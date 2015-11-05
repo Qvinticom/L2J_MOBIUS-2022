@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37900" name="SP Rune Pack (Top-grade) (1-day)" additionalName="" type="EtcItem">
+	<item id="37900" name="SP Rune Pack (Top-grade) (1-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (High-grade) (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" additionalName="" type="EtcItem">
+	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Low-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" additionalName="" type="EtcItem">
+	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Mid-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" additionalName="" type="EtcItem">
+	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (High-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="37904" name="Scroll: 1,000,000,000 SP" additionalName="" type="EtcItem">
+	<item id="37904" name="Scroll: 1,000,000,000 SP" type="EtcItem">
 		<!-- Scroll the replenishes 1,000,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37905" name="Kat the Cat's Surprise Gift" additionalName="" type="EtcItem">
+	<item id="37905" name="Kat the Cat's Surprise Gift" type="EtcItem">
 		<!-- Box containing Kat the Cat's gift. Double click to acquire 1 of the following at random: 150 Heavenly Recovery Potions, 1 Kat the Cat's Box of Roses, or 1 Emperor's Rune Box. Can be shared within the same account through the Dimensional Merchant. To be deleted on 30.10.13. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37906" name="Kat the Cat's Box of Roses" additionalName="" type="EtcItem">
+	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
 		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37907" name="Pig Lollipop Appearance Stone: One-handed Sword" additionalName="" type="EtcItem">
+	<item id="37907" name="Pig Lollipop Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Pig Lollipop. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37908" name="Chrono Cithara Appearance Stone: One-handed Sword" additionalName="" type="EtcItem">
+	<item id="37908" name="Chrono Cithara Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37909" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="" type="EtcItem">
+	<item id="37909" name="Chrono Unitus Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37910" name="Chrono Campana Appearance Stone: Spear" additionalName="" type="EtcItem">
+	<item id="37910" name="Chrono Campana Appearance Stone: Spear" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37911" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" additionalName="" type="EtcItem">
+	<item id="37911" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37912" name="Chrono Maracas Appearance Stone: Dualsword" additionalName="" type="EtcItem">
+	<item id="37912" name="Chrono Maracas Appearance Stone: Dualsword" type="EtcItem">
 		<!-- Changes the appearance of a dualsword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37913" name="Pumpkin Dagger Appearance Stone: Dagger" additionalName="" type="EtcItem">
+	<item id="37913" name="Pumpkin Dagger Appearance Stone: Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37914" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" additionalName="" type="EtcItem">
+	<item id="37914" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37915" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" additionalName="" type="EtcItem">
+	<item id="37915" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="37916" name="Pumpkin Dagger" additionalName="" type="Weapon">
+	<item id="37916" name="Pumpkin Dagger" type="Weapon">
 		<!-- Cute, pumpkin-shaped dagger. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -111,7 +111,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37917" name="Pumpkin Dual Dagger" additionalName="" type="Weapon">
+	<item id="37917" name="Pumpkin Dual Dagger" type="Weapon">
 		<!-- Cute, pumpkin-shaped dual dagger. -->
 		<set name="icon" val="icon.weapon_pumpin_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -126,7 +126,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37918" name="Scarecrow Sword" additionalName="" type="Weapon">
+	<item id="37918" name="Scarecrow Sword" type="Weapon">
 		<!-- Cute, scarecrow-shaped one-handed magic sword. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -209,7 +209,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="time" val="1296000" />
 	</item>
-	<item id="37928" name="Player Commendation - Art of Seduction" additionalName="" type="EtcItem">
+	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/MP/CP + 30%, P. Def./ M. Def. +30%, P. Atk. + 10%, M. Atk.+ 20%. Cooldown is 5min. Double-click to use. Effect disappears if you receive the Art of Seduction buff. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="weight" val="1" />
@@ -389,18 +389,18 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="37943" name="Awakened Warrior's Weapon Coupon (7-day)" additionalName="" type="EtcItem">
+	<item id="37943" name="Awakened Warrior's Weapon Coupon (7-day)" type="EtcItem">
 		<!-- Dimensional Item\nTalk to the Dimensional Merchant to exchange for an Awakened Warrior's Weapon (7-day).\n\nNote: Cannot be shared once exchanged. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37944" name="Emperor's Cookie" additionalName="" type="EtcItem">
+	<item id="37944" name="Emperor's Cookie" type="EtcItem">
 		<!-- For 1 hr., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
 		<set name="icon" val="icon.etc_bm_sonata_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37945" name="Chrono Cithara" additionalName="" type="Weapon">
+	<item id="37945" name="Chrono Cithara" type="Weapon">
 		<!-- Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37946" name="Chrono Unitus" additionalName="" type="Weapon">
+	<item id="37946" name="Chrono Unitus" type="Weapon">
 		<!-- Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -423,7 +423,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37947" name="Chrono Campana" additionalName="" type="Weapon">
+	<item id="37947" name="Chrono Campana" type="Weapon">
 		<!-- Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -434,7 +434,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37948" name="Chrono Darbuka" additionalName="" type="Weapon">
+	<item id="37948" name="Chrono Darbuka" type="Weapon">
 		<!-- Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_darbuka_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -446,7 +446,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37949" name="Chrono Maracas" additionalName="" type="Weapon">
+	<item id="37949" name="Chrono Maracas" type="Weapon">
 		<!-- Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -457,60 +457,60 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37950" name="Requiem Shaper Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 	</item>
-	<item id="37951" name="Requiem Cutter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37951" name="Requiem Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37952" name="Requiem Slasher Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37952" name="Requiem Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37953" name="Requiem Avenger Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37953" name="Requiem Avenger Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 	</item>
-	<item id="37954" name="Requiem Fighter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37954" name="Requiem Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37955" name="Requiem Stormer Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37955" name="Requiem Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
 	</item>
-	<item id="37956" name="Requiem Thrower Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37956" name="Requiem Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37957" name="Requiem Shooter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37958" name="Requiem Buster Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37958" name="Requiem Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37959" name="Requiem Caster Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37959" name="Requiem Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37960" name="Requiem Retributer Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37960" name="Requiem Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -608,81 +608,81 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
 	</item>
-	<item id="37978" name="Immortal Necklace Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37978" name="Immortal Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37979" name="Immortal Earring Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37979" name="Immortal Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37980" name="Immortal Ring Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37980" name="Immortal Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37981" name="Apocalypse Shaper Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37981" name="Apocalypse Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 	</item>
-	<item id="37982" name="Apocalypse Cutter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37982" name="Apocalypse Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 	</item>
-	<item id="37983" name="Apocalypse Slasher Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37983" name="Apocalypse Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 	</item>
-	<item id="37984" name="Apocalypse Avenger Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37984" name="Apocalypse Avenger Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 	</item>
-	<item id="37985" name="Apocalypse Fighter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37985" name="Apocalypse Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 	</item>
-	<item id="37986" name="Apocalypse Stormer Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37986" name="Apocalypse Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
 	</item>
-	<item id="37987" name="Apocalypse Thrower Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37987" name="Apocalypse Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="BOW" />
 	</item>
-	<item id="37988" name="Apocalypse Shooter Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37989" name="Apocalypse Buster Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37989" name="Apocalypse Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 	</item>
-	<item id="37990" name="Apocalypse Caster Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37990" name="Apocalypse Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 	</item>
-	<item id="37991" name="Apocalypse Retributer Crafting Pack" additionalName="" type="EtcItem">
+	<item id="37991" name="Apocalypse Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />

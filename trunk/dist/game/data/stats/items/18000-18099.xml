@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="18000" name="Blessed Immortal Ring" additionalName="" type="Armor">
+	<item id="18000" name="Blessed Immortal Ring" type="Armor">
 		<!-- Blessed Immortal Ring. MP + 26 effect. -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -15,7 +15,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18001" name="Blessed Apocalypse Shaper" additionalName="" type="Weapon">
+	<item id="18001" name="Blessed Apocalypse Shaper" type="Weapon">
 		<set name="icon" val="icon.weapon_phasian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -45,7 +45,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18002" name="Blessed Apocalypse Cutter" additionalName="" type="Weapon">
+	<item id="18002" name="Blessed Apocalypse Cutter" type="Weapon">
 		<set name="icon" val="icon.weapon_pasis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -74,7 +74,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18003" name="Blessed Apocalypse Slasher" additionalName="" type="Weapon">
+	<item id="18003" name="Blessed Apocalypse Slasher" type="Weapon">
 		<set name="icon" val="icon.weapon_volver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -103,7 +103,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18004" name="Blessed Apocalypse Avenger" additionalName="" type="Weapon">
+	<item id="18004" name="Blessed Apocalypse Avenger" type="Weapon">
 		<set name="icon" val="icon.weapon_raksilion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -133,7 +133,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18005" name="Blessed Apocalypse Fighter" additionalName="" type="Weapon">
+	<item id="18005" name="Blessed Apocalypse Fighter" type="Weapon">
 		<set name="icon" val="icon.weapon_kirche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -163,7 +163,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18006" name="Blessed Apocalypse Stormer" additionalName="" type="Weapon">
+	<item id="18006" name="Blessed Apocalypse Stormer" type="Weapon">
 		<set name="icon" val="icon.weapon_grave_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -194,7 +194,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18007" name="Blessed Apocalypse Thrower" additionalName="" type="Weapon">
+	<item id="18007" name="Blessed Apocalypse Thrower" type="Weapon">
 		<set name="icon" val="icon.weapon_spina_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -225,7 +225,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18008" name="Blessed Apocalypse Shooter" additionalName="" type="Weapon">
+	<item id="18008" name="Blessed Apocalypse Shooter" type="Weapon">
 		<set name="icon" val="icon.weapon_medianox_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -259,7 +259,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18009" name="Blessed Apocalypse Buster" additionalName="" type="Weapon">
+	<item id="18009" name="Blessed Apocalypse Buster" type="Weapon">
 		<set name="icon" val="icon.weapon_imerose_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -289,7 +289,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18010" name="Blessed Apocalypse Caster" additionalName="" type="Weapon">
+	<item id="18010" name="Blessed Apocalypse Caster" type="Weapon">
 		<set name="icon" val="icon.weapon_yuke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -320,7 +320,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18011" name="Blessed Apocalypse Retributer" additionalName="" type="Weapon">
+	<item id="18011" name="Blessed Apocalypse Retributer" type="Weapon">
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -352,7 +352,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18012" name="Blessed Apocalypse Dualsword" additionalName="" type="Weapon">
+	<item id="18012" name="Blessed Apocalypse Dualsword" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -381,7 +381,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18013" name="Blessed Apocalypse Dual Dagger" additionalName="" type="Weapon">
+	<item id="18013" name="Blessed Apocalypse Dual Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -417,7 +417,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18014" name="Blessed Apocalypse Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="18014" name="Blessed Apocalypse Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -750,7 +750,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="18032" name="Blessed Twilight Necklace" additionalName="" type="Armor">
+	<item id="18032" name="Blessed Twilight Necklace" type="Armor">
 		<!-- Blessed Twilight Necklace. MP + 58 effect. -->
 		<set name="icon" val="icon.r2_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -765,7 +765,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18033" name="Blessed Twilight Earring" additionalName="" type="Armor">
+	<item id="18033" name="Blessed Twilight Earring" type="Armor">
 		<!-- Blessed Twilight Earring. MP + 43 effect. -->
 		<set name="icon" val="icon.r2_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18034" name="Blessed Twilight Ring" additionalName="" type="Armor">
+	<item id="18034" name="Blessed Twilight Ring" type="Armor">
 		<!-- Blessed Twilight Ring. MP + 29 effect. -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -796,7 +796,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18035" name="Blessed Specter Shaper" additionalName="" type="Weapon">
+	<item id="18035" name="Blessed Specter Shaper" type="Weapon">
 		<set name="icon" val="icon.weapon_ignicion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -826,7 +826,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18036" name="Blessed Specter Cutter" additionalName="" type="Weapon">
+	<item id="18036" name="Blessed Specter Cutter" type="Weapon">
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -855,7 +855,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18037" name="Blessed Specter Slasher" additionalName="" type="Weapon">
+	<item id="18037" name="Blessed Specter Slasher" type="Weapon">
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -884,7 +884,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18038" name="Blessed Specter Avenger" additionalName="" type="Weapon">
+	<item id="18038" name="Blessed Specter Avenger" type="Weapon">
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -914,7 +914,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18039" name="Blessed Specter Fighter" additionalName="" type="Weapon">
+	<item id="18039" name="Blessed Specter Fighter" type="Weapon">
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -944,7 +944,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18040" name="Blessed Specter Stormer" additionalName="" type="Weapon">
+	<item id="18040" name="Blessed Specter Stormer" type="Weapon">
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -975,7 +975,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18041" name="Blessed Specter Thrower" additionalName="" type="Weapon">
+	<item id="18041" name="Blessed Specter Thrower" type="Weapon">
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1006,7 +1006,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18042" name="Blessed Specter Shooter" additionalName="" type="Weapon">
+	<item id="18042" name="Blessed Specter Shooter" type="Weapon">
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1040,7 +1040,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18043" name="Blessed Specter Buster" additionalName="" type="Weapon">
+	<item id="18043" name="Blessed Specter Buster" type="Weapon">
 		<set name="icon" val="icon.weapon_zihel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1070,7 +1070,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18044" name="Blessed Specter Caster" additionalName="" type="Weapon">
+	<item id="18044" name="Blessed Specter Caster" type="Weapon">
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1101,7 +1101,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18045" name="Blessed Specter Retributer" additionalName="" type="Weapon">
+	<item id="18045" name="Blessed Specter Retributer" type="Weapon">
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1133,7 +1133,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18046" name="Blessed Specter Dualsword" additionalName="" type="Weapon">
+	<item id="18046" name="Blessed Specter Dualsword" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1162,7 +1162,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18047" name="Blessed Specter Dual Dagger" additionalName="" type="Weapon">
+	<item id="18047" name="Blessed Specter Dual Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1198,7 +1198,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18048" name="Blessed Specter Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="18048" name="Blessed Specter Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1531,7 +1531,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="18066" name="Blessed Seraph Necklace" additionalName="" type="Armor">
+	<item id="18066" name="Blessed Seraph Necklace" type="Armor">
 		<!-- Blessed Seraph Necklace. MP + 62 effect. -->
 		<set name="icon" val="icon.r95_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1547,7 +1547,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18067" name="Blessed Seraph Earring" additionalName="" type="Armor">
+	<item id="18067" name="Blessed Seraph Earring" type="Armor">
 		<!-- Blessed Seraph Earring. MP + 46 effect. -->
 		<set name="icon" val="icon.r95_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1562,7 +1562,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18068" name="Blessed Seraph Ring" additionalName="" type="Armor">
+	<item id="18068" name="Blessed Seraph Ring" type="Armor">
 		<!-- Blessed Seraph Ring. MP + 31 effect. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1577,7 +1577,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18069" name="Blessed Amaranthine Shaper" additionalName="" type="Weapon">
+	<item id="18069" name="Blessed Amaranthine Shaper" type="Weapon">
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1607,7 +1607,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18070" name="Blessed Amaranthine Cutter" additionalName="" type="Weapon">
+	<item id="18070" name="Blessed Amaranthine Cutter" type="Weapon">
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1636,7 +1636,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18071" name="Blessed Amaranthine Slasher" additionalName="" type="Weapon">
+	<item id="18071" name="Blessed Amaranthine Slasher" type="Weapon">
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1665,7 +1665,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18072" name="Blessed Amaranthine Avenger" additionalName="" type="Weapon">
+	<item id="18072" name="Blessed Amaranthine Avenger" type="Weapon">
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1695,7 +1695,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18073" name="Blessed Amaranthine Fighter" additionalName="" type="Weapon">
+	<item id="18073" name="Blessed Amaranthine Fighter" type="Weapon">
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1725,7 +1725,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18074" name="Blessed Amaranthine Stormer" additionalName="" type="Weapon">
+	<item id="18074" name="Blessed Amaranthine Stormer" type="Weapon">
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1756,7 +1756,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18075" name="Blessed Amaranthine Thrower" additionalName="" type="Weapon">
+	<item id="18075" name="Blessed Amaranthine Thrower" type="Weapon">
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1787,7 +1787,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18076" name="Blessed Amaranthine Shooter" additionalName="" type="Weapon">
+	<item id="18076" name="Blessed Amaranthine Shooter" type="Weapon">
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1821,7 +1821,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18077" name="Blessed Amaranthine Buster" additionalName="" type="Weapon">
+	<item id="18077" name="Blessed Amaranthine Buster" type="Weapon">
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1851,7 +1851,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18078" name="Blessed Amaranthine Caster" additionalName="" type="Weapon">
+	<item id="18078" name="Blessed Amaranthine Caster" type="Weapon">
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1882,7 +1882,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18079" name="Blessed Amaranthine Retributer" additionalName="" type="Weapon">
+	<item id="18079" name="Blessed Amaranthine Retributer" type="Weapon">
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1914,7 +1914,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18080" name="Blessed Amaranthine Dualsword" additionalName="" type="Weapon">
+	<item id="18080" name="Blessed Amaranthine Dualsword" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1943,7 +1943,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18081" name="Blessed Amaranthine Dual Dagger" additionalName="" type="Weapon">
+	<item id="18081" name="Blessed Amaranthine Dual Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1979,7 +1979,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="18082" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="18082" name="Blessed Amaranthine Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />

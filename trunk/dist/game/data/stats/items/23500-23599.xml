@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="23503" name="Military Top Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23503" name="Military Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23504" name="Military Pants Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23504" name="Military Pants Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Military look. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23505" name="Military Gloves Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23505" name="Military Gloves Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Military look. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23506" name="Military Shoes Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23506" name="Military Shoes Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Military look. An appearance-modified item has no change in abilities. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23507" name="Military Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23507" name="Military Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Military look. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23513" name="Maid Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23513" name="Maid Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Maid Costume. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. Female only. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_cutie_maid_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23514" name="Maid Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23514" name="Maid Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Maid Costume. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
@@ -55,14 +55,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
 	</item>
-	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" additionalName="" type="EtcItem">
+	<item id="23530" name="Automatic Appearance Stone: Emerald Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" additionalName="" type="EtcItem">
+	<item id="23531" name="Automatic Appearance Stone: Japanese Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.\n\nNote: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
 		<set name="immediate_effect" val="true" />

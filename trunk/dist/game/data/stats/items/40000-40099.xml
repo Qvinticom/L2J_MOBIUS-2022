@@ -376,54 +376,54 @@
 		<set name="weight" val="10" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="40049" name="Scroll: 1,000 SP" additionalName="" type="EtcItem">
+	<item id="40049" name="Scroll: 1,000 SP" type="EtcItem">
 		<!-- Restores 1,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40050" name="Scroll: 10,000 SP" additionalName="" type="EtcItem">
+	<item id="40050" name="Scroll: 10,000 SP" type="EtcItem">
 		<!-- Restores 10,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40051" name="Scroll: 100,000 SP" additionalName="" type="EtcItem">
+	<item id="40051" name="Scroll: 100,000 SP" type="EtcItem">
 		<!-- Restores 100,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="40052" name="Scroll: 1,000,000 SP" additionalName="" type="EtcItem">
+	<item id="40052" name="Scroll: 1,000,000 SP" type="EtcItem">
 		<!-- Restores 1,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40053" name="Scroll: 10,000,000 SP" additionalName="" type="EtcItem">
+	<item id="40053" name="Scroll: 10,000,000 SP" type="EtcItem">
 		<!-- Restores 10,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="40054" name="Rune of Bountiful Growth Pack" additionalName="" type="EtcItem">
+	<item id="40054" name="Rune of Bountiful Growth Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Rune of Bountiful Growth (30-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40055" name="Rune of Bountiful Growth (30-day)" additionalName="" type="EtcItem">
+	<item id="40055" name="Rune of Bountiful Growth (30-day)" type="EtcItem">
 		<!-- When possessed in the inventory, XP/SP acquisition + 20% while hunting. Lv. 99 or below. Can be stacked with XP Rune I (Lv. 1-85) and XP Rune II (Lv. 1-95) 100%. If used with the Emperor's Rune, only the Emperor's Rune will take effect. -->
 		<set name="icon" val="icon.ev_charge_run" />
 	</item>
-	<item id="40056" name="Mysterious Wind Scroll" additionalName="" type="EtcItem">
+	<item id="40056" name="Mysterious Wind Scroll" type="EtcItem">
 		<!-- For 60 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, P. Atk. + 10%, M. Atk. + 20%, Wind Atk./Resistance + 20. Skill Cooldown - 10%. Cannot be used in the Olympiad. Does not stack with Art of Seduction. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40057" name="Magic Broom" additionalName="" type="Weapon">
+	<item id="40057" name="Magic Broom" type="Weapon">
 		<!-- A basic for appearance modification. -->
 		<set name="icon" val="icon.ert_custom_staff_a" />
 		<set name="default_action" val="EQUIP" />
@@ -438,7 +438,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="40058" name="Cat Staff" additionalName="" type="Weapon">
+	<item id="40058" name="Cat Staff" type="Weapon">
 		<!-- A basic for appearance modification. -->
 		<set name="icon" val="icon.ert_custom_staff_b" />
 		<set name="default_action" val="EQUIP" />
@@ -453,17 +453,17 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="40059" name="Counterfeit Atelia" additionalName="" type="EtcItem">
+	<item id="40059" name="Counterfeit Atelia" type="EtcItem">
 		<!-- A fake gem being sold in the Material Realm as a gem of the the Wind Spirit Realm. -->
 		<set name="icon" val="icon.etc_ertheia_astatine_fake" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40060" name="Dark Fragment" additionalName="" type="EtcItem">
+	<item id="40060" name="Dark Fragment" type="EtcItem">
 		<!-- An ingredient for making a jewel of the Wind Spirit Realm. Take them all to the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.etc_black_freezing_core_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40061" name="Apprentice's Staff" additionalName="" type="Weapon">
+	<item id="40061" name="Apprentice's Staff" type="Weapon">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
@@ -477,228 +477,228 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="40062" name="Recipe: Pendant (100%)" additionalName="" type="EtcItem">
+	<item id="40062" name="Recipe: Pendant (100%)" type="EtcItem">
 		<!-- Recipe for crafting a pendant. Requires Create Item Lv. 14. 100% success rate. Can obtain a pendant with stats if successful. Tyrr Maestros only. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40063" name="Secret Ancient Tome Fragment" additionalName="" type="EtcItem">
+	<item id="40063" name="Secret Ancient Tome Fragment" type="EtcItem">
 		<!-- Take this and with Elcyum to Resed to obtain Ancient Book: Divine Inspiration, which increases your buff slots. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40064" name="Ancient Book: Divine Inspiration (Beginner)" additionalName="" type="EtcItem">
+	<item id="40064" name="Ancient Book: Divine Inspiration (Beginner)" type="EtcItem">
 		<!-- Tome used for learning Divine Inspiration Lv. 5. -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40065" name="Ancient Book: Divine Inspiration (Intermediate)" additionalName="" type="EtcItem">
+	<item id="40065" name="Ancient Book: Divine Inspiration (Intermediate)" type="EtcItem">
 		<!-- Tome used for learning Divine Inspiration Lv. 6. -->
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40066" name="Recipe: Requiem Shaper Disassembly" additionalName="" type="EtcItem">
+	<item id="40066" name="Recipe: Requiem Shaper Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40067" name="Recipe: Requiem Cutter Disassembly" additionalName="" type="EtcItem">
+	<item id="40067" name="Recipe: Requiem Cutter Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40068" name="Recipe: Requiem Slasher Disassembly" additionalName="" type="EtcItem">
+	<item id="40068" name="Recipe: Requiem Slasher Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40069" name="Recipe: Requiem Avenger Disassembly" additionalName="" type="EtcItem">
+	<item id="40069" name="Recipe: Requiem Avenger Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40070" name="Recipe: Requiem Fighter Disassembly" additionalName="" type="EtcItem">
+	<item id="40070" name="Recipe: Requiem Fighter Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40071" name="Recipe: Requiem Stormer Disassembly" additionalName="" type="EtcItem">
+	<item id="40071" name="Recipe: Requiem Stormer Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40072" name="Recipe: Requiem Thrower Disassembly" additionalName="" type="EtcItem">
+	<item id="40072" name="Recipe: Requiem Thrower Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40073" name="Recipe: Requiem Shooter Disassembly" additionalName="" type="EtcItem">
+	<item id="40073" name="Recipe: Requiem Shooter Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40074" name="Recipe: Requiem Buster Disassembly" additionalName="" type="EtcItem">
+	<item id="40074" name="Recipe: Requiem Buster Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40075" name="Recipe: Requiem Caster Disassembly" additionalName="" type="EtcItem">
+	<item id="40075" name="Recipe: Requiem Caster Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40076" name="Recipe: Requiem Retributer Disassembly" additionalName="" type="EtcItem">
+	<item id="40076" name="Recipe: Requiem Retributer Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40077" name="Recipe: Immortal Helmet Disassembly" additionalName="" type="EtcItem">
+	<item id="40077" name="Recipe: Immortal Helmet Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40078" name="Recipe: Immortal Breastplate Disassembly" additionalName="" type="EtcItem">
+	<item id="40078" name="Recipe: Immortal Breastplate Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40079" name="Recipe: Immortal Gaiters Disassembly" additionalName="" type="EtcItem">
+	<item id="40079" name="Recipe: Immortal Gaiters Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40080" name="Recipe: Immortal Gauntlets Disassembly" additionalName="" type="EtcItem">
+	<item id="40080" name="Recipe: Immortal Gauntlets Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40081" name="Recipe: Immortal Boots Disassembly" additionalName="" type="EtcItem">
+	<item id="40081" name="Recipe: Immortal Boots Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40082" name="Recipe: Immortal Shield Disassembly" additionalName="" type="EtcItem">
+	<item id="40082" name="Recipe: Immortal Shield Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40083" name="Recipe: Immortal Leather Helmet Disassembly" additionalName="" type="EtcItem">
+	<item id="40083" name="Recipe: Immortal Leather Helmet Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40084" name="Recipe: Immortal Leather Armor Disassembly" additionalName="" type="EtcItem">
+	<item id="40084" name="Recipe: Immortal Leather Armor Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40085" name="Recipe: Immortal Leather Leggings Disassembly" additionalName="" type="EtcItem">
+	<item id="40085" name="Recipe: Immortal Leather Leggings Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40086" name="Recipe: Immortal Leather Gloves Disassembly" additionalName="" type="EtcItem">
+	<item id="40086" name="Recipe: Immortal Leather Gloves Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40087" name="Recipe: Immortal Leather Boots Disassembly" additionalName="" type="EtcItem">
+	<item id="40087" name="Recipe: Immortal Leather Boots Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40088" name="Recipe: Immortal Circlet Disassembly" additionalName="" type="EtcItem">
+	<item id="40088" name="Recipe: Immortal Circlet Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40089" name="Recipe: Immortal Tunic Disassembly" additionalName="" type="EtcItem">
+	<item id="40089" name="Recipe: Immortal Tunic Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40090" name="Recipe: Immortal Stockings Disassembly" additionalName="" type="EtcItem">
+	<item id="40090" name="Recipe: Immortal Stockings Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40091" name="Recipe: Immortal Gloves Disassembly" additionalName="" type="EtcItem">
+	<item id="40091" name="Recipe: Immortal Gloves Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40092" name="Recipe: Immortal Shoes Disassembly" additionalName="" type="EtcItem">
+	<item id="40092" name="Recipe: Immortal Shoes Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40093" name="Recipe: Immortal Sigil Disassembly" additionalName="" type="EtcItem">
+	<item id="40093" name="Recipe: Immortal Sigil Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40094" name="Recipe: Immortal Necklace Disassembly" additionalName="" type="EtcItem">
+	<item id="40094" name="Recipe: Immortal Necklace Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40095" name="Recipe: Immortal Earring Disassembly" additionalName="" type="EtcItem">
+	<item id="40095" name="Recipe: Immortal Earring Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40096" name="Recipe: Immortal Ring Disassembly" additionalName="" type="EtcItem">
+	<item id="40096" name="Recipe: Immortal Ring Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 11. 100% success rate. No extra rewards for enchanting. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40097" name="Recipe: Apocalypse Shaper Disassembly" additionalName="" type="EtcItem">
+	<item id="40097" name="Recipe: Apocalypse Shaper Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 12. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40098" name="Recipe: Apocalypse Cutter Disassembly" additionalName="" type="EtcItem">
+	<item id="40098" name="Recipe: Apocalypse Cutter Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 12. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40099" name="Recipe: Apocalypse Slasher Disassembly" additionalName="" type="EtcItem">
+	<item id="40099" name="Recipe: Apocalypse Slasher Disassembly" type="EtcItem">
 		<!-- Tyrr Maestro only. Disassembly recovers all original crafting ingredients. Requires Create Item Lv. 12. 100% success rate. No extra rewards for enchanting. Augmented weapons cannot be disassembled. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />

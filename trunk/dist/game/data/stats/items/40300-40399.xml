@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="40300" name="Freya's Recovery Potion" additionalName="" type="EtcItem">
+	<item id="40300" name="Freya's Recovery Potion" type="EtcItem">
 		<!-- Restores 3500 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="is_stackable" val="true" />
@@ -17,12 +17,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40303" name="Entrance Pass: Spezion (Normal)" additionalName="" type="EtcItem">
+	<item id="40303" name="Entrance Pass: Spezion (Normal)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (normal) dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40304" name="Entrance Pass: Spezion (Epic)" additionalName="" type="EtcItem">
+	<item id="40304" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (Epic) dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
 		<set name="is_stackable" val="true" />
@@ -38,35 +38,35 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40307" name="Dynamic Dual Master Gift Pack" additionalName="" type="EtcItem">
+	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
 		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40308" name="Dynamic Dual Knight Gift Pack" additionalName="" type="EtcItem">
+	<item id="40308" name="Dynamic Dual Knight Gift Pack" type="EtcItem">
 		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40309" name="Scroll of Escape: Dwarven Village" additionalName="" type="EtcItem">
+	<item id="40309" name="Scroll of Escape: Dwarven Village" type="EtcItem">
 		<!-- Teleports you to Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 	</item>
-	<item id="40310" name="Appearance Stone: Santa Hat" additionalName="" type="EtcItem">
+	<item id="40310" name="Appearance Stone: Santa Hat" type="EtcItem">
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. Only for hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="40311" name="Noelle's Gift" additionalName="" type="EtcItem">
+	<item id="40311" name="Noelle's Gift" type="EtcItem">
 		<!-- Double-click to recover Vitality while in peaceful zones. A set amount of Vitality is also restored when the buff is about to expire. 6-hour. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40312" name="Santa's Cloak" additionalName="" type="Armor">
+	<item id="40312" name="Santa's Cloak" type="Armor">
 		<!-- Light and cozy cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
@@ -75,7 +75,7 @@
 			<add order="0" stat="pDef" val="20.0" />
 		</for>
 	</item>
-	<item id="40313" name="Santa's Mark" additionalName="" type="EtcItem">
+	<item id="40313" name="Santa's Mark" type="EtcItem">
 		<!-- Proof of your successful search for Santa alongside Tree Fairy, Stocking Fairy, and Snowman Fairy. Take this to Noelle for a reward. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
 		<set name="is_stackable" val="true" />
@@ -177,7 +177,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40330" name="Appearance Stone: Santa Suit" additionalName="" type="EtcItem">
+	<item id="40330" name="Appearance Stone: Santa Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -589,33 +589,33 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="40362" name="Agathion - Joon Pack (30-day)" additionalName="" type="Armor">
+	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
 		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad.\n\n(Passive Skill)\n1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death.\n\n(Active Skill)\n1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="40363" name="Carrot" additionalName="" type="EtcItem">
+	<item id="40363" name="Carrot" type="EtcItem">
 		<!-- Give some of these to Galup and you might get a special gift. You can give it to Hungry Galup in the hunting zones. Deleted after event. -->
 		<set name="icon" val="icon.ev_carrot" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40364" name="Carrot Pouch" additionalName="" type="EtcItem">
+	<item id="40364" name="Carrot Pouch" type="EtcItem">
 		<!-- Double-click to obtain 7 - 63 carrots. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40365" name="Galup's Special Luck Pouch" additionalName="" type="EtcItem">
+	<item id="40365" name="Galup's Special Luck Pouch" type="EtcItem">
 		<!-- Double-click to obtain special rewards prepared by Galup. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40366" name="Galup's Gift Pouch" additionalName="" type="EtcItem">
+	<item id="40366" name="Galup's Gift Pouch" type="EtcItem">
 		<!-- Galup's gift after he had eaten his fill. Double-click to obtain a Carrot Pouch and feel some Horse Power. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40367" name="Angel Cat's Blessing Pack" additionalName="" type="EtcItem">
+	<item id="40367" name="Angel Cat's Blessing Pack" type="EtcItem">
 		<!-- Double-click to obtain an Angel Cat's Blessing (1-hour). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_stackable" val="true" />

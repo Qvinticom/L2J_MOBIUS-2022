@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="18100" name="Blessed Eternal Necklace" additionalName="" type="Armor">
+	<item id="18100" name="Blessed Eternal Necklace" type="Armor">
 		<!-- Blessed Eternal Necklace. MP + 65 effect. -->
 		<set name="icon" val="icon.r991_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -15,7 +15,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18101" name="Blessed Eternal Earring" additionalName="" type="Armor">
+	<item id="18101" name="Blessed Eternal Earring" type="Armor">
 		<!-- Blessed Eternal Earring. MP + 49 effect. -->
 		<set name="icon" val="icon.r991_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -30,7 +30,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18102" name="Blessed Eternal Ring" additionalName="" type="Armor">
+	<item id="18102" name="Blessed Eternal Ring" type="Armor">
 		<!-- Blessed Eternal Ring. MP + 33 effect. -->
 		<set name="icon" val="icon.r991_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -45,73 +45,73 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="18103" name="Unidentified Requiem Shaper" additionalName="" type="EtcItem">
+	<item id="18103" name="Unidentified Requiem Shaper" type="EtcItem">
 		<!-- A Requiem Shaper in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / dagger) -->
 		<set name="icon" val="icon.weapon_aspeda_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18104" name="Unidentified Requiem Cutter" additionalName="" type="EtcItem">
+	<item id="18104" name="Unidentified Requiem Cutter" type="EtcItem">
 		<!-- A Requiem Cutter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18105" name="Unidentified Requiem Slasher" additionalName="" type="EtcItem">
+	<item id="18105" name="Unidentified Requiem Slasher" type="EtcItem">
 		<!-- A Requiem Slasher in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_polion_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18106" name="Unidentified Requiem Avenger" additionalName="" type="EtcItem">
+	<item id="18106" name="Unidentified Requiem Avenger" type="EtcItem">
 		<!-- A Requiem Avenger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_batista_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18107" name="Unidentified Requiem Fighter" additionalName="" type="EtcItem">
+	<item id="18107" name="Unidentified Requiem Fighter" type="EtcItem">
 		<!-- A Requiem Fighter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / combat) -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18108" name="Unidentified Requiem Stormer" additionalName="" type="EtcItem">
+	<item id="18108" name="Unidentified Requiem Stormer" type="EtcItem">
 		<!-- A Requiem Stormer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / spear) -->
 		<set name="icon" val="icon.weapon_soryu_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18109" name="Unidentified Requiem Thrower" additionalName="" type="EtcItem">
+	<item id="18109" name="Unidentified Requiem Thrower" type="EtcItem">
 		<!-- A Requiem Thrower in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / bow) -->
 		<set name="icon" val="icon.weapon_grabathus_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18110" name="Unidentified Requiem Shooter" additionalName="" type="EtcItem">
+	<item id="18110" name="Unidentified Requiem Shooter" type="EtcItem">
 		<!-- A Requiem Shooter in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / crossbow / bow) -->
 		<set name="icon" val="icon.weapon_shyayaka_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18111" name="Unidentified Requiem Buster" additionalName="" type="EtcItem">
+	<item id="18111" name="Unidentified Requiem Buster" type="EtcItem">
 		<!-- A Requiem Buster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / sword) -->
 		<set name="icon" val="icon.weapon_kaynon_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18112" name="Unidentified Requiem Caster" additionalName="" type="EtcItem">
+	<item id="18112" name="Unidentified Requiem Caster" type="EtcItem">
 		<!-- A Requiem Caster in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: one-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_anatrian_i00" />
 		<set name="price" val="6284000" />
 	</item>
-	<item id="18113" name="Unidentified Requiem Retributer" additionalName="" type="EtcItem">
+	<item id="18113" name="Unidentified Requiem Retributer" type="EtcItem">
 		<!-- A Requiem Retributer in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / blunt) -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="price" val="6284000" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 	</item>
-	<item id="18114" name="Unidentified Requiem Dualsword" additionalName="" type="EtcItem">
+	<item id="18114" name="Unidentified Requiem Dualsword" type="EtcItem">
 		<!-- A Requiem Dualsword in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword) -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="price" val="7540800" />
 	</item>
-	<item id="18115" name="Unidentified Requiem Dual Dagger" additionalName="" type="EtcItem">
+	<item id="18115" name="Unidentified Requiem Dual Dagger" type="EtcItem">
 		<!-- A Requiem Dual Dagger in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / dagger) -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="price" val="7540800" />
 	</item>
-	<item id="18116" name="Unidentified Requiem Dual Blunt Weapon" additionalName="" type="EtcItem">
+	<item id="18116" name="Unidentified Requiem Dual Blunt Weapon" type="EtcItem">
 		<!-- A Requiem Dual Blunt Weapon in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: two-handed weapon / dualsword / blunt) -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="price" val="7540800" />
@@ -203,22 +203,22 @@
 		<set name="icon" val="icon.weapon_karyen_i00" />
 		<set name="price" val="861000" />
 	</item>
-	<item id="18134" name="Unidentified Immortal Necklace" additionalName="" type="EtcItem">
+	<item id="18134" name="Unidentified Immortal Necklace" type="EtcItem">
 		<!-- An Immortal Necklace in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Necklace) -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="price" val="855000" />
 	</item>
-	<item id="18135" name="Unidentified Immortal Earring" additionalName="" type="EtcItem">
+	<item id="18135" name="Unidentified Immortal Earring" type="EtcItem">
 		<!-- An Immortal Earring in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Earring) -->
 		<set name="icon" val="icon.r1_earring_i00" />
 		<set name="price" val="641000" />
 	</item>
-	<item id="18136" name="Unidentified Immortal Ring" additionalName="" type="EtcItem">
+	<item id="18136" name="Unidentified Immortal Ring" type="EtcItem">
 		<!-- An Immortal Ring in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Ring) -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="price" val="427000" />
 	</item>
-	<item id="18137" name="Unidentified Apocalypse Shaper" additionalName="" type="EtcItem">
+	<item id="18137" name="Unidentified Apocalypse Shaper" type="EtcItem">
 		<set name="icon" val="icon.weapon_phasian_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12046-1" />
 	</item>
-	<item id="18138" name="Unidentified Apocalypse Cutter" additionalName="" type="EtcItem">
+	<item id="18138" name="Unidentified Apocalypse Cutter" type="EtcItem">
 		<set name="icon" val="icon.weapon_pasis_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -238,7 +238,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12047-1" />
 	</item>
-	<item id="18139" name="Unidentified Apocalypse Slasher" additionalName="" type="EtcItem">
+	<item id="18139" name="Unidentified Apocalypse Slasher" type="EtcItem">
 		<set name="icon" val="icon.weapon_volver_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -248,7 +248,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12048-1" />
 	</item>
-	<item id="18140" name="Unidentified Apocalypse Avenger" additionalName="" type="EtcItem">
+	<item id="18140" name="Unidentified Apocalypse Avenger" type="EtcItem">
 		<set name="icon" val="icon.weapon_raksilion_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -258,7 +258,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12049-1" />
 	</item>
-	<item id="18141" name="Unidentified Apocalypse Fighter" additionalName="" type="EtcItem">
+	<item id="18141" name="Unidentified Apocalypse Fighter" type="EtcItem">
 		<set name="icon" val="icon.weapon_kirche_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12050-1" />
 	</item>
-	<item id="18142" name="Unidentified Apocalypse Stormer" additionalName="" type="EtcItem">
+	<item id="18142" name="Unidentified Apocalypse Stormer" type="EtcItem">
 		<set name="icon" val="icon.weapon_grave_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -278,7 +278,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12051-1" />
 	</item>
-	<item id="18143" name="Unidentified Apocalypse Thrower" additionalName="" type="EtcItem">
+	<item id="18143" name="Unidentified Apocalypse Thrower" type="EtcItem">
 		<set name="icon" val="icon.weapon_spina_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -288,7 +288,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12052-1" />
 	</item>
-	<item id="18144" name="Unidentified Apocalypse Shooter" additionalName="" type="EtcItem">
+	<item id="18144" name="Unidentified Apocalypse Shooter" type="EtcItem">
 		<set name="icon" val="icon.weapon_medianox_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -298,7 +298,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12053-1" />
 	</item>
-	<item id="18145" name="Unidentified Apocalypse Buster" additionalName="" type="EtcItem">
+	<item id="18145" name="Unidentified Apocalypse Buster" type="EtcItem">
 		<set name="icon" val="icon.weapon_imerose_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -308,7 +308,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12054-1" />
 	</item>
-	<item id="18146" name="Unidentified Apocalypse Caster" additionalName="" type="EtcItem">
+	<item id="18146" name="Unidentified Apocalypse Caster" type="EtcItem">
 		<set name="icon" val="icon.weapon_yuke_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -318,7 +318,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12055-1" />
 	</item>
-	<item id="18147" name="Unidentified Apocalypse Retributer" additionalName="" type="EtcItem">
+	<item id="18147" name="Unidentified Apocalypse Retributer" type="EtcItem">
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -328,7 +328,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12056-1" />
 	</item>
-	<item id="18148" name="Unidentified Apocalypse Dualsword" additionalName="" type="EtcItem">
+	<item id="18148" name="Unidentified Apocalypse Dualsword" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -338,7 +338,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12057-1" />
 	</item>
-	<item id="18149" name="Unidentified Apocalypse Dual Dagger" additionalName="" type="EtcItem">
+	<item id="18149" name="Unidentified Apocalypse Dual Dagger" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +348,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12058-1" />
 	</item>
-	<item id="18150" name="Unidentified Apocalypse Dual Blunt Weapon" additionalName="" type="EtcItem">
+	<item id="18150" name="Unidentified Apocalypse Dual Blunt Weapon" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -443,22 +443,22 @@
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
 		<set name="price" val="2087000" />
 	</item>
-	<item id="18168" name="Unidentified Twilight Necklace" additionalName="" type="EtcItem">
+	<item id="18168" name="Unidentified Twilight Necklace" type="EtcItem">
 		<!-- A Twilight Necklace in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Necklace) -->
 		<set name="icon" val="icon.r2_necklace_i00" />
 		<set name="price" val="2070000" />
 	</item>
-	<item id="18169" name="Unidentified Twilight Earring" additionalName="" type="EtcItem">
+	<item id="18169" name="Unidentified Twilight Earring" type="EtcItem">
 		<!-- A Twilight Earring in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Earring) -->
 		<set name="icon" val="icon.r2_earring_i00" />
 		<set name="price" val="1553000" />
 	</item>
-	<item id="18170" name="Unidentified Twilight Ring" additionalName="" type="EtcItem">
+	<item id="18170" name="Unidentified Twilight Ring" type="EtcItem">
 		<!-- A Twilight Ring in an Unidentified state. Double-click the item to identify it. The acquired item can be Blessed, Standard, or Bound. (Type: Ring) -->
 		<set name="icon" val="icon.r2_ring_i00" />
 		<set name="price" val="1035000" />
 	</item>
-	<item id="18171" name="Unidentified Specter Shaper" additionalName="" type="EtcItem">
+	<item id="18171" name="Unidentified Specter Shaper" type="EtcItem">
 		<set name="icon" val="icon.weapon_ignicion_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -468,7 +468,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12080-1" />
 	</item>
-	<item id="18172" name="Unidentified Specter Cutter" additionalName="" type="EtcItem">
+	<item id="18172" name="Unidentified Specter Cutter" type="EtcItem">
 		<set name="icon" val="icon.weapon_ninfea_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -478,7 +478,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12081-1" />
 	</item>
-	<item id="18173" name="Unidentified Specter Slasher" additionalName="" type="EtcItem">
+	<item id="18173" name="Unidentified Specter Slasher" type="EtcItem">
 		<set name="icon" val="icon.weapon_skia_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -488,7 +488,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12082-1" />
 	</item>
-	<item id="18174" name="Unidentified Specter Avenger" additionalName="" type="EtcItem">
+	<item id="18174" name="Unidentified Specter Avenger" type="EtcItem">
 		<set name="icon" val="icon.weapon_ikeon_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -498,7 +498,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12083-1" />
 	</item>
-	<item id="18175" name="Unidentified Specter Fighter" additionalName="" type="EtcItem">
+	<item id="18175" name="Unidentified Specter Fighter" type="EtcItem">
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -508,7 +508,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12084-1" />
 	</item>
-	<item id="18176" name="Unidentified Specter Stormer" additionalName="" type="EtcItem">
+	<item id="18176" name="Unidentified Specter Stormer" type="EtcItem">
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -518,7 +518,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12085-1" />
 	</item>
-	<item id="18177" name="Unidentified Specter Thrower" additionalName="" type="EtcItem">
+	<item id="18177" name="Unidentified Specter Thrower" type="EtcItem">
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -528,7 +528,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12086-1" />
 	</item>
-	<item id="18178" name="Unidentified Specter Shooter" additionalName="" type="EtcItem">
+	<item id="18178" name="Unidentified Specter Shooter" type="EtcItem">
 		<set name="icon" val="icon.weapon_lapis_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -538,7 +538,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12087-1" />
 	</item>
-	<item id="18179" name="Unidentified Specter Buster" additionalName="" type="EtcItem">
+	<item id="18179" name="Unidentified Specter Buster" type="EtcItem">
 		<set name="icon" val="icon.weapon_zihel_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -548,7 +548,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12088-1" />
 	</item>
-	<item id="18180" name="Unidentified Specter Caster" additionalName="" type="EtcItem">
+	<item id="18180" name="Unidentified Specter Caster" type="EtcItem">
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +558,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12089-1" />
 	</item>
-	<item id="18181" name="Unidentified Specter Retributer" additionalName="" type="EtcItem">
+	<item id="18181" name="Unidentified Specter Retributer" type="EtcItem">
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -568,7 +568,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12090-1" />
 	</item>
-	<item id="18182" name="Unidentified Specter Dualsword" additionalName="" type="EtcItem">
+	<item id="18182" name="Unidentified Specter Dualsword" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -578,7 +578,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12091-1" />
 	</item>
-	<item id="18183" name="Unidentified Specter Dual Dagger" additionalName="" type="EtcItem">
+	<item id="18183" name="Unidentified Specter Dual Dagger" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -588,7 +588,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="12092-1" />
 	</item>
-	<item id="18184" name="Unidentified Specter Dual Blunt Weapon" additionalName="" type="EtcItem">
+	<item id="18184" name="Unidentified Specter Dual Blunt Weapon" type="EtcItem">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

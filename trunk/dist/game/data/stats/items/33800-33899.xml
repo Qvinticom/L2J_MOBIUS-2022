@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33800" name="Mentee Certificate" additionalName="" type="EtcItem">
+	<item id="33800" name="Mentee Certificate" type="EtcItem">
 		<!-- Mentee Diploma. At level 85 or above, you can go find the Mentor Guide and exchange it for Diplomas. Diplomas can be exchanged for R-grade equipment after Awakening. -->
 		<set name="icon" val="icon.mentee_certificate" />
 	</item>
-	<item id="33801" name="Mentoring Guidebook" additionalName="" type="EtcItem">
+	<item id="33801" name="Mentoring Guidebook" type="EtcItem">
 		<!-- Guidebook containing details about mentoring. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -14,22 +14,22 @@
 		<set name="is_dropable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="33802" name="Mentee Certificate Pack" additionalName="" type="EtcItem">
+	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
 		<!-- Dimensional Item Pack\nContains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33803" name="Mentee Coupon" additionalName="" type="EtcItem">
+	<item id="33803" name="Mentee Coupon" type="EtcItem">
 		<!-- Contains a Mentee Certificate Pack. -->
 		<set name="icon" val="icon.mentee_coupon" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33804" name="Mentee's Mark" additionalName="" type="EtcItem">
+	<item id="33804" name="Mentee's Mark" type="EtcItem">
 		<!-- Item given to a Mentor when one of your Mentees levels up. You can exchange Mentee's Marks for items at a Mentor Guide. -->
 		<set name="icon" val="icon.mentee_mark" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33805" name="Diploma" additionalName="" type="EtcItem">
+	<item id="33805" name="Diploma" type="EtcItem">
 		<!-- Acquired after graduating from being a Mentee. You can go find the Mentor Guide to exchange it for various items. -->
 		<set name="icon" val="icon.mentee_graduate_proof" />
 		<set name="is_stackable" val="true" />

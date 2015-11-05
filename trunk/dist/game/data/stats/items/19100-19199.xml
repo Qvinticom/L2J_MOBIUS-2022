@@ -1086,7 +1086,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="19166" name="Life Stone: Accessory (R-grade)" additionalName="" type="EtcItem">
+	<item id="19166" name="Life Stone: Accessory (R-grade)" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 85 or above when augmenting items. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1099,7 +1099,7 @@
 			<player level="85" />
 		</cond>
 	</item>
-	<item id="19167" name="Life Stone: Accessory (R95-grade)" additionalName="" type="EtcItem">
+	<item id="19167" name="Life Stone: Accessory (R95-grade)" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. -->
 		<set name="icon" val="icon.r95_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1112,7 +1112,7 @@
 			<player level="95" />
 		</cond>
 	</item>
-	<item id="19168" name="Life Stone: Accessory (R99-grade)" additionalName="" type="EtcItem">
+	<item id="19168" name="Life Stone: Accessory (R99-grade)" type="EtcItem">
 		<!-- Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 95 or above when augmenting items. -->
 		<set name="icon" val="icon.r99_mineral_unique_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1125,196 +1125,196 @@
 			<player level="99" />
 		</cond>
 	</item>
-	<item id="19169" name="Unidentified Requiem Shaper Fragment" additionalName="" type="EtcItem">
+	<item id="19169" name="Unidentified Requiem Shaper Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Shaper. -->
 		<set name="icon" val="icon.weapon_aspeda_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19170" name="Unidentified Requiem Cutter Fragment" additionalName="" type="EtcItem">
+	<item id="19170" name="Unidentified Requiem Cutter Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Cutter. -->
 		<set name="icon" val="icon.weapon_estia_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19171" name="Unidentified Requiem Slasher Fragment" additionalName="" type="EtcItem">
+	<item id="19171" name="Unidentified Requiem Slasher Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Slasher. -->
 		<set name="icon" val="icon.weapon_polion_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19172" name="Unidentified Requiem Avenger Fragment" additionalName="" type="EtcItem">
+	<item id="19172" name="Unidentified Requiem Avenger Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Avenger. -->
 		<set name="icon" val="icon.weapon_batista_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19173" name="Unidentified Requiem Fighter Fragment" additionalName="" type="EtcItem">
+	<item id="19173" name="Unidentified Requiem Fighter Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Fighter. -->
 		<set name="icon" val="icon.weapon_fantasma_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19174" name="Unidentified Requiem Stormer Fragment" additionalName="" type="EtcItem">
+	<item id="19174" name="Unidentified Requiem Stormer Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Stormer. -->
 		<set name="icon" val="icon.weapon_soryu_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19175" name="Unidentified Requiem Thrower Fragment" additionalName="" type="EtcItem">
+	<item id="19175" name="Unidentified Requiem Thrower Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Thrower. -->
 		<set name="icon" val="icon.weapon_grabathus_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19176" name="Unidentified Requiem Shooter Fragment" additionalName="" type="EtcItem">
+	<item id="19176" name="Unidentified Requiem Shooter Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Shooter. -->
 		<set name="icon" val="icon.weapon_shyayaka_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19177" name="Unidentified Requiem Buster Fragment" additionalName="" type="EtcItem">
+	<item id="19177" name="Unidentified Requiem Buster Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Buster. -->
 		<set name="icon" val="icon.weapon_kaynon_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19178" name="Unidentified Requiem Caster Fragment" additionalName="" type="EtcItem">
+	<item id="19178" name="Unidentified Requiem Caster Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Caster. -->
 		<set name="icon" val="icon.weapon_anatrian_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19179" name="Unidentified Requiem Retributer Fragment" additionalName="" type="EtcItem">
+	<item id="19179" name="Unidentified Requiem Retributer Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Requiem Retributer. -->
 		<set name="icon" val="icon.weapon_grankaz_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="188520" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19183" name="Unidentified Immortal Helmet Ingredient" additionalName="" type="EtcItem">
+	<item id="19183" name="Unidentified Immortal Helmet Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="24620" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19184" name="Unidentified Immortal Breastplate Ingredient" additionalName="" type="EtcItem">
+	<item id="19184" name="Unidentified Immortal Breastplate Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Breastplate. -->
 		<set name="icon" val="icon.armor_t501_u_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="65660" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19185" name="Unidentified Immortal Gaiter Ingredient" additionalName="" type="EtcItem">
+	<item id="19185" name="Unidentified Immortal Gaiter Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Gaiters. -->
 		<set name="icon" val="icon.armor_t501_l_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="41040" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19186" name="Unidentified Immortal Gauntlet Ingredient" additionalName="" type="EtcItem">
+	<item id="19186" name="Unidentified Immortal Gauntlet Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Gauntlets. -->
 		<set name="icon" val="icon.armor_t501_g_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19187" name="Unidentified Immortal Boot Ingredients" additionalName="" type="EtcItem">
+	<item id="19187" name="Unidentified Immortal Boot Ingredients" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Boots. -->
 		<set name="icon" val="icon.armor_t501_b_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19188" name="Unidentified Immortal Shield Ingredient" additionalName="" type="EtcItem">
+	<item id="19188" name="Unidentified Immortal Shield Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Shield. -->
 		<set name="icon" val="icon.weapon_sacon_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="17220" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19189" name="Unidentified Immortal Leather Helmet Ingredient" additionalName="" type="EtcItem">
+	<item id="19189" name="Unidentified Immortal Leather Helmet Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Leather Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="24620" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19190" name="Unidentified Immortal Leather Armor Ingredient" additionalName="" type="EtcItem">
+	<item id="19190" name="Unidentified Immortal Leather Armor Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Leather Armor. -->
 		<set name="icon" val="icon.armor_t502_u_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="41040" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19191" name="Unidentified Immortal Leather Legging Ingredient" additionalName="" type="EtcItem">
+	<item id="19191" name="Unidentified Immortal Leather Legging Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Leather Leggings. -->
 		<set name="icon" val="icon.armor_t502_l_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="48500" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19192" name="Unidentified Immortal Leather Glove Ingredient" additionalName="" type="EtcItem">
+	<item id="19192" name="Unidentified Immortal Leather Glove Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Leather Gloves. -->
 		<set name="icon" val="icon.armor_t502_g_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19193" name="Unidentified Immortal Leather Boot Ingredient" additionalName="" type="EtcItem">
+	<item id="19193" name="Unidentified Immortal Leather Boot Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Leather Boots. -->
 		<set name="icon" val="icon.armor_t502_b_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19194" name="Unidentified Immortal Circlet Ingredient" additionalName="" type="EtcItem">
+	<item id="19194" name="Unidentified Immortal Circlet Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Circlet. -->
 		<set name="icon" val="icon.armor_circlet_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="24620" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19195" name="Unidentified Immortal Tunic Ingredient" additionalName="" type="EtcItem">
+	<item id="19195" name="Unidentified Immortal Tunic Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Tunic. -->
 		<set name="icon" val="icon.armor_t503_u_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="65660" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19196" name="Unidentified Immortal Stocking Ingredient" additionalName="" type="EtcItem">
+	<item id="19196" name="Unidentified Immortal Stocking Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Stockings. -->
 		<set name="icon" val="icon.armor_t503_l_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="41040" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19197" name="Unidentified Immortal Glove Ingredient" additionalName="" type="EtcItem">
+	<item id="19197" name="Unidentified Immortal Glove Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Gloves. -->
 		<set name="icon" val="icon.armor_t503_g_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19198" name="Unidentified Immortal Shoe Ingredient" additionalName="" type="EtcItem">
+	<item id="19198" name="Unidentified Immortal Shoe Ingredient" type="EtcItem">
 		<!-- Main ingredient for making Unidentified Immortal Shoes. -->
 		<set name="icon" val="icon.armor_t503_b_i00_piece" />
 		<set name="weight" val="60" />
 		<set name="price" val="16400" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="19199" name="Unidentified Immortal Sigil Ingredient" additionalName="" type="EtcItem">
+	<item id="19199" name="Unidentified Immortal Sigil Ingredient" type="EtcItem">
 		<!-- Main ingredient for making an Unidentified Immortal Sigil. -->
 		<set name="icon" val="icon.weapon_karyen_i00_piece" />
 		<set name="weight" val="60" />

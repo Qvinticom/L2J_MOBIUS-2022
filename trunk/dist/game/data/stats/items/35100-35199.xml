@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35100" name="Dark Amaranthine Stormer" additionalName="" type="Weapon">
+	<item id="35100" name="Dark Amaranthine Stormer" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -22,7 +22,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35101" name="Dark Amaranthine Thrower" additionalName="" type="Weapon">
+	<item id="35101" name="Dark Amaranthine Thrower" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠDamage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -44,7 +44,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35102" name="Dark Amaranthine Shooter" additionalName="" type="Weapon">
+	<item id="35102" name="Dark Amaranthine Shooter" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -66,7 +66,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35103" name="Dark Amaranthine Buster" additionalName="" type="Weapon">
+	<item id="35103" name="Dark Amaranthine Buster" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠAcumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -88,7 +88,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35104" name="Dark Amaranthine Caster" additionalName="" type="Weapon">
+	<item id="35104" name="Dark Amaranthine Caster" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠEmpower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -111,7 +111,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35105" name="Dark Amaranthine Retributer" additionalName="" type="Weapon">
+	<item id="35105" name="Dark Amaranthine Retributer" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠMP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -135,7 +135,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35106" name="Dark Amaranthine Dualsword" additionalName="" type="Weapon">
+	<item id="35106" name="Dark Amaranthine Dualsword" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHaste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -157,7 +157,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35107" name="Dark Amaranthine Dual Dagger" additionalName="" type="Weapon">
+	<item id="35107" name="Dark Amaranthine Dual Dagger" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠDamage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -185,7 +185,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35108" name="Dark Amaranthine Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="35108" name="Dark Amaranthine Dual Blunt Weapon" type="Weapon">
 		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
@@ -2130,7 +2130,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35193" name="Bloody Amaranthine Shaper" additionalName="" type="Weapon">
+	<item id="35193" name="Bloody Amaranthine Shaper" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠGuidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2152,7 +2152,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35194" name="Bloody Amaranthine Cutter" additionalName="" type="Weapon">
+	<item id="35194" name="Bloody Amaranthine Cutter" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHaste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2174,7 +2174,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35195" name="Bloody Amaranthine Slasher" additionalName="" type="Weapon">
+	<item id="35195" name="Bloody Amaranthine Slasher" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2196,7 +2196,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35196" name="Bloody Amaranthine Avenger" additionalName="" type="Weapon">
+	<item id="35196" name="Bloody Amaranthine Avenger" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHaste, Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2219,7 +2219,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35197" name="Bloody Amaranthine Fighter" additionalName="" type="Weapon">
+	<item id="35197" name="Bloody Amaranthine Fighter" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2242,7 +2242,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35198" name="Bloody Amaranthine Stormer" additionalName="" type="Weapon">
+	<item id="35198" name="Bloody Amaranthine Stormer" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2264,7 +2264,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35199" name="Bloody Amaranthine Thrower" additionalName="" type="Weapon">
+	<item id="35199" name="Bloody Amaranthine Thrower" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠDamage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i00" />
 		<set name="default_action" val="EQUIP" />

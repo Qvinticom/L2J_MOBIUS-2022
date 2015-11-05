@@ -590,7 +590,7 @@
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
 	</item>
-	<item id="38382" name="Apprentice's Spellbook" additionalName="" type="Weapon">
+	<item id="38382" name="Apprentice's Spellbook" type="Weapon">
 		<set name="icon" val="icon.weapon_apprentices_spellbook_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="650" />
@@ -601,72 +601,72 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38383" name="Lady's Hairpin Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38383" name="Lady's Hairpin Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Lady's Hairpin with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38384" name="Party Mask Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38384" name="Party Mask Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Party Mask with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38385" name="Monocle Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38385" name="Monocle Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Monocle with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38386" name="Maiden's Hairpin Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38386" name="Maiden's Hairpin Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Maiden's Hairpin with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38387" name="Forget-me-not Hairpin Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38387" name="Forget-me-not Hairpin Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Forget-me-not Hairpin with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38388" name="Daisy Hairpin Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38388" name="Daisy Hairpin Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Daisy Hairpin with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38389" name="Little Angel Wings Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38389" name="Little Angel Wings Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain Little Angel Wings with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38390" name="Fairy Antennae Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38390" name="Fairy Antennae Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain Fairy Antennae with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38391" name="Chapeau Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38391" name="Chapeau Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Chapeau with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38392" name="Artisan's Goggles Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38392" name="Artisan's Goggles Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain Artisan's Goggles with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38393" name="Arrow-pierced Apple Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38393" name="Arrow-pierced Apple Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain an Arrow-pierced Apple with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38394" name="Pirate's Eyepatch Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38394" name="Pirate's Eyepatch Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Pirate's Eyepatch with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38395" name="Outlaw's Eyepatch Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38395" name="Outlaw's Eyepatch Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain an Outlaw's Eyepatch with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38396" name="Party Hat Pendant Pouch" additionalName="" type="EtcItem">
+	<item id="38396" name="Party Hat Pendant Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Party Hat with pendant options. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />

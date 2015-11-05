@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38600" name="Steel Weapon Pack" additionalName="" type="EtcItem">
+	<item id="38600" name="Steel Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain either a Requiem, Apocalypse, or Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38601" name="Steel Armor Pack" additionalName="" type="EtcItem">
+	<item id="38601" name="Steel Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain either Immortal, Twilight, or Seraph armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38602" name="Steel Full Plate Helmet" additionalName="" type="Armor">
+	<item id="38602" name="Steel Full Plate Helmet" type="Armor">
 		<!-- Steel Full Plate Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -24,7 +24,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38603" name="Steel Full Plate Armor" additionalName="" type="Armor">
+	<item id="38603" name="Steel Full Plate Armor" type="Armor">
 		<!-- Steel Full Plate Armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38604" name="Steel Full Plate Boots" additionalName="" type="Armor">
+	<item id="38604" name="Steel Full Plate Boots" type="Armor">
 		<!-- Steel Full Plate Boots. -->
 		<set name="icon" val="icon.armor_t62_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -47,7 +47,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38605" name="Steel Full Plate Gauntlets" additionalName="" type="Armor">
+	<item id="38605" name="Steel Full Plate Gauntlets" type="Armor">
 		<!-- Steel Full Plate Gauntlets. -->
 		<set name="icon" val="icon.armor_t62_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -59,7 +59,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38606" name="Steel Full Plate Shield" additionalName="" type="Weapon">
+	<item id="38606" name="Steel Full Plate Shield" type="Weapon">
 		<!-- Steel Full Plate Shield. -->
 		<set name="icon" val="icon.shield_full_plate_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -73,7 +73,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38607" name="Steel Karmian Tunic" additionalName="" type="Armor">
+	<item id="38607" name="Steel Karmian Tunic" type="Armor">
 		<!-- Steel Karmian Tunic. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -85,7 +85,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38608" name="Steel Karmian Stockings" additionalName="" type="Armor">
+	<item id="38608" name="Steel Karmian Stockings" type="Armor">
 		<!-- Steel Karmian Stockings. -->
 		<set name="icon" val="icon.armor_t53_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -97,7 +97,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38609" name="Steel Karmian Gloves" additionalName="" type="Armor">
+	<item id="38609" name="Steel Karmian Gloves" type="Armor">
 		<!-- Steel Karmian Gloves. -->
 		<set name="icon" val="icon.armor_t53_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -109,7 +109,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38610" name="Steel Karmian Boots" additionalName="" type="Armor">
+	<item id="38610" name="Steel Karmian Boots" type="Armor">
 		<!-- Steel Karmian Boots. -->
 		<set name="icon" val="icon.armor_t53_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -121,7 +121,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38611" name="Steel Plated Leather Armor" additionalName="" type="Armor">
+	<item id="38611" name="Steel Plated Leather Armor" type="Armor">
 		<!-- Steel Plated Leather Armor. -->
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -133,7 +133,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38612" name="Steel Plated Leather Gaiters" additionalName="" type="Armor">
+	<item id="38612" name="Steel Plated Leather Gaiters" type="Armor">
 		<!-- Steel Plated Leather Gaiters. -->
 		<set name="icon" val="icon.armor_t47_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -145,7 +145,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38613" name="Steel Plated Leather Boots" additionalName="" type="Armor">
+	<item id="38613" name="Steel Plated Leather Boots" type="Armor">
 		<!-- Steel Plated Leather Boots. -->
 		<set name="icon" val="icon.armor_t47_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -157,7 +157,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38614" name="Steel Plated Leather Gloves" additionalName="" type="Armor">
+	<item id="38614" name="Steel Plated Leather Gloves" type="Armor">
 		<!-- Steel Plated Leather Gloves. -->
 		<set name="icon" val="icon.armor_t47_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -169,7 +169,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38615" name="Steel Doom Helmet" additionalName="" type="Armor">
+	<item id="38615" name="Steel Doom Helmet" type="Armor">
 		<!-- Steel Doom Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -181,7 +181,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38616" name="Steel Doom Gloves (Heavy Armor)" additionalName="" type="Armor">
+	<item id="38616" name="Steel Doom Gloves (Heavy Armor)" type="Armor">
 		<!-- Steel Doom Gloves (Heavy Armor). -->
 		<set name="icon" val="icon.armor_t71_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -193,7 +193,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38617" name="Steel Doom Boots (Heavy Armor)" additionalName="" type="Armor">
+	<item id="38617" name="Steel Doom Boots (Heavy Armor)" type="Armor">
 		<!-- Steel Doom Boots (Heavy Armor). -->
 		<set name="icon" val="icon.armor_t71_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -205,7 +205,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38618" name="Steel Doom Plate Armor" additionalName="" type="Armor">
+	<item id="38618" name="Steel Doom Plate Armor" type="Armor">
 		<!-- Steel Doom Plate Armor. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -216,7 +216,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38619" name="Steel Doom Shield" additionalName="" type="Weapon">
+	<item id="38619" name="Steel Doom Shield" type="Weapon">
 		<!-- Steel Doom Shield. -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -230,7 +230,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38620" name="Steel Avadon Robe" additionalName="" type="Armor">
+	<item id="38620" name="Steel Avadon Robe" type="Armor">
 		<!-- Steel Avadon Robe. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -242,7 +242,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38621" name="Steel Avadon Circlet" additionalName="" type="Armor">
+	<item id="38621" name="Steel Avadon Circlet" type="Armor">
 		<!-- Steel Avadon Circlet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38622" name="Steel Avadon Gloves (Robe)" additionalName="" type="Armor">
+	<item id="38622" name="Steel Avadon Gloves (Robe)" type="Armor">
 		<!-- Steel Avadon Gloves (Robe). -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -266,7 +266,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38623" name="Steel Avadon Boots (Robe)" additionalName="" type="Armor">
+	<item id="38623" name="Steel Avadon Boots (Robe)" type="Armor">
 		<!-- Steel Avadon Boots (Robe). -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -278,7 +278,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38624" name="Steel Avadon Shield" additionalName="" type="Weapon">
+	<item id="38624" name="Steel Avadon Shield" type="Weapon">
 		<!-- Steel Avadon Shield. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38625" name="Steel Leather Armor of Doom" additionalName="" type="Armor">
+	<item id="38625" name="Steel Leather Armor of Doom" type="Armor">
 		<!-- Steel Leather Armor of Doom. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -304,7 +304,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38626" name="Steel Doom Gloves (Light Armor)" additionalName="" type="Armor">
+	<item id="38626" name="Steel Doom Gloves (Light Armor)" type="Armor">
 		<!-- Steel Doom Gloves (Light Armor). -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -316,7 +316,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38627" name="Steel Doom Boots (Light Armor)" additionalName="" type="Armor">
+	<item id="38627" name="Steel Doom Boots (Light Armor)" type="Armor">
 		<!-- Steel Doom Boots (Light Armor). -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -328,7 +328,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38628" name="Steel Armor of Nightmare" additionalName="" type="Armor">
+	<item id="38628" name="Steel Armor of Nightmare" type="Armor">
 		<!-- Steel Armor of Nightmare. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38629" name="Steel Helm of Nightmare" additionalName="" type="Armor">
+	<item id="38629" name="Steel Helm of Nightmare" type="Armor">
 		<!-- Steel Helm of Nightmare. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -351,7 +351,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38630" name="Steel Gauntlets of Nightmare (Heavy Armor)" additionalName="" type="Armor">
+	<item id="38630" name="Steel Gauntlets of Nightmare (Heavy Armor)" type="Armor">
 		<!-- Steel Gauntlets of Nightmare (Heavy Armor). -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -363,7 +363,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38631" name="Steel Boots of Nightmare (Heavy Armor)" additionalName="" type="Armor">
+	<item id="38631" name="Steel Boots of Nightmare (Heavy Armor)" type="Armor">
 		<!-- Steel Boots of Nightmare (Heavy Armor). -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -375,7 +375,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38632" name="Steel Shield of Nightmare" additionalName="" type="Weapon">
+	<item id="38632" name="Steel Shield of Nightmare" type="Weapon">
 		<!-- Steel Shield of Nightmare. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -389,7 +389,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38633" name="Steel Dark Crystal Robe" additionalName="" type="Armor">
+	<item id="38633" name="Steel Dark Crystal Robe" type="Armor">
 		<!-- Steel Dark Crystal Robe. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -401,7 +401,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38634" name="Steel Dark Crystal Helmet" additionalName="" type="Armor">
+	<item id="38634" name="Steel Dark Crystal Helmet" type="Armor">
 		<!-- Steel Dark Crystal Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -413,7 +413,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38635" name="Steel Dark Crystal Gloves (Robe)" additionalName="" type="Armor">
+	<item id="38635" name="Steel Dark Crystal Gloves (Robe)" type="Armor">
 		<!-- Steel Dark Crystal Gloves (Robe). -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -425,7 +425,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38636" name="Steel Dark Crystal Boots (Robe)" additionalName="" type="Armor">
+	<item id="38636" name="Steel Dark Crystal Boots (Robe)" type="Armor">
 		<!-- Steel Dark Crystal Boots (Robe). -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -437,7 +437,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38637" name="Steel Dark Crystal Shield" additionalName="" type="Weapon">
+	<item id="38637" name="Steel Dark Crystal Shield" type="Weapon">
 		<!-- Steel Dark Crystal Shield. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -451,7 +451,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38638" name="Steel Dark Crystal Leather Armor" additionalName="" type="Armor">
+	<item id="38638" name="Steel Dark Crystal Leather Armor" type="Armor">
 		<!-- Steel Dark Crystal Leather Armor. -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -463,7 +463,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38639" name="Steel Dark Crystal Leggings" additionalName="" type="Armor">
+	<item id="38639" name="Steel Dark Crystal Leggings" type="Armor">
 		<!-- Steel Dark Crystal Leggings. -->
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -475,7 +475,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38640" name="Steel Dark Crystal Gloves (Light Armor)" additionalName="" type="Armor">
+	<item id="38640" name="Steel Dark Crystal Gloves (Light Armor)" type="Armor">
 		<!-- Steel Dark Crystal Gloves (Light Armor). -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -487,7 +487,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38641" name="Steel Dark Crystal Boots (Light Armor)" additionalName="" type="Armor">
+	<item id="38641" name="Steel Dark Crystal Boots (Light Armor)" type="Armor">
 		<!-- Steel Dark Crystal Boots (Light Armor). -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -499,7 +499,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38642" name="Steel Imperial Crusader Breastplate" additionalName="" type="Armor">
+	<item id="38642" name="Steel Imperial Crusader Breastplate" type="Armor">
 		<!-- Steel Imperial Crusader Breastplate. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -511,7 +511,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38643" name="Steel Imperial Crusader Gaiters" additionalName="" type="Armor">
+	<item id="38643" name="Steel Imperial Crusader Gaiters" type="Armor">
 		<!-- Steel Imperial Crusader Gaiters. -->
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -523,7 +523,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38644" name="Steel Imperial Crusader Gauntlets" additionalName="" type="Armor">
+	<item id="38644" name="Steel Imperial Crusader Gauntlets" type="Armor">
 		<!-- Steel Imperial Crusader Gauntlets. -->
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -535,7 +535,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38645" name="Steel Imperial Crusader Boots" additionalName="" type="Armor">
+	<item id="38645" name="Steel Imperial Crusader Boots" type="Armor">
 		<!-- Steel Imperial Crusader Boots. -->
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38646" name="Steel Imperial Crusader Helmet" additionalName="" type="Armor">
+	<item id="38646" name="Steel Imperial Crusader Helmet" type="Armor">
 		<!-- Steel Imperial Crusader Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -559,7 +559,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38647" name="Steel Imperial Crusader Shield" additionalName="" type="Weapon">
+	<item id="38647" name="Steel Imperial Crusader Shield" type="Weapon">
 		<!-- Steel Imperial Crusader Shield. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -573,7 +573,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38648" name="Steel Major Arcana Robe" additionalName="" type="Armor">
+	<item id="38648" name="Steel Major Arcana Robe" type="Armor">
 		<!-- Steel Major Arcana Robe. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38649" name="Steel Major Arcana Gloves" additionalName="" type="Armor">
+	<item id="38649" name="Steel Major Arcana Gloves" type="Armor">
 		<!-- Steel Major Arcana Gloves. -->
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38650" name="Steel Major Arcana Boots" additionalName="" type="Armor">
+	<item id="38650" name="Steel Major Arcana Boots" type="Armor">
 		<!-- Steel Major Arcana Boots. -->
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -609,7 +609,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38651" name="Steel Major Arcana Circlet" additionalName="" type="Armor">
+	<item id="38651" name="Steel Major Arcana Circlet" type="Armor">
 		<!-- Steel Major Arcana Circlet. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -621,7 +621,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38652" name="Steel Arcana Sigil" additionalName="" type="Armor">
+	<item id="38652" name="Steel Arcana Sigil" type="Armor">
 		<!-- Steel Arcana Sigil. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38653" name="Steel Draconic Leather Armor" additionalName="" type="Armor">
+	<item id="38653" name="Steel Draconic Leather Armor" type="Armor">
 		<!-- Steel Draconic Leather Armor. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38654" name="Steel Draconic Leather Gloves" additionalName="" type="Armor">
+	<item id="38654" name="Steel Draconic Leather Gloves" type="Armor">
 		<!-- Steel Draconic Leather Gloves. -->
 		<set name="icon" val="icon.armor_t89_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -658,7 +658,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38655" name="Steel Draconic Leather Boots" additionalName="" type="Armor">
+	<item id="38655" name="Steel Draconic Leather Boots" type="Armor">
 		<!-- Steel Draconic Leather Boots. -->
 		<set name="icon" val="icon.armor_t89_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38656" name="Steel Draconic Leather Helmet" additionalName="" type="Armor">
+	<item id="38656" name="Steel Draconic Leather Helmet" type="Armor">
 		<!-- Steel Draconic Leather Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -682,7 +682,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38657" name="Steel Dynasty Breastplate" additionalName="" type="Armor">
+	<item id="38657" name="Steel Dynasty Breastplate" type="Armor">
 		<!-- Steel Dynasty Breastplate. -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -694,7 +694,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38658" name="Steel Dynasty Gaiters" additionalName="" type="Armor">
+	<item id="38658" name="Steel Dynasty Gaiters" type="Armor">
 		<!-- Steel Dynasty Gaiters. -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -706,7 +706,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38659" name="Steel Dynasty Helmet" additionalName="" type="Armor">
+	<item id="38659" name="Steel Dynasty Helmet" type="Armor">
 		<!-- Steel Dynasty Helmet. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -718,7 +718,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38660" name="Steel Dynasty Gauntlets" additionalName="" type="Armor">
+	<item id="38660" name="Steel Dynasty Gauntlets" type="Armor">
 		<!-- Steel Dynasty Gauntlets. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -730,7 +730,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38661" name="Steel Dynasty Boots" additionalName="" type="Armor">
+	<item id="38661" name="Steel Dynasty Boots" type="Armor">
 		<!-- Steel Dynasty Boots. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -742,7 +742,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38662" name="Steel Dynasty Shield" additionalName="" type="Weapon">
+	<item id="38662" name="Steel Dynasty Shield" type="Weapon">
 		<!-- Steel Dynasty Shield. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -756,7 +756,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="38663" name="Steel Dynasty Tunic" additionalName="" type="Armor">
+	<item id="38663" name="Steel Dynasty Tunic" type="Armor">
 		<!-- Steel Dynasty Tunic. -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -768,7 +768,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38664" name="Steel Dynasty Stockings" additionalName="" type="Armor">
+	<item id="38664" name="Steel Dynasty Stockings" type="Armor">
 		<!-- Steel Dynasty Stockings. -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -780,7 +780,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38665" name="Steel Dynasty Circlet" additionalName="" type="Armor">
+	<item id="38665" name="Steel Dynasty Circlet" type="Armor">
 		<!-- Steel Dynasty Circlet. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -792,7 +792,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38666" name="Steel Dynasty Gloves" additionalName="" type="Armor">
+	<item id="38666" name="Steel Dynasty Gloves" type="Armor">
 		<!-- Steel Dynasty Gloves. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -804,7 +804,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38667" name="Steel Dynasty Shoes" additionalName="" type="Armor">
+	<item id="38667" name="Steel Dynasty Shoes" type="Armor">
 		<!-- Steel Dynasty Shoes. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -816,7 +816,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38668" name="Steel Dynasty Sigil" additionalName="" type="Armor">
+	<item id="38668" name="Steel Dynasty Sigil" type="Armor">
 		<!-- Steel Dynasty Sigil. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -829,7 +829,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38669" name="Steel Dynasty Leather Armor" additionalName="" type="Armor">
+	<item id="38669" name="Steel Dynasty Leather Armor" type="Armor">
 		<!-- Steel Dynasty Leather Armor. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -841,7 +841,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38670" name="Steel Dynasty Leather Leggings" additionalName="" type="Armor">
+	<item id="38670" name="Steel Dynasty Leather Leggings" type="Armor">
 		<!-- Steel Dynasty Leather Leggings. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -853,7 +853,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38671" name="Steel Dynasty Leather Helmet" additionalName="" type="Armor">
+	<item id="38671" name="Steel Dynasty Leather Helmet" type="Armor">
 		<!-- Steel Dynasty Leather Helmet. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38672" name="Steel Dynasty Leather Gloves" additionalName="" type="Armor">
+	<item id="38672" name="Steel Dynasty Leather Gloves" type="Armor">
 		<!-- Steel Dynasty Leather Gloves. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -877,7 +877,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38673" name="Steel Dynasty Leather Boots" additionalName="" type="Armor">
+	<item id="38673" name="Steel Dynasty Leather Boots" type="Armor">
 		<!-- Steel Dynasty Leather Boots. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -889,7 +889,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38674" name="Steel Moonstone Earring" additionalName="" type="Armor">
+	<item id="38674" name="Steel Moonstone Earring" type="Armor">
 		<!-- Steel Moonstone Earring. -->
 		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -901,7 +901,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38675" name="Steel Aquastone Necklace" additionalName="" type="Armor">
+	<item id="38675" name="Steel Aquastone Necklace" type="Armor">
 		<!-- Steel Aquastone Necklace. -->
 		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -913,7 +913,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38676" name="Steel Aquastone Ring" additionalName="" type="Armor">
+	<item id="38676" name="Steel Aquastone Ring" type="Armor">
 		<!-- Steel Aquastone Ring. -->
 		<set name="icon" val="icon.accessary_aquastone_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -925,7 +925,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38677" name="Steel Adamantite Earring" additionalName="" type="Armor">
+	<item id="38677" name="Steel Adamantite Earring" type="Armor">
 		<!-- Steel Adamantite Earring. -->
 		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -937,7 +937,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38678" name="Steel Adamantite Necklace" additionalName="" type="Armor">
+	<item id="38678" name="Steel Adamantite Necklace" type="Armor">
 		<!-- Steel Adamantite Necklace. -->
 		<set name="icon" val="icon.accessary_adamantite_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -949,7 +949,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38679" name="Steel Adamantite Ring" additionalName="" type="Armor">
+	<item id="38679" name="Steel Adamantite Ring" type="Armor">
 		<!-- Steel Adamantite Ring. -->
 		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -961,7 +961,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38680" name="Steel Phoenix Earring" additionalName="" type="Armor">
+	<item id="38680" name="Steel Phoenix Earring" type="Armor">
 		<!-- Steel Phoenix Earring. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -973,7 +973,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38681" name="Steel Phoenix Necklace" additionalName="" type="Armor">
+	<item id="38681" name="Steel Phoenix Necklace" type="Armor">
 		<!-- Steel Phoenix Necklace. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -985,7 +985,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38682" name="Steel Phoenix Ring" additionalName="" type="Armor">
+	<item id="38682" name="Steel Phoenix Ring" type="Armor">
 		<!-- Steel Phoenix Ring. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -997,7 +997,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38683" name="Steel Tateossian Earring" additionalName="" type="Armor">
+	<item id="38683" name="Steel Tateossian Earring" type="Armor">
 		<!-- Steel Tateossian Earring. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1009,7 +1009,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38684" name="Steel Tateossian Necklace" additionalName="" type="Armor">
+	<item id="38684" name="Steel Tateossian Necklace" type="Armor">
 		<!-- Steel Tateossian Necklace. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,7 +1021,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38685" name="Steel Tateossian Ring" additionalName="" type="Armor">
+	<item id="38685" name="Steel Tateossian Ring" type="Armor">
 		<!-- Steel Tateossian Ring. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1033,7 +1033,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38686" name="Steel Dynasty Earring" additionalName="" type="Armor">
+	<item id="38686" name="Steel Dynasty Earring" type="Armor">
 		<!-- Steel Dynasty Earring. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1045,7 +1045,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38687" name="Steel Dynasty Necklace" additionalName="" type="Armor">
+	<item id="38687" name="Steel Dynasty Necklace" type="Armor">
 		<!-- Steel Dynasty Necklace. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38688" name="Steel Dynasty Ring" additionalName="" type="Armor">
+	<item id="38688" name="Steel Dynasty Ring" type="Armor">
 		<!-- Steel Dynasty Ring. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38689" name="Steel Immortal Earring (30-day)" additionalName="" type="Armor">
+	<item id="38689" name="Steel Immortal Earring (30-day)" type="Armor">
 		<!-- 30-day. -->
 		<set name="icon" val="icon.r1_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1081,7 +1081,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38690" name="Steel Immortal Necklace (30-day)" additionalName="" type="Armor">
+	<item id="38690" name="Steel Immortal Necklace (30-day)" type="Armor">
 		<!-- 30-day. -->
 		<set name="icon" val="icon.r1_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1093,7 +1093,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38691" name="Steel Immortal Ring (30-day)" additionalName="" type="Armor">
+	<item id="38691" name="Steel Immortal Ring (30-day)" type="Armor">
 		<!-- 30-day. -->
 		<set name="icon" val="icon.r1_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1105,7 +1105,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="38692" name="Steel StormBringer" additionalName="" type="Weapon">
+	<item id="38692" name="Steel StormBringer" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 86. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1120,7 +1120,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38693" name="Steel Yaksa Mace" additionalName="" type="Weapon">
+	<item id="38693" name="Steel Yaksa Mace" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax HP + 25%. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1136,7 +1136,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38694" name="Steel Saber*Sword of Revolution" additionalName="" type="Weapon">
+	<item id="38694" name="Steel Saber*Sword of Revolution" type="Weapon">
 		<!-- Cannot augment. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1151,7 +1151,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38695" name="Steel Mysterious Sword" additionalName="" type="Weapon">
+	<item id="38695" name="Steel Mysterious Sword" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1166,7 +1166,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38696" name="Steel Body Slasher" additionalName="" type="Weapon">
+	<item id="38696" name="Steel Body Slasher" type="Weapon">
 		<!-- Cannot augment. \n(Soul Crystal Enhancement)\nIn a Critical attack, 34% chance of inflicting Stun. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1181,7 +1181,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38697" name="Steel Soulfire Dirk" additionalName="" type="Weapon">
+	<item id="38697" name="Steel Soulfire Dirk" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax MP + 30%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1196,7 +1196,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38698" name="Steel Crystallized Ice Bow" additionalName="" type="Weapon">
+	<item id="38698" name="Steel Crystallized Ice Bow" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nAccuracy + 5. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1211,7 +1211,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38699" name="Steel Schlager" additionalName="" type="Weapon">
+	<item id="38699" name="Steel Schlager" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Flamberge\n(Soul Crystal Enhancement)\nCritical + 86. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />

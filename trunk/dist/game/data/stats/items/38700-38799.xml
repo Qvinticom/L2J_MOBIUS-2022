@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38700" name="Steel Soldat Estoc" additionalName="" type="Weapon">
+	<item id="38700" name="Steel Soldat Estoc" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Stormbringer\n(Soul Crystal Enhancement)\nCritical + 86.\nWhen enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -15,7 +15,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38701" name="Steel Arbalest" additionalName="" type="Weapon">
+	<item id="38701" name="Steel Arbalest" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Crystallized Bow\n(Soul Crystal Enhancement)\nAccuracy + 5. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -30,7 +30,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38702" name="Steel Flamberge" additionalName="" type="Weapon">
+	<item id="38702" name="Steel Flamberge" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 86. -->
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -45,7 +45,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38703" name="Steel Chakram" additionalName="" type="Weapon">
+	<item id="38703" name="Steel Chakram" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nWhen HP drops to 60% or below, Atk. Spd. + 13%. -->
 		<set name="icon" val="icon.weapon_chakram_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -61,7 +61,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38704" name="Steel Sword of Valhalla" additionalName="" type="Weapon">
+	<item id="38704" name="Steel Sword of Valhalla" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -76,7 +76,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38705" name="Steel Spell Breaker" additionalName="" type="Weapon">
+	<item id="38705" name="Steel Spell Breaker" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -92,7 +92,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38706" name="Steel StormBringer*Ultimate Sword" additionalName="" type="Weapon">
+	<item id="38706" name="Steel StormBringer*Ultimate Sword" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above, P. Atk. + 166 in a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -107,7 +107,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38707" name="Steel Wizard's Tear" additionalName="" type="Weapon">
+	<item id="38707" name="Steel Wizard's Tear" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -122,7 +122,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38708" name="Steel Great Axe" additionalName="" type="Weapon">
+	<item id="38708" name="Steel Great Axe" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nIn a Critical attack, 27% chance of inflicting Stun. -->
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -137,7 +137,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38709" name="Steel Twilight Knife" additionalName="" type="Weapon">
+	<item id="38709" name="Steel Twilight Knife" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 71. -->
 		<set name="icon" val="icon.weapon_hell_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -152,7 +152,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38710" name="Steel Dark Elven Longbow" additionalName="" type="Weapon">
+	<item id="38710" name="Steel Dark Elven Longbow" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nIn a normal Critical Attack, 41% chance of inflicting Bleed. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -167,7 +167,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38711" name="Steel Innominate Victory" additionalName="" type="Weapon">
+	<item id="38711" name="Steel Innominate Victory" type="Weapon">
 		<!-- Cannot augment. Kamael only: Greatsword\n(Soul Crystal Enhancement)\nCritical + 68. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -183,7 +183,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38712" name="Steel Military Fleuret" additionalName="" type="Weapon">
+	<item id="38712" name="Steel Military Fleuret" type="Weapon">
 		<!-- Cannot augment. Kamael only: Keshanberk\n(Soul Crystal Enhancement)\nCritical + 68.\nWhen enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -198,7 +198,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38713" name="Steel Hell Hound" additionalName="" type="Weapon">
+	<item id="38713" name="Steel Hell Hound" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Bow of Peril\n(Soul Crystal Enhancement)\nSkill MP Consumption - 12%. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -213,7 +213,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38714" name="Steel Great Sword" additionalName="" type="Weapon">
+	<item id="38714" name="Steel Great Sword" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 68. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -228,7 +228,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38715" name="Steel Arthro Nail" additionalName="" type="Weapon">
+	<item id="38715" name="Steel Arthro Nail" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nWhen HP drops to 60% or below, Atk. Spd. + 10%. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -244,7 +244,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38716" name="Steel Elemental Sword" additionalName="" type="Weapon">
+	<item id="38716" name="Steel Elemental Sword" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCuring magic use, MP Consumption + 15% and M. Atk. + 153. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -259,7 +259,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38717" name="Steel Spiritual Eye" additionalName="" type="Weapon">
+	<item id="38717" name="Steel Spiritual Eye" type="Weapon">
 		<!-- Cannot augment. \n(Soul Crystal Enhancement)\n Casting Spd. + 15%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38718" name="Steel Keshanberk*Keshanberk" additionalName="" type="Weapon">
+	<item id="38718" name="Steel Keshanberk*Keshanberk" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above, Atk. Spd. + 8%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -290,7 +290,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38719" name="Steel Sword of Miracles" additionalName="" type="Weapon">
+	<item id="38719" name="Steel Sword of Miracles" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -305,7 +305,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38720" name="Steel Halberd" additionalName="" type="Weapon">
+	<item id="38720" name="Steel Halberd" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nIn a Critical attack, 25% chance of inflicting Stun.Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -320,7 +320,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38721" name="Steel Bloody Orchid" additionalName="" type="Weapon">
+	<item id="38721" name="Steel Bloody Orchid" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 67. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -335,7 +335,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38722" name="Steel Carnage Bow" additionalName="" type="Weapon">
+	<item id="38722" name="Steel Carnage Bow" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nIn a normal Critical Attack, 35% chance of inflicting Bleed. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -350,7 +350,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38723" name="Steel White Lightning" additionalName="" type="Weapon">
+	<item id="38723" name="Steel White Lightning" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Tallum Blade\n(Soul Crystal Enhancement)\nAtk. Spd. + 6%. Additional damage during PvP.\nWhen enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. -->
 		<set name="icon" val="icon.weapon_lightning_blaze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -365,7 +365,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38724" name="Steel Doomchanter" additionalName="" type="Weapon">
+	<item id="38724" name="Steel Doomchanter" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Carnage Bow\n(Soul Crystal Enhancement)\nIn a normal Critical Attack, 35% chance of inflicting Bleed. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -380,7 +380,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38725" name="Steel Divine Pain" additionalName="" type="Weapon">
+	<item id="38725" name="Steel Divine Pain" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Infernal Master\n(Soul Crystal Enhancement)\nCritical + 61. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -396,7 +396,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38726" name="Steel Infernal Master" additionalName="" type="Weapon">
+	<item id="38726" name="Steel Infernal Master" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 61. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38727" name="Steel Blood Tornado" additionalName="" type="Weapon">
+	<item id="38727" name="Steel Blood Tornado" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 61. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -427,7 +427,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38728" name="Steel Forgotten Blade" additionalName="" type="Weapon">
+	<item id="38728" name="Steel Forgotten Blade" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 84. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -442,7 +442,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38729" name="Steel Basalt Battlehammer" additionalName="" type="Weapon">
+	<item id="38729" name="Steel Basalt Battlehammer" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax HP + 25%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -458,7 +458,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38730" name="Steel Tallum Blade*Dark Legion's Edge" additionalName="" type="Weapon">
+	<item id="38730" name="Steel Tallum Blade*Dark Legion's Edge" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above, Max HP + 15%, Max MP + 20%, Max CP + 30%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -473,7 +473,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38731" name="Steel Arcana Mace" additionalName="" type="Weapon">
+	<item id="38731" name="Steel Arcana Mace" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -489,7 +489,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38732" name="Steel Saint Spear" additionalName="" type="Weapon">
+	<item id="38732" name="Steel Saint Spear" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nAtk. Spd. + 7%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -504,7 +504,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38733" name="Steel Angel Slayer" additionalName="" type="Weapon">
+	<item id="38733" name="Steel Angel Slayer" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nAtk. Spd. + 7%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -519,7 +519,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38734" name="Steel Gram" additionalName="" type="Weapon">
+	<item id="38734" name="Steel Gram" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Heaven's Divider\n(Soul Crystal Enhancement)\nCritical + 84. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -535,7 +535,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38735" name="Steel Laevateinn" additionalName="" type="Weapon">
+	<item id="38735" name="Steel Laevateinn" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Forgotten Blade\n(Soul Crystal Enhancement)\nCritical + 84. Additional damage during PvP.\nWhen enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -550,7 +550,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38736" name="Steel Sarunga" additionalName="" type="Weapon">
+	<item id="38736" name="Steel Sarunga" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Draconic Bow\n(Soul Crystal Enhancement)\nCritical + 88. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -565,7 +565,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38737" name="Steel Heaven's Divider" additionalName="" type="Weapon">
+	<item id="38737" name="Steel Heaven's Divider" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 84. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -580,7 +580,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38738" name="Steel Demon Splinter" additionalName="" type="Weapon">
+	<item id="38738" name="Steel Demon Splinter" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 80. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38739" name="Steel Dynasty Phantom" additionalName="" type="Weapon">
+	<item id="38739" name="Steel Dynasty Phantom" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCasting Spd. + 15%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -611,7 +611,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38740" name="Steel Dynasty Cudgel" additionalName="" type="Weapon">
+	<item id="38740" name="Steel Dynasty Cudgel" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nMax HP + 25%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38741" name="Steel Dynasty Dualsword" additionalName="" type="Weapon">
+	<item id="38741" name="Steel Dynasty Dualsword" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above, Critical + 109, Max HP + 10%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -642,7 +642,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38742" name="Steel Dynasty Halberd" additionalName="" type="Weapon">
+	<item id="38742" name="Steel Dynasty Halberd" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nIn a Critical Attack, 48% chance of inflicting Stun. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -657,7 +657,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38743" name="Steel Dynasty Knife" additionalName="" type="Weapon">
+	<item id="38743" name="Steel Dynasty Knife" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 116. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38744" name="Steel Dynasty Crossbow" additionalName="" type="Weapon">
+	<item id="38744" name="Steel Dynasty Crossbow" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Dynasty Bow\n(Soul Crystal Enhancement)\nCritical + 116. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -687,7 +687,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38745" name="Steel Dynasty Ancient Sword" additionalName="" type="Weapon">
+	<item id="38745" name="Steel Dynasty Ancient Sword" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Dysnasty Blade\n(Soul Crystal Enhancement)\nCritical + 111. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -703,7 +703,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38746" name="Steel Dynasty Rapier" additionalName="" type="Weapon">
+	<item id="38746" name="Steel Dynasty Rapier" type="Weapon">
 		<!-- Cannot augment. Kamael only: Convert - Dynasty Sword\n(Soul Crystal Enhancement)\nCritical + 111. Additional damage during PvP.\nWhen enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -718,7 +718,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38747" name="Steel Dynasty Blade" additionalName="" type="Weapon">
+	<item id="38747" name="Steel Dynasty Blade" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 111. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -733,7 +733,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38748" name="Steel Dynasty Bagh-Nakh" additionalName="" type="Weapon">
+	<item id="38748" name="Steel Dynasty Bagh-Nakh" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nAtk. Spd. + 10%. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -749,7 +749,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38749" name="Steel Dynasty Bow" additionalName="" type="Weapon">
+	<item id="38749" name="Steel Dynasty Bow" type="Weapon">
 		<!-- Cannot augment.\n(Soul Crystal Enhancement)\nCritical + 116. Additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -764,42 +764,42 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38750" name="Lara the Cat's Card Key" additionalName="" type="EtcItem">
+	<item id="38750" name="Lara the Cat's Card Key" type="EtcItem">
 		<!-- Carry this to pass for the Lineage II business team. You need this to receive buffs from Kuhina. Temporary event item. -->
 		<set name="icon" val="icon.cardkey_raracat" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38751" name="Lara the Cat's Business Card" additionalName="" type="EtcItem">
+	<item id="38751" name="Lara the Cat's Business Card" type="EtcItem">
 		<!-- Kuhina's offering a prize for anyone who collects 10 or 13 of her business cards. Temporary event item. -->
 		<set name="icon" val="icon.namecard_raracat" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38752" name="Lara the Cat's Secret Gift" additionalName="" type="EtcItem">
+	<item id="38752" name="Lara the Cat's Secret Gift" type="EtcItem">
 		<!-- A gift from Kuhina! Seems a bit hastily thrown together, but hey, it's a gift. Temporary event item. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38753" name="Lara the Cat's Quality Secret Gift" additionalName="" type="EtcItem">
+	<item id="38753" name="Lara the Cat's Quality Secret Gift" type="EtcItem">
 		<!-- A gift from Funog! A tremendous gift awaits if you're lucky. Temporary event item. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38754" name="Shiny Elemental Shirt + 8 Coupon" additionalName="" type="EtcItem">
+	<item id="38754" name="Shiny Elemental Shirt + 8 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt + 8. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38755" name="Shiny Elemental Shirt + 7 Coupon" additionalName="" type="EtcItem">
+	<item id="38755" name="Shiny Elemental Shirt + 7 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt + 7. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38756" name="Chaos Essence Pack" additionalName="" type="EtcItem">
+	<item id="38756" name="Chaos Essence Pack" type="EtcItem">
 		<!-- Double-click to obtain a Chaos Essence (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38757" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="38757" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Success rate + 20% for enchanting R-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i02" />
 		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_WP" />
@@ -810,7 +810,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="38758" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="38758" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Success rate + 30% for enchanting R-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i02" />
 		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_AM" />
@@ -821,7 +821,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="38759" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="38759" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
 		<!-- Success rate + 20% for enchanting S-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_wp_stone_i01" />
 		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_WP" />
@@ -832,7 +832,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="38760" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="38760" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
 		<!-- Success rate + 30% for enchanting S-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_high_ench_amr_stone_i01" />
 		<set name="etcitem_type" val="BLESS_SCRL_INC_ENCHANT_PROP_AM" />
@@ -843,22 +843,22 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="38761" name="Energy of Destruction 3-unit Pack" additionalName="" type="EtcItem">
+	<item id="38761" name="Energy of Destruction 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38762" name="Energy of Destruction 20-unit Pack" additionalName="" type="EtcItem">
+	<item id="38762" name="Energy of Destruction 20-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 20. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38763" name="Energy of Destruction 100-unit Pack" additionalName="" type="EtcItem">
+	<item id="38763" name="Energy of Destruction 100-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 100. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38764" name="My Teleport Pack" additionalName="" type="EtcItem">
+	<item id="38764" name="My Teleport Pack" type="EtcItem">
 		<!-- Double-click to obtain a My Teleport Book and My Teleport Scroll x 10. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -868,7 +868,7 @@
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38766" name="La Vie En Rose's Brooch" additionalName="" type="Armor">
+	<item id="38766" name="La Vie En Rose's Brooch" type="Armor">
 		<!-- Activates 2 jewel slots when equipped. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<set stat="broochJewels" val="2" />
 		</for>
 	</item>
-	<item id="38767" name="La Vie En Rose's Noble Brooch" additionalName="" type="Armor">
+	<item id="38767" name="La Vie En Rose's Noble Brooch" type="Armor">
 		<!-- Activates 3 jewel slots when equipped. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -896,7 +896,7 @@
 			<set stat="broochJewels" val="3" />
 		</for>
 	</item>
-	<item id="38768" name="La Vie En Rose's Brilliant Brooch" additionalName="" type="Armor">
+	<item id="38768" name="La Vie En Rose's Brilliant Brooch" type="Armor">
 		<!-- Activates 4 jewel slots when equipped. Inventory Slot + 12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38775" name="Sealed Antharas Shaper Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38775" name="Sealed Antharas Shaper Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -959,7 +959,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38776" name="Sealed Antharas Slasher Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38776" name="Sealed Antharas Slasher Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -971,7 +971,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38777" name="Sealed Antharas Thrower Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38777" name="Sealed Antharas Thrower Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -983,7 +983,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38778" name="Sealed Antharas Buster Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38778" name="Sealed Antharas Buster Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Casting Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -995,7 +995,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38779" name="Sealed Antharas Cutter Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38779" name="Sealed Antharas Cutter Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38780" name="Sealed Antharas Stormer Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38780" name="Sealed Antharas Stormer Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38781" name="Sealed Antharas Fighter Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38781" name="Sealed Antharas Fighter Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1032,7 +1032,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38782" name="Sealed Antharas Avenger Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38782" name="Sealed Antharas Avenger Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1045,7 +1045,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38783" name="Sealed Antharas Dual Blunt Weapon Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38783" name="Sealed Antharas Dual Blunt Weapon Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1058,7 +1058,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38784" name="Sealed Antharas Dualsword Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38784" name="Sealed Antharas Dualsword Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1070,7 +1070,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38785" name="Sealed Valakas Shaper Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38785" name="Sealed Valakas Shaper Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1082,7 +1082,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38786" name="Sealed Valakas Cutter Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38786" name="Sealed Valakas Cutter Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1094,7 +1094,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38787" name="Sealed Valakas Slasher Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38787" name="Sealed Valakas Slasher Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1106,7 +1106,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38788" name="Sealed Valakas Thrower Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38788" name="Sealed Valakas Thrower Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,7 +1118,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38789" name="Sealed Valakas Buster Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38789" name="Sealed Valakas Buster Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Casting Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1130,7 +1130,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38790" name="Sealed Valakas Caster Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38790" name="Sealed Valakas Caster Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Casting Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1143,7 +1143,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38791" name="Sealed Valakas Retributer Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38791" name="Sealed Valakas Retributer Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Valakas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Casting Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1157,7 +1157,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38792" name="Sealed Lindvior Shaper Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38792" name="Sealed Lindvior Shaper Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1169,7 +1169,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38793" name="Sealed Lindvior Thrower Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38793" name="Sealed Lindvior Thrower Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1181,7 +1181,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38794" name="Sealed Lindvior Slasher Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38794" name="Sealed Lindvior Slasher Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1193,7 +1193,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38795" name="Sealed Lindvior Caster Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38795" name="Sealed Lindvior Caster Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Casting Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1205,7 +1205,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38796" name="Sealed Lindvior Cutter Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38796" name="Sealed Lindvior Cutter Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1217,7 +1217,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38797" name="Sealed Lindvior Shooter Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38797" name="Sealed Lindvior Shooter Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1229,7 +1229,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38798" name="Sealed Lindvior Dual Dagger Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38798" name="Sealed Lindvior Dual Dagger Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Lindvior lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used.\n(Passive: Dandy's Strength)\nPvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1241,7 +1241,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38799" name="Antharas Shaper Borrowed by Dandy" additionalName="" type="Weapon">
+	<item id="38799" name="Antharas Shaper Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used. 1 hour limit.\n(Passive: Assisting Strength)\nPvP damage + 10%, Max HP/MP/CP + 20%, Atk. Spd. + 15%.\nCannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />

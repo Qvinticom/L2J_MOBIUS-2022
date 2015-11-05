@@ -144,7 +144,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23724" name="Adenian Tattoo: Wings" additionalName="" type="Armor">
+	<item id="23724" name="Adenian Tattoo: Wings" type="Armor">
 		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -153,7 +153,7 @@
 			<add stat="mDef" val="15.0" />
 		</for>
 	</item>
-	<item id="23725" name="Adenian Tattoo: Tribal" additionalName="" type="Armor">
+	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
 		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -162,7 +162,7 @@
 			<add stat="mDef" val="15.0" />
 		</for>
 	</item>
-	<item id="23726" name="Adenian Tattoo: Evil" additionalName="" type="Armor">
+	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
 		<!-- Adenian Collection\nP. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -171,27 +171,27 @@
 			<add stat="mDef" val="15.0" />
 		</for>
 	</item>
-	<item id="23727" name="Life Stone: Tattoo" additionalName="" type="EtcItem">
+	<item id="23727" name="Life Stone: Tattoo" type="EtcItem">
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23728" name="Erupting Vitality XP Potion" additionalName="" type="EtcItem">
+	<item id="23728" name="Erupting Vitality XP Potion" type="EtcItem">
 		<!-- For 1 hr., XP Bonus + 100% with current Vitality. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23729" name="Erupting Vitality Replenishing Potion" additionalName="" type="EtcItem">
+	<item id="23729" name="Erupting Vitality Replenishing Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality Recovery + 100%. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23730" name="Erupting Vitality Conservation Potion" additionalName="" type="EtcItem">
+	<item id="23730" name="Erupting Vitality Conservation Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality consumption upon XP gain - 50%. -->
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" additionalName="" type="EtcItem">
+	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -206,7 +206,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="26019-1" />
 	</item>
-	<item id="23732" name="Divine Scroll: Enchant Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="23732" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -221,7 +221,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22077-1" />
 	</item>
-	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -236,7 +236,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22440-1" />
 	</item>
-	<item id="23734" name="Divine Scroll: Enchant Armor (A-grade)" additionalName="" type="EtcItem">
+	<item id="23734" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -251,7 +251,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="26021-1" />
 	</item>
-	<item id="23735" name="Divine Scroll: Enchant Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="23735" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -266,7 +266,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22078-1" />
 	</item>
-	<item id="23736" name="Divine Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23736" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -281,7 +281,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22443-1" />
 	</item>
-	<item id="23737" name="Divine Scroll: Enchant Weapon (A-grade)" additionalName="" type="EtcItem">
+	<item id="23737" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -292,7 +292,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="26019-1" />
 	</item>
-	<item id="23738" name="Divine Scroll: Enchant Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="23738" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_wp_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -303,7 +303,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22077-1" />
 	</item>
-	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -314,7 +314,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22440-1" />
 	</item>
-	<item id="23740" name="Divine Scroll: Enchant Armor (A-grade)" additionalName="" type="EtcItem">
+	<item id="23740" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
 		<set name="icon" val="br_cashtex.item.br_cash_blessed_cry_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -326,7 +326,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="26021-1" />
 	</item>
-	<item id="23741" name="Divine Scroll: Enchant Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="23741" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
 		<set name="icon" val="BranchSys3.icon1.g_holy_cry_of_ench_am_s" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -338,7 +338,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="22078-1" />
 	</item>
-	<item id="23742" name="Divine Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23742" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4.\nWhen enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -475,23 +475,23 @@
 		<set name="icon" val="icon.blessed_feather_i00" />
 		<set name="time" val="86400" />
 	</item>
-	<item id="23766" name="Warrior's Quick CP Potion" additionalName="" type="EtcItem">
+	<item id="23766" name="Warrior's Quick CP Potion" type="EtcItem">
 		<!-- Premium User Only\nPotion with the strength of an ancient warrior. Restores 350 CP. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23767" name="Fortune Reading Ticket" additionalName="" type="EtcItem">
+	<item id="23767" name="Fortune Reading Ticket" type="EtcItem">
 		<!-- Ticket used in a Fortune Reading. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23768" name="Luxury Fortune Reading Ticket" additionalName="" type="EtcItem">
+	<item id="23768" name="Luxury Fortune Reading Ticket" type="EtcItem">
 		<!-- Ticket used in a Luxury Fortune Reading. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23769" name="Improved Lucky Enchant Stone: Weapon (D-grade)" additionalName="" type="EtcItem">
+	<item id="23769" name="Improved Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (D-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -504,7 +504,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23770" name="Improved Lucky Enchant Stone: Weapon (C-grade)" additionalName="" type="EtcItem">
+	<item id="23770" name="Improved Lucky Enchant Stone: Weapon (C-grade)" type="EtcItem">
 		<!-- Enchant success rate + 18% for weapons (C-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -517,7 +517,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23771" name="Improved Lucky Enchant Stone: Weapon (B-grade)" additionalName="" type="EtcItem">
+	<item id="23771" name="Improved Lucky Enchant Stone: Weapon (B-grade)" type="EtcItem">
 		<!-- Enchant success rate + 15% for weapons (B-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -530,7 +530,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23772" name="Improved Lucky Enchant Stone: Weapon (A-grade)" additionalName="" type="EtcItem">
+	<item id="23772" name="Improved Lucky Enchant Stone: Weapon (A-grade)" type="EtcItem">
 		<!-- Enchant success rate + 12% for weapons (A-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -543,7 +543,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23773" name="Improved Lucky Enchant Stone: Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="23773" name="Improved Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (S-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -556,7 +556,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23774" name="Improved Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23774" name="Improved Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 7% for weapons (R-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_WP" />
@@ -569,7 +569,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23775" name="Improved Lucky Enchant Stone: Armor (D-grade)" additionalName="" type="EtcItem">
+	<item id="23775" name="Improved Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
 		<!-- Enchant success rate + 35% for armor (D-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -582,7 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23776" name="Improved Lucky Enchant Stone: Armor (C-grade)" additionalName="" type="EtcItem">
+	<item id="23776" name="Improved Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
 		<!-- Enchant success rate + 27% for armor (C-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -595,7 +595,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23777" name="Improved Lucky Enchant Stone: Armor (B-grade)" additionalName="" type="EtcItem">
+	<item id="23777" name="Improved Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
 		<!-- Enchant success rate + 23% for armor (B-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -608,7 +608,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23778" name="Improved Lucky Enchant Stone: Armor (A-grade)" additionalName="" type="EtcItem">
+	<item id="23778" name="Improved Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
 		<!-- Enchant success rate + 18% for armor (A-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -621,7 +621,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23779" name="Improved Lucky Enchant Stone: Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="23779" name="Improved Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor (S-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_stone_i04" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23780" name="Improved Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23780" name="Improved Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for armor (R-grade). Only for items enchanted between + 10 and + 15. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="etcitem_type" val="SCRL_INC_ENCHANT_PROP_AM" />
@@ -647,7 +647,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23781" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23781" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT_SCRL_INC_ENCHANT_PROP_WP" />
@@ -660,7 +660,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23782" name="Giant's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23782" name="Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 15% for armor when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT_SCRL_INC_ENCHANT_PROP_AM" />
@@ -673,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23783" name="Blessed Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23783" name="Blessed Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT_SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -686,7 +686,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23784" name="Blessed Giant's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23784" name="Blessed Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT_SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -699,7 +699,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23785" name="Lesser Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23785" name="Lesser Giant's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0.\n -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -712,7 +712,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23786" name="Lesser Giant's Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23786" name="Lesser Giant's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant rate rises to between + 2 and + 4 when using the Giant's Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. \n -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_giant_stone_i00" />
 		<set name="etcitem_type" val="GIANT2_SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -725,7 +725,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23787" name="Blessed Lucky Enchant Stone: Weapon (D-grade)" additionalName="" type="EtcItem">
+	<item id="23787" name="Blessed Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (D-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i00" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23788" name="Blessed Lucky Enchant Stone: Weapon (C-grade)" additionalName="" type="EtcItem">
+	<item id="23788" name="Blessed Lucky Enchant Stone: Weapon (C-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (C-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i01" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -751,7 +751,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23789" name="Blessed Lucky Enchant Stone: Weapon (B-grade)" additionalName="" type="EtcItem">
+	<item id="23789" name="Blessed Lucky Enchant Stone: Weapon (B-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (B-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i02" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -764,7 +764,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23790" name="Blessed Lucky Enchant Stone: Weapon (A-grade)" additionalName="" type="EtcItem">
+	<item id="23790" name="Blessed Lucky Enchant Stone: Weapon (A-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (A-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i03" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -777,7 +777,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23791" name="Blessed Lucky Enchant Stone: Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="23791" name="Blessed Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (S-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_stone_blessed_i04" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -790,7 +790,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23792" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="23792" name="Blessed Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Weapon (R-grade). Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_wp_blessed_violet_i00" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_WP" />
@@ -803,7 +803,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23793" name="Blessed Lucky Enchant Stone: Armor (D-grade)" additionalName="" type="EtcItem">
+	<item id="23793" name="Blessed Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (D-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i00" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -816,7 +816,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23794" name="Blessed Lucky Enchant Stone: Armor (C-grade)" additionalName="" type="EtcItem">
+	<item id="23794" name="Blessed Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (C-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i01" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -829,7 +829,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23795" name="Blessed Lucky Enchant Stone: Armor (B-grade)" additionalName="" type="EtcItem">
+	<item id="23795" name="Blessed Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (B-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i02" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -842,7 +842,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23796" name="Blessed Lucky Enchant Stone: Armor (A-grade)" additionalName="" type="EtcItem">
+	<item id="23796" name="Blessed Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (A-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i03" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -855,7 +855,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23797" name="Blessed Lucky Enchant Stone: Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="23797" name="Blessed Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (S-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_stone_blessed_i04" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -868,7 +868,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23798" name="Blessed Lucky Enchant Stone: Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="23798" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Lets a failed enchant reset to 0 instead of crystallizing when using a Scroll: Enchant Armor (R-grade). Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="BranchSys3.icon1.ench_am_bleseed_violet_i00" />
 		<set name="etcitem_type" val="SCRL_BLESS_INC_ENCHANT_PROP_AM" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="23799" name="Vitality Maintaining Potion (10-minute)" additionalName="" type="EtcItem">
+	<item id="23799" name="Vitality Maintaining Potion (10-minute)" type="EtcItem">
 		<!-- Maintains Vitality for 10 min. Cooldown is 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="is_stackable" val="true" />

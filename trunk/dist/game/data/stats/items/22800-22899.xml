@@ -60,7 +60,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="22803" name="Freya's Staff - Cleverness (PvP)" additionalName="" type="Weapon">
+	<item id="22803" name="Freya's Staff - Cleverness (PvP)" type="Weapon">
 		<!-- Masterwork Item with chance of MP absorption.\nTwo-handed magic blunt with special powers used by Freya. Bestows either MP Regeneration, Magic Hold, or Empower. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -136,7 +136,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="22807" name="Spezion's Claw" additionalName="" type="Weapon">
+	<item id="22807" name="Spezion's Claw" type="Weapon">
 		<!-- Fist weapon with special powers used by Spezion. Bestows eitherﾠFocus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. and P. Atk. also increase. -->
 		<set name="icon" val="BranchSys3.Icon.g_spacia_claw_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -291,7 +291,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="22814" name="Maliss Stormer" additionalName="" type="Weapon">
+	<item id="22814" name="Maliss Stormer" type="Weapon">
 		<!-- Spear used by Maliss. Bestows eitherﾠHP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Multi-attack also increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -438,7 +438,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="22821" name="Steregos' Dagger" additionalName="" type="Weapon">
+	<item id="22821" name="Steregos' Dagger" type="Weapon">
 		<!-- Dagger used by Steregos. Bestows eitherﾠGuidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="BranchSys3.Icon.g_dainsleif_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -585,7 +585,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="22828" name="Ron's Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="22828" name="Ron's Dual Blunt Weapon" type="Weapon">
 		<!-- Dual blunt with special powers used by Ron. Bestows eitherﾠFocus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, also increases P. Skill Power and P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_urukmash_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -742,42 +742,42 @@
 			<set stat="critRate" val="4.0" />
 		</for>
 	</item>
-	<item id="22882" name="Hair Accessory Restoration Stone" additionalName="" type="EtcItem">
+	<item id="22882" name="Hair Accessory Restoration Stone" type="EtcItem">
 		<!-- Restores the original appearance of a modified hair accessory. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22883" name="Scroll: Replenish Vitality" additionalName="" type="EtcItem">
+	<item id="22883" name="Scroll: Replenish Vitality" type="EtcItem">
 		<!-- Replenishes 1 Vitality slot when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22884" name="Scroll: Replenish Vitality (High-grade)" additionalName="" type="EtcItem">
+	<item id="22884" name="Scroll: Replenish Vitality (High-grade)" type="EtcItem">
 		<!-- Replenishes 2 Vitality slots when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_2" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22885" name="Scroll: Replenish Vitality (Top-grade)" additionalName="" type="EtcItem">
+	<item id="22885" name="Scroll: Replenish Vitality (Top-grade)" type="EtcItem">
 		<!-- Replenishes Vitality to maximum when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_3" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22886" name="Uthanka's Ring" additionalName="" type="Armor">
+	<item id="22886" name="Uthanka's Ring" type="Armor">
 		<!-- Ring acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to turn into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="22887" name="Mount - Unicorn" additionalName="" type="Armor">
+	<item id="22887" name="Mount - Unicorn" type="Armor">
 		<!-- Can ride a unicorn when equipped. -->
 		<set name="icon" val="BranchSys3.lcon.g_pi_transformation_unicorn" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="22888" name="Mysterious Soulshot (R-grade)" additionalName="" type="EtcItem">
+	<item id="22888" name="Mysterious Soulshot (R-grade)" type="EtcItem">
 		<!-- Dimensional Item\nThe power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with an R-grade weapon. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be shared within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_soulshot_purple" />
 		<set name="default_action" val="SOULSHOT" />
@@ -789,7 +789,7 @@
 		<set name="handler" val="SoulShots" />
 		<set name="item_skill" val="9193-1" />
 	</item>
-	<item id="22889" name="Mysterious Blessed Spiritshot (R-grade)" additionalName="" type="EtcItem">
+	<item id="22889" name="Mysterious Blessed Spiritshot (R-grade)" type="EtcItem">
 		<!-- Dimensional Item\nThe power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with an R-grade weapon. Cannot be exchanged or dropped. Can be stored in a private warehouse. Can be shared within an account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_spell_shot_purple" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -802,36 +802,36 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="item_skill" val="9195-1" />
 	</item>
-	<item id="22890" name="Mysterious Blessed Soulshot Pack (10000) (R-grade)" additionalName="" type="EtcItem">
+	<item id="22890" name="Mysterious Blessed Soulshot Pack (10000) (R-grade)" type="EtcItem">
 		<!-- Pack containing 10,000 Mysterious Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22891" name="Mysterious Blessed Soulshot Pack (5000) (R-grade)" additionalName="" type="EtcItem">
+	<item id="22891" name="Mysterious Blessed Soulshot Pack (5000) (R-grade)" type="EtcItem">
 		<!-- Pack containing 5,000 Mysterious Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22892" name="Mysterious Blessed Spiritshot Pack (10000) (R-grade)" additionalName="" type="EtcItem">
+	<item id="22892" name="Mysterious Blessed Spiritshot Pack (10000) (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22893" name="Mysterious Blessed Spiritshot Pack (5000) (R-grade)" additionalName="" type="EtcItem">
+	<item id="22893" name="Mysterious Blessed Spiritshot Pack (5000) (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22894" name="Letter - W" additionalName="" type="EtcItem">
+	<item id="22894" name="Letter - W" type="EtcItem">
 		<!-- Item for the Lineage II 8th Anniversary event. Combine with other letters to create a special word and bring it to Angel Cat to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_w_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22895" name="Ancient Kartia's Labyrinth Chronicle" additionalName="" type="EtcItem">
+	<item id="22895" name="Ancient Kartia's Labyrinth Chronicle" type="EtcItem">
 		<!-- Bring the Ancient Kartia's Labyrinth Chronicle to the Kartia Researcher to receive a reward. -->
 		<set name="icon" val="BranchSys3.lcon.g_record_of_cartia" />
 		<set name="is_stackable" val="true" />
@@ -854,7 +854,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22899" name="Scroll: Decrease Vitality" additionalName="" type="EtcItem">
+	<item id="22899" name="Scroll: Decrease Vitality" type="EtcItem">
 		<!-- Decreases the number of vitality items that can be used per week by 1. For test. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i02" />
 		<set name="weight" val="30" />

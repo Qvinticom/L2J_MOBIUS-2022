@@ -235,7 +235,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="17413" name="Seraph Necklace" additionalName="" type="Armor">
+	<item id="17413" name="Seraph Necklace" type="Armor">
 		<!-- Seraph Necklace. MP + 62 effect. -->
 		<set name="icon" val="icon.r95_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -252,7 +252,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17414" name="Seraph Earring" additionalName="" type="Armor">
+	<item id="17414" name="Seraph Earring" type="Armor">
 		<!-- Seraph Earring. MP + 46 effect. -->
 		<set name="icon" val="icon.r95_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -269,7 +269,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17415" name="Seraph Ring" additionalName="" type="Armor">
+	<item id="17415" name="Seraph Ring" type="Armor">
 		<!-- Seraph Ring. MP + 31 effect. -->
 		<set name="icon" val="icon.r95_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -286,7 +286,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17416" name="Amaranthine Shaper" additionalName="" type="Weapon">
+	<item id="17416" name="Amaranthine Shaper" type="Weapon">
 		<set name="icon" val="icon.weapon_stanpid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -316,7 +316,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17417" name="Amaranthine Cutter" additionalName="" type="Weapon">
+	<item id="17417" name="Amaranthine Cutter" type="Weapon">
 		<set name="icon" val="icon.weapon_plenitas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -345,7 +345,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17418" name="Amaranthine Slasher" additionalName="" type="Weapon">
+	<item id="17418" name="Amaranthine Slasher" type="Weapon">
 		<set name="icon" val="icon.weapon_bauen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -374,7 +374,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17419" name="Amaranthine Avenger" additionalName="" type="Weapon">
+	<item id="17419" name="Amaranthine Avenger" type="Weapon">
 		<set name="icon" val="icon.weapon_qutram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -404,7 +404,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17420" name="Amaranthine Fighter" additionalName="" type="Weapon">
+	<item id="17420" name="Amaranthine Fighter" type="Weapon">
 		<set name="icon" val="icon.weapon_durga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -434,7 +434,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17421" name="Amaranthine Stormer" additionalName="" type="Weapon">
+	<item id="17421" name="Amaranthine Stormer" type="Weapon">
 		<set name="icon" val="icon.weapon_crabel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -465,7 +465,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17422" name="Amaranthine Thrower" additionalName="" type="Weapon">
+	<item id="17422" name="Amaranthine Thrower" type="Weapon">
 		<set name="icon" val="icon.weapon_castron_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -496,7 +496,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17423" name="Amaranthine Shooter" additionalName="" type="Weapon">
+	<item id="17423" name="Amaranthine Shooter" type="Weapon">
 		<set name="icon" val="icon.weapon_stilla_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -530,7 +530,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17424" name="Amaranthine Buster" additionalName="" type="Weapon">
+	<item id="17424" name="Amaranthine Buster" type="Weapon">
 		<set name="icon" val="icon.weaon_serapear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -560,7 +560,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17425" name="Amaranthine Caster" additionalName="" type="Weapon">
+	<item id="17425" name="Amaranthine Caster" type="Weapon">
 		<set name="icon" val="icon.weapon_pilia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -591,7 +591,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17426" name="Amaranthine Retributer" additionalName="" type="Weapon">
+	<item id="17426" name="Amaranthine Retributer" type="Weapon">
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -623,7 +623,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17427" name="Amaranthine Dualsword" additionalName="" type="Weapon">
+	<item id="17427" name="Amaranthine Dualsword" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -652,7 +652,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17428" name="Amaranthine Dual Dagger" additionalName="" type="Weapon">
+	<item id="17428" name="Amaranthine Dual Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -688,7 +688,7 @@
 			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="17429" name="Amaranthine Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="17429" name="Amaranthine Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1023,7 +1023,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="17447" name="Eternal Necklace" additionalName="" type="Armor">
+	<item id="17447" name="Eternal Necklace" type="Armor">
 		<!-- Eternal Necklace. MP + 65 effect. -->
 		<set name="icon" val="icon.r991_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1039,7 +1039,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17448" name="Eternal Earring" additionalName="" type="Armor">
+	<item id="17448" name="Eternal Earring" type="Armor">
 		<!-- Eternal Earring. MP + 49 effect. -->
 		<set name="icon" val="icon.r991_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17449" name="Eternal Ring" additionalName="" type="Armor">
+	<item id="17449" name="Eternal Ring" type="Armor">
 		<!-- Eternal Ring. MP + 33 effect. -->
 		<set name="icon" val="icon.r991_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1071,7 +1071,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17450" name="Blessed Kaliel Shaper" additionalName="" type="Weapon">
+	<item id="17450" name="Blessed Kaliel Shaper" type="Weapon">
 		<!-- Bestows one of the following functions: Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1087,7 +1087,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="17451" name="Blessed Kaliel Cutter" additionalName="" type="Weapon">
+	<item id="17451" name="Blessed Kaliel Cutter" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1103,7 +1103,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="17452" name="Blessed Kaliel Slasher" additionalName="" type="Weapon">
+	<item id="17452" name="Blessed Kaliel Slasher" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,7 +1119,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="17453" name="Blessed Kaliel Avenger" additionalName="" type="Weapon">
+	<item id="17453" name="Blessed Kaliel Avenger" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1136,7 +1136,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="17454" name="Blessed Kaliel Fighter" additionalName="" type="Weapon">
+	<item id="17454" name="Blessed Kaliel Fighter" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1153,7 +1153,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="17455" name="Blessed Kaliel Stormer" additionalName="" type="Weapon">
+	<item id="17455" name="Blessed Kaliel Stormer" type="Weapon">
 		<!-- Bestows one of the following functions: HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1169,7 +1169,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="17456" name="Blessed Kaliel Thrower" additionalName="" type="Weapon">
+	<item id="17456" name="Blessed Kaliel Thrower" type="Weapon">
 		<!-- Bestows one of the following functions: Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1185,7 +1185,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="17457" name="Blessed Kaliel Shooter" additionalName="" type="Weapon">
+	<item id="17457" name="Blessed Kaliel Shooter" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1201,7 +1201,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="17458" name="Blessed Kaliel Buster" additionalName="" type="Weapon">
+	<item id="17458" name="Blessed Kaliel Buster" type="Weapon">
 		<!-- Bestows one of the following functions: Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1217,7 +1217,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="17459" name="Blessed Kaliel Caster" additionalName="" type="Weapon">
+	<item id="17459" name="Blessed Kaliel Caster" type="Weapon">
 		<!-- Bestows one of the following functions: Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1234,7 +1234,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="17460" name="Blessed Kaliel Retributer" additionalName="" type="Weapon">
+	<item id="17460" name="Blessed Kaliel Retributer" type="Weapon">
 		<!-- Bestows one of the following functions: MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1252,7 +1252,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="17461" name="Blessed Kaliel Dualsword" additionalName="" type="Weapon">
+	<item id="17461" name="Blessed Kaliel Dualsword" type="Weapon">
 		<!-- Bestows one of the following functions: Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1268,7 +1268,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="17462" name="Blessed Kaliel Dual Dagger" additionalName="" type="Weapon">
+	<item id="17462" name="Blessed Kaliel Dual Dagger" type="Weapon">
 		<!-- Bestows one of the following functions: Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1284,7 +1284,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="17463" name="Blessed Kaliel Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="17463" name="Blessed Kaliel Dual Blunt Weapon" type="Weapon">
 		<!-- Bestows one of the following functions: Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1561,7 +1561,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="17481" name="Blessed Durandia Necklace" additionalName="" type="Armor">
+	<item id="17481" name="Blessed Durandia Necklace" type="Armor">
 		<set name="icon" val="icon.vesper_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1573,7 +1573,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17482" name="Blessed Durandia Earring" additionalName="" type="Armor">
+	<item id="17482" name="Blessed Durandia Earring" type="Armor">
 		<set name="icon" val="icon.vesper_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1585,7 +1585,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17483" name="Blessed Durandia Ring" additionalName="" type="Armor">
+	<item id="17483" name="Blessed Durandia Ring" type="Armor">
 		<set name="icon" val="icon.vesper_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1597,7 +1597,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="17484" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17484" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sword...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1605,7 +1605,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17485" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17485" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sword...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1613,7 +1613,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17486" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17486" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1621,7 +1621,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17487" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17487" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1629,7 +1629,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17488" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17488" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your dagger...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1637,7 +1637,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17489" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17489" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your arrow...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1645,7 +1645,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17490" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17490" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1653,7 +1653,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17491" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17491" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1661,7 +1661,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17492" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17492" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1669,7 +1669,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17493" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17493" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your spirit...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17494" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17494" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your spirit...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17495" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17495" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1693,7 +1693,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17496" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17496" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your sacrifice...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1701,7 +1701,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17497" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17497" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your dagger...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1709,7 +1709,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17498" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17498" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your arrow...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1717,7 +1717,7 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="17499" name="Cry of Destiny" additionalName="" type="Armor">
+	<item id="17499" name="Cry of Destiny" type="Armor">
 		<!-- Brilliant ring containing the blessing of light from the angel Nevit. - 'May the gods always bless your wisdom...' -->
 		<set name="icon" val="icon.accessary_blessed_ring_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -20,7 +20,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30801" name="Bound War Hammer" additionalName="" type="Weapon">
+	<item id="30801" name="Bound War Hammer" type="Weapon">
 		<!-- Bound War Hammer. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_war_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -39,7 +39,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30802" name="Bound Single-Edged Jamadhr" additionalName="" type="Weapon">
+	<item id="30802" name="Bound Single-Edged Jamadhr" type="Weapon">
 		<!-- Bound Single-Edged Jamadhr. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_single-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -59,7 +59,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30803" name="Bound Orcish Poleaxe" additionalName="" type="Weapon">
+	<item id="30803" name="Bound Orcish Poleaxe" type="Weapon">
 		<!-- Bound Orcish Poleaxe. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -135,7 +135,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30807" name="Bound Orcish Glaive" additionalName="" type="Weapon">
+	<item id="30807" name="Bound Orcish Glaive" type="Weapon">
 		<!-- Bound Orcish Glaive. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -211,7 +211,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30811" name="Bound Onyx Beast's Eye" additionalName="" type="Armor">
+	<item id="30811" name="Bound Onyx Beast's Eye" type="Armor">
 		<!-- Bound Onyx Beast's Eye. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -225,7 +225,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30812" name="Bound Ogre Power Gauntlets" additionalName="" type="Armor">
+	<item id="30812" name="Bound Ogre Power Gauntlets" type="Armor">
 		<!-- Bound Ogre Power Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -239,7 +239,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30813" name="Bound Ogre Power Gauntlets" additionalName="" type="Armor">
+	<item id="30813" name="Bound Ogre Power Gauntlets" type="Armor">
 		<!-- Bound Ogre Power Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -251,7 +251,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30814" name="Bound Near Forest Necklace" additionalName="" type="Armor">
+	<item id="30814" name="Bound Near Forest Necklace" type="Armor">
 		<!-- Bound Near Forest Necklace. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -265,7 +265,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30815" name="Bound Near Forest Necklace" additionalName="" type="Armor">
+	<item id="30815" name="Bound Near Forest Necklace" type="Armor">
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -278,7 +278,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30816" name="Bound Soul Bow" additionalName="" type="Weapon">
+	<item id="30816" name="Bound Soul Bow" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -354,7 +354,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30820" name="Bound Spiritual Eye" additionalName="" type="Weapon">
+	<item id="30820" name="Bound Spiritual Eye" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Mana Up, Magic Poison or Acumen. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -434,7 +434,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30824" name="Bound Ring of Ages" additionalName="" type="Armor">
+	<item id="30824" name="Bound Ring of Ages" type="Armor">
 		<!-- Bound Ring of ages. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -448,7 +448,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30825" name="Bound Ring of Ages" additionalName="" type="Armor">
+	<item id="30825" name="Bound Ring of Ages" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -461,7 +461,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30826" name="Bound Horn of Glory" additionalName="" type="Weapon">
+	<item id="30826" name="Bound Horn of Glory" type="Weapon">
 		<!-- Bound Horn of Glory. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_horn_of_glory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -480,7 +480,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30827" name="Bound Mace of Miracle" additionalName="" type="Weapon">
+	<item id="30827" name="Bound Mace of Miracle" type="Weapon">
 		<!-- Bound Mace of Miracle. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mace_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -500,7 +500,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30828" name="Bound Elven Stockings" additionalName="" type="Armor">
+	<item id="30828" name="Bound Elven Stockings" type="Armor">
 		<!-- Bound Elven Stockings. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t11_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -514,7 +514,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30829" name="Bound Elven Sword*Sword of Revolution" additionalName="" type="Weapon">
+	<item id="30829" name="Bound Elven Sword*Sword of Revolution" type="Weapon">
 		<!-- Bound Elven Sword*Sword of Revolution. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -533,7 +533,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30830" name="Bound Elven Sword*Elven Sword" additionalName="" type="Weapon">
+	<item id="30830" name="Bound Elven Sword*Elven Sword" type="Weapon">
 		<!-- Bound Elven Sword*Elven Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -552,7 +552,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30831" name="Bound Elven Sword*Elven Long Sword" additionalName="" type="Weapon">
+	<item id="30831" name="Bound Elven Sword*Elven Long Sword" type="Weapon">
 		<!-- Bound Elven Sword*Elven Long Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -571,7 +571,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30832" name="Bound Elven Sword" additionalName="" type="Weapon">
+	<item id="30832" name="Bound Elven Sword" type="Weapon">
 		<!-- Bound Elven Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_elven_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -590,7 +590,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30833" name="Bound Elven Bow" additionalName="" type="Weapon">
+	<item id="30833" name="Bound Elven Bow" type="Weapon">
 		<!-- Bound Elven Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -609,7 +609,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30834" name="Bound Elven Tunic" additionalName="" type="Armor">
+	<item id="30834" name="Bound Elven Tunic" type="Armor">
 		<!-- Bound Elven Tunic. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t11_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -623,7 +623,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30835" name="Bound Elven Earring" additionalName="" type="Armor">
+	<item id="30835" name="Bound Elven Earring" type="Armor">
 		<!-- Bound Elven Earring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -637,7 +637,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30836" name="Bound Elven Earring" additionalName="" type="Armor">
+	<item id="30836" name="Bound Elven Earring" type="Armor">
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -650,7 +650,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30837" name="Bound Elven Mithril Boots" additionalName="" type="Armor">
+	<item id="30837" name="Bound Elven Mithril Boots" type="Armor">
 		<!-- Bound Elven Mithril Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30838" name="Bound Elven Mithril Gloves" additionalName="" type="Armor">
+	<item id="30838" name="Bound Elven Mithril Gloves" type="Armor">
 		<!-- Bound Elven Mithril Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -678,7 +678,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30839" name="Bound Elven Ring" additionalName="" type="Armor">
+	<item id="30839" name="Bound Elven Ring" type="Armor">
 		<!-- Bound Elven Ring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -692,7 +692,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30840" name="Bound Elven Ring" additionalName="" type="Armor">
+	<item id="30840" name="Bound Elven Ring" type="Armor">
 		<set name="icon" val="icon.accessary_elven_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -705,7 +705,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30841" name="Bound Elven Long Sword*Elven Long Sword" additionalName="" type="Weapon">
+	<item id="30841" name="Bound Elven Long Sword*Elven Long Sword" type="Weapon">
 		<!-- Bound Elven Long Sword*Elven Long Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -724,7 +724,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30842" name="Bound Elven Long Sword" additionalName="" type="Weapon">
+	<item id="30842" name="Bound Elven Long Sword" type="Weapon">
 		<!-- Bound Elven Long Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -743,7 +743,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30843" name="Bound Elven Long Sword" additionalName="" type="Weapon">
+	<item id="30843" name="Bound Elven Long Sword" type="Weapon">
 		<!-- Bound Elven Long Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -758,7 +758,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30844" name="Bound Elven Necklace" additionalName="" type="Armor">
+	<item id="30844" name="Bound Elven Necklace" type="Armor">
 		<!-- Bound Elven Necklace. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -772,7 +772,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30845" name="Bound Elven Necklace" additionalName="" type="Armor">
+	<item id="30845" name="Bound Elven Necklace" type="Armor">
 		<set name="icon" val="icon.accessary_elven_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -785,7 +785,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30846" name="Bound Elysian" additionalName="" type="Weapon">
+	<item id="30846" name="Bound Elysian" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Health, Anger or Critical Drain. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -865,7 +865,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30850" name="Bound Elemental Sword" additionalName="" type="Weapon">
+	<item id="30850" name="Bound Elemental Sword" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: M. Atk., Magic Paralyze or Empower. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -941,7 +941,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30854" name="Bound Elemental Bow" additionalName="" type="Weapon">
+	<item id="30854" name="Bound Elemental Bow" type="Weapon">
 		<!-- Bound Elemental Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_elemental_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1017,7 +1017,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30858" name="Bound Eldarake" additionalName="" type="Weapon">
+	<item id="30858" name="Bound Eldarake" type="Weapon">
 		<!-- Bound Eldarake. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_eldarake_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1033,7 +1033,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="30859" name="Bound Angel Slayer" additionalName="" type="Weapon">
+	<item id="30859" name="Bound Angel Slayer" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: P. Critical Damage, HP Drain or Haste. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1109,7 +1109,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30863" name="Bound Épée" additionalName="" type="Weapon">
+	<item id="30863" name="Bound Épée" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Sword of Revolution, Bound ￉p￩e. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1128,7 +1128,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30864" name="Bound Estoc" additionalName="" type="Weapon">
+	<item id="30864" name="Bound Estoc" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Crimson Sword conversion, Bound estoc. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1147,7 +1147,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30865" name="Bound Estoc" additionalName="" type="Weapon">
+	<item id="30865" name="Bound Estoc" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Elven Sword conversion, Bound estoc. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1166,7 +1166,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30866" name="Bound Eminence Bow" additionalName="" type="Weapon">
+	<item id="30866" name="Bound Eminence Bow" type="Weapon">
 		<!-- Bound Eminence Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30870" name="Bound Crystallized Ice Bow" additionalName="" type="Weapon">
+	<item id="30870" name="Bound Crystallized Ice Bow" type="Weapon">
 		<!-- Bound Crystallized Ice Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1318,7 +1318,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30874" name="Bound Assassin Knife" additionalName="" type="Weapon">
+	<item id="30874" name="Bound Assassin Knife" type="Weapon">
 		<!-- Bound Assassin Knife. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1337,7 +1337,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="30875" name="Bound Military Fleuret" additionalName="" type="Weapon">
+	<item id="30875" name="Bound Military Fleuret" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Keshanberk\nBestows one of the following functions: Guidance, Focus or Back Blow.\nWhen enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_assult_fleuret_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1413,7 +1413,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30879" name="Bound Military Talwar" additionalName="" type="Weapon">
+	<item id="30879" name="Bound Military Talwar" type="Weapon">
 		<!-- Bound Military Talwar. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1433,7 +1433,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30880" name="Bound Two-handed Sword" additionalName="" type="Weapon">
+	<item id="30880" name="Bound Two-handed Sword" type="Weapon">
 		<!-- Bound two-handed sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1452,7 +1452,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="30881" name="Bound Yaksa Mace" additionalName="" type="Weapon">
+	<item id="30881" name="Bound Yaksa Mace" type="Weapon">
 		<!-- Bound Yaksa Mace. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1532,7 +1532,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="30885" name="Bound Dark Necklace" additionalName="" type="Armor">
+	<item id="30885" name="Bound Dark Necklace" type="Armor">
 		<!-- Bound Dark Necklace. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_necklace_of_darkness_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1546,7 +1546,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="30886" name="Bound Arm Breaker" additionalName="" type="Weapon">
+	<item id="30886" name="Bound Arm Breaker" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Reinforced Longbow Conversion, Bound arm breaker. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1565,7 +1565,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30887" name="Bound Arbalest" additionalName="" type="Weapon">
+	<item id="30887" name="Bound Arbalest" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow conversion, Bound Arbalest. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1641,7 +1641,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="30891" name="Bound Helm of Nightmare" additionalName="" type="Armor">
+	<item id="30891" name="Bound Helm of Nightmare" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1654,7 +1654,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30892" name="Bound Shield of Nightmare" additionalName="" type="Weapon">
+	<item id="30892" name="Bound Shield of Nightmare" type="Weapon">
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1710,7 +1710,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30896" name="Bound Robe of Nightmare" additionalName="" type="Armor">
+	<item id="30896" name="Bound Robe of Nightmare" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1724,7 +1724,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30897" name="Bound Leather Armor of Nightmare" additionalName="" type="Armor">
+	<item id="30897" name="Bound Leather Armor of Nightmare" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1738,7 +1738,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="30898" name="Bound Sword of Nightmare" additionalName="" type="Weapon">
+	<item id="30898" name="Bound Sword of Nightmare" type="Weapon">
 		<!-- Bound Sword of Nightmare. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_sword_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />

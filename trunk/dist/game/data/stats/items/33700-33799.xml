@@ -68,7 +68,7 @@
 		<!-- Dynasty Bow in an Unidentified state. Double-click the item to identify it. The acquired item can be Standard or Bound. (Type: two-handed weapon / bow) -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i00" />
 	</item>
-	<item id="33717" name="Legacy Duelist Dualsword" additionalName="" type="Weapon">
+	<item id="33717" name="Legacy Duelist Dualsword" type="Weapon">
 		<!-- Dualsword that contains the power of a Duelist. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -94,7 +94,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33718" name="Legacy Dreadnought Spear" additionalName="" type="Weapon">
+	<item id="33718" name="Legacy Dreadnought Spear" type="Weapon">
 		<!-- Spear that contains the power of a Dreadnought. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_eigelus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -120,7 +120,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33719" name="Legacy Phoenix Knight Sword" additionalName="" type="Weapon">
+	<item id="33719" name="Legacy Phoenix Knight Sword" type="Weapon">
 		<!-- Sword that contains the power of a Phoenix Knight. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -146,7 +146,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33720" name="Legacy Hell Knight Sword" additionalName="" type="Weapon">
+	<item id="33720" name="Legacy Hell Knight Sword" type="Weapon">
 		<!-- Sword that contains the power of a Hell Knight. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -172,7 +172,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33721" name="Legacy Sagittarius Bow" additionalName="" type="Weapon">
+	<item id="33721" name="Legacy Sagittarius Bow" type="Weapon">
 		<!-- Bow that contains the power of a Sagittarius. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -200,7 +200,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33722" name="Legacy Adventurer Dual Daggers" additionalName="" type="Weapon">
+	<item id="33722" name="Legacy Adventurer Dual Daggers" type="Weapon">
 		<!-- Dual daggers that contains the power of an Adventurer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -226,7 +226,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33723" name="Legacy Archmage Sword" additionalName="" type="Weapon">
+	<item id="33723" name="Legacy Archmage Sword" type="Weapon">
 		<!-- Sword that contains the power of an Archmage. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -252,7 +252,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33724" name="Legacy Soultaker Sword" additionalName="" type="Weapon">
+	<item id="33724" name="Legacy Soultaker Sword" type="Weapon">
 		<!-- Sword that contains the power of a Soultaker. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -278,7 +278,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33725" name="Legacy Arcana Lord Blunt Weapon" additionalName="" type="Weapon">
+	<item id="33725" name="Legacy Arcana Lord Blunt Weapon" type="Weapon">
 		<!-- Blunt Weapon that contains the power of an Arcana Lord. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -305,7 +305,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33726" name="Legacy Cardinal Staff" additionalName="" type="Weapon">
+	<item id="33726" name="Legacy Cardinal Staff" type="Weapon">
 		<!-- Staff that contains the power of a Cardinal. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -332,7 +332,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33727" name="Legacy Hierophant Staff" additionalName="" type="Weapon">
+	<item id="33727" name="Legacy Hierophant Staff" type="Weapon">
 		<!-- Staff that contains the power of a Hierophant. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -359,7 +359,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33728" name="Legacy Eva's Templar Sword" additionalName="" type="Weapon">
+	<item id="33728" name="Legacy Eva's Templar Sword" type="Weapon">
 		<!-- Sword that contains the power of an Eva's Templar. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -385,7 +385,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33729" name="Legacy Sword Muse Sword" additionalName="" type="Weapon">
+	<item id="33729" name="Legacy Sword Muse Sword" type="Weapon">
 		<!-- Sword that contains the power of a Sword Muse. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33730" name="Legacy Wind Rider Dagger" additionalName="" type="Weapon">
+	<item id="33730" name="Legacy Wind Rider Dagger" type="Weapon">
 		<!-- Dagger that contains the power of a Wind Rider. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -437,7 +437,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33731" name="Legacy Moonlight Sentinel Bow" additionalName="" type="Weapon">
+	<item id="33731" name="Legacy Moonlight Sentinel Bow" type="Weapon">
 		<!-- Bow that contains the power of a Moonlight Sentinel. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -465,7 +465,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33732" name="Legacy Mystic Muse Sword" additionalName="" type="Weapon">
+	<item id="33732" name="Legacy Mystic Muse Sword" type="Weapon">
 		<!-- Sword that contains the power of a Mystic Muse. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -491,7 +491,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33733" name="Legacy Elemental Master Blunt Weapon" additionalName="" type="Weapon">
+	<item id="33733" name="Legacy Elemental Master Blunt Weapon" type="Weapon">
 		<!-- Blunt Weapon that contains the power of an Elemental Master. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33734" name="Legacy Eva's Saint Blunt Weapon" additionalName="" type="Weapon">
+	<item id="33734" name="Legacy Eva's Saint Blunt Weapon" type="Weapon">
 		<!-- Blunt Weapon that contains the power of an Eva's Saint. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -545,7 +545,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33735" name="Legacy Shillien Templar Sword" additionalName="" type="Weapon">
+	<item id="33735" name="Legacy Shillien Templar Sword" type="Weapon">
 		<!-- Sword that contains the power of a Shillien Templar. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -571,7 +571,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33736" name="Legacy Spectral Dancer Dualsword" additionalName="" type="Weapon">
+	<item id="33736" name="Legacy Spectral Dancer Dualsword" type="Weapon">
 		<!-- Dualsword that contains the power of a Spectral Dancer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -597,7 +597,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33737" name="Legacy Ghost Hunter Dagger" additionalName="" type="Weapon">
+	<item id="33737" name="Legacy Ghost Hunter Dagger" type="Weapon">
 		<!-- Dagger that contains the power of a Ghost Hunter. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -623,7 +623,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33738" name="Legacy Ghost Sentinel Bow" additionalName="" type="Weapon">
+	<item id="33738" name="Legacy Ghost Sentinel Bow" type="Weapon">
 		<!-- Bow that contains the power of a Ghost Sentinel. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33739" name="Legacy Storm Screamer Sword" additionalName="" type="Weapon">
+	<item id="33739" name="Legacy Storm Screamer Sword" type="Weapon">
 		<!-- Sword that contains the power of a Storm Screamer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -677,7 +677,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33740" name="Legacy Spectral Master Sword" additionalName="" type="Weapon">
+	<item id="33740" name="Legacy Spectral Master Sword" type="Weapon">
 		<!-- Sword that contains the power of a Spectral Master. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -703,7 +703,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33741" name="Legacy Shillien Saint Blunt Weapon" additionalName="" type="Weapon">
+	<item id="33741" name="Legacy Shillien Saint Blunt Weapon" type="Weapon">
 		<!-- Blunt Weapon that contains the power of a Shillien Saint. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_kitz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -730,7 +730,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33742" name="Legacy Titan Two-handed Sword" additionalName="" type="Weapon">
+	<item id="33742" name="Legacy Titan Two-handed Sword" type="Weapon">
 		<!-- Two-handed Sword that contains the power of a Titan. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_spigel_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -756,7 +756,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33743" name="Legacy Grand Khavatari Fist Weapon" additionalName="" type="Weapon">
+	<item id="33743" name="Legacy Grand Khavatari Fist Weapon" type="Weapon">
 		<!-- Fist Weapon that contains the power of a Grand Khavatari. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_fantasma_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33744" name="Legacy Dominator Sword" additionalName="" type="Weapon">
+	<item id="33744" name="Legacy Dominator Sword" type="Weapon">
 		<!-- Sword that contains the power of a Dominator. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -809,7 +809,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33745" name="Legacy Doomcryer Dualsword" additionalName="" type="Weapon">
+	<item id="33745" name="Legacy Doomcryer Dualsword" type="Weapon">
 		<!-- Dualsword that contains the power of a Doomcryer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -833,7 +833,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33746" name="Legacy Fortune Seeker Dagger" additionalName="" type="Weapon">
+	<item id="33746" name="Legacy Fortune Seeker Dagger" type="Weapon">
 		<!-- Dagger that contains the power of a Fortune Seeker. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_radice_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -857,7 +857,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33747" name="Staff with Sealed Power of a Maestro" additionalName="" type="Weapon">
+	<item id="33747" name="Staff with Sealed Power of a Maestro" type="Weapon">
 		<!-- Staff with sealed power of a Maestro. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_arcorda_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -877,19 +877,19 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33748" name="Small Kukurin Pouch" additionalName="" type="EtcItem">
+	<item id="33748" name="Small Kukurin Pouch" type="EtcItem">
 		<!-- Can acquire a Kukurin Feather Helm. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33749" name="Big Kukurin Pouch" additionalName="" type="EtcItem">
+	<item id="33749" name="Big Kukurin Pouch" type="EtcItem">
 		<!-- Can acquire a Kukurin Feather Helm and a Kukurin Bracelet. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33750" name="Test - old requiem weapon" additionalName="" type="Weapon">
+	<item id="33750" name="Test - old requiem weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33751" name="Test - color varying requiem weapon" additionalName="" type="Weapon">
+	<item id="33751" name="Test - color varying requiem weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -927,7 +927,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33752" name="Test - apo requiem weapon" additionalName="" type="Weapon">
+	<item id="33752" name="Test - apo requiem weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -946,7 +946,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33753" name="Test - color varying apo weapon" additionalName="" type="Weapon">
+	<item id="33753" name="Test - color varying apo weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -965,7 +965,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33754" name="Test - old fanta weapon" additionalName="" type="Weapon">
+	<item id="33754" name="Test - old fanta weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -984,7 +984,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33755" name="Test - color varying fanta weapon" additionalName="" type="Weapon">
+	<item id="33755" name="Test - color varying fanta weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1003,7 +1003,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33756" name="Test - old heli weapon" additionalName="" type="Weapon">
+	<item id="33756" name="Test - old heli weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1022,7 +1022,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33757" name="Test - color varying heli weapon" additionalName="" type="Weapon">
+	<item id="33757" name="Test - color varying heli weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1041,7 +1041,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33758" name="Test - Old Celestial Weapon" additionalName="" type="Weapon">
+	<item id="33758" name="Test - Old Celestial Weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33759" name="Test - Color Varying Celestial Weapon" additionalName="" type="Weapon">
+	<item id="33759" name="Test - Color Varying Celestial Weapon" type="Weapon">
 		<!-- Dummy item - do not delete. Deleting this causes errors to the AI. It must be kept in the level time in the event that numbers 33717 - 33765 are changed. Must be maintained even if the order of the items is changed. -->
 		<set name="icon" val="icon.weapon_estia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1079,7 +1079,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33760" name="Legacy Fortune Seeker Dagger" additionalName="" type="Weapon">
+	<item id="33760" name="Legacy Fortune Seeker Dagger" type="Weapon">
 		<!-- Dagger that contains the power of a Fortune Seeker. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1090,7 +1090,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33761" name="Legacy Doombringer Sword" additionalName="" type="Weapon">
+	<item id="33761" name="Legacy Doombringer Sword" type="Weapon">
 		<!-- Sword that contains the power of a Doombringer. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33762" name="Legacy Soul Hound Sword (Male)" additionalName="" type="Weapon">
+	<item id="33762" name="Legacy Soul Hound Sword (Male)" type="Weapon">
 		<!-- Sword that contains the power of a Soul Hound (male). Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1112,7 +1112,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33763" name="Legacy Soul Hound Sword (Female)" additionalName="" type="Weapon">
+	<item id="33763" name="Legacy Soul Hound Sword (Female)" type="Weapon">
 		<!-- Sword that contains the power of a Soul Hound (female). Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_netra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1123,13 +1123,13 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="33764" name="Legacy Trickster Crossbow" additionalName="" type="EtcItem">
+	<item id="33764" name="Legacy Trickster Crossbow" type="EtcItem">
 		<!-- Crossbow that contains the power of a Trickster. Cannot be exchanged, dropped, destroyed, sold in a private store, or used in an Auction House. Enchantment, augmentation, and addition of attributes are not possible. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33765" name="Legacy Judicator Sword" additionalName="" type="Weapon">
+	<item id="33765" name="Legacy Judicator Sword" type="Weapon">
 		<!-- Sword that contains the power of a Judicator. Cannot be enchanted, agumented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_aseldor_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1140,49 +1140,49 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33766" name="Elixir of Blessing" additionalName="" type="EtcItem">
+	<item id="33766" name="Elixir of Blessing" type="EtcItem">
 		<!-- For 30 minutes, it receives the following level 1 effects: Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody and Drum Melody. Can be used at level 85 or above. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33767" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" additionalName="" type="Armor">
+	<item id="33767" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" type="Armor">
 		<!-- Increases Lethal Strike Resistance upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33768" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" additionalName="" type="Armor">
+	<item id="33768" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" type="Armor">
 		<!-- Increases resistance to damage shield when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33769" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" additionalName="" type="Armor">
+	<item id="33769" name="Talisman (R-grade) - Lethal Strike Resistance (Active)" type="Armor">
 		<!-- Increases Lethal Strike Resistance upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33770" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" additionalName="" type="Armor">
+	<item id="33770" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" type="Armor">
 		<!-- Increases resistance to damage shield upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33771" name="Aden Hero's Reward Box" additionalName="" type="EtcItem">
+	<item id="33771" name="Aden Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Aden from danger. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33772" name="Aden Hero's Reward Box" additionalName="" type="EtcItem">
+	<item id="33772" name="Aden Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Aden from danger. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33773" name="Aden Hero's Reward Box" additionalName="" type="EtcItem">
+	<item id="33773" name="Aden Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Aden from danger. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />

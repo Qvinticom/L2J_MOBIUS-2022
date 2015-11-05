@@ -449,7 +449,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="32226" name="Scroll of Escape: Talking Island Village" additionalName="" type="EtcItem">
+	<item id="32226" name="Scroll of Escape: Talking Island Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Talking Island. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -465,122 +465,122 @@
 			<player flyMounted="false" />
 		</cond>
 	</item>
-	<item id="32227" name="Stone of Awakening" additionalName="" type="EtcItem">
+	<item id="32227" name="Stone of Awakening" type="EtcItem">
 		<!-- Proof for awakening. -->
 		<set name="icon" val="icon.destiny_stone" />
 	</item>
-	<item id="32228" name="Hardener Pouch - D" additionalName="" type="EtcItem">
+	<item id="32228" name="Hardener Pouch - D" type="EtcItem">
 		<!-- Pouch containing A-D-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32229" name="Hardener Pouch - C(49)" additionalName="" type="EtcItem">
+	<item id="32229" name="Hardener Pouch - C(49)" type="EtcItem">
 		<!-- Pouch containing A-C-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32230" name="Hardener Pouch - C(52)" additionalName="" type="EtcItem">
+	<item id="32230" name="Hardener Pouch - C(52)" type="EtcItem">
 		<!-- Pouch containing A-C-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32231" name="Hardener Pouch - C(55)" additionalName="" type="EtcItem">
+	<item id="32231" name="Hardener Pouch - C(55)" type="EtcItem">
 		<!-- Pouch containing A-C-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32232" name="Hardener Pouch - B(58)" additionalName="" type="EtcItem">
+	<item id="32232" name="Hardener Pouch - B(58)" type="EtcItem">
 		<!-- Pouch containing B-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32233" name="Hardener Pouch - B(61)" additionalName="" type="EtcItem">
+	<item id="32233" name="Hardener Pouch - B(61)" type="EtcItem">
 		<!-- Pouch containing B-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32234" name="Hardener Pouch - A(64)" additionalName="" type="EtcItem">
+	<item id="32234" name="Hardener Pouch - A(64)" type="EtcItem">
 		<!-- Pouch containing A-grade Hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32235" name="Hardener Pouch - A(67)" additionalName="" type="EtcItem">
+	<item id="32235" name="Hardener Pouch - A(67)" type="EtcItem">
 		<!-- Pouch containing A-grade Hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32236" name="Hardener Pouch - A(70)" additionalName="" type="EtcItem">
+	<item id="32236" name="Hardener Pouch - A(70)" type="EtcItem">
 		<!-- Pouch containing A-grade Hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32237" name="Hardener Pouch - S(75)" additionalName="" type="EtcItem">
+	<item id="32237" name="Hardener Pouch - S(75)" type="EtcItem">
 		<!-- Pouch containing S-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32238" name="Hardener Pouch - S(80)" additionalName="" type="EtcItem">
+	<item id="32238" name="Hardener Pouch - S(80)" type="EtcItem">
 		<!-- Pouch containing S-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32239" name="Hardener Pouch - S(82)" additionalName="" type="EtcItem">
+	<item id="32239" name="Hardener Pouch - S(82)" type="EtcItem">
 		<!-- Pouch containing S-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32240" name="Hardener Pouch - S(84)" additionalName="" type="EtcItem">
+	<item id="32240" name="Hardener Pouch - S(84)" type="EtcItem">
 		<!-- Pouch containing S-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32241" name="Adventurer Support Goods" additionalName="" type="EtcItem">
+	<item id="32241" name="Adventurer Support Goods" type="EtcItem">
 		<!-- Box containing support goods for adventurers. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="weight" val="600" />
 	</item>
-	<item id="32242" name="Hardener Pouch - C(46)" additionalName="" type="EtcItem">
+	<item id="32242" name="Hardener Pouch - C(46)" type="EtcItem">
 		<!-- Pouch containing A-C-grade hardener. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32243" name="Talisman (R-grade) - P. Atk. (Passive)" additionalName="" type="Armor">
+	<item id="32243" name="Talisman (R-grade) - P. Atk. (Passive)" type="Armor">
 		<!-- P. Atk. + 2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32244" name="Talisman (R-grade) - Atk. Spd. (Passive)" additionalName="" type="Armor">
+	<item id="32244" name="Talisman (R-grade) - Atk. Spd. (Passive)" type="Armor">
 		<!-- Atk. Spd. + 2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32245" name="Talisman (R-grade) - M. Atk. (Passive)" additionalName="" type="Armor">
+	<item id="32245" name="Talisman (R-grade) - M. Atk. (Passive)" type="Armor">
 		<!-- M. Atk. + 2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32246" name="Talisman (R-grade) - Casting Spd. (Passive)" additionalName="" type="Armor">
+	<item id="32246" name="Talisman (R-grade) - Casting Spd. (Passive)" type="Armor">
 		<!-- Casting Spd. + 2% when equipped. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32247" name="Talisman (R-grade) - Remove Debuff (Active)" additionalName="" type="Armor">
+	<item id="32247" name="Talisman (R-grade) - Remove Debuff (Active)" type="Armor">
 		<!-- Cancels all debuffs when used. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32248" name="Talisman (R-grade) - Remove Debuff (Active)" additionalName="" type="Armor">
+	<item id="32248" name="Talisman (R-grade) - Remove Debuff (Active)" type="Armor">
 		<!-- Cancels all debuffs when used. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="32249" name="Infinite Wooden Quiver" additionalName="" type="EtcItem">
+	<item id="32249" name="Infinite Wooden Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of wood. Used with a No-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -591,7 +591,7 @@
 		<set name="price" val="1580" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32250" name="Infinite Bone Quiver" additionalName="" type="EtcItem">
+	<item id="32250" name="Infinite Bone Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of sharply ground bone. Used with a D-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
 		<set name="crystal_type" val="D" />
@@ -603,7 +603,7 @@
 		<set name="price" val="7320" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32251" name="Infinite Steel Quiver" additionalName="" type="EtcItem">
+	<item id="32251" name="Infinite Steel Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of steel. Used with a C-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_arrows_i00" />
 		<set name="crystal_type" val="C" />
@@ -615,7 +615,7 @@
 		<set name="price" val="11490" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32252" name="Infinite Silver Quiver" additionalName="" type="EtcItem">
+	<item id="32252" name="Infinite Silver Quiver" type="EtcItem">
 		<!-- Quiver containing steel arrows plated in silver. Used with a B-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_arrows_i00" />
 		<set name="crystal_type" val="B" />
@@ -627,7 +627,7 @@
 		<set name="price" val="34630" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32253" name="Infinite Mithril Quiver" additionalName="" type="EtcItem">
+	<item id="32253" name="Infinite Mithril Quiver" type="EtcItem">
 		<!-- Quiver containing steel arrows plated in mithril. Used with an A-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="crystal_type" val="A" />
@@ -639,7 +639,7 @@
 		<set name="price" val="364800" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32254" name="Infinite Quiver of Light" additionalName="" type="EtcItem">
+	<item id="32254" name="Infinite Quiver of Light" type="EtcItem">
 		<!-- This quiver contains arrows made of unknown material. Used with an S-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00" />
 		<set name="crystal_type" val="S" />
@@ -651,7 +651,7 @@
 		<set name="price" val="1716000" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32255" name="Infinite Orichalcum Quiver" additionalName="" type="EtcItem">
+	<item id="32255" name="Infinite Orichalcum Quiver" type="EtcItem">
 		<!-- Quiver containing arrows made of orichalcum. Used with an R-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="crystal_type" val="R" />
@@ -663,7 +663,7 @@
 		<set name="price" val="4528800" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32256" name="Infinite Wooden Bolt Container" additionalName="" type="EtcItem">
+	<item id="32256" name="Infinite Wooden Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of wood. Used with a No-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 		<set name="price" val="1580" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32257" name="Infinite Bone Bolt Container" additionalName="" type="EtcItem">
+	<item id="32257" name="Infinite Bone Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of sharply ground bone. Used with a D-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
 		<set name="crystal_type" val="D" />
@@ -686,7 +686,7 @@
 		<set name="price" val="7320" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32258" name="Infinite Steel Bolt Container" additionalName="" type="EtcItem">
+	<item id="32258" name="Infinite Steel Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of steel. Used with a C-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_fine_steel_bolts_i00" />
 		<set name="crystal_type" val="C" />
@@ -698,7 +698,7 @@
 		<set name="price" val="11490" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32259" name="Infinite Silver Bolt Container" additionalName="" type="EtcItem">
+	<item id="32259" name="Infinite Silver Bolt Container" type="EtcItem">
 		<!-- Container with steel bolts plated in silver. Used with a B-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_silver_bolts_i00" />
 		<set name="crystal_type" val="B" />
@@ -710,7 +710,7 @@
 		<set name="price" val="34630" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32260" name="Infinite Mithril Bolt Container" additionalName="" type="EtcItem">
+	<item id="32260" name="Infinite Mithril Bolt Container" type="EtcItem">
 		<!-- Container with steel bolts plated in mithril. Used with an A-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="crystal_type" val="A" />
@@ -722,7 +722,7 @@
 		<set name="price" val="364800" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32261" name="Infinite Light Bolt Container" additionalName="" type="EtcItem">
+	<item id="32261" name="Infinite Light Bolt Container" type="EtcItem">
 		<!-- This container Has bolts made of unknown material. Used with an S-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_bolts_i00" />
 		<set name="crystal_type" val="S" />
@@ -734,7 +734,7 @@
 		<set name="price" val="1716000" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32262" name="Infinite Orichalcum Bolt Container" additionalName="" type="EtcItem">
+	<item id="32262" name="Infinite Orichalcum Bolt Container" type="EtcItem">
 		<!-- Container with bolts made of orichalcum. Used with an R-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="crystal_type" val="R" />
@@ -746,7 +746,7 @@
 		<set name="price" val="4528800" />
 		<set name="is_infinite" val="true" />
 	</item>
-	<item id="32263" name="Awakened Hero's Olympiad Treasure Chest" additionalName="" type="EtcItem">
+	<item id="32263" name="Awakened Hero's Olympiad Treasure Chest" type="EtcItem">
 		<!-- Awakened Hero's Olympiad Treasure Chest. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -831,108 +831,108 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="capsuled_items" val="30317,1,1,100;32316,5,5,100;33502,1,1,100" />
 	</item>
-	<item id="32272" name="Expedition Volunteer's Reward Box" additionalName="" type="EtcItem">
+	<item id="32272" name="Expedition Volunteer's Reward Box" type="EtcItem">
 		<!-- Reward box given to volunteers for the Antharas expedition. When the chest is opened, you can receive the Oren Lord Valtez' reward. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32273" name="Recipe: Human Male Wig" additionalName="" type="EtcItem">
+	<item id="32273" name="Recipe: Human Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32274" name="Recipe: Human Female Wig" additionalName="" type="EtcItem">
+	<item id="32274" name="Recipe: Human Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32275" name="Recipe: Human Male Wizard Wig" additionalName="" type="EtcItem">
+	<item id="32275" name="Recipe: Human Male Wizard Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Male Wizard Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32276" name="Recipe: Human Female Wizard Wig" additionalName="" type="EtcItem">
+	<item id="32276" name="Recipe: Human Female Wizard Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Human Female Wizard Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32277" name="Recipe: Elf Male Wig" additionalName="" type="EtcItem">
+	<item id="32277" name="Recipe: Elf Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Elf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32278" name="Recipe: Elf Female Wig" additionalName="" type="EtcItem">
+	<item id="32278" name="Recipe: Elf Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Elf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32279" name="Recipe: Dark Elf Male Wig" additionalName="" type="EtcItem">
+	<item id="32279" name="Recipe: Dark Elf Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dark Elf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32280" name="Recipe: Dark Elf Female Wig" additionalName="" type="EtcItem">
+	<item id="32280" name="Recipe: Dark Elf Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dark Elf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32281" name="Recipe: Dwarf Male Wig" additionalName="" type="EtcItem">
+	<item id="32281" name="Recipe: Dwarf Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dwarf Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32282" name="Recipe: Dwarf Female Wig" additionalName="" type="EtcItem">
+	<item id="32282" name="Recipe: Dwarf Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Dwarf Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32283" name="Recipe: Orc Male Wig" additionalName="" type="EtcItem">
+	<item id="32283" name="Recipe: Orc Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32284" name="Recipe: Orc Female Wig" additionalName="" type="EtcItem">
+	<item id="32284" name="Recipe: Orc Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32285" name="Recipe: Orc Male Shaman Wig" additionalName="" type="EtcItem">
+	<item id="32285" name="Recipe: Orc Male Shaman Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Male Shaman Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32286" name="Recipe: Orc Female Shaman Wig" additionalName="" type="EtcItem">
+	<item id="32286" name="Recipe: Orc Female Shaman Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Orc Female Shaman Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32287" name="Recipe: Kamael Male Wig" additionalName="" type="EtcItem">
+	<item id="32287" name="Recipe: Kamael Male Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Kamael Male Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32288" name="Recipe: Kamael Female Wig" additionalName="" type="EtcItem">
+	<item id="32288" name="Recipe: Kamael Female Wig" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Kamael Female Wig. Requires Create Common Item Skill Lv. 10. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32289" name="Olympiad Guardian Warrior's Ring" additionalName="" type="Armor">
+	<item id="32289" name="Olympiad Guardian Warrior's Ring" type="Armor">
 		<!-- Olympiad Guardian Warrior's Ring. 30-day. MP + 28. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -944,7 +944,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="32290" name="Olympiad Guardian Warrior's Necklace" additionalName="" type="Armor">
+	<item id="32290" name="Olympiad Guardian Warrior's Necklace" type="Armor">
 		<!-- Olympiad Guardian Warrior's Necklace. 30-day. MP + 57. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -956,7 +956,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="32291" name="Olympiad Guardian Warrior's Earring" additionalName="" type="Armor">
+	<item id="32291" name="Olympiad Guardian Warrior's Earring" type="Armor">
 		<!-- Olympiad Guardian Warrior's Earring. 30-day. MP + 42. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -968,7 +968,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="32292" name="Recipe: Immortal Belt (60%)" additionalName="" type="EtcItem">
+	<item id="32292" name="Recipe: Immortal Belt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -976,21 +976,21 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="32293" name="Recipe: Immortal Bracelet (60%)" additionalName="" type="EtcItem">
+	<item id="32293" name="Recipe: Immortal Bracelet (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32294" name="Recipe: Immortal Shirt (60%)" additionalName="" type="EtcItem">
+	<item id="32294" name="Recipe: Immortal Shirt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Immortal Shirt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="399700" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32295" name="Recipe: Twilight Belt (60%)" additionalName="" type="EtcItem">
+	<item id="32295" name="Recipe: Twilight Belt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -998,14 +998,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="32296" name="Recipe: Twilight Bracelet (60%)" additionalName="" type="EtcItem">
+	<item id="32296" name="Recipe: Twilight Bracelet (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="355600" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="32297" name="Recipe: Twilight Shirt (60%)" additionalName="" type="EtcItem">
+	<item id="32297" name="Recipe: Twilight Shirt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Twilight Shirt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1013,7 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="32298" name="Recipe: Seraph Belt (60%)" additionalName="" type="EtcItem">
+	<item id="32298" name="Recipe: Seraph Belt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
@@ -1021,7 +1021,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="32299" name="Recipe: Seraph Bracelet (60%)" additionalName="" type="EtcItem">
+	<item id="32299" name="Recipe: Seraph Bracelet (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Seraph Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />

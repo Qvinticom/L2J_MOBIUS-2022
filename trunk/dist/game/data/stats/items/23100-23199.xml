@@ -338,19 +338,19 @@
 		<set name="weight" val="100" />
 		<set name="time" val="7776000" />
 	</item>
-	<item id="23127" name="Armor Pack (S80-grade) (90-day)" additionalName="" type="EtcItem">
+	<item id="23127" name="Armor Pack (S80-grade) (90-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Armor of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23128" name="Weapon Pack (S80-grade) (90-day)" additionalName="" type="EtcItem">
+	<item id="23128" name="Weapon Pack (S80-grade) (90-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapons of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23129" name="Accessory Pack (S80-grade) (90-day)" additionalName="" type="EtcItem">
+	<item id="23129" name="Accessory Pack (S80-grade) (90-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Accessories of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -395,31 +395,31 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="23133" name="Gender Change Ticket" additionalName="" type="EtcItem">
+	<item id="23133" name="Gender Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23134" name="Name Change Ticket" additionalName="" type="EtcItem">
+	<item id="23134" name="Name Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23135" name="Awakening Class Change Ticket" additionalName="" type="EtcItem">
+	<item id="23135" name="Awakening Class Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23136" name="Uthanka's Ring" additionalName="" type="Armor">
+	<item id="23136" name="Uthanka's Ring" type="Armor">
 		<!-- Ring acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to turn into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka_jp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23137" name="Extra Pass: Ancient Kartia's Labyrinth" additionalName="" type="EtcItem">
+	<item id="23137" name="Extra Pass: Ancient Kartia's Labyrinth" type="EtcItem">
 		<!-- Given to adventurers from the Kartia Research Center. Resets Cooldown for Ancient Kartia's Labyrinth. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 	</item>
@@ -455,7 +455,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="23140" name="Military Underwear" additionalName="" type="Armor">
+	<item id="23140" name="Military Underwear" type="Armor">
 		<!-- Underwear with a military look. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_military_undwrwear" />
 		<set name="default_action" val="EQUIP" />
@@ -464,7 +464,7 @@
 			<add stat="pDef" val="42.0" />
 		</for>
 	</item>
-	<item id="23141" name="Premium Underwear" additionalName="" type="Armor">
+	<item id="23141" name="Premium Underwear" type="Armor">
 		<!-- Underwear for premium users. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_premium_underwear" />
 		<set name="default_action" val="EQUIP" />
@@ -473,7 +473,7 @@
 			<add stat="pDef" val="42.0" />
 		</for>
 	</item>
-	<item id="23142" name="Temptation Underwear" additionalName="" type="Armor">
+	<item id="23142" name="Temptation Underwear" type="Armor">
 		<!-- Sexy underwear. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sexy_underwear" />
 		<set name="default_action" val="EQUIP" />
@@ -482,7 +482,7 @@
 			<add stat="pDef" val="42.0" />
 		</for>
 	</item>
-	<item id="23143" name="Cyber Underwear" additionalName="" type="Armor">
+	<item id="23143" name="Cyber Underwear" type="Armor">
 		<!-- Underwear with a cyberpunk look. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_underwear_01" />
 		<set name="default_action" val="EQUIP" />
@@ -491,7 +491,7 @@
 			<add stat="pDef" val="42.0" />
 		</for>
 	</item>
-	<item id="23144" name="Maid Underwear" additionalName="" type="Armor">
+	<item id="23144" name="Maid Underwear" type="Armor">
 		<!-- Cute underwear. Female only. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_maid_underwear_f01" />
 		<set name="default_action" val="EQUIP" />
@@ -539,79 +539,79 @@
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23152" name="Soul Avatar - Lancet" additionalName="" type="Armor">
+	<item id="23152" name="Soul Avatar - Lancet" type="Armor">
 		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23153" name="Soul Avatar - Liposa" additionalName="" type="Armor">
+	<item id="23153" name="Soul Avatar - Liposa" type="Armor">
 		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23154" name="Soul Avatar - Velarin" additionalName="" type="Armor">
+	<item id="23154" name="Soul Avatar - Velarin" type="Armor">
 		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23155" name="Soul Avatar - Dulcinel" additionalName="" type="Armor">
+	<item id="23155" name="Soul Avatar - Dulcinel" type="Armor">
 		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23156" name="Soul Avatar - Chimeros" additionalName="" type="Armor">
+	<item id="23156" name="Soul Avatar - Chimeros" type="Armor">
 		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23157" name="Soul Avatar - Niveri" additionalName="" type="Armor">
+	<item id="23157" name="Soul Avatar - Niveri" type="Armor">
 		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23158" name="Soul Avatar - Hamell" additionalName="" type="Armor">
+	<item id="23158" name="Soul Avatar - Hamell" type="Armor">
 		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23159" name="Soul Avatar - Joriya" additionalName="" type="Armor">
+	<item id="23159" name="Soul Avatar - Joriya" type="Armor">
 		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23160" name="Soul Avatar - Ralmak" additionalName="" type="Armor">
+	<item id="23160" name="Soul Avatar - Ralmak" type="Armor">
 		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23161" name="Soul Avatar - Goras" additionalName="" type="Armor">
+	<item id="23161" name="Soul Avatar - Goras" type="Armor">
 		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23162" name="Soul Avatar - Vensar" additionalName="" type="Armor">
+	<item id="23162" name="Soul Avatar - Vensar" type="Armor">
 		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23163" name="Soul Avatar - Kiela" additionalName="" type="Armor">
+	<item id="23163" name="Soul Avatar - Kiela" type="Armor">
 		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door.\nIncreases 6 defense attributes by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="23164" name="Soul Avatar's Large Placid" additionalName="" type="EtcItem">
+	<item id="23164" name="Soul Avatar's Large Placid" type="EtcItem">
 		<!-- Restores 100000 Soul Avatar energy when used. Can be replenished only when the Soul Avatar is equipped and 100000 or more energy has been consumed. -->
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01" />
 		<set name="is_stackable" val="true" />
@@ -658,7 +658,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23173" name="Alluring Swimsuit" additionalName="" type="Armor">
+	<item id="23173" name="Alluring Swimsuit" type="Armor">
 		<!-- Alluring swimsuit with exquisite prints. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_02" />
 		<set name="default_action" val="EQUIP" />
@@ -694,127 +694,127 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23179" name="Ninja Top" additionalName="" type="Armor">
+	<item id="23179" name="Ninja Top" type="Armor">
 		<!-- Ninja Top. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23180" name="Ninja Pants" additionalName="" type="Armor">
+	<item id="23180" name="Ninja Pants" type="Armor">
 		<!-- Ninja Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_l" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23181" name="Ninja Gloves" additionalName="" type="Armor">
+	<item id="23181" name="Ninja Gloves" type="Armor">
 		<!-- Ninja Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_g" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23182" name="Ninja Shoes" additionalName="" type="Armor">
+	<item id="23182" name="Ninja Shoes" type="Armor">
 		<!-- Ninja Shoes. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_b" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23183" name="Ninja Hair Accessory" additionalName="" type="Armor">
+	<item id="23183" name="Ninja Hair Accessory" type="Armor">
 		<!-- Ninja Hair Accessory. Mask form. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_hair" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23184" name="Traditional Taiwanese Top" additionalName="" type="Armor">
+	<item id="23184" name="Traditional Taiwanese Top" type="Armor">
 		<!-- Traditional Taiwanese Top. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23185" name="Traditional Taiwanese Pants" additionalName="" type="Armor">
+	<item id="23185" name="Traditional Taiwanese Pants" type="Armor">
 		<!-- Traditional Taiwanese Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23186" name="Traditional Taiwanese Gloves" additionalName="" type="Armor">
+	<item id="23186" name="Traditional Taiwanese Gloves" type="Armor">
 		<!-- Traditional Taiwanese Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23187" name="Traditional Taiwanese Shoes" additionalName="" type="Armor">
+	<item id="23187" name="Traditional Taiwanese Shoes" type="Armor">
 		<!-- Traditional Taiwanese Shoes. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23188" name="Traditional Taiwanese Hair Accessory" additionalName="" type="Armor">
+	<item id="23188" name="Traditional Taiwanese Hair Accessory" type="Armor">
 		<!-- Traditional Taiwanese Hair Accessory. Hat form. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_hair" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23189" name="Ninja Top Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23189" name="Ninja Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Ninja outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23190" name="Ninja Pants Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23190" name="Ninja Pants Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Ninja outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23191" name="Ninja Gloves Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23191" name="Ninja Gloves Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Ninja outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23192" name="Ninja Shoes Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23192" name="Ninja Shoes Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Ninja outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23193" name="Ninja Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots.\n\nWarning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23194" name="Traditional Taiwanese Top Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23194" name="Traditional Taiwanese Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23195" name="Traditional Taiwanese Pants Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23195" name="Traditional Taiwanese Pants Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23196" name="Traditional Taiwanese Gloves Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23196" name="Traditional Taiwanese Gloves Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23197" name="Traditional Taiwanese Shoes Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23197" name="Traditional Taiwanese Shoes Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of shoes to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23198" name="Traditional Taiwanese Hair Accessory Appearance Stone" additionalName="" type="EtcItem">
+	<item id="23198" name="Traditional Taiwanese Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Traditional Taiwanese outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23199" name="Ninja Outfit Appearance Stone Pack" additionalName="" type="EtcItem">
+	<item id="23199" name="Ninja Outfit Appearance Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Ninja Top/Pants/Gloves/Shoes/Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />

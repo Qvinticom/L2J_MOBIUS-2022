@@ -38,7 +38,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31202" name="Bound Blood Tornado" additionalName="" type="Weapon">
+	<item id="31202" name="Bound Blood Tornado" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Haste, Focus or Anger. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -118,7 +118,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31206" name="Bound Brigandine Helmet" additionalName="" type="Armor">
+	<item id="31206" name="Bound Brigandine Helmet" type="Armor">
 		<!-- Bound brigandine Helmet. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -132,7 +132,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31207" name="Bound Brigandine Shield" additionalName="" type="Weapon">
+	<item id="31207" name="Bound Brigandine Shield" type="Weapon">
 		<!-- Bound brigandine Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -148,7 +148,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="31208" name="Bound Brigandine Boots" additionalName="" type="Armor">
+	<item id="31208" name="Bound Brigandine Boots" type="Armor">
 		<!-- Bound brigandine Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -162,7 +162,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31209" name="Bound Brigandine Gauntlets" additionalName="" type="Armor">
+	<item id="31209" name="Bound Brigandine Gauntlets" type="Armor">
 		<!-- Bound Brigandine Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -176,7 +176,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31210" name="Bound Brigandine Gaiters" additionalName="" type="Armor">
+	<item id="31210" name="Bound Brigandine Gaiters" type="Armor">
 		<!-- Bound brigandine Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -190,7 +190,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31211" name="Bound Brigandine" additionalName="" type="Armor">
+	<item id="31211" name="Bound Brigandine" type="Armor">
 		<!-- Bound Brigandine. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -204,7 +204,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31212" name="Bound Gloves of Seal" additionalName="" type="Armor">
+	<item id="31212" name="Bound Gloves of Seal" type="Armor">
 		<!-- Bound Gloves of Seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31213" name="Bound Boots of Seal" additionalName="" type="Armor">
+	<item id="31213" name="Bound Boots of Seal" type="Armor">
 		<!-- Bound Boots of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -232,7 +232,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31214" name="Bound Ring of Seal" additionalName="" type="Armor">
+	<item id="31214" name="Bound Ring of Seal" type="Armor">
 		<!-- Bound Ring of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -246,7 +246,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31215" name="Bound Necklace of Seal" additionalName="" type="Armor">
+	<item id="31215" name="Bound Necklace of Seal" type="Armor">
 		<!-- Bound Necklace of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -260,7 +260,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31216" name="Bound Robe of Seal" additionalName="" type="Armor">
+	<item id="31216" name="Bound Robe of Seal" type="Armor">
 		<!-- Bound robe of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -274,7 +274,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31217" name="Bound Earring of Seal" additionalName="" type="Armor">
+	<item id="31217" name="Bound Earring of Seal" type="Armor">
 		<!-- Bound Earring of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -288,7 +288,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31218" name="Bound Earring of Seal" additionalName="" type="Armor">
+	<item id="31218" name="Bound Earring of Seal" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -301,7 +301,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31219" name="Bound Bonebreaker" additionalName="" type="Weapon">
+	<item id="31219" name="Bound Bonebreaker" type="Weapon">
 		<!-- Bound Bonebreaker. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31220" name="Bound Proof of Revenge" additionalName="" type="Weapon">
+	<item id="31220" name="Bound Proof of Revenge" type="Weapon">
 		<!-- Bound Proof of Revenge. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_proof_of_revenge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -339,7 +339,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31221" name="Bound Bellion Cestus" additionalName="" type="Weapon">
+	<item id="31221" name="Bound Bellion Cestus" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -419,7 +419,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31225" name="Bound Berserker Blade" additionalName="" type="Weapon">
+	<item id="31225" name="Bound Berserker Blade" type="Weapon">
 		<!-- Bound Berserker Blade. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -495,7 +495,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31229" name="Bound Battle Axe" additionalName="" type="Weapon">
+	<item id="31229" name="Bound Battle Axe" type="Weapon">
 		<!-- Bound Battle Axe. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -575,7 +575,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31233" name="Bound Bec de Corbin" additionalName="" type="Weapon">
+	<item id="31233" name="Bound Bec de Corbin" type="Weapon">
 		<!-- Bound Bec de Corbin. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -651,7 +651,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31237" name="Bound Ballista" additionalName="" type="Weapon">
+	<item id="31237" name="Bound Ballista" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Elemental Bow conversion, Bound Ballista. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="31238" name="Bound Ballista" additionalName="" type="Weapon">
+	<item id="31238" name="Bound Ballista" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Noble Elven Bow conversion, Bound Ballista. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="31245" name="Bound Bastard Sword*Sword of Revolution" additionalName="" type="Weapon">
+	<item id="31245" name="Bound Bastard Sword*Sword of Revolution" type="Weapon">
 		<!-- Bound Bastard Sword*Sword of Revolution. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -822,7 +822,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31246" name="Bound Bastard Sword*Crimson Sword" additionalName="" type="Weapon">
+	<item id="31246" name="Bound Bastard Sword*Crimson Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Crimson Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -841,7 +841,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31247" name="Bound Bastard Sword*Artisan's Sword" additionalName="" type="Weapon">
+	<item id="31247" name="Bound Bastard Sword*Artisan's Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Artisan's Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -860,7 +860,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31248" name="Bound Bastard Sword*Elven Sword" additionalName="" type="Weapon">
+	<item id="31248" name="Bound Bastard Sword*Elven Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Elven Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -879,7 +879,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31249" name="Bound Bastard Sword*Elven Long Sword" additionalName="" type="Weapon">
+	<item id="31249" name="Bound Bastard Sword*Elven Long Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Elven Long Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -898,7 +898,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31250" name="Bound Bastard Sword*Spinebone Sword" additionalName="" type="Weapon">
+	<item id="31250" name="Bound Bastard Sword*Spinebone Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Spinebone Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -917,7 +917,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31251" name="Bound Bastard Sword*Bastard Sword" additionalName="" type="Weapon">
+	<item id="31251" name="Bound Bastard Sword*Bastard Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Bastard Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -936,7 +936,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31252" name="Bound Bastard Sword*Knight's Sword" additionalName="" type="Weapon">
+	<item id="31252" name="Bound Bastard Sword*Knight's Sword" type="Weapon">
 		<!-- Bound Bastard Sword*Knight's Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -955,7 +955,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31253" name="Bound Bastard Sword" additionalName="" type="Weapon">
+	<item id="31253" name="Bound Bastard Sword" type="Weapon">
 		<!-- Bound Bastard Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -974,7 +974,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31254" name="Bound Basalt Battlehammer" additionalName="" type="Weapon">
+	<item id="31254" name="Bound Basalt Battlehammer" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: HP Drain, Health or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1054,7 +1054,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31258" name="Bound Body Slasher" additionalName="" type="Weapon">
+	<item id="31258" name="Bound Body Slasher" type="Weapon">
 		<!-- Bound Body Slasher. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1130,7 +1130,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31262" name="Bound Bagh-Nakh" additionalName="" type="Weapon">
+	<item id="31262" name="Bound Bagh-Nakh" type="Weapon">
 		<!-- Bound Bagh-Nakh. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1150,7 +1150,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31263" name="Bound Sword of Delusion" additionalName="" type="Weapon">
+	<item id="31263" name="Bound Sword of Delusion" type="Weapon">
 		<!-- Bound Sword of Delusion. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1226,7 +1226,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31267" name="Bound Meteor Shower" additionalName="" type="Weapon">
+	<item id="31267" name="Bound Meteor Shower" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Focus, Critical Bleed or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1306,7 +1306,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31271" name="Bound Mystic Staff" additionalName="" type="Weapon">
+	<item id="31271" name="Bound Mystic Staff" type="Weapon">
 		<!-- Bound Mystic Staff. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystic_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1326,7 +1326,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31272" name="Bound Mystic Knife" additionalName="" type="Weapon">
+	<item id="31272" name="Bound Mystic Knife" type="Weapon">
 		<!-- Bound Mystic Knife. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystic_knife_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1345,7 +1345,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31273" name="Bound Mysterious Sword" additionalName="" type="Weapon">
+	<item id="31273" name="Bound Mysterious Sword" type="Weapon">
 		<!-- Bound Mysterious Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1421,7 +1421,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31277" name="Bound Mithril Breastplate" additionalName="" type="Armor">
+	<item id="31277" name="Bound Mithril Breastplate" type="Armor">
 		<!-- Bound Mithril Breastplate. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1435,7 +1435,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31278" name="Bound Mithril Stockings" additionalName="" type="Armor">
+	<item id="31278" name="Bound Mithril Stockings" type="Armor">
 		<!-- Bound Mithril Stockings. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1449,7 +1449,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31279" name="Bound Mithril Stockings" additionalName="" type="Armor">
+	<item id="31279" name="Bound Mithril Stockings" type="Armor">
 		<!-- Bound Mithril Stockings. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1461,7 +1461,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31280" name="Bound Mithril Tunic" additionalName="" type="Armor">
+	<item id="31280" name="Bound Mithril Tunic" type="Armor">
 		<!-- Bound Mithril Tunic. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1475,7 +1475,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31281" name="Bound Mithril Tunic" additionalName="" type="Armor">
+	<item id="31281" name="Bound Mithril Tunic" type="Armor">
 		<!-- Bound Mithril Tunic. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1487,7 +1487,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31282" name="Bound Mithril Gloves" additionalName="" type="Armor">
+	<item id="31282" name="Bound Mithril Gloves" type="Armor">
 		<!-- Bound Mithril Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1501,7 +1501,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31283" name="Bound Mithril Gloves" additionalName="" type="Armor">
+	<item id="31283" name="Bound Mithril Gloves" type="Armor">
 		<!-- Bound Mithril Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1513,7 +1513,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31284" name="Bound Mithril Scale Gaiters" additionalName="" type="Armor">
+	<item id="31284" name="Bound Mithril Scale Gaiters" type="Armor">
 		<!-- Bound Mithril Scale Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t40_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1527,7 +1527,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31285" name="Bound Mithril Banded Mail" additionalName="" type="Armor">
+	<item id="31285" name="Bound Mithril Banded Mail" type="Armor">
 		<!-- Bound Mithril Banded Mail. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t10_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1541,7 +1541,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31286" name="Bound Mithril Banded Gaiters" additionalName="" type="Armor">
+	<item id="31286" name="Bound Mithril Banded Gaiters" type="Armor">
 		<!-- Bound Mithril Banded Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t10_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1555,7 +1555,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31287" name="Bound Mithril Ring" additionalName="" type="Armor">
+	<item id="31287" name="Bound Mithril Ring" type="Armor">
 		<!-- Bound Mithril Ring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_mithril_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1569,7 +1569,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31288" name="Bound Mithril Dagger" additionalName="" type="Weapon">
+	<item id="31288" name="Bound Mithril Dagger" type="Weapon">
 		<!-- Bound Mithril Dagger. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1588,7 +1588,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31289" name="Bound Mithril Gauntlets" additionalName="" type="Armor">
+	<item id="31289" name="Bound Mithril Gauntlets" type="Armor">
 		<!-- Bound Mithril Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t61_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1602,7 +1602,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31290" name="Bound Mithril Gaiters" additionalName="" type="Armor">
+	<item id="31290" name="Bound Mithril Gaiters" type="Armor">
 		<!-- Bound Mithril Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1616,7 +1616,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31291" name="Bound Moonstone Earring" additionalName="" type="Armor">
+	<item id="31291" name="Bound Moonstone Earring" type="Armor">
 		<!-- Bound Moonstone Earring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1630,7 +1630,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31292" name="Bound Moonstone Earring" additionalName="" type="Armor">
+	<item id="31292" name="Bound Moonstone Earring" type="Armor">
 		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1643,7 +1643,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="31293" name="Bound Linen Shirt" additionalName="" type="Armor">
+	<item id="31293" name="Bound Linen Shirt" type="Armor">
 		<!-- Bound Linen Shirt. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.etc_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1657,7 +1657,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31294" name="Bound Morning Star" additionalName="" type="Weapon">
+	<item id="31294" name="Bound Morning Star" type="Weapon">
 		<!-- Bound Morning Star. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31295" name="Bound Maingauche" additionalName="" type="Weapon">
+	<item id="31295" name="Bound Maingauche" type="Weapon">
 		<!-- Bound Maingauche. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1695,7 +1695,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31296" name="Bound Major Arcana Circlet" additionalName="" type="Armor">
+	<item id="31296" name="Bound Major Arcana Circlet" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1708,7 +1708,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31297" name="Bound Major Arcana Boots" additionalName="" type="Armor">
+	<item id="31297" name="Bound Major Arcana Boots" type="Armor">
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1721,7 +1721,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31298" name="Bound Major Arcana Robe" additionalName="" type="Armor">
+	<item id="31298" name="Bound Major Arcana Robe" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1735,7 +1735,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31299" name="Bound Major Arcana Gloves" additionalName="" type="Armor">
+	<item id="31299" name="Bound Major Arcana Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

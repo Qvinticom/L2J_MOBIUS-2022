@@ -57,7 +57,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31403" name="Bound Dragon Grinder" additionalName="" type="Weapon">
+	<item id="31403" name="Bound Dragon Grinder" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Rsk. Evasion, Guidance or Health. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -137,7 +137,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31407" name="Bound Draconic Bow" additionalName="" type="Weapon">
+	<item id="31407" name="Bound Draconic Bow" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Cheap Shot, Focus or Critical Slow. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -213,7 +213,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31411" name="Bound Draconic Leather Helmet" additionalName="" type="Armor">
+	<item id="31411" name="Bound Draconic Leather Helmet" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -226,7 +226,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31412" name="Bound Draconic Leather Armor" additionalName="" type="Armor">
+	<item id="31412" name="Bound Draconic Leather Armor" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -240,7 +240,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31413" name="Bound Draconic Leather Boots" additionalName="" type="Armor">
+	<item id="31413" name="Bound Draconic Leather Boots" type="Armor">
 		<set name="icon" val="icon.armor_t89_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -253,7 +253,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31414" name="Bound Draconic Leather Gloves" additionalName="" type="Armor">
+	<item id="31414" name="Bound Draconic Leather Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t89_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -266,7 +266,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31415" name="Bound Doom Hammer" additionalName="" type="Weapon">
+	<item id="31415" name="Bound Doom Hammer" type="Weapon">
 		<!-- Bound Doom Hammer. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_doom_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -286,7 +286,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31416" name="Bound Doom Helmet" additionalName="" type="Armor">
+	<item id="31416" name="Bound Doom Helmet" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -299,7 +299,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31417" name="Bound Doom Plate Armor" additionalName="" type="Armor">
+	<item id="31417" name="Bound Doom Plate Armor" type="Armor">
 		<!-- Full body armor. -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -312,7 +312,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31418" name="Bound Doom Crusher" additionalName="" type="Weapon">
+	<item id="31418" name="Bound Doom Crusher" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Health, Anger or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -392,7 +392,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31422" name="Bound Doomchanter" additionalName="" type="Weapon">
+	<item id="31422" name="Bound Doomchanter" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Carnage Bow Conversion\nBestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -468,7 +468,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="31426" name="Bound Doom Shield" additionalName="" type="Weapon">
+	<item id="31426" name="Bound Doom Shield" type="Weapon">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -566,7 +566,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31433" name="Bound Dasparion's Staff" additionalName="" type="Weapon">
+	<item id="31433" name="Bound Dasparion's Staff" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Mana Up, Conversion or Acumen. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31437" name="Bound Undertaker" additionalName="" type="Weapon">
+	<item id="31437" name="Bound Undertaker" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Dragon Slayer Conversion\nBestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -726,7 +726,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31441" name="Bound Sword of Whispering Death" additionalName="" type="Weapon">
+	<item id="31441" name="Bound Sword of Whispering Death" type="Weapon">
 		<!-- Bound Sword of Whispering Death. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31445" name="Bound Demon Splinter" additionalName="" type="Weapon">
+	<item id="31445" name="Bound Demon Splinter" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Focus, Health or Critical Stun. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -882,7 +882,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31449" name="Bound Club of Nature" additionalName="" type="Weapon">
+	<item id="31449" name="Bound Club of Nature" type="Weapon">
 		<!-- Bound Club of Nature. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -962,7 +962,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31453" name="Bound Dark Elven Bow" additionalName="" type="Weapon">
+	<item id="31453" name="Bound Dark Elven Bow" type="Weapon">
 		<!-- Bound Dark Elven Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31454" name="Bound Dark Elven Longbow" additionalName="" type="Weapon">
+	<item id="31454" name="Bound Dark Elven Longbow" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Evasion, Critical Bleed, or Miser. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1057,7 +1057,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31458" name="Bound Dark Screamer" additionalName="" type="Weapon">
+	<item id="31458" name="Bound Dark Screamer" type="Weapon">
 		<!-- Bound Dark Screamer. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1133,7 +1133,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31462" name="Bound Dark Crystal Breastplate" additionalName="" type="Armor">
+	<item id="31462" name="Bound Dark Crystal Breastplate" type="Armor">
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -1146,7 +1146,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31463" name="Bound Dark Crystal Helmet" additionalName="" type="Armor">
+	<item id="31463" name="Bound Dark Crystal Helmet" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1159,7 +1159,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31464" name="Bound Dark Crystal Shield" additionalName="" type="Weapon">
+	<item id="31464" name="Bound Dark Crystal Shield" type="Weapon">
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1212,7 +1212,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31468" name="Bound Dark Crystal Robe" additionalName="" type="Armor">
+	<item id="31468" name="Bound Dark Crystal Robe" type="Armor">
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="fullarmor" />
@@ -1225,7 +1225,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31469" name="Bound Dark Crystal Leather Armor" additionalName="" type="Armor">
+	<item id="31469" name="Bound Dark Crystal Leather Armor" type="Armor">
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -1280,7 +1280,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31473" name="Bound Dark Crystal Gaiters" additionalName="" type="Armor">
+	<item id="31473" name="Bound Dark Crystal Gaiters" type="Armor">
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -1293,7 +1293,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="31474" name="Bound Dark Elven Dagger" additionalName="" type="Weapon">
+	<item id="31474" name="Bound Dark Elven Dagger" type="Weapon">
 		<!-- Bound Dark Elven Dagger. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1369,7 +1369,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31478" name="Bound Dark Legion's Edge" additionalName="" type="Weapon">
+	<item id="31478" name="Bound Dark Legion's Edge" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Critical Damage, Health or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1445,7 +1445,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31482" name="Bound Dynasty Dualsword" additionalName="" type="Weapon">
+	<item id="31482" name="Bound Dynasty Dualsword" type="Weapon">
 		<!-- Bound Item.\nWhen enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1464,7 +1464,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31483" name="Bound Dynasty Dual Dagger" additionalName="" type="Weapon">
+	<item id="31483" name="Bound Dynasty Dual Dagger" type="Weapon">
 		<!-- Bound Item.\nWhen enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1483,7 +1483,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31484" name="Bound Damascus*Damascus" additionalName="" type="Weapon">
+	<item id="31484" name="Bound Damascus*Damascus" type="Weapon">
 		<!-- Bound Item.\nWhen enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 6. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1502,7 +1502,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31485" name="Bound Damascus Sword" additionalName="" type="Weapon">
+	<item id="31485" name="Bound Damascus Sword" type="Weapon">
 		<!-- Bound Item.\nBestows one of the following functions: Focus, Critical Damage or Haste. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1578,7 +1578,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31489" name="Bound Needle Wolverine" additionalName="" type="Weapon">
+	<item id="31489" name="Bound Needle Wolverine" type="Weapon">
 		<!-- Bound Needle Wolverine. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1597,7 +1597,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="31490" name="Bound Innominate Victory" additionalName="" type="Weapon">
+	<item id="31490" name="Bound Innominate Victory" type="Weapon">
 		<!-- Bound Item.\nKamael-exclusive Weapon: Great Sword\nBestows one of the following functions: Health, P. Critical Damage or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="31494" name="Bound Knuckle Duster" additionalName="" type="Weapon">
+	<item id="31494" name="Bound Knuckle Duster" type="Weapon">
 		<!-- Bound Knuckle Duster. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1757,7 +1757,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="31498" name="Bound Nirvana Axe" additionalName="" type="Weapon">
+	<item id="31498" name="Bound Nirvana Axe" type="Weapon">
 		<!-- Bound Nirvana Axe. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37600" name="Weapon Coupon (A-grade)" additionalName="" type="EtcItem">
+	<item id="37600" name="Weapon Coupon (A-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (A-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37601" name="Armor Coupon (R-grade)" additionalName="" type="EtcItem">
+	<item id="37601" name="Armor Coupon (R-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37602" name="Armor Coupon (R95-grade)" additionalName="" type="EtcItem">
+	<item id="37602" name="Armor Coupon (R95-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R95-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37603" name="Armor Coupon (R99-grade)" additionalName="" type="EtcItem">
+	<item id="37603" name="Armor Coupon (R99-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R99-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37604" name="Armor Coupon (S-grade)" additionalName="" type="EtcItem">
+	<item id="37604" name="Armor Coupon (S-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (S-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37605" name="Armor Coupon (A-grade)" additionalName="" type="EtcItem">
+	<item id="37605" name="Armor Coupon (A-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (A-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_stackable" val="true" />
@@ -145,23 +145,23 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37625" name="Legendary Card: Frintezza" additionalName="" type="EtcItem">
+	<item id="37625" name="Legendary Card: Frintezza" type="EtcItem">
 		<set name="icon" val="icon.card_devil_frintessa" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" additionalName="" type="EtcItem">
+	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" type="EtcItem">
 		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 10,000 rounds of Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" additionalName="" type="EtcItem">
+	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" type="EtcItem">
 		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 20,000 rounds of Mysterious Blessed Soulshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37628" name="Cupid's Arrow" additionalName="" type="Weapon">
+	<item id="37628" name="Cupid's Arrow" type="Weapon">
 		<!-- Throws a love-filled heart. Can use the active skill 'Heart Shot.' \nWarning: When using on a monster, you can receive another player's attack. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="default_action" val="EQUIP" />
@@ -173,7 +173,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="37629" name="Pig Lollipop" additionalName="" type="Weapon">
+	<item id="37629" name="Pig Lollipop" type="Weapon">
 		<!-- Magic lollipop with a cute piggy drawing on it. It makes a piggy squeal upon a strike. Can transform into a cute piggy for a certain amount of time. -->
 		<set name="icon" val="icon.bm_pig_candy" />
 		<set name="default_action" val="EQUIP" />
@@ -560,18 +560,18 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" additionalName="" type="EtcItem">
+	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" type="EtcItem">
 		<!-- Double click to acquire 3 Mysterious Healthy Juices (HP/CP). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" additionalName="" type="EtcItem">
+	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
 		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
 		<set name="icon" val="icon.bm_health_juice_violet" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37660" name="Magmeld's Instrument" additionalName="" type="Weapon">
+	<item id="37660" name="Magmeld's Instrument" type="Weapon">
 		<!-- Magmeld's special instrument. Can play lively music. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="EQUIP" />
@@ -583,37 +583,37 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37661" name="Refined Romantic Chapeau: Blue" additionalName="" type="Armor">
+	<item id="37661" name="Refined Romantic Chapeau: Blue" type="Armor">
 		<!-- Refined blue romantic chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="" type="Armor">
+	<item id="37662" name="Refined Romantic Chapeau: Gold" type="Armor">
 		<!-- Refined gold romantic chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37663" name="Refined Romantic Chapeau: Green" additionalName="" type="Armor">
+	<item id="37663" name="Refined Romantic Chapeau: Green" type="Armor">
 		<!-- Refined green romantic chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_green" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37664" name="Refined Romantic Chapeau: Red" additionalName="" type="Armor">
+	<item id="37664" name="Refined Romantic Chapeau: Red" type="Armor">
 		<!-- Refined red romantic chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_red" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="" type="Armor">
+	<item id="37665" name="Refined Romantic Chapeau: Yellow" type="Armor">
 		<!-- Refined yellow romantic chapeau. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37666" name="Rare Accessory Pack" additionalName="" type="EtcItem">
+	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_stackable" val="true" />
@@ -670,7 +670,7 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="37671" name="Heavenly Recovery Potion" additionalName="" type="EtcItem">
+	<item id="37671" name="Heavenly Recovery Potion" type="EtcItem">
 		<!-- When used, recovers 2500 HP and the remaining power is recovered as CP. There is no duration. Cannot be used in an auction house or the Olympiad. Can be shared within the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_stackable" val="true" />
@@ -681,24 +681,24 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="time" val="2592000" />
 	</item>
-	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" additionalName="" type="EtcItem">
+	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
 		<!-- Double click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37674" name="Scroll: Modify Demonic Sword Zariche" additionalName="" type="EtcItem">
+	<item id="37674" name="Scroll: Modify Demonic Sword Zariche" type="EtcItem">
 		<!-- Scroll that modifies the appearance of a two-handed sword to that of the Demonic Sword Zariche. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_zariche_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37675" name="Scroll: Modify Blood Sword Akamanah" additionalName="" type="EtcItem">
+	<item id="37675" name="Scroll: Modify Blood Sword Akamanah" type="EtcItem">
 		<!-- Scroll that modifies the appearance of a dualsword to that of the Blood Sword Akamanah. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_aka_manaf_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37676" name="Coin of Knowledge" additionalName="" type="EtcItem">
+	<item id="37676" name="Coin of Knowledge" type="EtcItem">
 		<!-- You are full of knowledge!\nYou can purchase useful items through the Adventurers' Guide. -->
 		<set name="icon" val="icon.int_coin_gm_i00" />
 		<set name="is_stackable" val="true" />
@@ -721,7 +721,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37680" name="Transformation Scroll: Makeshift Bat" additionalName="" type="EtcItem">
+	<item id="37680" name="Transformation Scroll: Makeshift Bat" type="EtcItem">
 		<!-- Can change into the appearance of a Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
@@ -767,25 +767,25 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37685" name="Transformation Scroll: Lady Tow" additionalName="" type="EtcItem">
+	<item id="37685" name="Transformation Scroll: Lady Tow" type="EtcItem">
 		<!-- Can change into the appearance of a Lady Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37686" name="Transformation Scroll: Angry Tow" additionalName="" type="EtcItem">
+	<item id="37686" name="Transformation Scroll: Angry Tow" type="EtcItem">
 		<!-- Can change into the appearance of a Angry Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37687" name="Transformation Scroll: Sleepy Tow" additionalName="" type="EtcItem">
+	<item id="37687" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
 		<!-- Can change into the appearance of a Sleepy Tow for 30 minutes.\nPlease note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37688" name="Valentine Dagger" additionalName="" type="Weapon">
+	<item id="37688" name="Valentine Dagger" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +797,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="37689" name="Valentine One-handed Sword" additionalName="" type="Weapon">
+	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -809,7 +809,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37690" name="Valentine Two-handed Sword" additionalName="" type="Weapon">
+	<item id="37690" name="Valentine Two-handed Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -821,7 +821,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37691" name="Valentine One-handed Blunt Weapon" additionalName="" type="Weapon">
+	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -834,7 +834,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37692" name="Valentine Fist Weapon" additionalName="" type="Weapon">
+	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -847,7 +847,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37693" name="Valentine Spear" additionalName="" type="Weapon">
+	<item id="37693" name="Valentine Spear" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -859,7 +859,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37694" name="Valentine Bow" additionalName="" type="Weapon">
+	<item id="37694" name="Valentine Bow" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -871,7 +871,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="37695" name="Valentine Crossbow" additionalName="" type="Weapon">
+	<item id="37695" name="Valentine Crossbow" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -883,7 +883,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="37696" name="Valentine One-handed Magic Sword" additionalName="" type="Weapon">
+	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -895,7 +895,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="37699" name="Valentine Dualsword" additionalName="" type="Weapon">
+	<item id="37699" name="Valentine Dualsword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />

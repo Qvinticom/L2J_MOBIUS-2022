@@ -239,7 +239,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33641" name="Illusion Guard Helmet" additionalName="" type="EtcItem">
+	<item id="33641" name="Illusion Guard Helmet" type="EtcItem">
 		<!-- Illusion guard's helmet. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="weight" val="10" />
@@ -247,55 +247,55 @@
 			<add order="0" stat="pDef" val="37.0" />
 		</for>
 	</item>
-	<item id="33642" name="Kukurin Bracelet" additionalName="" type="Armor">
+	<item id="33642" name="Kukurin Bracelet" type="Armor">
 		<!-- When equipped, you can mount a Kukurin. -->
 		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="33643" name="Scroll: Minion" additionalName="" type="EtcItem">
+	<item id="33643" name="Scroll: Minion" type="EtcItem">
 		<!-- Scroll that can summon a Minion for 2 hours. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33644" name="Scroll: Superior Minion" additionalName="" type="EtcItem">
+	<item id="33644" name="Scroll: Superior Minion" type="EtcItem">
 		<!-- Scroll that can summon a Superior Minion for 2 hours. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33645" name="Minion 3-unit Pack" additionalName="" type="EtcItem">
+	<item id="33645" name="Minion 3-unit Pack" type="EtcItem">
 		<!-- Scroll that can summon a Minion for 2 hours. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33646" name="Superior Minion 3-unit Pack" additionalName="" type="EtcItem">
+	<item id="33646" name="Superior Minion 3-unit Pack" type="EtcItem">
 		<!-- Scroll that can summon a Superior Minion for 2 hours. Contains 3 sheets. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33647" name="Hero's Gift Box" additionalName="" type="EtcItem">
+	<item id="33647" name="Hero's Gift Box" type="EtcItem">
 		<!-- Can acquire a 5-unit Hero's Blessing Buff Scroll pack, a 3-unit Minion Coupon pack, a 5-unit Noblesse Blessing buff scroll pack, a 30-unit Kukuru mounting scroll pack, and a 3-unit Feather of Blessing pack. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33648" name="Gift Box of Destiny" additionalName="" type="EtcItem">
+	<item id="33648" name="Gift Box of Destiny" type="EtcItem">
 		<!-- Can acquire 250 Returning Hero's Marks, 1 Returning Hero's Vitality Replenishing Juice pack of 5, and a Superior Minion coupon pack of 2. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33649" name="Kukurin Feather Helm" additionalName="" type="Armor">
+	<item id="33649" name="Kukurin Feather Helm" type="Armor">
 		<!-- Kukurin Feather Helm. -->
 		<set name="icon" val="icon.accessory_tengallon_brown_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="33650" name="Shilen Wand" additionalName="" type="Weapon">
+	<item id="33650" name="Shilen Wand" type="Weapon">
 		<!-- Shilen Wand. -->
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />

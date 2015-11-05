@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="38200" name="Blue Mackerel Appearance Stone: One-handed Sword" additionalName="" type="EtcItem">
+	<item id="38200" name="Blue Mackerel Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Turns the appearance of a one-handed sword into that of a Blue Mackerel . -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38201" name="Trumpetfish Appearance Stone: Dagger" additionalName="" type="EtcItem">
+	<item id="38201" name="Trumpetfish Appearance Stone: Dagger" type="EtcItem">
 		<!-- Turns the appearance of a one-handed dagger into that of a Trumpetfish . -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38202" name="Shark Appearance Stone: Two-handed Sword" additionalName="" type="EtcItem">
+	<item id="38202" name="Shark Appearance Stone: Two-handed Sword" type="EtcItem">
 		<!-- Turns the appearance of a two-handed sword into that of a Shark . -->
 		<set name="icon" val="icon.shape_shifting_twohand_sword_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38203" name="Squid Appearance Stone: Spear" additionalName="" type="EtcItem">
+	<item id="38203" name="Squid Appearance Stone: Spear" type="EtcItem">
 		<!-- Turns the appearance of a spear into that of a Squid . -->
 		<set name="icon" val="icon.shape_shifting_pole_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="" type="EtcItem">
+	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a two-handed blunt weapon into that of a Sea Horse . -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -36,49 +36,49 @@
 		<set name="handler" val="Appearance" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="38205" name="Lobster Appearance Stone: Fist Weapon" additionalName="" type="EtcItem">
+	<item id="38205" name="Lobster Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Turns the appearance of a fist weapon into that of a Lobster . -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38206" name="Giant Crab Appearance Stone: Bow" additionalName="" type="EtcItem">
+	<item id="38206" name="Giant Crab Appearance Stone: Bow" type="EtcItem">
 		<!-- Turns the appearance of a bow into that of a Giant Crab . -->
 		<set name="icon" val="icon.shape_shifting_bow_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38207" name="Crayfish Appearance Stone: Crossbow" additionalName="" type="EtcItem">
+	<item id="38207" name="Crayfish Appearance Stone: Crossbow" type="EtcItem">
 		<!-- Turns the appearance of a crossbow into that of a Crayfish . -->
 		<set name="icon" val="icon.shape_shifting_twohand_crossbow_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38208" name="Starfish Appearance Stone: Sigil" additionalName="" type="EtcItem">
+	<item id="38208" name="Starfish Appearance Stone: Sigil" type="EtcItem">
 		<!-- Turns the appearance of a sigil into that of a Starfish . -->
 		<set name="icon" val="Icon.shape_shifting_sigil_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38209" name="Turtle Appearance Stone: Shield" additionalName="" type="EtcItem">
+	<item id="38209" name="Turtle Appearance Stone: Shield" type="EtcItem">
 		<!-- Turns the appearance of a shield into that of a Turtle . -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" additionalName="" type="EtcItem">
+	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" type="EtcItem">
 		<!-- Turns the appearance of a dualsword into that of a Blue Mackerel . -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="38211" name="Blue Mackerel: One-handed Sword" additionalName="" type="Weapon">
+	<item id="38211" name="Blue Mackerel: One-handed Sword" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. One-handed sword. -->
 		<set name="icon" val="icon.wp_fishing1" />
 		<set name="default_action" val="EQUIP" />
@@ -93,7 +93,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38212" name="Trumpetfish: Dagger" additionalName="" type="Weapon">
+	<item id="38212" name="Trumpetfish: Dagger" type="Weapon">
 		<!-- Trumpetfish-shaped weapon. Dagger. -->
 		<set name="icon" val="icon.wp_fishing2" />
 		<set name="default_action" val="EQUIP" />
@@ -108,7 +108,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38213" name="Shark: Two-handed Sword" additionalName="" type="Weapon">
+	<item id="38213" name="Shark: Two-handed Sword" type="Weapon">
 		<!-- Shark-shaped weapon. Two-handed sword. -->
 		<set name="icon" val="icon.wp_fishing3" />
 		<set name="default_action" val="EQUIP" />
@@ -123,7 +123,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38214" name="Squid: Spear" additionalName="" type="Weapon">
+	<item id="38214" name="Squid: Spear" type="Weapon">
 		<!-- Squid-shaped weapon. Spear. -->
 		<set name="icon" val="icon.wp_fishing4" />
 		<set name="default_action" val="EQUIP" />
@@ -138,7 +138,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" additionalName="" type="Weapon">
+	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" type="Weapon">
 		<!-- Sea Horse-shaped weapon. Two-handed magic blunt weapon. -->
 		<set name="icon" val="icon.wp_fishing5" />
 		<set name="default_action" val="EQUIP" />
@@ -153,7 +153,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38216" name="Lobster: Fist Weapon" additionalName="" type="Weapon">
+	<item id="38216" name="Lobster: Fist Weapon" type="Weapon">
 		<!-- Lobster-shaped weapon. Fist weapon. -->
 		<set name="icon" val="icon.wp_fishing6" />
 		<set name="default_action" val="EQUIP" />
@@ -169,7 +169,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="38217" name="Giant Crab: Bow" additionalName="" type="Weapon">
+	<item id="38217" name="Giant Crab: Bow" type="Weapon">
 		<!-- Giant crab-shaped weapon. Bow. -->
 		<set name="icon" val="icon.wp_fishing7" />
 		<set name="default_action" val="EQUIP" />
@@ -184,7 +184,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="38218" name="Crayfish: Crossbow" additionalName="" type="Weapon">
+	<item id="38218" name="Crayfish: Crossbow" type="Weapon">
 		<!-- Crayfish-shaped weapon. Crossbow. -->
 		<set name="icon" val="icon.wp_fishing8" />
 		<set name="default_action" val="EQUIP" />
@@ -199,7 +199,7 @@
 			<add stat="critRate" val="10.0" />
 		</for>
 	</item>
-	<item id="38219" name="Starfish: Sigil" additionalName="" type="Armor">
+	<item id="38219" name="Starfish: Sigil" type="Armor">
 		<!-- Starfish-shaped sigil. -->
 		<set name="icon" val="icon.wp_fishing9" />
 		<set name="default_action" val="EQUIP" />
@@ -211,7 +211,7 @@
 			<add stat="rShld" val="20.0" />
 		</for>
 	</item>
-	<item id="38220" name="Turtle: Shield" additionalName="" type="Weapon">
+	<item id="38220" name="Turtle: Shield" type="Weapon">
 		<!-- Turtle-shaped shield. -->
 		<set name="icon" val="icon.wp_fishing10" />
 		<set name="default_action" val="EQUIP" />
@@ -223,7 +223,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="38221" name="Blue Mackerel: Dualsword" additionalName="" type="Weapon">
+	<item id="38221" name="Blue Mackerel: Dualsword" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. Dualsword. -->
 		<set name="icon" val="icon.wp_fishing11" />
 		<set name="default_action" val="EQUIP" />

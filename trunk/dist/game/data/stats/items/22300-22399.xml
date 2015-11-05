@@ -561,12 +561,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 	</item>
-	<item id="22348" name="Adventurer's Song - Energy of Recovery" additionalName="" type="EtcItem">
+	<item id="22348" name="Adventurer's Song - Energy of Recovery" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_recovery" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22349" name="Adventurer's Song - Eva's Protection" additionalName="" type="EtcItem">
+	<item id="22349" name="Adventurer's Song - Eva's Protection" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hour upon use. Can only be used by characters level 1 - 84. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
 		<set name="weight" val="120" />
@@ -578,25 +578,25 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22351" name="Auction House Fee 30% Voucher" additionalName="" type="EtcItem">
+	<item id="22351" name="Auction House Fee 30% Voucher" type="EtcItem">
 		<!-- Provides a 30% fee discount when using the auction house system. Must be in the inventory to be used. -->
 		<set name="icon" val="BranchSys3.Icon.g_market_fee_discount" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22352" name="Auction House Fee 100% Voucher" additionalName="" type="EtcItem">
+	<item id="22352" name="Auction House Fee 100% Voucher" type="EtcItem">
 		<!-- Provides a 100% fee discount when using the auction house system. Must be in the inventory to be used. -->
 		<set name="icon" val="BranchSys3.Icon.g_market_fee_nomargin" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22353" name="Auction House Extension Voucher (15-day)" additionalName="" type="EtcItem">
+	<item id="22353" name="Auction House Extension Voucher (15-day)" type="EtcItem">
 		<!-- When using the auction house system, you can register an item for 15 days but only pay for 7 days. Must be in the inventory to be used. -->
 		<set name="icon" val="BranchSys3.Icon.g_market_fee_extension_15day" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22354" name="Auction House Extension Voucher (30-day)" additionalName="" type="EtcItem">
+	<item id="22354" name="Auction House Extension Voucher (30-day)" type="EtcItem">
 		<!-- When using the auction house system, you can register an item for 30 days but only pay for 7 days. Must be in the inventory to be used. -->
 		<set name="icon" val="BranchSys3.Icon.g_market_fee_extension_30day" />
 		<set name="weight" val="5" />
@@ -609,37 +609,37 @@
 		<set name="weight" val="30" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="22356" name="Mount - Tame Princess Ant" additionalName="" type="Armor">
+	<item id="22356" name="Mount - Tame Princess Ant" type="Armor">
 		<!-- Can mount a tame princess ant when equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_ant_princess_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="22357" name="Mount - Tame Princess Ant Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22357" name="Mount - Tame Princess Ant Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Tame Princess Ant (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22358" name="Mount - Tame Princess Ant Pack" additionalName="" type="EtcItem">
+	<item id="22358" name="Mount - Tame Princess Ant Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Tame Princess Ant. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22359" name="Weapon Conversion Scroll: Emerald Sword" additionalName="" type="EtcItem">
+	<item id="22359" name="Weapon Conversion Scroll: Emerald Sword" type="EtcItem">
 		<!-- When used, the equipped weapon changes into an emerald sword for 2 hours. Cooldown is 60 min. Only applies when a one-handed sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" additionalName="" type="EtcItem">
+	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" type="EtcItem">
 		<!-- When used, the equipped weapon changes into an emerald dualsword for 2 hours. Cooldown is 60 min. Only applies when a dualsword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22361" name="Emerald Sword" additionalName="" type="Weapon">
+	<item id="22361" name="Emerald Sword" type="Weapon">
 		<!-- One-handed Emerald Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_1h_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -650,7 +650,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="22362" name="Emerald Dualsword" additionalName="" type="Weapon">
+	<item id="22362" name="Emerald Dualsword" type="Weapon">
 		<!-- Emerald Dualsword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -668,7 +668,7 @@
 		<set name="weight" val="30" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="22364" name="Mount - Black Bear" additionalName="" type="Armor">
+	<item id="22364" name="Mount - Black Bear" type="Armor">
 		<!-- Can ride a Black Bear when equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_black_bear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -686,7 +686,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="22366" name="Black Bear Claw" additionalName="" type="Weapon">
+	<item id="22366" name="Black Bear Claw" type="Weapon">
 		<!-- Powerful-looking fist weapon in the shape of Black Bear claws. Very low P. Atk. -->
 		<set name="icon" val="BranchSys3.Icon.g_hands_of_blackbear" />
 		<set name="default_action" val="EQUIP" />
@@ -704,43 +704,43 @@
 		<set name="weight" val="10" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="22368" name="Black Bear Hat" additionalName="" type="Armor">
+	<item id="22368" name="Black Bear Hat" type="Armor">
 		<!-- Powerful-looking Black Bear Hat. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_hat_of_blackbear" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="22369" name="Mount - Black Bear Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22369" name="Mount - Black Bear Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Black Bear (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22370" name="Mount - Black Bear Pack" additionalName="" type="EtcItem">
+	<item id="22370" name="Mount - Black Bear Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Black Bear. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22371" name="Black Bear Claw Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22371" name="Black Bear Claw Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Black Bear Claws (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22372" name="Black Bear Claw Pack" additionalName="" type="EtcItem">
+	<item id="22372" name="Black Bear Claw Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Black Bear Claws. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22373" name="Black Bear Hat Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22373" name="Black Bear Hat Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22374" name="Black Bear Hat Pack" additionalName="" type="EtcItem">
+	<item id="22374" name="Black Bear Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -753,7 +753,7 @@
 		<set name="weight" val="10" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="22376" name="Brilliant Beach Sun Cap" additionalName="" type="Armor">
+	<item id="22376" name="Brilliant Beach Sun Cap" type="Armor">
 		<!-- Brilliant Beach Sun Cap that provides perfect protection from the sun. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon.g_beach_cap" />
 		<set name="default_action" val="EQUIP" />
@@ -766,31 +766,31 @@
 		<set name="weight" val="10" />
 		<set name="time" val="604800" />
 	</item>
-	<item id="22378" name="Stylish Straw Hat" additionalName="" type="Armor">
+	<item id="22378" name="Stylish Straw Hat" type="Armor">
 		<!-- Hat made of straw. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon.g_straw_hat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22380" name="Brilliant Beach Sun Cap Pack" additionalName="" type="EtcItem">
+	<item id="22380" name="Brilliant Beach Sun Cap Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Brilliant Beach Sun Cap. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22381" name="Stylish Straw Hat Pack (7-day)" additionalName="" type="EtcItem">
+	<item id="22381" name="Stylish Straw Hat Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Stylish Straw Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22382" name="Stylish Straw Hat Pack" additionalName="" type="EtcItem">
+	<item id="22382" name="Stylish Straw Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Stylish Straw Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />

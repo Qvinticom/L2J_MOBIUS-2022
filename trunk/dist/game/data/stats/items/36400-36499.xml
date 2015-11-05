@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36400" name="XP Buff 50% (1-hour)" additionalName="" type="EtcItem">
+	<item id="36400" name="XP Buff 50% (1-hour)" type="EtcItem">
 		<!-- Hourglass that increases acquired XP by an additional 50% for 1 hours. Available for all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
@@ -97,26 +97,26 @@
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
-	<item id="36413" name="Single Mesh Armor" additionalName="" type="Armor">
+	<item id="36413" name="Single Mesh Armor" type="Armor">
 		<!-- Changes into single mesh in a certain area. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
 		<set name="price" val="5000000" />
 	</item>
-	<item id="36414" name="Dragon Claw" additionalName="" type="EtcItem">
+	<item id="36414" name="Dragon Claw" type="EtcItem">
 		<!-- Material for making a dragon weapon. -->
 		<set name="icon" val="icon.etc_toenail_dragon" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36415" name="Dragon Blood" additionalName="" type="EtcItem">
+	<item id="36415" name="Dragon Blood" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36416" name="Dragon Tooth" additionalName="" type="EtcItem">
+	<item id="36416" name="Dragon Tooth" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
 		<set name="weight" val="2" />

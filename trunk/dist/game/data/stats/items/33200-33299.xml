@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="33200" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33200" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -12,7 +12,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33201" name="Blue Wolf Leather Armor of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33201" name="Blue Wolf Leather Armor of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Leather Armor of Destiny (Water, Earth, Holy) with limited ability enhancement. Full body armor. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -48,7 +48,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33204" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33204" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -60,7 +60,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33205" name="Blue Wolf Tunic of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33205" name="Blue Wolf Tunic of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Tunic of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -72,7 +72,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33206" name="Blue Wolf Stockings of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33206" name="Blue Wolf Stockings of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Stockings of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t70_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -324,7 +324,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33223" name="Tallum Blade*Damascus of Destiny (Fire)" additionalName="" type="Weapon">
+	<item id="33223" name="Tallum Blade*Damascus of Destiny (Fire)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Fire) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33238" name="Tallum Blade*Damascus of Destiny (Water)" additionalName="" type="Weapon">
+	<item id="33238" name="Tallum Blade*Damascus of Destiny (Water)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Water) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -786,7 +786,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33253" name="Tallum Blade*Damascus of Destiny (Wind)" additionalName="" type="Weapon">
+	<item id="33253" name="Tallum Blade*Damascus of Destiny (Wind)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Wind) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1017,7 +1017,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33268" name="Tallum Blade*Damascus of Destiny (Earth)" additionalName="" type="Weapon">
+	<item id="33268" name="Tallum Blade*Damascus of Destiny (Earth)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Earth) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1248,7 +1248,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33283" name="Tallum Blade*Damascus of Destiny (Holy)" additionalName="" type="Weapon">
+	<item id="33283" name="Tallum Blade*Damascus of Destiny (Holy)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Holy) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33298" name="Tallum Blade*Damascus of Destiny (Dark)" additionalName="" type="Weapon">
+	<item id="33298" name="Tallum Blade*Damascus of Destiny (Dark)" type="Weapon">
 		<!-- Talum Blade*Damascus Sword of Destiny (Dark) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1494,7 +1494,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33299" name="Majestic Circlet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33299" name="Majestic Circlet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Majestic Circlet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />

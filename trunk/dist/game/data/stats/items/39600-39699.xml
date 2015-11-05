@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="39600" name="Grieving Soul" additionalName="" type="EtcItem">
+	<item id="39600" name="Grieving Soul" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="39601" name="Soul Bottle" additionalName="" type="EtcItem">
+	<item id="39601" name="Soul Bottle" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="39602" name="Dimensional Antharas Shaper" additionalName="" type="Weapon">
+	<item id="39602" name="Dimensional Antharas Shaper" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39603" name="Dimensional Antharas Slasher" additionalName="" type="Weapon">
+	<item id="39603" name="Dimensional Antharas Slasher" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -32,7 +32,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39604" name="Dimensional Antharas Thrower" additionalName="" type="Weapon">
+	<item id="39604" name="Dimensional Antharas Thrower" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -44,7 +44,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39605" name="Dimensional Antharas Buster" additionalName="" type="Weapon">
+	<item id="39605" name="Dimensional Antharas Buster" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -56,7 +56,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39606" name="Dimensional Antharas Cutter" additionalName="" type="Weapon">
+	<item id="39606" name="Dimensional Antharas Cutter" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -68,7 +68,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39607" name="Dimensional Antharas Stormer" additionalName="" type="Weapon">
+	<item id="39607" name="Dimensional Antharas Stormer" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -80,7 +80,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39608" name="Dimensional Antharas Fighter" additionalName="" type="Weapon">
+	<item id="39608" name="Dimensional Antharas Fighter" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -93,7 +93,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="39609" name="Dimensional Antharas Avenger" additionalName="" type="Weapon">
+	<item id="39609" name="Dimensional Antharas Avenger" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -106,7 +106,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="39610" name="Dimensional Antharas Dual Blunt" additionalName="" type="Weapon">
+	<item id="39610" name="Dimensional Antharas Dual Blunt" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -119,7 +119,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="39611" name="Dimensional Antharas Dualsword" additionalName="" type="Weapon">
+	<item id="39611" name="Dimensional Antharas Dualsword" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Antharas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -131,7 +131,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39612" name="Dimensional Valakas Shaper" additionalName="" type="Weapon">
+	<item id="39612" name="Dimensional Valakas Shaper" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -143,7 +143,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39613" name="Dimensional Valakas Cutter" additionalName="" type="Weapon">
+	<item id="39613" name="Dimensional Valakas Cutter" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -155,7 +155,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39614" name="Dimensional Valakas Slasher" additionalName="" type="Weapon">
+	<item id="39614" name="Dimensional Valakas Slasher" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -167,7 +167,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39615" name="Dimensional Valakas Thrower" additionalName="" type="Weapon">
+	<item id="39615" name="Dimensional Valakas Thrower" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -179,7 +179,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39616" name="Dimensional Valakas Buster" additionalName="" type="Weapon">
+	<item id="39616" name="Dimensional Valakas Buster" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -191,7 +191,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39617" name="Dimensional Valakas Caster" additionalName="" type="Weapon">
+	<item id="39617" name="Dimensional Valakas Caster" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -204,7 +204,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="39621" name="Dimensional Valakas Retributer" additionalName="" type="Weapon">
+	<item id="39621" name="Dimensional Valakas Retributer" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Valakas' Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Valakas' Meteor: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -218,7 +218,7 @@
 			<set stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="39622" name="Dimensional Lindvior Shaper" additionalName="" type="Weapon">
+	<item id="39622" name="Dimensional Lindvior Shaper" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -230,7 +230,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39623" name="Dimensional Lindvior Thrower" additionalName="" type="Weapon">
+	<item id="39623" name="Dimensional Lindvior Thrower" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -242,7 +242,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39624" name="Dimensional Lindvior Slasher" additionalName="" type="Weapon">
+	<item id="39624" name="Dimensional Lindvior Slasher" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39625" name="Dimensional Lindvior Caster" additionalName="" type="Weapon">
+	<item id="39625" name="Dimensional Lindvior Caster" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -266,7 +266,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39626" name="Dimensional Lindvior Cutter" additionalName="" type="Weapon">
+	<item id="39626" name="Dimensional Lindvior Cutter" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -278,7 +278,7 @@
 			<set stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="39627" name="Dimensional Lindvior Shooter" additionalName="" type="Weapon">
+	<item id="39627" name="Dimensional Lindvior Shooter" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -290,7 +290,7 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39628" name="Dimensional Lindvior Dual Dagger" additionalName="" type="Weapon">
+	<item id="39628" name="Dimensional Lindvior Dual Dagger" type="Weapon">
 		<!-- Top-grade Dragon Weapon.\n(Passive Skill)\nPvP Damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500, Damage against dragons + 300%.\n(Active Skill)\n1. Protection: For 2 min., Speed + 100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min.\n2. Lindvior's Breath: Decreases nearby enemies' Atk./Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min.\n3. Lindvior's Wingbeat: Destroys nearby enemies' CP. Cooldown is 5 min.\nCannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -302,31 +302,31 @@
 			<set stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="39629" name="Fortune Pocket - Stage 1" additionalName="" type="EtcItem">
+	<item id="39629" name="Fortune Pocket - Stage 1" type="EtcItem">
 		<!-- Use to obtain 400000 XP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 1 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39630" name="Fortune Pocket - Stage 2" additionalName="" type="EtcItem">
+	<item id="39630" name="Fortune Pocket - Stage 2" type="EtcItem">
 		<!-- Use to obtain 1600000 XP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 2 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39631" name="Fortune Pocket - Stage 3" additionalName="" type="EtcItem">
+	<item id="39631" name="Fortune Pocket - Stage 3" type="EtcItem">
 		<!-- Use to obtain 6400000 XP, plus a little something else. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 3 Pockets. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39632" name="Fortune Pocket - Stage 4" additionalName="" type="EtcItem">
+	<item id="39632" name="Fortune Pocket - Stage 4" type="EtcItem">
 		<!-- Use to obtain 80000 SP. Go to Pelu the Grocer in Faeron Village to combine to 2 Stage 4 Pockets. Lv. 85 or above. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39633" name="Fortune Pocket - Stage 5" additionalName="" type="EtcItem">
+	<item id="39633" name="Fortune Pocket - Stage 5" type="EtcItem">
 		<!-- Use to obtain 256000 SP, plus a little something else. Lv. 85 or above. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_stackable" val="true" />
@@ -775,12 +775,12 @@
 		<set name="item_skill" val="18024-24" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
-	<item id="39658" name="LUC Pendant" additionalName="" type="EtcItem">
+	<item id="39658" name="LUC Pendant" type="EtcItem">
 		<!-- You can bestow LUC + 3 when one of the following are equipped:ﾠRabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="39659" name="CHA Pendant" additionalName="" type="EtcItem">
+	<item id="39659" name="CHA Pendant" type="EtcItem">
 		<!-- You can bestow CHA + 3 when one of the following are equipped:ﾠRabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, or 9th Anniversary Rocket Gun Hat. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
 		<set name="weight" val="10" />

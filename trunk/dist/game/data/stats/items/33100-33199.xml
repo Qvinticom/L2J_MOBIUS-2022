@@ -125,7 +125,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33108" name="Samurai Long Sword*Samurai Long Sword of Destiny (Fire)" additionalName="" type="Weapon">
+	<item id="33108" name="Samurai Long Sword*Samurai Long Sword of Destiny (Fire)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Fire) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33122" name="Samurai Long Sword*Samurai Long Sword of Destiny (Water)" additionalName="" type="Weapon">
+	<item id="33122" name="Samurai Long Sword*Samurai Long Sword of Destiny (Water)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Water) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33136" name="Samurai Long Sword*Samurai Long Sword of Destiny (Wind)" additionalName="" type="Weapon">
+	<item id="33136" name="Samurai Long Sword*Samurai Long Sword of Destiny (Wind)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Wind) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -770,7 +770,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33150" name="Samurai Long Sword*Samurai Long Sword of Destiny (Earth)" additionalName="" type="Weapon">
+	<item id="33150" name="Samurai Long Sword*Samurai Long Sword of Destiny (Earth)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Earth) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -985,7 +985,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33164" name="Samurai Long Sword*Samurai Long Sword of Destiny (Holy)" additionalName="" type="Weapon">
+	<item id="33164" name="Samurai Long Sword*Samurai Long Sword of Destiny (Holy)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Holy) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1200,7 +1200,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33178" name="Samurai Long Sword*Samurai Long Sword of Destiny (Dark)" additionalName="" type="Weapon">
+	<item id="33178" name="Samurai Long Sword*Samurai Long Sword of Destiny (Dark)" type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword of Destiny (Dark) with limited ability enhancement. When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1215,7 +1215,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33179" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33179" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1227,7 +1227,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33180" name="Blue Wolf Breastplate of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33180" name="Blue Wolf Breastplate of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Breastplate of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1239,7 +1239,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33181" name="Blue Wolf Gaiters of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33181" name="Blue Wolf Gaiters of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Gaiters of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t68_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1274,7 +1274,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33184" name="Dark Dragon Shield of Destiny (Fire, Wind, Dark)" additionalName="" type="Weapon">
+	<item id="33184" name="Dark Dragon Shield of Destiny (Fire, Wind, Dark)" type="Weapon">
 		<!-- Dark Dragon Shield of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.shield_dark_dragon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,7 +1288,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="33185" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33185" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33186" name="Blue Wolf Leather Armor of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33186" name="Blue Wolf Leather Armor of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Leather Armor of Destiny (Fire, Wind, Dark) with limited ability enhancement. Full body armor. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1336,7 +1336,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33189" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33189" name="Blue Wolf Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1348,7 +1348,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33190" name="Blue Wolf Tunic of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33190" name="Blue Wolf Tunic of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Tunic of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1360,7 +1360,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33191" name="Blue Wolf Stockings of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33191" name="Blue Wolf Stockings of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Blue Wolf Stockings of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t70_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,7 +1396,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33194" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33194" name="Blue Wolf Helmet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Helmet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1408,7 +1408,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33195" name="Blue Wolf Breastplate of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33195" name="Blue Wolf Breastplate of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Breastplate of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1420,7 +1420,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33196" name="Blue Wolf Gaiters of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33196" name="Blue Wolf Gaiters of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Blue Wolf Gaiters of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t68_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1455,7 +1455,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33199" name="Dark Dragon Shield of Destiny (Water, Earth, Holy)" additionalName="" type="Weapon">
+	<item id="33199" name="Dark Dragon Shield of Destiny (Water, Earth, Holy)" type="Weapon">
 		<!-- Dark Dragon Shield of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.shield_dark_dragon_shield_i00" />
 		<set name="default_action" val="EQUIP" />

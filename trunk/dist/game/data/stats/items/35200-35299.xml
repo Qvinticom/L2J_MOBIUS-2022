@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35200" name="Bloody Amaranthine Shooter" additionalName="" type="Weapon">
+	<item id="35200" name="Bloody Amaranthine Shooter" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -22,7 +22,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35201" name="Bloody Amaranthine Buster" additionalName="" type="Weapon">
+	<item id="35201" name="Bloody Amaranthine Buster" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠAcumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -44,7 +44,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35202" name="Bloody Amaranthine Caster" additionalName="" type="Weapon">
+	<item id="35202" name="Bloody Amaranthine Caster" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠEmpower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -67,7 +67,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35203" name="Bloody Amaranthine Retributer" additionalName="" type="Weapon">
+	<item id="35203" name="Bloody Amaranthine Retributer" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠMP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -91,7 +91,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35204" name="Bloody Amaranthine Dualsword" additionalName="" type="Weapon">
+	<item id="35204" name="Bloody Amaranthine Dualsword" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠHaste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -113,7 +113,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="35205" name="Bloody Amaranthine Dual Dagger" additionalName="" type="Weapon">
+	<item id="35205" name="Bloody Amaranthine Dual Dagger" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠDamage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -141,7 +141,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="35206" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="" type="Weapon">
+	<item id="35206" name="Bloody Amaranthine Dual Blunt Weapon" type="Weapon">
 		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:ﾠFocus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2086,7 +2086,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="35291" name="Glorious T-shirt" additionalName="" type="Armor">
+	<item id="35291" name="Glorious T-shirt" type="Armor">
 		<!-- Glorious T-shirt. HP increases by 465. -->
 		<set name="icon" val="icon.honor_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2101,13 +2101,13 @@
 			<add order="0" stat="pDef" val="60.0" />
 		</for>
 	</item>
-	<item id="35292" name="Scroll of Escape: Guillotine Fortress" additionalName="" type="EtcItem">
+	<item id="35292" name="Scroll of Escape: Guillotine Fortress" type="EtcItem">
 		<!-- Magical scroll that relocates you to the Guillotine Fortress. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35293" name="Tauti's Bracelet" additionalName="" type="Armor">
+	<item id="35293" name="Tauti's Bracelet" type="Armor">
 		<!-- MP + 216. Activates 5 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2123,7 +2123,7 @@
 			<add stat="maxMp" val="216" />
 		</for>
 	</item>
-	<item id="35294" name="Enhanced Tauti's Bracelet" additionalName="" type="Armor">
+	<item id="35294" name="Enhanced Tauti's Bracelet" type="Armor">
 		<!-- Tauti's Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2140,13 +2140,13 @@
 			<add stat="maxMp" val="216" />
 		</for>
 	</item>
-	<item id="35295" name="Bottle of Tauti's Soul" additionalName="" type="EtcItem">
+	<item id="35295" name="Bottle of Tauti's Soul" type="EtcItem">
 		<!-- Bottle containing Tauti's Soul. Tauti's Soul can be bestowed on Tauti's Bracelet. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35296" name="Specter Shaper Fragment" additionalName="" type="EtcItem">
+	<item id="35296" name="Specter Shaper Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Shaper. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
 		<set name="weight" val="60" />
@@ -2154,7 +2154,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="35297" name="Specter Cutter Fragment" additionalName="" type="EtcItem">
+	<item id="35297" name="Specter Cutter Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Cutter. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="weight" val="60" />
@@ -2162,7 +2162,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="35298" name="Specter Slasher Fragment" additionalName="" type="EtcItem">
+	<item id="35298" name="Specter Slasher Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Slasher. -->
 		<set name="icon" val="icon.etc_vesper_slasher_piece_i00" />
 		<set name="weight" val="60" />
@@ -2170,7 +2170,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="35299" name="Specter Avenger Fragment" additionalName="" type="EtcItem">
+	<item id="35299" name="Specter Avenger Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Avenger. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
 		<set name="weight" val="60" />

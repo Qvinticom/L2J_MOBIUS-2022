@@ -63,7 +63,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33404" name="Vesper Dualsword of Destiny (Holy)" additionalName="" type="Weapon">
+	<item id="33404" name="Vesper Dualsword of Destiny (Holy)" type="Weapon">
 		<!-- Vesper Dualsword of Destiny (Holy) with limited ability enhancement. When enchanted, P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons increases more than that of one-handed swords. When enchanted to 4 or more, increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -93,7 +93,7 @@
 			<add stat="critRate" val="12.0" />
 		</for>
 	</item>
-	<item id="33406" name="Vesper Dual Daggers of Destiny (Dark)" additionalName="" type="Weapon">
+	<item id="33406" name="Vesper Dual Daggers of Destiny (Dark)" type="Weapon">
 		<!-- Vesper Dual Daggers (Dark) with limited ability enhancement. When enchanted, P. Atk. of a dual dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -309,7 +309,7 @@
 			<add stat="critRate" val="6.0" />
 		</for>
 	</item>
-	<item id="33420" name="Vesper Dualsword of Destiny (Dark)" additionalName="" type="Weapon">
+	<item id="33420" name="Vesper Dualsword of Destiny (Dark)" type="Weapon">
 		<!-- Vesper Dualsword of Destiny (Dark) with limited ability enhancement. When enchanted, P. Atk. of dualswords, two-handed swords, two-handed blunt weapons and fist weapons increases more than that of one-handed swords. When enchanted to 4 or more, increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -324,7 +324,7 @@
 			<add stat="critRate" val="8.0" />
 		</for>
 	</item>
-	<item id="33421" name="Vesper Helmet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33421" name="Vesper Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Helmet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -336,7 +336,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33422" name="Vesper Breastplate of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33422" name="Vesper Breastplate of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Breastplate of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -348,7 +348,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33423" name="Vesper Gaiters of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33423" name="Vesper Gaiters of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Gaiters of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -360,7 +360,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33424" name="Vesper Shield of Destiny (Fire, Wind, Dark)" additionalName="" type="Weapon">
+	<item id="33424" name="Vesper Shield of Destiny (Fire, Wind, Dark)" type="Weapon">
 		<!-- Vesper Shield of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -374,7 +374,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="33425" name="Vesper Gauntlets of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33425" name="Vesper Gauntlets of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Gauntlets of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -386,7 +386,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33426" name="Vesper Boots of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33426" name="Vesper Boots of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Boots of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -398,7 +398,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33427" name="Vesper Leather Helmet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33427" name="Vesper Leather Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Leather Helmet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -410,7 +410,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33428" name="Vesper Leather Breastplate of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33428" name="Vesper Leather Breastplate of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Leather Breastplate of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -422,7 +422,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33429" name="Vesper Leather Leggings of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33429" name="Vesper Leather Leggings of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Leather Leggings (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -434,7 +434,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33430" name="Vesper Leather Gloves of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33430" name="Vesper Leather Gloves of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Leather Gloves of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -446,7 +446,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33431" name="Vesper Leather Boots of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33431" name="Vesper Leather Boots of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Leather Boots of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -458,7 +458,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33432" name="Vesper Circlet of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33432" name="Vesper Circlet of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Circlet of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -470,7 +470,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33433" name="Vesper Tunic of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33433" name="Vesper Tunic of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Tunic of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -482,7 +482,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33434" name="Vesper Stockings of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33434" name="Vesper Stockings of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Stockings of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -494,7 +494,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33435" name="Vesper Gloves of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33435" name="Vesper Gloves of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Gloves of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -506,7 +506,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33436" name="Vesper Shoes of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33436" name="Vesper Shoes of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Shoes of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -518,7 +518,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33437" name="Vesper Sigil of Destiny (Fire, Wind, Dark)" additionalName="" type="Armor">
+	<item id="33437" name="Vesper Sigil of Destiny (Fire, Wind, Dark)" type="Armor">
 		<!-- Vesper Sigil of Destiny (Fire, Wind, Dark) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33438" name="Vesper Helmet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33438" name="Vesper Helmet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Helmet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -543,7 +543,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33439" name="Vesper Breastplate of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33439" name="Vesper Breastplate of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Breastplate of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33440" name="Vesper Gaiters of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33440" name="Vesper Gaiters of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Gaiters of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -567,7 +567,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33441" name="Vesper Shield of Destiny (Water, Earth, Holy)" additionalName="" type="Weapon">
+	<item id="33441" name="Vesper Shield of Destiny (Water, Earth, Holy)" type="Weapon">
 		<!-- Vesper Shield of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -581,7 +581,7 @@
 			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
-	<item id="33442" name="Vesper Gauntlets of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33442" name="Vesper Gauntlets of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Gauntlets of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -593,7 +593,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33443" name="Vesper Boots of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33443" name="Vesper Boots of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Boots of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t94_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -605,7 +605,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33444" name="Vesper Leather Helmet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33444" name="Vesper Leather Helmet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Leather Helmet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -617,7 +617,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33445" name="Vesper Leather Breastplate of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33445" name="Vesper Leather Breastplate of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Leather Breastplate of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -629,7 +629,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33446" name="Vesper Leather Leggings of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33446" name="Vesper Leather Leggings of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Leather Leggings of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -641,7 +641,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33447" name="Vesper Leather Gloves of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33447" name="Vesper Leather Gloves of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Leather Gloves of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -653,7 +653,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33448" name="Vesper Leather Boots of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33448" name="Vesper Leather Boots of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Leather Boots of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t95_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -665,7 +665,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33449" name="Vesper Circlet of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33449" name="Vesper Circlet of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Circlet of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -677,7 +677,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33450" name="Vesper Tunic of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33450" name="Vesper Tunic of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Tunic of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -689,7 +689,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33451" name="Vesper Stockings of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33451" name="Vesper Stockings of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Stockings of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -701,7 +701,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33452" name="Vesper Gloves of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33452" name="Vesper Gloves of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Gloves of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -713,7 +713,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33453" name="Vesper Shoes of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33453" name="Vesper Shoes of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Shoes of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.armor_t96_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -725,7 +725,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33454" name="Vesper Sigil of Destiny (Water, Earth, Holy)" additionalName="" type="Armor">
+	<item id="33454" name="Vesper Sigil of Destiny (Water, Earth, Holy)" type="Armor">
 		<!-- Vesper Sigil of Destiny (Water, Earth, Holy) with limited ability enhancement. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.verper_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -738,7 +738,7 @@
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
-	<item id="33455" name="Destiny Scroll: Enchant Weapon (D-grade)" additionalName="" type="EtcItem">
+	<item id="33455" name="Destiny Scroll: Enchant Weapon (D-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bows. P. Atk. + 4 for bow weapons. M. Atk. + 2 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -754,7 +754,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2019-1" />
 	</item>
-	<item id="33456" name="Destiny Scroll: Enchant Weapon (C-grade)" additionalName="" type="EtcItem">
+	<item id="33456" name="Destiny Scroll: Enchant Weapon (C-grade)" type="EtcItem">
 		<!-- P. Atk. + 3 for C-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 4 for two-handed sword, two-handed blunt, dualsword, and two-handed fist weapon. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -770,7 +770,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2017-1" />
 	</item>
-	<item id="33457" name="Destiny Scroll: Enchant Weapon (B-grade)" additionalName="" type="EtcItem">
+	<item id="33457" name="Destiny Scroll: Enchant Weapon (B-grade)" type="EtcItem">
 		<!-- P. Atk. + 3 for B-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 4 for two-handed sword, two-handed blunt, dualsword, and two-handed fist weapon. P. Atk. + 6 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -786,7 +786,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2015-1" />
 	</item>
-	<item id="33458" name="Destiny Scroll: Enchant Weapon (A-grade)" additionalName="" type="EtcItem">
+	<item id="33458" name="Destiny Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- P. Atk. + 4 for A-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 5 for two-handed sword, two-handed blunt, dualsword, and two-handed fist weapon. P. Atk. + 8 for bow weapons. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -802,7 +802,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2006-1" />
 	</item>
-	<item id="33459" name="Destiny Scroll: Enchant Weapon (S-grade)" additionalName="" type="EtcItem">
+	<item id="33459" name="Destiny Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- P. Atk. + 5 for S-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 6 for two-handed sword, two-handed blunt, dualsword, and fist weapons. P. Atk. + 10 for Bow weapons. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increases by double starting at + 4. Can only be used on Destiny weapons. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -818,7 +818,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2021-1" />
 	</item>
-	<item id="33460" name="Destiny Scroll: Enchant Armor (D-grade)" additionalName="" type="EtcItem">
+	<item id="33460" name="Destiny Scroll: Enchant Armor (D-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -834,7 +834,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2020-1" />
 	</item>
-	<item id="33461" name="Destiny Scroll: Enchant Armor (C-grade)" additionalName="" type="EtcItem">
+	<item id="33461" name="Destiny Scroll: Enchant Armor (C-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -850,7 +850,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2018-1" />
 	</item>
-	<item id="33462" name="Destiny Scroll: Enchant Armor (B-grade)" additionalName="" type="EtcItem">
+	<item id="33462" name="Destiny Scroll: Enchant Armor (B-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -866,7 +866,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2016-1" />
 	</item>
-	<item id="33463" name="Destiny Scroll: Enchant Armor (A-grade)" additionalName="" type="EtcItem">
+	<item id="33463" name="Destiny Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -882,7 +882,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2007-1" />
 	</item>
-	<item id="33464" name="Destiny Scroll: Enchant Armor (S-grade)" additionalName="" type="EtcItem">
+	<item id="33464" name="Destiny Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for S-grade armor and accessories when enchanted. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. Exclusive for equipment of destiny. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -898,85 +898,85 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="item_skill" val="2022-1" />
 	</item>
-	<item id="33465" name="Lesser Giant's Fortune Box" additionalName="" type="EtcItem">
+	<item id="33465" name="Lesser Giant's Fortune Box" type="EtcItem">
 		<!-- What is inside the box? If you are lucky, you may obtain 1 out of 4 types of Superior Giant's Codexes… or it could be completely empty. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33466" name="Weapon Pouch - R2" additionalName="" type="EtcItem">
+	<item id="33466" name="Weapon Pouch - R2" type="EtcItem">
 		<!-- Pouch containing high-grade R weapon. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33467" name="Armor Pouch - R2" additionalName="" type="EtcItem">
+	<item id="33467" name="Armor Pouch - R2" type="EtcItem">
 		<!-- Pouch containing high-grade R armor. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33468" name="Hero's Support Box" additionalName="" type="EtcItem">
+	<item id="33468" name="Hero's Support Box" type="EtcItem">
 		<!-- Box containing support items for playing on the test server. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33469" name="Awakening Support Box" additionalName="" type="EtcItem">
+	<item id="33469" name="Awakening Support Box" type="EtcItem">
 		<!-- Box containing support items for a new character playing on the test server. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33470" name="Special Talisman - M. Def. (Active)" additionalName="" type="Armor">
+	<item id="33470" name="Special Talisman - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 50% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33471" name="Special Talisman - Ranged Attack Resistance (Active)" additionalName="" type="Armor">
+	<item id="33471" name="Special Talisman - Ranged Attack Resistance (Active)" type="Armor">
 		<!-- Increases Bow/Crossbow Resistance + 80% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33472" name="Special Talisman - M. Def. (Active)" additionalName="" type="Armor">
+	<item id="33472" name="Special Talisman - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 50% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_mm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33473" name="Special Talisman - Ranged Attack Resistance (Active)" additionalName="" type="Armor">
+	<item id="33473" name="Special Talisman - Ranged Attack Resistance (Active)" type="Armor">
 		<!-- Increases Bow/Crossbow Resistance + 80% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_sp_talisman_ad_ex_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="33474" name="Talking Island Homemade Cookie" additionalName="" type="EtcItem">
+	<item id="33474" name="Talking Island Homemade Cookie" type="EtcItem">
 		<!-- For 60 minutes, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Additionally increases P. Critical Damage during a standard attack for party members equipped with melee or ranged weapons that received an attack of certain amount of damage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33475" name="Charm of Courage (R-grade)" additionalName="" type="EtcItem">
+	<item id="33475" name="Charm of Courage (R-grade)" type="EtcItem">
 		<!-- Allows on-the-spot resurrection during a Castle Siege, Clan Hall, or Fortress Battle (Lv. 85-99). Can also be used by characters below level 85. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="weight" val="10" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33476" name="Rune of Destiny" additionalName="" type="EtcItem">
+	<item id="33476" name="Rune of Destiny" type="EtcItem">
 		<!-- When carried in the inventory of a character below level 86, increases acquired XP and SP by 100%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33477" name="Hero's Treasure Chest" additionalName="" type="EtcItem">
+	<item id="33477" name="Hero's Treasure Chest" type="EtcItem">
 		<!-- Box containing of various R-grade items (Elixirs, Enchant Scrolls, etc.). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33478" name="Destruction Scroll: Enchant Weapon (R-grade)" additionalName="" type="EtcItem">
+	<item id="33478" name="Destruction Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item is not reset but maintains its prior enchant value through the power of the goddess of destruction. Cannot be used on weapons above + 15. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -988,7 +988,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="item_skill" val="12872-1" />
 	</item>
-	<item id="33479" name="Destruction Scroll: Enchant Armor (R-grade)" additionalName="" type="EtcItem">
+	<item id="33479" name="Destruction Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories. Greatly increased starting at + 4. Can be enhanced safely to + 3. When enhanced + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item is not reset but maintains its prior enchant value through the power of the goddess of destruction. Cannot be used on armors above + 6. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1000,13 +1000,13 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="item_skill" val="12873-1" />
 	</item>
-	<item id="33480" name="WiFi Helmet" additionalName="" type="Armor">
+	<item id="33480" name="WiFi Helmet" type="Armor">
 		<!-- WiFi helmet. -->
 		<set name="icon" val="icon.wifi_event_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="33481" name="Fire Stone - Super" additionalName="" type="EtcItem">
+	<item id="33481" name="Fire Stone - Super" type="EtcItem">
 		<!-- Fire attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1020,7 +1020,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-1" />
 	</item>
-	<item id="33482" name="Water Stone - Super" additionalName="" type="EtcItem">
+	<item id="33482" name="Water Stone - Super" type="EtcItem">
 		<!-- Water attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1034,7 +1034,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-1" />
 	</item>
-	<item id="33483" name="Earth Stone - Super" additionalName="" type="EtcItem">
+	<item id="33483" name="Earth Stone - Super" type="EtcItem">
 		<!-- Earth attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1048,7 +1048,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-1" />
 	</item>
-	<item id="33484" name="Wind Stone - Super" additionalName="" type="EtcItem">
+	<item id="33484" name="Wind Stone - Super" type="EtcItem">
 		<!-- Wind attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1062,7 +1062,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-1" />
 	</item>
-	<item id="33485" name="Dark Stone - Super" additionalName="" type="EtcItem">
+	<item id="33485" name="Dark Stone - Super" type="EtcItem">
 		<!-- Dark attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1076,7 +1076,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-1" />
 	</item>
-	<item id="33486" name="Holy Stone - Super" additionalName="" type="EtcItem">
+	<item id="33486" name="Holy Stone - Super" type="EtcItem">
 		<!-- Holy attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1090,7 +1090,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-1" />
 	</item>
-	<item id="33487" name="Fire Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33487" name="Fire Crystal - Super" type="EtcItem">
 		<!-- Fire attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1104,7 +1104,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2329-2" />
 	</item>
-	<item id="33488" name="Water Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33488" name="Water Crystal - Super" type="EtcItem">
 		<!-- Water attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1118,7 +1118,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2330-2" />
 	</item>
-	<item id="33489" name="Earth Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33489" name="Earth Crystal - Super" type="EtcItem">
 		<!-- Earth attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1132,7 +1132,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2332-2" />
 	</item>
-	<item id="33490" name="Wind Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33490" name="Wind Crystal - Super" type="EtcItem">
 		<!-- Wind attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1146,7 +1146,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2331-2" />
 	</item>
-	<item id="33491" name="Dark Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33491" name="Dark Crystal - Super" type="EtcItem">
 		<!-- Dark attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1160,7 +1160,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2334-2" />
 	</item>
-	<item id="33492" name="Holy Crystal - Super" additionalName="" type="EtcItem">
+	<item id="33492" name="Holy Crystal - Super" type="EtcItem">
 		<!-- Holy attribute from level 3 to level 6 can be bestowed at the same time. The crystal's power is destroyed when additional attributes are bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1174,7 +1174,7 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="item_skill" val="2333-2" />
 	</item>
-	<item id="33493" name="Attribute Enchant Support Box" additionalName="" type="EtcItem">
+	<item id="33493" name="Attribute Enchant Support Box" type="EtcItem">
 		<!-- Box containing attribute items for playing on the test server. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
@@ -1184,23 +1184,23 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33495" name="Requiem Weapon Pack - Standard" additionalName="" type="EtcItem">
+	<item id="33495" name="Requiem Weapon Pack - Standard" type="EtcItem">
 		<!-- Can acquire Requiem weapons. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
-	<item id="33496" name="Immortal Heavy Armor Pack - Standard" additionalName="" type="EtcItem">
+	<item id="33496" name="Immortal Heavy Armor Pack - Standard" type="EtcItem">
 		<!-- Can acquire Immortal Heavy Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
-	<item id="33497" name="Immortal Light Armor Pack - Standard" additionalName="" type="EtcItem">
+	<item id="33497" name="Immortal Light Armor Pack - Standard" type="EtcItem">
 		<!-- Can acquire Immortal Light Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
-	<item id="33498" name="Immortal Robe Armor Pack - Standard" additionalName="" type="EtcItem">
+	<item id="33498" name="Immortal Robe Armor Pack - Standard" type="EtcItem">
 		<!-- Can acquire Immortal Robe Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
-	<item id="33499" name="Immortal Accessory Pack - Standard" additionalName="" type="EtcItem">
+	<item id="33499" name="Immortal Accessory Pack - Standard" type="EtcItem">
 		<!-- Can acquire Immortal Accessories. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 	</item>
