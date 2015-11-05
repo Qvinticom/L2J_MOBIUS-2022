@@ -33,6 +33,7 @@ import com.l2jserver.Config;
 import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -367,6 +368,10 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
+					if (player.getClassId().level() > 3)
+					{
+						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+					}
 					player.sendPacket(new AcquireSkillList(player));
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 				}
