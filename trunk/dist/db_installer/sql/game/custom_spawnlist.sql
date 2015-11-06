@@ -12,5 +12,6 @@ CREATE TABLE IF NOT EXISTS `custom_spawnlist` (
   `respawn_delay` mediumint(5) NOT NULL DEFAULT '0',
   `respawn_random` mediumint(5) NOT NULL DEFAULT '0',
   `loc_id` int(9) NOT NULL DEFAULT '0',
-  `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0'
+  `periodOfDay` tinyint(1) unsigned NOT NULL DEFAULT '0',
+ PRIMARY KEY (`npc_templateid`,`locx`,`locy`,`locz`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
