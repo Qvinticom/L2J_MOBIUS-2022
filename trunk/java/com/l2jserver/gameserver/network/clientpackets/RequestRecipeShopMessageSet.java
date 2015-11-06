@@ -55,10 +55,7 @@ public class RequestRecipeShopMessageSet extends L2GameClientPacket
 			return;
 		}
 		
-		if (player.hasManufactureShop())
-		{
-			player.setStoreName(_name);
-		}
+		player.setStoreName(_name);
 	}
 	
 	@Override
