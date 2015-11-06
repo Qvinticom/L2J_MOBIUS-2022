@@ -21,13 +21,16 @@ package com.l2jserver.gameserver.model.actor.instance;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
@@ -424,6 +427,11 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 		
 		player.broadcastUserInfo();
+		if (player.isAwaken())
+		{
+			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+		}
+		player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 		
 		if (Config.CLASS_MASTER_SETTINGS.isAllowed(player.getClassId().level() + 1) && Config.ALTERNATE_CLASS_MASTER && (((player.getClassId().level() == 1) && (player.getLevel() >= 40)) || ((player.getClassId().level() == 2) && (player.getLevel() >= 76)) || ((player.getClassId().level() == 3) && (player.getLevel() >= 85))))
 		{
