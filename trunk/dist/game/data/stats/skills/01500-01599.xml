@@ -2108,18 +2108,28 @@
 		</for>
 	</skill>
 	<skill id="1571" levels="1" name="Inventory Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases inventory slots by 18. -->
 		<set name="icon" val="icon.skill0332" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="inventoryLimit" val="18" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1572" levels="1" name="Weight Increase">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases weight capacity by 10,000. -->
 		<set name="icon" val="icon.skill0150" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="weightLimit" val="10000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1573" levels="6" name="Sub - P. Atk./M. Atk. Increase">
 		<!-- AUTO GENERATED SKILL -->
@@ -2517,6 +2527,7 @@
 	<skill id="1597" levels="1" name="Weight Increase">
 		<!-- Increases weight capacity by 15000. -->
 		<set name="icon" val="icon.skill0150" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
