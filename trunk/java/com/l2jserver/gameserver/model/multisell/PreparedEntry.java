@@ -98,6 +98,11 @@ public class PreparedEntry extends Entry
 			{
 				newProduct.setItemInfo(info);
 			}
+			else if (ing.isArmorOrWeapon() && (ing.getTemplate().getDefaultEnchantLevel() > 0))
+			{
+				info = new ItemInfo(ing.getTemplate().getDefaultEnchantLevel());
+				newProduct.setItemInfo(info);
+			}
 			_products.add(newProduct);
 		}
 	}

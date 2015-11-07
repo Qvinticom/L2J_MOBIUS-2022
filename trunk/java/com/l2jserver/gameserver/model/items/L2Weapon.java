@@ -454,4 +454,19 @@ public final class L2Weapon extends L2Item
 			caster.sendPacket(sm);
 		}
 	}
+	
+	public boolean isRange()
+	{
+		return isBow() || isCrossBow();
+	}
+	
+	public boolean isBow()
+	{
+		return _type == WeaponType.BOW;
+	}
+	
+	public boolean isCrossBow()
+	{
+		return _type == WeaponType.CROSSBOW;
+	}
 }

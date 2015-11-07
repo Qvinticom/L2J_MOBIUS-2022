@@ -35,7 +35,6 @@ import com.l2jserver.gameserver.data.xml.impl.AdminData;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.util.StringUtil;
 
 public final class L2World
 {
@@ -79,8 +78,6 @@ public final class L2World
 	private final static Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
-	/** Map used for debug. */
-	private final Map<Integer, String> _allObjectsDebug = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
 	private final Map<Integer, L2PetInstance> _petsInstance = new ConcurrentHashMap<>();
 	
@@ -106,15 +103,11 @@ public final class L2World
 		if (_allObjects.containsKey(object.getObjectId()))
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Current object: " + object + " already exist in OID map!");
-			_log.log(Level.WARNING, StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Previous object: " + _allObjects.get(object.getObjectId()) + " already exist in OID map!");
-			_log.log(Level.WARNING, _allObjectsDebug.get(object.getObjectId()));
 			_log.log(Level.WARNING, "---------------------- End ---------------------");
 			return;
 		}
 		
 		_allObjects.put(object.getObjectId(), object);
-		_allObjectsDebug.put(object.getObjectId(), StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
 	}
 	
 	/**
@@ -130,7 +123,6 @@ public final class L2World
 	public void removeObject(L2Object object)
 	{
 		_allObjects.remove(object.getObjectId());
-		_allObjectsDebug.remove(object.getObjectId());
 	}
 	
 	/**
@@ -281,24 +273,6 @@ public final class L2World
 	 */
 	public void addVisibleObject(L2Object object, L2WorldRegion newRegion)
 	{
-		// TODO: this code should be obsoleted by protection in putObject func...
-		if (object.isPlayer())
-		{
-			L2PcInstance player = object.getActingPlayer();
-			if (!player.isTeleporting())
-			{
-				final L2PcInstance old = getPlayer(player.getObjectId());
-				if (old != null)
-				{
-					_log.warning("Duplicate character!? Closing both characters (" + player.getName() + ")");
-					player.logout();
-					old.logout();
-					return;
-				}
-				addPlayerToWorld(player);
-			}
-		}
-		
 		if (!newRegion.isActive())
 		{
 			return;
@@ -419,16 +393,6 @@ public final class L2World
 			// Remove all L2Object from L2ObjectHashSet(L2Object) containing all L2Object detected by the L2Character
 			// Remove all L2PcInstance from L2ObjectHashSet(L2PcInstance) containing all player ingame detected by the L2Character
 			object.getKnownList().removeAllKnownObjects();
-			
-			// If selected L2Object is a L2PcIntance, remove it from L2ObjectHashSet(L2PcInstance) _allPlayers of L2World
-			if (object.isPlayer())
-			{
-				final L2PcInstance player = object.getActingPlayer();
-				if (!player.isTeleporting())
-				{
-					removeFromAllPlayers(player);
-				}
-			}
 		}
 	}
 	

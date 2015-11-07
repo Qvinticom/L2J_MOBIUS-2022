@@ -556,7 +556,7 @@ public class PcInventory extends Inventory
 				actor.sendPacket(new ExAdenaInvenCount(actor));
 				
 				// Notify to scripts
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), item.getItem());
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor);
 			}
 		}
 		
@@ -611,7 +611,7 @@ public class PcInventory extends Inventory
 			actor.sendPacket(new ExAdenaInvenCount(actor));
 			
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), item.getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor);
 		}
 		
 		return item;

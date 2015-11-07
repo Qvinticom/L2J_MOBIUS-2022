@@ -161,7 +161,7 @@ public class CharacterSelect extends L2GameClientPacket
 					{
 						return; // handled in L2GameClient
 					}
-					
+					L2World.getInstance().addPlayerToWorld(cha);
 					CharNameTable.getInstance().addName(cha);
 					
 					cha.setClient(client);

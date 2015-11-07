@@ -320,6 +320,7 @@ public abstract class ItemContainer
 				item.setOwnerId(getOwnerId());
 				item.setItemLocation(getBaseLocation());
 				item.setLastChange(L2ItemInstance.ADDED);
+				item.setEnchantLevel(template.getDefaultEnchantLevel());
 				
 				// Add item in inventory
 				addItem(item);
