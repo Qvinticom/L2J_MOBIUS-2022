@@ -2525,124 +2525,231 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23477" level="99" type="L2Npc" name="Abyssal Shaman" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23477" level="99" type="L2Monster" name="Abyssal Shaman" title="Watcher">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
+		<acquire exp="125609616" sp="452194" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1302337" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="781403" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
+			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
+			<skill id="16363" level="1" /> <!-- Dimensional Warp Aerial Yoke -->
+		</skill_list>
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2.042" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="23478" level="99" type="L2Npc" name="Abyssal Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="752796" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="23478" level="99" type="L2Monster" name="Abyssal Berserker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="125609616" sp="452194" />
+		<stats>
+			<vitals hp="781403" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
+			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
+			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull -->
+		</skill_list>
 		<collision>
 			<radius normal="12" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="1.94" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="23479" level="99" type="L2Npc" name="Abyssal Salamander" title="Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="911635" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="23479" level="99" type="L2Monster" name="Abyssal Salamander" title="Hunter">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="546982" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
+			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
+			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16363" level="1" /> <!-- Dimensional Warp Aerial Yoke -->
+		</skill_list>
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="23480" level="99" type="L2Npc" name="Abyssal Harpy" title="Avenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1302337" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="23480" level="99" type="L2Monster" name="Abyssal Harpy">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
+		<acquire exp="125609616" sp="452194" />
+		<stats>
+			<vitals hp="781403" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="1" /> <!-- Dimensional Armor -->
+			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back / Knock Down -->
+			<skill id="16363" level="1" /> <!-- Dimensional Warp Aerial Yoke -->
+		</skill_list>
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2.047" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="23481" level="99" type="L2Npc" name="Abyssal Binder">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="752796" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="23481" level="99" type="L2Monster" name="Abyssal Binder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="125609616" sp="452194" />
+		<stats>
+			<vitals hp="781403" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
+			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
+			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+		</skill_list>
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="1.943" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="23482" level="99" type="L2Npc" name="Abyssal Archon" title="Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2344207" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="251219232" sp="904389" />
+		<stats>
+			<vitals hp="1406525" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="3" /> <!-- Dimensional Armor -->
+			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
+			<skill id="16360" level="1" /> <!-- Dimensional Warp Paralysis -->
+			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+			<skill id="16364" level="1" /> <!-- Dimensional Warp Pull -->
+		</skill_list>
 		<collision>
 			<radius normal="12" />
 			<height normal="39" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="2" max="2" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="3.962" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="23483" level="99" type="L2Npc" name="Abyssal Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1302337" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="125609616" sp="452194" />
+		<stats>
+			<vitals hp="781403" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
+			<skill id="16358" level="2" /> <!-- Dimensional Armor -->
+			<skill id="16359" level="1" /> <!-- Dimensional Warp Hold -->
+			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
+		</skill_list>
 		<collision>
 			<radius normal="10" />
 			<height normal="37" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="39597" min="1" max="1" chance="100" /> <!-- Warp Crystal -->
+				<item id="40051" min="1" max="1" chance="2.009" /> <!-- Scroll: 100,000 SP -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="23484" level="11" type="L2Monster" name="Robust Honeybee">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

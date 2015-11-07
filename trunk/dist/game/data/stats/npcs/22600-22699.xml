@@ -2760,6 +2760,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22639" level="78" type="L2Monster" name="Assassin Beetle">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->  
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2769,7 +2770,7 @@
 		<sex>MALE</sex>
 		<acquire exp="67941" sp="16" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="11900" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -2785,8 +2786,6 @@
 		<skill_list>
 			<skill id="4244" level="9" /> <!-- NPC Wild Sweep -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2810,13 +2809,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="107" max="248" chance="70" /> <!-- Adena -->
+				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
 				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
 				<item id="5282" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.100" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="1.18" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
@@ -3077,6 +3077,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22644" level="78" type="L2Monster" name="Arimanes of Destruction">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4589" level="9" /> <!-- Decrease Speed -->
@@ -3086,7 +3087,7 @@
 		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
 		<acquire exp="92620" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="11900" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3101,8 +3102,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3127,15 +3126,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="140" max="340" chance="70" /> <!-- Adena -->
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.550" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="1.57" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3204,6 +3204,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22646" level="78" type="L2Monster" name="Ashuras of Destruction">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->  
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3213,7 +3214,7 @@
 		<sex>MALE</sex>
 		<acquire exp="91503" sp="21" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="14875" hpRegen="8.5" mp="1607" mpRegen="3" />   
 			<attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -3229,8 +3230,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4244" level="9" /> <!-- NPC Wild Sweep -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
@@ -3255,13 +3254,14 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="285" max="663" chance="70" /> <!-- Adena -->
-				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+				<item id="5277" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="3.010" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="3.055" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3946,6 +3946,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22655" level="84" type="L2Monster" name="Awakened Mucrokian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->   
 		<parameters>
 			<skill name="Skill01_ID" id="4072" level="9" /> <!-- Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -3954,7 +3955,7 @@
 		<sex>MALE</sex>
 		<acquire exp="102553" sp="24" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="6059" hpRegen="9.5" mp="1812" mpRegen="3.3" />   
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -3971,8 +3972,6 @@
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -3981,6 +3980,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5909" level="1" /> <!-- Stronghold Attack -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->      			
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
@@ -3993,10 +3993,10 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="130" max="303" chance="70" /> <!-- Adena -->
 				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlets -->
 				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
 				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
+				<item id="57" min="130" max="303" chance="70" /> <!-- Adena -->
 				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
 				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
 				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
@@ -4007,9 +4007,10 @@
 				<item id="36557" min="1" max="1" chance="0.075" /> <!-- Accessory Gem -->
 				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
-				<item id="36890" min="1" max="1" chance="0.009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
 				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 				<item id="36931" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4043,9 +4044,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.400" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.334" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>

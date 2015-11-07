@@ -1436,6 +1436,7 @@
 		</collision>
 	</npc>
 	<npc id="25029" level="53" type="L2RaidBoss" name="Atraiban" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) --> 
 		<parameters>
 			<minions name="Privates">
 				<npc id="25030" count="2" respawnTime="360" weightPoint="1" /> <!-- Atraiban's Top Disciple -->
@@ -1448,7 +1449,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1947885" sp="467" raidPoints="1868" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="242937.111327544" hpRegen="82.9561669443548" mp="832.4" mpRegen="2.4" />
+			<vitals hp="381767" hpRegen="6.5" mp="832" mpRegen="2.4" /> 
 			<attack physical="1023.10031543056" magical="279.752902373776" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="642.54978" magical="313.46" evasion="-18" />
 			<attribute>
@@ -1464,8 +1465,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="5" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1478,36 +1477,27 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9817" min="2" max="6" chance="79" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="3" chance="79" /> <!-- Destruction Tombstone -->
-				<group chance="75.74919891357422">
-					<item id="503" min="1" max="1" chance="12.6448" /> <!-- Zubei's Helmet -->
-					<item id="633" min="1" max="1" chance="18.0649" /> <!-- Zubei's Shield -->
-					<item id="673" min="1" max="1" chance="18.0649" /> <!-- Avadon Shield -->
-					<item id="2415" min="1" max="1" chance="12.6448" /> <!-- Avadon Circlet -->
-					<item id="4102" min="192" max="576" chance="4.4266" /> <!-- Zubei's Helmet Design -->
-					<item id="4101" min="116" max="346" chance="9.4977" /> <!-- Zubei's Shield Fragment -->
-					<item id="4439" min="60" max="180" chance="21.7506" /> <!-- Avadon Shield Fragment -->
-					<item id="4072" min="293" max="877" chance="2.9057" /> <!-- Avadon Circlet Pattern -->
-				</group>
-				<group chance="45.72700119018555">
-					<item id="284" min="1" max="1" chance="11.2615" /> <!-- Dark Elven Long Bow -->
-					<item id="4112" min="12" max="36" chance="88.7385" /> <!-- Dark Elven Longbow Shaft -->
-				</group>
-				<group chance="74.83670043945312">
-					<item id="4613" min="5" max="15" chance="10.274" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="4614" min="2" max="4" chance="34.2466" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
-					<item id="4615" min="2" max="6" chance="25.6849" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
-					<item id="947" min="1" max="1" chance="29.7945" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="45" />
 			<height normal="96" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="633" min="1" max="1" chance="5.183" /> <!-- Zubei's Shield -->
+				<item id="284" min="1" max="1" chance="3.872" /> <!-- Dark Elven Longbow -->
+				<item id="673" min="1" max="1" chance="2.944" /> <!-- Avadon Shield -->
+				<item id="503" min="1" max="1" chance="1.393" /> <!-- Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.75" /> <!-- Avadon Circlet -->
+				<item id="9817" min="2" max="6" chance="79.68" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="3" chance="79.13" /> <!-- Destruction Tombstone -->
+				<item id="4614" min="1" max="1" chance="15.68" /> <!-- Greater STR Dye (STR   4 DEX - 4) -->
+				<item id="4615" min="1" max="1" chance="15.13" /> <!-- Greater CON Dye (Con   4 Str - 4) -->
+				<item id="4613" min="1" max="1" chance="14.4" /> <!-- Greater STR Dye (STR   4 CON - 4) -->
+				<item id="947" min="1" max="1" chance="4.319" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006955" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>		
 	</npc>
 	<npc id="25030" level="52" type="L2Monster" name="Atraiban's Top Disciple" title="Raid Fighter">
 		<parameters>

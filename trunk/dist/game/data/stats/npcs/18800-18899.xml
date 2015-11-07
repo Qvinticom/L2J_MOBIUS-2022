@@ -57,16 +57,17 @@
 		</drop_lists>
 	</npc>
 	<npc id="18801" level="77" type="L2Monster" name="Adult Lavasaurus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
 			<skill name="Skill01_ID" id="4607" level="1" /> <!-- Magma Attack -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="88993" sp="21" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<vitals hp="17142" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -82,8 +83,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -107,8 +106,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="6370" min="1" max="1" chance="0.03" /> <!-- Saint Spear -->
-				<item id="6694" min="1" max="1" chance="0.003" /> <!-- Saint Spear Blade -->
+				<item id="6370" min="1" max="1" chance="0.003" /> <!-- Saint Spear -->
+				<item id="6694" min="1" max="1" chance="0.3" /> <!-- Saint Spear Blade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -171,16 +171,17 @@
 		</drop_lists>
 	</npc>
 	<npc id="18803" level="78" type="L2Monster" name="Ancient Lavasaurus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
 			<skill name="Skill01_ID" id="4607" level="1" /> <!-- Magma Attack -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="91319" sp="21" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="17850" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -196,12 +197,11 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
@@ -221,10 +221,11 @@
 		</collision>
 		<drop_lists>
 			<death>
+				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
 				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6675" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6701" min="1" max="1" chance="1.267" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6702" min="1" max="1" chance="1.308" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -3373,6 +3374,7 @@
 		</collision>
 	</npc>
 	<npc id="18876" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="3" />
@@ -3384,7 +3386,7 @@
 		<sex>MALE</sex>
 		<acquire exp="22992" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="11508" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3403,8 +3405,6 @@
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -3425,8 +3425,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="15698" min="1" max="1" chance="0.0055" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15649" min="1" max="1" chance="1" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="15698" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15649" min="1" max="1" chance="1.026" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3462,6 +3463,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="18877" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="3" />
@@ -3473,7 +3475,7 @@
 		<sex>MALE</sex>
 		<acquire exp="194704" sp="46" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="11508" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3492,8 +3494,6 @@
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -3508,6 +3508,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -3542,11 +3546,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="26.4" />
-		</collision>
+		</drop_lists>        
 	</npc>
 	<npc id="18878" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
 		<parameters>
@@ -3735,6 +3735,7 @@
 		</collision>
 	</npc>
 	<npc id="18880" level="83" type="L2FeedableBeast" name="Baby Alpine Cougar">
+    		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="1" />
@@ -3743,7 +3744,7 @@
 		<sex>MALE</sex>
 		<acquire exp="31401" sp="7" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="3836" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3761,8 +3762,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3787,6 +3786,7 @@
 				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
 				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
 				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4002,6 +4002,7 @@
 		</collision>
 	</npc>
 	<npc id="18883" level="83" type="L2FeedableBeast" name="Adult Cougar">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -4013,7 +4014,7 @@
 		<sex>MALE</sex>
 		<acquire exp="22992" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="11508" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -4032,8 +4033,6 @@
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -4056,6 +4055,7 @@
 			<death>
 				<item id="15697" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Breastplate -->
 				<item id="15648" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Breastplate Piece -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4091,6 +4091,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="18884" level="83" type="L2FeedableBeast" name="Adult Cougar">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="3" />
@@ -4100,9 +4101,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="194704" sp="46" />
+		<acquire exp="22992" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="11508" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -4121,8 +4122,6 @@
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -4137,6 +4136,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -4172,10 +4175,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="16" />
-			<height normal="17.2" />
-		</collision>
 	</npc>
 	<npc id="18885" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
 		<parameters>
@@ -4682,6 +4681,7 @@
 		</collision>
 	</npc>
 	<npc id="18890" level="84" type="L2FeedableBeast" name="Adult Buffalo">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4693,7 +4693,7 @@
 		<sex>MALE</sex>
 		<acquire exp="25481" sp="6" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="12120" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4712,8 +4712,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -4735,7 +4733,8 @@
 		<drop_lists>
 			<death>
 				<item id="15699" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Tunic -->
-				<item id="15650" min="1" max="1" chance="2.150" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15650" min="1" max="1" chance="2.114" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4771,6 +4770,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="18891" level="84" type="L2FeedableBeast" name="Adult Buffalo">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="3" />
@@ -4782,7 +4782,7 @@
 		<sex>MALE</sex>
 		<acquire exp="214114" sp="51" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="12120" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4801,8 +4801,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -4817,6 +4815,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="25.2" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -4852,10 +4854,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="16" />
-			<height normal="25.2" />
-		</collision>
 	</npc>
 	<npc id="18892" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
 		<parameters>
@@ -5304,6 +5302,7 @@
 		</collision>
 	</npc>
 	<npc id="18897" level="84" type="L2FeedableBeast" name="Adult Grendel">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -5315,7 +5314,7 @@
 		<sex>MALE</sex>
 		<acquire exp="25481" sp="6" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="12120" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -5334,8 +5333,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -5356,7 +5353,8 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="10216" min="1" max="1" chance="0.0055" /> <!-- Icarus Disperser -->
+				<item id="10216" min="1" max="1" chance="0.0075" /> <!-- Icarus Disperser -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5392,6 +5390,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="18898" level="84" type="L2FeedableBeast" name="Adult Grendel">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="3" />
@@ -5403,7 +5402,7 @@
 		<sex>MALE</sex>
 		<acquire exp="214114" sp="51" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="12120" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -5422,8 +5421,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -5438,6 +5435,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -5473,10 +5474,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="15" grown="18" />
-			<height normal="39" grown="47.5" />
-		</collision>
 	</npc>
 	<npc id="18899" level="84" type="L2FeedableBeast" name="Full Grown Grendel">
 		<parameters>

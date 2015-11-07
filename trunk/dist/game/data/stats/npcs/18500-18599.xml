@@ -1839,6 +1839,7 @@
 		</collision>
 	</npc>
 	<npc id="18545" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1853,9 +1854,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="9472" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<vitals hp="9472" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -1872,8 +1874,6 @@
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -1891,14 +1891,16 @@
 		</collision>
 		<drop_lists>
 			<death>
+				<item id="381" min="1" max="1" chance="1.191" /> <!-- Chain Gaiters -->
 				<item id="354" min="1" max="1" chance="0.75" /> <!-- Chain Mail Shirt -->
-				<item id="1959" min="96" max="288" chance="36.36" /> <!-- Chain Mail Shirt Material -->
-				<item id="381" min="1" max="1" chance="1.200" /> <!-- Chain Gaiters -->
 				<item id="1960" min="105" max="315" chance="78.45" /> <!-- Chain Gaiter Fragment -->
+				<item id="1959" min="96" max="288" chance="36.36" /> <!-- Chain Mail Shirt Material -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="18546" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1915,10 +1917,11 @@
 			<skill name="Skill02_ID" id="4157" level="4" /> <!-- NPC Blaze - Magic -->
 			<skill name="SpawnSkill" id="4028" level="2" /> <!-- NPC Might -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="12601.1073614331" hpRegen="27.4690282230768" mp="610.8" mpRegen="2.1" />
+			<vitals hp="12602" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="538.165880083998" magical="367.497528603312" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="284.459936" magical="312.23316" />
 			<attribute>
@@ -1937,8 +1940,6 @@
 			<skill id="4077" level="5" /> <!-- NPC Aura Burn -->
 			<skill id="4157" level="4" /> <!-- NPC Blaze - Magic -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1959,13 +1960,15 @@
 		<drop_lists>
 			<death>
 				<item id="226" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger -->
-				<item id="2070" min="192" max="576" chance="7.608" /> <!-- Cursed Dagger Blade -->
 				<item id="232" min="1" max="1" chance="0.3" /> <!-- Dark Elven Dagger -->
 				<item id="2072" min="52" max="156" chance="7.608" /> <!-- Dark Elven Dagger Edge -->
+				<item id="2070" min="192" max="576" chance="7.585" /> <!-- Cursed Dagger Blade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="18547" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1987,8 +1990,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="37803.3220842992" hpRegen="27.4690282230768" mp="610.8" mpRegen="2.1" />
+			<vitals hp="37804" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="336.33483277555" magical="229.673088544615" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="284.459936" magical="312.23316" />
 			<attribute>
@@ -2005,8 +2009,6 @@
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4077" level="4" /> <!-- NPC Aura Burn -->
 			<skill id="4157" level="4" /> <!-- NPC Blaze - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2023,16 +2025,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="71" min="1" max="1" chance="1.275" /> <!-- Flamberge -->
-				<item id="2059" min="14" max="42" chance="73.50" /> <!-- Flamberge Blade -->
-				<item id="72" min="1" max="1" chance="1.275" /> <!-- Stormbringer -->
-				<item id="2060" min="40" max="120" chance="87" /> <!-- Stormbringer Blade -->
-				<item id="7887" min="1" max="1" chance="1.275" /> <!-- Mysterious Sword -->
+				<item id="71" min="1" max="1" chance="1.282" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="1.273" /> <!-- Stormbringer -->
+				<item id="7887" min="1" max="1" chance="1.219" /> <!-- Mysterious Sword -->
 				<item id="8334" min="81" max="243" chance="87" /> <!-- Mysterious Sword Blade -->
+				<item id="2060" min="40" max="120" chance="86.72" /> <!-- Stormbringer Blade -->
+				<item id="2059" min="14" max="42" chance="78.43" /> <!-- Flamberge Blade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="18548" level="45" type="L2Monster" name="Ancient Giants' Experiment">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2045,8 +2049,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
+        <acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="12601.1073614331" hpRegen="27.4690282230768" mp="610.8" mpRegen="2.1" />
+			<vitals hp="6301" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="538.165880083998" magical="367.497528603312" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="284.459936" magical="312.23316" />
 			<attribute>
@@ -2061,8 +2066,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2083,15 +2086,17 @@
 		<drop_lists>
 			<death>
 				<item id="96" min="1" max="1" chance="0.3" /> <!-- Scythe -->
-				<item id="2062" min="40" max="120" chance="23" /> <!-- Scythe Edge -->
 				<item id="298" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive -->
-				<item id="2075" min="81" max="243" chance="23" /> <!-- Orcish Glaive Blade -->
 				<item id="302" min="1" max="1" chance="0.3" /> <!-- Body Slasher -->
-				<item id="2076" min="14" max="42" chance="23" /> <!-- Body Slasher Blade -->
+				<item id="2075" min="81" max="243" chance="23.02" /> <!-- Orcish Glaive Blade -->
+				<item id="2062" min="40" max="120" chance="21.18" /> <!-- Scythe Edge -->
+				<item id="2076" min="14" max="42" chance="21.18" /> <!-- Body Slasher Blade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="18549" level="45" type="L2Monster" name="Ancient Giants' Experiment">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2109,8 +2114,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
+        	<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="12601.1073614331" hpRegen="27.4690282230768" mp="610.8" mpRegen="2.1" />
+			<vitals hp="6301" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="538.165880083998" magical="367.497528603312" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="284.459936" magical="312.23316" />
 			<attribute>
@@ -2125,8 +2131,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4065" level="4" /> <!-- NPC Heal -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2147,23 +2151,24 @@
 		<drop_lists>
 			<death>
 				<item id="62" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Boots -->
-				<item id="1958" min="1" max="1" chance="18" /> <!-- Reinforced Mithril Boots Design -->
 				<item id="2429" min="1" max="1" chance="0.3" /> <!-- Chain Boots -->
-				<item id="2937" min="1" max="1" chance="18" /> <!-- Chain Boots Part -->
 				<item id="2430" min="1" max="1" chance="0.3" /> <!-- Karmian Boots -->
-				<item id="2938" min="1" max="1" chance="18" /> <!-- Karmian Boots Fabric -->
 				<item id="2431" min="1" max="1" chance="0.3" /> <!-- Plated Leather Boots -->
-				<item id="2939" min="1" max="1" chance="18" /> <!-- Plate Leather Boots Lining -->
 				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
-				<item id="2940" min="1" max="1" chance="18" /> <!-- Dwarven Chain Boots Part -->
 				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
-				<item id="2941" min="1" max="1" chance="18" /> <!-- Boots of Seal Pattern -->
 				<item id="2452" min="1" max="1" chance="0.3" /> <!-- Reinforced Mithril Gloves -->
-				<item id="2942" min="1" max="1" chance="18" /> <!-- Reinforced Mithril Gloves Design -->
 				<item id="2453" min="1" max="1" chance="0.3" /> <!-- Chain Gloves -->
-				<item id="2943" min="1" max="1" chance="18" /> <!-- Chain Gloves Design -->
 				<item id="2454" min="1" max="1" chance="0.3" /> <!-- Karmian Gloves -->
-				<item id="2944" min="1" max="1" chance="18" /> <!-- Karmian Gloves Fabric -->
+				<item id="2940" min="3" max="9" chance="18.65" /> <!-- Dwarven Chain Boot Fragment -->
+				<item id="2939" min="2" max="6" chance="18.37" /> <!-- Plated Leather Boot Lining -->
+				<item id="2937" min="1" max="3" chance="17.47" /> <!-- Chain Boot Fragment -->
+				<item id="2944" min="1" max="1" chance="17.45" /> <!-- Karmian Glove Fabric -->
+				<item id="2942" min="4" max="12" chance="17.32" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2941" min="3" max="9" chance="17.22" /> <!-- Boots of Seal Pattern -->
+				<item id="2938" min="2" max="6" chance="17.07" /> <!-- Karmian Boot Fabric -->
+				<item id="2943" min="4" max="12" chance="17.05" /> <!-- Chain Glove Design -->
+				<item id="1958" min="1" max="3" chance="17.04" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>

@@ -4535,6 +4535,7 @@
 		</collision>
 	</npc>
 	<npc id="25188" level="30" type="L2RaidBoss" name="Apepi" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" /> <!-- BOSS Cancel Magic -->
@@ -4546,7 +4547,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="107380.067377021" hpRegen="54.2850964385025" mp="329.4" mpRegen="1.5" />
+			<vitals hp="168744" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="222.437554766423" magical="28.8595106837795" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
@@ -4564,8 +4565,6 @@
 			<skill id="4172" level="3" /> <!-- Stun -->
 			<skill id="4175" level="3" /> <!-- BOSS Haste -->
 			<skill id="4177" level="3" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4579,40 +4578,27 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="58.137001037597656">
-					<item id="629" min="5" max="15" chance="6.5246" /> <!-- Kite Shield -->
-					<item id="2411" min="1" max="1" chance="45.6949" /> <!-- Brigandine Helmet -->
-					<item id="2493" min="6" max="16" chance="5.9314" /> <!-- Brigandine Shield -->
-					<item id="1947" min="336" max="1008" chance="4.215" /> <!-- Kite Shield Fragment -->
-					<item id="2922" min="27" max="81" chance="14.03" /> <!-- Brigandine Helmet Design -->
-					<item id="2929" min="60" max="180" chance="23.6041" /> <!-- Brigandine Shield Fragment -->
-				</group>
-				<group chance="60.95320129394531">
-					<item id="88" min="1" max="1" chance="3.1446" /> <!-- Morning Star -->
-					<item id="90" min="1" max="1" chance="3.1446" /> <!-- Goat Head Staff -->
-					<item id="21735" min="1" max="1" chance="3.1446" /> <!-- Tarbar - Event -->
-					<item id="169" min="1" max="1" chance="3.1446" /> <!-- Skull Breaker -->
-					<item id="172" min="1" max="1" chance="3.1446" /> <!-- Heavy Bone Club -->
-					<item id="2031" min="7" max="21" chance="12.2101" /> <!-- Morning Star Head -->
-					<item id="2032" min="3" max="9" chance="26.0076" /> <!-- Goat Head Staff Head -->
-					<item id="2035" min="12" max="36" chance="7.1226" /> <!-- Tarbar Head -->
-					<item id="2036" min="18" max="54" chance="4.7484" /> <!-- Skull Breaker Head -->
-					<item id="2037" min="3" max="7" chance="34.1883" /> <!-- Heavy Bone Club Head -->
-				</group>
-				<group chance="78.94380187988281">
-					<item id="4556" min="5" max="15" chance="8.4507" /> <!-- Greater Dye of CON <Con+1 Dex-1> -->
-					<item id="4557" min="2" max="4" chance="28.169" /> <!-- Greater Dye of DEX <Dex+1 Str-1> -->
-					<item id="4558" min="2" max="6" chance="21.1268" /> <!-- Greater Dye of DEX <Dex+1 Con-1> -->
-					<item id="6576" min="1" max="1" chance="42.2535" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="169" min="1" max="1" chance="4.598" /> <!-- Skull Breaker -->
+				<item id="172" min="1" max="1" chance="4.572" /> <!-- Heavy Bone Club -->
+				<item id="90" min="1" max="1" chance="4.571" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="4.569" /> <!-- Tarbar -->
+				<item id="2493" min="1" max="1" chance="4.444" /> <!-- Brigandine Shield -->
+				<item id="2411" min="1" max="1" chance="2.087" /> <!-- Brigandine Helmet -->
+				<item id="629" min="1" max="1" chance="1.005" /> <!-- Kite Shield -->
+				<item id="88" min="1" max="1" chance="0.75" /> <!-- Morning Star -->
+				<item id="4557" min="1" max="1" chance="13.37" /> <!-- Greater DEX Dye (Dex   1 Str - 1) -->
+				<item id="4558" min="1" max="1" chance="12.66" /> <!-- Greater DEX Dye (Dex   1 CON - 1) -->
+				<item id="4556" min="1" max="1" chance="12.48" /> <!-- Greater CON Dye (Con   1 DEX - 1) -->
+				<item id="6576" min="1" max="1" chance="6.626" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.004952" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25189" level="34" type="L2RaidBoss" name="Cronos' Servitor Mumu" title="Raid Boss">
 		<parameters>

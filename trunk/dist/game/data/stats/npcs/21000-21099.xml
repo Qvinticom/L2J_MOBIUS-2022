@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21001" level="60" type="L2Monster" name="Archer of Destruction">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -16,7 +17,7 @@
 		<equipment rhand="282" /> <!-- rhand: Elemental Bow -->
 		<acquire exp="46912" sp="11" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="6128" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<vitals hp="3868" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="223.6362" magical="148.899508363765" />
 			<attribute>
@@ -34,8 +35,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4120" level="5" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -51,31 +50,18 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="933" max="1901" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.20229999721050262">
-					<item id="286" min="1" max="1" chance="0.9143" /> <!-- Eminence Bow -->
-					<item id="2121" min="1" max="1" chance="99.0857" /> <!-- Eminence Bow Shaft -->
-				</group>
-				<group chance="19.05660057067871">
-					<item id="1873" min="1" max="1" chance="13.0727" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="65.3637" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="6.5364" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="9.3377" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="0.5447" /> <!-- Enria -->
-					<item id="4939" min="1" max="1" chance="0.4045" /> <!-- Recipe: Adamantite Necklace (70%) -->
-					<item id="4966" min="1" max="1" chance="0.0377" /> <!-- Recipe: Keshanberk (60%) -->
-					<item id="5165" min="1" max="1" chance="0.0654" /> <!-- Recipe: Blessed Spiritshot (B) Compressed Package (100%) -->
-					<item id="4180" min="1" max="1" chance="3.6313" /> <!-- Recipe: Silver Arrow (100%) -->
-					<item id="4971" min="1" max="1" chance="0.0377" /> <!-- Recipe: Dark Elven Long Bow (60%) -->
-					<item id="8726" min="1" max="1" chance="0.7565" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1891" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0189" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0037" /> <!-- Top-Grade Life Stone - Level 55 -->
-				</group>
+				<item id="5320" min="1" max="1" chance="0.003" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="289" min="1" max="1" chance="0.0009" /> <!-- Soul Bow -->
+				<item id="8684" min="1" max="1" chance="0.0009" /> <!-- Shyeed's Bow -->
+				<item id="57" min="383" max="894" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -109,15 +95,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1988" min="1" max="1" chance="4.5373" /> <!-- Divine Tunic Fabric -->
-				<item id="1895" min="1" max="1" chance="67.4702" /> <!-- Metallic Fiber -->
-				<item id="4042" min="1" max="1" chance="3.9358" /> <!-- Enria -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="27" />
-		</collision>
 	</npc>
 	<npc id="21002" level="60" type="L2Monster" name="Doom Scout">
 		<parameters>
@@ -1998,6 +1980,7 @@
 		</collision>
 	</npc>
 	<npc id="21018" level="58" type="L2Monster" name="Ancient Gargoyle">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2009,11 +1992,11 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="PhysicalSpecial" id="4067" level="5" /> <!-- NPC Mortal Blow -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="45255" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="5796" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<vitals hp="3658" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="405.96455" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.40135" magical="152.072199009316" />
 			<attribute>
@@ -2029,8 +2012,6 @@
 		<skill_list>
 			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2046,31 +2027,25 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="65" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="883" max="1802" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.20640000700950623">
-					<item id="11918" min="1" max="1" chance="4.5796" /> <!-- Common Item - Heavy War Axe -->
-					<item id="4105" min="1" max="1" chance="45.7961" /> <!-- Heavy War Axe Head -->
-					<item id="11908" min="1" max="1" chance="4.5796" /> <!-- Common Item - Sprite's Staff -->
-					<item id="4106" min="1" max="1" chance="45.0447" /> <!-- Sprite's Staff Head -->
-				</group>
-				<group chance="16.106399536132812">
-					<item id="1872" min="1" max="1" chance="45.5867" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="45.5867" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.5587" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2793" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.2973" /> <!-- Mold Hardener -->
-					<item id="4950" min="1" max="1" chance="0.3514" /> <!-- Recipe: Stockings of Zubei (60%) -->
-					<item id="4999" min="1" max="1" chance="0.4252" /> <!-- Recipe: Sealed Doom Boots (60%) -->
-					<item id="8309" min="1" max="1" chance="0.0394" /> <!-- Recipe: Spell Breaker (100%) -->
-					<item id="8727" min="1" max="1" chance="0.6838" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.171" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.0171" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.0034" /> <!-- Top-Grade Life Stone - Level 58 -->
-				</group>
+				<item id="503" min="1" max="1" chance="0.03" /> <!-- Zubei's Helmet -->
+				<item id="612" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="633" min="1" max="1" chance="0.03" /> <!-- Zubei's Shield -->
+				<item id="891" min="1" max="1" chance="0.03" /> <!-- Sage's Ring -->
+				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Avadon Circlet -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Doom Helmet -->
+				<item id="5289" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Helmet -->
+				<item id="57" min="364" max="851" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2104,15 +2079,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="4947" min="1" max="1" chance="2.2992" /> <!-- Recipe: Zubei's Leather Gaiters (60%) -->
-				<item id="2961" min="1" max="1" chance="12.1815" /> <!-- Full Plate Boots Part -->
-				<item id="4049" min="1" max="1" chance="11.7342" /> <!-- Adamantite Earring Gemstone -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="65" />
-		</collision>
+		</drop_lists>        
 	</npc>
 	<npc id="21019" level="58" type="L2Monster" name="Fallen Orc Archer">
 		<parameters>

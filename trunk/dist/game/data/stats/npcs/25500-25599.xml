@@ -5273,6 +5273,10 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="42" />
+			<height normal="45" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="45.42729949951172">
@@ -5300,11 +5304,7 @@
 					<!-- Knight's Epaulette -->
 				</group>
 			</death>
-		</drop_lists>
-		<collision>
-			<radius normal="42" />
-			<height normal="45" />
-		</collision>
+		</drop_lists>        
 	</npc>
 	<npc id="25576" level="93" type="L2Monster" name="Rango's Iris">
 		<parameters>

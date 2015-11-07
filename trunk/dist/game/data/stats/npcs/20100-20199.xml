@@ -451,6 +451,7 @@
 		</collision>
 	</npc>
 	<npc id="20135" level="40" type="L2Monster" name="Alligator">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -477,11 +478,9 @@
 			</speed>
 			<hit_time>410</hit_time>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skill_list>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -503,9 +502,10 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="57" min="143" max="335" chance="70" /> <!-- Adena -->
 				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -539,9 +539,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="5.550" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="12" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3070,6 +3070,7 @@
 		</collision>
 	</npc>
 	<npc id="20199" level="30" type="L2Monster" name="Amber Basilisk">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3083,9 +3084,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2803" sp="1" />
+		<acquire exp="2803" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -3097,11 +3098,9 @@
 			</speed>
 			<hit_time>390</hit_time>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skill_list>
 			<skill id="4073" level="3" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3117,15 +3116,17 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="25" />
+		</collision>        
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="267" max="533" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.26980000734329224">
-					<item id="1123" min="1" max="1" chance="50" /> <!-- Blue Buckskin Boots -->
-					<item id="605" min="1" max="1" chance="50" /> <!-- Leather Gauntlets -->
-				</group>
+				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
+				<item id="1834" min="1" max="1" chance="6.222" /> <!-- Emergency Dressing -->
+				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="22.25189971923828">
 					<item id="1867" min="1" max="1" chance="41.3793" /> <!-- Animal Skin -->
 					<item id="1872" min="1" max="1" chance="41.3793" /> <!-- Animal Bone -->
@@ -3171,9 +3172,5 @@
 				<item id="1900" min="1" max="1" chance="6.9132" /> <!-- Enchanted Necklace Chain -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="34" />
-			<height normal="25" />
-		</collision>
 	</npc>
 </list>

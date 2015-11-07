@@ -4790,6 +4790,7 @@
 		</collision>
 	</npc>
 	<npc id="25395" level="45" type="L2RaidBoss" name="Archon Susceptor" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25396" count="1" respawnTime="360" weightPoint="1" /> <!-- Kusion Suscepter -->
@@ -4798,11 +4799,11 @@
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeDDMagic_a" id="4178" level="4" /> <!-- BOSS Flamestrike -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="1042754" sp="250" raidPoints="764" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="190435" hpRegen="43.342559280568" mp="610.8" mpRegen="2.1" />
+			<vitals hp="190435" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<attribute>
@@ -4818,8 +4819,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4838,23 +4837,24 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="103" min="1" max="1" chance="2.100" /> <!-- Tower Shield -->
-				<item id="162" min="1" max="1" chance="1.600" /> <!-- War Axe -->
-				<item id="201" min="1" max="1" chance="1.600" /> <!-- Club of Nature -->
-				<item id="197" min="1" max="1" chance="1.600" /> <!-- Paradia Staff -->
-				<item id="200" min="1" max="1" chance="1.600" /> <!-- Sage's Staff -->
-				<item id="202" min="1" max="1" chance="1.600" /> <!-- Mace of Underworld -->
-				<item id="196" min="1" max="1" chance="1.600" /> <!-- Stick of Eternity -->
-				<item id="174" min="1" max="1" chance="1.600" /> <!-- Nirvana Axe -->
-				<item id="199" min="1" max="1" chance="1.600" /> <!-- Pa'agrian Hammer -->
-				<item id="107" min="1" max="1" chance="1.200" /> <!-- Composite Shield -->
-				<item id="517" min="1" max="1" chance="0.75" /> <!-- Composite Helmet -->
+				<item id="103" min="1" max="1" chance="2.095" /> <!-- Tower Shield -->
+				<item id="162" min="1" max="1" chance="1.609" /> <!-- War Axe -->
+				<item id="201" min="1" max="1" chance="1.556" /> <!-- Club of Nature -->
+				<item id="197" min="1" max="1" chance="1.552" /> <!-- Paradia Staff -->
+				<item id="200" min="1" max="1" chance="1.542" /> <!-- Sage's Staff -->
+				<item id="202" min="1" max="1" chance="1.539" /> <!-- Mace of Underworld -->
+				<item id="196" min="1" max="1" chance="1.536" /> <!-- Stick of Eternity -->
+				<item id="174" min="1" max="1" chance="1.533" /> <!-- Nirvana Axe -->
+				<item id="199" min="1" max="1" chance="1.511" /> <!-- Pa'agrio Hammer -->
+				<item id="107" min="1" max="1" chance="1.255" /> <!-- Compound Shield -->
+				<item id="517" min="1" max="1" chance="0.75" /> <!-- Compound Helmet -->
 				<item id="1149" min="1" max="1" chance="0.3" /> <!-- Shining Circlet -->
-				<item id="9817" min="1" max="3" chance="75" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<item id="4605" min="1" max="1" chance="15.50" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
-				<item id="4604" min="1" max="1" chance="15.25" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
-				<item id="4606" min="1" max="1" chance="15.25" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+				<item id="8176" min="1" max="1" chance="75.39" /> <!-- Destruction Tombstone -->
+				<item id="9817" min="1" max="3" chance="74.82" /> <!-- Nonliving Nucleus -->
+				<item id="4605" min="1" max="1" chance="15.58" /> <!-- Greater DEX Dye (Dex   3 Str - 3) -->
+				<item id="4604" min="1" max="1" chance="15.31" /> <!-- Greater CON Dye (Con   3 DEX - 3) -->
+				<item id="4606" min="1" max="1" chance="15" /> <!-- Greater DEX Dye (Dex   3 CON - 3) -->
+				<item id="39629" min="1" max="1" chance="0.006084" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>

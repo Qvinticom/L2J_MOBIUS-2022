@@ -3199,6 +3199,7 @@
 		</collision>
 	</npc>
 	<npc id="25649" level="81" type="L2RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->  
 		<parameters>
 			<skill name="Skill01_ID" id="5880" level="2" /> <!-- Vicious Mutilation -->
 			<skill name="Skill02_ID" id="5894" level="1" /> <!-- Mark of Despair -->
@@ -3210,7 +3211,7 @@
 		<equipment rhand="13985" lhand="13986" /> <!-- rhand: Exclusive to Monsters (Death Slayer_r) lhand: Exclusive to Monsters (Death Slayer_l) -->
 		<acquire exp="3100451" sp="744" raidPoints="361.2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
+			<vitals hp="1049207" hpRegen="9.5" mp="1846" mpRegen="3.3" /> 
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
 			<attribute>
@@ -3225,8 +3226,6 @@
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3248,32 +3247,27 @@
 				<clan>ACEED</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="61.93410110473633">
-					<item id="6678" min="1" max="1" chance="1.907" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6679" min="1" max="1" chance="1.3349" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="1.3349" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="1.3349" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6705" min="23" max="67" chance="9.9142" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="6" max="18" chance="43.2454" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="11" max="31" chance="24.7117" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-					<item id="6714" min="16" max="48" chance="16.217" /> <!-- Sealed Major Arcana Circlet Pattern -->
-				</group>
-				<group chance="44.15679931640625">
-					<item id="6370" min="1" max="1" chance="1.2592" /> <!-- Saint Spear -->
-					<item id="6694" min="3" max="9" chance="98.7408" /> <!-- Saint Spear Blade -->
-				</group>
-				<group chance="41.94889831542969">
-					<item id="6578" min="1" max="1" chance="8.1633" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="1" chance="91.8367" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="24" />
 			<height normal="40.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6678" min="1" max="1" chance="2.308" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="1.634" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="1.587" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="1.518" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6370" min="1" max="1" chance="0.3" /> <!-- Saint Spear -->
+				<item id="6705" min="6" max="18" chance="30.42" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6694" min="1" max="1" chance="28.55" /> <!-- Saint Spear Blade -->
+				<item id="3936" min="1" max="1" chance="13.85" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6706" min="10" max="30" chance="12.69" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="16" max="48" chance="8.183" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6714" min="22" max="66" chance="5.821" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6578" min="1" max="1" chance="1.243" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.009053" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>		
 	</npc>
 	<npc id="25650" level="81" type="L2RaidBoss" name="Awakened Ancient Executor" title="Raid Boss">
 		<parameters>
@@ -5758,6 +5752,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="25691" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5778,7 +5773,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3327990" sp="798" raidPoints="338.1" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1038818" hpRegen="186.30557254141" mp="18120.0" mpRegen="30" />
+			<vitals hp="1038818" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
@@ -5794,8 +5789,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5818,25 +5811,27 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="9452" min="1" max="1" chance="1.800" /> <!-- Sealed Dynasty Earring -->
-				<item id="9454" min="1" max="1" chance="1.225" /> <!-- Sealed Dynasty Ring -->
+				<item id="9454" min="1" max="1" chance="1.776" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.22" /> <!-- Sealed Dynasty Earring -->
 				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
 				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
 				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
 				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.135" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="5.464" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.335" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.450" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.450" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.125" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="5.475" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9992" min="2" max="6" chance="8.239" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6.069" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5.494" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.436" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9616" min="3" max="9" chance="1.49" /> <!-- Dynasty Sword Piece -->
+				<item id="9617" min="4" max="12" chance="1.281" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.134" /> <!-- Dynasty Phantom Piece -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008768" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="25692" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5857,7 +5852,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3327990" sp="798" raidPoints="338.1" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1038818" hpRegen="186.30557254141" mp="18120.0" mpRegen="30" />
+			<vitals hp="1038818" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
@@ -5873,8 +5868,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5897,25 +5890,27 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="9452" min="1" max="1" chance="1.800" /> <!-- Sealed Dynasty Earring -->
-				<item id="9454" min="1" max="1" chance="1.225" /> <!-- Sealed Dynasty Ring -->
+				<item id="9454" min="1" max="1" chance="1.78" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.265" /> <!-- Sealed Dynasty Earring -->
 				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
 				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
 				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
 				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.135" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="5.464" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.335" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.450" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.450" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.125" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="5.475" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9992" min="2" max="6" chance="8.175" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6.008" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5.501" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.349" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9616" min="3" max="9" chance="1.493" /> <!-- Dynasty Sword Piece -->
+				<item id="9617" min="4" max="12" chance="1.256" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.121" /> <!-- Dynasty Phantom Piece -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.0090985" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="25693" level="81" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -5936,7 +5931,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3327990" sp="798" raidPoints="338.1" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1038818" hpRegen="186.30557254141" mp="18120.0" mpRegen="30" />
+			<vitals hp="1038818" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
@@ -5952,8 +5947,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5976,25 +5969,27 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="9452" min="1" max="1" chance="1.800" /> <!-- Sealed Dynasty Earring -->
-				<item id="9454" min="1" max="1" chance="1.225" /> <!-- Sealed Dynasty Ring -->
+				<item id="9454" min="1" max="1" chance="1.869" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="1.199" /> <!-- Sealed Dynasty Earring -->
 				<item id="9453" min="1" max="1" chance="0.75" /> <!-- Sealed Dynasty Necklace -->
 				<item id="9442" min="1" max="1" chance="0.075" /> <!-- Dynasty Sword -->
 				<item id="9443" min="1" max="1" chance="0.075" /> <!-- Dynasty Blade -->
 				<item id="9444" min="1" max="1" chance="0.075" /> <!-- Dynasty Phantom -->
-				<item id="9992" min="2" max="6" chance="8.135" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				<item id="9993" min="5" max="15" chance="5.464" /> <!-- Sealed Dynasty Ring Gemstone -->
-				<item id="9991" min="9" max="27" chance="2.335" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="9616" min="3" max="9" chance="1.450" /> <!-- Dynasty Sword Piece -->
-				<item id="9617" min="4" max="12" chance="1.450" /> <!-- Dynasty Blade Piece -->
-				<item id="9618" min="4" max="12" chance="1.125" /> <!-- Dynasty Phantom Piece -->
-				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="5.475" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9992" min="2" max="6" chance="8.185" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="5" max="15" chance="6.036" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="960" min="1" max="1" chance="5.47" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9991" min="9" max="27" chance="2.373" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9616" min="3" max="9" chance="1.488" /> <!-- Dynasty Sword Piece -->
+				<item id="9617" min="4" max="12" chance="1.251" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="4" max="12" chance="1.066" /> <!-- Dynasty Phantom Piece -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008682" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="25694" level="82" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -6015,7 +6010,7 @@
 		<sex>MALE</sex>
 		<acquire exp="37775745" sp="9066" raidPoints="343.7" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1038818" hpRegen="186.30557254141" mp="18120.0" mpRegen="30" />
+			<vitals hp="1038818" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="1785.40820928327" magical="1036.33137295235" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" />
 			<attribute>
@@ -6031,8 +6026,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6055,19 +6048,22 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="15341" min="1" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
-				<item id="9452" min="1" max="1" chance="5.500" /> <!-- Sealed Dynasty Earring -->
-				<item id="9454" min="1" max="1" chance="2.500" /> <!-- Sealed Dynasty Ring -->
-				<item id="9453" min="1" max="1" chance="3.150" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9452" min="1" max="1" chance="5.52" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="3.131" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9454" min="1" max="1" chance="2.472" /> <!-- Sealed Dynasty Ring -->
 				<item id="9442" min="1" max="1" chance="0.75" /> <!-- Dynasty Sword -->
-				<item id="21955" min="1" max="1" chance="0.75" /> <!-- Blades of Delusion -->
 				<item id="9444" min="1" max="1" chance="0.75" /> <!-- Dynasty Phantom -->
-				<item id="959" min="1" max="1" chance="5.575" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="21955" min="1" max="1" chance="0.75" /> <!-- Blades of Delusion -->
+				<item id="15341" min="1" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
+				<item id="959" min="1" max="1" chance="5.661" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.009249" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="25695" level="84" type="L2RaidBoss" name="Aenkinel" title="Invader of Dream">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->     
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -6088,7 +6084,7 @@
 		<sex>MALE</sex>
 		<acquire exp="42720365" sp="10252" raidPoints="355.6" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1070295" hpRegen="191.950817694987" mp="19170.0" mpRegen="30" />
+			<vitals hp="1070295" hpRegen="9.5" mp="19170" mpRegen="3.3" />
 			<attack physical="1839.50786343276" magical="1082.55400336307" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="1108.0785" magical="540.56" />
 			<attribute>
@@ -6104,8 +6100,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="9" /> <!-- BOSS Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6128,15 +6122,17 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="15341" min="2" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
-				<item id="9452" min="1" max="1" chance="6.500" /> <!-- Sealed Dynasty Earring -->
-				<item id="9453" min="1" max="1" chance="3.660" /> <!-- Sealed Dynasty Necklace -->
-				<item id="9454" min="1" max="1" chance="3" /> <!-- Sealed Dynasty Ring -->
+				<item id="9452" min="1" max="1" chance="6.54" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="3.647" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9454" min="1" max="1" chance="3.001" /> <!-- Sealed Dynasty Ring -->
 				<item id="10215" min="1" max="1" chance="0.75" /> <!-- Icarus Sawsword -->
 				<item id="10217" min="1" max="1" chance="0.75" /> <!-- Icarus Spirit -->
 				<item id="10218" min="1" max="1" chance="0.75" /> <!-- Icarus Heavy Arms -->
-				<item id="959" min="1" max="1" chance="6.500" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="1.140" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="15341" min="2" max="3" chance="100" /> <!-- Guiding Tea Leaves -->
+				<item id="959" min="1" max="1" chance="6.666" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="1.162" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.0092475" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</drop_lists>
 	</npc>

@@ -2864,6 +2864,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20043" level="19" type="L2Monster" name="Arachnid Tracker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2872,9 +2873,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1141" sp="1" />
+		<acquire exp="1141" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="321.63954" hpRegen="2.5" mp="183.28" mpRegen="1.2" />
+			<vitals hp="322" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="84.07638" magical="55.9790056860875" />
 			<attribute>
@@ -2889,8 +2890,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4035" level="1" /> <!-- Poison -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2908,25 +2907,12 @@
 		</ai>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="137" max="234" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.11490000039339066">
-					<item id="2" min="1" max="1" chance="7.1749" /> <!-- Long Sword -->
-					<item id="120" min="1" max="1" chance="7.1749" /> <!-- Sword of Reflection -->
-					<item id="2012" min="1" max="1" chance="78.4753" /> <!-- Sword of Reflection Blade -->
-					<item id="121" min="1" max="1" chance="7.1749" /> <!-- Sword of Watershadow -->
-				</group>
-				<group chance="19.41819953918457">
-					<item id="1864" min="1" max="1" chance="22.2883" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="11.1441" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="7.4294" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="4.4577" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="22.2883" /> <!-- Thread -->
-					<item id="2143" min="1" max="1" chance="2.2288" /> <!-- Recipe: Synthetic Cokes -->
-					<item id="5158" min="1" max="1" chance="0.4458" /> <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
-					<item id="1831" min="1" max="1" chance="29.7176" /> <!-- Antidote -->
-				</group>
+				<item id="907" min="1" max="1" chance="1.717" /> <!-- Necklace of Anguish -->
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="1.113" /> <!-- Fiber -->
+				<item id="36518" min="1" max="1" chance="0.003" /> <!-- Durable Leather -->
+				<item id="36523" min="1" max="1" chance="0.003" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2960,9 +2946,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1817" min="1" max="1" chance="5.8608" /> <!-- Recipe: Cord -->
-				<item id="1924" min="1" max="1" chance="9.4529" /> <!-- Leather Helmet Design -->
-				<item id="1864" min="1" max="1" chance="58.6082" /> <!-- Stem -->
+				<item id="36531" min="1" max="1" chance="2.745" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 		<collision>
@@ -5234,6 +5219,7 @@
 		</collision>
 	</npc>
 	<npc id="20075" level="29" type="L2Monster" name="Ant Larva">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -5247,9 +5233,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2051" sp="1" />
+		<acquire exp="2051" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+			<vitals hp="574" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -5264,8 +5250,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4035" level="2" /> <!-- Poison -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5288,9 +5272,10 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="1061" min="1" max="1" chance="2.500" /> <!-- Major Healing Potion -->
-				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="1831" min="1" max="1" chance="11" /> <!-- Antidote -->
+				<item id="1831" min="1" max="1" chance="11.4" /> <!-- Antidote -->
+				<item id="1061" min="1" max="1" chance="2.42" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5324,7 +5309,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.872" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
@@ -5739,6 +5724,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20081" level="32" type="L2Monster" name="Ant Overseer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -5754,7 +5740,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4321" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<vitals hp="1338" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -5769,8 +5755,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5794,9 +5778,10 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
-				<item id="1061" min="1" max="1" chance="7.550" /> <!-- Major Healing Potion -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<group chance="42.0">
+				<item id="1061" min="1" max="1" chance="7.743" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -5829,13 +5814,14 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="2.950" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36531" min="1" max="1" chance="6.026" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="20082" level="33" type="L2Monster" name="Ant Recruit">
+ 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5849,9 +5835,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2613" sp="1" />
+		<acquire exp="2613" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<vitals hp="703" hpRegen="4.5" mp="372" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="86.043423444366" />
 			<attribute>
@@ -5866,8 +5852,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4035" level="3" /> <!-- Poison -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5890,8 +5874,9 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
-				<item id="1832" min="1" max="1" chance="8.620" /> <!-- Greater Antidote -->
-				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="1832" min="1" max="1" chance="8.493" /> <!-- Greater Antidote -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5925,13 +5910,14 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.600" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.638" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="20084" level="34" type="L2Monster" name="Ant Patrol">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -5946,9 +5932,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="3001" sp="1" />
+		<acquire exp="3001" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
@@ -5963,8 +5949,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4067" level="3" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5987,7 +5971,8 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6021,13 +6006,14 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="4.050" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.064" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="20086" level="35" type="L2Monster" name="Ant Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6043,9 +6029,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2672" sp="1" />
+		<acquire exp="2672" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="91.0360303625432" />
 			<attribute>
@@ -6060,8 +6046,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6084,7 +6068,8 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6118,7 +6103,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.600" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.628" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>

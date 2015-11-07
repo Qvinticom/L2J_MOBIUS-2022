@@ -578,22 +578,39 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="19555" level="99" type="L2Npc" name="Abyssal Imp" title="Treasure Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="87826" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19555" level="99" type="L2Monster" name="Abyssal Imp" title="Treasure Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="41869872" sp="100487" />
+		<stats>
+			<vitals hp="87827" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="16.5" />
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="40063" min="4" max="8" chance="51.15" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40042" min="1" max="2" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="2" chance="12.4" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40043" min="1" max="2" chance="12.32" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="2" chance="12.31" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="2" chance="12.21" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40045" min="1" max="2" chance="12.02" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="2" chance="11.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="2" chance="11.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="19556" level="99" type="L2Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

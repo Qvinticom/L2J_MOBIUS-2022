@@ -2778,11 +2778,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="22964" level="93" type="L2Monster" name="Apherus Lookout" title="Bewildered">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="10710778" sp="45006" />
+		<acquire exp="1071077" sp="257" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1082441" hpRegen="7.5" mp="1082441" mpRegen="2.7" />
+			<vitals hp="649466" hpRegen="10.5" mp="21324" mpRegen="3.6" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1375" magical="1325" />
 			<attribute>
@@ -2796,9 +2796,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
 			<skill id="14085" level="1" />
-			<skill id="5464" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2807,14 +2807,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="5918" max="13677" chance="70" />
-				<item id="36850" min="1" max="3" chance="10" />
-				<item id="9550" min="1" max="1" chance="0.4" />
-				<item id="36788" min="1" max="1" chance="0.13333" />
-				<item id="9556" min="1" max="1" chance="0.13333" />
+				<item id="57" min="13354" max="31115" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="33.21" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="6.653" /> <!-- Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="9556" min="1" max="1" chance="0.8" />
+				<item id="36562" min="1" max="1" chance="25.93" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="5.16" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3463,11 +3463,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="22994" level="14" type="L2Monster" name="Avian" title="Husk">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<acquire exp="578" sp="5" />
+		<acquire exp="578" sp="0" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="365" hpRegen="7.5" mp="365" mpRegen="2.7" />
+			<vitals hp="231" hpRegen="2.5" mp="140" mpRegen="1.2" />    
 			<attack physical="23" magical="13" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="51" magical="31" />
 			<attribute>
@@ -3482,10 +3482,10 @@
 		<status attackable="true" />
 		<skill_list>
 			<skill id="14161" level="1" />
-			<skill id="4416" level="4" />
-			<!-- <skill id="4412" level="9" /> -->
-			<!-- <skill id="4413" level="8" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 		</skill_list>
 		<collision>
 			<radius normal="11" />
@@ -3493,15 +3493,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="31" max="74" chance="70" />
-				<item id="1061" min="1" max="1" chance="4.87598" />
-				<item id="114" min="1" max="1" chance="0.33784" />
-				<item id="945" min="1" max="1" chance="0.32362" />
-				<item id="36561" min="1" max="1" chance="0.21142" />
-				<item id="625" min="1" max="1" chance="0.07502" />
+				<item id="9" min="1" max="1" chance="0.075" /> <!-- Cedar Staff -->
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="22.5225" />
+				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>

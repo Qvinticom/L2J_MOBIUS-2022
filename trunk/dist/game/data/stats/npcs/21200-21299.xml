@@ -3281,6 +3281,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21278" level="68" type="L2Monster" name="Antelope">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3296,7 +3297,7 @@
 		<sex>MALE</sex>
 		<acquire exp="20794" sp="4" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="2346" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<attribute>
@@ -3311,8 +3312,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3320,7 +3319,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
@@ -3336,9 +3335,10 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="1.250" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="1.248" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36859" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3372,7 +3372,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36517" min="1" max="1" chance="1.800" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="1.844" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>

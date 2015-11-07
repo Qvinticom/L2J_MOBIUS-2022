@@ -417,11 +417,11 @@
 		</collision>
 	</npc>
 	<npc id="19216" level="85" type="L2Monster" name="Altar of Evil Spirit Offering Box">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>CONSTRUCT</race>
-		<acquire exp="6374840" sp="48480" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
+		<acquire exp="6374840" sp="1529" />
 		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="26378" hpRegen="7.5" mp="2770" mpRegen="2.7" />
+			<vitals hp="26378" hpRegen="9.5" mp="2770" mpRegen="3.3" />
 			<attack physical="36225" magical="32100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1314" magical="1314" />
 			<attribute>
@@ -435,16 +435,16 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4441" level="5" />
-			<skill id="4440" level="5" />
-			<skill id="4438" level="5" />
-			<skill id="5464" level="1" />
-			<skill id="4416" level="2" />
-			<!-- <skill id="4410" level="16" /> -->
-			<!-- <skill id="4411" level="15" /> -->
-			<!-- <skill id="4413" level="15" /> -->
-			<!-- <skill id="4412" level="15" /> -->
 			<skill id="14639" level="1" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="20" />
@@ -452,8 +452,8 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="17527" min="1" max="1" chance="0.012" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="4.415" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</death>
 		</drop_lists>
 	</npc>

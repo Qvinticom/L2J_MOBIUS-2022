@@ -767,6 +767,7 @@
 		</collision>
 	</npc>
 	<npc id="20926" level="25" type="L2Monster" name="Poison Araneid">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -780,9 +781,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="910" sp="1" />
+		<acquire exp="910" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+			<vitals hp="231" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="67.8031159084826" />
 			<attribute>
@@ -797,8 +798,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4036" level="2" /> <!-- Poison -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -815,25 +814,18 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="27" />
+			<height normal="25.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="94" max="177" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.007600000128149986">
-					<item id="156" min="1" max="1" chance="33.3333" /> <!-- Hand Axe -->
-					<item id="167" min="1" max="1" chance="33.3333" /> <!-- Scalpel -->
-					<item id="178" min="1" max="1" chance="33.3334" /> <!-- Bone Staff -->
-				</group>
-				<group chance="7.371500015258789">
-					<item id="1875" min="1" max="1" chance="1.552" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="3.88" /> <!-- Cokes -->
-					<item id="5549" min="1" max="1" chance="2.328" /> <!-- Metallic Thread -->
-					<item id="2178" min="1" max="1" chance="3.7248" /> <!-- Recipe: Dark Stockings -->
-					<item id="5437" min="1" max="1" chance="0.5692" /> <!-- Recipe: Heavy Sword(100%) -->
-					<item id="1834" min="1" max="1" chance="25.8665" /> <!-- Emergency Dressing -->
-					<item id="1831" min="1" max="1" chance="62.0795" /> <!-- Antidote -->
-				</group>
+				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="3.712" /> <!-- Antidote -->
+				<item id="1834" min="1" max="1" chance="1.542" /> <!-- Emergency Dressing -->
+				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36922" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Low-grade) - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -867,15 +859,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2018" min="1" max="1" chance="0.2844" /> <!-- Assassin Knife Edge -->
-				<item id="1869" min="1" max="1" chance="21.4041" /> <!-- Iron Ore -->
-				<item id="1875" min="1" max="1" chance="1.4269" /> <!-- Stone of Purity -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="27" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="20927" level="27" type="L2Monster" name="King of the Araneid">
 		<parameters>

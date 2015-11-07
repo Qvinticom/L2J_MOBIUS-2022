@@ -1133,11 +1133,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23325" level="99" type="L2Monster" name="Archer" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ORC</race>
-		<acquire exp="30863520" sp="133868" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="30863520" sp="49381" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
+			<vitals hp="328875" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="15960" magical="570000" random="30" critical="8" accuracy="4.75" attackSpeed="398" type="SWORD" range="900" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
 			<attribute>
@@ -1151,12 +1151,12 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1165,14 +1165,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="37978" max="85770" chance="70" />
-				<item id="36520" min="1" max="1" chance="0.5" />
-				<item id="36529" min="1" max="1" chance="0.5" />
-				<item id="17418" min="1" max="1" chance="0.005" />
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
+				<item id="57" min="22025" max="51306" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="4.94" /> <!-- Quality Fiber -->
+				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36520" min="1" max="1" chance="2.5" />
-				<item id="36887" min="1" max="1" chance="0.5" />
+				<item id="36520" min="1" max="1" chance="0.75" /> <!-- Exquisite Leather -->
+				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1264,11 +1265,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23328" level="99" type="L2Monster" name="Assassin" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ORC</race>
-		<acquire exp="30863520" sp="133868" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="30863520" sp="49381" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
+			<vitals hp="328875" hpRegen="10.5" mp="23550" mpRegen="3.6" />  
 			<attack physical="15200" magical="570000" random="30" critical="8" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6210" magical="6210" />
 			<attribute>
@@ -1282,12 +1283,12 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
-			<!-- <skill id="4411" level="8" /> -->
-			<!-- <skill id="4413" level="7" /> -->
-			<!-- <skill id="4410" level="8" /> -->
-			<!-- <skill id="4412" level="7" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1296,13 +1297,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="40121" max="84143" chance="70" />
-				<item id="36540" min="1" max="1" chance="0.5" />
-				<item id="36549" min="1" max="1" chance="0.5" />
+				<item id="57" min="22025" max="51306" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="1.093" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36540" min="1" max="1" chance="2.5" />
-				<item id="36887" min="1" max="1" chance="0.5" />
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
+				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1971,30 +1973,37 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23355" level="99" type="L2Npc" name="Armor Beast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23355" level="99" type="L2Monster" name="Armor Beast">  
+		<!-- Source: www.l2wiki.com (2015-04-08) --> 
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" /> 		
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" /> 
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>		
 		<collision>
 			<radius normal="31" />
 			<height normal="15.5" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="18.72" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.883" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
@@ -2170,117 +2179,143 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23362" level="99" type="L2Npc" name="Amos Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23362" level="99" type="L2Monster" name="Amos Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>GIANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skill_list>
 		<collision>
 			<radius normal="60" />
 			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="20.31" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.939" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23363" level="99" type="L2Npc" name="Amos Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23363" level="99" type="L2Monster" name="Amos Officer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>GIANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skill_list>
 		<collision>
 			<radius normal="46" />
 			<height normal="71.5" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="20.21" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.95" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23364" level="99" type="L2Npc" name="Amos Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23364" level="99" type="L2Monster" name="Amos Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
 		<collision>
 			<radius normal="30" />
 			<height normal="42.51" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="19.35" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.987" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23365" level="99" type="L2Npc" name="Ailith Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23365" level="99" type="L2Monster" name="Ailith Hunter">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
+		</skill_list>
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.800" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="19.88" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.933" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
@@ -2313,30 +2348,37 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23367" level="99" type="L2Npc" name="Armor Beast">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23367" level="99" type="L2Monster" name="Armor Beast"> 
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />  		
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />   
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+		</skill_list>		
 		<collision>
 			<radius normal="31" />
 			<height normal="15.5" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
+				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="47" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="48.7" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="4.703" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>

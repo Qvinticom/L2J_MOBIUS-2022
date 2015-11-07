@@ -2202,14 +2202,16 @@
 		</collision>
 	</npc>
 	<npc id="18344" level="78" type="L2Monster" name="Dinosaur Egg">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="BroadCastRange" value="300" />
 			<param name="ProbBroadCast" value="80" />
 		</parameters>
-		<race>ETC</race>
+		<race>NONE</race>
 		<sex>ETC</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="10" hpRegen="8.5" mp="1881.8" mpRegen="3" />
+			<vitals hp="3" hpRegen="8.5" mp="1881" mpRegen="3" />
 			<attack physical="998.77667" magical="709.589203596" random="50" critical="1" accuracy="11" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="365.6202" magical="267.545" evasion="2" />
 			<attribute>
@@ -2220,10 +2222,8 @@
 				<run ground="100" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status undying="false" attackable="true" />
 		<skill_list>
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2231,6 +2231,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="4416" level="19" /> <!-- Misc. -->            
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>

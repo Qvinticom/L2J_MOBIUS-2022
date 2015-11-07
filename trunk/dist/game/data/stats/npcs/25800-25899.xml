@@ -2082,11 +2082,11 @@
 		</collision>
 	</npc>
 	<npc id="25866" level="94" type="L2RaidBoss" name="Apherus">
-		<!-- Source: http://l2on.net/en/?c=npc&id=25866 -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="198916032" sp="47739" raidPoints="1"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8223068" hpRegen="7.5" mp="822307" mpRegen="2.7" />
+			<vitals hp="8223069" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="68250" magical="48750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2800" magical="2700" />
 			<attribute>
@@ -2102,10 +2102,10 @@
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<skill_list>
 			<skill id="14087" level="1" />
-			<skill id="5465" level="1" />
-			<skill id="4416" level="5" />
-			<skill id="4494" level="1" />
-			<skill id="14723" level="1" />
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14723" level="1" /> <!-- Raid Boss (Lv. 94) -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -2114,11 +2114,12 @@
 		</collision>
 		<drop_lists>
 			<death>
+				<item id="17347" min="1" max="1" chance="5.315" /> <!-- Twilight Leather Gloves -->
+				<item id="17352" min="1" max="1" chance="5.297" /> <!-- Twilight Gloves -->
 				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
-				<item id="17347" min="1" max="1" chance="5.323" /> <!-- Twilight Leather Gloves Light Armor -->
-				<item id="17526" min="1" max="1" chance="5.601" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
-				<item id="17352" min="1" max="1" chance="5.387" /> <!-- Twilight Gloves Robe -->
+				<item id="17526" min="1" max="1" chance="5.537" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>

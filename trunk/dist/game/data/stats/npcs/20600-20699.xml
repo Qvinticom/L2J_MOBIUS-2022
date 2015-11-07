@@ -5483,6 +5483,7 @@
 		</collision>
 	</npc>
 	<npc id="20660" level="46" type="L2Monster" name="Archer of Greed">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -5498,7 +5499,7 @@
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="7286" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<vitals hp="1230" hpRegen="5.5" mp="637" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="182.18816" magical="121.302932993263" />
 			<attribute>
@@ -5514,8 +5515,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4120" level="4" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5531,29 +5530,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="637" max="1303" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.6615999937057495">
-					<item id="439" min="1" max="1" chance="0.7904" /> <!-- Karmian Tunic -->
-					<item id="1962" min="1" max="1" chance="36.8033" /> <!-- Karmian Tunic Pattern -->
-					<item id="471" min="1" max="1" chance="1.2632" /> <!-- Karmian Stockings -->
-					<item id="1954" min="1" max="1" chance="61.1431" /> <!-- Karmian Stocking Design -->
-				</group>
-				<group chance="24.833200454711914">
-					<item id="1869" min="1" max="1" chance="30.7798" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="61.5595" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.078" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4104" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="1.026" /> <!-- Asofe -->
-					<item id="2163" min="1" max="1" chance="1.5704" /> <!-- Recipe: Earring of Protection -->
-					<item id="8723" min="1" max="1" chance="1.2312" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3078" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0308" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0061" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="27" max="62" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5587,15 +5572,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2330" min="1" max="1" chance="0.3761" /> <!-- Recipe: Homunkulus's Sword -->
-				<item id="2084" min="1" max="1" chance="1.0746" /> <!-- Soulfire Dirk Blade -->
-				<item id="1908" min="1" max="1" chance="15.3154" /> <!-- Moonstone Earring Wire -->
+				<item id="36531" min="1" max="1" chance="14.41" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="27" />
-		</collision>
 	</npc>
 	<npc id="20661" level="47" type="L2Monster" name="Hatar Ratman Thief">
 		<parameters>

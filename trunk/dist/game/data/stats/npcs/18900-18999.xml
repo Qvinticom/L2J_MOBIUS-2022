@@ -3283,11 +3283,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="18995" level="88" type="L2Monster" name="Awakened Millipede">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->  
 		<race>BUG</race>
-		<acquire exp="102099" sp="2028" />
+		<acquire exp="0" sp="0" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="248627" hpRegen="7.5" mp="248627" mpRegen="2.7" />
+			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />  
 			<attack physical="16500" magical="8250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="548" magical="480" />
 			<attribute>
@@ -3302,9 +3302,9 @@
 		<status attackable="true" />
 		<skill_list>
 			<skill id="14183" level="1" />
-			<skill id="4416" level="12" />
-			<skill id="5465" level="1" />
-			<!-- <skill id="4412" level="9" /> -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skill_list>
 		<collision>
 			<radius normal="45" />
