@@ -34,5 +34,6 @@ public class ExPlayScene extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x5D);
+		writeD(0x00);
 	}
 }

@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.Shortcut;
 
 public final class ShortCutRegister extends L2GameServerPacket
@@ -50,12 +51,22 @@ public final class ShortCutRegister extends L2GameServerPacket
 				writeD(0x00); // unknown
 				writeD(0x00); // item augment id
 				writeD(0x00); // TODO: Find me, item visual id ?
+				writeD(0x00);
 				break;
 			}
 			case SKILL:
 			{
 				writeD(_shortcut.getId());
-				writeD(_shortcut.getLevel());
+				if ((_shortcut.getLevel() < 100) || (_shortcut.getLevel() > 10000))
+				{
+					writeD(_shortcut.getLevel());
+				}
+				else
+				{
+					int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
+					writeH(_maxLevel);
+					writeH(_shortcut.getLevel());
+				}
 				writeD(_shortcut.getSharedReuseGroup());
 				writeC(0x00); // C5
 				writeD(_shortcut.getCharacterType());

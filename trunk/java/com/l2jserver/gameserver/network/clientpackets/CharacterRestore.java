@@ -49,7 +49,7 @@ public final class CharacterRestore extends L2GameClientPacket
 		}
 		
 		getClient().markRestoredChar(_charSlot);
-		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
+		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
 		sendPacket(cl);
 		getClient().setCharSelection(cl.getCharInfo());
 		final CharSelectInfoPackage charInfo = getClient().getCharSelection(_charSlot);

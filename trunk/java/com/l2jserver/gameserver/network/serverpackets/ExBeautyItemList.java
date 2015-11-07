@@ -70,7 +70,7 @@ public class ExBeautyItemList extends L2GameServerPacket
 			writeD(hair.getAdena());
 			writeD(hair.getResetAdena());
 			writeD(hair.getBeautyShopTicket());
-			writeD(1); // Limit
+			writeD(99999999); // Limit
 		}
 		
 		writeD(FACE_TYPE);
@@ -82,7 +82,7 @@ public class ExBeautyItemList extends L2GameServerPacket
 			writeD(face.getAdena());
 			writeD(face.getResetAdena());
 			writeD(face.getBeautyShopTicket());
-			writeD(1); // Limit
+			writeD(99999999); // Limit
 		}
 		
 		writeD(COLOR_TYPE);
@@ -96,7 +96,7 @@ public class ExBeautyItemList extends L2GameServerPacket
 				writeD(color.getAdena());
 				writeD(color.getResetAdena());
 				writeD(color.getBeautyShopTicket());
-				writeD(1);
+				writeD(99999999);
 			}
 		}
 	}

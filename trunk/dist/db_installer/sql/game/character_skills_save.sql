@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS `character_skills_save` (
   `buff_index` INT(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`charId`,`skill_id`,`skill_level`,`class_index`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE `character_skills_save` MODIFY COLUMN `skill_level` INT(4);
+UPDATE `character_skills_save` SET skill_level=((skill_level % 100) + (round(skill_level / 100) * 1000)) WHERE skill_level <= 1000 AND skill_level >= 100;

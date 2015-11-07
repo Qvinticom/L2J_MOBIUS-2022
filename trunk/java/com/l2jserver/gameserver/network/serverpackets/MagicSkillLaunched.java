@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 
@@ -33,6 +34,7 @@ public class MagicSkillLaunched extends L2GameServerPacket
 	private final int _charObjId;
 	private final int _skillId;
 	private final int _skillLevel;
+	private final int _maxLevel;
 	private final List<L2Object> _targets;
 	
 	public MagicSkillLaunched(L2Character cha, int skillId, int skillLevel, L2Object... targets)
@@ -40,6 +42,7 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		_charObjId = cha.getObjectId();
 		_skillId = skillId;
 		_skillLevel = skillLevel;
+		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
 		
 		//@formatter:off
 		if (targets == null)
@@ -62,7 +65,15 @@ public class MagicSkillLaunched extends L2GameServerPacket
 		writeD(0x00); // TODO: Find me!
 		writeD(_charObjId);
 		writeD(_skillId);
-		writeD(_skillLevel);
+		if (_skillLevel < 100)
+		{
+			writeD(_skillLevel);
+		}
+		else
+		{
+			writeH(_maxLevel);
+			writeH(_skillLevel);
+		}
 		writeD(_targets.size());
 		for (L2Object target : _targets)
 		{

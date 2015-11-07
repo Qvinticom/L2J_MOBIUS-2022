@@ -511,22 +511,64 @@
 	<item id="35985" name="XP Rune I (Lv. 1-85) 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 100%. The effect only applies to characters Lv. 86 or below. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9240-1" />
+		<set name="time" val="60" />
 	</item>
 	<item id="35986" name="XP Rune I (Lv. 1-85) 200% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 200%. The effect only applies to characters Lv. 86 or below. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9240-2" />
+		<set name="time" val="60" />
 	</item>
 	<item id="35987" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35985,1,1,100" />
 	</item>
 	<item id="35988" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="100" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="capsuled_items" val="35986,1,1,100" />
 	</item>
 	<item id="35989" name="Festival's Cloak" additionalName="Ceremony of Chaos" type="Armor">
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i00" />

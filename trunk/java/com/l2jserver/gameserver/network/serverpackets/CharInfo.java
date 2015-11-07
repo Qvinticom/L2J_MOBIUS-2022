@@ -48,22 +48,6 @@ public class CharInfo extends L2GameServerPacket
 	
 	private int _vehicleId = 0;
 	
-	private static final int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_CLOAK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2
-	};
-	
 	public CharInfo(L2PcInstance cha)
 	{
 		_activeChar = cha;
@@ -131,21 +115,22 @@ public class CharInfo extends L2GameServerPacket
 		writeS(_activeChar.getAppearance().getVisibleName()); // Confirmed
 		writeH(_activeChar.getRace().ordinal()); // Confirmed
 		writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00); // Confirmed
-		writeD(_activeChar.getBaseClass()); // Confirmed
+		writeD(_activeChar.getBaseClassId()); // Confirmed
 		
-		for (int slot : getPaperdollOrder())
+		for (int slot : Inventory.PAPERDOLL_ORDER)
 		{
 			writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot)); // Confirmed
 		}
 		
-		for (int slot : getPaperdollOrderAugument())
+		for (int slot : Inventory.PAPERDOLL_ORDER_AUGMENT)
 		{
-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot)); // Confirmed
+			writeD(_activeChar.getInventory().getPaperdoll1stAugmentationId(slot));
+			writeD(_activeChar.getInventory().getPaperdoll2ndAugmentationId(slot));
 		}
 		
 		writeC(_armorEnchant);
 		
-		for (int slot : getPaperdollOrderVisualId())
+		for (int slot : Inventory.PAPERDOLL_ORDER_VISUAL_ID)
 		{
 			writeD(_activeChar.getInventory().getPaperdollItemVisualId(slot));
 		}
@@ -241,7 +226,7 @@ public class CharInfo extends L2GameServerPacket
 		writeD(_activeChar.getTransformationDisplayId()); // Confirmed
 		writeD(_activeChar.getAgathionId()); // Confirmed
 		
-		writeC(0x00); // TODO: Find me!
+		writeC(0x01); // TODO: Find me!
 		
 		writeD((int) Math.round(_activeChar.getCurrentCp())); // Confirmed
 		writeD(_activeChar.getMaxHp()); // Confirmed
@@ -259,11 +244,5 @@ public class CharInfo extends L2GameServerPacket
 		writeC(0x00); // TODO: Find me!
 		writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
 		writeC(_activeChar.getAbilityPointsUsed()); // Used Ability Points
-	}
-	
-	@Override
-	protected int[] getPaperdollOrder()
-	{
-		return PAPERDOLL_ORDER;
 	}
 }

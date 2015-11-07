@@ -26,6 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jserver.Config;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
@@ -61,7 +62,12 @@ public class KarmaData implements IXmlReader
 					if ("increase".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						_karmaTable.put(parseInteger(attrs, "lvl"), parseDouble(attrs, "val"));
+						int level = parseInteger(attrs, "lvl");
+						if (level >= Config.PLAYER_MAXIMUM_LEVEL)
+						{
+							break;
+						}
+						_karmaTable.put(level, parseDouble(attrs, "val"));
 					}
 				}
 			}

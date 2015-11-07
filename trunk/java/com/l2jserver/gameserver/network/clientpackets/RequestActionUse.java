@@ -1186,7 +1186,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		if (activeChar.isFishing())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
+			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
 			return;
 		}
 		
@@ -1241,7 +1241,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		
 		if (requester.isFishing())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
+			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
 			return;
 		}
 		

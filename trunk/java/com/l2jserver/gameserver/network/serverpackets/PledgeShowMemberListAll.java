@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Clan.SubPledge;
 import com.l2jserver.gameserver.model.L2ClanMember;
@@ -58,7 +59,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		
 		writeD(pledge == null ? 0 : 1);
 		writeD(_clan.getId());
-		writeD(0x00); // pledge db id
+		writeD(Config.SERVER_ID);
 		writeD(pledgeId);
 		writeS(_clan.getName());
 		writeS(_clan.getLeaderName());

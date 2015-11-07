@@ -73,7 +73,7 @@ public class L2Mentee
 		else
 		{
 			_name = player.getName();
-			_classId = player.getBaseClass();
+			_classId = player.getBaseClassId();
 			_currentLevel = player.getLevel();
 		}
 	}

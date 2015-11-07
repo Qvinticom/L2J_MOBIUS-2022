@@ -18,6 +18,7 @@
  */
 package com.l2jserver.gameserver.model;
 
+import com.l2jserver.gameserver.model.entity.Hero;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.variables.PlayerVariables;
@@ -322,9 +323,14 @@ public class CharSelectInfoPackage
 		_sp = sp;
 	}
 	
-	public int getEnchantEffect()
+	public int getWeaponEnchantEffect()
 	{
-		return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
+		return getEnchantEffect(Inventory.PAPERDOLL_RHAND);
+	}
+	
+	public int getEnchantEffect(int slot)
+	{
+		return _paperdoll[slot][2];
 	}
 	
 	public void setReputation(int reputation)
@@ -420,5 +426,49 @@ public class CharSelectInfoPackage
 	public boolean isHairAccessoryEnabled()
 	{
 		return _vars.getBoolean("hairAccessoryEnabled", true);
+	}
+	
+	public int getTransformationId()
+	{
+		int weaponId = getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+		switch (weaponId)
+		{
+			case 8190:
+				return 301;
+			case 8689:
+				return 302;
+		}
+		
+		return 0;
+	}
+	
+	public int getVitalityPercent()
+	{
+		return 200; // TODO: Implement.
+	}
+	
+	public int getVitalityItemCount()
+	{
+		return 5; // TODO: Implement.
+	}
+	
+	public boolean isAvailable()
+	{
+		return getAccessLevel() > -100;
+	}
+	
+	public boolean isHero()
+	{
+		return Hero.getInstance().isHero(getObjectId());
+	}
+	
+	public int get1stAugmentationId()
+	{
+		return 0x0000FFFF & getAugmentationId();
+	}
+	
+	public int get2ndAugmentationId()
+	{
+		return getAugmentationId() >> 16;
 	}
 }

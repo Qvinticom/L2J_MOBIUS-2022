@@ -395,7 +395,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		{
 			if (player.getInventory().getInventoryItemCount(holder.getId(), -1) < holder.getCount())
 			{
-				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
 				return false;
 			}
 		}
@@ -419,11 +419,11 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		if (player.isSubClassActive())
 		{
-			player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
+			player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClassId());
 		}
 		else
 		{
-			player.setBaseClass(player.getActiveClass());
+			player.setBaseClassId(player.getActiveClassId());
 		}
 		
 		player.broadcastUserInfo();

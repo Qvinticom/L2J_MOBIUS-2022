@@ -64,7 +64,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_sysMessageId = -1;
 		_unk1 = 0;
 		_unk2 = 0;
-		_unk3 = 0;
+		_unk3 = 1;
 		_fade = false;
 		_position = TOP_CENTER;
 		_text = text;
@@ -88,7 +88,7 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		_sysMessageId = -1;
 		_unk1 = 0;
 		_unk2 = 0;
-		_unk3 = 0;
+		_unk3 = 1;
 		_fade = false;
 		_position = TOP_CENTER;
 		_text = text;
@@ -107,11 +107,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	 */
 	public ExShowScreenMessage(NpcStringId npcString, int position, int time, String... params)
 	{
-		_type = 2;
+		_type = 1;
 		_sysMessageId = -1;
 		_unk1 = 0x00;
 		_unk2 = 0x00;
-		_unk3 = 0x00;
+		_unk3 = 0x01;
 		_fade = false;
 		_position = position;
 		_text = null;
@@ -134,11 +134,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	 */
 	public ExShowScreenMessage(SystemMessageId systemMsg, int position, int time, String... params)
 	{
-		_type = 2;
+		_type = 0;
 		_sysMessageId = systemMsg.getId();
 		_unk1 = 0x00;
 		_unk2 = 0x00;
-		_unk3 = 0x00;
+		_unk3 = 0x01;
 		_fade = false;
 		_position = position;
 		_text = null;
@@ -216,9 +216,11 @@ public class ExShowScreenMessage extends L2GameServerPacket
 		writeD(_time);
 		writeD(_fade ? 0x01 : 0x00);
 		writeD(_npcString);
+		int exsize = 5;
 		if (_npcString == -1)
 		{
 			writeS(_text);
+			exsize--;
 		}
 		else
 		{
@@ -227,8 +229,13 @@ public class ExShowScreenMessage extends L2GameServerPacket
 				for (String s : _parameters)
 				{
 					writeS(s);
+					exsize--;
 				}
 			}
+		}
+		for (int i = 1; i < exsize; i++)
+		{
+			writeS("");
 		}
 	}
 }

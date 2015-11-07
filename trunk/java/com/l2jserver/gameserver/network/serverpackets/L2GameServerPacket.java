@@ -25,7 +25,6 @@ import com.l2jserver.commons.mmocore.SendablePacket;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
 import com.l2jserver.gameserver.model.interfaces.IUpdateTypeComponent;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.network.L2GameClient;
 
 /**
@@ -36,64 +35,6 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 	protected static final Logger _log = Logger.getLogger(L2GameServerPacket.class.getName());
 	
 	private boolean _invisible = false;
-	
-	private static final int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_REAR,
-		Inventory.PAPERDOLL_LEAR,
-		Inventory.PAPERDOLL_NECK,
-		Inventory.PAPERDOLL_RFINGER,
-		Inventory.PAPERDOLL_LFINGER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_CLOAK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2,
-		Inventory.PAPERDOLL_RBRACELET,
-		Inventory.PAPERDOLL_LBRACELET,
-		Inventory.PAPERDOLL_DECO1,
-		Inventory.PAPERDOLL_DECO2,
-		Inventory.PAPERDOLL_DECO3,
-		Inventory.PAPERDOLL_DECO4,
-		Inventory.PAPERDOLL_DECO5,
-		Inventory.PAPERDOLL_DECO6,
-		Inventory.PAPERDOLL_BELT,
-		Inventory.PAPERDOLL_BROOCH,
-		Inventory.PAPERDOLL_BROOCH_JEWEL1,
-		Inventory.PAPERDOLL_BROOCH_JEWEL2,
-		Inventory.PAPERDOLL_BROOCH_JEWEL3,
-		Inventory.PAPERDOLL_BROOCH_JEWEL4,
-		Inventory.PAPERDOLL_BROOCH_JEWEL5,
-		Inventory.PAPERDOLL_BROOCH_JEWEL6
-	
-	};
-	
-	private static final int[] PAPERDOLL_ORDER_AUGMENT = new int[]
-	{
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_RHAND
-	};
-	
-	private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
-	{
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_HAIR2
-	};
 	
 	/**
 	 * @return True if packet originated from invisible character.
@@ -141,21 +82,6 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 		{
 			_buf.putChar(ch);
 		}
-	}
-	
-	protected int[] getPaperdollOrder()
-	{
-		return PAPERDOLL_ORDER;
-	}
-	
-	protected int[] getPaperdollOrderAugument()
-	{
-		return PAPERDOLL_ORDER_AUGMENT;
-	}
-	
-	protected int[] getPaperdollOrderVisualId()
-	{
-		return PAPERDOLL_ORDER_VISUAL_ID;
 	}
 	
 	@Override

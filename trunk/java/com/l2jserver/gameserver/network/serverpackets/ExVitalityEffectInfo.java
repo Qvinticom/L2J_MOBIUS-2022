@@ -50,6 +50,7 @@ public class ExVitalityEffectInfo extends L2GameServerPacket
 		
 		writeD(_points);
 		writeD((int) (Config.RATE_VITALITY_EXP_MULTIPLIER * 100)); // Vitality Bonus
+		writeH(0x00);
 		writeH(0x05); // How much vitality items remaining for use
 		writeH(0x05); // Max number of items for use
 	}

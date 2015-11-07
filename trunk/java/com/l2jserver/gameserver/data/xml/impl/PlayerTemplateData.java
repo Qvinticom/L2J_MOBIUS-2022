@@ -28,6 +28,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.templates.L2PcTemplate;
@@ -152,12 +153,11 @@ public final class PlayerTemplateData implements IXmlReader
 							{
 								attrs = lvlNode.getAttributes();
 								int level = parseInteger(attrs, "val");
-								
 								for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling())
 								{
 									String nodeName = valNode.getNodeName();
 									
-									if ((nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId)))
+									if ((level < Config.PLAYER_MAXIMUM_LEVEL) && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId)))
 									{
 										_playerTemplates.get(ClassId.getClassId(classId)).setUpgainValue(nodeName, level, Double.parseDouble(valNode.getTextContent()));
 										_dataCount++;
@@ -165,6 +165,7 @@ public final class PlayerTemplateData implements IXmlReader
 								}
 							}
 						}
+						// TODO: Generate stats automatically.
 					}
 				}
 			}

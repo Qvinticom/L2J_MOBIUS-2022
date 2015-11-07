@@ -582,4 +582,18 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. --> 
+	<skill id="30546" levels="1" name="Flying Knee Kick">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. --> 
+	<skill id="30547" levels="1" name="Stamp Punch">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

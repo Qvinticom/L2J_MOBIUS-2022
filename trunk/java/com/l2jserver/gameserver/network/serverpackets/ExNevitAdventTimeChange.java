@@ -36,7 +36,7 @@ public class ExNevitAdventTimeChange extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0xE1);
+		writeH(0xE5);
 		// state 0 - pause 1 - started
 		writeC(_paused ? 0x00 : 0x01);
 		// left time in ms max is 16000 its 4m and state is automatically changed to quit

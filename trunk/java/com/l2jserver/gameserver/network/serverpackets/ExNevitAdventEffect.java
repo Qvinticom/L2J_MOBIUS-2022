@@ -34,7 +34,7 @@ public class ExNevitAdventEffect extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0xE0);
+		writeH(0xE4);
 		writeD(_timeLeft);
 	}
 }

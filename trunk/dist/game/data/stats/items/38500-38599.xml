@@ -685,10 +685,10 @@
 		<set name="crystal_type" val="B"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.weapon_kshanberk_i01"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_tradable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="SWORD"/>
 		<set name="weight" val="1370"/>
 		<for>
@@ -703,10 +703,10 @@
 		<set name="crystal_type" val="B"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.weapon_hazard_bow_i01"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_tradable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="BOW"/>
 		<set name="weight" val="1700"/>
 		<for>
@@ -721,10 +721,10 @@
 		<set name="crystal_type" val="A"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.weapon_tallum_blade_i01"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_tradable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="SWORD"/>
 		<set name="weight" val="1330"/>
 		<for>
@@ -739,10 +739,10 @@
 		<set name="crystal_type" val="S"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.weapon_draconic_bow_i01"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_tradable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="BOW"/>
 		<set name="weight" val="1650"/>
 		<for>
@@ -757,10 +757,10 @@
 		<set name="crystal_type" val="S"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.weapon_dynasty_blade_i01"/>
-		<set name="is_depositable" val="false"/>
-		<set name="is_dropable" val="false"/>
-		<set name="is_sellable" val="false"/>
-		<set name="is_tradable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="SWORD"/>
 		<set name="weight" val="1520"/>
 		<for>

@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="46000" name="Apocalypse Avenger Focus Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_raksilion_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18273-1" />
+	</item>
+	<item id="46001" name="Apocalypse Fighter Focus Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_kirche_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18274-1" />
+	</item>
+	<item id="46002" name="Apocalypse Stormer Damage Up Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_grave_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18275-1" />
+	</item>
+	<item id="46003" name="Apocalypse Thrower Focus Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_spina_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18276-1" />
+	</item>
+	<item id="46004" name="Apocalypse Shooter Focus Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_medianox_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18277-1" />
+	</item>
+	<item id="46005" name="Apocalypse Buster Acumen Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_imerose_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18278-1" />
+	</item>
+	<item id="46006" name="Apocalypse Caster Acumen Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_yuke_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18279-1" />
+	</item>
+	<item id="46007" name="Apocalypse Retributer Acumen Capsule" additionalName="Event" type="EtcItem">
+		<set name="icon" val="icon.weapon_herencia_i01" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="18280-1" />
+	</item>
+	<item id="46008" type="EtcItem" name="Specter Shaper Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46009" type="EtcItem" name="Specter Cutter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46010" type="EtcItem" name="Specter Slasher Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46011" type="EtcItem" name="Specter Dualsword Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46012" type="EtcItem" name="Specter Dual Dagger Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46013" type="EtcItem" name="Specter Dual Blunt Weapon Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46014" type="EtcItem" name="Specter Avenger Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46015" type="EtcItem" name="Specter Fighter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46016" type="EtcItem" name="Specter Stormer Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46017" type="EtcItem" name="Specter Thrower Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46018" type="EtcItem" name="Specter Shooter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46019" type="EtcItem" name="Specter Buster Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46020" type="EtcItem" name="Specter Caster Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46021" type="EtcItem" name="Specter Retributer Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46022" type="EtcItem" name="Amaranthine Shaper Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46023" type="EtcItem" name="Amaranthine Cutter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46024" type="EtcItem" name="Amaranthine Slasher Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46025" type="EtcItem" name="Amaranthine Dualsword Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46026" type="EtcItem" name="Amaranthine Dual Dagger Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46027" type="EtcItem" name="Amaranthine Dual Blunt Weapon Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46028" type="EtcItem" name="Amaranthine Avenger Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46029" type="EtcItem" name="Amaranthine Fighter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46030" type="EtcItem" name="Amaranthine Stormer Damage Up Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46031" type="EtcItem" name="Amaranthine Thrower Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46032" type="EtcItem" name="Amaranthine Shooter Focus Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46033" type="EtcItem" name="Amaranthine Buster Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46034" type="EtcItem" name="Amaranthine Caster Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46035" type="EtcItem" name="Amaranthine Retributer Acumen Capsule" additionalName="Event">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46036" type="EtcItem" name="Spellbook: Fate of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46037" type="EtcItem" name="Awakened Hero's Olympiad Gift">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46038" type="EtcItem" name="Indomitable Hero's Olympiad Gift">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46039" type="EtcItem" name="Player Commendation Talisman - STR" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46040" type="EtcItem" name="Player Commendation Talisman - INT" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46041" type="EtcItem" name="Player Commendation Talisman - DEX" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46042" type="EtcItem" name="Player Commendation Talisman - WIT" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46043" type="EtcItem" name="Player Commendation Talisman - CON" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46044" type="EtcItem" name="Player Commendation Talisman - MEN" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46045" type="EtcItem" name="Player Commendation Talisman - Atk. Attribute Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46046" type="EtcItem" name="Player Commendation Talisman - Fire Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46047" type="EtcItem" name="Player Commendation Talisman - Water Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46048" type="EtcItem" name="Player Commendation Talisman - Wind Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46049" type="EtcItem" name="Player Commendation Talisman - Earth Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46050" type="EtcItem" name="Player Commendation Talisman - Holy Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46051" type="EtcItem" name="Player Commendation Talisman - Dark Resistance Boost" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46052" type="EtcItem" name="Veridan's Soul Stone">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46053" type="EtcItem" name="Kechi's Soul Stone">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46054" type="EtcItem" name="Michaela's Soul Stone">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46055" type="EtcItem" name="Dark Soul Stone">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46056" type="EtcItem" name="Merlot's Certificate">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46057" type="EtcItem" name="Kurtiz' Certificate">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46058" type="EtcItem" name="Mark of Advance">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46059" type="EtcItem" name="Mark of Valor">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46060" type="EtcItem" name="Kelbim Dagger">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46061" type="EtcItem" name="Kelbim Dual Dagger">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46062" type="EtcItem" name="Kelbim Bow">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46063" type="EtcItem" name="Kelbim Crossbow">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46064" type="EtcItem" name="Dimensional Gludio Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46065" type="EtcItem" name="Dimensional Gludin Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46066" type="EtcItem" name="Dimensional Giran Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46067" type="EtcItem" name="Dimensional Oren Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46068" type="EtcItem" name="Dimensional Aden Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46069" type="EtcItem" name="Dimensional Gainak Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46070" type="EtcItem" name="Dimensional Goddard Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46071" type="EtcItem" name="Dimensional Schuttgart Badge">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46072" type="EtcItem" name="Bloody Amaranthine Enhancement Stone Coupon">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46073" type="EtcItem" name="Bloody Eternal Enhancement Stone Coupon">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46074" type="EtcItem" name="Dimensional Elcyum Pack">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46075" type="EtcItem" name="Dimensional Augment Pack">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46076" type="EtcItem" name="Dimensional Enhancement Pack">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46077" type="EtcItem" name="Lucky Enchant Stone: Weapon (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46078" type="EtcItem" name="Lucky Enchant Stone: Armor (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46079" type="EtcItem" name="Kelbim's Atelia Fragment">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46080" type="EtcItem" name="Recipe: Mysterious Soulshot (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46081" type="EtcItem" name="Recipe: Mysterious Blessed Spiritshot (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46082" type="EtcItem" name="Mysterious Soulshot (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46083" type="EtcItem" name="Mysterious Blessed Spiritshot (R-grade)">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46084" type="EtcItem" name="Player Commendation Special Bait" additionalName="PC-exclusive">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46085" type="EtcItem" name="Treasure Map Piece - 1">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46086" type="EtcItem" name="Treasure Map Piece - 2">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46087" type="EtcItem" name="Treasure Map Piece - 3">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46088" type="EtcItem" name="Treasure Map Piece - 4">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46089" type="EtcItem" name="Treasure Map Piece - 5">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46090" type="EtcItem" name="Treasure Map - Great Pirate Zaken">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46091" type="EtcItem" name="Treasure Map - Leona Blackbird">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46092" type="EtcItem" name="Treasure Map - Beora">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46093" type="EtcItem" name="Treasure Map - Unknown Gladiator">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46094" type="EtcItem" name="Treasure Map - High Priest Raymond">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46095" type="EtcItem" name="Treasure Map - Turek Orc's Legacy">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46096" type="EtcItem" name="Treasure Map - Great Pirate Zaken">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46097" type="EtcItem" name="Treasure Map - Leona Blackbird">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46098" type="EtcItem" name="Treasure Map - Beora">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+	<item id="46099" type="EtcItem" name="Treasure Map - Unknown Gladiator">
+		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" /> <!-- ? -->
+	</item>
+</list>

@@ -350,4 +350,452 @@
 		<set name="isMagic" val="#isMagics" />
 		<set name="isDebuff" val="#isDebuffs" />
 	</skill>
+	<!-- Attacks nearby enemies and stuns them for 5 seconds. --> 
+	<skill id="23636" levels="1" name="Stun Crush">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Provokes selected target and makes them re-target to you, and reduces their P. Atk. and Atk. Spd by 35%% for 15 seconds. --> 
+	<skill id="23637" levels="1" name="Dark Provoke">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to a single target and makes them bleed for 10 seconds. --> 
+	<skill id="23638" levels="1" name="Bloody Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Rush towards a single target and knocks them back. --> 
+	<skill id="23639" levels="1" name="Rush Assault">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts damage on enemy. Recovers 40%% of Damage as HP. --> 
+	<skill id="23640" levels="1" name="Thirst of Blood">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. And Atk. Spd. by 50%% for 10 seconds. --> 
+	<skill id="23641" levels="1" name="Embryo Haste">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Pull those within range of the target and reduces Speed and Atk. Spd. by 50%% for 10 seconds. --> 
+	<skill id="23642" levels="1" name="Crack of Air">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts HP Drain to those within range of the target and inflicts Vampiric Rage for 10 seconds. --> 
+	<skill id="23643" levels="1" name="Vampiric Force">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For 10 sec., recover 80%% of P. Damage inflicted to enemy as HP at a set rate. --> 
+	<skill id="23644" levels="1" name="Road of Embryo">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Attacks surrounding enemies with 550 Power added to M. Atk. and blocks P./M. Skills for 10 seconds. --> 
+	<skill id="23645" levels="1" name="Curse of Silence">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Recovers 30%% of total HP. --> 
+	<skill id="23646" levels="1" name="Blessing of Darkness">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Attacks nearby enemies and stuns them for 5 seconds. --> 
+	<skill id="23647" levels="1" name="Absolute Black">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Recovers 50%% of HP of ally NPCs within the range of the target. --> 
+	<skill id="23648" levels="1" name="Blessing of Atelia">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage to a single target and makes them burn for 10 seconds. --> 
+	<skill id="23649" levels="1" name="Curse of Blaze">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage to those within the range of the target. --> 
+	<skill id="23650" levels="1" name="Meteor Hurricane">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage with HP Drain to enemies within range. --> 
+	<skill id="23651" levels="1" name="Absolute Crimson">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage to a single target and paralyzes them for 5 seconds. --> 
+	<skill id="23652" levels="1" name="Rage of Embryo">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Poisoned with Atelia. Will affect battle ability if it adds up. Duration $s1. --> 
+	<skill id="23653" levels="1" name="Poisonous Atelia">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to a single target and knocks back by 100 grids. --> 
+	<skill id="23654" levels="1" name="Earth Breaker">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to enemies within range and stuns them for 5 seconds. --> 
+	<skill id="23655" levels="1" name="Gravity Slam">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- You won't die for 30 seconds. --> 
+	<skill id="23656" levels="1" name="Oath of Keeper">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23657" levels="1" name="Wind Aura Spike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23658" levels="1" name="Earth Aura Spike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23659" levels="1" name="Wind Fatal Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23660" levels="1" name="Holy  Fatal Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23661" levels="1" name="Earth  Fatal Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23662" levels="1" name="Dark  Fatal Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23663" levels="1" name="Wind Blast">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23664" levels="1" name="Holy Blast">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23665" levels="1" name="Earth Blast">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23666" levels="1" name="Darkness Blast">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Thrusts nearby enemies into the air and immobilizes them for 10 seconds. --> 
+	<skill id="23667" levels="1" name="Mass Air Binding">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Deals a powerful blow and knocks back the enemy. --> 
+	<skill id="23668" levels="1" name="Mass Power Slam">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases Wind Resistance. --> 
+	<skill id="23669" levels="1" name="Wind Defense Down">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases Holly Resistance. --> 
+	<skill id="23670" levels="1" name="Holy Defense Down">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases Earth Resistance. --> 
+	<skill id="23671" levels="1" name="Earth Defense Down">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases Dark Resistance. --> 
+	<skill id="23672" levels="1" name="Dark Defense Down">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicted with Isabella Mass Fear and moves against own will momentarily. --> 
+	<skill id="23673" levels="1" name="Isabella Mass Fear">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicted with Isabella Bleeding Range and receives damage with bleeding. --> 
+	<skill id="23674" levels="1" name="Isabella Bleeding Range">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicted with Isabella Mass Fear and moves against own will momentarily. --> 
+	<skill id="23675" levels="1" name="Isabella Mass Fear">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicted with Isabella Bleeding Range and receives damage with bleeding. --> 
+	<skill id="23676" levels="1" name="Isabella Bleeding Range">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Key for Spirits' Evil Thoughts. --> 
+	<skill id="23677" levels="1" name="Spirit's Evil Thoughts">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Presentation AI. Summon NPC. --> 
+	<skill id="23678" levels="1" name="Summon Friends">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Harpe petrifies itself for defense, and recovers HP. --> 
+	<skill id="23679" levels="1" name="Harpe Recovery">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Def. and M. Def. by 50%% for 1 minute and reflects damage. 35%% of damage received is reflected. --> 
+	<skill id="23680" levels="1" name="Kelbim's Blessing">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="23681" levels="1" name="Harpe Stone Cancel">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts a powerful blow on a single target. --> 
+	<skill id="23682" levels="1" name="Fatal Strike">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage to enemies within range. --> 
+	<skill id="23683" levels="1" name="Dark Cloud">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to enemies within range and makes them bleed for 10 seconds. --> 
+	<skill id="23684" levels="1" name="Dancing Blade">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts Fear to enemies within range for 10 seconds. --> 
+	<skill id="23685" levels="1" name="Exploration Fear">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Knocks Down enemies within range for 10 seconds. --> 
+	<skill id="23686" levels="1" name="Seismic Wave">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases MP by 60%% of enemies within a certain range of Kelim by, and decreases Spdd by 50%% for 10 seconds. --> 
+	<skill id="23687" levels="1" name="Freezing Storm">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Gains Damage Reflect effect. --> 
+	<skill id="23688" levels="1" name="Reflection Armor">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P./M. Atk. And Atk. Spd. by 50%%. --> 
+	<skill id="23689" levels="1" name="Fury of Kelbim">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Def. --> 
+	<skill id="23690" levels="1" name="Kelbim Physical Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases M. Def. --> 
+	<skill id="23691" levels="1" name="Kelbim Magic Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Gains resistance to all damage. --> 
+	<skill id="23692" levels="1" name="Kelbim Ultimate Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great magic damage to enemies within range. --> 
+	<skill id="23693" levels="1" name="Meteor Crash">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts Aerial Yoke to enemies within range for 5 seconds. --> 
+	<skill id="23694" levels="1" name="Water Drop Shackle">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to enemies within range and blows them away. --> 
+	<skill id="23695" levels="1" name="Tornado Shackle">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to a single target and stuns them for 5 seconds. --> 
+	<skill id="23696" levels="1" name="Stun Crash">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Pulls in enemies within range and stuns them for 10 seconds. --> 
+	<skill id="23697" levels="1" name="Chain Snake">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Inflicts great damage to a single target and silences them for 5 seconds. --> 
+	<skill id="23698" levels="1" name="Curse of Silence">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Infllicts great damage to enemies within range and blows them away. --> 
+	<skill id="23699" levels="1" name="Storm Rage">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

@@ -3227,39 +3227,6 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25771" level="87" type="L2Monster" name="Noctum" title="Gravekeeper">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>HUMANOID</race>
-		<acquire exp="17039332" sp="1717663" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="368130" hpRegen="7.5" mp="368130" mpRegen="2.7" />
-			<attack physical="48000" magical="32000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1920" magical="1880" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
-			</attribute>
-			<speed>
-				<walk ground="80" />
-				<run ground="160" />
-			</speed>
-			<hit_time>333</hit_time>
-		</stats>
-		<status attackable="true" />
-		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="14449" level="1" />
-		</skill_list>
-		<collision>
-			<radius normal="50" />
-			<height normal="60.5" />
-		</collision>
-		<drop_lists>
-			<death>
-				<item id="17526" min="1" max="1" chance="0.75188" />
-			</death>
-		</drop_lists>
-	</npc>
 	<npc id="25772" level="87" type="L2Monster" name="Harnak's Wraith" title="Greater Giant King">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
@@ -3290,73 +3257,6 @@
 		<drop_lists>
 			<death>
 				<item id="17526" min="1" max="1" chance="1.02" />
-			</death>
-		</drop_lists>
-	</npc>
-	<npc id="25773" level="88" type="L2Monster" name="Demonic Noctum" title="Cursed Manager">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>HUMANOID</race>
-		<acquire exp="17433292" sp="1717663" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="371819" hpRegen="7.5" mp="371819" mpRegen="2.7" />
-			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1980" magical="1920" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hit_time>333</hit_time>
-		</stats>
-		<status attackable="true" />
-		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="14447" level="1" />
-		</skill_list>
-		<collision>
-			<radius normal="50" />
-			<height normal="60.5" />
-		</collision>
-		<drop_lists>
-			<death>
-				<item id="17527" min="1" max="1" chance="8.5" />
-			</death>
-		</drop_lists>
-	</npc>
-	<npc id="25774" level="88" type="L2Monster" name="Harnak's Evil Spirit" title="Greater Giant King">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>HUMANOID</race>
-		<acquire exp="174332928" sp="697332" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="3718193" hpRegen="7.5" mp="3718193" mpRegen="2.7" />
-			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1980" magical="1920" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hit_time>333</hit_time>
-		</stats>
-		<status attackable="true" />
-		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="14445" level="1" />
-		</skill_list>
-		<collision>
-			<radius normal="40" />
-			<height normal="100" />
-		</collision>
-		<drop_lists>
-			<death>
-				<item id="17527" min="1" max="1" chance="41.49" />
-				<item id="17526" min="1" max="1" chance="3.28" />
 			</death>
 		</drop_lists>
 	</npc>

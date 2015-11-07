@@ -1237,9 +1237,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="531" levels="5" name="Critical Wound">
-		<table name="#magicLvl"> 79 85 90 95 99 </table>
-		<table name="#mpConsume"> 43 46 49 52 55 </table>
+	<skill id="531" levels="8" name="Critical Wound">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#magicLvl"> 79 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 43 46 49 52 55 49 52 55 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="T_CRT_RATE_UP" />

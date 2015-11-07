@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 
 public class GMViewCharacterInfo extends L2GameServerPacket
 {
@@ -75,19 +76,20 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_activeChar.getMaxLoad());
 		writeD(_activeChar.getPkKills());
 		
-		for (int slot : getPaperdollOrder())
+		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
 		{
 			writeD(_activeChar.getInventory().getPaperdollObjectId(slot));
 		}
 		
-		for (int slot : getPaperdollOrder())
+		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
 		{
 			writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
 		}
 		
-		for (int slot : getPaperdollOrder())
+		for (int slot : Inventory.PAPERDOLL_ORDER_ALL)
 		{
-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
+			writeD(_activeChar.getInventory().getPaperdoll1stAugmentationId(slot));
+			writeD(_activeChar.getInventory().getPaperdoll2ndAugmentationId(slot));
 		}
 		
 		writeD(_activeChar.getInventory().getTalismanSlots()); // CT2.3

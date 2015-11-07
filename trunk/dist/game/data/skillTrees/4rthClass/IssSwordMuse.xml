@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Iss Sword Muse -->
 	<skillTree type="classSkillTree" classId="172" parentClassId="100">
-		<!-- Expertise Skills -->
-		<skill skillName="Expertise S80" skillId="239" skillLvl="6" getLevel="80" autoGet="true" />
-		<skill skillName="Expertise S84" skillId="239" skillLvl="7" getLevel="84" autoGet="true" />
+		<skill skillName="Lucky" skillId="194" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Expertise R" skillId="239" skillLvl="8" getLevel="85" autoGet="true" />
 		<skill skillName="Expertise R95" skillId="239" skillLvl="9" getLevel="95" autoGet="true" />
 		<skill skillName="Expertise R99" skillId="239" skillLvl="10" getLevel="99" autoGet="true" />
+		<skill skillName="Common Craft" skillId="1322" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
 		
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -138,6 +138,11 @@
 			<removeSkill id="2" />
 			<removeSkill id="15" />
 		</skill>
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -162,10 +167,22 @@
 			<removeSkill id="61" />
 		</skill>
 		<skill skillName="Polymorph" skillId="11541" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Prevailing Song" skillId="11607" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Daring Song" skillId="11608" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Prevailing Song" skillId="11607" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="304" />
+			<removeSkill id="363" />
+			<removeSkill id="1592" />
+		</skill>
+		<skill skillName="Daring Song" skillId="11608" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="305" />
+			<removeSkill id="1594" />
+		</skill>
 		<skill skillName="Song of Protection" skillId="11613" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Refreshing Song" skillId="11609" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Refreshing Song" skillId="11609" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="265" />
+			<removeSkill id="266" />
+			<removeSkill id="268" />
+			<removeSkill id="364" />
+		</skill>
 		<skill skillName="Song of Silence" skillId="437" skillLvl="4" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Shield Song" skillId="11605" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Ultimate Oblivion" skillId="11558" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -226,7 +243,6 @@
 		</skill>
 		<skill skillName="Petrify" skillId="11539" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1097" />
-			<removeSkill id="437" />
 		</skill>
 		<skill skillName="Mass Crippling Attack" skillId="11513" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1366" />
@@ -237,7 +253,6 @@
 			<removeSkill id="1248" />
 			<removeSkill id="1359" />
 		</skill>
-		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="260" />
 			<removeSkill id="408" />
@@ -316,7 +331,6 @@
 		<skill skillName="Horn Melody" skillId="11517" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Mass Crippling Attack" skillId="11513" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="2" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="12" getLevel="90" autoGet="true" />
 		<skill skillName="Death Strike" skillId="11511" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Transform" skillId="11537" skillLvl="4" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Shadow Blade" skillId="11510" skillLvl="4" getLevel="91" levelUpSp="400000" />
@@ -356,7 +370,6 @@
 		<skill skillName="Pipe Organ Melody" skillId="11519" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Horn Melody" skillId="11517" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Petrify" skillId="11539" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="13" getLevel="95" autoGet="true" />
 		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLvl="7" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Assault Rush" skillId="11508" skillLvl="5" getLevel="96" levelUpSp="4970000" />
@@ -394,7 +407,6 @@
 		<skill skillName="Disperse" skillId="11543" skillLvl="3" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Angel's Touch" skillId="11534" skillLvl="5" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="1" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Prevailing Sonata" skillId="11529" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1001" />
@@ -436,5 +448,116 @@
 		</skill>
 		<!-- Mount -->
 		<skill skillName="Summon Swift Melody" skillId="8606" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Inventory Increase" skillId="1571" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Weight Increase" skillId="1572" skillLvl="1" getLevel="85" autoGet="true" />
+		
+		<skill skillName="Song of Silence" skillId="437" skillLvl="8" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Song of Silence" skillId="437" skillLvl="9" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Song of Silence" skillId="437" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Divine Expansion" skillId="10956" skillLvl="1" getLevel="100" levelUpSp="88099899">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Dual Weapon Mastery" skillId="11501" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Robe Mastery" skillId="11502" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="11504" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior MP Boost" skillId="11507" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Assault Rush" skillId="11508" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Assault Rush" skillId="11508" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Assault Rush" skillId="11508" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Crippling Attack" skillId="11509" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Crippling Attack" skillId="11509" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Crippling Attack" skillId="11509" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Shadow Blade" skillId="11510" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Shadow Blade" skillId="11510" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Shadow Blade" skillId="11510" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Death Strike" skillId="11511" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Death Strike" skillId="11511" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Death Strike" skillId="11511" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Mass Crippling Attack" skillId="11513" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Mass Crippling Attack" skillId="11513" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Mass Crippling Attack" skillId="11513" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Mass Shadow Blade" skillId="11514" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="11526" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Angel's Touch" skillId="11534" skillLvl="6" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Divine Cancel" skillId="11536" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Divine Cancel" skillId="11536" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Divine Cancel" skillId="11536" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Transform" skillId="11537" skillLvl="8" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Transform" skillId="11537" skillLvl="9" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Transform" skillId="11537" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="5" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="6" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Petrify" skillId="11539" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Petrify" skillId="11539" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Petrify" skillId="11539" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Quick Escape" skillId="11540" skillLvl="5" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Quick Escape" skillId="11540" skillLvl="6" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Quick Escape" skillId="11540" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Disperse" skillId="11543" skillLvl="4" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Disperse" skillId="11543" skillLvl="5" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Disperse" skillId="11543" skillLvl="6" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Chaos Symphony" skillId="11546" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior HP Recovery" skillId="11547" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Giant Root" skillId="11561" skillLvl="5" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Giant Root" skillId="11561" skillLvl="6" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Giant Root" skillId="11561" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Angel's Resurrection" skillId="11564" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Song of Archery" skillId="19205" skillLvl="1" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Song of Thief" skillId="19228" skillLvl="1" getLevel="101" levelUpSp="211440000">
+			<item id="39738" count="8" />
+		</skill>
 	</skillTree>
 </list>

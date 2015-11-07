@@ -33,7 +33,7 @@ public enum PartySmallWindowUpdateType implements IUpdateTypeComponent
 	MAX_MP(0x20),
 	LEVEL(0x40),
 	CLASS_ID(0x80),
-	VITALITY_POINTS(0x100);
+	VITALITY_POINTS(0x200);
 	
 	private final int _mask;
 	

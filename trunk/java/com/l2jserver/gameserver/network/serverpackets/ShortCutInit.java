@@ -18,12 +18,16 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.datatables.SkillData;
+import com.l2jserver.gameserver.enums.ShortcutType;
+import com.l2jserver.gameserver.model.L2Augmentation;
 import com.l2jserver.gameserver.model.Shortcut;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 public final class ShortCutInit extends L2GameServerPacket
 {
-	private Shortcut[] _shortCuts;
+	private ShortcutInfo[] _shortCuts;
 	
 	public ShortCutInit(L2PcInstance activeChar)
 	{
@@ -32,7 +36,68 @@ public final class ShortCutInit extends L2GameServerPacket
 			return;
 		}
 		
-		_shortCuts = activeChar.getAllShortCuts();
+		Shortcut[] tmp = activeChar.getAllShortCuts();
+		_shortCuts = new ShortcutInfo[tmp.length];
+		
+		int index = -1;
+		for (Shortcut shortCut : tmp)
+		{
+			index++;
+			_shortCuts[index] = convert(activeChar, shortCut);
+		}
+	}
+	
+	/**
+	 * @param player
+	 * @param shortCut
+	 * @return
+	 */
+	private ShortcutInfo convert(L2PcInstance player, Shortcut shortCut)
+	{
+		ShortcutInfo shortcutInfo = null;
+		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
+		ShortcutType type = shortCut.getType();
+		int id = shortCut.getId();
+		int characterType = 0;
+		
+		switch (type)
+		{
+			case ITEM:
+				int reuseGroup = -1,
+				currentReuse = 0,
+				reuse = 0,
+				augmentationId = 0;
+				
+				characterType = shortCut.getCharacterType();
+				L2ItemInstance item = player.getInventory().getItemByObjectId(shortCut.getId());
+				
+				if (item != null)
+				{
+					L2Augmentation augmentation = item.getAugmentation();
+					if (augmentation != null)
+					{
+						augmentationId = augmentation.getAugmentationId();
+					}
+					
+					reuseGroup = shortCut.getSharedReuseGroup();
+				}
+				
+				shortcutInfo = new ItemShortcutInfo(type, page, id, reuseGroup, currentReuse, reuse, augmentationId, characterType);
+				break;
+			
+			case SKILL:
+				int level = shortCut.getLevel();
+				int skillReuseGroup = shortCut.getSharedReuseGroup();
+				boolean isDisabled = false; // FIXME: To implement !!!
+				shortcutInfo = new SkillShortcutInfo(type, page, id, skillReuseGroup, level, isDisabled, characterType);
+				break;
+			
+			default:
+				shortcutInfo = new ShortcutInfo(type, page, id, characterType);
+				break;
+		}
+		
+		return shortcutInfo;
 	}
 	
 	@Override
@@ -40,32 +105,45 @@ public final class ShortCutInit extends L2GameServerPacket
 	{
 		writeC(0x45);
 		writeD(_shortCuts.length);
-		for (Shortcut sc : _shortCuts)
+		for (ShortcutInfo sc : _shortCuts)
 		{
 			writeD(sc.getType().ordinal());
-			writeD(sc.getSlot() + (sc.getPage() * 12));
+			writeD(sc.getPage());
 			
 			switch (sc.getType())
 			{
 				case ITEM:
 				{
-					writeD(sc.getId());
-					writeD(0x01);
-					writeD(sc.getSharedReuseGroup());
-					writeD(0x00);
-					writeD(0x00);
-					writeH(0x00);
-					writeH(0x00);
+					ItemShortcutInfo item = (ItemShortcutInfo) sc;
+					
+					writeD(item.getId());
+					writeD(item.getCharacterType());
+					writeD(item.getReuseGroup());
+					writeD(item.getCurrentReuse());
+					writeD(item.getBasicReuse());
+					writeD(item.get1stAugmentationId());
+					writeD(item.get2ndAugmentationId());
 					writeD(0x00); // TODO: Find me!
 					break;
 				}
 				case SKILL:
 				{
-					writeD(sc.getId());
-					writeD(sc.getLevel());
-					writeD(0x00); // TODO: Find me!
-					writeC(0x00); // C5
-					writeD(0x01); // C6
+					SkillShortcutInfo skill = (SkillShortcutInfo) sc;
+					
+					writeD(skill.getId());
+					if ((skill.getLevel() < 100) || (skill.getLevel() > 10000))
+					{
+						writeD(skill.getLevel());
+					}
+					else
+					{
+						int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
+						writeH(maxLevel);
+						writeH(skill.getLevel());
+					}
+					writeD(skill.getReuseGroup());
+					writeC(skill.isDisabled());
+					writeD(skill.getCharacterType());
 					break;
 				}
 				case ACTION:
@@ -74,9 +152,120 @@ public final class ShortCutInit extends L2GameServerPacket
 				case BOOKMARK:
 				{
 					writeD(sc.getId());
-					writeD(0x01); // C6
+					writeD(sc.getCharacterType());
 				}
 			}
+		}
+	}
+	
+	protected class ShortcutInfo
+	{
+		private final ShortcutType _type;
+		private final int _page;
+		protected final int _id;
+		protected final int _characterType;
+		
+		ShortcutInfo(ShortcutType type, int page, int id, int characterType)
+		{
+			_type = type;
+			_page = page;
+			_id = id;
+			_characterType = characterType;
+		}
+		
+		public ShortcutType getType()
+		{
+			return _type;
+		}
+		
+		public int getPage()
+		{
+			return _page;
+		}
+		
+		public int getId()
+		{
+			return _id;
+		}
+		
+		public int getCharacterType()
+		{
+			return _characterType;
+		}
+	}
+	
+	private class SkillShortcutInfo extends ShortcutInfo
+	{
+		private final int _reuseGroup;
+		private final int _level;
+		private final boolean _isDisabled;
+		
+		SkillShortcutInfo(ShortcutType type, int page, int id, int reuseGroup, int level, boolean isDisabled, int characterType)
+		{
+			super(type, page, id, characterType);
+			_level = level;
+			_reuseGroup = reuseGroup;
+			_isDisabled = isDisabled;
+		}
+		
+		/**
+		 * @return
+		 */
+		public boolean isDisabled()
+		{
+			return _isDisabled;
+		}
+		
+		public int getReuseGroup()
+		{
+			return _reuseGroup;
+		}
+		
+		public int getLevel()
+		{
+			return _level;
+		}
+	}
+	
+	private class ItemShortcutInfo extends ShortcutInfo
+	{
+		private final int _reuseGroup;
+		private final int _currentReuse;
+		private final int _basicReuse;
+		private final int _augmentationId;
+		
+		ItemShortcutInfo(ShortcutType type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
+		{
+			super(type, page, id, characterType);
+			_reuseGroup = reuseGroup;
+			_currentReuse = currentReuse;
+			_basicReuse = basicReuse;
+			_augmentationId = augmentationId;
+		}
+		
+		public int getReuseGroup()
+		{
+			return _reuseGroup;
+		}
+		
+		public int getCurrentReuse()
+		{
+			return _currentReuse;
+		}
+		
+		public int getBasicReuse()
+		{
+			return _basicReuse;
+		}
+		
+		public int get1stAugmentationId()
+		{
+			return 0x0000FFFF & _augmentationId;
+		}
+		
+		public int get2ndAugmentationId()
+		{
+			return _augmentationId >> 16;
 		}
 	}
 }

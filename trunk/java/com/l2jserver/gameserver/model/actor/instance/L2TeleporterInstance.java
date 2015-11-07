@@ -218,8 +218,6 @@ public final class L2TeleporterInstance extends L2Npc
 	}
 	
 	/**
-	 * For characters below level 77 teleport service is free.<br>
-	 * From 8.00 pm to 00.00 from Monday till Tuesday for all characters there's a 50% discount on teleportation services
 	 * @param player
 	 * @param type
 	 * @param loc
@@ -247,7 +245,7 @@ public final class L2TeleporterInstance extends L2Npc
 	
 	protected boolean shouldPayFee(L2PcInstance player, TeleportType type, TeleportLocation loc)
 	{
-		return (type != TeleportType.NORMAL) || (!Config.ALT_GAME_FREE_TELEPORT && ((player.getLevel() > 76) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+		return (type != TeleportType.NORMAL) || (!Config.FREE_TELEPORTING && ((player.getLevel() > 76) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
 	}
 	
 	protected int parseNextInt(StringTokenizer st, int defaultVal)
@@ -556,7 +554,7 @@ public final class L2TeleporterInstance extends L2Npc
 				}
 			}
 			
-			if (Config.ALT_GAME_FREE_TELEPORT || player.destroyItemByItemId("Teleport " + (list.getIsForNoble() ? " nobless" : ""), list.getItemId(), price, this, true))
+			if (Config.FREE_TELEPORTING || player.destroyItemByItemId("Teleport " + (list.getIsForNoble() ? " nobless" : ""), list.getItemId(), price, this, true))
 			{
 				if (Config.DEBUG)
 				{

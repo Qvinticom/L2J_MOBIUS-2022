@@ -89,7 +89,7 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		for (L2PcInstance member : _members)
 		{
 			writeS(member.getName());
-			writeD(member.getActiveClass());
+			writeD(member.getActiveClassId());
 			writeD(member.getLevel());
 			writeD(_currentTemplateId);
 			writeD(0x00); // TODO: Instance ID reuse size

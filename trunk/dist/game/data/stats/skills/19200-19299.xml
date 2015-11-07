@@ -8,4 +8,228 @@
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
+	<!-- For 15 sec., all party members' P. Def. + 200%%, P. Evastion + 8, Speed + 20. Consumes 5 Soulstones. --> 
+	<skill id="19201" levels="1" name="Paladin's Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For 15 sec., all party members' M. Def. + 200%%, M. Evastion + 8, Speed + 20. Consumes 5 Soulstones. --> 
+	<skill id="19202" levels="1" name="Sentinel's Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases target's Bow/Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. --> 
+	<skill id="19203" levels="1" name="Ultimate Bullseye">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases Critical Rate and Damage of general attacks and skills of selected party member by $s1 for $s2. Consumes $s3 Spirit Ores. --> 
+	<skill id="19204" levels="1" name="Prophecy of Might">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases Bow/Crossbow Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
+	<skill id="19205" levels="1" name="Song of Archery">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases M. Def. of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
+	<skill id="19206" levels="1" name="Sage's Dance">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk./M. Atk. by $s2 and P. Accuracy/M. Accuracy by $s3 for all party members for $s1. Consumes $s4 Spirit Ores. --> 
+	<skill id="19207" levels="1" name="Chant of Bison">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for $s1 during PvP. Consumes $s2 Spirit Ores. --> 
+	<skill id="19208" levels="1" name="Seal of Restriction">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases Magic Skill MP Consumption by $s2 and has a $s3 to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for $s1. Consumes $s4 Spirit Ores. --> 
+	<skill id="19209" levels="1" name="Divinity of Einhasad">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for $s1 and casts a debuff canceling blessing. Consumes $s2 Spirit Ores. --> 
+	<skill id="19210" levels="1" name="Summon Tree of Sephiroth">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Soulstones. --> 
+	<skill id="19211" levels="1" name="Barrer for Test">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Puts a barrier around a party member for $s1. Recovers $s2 CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes $s3 Spirit Ores. --> 
+	<skill id="19212" levels="1" name="Shillien Protection">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19213" levels="1" name="Polishing Arrows: Atk. Spd.">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Bolts with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19214" levels="1" name="Polishing Bolts: Atk. Spd.">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Arrows with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19215" levels="1" name="Polishing Arrows: P. Atk.">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Bolts with increased P. Atk. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19216" levels="1" name="Polishing Bolts: P. Atk.">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19217" levels="1" name="Polishing Arrows: Added Blow">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). --> 
+	<skill id="19218" levels="1" name="Polishing Bolts: Added Blow">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Recovers HP and removes bad abnormal statuses. --> 
+	<skill id="19219" levels="1" name="Blessing of Tree">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. --> 
+	<skill id="19220" levels="1" name="Sharing Equipment">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="19221" levels="1" name="Power of Darkness">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1. World Chat + $s8 times. --> 
+	<skill id="19222" levels="1" name="Dignity of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Teleports to selected party member. Consumes 100 Spirit Ores. --> 
+	<skill id="19223" levels="1" name="Belief of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/de-buff condition even following death and resurrection. Consumes 40 Spirit Ores. --> 
+	<skill id="19224" levels="1" name="Blessing of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Summons 5 Battle Quick Healing Potions. Consumes 40 Crystals (R-grade). --> 
+	<skill id="19225" levels="1" name="Summon Battle Potion">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For $s1 hr., increases gained XP/SP by $s2. Consumes $s3 Spirit Ores. --> 
+	<skill id="19226" levels="1" name="Favor of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Blends into the wind for $s1. Increases Speed by $s2. Canceled when using normal attacks or attack skills. --> 
+	<skill id="19227" levels="1" name="Wind Hiding">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases Dagger/Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
+	<skill id="19228" levels="1" name="Song of Thief">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- LUC + 3. --> 
+	<skill id="19229" levels="1" name="Fate of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- MP Recovery Bonus + $s2 for $s1. --> 
+	<skill id="19230" levels="1" name="MP Recovery">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Party's M. Atk. + 30%% for 30 seconds. Consumes 5 Spirit Ores. --> 
+	<skill id="19231" levels="1" name="Song of Wisdom">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Party's P. Skill Power + 30%% for 30 seconds. Consumes 5 Spirit Ores. --> 
+	<skill id="19232" levels="1" name="Crippling Dance">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

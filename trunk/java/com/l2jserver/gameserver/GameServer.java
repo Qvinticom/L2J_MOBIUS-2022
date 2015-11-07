@@ -53,6 +53,7 @@ import com.l2jserver.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jserver.gameserver.data.xml.impl.BuyListData;
 import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
+import com.l2jserver.gameserver.data.xml.impl.DailyMissionData;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jserver.gameserver.data.xml.impl.EnchantItemGroupsData;
@@ -312,6 +313,7 @@ public final class GameServer
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();
+		DailyMissionData.getInstance();
 		
 		printSection("Scripts");
 		QuestManager.getInstance();

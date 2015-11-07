@@ -733,20 +733,23 @@
 	</zone>
 	<zone name="arcan_city_shuttle_2_circle" type="PeaceZone" shape="Cylinder" minZ="-1900" maxZ="-700" rad="700">
 		<node X="209885" Y="83357" />
-	</zone>	
+	</zone>
 	<zone name="arcan_city_area_east" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
 		<node X="211160" Y="82648" />
 		<node X="210312" Y="83112" />
 		<node X="210168" Y="83048" />
 		<node X="211032" Y="82456" />
-	</zone>	
+	</zone>
 	<zone name="arcan_city_area_east_circle" type="PeaceZone" shape="Cylinder" minZ="-500" maxZ="-50" rad="1000">
 		<node X="211368" Y="82360" />
-	</zone>	
+	</zone>
 	<zone name="arcan_city_area_west" type="PeaceZone" shape="NPoly" minZ="-500" maxZ="-50">
 		<node X="205864" Y="81432" />
 		<node X="206440" Y="82296" />
 		<node X="206328" Y="82296" />
 		<node X="205672" Y="81560" />
-	</zone>	
+	</zone>
+	<zone name="underground_gainak_peace" type="PeaceZone" shape="Cylinder" minZ="-16000" maxZ="-13000" rad="4500">
+		<node X="-51015" Y="-147271" />
+	</zone>
 </list>

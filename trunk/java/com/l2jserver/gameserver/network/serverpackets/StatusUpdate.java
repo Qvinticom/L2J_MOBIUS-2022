@@ -47,8 +47,8 @@ public final class StatusUpdate extends L2GameServerPacket
 	public static final int M_ATK = 0x16;
 	public static final int CAST_SPD = 0x17;
 	public static final int M_DEF = 0x18;
-	public static final int PVP_FLAG = 0x19;
-	public static final int KARMA = 0x1A;
+	public static final int PVP_FLAG = 0x1A;
+	public static final int KARMA = 0x1B;
 	
 	public static final int CUR_CP = 0x21;
 	public static final int MAX_CP = 0x22;

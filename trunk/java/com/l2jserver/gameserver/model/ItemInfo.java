@@ -325,6 +325,16 @@ public class ItemInfo
 		return _augmentation;
 	}
 	
+	public int get1stAugmentationId()
+	{
+		return 0x0000FFFF & getAugmentationBonus();
+	}
+	
+	public int get2ndAugmentationId()
+	{
+		return getAugmentationBonus() >> 16;
+	}
+	
 	public long getCount()
 	{
 		return _count;

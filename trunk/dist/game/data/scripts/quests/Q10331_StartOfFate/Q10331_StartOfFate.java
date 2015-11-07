@@ -177,7 +177,7 @@ public class Q10331_StartOfFate extends Quest
 				return null;
 			}
 			final int classId = Integer.parseInt(event.replace("change_to_", ""));
-			player.setBaseClass(classId);
+			player.setBaseClassId(classId);
 			player.setClassId(classId);
 			switch (classId)
 			{

@@ -39,7 +39,7 @@ public class ExMentorAdd extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0x11C);
 		writeS(_mentor.getName());
-		writeD(_mentor.getActiveClass());
+		writeD(_mentor.getActiveClassId());
 		writeD(_mentor.getLevel());
 	}
 }

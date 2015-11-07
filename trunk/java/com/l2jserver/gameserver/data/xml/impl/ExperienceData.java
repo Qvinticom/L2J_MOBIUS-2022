@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jserver.Config;
 import com.l2jserver.util.data.xml.IXmlReader;
 
 /**
@@ -51,7 +52,7 @@ public final class ExperienceData implements IXmlReader
 	{
 		_expTable.clear();
 		parseDatapackFile("stats/experience.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_expTable.size() - 1) + " levels.");
 		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
 		LOGGER.info(getClass().getSimpleName() + ": Max Pet Level is: " + (MAX_PET_LEVEL - 1));
 	}
@@ -65,12 +66,27 @@ public final class ExperienceData implements IXmlReader
 		MAX_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxLevel").getNodeValue()) + 1);
 		MAX_PET_LEVEL = (byte) (Byte.parseByte(tableAttr.getNamedItem("maxPetLevel").getNodeValue()) + 1);
 		
+		if (MAX_LEVEL > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			MAX_LEVEL = Config.PLAYER_MAXIMUM_LEVEL;
+		}
+		if (MAX_PET_LEVEL > MAX_LEVEL)
+		{
+			MAX_PET_LEVEL = MAX_LEVEL; // Pet level should not exceed owner level.
+		}
+		
+		int maxLevel = 0;
 		for (Node n = table.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("experience".equals(n.getNodeName()))
 			{
 				NamedNodeMap attrs = n.getAttributes();
-				_expTable.put(parseInteger(attrs, "level"), parseLong(attrs, "tolevel"));
+				maxLevel = parseInteger(attrs, "level");
+				if (maxLevel > Config.PLAYER_MAXIMUM_LEVEL)
+				{
+					break;
+				}
+				_expTable.put(maxLevel, parseLong(attrs, "tolevel"));
 			}
 		}
 	}
@@ -82,6 +98,10 @@ public final class ExperienceData implements IXmlReader
 	 */
 	public long getExpForLevel(int level)
 	{
+		if (level > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			level = Config.PLAYER_MAXIMUM_LEVEL;
+		}
 		return _expTable.get(level);
 	}
 	

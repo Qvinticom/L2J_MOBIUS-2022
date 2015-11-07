@@ -42,7 +42,7 @@ public class FriendAddRequestResult extends L2GameServerPacket
 		_isOnline = activeChar.isOnlineInt();
 		_charObjectId = activeChar.getObjectId();
 		_charLevel = activeChar.getLevel();
-		_charClassId = activeChar.getActiveClass();
+		_charClassId = activeChar.getActiveClassId();
 	}
 	
 	@Override

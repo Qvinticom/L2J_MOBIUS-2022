@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.EnchantSkillGroupsData;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jserver.gameserver.model.L2EnchantSkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -42,21 +43,26 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 	private final int _type;
 	private final int _skillid;
 	private final int _skilllvl;
+	private final int _maxlvl;
 	private final int _chance;
 	private int _sp;
 	private final int _adenacount;
 	
 	public ExEnchantSkillInfoDetail(int type, int skillid, int skilllvl, L2PcInstance ply)
 	{
+		_type = type;
+		_skillid = skillid;
+		_skilllvl = skilllvl;
+		_maxlvl = SkillData.getInstance().getMaxLevel(_skillid);
 		
 		L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
 		if (enchantLearn != null)
 		{
-			if (skilllvl > 100)
+			if (_skilllvl > 1000)
 			{
-				esd = enchantLearn.getEnchantSkillHolder(skilllvl);
+				esd = enchantLearn.getEnchantSkillHolder(_skilllvl);
 			}
 			else
 			{
@@ -66,7 +72,7 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		
 		if (esd == null)
 		{
-			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + skilllvl);
+			throw new IllegalArgumentException("Skill " + skillid + " dont have enchant data for level " + _skilllvl);
 		}
 		
 		if (type == 0)
@@ -93,58 +99,96 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 			_sp = 0;
 			_adenacount = 0;
 		}
-		_type = type;
-		_skillid = skillid;
-		_skilllvl = skilllvl;
 		
+		final int _elvl = ((_skilllvl % 100) - 1) / 10;
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
-				if (ply.getClassId().level() == 3)
+				if (ply.getClassId().level() < 4)
 				{
 					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_OLD;
 				}
 				else
 				{
-					bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+					if (_elvl == 0)
+					{
+						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+					}
+					else if (_elvl == 1)
+					{
+						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
+					}
+					else
+					{
+						bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
+					}
 				}
-				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
+				reqCount = 1;
 				break;
 			case TYPE_SAFE_ENCHANT:
-				if (ply.getClassId().level() == 3)
+				if (ply.getClassId().level() < 4)
 				{
 					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_OLD;
 				}
 				else
 				{
-					bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
-				}
-				reqCount = 1;
-				break;
-			case TYPE_UNTRAIN_ENCHANT:
-				if (ply.getClassId().level() == 3)
-				{
-					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
-				}
-				else
-				{
-					bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
+					if (_elvl == 0)
+					{
+						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+					}
+					else if (_elvl == 1)
+					{
+						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
+					}
+					else
+					{
+						bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
+					}
 				}
 				reqCount = 1;
 				break;
 			case TYPE_CHANGE_ENCHANT:
-				if (ply.getClassId().level() == 3)
+				if (ply.getClassId().level() < 4)
 				{
 					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_OLD;
 				}
 				else
 				{
-					bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+					if (_elvl == 0)
+					{
+						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+					}
+					else if (_elvl == 1)
+					{
+						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
+					}
+					else
+					{
+						bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
+					}
 				}
 				reqCount = 1;
 				break;
 			case TYPE_IMMORTAL_ENCHANT:
-				bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+				if (ply.getClassId().level() < 4)
+				{
+					bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+				}
+				else
+				{
+					if (_elvl == 0)
+					{
+						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+					}
+					else if (_elvl == 1)
+					{
+						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
+					}
+					else
+					{
+						bookId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
+					}
+				}
 				reqCount = 1;
 				break;
 			default:
@@ -165,7 +209,8 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		
 		writeD(_type);
 		writeD(_skillid);
-		writeD(_skilllvl);
+		writeH(_maxlvl);
+		writeH(_skilllvl);
 		writeQ(_sp * multi); // sp
 		writeD(_chance); // exp
 		writeD(0x02); // items count?

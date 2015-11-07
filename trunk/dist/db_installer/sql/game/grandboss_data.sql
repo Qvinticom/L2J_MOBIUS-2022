@@ -38,8 +38,3 @@ INSERT IGNORE INTO `grandboss_data` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`heading`
 -- (29178, 0, 0, 0, 0, 0, 0), -- Freya (Stand) (85)
 -- (29178, 0, 0, 0, 0, 0, 0), -- Freya (Stand Hard) (85)
 -- (29179, 0, 0, 0, 0, 0, 0), -- Zaken Day (83)
-
--- 
--- Dr. Chaos
--- 
-INSERT IGNORE INTO grandboss_data VALUES (25512, 96320, -110912, -3328, 8191, 0, 0, 0, 0);

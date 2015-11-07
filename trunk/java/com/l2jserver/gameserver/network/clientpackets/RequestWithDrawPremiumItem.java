@@ -33,14 +33,14 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
 	
 	private int _itemNum;
-	private int _charId;
+	// private int _charId;
 	private long _itemCount;
 	
 	@Override
 	protected void readImpl()
 	{
-		_itemNum = readD();
-		_charId = readD();
+		_itemNum = (int) readQ();
+		// _charId = readD();
 		_itemCount = readQ();
 	}
 	
@@ -57,11 +57,9 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		{
 			return;
 		}
-		else if (activeChar.getObjectId() != _charId)
-		{
-			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH);
-			return;
-		}
+		/*
+		 * else if (activeChar.getObjectId() != _charId) { Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Incorrect owner, Player: " + activeChar.getName(), Config.DEFAULT_PUNISH); return; }
+		 */
 		else if (activeChar.getPremiumItemList().isEmpty())
 		{
 			Util.handleIllegalPlayerAction(activeChar, "[RequestWithDrawPremiumItem] Player: " + activeChar.getName() + " try to get item with empty list!", Config.DEFAULT_PUNISH);

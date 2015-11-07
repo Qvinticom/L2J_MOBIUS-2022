@@ -35,13 +35,22 @@ public class RequestDispel extends L2GameClientPacket
 	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
+	private int _fullLevel;
 	
 	@Override
 	protected void readImpl()
 	{
 		_objectId = readD();
 		_skillId = readD();
-		_skillLevel = readD();
+		_fullLevel = readD();
+		if (_fullLevel < 100)
+		{
+			_skillLevel = _fullLevel;
+		}
+		else
+		{
+			_skillLevel = _fullLevel >> 16;
+		}
 	}
 	
 	@Override

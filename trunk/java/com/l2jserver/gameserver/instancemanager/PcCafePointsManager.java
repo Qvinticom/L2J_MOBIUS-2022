@@ -73,7 +73,7 @@ public final class PcCafePointsManager
 			}
 			else
 			{
-				message = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S2);
+				message = SystemMessage.getSystemMessage(SystemMessageId.YOU_EARNED_S1_PC_POINT_S);
 			}
 			if ((player.getPcBangPoints() + points) > Config.PC_BANG_MAX_POINTS)
 			{

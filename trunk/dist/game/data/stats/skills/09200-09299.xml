@@ -533,12 +533,18 @@
 		<set name="reuseDelay" val="-1000" />
 	</skill>
 	<skill id="9240" levels="2" name="XP Rune I (Lv. 1-85)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP/SP + 100%. -->
-		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_1 br_cashtex.skill.br_cash_rune_of_exp_buff_2 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
 		<set name="icon" val="#icons" />
+		<table name="#bonusExp"> 100 200 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="bonusExp" val="#bonusExp" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9241" levels="1" name="Giant's Box">
 		<!-- AUTO GENERATED SKILL -->

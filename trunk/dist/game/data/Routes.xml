@@ -1608,4 +1608,40 @@
 		<point X="-19748" Y="133899" Z="-3881" delay="0" run="false" />
 		<point X="-19331" Y="133534" Z="-3798" delay="0" run="false" />	
 	</route>
+	<!-- Underground - Tavern Employee Male Route 1 -->
+	<route name="tavern_1" repeat="true" repeatStyle="back">
+		<target id="34202" spawnX="-50781" spawnY="-148963" spawnZ="-14944" />
+		<point string="" X="-50997" Y="-148648" Z="-14944" delay="0" run="false" />
+		<point string="" X="-51128" Y="-148187" Z="-14944" delay="0" run="false" />
+		<point string="" X="-51140" Y="-147688" Z="-14944" delay="0" run="false" />
+		<point string="" X="-51073" Y="-147302" Z="-14944" delay="3" run="false" />
+	</route>
+	<!-- Underground - Tavern Employee Female Route 2 -->
+	<route name="tavern_2" repeat="true" repeatStyle="cycle">
+		<target id="34203" spawnX="-50290" spawnY="-148100" spawnZ="-14157" />
+		<point string="Is there anything to clean up?" X="-49873" Y="-148291" Z="-14186" delay="3" run="false" />
+		<point string="Lupia introduced me here, so that's how I started working here." X="-49962" Y="-147955" Z="-14157" delay="3" run="false" />
+		<point string="I wonder what Hanna will be making today..." X="-50146" Y="-147816" Z="-14157" delay="3" run="false" />
+		<point string="Hey, you! We don't want drunk customers here." X="-50298" Y="-148021" Z="-14157" delay="2" run="false" />
+	</route>
+	<!-- Underground - Tavern Employee Female Route 3 -->
+	<route name="tavern_3" repeat="true" repeatStyle="cycle">
+		<target id="34204" spawnX="-50318" spawnY="-149266" spawnZ="-14171" />
+		<point string="You can place you order over here." X="-50069" Y="-148934" Z="-14159" delay="4" run="false" />
+		<point string="Hanna's cooking is the best." X="-49817" Y="-148762" Z="-14155" delay="3" run="false" />
+		<point string="Here you can forget about your responsibilities for a while." X="-49796" Y="-148464" Z="-14171" delay="4" run="false" />
+		<point string="Is there anything for clean up?" X="-50046" Y="-148498" Z="-14157" delay="3" run="false" />
+		<point string="I think we can wait for some more customers." X="-50413" Y="-148665" Z="-14161" delay="3" run="false" />
+		<point string="What your step." X="-50266" Y="-149095" Z="-14169" delay="2" run="false" />
+	</route>
+	<!-- Underground - Tavern Employee Female Route 4 -->
+	<route name="tavern_4" repeat="true" repeatStyle="cycle">
+		<target id="34205" spawnX="-49227" spawnY="-148682" spawnZ="-14157" />
+		<point string="Hanna's cooking is the best." X="-49291" Y="-148648" Z="-14157" delay="2" run="false" />
+		<point string="You can place you order over here." X="-49470" Y="-148411" Z="-14157" delay="3" run="false" />
+		<point string="Here you can forget about your responsibilities for a while." X="-49187" Y="-148229" Z="-14157" delay="4" run="false" />
+		<point string="Sigh.. busy as always." X="-49341" Y="-148047" Z="-14157" delay="2" run="false" />
+		<point string="You can place you order over here." X="-49627" Y="-148203" Z="-14167" delay="3" run="false" />
+		<point string="What do you think about our tavern? Isn't it great?" X="-49510" Y="-148437" Z="-14157" delay="5" run="false" />
+	</route>
 </routes>

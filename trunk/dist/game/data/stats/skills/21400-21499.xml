@@ -556,4 +556,53 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
+	<!-- Increases P. Atk. + 15%%, M. Atk. + 15%%, Skill Power + 15%%, Skill Critical Rate + 15%% momentarily with the power of Talisman. --> 
+	<skill id="21477" levels="1" name="Power of Abundance - Lv. 1">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Removes the Agathion's seal. --> 
+	<skill id="21478" levels="1" name="Release Agathion's Seal - Griffin">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Teleport to the Town of Aden. Usable only when Agathion's Seal is released. --> 
+	<skill id="21479" levels="1" name="Griffin Teleport - Town of Aden">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Teleport to the Town of Rune. Usable only when Agathion's Seal is released. --> 
+	<skill id="21480" levels="1" name="Griffin Teleport - Town of Rune">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Teleport to the Town of Giran. Usable only when Agathion's Seal is released. --> 
+	<skill id="21481" levels="1" name="Griffin Teleport - Town of Giran">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="21482" levels="1" name="Blessed Griffin Agathion's Egg">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="21483" levels="1" name="Blessed Griffin Egg">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

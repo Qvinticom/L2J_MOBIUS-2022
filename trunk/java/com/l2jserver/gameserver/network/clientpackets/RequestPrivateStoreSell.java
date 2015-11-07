@@ -37,7 +37,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 {
 	private static final String _C__9F_REQUESTPRIVATESTORESELL = "[C] 9F RequestPrivateStoreSell";
 	
-	private static final int BATCH_LENGTH = 32; // length of the one item
+	private static final int BATCH_LENGTH = 34; // length of the one item
 	
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
@@ -61,6 +61,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			readH(); // TODO analyse this
 			long cnt = readQ();
 			long price = readQ();
+			readH(); // TODO analyse this
 			
 			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{

@@ -45,9 +45,7 @@ public class Die extends L2GameServerPacket
 	private final boolean _isSweepable;
 	private boolean _useFeather;
 	private boolean _toFortress;
-	private boolean _hideAnimation;
 	private List<Integer> _items = null;
-	private boolean _itemsEnabled;
 	
 	public Die(L2Character activeChar)
 	{
@@ -84,11 +82,6 @@ public class Die extends L2GameServerPacket
 		_isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();
 	}
 	
-	public void setHideAnimation(boolean val)
-	{
-		_hideAnimation = val;
-	}
-	
 	public void addItem(int itemId)
 	{
 		if (_items == null)
@@ -111,11 +104,6 @@ public class Die extends L2GameServerPacket
 		return _items != null ? _items : Collections.emptyList();
 	}
 	
-	public void setItemsEnabled(boolean val)
-	{
-		_itemsEnabled = val;
-	}
-	
 	@Override
 	protected final void writeImpl()
 	{
@@ -128,14 +116,10 @@ public class Die extends L2GameServerPacket
 		writeD(_isSweepable ? 0x01 : 0x00);
 		writeD(_useFeather ? 0x01 : 0x00);
 		writeD(_toFortress ? 0x01 : 0x00);
-		writeC(_hideAnimation ? 0x01 : 0x00);
-		
-		writeD(getItems().size());
-		for (int itemId : getItems())
-		{
-			writeD(itemId);
-		}
-		
-		writeD(_itemsEnabled ? 0x01 : 0x00);
+		writeD(0x00);
+		writeD(0x00);
+		writeC(0x00);
+		writeD(0x00);
+		writeD(0x00);
 	}
 }

@@ -49,6 +49,27 @@
 			<effect name="Plunder" noicon="1" val="0" />
 		</for>-->
 	</skill>
+	<!-- Cancels target's armor for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
+	<skill id="10703" levels="1" name="Armor Breaker">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Reveals the enemy's back and inflicts Stun for $s1. Requires dagger/dual dagger. Consumes $s2 Soulstones. --> 
+	<skill id="10704" levels="1" name="Mass Power Bluff">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Front Critical Rate - 10%%, Side Critical Rate + 10%%, Critical Damage + 10%%, Rear Critical Rate + 20%%, Critical Damage + 20%%. --> 
+	<skill id="10705" levels="1" name="Shadow Walking">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 	<skill id="10747" levels="1" name="Rogue - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />

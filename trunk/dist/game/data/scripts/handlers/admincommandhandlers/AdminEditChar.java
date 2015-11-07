@@ -34,6 +34,7 @@ import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -359,11 +360,17 @@ public class AdminEditChar implements IAdminCommandHandler
 					
 					if (player.isSubClassActive())
 					{
-						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
+						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClassId());
 					}
 					else
 					{
-						player.setBaseClass(player.getActiveClass());
+						player.setBaseClassId(player.getActiveClassId());
+						player.setInitialClassId(ClassId.getInitialClassId(player));
+					}
+					
+					if (player.getBaseClass().getRace().equals(Race.ERTHEIA))
+					{
+						player.getAppearance().setSex(true);
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
@@ -991,7 +998,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%class%", ClassListData.getInstance().getClass(player.getClassId()).getClientCode());
 		adminReply.replace("%ordinal%", String.valueOf(player.getClassId().ordinal()));
 		adminReply.replace("%classid%", String.valueOf(player.getClassId()));
-		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode());
+		adminReply.replace("%baseclass%", ClassListData.getInstance().getClass(player.getBaseClassId()).getClientCode());
 		adminReply.replace("%x%", String.valueOf(player.getX()));
 		adminReply.replace("%y%", String.valueOf(player.getY()));
 		adminReply.replace("%z%", String.valueOf(player.getZ()));

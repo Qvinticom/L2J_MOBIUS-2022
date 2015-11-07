@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
 /**
- * @author Erlandys
+ * @author Erlandys TODO: Fix this class to Infinity Odyssey !!!
  */
 public class ExChangeAttributeItemList extends AbstractItemPacket
 {

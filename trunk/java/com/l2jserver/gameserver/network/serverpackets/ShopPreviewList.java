@@ -51,7 +51,7 @@ public class ShopPreviewList extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xF5);
-		writeD(5056);
+		writeD(0x00);
 		writeQ(_money); // current money
 		writeD(_listId);
 		

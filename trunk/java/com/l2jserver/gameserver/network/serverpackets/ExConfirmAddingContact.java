@@ -36,7 +36,7 @@ public class ExConfirmAddingContact extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0xD2);
+		writeH(0xD3);
 		writeS(_charName);
 		writeD(_added ? 0x01 : 0x00);
 	}

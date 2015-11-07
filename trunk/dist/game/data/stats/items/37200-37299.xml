@@ -7,6 +7,11 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="360" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
@@ -19,6 +24,11 @@
 		<set name="bodypart" val="lhand" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="310" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="15.0" />
@@ -32,6 +42,11 @@
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1390" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="170.0" />
 			<enchant stat="pDef" val="0" />
@@ -44,6 +59,11 @@
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="460" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="106.0" />
 			<enchant stat="pDef" val="0" />
@@ -56,6 +76,11 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="92.0" />
 			<enchant stat="pDef" val="0" />
@@ -68,6 +93,11 @@
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
@@ -80,6 +110,11 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="360" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="pDef" val="61.0" />
 			<enchant stat="pDef" val="0" />
@@ -92,6 +127,11 @@
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="2510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="309.0" />
 			<enchant stat="pDef" val="0" />
@@ -104,6 +144,11 @@
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1060" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="193.0" />
 			<enchant stat="pDef" val="0" />
@@ -116,6 +161,11 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="116.0" />
 			<enchant stat="pDef" val="0" />
@@ -128,6 +178,11 @@
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -140,6 +195,11 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="360" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -152,6 +212,11 @@
 		<set name="bodypart" val="lhand" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="380" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<set stat="sDef" val="422.0" />
@@ -166,6 +231,11 @@
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1380" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="247.0" />
 			<add stat="rEvas" val="5.0" />
@@ -180,6 +250,11 @@
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="154.0" />
 			<add stat="rEvas" val="3.0" />
@@ -194,6 +269,11 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="116.0" />
 			<enchant stat="pDef" val="0" />
@@ -206,6 +286,11 @@
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -218,6 +303,11 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="360" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -230,6 +320,11 @@
 		<set name="bodypart" val="chest" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="580" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="169.0" />
 			<add order="0" stat="mDef" val="36.0" />
@@ -244,6 +339,11 @@
 		<set name="bodypart" val="legs" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="280" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="106.0" />
 			<add order="0" stat="mDef" val="24.0" />
@@ -258,6 +358,11 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="116.0" />
 			<enchant stat="pDef" val="0" />
@@ -270,6 +375,11 @@
 		<set name="bodypart" val="gloves" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="170" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -282,6 +392,11 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="360" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="77.0" />
 			<enchant stat="pDef" val="0" />
@@ -294,6 +409,11 @@
 		<set name="bodypart" val="lhand" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="310" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<sub stat="rEvas" val="8" />
 			<add order="0" stat="pDef" val="38.0" />
@@ -307,6 +427,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="39.0" />
 			<enchant stat="mDef" val="0" />
@@ -319,6 +444,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="52.0" />
 			<enchant stat="mDef" val="0" />
@@ -331,6 +461,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="26.0" />
 			<enchant stat="mDef" val="0" />
@@ -343,6 +478,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="51.0" />
 			<enchant stat="mDef" val="0" />
@@ -355,6 +495,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="68.0" />
 			<enchant stat="mDef" val="0" />
@@ -367,6 +512,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="34.0" />
 			<enchant stat="mDef" val="0" />
@@ -379,6 +529,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="60.0" />
 			<enchant stat="mDef" val="0" />
@@ -391,6 +546,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="80.0" />
 			<enchant stat="mDef" val="0" />
@@ -403,6 +563,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="40.0" />
 			<enchant stat="mDef" val="0" />
@@ -415,6 +580,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="71.0" />
 			<enchant stat="mDef" val="0" />
@@ -427,6 +597,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="95.0" />
 			<enchant stat="mDef" val="0" />
@@ -439,6 +614,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="48.0" />
 			<enchant stat="mDef" val="0" />
@@ -451,6 +631,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="79.0" />
 			<enchant stat="mDef" val="0" />
@@ -463,6 +648,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="106.0" />
 			<enchant stat="mDef" val="0" />
@@ -475,6 +665,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add order="0" stat="mDef" val="60.0" />
 			<enchant stat="mDef" val="0" />
@@ -487,6 +682,11 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="mDef" val="94.0" />
 			<enchant stat="mDef" val="0" />
@@ -499,6 +699,11 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="mDef" val="126.0" />
 			<enchant stat="mDef" val="0" />
@@ -511,6 +716,11 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="50" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="mDef" val="63.0" />
 			<enchant stat="mDef" val="0" />
@@ -524,6 +734,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="477" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="107.0" />
 			<add stat="mAtk" val="61.0" />
@@ -539,6 +754,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="547" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="156.0" />
 			<add stat="mAtk" val="83.0" />
@@ -555,6 +775,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="807" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="118.0" />
 			<add stat="mAtk" val="56.0" />
@@ -570,6 +795,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="477" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="85.0" />
 			<add stat="mAtk" val="81.0" />
@@ -585,6 +815,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="677" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="107.0" />
 			<add stat="mAtk" val="61.0" />
@@ -600,6 +835,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="250" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="86.0" />
 			<add stat="mAtk" val="91.0" />
@@ -615,6 +855,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="597" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="220.0" />
 			<add stat="mAtk" val="61.0" />
@@ -630,6 +875,11 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="660" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="116.0" />
 			<add stat="mAtk" val="61.0" />
@@ -646,6 +896,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="477" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="97.0" />
 			<add stat="mAtk" val="61.0" />
@@ -661,6 +916,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="597" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="135.0" />
 			<add stat="mAtk" val="61.0" />
@@ -676,6 +936,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="670" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="130.0" />
 			<add stat="mAtk" val="61.0" />
@@ -691,6 +956,11 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="497" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="130.0" />
 			<add stat="mAtk" val="61.0" />
@@ -707,6 +977,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="300" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="140.0" />
 			<add stat="mAtk" val="122.0" />
@@ -722,6 +997,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="540" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="140.0" />
 			<add stat="mAtk" val="122.0" />
@@ -738,6 +1018,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="747" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="197.0" />
 			<add stat="mAtk" val="86.0" />
@@ -753,6 +1038,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="450" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="155.0" />
 			<add stat="mAtk" val="132.0" />
@@ -768,6 +1058,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="647" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="175.0" />
 			<add stat="mAtk" val="91.0" />
@@ -783,6 +1078,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="247" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="122.0" />
 			<add stat="mAtk" val="122.0" />
@@ -798,6 +1098,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="573" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="397.0" />
 			<add stat="mAtk" val="100.0" />
@@ -813,6 +1118,11 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="643" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="190.0" />
 			<add stat="mAtk" val="91.0" />
@@ -829,6 +1139,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="457" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="159.0" />
 			<add stat="mAtk" val="91.0" />
@@ -844,6 +1159,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="567" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="245.0" />
 			<add stat="mAtk" val="99.0" />
@@ -859,6 +1179,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="643" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="213.0" />
 			<add stat="mAtk" val="91.0" />
@@ -874,6 +1199,11 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="473" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="213.0" />
 			<add stat="mAtk" val="91.0" />
@@ -890,6 +1220,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="277" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="170.0" />
 			<add stat="mAtk" val="143.0" />
@@ -905,6 +1240,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="517" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="170.0" />
 			<add stat="mAtk" val="143.0" />
@@ -921,6 +1261,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="693" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="259.0" />
 			<add stat="mAtk" val="107.0" />
@@ -936,6 +1281,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="280" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="186.0" />
 			<add stat="mAtk" val="152.0" />
@@ -951,6 +1301,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="633" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="213.0" />
 			<add stat="mAtk" val="107.0" />
@@ -966,6 +1321,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="320" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="186.0" />
 			<add stat="mAtk" val="107.0" />
@@ -981,6 +1341,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="557" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="440.0" />
 			<add stat="mAtk" val="107.0" />
@@ -996,6 +1361,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="443" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="193.0" />
 			<add stat="mAtk" val="107.0" />
@@ -1011,6 +1381,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="557" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="270.0" />
 			<add stat="mAtk" val="107.0" />
@@ -1026,6 +1401,11 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="633" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="231.0" />
 			<add stat="mAtk" val="107.0" />
@@ -1042,6 +1422,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="633" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="259.0" />
 			<add stat="mAtk" val="107.0" />
@@ -1057,6 +1442,11 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="457" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="259.0" />
 			<add stat="mAtk" val="107.0" />
@@ -1073,6 +1463,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="433" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="281.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1088,6 +1483,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="523" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="281.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1104,6 +1504,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="693" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="342.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1119,6 +1524,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="433" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="225.0" />
 			<add stat="mAtk" val="175.0" />
@@ -1135,6 +1545,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="600" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="281.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1150,6 +1565,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="317" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="246.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1165,6 +1585,11 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="600" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="304.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1181,6 +1606,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="433" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="255.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1196,6 +1626,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="533" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="356.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1211,6 +1646,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="460" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="342.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1226,6 +1666,11 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="450" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="342.0" />
 			<add stat="mAtk" val="132.0" />
@@ -1242,6 +1687,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="267.0" />
 			<add stat="mAtk" val="202.0" />
@@ -1257,6 +1707,11 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="580" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="333.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1273,6 +1728,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="405.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1288,6 +1748,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="670" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="333.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1303,6 +1768,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="291.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1318,6 +1788,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="530" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="401.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1333,6 +1808,11 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="600" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="361.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1349,6 +1829,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="430" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="302.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1364,6 +1849,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="580" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="405.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1379,6 +1869,11 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="520" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="405.0" />
 			<add stat="mAtk" val="151.0" />
@@ -1395,6 +1890,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<for>
 			<add stat="pAtk" val="435.0" />
 			<add stat="mAtk" val="189.0" />

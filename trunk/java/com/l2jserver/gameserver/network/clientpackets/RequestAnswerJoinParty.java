@@ -82,7 +82,7 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 			{
 				if (requestor.isInParty())
 				{
-					if (requestor.getParty().getMemberCount() >= 9)
+					if (requestor.getParty().getMemberCount() >= 7)
 					{
 						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
 						player.sendPacket(sm);

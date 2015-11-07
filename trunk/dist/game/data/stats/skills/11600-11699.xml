@@ -669,4 +669,25 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="2000" />
 	</skill>
+	<!-- Shield Defense Success Rate + $s1, Shield Defense + $s2. --> 
+	<skill id="11620" levels="1" name="Superior Shield Mastery">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Has a chance to create a barrier that absorbs damage. --> 
+	<skill id="11621" levels="1" name="Blessing Barrier">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Protected by a barrier. It absorbs 20000 damage for 10 seconds. --> 
+	<skill id="11622" levels="1" name="Blessing Barrier">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

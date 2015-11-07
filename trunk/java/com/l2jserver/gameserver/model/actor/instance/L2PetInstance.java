@@ -395,7 +395,7 @@ public class L2PetInstance extends L2Summon
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
 			}
 			
 			return false;
@@ -443,7 +443,7 @@ public class L2PetInstance extends L2Summon
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
 			}
 			return false;
 		}

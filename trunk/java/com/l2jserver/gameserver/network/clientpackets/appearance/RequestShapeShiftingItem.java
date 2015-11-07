@@ -381,6 +381,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
+		
 		if (inventory.getItemByObjectId(stone.getObjectId()) == null)
 		{
 			iu.addRemovedItem(stone);
@@ -389,6 +390,19 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		{
 			iu.addModifiedItem(stone);
 		}
+		
+		if (appearanceStone.getType() == AppearanceType.NORMAL)
+		{
+			if (inventory.getItemByObjectId(extracItem.getObjectId()) == null)
+			{
+				iu.addRemovedItem(extracItem);
+			}
+			else
+			{
+				iu.addModifiedItem(extracItem);
+			}
+		}
+		
 		player.sendPacket(iu);
 		
 		player.removeRequest(ShapeShiftingItemRequest.class);

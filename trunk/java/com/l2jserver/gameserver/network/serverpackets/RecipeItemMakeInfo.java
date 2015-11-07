@@ -54,6 +54,8 @@ public class RecipeItemMakeInfo extends L2GameServerPacket
 			writeD((int) _activeChar.getCurrentMp());
 			writeD(_activeChar.getMaxMp());
 			writeD(_success ? 1 : 0); // item creation success/failed
+			writeC(0);
+			writeQ(0);
 		}
 		else
 		{

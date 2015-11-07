@@ -46,21 +46,21 @@ public final class HennaItemRemoveInfo extends L2GameServerPacket
 		writeD(_henna.isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00); // able to remove or not
 		writeQ(_activeChar.getAdena());
 		writeD(_activeChar.getINT()); // current INT
-		writeC(_activeChar.getINT() - _henna.getStatINT()); // equip INT
+		writeD(_activeChar.getINT() - _henna.getStatINT()); // equip INT
 		writeD(_activeChar.getSTR()); // current STR
-		writeC(_activeChar.getSTR() - _henna.getStatSTR()); // equip STR
+		writeD(_activeChar.getSTR() - _henna.getStatSTR()); // equip STR
 		writeD(_activeChar.getCON()); // current CON
-		writeC(_activeChar.getCON() - _henna.getStatCON()); // equip CON
+		writeD(_activeChar.getCON() - _henna.getStatCON()); // equip CON
 		writeD(_activeChar.getMEN()); // current MEN
-		writeC(_activeChar.getMEN() - _henna.getStatMEN()); // equip MEN
+		writeD(_activeChar.getMEN() - _henna.getStatMEN()); // equip MEN
 		writeD(_activeChar.getDEX()); // current DEX
-		writeC(_activeChar.getDEX() - _henna.getStatDEX()); // equip DEX
+		writeD(_activeChar.getDEX() - _henna.getStatDEX()); // equip DEX
 		writeD(_activeChar.getWIT()); // current WIT
-		writeC(_activeChar.getWIT() - _henna.getStatWIT()); // equip WIT
+		writeD(_activeChar.getWIT() - _henna.getStatWIT()); // equip WIT
 		writeD(_activeChar.getLUC()); // current LUC
-		writeC(_activeChar.getLUC() - _henna.getStatLUC()); // equip LUC
+		writeD(_activeChar.getLUC() - _henna.getStatLUC()); // equip LUC
 		writeD(_activeChar.getCHA()); // current CHA
-		writeC(_activeChar.getCHA() - _henna.getStatCHA()); // equip CHA
+		writeD(_activeChar.getCHA() - _henna.getStatCHA()); // equip CHA
 		writeD(0x00);
 	}
 }

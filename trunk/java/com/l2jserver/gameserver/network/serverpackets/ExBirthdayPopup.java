@@ -18,14 +18,19 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+
 /**
  * @author Gnat
  **/
 
 public class ExBirthdayPopup extends L2GameServerPacket
 {
-	public ExBirthdayPopup()
+	private final L2PcInstance _activeChar;
+	
+	public ExBirthdayPopup(L2PcInstance character)
 	{
+		_activeChar = character;
 	}
 	
 	@Override
@@ -33,5 +38,6 @@ public class ExBirthdayPopup extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x90);
+		writeD(_activeChar.getObjectId());
 	}
 }

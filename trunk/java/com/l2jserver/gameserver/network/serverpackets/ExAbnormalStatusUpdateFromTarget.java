@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.Skill;
@@ -34,6 +35,7 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 	{
 		protected int _skillId;
 		protected int _level;
+		protected int _maxlevel;
 		protected int _duration;
 		protected int _caster;
 		
@@ -49,6 +51,7 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 			
 			_skillId = skill.getDisplayId();
 			_level = skill.getDisplayLevel();
+			_maxlevel = SkillData.getInstance().getMaxLevel(_skillId);
 			_duration = info.getTime();
 			_caster = casterId;
 		}
@@ -86,7 +89,16 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 		for (Effect info : _effects)
 		{
 			writeD(info._skillId);
-			writeH(info._level);
+			if (info._level < 100)
+			{
+				writeH(info._level);
+				writeH(0x00);
+			}
+			else
+			{
+				writeH(info._maxlevel);
+				writeH(info._level);
+			}
 			writeH(0x00); // Combo abnormal ?
 			writeH(info._duration);
 			writeD(info._caster);

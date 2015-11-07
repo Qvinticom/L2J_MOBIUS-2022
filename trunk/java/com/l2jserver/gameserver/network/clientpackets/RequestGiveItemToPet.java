@@ -114,7 +114,7 @@ public final class RequestGiveItemToPet extends L2GameClientPacket
 		
 		if (!pet.getInventory().validateWeight(item, _amount))
 		{
-			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS2);
+			player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
 			return;
 		}
 		

@@ -10,3 +10,4 @@ CREATE TABLE IF NOT EXISTS `character_shortcuts` (
   PRIMARY KEY (`charId`,`slot`,`page`,`class_index`),
   KEY `shortcut_id` (`shortcut_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE `character_shortcuts` MODIFY COLUMN `level` varchar(9);

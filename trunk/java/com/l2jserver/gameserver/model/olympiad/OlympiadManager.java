@@ -141,7 +141,7 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
+		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClassId());
 		if ((classed != null) && classed.contains(objId))
 		{
 			if (showMessage)
@@ -250,7 +250,7 @@ public class OlympiadManager
 					return false;
 				}
 				
-				List<Integer> classed = _classBasedRegisters.get(player.getBaseClass());
+				List<Integer> classed = _classBasedRegisters.get(player.getBaseClassId());
 				if (classed != null)
 				{
 					classed.add(charId);
@@ -259,7 +259,7 @@ public class OlympiadManager
 				{
 					classed = new CopyOnWriteArrayList<>();
 					classed.add(charId);
-					_classBasedRegisters.put(player.getBaseClass(), classed);
+					_classBasedRegisters.put(player.getBaseClassId(), classed);
 				}
 				
 				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE);
@@ -388,10 +388,10 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
+		final List<Integer> classed = _classBasedRegisters.get(noble.getBaseClassId());
 		if ((classed != null) && classed.remove(objId))
 		{
-			_classBasedRegisters.put(noble.getBaseClass(), classed);
+			_classBasedRegisters.put(noble.getBaseClassId(), classed);
 			
 			if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
 			{
@@ -428,7 +428,7 @@ public class OlympiadManager
 			return;
 		}
 		
-		final List<Integer> classed = _classBasedRegisters.get(player.getBaseClass());
+		final List<Integer> classed = _classBasedRegisters.get(player.getBaseClassId());
 		if ((classed != null) && classed.remove(objId))
 		{
 			return;
@@ -508,7 +508,7 @@ public class OlympiadManager
 		if (statDat == null)
 		{
 			statDat = new StatsSet();
-			statDat.set(Olympiad.CLASS_ID, noble.getBaseClass());
+			statDat.set(Olympiad.CLASS_ID, noble.getBaseClassId());
 			statDat.set(Olympiad.CHAR_NAME, noble.getName());
 			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);
 			statDat.set(Olympiad.COMP_DONE, 0);

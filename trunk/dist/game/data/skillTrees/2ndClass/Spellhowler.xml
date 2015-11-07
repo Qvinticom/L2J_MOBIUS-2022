@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="40" parentClassId="39">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="30" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="30" />
@@ -36,7 +31,6 @@
 		<skill skillName="Body To Mind" skillId="1157" skillLvl="2" getLevel="40" levelUpSp="30" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="1" getLevel="40" levelUpSp="30" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="1" getLevel="40" levelUpSp="30" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="44" levelUpSp="37" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="14" getLevel="44" levelUpSp="37" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="15" getLevel="44" levelUpSp="37" />
@@ -67,7 +61,6 @@
 		<skill skillName="Curse Poison" skillId="1168" skillLvl="4" getLevel="44" levelUpSp="37" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="2" getLevel="44" levelUpSp="37" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="2" getLevel="44" levelUpSp="37" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="16" getLevel="48" levelUpSp="67" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="17" getLevel="48" levelUpSp="67" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="18" getLevel="48" levelUpSp="67" />
@@ -101,7 +94,7 @@
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="3" getLevel="48" levelUpSp="67" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="3" getLevel="48" levelUpSp="67" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="3" getLevel="48" levelUpSp="67" />
-
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="19" getLevel="52" levelUpSp="96" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="20" getLevel="52" levelUpSp="96" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="21" getLevel="52" levelUpSp="96" />
@@ -137,7 +130,6 @@
 		<skill skillName="Body To Mind" skillId="1157" skillLvl="3" getLevel="52" levelUpSp="96" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="4" getLevel="52" levelUpSp="96" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="4" getLevel="52" levelUpSp="96" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="56" levelUpSp="105" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="23" getLevel="56" levelUpSp="105" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="24" getLevel="56" levelUpSp="105" />
@@ -173,7 +165,6 @@
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="4" getLevel="56" levelUpSp="105" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="5" getLevel="56" levelUpSp="105" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="5" getLevel="56" levelUpSp="105" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="25" getLevel="58" levelUpSp="121" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="26" getLevel="58" levelUpSp="121" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="24" getLevel="58" levelUpSp="121" />
@@ -202,7 +193,6 @@
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="6" getLevel="58" levelUpSp="121" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="6" getLevel="58" levelUpSp="121" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="1" getLevel="58" levelUpSp="121" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="27" getLevel="60" levelUpSp="151" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="28" getLevel="60" levelUpSp="151" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="26" getLevel="60" levelUpSp="151" />
@@ -230,7 +220,7 @@
 		<skill skillName="Shadow Flare" skillId="1267" skillLvl="7" getLevel="60" levelUpSp="151" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="7" getLevel="60" levelUpSp="151" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="7" getLevel="60" levelUpSp="151" />
-
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="29" getLevel="62" levelUpSp="200" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="30" getLevel="62" levelUpSp="200" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="28" getLevel="62" levelUpSp="200" />
@@ -259,7 +249,6 @@
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="8" getLevel="62" levelUpSp="200" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="8" getLevel="62" levelUpSp="200" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="2" getLevel="62" levelUpSp="200" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="64" levelUpSp="210" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="32" getLevel="64" levelUpSp="210" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="64" levelUpSp="210" />
@@ -287,7 +276,6 @@
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="5" getLevel="64" levelUpSp="210" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="9" getLevel="64" levelUpSp="210" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="9" getLevel="64" levelUpSp="210" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="33" getLevel="66" levelUpSp="310" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="34" getLevel="66" levelUpSp="310" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="32" getLevel="66" levelUpSp="310" />
@@ -317,7 +305,6 @@
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="10" getLevel="66" levelUpSp="310" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="10" getLevel="66" levelUpSp="310" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="3" getLevel="66" levelUpSp="310" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="68" levelUpSp="478" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="36" getLevel="68" levelUpSp="478" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="68" levelUpSp="478" />
@@ -346,7 +333,6 @@
 		<skill skillName="Aura Symphony" skillId="1288" skillLvl="1" getLevel="68" levelUpSp="478" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="11" getLevel="68" levelUpSp="478" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="11" getLevel="68" levelUpSp="478" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="70" levelUpSp="711" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="38" getLevel="70" levelUpSp="711" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="70" levelUpSp="711" />
@@ -374,7 +360,6 @@
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="12" getLevel="70" levelUpSp="711" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="12" getLevel="70" levelUpSp="711" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="4" getLevel="70" levelUpSp="711" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="72" levelUpSp="748" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="40" getLevel="72" levelUpSp="748" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="72" levelUpSp="748" />
@@ -403,7 +388,6 @@
 		<skill skillName="Curse Poison" skillId="1168" skillLvl="7" getLevel="72" levelUpSp="748" />
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="13" getLevel="72" levelUpSp="748" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="13" getLevel="72" levelUpSp="748" />
-
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="42" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="74" levelUpSp="1000" />
@@ -434,5 +418,7 @@
 		<skill skillName="Surrender To Wind" skillId="1074" skillLvl="14" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="14" getLevel="74" levelUpSp="1000" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="5" getLevel="74" levelUpSp="1000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 	</skillTree>
 </list>

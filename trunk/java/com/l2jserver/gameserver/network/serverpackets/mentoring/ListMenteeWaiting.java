@@ -69,7 +69,7 @@ public class ListMenteeWaiting extends L2GameServerPacket
 			if ((1 <= (PLAYERS_PER_PAGE * _page)) && (1 > (PLAYERS_PER_PAGE * (_page - 1))))
 			{
 				writeS(player.getName());
-				writeD(player.getActiveClass());
+				writeD(player.getActiveClassId());
 				writeD(player.getLevel());
 			}
 		}

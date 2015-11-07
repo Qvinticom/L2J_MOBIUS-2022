@@ -477,6 +477,76 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="isDebuff" val="true" />
 	</skill>
+	<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ores. --> 
+	<skill id="11134" levels="1" name="Meteor">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates a black swamp in the selected location, dealing great damage, and receiving $s1 of the target's damage as HP. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes $s2 Spirit Ores. --> 
+	<skill id="11135" levels="1" name="Black Pool">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ores. --> 
+	<skill id="11136" levels="1" name="Snow Storm">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ores. --> 
+	<skill id="11137" levels="1" name="Tornado">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Detonates the soul in the selected location to attack surrounding enemies. Increases target's PvP Damage. The effect increases as the level of the abnormal state increases. Consumes $s1 Spirit Ores. --> 
+	<skill id="11138" levels="1" name="Soul Barrage">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Engulfed in flames. --> 
+	<skill id="11139" levels="1" name="Ignite">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Bound to dark power. --> 
+	<skill id="11140" levels="1" name="Black Shackle">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- The cold is creeping up from your feet. --> 
+	<skill id="11141" levels="1" name="Freezing Slow">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Momentarily incurs damage. All speeds are decreased. --> 
+	<skill id="11142" levels="1" name="Damaged Area">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Momentarily incurs damage. All speeds are decreased. --> 
+	<skill id="11143" levels="1" name="Damaged Area">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 	<skill id="11142" levels="3" name="Damaged Area">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
@@ -494,6 +564,20 @@
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
+	</skill>
+	<!-- Speed has decreased due to the gust. --> 
+	<skill id="11144" levels="1" name="Wind Binding">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Cursed by a soul. --> 
+	<skill id="11145" levels="1" name="Soul Weakness">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11150" levels="1" name="Dark Curse">
 		<!-- AUTO GENERATED SKILL -->

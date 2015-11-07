@@ -41,7 +41,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 {
 	private static final String _C__9A_SETPRIVATESTORELISTBUY = "[C] 9A SetPrivateStoreListBuy";
 	
-	private static final int BATCH_LENGTH = 44; // length of the one item
+	private static final int BATCH_LENGTH = 46; // length of the one item
 	
 	private Item[] _items = null;
 	
@@ -81,6 +81,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 				defenseAttributes[i] = readH(); // Defense attributes
 			}
 			int appearanceId = readD(); // Appearance ID
+			readH(); // ?
 			boolean canUse = false;
 			for (L2ItemInstance item : player.getInventory().getItemsByItemId(itemId))
 			{

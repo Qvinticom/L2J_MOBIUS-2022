@@ -38,7 +38,7 @@ public class ExShowContactList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0xD3);
+		writeH(0xD4);
 		writeD(_contacts.size());
 		for (String name : _contacts)
 		{

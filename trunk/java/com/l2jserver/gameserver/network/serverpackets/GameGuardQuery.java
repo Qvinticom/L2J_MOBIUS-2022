@@ -35,9 +35,9 @@ public class GameGuardQuery extends L2GameServerPacket
 	public void writeImpl()
 	{
 		writeC(0x74);
-		writeD(0x27533DD9);
-		writeD(0x2E72A51D);
-		writeD(0x2017038B);
-		writeD(0xC35B1EA3);
+		writeD(0xE1B752B6);
+		writeD(0x51AFEF3A);
+		writeD(0xB1180C49);
+		writeD(0x08F4F7D7);
 	}
 }

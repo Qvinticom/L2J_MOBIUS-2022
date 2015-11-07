@@ -1308,7 +1308,7 @@ public final class Skill implements IIdentifiable
 				{
 					if (effect.isInstant())
 					{
-						if (applyInstantEffects && effect.calcSuccess(info))
+						if (applyInstantEffects && (getBlowChance() > 0 ? BlowSuccess.getInstance().get(info.getEffector(), info.getSkill()) : effect.calcSuccess(info)))
 						{
 							effect.onStart(info);
 						}

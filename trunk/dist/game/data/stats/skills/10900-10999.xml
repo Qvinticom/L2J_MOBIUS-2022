@@ -95,6 +95,41 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- For $s1, increases P. Atk. by $s2, P. Def/M. Def. by $s3, and increases Max HP/CP by $s4. Consumes $s5 Soulstones. --> 
+	<skill id="10952" levels="1" name="Survival Instinct">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For $s1, increases Atk. Spd. by $s2, Skill Power by $s3, P. Skill Critical Rate by $s4, and Skill Critical Damage by $s5. Consumes $s6 Soulstones. --> 
+	<skill id="10953" levels="1" name="Hunting Instinct">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For $s1, increases Skill Power by $s2, P. Skill Critical Rate by $s3, and Skill Critical Damage by $s4. Consumes $s5 Soulstones. --> 
+	<skill id="10954" levels="1" name="Counter Instinct">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- For $s1, increases PvP Damage by $s2, and Skill Power by $s3. Consumes $s4 Soulstones. --> 
+	<skill id="10955" levels="1" name="Bloody Instinct">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases the number of buffs an individual can receive by 1. --> 
+	<skill id="10956" levels="1" name="Divine Expansion">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 	<skill id="10997" levels="1" name="Archer - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />

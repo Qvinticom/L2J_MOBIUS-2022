@@ -86,6 +86,7 @@ import com.l2jserver.gameserver.model.actor.tasks.character.QueuedMagicUseTask;
 import com.l2jserver.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jserver.gameserver.model.actor.transform.Transform;
 import com.l2jserver.gameserver.model.actor.transform.TransformTemplate;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.entity.Instance;
@@ -119,6 +120,7 @@ import com.l2jserver.gameserver.model.options.OptionsSkillHolder;
 import com.l2jserver.gameserver.model.options.OptionsSkillType;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BlowSuccess;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.CommonSkill;
 import com.l2jserver.gameserver.model.skills.EffectScope;
@@ -1853,7 +1855,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (!destroyItemByItemId("Consume", skill.getItemConsumeId(), skill.getItemConsumeCount(), null, true))
 				{
-					getActingPlayer().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+					getActingPlayer().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
 					abortCast();
 					return;
 				}
@@ -1880,7 +1882,18 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
 		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
-		broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
+		if (skill.getBlowChance() > 0)
+		{
+			for (AbstractEffect effect : skill.getEffects(EffectScope.GENERAL))
+			{
+				BlowSuccess.getInstance().set(this, skill, effect.calcSuccess(new BuffInfo(this, target, skill)));
+			}
+			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay, BlowSuccess.getInstance().get(this, skill)));
+		}
+		else
+		{
+			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
+		}
 		
 		// Send a system message to the player.
 		if (isPlayer() && !skill.isAbnormalInstant())

@@ -129,7 +129,7 @@ public final class RequestDropItem extends L2GameClientPacket
 		if (activeChar.isFishing())
 		{
 			// You can't mount, dismount, break and drop items while fishing
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING2);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
 			return;
 		}
 		if (activeChar.isFlying())

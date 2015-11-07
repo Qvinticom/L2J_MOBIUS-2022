@@ -784,7 +784,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				}
 				else if (tOneCrash && tTwoCrash)
 				{
-					stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
+					stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR));
 					
 					for (int i = _teamOneSize; --i >= 0;)
 					{
@@ -936,7 +936,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 			}
 			else
 			{
-				stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE));
+				stadium.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR));
 				
 				for (int i = 0; i < _teamOneSize; i++)
 				{

@@ -42,7 +42,7 @@ public class L2FriendStatus extends L2GameServerPacket
 	public L2FriendStatus(L2PcInstance player, int type)
 	{
 		_objectId = player.getObjectId();
-		_classId = player.getActiveClass();
+		_classId = player.getActiveClassId();
 		_level = player.getLevel();
 		_name = player.getName();
 		_type = type;

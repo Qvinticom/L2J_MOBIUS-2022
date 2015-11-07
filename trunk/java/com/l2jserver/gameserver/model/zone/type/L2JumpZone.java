@@ -71,6 +71,11 @@ public class L2JumpZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
+		if (!isInsideZone(character))
+		{
+			return;
+		}
+		
 		if (character.isPlayer())
 		{
 			character.setInsideZone(ZoneId.JUMP, true);

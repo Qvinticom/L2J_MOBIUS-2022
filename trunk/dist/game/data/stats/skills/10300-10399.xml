@@ -697,4 +697,74 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
+	<!-- Engages target in 1:1 combat. All damage from the target is ignored. --> 
+	<skill id="10331" levels="1" name="Last Man Standing">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. by $s2 for $s1 when a dualsword/dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by $s3. Consumes $s4 Soulstones. --> 
+	<skill id="10332" levels="1" name="Duelist Wrath">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. By $s2 for $s1 when a spear is equipped. Range of normal attacks increases by $s3 and has a $s4 chance to Stun when striking. Consumes $s5 Soulstones. --> 
+	<skill id="10333" levels="1" name="Winged Spear">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. by $s2 for $s1 when a two-handed sword/two-handed blunt weapon is equipped. Attack $s3 enemies at the same time with a regular attack. Consumes $s4 Soulstones. --> 
+	<skill id="10334" levels="1" name="Furious Slasher">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. by $s2 and P. Critical Damage by $s3 for $s1 when a fist weapon is equipped. Has $s4 chance to decrease Fist Weapon Resistance by $s5 when striking. Consumes $s6 Soulstones. --> 
+	<skill id="10335" levels="1" name="Furious Fist">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases power when using the Rush Impact. --> 
+	<skill id="10336" levels="1" name="Infinity Rush">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- P. Atk. + $s1 and P. Critical Damage + $s2. --> 
+	<skill id="10337" levels="1" name="Infinity Rush">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Decreases target's resistance to Fist Weapons by 30%%. --> 
+	<skill id="10338" levels="1" name="Punch Drunk">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Stuns target for 3 seconds. --> 
+	<skill id="10339" levels="1" name="Winged Spear - Stun">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Attacks enemies in front with $s1 Power added to P. Atk. If the target is stunned, attacks with $s2 power. Can be used while a sword or blunt weapon is equipped. Consumes $s3 Soulstone. --> 
+	<skill id="10340" levels="1" name="Blade Slasher">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

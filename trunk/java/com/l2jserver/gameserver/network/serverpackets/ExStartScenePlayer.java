@@ -36,5 +36,6 @@ public class ExStartScenePlayer extends L2GameServerPacket
 		writeC(0xFE);
 		writeH(0x9A);
 		writeD(_movieId);
+		writeD(-1);
 	}
 }

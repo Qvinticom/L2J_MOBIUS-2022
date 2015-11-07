@@ -424,4 +424,270 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="isMagic" val="4" />
 	</skill>
+	<!-- Buff filled with Pippi's love. Acquired XP/SP through hunting increases by $s2 for $s1. Once the effect wears off, receive Pippi's Fortune Pocket - Stage $s3. <Note:> Cannot receive item if you are dead or don't have space in your inventory. Deleted when changing main/dual/sub classes. --> 
+	<skill id="18265" levels="1" name="Pippi's Love">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- none --> 
+	<skill id="18266" levels="1" name="Spellbook: Fate of the Exalted">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Shaper Focus. --> 
+	<skill id="18270" levels="1" name="Apocalypse Shaper Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18706" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Cutter Focus. --> 
+	<skill id="18271" levels="1" name="Apocalypse Cutter Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18708" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Slasher Focus. --> 
+	<skill id="18272" levels="1" name="Apocalypse Slasher Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18710" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Avenger Focus. --> 
+	<skill id="18273" levels="1" name="Apocalypse Avenger Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18715" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Fighter Focus. --> 
+	<skill id="18274" levels="1" name="Apocalypse Fighter Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18716" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Stormer Damage Up. --> 
+	<skill id="18275" levels="1" name="Apocalypse Stormer Damage Up">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18721" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Thrower Focus. --> 
+	<skill id="18276" levels="1" name="Apocalypse Thrower Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18723" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Shooter Focus. --> 
+	<skill id="18277" levels="1" name="Apocalypse Shooter Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18725" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Buster Acumen. --> 
+	<skill id="18278" levels="1" name="Apocalypse Buster Acumen">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18728" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Caster Acumen. --> 
+	<skill id="18279" levels="1" name="Apocalypse Caster Acumen">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18732" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Retributer Acumen. --> 
+	<skill id="18280" levels="1" name="Apocalypse Retributer Acumen">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18735" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Dualsword Damage Up. --> 
+	<skill id="18281" levels="1" name="Apocalypse Dualsword Damage Up">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18740" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Dual Dagger Focus. --> 
+	<skill id="18282" levels="1" name="Apocalypse Dual Dagger Focus">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18741" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Creates a + 4/6/9/11 enchanted Apocalypse Dual Blunt Weapon Damage Up. --> 
+	<skill id="18283" levels="1" name="Apocalypse Dual Blunt Weapon Damage Up">
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="Restoration">
+				<param itemId="18745" itemCount="1" />
+			</effect>
+		</for>
+	</skill>
 </list>

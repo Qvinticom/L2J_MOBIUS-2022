@@ -25,7 +25,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="8501" level="90" type="L2Npc" name="Ruben">
+	<npc id="8501" level="90" type="L2Npc" name="Ruben" title="Person of Influence">
 		<race>DWARF</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
@@ -472,7 +472,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="8520" level="90" type="L2Npc" name="Ruben">
+	<npc id="8520" level="90" type="L2Npc" name="Ruben" title="Spectator of Influence">
 		<race>DWARF</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
@@ -1409,7 +1409,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="8568" level="99" type="L2Npc" name="Katura Fire Altar">
+	<npc id="8568" level="99" type="L2Npc" name="Katura Altar of Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1426,7 +1426,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="8569" level="99" type="L2Npc" name="Katura Water Altar">
+	<npc id="8569" level="99" type="L2Npc" name="Katura Altar of Water">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1443,7 +1443,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="8570" level="99" type="L2Npc" name="Katura Dark Altar">
+	<npc id="8570" level="99" type="L2Npc" name="Katura Altar of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1460,7 +1460,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="8571" level="99" type="L2Npc" name="Katura Earth Altar">
+	<npc id="8571" level="99" type="L2Npc" name="Katura Altar of Earth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>

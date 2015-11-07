@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sigel Pheonix Knight -->
 	<skillTree type="classSkillTree" classId="148" parentClassId="90">
-		<!-- Expertise Skills -->
-		<skill skillName="Expertise S80" skillId="239" skillLvl="6" getLevel="80" autoGet="true" />
-		<skill skillName="Expertise S84" skillId="239" skillLvl="7" getLevel="84" autoGet="true" />
+		<skill skillName="Lucky" skillId="194" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Expertise R" skillId="239" skillLvl="8" getLevel="85" autoGet="true" />
 		<skill skillName="Expertise R95" skillId="239" skillLvl="9" getLevel="95" autoGet="true" />
 		<skill skillName="Expertise R99" skillId="239" skillLvl="10" getLevel="99" autoGet="true" />
+		<skill skillName="Common Craft" skillId="1322" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
 		
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" />
 		<skill skillName="Sigel Aura" skillId="1927" skillLvl="1" getLevel="85" autoGet="true" />
@@ -91,6 +91,11 @@
 			<removeSkill id="278" />
 			<removeSkill id="22" />
 		</skill>
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -111,7 +116,6 @@
 		<skill skillName="Summon Golden Lion" skillId="10040" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="283" />
 		</skill>
-		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
 		<skill skillName="Last Judgment" skillId="10009" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="400" />
 			<removeSkill id="401" />
@@ -165,7 +169,6 @@
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Mass Shackling" skillId="404" skillLvl="12" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Summon Knight Cubic" skillId="10043" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="12" getLevel="90" autoGet="true" />
 		<skill skillName="Last Judgment" skillId="10009" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="3" getLevel="90" levelUpSp="370000" />
@@ -208,7 +211,6 @@
 		<skill skillName="Mass Shackling" skillId="404" skillLvl="13" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Gust Blade" skillId="10013" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Summon Golden Lion" skillId="10040" skillLvl="5" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="13" getLevel="95" autoGet="true" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Chain Hydra" skillId="10016" skillLvl="4" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Spike Shield" skillId="10021" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -246,7 +248,6 @@
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mass Shackling" skillId="404" skillLvl="14" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Gust Blade" skillId="10013" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Chain Hydra" skillId="10016" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="6" getLevel="99" levelUpSp="5000000" />
@@ -270,5 +271,113 @@
 		</skill>
 		<!-- Mount -->
 		<skill skillName="Summon Royal Aegis" skillId="8600" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Inventory Increase" skillId="1571" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Weight Increase" skillId="1572" skillLvl="1" getLevel="85" autoGet="true" />
+		
+		<skill skillName="Sacrifice" skillId="69" skillLvl="35" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Sacrifice" skillId="69" skillLvl="36" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Sacrifice" skillId="69" skillLvl="37" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Mass Shackling" skillId="404" skillLvl="15" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Mass Shackling" skillId="404" skillLvl="16" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Mass Shackling" skillId="404" skillLvl="17" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Heavy Armor Mastery" skillId="10002" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Shield Mastery" skillId="10003" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior M. Def." skillId="10004" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10005" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Shield Charge" skillId="10008" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Shield Charge" skillId="10008" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Shield Charge" skillId="10008" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Last Judgment" skillId="10009" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Last Judgment" skillId="10009" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Last Judgment" skillId="10009" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Justice Punishment" skillId="10010" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Justice Punishment" skillId="10010" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Justice Punishment" skillId="10010" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Shield Impact" skillId="10011" skillLvl="6" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Shield Impact" skillId="10011" skillLvl="7" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Shield Impact" skillId="10011" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Shield Wave" skillId="10012" skillLvl="8" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Shield Wave" skillId="10012" skillLvl="9" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Shield Wave" skillId="10012" skillLvl="10" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Gust Blade" skillId="10013" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Gust Blade" skillId="10013" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Gust Blade" skillId="10013" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Chain Galaxy" skillId="10014" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Chain Galaxy" skillId="10014" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Chain Galaxy" skillId="10014" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Chain Hydra" skillId="10016" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Chain Hydra" skillId="10016" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Chain Hydra" skillId="10016" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Protection of Faith" skillId="10019" skillLvl="3" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Protection of Faith" skillId="10019" skillLvl="4" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Protection of Faith" skillId="10019" skillLvl="5" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Focus Shield" skillId="10020" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Focus Shield" skillId="10020" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Focus Shield" skillId="10020" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Spike Shield" skillId="10021" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Spike Shield" skillId="10021" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Spike Shield" skillId="10021" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="King of Beasts" skillId="10023" skillLvl="3" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="King of Beasts" skillId="10023" skillLvl="4" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="King of Beasts" skillId="10023" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior Aggression" skillId="10026" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Superior Aggression" skillId="10026" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Superior Aggression" skillId="10026" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="6" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="7" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Riot Shield" skillId="10097" skillLvl="4" getLevel="101" levelUpSp="211440000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Riot Shield" skillId="10097" skillLvl="5" getLevel="103" levelUpSp="608946501">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Riot Shield" skillId="10097" skillLvl="6" getLevel="105" levelUpSp="1753765925">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Paladin's Aura" skillId="10104" skillLvl="1" getLevel="101" levelUpSp="211440000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Expansion" skillId="10956" skillLvl="1" getLevel="100" levelUpSp="88099899">
+			<item id="39738" count="8" />
+		</skill>
 	</skillTree>
 </list>

@@ -18,6 +18,9 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
@@ -29,6 +32,7 @@ public class ExBuySellList extends AbstractItemPacket
 	private L2ItemInstance[] _sellList = null;
 	private L2ItemInstance[] _refundList = null;
 	private final boolean _done;
+	private final List<L2ItemInstance> _items = new ArrayList<>();
 	
 	public ExBuySellList(L2PcInstance player, boolean done)
 	{
@@ -38,6 +42,14 @@ public class ExBuySellList extends AbstractItemPacket
 			_refundList = player.getRefund().getItems();
 		}
 		_done = done;
+		
+		for (L2ItemInstance item : player.getInventory().getItems())
+		{
+			if (!item.isQuestItem())
+			{
+				_items.add(item);
+			}
+		}
 	}
 	
 	@Override
@@ -46,7 +58,7 @@ public class ExBuySellList extends AbstractItemPacket
 		writeC(0xFE);
 		writeH(0xB8);
 		writeD(0x01);
-		writeD(0x00); // TODO: Find me
+		writeD(_items.size());
 		
 		if ((_sellList != null))
 		{

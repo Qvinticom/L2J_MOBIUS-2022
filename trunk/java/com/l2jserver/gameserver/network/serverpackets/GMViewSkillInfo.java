@@ -48,7 +48,16 @@ public class GMViewSkillInfo extends L2GameServerPacket
 		for (Skill skill : _skills)
 		{
 			writeD(skill.isPassive() ? 1 : 0);
-			writeD(skill.getDisplayLevel());
+			if (skill.getDisplayLevel() < 100)
+			{
+				writeD(skill.getDisplayLevel());
+			}
+			else
+			{
+				int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
+				writeH(maxLevel);
+				writeH(skill.getDisplayLevel());
+			}
 			writeD(skill.getDisplayId());
 			writeD(0x00);
 			writeC(isDisabled && skill.isClanSkill() ? 1 : 0);

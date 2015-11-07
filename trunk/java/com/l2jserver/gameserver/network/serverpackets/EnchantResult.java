@@ -63,7 +63,7 @@ public class EnchantResult extends L2GameServerPacket
 		writeD(_enchantLevel);
 		for (int option : _enchantOptions)
 		{
-			writeH(option);
+			writeD(option);
 		}
 	}
 }

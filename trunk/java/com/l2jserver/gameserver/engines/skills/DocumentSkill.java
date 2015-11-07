@@ -280,7 +280,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets1[i] = new StatsSet();
 			_currentSkill.enchsets1[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets1[i].set("level", i + 101);
+			_currentSkill.enchsets1[i].set("level", i + 1001);
 			_currentSkill.enchsets1[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -309,7 +309,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets2[i] = new StatsSet();
 			_currentSkill.enchsets2[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets2[i].set("level", i + 201);
+			_currentSkill.enchsets2[i].set("level", i + 2001);
 			_currentSkill.enchsets2[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -338,7 +338,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets3[i] = new StatsSet();
 			_currentSkill.enchsets3[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets3[i].set("level", i + 301);
+			_currentSkill.enchsets3[i].set("level", i + 3001);
 			_currentSkill.enchsets3[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -367,7 +367,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets4[i] = new StatsSet();
 			_currentSkill.enchsets4[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets4[i].set("level", i + 401);
+			_currentSkill.enchsets4[i].set("level", i + 4001);
 			_currentSkill.enchsets4[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -396,7 +396,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets5[i] = new StatsSet();
 			_currentSkill.enchsets5[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets5[i].set("level", i + 501);
+			_currentSkill.enchsets5[i].set("level", i + 5001);
 			_currentSkill.enchsets5[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -425,7 +425,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets6[i] = new StatsSet();
 			_currentSkill.enchsets6[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets6[i].set("level", i + 601);
+			_currentSkill.enchsets6[i].set("level", i + 6001);
 			_currentSkill.enchsets6[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -454,7 +454,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets7[i] = new StatsSet();
 			_currentSkill.enchsets7[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets7[i].set("level", i + 701);
+			_currentSkill.enchsets7[i].set("level", i + 7001);
 			_currentSkill.enchsets7[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -483,7 +483,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets8[i] = new StatsSet();
 			_currentSkill.enchsets8[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets8[i].set("level", i + 801);
+			_currentSkill.enchsets8[i].set("level", i + 8001);
 			_currentSkill.enchsets8[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())
@@ -512,7 +512,7 @@ public class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets9[i] = new StatsSet();
 			_currentSkill.enchsets9[i].set("skill_id", _currentSkill.id);
-			_currentSkill.enchsets9[i].set("level", i + 901);
+			_currentSkill.enchsets9[i].set("level", i + 9001);
 			_currentSkill.enchsets9[i].set("name", _currentSkill.name);
 			
 			for (n = first; n != null; n = n.getNextSibling())

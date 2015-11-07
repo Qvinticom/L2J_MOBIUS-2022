@@ -34,13 +34,22 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 	private int _type;
 	private int _skillId;
 	private int _skillLvl;
+	private int _fullLvl;
 	
 	@Override
 	protected void readImpl()
 	{
 		_type = readD();
 		_skillId = readD();
-		_skillLvl = readD();
+		_fullLvl = readD();
+		if (_fullLvl < 100)
+		{
+			_skillLvl = _fullLvl;
+		}
+		else
+		{
+			_skillLvl = _fullLvl >> 16;
+		}
 	}
 	
 	@Override
@@ -66,7 +75,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		}
 		else if (_type == 2)
 		{
-			reqSkillLvl = _skillLvl + 1; // untrain
+			return;
 		}
 		else if (_type == 3)
 		{
@@ -82,7 +91,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		}
 		
 		// if reqlvl is 100,200,.. check base skill lvl enchant
-		if ((reqSkillLvl % 100) == 0)
+		if ((reqSkillLvl % 1000) == 0)
 		{
 			L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null)
@@ -102,7 +111,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		else if (playerSkillLvl != reqSkillLvl)
 		{
 			// change route is different skill lvl but same enchant
-			if ((_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
+			if ((_type == 3) && ((playerSkillLvl % 1000) != (_skillLvl % 1000)))
 			{
 				return;
 			}

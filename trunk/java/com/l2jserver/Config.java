@@ -173,6 +173,7 @@ public final class Config
 	public static int MAX_EVASION;
 	public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
 	public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
+	public static byte PLAYER_MAXIMUM_LEVEL;
 	public static byte MAX_SUBCLASS;
 	public static byte BASE_SUBCLASS_LEVEL;
 	public static byte BASE_DUALCLASS_LEVEL;
@@ -251,7 +252,7 @@ public final class Config
 	public static boolean PETITIONING_ALLOWED;
 	public static int MAX_PETITIONS_PER_PLAYER;
 	public static int MAX_PETITIONS_PENDING;
-	public static boolean ALT_GAME_FREE_TELEPORT;
+	public static boolean FREE_TELEPORTING;
 	public static int DELETE_DAYS;
 	public static float ALT_GAME_EXPONENT_XP;
 	public static float ALT_GAME_EXPONENT_SP;
@@ -1523,6 +1524,8 @@ public final class Config
 			MAX_EVASION = character.getInt("MaxEvasion", 250);
 			MIN_ABNORMAL_STATE_SUCCESS_RATE = character.getInt("MinAbnormalStateSuccessRate", 10);
 			MAX_ABNORMAL_STATE_SUCCESS_RATE = character.getInt("MaxAbnormalStateSuccessRate", 90);
+			PLAYER_MAXIMUM_LEVEL = character.getByte("MaximumPlayerLevel", (byte) 99);
+			PLAYER_MAXIMUM_LEVEL++; // Player maximum level calculations always require +1.
 			MAX_SUBCLASS = (byte) Math.min(3, character.getByte("MaxSubclass", (byte) 3));
 			BASE_SUBCLASS_LEVEL = character.getByte("BaseSubclassLevel", (byte) 40);
 			BASE_DUALCLASS_LEVEL = character.getByte("BaseDualclassLevel", (byte) 85);
@@ -1696,7 +1699,7 @@ public final class Config
 			PETITIONING_ALLOWED = character.getBoolean("PetitioningAllowed", true);
 			MAX_PETITIONS_PER_PLAYER = character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = character.getInt("MaxPetitionsPending", 25);
-			ALT_GAME_FREE_TELEPORT = character.getBoolean("AltFreeTeleporting", false);
+			FREE_TELEPORTING = character.getBoolean("FreeTeleporting", false);
 			DELETE_DAYS = character.getInt("DeleteCharAfterDays", 1);
 			ALT_GAME_EXPONENT_XP = character.getFloat("AltGameExponentXp", 0);
 			ALT_GAME_EXPONENT_SP = character.getFloat("AltGameExponentSp", 0);
@@ -3552,8 +3555,8 @@ public final class Config
 			case "castlezonefameaquirepoints":
 				CASTLE_ZONE_FAME_AQUIRE_POINTS = Integer.parseInt(pValue);
 				break;
-			case "altfreeteleporting":
-				ALT_GAME_FREE_TELEPORT = Boolean.parseBoolean(pValue);
+			case "freeteleporting":
+				FREE_TELEPORTING = Boolean.parseBoolean(pValue);
 				break;
 			case "altsubclasswithoutquests":
 				ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Boolean.parseBoolean(pValue);

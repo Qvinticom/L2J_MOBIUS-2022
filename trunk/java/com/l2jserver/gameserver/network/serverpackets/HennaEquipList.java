@@ -63,7 +63,7 @@ public class HennaEquipList extends L2GameServerPacket
 				writeQ(henna.getWearCount()); // amount of dyes required
 				writeQ(henna.getWearFee()); // amount of Adena required
 				writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
-				writeD(0x00); // TODO: Find me!
+				writeD(0x00);
 			}
 		}
 	}

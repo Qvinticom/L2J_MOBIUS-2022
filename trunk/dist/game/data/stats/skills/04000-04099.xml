@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<!-- 5 Talisman can be equipped. --> 
+	<skill id="4000" levels="1" name="Returning Warrior's Bracelet">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 	<skill id="4001" levels="12" name="Gust">
 		<!-- Freya retail confirmed -->
 		<table name="#hitTime"> 4000 4000 4000 4000 4000 4000 4000 1000 1000 1000 1000 1000 </table>

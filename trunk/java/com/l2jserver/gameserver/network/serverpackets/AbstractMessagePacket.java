@@ -414,12 +414,8 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				}
 				
 				case TYPE_ITEM_NAME:
-				case TYPE_CASTLE_NAME:
 				case TYPE_INT_NUMBER:
 				case TYPE_NPC_NAME:
-				case TYPE_ELEMENT_NAME:
-				case TYPE_SYSTEM_STRING:
-				case TYPE_INSTANCE_NAME:
 				case TYPE_DOOR_NAME:
 				{
 					writeD(param.getIntValue());
@@ -429,8 +425,25 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				case TYPE_SKILL_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					writeD(array[0]); // SkillId
-					writeH(array[1]); // SkillLevel
+					final int _skillId = array[0];
+					final int _skillLevel = array[1];
+					writeD(_skillId); // SkillId
+					if (_skillLevel < 100)
+					{
+						writeH(_skillLevel); // SkillLevel
+						writeH(0);
+					}
+					else if (_skillLevel > 10000)
+					{
+						writeH((short) _skillLevel);
+						writeH(_skillLevel >> 16);
+					}
+					else
+					{
+						int _maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+						writeH(_maxLevel);
+						writeH(_skillLevel);
+					}
 					break;
 				}
 				
@@ -444,8 +457,16 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 					break;
 				}
 				case TYPE_CLASS_ID:
+				case TYPE_CASTLE_NAME:
+				case TYPE_INSTANCE_NAME:
+				case TYPE_SYSTEM_STRING:
 				{
 					writeH(param.getIntValue());
+					break;
+				}
+				case TYPE_ELEMENT_NAME:
+				{
+					writeC(param.getIntValue());
 					break;
 				}
 			}
@@ -504,6 +525,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 					final int[] array = param.getIntArrayValue();
 					out.println(array[0]); // SkillId
 					out.println(array[1]); // SkillLevel
+					out.println(array[2]);
 					break;
 				}
 				
@@ -615,8 +637,16 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 				case TYPE_SKILL_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					final Skill skill = SkillData.getInstance().getSkill(array[0], array[1]);
-					params[i] = skill == null ? "Unknown" : skill.getName();
+					if (array[1] < 10000)
+					{
+						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1]);
+						params[i] = skill == null ? "Unknown" : skill.getName();
+					}
+					else
+					{
+						final Skill skill = SkillData.getInstance().getSkill(array[0], array[1] >> 16);
+						params[i] = skill == null ? "Unknown" : skill.getName();
+					}
 					break;
 				}
 				

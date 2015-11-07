@@ -59,17 +59,17 @@ public final class L2EnchantSkillLearn
 	
 	public static int getEnchantRoute(int level)
 	{
-		return (int) Math.floor(level / 100);
+		return (int) Math.floor(level / 1000);
 	}
 	
 	public static int getEnchantIndex(int level)
 	{
-		return (level % 100) - 1;
+		return (level % 1000) - 1;
 	}
 	
 	public static int getEnchantType(int level)
 	{
-		return ((level - 1) / 100) - 1;
+		return ((level - 1) / 1000) - 1;
 	}
 	
 	public L2EnchantSkillGroup getFirstRouteGroup()
@@ -84,7 +84,7 @@ public final class L2EnchantSkillLearn
 	
 	public int getMinSkillLevel(int level)
 	{
-		if ((level % 100) == 1)
+		if ((level % 1000) == 1)
 		{
 			return _baseLvl;
 		}

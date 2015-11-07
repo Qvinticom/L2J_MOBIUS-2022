@@ -53,6 +53,9 @@ import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchant
 import com.l2jserver.gameserver.network.clientpackets.compound.RequestNewEnchantTry;
 import com.l2jserver.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jserver.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
+import com.l2jserver.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
+import com.l2jserver.gameserver.network.clientpackets.dailymission.RequestTodoList;
+import com.l2jserver.gameserver.network.clientpackets.dailymission.RequestTodoListHTML;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDel;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
@@ -466,6 +469,9 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 						break;
 					case 0x67:
 						msg = new RequestPledgeCrest();
+						break;
+					case 0x6a:
+						// New Request Friend List
 						break;
 					case 0x6b: // RequestSendL2FriendSay
 						msg = new RequestSendFriendMsg();
@@ -937,7 +943,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestExEnchantItemAttribute();
 								break;
 							case 0x33:
-								msg = new RequestGotoLobby();
+								// already in AUTHED
 								break;
 							case 0x35:
 								msg = new MoveToLocationAirShip();
@@ -986,7 +992,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestExEnchantSkillInfoDetail();
 								break;
 							case 0x44:
-								msg = new RequestExMagicSkillUseGround();
+								// already in 0x41
 								break;
 							case 0x45:
 								msg = new RequestFortressMapInfo();
@@ -1664,6 +1670,57 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								break;
 							case 0x104:
 								msg = new RequestExAutoFish();
+								break;
+							case 0x105:
+								// msg = new RequestVipAttendanceItemList();
+								break;
+							case 0x106:
+								// msg = new RequestVipAttendanceCheck();
+								break;
+							case 0x107:
+								// msg = new RequestItemEnsoul();
+								break;
+							case 0x108:
+								// msg = new RequestVipProductList();
+								break;
+							case 0x109:
+								// msg = new RequestVipLuckyGameInfo();
+								break;
+							case 0x10A:
+								// msg = new RequestVipLuckyGameItemList();
+								break;
+							case 0x10B:
+								// msg = new RequestVipLuckyGameBonus();
+								break;
+							case 0x10C:
+								// msg = new ExRequestVipInfo();
+								break;
+							case 0x10D:
+								// msg = new RequestCaptchaAnswer();
+								break;
+							case 0x10E:
+								// msg = new RequestRefreshCaptchaImage();
+								break;
+							case 0x10F:
+								msg = new RequestTodoList();
+								break;
+							case 0x110:
+								msg = new RequestTodoListHTML();
+								break;
+							case 0x111:
+								msg = new RequestOneDayRewardReceive();
+								break;
+							case 0x112:
+								// msg = new RequestPledgeBonusOpen();
+								break;
+							case 0x113:
+								// msg = new RequestPledgeBonusRewardList();
+								break;
+							case 0x114:
+								// msg = new RequestPledgeBonusReward();
+								break;
+							case 0x115:
+								// msg = new RequestSSOAuthnToken();
 								break;
 							default:
 								printDebugDoubleOpcode(opcode, id2, buf, state, client);

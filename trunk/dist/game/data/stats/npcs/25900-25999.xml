@@ -766,33 +766,6 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="25923" level="99" type="L2RaidBoss" name="Nerva Chief Turakan" title="Raid Boss">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<parameters>
-			<minions name="Privates">
-				<npc id="25924" count="2" respawnTime= "3" weightPoint="4" />
-			</minions>
-		</parameters>
-		<race>ETC</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="23023279" hpRegen="7.5" mp="23023279" mpRegen="2.7" />
-			<attack physical="500000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4320" magical="4885" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<hit_time>500</hit_time>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27.5" />
-		</collision>
-	</npc>
 	<npc id="25924" level="99" type="L2Npc" name="Nerva Orc Linebreaker">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>

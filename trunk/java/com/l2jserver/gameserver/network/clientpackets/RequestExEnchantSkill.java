@@ -52,13 +52,22 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 	
 	private int _skillId;
 	private int _skillLvl;
+	private int _fullLvl;
 	
 	@Override
 	protected void readImpl()
 	{
 		_type = readD();
 		_skillId = readD();
-		_skillLvl = readD();
+		_fullLvl = readD();
+		if (_fullLvl < 100)
+		{
+			_skillLvl = _fullLvl;
+		}
+		else
+		{
+			_skillLvl = _fullLvl >> 16;
+		}
 	}
 	
 	@Override
@@ -104,6 +113,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		{
 			return;
 		}
+		final int _elvl = ((_skillLvl % 100) - 1) / 10;
 		if (_type == 0) // enchant
 		{
 			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
@@ -117,8 +127,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			final int requiredSp = esd.getSpCost() * costMultiplier;
 			if (player.getSp() >= requiredSp)
 			{
-				// only first lvl requires book
-				final boolean usesBook = (_skillLvl % 100) == 1; // 101, 201, 301 ...
+				final boolean usesBook = true;
 				final int reqItemId;
 				if (player.getClassId().level() == 3)
 				{
@@ -126,7 +135,18 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				else
 				{
-					reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+					if (_elvl == 0)
+					{
+						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
+					}
+					else if (_elvl == 1)
+					{
+						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V2;
+					}
+					else
+					{
+						reqItemId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK_V3;
+					}
 				}
 				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 				
@@ -188,7 +208,15 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				}
 				else
 				{
-					player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
+					if (player.getClassId().level() == 3)
+					{
+						player.addSkill(SkillData.getInstance().getSkill(_skillId, s.getBaseLevel()), true);
+					}
+					else
+					{
+						final int _clvl = ((((_skillLvl % 100) - 1) / 10) * 10) + ((_skillLvl / 1000) * 1000);
+						player.addSkill(SkillData.getInstance().getSkill(_skillId, _clvl), true);
+					}
 					player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
 					player.sendPacket(ExEnchantSkillResult.valueOf(false));
 					
@@ -229,7 +257,18 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+				if (_elvl == 0)
+				{
+					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V2;
+				}
+				else
+				{
+					reqItemId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK_V3;
+				}
 			}
 			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
@@ -333,104 +372,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		}
 		else if (_type == 2) // untrain
 		{
-			if ((_skillLvl % 100) == 0)
-			{
-				_skillLvl = s.getBaseLevel();
-			}
-			
-			final int reqItemId;
-			if (player.getClassId().level() == 3)
-			{
-				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK_OLD;
-			}
-			else
-			{
-				reqItemId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
-			}
-			
-			final int beforeUntrainSkillLevel = player.getSkillLevel(_skillId);
-			if (((beforeUntrainSkillLevel - 1) != _skillLvl) && (((beforeUntrainSkillLevel % 100) != 1) || (_skillLvl != s.getBaseLevel())))
-			{
-				return;
-			}
-			
-			EnchantSkillHolder esd = s.getEnchantSkillHolder(beforeUntrainSkillLevel);
-			
-			int requiredSp = esd.getSpCost();
-			int requireditems = esd.getAdenaCost();
-			
-			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
-			if (Config.ES_SP_BOOK_NEEDED)
-			{
-				if (spb == null)
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
-					return;
-				}
-			}
-			
-			if (player.getInventory().getAdena() < requireditems)
-			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
-				return;
-			}
-			
-			boolean check = true;
-			if (Config.ES_SP_BOOK_NEEDED)
-			{
-				check &= player.destroyItem("Consume", spb.getObjectId(), 1, player, true);
-			}
-			
-			check &= player.destroyItemByItemId("Consume", Inventory.ADENA_ID, requireditems, player, true);
-			
-			if (!check)
-			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
-				return;
-			}
-			
-			player.getStat().addSp((int) (requiredSp * 0.8));
-			
-			if (Config.LOG_SKILL_ENCHANTS)
-			{
-				LogRecord record = new LogRecord(Level.INFO, "Untrain");
-				record.setParameters(new Object[]
-				{
-					player,
-					skill,
-					spb
-				});
-				record.setLoggerName("skill");
-				_logEnchant.log(record);
-			}
-			
-			player.addSkill(skill, true);
-			player.sendPacket(ExEnchantSkillResult.valueOf(true));
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requireditems + " Adena.");
-			}
-			
-			player.sendPacket(new UserInfo(player));
-			
-			if (_skillLvl > 100)
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
-				sm.addSkillName(_skillId);
-				player.sendPacket(sm);
-			}
-			else
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
-				sm.addSkillName(_skillId);
-				player.sendPacket(sm);
-			}
-			player.sendSkillList();
-			final int afterUntrainSkillLevel = player.getSkillLevel(_skillId);
-			player.sendPacket(new ExEnchantSkillInfo(_skillId, afterUntrainSkillLevel));
-			player.sendPacket(new ExEnchantSkillInfoDetail(2, _skillId, afterUntrainSkillLevel - 1, player));
-			player.updateShortCuts(_skillId, afterUntrainSkillLevel);
+			return;
 		}
 		else if (_type == 3) // change route
 		{
@@ -441,17 +383,28 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+				if (_elvl == 0)
+				{
+					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
+				}
+				else if (_elvl == 1)
+				{
+					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V2;
+				}
+				else
+				{
+					reqItemId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK_V3;
+				}
 			}
 			
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
-			if (beforeEnchantSkillLevel <= 100)
+			if (beforeEnchantSkillLevel <= 1000)
 			{
 				return;
 			}
 			
-			int currentEnchantLevel = beforeEnchantSkillLevel % 100;
-			if (currentEnchantLevel != (_skillLvl % 100))
+			int currentEnchantLevel = beforeEnchantSkillLevel % 1000;
+			if (currentEnchantLevel != (_skillLvl % 1000))
 			{
 				return;
 			}
@@ -495,7 +448,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				
 				int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
 				_skillLvl -= levelPenalty;
-				if ((_skillLvl % 100) == 0)
+				if ((_skillLvl % 1000) == 0)
 				{
 					_skillLvl = s.getBaseLevel();
 				}
@@ -534,9 +487,9 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
 					sm.addSkillName(_skillId);
 					
-					if (_skillLvl > 100)
+					if (_skillLvl > 1000)
 					{
-						sm.addInt(_skillLvl % 100);
+						sm.addInt(_skillLvl % 1000);
 					}
 					else
 					{
@@ -558,7 +511,26 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		}
 		else if (_type == 4) // 100% enchant
 		{
-			int reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+			final int reqItemId;
+			if (player.getClassId().level() == 3)
+			{
+				reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+			}
+			else
+			{
+				if (_elvl == 0)
+				{
+					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL;
+				}
+				else if (_elvl == 1)
+				{
+					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V2;
+				}
+				else
+				{
+					reqItemId = EnchantSkillGroupsData.IMMORTAL_SCROLL_V3;
+				}
+			}
 			final int beforeEnchantSkillLevel = player.getSkillLevel(_skillId);
 			if (beforeEnchantSkillLevel != s.getMinSkillLevel(_skillLvl))
 			{

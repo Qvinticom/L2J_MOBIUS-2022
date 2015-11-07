@@ -29,7 +29,6 @@ public class ExStorageMaxCount extends L2GameServerPacket
 {
 	private final int _inventory;
 	private final int _warehouse;
-	private final int _freight;
 	private final int _clan;
 	private final int _privateSell;
 	private final int _privateBuy;
@@ -42,7 +41,6 @@ public class ExStorageMaxCount extends L2GameServerPacket
 	{
 		_inventory = activeChar.getInventoryLimit();
 		_warehouse = activeChar.getWareHouseLimit();
-		_freight = Config.ALT_FREIGHT_SLOTS;
 		_privateSell = activeChar.getPrivateSellStoreLimit();
 		_privateBuy = activeChar.getPrivateBuyStoreLimit();
 		_clan = Config.WAREHOUSE_SLOTS_CLAN;
@@ -60,7 +58,6 @@ public class ExStorageMaxCount extends L2GameServerPacket
 		
 		writeD(_inventory);
 		writeD(_warehouse);
-		writeD(_freight);
 		writeD(_clan);
 		writeD(_privateSell);
 		writeD(_privateBuy);

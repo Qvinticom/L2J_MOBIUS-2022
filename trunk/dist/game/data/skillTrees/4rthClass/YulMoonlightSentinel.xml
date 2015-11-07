@@ -2,12 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Yul Moonlight Sentinel -->
 	<skillTree type="classSkillTree" classId="163" parentClassId="102">
-		<!-- Expertise Skills -->
-		<skill skillName="Expertise S80" skillId="239" skillLvl="6" getLevel="80" autoGet="true" />
-		<skill skillName="Expertise S84" skillId="239" skillLvl="7" getLevel="84" autoGet="true" />
+		<skill skillName="Lucky" skillId="194" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Expertise R" skillId="239" skillLvl="8" getLevel="85" autoGet="true" />
 		<skill skillName="Expertise R95" skillId="239" skillLvl="9" getLevel="95" autoGet="true" />
 		<skill skillName="Expertise R99" skillId="239" skillLvl="10" getLevel="99" autoGet="true" />
+		<skill skillName="Common Craft" skillId="1322" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
+		<skill skillName="Acrobatic Move" skillId="225" skillLvl="2" getLevel="43" levelUpSp="31" />
 		
 		<skill skillName="Dual Maximum HP" skillId="1986" skillLvl="1" getLevel="85" getDualClassLevel="85" />
 		<skill skillName="Yul Aura" skillId="1933" skillLvl="1" getLevel="85" autoGet="true" />
@@ -69,6 +70,11 @@
 			<removeSkill id="101" />
 			<removeSkill id="509" />
 		</skill>
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
 		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Frost Trap" skillId="10791" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="516" />
@@ -113,7 +119,6 @@
 			<removeSkill id="105" />
 			<removeSkill id="369" />
 		</skill>
-		<skill skillName="Create Common Item" skillId="1320" skillLvl="10" getLevel="85" autoGet="true" />
 		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="131" />
 			<removeSkill id="835" />
@@ -172,7 +177,6 @@
 		<skill skillName="Quick Evasion" skillId="10774" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Rapid Fire Position" skillId="10856" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="4" getLevel="90" levelUpSp="370000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="12" getLevel="90" autoGet="true" />
 		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="2" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Sniper Stance" skillId="10759" skillLvl="2" getLevel="90" levelUpSp="370000" />
@@ -216,7 +220,6 @@
 		<skill skillName="Rapid Fire Position" skillId="10856" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="6" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Quick Shot" skillId="10762" skillLvl="6" getLevel="95" levelUpSp="1000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="13" getLevel="95" autoGet="true" />
 		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Sniper Stance" skillId="10759" skillLvl="3" getLevel="95" levelUpSp="1000000" />
@@ -251,7 +254,6 @@
 		<skill skillName="Time Bomb" skillId="10786" skillLvl="3" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Summon Thunder Hawk" skillId="10787" skillLvl="8" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Quick Shot" skillId="10762" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Create Item" skillId="172" skillLvl="14" getLevel="99" autoGet="true" />
 		<skill skillName="Mass Bullseye" skillId="10802" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Rapid Fire Stance" skillId="10758" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Dead Eye Stance" skillId="10757" skillLvl="4" getLevel="99" levelUpSp="5000000" />
@@ -268,5 +270,118 @@
 		</skill>
 		<!-- Mount -->
 		<skill skillName="Summon Tempest Arrow" skillId="8603" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Inventory Increase" skillId="1571" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Weight Increase" skillId="1572" skillLvl="1" getLevel="85" autoGet="true" />
+		
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Bow/Crossbow Mastery" skillId="10751" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Light Armor Mastery" skillId="10752" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Mental Attack Resistance" skillId="10755" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Tornado Shot" skillId="10760" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Bow Strike" skillId="10761" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Bow Strike" skillId="10761" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Bow Strike" skillId="10761" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Quick Shot" skillId="10762" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Quick Shot" skillId="10762" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Quick Shot" skillId="10762" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Impact Shot" skillId="10769" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Impact Shot" skillId="10769" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Impact Shot" skillId="10769" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Recoil Shot" skillId="10770" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Multiple Arrow" skillId="10771" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="9" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="10" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Heavy Arrow Rain" skillId="10772" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="4" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="5" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Confusion Decoy" skillId="10775" skillLvl="6" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Lure Shot" skillId="10777" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Lure Shot" skillId="10777" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Lure Shot" skillId="10777" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Slow Shot" skillId="10780" skillLvl="7" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Slow Shot" skillId="10780" skillLvl="8" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Slow Shot" skillId="10780" skillLvl="9" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Phoenix Arrow" skillId="10781" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Phoenix Arrow" skillId="10781" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Phoenix Arrow" skillId="10781" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Flare" skillId="10785" skillLvl="2" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Flare" skillId="10785" skillLvl="3" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Flare" skillId="10785" skillLvl="4" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Flare" skillId="10785" skillLvl="5" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Time Bomb" skillId="10786" skillLvl="4" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Time Bomb" skillId="10786" skillLvl="5" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Time Bomb" skillId="10786" skillLvl="6" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Frost Trap" skillId="10791" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Frost Trap" skillId="10791" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Frost Trap" skillId="10791" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Gravity Trap" skillId="10792" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Gravity Trap" skillId="10792" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Gravity Trap" skillId="10792" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior M. Def." skillId="10799" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="4" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="5" getLevel="100" levelUpSp="88099899" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="6" getLevel="102" levelUpSp="507455418" />
+		<skill skillName="Superior Elemental Resistance" skillId="10800" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
+		<skill skillName="Bullseye" skillId="10801" skillLvl="6" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Bullseye" skillId="10801" skillLvl="7" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Bullseye" skillId="10801" skillLvl="8" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Mass Bullseye" skillId="10802" skillLvl="2" getLevel="101" levelUpSp="211440000" />
+		<skill skillName="Mass Bullseye" skillId="10802" skillLvl="3" getLevel="103" levelUpSp="608946501" />
+		<skill skillName="Mass Bullseye" skillId="10802" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
+		<skill skillName="Hunting Instinct" skillId="10953" skillLvl="1" getLevel="101" levelUpSp="211440000">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Divine Expansion" skillId="10956" skillLvl="1" getLevel="100" levelUpSp="88099899">
+			<item id="39738" count="8" />
+		</skill>
+		<skill skillName="Polishing Arrows: Atk. Spd." skillId="19213" skillLvl="1" getLevel="85" />
+		<skill skillName="Polishing Bolts: Atk. Spd." skillId="19214" skillLvl="1" getLevel="85" />
+		<skill skillName="Polishing Arrows: P. Atk." skillId="19215" skillLvl="1" getLevel="85" />
+		<skill skillName="Polishing Bolts: P. Atk." skillId="19216" skillLvl="1" getLevel="85" />
+		<skill skillName="Polishing Arrows: Added Blow" skillId="19217" skillLvl="1" getLevel="90" />
+		<skill skillName="Polishing Bolts: Added Blow" skillId="19218" skillLvl="1" getLevel="90" />
 	</skillTree>
 </list>

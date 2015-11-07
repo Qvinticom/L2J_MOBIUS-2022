@@ -43,6 +43,10 @@ public final class RequestShortCutReg extends L2GameClientPacket
 		_page = slot / 12;
 		_id = readD();
 		_lvl = readD();
+		if ((typeId == 2) && (_lvl > 10000))
+		{
+			_lvl = _lvl >> 16;
+		}
 		_characterType = readD();
 	}
 	

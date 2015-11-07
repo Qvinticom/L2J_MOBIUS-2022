@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.interfaces.IPositionable;
@@ -34,11 +35,12 @@ public final class MagicSkillUse extends L2GameServerPacket
 {
 	private final int _skillId;
 	private final int _skillLevel;
+	private final int _maxLevel;
 	private final int _hitTime;
 	private final int _reuseDelay;
 	private final L2Character _activeChar;
 	private final L2Character _target;
-	private final List<Integer> _unknown = Collections.emptyList();
+	private List<Integer> _unknown = Collections.emptyList();
 	private final List<Location> _groundLocations;
 	
 	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
@@ -47,6 +49,7 @@ public final class MagicSkillUse extends L2GameServerPacket
 		_target = target;
 		_skillId = skillId;
 		_skillLevel = skillLevel;
+		_maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
 		_hitTime = hitTime;
 		_reuseDelay = reuseDelay;
 		_groundLocations = cha.isPlayer() && (cha.getActingPlayer().getCurrentSkillWorldPosition() != null) ? Arrays.asList(cha.getActingPlayer().getCurrentSkillWorldPosition()) : Collections.<Location> emptyList();
@@ -57,6 +60,25 @@ public final class MagicSkillUse extends L2GameServerPacket
 		this(cha, cha, skillId, skillLevel, hitTime, reuseDelay);
 	}
 	
+	/**
+	 * @param l2Character
+	 * @param target
+	 * @param displayId
+	 * @param displayLevel
+	 * @param skillTime
+	 * @param reuseDelay
+	 * @param blowSuccess
+	 */
+	public MagicSkillUse(L2Character l2Character, L2Character target, int displayId, int displayLevel, int skillTime, int reuseDelay, boolean blowSuccess)
+	{
+		this(l2Character, target, displayId, displayLevel, skillTime, reuseDelay);
+		if (blowSuccess)
+		{
+			_unknown = Arrays.asList(0);
+		}
+		
+	}
+	
 	@Override
 	protected final void writeImpl()
 	{
@@ -65,7 +87,15 @@ public final class MagicSkillUse extends L2GameServerPacket
 		writeD(_activeChar.getObjectId());
 		writeD(_target.getObjectId());
 		writeD(_skillId);
-		writeD(_skillLevel);
+		if (_skillLevel < 100)
+		{
+			writeD(_skillLevel);
+		}
+		else
+		{
+			writeH(_maxLevel);
+			writeH(_skillLevel);
+		}
 		writeD(_hitTime);
 		writeD(-1); // TODO: Find me!
 		writeD(_reuseDelay);

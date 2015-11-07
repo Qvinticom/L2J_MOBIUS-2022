@@ -75,6 +75,7 @@ public final class MultiSellList extends L2GameServerPacket
 			writeH(0x00);
 			writeH(0x00);
 			writeH(0x00);
+			writeH(0x00);
 			
 			writeH(ent.getProducts().size());
 			writeH(ent.getIngredients().size());
@@ -107,6 +108,7 @@ public final class MultiSellList extends L2GameServerPacket
 					writeH(ing.getItemInfo().getElementals()[3]); // earth
 					writeH(ing.getItemInfo().getElementals()[4]); // holy
 					writeH(ing.getItemInfo().getElementals()[5]); // dark
+					writeH(0x00);
 				}
 				else
 				{
@@ -122,6 +124,7 @@ public final class MultiSellList extends L2GameServerPacket
 					writeH(0x00); // earth
 					writeH(0x00); // holy
 					writeH(0x00); // dark
+					writeH(0x00);
 				}
 			}
 			
@@ -143,6 +146,7 @@ public final class MultiSellList extends L2GameServerPacket
 					writeH(ing.getItemInfo().getElementals()[3]); // earth
 					writeH(ing.getItemInfo().getElementals()[4]); // holy
 					writeH(ing.getItemInfo().getElementals()[5]); // dark
+					writeH(0x00);
 				}
 				else
 				{
@@ -157,6 +161,7 @@ public final class MultiSellList extends L2GameServerPacket
 					writeH(0x00); // earth
 					writeH(0x00); // holy
 					writeH(0x00); // dark
+					writeH(0x00);
 				}
 			}
 		}

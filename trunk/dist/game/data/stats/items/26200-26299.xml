@@ -119,6 +119,10 @@
 		<!-- Double-click to obtain 500 Steel Door Guild Coins. Lv. 40 or above. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="weight" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26224" name="Steel Demon's Staff (60-day)" type="Weapon">
@@ -131,6 +135,11 @@
 		<set name="weight" val="990" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="152.0" />
 			<add stat="mAtk" val="122.0" />
@@ -149,6 +158,11 @@
 		<set name="weight" val="960" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="170.0" />
 			<add stat="mAtk" val="134.0" />
@@ -167,6 +181,11 @@
 		<set name="weight" val="920" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="207.0" />
 			<add stat="mAtk" val="157.0" />
@@ -185,6 +204,11 @@
 		<set name="weight" val="910" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="274.0" />
 			<add stat="mAtk" val="193.0" />
@@ -203,6 +227,11 @@
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="86400" />
 		<for>
 			<add stat="pAtk" val="325.0" />
 			<add stat="mAtk" val="222.0" />

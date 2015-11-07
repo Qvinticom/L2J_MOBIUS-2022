@@ -69,7 +69,7 @@ public class ExSubjobInfo extends L2GameServerPacket
 		public SubInfo(L2PcInstance player)
 		{
 			_index = 0;
-			_classId = player.getBaseClass();
+			_classId = player.getBaseClassId();
 			_level = player.getStat().getBaseLevel();
 			_type = SubclassType.BASECLASS.ordinal();
 		}

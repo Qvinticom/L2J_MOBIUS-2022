@@ -75,6 +75,5 @@ public class ExReplySentPost extends AbstractItemPacket
 		}
 		writeQ(_msg.getReqAdena());
 		writeD(_msg.hasAttachments() ? 0x01 : 0x00);
-		writeD(_msg.isReturned() ? 0x01 : 00);
 	}
 }

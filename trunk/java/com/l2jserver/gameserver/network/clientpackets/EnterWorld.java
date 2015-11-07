@@ -70,6 +70,7 @@ import com.l2jserver.gameserver.network.serverpackets.Die;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ExAcquireAPSkillList;
 import com.l2jserver.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jserver.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jserver.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jserver.gameserver.network.serverpackets.ExBeautyItemList;
 import com.l2jserver.gameserver.network.serverpackets.ExCastleState;
@@ -103,16 +104,11 @@ import com.l2jserver.gameserver.network.serverpackets.ShortCutInit;
 import com.l2jserver.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jserver.gameserver.network.serverpackets.SkillList;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGetTableReward;
 import com.l2jserver.gameserver.network.serverpackets.friend.L2FriendList;
 
 /**
  * Enter World Packet Handler
- * <p>
- * <p>
- * 0000: 03
- * <p>
- * packet format rev87 bddddbdcccccccccccccccccccc
- * <p>
  */
 public class EnterWorld extends L2GameClientPacket
 {
@@ -659,6 +655,15 @@ public class EnterWorld extends L2GameClientPacket
 		
 		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
 		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		
+		// Underground auto shots system.
+		activeChar.sendPacket(new ExAutoSoulShot(0, 0, 0));
+		activeChar.sendPacket(new ExAutoSoulShot(0, 0, 1));
+		activeChar.sendPacket(new ExAutoSoulShot(0, 0, 2));
+		activeChar.sendPacket(new ExAutoSoulShot(0, 0, 3));
+		
+		// Underground daily rewards system.
+		activeChar.sendPacket(ExConnectedTimeAndGetTableReward.STATIC_PACKET);
 		
 		// Unstuck players that had client open when server crashed.
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);

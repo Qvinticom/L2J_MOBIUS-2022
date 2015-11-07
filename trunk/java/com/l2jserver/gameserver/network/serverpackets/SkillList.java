@@ -21,6 +21,8 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.datatables.SkillData;
+
 public final class SkillList extends L2GameServerPacket
 {
 	private final List<Skill> _skills = new ArrayList<>();
@@ -63,7 +65,16 @@ public final class SkillList extends L2GameServerPacket
 		for (Skill temp : _skills)
 		{
 			writeD(temp.passive ? 1 : 0);
-			writeD(temp.level);
+			if (temp.level < 100)
+			{
+				writeD(temp.level);
+			}
+			else
+			{
+				int maxlevel = SkillData.getInstance().getMaxLevel(temp.id);
+				writeH(maxlevel);
+				writeH(temp.level);
+			}
 			writeD(temp.id);
 			writeD(-1); // GOD ReuseDelayShareGroupID
 			writeC(temp.disabled ? 1 : 0); // iSkillDisabled

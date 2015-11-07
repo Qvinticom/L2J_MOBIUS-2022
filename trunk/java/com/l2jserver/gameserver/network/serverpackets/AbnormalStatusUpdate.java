@@ -49,6 +49,7 @@ public class AbnormalStatusUpdate extends L2GameServerPacket
 				if (info.getSkill().getDisplayLevel() < 100)
 				{
 					writeH(info.getSkill().getDisplayLevel());
+					writeH(0x00);
 				}
 				else
 				{

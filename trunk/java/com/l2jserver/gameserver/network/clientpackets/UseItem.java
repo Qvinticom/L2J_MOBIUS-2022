@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
 import com.l2jserver.gameserver.instancemanager.FortSiegeManager;
-import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -153,7 +152,7 @@ public final class UseItem extends L2GameClientPacket
 		if (activeChar.isFishing() && ((_itemId < 6535) || (_itemId > 6540)))
 		{
 			// You cannot do anything else while fishing
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING);
 			return;
 		}
 		
@@ -244,61 +243,6 @@ public final class UseItem extends L2GameClientPacket
 					{
 						return;
 					}
-					
-					// Don't allow other Race to Wear Kamael exclusive Weapons.
-					if (!item.isEquipped() && item.isWeapon() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
-					{
-						L2Weapon wpn = (L2Weapon) item.getItem();
-						
-						switch (activeChar.getRace())
-						{
-							case ERTHEIA:
-							{
-								switch (wpn.getItemType())
-								{
-									case SWORD:
-									case DAGGER:
-									case BOW:
-									case POLE:
-									case NONE:
-									case DUAL:
-									case RAPIER:
-									case ANCIENTSWORD:
-									case CROSSBOW:
-									case DUALDAGGER:
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-								}
-								break;
-							}
-							case KAMAEL:
-							{
-								switch (wpn.getItemType())
-								{
-									case NONE:
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-								}
-								break;
-							}
-							case HUMAN:
-							case DWARF:
-							case ELF:
-							case DARK_ELF:
-							case ORC:
-							{
-								switch (wpn.getItemType())
-								{
-									case RAPIER:
-									case CROSSBOW:
-									case ANCIENTSWORD:
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-								}
-								break;
-							}
-						}
-					}
 					break;
 				}
 				case L2Item.SLOT_CHEST:
@@ -309,7 +253,7 @@ public final class UseItem extends L2GameClientPacket
 				case L2Item.SLOT_FULL_ARMOR:
 				case L2Item.SLOT_LEGS:
 				{
-					if ((activeChar.getRace() == Race.ERTHEIA) && ((item.getItem().getItemType() == ArmorType.HEAVY) || (item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
+					if ((activeChar.getRace() == Race.ERTHEIA) && (activeChar.isMageClass()) && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;

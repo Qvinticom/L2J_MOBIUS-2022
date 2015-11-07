@@ -114,7 +114,7 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 						
 						// Activate shots
 						activeChar.addAutoSoulShot(_itemId);
-						activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, 1, isSoulshot ? 2 : 3));
 						
 						// Send message
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
@@ -149,7 +149,7 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 					
 					// Activate shots
 					activeChar.addAutoSoulShot(_itemId);
-					activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+					activeChar.sendPacket(new ExAutoSoulShot(_itemId, 1, isSoulshot ? 0 : 1));
 					
 					// Send message
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
@@ -164,7 +164,30 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 			{
 				// Cancel auto shots
 				activeChar.removeAutoSoulShot(_itemId);
-				activeChar.sendPacket(new ExAutoSoulShot(_itemId, _type));
+				switch (item.getEtcItem().getDefaultAction())
+				{
+					case SOULSHOT:
+					case FISHINGSHOT:
+					{
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, 0, 0));
+						break;
+					}
+					case SPIRITSHOT:
+					{
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, 0, 1));
+						break;
+					}
+					case SUMMON_SOULSHOT:
+					{
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, 0, 2));
+						break;
+					}
+					case SUMMON_SPIRITSHOT:
+					{
+						activeChar.sendPacket(new ExAutoSoulShot(_itemId, 0, 3));
+						break;
+					}
+				}
 				
 				// Send message
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);

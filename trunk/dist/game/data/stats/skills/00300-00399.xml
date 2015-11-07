@@ -719,15 +719,15 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="320" levels="14" name="Wrath" enchantGroup1="2" enchantGroup2="2">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#effectPoints"> -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -339 -402 </table>
-		<table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 85 90 95 99 </table> <!-- Confirmed -->
-		<table name="#mpConsume"> 66 67 68 69 70 71 72 73 74 75 80 85 90 100 </table> <!-- Confirmed -->
-		<table name="#power"> 7 10 12 15 17 20 22 25 27 30 33 36 40 45 </table> <!-- Confirmed -->
-		<table name="#ench1Power"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
-		<table name="#ench2MpConsume"> 74 72 71 69 68 67 65 64 62 61 59 58 56 55 53 52 50 49 48 46 45 43 42 40 39 37 36 34 33 32 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+	<skill id="320" levels="17" name="Wrath" enchantGroup1="2" enchantGroup2="2">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#effectPoints"> -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -339 -402 -402 -402 -402 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 85 90 95 99 101 103 105 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 66 67 68 69 70 71 72 73 74 75 80 85 90 100 0 0 0 </table> <!-- Confirmed -->
+		<table name="#power"> 7 10 12 15 17 20 22 25 27 30 33 36 40 45 50 55 60 </table> <!-- Confirmed -->
+		<table name="#ench1Power"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 </table> <!-- Guessed -->
+		<table name="#ench2MpConsume"> 74 72 71 69 68 67 65 64 62 61 59 58 56 55 53 52 50 49 48 46 45 43 42 40 39 37 36 34 33 32 31 30 29 </table> <!-- Guessed -->
+		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 </table> <!-- Guessed -->
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="80" />
 		<set name="castRange" val="40" />
@@ -1466,11 +1466,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="345" levels="12" name="Sonic Rage">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#magicLevel"> 78 79 81 83 85 86 88 90 92 94 96 98 </table> <!-- Confirmed -->
-		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 </table> <!-- Confirmed -->
-		<table name="#power"> 195 205 215 225 551 565 598 630 662 693 725 757 </table> <!-- Confirmed -->
+	<skill id="345" levels="15" name="Sonic Rage">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#magicLevel"> 78 79 81 83 85 86 88 90 92 94 96 98 101 103 105 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 73 75 77</table> <!-- Confirmed -->
+		<table name="#power"> 195 205 215 225 551 565 598 630 662 693 725 757 812 844 876 </table> <!-- Confirmed -->
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="300" />
@@ -1498,9 +1498,10 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="346" levels="12" name="Raging Force">
-		<table name="#magicLvl"> 78 79 80 81 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 </table>
+	<skill id="346" levels="15" name="Raging Force">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#magicLvl"> 78 79 80 81 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 50 55 56 57 58 59 61 63 65 67 69 71 73 75 77 </table>
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-340" />
@@ -2429,15 +2430,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="367" levels="8" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#activateRate"> 40 42 44 46 48 50 55 60  </table> <!-- Guessed -->
-		<table name="#magicLevel"> 77 79 81 83 85 90 95 99  </table> <!-- Confirmed -->
-		<table name="#mpConsume"> 43 50 75 90 126 139 153 166 </table> <!-- Confirmed -->
-		<table name="#ench1ActivateRates"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
-		<table name="#ench2AbnormalTimes"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 </table>
-		<table name="#ench2ActivateRates"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
-		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+	<skill id="367" levels="11" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#activateRate"> 40 42 44 46 48 50 55 60 62 64 66 </table> <!-- Guessed -->
+		<table name="#magicLevel"> 77 79 81 83 85 90 95 99 101 103 105 </table> <!-- Confirmed -->
+		<table name="#mpConsume"> 43 50 75 90 126 139 153 166 179 192 205 </table> <!-- Confirmed -->
+		<table name="#ench1ActivateRates"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 83 86 89 </table> <!-- Guessed -->
+		<table name="#ench2AbnormalTimes"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 </table> <!-- Guessed -->
+		<table name="#ench2ActivateRates"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 </table> <!-- Guessed -->
+		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_STONE" />

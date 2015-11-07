@@ -34,7 +34,7 @@ public class FriendAddRequest extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x83);
+		writeC(1);
 		writeS(_requestorName);
-		writeD(0x00);
 	}
 }

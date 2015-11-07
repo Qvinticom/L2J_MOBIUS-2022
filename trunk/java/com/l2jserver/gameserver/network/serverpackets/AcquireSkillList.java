@@ -23,6 +23,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
@@ -51,7 +52,7 @@ public class AcquireSkillList extends L2GameServerPacket
 		for (L2SkillLearn skill : _learnable)
 		{
 			writeD(skill.getSkillId());
-			writeH(skill.getSkillLevel());
+			writeD(skill.getSkillLevel());
 			writeQ(skill.getLevelUpSp());
 			writeC(skill.getGetLevel());
 			writeC(skill.getDualClassLevel());
@@ -68,7 +69,16 @@ public class AcquireSkillList extends L2GameServerPacket
 			for (Skill skillRemove : skillRem)
 			{
 				writeD(skillRemove.getId());
-				writeH(skillRemove.getLevel());
+				if (skillRemove.getLevel() < 100)
+				{
+					writeD(skillRemove.getLevel());
+				}
+				else
+				{
+					int maxLevel = SkillData.getInstance().getMaxLevel(skillRemove.getId());
+					writeH(maxLevel);
+					writeH(skillRemove.getLevel());
+				}
 			}
 		}
 	}

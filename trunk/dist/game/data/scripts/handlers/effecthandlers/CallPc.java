@@ -139,7 +139,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.inObserverMode())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING2);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 			sm.addCharName(target);
 			activeChar.sendPacket(sm);
 			return false;

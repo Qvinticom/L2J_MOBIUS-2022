@@ -161,4 +161,60 @@
 			</effect>
 		</for>
 	</skill>
+	<!-- Increases P. Def. by $s1, Received Heal by $s2, and decreases Received P. Critical Damage by $s3. Increases party members' P. Def. by $s4, Received Heal by $s5, and decreases Received Critical Damage by $s6. Only one Knight's Aura can be active at any time. --> 
+	<skill id="10104" levels="1" name="Paladin's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk./Atk. Spd by $s1, P. Critical Rate by $s2, P. Critical Damage by $s3, and Speed by $s4. Decreases P./M. Atk. by $s5, Atk. Spd./Casting Spd. by $s6, Speed by $s7 and Received Critical Damage by $s8 of nearby enemies. Only one Knight's Aura can be active at any time. --> 
+	<skill id="10105" levels="1" name="Avenger's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases M. Def. by $s1, $s2 Attribute Resistance by $s3, and Debuff Resistance by $s4. Increases party members' M. Def. by $s5, $s6 Attribute Resistance by $s7, and Debuff Resistance by $s8. Only one Knight's Aura can be active at any time. --> 
+	<skill id="10106" levels="1" name="Sentinel's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- Increases P. Atk. by $s1, Atk. Spd. by $s2, and Speed by $s3. Increases party members' P. Atk. By $s4, Atk. Spd. by $s5, M. Atk. by $s6, Casting Spd. by $s7 and Speed by $s8. Only one Knight's Aura can be active at any time. --> 
+	<skill id="10107" levels="1" name="Templar's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- P. Def. + $s1, heal amount + $s2, and Received P. Critical Damage - $s3. --> 
+	<skill id="10108" levels="1" name="Paladin's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- P./M. Atk. - $s1, Atk. Spd./Casting Spd. - $s2, Speed - $s3, and Received Critical Damage + $s4. --> 
+	<skill id="10109" levels="1" name="Avenger's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- M. Def. + $s1, $s2 Attribute Resistance + $s3, Debuff Resistance + $s4. --> 
+	<skill id="10110" levels="1" name="Sentinel's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<!-- P. Atk. + $s1, Atk. Spd. + $s2, M. Atk. + $s3, Casting Spd. + $s4, Speed + $s5. --> 
+	<skill id="10111" levels="1" name="Templar's Aura">
+		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+	</skill>
 </list>

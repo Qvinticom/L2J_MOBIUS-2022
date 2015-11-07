@@ -129,7 +129,30 @@ public class ShortCuts implements IRestorable
 			{
 				if (_owner.removeAutoSoulShot(item.getId()))
 				{
-					_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0));
+					switch (item.getEtcItem().getDefaultAction())
+					{
+						case SOULSHOT:
+						case FISHINGSHOT:
+						{
+							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 0));
+							break;
+						}
+						case SPIRITSHOT:
+						{
+							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 1));
+							break;
+						}
+						case SUMMON_SOULSHOT:
+						{
+							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 2));
+							break;
+						}
+						case SUMMON_SPIRITSHOT:
+						{
+							_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0, 3));
+							break;
+						}
+					}
 				}
 			}
 		}
@@ -138,7 +161,32 @@ public class ShortCuts implements IRestorable
 		
 		for (int shotId : _owner.getAutoSoulShot())
 		{
-			_owner.sendPacket(new ExAutoSoulShot(shotId, 1));
+			L2ItemInstance item = _owner.getInventory().getItemByObjectId(shotId);
+			
+			switch (item.getEtcItem().getDefaultAction())
+			{
+				case SOULSHOT:
+				case FISHINGSHOT:
+				{
+					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 0));
+					break;
+				}
+				case SPIRITSHOT:
+				{
+					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 1));
+					break;
+				}
+				case SUMMON_SOULSHOT:
+				{
+					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 2));
+					break;
+				}
+				case SUMMON_SPIRITSHOT:
+				{
+					_owner.sendPacket(new ExAutoSoulShot(shotId, 1, 3));
+					break;
+				}
+			}
 		}
 	}
 	

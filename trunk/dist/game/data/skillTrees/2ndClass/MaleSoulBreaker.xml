@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="128" parentClassId="125">
-		<!-- Confirmed CT2.5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="9" getLevel="40" levelUpSp="28" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="10" getLevel="40" levelUpSp="28" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="11" getLevel="40" levelUpSp="28" />
@@ -19,14 +14,14 @@
 		<skill skillName="Triple Thrust" skillId="504" skillLvl="1" getLevel="40" levelUpSp="28" />
 		<skill skillName="Triple Thrust" skillId="504" skillLvl="2" getLevel="40" levelUpSp="28" />
 		<skill skillName="Triple Thrust" skillId="504" skillLvl="3" getLevel="40" levelUpSp="28" />
-		<skill skillName="Soul of Pain" skillId="1436" skillLvl="1" getLevel="40" levelUpSp="19000" />
-		<skill skillName="Soul of Pain" skillId="1436" skillLvl="2" getLevel="40" levelUpSp="19000" />
+		<skill skillName="Soul of Pain" skillId="1436" skillLvl="1" getLevel="40" levelUpSp="28" />
+		<skill skillName="Soul of Pain" skillId="1436" skillLvl="2" getLevel="40" levelUpSp="28" />
 		<skill skillName="Surrender to Dark" skillId="1445" skillLvl="4" getLevel="40" levelUpSp="28" />
 		<skill skillName="Death Mark" skillId="1435" skillLvl="3" getLevel="40" levelUpSp="28" />
 		<skill skillName="Life to Soul" skillId="502" skillLvl="1" getLevel="40" levelUpSp="28" />
 		<skill skillName="Expert Casting" skillId="1527" skillLvl="1" getLevel="40" levelUpSp="28" />
 		<skill skillName="Critical Sense" skillId="626" skillLvl="1" getLevel="40" levelUpSp="28" />
-		
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="1" getLevel="40" levelUpSp="28" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="12" getLevel="43" levelUpSp="31" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="13" getLevel="43" levelUpSp="31" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="14" getLevel="43" levelUpSp="31" />
@@ -47,7 +42,6 @@
 		<skill skillName="Dark Armor" skillId="481" skillLvl="2" getLevel="43" levelUpSp="31" />
 		<skill skillName="Abyssal Power" skillId="1474" skillLvl="1" getLevel="43" levelUpSp="31" />
 		<skill skillName="Fast Recovery" skillId="832" skillLvl="1" getLevel="43" levelUpSp="31" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="15" getLevel="46" levelUpSp="51" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="16" getLevel="46" levelUpSp="51" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="17" getLevel="46" levelUpSp="51" />
@@ -70,7 +64,6 @@
 		<skill skillName="Death Mark" skillId="1435" skillLvl="4" getLevel="46" levelUpSp="51" />
 		<skill skillName="Erase Mark" skillId="1475" skillLvl="2" getLevel="46" levelUpSp="51" />
 		<skill skillName="Soul Gathering" skillId="625" skillLvl="1" getLevel="46" levelUpSp="51" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="18" getLevel="49" levelUpSp="68" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="19" getLevel="49" levelUpSp="68" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="20" getLevel="49" levelUpSp="68" />
@@ -94,7 +87,10 @@
 		<skill skillName="Surrender to Dark" skillId="1445" skillLvl="7" getLevel="49" levelUpSp="68" />
 		<skill skillName="Pride of Kamael" skillId="1444" skillLvl="1" getLevel="49" levelUpSp="68" />
 		<skill skillName="Life to Soul" skillId="502" skillLvl="2" getLevel="49" levelUpSp="68" />
-		
+		<skill skillName="Expert Casting" skillId="1527" skillLvl="2" getLevel="49" levelUpSp="68" />
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="2" getLevel="49" levelUpSp="68" />
+		<skill skillName="Fast Recovery" skillId="832" skillLvl="2" getLevel="49" levelUpSp="68" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="79" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="21" getLevel="52" levelUpSp="79" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="22" getLevel="52" levelUpSp="79" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="23" getLevel="52" levelUpSp="79" />
@@ -123,7 +119,6 @@
 		<skill skillName="Death Mark" skillId="1435" skillLvl="5" getLevel="52" levelUpSp="79" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="1" getLevel="52" levelUpSp="79" />
 		<skill skillName="Critical Sense" skillId="626" skillLvl="2" getLevel="52" levelUpSp="79" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="24" getLevel="55" levelUpSp="89" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="25" getLevel="55" levelUpSp="89" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="26" getLevel="55" levelUpSp="89" />
@@ -151,7 +146,7 @@
 		<skill skillName="Surrender to Dark" skillId="1445" skillLvl="9" getLevel="55" levelUpSp="89" />
 		<skill skillName="Soul to Empower" skillId="1441" skillLvl="2" getLevel="55" levelUpSp="89" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="2" getLevel="55" levelUpSp="89" />
-		
+		<skill skillName="Expert Casting" skillId="1527" skillLvl="3" getLevel="55" levelUpSp="89" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="27" getLevel="58" levelUpSp="154" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="28" getLevel="58" levelUpSp="154" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="29" getLevel="58" levelUpSp="154" />
@@ -183,7 +178,7 @@
 		<skill skillName="Protection from Darkness" skillId="1442" skillLvl="1" getLevel="58" levelUpSp="154" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="3" getLevel="58" levelUpSp="154" />
 		<skill skillName="Painkiller" skillId="837" skillLvl="1" getLevel="58" levelUpSp="154" />
-		
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="3" getLevel="58" levelUpSp="154" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="30" getLevel="60" levelUpSp="194" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="31" getLevel="60" levelUpSp="194" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="35" getLevel="60" levelUpSp="194" />
@@ -210,7 +205,7 @@
 		<skill skillName="Curse of Life Flow" skillId="1511" skillLvl="1" getLevel="60" levelUpSp="194" />
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="2" getLevel="60" levelUpSp="194" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="4" getLevel="60" levelUpSp="194" />
-		
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="200" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="32" getLevel="62" levelUpSp="266" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="33" getLevel="62" levelUpSp="266" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="37" getLevel="62" levelUpSp="266" />
@@ -235,7 +230,6 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="3" getLevel="62" levelUpSp="266" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="5" getLevel="62" levelUpSp="266" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="1" getLevel="62" levelUpSp="266" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="34" getLevel="64" levelUpSp="295" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="35" getLevel="64" levelUpSp="295" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="39" getLevel="64" levelUpSp="295" />
@@ -260,7 +254,8 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="4" getLevel="64" levelUpSp="295" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="6" getLevel="64" levelUpSp="295" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="2" getLevel="64" levelUpSp="295" />
-		
+		<skill skillName="Soul to Empower" skillId="1441" skillLvl="3" getLevel="64" levelUpSp="295" />
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="4" getLevel="64" levelUpSp="295" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="36" getLevel="66" levelUpSp="406" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="37" getLevel="66" levelUpSp="406" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="41" getLevel="66" levelUpSp="406" />
@@ -292,7 +287,6 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="5" getLevel="66" levelUpSp="406" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="7" getLevel="66" levelUpSp="406" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="3" getLevel="66" levelUpSp="406" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="38" getLevel="68" levelUpSp="632" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="39" getLevel="68" levelUpSp="632" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="43" getLevel="68" levelUpSp="632" />
@@ -318,7 +312,7 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="6" getLevel="68" levelUpSp="632" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="8" getLevel="68" levelUpSp="632" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="4" getLevel="68" levelUpSp="632" />
-		
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="5" getLevel="68" levelUpSp="632" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="40" getLevel="70" levelUpSp="940" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="41" getLevel="70" levelUpSp="940" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="45" getLevel="70" levelUpSp="940" />
@@ -344,7 +338,6 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="7" getLevel="70" levelUpSp="940" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="9" getLevel="70" levelUpSp="940" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="5" getLevel="70" levelUpSp="940" />
-		
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="42" getLevel="72" levelUpSp="997" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="43" getLevel="72" levelUpSp="997" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="47" getLevel="72" levelUpSp="997" />
@@ -372,7 +365,7 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="8" getLevel="72" levelUpSp="997" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="10" getLevel="72" levelUpSp="997" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="6" getLevel="72" levelUpSp="997" />
-		
+		<skill skillName="Mana Pump" skillId="1565" skillLvl="6" getLevel="72" levelUpSp="997" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="44" getLevel="74" levelUpSp="1428" />
 		<skill skillName="Rapier Mastery" skillId="474" skillLvl="45" getLevel="74" levelUpSp="1428" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="49" getLevel="74" levelUpSp="1428" />
@@ -399,16 +392,7 @@
 		<skill skillName="Voice Bind" skillId="1447" skillLvl="9" getLevel="74" levelUpSp="1428" />
 		<skill skillName="Shadow Bind" skillId="1446" skillLvl="11" getLevel="74" levelUpSp="1428" />
 		<skill skillName="Soul Web" skillId="1529" skillLvl="7" getLevel="74" levelUpSp="1428" />
-
-		<skill skillName="Soul to Empower" skillId="1441" skillLvl="3" getLevel="64" levelUpSp="295" />
-		<skill skillName="Expert Casting" skillId="1527" skillLvl="2" getLevel="49" levelUpSp="68" />
-		<skill skillName="Expert Casting" skillId="1527" skillLvl="3" getLevel="55" levelUpSp="89" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="1" getLevel="40" levelUpSp="28" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="2" getLevel="49" levelUpSp="68" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="3" getLevel="58" levelUpSp="154" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="4" getLevel="64" levelUpSp="295" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="5" getLevel="68" levelUpSp="632" />
-		<skill skillName="Mana Pump" skillId="1565" skillLvl="6" getLevel="72" levelUpSp="997" />
-		<skill skillName="Fast Recovery" skillId="832" skillLvl="2" getLevel="49" levelUpSp="68" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="2000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
 	</skillTree>
 </list>

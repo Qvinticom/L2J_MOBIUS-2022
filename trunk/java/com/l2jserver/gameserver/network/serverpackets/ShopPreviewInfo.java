@@ -54,11 +54,28 @@ public class ShopPreviewInfo extends L2GameServerPacket
 		writeD(getFromList(Inventory.PAPERDOLL_LEGS));
 		writeD(getFromList(Inventory.PAPERDOLL_FEET));
 		writeD(getFromList(Inventory.PAPERDOLL_CLOAK));
-		writeD(getFromList(Inventory.PAPERDOLL_RHAND));
+		writeD(getFromList(Inventory.PAPERDOLL_LRHAND));
 		writeD(getFromList(Inventory.PAPERDOLL_HAIR));
-		writeD(getFromList(Inventory.PAPERDOLL_HAIR2));
+		writeD(getFromList(Inventory.PAPERDOLL_DHAIR));
 		writeD(getFromList(Inventory.PAPERDOLL_RBRACELET));
 		writeD(getFromList(Inventory.PAPERDOLL_LBRACELET));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN1));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN2));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN3));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN4));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN5));
+		writeD(getFromList(Inventory.PAPERDOLL_TALISMAN6));
+		writeD(getFromList(Inventory.PAPERDOLL_BELT));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE1));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE2));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE3));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE4));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE5));
+		writeD(getFromList(Inventory.PAPERDOLL_BROOCH_STONE6));
+		writeD(0);
+		writeD(0);
+		writeD(0);
 	}
 	
 	private int getFromList(int key)

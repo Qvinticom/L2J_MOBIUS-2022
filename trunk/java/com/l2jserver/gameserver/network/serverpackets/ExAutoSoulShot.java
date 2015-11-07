@@ -18,18 +18,24 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+/**
+ * @author Mobius
+ */
 public class ExAutoSoulShot extends L2GameServerPacket
 {
 	private final int _itemId;
-	private final int _type;
+	private final int _enabled;
+	private final int _type; // 0 SS, 1 SPS, 2 Beast SS, 3 Beast SPS
 	
 	/**
 	 * @param itemId
+	 * @param enabled
 	 * @param type
 	 */
-	public ExAutoSoulShot(int itemId, int type)
+	public ExAutoSoulShot(int itemId, int enabled, int type)
 	{
 		_itemId = itemId;
+		_enabled = enabled;
 		_type = type;
 	}
 	
@@ -37,8 +43,9 @@ public class ExAutoSoulShot extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0x0c); // sub id
+		writeH(0x0C);
 		writeD(_itemId);
+		writeD(_enabled);
 		writeD(_type);
 	}
 }

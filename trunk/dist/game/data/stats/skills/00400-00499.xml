@@ -268,13 +268,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="404" levels="14" name="Mass Shackling" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#effectPoints"> -1098 -1163 -1221 -1270 -1309 -1348 -1396 -1484 -1572 -1660 -1748 -1836 -1923 -2011 </table> <!-- Guessed -->
-		<table name="#magicLvl"> 58 62 66 70 74 75 77 79 81 83 85 90 95 99 </table>
-		<table name="#mpConsume"> 40 43 46 49 51 52 53 54 55 57 59 61 63 65 </table>
-		<table name="#ench1EffectPoints"> -2099 -2187 -2275 -2363 -2450 -2538 -2626 -2714 -2802 -2890 -2977 -3065 -3153 -3241 -3329 -3417 -3505 -3592 -3680 -3768 -3856 -3944 -4032 -4120 -4208 -4296 -4384 -4472 -4560 -4648 </table>
-		<table name="#ench2ActivateRates"> 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 </table>
+	<skill id="404" levels="17" name="Mass Shackling" enchantGroup1="1" enchantGroup2="1">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#effectPoints"> -1098 -1163 -1221 -1270 -1309 -1348 -1396 -1484 -1572 -1660 -1748 -1836 -1923 -2011 -2099 -2187 -2275 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 58 62 66 70 74 75 77 79 81 83 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 40 43 46 49 51 52 53 54 55 57 59 61 63 65 67 69 71 </table>
+		<table name="#ench1EffectPoints"> -2099 -2187 -2275 -2363 -2450 -2538 -2626 -2714 -2802 -2890 -2977 -3065 -3153 -3241 -3329 -3417 -3505 -3592 -3680 -3768 -3856 -3944 -4032 -4120 -4208 -4296 -4384 -4472 -4560 -4648 -4736 -4824 -4912 </table> <!-- Guessed -->
+		<table name="#ench2ActivateRates"> 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 50 51 52 52 53 54 54 55 56 56 57 58 58 59 60 61 62 63 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
@@ -1486,14 +1486,14 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="437" levels="7" name="Song of Silence" enchantGroup1="5" enchantGroup2="5">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#ench1ActivateRates"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
-		<table name="#ench1EffectPoints"> -154 -159 -165 -171 -177 -183 -189 -196 -202 -209 -215 -222 -229 -236 -243 </table>
-		<table name="#ench2AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench2EffectPoints"> -250 -257 -264 -271 -279 -286 -293 -301 -308 -315 -323 -330 -338 -345 -352 </table>
-		<table name="#magicLvl"> 79 81 83 85 90 95 99 </table>
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 </table>
+	<skill id="437" levels="10" name="Song of Silence" enchantGroup1="5" enchantGroup2="5">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#ench1ActivateRates"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 </table> <!-- Guessed -->
+		<table name="#ench1EffectPoints"> -154 -159 -165 -171 -177 -183 -189 -196 -202 -209 -215 -222 -229 -236 -243 -250 -257 -264 </table> <!-- Guessed -->
+		<table name="#ench2AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 248 256 264 </table> <!-- Guessed -->
+		<table name="#ench2EffectPoints"> -250 -257 -264 -271 -279 -286 -293 -301 -308 -315 -323 -330 -338 -345 -352 -359 -366 -373</table> <!-- Guessed -->
+		<table name="#magicLvl"> 79 81 83 85 90 95 99 101 103 105 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 7 7 7 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE_ALL" />
@@ -2785,14 +2785,14 @@
 			<effect name="EnemyCharge" />
 		</for>
 	</skill>
-	<skill id="485" levels="16" name="Disarm" enchantGroup1="1" enchantGroup2="1">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#effectPoints"> -341 -408 -467 -523 -582 -624 -655 -686 -717 -748 -779 -810 -841 -872 -903 -934 </table>
-		<table name="#magicLvl"> 36 43 49 55 62 68 74 75 77 79 81 83 85 90 95 99 </table>
-		<table name="#mpConsume"> 25 25 25 35 35 35 35 45 45 45 45 45 55 55 55 55 </table>
-		<table name="#ench1ActivateRates"> 70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
-		<table name="#ench2AbnormalTimes"> 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+	<skill id="485" levels="19" name="Disarm" enchantGroup1="1" enchantGroup2="1">
+		<!-- Updated to Infinite Odyssey -->
+		<table name="#effectPoints"> -341 -408 -467 -523 -582 -624 -655 -686 -717 -748 -779 -810 -841 -872 -903 -934 -965 -996 -1027 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 36 43 49 55 62 68 74 75 77 79 81 83 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 25 25 25 35 35 35 35 45 45 45 45 45 55 55 55 55 55 55 55 </table>
+		<table name="#ench1ActivateRates"> 70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 91 92 93 </table> <!-- Guessed -->
+		<table name="#ench2AbnormalTimes"> 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 21 </table> <!-- Guessed -->
+		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 </table> <!-- Guessed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />

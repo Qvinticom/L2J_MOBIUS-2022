@@ -41,5 +41,7 @@ public class RecipeShopItemInfo extends L2GameServerPacket
 		writeD(_player.getMaxMp());
 		writeD(0xffffffff);
 		writeQ(0x00);
+		writeC(0);
+		writeQ(0);
 	}
 }

@@ -644,7 +644,7 @@ public final class Raina extends AbstractNpcAI
 	 */
 	private Set<PlayerClass> getAvailableSubClasses(L2PcInstance player)
 	{
-		final int currentBaseId = player.getBaseClass();
+		final int currentBaseId = player.getBaseClassId();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
 		int baseClassId = (baseCID.level() > 2) ? baseCID.getParent().ordinal() : currentBaseId;
 		
@@ -700,7 +700,7 @@ public final class Raina extends AbstractNpcAI
 		}
 		
 		// get player base class
-		final int currentBaseId = player.getBaseClass();
+		final int currentBaseId = player.getBaseClassId();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
 		
 		// we need 2nd occupation ID
@@ -755,7 +755,7 @@ public final class Raina extends AbstractNpcAI
 	private List<PlayerClass> getDualClasses(L2PcInstance player, CategoryType cType)
 	{
 		final List<PlayerClass> tempList = new ArrayList<>();
-		final int baseClassId = player.getBaseClass();
+		final int baseClassId = player.getBaseClassId();
 		final int dualClassId = player.getClassId().getId();
 		
 		for (PlayerClass temp : dualClassList)

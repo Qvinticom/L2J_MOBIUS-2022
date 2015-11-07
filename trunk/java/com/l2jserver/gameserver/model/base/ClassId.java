@@ -22,6 +22,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jserver.gameserver.enums.Race;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -377,7 +378,7 @@ public enum ClassId implements IIdentifiable
 	}
 	
 	/**
-	 * @return the child level of this Class (0=root, 1=child leve 1...)
+	 * @return the level of this Class (0=initial, 4=awaken...)
 	 */
 	public final int level()
 	{
@@ -420,5 +421,65 @@ public enum ClassId implements IIdentifiable
 	private final void addNextClassId(ClassId cId)
 	{
 		_nextClassIds.add(cId);
+	}
+	
+	public static int getInitialClassId(L2PcInstance player)
+	{
+		switch (player.getBaseClass().getRace())
+		{
+			case HUMAN:
+			{
+				if (player.getClassId().isMage())
+				{
+					return 10;
+				}
+				return 0;
+			}
+			case ELF:
+			{
+				if (player.getClassId().isMage())
+				{
+					return 25;
+				}
+				return 18;
+			}
+			case DARK_ELF:
+			{
+				if (player.getClassId().isMage())
+				{
+					return 38;
+				}
+				return 31;
+			}
+			case ORC:
+			{
+				if (player.getClassId().isMage())
+				{
+					return 49;
+				}
+				return 44;
+			}
+			case DWARF:
+			{
+				return 53;
+			}
+			case KAMAEL:
+			{
+				if (player.getAppearance().getSex())
+				{
+					return 124;
+				}
+				return 123;
+			}
+			case ERTHEIA:
+			{
+				if (player.getClassId().isMage())
+				{
+					return 183;
+				}
+				return 182;
+			}
+		}
+		return 0;
 	}
 }

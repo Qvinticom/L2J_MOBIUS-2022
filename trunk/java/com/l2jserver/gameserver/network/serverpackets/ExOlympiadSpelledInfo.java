@@ -54,7 +54,7 @@ public class ExOlympiadSpelledInfo extends L2GameServerPacket
 			if ((info != null) && info.isInUse())
 			{
 				writeD(info.getSkill().getDisplayId());
-				writeH(info.getSkill().getDisplayLevel());
+				writeD(info.getSkill().getDisplayLevel());
 				writeD(0x00);
 				writeH(info.getTime());
 			}

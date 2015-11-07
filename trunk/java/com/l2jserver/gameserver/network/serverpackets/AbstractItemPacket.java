@@ -76,9 +76,10 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
 		writeC(item.getCustomType1()); // Filler (always 0)
 		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
+		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
 		writeH(0x00); // Equipped : 00-No, 01-yes
-		writeH(item.getCustomType2());
+		writeC(item.getCustomType2());
+		writeD(0);
 		writeItemElementalAndEnchant(new ItemInfo(item));
 	}
 	
@@ -95,13 +96,15 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeC(item.getCustomType1()); // Filler (always 0)
 		writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
+		writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
+		writeC(0);
 		writeD(item.getMana());
 		writeD(item.getTime());
 		writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
-			writeD(item.getAugmentationBonus());
+			writeD(item.get1stAugmentationId());
+			writeD(item.get2ndAugmentationId());
 		}
 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
 		{
@@ -181,7 +184,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		// Enchant Effects
 		for (int op : item.getEnchantOptions())
 		{
-			writeH(op);
+			writeD(op);
 		}
 	}
 	

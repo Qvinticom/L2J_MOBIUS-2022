@@ -18,12 +18,16 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.data.xml.impl.ExperienceData;
 import com.l2jserver.gameserver.enums.UserInfoType;
+import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.L2Weapon;
+import com.l2jserver.gameserver.model.items.type.WeaponType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
@@ -148,7 +152,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeC(_activeChar.isGM() ? 0x01 : 0x00);
 			writeC(_activeChar.getRace().ordinal());
 			writeC(_activeChar.getAppearance().getSex() ? 0x01 : 0x00);
-			writeD(_activeChar.getBaseClass());
+			writeD(_activeChar.getInitialClassId());
 			writeD(_activeChar.getClassId().getId());
 			writeC(_activeChar.getLevel());
 		}
@@ -206,14 +210,37 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeH(6);
 			writeC(_activeChar.getMountType().ordinal());
 			writeC(_activeChar.getPrivateStoreType().getId());
-			writeC(_activeChar.hasDwarvenCraft() ? 1 : 0);
+			writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
 			writeC(_activeChar.getAbilityPointsUsed());
 		}
 		
 		if (containsMask(UserInfoType.STATS))
 		{
 			writeH(56);
-			writeH(_activeChar.getActiveWeaponItem() != null ? 40 : 20);
+			if (_activeChar.getActiveWeaponItem() != null)
+			{
+				L2Weapon weaponItem = _activeChar.getActiveWeaponItem();
+				if (weaponItem.getItemType() == WeaponType.POLE)
+				{
+					writeH(80);
+				}
+				else if (weaponItem.getItemType() == WeaponType.BOW)
+				{
+					writeH(500);
+				}
+				else if (weaponItem.getItemType() == WeaponType.CROSSBOW)
+				{
+					writeH(400);
+				}
+				else
+				{
+					writeH(40);
+				}
+			}
+			else
+			{
+				writeH(0);
+			}
 			writeD((int) _activeChar.getPAtk(null));
 			writeD((int) _activeChar.getPAtkSpd());
 			writeD((int) _activeChar.getPDef(null));
@@ -292,8 +319,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeD(_activeChar.getClanId());
 			writeD(_activeChar.getClanCrestLargeId());
 			writeD(_activeChar.getClanCrestId());
-			writeC(_activeChar.isClanLeader() ? -1 : 0x00);
 			writeD(_activeChar.getClanPrivileges().getBitmask());
+			writeC(_activeChar.isClanLeader() ? 1 : 0);
 			writeD(_activeChar.getAllyId());
 			writeD(_activeChar.getAllyCrestId());
 			writeC(_activeChar.isInPartyMatchRoom() ? 0x01 : 0x00);
@@ -305,11 +332,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeC(_activeChar.getPvpFlag());
 			writeD(_activeChar.getReputation());
 			writeC(_activeChar.isNoble() ? 0x01 : 0x00);
-			writeC(_activeChar.isHero() ? 0x01 : 0x00);
+			writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
 			writeC(_activeChar.getPledgeClass());
 			writeD(_activeChar.getPkKills());
 			writeD(_activeChar.getPvpKills());
-			writeD(_activeChar.getRecomLeft());
+			writeH(_activeChar.getRecomLeft());
+			writeH(_activeChar.getRecomHave());
 		}
 		
 		if (containsMask(UserInfoType.VITA_FAME))
@@ -353,13 +381,13 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeH(0x00);
 			writeH(0x00);
 			writeH(_activeChar.getInventoryLimit());
-			writeC(0x00); // if greater than 1 show the attack cursor when interacting
+			writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
 		}
 		
 		if (containsMask(UserInfoType.UNK_3))
 		{
 			writeH(9);
-			writeC(0x00);
+			writeC(0x01);
 			writeH(0x00);
 			writeD(0x00);
 		}
