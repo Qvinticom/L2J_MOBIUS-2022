@@ -65,7 +65,7 @@ public class PcStat extends PlayableStat
 	private boolean _cloakSlot = false;
 	
 	public static final int MAX_VITALITY_POINTS = 140000;
-	public static final int MIN_VITALITY_POINTS = 1;
+	public static final int MIN_VITALITY_POINTS = 0;
 	public static String VITALITY_VARIABLE = "vitality_points";
 	
 	public PcStat(L2PcInstance activeChar)
@@ -192,7 +192,7 @@ public class PcStat extends PlayableStat
 		}
 		else
 		{
-			if ((addToExp - baseExp) > 0)
+			if (addToExp > baseExp)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
 				sm.addLong(addToExp);
@@ -742,7 +742,7 @@ public class PcStat extends PlayableStat
 		}
 		else
 		{
-			points = Math.max(getActiveChar().getVitalityPoints() + points, MIN_VITALITY_POINTS);
+			points = MIN_VITALITY_POINTS;
 		}
 		
 		if (Math.abs(points - getActiveChar().getVitalityPoints()) <= 1e-6)
@@ -755,7 +755,7 @@ public class PcStat extends PlayableStat
 	
 	public double getVitalityMultiplier()
 	{
-		return Config.ENABLE_VITALITY ? Config.RATE_VITALITY_EXP_MULTIPLIER : 1;
+		return Config.ENABLE_VITALITY && (getActiveChar().getVitalityPoints() > 0) ? Config.RATE_VITALITY_EXP_MULTIPLIER : 1;
 	}
 	
 	public double getExpBonusMultiplier()
