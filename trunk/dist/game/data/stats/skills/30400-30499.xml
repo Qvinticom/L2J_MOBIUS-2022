@@ -1,24 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30400" levels="2" name="Divine Wind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind/Holy Resistance + 10. -->
+		<table name="#magicLvl"> 1 85 </table>
+		<table name="#res"> 10 20 </table>
 		<set name="icon" val="icon.skill30400" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windRes" val="#res" />
+				<add stat="holyRes" val="#res" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30401" levels="2" name="Tenacity">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. HP + 1%, Speed + 4. -->
+		<table name="#magicLvl"> 1 85 </table>
+		<table name="#maxHp"> 1.01 1.02 </table>
+		<table name="#spd"> 4 7 </table>
 		<set name="icon" val="icon.skill30401" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#maxHp" />
+				<add stat="runSpd" val="#spd" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="30402" levels="2" name="Efficacy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MP Consumption - 1%. -->
+		<table name="#magicLvl"> 1 85 </table>
+		<table name="#mpConsumeRate"> 0.99 0.98 </table>
 		<set name="icon" val="icon.skill30402" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+			</effect>
+		</for>
 	</skill>
 </list>

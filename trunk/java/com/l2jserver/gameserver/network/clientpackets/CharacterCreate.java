@@ -338,11 +338,6 @@ public final class CharacterCreate extends L2GameClientPacket
 			}
 		}
 		
-		for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(newChar.getRace()))
-		{
-			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
-		}
-		
 		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true))
 		{
 			if (Config.DEBUG)
