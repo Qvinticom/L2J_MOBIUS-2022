@@ -29,20 +29,13 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private L2ItemInstance[] _sellList = null;
+	private final List<L2ItemInstance> _items = new ArrayList<>();
+	private final List<L2ItemInstance> _sellList = null;
 	private L2ItemInstance[] _refundList = null;
 	private final boolean _done;
-	private final List<L2ItemInstance> _items = new ArrayList<>();
 	
 	public ExBuySellList(L2PcInstance player, boolean done)
 	{
-		_sellList = player.getInventory().getAvailableItems(false, false, false);
-		if (player.hasRefund())
-		{
-			_refundList = player.getRefund().getItems();
-		}
-		_done = done;
-		
 		for (L2ItemInstance item : player.getInventory().getItems())
 		{
 			if (!item.isQuestItem())
@@ -50,6 +43,20 @@ public class ExBuySellList extends AbstractItemPacket
 				_items.add(item);
 			}
 		}
+		
+		for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
+		{
+			if (item.isSellable())
+			{
+				_sellList.add(item);
+			}
+		}
+		
+		if (player.hasRefund())
+		{
+			_refundList = player.getRefund().getItems();
+		}
+		_done = done;
 	}
 	
 	@Override
@@ -62,7 +69,7 @@ public class ExBuySellList extends AbstractItemPacket
 		
 		if ((_sellList != null))
 		{
-			writeH(_sellList.length);
+			writeH(_sellList.size());
 			for (L2ItemInstance item : _sellList)
 			{
 				writeItem(item);
