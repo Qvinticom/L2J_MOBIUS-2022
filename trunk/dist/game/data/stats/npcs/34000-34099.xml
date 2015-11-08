@@ -956,6 +956,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
@@ -990,6 +991,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
+		<equipment rhand="17383" lhand="17401" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
@@ -1326,7 +1328,7 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="34078" level="99" type="L2Npc" name="Training Soldier" title="">
+	<npc id="34078" level="99" type="L2Npc" name="" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1337,7 +1339,7 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+	<status attackable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
