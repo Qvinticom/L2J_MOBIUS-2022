@@ -453,11 +453,10 @@
 	<admin command="admin_ride_bike" accessLevel="100" />
 	<admin command="admin_ride_wyvern" accessLevel="100" />
 	<admin command="admin_ride_strider" accessLevel="100" />
-	<admin command="admin_unride_wyvern" accessLevel="100" />
-	<admin command="admin_unride_strider" accessLevel="100" />
-	<admin command="admin_unride" accessLevel="100" />
+	<admin command="admin_ride_guardian" accessLevel="100" />
+	<admin command="admin_ride_lion" accessLevel="100" />
 	<admin command="admin_ride_wolf" accessLevel="100" />
-	<admin command="admin_unride_wolf" accessLevel="100" />
+	<admin command="admin_unride" accessLevel="100" />
 
 	<!-- ADMIN SHOP -->
 	<admin command="admin_buy" accessLevel="100" />
