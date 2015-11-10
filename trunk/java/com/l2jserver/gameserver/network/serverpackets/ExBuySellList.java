@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 public class ExBuySellList extends AbstractItemPacket
 {
 	private final List<L2ItemInstance> _items = new ArrayList<>();
-	private final List<L2ItemInstance> _sellList = null;
+	private final List<L2ItemInstance> _sellList = new ArrayList<>();
 	private L2ItemInstance[] _refundList = null;
 	private final boolean _done;
 	
@@ -67,7 +67,7 @@ public class ExBuySellList extends AbstractItemPacket
 		writeD(0x01);
 		writeD(_items.size());
 		
-		if ((_sellList != null))
+		if (_sellList.size() > 0)
 		{
 			writeH(_sellList.size());
 			for (L2ItemInstance item : _sellList)
