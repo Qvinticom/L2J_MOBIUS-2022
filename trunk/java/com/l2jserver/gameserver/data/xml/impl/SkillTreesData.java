@@ -653,6 +653,11 @@ public final class SkillTreesData implements IXmlReader
 		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
 	}
 	
+	public List<L2SkillLearn> getAvailableSkillsList(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	{
+		return getAvailableSkillsList(player, classId, includeByFs, includeAutoGet, player);
+	}
+	
 	/**
 	 * Gets the available skills.
 	 * @param player the learning skill player
@@ -710,6 +715,56 @@ public final class SkillTreesData implements IXmlReader
 				{
 					result.add(skill);
 				}
+			}
+		}
+		return result;
+	}
+	
+	private List<L2SkillLearn> getAvailableSkillsList(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder)
+	{
+		final List<L2SkillLearn> result = new LinkedList<>();
+		final Map<Integer, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
+		
+		if (skills.isEmpty())
+		{
+			// The Skill Tree for this class is undefined.
+			LOGGER.warning(getClass().getSimpleName() + ": Skilltree for class " + classId + " is not defined!");
+			return result;
+		}
+		
+		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP);
+		
+		for (Entry<Integer, L2SkillLearn> entry : skills.entrySet())
+		{
+			final L2SkillLearn skill = entry.getValue();
+			
+			// Skill level doesn't exist.
+			if (SkillData.getInstance().getMaxLevel(skill.getSkillId()) < skill.getSkillLevel())
+			{
+				continue;
+			}
+			
+			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
+			{
+				continue;
+			}
+			
+			if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey()))
+			{
+				continue;
+			}
+			
+			final Skill oldSkill = holder.getKnownSkill(skill.getSkillId());
+			if (oldSkill != null)
+			{
+				if (oldSkill.getLevel() == (skill.getSkillLevel() - 1))
+				{
+					result.add(skill);
+				}
+			}
+			else if (skill.getSkillLevel() == 1)
+			{
+				result.add(skill);
 			}
 		}
 		return result;
@@ -1463,11 +1518,20 @@ public final class SkillTreesData implements IXmlReader
 		for (Skill skill : player.getAllSkills())
 		{
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
+			final int Lvl_cur = skill.getLevel();
 			final int hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
+			final int hash_cur = SkillData.getSkillHashCode(skill.getId(), Lvl_cur); // must in parent class
+			final int hash_curx = SkillData.getSkillHashCode(skill.getId(), Lvl_cur + 1); // some skill not update maxlvl in stats
 			
-			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()))
+			final int _classlv = player.getClassId().level();
+			ClassId _classId = player.getClassId();
+			for (int i = 0; i < _classlv; i++)
 			{
-				player.removeSkill(skill, true, true);
+				_classId = _classId.getParent();
+				if (isCurrentClassSkillNoParent(_classId, hash_cur) && (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isCurrentClassSkillNoParent(player.getClassId(), hash_curx)) && !isRemoveSkill(player.getClassId(), skill.getId()))
+				{
+					player.removeSkill(skill, true, true);
+				}
 			}
 		}
 	}

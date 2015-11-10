@@ -2657,7 +2657,7 @@ public final class L2PcInstance extends L2Playable
 		// Remove skills if required.
 		for (Skill sk : getSkills().values())
 		{
-			final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(sk.getId(), sk.getLevel(), this);
+			final L2SkillLearn s = SkillTreesData.getInstance().getSkillLearn(sk.getId(), 1, this);
 			if ((s != null) && !s.getRemoveSkills().isEmpty())
 			{
 				s.getRemoveSkills().forEach(skillId ->
