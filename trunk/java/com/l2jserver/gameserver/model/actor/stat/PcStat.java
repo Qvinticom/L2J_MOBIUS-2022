@@ -742,7 +742,7 @@ public class PcStat extends PlayableStat
 		}
 		else
 		{
-			points = MIN_VITALITY_POINTS;
+			points = Math.max(getActiveChar().getVitalityPoints() + points, MIN_VITALITY_POINTS);
 		}
 		
 		if (Math.abs(points - getActiveChar().getVitalityPoints()) <= 1e-6)
