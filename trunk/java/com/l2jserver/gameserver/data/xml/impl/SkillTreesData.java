@@ -1518,17 +1518,16 @@ public final class SkillTreesData implements IXmlReader
 		for (Skill skill : player.getAllSkills())
 		{
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
-			final int Lvl_cur = skill.getLevel();
-			final int hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
-			final int hash_cur = SkillData.getSkillHashCode(skill.getId(), Lvl_cur); // must in parent class
-			final int hash_curx = SkillData.getSkillHashCode(skill.getId(), Lvl_cur + 1); // some skill not update maxlvl in stats
-			
-			final int _classlv = player.getClassId().level();
-			ClassId _classId = player.getClassId();
-			for (int i = 0; i < _classlv; i++)
+			final int currentLevel = skill.getLevel();
+			final int hashMaxLevel = SkillData.getSkillHashCode(skill.getId(), maxLvl);
+			final int hashCurrentLevel = SkillData.getSkillHashCode(skill.getId(), currentLevel); // must in parent class
+			final int hashNextLevel = SkillData.getSkillHashCode(skill.getId(), currentLevel + 1); // some skill not update maxlvl in stats
+			final int classlevel = player.getClassId().level();
+			ClassId classId = player.getClassId();
+			for (int i = 0; i < classlevel; i++)
 			{
-				_classId = _classId.getParent();
-				if (isCurrentClassSkillNoParent(_classId, hash_cur) && (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isCurrentClassSkillNoParent(player.getClassId(), hash_curx)) && !isRemoveSkill(player.getClassId(), skill.getId()))
+				classId = classId.getParent();
+				if (isCurrentClassSkillNoParent(classId, hashCurrentLevel) && (!isCurrentClassSkillNoParent(player.getClassId(), hashMaxLevel) && !isCurrentClassSkillNoParent(player.getClassId(), hashNextLevel)) && !isRemoveSkill(player.getClassId(), skill.getId()))
 				{
 					player.removeSkill(skill, true, true);
 				}
