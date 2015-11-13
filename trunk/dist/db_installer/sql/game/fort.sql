@@ -26,7 +26,7 @@ INSERT IGNORE INTO `fort` VALUES
 (110,'Swamp',0,0,0,1,0,0,0),
 (111,'Archaic',0,0,0,0,0,0,0),
 (112,'Floran',0,0,0,1,0,0,0),
-(113,'Cloud Mountain',0,0,0,1,0,0,0),
+-- (113,'Cloud Mountain',0,0,0,1,0,0,0),
 (114,'Tanor',0,0,0,0,0,0,0),
 (115,'Dragonspine',0,0,0,0,0,0,0),
 (116,'Antharas',0,0,0,1,0,0,0),
