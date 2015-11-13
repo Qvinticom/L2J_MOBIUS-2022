@@ -16,26 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.individual;
+package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 
 /**
- * Embryo Purifier AI.
+ * Non Random Walk Npcs AI.
  * @author Mobius
  */
-public class EmbryoPurifier extends AbstractNpcAI
+public class NonRandomWalkNpcs extends AbstractNpcAI
 {
-	// Npc
-	private static final int EMBRYO_PURIFIER_1 = 27540;
-	private static final int EMBRYO_PURIFIER_2 = 27541;
-	
-	public EmbryoPurifier()
+	private static final int[] NPCS =
 	{
-		super(EmbryoPurifier.class.getSimpleName(), "ai/individual");
-		addSpawnId(EMBRYO_PURIFIER_1, EMBRYO_PURIFIER_2);
+		27540, // Fields of Massacre - Embryo Purifier
+		27541, // Fields of Massacre - Embryo Purifier
+	};
+	
+	public NonRandomWalkNpcs()
+	{
+		super(NonRandomWalkNpcs.class.getSimpleName(), "ai/group_template");
+		addSpawnId(NPCS);
 	}
 	
 	@Override
@@ -47,6 +49,6 @@ public class EmbryoPurifier extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new EmbryoPurifier();
+		new NonRandomWalkNpcs();
 	}
 }
