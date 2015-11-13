@@ -547,7 +547,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="810" hpRegen="4.5" mp="417" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
@@ -562,7 +562,6 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

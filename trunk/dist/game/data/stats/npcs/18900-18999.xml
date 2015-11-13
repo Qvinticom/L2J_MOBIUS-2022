@@ -435,7 +435,6 @@
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2621,7 +2620,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
 		<acquire exp="2737891" sp="657" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="29348" hpRegen="10.5" mp="2059" mpRegen="3.6" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1375" magical="1325" />

@@ -3279,7 +3279,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="226669890" sp="54400" raidPoints="2884" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="889034" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="2154.88111713047" magical="717.403871261232" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="887.74791" magical="433.08" evasion="-18" />
@@ -3294,7 +3294,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

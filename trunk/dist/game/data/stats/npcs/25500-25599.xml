@@ -3098,7 +3098,7 @@
 		<equipment rhand="3939" />
 		<!-- rhand: Lady's Fan -->
 		<acquire exp="138831575" sp="33319" raidPoints="303.8" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="2555827" hpRegen="10.5" mp="44116" mpRegen="3.6" />
 			<attack physical="5343.97938761949" magical="876.212888951461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="957.73869" magical="467.22" evasion="-18" />
@@ -3115,7 +3115,6 @@
 		<skill_list>
 			<skill id="4045" level="1" />  <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="7" />  <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" />  <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3704,7 +3703,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="217112675" sp="52107" raidPoints="320.6" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="2784208" hpRegen="10.5" mp="45600" mpRegen="3.6" />
 			<attack physical="7149.40063947237" magical="941.257306822256" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
@@ -3724,7 +3723,6 @@
 			<skill id="4182" level="7" /> <!-- Poison -->
 			<skill id="4190" level="7" /> <!-- Decrease MP -->
 			<skill id="4195" level="7" /> <!-- BOSS Twister -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4330,7 +4328,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="376926858" sp="603082" raidPoints="338.1" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="2911646" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<attack physical="7561.96024153683" magical="984.65035778871" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1036.83381" magical="505.8" evasion="-18" />
@@ -4350,7 +4348,6 @@
 			<skill id="4182" level="7" />	<!-- Poison -->
 			<skill id="4188" level="7" />	<!-- Bleed -->
 			<skill id="4194" level="7" />	<!-- BOSS Aura Burn -->
-			<skill id="4408" level="1" />	<!-- HP Increase (1x) -->
 			<skill id="4410" level="11" />	<!-- Average P. Atk. -->
 			<skill id="4411" level="11" />	<!-- Average M. Atk. -->
 			<skill id="4412" level="11" />	<!-- Average P. Def. -->
@@ -6230,7 +6227,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="5131" /> 	<!-- rhand: Parhit Staff -->
 		<acquire exp="361851322" sp="86844" raidPoints="320.6" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="2784208" hpRegen="10.5" mp="45600" mpRegen="3.6" />
 			<attack physical="7149.40063947237" magical="941.257306822256" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
@@ -6249,7 +6246,6 @@
 			<skill id="4188" level="6" />  	<!-- Bleed -->
 			<skill id="4190" level="6" />  	<!-- Decrease MP -->
 			<skill id="4192" level="6" />  	<!-- BOSS HP Drain -->
-			<skill id="4408" level="1" />   <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" />  <!-- Average P. Atk. -->
 			<skill id="4411" level="11" />  <!-- Average M. Atk. -->
 			<skill id="4412" level="11" />  <!-- Average P. Def. -->

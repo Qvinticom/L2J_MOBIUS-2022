@@ -4955,7 +4955,7 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="5476117" sp="1314" raidPoints="520" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="109138" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="163.695648646951" magical="12.9299967753255" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" />
@@ -4974,7 +4974,6 @@
 			<skill id="4182" level="3" /> <!-- Poison -->
 			<skill id="4190" level="3" /> <!-- Decrease MP -->
 			<skill id="4194" level="3" /> <!-- BOSS Aura Burn -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

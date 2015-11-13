@@ -13,7 +13,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="6804" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1934" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="150.021245531891" />
@@ -32,7 +32,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -90,7 +89,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="6480" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1933.2" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="529.48" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65" magical="150.021593197344" />
@@ -109,7 +108,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

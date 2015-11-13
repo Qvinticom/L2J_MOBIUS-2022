@@ -3770,7 +3770,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="534" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="164" hpRegen="2" mp="108" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="61.82527" magical="41.16396260604" />
@@ -3786,7 +3786,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->

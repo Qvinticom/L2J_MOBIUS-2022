@@ -1146,7 +1146,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="19351609" sp="4644" raidPoints="356" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="8929367" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="19948.8396409168" magical="32304.9196496018" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
@@ -1162,7 +1162,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1215,7 +1214,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="21110846" sp="5066" raidPoints="356" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="8929367" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="19948.8396409168" magical="25843.9357196815" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
@@ -1231,7 +1230,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1552,7 +1550,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire raidPoints="213" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="9291398" hpRegen="9.5" mp="18468" mpRegen="3.3" />
 			<attack physical="15345.2612622437" magical="23259.5421477133" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.129926" magical="529.48" evasion="-18" />
@@ -1569,7 +1567,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

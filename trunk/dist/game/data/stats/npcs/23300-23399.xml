@@ -2070,7 +2070,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649430" sp="20758" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -2104,7 +2104,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -2141,7 +2141,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649430" sp="20758" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -2469,7 +2469,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649430" sp="20758" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -2503,7 +2503,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2162357" sp="5189" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -2540,7 +2540,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649430" sp="20758" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -3194,7 +3194,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BUG</race>
 		<acquire exp="90421085" sp="217010" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats>
 			<vitals hp="986624" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2570" magical="2584" />

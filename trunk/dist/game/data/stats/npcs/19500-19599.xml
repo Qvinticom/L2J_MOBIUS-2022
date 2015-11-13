@@ -22,11 +22,11 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="22781091564" sp="36449746" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1004459615" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -36,11 +36,9 @@
 			<skill id="16179" level="1" /> <!-- Beleth -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
-		<drop_lists>
-		</drop_lists>
 	</npc>
 	<npc id="19502" level="99" type="L2Npc" name="Darion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -64,7 +62,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="20395684" sp="48949" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197325" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -200,7 +198,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21755475" sp="52213" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="210479" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
@@ -222,7 +220,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="21755475" sp="52213" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="210479" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
@@ -313,7 +311,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197325" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />

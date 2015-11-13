@@ -501,7 +501,7 @@
  		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="292767" sp="70" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="17848" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="12310" magical="11740" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1312" magical="1070" />
@@ -782,7 +782,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="525002" sp="126" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="21862" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="15970" magical="13990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1812" magical="1705" />
@@ -1246,7 +1246,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
 		<acquire exp="534853" sp="128" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="20772" hpRegen="9.5" mp="1708" mpRegen="3.3" />
 			<attack physical="13470" magical="9450" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1498" magical="1295" />
@@ -3261,7 +3261,7 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>FEMALE</sex>
 		<acquire exp="15385855" sp="24617" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
@@ -3305,7 +3305,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="15385855" sp="24617" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->

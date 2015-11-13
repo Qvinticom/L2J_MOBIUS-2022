@@ -969,7 +969,7 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="25917" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
@@ -984,7 +984,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -2411,7 +2410,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1916627" sp="459" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="132524" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
@@ -2427,7 +2426,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
@@ -2479,7 +2477,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1290396" sp="309" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="66262" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
@@ -2495,7 +2493,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
@@ -2549,7 +2546,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1290396" sp="309" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="66262" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
@@ -2565,7 +2562,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->

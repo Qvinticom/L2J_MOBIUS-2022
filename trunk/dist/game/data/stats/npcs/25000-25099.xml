@@ -998,7 +998,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8" /> <!-- rhand: Willow Staff -->
 		<acquire exp="2417862" sp="580" raidPoints="496" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="103390" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="151.742801059792" magical="12.040611940131" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="398.8458" magical="194.58" evasion="-18" />
@@ -1015,7 +1015,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="3" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2192,7 +2191,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="70" /> <!-- rhand: Claymore -->
 		<acquire exp="6374055" sp="1529" raidPoints="820" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="211152" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="380.236376471706" magical="42.8987594363472" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="559.90707" magical="273.14" evasion="-18" />
@@ -2210,7 +2209,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2869,7 +2867,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="5918766" sp="1420" raidPoints="764" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="190435" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="333.674474509607" magical="35.7320100968747" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
@@ -2885,7 +2883,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

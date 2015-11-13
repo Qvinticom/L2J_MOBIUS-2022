@@ -1224,7 +1224,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- rhand: Soulfire Dirk -->
 		<acquire exp="21676" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1986" hpRegen="7.5" mp="1066" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="168.112997103103" />
@@ -1242,7 +1242,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -1330,7 +1329,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- rhand: Soulfire Dirk -->
 		<acquire exp="21676" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1986" hpRegen="7.5" mp="1066" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="168.112997103103" />
@@ -1348,7 +1347,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4440,7 +4438,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66712" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
@@ -4457,7 +4455,6 @@
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4545,7 +4542,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66712" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
@@ -4562,7 +4559,6 @@
 		<skill_list>
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4652,7 +4648,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="71626" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
@@ -4668,7 +4664,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4757,7 +4752,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="71626" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
@@ -4773,7 +4768,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5064,7 +5058,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="70141" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4592" hpRegen="7.5" mp="1251" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
@@ -5080,7 +5074,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5279,7 +5272,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66782" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4692" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
@@ -5296,7 +5289,6 @@
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5484,7 +5476,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="85601" sp="20" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4692" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
@@ -5500,7 +5492,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4138" level="6" /> <!-- NPC AE - Corpse Burst -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5993,7 +5984,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="76692" sp="18" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4792" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
@@ -6009,7 +6000,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6201,7 +6191,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="91866" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4890" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
@@ -6217,7 +6207,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4138" level="7" /> <!-- NPC AE - Corpse Burst -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6302,7 +6291,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="91866" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4890" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
@@ -6317,7 +6306,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6605,7 +6593,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="88642" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
@@ -6622,7 +6610,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -6814,7 +6801,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="86622" sp="20" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
@@ -6831,7 +6818,6 @@
 		<skill_list>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4155" level="7" /> <!-- NPC Twister - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6920,7 +6906,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="93835" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
@@ -6936,7 +6922,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7137,7 +7122,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="94356" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
@@ -7153,7 +7138,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4047" level="7" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7246,7 +7230,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="92129" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
@@ -7263,7 +7247,6 @@
 		<skill_list>
 			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->

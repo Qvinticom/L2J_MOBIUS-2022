@@ -4255,7 +4255,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1902457" sp="456" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
@@ -4271,7 +4271,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4388" level="4" /> 	<!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" />  <!-- HP Increase (2x) -->
 			<skill id="4410" level="17" />  <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" />  <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" />  <!-- Strong P. Def. -->
@@ -4326,7 +4325,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="298353" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
@@ -4342,7 +4341,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4388" level="4" />	<!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" />	<!-- HP Increase (2x) -->
 			<skill id="4410" level="17" />	<!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" />	<!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" />	<!-- Strong P. Def. -->
