@@ -1195,7 +1195,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11090077" sp="2661" raidPoints="13008" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="127007999" hpRegen="750" mp="18000.0" mpRegen="99" />
+			<vitals hp="127008002" hpRegen="8.5" mp="18000" mpRegen="3" />
 			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" />
 			<attribute>
@@ -1223,50 +1223,41 @@
 		</skill_list>
 		<corpse_time>13</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
 			<skill primaryId="4127" />
 		</ai>
-		<drop_lists>
-			<death>
-				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<group chance="30">
-					<item id="80" min="1" max="1" chance="20" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="1" chance="20" /> <!-- Halberd -->
-					<item id="288" min="1" max="1" chance="20" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="1" chance="20" /> <!-- Elemental Sword -->
-					<item id="6364" min="1" max="1" chance="4" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="4" /> <!-- Basalt Battlehammer -->
-					<item id="6580" min="1" max="1" chance="3" /> <!-- Tallum Blade*Dark Legion's Edge -->
-					<item id="6367" min="1" max="1" chance="3" /> <!-- Angel Slayer -->
-					<item id="6369" min="1" max="1" chance="3" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="3" /> <!-- Saint Spear -->
-				</group>
-				<group chance="30">
-					<item id="269" min="1" max="1" chance="20" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="1" chance="20" /> <!-- Meteor Shower -->
-					<item id="235" min="1" max="1" chance="20" /> <!-- Bloody Orchid -->
-					<item id="212" min="1" max="1" chance="20" /> <!-- Dasparion's Staff -->
-					<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
-					<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
-					<item id="6372" min="1" max="1" chance="4" /> <!-- Heaven's Divider -->
-				</group>
-				<group chance="100">
-					<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-					<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-					<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
-				</group>
-				<group chance="100">
-					<item id="6658" min="1" max="1" chance="100" /> <!-- Ring of Baium -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="65" />
 			<height normal="174" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6658" min="1" max="1" chance="69.08" /> <!-- Baium's Ring -->
+				<item id="235" min="1" max="1" chance="6.058" /> <!-- Bloody Orchid -->
+				<item id="98" min="1" max="1" chance="6.057" /> <!-- Halberd -->
+				<item id="212" min="1" max="1" chance="6.051" /> <!-- Dasparion's Staff -->
+				<item id="288" min="1" max="1" chance="6.027" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="5.996" /> <!-- Meteor Shower -->
+				<item id="80" min="1" max="1" chance="5.988" /> <!-- Tallum Blade -->
+				<item id="150" min="1" max="1" chance="5.974" /> <!-- Elemental Sword -->
+				<item id="269" min="1" max="1" chance="5.965" /> <!-- Blood Tornado -->
+				<item id="6372" min="1" max="1" chance="1.232" /> <!-- Heaven's Divider -->
+				<item id="6365" min="1" max="1" chance="1.224" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="1.221" /> <!-- Imperial Staff -->
+				<item id="6364" min="1" max="1" chance="1.212" /> <!-- Forgotten Blade -->
+				<item id="6579" min="1" max="1" chance="1.191" /> <!-- Arcana Mace -->
+				<item id="7575" min="1" max="1" chance="1.184" /> <!-- Draconic Bow -->
+				<item id="6371" min="1" max="1" chance="1.142" /> <!-- Demon Splinter -->
+				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
+				<item id="6369" min="1" max="1" chance="0.75" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="0.75" /> <!-- Saint Spear -->
+				<item id="6580" min="1" max="1" chance="0.75" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="36514" min="1" max="2" chance="100" /> <!-- Elcyum Crystal -->
+				<item id="45929" min="1" max="6" chance="45.7" /> <!-- Spirit Stone -->
+				<item id="37520" min="1" max="1" chance="30.67" /> <!-- Bottle of Baium's Soul -->
+				<item id="39629" min="1" max="1" chance="0.007802" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29021" level="74" type="L2Monster" name="Archangel">
 		<race>DIVINE</race>

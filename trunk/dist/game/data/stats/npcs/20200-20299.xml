@@ -84,6 +84,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20204" level="23" type="L2Monster" name="Bloody Bee">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -97,9 +98,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1721" sp="1" />
+		<acquire exp="1721" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="410.70422" hpRegen="3.5" mp="231.96" mpRegen="1.5" />
+			<vitals hp="411" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<attack physical="55.84125" magical="38.13234" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="95.64976" magical="63.6846860642986" />
 			<attribute>
@@ -115,7 +116,6 @@
 		<skill_list>
 			<skill id="4035" level="2" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -127,24 +127,16 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="188" max="333" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9463000297546387">
-					<item id="846" min="1" max="1" chance="10.4521" /> <!-- Coral Earring -->
-					<item id="909" min="1" max="1" chance="7.8391" /> <!-- Blue Diamond Necklace -->
-					<item id="1898" min="1" max="1" chance="66.0305" /> <!-- Blue Diamond Necklace Gem -->
-					<item id="878" min="1" max="1" chance="15.6783" /> <!-- Blue Coral Ring -->
-				</group>
-				<group chance="27.228300094604492">
-					<item id="1867" min="1" max="1" chance="23.8284" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="23.8284" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="3.9714" /> <!-- Leather -->
-					<item id="3953" min="1" max="1" chance="0.7149" /> <!-- Recipe: Blessed Spiritshot D -->
-					<item id="1831" min="1" max="1" chance="47.6569" /> <!-- Antidote -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="14.1" /> <!-- Antidote -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -178,15 +170,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1868" min="1" max="1" chance="82.368" /> <!-- Thread -->
-				<item id="2014" min="1" max="1" chance="0.4734" /> <!-- Iron Hammer Head -->
-				<item id="1867" min="1" max="1" chance="54.912" /> <!-- Animal Skin -->
+				<item id="36531" min="1" max="1" chance="3.865" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="8" />
-			<height normal="24.5" />
-		</collision>
 	</npc>
 	<npc id="20205" level="24" type="L2Monster" name="Dire Wolf">
 		<parameters>
@@ -5132,6 +5119,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20267" level="31" type="L2Monster" name="Breka Orc">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -5148,9 +5136,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="215" /> <!-- rhand: Doom Dagger -->
-		<acquire exp="2515" sp="1" />
+		<acquire exp="2515" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<vitals hp="636" hpRegen="4.5" mp="343" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="81.2211098160515" />
 			<attribute>
@@ -5166,7 +5154,6 @@
 		<skill_list>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5182,25 +5169,16 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="239" max="476" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.08780000358819962">
-					<item id="69" min="1" max="1" chance="2.8343" /> <!-- Bastard Sword -->
-					<item id="125" min="1" max="1" chance="2.8343" /> <!-- Spinebone Sword -->
-					<item id="2021" min="1" max="1" chance="88.6626" /> <!-- Spinebone Sword Blade -->
-					<item id="126" min="1" max="1" chance="2.8343" /> <!-- Artisan's Sword -->
-					<item id="128" min="1" max="1" chance="2.8345" /> <!-- Knight's Sword -->
-				</group>
-				<group chance="17.031200408935547">
-					<item id="1873" min="1" max="1" chance="14.4788" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="72.3939" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="7.2394" /> <!-- Mithril Ore -->
-					<item id="2153" min="1" max="1" chance="5.6294" /> <!-- Recipe: Tiger's Eye Earring -->
-					<item id="2274" min="1" max="1" chance="0.2585" /> <!-- Recipe: Skull Breaker -->
-				</group>
+				<item id="180" min="1" max="1" chance="0.03" /> <!-- Mace of Judgment -->
+				<item id="57" min="10" max="22" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="1.73" /> <!-- Major Healing Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5234,17 +5212,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2203" min="1" max="1" chance="12.289" /> <!-- Recipe: Reinforced Mithril Boots -->
-				<item id="1882" min="1" max="1" chance="12.5348" /> <!-- Leather -->
-				<item id="1061" min="1" max="1" chance="34.1857" /> <!-- Greater Healing Potion -->
+				<item id="36531" min="1" max="1" chance="10.83" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
-		</collision>
 	</npc>
 	<npc id="20268" level="32" type="L2Monster" name="Breka Orc Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -5258,9 +5231,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="275" /> <!-- rhand: Long Bow -->
-		<acquire exp="3456" sp="1" />
+		<acquire exp="3456" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<vitals hp="669" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -5276,7 +5249,6 @@
 		<skill_list>
 			<skill id="4040" level="3" /> <!-- NPC Bow Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5292,23 +5264,15 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="21.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="324" max="651" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2110999971628189">
-					<item id="275" min="1" max="1" chance="2.6815" /> <!-- Long Bow -->
-					<item id="276" min="1" max="1" chance="2.6815" /> <!-- Elven Bow -->
-					<item id="2024" min="1" max="1" chance="94.637" /> <!-- Elven Bow Shaft -->
-				</group>
-				<group chance="24.406999588012695">
-					<item id="1872" min="1" max="1" chance="45.977" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="45.977" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.5977" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2989" /> <!-- Stone of Purity -->
-					<item id="956" min="1" max="1" chance="1.1494" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
+				<item id="184" min="1" max="1" chance="0.03" /> <!-- Conjuror's Staff -->
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5342,17 +5306,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1878" min="1" max="1" chance="30.8026" /> <!-- Braided Hemp -->
-				<item id="1878" min="1" max="1" chance="30.8026" /> <!-- Braided Hemp -->
-				<item id="1900" min="1" max="1" chance="8.4252" /> <!-- Enchanted Necklace Chain -->
+				<item id="36531" min="1" max="1" chance="14.25" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="21.5" />
-		</collision>
 	</npc>
 	<npc id="20269" level="34" type="L2Monster" name="Breka Orc Shaman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5369,9 +5328,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
-		<acquire exp="3026" sp="1" />
+		<acquire exp="3026" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
@@ -5388,7 +5347,6 @@
 			<skill id="4153" level="3" /> <!-- Decrease Speed -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5404,26 +5362,15 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="282" max="563" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1615000069141388">
-					<item id="157" min="1" max="1" chance="1.9724" /> <!-- Spiked Club -->
-					<item id="2027" min="1" max="1" chance="96.0552" /> <!-- Spiked Club Head -->
-					<item id="186" min="1" max="1" chance="1.9724" /> <!-- Staff of Magic -->
-				</group>
-				<group chance="4.740499973297119">
-					<item id="1875" min="1" max="1" chance="6.244" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="15.6099" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="7.805" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="1.2488" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="9.3659" /> <!-- Metallic Thread -->
-					<item id="2275" min="1" max="1" chance="0.669" /> <!-- Recipe: Heavy Bone Club -->
-					<item id="2286" min="1" max="1" chance="0.5203" /> <!-- Recipe: Bonebreaker -->
-					<item id="6667" min="1" max="1" chance="58.5371" /> <!-- Deluxe Chest Key - Grade 3 -->
-				</group>
+				<item id="348" min="1" max="1" chance="0.3" /> <!-- Scale Mail -->
+				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5457,17 +5404,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1879" min="1" max="1" chance="11.1342" /> <!-- Cokes -->
-				<item id="2029" min="1" max="1" chance="0.7969" /> <!-- Gastraphetes Shaft -->
-				<item id="2154" min="1" max="1" chance="7.1526" /> <!-- Recipe: Elven Earring -->
+				<item id="36531" min="1" max="1" chance="12.16" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="16" />
-		</collision>
 	</npc>
 	<npc id="20270" level="35" type="L2Monster" name="Breka Orc Prefect">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5485,7 +5427,7 @@
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
 		<acquire exp="4285" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="91.0360303625432" />
 			<attribute>
@@ -5502,7 +5444,6 @@
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5518,26 +5459,15 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="24" grown="28.8" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="398" max="795" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3702000379562378">
-					<item id="393" min="1" max="1" chance="1.0427" /> <!-- Mithril Banded Mail -->
-					<item id="1938" min="1" max="1" chance="41.0057" /> <!-- Mithril Banded Mail Material -->
-					<item id="394" min="1" max="1" chance="1.0427" /> <!-- Reinforced Leather Shirt -->
-					<item id="415" min="1" max="1" chance="1.6666" /> <!-- Mithril Banded Gaiters -->
-					<item id="1939" min="1" max="1" chance="53.5758" /> <!-- Mithril Banded Gaiters Material -->
-					<item id="416" min="1" max="1" chance="1.6665" /> <!-- Reinforced Leather Gaiters -->
-				</group>
-				<group chance="38.78670120239258">
-					<item id="1870" min="1" max="1" chance="25.8585" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="25.8585" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="1.7239" /> <!-- Oriharukon Ore -->
-					<item id="2980" min="1" max="1" chance="3.4616" /> <!-- Recipe: Brigandine Gauntlets -->
-					<item id="1341" min="20" max="60" chance="43.0975" /> <!-- Bone Arrow -->
-				</group>
+				<item id="295" min="1" max="1" chance="0.075" /> <!-- Dwarven Trident -->
+				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5571,17 +5501,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2972" min="1" max="1" chance="5.0438" /> <!-- Recipe: Brigandine Gaiters -->
-				<item id="2976" min="1" max="1" chance="12.6263" /> <!-- Recipe: Manticore Skin Boots -->
-				<item id="1901" min="1" max="1" chance="13.0274" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="18.22" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14.5" />
-			<height normal="24" grown="28.8" />
-		</collision>
 	</npc>
 	<npc id="20271" level="33" type="L2Monster" name="Breka Orc Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5597,9 +5522,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="123" lhand="20" /> <!-- rhand: Saber lhand: Buckler -->
-		<acquire exp="3460" sp="1" />
+		<acquire exp="3460" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+			<vitals hp="703" hpRegen="4.5" mp="372" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="129.23095" magical="86.043423444366" shield="65" shieldRate="20" />
 			<attribute>
@@ -5615,7 +5540,6 @@
 		<skill_list>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5631,27 +5555,15 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="20" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="325" max="650" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.545799970626831">
-					<item id="849" min="1" max="1" chance="2.6765" /> <!-- Tiger's Eye Earring -->
-					<item id="1901" min="1" max="1" chance="91.3106" /> <!-- Tiger's Eye Earring Stone -->
-					<item id="912" min="1" max="1" chance="2.0063" /> <!-- Near Forest Necklace -->
-					<item id="880" min="1" max="1" chance="4.0066" /> <!-- Black Pearl Ring -->
-				</group>
-				<group chance="6.3668999671936035">
-					<item id="1874" min="1" max="1" chance="5.3502" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="32.1012" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="49.3865" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.3502" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.2101" /> <!-- Metal Hardener -->
-					<item id="2187" min="1" max="1" chance="3.5827" /> <!-- Recipe: Manticore Skin Shirt -->
-					<item id="2293" min="1" max="1" chance="0.4459" /> <!-- Recipe: Glaive -->
-					<item id="2269" min="1" max="1" chance="0.5732" /> <!-- Recipe: Morning Star -->
-				</group>
+				<item id="125" min="1" max="1" chance="0.03" /> <!-- Spinebone Sword -->
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5685,15 +5597,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1882" min="1" max="1" chance="17.0847" /> <!-- Leather -->
-				<item id="2271" min="1" max="1" chance="0.5492" /> <!-- Recipe: Winged Spear -->
-				<item id="2155" min="1" max="1" chance="12.3405" /> <!-- Recipe: Elven Ring -->
+				<item id="36531" min="1" max="1" chance="14.05" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
 	</npc>
 	<npc id="20272" level="46" type="L2Monster" name="Cave Servant">
 		<parameters>

@@ -4941,6 +4941,7 @@
 		</collision>
 	</npc>
 	<npc id="25398" level="35" type="L2RaidBoss" name="Beleth' Eye" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25399" count="3" respawnTime="360" weightPoint="1" /> <!-- Apprentice of Watchman -->
@@ -4951,11 +4952,11 @@
 			<skill name="SelfRangeDebuff_a" id="4182" level="3" /> <!-- Poison -->
 			<skill name="SelfRangeDebuffAnother_a" id="4190" level="3" /> <!-- Decrease MP -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="5476117" sp="1314" raidPoints="520" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="69449.5684546156" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
+			<vitals hp="109138" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="163.695648646951" magical="12.9299967753255" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="410.18844" magical="200.1" evasion="-18" />
 			<attribute>
@@ -4974,7 +4975,6 @@
 			<skill id="4190" level="3" /> <!-- Decrease MP -->
 			<skill id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4987,29 +4987,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="62.27199935913086">
-					<item id="353" min="1" max="1" chance="21.5211" /> <!-- Half Plate Armor -->
-					<item id="380" min="1" max="1" chance="34.4338" /> <!-- Plate Gaiters -->
-					<item id="1950" min="53" max="157" chance="10.0053" /> <!-- Half Plate Temper -->
-					<item id="1951" min="24" max="72" chance="34.0398" /> <!-- Plate Gaiters Part -->
-				</group>
-				<group chance="59.423099517822266">
-					<item id="70" min="1" max="1" chance="7.3366" /> <!-- Claymore -->
-					<item id="2499" min="1" max="1" chance="7.3366" /> <!-- Elven Long Sword -->
-					<item id="2047" min="4" max="12" chance="55.9111" /> <!-- Claymore Blade -->
-					<item id="2967" min="8" max="22" chance="29.4157" /> <!-- Elven Long Sword Blade -->
-				</group>
-				<group chance="71.25869750976562">
-					<item id="951" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2499" min="1" max="1" chance="8.336" /> <!-- Elven Long Sword -->
+				<item id="380" min="1" max="1" chance="7.644" /> <!-- Plate Gaiters -->
+				<item id="353" min="1" max="1" chance="2.503" /> <!-- Half Plate Armor -->
+				<item id="70" min="1" max="1" chance="1.398" /> <!-- Claymore -->
+				<item id="951" min="1" max="1" chance="29.25" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.00492" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25399" level="34" type="L2Monster" name="Watchman's Apprentice" title="Raid Fighter">
 		<parameters>

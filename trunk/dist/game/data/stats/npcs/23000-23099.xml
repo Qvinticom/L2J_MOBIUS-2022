@@ -1244,12 +1244,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23046" level="61" type="L2Monster" name="Byron's Knight">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<acquire exp="63274" sp="1059" />
+		<acquire exp="63274" sp="15" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="12588" hpRegen="7.5" mp="12588" mpRegen="2.7" />
+			<vitals hp="7944" hpRegen="7.5" mp="1066" mpRegen="2.7" />
 			<attack physical="1068" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="549" magical="275" />
 			<attribute>
@@ -1263,8 +1263,12 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" /> <!-- <skill id="4412" level="16" /> --><!-- <skill id="4413" level="12" /> --><!-- <skill id="4410" level="12" /> --></skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
@@ -1272,26 +1276,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2516" max="5866" chance="70" />
-				<item id="4084" min="1" max="1" chance="2.37506" />
-				<item id="4116" min="1" max="1" chance="0.5" />
-				<item id="4121" min="1" max="1" chance="0.5" />
-				<item id="8728" min="1" max="1" chance="0.4" />
-				<item id="2403" min="1" max="1" chance="0.3003" />
-				<item id="8738" min="1" max="1" chance="0.1" />
-				<item id="948" min="1" max="1" chance="0.1" />
-				<item id="4161" min="1" max="1" chance="0.1" />
-				<item id="4163" min="1" max="1" chance="0.09001" />
-				<item id="7889" min="1" max="1" chance="0.03" />
-				<item id="8748" min="1" max="1" chance="0.01" />
-				<item id="4195" min="1" max="1" chance="0.01" />
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
+				<item id="948" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="7" chance="80.5687" />
-				<item id="36532" min="1" max="1" chance="10.4265" />
-				<item id="36880" min="1" max="1" chance="0.3003" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
-				<item id="36882" min="1" max="1" chance="0.3003" />
+				<item id="36531" min="1" max="1" chance="31.07" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1475,12 +1469,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23051" level="62" type="L2Monster" name="Byron's Confidant">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
-		<acquire exp="48939" sp="828" />
+		<acquire exp="48939" sp="11" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="9689" hpRegen="7.5" mp="9689" mpRegen="2.7" />
+			<vitals hp="6114" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="971" magical="968" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="275" />
 			<attribute>
@@ -1494,7 +1488,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- <skill id="4411" level="13" /> --><!-- <skill id="4413" level="12" /> --></skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
@@ -1502,16 +1499,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1960" max="4571" chance="70" />
-				<item id="6344" min="1" max="1" chance="1.51367" />
-				<item id="5488" min="1" max="1" chance="1.07421" />
-				<item id="8696" min="1" max="1" chance="0.03" />
-				<item id="5287" min="1" max="1" chance="0.03" />
+				<item id="57" min="113" max="265" chance="70" /> <!-- Adena -->
+				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="11.7647" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
-				<item id="36882" min="1" max="1" chance="0.3003" />
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1561,12 +1556,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23053" level="64" type="L2Monster" name="Brutal Warrior">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
-		<acquire exp="67881" sp="1181" />
+		<acquire exp="67881" sp="16" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="13579" hpRegen="7.5" mp="13579" mpRegen="2.7" />
+			<vitals hp="8568" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="413" magical="250" />
 			<attribute>
@@ -1580,7 +1575,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="9" /> <!-- <skill id="4412" level="13" /> --></skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
@@ -1588,17 +1585,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2715" max="6336" chance="70" />
-				<item id="5514" min="1" max="1" chance="6.5" />
-				<item id="5289" min="1" max="1" chance="0.05" />
-				<item id="730" min="1" max="1" chance="0.03951" />
-				<item id="8702" min="1" max="1" chance="0.03" />
-				<item id="729" min="1" max="1" chance="0.0055" />
+				<item id="57" min="158" max="367" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="11.7506" />
-				<item id="36882" min="1" max="1" chance="0.75188" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
+				<item id="36532" min="1" max="1" chance="1.243" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1733,12 +1728,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23057" level="63" type="L2Monster" name="Bonehead Slave">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
-		<acquire exp="50366" sp="864" />
+		<acquire exp="50366" sp="12" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="9937" hpRegen="7.5" mp="9937" mpRegen="2.7" />
+			<vitals hp="6270" hpRegen="7.5" mp="1127" mpRegen="2.7" />
 			<attack physical="971" magical="802" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="273" magical="275" />
 			<attribute>
@@ -1752,8 +1747,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="9" />
-			<skill id="4414" level="3" /> <!-- <skill id="4411" level="12" /> --><!-- <skill id="4413" level="12" /> --></skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
@@ -1761,17 +1759,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2022" max="4714" chance="70" />
-				<item id="5503" min="1" max="1" chance="4" />
-				<item id="6339" min="1" max="1" chance="0.1" />
-				<item id="730" min="1" max="1" chance="0.04" />
-				<item id="5312" min="1" max="1" chance="0.025" />
-				<item id="8708" min="1" max="1" chance="0.006" />
+				<item id="57" min="118" max="274" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="11.639" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
-				<item id="36882" min="1" max="1" chance="0.3003" />
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2338,12 +2333,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23071" level="69" type="L2Monster" name="Beastian">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DIVINE</race>
-		<acquire exp="81258" sp="1513" />
+		<acquire exp="81258" sp="19" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="15187" hpRegen="7.5" mp="15187" mpRegen="2.7" />
+			<vitals hp="9584" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="1175" magical="1174" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="498" magical="250" />
 			<attribute>
@@ -2357,7 +2352,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="8" /> <!-- <skill id="4411" level="14" /> --><!-- <skill id="4412" level="15" /> --><!-- <skill id="4410" level="13" /> --></skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+        </skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -2365,27 +2364,24 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3314" max="7690" chance="70" />
-				<item id="5494" min="1" max="1" chance="4.65" />
-				<item id="730" min="1" max="1" chance="0.3003" />
-				<item id="5406" min="1" max="1" chance="0.14993" />
-				<item id="5319" min="1" max="1" chance="0.07502" />
-				<item id="8686" min="1" max="1" chance="0.003" />
+				<item id="57" min="192" max="446" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="16.6667" />
-				<item id="36882" min="1" max="1" chance="0.75188" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
+				<item id="36532" min="1" max="1" chance="1.503" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23072" level="69" type="L2Monster" name="Birestian">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DIVINE</race>
-		<acquire exp="79056" sp="1470" />
+		<acquire exp="79056" sp="18" />
 		<stats>
 			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="15187" hpRegen="7.5" mp="15187" mpRegen="2.7" />
+			<vitals hp="9584" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="971" magical="1419" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="273" magical="250" />
 			<attribute>
@@ -2399,8 +2395,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="8" />
-			<skill id="4414" level="3" /> <!-- <skill id="4411" level="15" /> --></skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+        </skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="13" />
@@ -2408,17 +2406,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3217" max="7434" chance="70" />
-				<item id="5496" min="1" max="1" chance="5" />
-				<item id="5364" min="1" max="1" chance="0.14993" />
-				<item id="8719" min="1" max="1" chance="0.14993" />
-				<item id="5296" min="1" max="1" chance="0.07502" />
-				<item id="8683" min="1" max="1" chance="0.003" />
+				<item id="57" min="186" max="434" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="15.7895" />
-				<item id="36882" min="1" max="1" chance="0.75188" />
-				<item id="36881" min="1" max="1" chance="0.3003" />
+				<item id="36532" min="1" max="1" chance="1.47" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>

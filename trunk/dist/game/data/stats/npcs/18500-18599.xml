@@ -3008,6 +3008,7 @@
 		</collision>
 	</npc>
 	<npc id="18562" level="43" type="L2Monster" name="Blade Otis" title="Kaneus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -3021,7 +3022,7 @@
 		<equipment rhand="131" /> <!-- rhand: Spirit Sword -->
 		<acquire exp="1176574" sp="282" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="132634.618317353" hpRegen="23.2361783984" mp="2787.0" mpRegen="11.55" />
+			<vitals hp="132635" hpRegen="5.5" mp="2787" mpRegen="2.1" />
 			<attack physical="361.027339491631" magical="246.534866030033" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="270.614672" magical="297.03612" />
 			<attribute>
@@ -3039,7 +3040,6 @@
 			<skill id="4087" level="4" /> <!-- NPC Blaze -->
 			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -3052,30 +3052,19 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="76.01679992675781">
-					<item id="353" min="1" max="1" chance="6.517" /> <!-- Half Plate Armor -->
-					<item id="1950" min="8" max="22" chance="21.2086" /> <!-- Half Plate Temper -->
-					<item id="380" min="1" max="1" chance="10.4272" /> <!-- Plate Gaiters -->
-					<item id="1951" min="4" max="12" chance="61.8472" /> <!-- Plate Gaiters Part -->
-				</group>
-				<group chance="55.25749969482422">
-					<item id="353" min="1" max="1" chance="13.448" /> <!-- Half Plate Armor -->
-					<item id="1950" min="8" max="22" chance="43.7646" /> <!-- Half Plate Temper -->
-					<item id="380" min="1" max="1" chance="21.5168" /> <!-- Plate Gaiters -->
-					<item id="1951" min="24" max="72" chance="21.2706" /> <!-- Plate Gaiters Part -->
-				</group>
-				<group chance="58.53630065917969">
-					<item id="951" min="1" max="1" chance="45" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="3" max="9" chance="55" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="35.1" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="380" min="1" max="2" chance="21.43" /> <!-- Plate Gaiters -->
+				<item id="353" min="1" max="2" chance="13.26" /> <!-- Half Plate Armor -->
+				<item id="1950" min="16" max="114" chance="100" /> <!-- Half Plate Temper -->
+				<item id="1951" min="6" max="48" chance="100" /> <!-- Plate Gaiter Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18563" level="43" type="L2Monster" name="Otis' Subordinate">
 		<parameters>
@@ -3186,6 +3175,7 @@
 		</collision>
 	</npc>
 	<npc id="18565" level="46" type="L2Monster" name="Brave Martim" title="Kaneus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3202,7 +3192,7 @@
 		<equipment rhand="298" /> <!-- rhand: Orcish Glaive -->
 		<acquire exp="1272170" sp="305" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="165222.57986374" hpRegen="28.3020159951777" mp="3189.0" mpRegen="11.55" />
+			<vitals hp="165223" hpRegen="5.5" mp="3189" mpRegen="2.1" />
 			<attack physical="470.818632922437" magical="321.5080926593" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.501056" magical="319.961736" />
 			<attribute>
@@ -3220,7 +3210,6 @@
 			<skill id="4101" level="10" /> <!-- NPC Spinning Slash -->
 			<skill id="4187" level="4" /> <!-- Decrease Speed -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3234,34 +3223,21 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="75.83439636230469">
-					<item id="631" min="1" max="1" chance="14.6164" /> <!-- Eldarake -->
-					<item id="1964" min="40" max="120" chance="7.5297" /> <!-- Eldarake Temper -->
-					<item id="2413" min="1" max="1" chance="10.2325" /> <!-- Chain Hood -->
-					<item id="2936" min="14" max="42" chance="19.5397" /> <!-- Chain Hood Pattern -->
-					<item id="2495" min="1" max="1" chance="14.6164" /> <!-- Chain Shield -->
-					<item id="2945" min="9" max="27" chance="33.4653" /> <!-- Chain Shield Fragment -->
-				</group>
-				<group chance="79.91380310058594">
-					<item id="631" min="1" max="1" chance="20.8054" /> <!-- Eldarake -->
-					<item id="1964" min="40" max="120" chance="10.7179" /> <!-- Eldarake Temper -->
-					<item id="2413" min="1" max="1" chance="14.5652" /> <!-- Chain Hood -->
-					<item id="2936" min="14" max="42" chance="27.8132" /> <!-- Chain Hood Pattern -->
-					<item id="2495" min="1" max="1" chance="20.8054" /> <!-- Chain Shield -->
-					<item id="2945" min="81" max="243" chance="5.2929" /> <!-- Chain Shield Fragment -->
-				</group>
-				<group chance="66.61750030517578">
-					<item id="951" min="1" max="1" chance="45" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="3" max="9" chance="55" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="631" min="1" max="1" chance="62.23" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="61.07" /> <!-- Chain Shield -->
+				<item id="2413" min="1" max="1" chance="42.6" /> <!-- Chain Hood -->
+				<item id="1964" min="40" max="120" chance="100" /> <!-- Eldarake Temper -->
+				<item id="2936" min="14" max="42" chance="100" /> <!-- Chain Hood Pattern -->
+				<item id="2945" min="81" max="243" chance="100" /> <!-- Chain Shield Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18566" level="53" type="L2Monster" name="Kaim Abigore" title="Kaneus">
 		<parameters>

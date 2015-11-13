@@ -518,11 +518,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23213" level="97" type="L2Monster" name="Beggar Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="3972480" sp="17283" />
+		<acquire exp="3972480" sp="953" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1419" />
 			<attribute>
@@ -536,11 +536,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -548,26 +548,24 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="5558" max="12950" chance="70" />
-				<item id="36558" min="1" max="1" chance="1.14" />
-				<item id="35347" min="1" max="1" chance="0.22989" />
-				<item id="36559" min="1" max="1" chance="0.14993" />
-				<item id="35471" min="1" max="1" chance="0.02" />
-				<item id="17439" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2695" max="6292" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.4" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="6.30099" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
-				<item id="36898" min="1" max="1" chance="0.3003" />
+				<item id="36558" min="1" max="1" chance="3.333" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23214" level="97" type="L2Monster" name="Beggar Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="3972480" sp="17283" />
+		<acquire exp="3972480" sp="953" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1419" />
 			<attribute>
@@ -581,11 +579,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -593,15 +591,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="5574" max="12947" chance="70" />
-				<item id="35347" min="1" max="1" chance="0.3003" />
-				<item id="35471" min="1" max="1" chance="0.02" />
-				<item id="17439" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2695" max="6292" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.9" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="13.27" />
-				<item id="36534" min="1" max="1" chance="1.26" />
-				<item id="36898" min="1" max="1" chance="0.3003" />
+				<item id="36533" min="1" max="1" chance="4.917" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -924,11 +922,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23222" level="98" type="L2Monster" name="Borok the Engineer" title="Chief Engineer">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="14612219" sp="202801" />
+		<acquire exp="21918329" sp="5260" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1535000" hpRegen="7.5" mp="1535000" mpRegen="2.7" />
+			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2081" magical="2105" />
 			<attribute>
@@ -942,13 +940,13 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -956,11 +954,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="20804" max="48154" chance="70" />
-				<item id="36558" min="1" max="1" chance="4.4" />
-				<item id="36559" min="1" max="1" chance="0.3003" />
-				<item id="35345" min="1" max="1" chance="0.3003" />
+				<item id="57" min="10030" max="23373" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="2.385" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="12.17" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.166" /> <!-- Accessory Gem (High-grade) -->
+				<item id="19440" min="1" max="1" chance="1.11" /> <!-- Gemstone (R-grade) -->
+			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23223" level="98" type="L2Monster" name="Koja the Engineer" title="Chief Engineer">
@@ -1132,11 +1137,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23227" level="97" type="L2Monster" name="Beggar Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="5830877" sp="25368" />
+		<acquire exp="5830877" sp="1399" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="2069" />
 			<attribute>
@@ -1150,12 +1155,12 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4410" level="15" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -1163,24 +1168,24 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="5568" max="12982" chance="70" />
-				<item id="35347" min="1" max="1" chance="0.2" />
-				<item id="35471" min="1" max="1" chance="0.02" />
-				<item id="17439" min="1" max="1" chance="0.006" />
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.921" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="14.17" />
-				<item id="36534" min="1" max="1" chance="1.274" />
-				<item id="36898" min="1" max="1" chance="0.3003" />
+				<item id="36533" min="1" max="1" chance="4.91" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23228" level="97" type="L2Monster" name="Beggar Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="5830877" sp="25368" />
+		<acquire exp="5830877" sp="1399" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="2069" />
 			<attribute>
@@ -1194,12 +1199,12 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4410" level="15" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -1207,15 +1212,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="5568" max="12978" chance="70" />
-				<item id="35347" min="1" max="1" chance="0.21978" />
-				<item id="35471" min="1" max="1" chance="0.02" />
-				<item id="17439" min="1" max="1" chance="0.006" />
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.942" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="14.25" />
-				<item id="36534" min="1" max="1" chance="1.194" />
-				<item id="36898" min="1" max="1" chance="0.3003" />
+				<item id="36533" min="1" max="1" chance="4.924" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2775,10 +2780,11 @@
 		</collision>
 	</npc>
 	<npc id="23259" level="96" type="L2Monster" name="Broken-bodied Golem">
-		<race>CONSTRUCT</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="1402250" sp="336" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="46371" hpRegen="7.5" mp="2242" mpRegen="2.7" />
+			<vitals hp="46371" hpRegen="10.5" mp="2242" mpRegen="3.6" />
 			<attack physical="26600" magical="35400" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1373" magical="1188" />
 			<attribute>
@@ -2792,13 +2798,13 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
-			<skill id="4411" level="14" />
-			<skill id="4410" level="14" /> 
-			<skill id="4414" level="1" />
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clan_list>
@@ -2811,11 +2817,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1267" max="2930" chance="70" />
-				<item id="36836" min="1" max="1" chance="1.5" />
-				<item id="36774" min="1" max="1" chance="0.04" />
-				<item id="17338" min="1" max="1" chance="0.02" />
-				<item id="17526" min="1" max="1" chance="0.02" />
+				<item id="17338" min="1" max="1" chance="0.0075" /> <!-- Twilight Helmet -->
+				<item id="57" min="732" max="1709" chance="70" /> <!-- Adena -->
+				<item id="36836" min="1" max="1" chance="1.564" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36774" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2849,7 +2856,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="33" />
+				<item id="36532" min="1" max="1" chance="24.78" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2974,10 +2981,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23262" level="95" type="L2Monster" name="Spicula Elite Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>CONSTRUCT</race>
 		<acquire exp="1494765" sp="358" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
+			<vitals hp="61479" hpRegen="10.5" mp="2205" mpRegen="3.6" />
 			<attack physical="19950" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
@@ -2991,13 +2999,13 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
 			<skill id="4411" level="14" />
 			<skill id="4410" level="14" />
-			<skill id="4414" level="1" />
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
 			<clan_list>
@@ -3009,14 +3017,16 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
-				<item id="57" min="1373" max="3206" chance="70" />
-				<item id="36840" min="1" max="1" chance="2.5" />
-				<item id="9546" min="1" max="1" chance="0.4" />
-				<item id="9548" min="1" max="1" chance="0.4" />
-				<item id="9550" min="1" max="1" chance="0.4" />
-				<item id="36778" min="1" max="1" chance="0.04" />
-				<group chance="42.0">
+			<death>		
+				<item id="17342" min="1" max="1" chance="0.03" /> <!-- Twilight Boots -->
+				<item id="57" min="801" max="1868" chance="70" /> <!-- Adena -->
+				<item id="36840" min="1" max="1" chance="2.304" /> <!-- Twilight Boot Ingredient -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="36778" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -3047,21 +3057,20 @@
 					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
-				
-				<item id="17342" min="1" max="1" chance="0.02" />
 			</death>
 			<corpse>
-				<item id="9552" min="1" max="1" chance="1" />
-				<item id="9554" min="1" max="1" chance="1" />
-				<item id="9556" min="1" max="1" chance="1" />
+				<item id="9552" min="1" max="1" chance="0.03" /> <!-- Fire Crystal -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="9556" min="1" max="1" chance="0.03" /> <!-- Dark Crystal -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23263" level="93" type="L2Monster" name="Broken Golem of Repairs">
-		<race>CONSTRUCT</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="1791830" sp="430" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="60071" hpRegen="7.5" mp="2132" mpRegen="2.7" />
+			<vitals hp="60071" hpRegen="10.5" mp="2132" mpRegen="3.6" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
@@ -3075,11 +3084,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
-			<skill id="4411" level="14" />
-			<skill id="4410" level="14" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
 		</skill_list>
@@ -3094,10 +3103,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1294" max="3015" chance="70" />
-				<item id="36841" min="1" max="1" chance="2.5" />
-				<item id="36779" min="1" max="1" chance="0.05" />
-				<item id="17343" min="1" max="1" chance="0.025" />
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="57" min="754" max="1757" chance="70" /> <!-- Adena -->
+				<item id="36841" min="1" max="1" chance="2.105" /> <!-- Twilight Shield Ingredient -->
+				<item id="36779" min="1" max="1" chance="0.3" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3128,18 +3138,19 @@
 					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
 					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>	
+				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="33" />
+				<item id="36532" min="1" max="1" chance="25.56" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23264" level="94" type="L2Monster" name="Broken Drill Golem">
-		<race>CONSTRUCT</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="1833182" sp="439" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="60403" hpRegen="7.5" mp="2169" mpRegen="2.7" />
+			<vitals hp="60403" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
@@ -3153,11 +3164,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
-			<skill id="4411" level="14" />
-			<skill id="4410" level="14" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
 		</skill_list>
@@ -3172,11 +3183,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1330" max="3104" chance="70" />
-				<item id="36830" min="1" max="1" chance="0.4" />
-				<item id="36768" min="1" max="1" chance="0.02" />
-				<item id="17329" min="1" max="1" chance="0.005" />
-				<group chance="42.0">
+				<item id="17329" min="1" max="1" chance="0.003" /> <!-- Apocalypse Stormer -->
+				<item id="57" min="775" max="1808" chance="70" /> <!-- Adena -->
+				<item id="36830" min="1" max="1" chance="0.3" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36768" min="1" max="1" chance="0.03" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -3209,7 +3221,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="33" />
+				<item id="36532" min="1" max="1" chance="27.3" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3256,10 +3268,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23266" level="95" type="L2Monster" name="Broken Pincer Golem">
-		<race>CONSTRUCT</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="1730317" sp="415" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
+			<vitals hp="61479" hpRegen="10.5" mp="2205" mpRegen="3.6" />
 			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1320" magical="1155" />
 			<attribute>
@@ -3273,11 +3286,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
-			<skill id="4411" level="14" />
-			<skill id="4410" level="14" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
 		</skill_list>
@@ -3292,10 +3305,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1373" max="3206" chance="70" />
-				<item id="36528" min="1" max="1" chance="4.5" />
-				<item id="36529" min="1" max="1" chance="0.5" />
-				<group chance="42.0">
+				<item id="57" min="801" max="1868" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="12.03" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="1.006" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -3328,8 +3342,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36528" min="1" max="1" chance="10" />
-				<item id="36529" min="1" max="1" chance="1" />
+				<item id="36528" min="1" max="1" chance="9.018" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3457,9 +3471,9 @@
 		</drop_lists>
 	</npc>
 	<npc id="23269" level="94" type="L2Monster" name="Battle Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>CONSTRUCT</race>
-		<acquire exp="3295625" sp="13968" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="3295625" sp="790" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="201339" hpRegen="7.5" mp="201339" mpRegen="2.7" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3475,11 +3489,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
 		</skill_list>
@@ -3490,14 +3504,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1793" max="4186" chance="70" />
-				<item id="36528" min="1" max="1" chance="10" />
-				<item id="36529" min="1" max="1" chance="1" />
+				<item id="57" min="1045" max="2438" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="14.79" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="1.395" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36528" min="1" max="1" chance="10" />
-				<item id="36529" min="1" max="1" chance="1" />
-				<item id="17527" min="1" max="1" chance="0.25" />
+				<item id="40206" min="1" max="1" chance="12.17" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>

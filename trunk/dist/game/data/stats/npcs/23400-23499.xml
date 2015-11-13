@@ -498,10 +498,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23425" level="78" type="L2Monster" name="Black Dragon">
+ 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="292767" sp="70" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+			<vitals hp="17848" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="12310" magical="11740" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1312" magical="1070" />
 			<attribute>
@@ -515,10 +516,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="10" />
-			<skill id="5462" level="1" /> <!-- Not Done -->
-			<skill id="4412" level="12" />
-			<skill id="4413" level="12" />
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -531,16 +532,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.0055" /> <!-- Earth Stone -->
+				<item id="57" min="24" max="55" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.0075" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -779,10 +779,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23431" level="82" type="L2Monster" name="Beast Drake">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="525002" sp="126" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="21862" hpRegen="7.5" mp="1743" mpRegen="2.7" />
+			<vitals hp="21862" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="15970" magical="13990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1812" magical="1705" />
 			<attribute>
@@ -796,11 +797,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="10" />
-			<skill id="5467" level="1" /> <!-- Not Done -->
-			<skill id="4410" level="14" />
-			<skill id="4412" level="14" />
-			<skill id="4413" level="14" />
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -814,15 +815,14 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9547" min="1" max="1" chance="0.0055" /> <!-- Water Stone -->
+				<item id="9547" min="1" max="1" chance="0.0075" /> <!-- Water Stone -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
 				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
-				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.725" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="1.691" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1243,10 +1243,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23441" level="81" type="L2Monster" name="Bloody Grave Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
 		<acquire exp="534853" sp="128" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="20772" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+			<vitals hp="20772" hpRegen="9.5" mp="1708" mpRegen="3.3" />
 			<attack physical="13470" magical="9450" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1498" magical="1295" />
 			<attribute>
@@ -1260,11 +1261,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="1" />
-			<skill id="5467" level="1" /> <!-- Not Done -->
-			<skill id="4410" level="15" />
-			<skill id="4412" level="15" />
-			<skill id="4413" level="15" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -1278,15 +1279,14 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
 				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.920" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="1.985" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3256,25 +3256,26 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23497" level="99" type="L2Npc" name="Blazing Saurus" title="Flaming Stigma">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23497" level="99" type="L2Monster" name="Blazing Saurus" title="Flaming Stigma">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>FEMALE</sex>
+		<acquire exp="15385855" sp="24617" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3287,10 +3288,11 @@
 				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
 				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Amaranthine Stormer Fragment -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="36549" min="1" max="1" chance="0.0055" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Stormer (60%) -->
 				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
@@ -3298,25 +3300,26 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23498" level="99" type="L2Npc" name="Blazing Wizard" title="Flaming Stigma">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23498" level="99" type="L2Monster" name="Blazing Wizard" title="Flaming Stigma">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
+		<acquire exp="15385855" sp="24617" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="1" />
-			<skill id="5462" level="1" />
-			<skill id="4411" level="19" />
-			<skill id="4412" level="16" />
-			<skill id="4413" level="16" />
-			<skill id="4379" level="5" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3330,12 +3333,13 @@
 				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Amaranthine Buster Fragment -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Buster (60%) -->
 				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36539" min="1" max="1" chance="0.75" /> <!--Quality Leather Braid -->
+				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</corpse>
 		</drop_lists>

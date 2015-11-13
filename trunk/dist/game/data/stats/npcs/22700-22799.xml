@@ -4246,19 +4246,17 @@
 		</drop_lists>
 	</npc>
 	<npc id="22746" level="88" type="L2Monster" name="Bgurent">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
-			<skill name="Skill01_ID" id="6382" level="1" />
-			<!-- Bistakon Rolling Claw -->
-			<skill name="Skill02_ID" id="6384" level="1" />
-			<!-- Bistakon Deadly Blow -->
-			<skill name="SpecialSkill01_ID" id="6383" level="1" />
-			<!-- Bistakon Deadly Roar -->
+			<skill name="Skill01_ID" id="6382" level="1" />  <!-- Bistakon Rolling Claw -->
+			<skill name="Skill02_ID" id="6384" level="1" />  <!-- Bistakon Deadly Blow -->
+			<skill name="SpecialSkill01_ID" id="6383" level="1" />  <!-- Bistakon Deadly Roar -->
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1902457" sp="456" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="149177" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
+			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4272,44 +4270,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4388" level="4" />
-			<!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" />
-			<!-- HP Increase (2x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="17" />
-			<!-- Very Strong P. Atk. -->
-			<skill id="4411" level="16" />
-			<!-- Very Strong M. Atk. -->
-			<skill id="4412" level="15" />
-			<!-- Strong P. Def. -->
-			<skill id="4413" level="4" />
-			<!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="3" />
-			<!-- Beasts -->
-			<skill id="4438" level="4" />
-			<!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" />
-			<!-- Greater Resist Hold -->
-			<skill id="4441" level="5" />
-			<!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
-			<skill id="5598" level="9" />
-			<!-- Flash Resistance -->
-			<skill id="5599" level="9" />
-			<!-- Stun Resistance -->
-			<skill id="6382" level="1" />
-			<!-- Bistakon Rolling Claw -->
-			<skill id="6383" level="1" />
-			<!-- Bistakon Deadly Roar -->
-			<skill id="6384" level="1" />
-			<!-- Bistakon Deadly Blow -->
+			<skill id="4388" level="4" /> 	<!-- Resist Paralysis Attacks -->
+			<skill id="4408" level="10" />  <!-- HP Increase (2x) -->
+			<skill id="4410" level="17" />  <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" />  <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" />  <!-- Strong P. Def. -->
+			<skill id="4413" level="4" />   <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="2" />   <!-- Standard Type -->
+			<skill id="4415" level="3" />   <!-- One-handed Sword -->
+			<skill id="4416" level="3" />   <!-- Beasts -->
+			<skill id="4438" level="4" />   <!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" />   <!-- Greater Resist Hold -->
+			<skill id="4441" level="5" />   <!-- Greater Resist Mental Derangement -->
+			<skill id="5465" level="1" />   <!-- Earth Attacks -->
+			<skill id="5598" level="9" />   <!-- Flash Resistance -->
+			<skill id="5599" level="9" />   <!-- Stun Resistance -->
+			<skill id="6382" level="1" />   <!-- Bistakon Rolling Claw -->
+			<skill id="6383" level="1" />   <!-- Bistakon Deadly Roar -->
+			<skill id="6384" level="1" />   <!-- Bistakon Deadly Blow -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
@@ -4320,30 +4298,23 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1767" max="4118" chance="70" />
-				<!-- Adena -->
-				<item id="17313" min="1" max="1" chance="0.075" />
-				<!-- Immortal Leather Gloves -->
-				<item id="36814" min="1" max="1" chance="16.57" />
-				<!-- Immortal Leather Glove Ingredient -->
-				<item id="36527" min="1" max="1" chance="13.04" />
-				<!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="2.500" />
-				<!-- Metallic Fiber -->
-				<item id="36752" min="1" max="1" chance="0.3" />
-				<!-- Recipe: Immortal Leather Gloves (60%) -->
-				<item id="17526" min="1" max="1" chance="0.003" />
-				<!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17313" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Gloves -->
+				<item id="57" min="2120" max="4942" chance="70" /> <!-- Adena -->
+				<item id="36814" min="1" max="1" chance="19.73" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36527" min="1" max="1" chance="15.69" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="3.053" /> <!-- Metallic Fiber -->
+				<item id="36752" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40205" min="1" max="1" chance="42.64" />
-				<!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.006" />
-				<!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="51.98" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22747" level="88" type="L2Monster" name="Brakian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6384" level="2" />
 			<!-- Bistakon Deadly Blow -->
@@ -4356,7 +4327,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
+			<vitals hp="298353" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -4370,44 +4341,24 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4388" level="4" />
-			<!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" />
-			<!-- HP Increase (2x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="17" />
-			<!-- Very Strong P. Atk. -->
-			<skill id="4411" level="16" />
-			<!-- Very Strong M. Atk. -->
-			<skill id="4412" level="15" />
-			<!-- Strong P. Def. -->
-			<skill id="4413" level="4" />
-			<!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="3" />
-			<!-- Beasts -->
-			<skill id="4438" level="4" />
-			<!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" />
-			<!-- Greater Resist Hold -->
-			<skill id="4441" level="5" />
-			<!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
-			<skill id="5598" level="9" />
-			<!-- Flash Resistance -->
-			<skill id="5599" level="9" />
-			<!-- Stun Resistance -->
-			<skill id="6381" level="1" />
-			<!-- Bistakon Soul Beam -->
-			<skill id="6384" level="2" />
-			<!-- Bistakon Deadly Blow -->
-			<skill id="6385" level="1" />
-			<!-- Bistakon Critical Claw -->
+			<skill id="4388" level="4" />	<!-- Resist Paralysis Attacks -->
+			<skill id="4408" level="10" />	<!-- HP Increase (2x) -->
+			<skill id="4410" level="17" />	<!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" />	<!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" />	<!-- Strong P. Def. -->
+			<skill id="4413" level="4" />	<!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="2" />	<!-- Standard Type -->
+			<skill id="4415" level="3" />	<!-- One-handed Sword -->
+			<skill id="4416" level="3" />	<!-- Beasts -->
+			<skill id="4438" level="4" />	<!-- Greater Resist Sleep -->
+			<skill id="4439" level="4" />	<!-- Greater Resist Hold -->
+			<skill id="4441" level="5" />	<!-- Greater Resist Mental Derangement -->
+			<skill id="5465" level="1" />	<!-- Earth Attacks -->
+			<skill id="5598" level="9" />	<!-- Flash Resistance -->
+			<skill id="5599" level="9" />	<!-- Stun Resistance -->
+			<skill id="6381" level="1" />	<!-- Bistakon Soul Beam -->
+			<skill id="6384" level="2" />	<!-- Bistakon Deadly Blow -->
+			<skill id="6385" level="1" />	<!-- Bistakon Critical Claw -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
@@ -4418,20 +4369,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2350" max="5478" chance="70" />
-				<!-- Adena -->
-				<item id="17314" min="1" max="1" chance="0.3" />
-				<!-- Immortal Leather Boots -->
-				<item id="36815" min="1" max="3" chance="10.52" />
-				<!-- Immortal Leather Boot Ingredient -->
-				<item id="36753" min="1" max="1" chance="1" />
-				<!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
+				<item id="57" min="2820" max="6573" chance="70" /> <!-- Adena -->
+				<item id="36815" min="1" max="3" chance="12.28" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36753" min="1" max="1" chance="1.293" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40205" min="1" max="1" chance="55" />
-				<!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.03" />
-				<!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="67.37" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18001" level="60" type="L2Monster" name="Blood Queen">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -13,7 +14,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="6804" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="1934" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="150.021245531891" />
 			<attribute>
@@ -32,7 +33,6 @@
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -40,6 +40,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="400">
@@ -61,39 +62,21 @@
 				<ignore_npc_id>20287</ignore_npc_id> <!-- Cave Maiden -->
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="765" max="1528" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.694599986076355">
-					<item id="2397" min="1" max="1" chance="0.1646" /> <!-- Tunic of Zubei -->
-					<item id="4069" min="1" max="1" chance="30.262" /> <!-- Tunic of Zubei Fabric -->
-					<item id="2402" min="1" max="1" chance="0.2638" /> <!-- Stockings of Zubei -->
-					<item id="4070" min="1" max="1" chance="45.9482" /> <!-- Stockings of Zubei Fabric -->
-					<item id="2406" min="1" max="1" chance="0.1126" /> <!-- Avadon Robe -->
-					<item id="4071" min="1" max="1" chance="23.2488" /> <!-- Avadon Robe Fabric -->
-				</group>
-				<group chance="28.691200256347656">
-					<item id="1864" min="1" max="1" chance="62.1614" /> <!-- Stem -->
-					<item id="1866" min="1" max="1" chance="20.7205" /> <!-- Suede -->
-					<item id="1878" min="1" max="1" chance="12.4323" /> <!-- Braided Hemp -->
-					<item id="1885" min="1" max="1" chance="2.5901" /> <!-- High-Grade Suede -->
-					<item id="1889" min="1" max="1" chance="2.072" /> <!-- Compound Braid -->
-					<item id="4197" min="1" max="1" chance="0.0237" /> <!-- Recipe: Demon's Dagger (100%) -->
-				</group>
-				<group chance="20">
-					<item id="1419" min="1" max="1" chance="100" /> <!-- Blood Mark -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1806" min="1" max="1" chance="1.0868" /> <!-- Recipe: Soulshot (B-Grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2397" min="1" max="1" chance="0.03" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="0.03" /> <!-- Avadon Robe -->
+				<item id="4070" min="1" max="1" chance="3.795" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4069" min="1" max="1" chance="2.458" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4071" min="1" max="1" chance="1.746" /> <!-- Avadon Robe Fabric -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18002" level="60" type="L2Monster" name="Blood Queen">
 		<parameters>
@@ -127,7 +110,6 @@
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

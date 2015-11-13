@@ -408,6 +408,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="18907" level="84" type="L2Monster" name="Beast Devourer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6566" level="17" /> <!-- NPC water shot -->
@@ -417,7 +418,7 @@
 		<sex>MALE</sex>
 		<acquire exp="50359" sp="12" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+			<vitals hp="4040" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -435,7 +436,6 @@
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -455,16 +455,17 @@
 		</collision>
 		<drop_lists>
 			<death>
+				<item id="15709" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
 				<item id="15694" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Helmet -->
 				<item id="15695" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Helmet -->
 				<item id="15696" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Circlet -->
-				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
-				<item id="15709" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Sigil -->
 				<item id="15645" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Helmet Piece -->
 				<item id="15646" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Helmet Piece -->
 				<item id="15647" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Piece -->
 				<item id="15692" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="15693" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shield Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2617,11 +2618,11 @@
 		</collision>
 	</npc>
 	<npc id="18976" level="91" type="L2Monster" name="Beorning Berserker" title="Scout">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BEAST</race>
-		<acquire exp="1808517" sp="38710" />
+		<acquire exp="2737891" sp="657" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="100115" hpRegen="7.5" mp="100115" mpRegen="2.7" />
+			<vitals hp="29348" hpRegen="10.5" mp="2059" mpRegen="3.6" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1375" magical="1325" />
 			<attribute>
@@ -2635,8 +2636,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5462" level="1" />
-			<skill id="4416" level="3" />
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="14050" level="2" />
 			<skill id="14052" level="2" />
 			<skill id="14051" level="2" />

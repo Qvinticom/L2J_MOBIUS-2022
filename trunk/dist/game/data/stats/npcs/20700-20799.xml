@@ -1811,6 +1811,7 @@
 		</collision>
 	</npc>
 	<npc id="20775" level="17" type="L2Monster" name="Bugbear Raider">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -1818,9 +1819,9 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="899" sp="1" />
+		<acquire exp="899" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
+			<vitals hp="283" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="78.68469" magical="52.3891528929827" />
 			<attribute>
@@ -1835,7 +1836,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1847,20 +1847,16 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="17" />
+			<height normal="35" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="119" max="191" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.17790000140666962">
-					<item id="15" min="1" max="1" chance="7.7061" /> <!-- Short Spear -->
-					<item id="2011" min="1" max="1" chance="92.2939" /> <!-- Short Spear Edge -->
-				</group>
-				<group chance="12.474499702453613">
-					<item id="1873" min="1" max="1" chance="15.3846" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="76.9231" /> <!-- Thread -->
-					<item id="2144" min="1" max="1" chance="7.6923" /> <!-- Recipe: Compound Braid -->
-				</group>
+				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
+				<item id="36521" min="1" max="1" chance="2.455" /> <!-- Iron Ore -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1894,15 +1890,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2253" min="1" max="1" chance="0.9985" /> <!-- Recipe: Sword Breaker -->
-				<item id="1897" min="1" max="1" chance="5.801" /> <!-- Necklace of Wisdom Chain -->
-				<item id="1800" min="1" max="1" chance="7.6617" /> <!-- Recipe: Piece Bone Breastplate -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="17" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="20777" level="14" type="L2Monster" name="Hunter Bear">
 		<parameters>
@@ -3345,6 +3335,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20794" level="41" type="L2Monster" name="Blade Stakato">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3361,7 +3352,7 @@
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
 		<acquire exp="7571" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+			<vitals hp="2018" hpRegen="5.5" mp="504" mpRegen="2.1" />
 			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="160.69002" magical="106.989225133249" />
 			<attribute>
@@ -3377,7 +3368,6 @@
 		<skill_list>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3394,24 +3384,15 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="36" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="678" max="1356" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3702999949455261">
-					<item id="225" min="1" max="1" chance="1.6355" /> <!-- Mithril Dagger -->
-					<item id="2052" min="1" max="1" chance="98.3645" /> <!-- Mithril Dagger Blade -->
-				</group>
-				<group chance="21.885799407958984">
-					<item id="1866" min="1" max="1" chance="36.5553" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="54.833" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="2.1933" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="4.5694" /> <!-- High-Grade Suede -->
-					<item id="2206" min="1" max="1" chance="1.4468" /> <!-- Recipe: Mithril Shirt -->
-					<item id="4556" min="1" max="1" chance="0.2193" /> <!-- Greater Dye of CON <Con+1 Dex-1> -->
-					<item id="5274" min="1" max="1" chance="0.1829" /> <!-- Recipe: Greater Spiritshot (C) Compressed Package(100%) -->
-				</group>
+				<item id="57" min="28" max="65" chance="70" /> <!-- Adena -->
+				<item id="36537" min="1" max="1" chance="0.3" /> <!-- Leather Braid -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -3445,17 +3426,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2991" min="1" max="1" chance="13.2768" /> <!-- Recipe: Karmian Boots -->
-				<item id="1952" min="1" max="1" chance="5.3584" /> <!-- Salamander Skin Mail Texture -->
-				<item id="1866" min="1" max="3" chance="55.7627" /> <!-- Suede -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="36" />
-		</collision>
 	</npc>
 	<npc id="20795" level="42" type="L2Monster" name="Blade Stakato Worker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3472,7 +3448,7 @@
 		<equipment rhand="226" /> <!-- rhand: Cursed Dagger -->
 		<acquire exp="7157" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+			<vitals hp="2102" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="109.782377202178" />
 			<attribute>
@@ -3488,7 +3464,6 @@
 		<skill_list>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3505,28 +3480,15 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="636" max="1285" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.112599849700928">
-					<item id="851" min="1" max="1" chance="0.6887" /> <!-- Omen Beast's Eye Earring -->
-					<item id="1905" min="1" max="1" chance="31.2519" /> <!-- Omen Beast's Eye Earring Gemstone -->
-					<item id="914" min="1" max="1" chance="0.5165" /> <!-- Necklace of Darkness -->
-					<item id="1907" min="1" max="1" chance="22.3492" /> <!-- Necklace of Darkness Gem -->
-					<item id="882" min="1" max="1" chance="1.033" /> <!-- Mithril Ring -->
-					<item id="1906" min="1" max="1" chance="44.1607" /> <!-- Mithril Ring Wire -->
-				</group>
-				<group chance="38.8765983581543">
-					<item id="1867" min="1" max="1" chance="38.842" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="38.842" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.4737" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.0222" /> <!-- Crafted Leather -->
-					<item id="2304" min="1" max="1" chance="0.1272" /> <!-- Recipe: Heavy Doom Hammer -->
-					<item id="736" min="1" max="1" chance="14.5658" /> <!-- Scroll of Escape -->
-					<item id="2303" min="1" max="1" chance="0.1271" /> <!-- Recipe: Skull Graver -->
-				</group>
+				<item id="57" min="26" max="61" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -3560,17 +3522,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2161" min="1" max="1" chance="15.3276" /> <!-- Recipe: Aquastone Ring -->
-				<item id="2047" min="1" max="1" chance="1.3879" /> <!-- Claymore Blade -->
-				<item id="4469" min="1" max="1" chance="0.9021" /> <!-- Dye of STR <Str+1 Con-1> -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="20796" level="43" type="L2Monster" name="Blade Stakato Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3587,7 +3544,7 @@
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
 		<acquire exp="7652" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<vitals hp="2190" hpRegen="5.5" mp="557" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
 			<attribute>
@@ -3603,7 +3560,6 @@
 		<skill_list>
 			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3621,27 +3577,15 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="38" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="671" max="1364" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.388700008392334">
-					<item id="396" min="1" max="1" chance="1.6747" /> <!-- Salamander Skin Mail -->
-					<item id="1952" min="1" max="1" chance="98.3253" /> <!-- Salamander Skin Mail Texture -->
-				</group>
-				<group chance="26.513399124145508">
-					<item id="1868" min="1" max="1" chance="64.3156" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="12.8631" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.2158" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.1439" /> <!-- Compound Braid -->
-					<item id="2998" min="1" max="1" chance="2.4179" /> <!-- Recipe: Chain Shield -->
-					<item id="737" min="1" max="1" chance="3.2158" /> <!-- Scroll of Resurrection -->
-					<item id="4557" min="1" max="1" chance="0.1286" /> <!-- Greater Dye of DEX <Dex+1 Str-1> -->
-					<item id="3033" min="1" max="1" chance="0.1072" /> <!-- Recipe: Spiritshot C -->
-					<item id="3954" min="1" max="1" chance="0.1072" /> <!-- Recipe: Blessed Spiritshot C -->
-					<item id="6668" min="1" max="1" chance="11.4849" /> <!-- Deluxe Chest Key - Grade 4 -->
-				</group>
+				<item id="57" min="28" max="65" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -3675,17 +3619,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2199" min="1" max="1" chance="7.1642" /> <!-- Recipe: Karmian Stockings -->
-				<item id="2930" min="1" max="1" chance="13.6873" /> <!-- Plate Helmet Design -->
-				<item id="1905" min="1" max="1" chance="16.5167" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="38" />
-		</collision>
 	</npc>
 	<npc id="20797" level="44" type="L2Monster" name="Blade Stakato Drone">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -3708,7 +3647,7 @@
 		<equipment rhand="74" /> <!-- rhand: Katana -->
 		<acquire exp="11631" sp="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<vitals hp="3417" hpRegen="5.5" mp="584" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="173.43552" magical="115.475328468187" />
 			<attribute>
@@ -3729,7 +3668,6 @@
 			<skill id="4094" level="4" /> <!-- NPC Cancel Magic -->
 			<skill id="4098" level="4" /> <!-- Silence -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3747,30 +3685,15 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="39" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1015" max="2079" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.648200035095215">
-					<item id="397" min="1" max="1" chance="0.7904" /> <!-- Mithril Shirt -->
-					<item id="1961" min="1" max="1" chance="36.8033" /> <!-- Mithril Shirt Fabric -->
-					<item id="2387" min="1" max="1" chance="1.2632" /> <!-- Reinforced Mithril Gaiters -->
-					<item id="2935" min="1" max="1" chance="61.1431" /> <!-- Reinforced Mithril Gaiters Fragment -->
-				</group>
-				<group chance="35.55509948730469">
-					<item id="1869" min="1" max="1" chance="31.1482" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="62.2964" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.1148" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4153" /> <!-- Durable Metal Plate -->
-					<item id="2220" min="1" max="1" chance="0.6449" /> <!-- Recipe: Rind Leather Armor -->
-					<item id="2225" min="1" max="1" chance="0.6771" /> <!-- Recipe: Demon's Stockings -->
-					<item id="2321" min="1" max="1" chance="0.1085" /> <!-- Recipe: Stiletto -->
-					<item id="8723" min="1" max="1" chance="1.2459" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.3115" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0311" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0063" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="42" max="99" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -3804,15 +3727,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="4440" min="1" max="1" chance="0.8981" /> <!-- Recipe: Knuckle Duster -->
-				<item id="1908" min="1" max="1" chance="24.4093" /> <!-- Moonstone Earring Wire -->
-				<item id="2163" min="1" max="1" chance="13.1511" /> <!-- Recipe: Earring of Protection -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="15" />
-			<height normal="39" />
-		</collision>
 	</npc>
 	<npc id="20798" level="45" type="L2Monster" name="Water Giant">
 		<parameters>

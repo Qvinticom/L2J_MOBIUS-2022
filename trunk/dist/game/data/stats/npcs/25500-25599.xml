@@ -3076,12 +3076,11 @@
 		</collision>
 	</npc>
 	<npc id="25546" level="95" type="L2RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25547" count="2" respawnTime="360" weightPoint="1" />
-				<!-- Rhianna's Escort -->
-				<npc id="25548" count="2" respawnTime="360" weightPoint="1" />
-				<!-- Rhianna's Healer -->
+				<npc id="25547" count="2" respawnTime="360" weightPoint="1" />  <!-- Rhianna's Escort -->
+				<npc id="25548" count="2" respawnTime="360" weightPoint="1" /> 	<!-- Rhianna's Healer -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3100,7 +3099,7 @@
 		<!-- rhand: Lady's Fan -->
 		<acquire exp="138831575" sp="33319" raidPoints="303.8" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2555826" hpRegen="85.6354519750785" mp="1507.8" mpRegen="3" />
+			<vitals hp="2555827" hpRegen="10.5" mp="44116" mpRegen="3.6" />
 			<attack physical="5343.97938761949" magical="876.212888951461" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<attribute>
@@ -3114,63 +3113,42 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" />
-			<!-- Resist Full Magic Attack -->
-			<skill id="4178" level="7" />
-			<!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" />
-			<!-- HP Increase (1x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="11" />
-			<!-- Average P. Atk. -->
-			<skill id="4411" level="11" />
-			<!-- Average M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="11" />
-			<!-- Average M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="9" />
-			<!-- Demons -->
+			<skill id="4045" level="1" />  <!-- Resist Full Magic Attack -->
+			<skill id="4178" level="7" />  <!-- BOSS Flamestrike -->
+			<skill id="4408" level="1" />  <!-- HP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" />  <!-- Standard Type -->
+			<skill id="4415" level="3" />  <!-- One-handed Sword -->
+			<skill id="4416" level="9" />  <!-- Demons -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="59.513301849365234">
-					<item id="5297" min="1" max="1" chance="1.6112" />
-					<!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5478" min="2" max="4" chance="60.3123" />
-					<!-- Sealed Dark Crystal Leather Armor Pattern -->
-					<item id="5298" min="1" max="1" chance="2.5769" />
-					<!-- Sealed Dark Crystal Leggings -->
-					<item id="5482" min="4" max="12" chance="35.4996" />
-					<!-- Sealed Dark Crystal Leggings Design -->
-				</group>
-				<group chance="11.022500038146973">
-					<item id="9626" min="1" max="1" chance="36.1446" />
-					<!-- Giant's Codex - Discipline -->
-					<item id="6570" min="1" max="1" chance="30.1205" />
-					<!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-					<item id="729" min="1" max="1" chance="30.1205" />
-					<!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="6569" min="1" max="1" chance="3.6144" />
-					<!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="190" max="380" chance="100" />
-					<!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="13.5" />
 			<height normal="38" />
 		</collision>
+		<drop_lists>
+			<death>
+				<group chance="59.513301849365234">
+					<item id="5297" min="1" max="1" chance="1.6112" /> 	<!-- Sealed Dark Crystal Leather Armor -->
+					<item id="5478" min="2" max="4" chance="60.3123" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+					<item id="5298" min="1" max="1" chance="2.5769" />  <!-- Sealed Dark Crystal Leggings -->
+					<item id="5482" min="4" max="12" chance="35.4996" /> <!-- Sealed Dark Crystal Leggings Design -->
+				</group>
+				<group chance="11.022500038146973">
+					<item id="9626" min="1" max="1" chance="36.1446" /> <!-- Giant's Codex - Discipline -->
+					<item id="6570" min="1" max="1" chance="30.1205" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+					<item id="729" min="1" max="1" chance="30.1205" />  <!-- Scroll: Enchant Weapon (A-Grade) -->
+					<item id="6569" min="1" max="1" chance="3.6144" />  <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				</group>
+				<group chance="100">
+					<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
+				</group>
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25547" level="95" type="L2Monster" name="Rhianna's Escort">
 		<parameters>
@@ -3707,33 +3685,27 @@
 		</collision>
 	</npc>
 	<npc id="25554" level="97" type="L2RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25555" count="1" respawnTime="360" weightPoint="1" />
-				<!-- Brutus' Right Hand -->
-				<npc id="25556" count="4" respawnTime="360" weightPoint="1" />
-				<!-- Brutus' Left Hand -->
+				<npc id="25555" count="1" respawnTime="360" weightPoint="1" />	<!-- Brutus' Right Hand -->
+				<npc id="25556" count="4" respawnTime="360" weightPoint="1" />	<!-- Brutus' Left Hand -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
 			<param name="DespawnTime" value="10" />
 			<param name="InzoneRestriction" value="1" />
-			<skill name="DDMagic_a" id="4195" level="7" />
-			<!-- BOSS Twister -->
-			<skill name="SelfRangeDebuff_a" id="4182" level="7" />
-			<!-- Poison -->
-			<skill name="SelfRangeDebuffAnother_a" id="4190" level="7" />
-			<!-- Decrease MP -->
-			<skill name="different_level_9_attacked" id="5456" level="1" />
-			<!-- Stubborn Resistance -->
-			<skill name="different_level_9_see_spelled" id="5456" level="1" />
-			<!-- Stubborn Resistance -->
+			<skill name="DDMagic_a" id="4195" level="7" />	<!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4182" level="7" /> <!-- Poison -->
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="7" /> <!-- Decrease MP -->
+			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
+			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="217112675" sp="52107" raidPoints="320.6" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2784206" hpRegen="87.9040997147757" mp="1607.4" mpRegen="3" />
+			<vitals hp="2784208" hpRegen="10.5" mp="45600" mpRegen="3.6" />
 			<attack physical="7149.40063947237" magical="941.257306822256" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<attribute>
@@ -3748,34 +3720,19 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" />
-			<!-- Resist Full Magic Attack -->
-			<skill id="4182" level="7" />
-			<!-- Poison -->
-			<skill id="4190" level="7" />
-			<!-- Decrease MP -->
-			<skill id="4195" level="7" />
-			<!-- BOSS Twister -->
-			<skill id="4408" level="1" />
-			<!-- HP Increase (1x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="11" />
-			<!-- Average P. Atk. -->
-			<skill id="4411" level="11" />
-			<!-- Average M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="11" />
-			<!-- Average M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="9" />
-			<!-- Demons -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4182" level="7" /> <!-- Poison -->
+			<skill id="4190" level="7" /> <!-- Decrease MP -->
+			<skill id="4195" level="7" /> <!-- BOSS Twister -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" />  <!-- Standard Type -->
+			<skill id="4415" level="3" />  <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
@@ -4346,6 +4303,7 @@
 		</collision>
 	</npc>
 	<npc id="25563" level="99" type="L2RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25564" count="1" respawnTime="360" weightPoint="1" />
@@ -4373,7 +4331,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="376926858" sp="603082" raidPoints="338.1" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2911644" hpRegen="90.4131766063558" mp="1708.8" mpRegen="3" />
+			<vitals hp="2911646" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<attack physical="7561.96024153683" magical="984.65035778871" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1036.83381" magical="505.8" evasion="-18" />
 			<attribute>
@@ -4388,34 +4346,19 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" />
-			<!-- Resist Full Magic Attack -->
-			<skill id="4182" level="7" />
-			<!-- Poison -->
-			<skill id="4188" level="7" />
-			<!-- Bleed -->
-			<skill id="4194" level="7" />
-			<!-- BOSS Aura Burn -->
-			<skill id="4408" level="1" />
-			<!-- HP Increase (1x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="11" />
-			<!-- Average P. Atk. -->
-			<skill id="4411" level="11" />
-			<!-- Average M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="11" />
-			<!-- Average M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="9" />
-			<!-- Demons -->
-			<skill id="5467" level="1" />
-			<!-- Dark Attacks -->
+			<skill id="4045" level="1" />	<!-- Resist Full Magic Attack -->
+			<skill id="4182" level="7" />	<!-- Poison -->
+			<skill id="4188" level="7" />	<!-- Bleed -->
+			<skill id="4194" level="7" />	<!-- BOSS Aura Burn -->
+			<skill id="4408" level="1" />	<!-- HP Increase (1x) -->
+			<skill id="4410" level="11" />	<!-- Average P. Atk. -->
+			<skill id="4411" level="11" />	<!-- Average M. Atk. -->
+			<skill id="4412" level="11" />	<!-- Average P. Def. -->
+			<skill id="4413" level="11" />	<!-- Average M. Def. -->
+			<skill id="4414" level="2" /> 	<!-- Standard Type -->
+			<skill id="4415" level="3" /> 	<!-- One-handed Sword -->
+			<skill id="4416" level="9" /> 	<!-- Demons -->
+			<skill id="5467" level="1" /> 	<!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
@@ -4425,8 +4368,7 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="36313" min="14" max="21" chance="100" />
-				<!-- Item .jpg Battleground Scroll: Sleep -->
+				<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -4457,30 +4399,18 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" />
-			<!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" />
-			<!-- HP Increase (1x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="11" />
-			<!-- Average P. Atk. -->
-			<skill id="4411" level="11" />
-			<!-- Average M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="11" />
-			<!-- Average M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="1" />
-			<!-- Bare Hands -->
-			<skill id="4416" level="9" />
-			<!-- Demons -->
-			<skill id="4725" level="7" />
-			<!-- Stun -->
-			<skill id="5467" level="1" />
-			<!-- Dark Attacks -->
+			<skill id="4045" level="1" />   <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" />	<!-- HP Increase (1x) -->
+			<skill id="4409" level="1" />	<!-- MP Increase (1x) -->
+			<skill id="4410" level="11" />	<!-- Average P. Atk. -->
+			<skill id="4411" level="11" />	<!-- Average M. Atk. -->
+			<skill id="4412" level="11" />	<!-- Average P. Def. -->
+			<skill id="4413" level="11" />	<!-- Average M. Def. -->
+			<skill id="4414" level="2" />	<!-- Standard Type -->
+			<skill id="4415" level="1" />	<!-- Bare Hands -->
+			<skill id="4416" level="9" />	<!-- Demons -->
+			<skill id="4725" level="7" />	<!-- Stun -->
+			<skill id="5467" level="1" />	<!-- Dark Attacks -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
@@ -6279,36 +6209,29 @@
 		</collision>
 	</npc>
 	<npc id="25589" level="97" type="L2RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25590" count="1" respawnTime="360" weightPoint="1" />
-				<!-- Brand's Chamberlain -->
-				<npc id="25591" count="4" respawnTime="360" weightPoint="1" />
-				<!-- Brand's Servant -->
+				<npc id="25590" count="1" respawnTime="360" weightPoint="1" /> <!-- Brand's Chamberlain -->
+				<npc id="25591" count="4" respawnTime="360" weightPoint="1" /> <!-- Brand's Servant -->
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
 			<param name="DespawnTime" value="10" />
 			<param name="InzoneFinish" value="1" />
 			<param name="InzoneRestriction" value="1" />
-			<skill name="DDMagic_a" id="4192" level="6" />
-			<!-- BOSS HP Drain -->
-			<skill name="SelfRangeDebuff_a" id="4188" level="6" />
-			<!-- Bleed -->
-			<skill name="SelfRangeDebuffAnother_a" id="4190" level="6" />
-			<!-- Decrease MP -->
-			<skill name="different_level_9_attacked" id="5456" level="1" />
-			<!-- Stubborn Resistance -->
-			<skill name="different_level_9_see_spelled" id="5456" level="1" />
-			<!-- Stubborn Resistance -->
+			<skill name="DDMagic_a" id="4192" level="6" />	<!-- BOSS HP Drain -->
+			<skill name="SelfRangeDebuff_a" id="4188" level="6" />	<!-- Bleed -->
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="6" />	<!-- Decrease MP -->
+			<skill name="different_level_9_attacked" id="5456" level="1" />	<!-- Stubborn Resistance -->
+			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="5131" />
-		<!-- rhand: Parhit Staff -->
+		<equipment rhand="5131" /> 	<!-- rhand: Parhit Staff -->
 		<acquire exp="361851322" sp="86844" raidPoints="320.6" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2784206" hpRegen="87.9040997147757" mp="1607.4" mpRegen="3" />
+			<vitals hp="2784208" hpRegen="10.5" mp="45600" mpRegen="3.6" />
 			<attack physical="7149.40063947237" magical="941.257306822256" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<attribute>
@@ -6322,69 +6245,30 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4045" level="1" />
-			<!-- Resist Full Magic Attack -->
-			<skill id="4188" level="6" />
-			<!-- Bleed -->
-			<skill id="4190" level="6" />
-			<!-- Decrease MP -->
-			<skill id="4192" level="6" />
-			<!-- BOSS HP Drain -->
-			<skill id="4408" level="1" />
-			<!-- HP Increase (1x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="11" />
-			<!-- Average P. Atk. -->
-			<skill id="4411" level="11" />
-			<!-- Average M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="11" />
-			<!-- Average M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="6" />
-			<!-- Humanoids -->
+			<skill id="4045" level="1" /> 	<!-- Resist Full Magic Attack -->
+			<skill id="4188" level="6" />  	<!-- Bleed -->
+			<skill id="4190" level="6" />  	<!-- Decrease MP -->
+			<skill id="4192" level="6" />  	<!-- BOSS HP Drain -->
+			<skill id="4408" level="1" />   <!-- HP Increase (1x) -->
+			<skill id="4410" level="11" />  <!-- Average P. Atk. -->
+			<skill id="4411" level="11" />  <!-- Average M. Atk. -->
+			<skill id="4412" level="11" />  <!-- Average P. Def. -->
+			<skill id="4413" level="11" />  <!-- Average M. Def. -->
+			<skill id="4414" level="2" />   <!-- Standard Type -->
+			<skill id="4415" level="3" />   <!-- One-handed Sword -->
+			<skill id="4416" level="6" />   <!-- Humanoids -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="47.79010009765625">
-					<item id="6364" min="1" max="1" chance="0.1071" />
-					<!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.1071" />
-					<!-- Heaven's Divider -->
-					<item id="6688" min="1" max="1" chance="49.4997" />
-					<!-- Forgotten Blade Edge -->
-					<item id="6696" min="1" max="1" chance="50.2861" />
-					<!-- Heavens Divider Edge -->
-				</group>
-				<group chance="11.981100082397461">
-					<item id="9626" min="1" max="1" chance="22.7321" />
-					<!-- Giant's Codex - Discipline -->
-					<item id="9587" min="1" max="1" chance="38.7479" />
-					<!-- Striped Scale Shirt -->
-					<item id="9591" min="1" max="1" chance="29.8061" />
-					<!-- Steel Bracelet -->
-					<item id="6577" min="1" max="1" chance="1.1366" />
-					<!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6578" min="1" max="1" chance="7.5773" />
-					<!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="9912" min="199" max="391" chance="100" />
-					<!-- Knight's Epaulette -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="19.5" />
 			<height normal="51" />
 		</collision>
+ 		<drop_lists>
+			<death>
+				<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25590" level="97" type="L2Monster" name="Brand's Servant">
 		<parameters>

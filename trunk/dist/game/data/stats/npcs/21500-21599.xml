@@ -1203,6 +1203,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21524" level="61" type="L2Monster" name="Blade of Splendor">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1224,7 +1225,7 @@
 		<equipment rhand="242" /> <!-- rhand: Soulfire Dirk -->
 		<acquire exp="21676" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="1986" hpRegen="7.5" mp="1066" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="168.112997103103" />
 			<attribute>
@@ -1242,7 +1243,6 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -1266,8 +1266,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
 				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
+				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1301,7 +1302,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="12.67" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="12.35" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
@@ -1310,6 +1311,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21525" level="61" type="L2Monster" name="Blade of Splendor">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1329,7 +1331,7 @@
 		<equipment rhand="242" /> <!-- rhand: Soulfire Dirk -->
 		<acquire exp="21676" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
+			<vitals hp="1986" hpRegen="7.5" mp="1066" mpRegen="2.7" />
 			<attack physical="501.08068" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.49346" magical="168.112997103103" />
 			<attribute>
@@ -1347,7 +1349,6 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1371,8 +1372,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
 				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
+				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1406,7 +1408,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="12.67" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="12.35" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
@@ -4416,6 +4418,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21557" level="66" type="L2Monster" name="Bone Snatcher">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4438,7 +4441,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66712" sp="16" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -4455,7 +4458,6 @@
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4481,11 +4483,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="86" max="201" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<group chance="42.0">
+				<item id="57" min="467" max="1089" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -4518,11 +4521,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21558" level="66" type="L2Monster" name="Bone Snatcher">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4542,7 +4546,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66712" sp="16" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -4559,7 +4563,6 @@
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4584,11 +4587,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="86" max="201" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<group chance="42.0">
+				<item id="57" min="467" max="1089" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -4621,11 +4625,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21559" level="66" type="L2Monster" name="Bone Maker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4648,7 +4653,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="71626" sp="17" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -4664,7 +4669,6 @@
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4691,10 +4695,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="92" max="216" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="57" min="502" max="1169" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4728,11 +4733,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21560" level="66" type="L2Monster" name="Bone Shaper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4752,7 +4758,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="71626" sp="17" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="4490" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="184.248304515217" />
 			<attribute>
@@ -4768,7 +4774,6 @@
 		<skill_list>
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4794,10 +4799,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="92" max="216" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="57" min="502" max="1169" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4831,7 +4837,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36552" min="1" max="1" chance="1.250" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="2.546" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
@@ -5036,6 +5042,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21563" level="67" type="L2Monster" name="Bone Collector">
+ 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5058,7 +5065,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="70141" sp="16" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<vitals hp="4592" hpRegen="7.5" mp="1251" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
 			<attribute>
@@ -5074,7 +5081,6 @@
 		<skill_list>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5101,9 +5107,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
-				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="57" min="472" max="1098" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5137,9 +5145,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36522" min="1" max="1" chance="2.546" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -5253,6 +5260,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21565" level="68" type="L2Monster" name="Bone Animator">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5272,7 +5280,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="66782" sp="16" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="4692" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -5289,7 +5297,6 @@
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5314,15 +5321,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
+				<item id="57" min="445" max="1039" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="11.0">
 					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
 					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
@@ -5352,8 +5355,8 @@
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -5463,6 +5466,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21567" level="68" type="L2Monster" name="Bone Slayer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5481,7 +5485,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="85601" sp="20" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="4692" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -5497,7 +5501,6 @@
 		<skill_list>
 			<skill id="4138" level="6" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5521,10 +5524,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="111" max="259" chance="70" /> <!-- Adena -->
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="164" min="1" max="1" chance="0.003" /> <!-- Elysian -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
+				<item id="57" min="571" max="1332" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5559,7 +5563,7 @@
 			</death>
 			<corpse>
 				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -5967,6 +5971,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21572" level="69" type="L2Monster" name="Bone Sweeper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5989,7 +5994,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="76692" sp="18" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<vitals hp="4792" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -6005,7 +6010,6 @@
 		<skill_list>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6032,11 +6036,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="57" min="498" max="1162" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6070,8 +6075,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="1.345" /> <!-- Silver-->
-				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="1" chance="2.815" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -6178,6 +6183,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21574" level="70" type="L2Monster" name="Bone Grinder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -6196,7 +6202,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="91866" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="4890" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -6212,7 +6218,6 @@
 		<skill_list>
 			<skill id="4138" level="7" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -6236,11 +6241,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="120" max="279" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
+				<item id="57" min="582" max="1359" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.075" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6274,12 +6280,13 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="1.358" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21575" level="70" type="L2Monster" name="Bone Grinder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -6294,9 +6301,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
-		<acquire exp="69863" sp="16" />
+		<acquire exp="91866" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="4890" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -6311,7 +6318,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6335,11 +6341,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="120" max="279" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
+				<item id="57" min="582" max="1359" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.075" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6373,7 +6380,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="1.358" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
@@ -6581,6 +6588,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21578" level="71" type="L2Monster" name="Behemoth Zombie">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6598,7 +6606,7 @@
 		<sex>MALE</sex>
 		<acquire exp="88642" sp="21" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2492.727" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
@@ -6615,7 +6623,6 @@
 		<skill_list>
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -6641,8 +6648,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment (High-grade) -->
+				<item id="57" min="546" max="1274" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6677,8 +6685,8 @@
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -6787,6 +6795,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21580" level="71" type="L2Monster" name="Bone Caster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -6806,7 +6815,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="86622" sp="20" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2492.727" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
@@ -6823,7 +6832,6 @@
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4155" level="7" /> <!-- NPC Twister - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6849,11 +6857,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="114" max="264" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="57" min="533" max="1245" chance="70" /> <!-- Adena -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6887,11 +6896,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21581" level="71" type="L2Monster" name="Bone Puppeteer">
+ 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -6911,7 +6921,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="93835" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2492.727" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
@@ -6927,7 +6937,6 @@
 		<skill_list>
 			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6954,10 +6963,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
-				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
+				<item id="164" min="1" max="1" chance="0.003" /> <!-- Elysian -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
+				<item id="57" min="578" max="1349" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6992,8 +7002,8 @@
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -7105,6 +7115,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21583" level="72" type="L2Monster" name="Bone Scavenger">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -7127,7 +7138,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="94356" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
@@ -7143,7 +7154,6 @@
 		<skill_list>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -7171,11 +7181,12 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="124" max="289" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="36519" min="1" max="1" chance="0.003" /> <!-- Quality Leather -->
+				<item id="57" min="565" max="1319" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7216,6 +7227,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21584" level="72" type="L2Monster" name="Bone Scavenger">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -7235,7 +7247,7 @@
 		<equipment rhand="178" /> <!-- rhand: Bone Staff -->
 		<acquire exp="92129" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
@@ -7252,7 +7264,6 @@
 			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -7278,12 +7289,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="124" max="289" chance="70" /> <!-- Adena -->
+				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
-				<item id="2504" min="1" max="1" chance="0.0009" /> <!-- Meteor Shower -->
-				<item id="7899" min="1" max="1" chance="0.0009" /> <!-- Destroyer Hammer -->
-				<item id="36519" min="1" max="1" chance="0.003" /> <!-- Quality Leather -->
-				<group chance="42.0">
+				<item id="57" min="565" max="1319" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -7317,8 +7329,8 @@
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>

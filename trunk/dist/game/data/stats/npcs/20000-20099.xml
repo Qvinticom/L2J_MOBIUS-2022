@@ -5062,6 +5062,7 @@
 		</collision>
 	</npc>
 	<npc id="20072" level="35" type="L2Monster" name="Basilisk">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5074,9 +5075,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3346" sp="1" />
+		<acquire exp="3346" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1224" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="80.54056" magical="54.99876" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="111.61368" magical="74.3136496629463" />
 			<attribute>
@@ -5091,7 +5092,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5103,25 +5103,16 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
+		<collision>
+			<radius normal="34" />
+			<height normal="25" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="210" max="411" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.6395000219345093">
-					<item id="626" min="1" max="1" chance="6.6164" /> <!-- Bronze Shield -->
-					<item id="45" min="1" max="1" chance="4.6397" /> <!-- Bone Helmet -->
-					<item id="1932" min="1" max="1" chance="88.7439" /> <!-- Bone Helmet Design -->
-				</group>
-				<group chance="11.348899841308594">
-					<item id="1866" min="1" max="1" chance="23.0771" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="34.6157" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="1.3846" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="2.8846" /> <!-- High-Grade Suede -->
-					<item id="2262" min="1" max="1" chance="0.5375" /> <!-- Recipe: Elven Bow -->
-					<item id="6666" min="1" max="1" chance="34.6157" /> <!-- Deluxe Chest Key - Grade 2 -->
-					<item id="6035" min="1" max="1" chance="2.8848" /> <!-- Magic Haste Potion -->
-				</group>
+				<item id="470" min="1" max="1" chance="0.3" /> <!-- Mithril Stockings -->
+				<item id="437" min="1" max="1" chance="0.075" /> <!-- Mithril Tunic -->
+				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5155,15 +5146,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2263" min="1" max="1" chance="0.7608" /> <!-- Recipe: Dwarven Trident -->
-				<item id="3953" min="1" max="1" chance="1.9599" /> <!-- Recipe: Blessed Spiritshot D -->
-				<item id="1931" min="1" max="1" chance="6.405" /> <!-- Leather Boots Lining -->
+				<item id="36531" min="1" max="1" chance="8.011" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="34" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="20073" level="28" type="L2Monster" name="Ol Mahum Legionnaire">
 		<parameters>

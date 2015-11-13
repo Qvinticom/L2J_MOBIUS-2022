@@ -962,14 +962,15 @@
 		</drop_lists>
 	</npc>
 	<npc id="22812" level="72" type="L2Monster" name="Boom Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6264" level="1" /> <!-- Golem Boom -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="25917" sp="6" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -984,7 +985,6 @@
 		<skill_list>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -1009,9 +1009,10 @@
 			<death>
 				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36521" min="1" max="1" chance="36.92" /> <!-- Iron Ore -->
+				<item id="36521" min="1" max="1" chance="40.12" /> <!-- Iron Ore -->
 				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
@@ -2400,6 +2401,7 @@
 		</collision>
 	</npc>
 	<npc id="22854" level="85" type="L2Monster" name="Bloody Karik">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6771" level="1" /> <!-- Death Strike -->
@@ -2410,7 +2412,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1916627" sp="459" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="210050" hpRegen="185.531972616358" mp="1881.8" mpRegen="3" />
+			<vitals hp="132524" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
@@ -2426,7 +2428,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
@@ -2447,44 +2448,29 @@
 				<clan>DRAGON_IN</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="66">
-					<item id="57" min="115052" max="268713" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2102999985218048">
-					<item id="15743" min="1" max="1" chance="13.5705" /> <!-- Sealed Vorpal Helmet -->
-					<item id="15755" min="1" max="1" chance="20.3557" /> <!-- Sealed Vorpal Boots -->
-					<item id="15751" min="1" max="1" chance="10.8564" /> <!-- Sealed Vorpal Stockings -->
-					<item id="15750" min="1" max="1" chance="10.8564" /> <!-- Sealed Vorpal Leather Legging -->
-					<item id="15745" min="1" max="1" chance="13.5705" /> <!-- Sealed Vorpal Circlet -->
-					<item id="15764" min="1" max="1" chance="30.7905" /> <!-- Sealed Vorpal Earring -->
-				</group>
-				<group chance="43.753501892089844">
-					<item id="1895" min="72" max="216" chance="10.1602" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="20.483" /> <!-- Mold Lubricant -->
-					<item id="9628" min="4" max="12" chance="5.0204" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="26.9514" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="24.738" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="6.177" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.6177" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9549" min="3" max="9" chance="5.8523" /> <!-- Wind Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9630" min="1" max="3" chance="57.4512" /> <!-- Orichalcum -->
-				<item id="14166" min="1" max="3" chance="52.7329" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="26.3347" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="2.6335" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.5266" /> <!-- Top-Grade Life Stone - Level 84 -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="24" />
 			<height normal="57" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="4278" max="9971" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.75" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.75" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25.56" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="4.921" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.3" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22855" level="85" type="L2Monster" name="Bloody Berserker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6774" level="1" /> <!-- Stun Attack -->
@@ -2494,7 +2480,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1290396" sp="309" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="210050" hpRegen="185.531972616358" mp="1881.8" mpRegen="3" />
+			<vitals hp="66262" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
@@ -2510,7 +2496,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
@@ -2530,46 +2515,31 @@
 				<clan>DRAGON_IN</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="66">
-					<item id="57" min="65375" max="152689" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.14560000598430634">
-					<item id="15763" min="1" max="1" chance="37.9017" /> <!-- Sealed Vorpal Ring -->
-					<item id="15754" min="1" max="1" chance="16.7028" /> <!-- Sealed Vorpal Gloves -->
-					<item id="15746" min="1" max="1" chance="4.1757" /> <!-- Sealed Vorpal Breastplate -->
-					<item id="15765" min="1" max="1" chance="18.9493" /> <!-- Sealed Vorpal Necklace -->
-					<item id="15753" min="1" max="1" chance="16.7028" /> <!-- Sealed Vorpal Leather Gloves -->
-					<item id="15748" min="1" max="1" chance="5.5677" /> <!-- Sealed Vorpal Tunic -->
-				</group>
-				<group chance="44.03219985961914">
-					<item id="1895" min="12" max="36" chance="27.5363" /> <!-- Metallic Fiber -->
-					<item id="4040" min="2" max="6" chance="9.2522" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="18.1416" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="12.1739" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="11.1741" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.7902" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.279" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0558" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0925" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="9549" min="1" max="1" chance="18.5044" /> <!-- Wind Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9628" min="1" max="3" chance="48.6477" /> <!-- Leonard -->
-				<item id="14166" min="1" max="1" chance="59.9284" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="14.964" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="1.4964" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.2992" /> <!-- Top-Grade Life Stone - Level 84 -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2907" max="6775" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.075" /> <!-- Mid-grade Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.53" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3.248" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22856" level="85" type="L2Monster" name="Bloody Karinness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6776" level="1" /> <!-- Paralysis -->
@@ -2580,7 +2550,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1290396" sp="309" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="210050" hpRegen="185.531972616358" mp="1881.8" mpRegen="3" />
+			<vitals hp="66262" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
@@ -2596,7 +2566,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
@@ -2617,47 +2586,29 @@
 				<clan>DRAGON_IN</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="66">
-					<item id="57" min="65375" max="152689" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.10559999942779541">
-					<item id="15749" min="1" max="1" chance="6.9065" /> <!-- Sealed Vorpal Gaiter -->
-					<item id="15758" min="1" max="1" chance="16.444" /> <!-- Sealed Vorpal Shield -->
-					<item id="15756" min="1" max="1" chance="17.2662" /> <!-- Sealed Vorpal Leather Boots -->
-					<item id="15744" min="1" max="1" chance="11.5108" /> <!-- Sealed Vorpal Leather Helmet -->
-					<item id="15759" min="1" max="1" chance="16.444" /> <!-- Sealed Vorpal Sigil -->
-					<item id="15752" min="1" max="1" chance="17.2662" /> <!-- Sealed Vorpal Gauntlet -->
-					<item id="15747" min="1" max="1" chance="5.7554" /> <!-- Sealed Vorpal Leather Breastplate -->
-					<item id="13893" min="1" max="1" chance="8.4069" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="37.68769836425781">
-					<item id="1879" min="15" max="45" chance="13.6487" /> <!-- Cokes -->
-					<item id="1885" min="12" max="36" chance="8.5305" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="19.2688" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="12.9304" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="10.6816" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="11.8685" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="2.9635" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.2964" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0593" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0983" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="9549" min="1" max="1" chance="19.654" /> <!-- Wind Stone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9629" min="1" max="1" chance="53.9355" /> <!-- Adamantine -->
-				<item id="14166" min="1" max="1" chance="59.9284" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="14.964" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="1.4964" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.2992" /> <!-- Top-Grade Life Stone - Level 84 -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="2907" max="6775" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.075" /> <!-- Mid-grade Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="13893" min="1" max="1" chance="0.0075" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="16.99" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3.259" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22857" level="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patrol">
 		<race>HUMANOID</race>

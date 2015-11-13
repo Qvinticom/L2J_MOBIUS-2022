@@ -392,17 +392,17 @@
 			<height normal="60.72" />
 		</collision>
 	</npc>
-	<npc id="25813" level="66" type="L2Monster" name="Byron" title="Queen of Blood">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="25813" level="66" type="L2RaidBoss" name="Byron" title="Queen of Blood">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25814" count="2" respawnTime= "3" weightPoint="4" />
 			</minions>
 		</parameters>
 		<race>DEMONIC</race>
-		<acquire exp="470082" sp="19550" />
+		<acquire exp="470082" sp="112" />
 		<stats> <!-- str="79" int="74" dex="42" wit="65" con="75" men="72" -->
-			<vitals hp="400104" hpRegen="7.5" mp="400104" mpRegen="2.7" />
+			<vitals hp="601041" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="9350" magical="7005" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="515" magical="766" />
 			<attribute>
@@ -416,9 +416,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="9" />
-			<skill id="4414" level="3" />
-			<skill id="14760" level="1" />
+			<skill id="14760" level="1" /> <!-- Raid Boss (Lv. 66) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="14423" level="1" />
 		</skill_list>
 		<collision>
@@ -427,13 +427,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="730" min="1" max="1" chance="75" />
-				<item id="5313" min="1" max="1" chance="35" />
-				<item id="5314" min="1" max="1" chance="35" />
-				<item id="5311" min="1" max="1" chance="30" />
-				<item id="729" min="1" max="1" chance="25" />
-				<item id="8679" min="1" max="1" chance="2.5" />
-				<item id="8682" min="1" max="1" chance="2.5" />
+				<item id="5313" min="1" max="1" chance="9.946" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="4.926" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5311" min="1" max="1" chance="1.48" /> <!-- Sealed Armor of Nightmare -->
+				<item id="8679" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos -->
+				<item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga Storm -->
+				<item id="730" min="1" max="1" chance="17.92" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008057" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -736,10 +736,11 @@
 		</collision>
 	</npc>
 	<npc id="25823" level="95" type="L2Npc" name="Brakiera" title="Cursed Hero">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
+		<acquire exp="0" sp="0" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="66024" hpRegen="7.5" mp="66024" mpRegen="2.7" />
+			<vitals hp="68534" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="180000" magical="135000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3200" magical="3300" />
 			<attribute>
@@ -754,8 +755,8 @@
 		<status attackable="false" />
 		<skill_list>
 			<skill id="14265" level="1" />
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
@@ -1303,11 +1304,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="25839" level="96" type="L2RaidBoss" name="Blind Hornafi" title="Raid Boss">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="201701376" sp="806830" />
+		<acquire exp="201701376" sp="48408" />
 		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
-			<vitals hp="1416942" hpRegen="7.5" mp="1416942" mpRegen="2.7" />
+			<vitals hp="1416943" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="246000" magical="184500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6560" magical="6720" />
 			<attribute>
@@ -1321,11 +1322,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="4494" level="1" />
-			<skill id="14734" level="1" />
 			<skill id="4073" level="12" />
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14734" level="1" /> <!-- Raid Boss (Lv. 96) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
@@ -1334,31 +1335,31 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shaper (60%) -->
-				<item id="35421" min="1" max="1" chance="0.25079" /> <!-- Recipe:Β Specter Cutter (60%) -->
-				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Slasher (60%) -->
-				<item id="35423" min="1" max="1" chance="0.0836" /> <!-- Recipe:Β Specter Avenger (60%) -->
-				<item id="35296" min="1" max="1" chance="0.1672" /> <!-- Specter Shaper Fragment -->
-				<item id="35424" min="1" max="1" chance="0.0836" /> <!-- Recipe:Β Specter Fighter (60%) -->
-				<item id="36513" min="2" max="2" chance="89.61038" /> <!-- Elcyum Powder -->
-				<item id="35297" min="1" max="1" chance="0.3344" /> <!-- Specter Cutter Fragment -->
-				<item id="35425" min="1" max="1" chance="0.25079" /> <!-- Recipe:Β Specter Stormer (60%) -->
-				<item id="35298" min="1" max="1" chance="0.25079" /> <!-- Specter Slasher Fragment -->
-				<item id="35426" min="1" max="1" chance="0.1672" /> <!-- Recipe:Β Specter Thrower (60%) -->
-				<item id="35427" min="1" max="1" chance="0.1672" /> <!-- Recipe:Β Specter Shooter (60%) -->
-				<item id="35299" min="1" max="1" chance="0.1672" /> <!-- Specter Avenger Fragment -->
-				<item id="35428" min="1" max="1" chance="0.5852" /> <!-- Recipe:Β Specter Buster (60%) -->
-				<item id="35300" min="1" max="1" chance="0.0836" /> <!-- Specter Fighter Fragment -->
-				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Caster (60%) -->
-				<item id="35301" min="1" max="1" chance="0.0836" /> <!-- Specter Stormer Fragment -->
-				<item id="35430" min="1" max="1" chance="0.25079" /> <!-- Recipe:Β Specter Retributer (60%) -->
-				<item id="35302" min="1" max="1" chance="0.1672" /> <!-- Specter Thrower Fragment -->
-				<item id="35303" min="1" max="1" chance="0.418" /> <!-- Specter Shooter Fragment -->
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="51" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35296" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Fragment -->
+				<item id="35298" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Fragment -->
+				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
+				<item id="35301" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Fragment -->
+				<item id="35302" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Fragment -->
+				<item id="35303" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Fragment -->
 				<item id="35304" min="1" max="1" chance="0.3" /> <!-- Specter Buster Fragment -->
-				<item id="35305" min="1" max="1" chance="0.3344" /> <!-- Specter Caster Fragment -->
-				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="35306" min="1" max="1" chance="0.25079" /> <!-- Specter Retributer Fragment -->
-				<item id="17527" min="1" max="1" chance="46.75324" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35305" min="1" max="1" chance="0.3" /> <!-- Specter Caster Fragment -->
+				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>

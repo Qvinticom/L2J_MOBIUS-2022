@@ -1596,11 +1596,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="22937" level="86" type="L2Monster" name="Bamonti">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="1033874" sp="4002" />
+		<acquire exp="1033874" sp="248" />
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="91736" hpRegen="7.5" mp="91736" mpRegen="2.7" />
+			<vitals hp="55043" hpRegen="9.5" mp="1881" mpRegen="3.3" />
 			<attack physical="33945" magical="15500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="930" magical="920" />
 			<attribute>
@@ -1614,10 +1614,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
-			<!-- <skill id="4410" level="15" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -1626,17 +1627,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1071" max="2499" chance="70" />
-				<item id="36824" min="1" max="1" chance="13.1274" />
-				<item id="36557" min="1" max="1" chance="0.9901" />
-				<item id="36762" min="1" max="1" chance="0.17361" />
-				<item id="36558" min="1" max="1" chance="0.15924" />
-				<item id="17323" min="1" max="1" chance="0.09294" />
-				<item id="17527" min="1" max="1" chance="0.02144" />
+				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
+				<item id="57" min="624" max="1455" chance="70" /> <!-- Adena -->
+				<item id="36824" min="1" max="1" chance="8.623" /> <!-- Immortal Ring Gem -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36762" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Ring (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36557" min="1" max="1" chance="9.39" />
-				<item id="36558" min="1" max="1" chance="1.833" />
+				<item id="36557" min="1" max="1" chance="5.127" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>

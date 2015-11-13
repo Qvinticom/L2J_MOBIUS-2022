@@ -3267,6 +3267,7 @@
 		</collision>
 	</npc>
 	<npc id="25269" level="70" type="L2RaidBoss" name="Beast Lord Behemoth" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25270" count="3" respawnTime="360" weightPoint="1" /> <!-- Behemoth Javeliner -->
@@ -3279,7 +3280,7 @@
 		<sex>MALE</sex>
 		<acquire exp="226669890" sp="54400" raidPoints="2884" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="373386.071242416" hpRegen="117.68436242886" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="889034" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="2154.88111713047" magical="717.403871261232" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="887.74791" magical="433.08" evasion="-18" />
 			<attribute>
@@ -3294,7 +3295,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3308,33 +3308,23 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="9817" min="3" max="7" chance="81" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="4" chance="81" /> <!-- Destruction Tombstone -->
-				<group chance="74.64250183105469">
-					<item id="6326" min="1" max="1" chance="6.579" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="1" chance="8.7749" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="1" chance="13.158" /> <!-- Sealed Majestic Ring -->
-					<item id="6344" min="20" max="60" chance="24.0871" /> <!-- Sealed Majestic Necklace Beads -->
-					<item id="6342" min="81" max="243" chance="9.1903" /> <!-- Sealed Majestic Earring Gemstone -->
-					<item id="6346" min="28" max="84" chance="38.2107" /> <!-- Sealed Majestic Ring Gemstone -->
-				</group>
-				<group chance="27.381900787353516">
-					<item id="289" min="1" max="1" chance="7.7743" /> <!-- Soul Bow -->
-					<item id="5534" min="12" max="36" chance="92.2257" /> <!-- Soul Bow Stave -->
-				</group>
-				<group chance="65.97840118408203">
-					<item id="6578" min="1" max="1" chance="9.6386" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="730" min="1" max="3" chance="90.3614" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="46" />
 			<height normal="71.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6326" min="1" max="1" chance="5.315" /> <!-- Sealed Majestic Necklace -->
+				<item id="6328" min="1" max="1" chance="4.168" /> <!-- Sealed Majestic Ring -->
+				<item id="289" min="1" max="1" chance="2.018" /> <!-- Soul Bow -->
+				<item id="6327" min="1" max="1" chance="1.487" /> <!-- Sealed Majestic Earring -->
+				<item id="9817" min="3" max="7" chance="84.09" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="4" chance="80.56" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="51.12" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6578" min="1" max="1" chance="2.549" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008173" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25270" level="69" type="L2Monster" name="Behemoth Javeliner" title="Raid Fighter">
 		<parameters>

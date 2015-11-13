@@ -1388,6 +1388,7 @@
 		</collision>
 	</npc>
 	<npc id="25426" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25427" count="2" respawnTime="360" weightPoint="1" /> <!-- Freki's Vampire Bat -->
@@ -1400,7 +1401,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" raidPoints="320" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="43316.3085364372" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
+			<vitals hp="68070" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.50599" magical="149.04" evasion="-18" />
 			<attribute>
@@ -1417,7 +1418,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="2" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1430,25 +1430,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="51.33420181274414">
-					<item id="47" min="2" max="4" chance="65.1052" /> <!-- Helmet -->
-					<item id="628" min="4" max="12" chance="34.8948" /> <!-- Hoplon -->
-				</group>
-				<group chance="33.75469970703125">
-					<item id="278" min="1" max="1" chance="35.117" /> <!-- Gastraphetes -->
-					<item id="2029" min="12" max="36" chance="64.883" /> <!-- Gastraphetes Shaft -->
-				</group>
-				<group chance="79.33670043945312">
-					<item id="956" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="29.7" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="278" min="1" max="1" chance="10.73" /> <!-- Gastraphetes -->
+				<item id="628" min="1" max="1" chance="7.254" /> <!-- Hoplon -->
+				<item id="47" min="1" max="1" chance="3.508" /> <!-- Helmet -->
+				<item id="956" min="12" max="36" chance="16.14" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="2029" min="162" max="486" chance="1.501" /> <!-- Gastraphetes Shaft -->
+				<item id="39629" min="1" max="1" chance="0.00412" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25427" level="24" type="L2Monster" name="Freki's Vampire Bat" title="Raid Fighter">
 		<parameters>
@@ -1789,6 +1784,7 @@
 		</collision>
 	</npc>
 	<npc id="25434" level="55" type="L2RaidBoss" name="Bandit Leader Barda" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25435" count="1" respawnTime="360" weightPoint="1" /> <!-- Barda's Bandit -->
@@ -1802,7 +1798,7 @@
 		<equipment rhand="121" /> <!-- rhand: Sword of Watershadow -->
 		<acquire exp="22247944" sp="5339" raidPoints="1068" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
+			<vitals hp="298044" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
@@ -1819,7 +1815,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="5" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1832,39 +1827,25 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="2" chance="62" /> <!-- Destruction Tombstone -->
-				<group chance="66.79620361328125">
-					<item id="554" min="1" max="1" chance="12.6691" /> <!-- Sealed Zubei's Boots -->
-					<item id="600" min="1" max="1" chance="12.6691" /> <!-- Sealed Avadon Boots -->
-					<item id="612" min="1" max="1" chance="12.6691" /> <!-- Sealed Zubei's Gauntlets -->
-					<item id="2464" min="1" max="1" chance="12.6691" /> <!-- Sealed Avadon Gloves -->
-					<item id="4097" min="60" max="180" chance="10.9641" /> <!-- Sealed Zubei's Boots Design -->
-					<item id="4098" min="116" max="346" chance="5.6957" /> <!-- Sealed Avadon Boots Design -->
-					<item id="4100" min="192" max="576" chance="3.4263" /> <!-- Sealed Zubei's Gauntlets Part -->
-					<item id="4073" min="23" max="67" chance="29.2375" /> <!-- Sealed Avadon Gloves Part -->
-				</group>
-				<group chance="39.72629928588867">
-					<item id="78" min="1" max="1" chance="2.5452" /> <!-- Great Sword -->
-					<item id="142" min="1" max="1" chance="2.5452" /> <!-- Keshanberk -->
-					<item id="148" min="1" max="1" chance="2.5452" /> <!-- Sword of Valhalla -->
-					<item id="4104" min="5" max="15" chance="48.6498" /> <!-- Great Sword Blade -->
-					<item id="4107" min="9" max="27" chance="26.6089" /> <!-- Keshanberk Blade -->
-					<item id="4108" min="14" max="42" chance="17.1057" /> <!-- Sword of Valhalla Blade -->
-				</group>
-				<group chance="78.07559967041016">
-					<item id="6572" min="1" max="1" chance="14.9533" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-					<item id="6572" min="1" max="1" chance="14.9533" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-					<item id="948" min="1" max="3" chance="70.0934" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2464" min="1" max="1" chance="5.514" /> <!-- Sealed Avadon Gloves -->
+				<item id="554" min="1" max="1" chance="2.325" /> <!-- Sealed Zubei's Boots -->
+				<item id="78" min="1" max="1" chance="1.714" /> <!-- Great Sword -->
+				<item id="148" min="1" max="1" chance="1.703" /> <!-- Sword of Valhalla -->
+				<item id="142" min="1" max="1" chance="1.681" /> <!-- Keshanberk -->
+				<item id="600" min="1" max="1" chance="1.327" /> <!-- Sealed Avadon Boots -->
+				<item id="612" min="1" max="1" chance="0.75" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="9814" min="1" max="4" chance="74.61" /> <!-- Memento Mori -->
+				<item id="8176" min="1" max="2" chance="63.19" /> <!-- Destruction Tombstone -->
+				<item id="6572" min="1" max="2" chance="3.509" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.00706" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25435" level="54" type="L2Monster" name="Barda's Pawn" title="Raid Fighter">
 		<parameters>

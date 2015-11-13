@@ -620,6 +620,7 @@
 		</collision>
 	</npc>
 	<npc id="25112" level="30" type="L2RaidBoss" name="Beleth' Agent Meana" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25113" count="3" respawnTime="360" weightPoint="1" /> <!-- Meana's Maid -->
@@ -632,7 +633,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2417862" sp="580" raidPoints="416" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="53690.0336885106" hpRegen="21.714038575401" mp="329.4" mpRegen="1.5" />
+			<vitals hp="84373" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="111.218777383212" magical="7.21487767094488" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
@@ -649,7 +650,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="3" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -662,31 +662,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="65.76589965820312">
-					<item id="850" min="6" max="18" chance="4.031" /> <!-- Elven Earring -->
-					<item id="881" min="5" max="15" chance="7.2609" /> <!-- Elven Ring -->
-					<item id="913" min="1" max="1" chance="36.3043" /> <!-- Elven Necklace -->
-					<item id="1902" min="81" max="243" chance="10.8758" /> <!-- Elven Earring Beads -->
-					<item id="1903" min="40" max="120" chance="36.2588" /> <!-- Elven Ring Piece -->
-					<item id="1904" min="154" max="462" chance="5.2692" /> <!-- Elven Necklace Beads -->
-				</group>
-				<group chance="64.60089874267578">
-					<item id="21738" min="1" max="1" chance="7.4176" /> <!-- Winged Spear - Event -->
-					<item id="294" min="1" max="1" chance="7.4176" /> <!-- War Pick -->
-					<item id="2033" min="4" max="12" chance="55.5422" /> <!-- Winged Spear Blade -->
-					<item id="2041" min="8" max="22" chance="29.6226" /> <!-- War Pick Head -->
-				</group>
-				<group chance="92.65699768066406">
-					<item id="956" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="53" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="881" min="1" max="1" chance="9.626" /> <!-- Elven Ring -->
+				<item id="850" min="1" max="1" chance="6.422" /> <!-- Elven Earring -->
+				<item id="913" min="1" max="1" chance="4.883" /> <!-- Elven Necklace -->
+				<item id="93" min="1" max="1" chance="0.3" /> <!-- Winged Spear -->
+				<item id="294" min="1" max="1" chance="0.3" /> <!-- War Pick -->
+				<item id="39629" min="1" max="1" chance="0.004913" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25113" level="29" type="L2Monster" name="Meana's Maid" title="Raid Fighter">
 		<parameters>
@@ -1992,6 +1981,7 @@
 		</collision>
 	</npc>
 	<npc id="25137" level="55" type="L2RaidBoss" name="Beleth' Seer Sephia" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25138" count="3" respawnTime="360" weightPoint="1" /> <!-- Soul Drinker -->
@@ -2004,7 +1994,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1238553" sp="297" raidPoints="1068" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="189660.129360453" hpRegen="64.1713408913048" mp="889.8" mpRegen="2.4" />
+			<vitals hp="298044" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<attack physical="610.439011291351" magical="93.5186493178929" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<attribute>
@@ -2022,7 +2012,6 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="5" /> <!-- Hold -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2035,36 +2024,26 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="4" chance="75" /> <!-- Destruction Tombstone -->
-				<group chance="60.1781005859375">
-					<item id="503" min="1" max="1" chance="9.3757" /> <!-- Zubei's Helmet -->
-					<item id="633" min="1" max="1" chance="13.3946" /> <!-- Zubei's Shield -->
-					<item id="673" min="1" max="1" chance="13.3946" /> <!-- Avadon Shield -->
-					<item id="2415" min="1" max="1" chance="9.3757" /> <!-- Avadon Circlet -->
-					<item id="4102" min="192" max="576" chance="3.2821" /> <!-- Zubei's Helmet Design -->
-					<item id="4101" min="116" max="346" chance="7.0422" /> <!-- Zubei's Shield Fragment -->
-					<item id="4439" min="60" max="180" chance="16.1273" /> <!-- Avadon Shield Fragment -->
-					<item id="4072" min="23" max="67" chance="28.0078" /> <!-- Avadon Circlet Pattern -->
-				</group>
-				<group chance="27.1919002532959">
-					<item id="267" min="1" max="1" chance="11.1553" /> <!-- Arthro Nail -->
-					<item id="4111" min="12" max="36" chance="88.8447" /> <!-- Arthro Nail Blade -->
-				</group>
-				<group chance="83.970703125">
-					<item id="4613" min="1" max="3" chance="26.968" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-					<item id="4614" min="2" max="4" chance="17.9787" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
-					<item id="4615" min="1" max="1" chance="53.936" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
-					<item id="6571" min="1" max="1" chance="1.1173" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="28" />
 			<height normal="85" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="503" min="1" max="1" chance="6.474" /> <!-- Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="5.198" /> <!-- Avadon Circlet -->
+				<item id="633" min="1" max="1" chance="3.108" /> <!-- Zubei's Shield -->
+				<item id="267" min="1" max="1" chance="2.324" /> <!-- Arthro Nail -->
+				<item id="673" min="1" max="1" chance="1.734" /> <!-- Avadon Shield -->
+				<item id="8176" min="1" max="4" chance="73.49" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="4" chance="73.43" /> <!-- Memento Mori -->
+				<item id="4614" min="1" max="1" chance="8.96" /> <!-- Greater STR Dye (STR   4 DEX - 4) -->
+				<item id="4615" min="1" max="1" chance="8.942" /> <!-- Greater CON Dye (Con   4 Str - 4) -->
+				<item id="4613" min="1" max="1" chance="8.918" /> <!-- Greater STR Dye (STR   4 CON - 4) -->
+				<item id="6571" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006972" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25138" level="54" type="L2Monster" name="Soul Drinker" title="Raid Fighter">
 		<parameters>

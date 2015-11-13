@@ -837,18 +837,19 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23649" level="104" type="L2Npc" name="Banshee Queen">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23649" level="101" type="L2Monster" name="Banshee Queen">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />

@@ -2065,87 +2065,108 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23358" level="99" type="L2Npc" name="Blow Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23358" level="99" type="L2Monster" name="Blow Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skill_list>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="19.45" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.999" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23359" level="99" type="L2Npc" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23359" level="99" type="L2Monster" name="Blow Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2162357" sp="5189" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3368" max="7847" chance="50" /> <!-- Adena -->
+				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="20" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.900" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="19.05" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.918" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23360" level="99" type="L2Npc" name="Bizuard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23360" level="99" type="L2Monster" name="Bizuard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="3371" max="7853" chance="50" /> <!-- Adena -->
+				<item id="57" min="4045" max="9424" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="20.35" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="2" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="20.28" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="2.017" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
@@ -2443,86 +2464,108 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23370" level="99" type="L2Npc" name="Blow Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23370" level="99" type="L2Monster" name="Blow Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skill_list>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="47" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="47.42" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="4.775" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23371" level="99" type="L2Npc" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23371" level="99" type="L2Monster" name="Blow Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="2162357" sp="5189" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39070" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="47" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="19.05" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="1.918" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="23372" level="99" type="L2Npc" name="Bizuard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23372" level="99" type="L2Monster" name="Bizuard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8649430" sp="20758" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="39070" hpRegen="7.5" mp="23550" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
+				<item id="57" min="9888" max="23034" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="47" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
+				<item id="40049" min="1" max="1" chance="47.56" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="4.764" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
@@ -3148,11 +3191,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23399" level="99" type="L2Monster" name="Bend Beetle">
-		<!-- GUESSED STATS TODO: FIX IT -->
-		<race>HUMAN</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BUG</race>
 		<acquire exp="90421085" sp="217010" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1644368" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="986624" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="64240" magical="70620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2570" magical="2584" />
 			<attribute>
@@ -3164,6 +3207,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
+			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
+			<skill id="4225" level="3" /> <!-- Stun Resistance -->
+		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="40" />
@@ -3171,15 +3225,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="30540" max="2418494" chance="13.2" />
-				<item id="37791" min="1" max="1" chance="0.6" />
-				<item id="37890" min="1" max="1" chance="0.3" />
-				<item id="36550" min="1" max="1" chance="0.07501" />
+				<item id="57" min="36635" max="85342" chance="30" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40049" min="1" max="1" chance="51.8" />
-				<item id="40050" min="1" max="1" chance="10.3" />
-				<item id="40051" min="1" max="1" chance="1.1" />
+				<item id="40049" min="1" max="3" chance="53.13" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="10.61" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="1.086" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
 		</drop_lists>
 	</npc>

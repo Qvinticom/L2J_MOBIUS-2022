@@ -1134,6 +1134,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="25720" level="84" type="L2RaidBoss" name="Bleeding Fly" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill03_Probablity" value="1111" />
@@ -1146,7 +1147,7 @@
 		<sex>MALE</sex>
 		<acquire exp="19351609" sp="4644" raidPoints="356" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8929367" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<vitals hp="8929367" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="19948.8396409168" magical="32304.9196496018" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
 			<attribute>
@@ -1162,7 +1163,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1171,12 +1171,12 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6829" level="1" /> <!-- Vampiric Attack -->
 			<skill id="6830" level="1" /> <!-- Bleed -->
 			<skill id="6831" level="1" /> <!-- Blood Burst -->
-			<skill id="6900" level="1" /> <!-- 84 level Raid Boss -->
+			<skill id="6900" level="1" /> <!-- Raid Boss (Lv. 84) -->
 			<skill id="6915" level="1" /> <!-- npc Acumen -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
@@ -1187,24 +1187,26 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
-				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
 				<item id="14117" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes -->
-				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
-				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
-				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
+				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
 				<item id="14111" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shield -->
+				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
+				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="13887" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Sigil -->
-				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
-				<item id="959" min="1" max="1" chance="1.340" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="1.140" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
+				<item id="17267" min="1" max="1" chance="10.044" /> <!-- Sealed Blood Crystal -->
+				<item id="6578" min="1" max="1" chance="1.17" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="1.073" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008665" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
 	<npc id="25721" level="84" type="L2RaidBoss" name="Blackdagger Wing" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="6833" level="1" /> <!-- Power Strike -->
@@ -1214,7 +1216,7 @@
 		<sex>MALE</sex>
 		<acquire exp="21110846" sp="5066" raidPoints="356" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8929367" hpRegen="240.220217981479" mp="18120.0" mpRegen="30" />
+			<vitals hp="8929367" hpRegen="9.5" mp="18120" mpRegen="3.3" />
 			<attack physical="19948.8396409168" magical="25843.9357196815" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1073.60169" magical="523.74" evasion="-18" />
 			<attribute>
@@ -1230,7 +1232,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1253,20 +1254,21 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
-				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
 				<item id="14117" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes -->
-				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
-				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
-				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="14116" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves -->
+				<item id="14114" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14113" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves -->
 				<item id="14111" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shield -->
+				<item id="14110" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots -->
+				<item id="14109" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="13887" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Sigil -->
+				<item id="13145" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Circlet -->
+				<item id="13144" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13143" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Helmet -->
 				<item id="17267" min="1" max="1" chance="10" /> <!-- Sealed Blood Crystal -->
-				<item id="959" min="1" max="1" chance="1.340" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="1.140" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="1.236" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="1.144" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008895" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>
@@ -1536,6 +1538,7 @@
 		</collision>
 	</npc>
 	<npc id="25726" level="85" type="L2RaidBoss" name="Behemoth Leader" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill name="notank_skill_a" id="6887" level="1" /> <!-- Fatal Strike -->
@@ -1550,7 +1553,7 @@
 		<sex>MALE</sex>
 		<acquire raidPoints="213" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3902308.59665528" hpRegen="556.482123682282" mp="18468.0" mpRegen="500" />
+			<vitals hp="9291398" hpRegen="9.5" mp="18468" mpRegen="3.3" />
 			<attack physical="15345.2612622437" magical="23259.5421477133" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.129926" magical="529.48" evasion="-18" />
 			<attribute>
@@ -1567,7 +1570,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1587,15 +1589,15 @@
 		<corpse_time>14</corpse_time>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<item id="17266" min="1" max="1" chance="20" /> <!-- Will of Antharas -->
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17266" min="1" max="1" chance="20.63" /> <!-- Will of Antharas -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25727" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
 		<parameters>

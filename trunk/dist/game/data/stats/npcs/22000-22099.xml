@@ -573,6 +573,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22017" level="30" type="L2Monster" name="Bandit Sweeper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -588,9 +589,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="152" /> <!-- rhand: Heavy Chisel -->
-		<acquire exp="2624" sp="95" />
+		<acquire exp="2624" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<attribute>
@@ -607,7 +608,6 @@
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4274" level="2" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -635,6 +635,7 @@
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="911" min="1" max="1" chance="0.3" /> <!-- Magic Necklace -->
 				<item id="737" min="1" max="1" chance="0.3" /> <!-- Scroll of Resurrection -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -668,11 +669,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="11.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="11.23" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22018" level="31" type="L2Monster" name="Bandit Hound">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -685,9 +687,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2251" sp="83" />
+		<acquire exp="2251" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="635.76437" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+			<vitals hp="636" hpRegen="4.5" mp="343" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="89.26566" />
 			<attribute>
@@ -714,7 +716,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="400" clanHelpRange="300">
 			<clan_list>
 				<clan>BRIGAND</clan>
 			</clan_list>
@@ -725,8 +727,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
 				<item id="467" min="1" max="1" chance="0.3" /> <!-- Dark Stockings -->
+				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -760,11 +763,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="11.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="9.381" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22019" level="32" type="L2Monster" name="Bandit Watchman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -778,9 +782,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="273" /> <!-- rhand: Composite Bow -->
-		<acquire exp="3083" sp="115" />
+		<acquire exp="3083" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<vitals hp="669" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="125.57727" magical="91.89199" />
 			<attribute>
@@ -810,7 +814,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="ARCHER" aggroRange="500" clanHelpRange="300" dodge="15" isAggressive="false">
+		<ai type="ARCHER" aggroRange="1000" clanHelpRange="300" dodge="15" isAggressive="false">
 			<clan_list>
 				<clan>BRIGAND</clan>
 			</clan_list>
@@ -821,10 +825,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
 				<item id="348" min="1" max="1" chance="0.3" /> <!-- Scale Mail -->
-				<item id="1834" min="1" max="1" chance="2" /> <!-- Emergency Dressing -->
-				<item id="1061" min="1" max="1" chance="1.150" /> <!-- Major Healing Potion -->
+				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
+				<item id="1834" min="1" max="1" chance="1.946" /> <!-- Emergency Dressing -->
+				<item id="1061" min="1" max="1" chance="1.04" /> <!-- Major Healing Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -858,7 +863,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="12.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="12.73" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -953,6 +958,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22021" level="34" type="L2Monster" name="Bandit Undertaker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -967,9 +973,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" lhand="102" /> <!-- rhand: Gladius lhand: Round Shield -->
-		<acquire exp="3121" sp="121" />
+		<acquire exp="3121" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="97.28601" />
 			<attribute>
@@ -987,7 +993,6 @@
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4274" level="2" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1011,8 +1016,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
 				<item id="377" min="1" max="1" chance="0.3" /> <!-- Scale Gaiters -->
+				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1046,11 +1052,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="13.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="13.06" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22022" level="35" type="L2Monster" name="Bandit Assassin">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1066,9 +1073,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="221" /> <!-- rhand: Assassin Knife -->
-		<acquire exp="3704" sp="145" />
+		<acquire exp="3704" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="100.0527" />
 			<attribute>
@@ -1097,7 +1104,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="400" clanHelpRange="300">
 			<clan_list>
 				<clan>BRIGAND</clan>
 			</clan_list>
@@ -1108,8 +1115,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
-				<item id="276" min="1" max="1" chance="0.3" /> <!-- Elven Bow -->
+				<item id="276" min="1" max="1" chance="0.03" /> <!-- Elven Bow -->
+				<item id="57" min="14" max="32" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1143,11 +1151,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="15.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="14.39" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22023" level="36" type="L2Monster" name="Bandit Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1165,7 +1174,7 @@
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="4238" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<vitals hp="810" hpRegen="4.5" mp="417" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<attribute>
@@ -1182,7 +1191,6 @@
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4274" level="2" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1207,8 +1215,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
 				<item id="180" min="1" max="1" chance="0.03" /> <!-- Mace of Judgment -->
+				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1242,11 +1251,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="17.001" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="17.3" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22024" level="37" type="L2Monster" name="Bandit Inspector">
+ 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -1262,9 +1272,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" /> <!-- rhand: Gladius -->
-		<acquire exp="3992" sp="163" />
+		<acquire exp="3992" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
+			<vitals hp="848" hpRegen="4.5" mp="432" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="144.47758" magical="105.72243" />
 			<attribute>
@@ -1293,7 +1303,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="400" clanHelpRange="300">
 			<clan_list>
 				<clan>BRIGAND</clan>
 			</clan_list>
@@ -1304,9 +1314,10 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
 				<item id="184" min="1" max="1" chance="0.03" /> <!-- Conjuror's Staff -->
+				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
 				<item id="6036" min="1" max="1" chance="0.3" /> <!-- Greater Magic Haste Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1340,7 +1351,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="15.500" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="16.41" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1435,6 +1446,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22026" level="40" type="L2Monster" name="Bandit Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1483,7 +1495,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="400" clanHelpRange="300">
 			<clan_list>
 				<clan>BRIGAND</clan>
 			</clan_list>
@@ -1494,9 +1506,10 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="19" max="45" chance="70" /> <!-- Adena -->
 				<item id="295" min="1" max="1" chance="0.03" /> <!-- Dwarven Trident -->
+				<item id="57" min="19" max="45" chance="70" /> <!-- Adena -->
 				<item id="6036" min="1" max="1" chance="0.3" /> <!-- Greater Magic Haste Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1530,7 +1543,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="10.25" /> <!-- Thread-->
+				<item id="36531" min="1" max="1" chance="10.91" /> <!-- Thread -->
 				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
@@ -5117,6 +5130,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22083" level="55" type="L2Monster" name="Baby Panthera">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -5132,7 +5146,7 @@
 		<sex>MALE</sex>
 		<acquire exp="10406" sp="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<vitals hp="837" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
 			<attribute>
@@ -5161,7 +5175,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="400" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>WANIMAL</clan>
 			</clan_list>
@@ -5173,10 +5187,11 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="82" max="192" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="2.150" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="2.163" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="30" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="29.08" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>

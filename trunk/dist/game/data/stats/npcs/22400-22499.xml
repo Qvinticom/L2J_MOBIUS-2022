@@ -1368,6 +1368,7 @@
 		</collision>
 	</npc>
 	<npc id="22455" level="30" type="L2Monster" name="Begrudged Kanabion">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -1389,9 +1390,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
-		<acquire exp="2248" sp="1" />
+		<acquire exp="2248" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<attribute>
@@ -1407,7 +1408,6 @@
 		<skill_list>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1423,9 +1423,13 @@
 				<clan>RIM</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.34" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -1459,12 +1463,9 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="22456" level="30" type="L2Monster" name="Begrudged Kanabion" title="Doppler">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1488,9 +1489,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="21732" /> <!-- rhand: Sword of Revolution - Event -->
-		<acquire exp="2248" sp="1" />
+		<acquire exp="2248" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<attribute>
@@ -1506,7 +1507,6 @@
 		<skill_list>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1523,9 +1523,13 @@
 				<ignore_npc_id>22455</ignore_npc_id> <!-- Begrudged Kanabion -->
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.296" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -1559,12 +1563,9 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="22" grown="26.4" />
-		</collision>
 	</npc>
 	<npc id="22457" level="32" type="L2Monster" name="Begrudged Kanabion" title="Void">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1589,9 +1590,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="21741" /> <!-- rhand: Sword of Magic Fog - Event -->
-		<acquire exp="2823" sp="1" />
+		<acquire exp="2823" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+			<vitals hp="669" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="92.64226" magical="63.26266" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<attribute>
@@ -1608,7 +1609,6 @@
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1625,9 +1625,13 @@
 				<ignore_npc_id>22455</ignore_npc_id> <!-- Begrudged Kanabion -->
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="23" grown="27.6" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="956" min="1" max="1" chance="1.4105472" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.342" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -1661,10 +1665,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="23" grown="27.6" />
-		</collision>
 	</npc>
 	<npc id="22458" level="35" type="L2Monster" name="Rotten Kanabion">
 		<parameters>

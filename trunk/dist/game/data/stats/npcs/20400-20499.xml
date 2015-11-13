@@ -3760,6 +3760,7 @@
 		</collision>
 	</npc>
 	<npc id="20480" level="10" type="L2Monster" name="Blade Bat">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3768,9 +3769,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="534" sp="12" />
+		<acquire exp="534" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="163.28607" hpRegen="2" mp="108.4" mpRegen="0.9" />
+			<vitals hp="164" hpRegen="2" mp="108" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="61.82527" magical="41.16396260604" />
 			<attribute>
@@ -3784,9 +3785,8 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4276" level="1" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3801,20 +3801,15 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="33.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="96" max="130" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4643000364303589">
-					<item id="22" min="1" max="1" chance="38.4868" /> <!-- Leather Shirt -->
-					<item id="29" min="1" max="1" chance="61.5132" /> <!-- Leather Pants -->
-				</group>
-				<group chance="11.187999725341797">
-					<item id="1864" min="1" max="1" chance="62.7974" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="31.3987" /> <!-- Iron Ore -->
-					<item id="1789" min="1" max="1" chance="5.8039" /> <!-- Recipe: Cedar Staff -->
-				</group>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3848,15 +3843,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="1" chance="35.6778" /> <!-- Stem -->
-				<item id="2007" min="1" max="1" chance="1.2742" /> <!-- Bow Shaft -->
-				<item id="2005" min="1" max="1" chance="1.2742" /> <!-- Broadsword Blade -->
+				<item id="36531" min="1" max="1" chance="3.247" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="33.5" />
-		</collision>
 	</npc>
 	<npc id="20483" level="17" type="L2Monster" name="Corpse Candle">
 		<parameters>
