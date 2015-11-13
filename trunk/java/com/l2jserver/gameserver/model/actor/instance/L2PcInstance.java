@@ -2419,6 +2419,8 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			sendPacket(new ExSubjobInfo(this, SubclassInfoType.CLASS_CHANGED));
+			recalcHennaStats();
+			sendPacket(new HennaInfo(this));
 			
 			setLearningClass(getClassId());
 			
@@ -8467,14 +8469,34 @@ public final class L2PcInstance extends L2Playable
 				continue;
 			}
 			
-			_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
-			_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
-			_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
-			_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
-			_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
-			_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
-			_hennaLUC += ((_hennaLUC + h.getStatLUC()) > 5) ? 5 - _hennaLUC : h.getStatLUC();
-			_hennaCHA += ((_hennaCHA + h.getStatCHA()) > 5) ? 5 - _hennaCHA : h.getStatCHA();
+			if (isAwaken())
+			{
+				if (h.getDyeId() > 180)
+				{
+					_hennaINT += h.getStatINT();
+					_hennaMEN += h.getStatMEN();
+					_hennaSTR += h.getStatSTR();
+					_hennaCON += h.getStatCON();
+					_hennaWIT += h.getStatWIT();
+					_hennaDEX += h.getStatDEX();
+					_hennaLUC += h.getStatLUC();
+					_hennaCHA += h.getStatCHA();
+				}
+			}
+			else
+			{
+				if (h.getDyeId() <= 180)
+				{
+					_hennaINT += ((_hennaINT + h.getStatINT()) > 5) ? 5 - _hennaINT : h.getStatINT();
+					_hennaSTR += ((_hennaSTR + h.getStatSTR()) > 5) ? 5 - _hennaSTR : h.getStatSTR();
+					_hennaMEN += ((_hennaMEN + h.getStatMEN()) > 5) ? 5 - _hennaMEN : h.getStatMEN();
+					_hennaCON += ((_hennaCON + h.getStatCON()) > 5) ? 5 - _hennaCON : h.getStatCON();
+					_hennaWIT += ((_hennaWIT + h.getStatWIT()) > 5) ? 5 - _hennaWIT : h.getStatWIT();
+					_hennaDEX += ((_hennaDEX + h.getStatDEX()) > 5) ? 5 - _hennaDEX : h.getStatDEX();
+					_hennaLUC += ((_hennaLUC + h.getStatLUC()) > 5) ? 5 - _hennaLUC : h.getStatLUC();
+					_hennaCHA += ((_hennaCHA + h.getStatCHA()) > 5) ? 5 - _hennaCHA : h.getStatCHA();
+				}
+			}
 		}
 	}
 	
