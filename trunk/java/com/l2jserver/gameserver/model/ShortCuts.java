@@ -162,6 +162,10 @@ public class ShortCuts implements IRestorable
 		for (int shotId : _owner.getAutoSoulShot())
 		{
 			L2ItemInstance item = _owner.getInventory().getItemByObjectId(shotId);
+			if ((item == null) || (item.getEtcItem() == null) || (item.getEtcItem().getDefaultAction() == null))
+			{
+				continue;
+			}
 			
 			switch (item.getEtcItem().getDefaultAction())
 			{
