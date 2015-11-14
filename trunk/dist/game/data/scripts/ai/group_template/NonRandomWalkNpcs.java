@@ -32,6 +32,8 @@ public class NonRandomWalkNpcs extends AbstractNpcAI
 	{
 		27540, // Fields of Massacre - Embryo Purifier
 		27541, // Fields of Massacre - Embryo Purifier
+		23537, // Atelia Fortress - Atelia Infuser
+		23588, // Atelia Fortress - Hummel
 	};
 	
 	public NonRandomWalkNpcs()
