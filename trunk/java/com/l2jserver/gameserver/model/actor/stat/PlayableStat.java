@@ -103,6 +103,11 @@ public class PlayableStat extends CharStat
 	
 	public boolean removeExp(long value)
 	{
+		if (((getExp() - value) < getExpForLevel(getLevel())) && (!Config.PLAYER_DELEVEL || (Config.PLAYER_DELEVEL && (getLevel() <= Config.DELEVEL_MINIMUM))))
+		{
+			value = getExp() - getExpForLevel(getLevel());
+		}
+		
 		if ((getExp() - value) < 0)
 		{
 			value = getExp() - 1;

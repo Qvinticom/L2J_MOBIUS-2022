@@ -5839,7 +5839,7 @@ public final class L2PcInstance extends L2Playable
 		
 		setExpBeforeDeath(getExp());
 		
-		getStat().addExp(-lostExp);
+		getStat().removeExp(lostExp);
 	}
 	
 	public boolean isPartyWaiting()

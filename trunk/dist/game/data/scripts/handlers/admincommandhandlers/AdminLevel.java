@@ -77,17 +77,11 @@ public class AdminLevel implements IAdminCommandHandler
 				byte lvl = Byte.parseByte(val);
 				if ((lvl >= 1) && (lvl <= maxLevel))
 				{
-					long pXp = targetPlayer.getExp();
-					long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
-					
-					if (pXp > tXp)
-					{
-						targetPlayer.removeExpAndSp(pXp - tXp, 0);
-					}
-					else if (pXp < tXp)
-					{
-						targetPlayer.addExpAndSp(tXp - pXp, 0);
-					}
+					targetPlayer.setExp(ExperienceData.getInstance().getExpForLevel(lvl));
+					targetPlayer.getStat().setLevel(lvl);
+					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
+					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
+					targetPlayer.broadcastUserInfo();
 				}
 				else
 				{

@@ -76,7 +76,7 @@ public class PcStat extends PlayableStat
 	@Override
 	public boolean addExp(long value)
 	{
-		L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		
 		// Allowed to gain exp?
 		if (!getActiveChar().getAccessLevel().canGainExp())
@@ -92,7 +92,7 @@ public class PcStat extends PlayableStat
 		// Set new karma
 		if (!activeChar.isCursedWeaponEquipped() && (activeChar.getReputation() < 0) && (activeChar.isGM() || !activeChar.isInsideZone(ZoneId.PVP)))
 		{
-			int karmaLost = Formulas.calculateKarmaLost(activeChar, value);
+			final int karmaLost = Formulas.calculateKarmaLost(activeChar, value);
 			if (karmaLost > 0)
 			{
 				activeChar.setReputation(activeChar.getReputation() + karmaLost);
@@ -219,7 +219,7 @@ public class PcStat extends PlayableStat
 	
 	public boolean removeExpAndSp(long addToExp, long addToSp, boolean sendMessage)
 	{
-		int level = getLevel();
+		final int level = getLevel();
 		if (!super.removeExpAndSp(addToExp, addToSp))
 		{
 			return false;

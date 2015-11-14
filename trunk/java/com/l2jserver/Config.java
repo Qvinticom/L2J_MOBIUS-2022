@@ -116,7 +116,8 @@ public final class Config
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
-	public static boolean ALT_GAME_DELEVEL;
+	public static boolean PLAYER_DELEVEL;
+	public static int DELEVEL_MINIMUM;
 	public static boolean DECREASE_SKILL_LEVEL;
 	public static double ALT_WEIGHT_LIMIT;
 	public static int RUN_SPD_BOOST;
@@ -1396,7 +1397,8 @@ public final class Config
 			// Load Character L2Properties file (if exists)
 			final PropertiesParser character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 			
-			ALT_GAME_DELEVEL = character.getBoolean("Delevel", true);
+			PLAYER_DELEVEL = character.getBoolean("Delevel", true);
+			DELEVEL_MINIMUM = character.getInt("DelevelMinimum", 85);
 			DECREASE_SKILL_LEVEL = character.getBoolean("DecreaseSkillOnDelevel", true);
 			ALT_WEIGHT_LIMIT = character.getDouble("AltWeightLimit", 1);
 			RUN_SPD_BOOST = character.getInt("RunSpeedBoost", 0);
@@ -3472,7 +3474,10 @@ public final class Config
 				ALT_PERFECT_SHLD_BLOCK = Integer.parseInt(pValue);
 				break;
 			case "delevel":
-				ALT_GAME_DELEVEL = Boolean.parseBoolean(pValue);
+				PLAYER_DELEVEL = Boolean.parseBoolean(pValue);
+				break;
+			case "DelevelMinimum":
+				DELEVEL_MINIMUM = Integer.parseInt(pValue);
 				break;
 			case "magicfailures":
 				ALT_GAME_MAGICFAILURES = Boolean.parseBoolean(pValue);
