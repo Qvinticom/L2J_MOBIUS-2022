@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.MinionHolder;
+import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -278,6 +279,8 @@ public class MinionList
 			final L2MonsterInstance minion = _reusedMinionReferences.stream().filter(m -> (m.getId() == minionId)).findFirst().orElse(null);
 			if (minion != null)
 			{
+				DecayTaskManager.getInstance().cancel(minion);
+				minion.onDecay();
 				_reusedMinionReferences.remove(minion);
 				minion.refreshID();
 				initializeNpcInstance(_master, minion);
