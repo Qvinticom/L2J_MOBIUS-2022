@@ -1337,12 +1337,9 @@ public final class Formulas
 		double attack = 2 * actor.getMAtk(target, skill) * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
 		double d = (attack - defence) / (attack + defence);
 		
-		if (skill.isDebuff())
+		if (skill.isDebuff() && target.isDebuffBlocked())
 		{
-			if (target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0)
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		d += 0.5 * Rnd.nextGaussian();
@@ -1372,7 +1369,7 @@ public final class Formulas
 			return false;
 		}
 		
-		if (skill.isDebuff() && (target.calcStat(Stats.DEBUFF_IMMUNITY, 0, attacker, skill) > 0))
+		if (skill.isDebuff() && target.isDebuffBlocked())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
 			sm.addCharName(target);
@@ -1470,7 +1467,7 @@ public final class Formulas
 			{
 				return true;
 			}
-			else if (target.calcStat(Stats.DEBUFF_IMMUNITY, 0, null, skill) > 0)
+			else if (target.isDebuffBlocked())
 			{
 				return false;
 			}
@@ -2024,6 +2021,7 @@ public final class Formulas
 				int cancelMagicLvl = skill.getMagicLevel();
 				final double vuln = target.calcStat(Stats.CANCEL_VULN, 0, target, null);
 				final double prof = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
+				
 				double resMod = 1 + (((vuln + prof) * -1) / 100);
 				double finalRate = rate / resMod;
 				

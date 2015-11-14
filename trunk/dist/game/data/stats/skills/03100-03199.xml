@@ -87,7 +87,18 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3103" levels="10" name="Item Skill: Fear">
@@ -474,7 +485,18 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3118" levels="10" name="Item Skill: Fear">
@@ -1529,7 +1551,12 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3159" levels="3" name="Item Skill: Stealth">
@@ -2544,7 +2571,18 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3194" levels="10" name="Item Skill: Fear">

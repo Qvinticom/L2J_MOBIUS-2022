@@ -414,17 +414,13 @@
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
 			</effect>
-			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockDebuff" />
 		</for>
 		<enchant2for>
 			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="10" />
 			</effect>
-			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockDebuff" />
 			<effect name="HealPercent">
 				<param power="#ench2power" />
 			</effect>
@@ -453,7 +449,18 @@
 		<enchant2 name="mpConsume" val="#ench1mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 			<effect name="HealOverTime" ticks="1">
 				<param power="#hpPower" />
 			</effect>
@@ -462,7 +469,18 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 			<effect name="HealOverTime" ticks="1">
 				<param power="#ench1hpPower" />
 			</effect>

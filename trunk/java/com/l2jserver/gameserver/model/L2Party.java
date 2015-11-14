@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.PartyDistributionType;
-import com.l2jserver.gameserver.instancemanager.DuelManager;
 import com.l2jserver.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -485,11 +484,6 @@ public class L2Party extends AbstractPlayerGroup
 			getMembers().remove(player);
 			recalculatePartyLevel();
 			
-			if (player.isInDuel())
-			{
-				DuelManager.getInstance().onRemoveFromParty(player);
-			}
-			
 			try
 			{
 				// Channeling a player!
@@ -564,10 +558,6 @@ public class L2Party extends AbstractPlayerGroup
 				if (getLeader() != null)
 				{
 					getLeader().setParty(null);
-					if (getLeader().isInDuel())
-					{
-						DuelManager.getInstance().onRemoveFromParty(getLeader());
-					}
 				}
 				if (_changeDistributionTypeRequestTask != null)
 				{

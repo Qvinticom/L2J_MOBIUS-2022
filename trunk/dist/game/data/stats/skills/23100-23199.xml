@@ -835,8 +835,14 @@
 	</skill>
 	<skill id="23167" levels="1" name="Rosy Seduction">
 		<!-- Increases Max HP by 20%, Max MP by 20%, and the moving speed by 20% for 5 minutes. Increases the resistance to de-buffs by 10%. Reuse delay 10 minutes. Consumes 3 Rose Essence during skill use. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="BR_EVENT_BUF5" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_red_i00" />
-		<set name="magicLvl" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="itemConsumeCount" val="3" />
@@ -957,7 +963,13 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
 			<effect name="CpHealPercent">
 				<param power="100" />
 			</effect>

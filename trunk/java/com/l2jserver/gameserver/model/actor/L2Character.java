@@ -2973,7 +2973,27 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	@Override
 	public boolean isInvul()
 	{
-		return _isInvul || _isTeleporting || isAffected(EffectFlag.INVUL);
+		return _isInvul || _isTeleporting;
+	}
+	
+	public boolean isHpBlocked()
+	{
+		return isAffected(EffectFlag.BLOCK_HP);
+	}
+	
+	public boolean isMpBlocked()
+	{
+		return isAffected(EffectFlag.BLOCK_MP);
+	}
+	
+	public boolean isBuffBlocked()
+	{
+		return isAffected(EffectFlag.BLOCK_BUFF);
+	}
+	
+	public boolean isDebuffBlocked()
+	{
+		return isAffected(EffectFlag.BLOCK_DEBUFF);
 	}
 	
 	public void setIsMortal(boolean b)

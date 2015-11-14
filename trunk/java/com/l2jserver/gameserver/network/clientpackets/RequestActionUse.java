@@ -45,6 +45,7 @@ import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.skills.Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
@@ -249,10 +250,10 @@ public final class RequestActionUse extends L2GameClientPacket
 				activeChar.tryOpenPrivateBuyStore();
 				break;
 			case 32: // Wild Hog Cannon - Wild Cannon
-				useSkill(4230, false);
+				useSkill("DDMagic", false);
 				break;
 			case 36: // Soulless - Toxic Smoke
-				useSkill(4259, false);
+				useSkill("RangeDebuff", false);
 				break;
 			case 37: // Dwarven Manufacture
 				if (activeChar.isAlikeDead())
@@ -276,7 +277,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				activeChar.mountPlayer(pet);
 				break;
 			case 39: // Soulless - Parasite Burst
-				useSkill(4138, false);
+				useSkill("RangeDD", false);
 				break;
 			case 41: // Wild Hog Cannon - Attack
 				if (validateSummon(servitor, false))
@@ -292,25 +293,25 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				break;
 			case 42: // Kai the Cat - Self Damage Shield
-				useSkill(4378, activeChar, false);
+				useSkill("HealMagic", false);
 				break;
-			case 43: // Unicorn Merrow - Hydro Screw
-				useSkill(4137, false);
+			case 43: // Merrow the Unicorn - Hydro Screw
+				useSkill("DDMagic", false);
 				break;
 			case 44: // Big Boom - Boom Attack
-				useSkill(4139, false);
+				useSkill("DDMagic", false);
 				break;
-			case 45: // Unicorn Boxer - Master Recharge
-				useSkill(4025, activeChar, false);
+			case 45: // Boxer the Unicorn - Master Recharge
+				useSkill("HealMagic", activeChar, false);
 				break;
 			case 46: // Mew the Cat - Mega Storm Strike
-				useSkill(4261, false);
+				useSkill("DDMagic", false);
 				break;
 			case 47: // Silhouette - Steal Blood
-				useSkill(4260, false);
+				useSkill("DDMagic", false);
 				break;
 			case 48: // Mechanic Golem - Mech. Cannon
-				useSkill(4068, false);
+				useSkill("DDMagic", false);
 				break;
 			case 51: // General Manufacture
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
@@ -459,97 +460,91 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				break;
 			case 1003: // Wind Hatchling/Strider - Wild Stun
-				useSkill(4710, true);
+				useSkill("PhysicalSpecial", true);
 				break;
 			case 1004: // Wind Hatchling/Strider - Wild Defense
-				useSkill(4711, activeChar, true);
+				useSkill("Buff", activeChar, true);
 				break;
 			case 1005: // Star Hatchling/Strider - Bright Burst
-				useSkill(4712, true);
+				useSkill("DDMagic", true);
 				break;
 			case 1006: // Star Hatchling/Strider - Bright Heal
-				useSkill(4713, activeChar, true);
+				useSkill("Heal", activeChar, true);
 				break;
-			case 1007: // Cat Queen - Blessing of Queen
-				useSkill(4699, activeChar, false);
+			case 1007: // Feline Queen - Blessing of Queen
+				useSkill("Buff1", activeChar, false);
 				break;
-			case 1008: // Cat Queen - Gift of Queen
-				useSkill(4700, activeChar, false);
+			case 1008: // Feline Queen - Gift of Queen
+				useSkill("Buff2", activeChar, false);
 				break;
-			case 1009: // Cat Queen - Cure of Queen
-				useSkill(4701, false);
+			case 1009: // Feline Queen - Cure of Queen
+				useSkill("DDMagic", false);
 				break;
 			case 1010: // Unicorn Seraphim - Blessing of Seraphim
-				useSkill(4702, activeChar, false);
+				useSkill("Buff1", activeChar, false);
 				break;
 			case 1011: // Unicorn Seraphim - Gift of Seraphim
-				useSkill(4703, activeChar, false);
+				useSkill("Buff2", activeChar, false);
 				break;
 			case 1012: // Unicorn Seraphim - Cure of Seraphim
-				useSkill(4704, false);
+				useSkill("DDMagic", false);
 				break;
 			case 1013: // Nightshade - Curse of Shade
-				useSkill(4705, false);
+				useSkill("DeBuff1", false);
 				break;
 			case 1014: // Nightshade - Mass Curse of Shade
-				useSkill(4706, false);
+				useSkill("DeBuff2", false);
 				break;
 			case 1015: // Nightshade - Shade Sacrifice
-				useSkill(4707, false);
+				useSkill("Heal", false);
 				break;
 			case 1016: // Cursed Man - Cursed Blow
-				useSkill(4709, false);
+				useSkill("PhysicalSpecial1", false);
 				break;
-			case 1017: // Cursed Man - Cursed Strike/Stun
-				useSkill(4708, false);
+			case 1017: // Cursed Man - Cursed Strike
+				useSkill("PhysicalSpecial2", false);
 				break;
 			case 1031: // Feline King - Slash
-				useSkill(5135, false);
+				useSkill("PhysicalSpecial1", false);
 				break;
 			case 1032: // Feline King - Spinning Slash
-				useSkill(5136, false);
+				useSkill("PhysicalSpecial2", false);
 				break;
-			case 1033: // Feline King - Grip of the Cat
-				useSkill(5137, false);
+			case 1033: // Feline King - Hold of King
+				useSkill("PhysicalSpecial3", false);
 				break;
 			case 1034: // Magnus the Unicorn - Whiplash
-				useSkill(5138, false);
+				useSkill("PhysicalSpecial1", false);
 				break;
 			case 1035: // Magnus the Unicorn - Tridal Wave
-				useSkill(5139, false);
+				useSkill("PhysicalSpecial2", false);
 				break;
 			case 1036: // Spectral Lord - Corpse Kaboom
-				useSkill(5142, false);
+				useSkill("PhysicalSpecial1", false);
 				break;
 			case 1037: // Spectral Lord - Dicing Death
-				useSkill(5141, false);
+				useSkill("PhysicalSpecial2", false);
 				break;
-			case 1038: // Spectral Lord - Force Curse
-				useSkill(5140, false);
+			case 1038: // Spectral Lord - Dark Curse
+				useSkill("PhysicalSpecial3", false);
 				break;
 			case 1039: // Swoop Cannon - Cannon Fodder
-				if ((target != null) && target.isDoor())
-				{
-					useSkill(5110, false);
-				}
+				useSkill(5110, false);
 				break;
 			case 1040: // Swoop Cannon - Big Bang
-				if ((target != null) && target.isDoor())
-				{
-					useSkill(5111, false);
-				}
+				useSkill(5111, false);
 				break;
 			case 1041: // Great Wolf - Bite Attack
-				useSkill(5442, true);
+				useSkill("Skill01", true);
 				break;
 			case 1042: // Great Wolf - Maul
-				useSkill(5444, true);
+				useSkill("Skill03", true);
 				break;
 			case 1043: // Great Wolf - Cry of the Wolf
-				useSkill(5443, true);
+				useSkill("Skill02", true);
 				break;
 			case 1044: // Great Wolf - Awakening
-				useSkill(5445, true);
+				useSkill("Skill04", true);
 				break;
 			case 1045: // Great Wolf - Howl
 				useSkill(5584, true);
@@ -570,34 +565,34 @@ public final class RequestActionUse extends L2GameClientPacket
 				useSkill(5583, false);
 				break;
 			case 1051: // Feline Queen - Bless The Body
-				useSkill(5638, false);
+				useSkill("buff3", false);
 				break;
 			case 1052: // Feline Queen - Bless The Soul
-				useSkill(5639, false);
+				useSkill("buff4", false);
 				break;
 			case 1053: // Feline Queen - Haste
-				useSkill(5640, false);
+				useSkill("buff5", false);
 				break;
 			case 1054: // Unicorn Seraphim - Acumen
-				useSkill(5643, false);
+				useSkill("buff3", false);
 				break;
 			case 1055: // Unicorn Seraphim - Clarity
-				useSkill(5647, false);
+				useSkill("buff4", false);
 				break;
 			case 1056: // Unicorn Seraphim - Empower
-				useSkill(5648, false);
+				useSkill("buff5", false);
 				break;
 			case 1057: // Unicorn Seraphim - Wild Magic
-				useSkill(5646, false);
+				useSkill("buff6", false);
 				break;
 			case 1058: // Nightshade - Death Whisper
-				useSkill(5652, false);
+				useSkill("buff3", false);
 				break;
 			case 1059: // Nightshade - Focus
-				useSkill(5653, false);
+				useSkill("buff4", false);
 				break;
 			case 1060: // Nightshade - Guidance
-				useSkill(5654, false);
+				useSkill("buff5", false);
 				break;
 			case 1061: // Wild Beast Fighter, White Weasel - Death blow
 				useSkill(5745, true);
@@ -630,7 +625,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				useSkill(5771, true);
 				break;
 			case 1071: // Tigress - Power Strike
-				useSkill(5761, true);
+				useSkill("DDMagic", true);
 				break;
 			case 1072: // Toy Knight - Piercing attack
 				useSkill(6046, true);
@@ -1046,18 +1041,8 @@ public final class RequestActionUse extends L2GameClientPacket
 				return;
 			}
 			
-			if (summon instanceof L2BabyPetInstance)
+			if (!canControl(summon))
 			{
-				if (!((L2BabyPetInstance) summon).isInSupportMode())
-				{
-					sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
-					return;
-				}
-			}
-			
-			if ((summon.getLevel() - activeChar.getLevel()) > 20)
-			{
-				sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 				return;
 			}
 			
@@ -1092,6 +1077,69 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 	}
 	
+	private void useSkill(String skillName, L2Object target, boolean pet)
+	{
+		final L2PcInstance activeChar = getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		final L2Summon summon = activeChar.getPet();
+		if (!validateSummon(summon, pet))
+		{
+			return;
+		}
+		
+		if (!canControl(summon))
+		{
+			return;
+		}
+		
+		if (summon instanceof L2BabyPetInstance)
+		{
+			if (!((L2BabyPetInstance) summon).isInSupportMode())
+			{
+				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+				return;
+			}
+		}
+		final Skill skill = summon.getTemplate().getParameters().getSkillHolder(skillName).getSkill();
+		
+		if (skill != null)
+		{
+			summon.setTarget(target);
+			summon.useMagic(skill, _ctrlPressed, _shiftPressed);
+			
+			if (skill.getId() == SWITCH_STANCE_ID)
+			{
+				summon.switchMode();
+			}
+		}
+	}
+	
+	private boolean canControl(L2Summon summon)
+	{
+		if (summon instanceof L2BabyPetInstance)
+		{
+			if (!((L2BabyPetInstance) summon).isInSupportMode())
+			{
+				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+				return false;
+			}
+		}
+		
+		if (summon.isPet())
+		{
+			if ((summon.getLevel() - getActiveChar().getLevel()) > 20)
+			{
+				sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+				return false;
+			}
+		}
+		return true;
+	}
+	
 	/**
 	 * Cast a skill for active summon.<br>
 	 * Target is retrieved from owner's target, then validated by overloaded method useSkill(int, L2Character).
@@ -1107,6 +1155,23 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		useSkill(skillId, activeChar.getTarget(), pet);
+	}
+	
+	/**
+	 * Cast a skill for active summon.<br>
+	 * Target is retrieved from owner's target, then validated by overloaded method useSkill(int, L2Character).
+	 * @param skillName the skill name to use
+	 * @param pet if {@code true} it'll validate a pet, if {@code false} it will validate a servitor
+	 */
+	private void useSkill(String skillName, boolean pet)
+	{
+		final L2PcInstance activeChar = getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
+		useSkill(skillName, activeChar.getTarget(), pet);
 	}
 	
 	/**

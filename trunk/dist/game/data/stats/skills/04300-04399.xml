@@ -195,7 +195,6 @@
 		</for>
 	</skill>
 	<skill id="4318" levels="2" name="Ultimate Buff">
-		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -1531,7 +1530,18 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 			<effect name="TargetMeProbability">
 				<param chance="40" />
 			</effect>
@@ -1632,16 +1642,13 @@
 		</for>
 	</skill>
 	<skill id="4390" levels="2" name="Mystic Immunity">
-		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<!-- set stat="buffImmunity" val="1" / TODO: Needs Support -->
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
 		</for>
 	</skill>
 	<skill id="4391" levels="2" name="Wind Walk">

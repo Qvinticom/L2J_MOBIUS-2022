@@ -18,19 +18,18 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.skills.BuffInfo;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 
 /**
- * Petrification effect implementation.
+ * @author Zealar
  */
-public final class Petrification extends AbstractEffect
+public final class BlockDebuff extends AbstractEffect
 {
-	public Petrification(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
+	public BlockDebuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 	}
@@ -38,21 +37,12 @@ public final class Petrification extends AbstractEffect
 	@Override
 	public int getEffectFlags()
 	{
-		return EffectFlag.PARALYZED.getMask() | EffectFlag.INVUL.getMask();
+		return EffectFlag.BLOCK_DEBUFF.getMask();
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public L2EffectType getEffectType()
 	{
-		if (!info.getEffected().isPlayer())
-		{
-			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
-		}
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		info.getEffected().startParalyze();
+		return L2EffectType.BLOCK_DEBUFF;
 	}
 }

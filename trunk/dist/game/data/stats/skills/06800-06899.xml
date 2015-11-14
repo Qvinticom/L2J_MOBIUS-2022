@@ -31,7 +31,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -52,7 +52,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -73,7 +73,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -94,7 +94,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1085" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -115,7 +115,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1078" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -136,7 +136,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -157,7 +157,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -178,7 +178,7 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1313,7 +1313,18 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6883" levels="1" name="Vitality Recovery Effect">

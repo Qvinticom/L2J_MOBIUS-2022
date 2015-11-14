@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.model.actor.status;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.enums.DuelState;
 import com.l2jserver.gameserver.enums.PrivateStoreType;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -27,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.stat.PcStat;
-import com.l2jserver.gameserver.model.entity.Duel;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -83,7 +83,7 @@ public class PcStatus extends PlayableStatus
 			return;
 		}
 		
-		if (getActiveChar().isInvul() && !getActiveChar().isVulnerableFor(attacker) && !(isDOT || isHPConsumption))
+		if ((getActiveChar().isInvul() || getActiveChar().isHpBlocked()) && !getActiveChar().isVulnerableFor(attacker) && !(isDOT || isHPConsumption))
 		{
 			return;
 		}
@@ -129,11 +129,11 @@ public class PcStatus extends PlayableStatus
 				
 				if (getActiveChar().isInDuel())
 				{
-					if (getActiveChar().getDuelState() == Duel.DUELSTATE_DEAD)
+					if (getActiveChar().getDuelState() == DuelState.DEAD)
 					{
 						return;
 					}
-					else if (getActiveChar().getDuelState() == Duel.DUELSTATE_WINNER)
+					else if (getActiveChar().getDuelState() == DuelState.WINNER)
 					{
 						return;
 					}
@@ -141,7 +141,7 @@ public class PcStatus extends PlayableStatus
 					// cancel duel if player got hit by another player, that is not part of the duel
 					if (attackerPlayer.getDuelId() != getActiveChar().getDuelId())
 					{
-						getActiveChar().setDuelState(Duel.DUELSTATE_INTERRUPTED);
+						getActiveChar().setDuelState(DuelState.INTERRUPTED);
 					}
 				}
 			}
@@ -280,7 +280,10 @@ public class PcStatus extends PlayableStatus
 					{
 						attacker.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						attacker.sendPacket(ActionFailed.STATIC_PACKET);
+						attacker.setTarget(null);
+						attacker.abortAttack();
 					}
+					
 					// let the DuelManager know of his defeat
 					DuelManager.getInstance().onPlayerDefeat(getActiveChar());
 					value = 1;

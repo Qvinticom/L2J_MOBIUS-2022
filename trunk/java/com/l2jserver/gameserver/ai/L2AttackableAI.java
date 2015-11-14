@@ -43,7 +43,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2FriendlyMobInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GuardInstance;
@@ -180,24 +179,24 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		if (target.isInvul())
 		{
 			// However EffectInvincible requires to check GMs specially
-			if ((target instanceof L2PcInstance) && target.isGM())
+			if (target.isPlayer() && target.isGM())
 			{
 				return false;
 			}
-			if ((target instanceof L2Summon) && ((L2Summon) target).getOwner().isGM())
+			if (target.isSummon() && ((L2Summon) target).getOwner().isGM())
 			{
 				return false;
 			}
 		}
 		
 		// Check if the target isn't a Folk or a Door
-		if (target instanceof L2DoorInstance)
+		if (target.isDoor())
 		{
 			return false;
 		}
 		
 		// Check if the target isn't dead, is in the Aggro range and is at the same height
-		if (target.isAlikeDead() || ((target instanceof L2Playable) && !me.isInsideRadius(target, me.getAggroRange(), true, false)))
+		if (target.isAlikeDead() || ((target.isPlayable()) && !me.isInsideRadius(target, me.getAggroRange(), true, false)))
 		{
 			return false;
 		}

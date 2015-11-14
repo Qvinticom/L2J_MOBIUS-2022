@@ -290,7 +290,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		L2Party party = player.getParty();
 		int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		ins.setSpawnLoc(new Location(player));
+		ins.setExitLoc(new Location(player));
 		world = new FAUWorld();
 		world.setInstanceId(instanceId);
 		world.setTemplateId(dungeon.getInstanceId());

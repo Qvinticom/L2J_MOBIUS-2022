@@ -1931,8 +1931,8 @@
 			<effect name="HealPercent">
 				<param power="#HpHealPercent" />
 			</effect>
+			<effect name="BlockDebuff" />
 			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
 				<add stat="pDef" val="#pDef" />
 				<add stat="mDef" val="#mDef" />
 			</effect>

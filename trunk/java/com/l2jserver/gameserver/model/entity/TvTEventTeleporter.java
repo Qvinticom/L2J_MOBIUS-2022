@@ -20,6 +20,7 @@ package com.l2jserver.gameserver.model.entity;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.enums.DuelState;
 import com.l2jserver.gameserver.enums.Team;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -77,14 +78,14 @@ public class TvTEventTeleporter implements Runnable
 		
 		_playerInstance.getServitors().values().forEach(s -> s.unSummon(_playerInstance));
 		
-		if ((Config.TVT_EVENT_EFFECTS_REMOVAL == 0) || ((Config.TVT_EVENT_EFFECTS_REMOVAL == 1) && ((_playerInstance.getTeam() == Team.NONE) || (_playerInstance.isInDuel() && (_playerInstance.getDuelState() != Duel.DUELSTATE_INTERRUPTED)))))
+		if ((Config.TVT_EVENT_EFFECTS_REMOVAL == 0) || ((Config.TVT_EVENT_EFFECTS_REMOVAL == 1) && ((_playerInstance.getTeam() == Team.NONE) || (_playerInstance.isInDuel() && (_playerInstance.getDuelState() != DuelState.INTERRUPTED)))))
 		{
 			_playerInstance.stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
 		
 		if (_playerInstance.isInDuel())
 		{
-			_playerInstance.setDuelState(Duel.DUELSTATE_INTERRUPTED);
+			_playerInstance.setDuelState(DuelState.INTERRUPTED);
 		}
 		
 		int TvTInstance = TvTEvent.getTvTEventInstance();

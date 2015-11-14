@@ -459,7 +459,18 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4617" levels="1" name="Dispel Petrification">
@@ -1950,8 +1961,8 @@
 		<for>
 			<effect name="DefenceTrait">
 				<param VALAKAS="-8" />
-				<set stat="debuffImmunity" val="1" />
 			</effect>
+			<effect name="BlockDebuff" />
 		</for>
 	</skill>
 	<skill id="4680" levels="1" name="Valakas Lava Skin">

@@ -21,13 +21,8 @@ package com.l2jserver.gameserver.enums;
 /**
  * @author Zealar
  */
-public enum DuelResult
+public enum StartPosType
 {
-	CONTINUE,
-	TEAM_1_WIN,
-	TEAM_2_WIN,
-	TEAM_1_SURRENDER,
-	TEAM_2_SURRENDER,
-	CANCELED,
-	TIMEOUT
+	FIXED,
+	RANDOM
 }

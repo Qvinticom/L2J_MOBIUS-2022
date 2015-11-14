@@ -1031,7 +1031,6 @@
 	</skill>
 	<skill id="246" levels="1" name="Seal of Ruler">
 		<!-- Confirmed CT2.5 -->
-		<!-- Not Used Anymore -->
 		<set name="castRange" val="85" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="180000" />
@@ -1624,6 +1623,7 @@
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 52 54 56 </table> <!-- Guessed -->
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 </table> <!-- Guessed -->
 		<set name="castRange" val="40" />
+		<set name="chargeConsume" val="4" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
@@ -1655,7 +1655,10 @@
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
-			<using kind="SWORD, BLUNT, POLE, DUALFIST, DUALBLUNT, DUAL" />
+			<and>
+				<using kind="DUAL" />
+				<player Charges="4" /> <!-- Need to recharge 4th stage of Sword Energy. -->
+			</and>
 		</cond>
 		<for>
 			<effect name="EnergyAttack">
@@ -2319,7 +2322,7 @@
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="PhysicalAttack" />
+			<effect name="MagicalAttack" />
 			<effect name="Debuff">
 				<mul stat="pAtkSpd" val="0.5" />
 				<mul stat="runSpd" val="0.5" />
@@ -2664,6 +2667,9 @@
 				<param HOLD="#traits" />
 				<param SLEEP="#traits" />
 				<param PARALYZE="#traits" />
+			</effect>
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="40" />
 			</effect>
 		</for>
 	</skill>

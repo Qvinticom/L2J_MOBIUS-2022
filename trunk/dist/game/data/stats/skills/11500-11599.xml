@@ -1403,19 +1403,17 @@
 		<set name="targetType" val="PARTY_MEMBER" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockDebuff" />
 		</for>
 		<enchant2for>
+			<effect name="BlockDebuff" />
 			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
 				<mul stat="pDef" val="#ench23pmDef" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
+			<effect name="BlockDebuff" />
 			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
 				<mul stat="mDef" val="#ench23pmDef" />
 			</effect>
 		</enchant3for>
@@ -1555,7 +1553,18 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="11540" levels="4" name="Quick Escape">
@@ -2116,7 +2125,16 @@
 		<set name="castRange" val="900" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2126,7 +2144,16 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="Buff">
 				<add stat="runSpd" val="#ench2runSpd" />
 			</effect>
@@ -2140,7 +2167,16 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="HealPercent" />
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2150,8 +2186,17 @@
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="MpHealPercent" />
-			<effect name="Invincible" />
+			<effect name="ManaHealPercent" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />
@@ -2162,7 +2207,16 @@
 		</enchant4for>
 		<enchant5for>
 			<effect name="CpHealPercent" />
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" chance="100" />

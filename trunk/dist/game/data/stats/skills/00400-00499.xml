@@ -1167,7 +1167,6 @@
 	</skill>
 	<skill id="426" levels="1" name="Battle Stance">
 		<!-- Not Used Anymore -->
-
 		<set name="castRange" val="400" />
 		<set name="channelingSkillId" val="5104" />
 		<set name="effectPoint" val="1" />
@@ -1642,7 +1641,16 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
@@ -1667,7 +1675,16 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Sweeper Festival">
@@ -2676,7 +2693,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 32 43 </table>
-
 		<set name="icon" val="icon.skill0481" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="TOGGLE" />

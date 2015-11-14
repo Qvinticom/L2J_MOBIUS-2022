@@ -246,6 +246,14 @@
 	<xs:complexType name="paramType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
+				<xs:attribute name="block" use="optional">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="HP" />
+							<xs:enumeration value="MP" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
 				<xs:attribute type="xs:string" name="pAtk" use="optional" />
 				<xs:attribute type="xs:string" name="mAtk" use="optional" />
 				<xs:attribute type="xs:string" name="pDef" use="optional" />
@@ -471,7 +479,6 @@
 			<xs:enumeration value="inventoryLimit" />
 			<xs:enumeration value="pReuse" />
 			<xs:enumeration value="dReuse" />
-			<xs:enumeration value="debuffImmunity" />
 			<xs:enumeration value="vitalityConsumeRate" />
 			<xs:enumeration value="weightPenalty" />
 			<xs:enumeration value="darkPower" />
@@ -502,6 +509,7 @@
 			<xs:enumeration value="momentumSkillPower" />
 			<xs:enumeration value="maxPhysCritRate" />
 			<xs:enumeration value="craftMastery" />
+			<xs:enumeration value="debuffImmunity" />
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="addType" mixed="true">
@@ -534,7 +542,189 @@
 			<xs:element name="set" type="addType" />
 			<xs:element name="share" type="shareType" />
 		</xs:choice>
-		<xs:attribute type="xs:string" name="name" use="optional" />
+		<xs:attribute name="name" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="#effectname1" /> <!-- Frintezza's Songs -->
+					<xs:enumeration value="AddHate" />
+					<xs:enumeration value="AttackTrait" />
+					<xs:enumeration value="Backstab" />
+					<xs:enumeration value="Betray" />
+					<xs:enumeration value="Blink" />
+					<xs:enumeration value="BlockAction" />
+					<xs:enumeration value="BlockBuff" />
+					<xs:enumeration value="BlockChat" />
+					<xs:enumeration value="BlockDamage" />
+					<xs:enumeration value="BlockDebuff" />
+					<xs:enumeration value="BlockParty" />
+					<xs:enumeration value="BlockBuffSlot" />
+					<xs:enumeration value="BlockResurrection" />
+					<xs:enumeration value="BlockTarget" />
+					<xs:enumeration value="Bluff" />
+					<xs:enumeration value="Buff" />
+					<xs:enumeration value="CallParty" />
+					<xs:enumeration value="CallPc" />
+					<xs:enumeration value="CallSkill" />
+					<xs:enumeration value="ChameleonRest" />
+					<xs:enumeration value="ChangeFace" />
+					<xs:enumeration value="ChangeFishingMastery" />
+					<xs:enumeration value="ChangeHairColor" />
+					<xs:enumeration value="ChangeHairStyle" />
+					<xs:enumeration value="ClassChange" />
+					<xs:enumeration value="ClanGate" />
+					<xs:enumeration value="Confuse" />
+					<xs:enumeration value="ConsumeBody" />
+					<xs:enumeration value="ConvertItem" />
+					<xs:enumeration value="CpDamPercent" />
+					<xs:enumeration value="CpHeal" />
+					<xs:enumeration value="CpHealOverTime" />
+					<xs:enumeration value="CpHealPercent" />
+					<xs:enumeration value="CrystalGradeModify" />
+					<xs:enumeration value="CubicMastery" />
+					<xs:enumeration value="DamOverTime" />
+					<xs:enumeration value="DamOverTimePercent" />
+					<xs:enumeration value="DeathLink" />
+					<xs:enumeration value="Debuff" />
+					<xs:enumeration value="DefenceTrait" />
+					<xs:enumeration value="DeleteHate" />
+					<xs:enumeration value="DeleteHateOfMe" />
+					<xs:enumeration value="DetectHiddenObjects" />
+					<xs:enumeration value="Detection" />
+					<xs:enumeration value="Disarm" />
+					<xs:enumeration value="DispelAll" />
+					<xs:enumeration value="DispelByCategory" />
+					<xs:enumeration value="DispelBySlot" />
+					<xs:enumeration value="DispelBySlotProbability" />
+					<xs:enumeration value="Duel" />
+					<xs:enumeration value="EnableCloak" />
+					<xs:enumeration value="EnemyCharge" />
+					<xs:enumeration value="EnergyAttack" />
+					<xs:enumeration value="Escape" />
+					<xs:enumeration value="FakeDeath" />
+					<xs:enumeration value="FatalBlow" />
+					<xs:enumeration value="Fear" />
+					<xs:enumeration value="Fishing" />
+					<xs:enumeration value="Flag" />
+					<xs:enumeration value="FocusEnergy" />
+					<xs:enumeration value="FocusMaxEnergy" />
+					<xs:enumeration value="FocusSouls" />
+					<xs:enumeration value="GetAgro" />
+					<xs:enumeration value="GiveRecommendation" />
+					<xs:enumeration value="GiveSp" />
+					<xs:enumeration value="Grow" />
+					<xs:enumeration value="HairAccessorySet" />
+					<xs:enumeration value="Harvesting" />
+					<xs:enumeration value="HeadquarterCreate" />
+					<xs:enumeration value="Heal" />
+					<xs:enumeration value="HealOverTime" />
+					<xs:enumeration value="HealPercent" />
+					<xs:enumeration value="Hide" />
+					<xs:enumeration value="HpByLevel" />
+					<xs:enumeration value="HpCpHeal" />
+					<xs:enumeration value="HpDrain" />
+					<xs:enumeration value="IgnoreDeath" />
+					<xs:enumeration value="ImmobileBuff" />
+					<xs:enumeration value="ImmobilePetBuff" />
+					<xs:enumeration value="JumpToFriend" />
+					<xs:enumeration value="KnockBack" />
+					<xs:enumeration value="KnockDown" />
+					<xs:enumeration value="Lethal" />
+					<xs:enumeration value="Lucky" />
+					<xs:enumeration value="MagicalAttack" />
+					<xs:enumeration value="MagicalAttackByAbnormal" />
+					<xs:enumeration value="MagicalAttackMp" />
+					<xs:enumeration value="MagicalSoulAttack" />
+					<xs:enumeration value="ManaDamOverTime" />
+					<xs:enumeration value="ManaHeal" />
+					<xs:enumeration value="ManaHealByLevel" />
+					<xs:enumeration value="ManaHealOverTime" />
+					<xs:enumeration value="ManaHealPercent" />
+					<xs:enumeration value="MaxCp" />
+					<xs:enumeration value="MaxHp" />
+					<xs:enumeration value="MpConsumePerLevel" />
+					<xs:enumeration value="Mute" />
+					<xs:enumeration value="NoblesseBless" />
+					<xs:enumeration value="OpenChest" />
+					<xs:enumeration value="Unsummon" />
+					<xs:enumeration value="OpenCommonRecipeBook" />
+					<xs:enumeration value="OpenDoor" />
+					<xs:enumeration value="OpenDwarfRecipeBook" />
+					<xs:enumeration value="OutpostCreate" />
+					<xs:enumeration value="OutpostDestroy" />
+					<xs:enumeration value="Paralyze" />
+					<xs:enumeration value="Passive" />
+					<xs:enumeration value="PhysicalAttack" />
+					<xs:enumeration value="PhysicalAttackHpLink" />
+					<xs:enumeration value="PhysicalAttackMute" />
+					<xs:enumeration value="PhysicalMute" />
+					<xs:enumeration value="PhysicalSoulAttack" />
+					<xs:enumeration value="Pumping" />
+					<xs:enumeration value="ProtectionBlessing" />
+					<xs:enumeration value="RandomizeHate" />
+					<xs:enumeration value="RebalanceHP" />
+					<xs:enumeration value="Recovery" />
+					<xs:enumeration value="Reeling" />
+					<xs:enumeration value="RefuelAirship" />
+					<xs:enumeration value="Relax" />
+					<xs:enumeration value="RemoteControl" />
+					<xs:enumeration value="RemoveTarget" />
+					<xs:enumeration value="ResistSkill" />
+					<xs:enumeration value="Restoration" />
+					<xs:enumeration value="RestorationRandom" />
+					<xs:enumeration value="Resurrection" />
+					<xs:enumeration value="ResurrectionSpecial" />
+					<xs:enumeration value="Root" />
+					<xs:enumeration value="RunAway" />
+					<xs:enumeration value="ServitorShare" />
+					<xs:enumeration value="SetSkill" />
+					<xs:enumeration value="ShiftTarget" />
+					<xs:enumeration value="ShilensBreath" />
+					<xs:enumeration value="SilentMove" />
+					<xs:enumeration value="SkillTurning" />
+					<xs:enumeration value="Sleep" />
+					<xs:enumeration value="SoulBlow" />
+					<xs:enumeration value="SoulEating" />
+					<xs:enumeration value="Sow" />
+					<xs:enumeration value="Spoil" />
+					<xs:enumeration value="StaticDamage" />
+					<xs:enumeration value="StealAbnormal" />
+					<xs:enumeration value="Stun" />
+					<xs:enumeration value="Summon" />
+					<xs:enumeration value="SummonAgathion" />
+					<xs:enumeration value="SummonCubic" />
+					<xs:enumeration value="SummonDebuff" />
+					<xs:enumeration value="SummonNpc" />
+					<xs:enumeration value="SummonPet" />
+					<xs:enumeration value="SummonTrap" />
+					<xs:enumeration value="Sweeper" />
+					<xs:enumeration value="TakeCastle" />
+					<xs:enumeration value="TakeCastleStart" />
+					<xs:enumeration value="TakeFort" />
+					<xs:enumeration value="TakeFortStart" />
+					<xs:enumeration value="TakeTerritoryFlag" />
+					<xs:enumeration value="TalismanSlot" />
+					<xs:enumeration value="TargetCancel" />
+					<xs:enumeration value="TargetMe" />
+					<xs:enumeration value="TargetMeProbability" />
+					<xs:enumeration value="Teleport" />
+					<xs:enumeration value="TeleportToTarget" />
+					<xs:enumeration value="ThrowHorizontal" />
+					<xs:enumeration value="ThrowUp" />
+					<xs:enumeration value="TransferDamage" />
+					<xs:enumeration value="TransferHate" />
+					<xs:enumeration value="Transformation" />
+					<xs:enumeration value="TrapDetect" />
+					<xs:enumeration value="TrapRemove" />
+					<xs:enumeration value="TriggerForce" />
+					<xs:enumeration value="TriggerSkillByAttack" />
+					<xs:enumeration value="TriggerSkillByAvoid" />
+					<xs:enumeration value="TriggerSkillByDamage" />
+					<xs:enumeration value="TriggerSkillBySkill" />
+					<xs:enumeration value="UnsummonAgathion" />
+					<xs:enumeration value="VitalityPointUp" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 		<xs:attribute type="xs:string" name="ticks" use="optional" />
 		<xs:attribute type="xs:string" name="abnormalTime" use="optional" />
 		<xs:attribute type="xs:string" name="activationChance" use="optional" />

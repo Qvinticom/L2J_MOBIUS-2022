@@ -403,7 +403,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		}
 		
 		// TODO(Zoey76)[#112]: This check must change if summon fall in L2Npc hierarchy.
-		if (target instanceof L2Npc)
+		if (target.isNpc())
 		{
 			return false;
 		}

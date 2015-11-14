@@ -309,7 +309,16 @@
 			<player agathionId="13414" />
 		</cond>			
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="26124" levels="12" name="Bountiful Resurrection">
@@ -383,9 +392,7 @@
 			<player agathionId="13407" />
 		</cond>			
 		<for>
-			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockDebuff" />
 		</for>				
 	</skill>
 	<skill id="26128" levels="12" name="Archer's Call">

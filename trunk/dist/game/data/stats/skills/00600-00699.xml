@@ -901,6 +901,9 @@
 				<param SLEEP="5" />
 				<param PARALYZE="5" />
 			</effect>
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability: Haste">

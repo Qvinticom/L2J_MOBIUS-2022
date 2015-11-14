@@ -1372,6 +1372,21 @@ public final class Skill implements IIdentifiable
 			return;
 		}
 		
+		if (isDebuff())
+		{
+			if (effected.isDebuffBlocked())
+			{
+				return;
+			}
+		}
+		else
+		{
+			if (effected.isBuffBlocked() && !isBad())
+			{
+				return;
+			}
+		}
+		
 		if (effected.isInvulAgainst(getId(), getLevel()))
 		{
 			effected.sendDebugMessage("Skill " + toString() + " has been ignored (invul against)");

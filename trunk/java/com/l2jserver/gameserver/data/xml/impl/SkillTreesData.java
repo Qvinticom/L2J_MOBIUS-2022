@@ -1583,7 +1583,7 @@ public final class SkillTreesData implements IXmlReader
 	 */
 	public boolean isClanSkill(int skillId, int skillLevel)
 	{
-		final int hashCode = SkillData.getSkillHashCode(skillId, skillId);
+		final int hashCode = SkillData.getSkillHashCode(skillId, skillLevel);
 		return _pledgeSkillTree.containsKey(hashCode) || _subPledgeSkillTree.containsKey(hashCode);
 	}
 	

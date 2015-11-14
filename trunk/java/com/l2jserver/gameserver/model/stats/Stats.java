@@ -136,8 +136,6 @@ public enum Stats
 	HOLY_RES("holyRes"),
 	DARK_RES("darkRes"),
 	MAGIC_SUCCESS_RES("magicSuccRes"),
-	// BUFF_IMMUNITY("buffImmunity"), //TODO: Implement me
-	DEBUFF_IMMUNITY("debuffImmunity"),
 	
 	// ELEMENT POWER
 	FIRE_POWER("firePower"),

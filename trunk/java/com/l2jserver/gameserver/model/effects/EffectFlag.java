@@ -24,6 +24,10 @@ package com.l2jserver.gameserver.model.effects;
 public enum EffectFlag
 {
 	NONE,
+	BLOCK_BUFF,
+	BLOCK_DEBUFF,
+	BLOCK_HP,
+	BLOCK_MP,
 	RESURRECTION_SPECIAL,
 	NOBLESS_BLESSING,
 	SILENT_MOVE,
@@ -39,7 +43,6 @@ public enum EffectFlag
 	SLEEP,
 	STUNNED,
 	BETRAYED,
-	INVUL,
 	PARALYZED,
 	BLOCK_RESURRECTION,
 	SERVITOR_SHARE;

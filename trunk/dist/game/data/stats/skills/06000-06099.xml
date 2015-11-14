@@ -294,9 +294,18 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Invincible" />
-			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 			<effect name="ImmobileBuff" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="6035" levels="1" name="Transform Red Team">
@@ -670,7 +679,6 @@
 	</skill>
 	<skill id="6054" levels="1" name="Switch State">
 		<!-- Confirmed CT2.5 -->
-		
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="TOGGLE" />
 		<set name="rideState" val="NONE" />

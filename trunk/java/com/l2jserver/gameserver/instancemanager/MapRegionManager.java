@@ -412,7 +412,7 @@ public final class MapRegionManager implements IXmlReader
 				Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 				if (inst != null)
 				{
-					loc = inst.getSpawnLoc();
+					loc = inst.getExitLoc();
 					if (loc != null)
 					{
 						return loc;

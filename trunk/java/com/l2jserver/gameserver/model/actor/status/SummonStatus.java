@@ -18,11 +18,11 @@
  */
 package com.l2jserver.gameserver.model.actor.status;
 
+import com.l2jserver.gameserver.enums.DuelState;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Duel;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.util.Util;
 
@@ -50,7 +50,7 @@ public class SummonStatus extends PlayableStatus
 		final L2PcInstance attackerPlayer = attacker.getActingPlayer();
 		if ((attackerPlayer != null) && ((getActiveChar().getOwner() == null) || (getActiveChar().getOwner().getDuelId() != attackerPlayer.getDuelId())))
 		{
-			attackerPlayer.setDuelState(Duel.DUELSTATE_INTERRUPTED);
+			attackerPlayer.setDuelState(DuelState.INTERRUPTED);
 		}
 		
 		final L2PcInstance caster = getActiveChar().getTransferingDamageTo();

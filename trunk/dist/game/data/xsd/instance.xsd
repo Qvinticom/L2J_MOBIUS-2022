@@ -30,11 +30,32 @@
 						<xs:attribute name="text" type="xs:normalizedString" use="optional" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="spawnPoint" minOccurs="0" maxOccurs="1">
+				<xs:element name="spawnPoints" minOccurs="0" maxOccurs="1">
 					<xs:complexType>
-						<xs:attribute name="spawnX" type="xs:integer" use="required" />
-						<xs:attribute name="spawnY" type="xs:integer" use="required" />
-						<xs:attribute name="spawnZ" type="xs:integer" use="required" />
+						<xs:sequence>
+							<xs:element name="Location" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="x" type="xs:int" use="required" />
+									<xs:attribute name="y" type="xs:int" use="required" />
+									<xs:attribute name="z" type="xs:int" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="startPosType" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:token">
+									<xs:enumeration value="FIXED" />
+									<xs:enumeration value="RANDOM" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="exitPoint" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:attribute name="x" type="xs:int" use="required" />
+						<xs:attribute name="y" type="xs:int" use="required" />
+						<xs:attribute name="z" type="xs:int" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="reenter" minOccurs="0" maxOccurs="1">
@@ -64,9 +85,9 @@
 						<xs:attribute name="additionStyle">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
-										<xs:enumeration value="NONE" />
-										<xs:enumeration value="ON_INSTANCE_ENTER" />
-										<xs:enumeration value="ON_INSTANCE_FINISH" />
+									<xs:enumeration value="NONE" />
+									<xs:enumeration value="ON_INSTANCE_ENTER" />
+									<xs:enumeration value="ON_INSTANCE_FINISH" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -84,9 +105,9 @@
 						<xs:attribute name="type">
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
-										<xs:enumeration value="ALL" />
-										<xs:enumeration value="WHITELIST" />
-										<xs:enumeration value="BLACKLIST" />
+									<xs:enumeration value="ALL" />
+									<xs:enumeration value="WHITELIST" />
+									<xs:enumeration value="BLACKLIST" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
@@ -130,6 +151,7 @@
 												<xs:attribute name="amount" type="xs:positiveInteger" />
 												<xs:attribute name="heading" type="xs:integer" use="required" />
 												<xs:attribute name="npcId" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="onKillDelay" type="xs:nonNegativeInteger" />
 												<xs:attribute name="respawn" type="xs:nonNegativeInteger" use="required" />
 												<xs:attribute name="respawnRandom" type="xs:nonNegativeInteger" />
 												<xs:attribute name="allowRandomWalk" type="xs:boolean" />

@@ -136,11 +136,11 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		if (target.isInvul())
 		{
 			// However EffectInvincible requires to check GMs specially
-			if ((target instanceof L2PcInstance) && target.isGM())
+			if (target.isPlayer() && target.isGM())
 			{
 				return false;
 			}
-			if ((target instanceof L2Summon) && ((L2Summon) target).getOwner().isGM())
+			if (target.isSummon() && ((L2Summon) target).getOwner().isGM())
 			{
 				return false;
 			}

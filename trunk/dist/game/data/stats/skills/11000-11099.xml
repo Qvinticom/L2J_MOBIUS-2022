@@ -2416,7 +2416,16 @@
 			<effect name="ManaHealOverTime" ticks="3">
 				<param power="49" />
 			</effect>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 		<enchant2for>
 			<effect name="DispelBySlot">
@@ -2428,7 +2437,16 @@
 			<effect name="ManaHealOverTime" ticks="3">
 				<param power="#enchMpHeal" />
 			</effect>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="DispelBySlot">
@@ -2440,7 +2458,16 @@
 			<effect name="ManaHealOverTime" ticks="3">
 				<param power="#enchMpHeal" />
 			</effect>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<!-- Level 1 : Attacks nearby enemies with 133 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the front. -->

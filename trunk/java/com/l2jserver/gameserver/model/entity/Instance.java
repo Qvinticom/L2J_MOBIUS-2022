@@ -82,7 +82,9 @@ public final class Instance
 	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
 	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
 	private final Map<String, List<L2Spawn>> _manualSpawn = new HashMap<>();
-	private Location _spawnLoc = null;
+	// private StartPosType _enterLocationOrder; TODO implement me
+	private List<Location> _enterLocations = null;
+	private Location _exitLocation = null;
 	private boolean _allowSummon = true;
 	private long _emptyDestroyTime = -1;
 	private long _lastLeft = -1;
@@ -324,20 +326,37 @@ public final class Instance
 	}
 	
 	/**
+	 * @return the spawn location for this instance to be used when enter in instance
+	 */
+	public List<Location> getEnterLocs()
+	{
+		return _enterLocations;
+	}
+	
+	/**
+	 * Sets the spawn location for this instance to be used when enter in instance
+	 * @param loc
+	 */
+	public void addEnterLoc(Location loc)
+	{
+		_enterLocations.add(loc);
+	}
+	
+	/**
 	 * @return the spawn location for this instance to be used when leaving the instance
 	 */
-	public Location getSpawnLoc()
+	public Location getExitLoc()
 	{
-		return _spawnLoc;
+		return _exitLocation;
 	}
 	
 	/**
 	 * Sets the spawn location for this instance to be used when leaving the instance
 	 * @param loc
 	 */
-	public void setSpawnLoc(Location loc)
+	public void setExitLoc(Location loc)
 	{
-		_spawnLoc = loc;
+		_exitLocation = loc;
 	}
 	
 	public void removePlayers()
@@ -348,9 +367,9 @@ public final class Instance
 			if ((player != null) && (player.getInstanceId() == getId()))
 			{
 				player.setInstanceId(0);
-				if (getSpawnLoc() != null)
+				if (getExitLoc() != null)
 				{
-					player.teleToLocation(getSpawnLoc(), true);
+					player.teleToLocation(getExitLoc(), true);
 				}
 				else
 				{
@@ -477,257 +496,272 @@ public final class Instance
 		Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
-			if ("activityTime".equalsIgnoreCase(n.getNodeName()))
+			switch (n.getNodeName().toLowerCase())
 			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
+				case "activitytime":
 				{
-					_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new CheckTimeUp(Integer.parseInt(a.getNodeValue()) * 60000), 15000);
-					_instanceEndTime = System.currentTimeMillis() + (Long.parseLong(a.getNodeValue()) * 60000) + 15000;
-				}
-			}
-			// @formatter:off
-			/*
-			else if ("timeDelay".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
-				{
-					instance.setTimeDelay(Integer.parseInt(a.getNodeValue()));
-				}
-			}
-			*/
-			// @formatter:on
-			else if ("allowSummon".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
-				{
-					setAllowSummon(Boolean.parseBoolean(a.getNodeValue()));
-				}
-			}
-			else if ("emptyDestroyTime".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
-				{
-					_emptyDestroyTime = Long.parseLong(a.getNodeValue()) * 1000;
-				}
-			}
-			else if ("showTimer".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
-				{
-					_showTimer = Boolean.parseBoolean(a.getNodeValue());
-				}
-				a = n.getAttributes().getNamedItem("increase");
-				if (a != null)
-				{
-					_isTimerIncrease = Boolean.parseBoolean(a.getNodeValue());
-				}
-				a = n.getAttributes().getNamedItem("text");
-				if (a != null)
-				{
-					_timerText = a.getNodeValue();
-				}
-			}
-			else if ("PvPInstance".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("val");
-				if (a != null)
-				{
-					setPvPInstance(Boolean.parseBoolean(a.getNodeValue()));
-				}
-			}
-			else if ("doorlist".equalsIgnoreCase(n.getNodeName()))
-			{
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					int doorId = 0;
-					if ("door".equalsIgnoreCase(d.getNodeName()))
+					a = n.getAttributes().getNamedItem("val");
+					if (a != null)
 					{
-						doorId = Integer.parseInt(d.getAttributes().getNamedItem("doorId").getNodeValue());
-						StatsSet set = new StatsSet();
-						set.add(DoorData.getInstance().getDoorTemplate(doorId));
-						for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
-						{
-							if ("set".equalsIgnoreCase(bean.getNodeName()))
-							{
-								NamedNodeMap attrs = bean.getAttributes();
-								String setname = attrs.getNamedItem("name").getNodeValue();
-								String value = attrs.getNamedItem("val").getNodeValue();
-								set.set(setname, value);
-							}
-						}
-						addDoor(doorId, set);
+						_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new CheckTimeUp(Integer.parseInt(a.getNodeValue()) * 60000), 15000);
+						_instanceEndTime = System.currentTimeMillis() + (Long.parseLong(a.getNodeValue()) * 60000) + 15000;
 					}
+					break;
 				}
-			}
-			else if ("spawnlist".equalsIgnoreCase(n.getNodeName()))
-			{
-				for (Node group = n.getFirstChild(); group != null; group = group.getNextSibling())
+				case "allowsummon":
 				{
-					if ("group".equalsIgnoreCase(group.getNodeName()))
+					a = n.getAttributes().getNamedItem("val");
+					if (a != null)
 					{
-						String spawnGroup = group.getAttributes().getNamedItem("name").getNodeValue();
-						List<L2Spawn> manualSpawn = new ArrayList<>();
-						for (Node d = group.getFirstChild(); d != null; d = d.getNextSibling())
+						setAllowSummon(Boolean.parseBoolean(a.getNodeValue()));
+					}
+					break;
+				}
+				case "emptydestroytime":
+				{
+					a = n.getAttributes().getNamedItem("val");
+					if (a != null)
+					{
+						_emptyDestroyTime = Long.parseLong(a.getNodeValue()) * 1000;
+					}
+					break;
+				}
+				case "showtimer":
+				{
+					a = n.getAttributes().getNamedItem("val");
+					if (a != null)
+					{
+						_showTimer = Boolean.parseBoolean(a.getNodeValue());
+					}
+					a = n.getAttributes().getNamedItem("increase");
+					if (a != null)
+					{
+						_isTimerIncrease = Boolean.parseBoolean(a.getNodeValue());
+					}
+					a = n.getAttributes().getNamedItem("text");
+					if (a != null)
+					{
+						_timerText = a.getNodeValue();
+					}
+					break;
+				}
+				case "pvpinstance":
+				{
+					a = n.getAttributes().getNamedItem("val");
+					if (a != null)
+					{
+						setPvPInstance(Boolean.parseBoolean(a.getNodeValue()));
+					}
+					break;
+				}
+				case "doorlist":
+				{
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					{
+						int doorId = 0;
+						if ("door".equalsIgnoreCase(d.getNodeName()))
 						{
-							int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
-							Boolean allowRandomWalk = null;
-							if ("spawn".equalsIgnoreCase(d.getNodeName()))
+							doorId = Integer.parseInt(d.getAttributes().getNamedItem("doorId").getNodeValue());
+							StatsSet set = new StatsSet();
+							set.add(DoorData.getInstance().getDoorTemplate(doorId));
+							for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
 							{
-								
-								npcId = Integer.parseInt(d.getAttributes().getNamedItem("npcId").getNodeValue());
-								x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
-								y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
-								z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
-								heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
-								respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
-								if (d.getAttributes().getNamedItem("onKillDelay") != null)
+								if ("set".equalsIgnoreCase(bean.getNodeName()))
 								{
-									delay = Integer.parseInt(d.getAttributes().getNamedItem("onKillDelay").getNodeValue());
+									NamedNodeMap attrs = bean.getAttributes();
+									String setname = attrs.getNamedItem("name").getNodeValue();
+									String value = attrs.getNamedItem("val").getNodeValue();
+									set.set(setname, value);
 								}
-								if (d.getAttributes().getNamedItem("respawnRandom") != null)
+							}
+							addDoor(doorId, set);
+						}
+					}
+					break;
+				}
+				case "spawnlist":
+				{
+					for (Node group = n.getFirstChild(); group != null; group = group.getNextSibling())
+					{
+						if ("group".equalsIgnoreCase(group.getNodeName()))
+						{
+							String spawnGroup = group.getAttributes().getNamedItem("name").getNodeValue();
+							List<L2Spawn> manualSpawn = new ArrayList<>();
+							for (Node d = group.getFirstChild(); d != null; d = d.getNextSibling())
+							{
+								int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
+								Boolean allowRandomWalk = null;
+								if ("spawn".equalsIgnoreCase(d.getNodeName()))
 								{
-									respawnRandom = Integer.parseInt(d.getAttributes().getNamedItem("respawnRandom").getNodeValue());
-								}
-								if (d.getAttributes().getNamedItem("allowRandomWalk") != null)
-								{
-									allowRandomWalk = Boolean.valueOf(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
-								}
-								
-								final L2Spawn spawnDat = new L2Spawn(npcId);
-								spawnDat.setX(x);
-								spawnDat.setY(y);
-								spawnDat.setZ(z);
-								spawnDat.setAmount(1);
-								spawnDat.setHeading(heading);
-								spawnDat.setRespawnDelay(respawn, respawnRandom);
-								if (respawn == 0)
-								{
-									spawnDat.stopRespawn();
-								}
-								else
-								{
-									spawnDat.startRespawn();
-								}
-								spawnDat.setInstanceId(getId());
-								if (allowRandomWalk == null)
-								{
-									spawnDat.setIsNoRndWalk(!_allowRandomWalk);
-								}
-								else
-								{
-									spawnDat.setIsNoRndWalk(!allowRandomWalk);
-								}
-								if (spawnGroup.equals("general"))
-								{
-									L2Npc spawned = spawnDat.doSpawn();
-									if ((delay >= 0) && (spawned instanceof L2Attackable))
+									
+									npcId = Integer.parseInt(d.getAttributes().getNamedItem("npcId").getNodeValue());
+									x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
+									y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
+									z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
+									heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
+									respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
+									if (d.getAttributes().getNamedItem("onKillDelay") != null)
 									{
-										((L2Attackable) spawned).setOnKillDelay(delay);
+										delay = Integer.parseInt(d.getAttributes().getNamedItem("onKillDelay").getNodeValue());
+									}
+									if (d.getAttributes().getNamedItem("respawnRandom") != null)
+									{
+										respawnRandom = Integer.parseInt(d.getAttributes().getNamedItem("respawnRandom").getNodeValue());
+									}
+									if (d.getAttributes().getNamedItem("allowRandomWalk") != null)
+									{
+										allowRandomWalk = Boolean.valueOf(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
+									}
+									
+									final L2Spawn spawnDat = new L2Spawn(npcId);
+									spawnDat.setX(x);
+									spawnDat.setY(y);
+									spawnDat.setZ(z);
+									spawnDat.setAmount(1);
+									spawnDat.setHeading(heading);
+									spawnDat.setRespawnDelay(respawn, respawnRandom);
+									if (respawn == 0)
+									{
+										spawnDat.stopRespawn();
+									}
+									else
+									{
+										spawnDat.startRespawn();
+									}
+									spawnDat.setInstanceId(getId());
+									if (allowRandomWalk == null)
+									{
+										spawnDat.setIsNoRndWalk(!_allowRandomWalk);
+									}
+									else
+									{
+										spawnDat.setIsNoRndWalk(!allowRandomWalk);
+									}
+									if (spawnGroup.equals("general"))
+									{
+										L2Npc spawned = spawnDat.doSpawn();
+										if ((delay >= 0) && (spawned instanceof L2Attackable))
+										{
+											((L2Attackable) spawned).setOnKillDelay(delay);
+										}
+									}
+									else
+									{
+										manualSpawn.add(spawnDat);
 									}
 								}
-								else
+							}
+							if (!manualSpawn.isEmpty())
+							{
+								_manualSpawn.put(spawnGroup, manualSpawn);
+							}
+						}
+					}
+					break;
+				}
+				case "exitpoint":
+				{
+					int x = Integer.parseInt(n.getAttributes().getNamedItem("x").getNodeValue());
+					int y = Integer.parseInt(n.getAttributes().getNamedItem("y").getNodeValue());
+					int z = Integer.parseInt(n.getAttributes().getNamedItem("z").getNodeValue());
+					_exitLocation = new Location(x, y, z);
+					break;
+				}
+				case "spawnpoints":
+				{
+					_enterLocations = new ArrayList<>();
+					for (Node loc = n.getFirstChild(); loc != null; loc = loc.getNextSibling())
+					{
+						if (loc.getNodeName().equals("Location"))
+						{
+							try
+							{
+								int x = Integer.parseInt(loc.getAttributes().getNamedItem("x").getNodeValue());
+								int y = Integer.parseInt(loc.getAttributes().getNamedItem("y").getNodeValue());
+								int z = Integer.parseInt(loc.getAttributes().getNamedItem("z").getNodeValue());
+								_enterLocations.add(new Location(x, y, z));
+							}
+							catch (Exception e)
+							{
+								_log.log(Level.WARNING, "Error parsing instance xml: " + e.getMessage(), e);
+							}
+						}
+					}
+					break;
+				}
+				case "reenter":
+				{
+					a = n.getAttributes().getNamedItem("additionStyle");
+					if (a != null)
+					{
+						_type = InstanceReenterType.valueOf(a.getNodeValue());
+					}
+					
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					{
+						long time = -1;
+						DayOfWeek day = null;
+						int hour = -1;
+						int minute = -1;
+						
+						if ("reset".equalsIgnoreCase(d.getNodeName()))
+						{
+							a = d.getAttributes().getNamedItem("time");
+							if (a != null)
+							{
+								time = Long.parseLong(a.getNodeValue());
+								
+								if (time > 0)
 								{
-									manualSpawn.add(spawnDat);
+									_resetData.add(new InstanceReenterTimeHolder(time));
+									break;
 								}
 							}
-						}
-						if (!manualSpawn.isEmpty())
-						{
-							_manualSpawn.put(spawnGroup, manualSpawn);
+							else if (time == -1)
+							{
+								a = d.getAttributes().getNamedItem("day");
+								if (a != null)
+								{
+									day = DayOfWeek.valueOf(a.getNodeValue().toUpperCase());
+								}
+								
+								a = d.getAttributes().getNamedItem("hour");
+								if (a != null)
+								{
+									hour = Integer.parseInt(a.getNodeValue());
+								}
+								
+								a = d.getAttributes().getNamedItem("minute");
+								if (a != null)
+								{
+									minute = Integer.parseInt(a.getNodeValue());
+								}
+								_resetData.add(new InstanceReenterTimeHolder(day, hour, minute));
+							}
 						}
 					}
+					break;
 				}
-			}
-			else if ("spawnpoint".equalsIgnoreCase(n.getNodeName()))
-			{
-				try
+				case "removebuffs":
 				{
-					int x = Integer.parseInt(n.getAttributes().getNamedItem("spawnX").getNodeValue());
-					int y = Integer.parseInt(n.getAttributes().getNamedItem("spawnY").getNodeValue());
-					int z = Integer.parseInt(n.getAttributes().getNamedItem("spawnZ").getNodeValue());
-					_spawnLoc = new Location(x, y, z);
-				}
-				catch (Exception e)
-				{
-					_log.log(Level.WARNING, "Error parsing instance xml: " + e.getMessage(), e);
-					_spawnLoc = null;
-				}
-			}
-			else if ("reenter".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("additionStyle");
-				if (a != null)
-				{
-					_type = InstanceReenterType.valueOf(a.getNodeValue());
-				}
-				
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					long time = -1;
-					DayOfWeek day = null;
-					int hour = -1;
-					int minute = -1;
+					a = n.getAttributes().getNamedItem("type");
+					if (a != null)
+					{
+						_removeBuffType = InstanceRemoveBuffType.valueOf(a.getNodeValue().toUpperCase());
+					}
 					
-					if ("reset".equalsIgnoreCase(d.getNodeName()))
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
-						a = d.getAttributes().getNamedItem("time");
-						if (a != null)
+						if ("skill".equalsIgnoreCase(d.getNodeName()))
 						{
-							time = Long.parseLong(a.getNodeValue());
-							
-							if (time > 0)
-							{
-								_resetData.add(new InstanceReenterTimeHolder(time));
-								break;
-							}
-						}
-						else if (time == -1)
-						{
-							a = d.getAttributes().getNamedItem("day");
+							a = d.getAttributes().getNamedItem("id");
 							if (a != null)
 							{
-								day = DayOfWeek.valueOf(a.getNodeValue().toUpperCase());
+								_exceptionList.add(Integer.parseInt(a.getNodeValue()));
 							}
-							
-							a = d.getAttributes().getNamedItem("hour");
-							if (a != null)
-							{
-								hour = Integer.parseInt(a.getNodeValue());
-							}
-							
-							a = d.getAttributes().getNamedItem("minute");
-							if (a != null)
-							{
-								minute = Integer.parseInt(a.getNodeValue());
-							}
-							_resetData.add(new InstanceReenterTimeHolder(day, hour, minute));
 						}
 					}
-				}
-			}
-			else if ("removeBuffs".equalsIgnoreCase(n.getNodeName()))
-			{
-				a = n.getAttributes().getNamedItem("type");
-				if (a != null)
-				{
-					_removeBuffType = InstanceRemoveBuffType.valueOf(a.getNodeValue().toUpperCase());
-				}
-				
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-				{
-					if ("skill".equalsIgnoreCase(d.getNodeName()))
-					{
-						a = d.getAttributes().getNamedItem("id");
-						if (a != null)
-						{
-							_exceptionList.add(Integer.parseInt(a.getNodeValue()));
-						}
-					}
+					break;
 				}
 			}
 		}
@@ -854,9 +888,9 @@ public final class Instance
 				if (player.isDead() && (player.getInstanceId() == getId()))
 				{
 					player.setInstanceId(0);
-					if (getSpawnLoc() != null)
+					if (getExitLoc() != null)
 					{
-						player.teleToLocation(getSpawnLoc(), true);
+						player.teleToLocation(getExitLoc(), true);
 					}
 					else
 					{

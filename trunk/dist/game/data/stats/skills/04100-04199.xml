@@ -327,7 +327,16 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
-			<effect name="Petrification">
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
 				<mul stat="regHp" val="0" />
 			</effect>
 		</for>
@@ -573,9 +582,7 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
-				<set stat="debuffImmunity" val="1" />
-			</effect>
+			<effect name="BlockDebuff" />
 			<effect name="DefenceTrait">
 				<param SHOCK="80" />
 			</effect>

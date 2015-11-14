@@ -21,13 +21,11 @@ package com.l2jserver.gameserver.enums;
 /**
  * @author Zealar
  */
-public enum DuelResult
+public enum DuelState
 {
-	CONTINUE,
-	TEAM_1_WIN,
-	TEAM_2_WIN,
-	TEAM_1_SURRENDER,
-	TEAM_2_SURRENDER,
-	CANCELED,
-	TIMEOUT
+	NO_DUEL,
+	DUELLING,
+	DEAD,
+	WINNER,
+	INTERRUPTED
 }

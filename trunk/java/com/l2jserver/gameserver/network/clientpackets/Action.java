@@ -19,6 +19,7 @@
 package com.l2jserver.gameserver.network.clientpackets;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.DuelState;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -28,6 +29,7 @@ import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public final class Action extends L2GameClientPacket
 {
@@ -107,6 +109,12 @@ public final class Action extends L2GameClientPacket
 			return;
 		}
 		
+		if (obj.isPlayable() && (obj.getActingPlayer().getDuelState() == DuelState.DEAD))
+		{
+			sendPacket(ActionFailed.STATIC_PACKET);
+			activeChar.getActingPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OTHER_PARTY_IS_FROZEN_PLEASE_WAIT_A_MOMENT));
+			return;
+		}
 		if (!obj.isTargetable() && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);

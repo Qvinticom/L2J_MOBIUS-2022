@@ -1487,7 +1487,7 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="SWORD,BLUNT,FIST,DUAL,DUALFIST" />
+			<using kind="DUAL" />
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2470,7 +2470,18 @@
 			<using kind="DUAL" />
 		</cond>
 		<for>
-			<effect name="Petrification" />
+			<effect name="Stun" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockBuff" />
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<mul stat="regHp" val="0" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="368" levels="1" name="Vengeance" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -2853,7 +2864,6 @@
 	</skill>
 	<skill id="390" levels="5" name="Clan Luck">
 		<!-- Updated to Ertheia -->
-		<!-- TODO: Still missing info about other penalties than exp. loss -->
 		<table name="#byPvp"> 0.7 0.5 0.4 0.3 0.2 </table>
 		<table name="#byMob"> 0.88 0.8 0.76 0.72 0.68 </table>
 		<set name="icon" val="icon.skill0390" />
@@ -2940,10 +2950,9 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
+			<effect name="BlockDebuff">
 				<add stat="accCombat" val="8" />
 				<sub stat="cancelVuln" val="80" />
-				<set stat="debuffImmunity" val="1" />
 				<mul stat="healEffect" val="2" />
 				<add stat="mAtk" val="500" />
 				<add stat="mAtkSpd" val="100" />

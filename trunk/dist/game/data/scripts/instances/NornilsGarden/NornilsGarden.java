@@ -282,7 +282,7 @@ public final class NornilsGarden extends AbstractInstance
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
 		
 		inst.setName(InstanceManager.getInstance().getInstanceIdName(TEMPLATE_ID));
-		inst.setSpawnLoc(new Location(player));
+		inst.setExitLoc(new Location(player));
 		inst.setAllowSummon(false);
 		inst.setDuration(DURATION_TIME * 60000);
 		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);

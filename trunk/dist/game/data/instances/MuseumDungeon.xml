@@ -2,7 +2,7 @@
 <instance name="Museum Dungeon" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
 	<allowSummon val="false" />
 	<emptyDestroyTime val="5" />
-	<spawnPoint spawnX="-114711" spawnY="243911" spawnZ="-7968" />
+	<exitPoint x="-114711" y="243911" z="-7968" />
 	<spawnlist>	
 		<group name="desks">
 			<spawn npcId="33126" x="-113744" y="244686" z="-7952" heading="0" respawn="0" />

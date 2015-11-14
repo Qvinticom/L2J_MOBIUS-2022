@@ -449,8 +449,7 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff">
-				<!-- set stat="buffImmunity" val="1" / TODO: Needs Support -->
+			<effect name="BlockBuff">
 				<sub stat="darkRes" val="50" />
 			</effect>
 			<effect name="DispelByCategory">
@@ -1447,7 +1446,13 @@
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" />
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
 		</for>
 	</skill>
 	<skill id="5577" levels="1" name="Healer Ability: Heal">

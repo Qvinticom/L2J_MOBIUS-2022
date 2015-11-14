@@ -94,7 +94,7 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 			player.sendPacket(msg1);
 			requestor.sendPacket(msg2);
 			
-			DuelManager.getInstance().addDuel(requestor, player, _partyDuel);
+			DuelManager.getInstance().addDuel(requestor, player, _partyDuel == 1 ? true : false);
 		}
 		else if (_response == -1)
 		{

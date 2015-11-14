@@ -83,6 +83,7 @@ import com.l2jserver.gameserver.datatables.SkillData;
 import com.l2jserver.gameserver.enums.CastleSide;
 import com.l2jserver.gameserver.enums.CategoryType;
 import com.l2jserver.gameserver.enums.ChatType;
+import com.l2jserver.gameserver.enums.DuelState;
 import com.l2jserver.gameserver.enums.HtmlActionScope;
 import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.enums.InstanceType;
@@ -500,10 +501,8 @@ public final class L2PcInstance extends L2Playable
 	private int _olyBuffsCount = 0;
 	
 	/** Duel */
-	private boolean _isInDuel = false;
-	private int _duelState = Duel.DUELSTATE_NODUEL;
+	private DuelState _duelState = DuelState.NO_DUEL;
 	private int _duelId = 0;
-	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
 	
 	/** Boat and AirShip */
 	private L2Vehicle _vehicle = null;
@@ -4756,6 +4755,14 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public void doCast(Skill skill)
 	{
+		if (getCurrentSkill() != null)
+		{
+			if (!checkUseMagicConditions(skill, getCurrentSkill().isCtrlPressed(), getCurrentSkill().isShiftPressed()))
+			{
+				setIsCastingNow(false);
+				return;
+			}
+		}
 		super.doCast(skill);
 		setRecentFakeDeath(false);
 	}
@@ -6721,7 +6728,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean isInvul()
 	{
-		return super.isInvul() || (_teleportProtectEndTime > GameTimeController.getInstance().getGameTicks());
+		return super.isInvul() || _isTeleporting;
 	}
 	
 	/**
@@ -8638,8 +8645,17 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// is AutoAttackable if both players are in the same duel and the duel is still going on
-		if (attacker.isPlayable() && (getDuelState() == Duel.DUELSTATE_DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId()))
+		if (attacker.isPlayable() && (getDuelState() == DuelState.DUELLING) && (getDuelId() == attacker.getActingPlayer().getDuelId()))
 		{
+			Duel duel = DuelManager.getInstance().getDuel(getDuelId());
+			if (duel.getTeamA().contains(this) && duel.getTeamA().contains(attacker))
+			{
+				return false;
+			}
+			else if (duel.getTeamB().contains(this) && duel.getTeamB().contains(attacker))
+			{
+				return false;
+			}
 			return true;
 		}
 		
@@ -8812,12 +8828,6 @@ public final class L2PcInstance extends L2Playable
 		if (getQueuedSkill() != null)
 		{
 			setQueuedSkill(null, false, false);
-		}
-		
-		if (!checkUseMagicConditions(skill, forceUse, dontMove))
-		{
-			setIsCastingNow(false);
-			return false;
 		}
 		
 		// Check if the target is correct and Notify the AI with AI_INTENTION_CAST and target
@@ -10181,7 +10191,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean isInDuel()
 	{
-		return _isInDuel;
+		return _duelState != DuelState.NO_DUEL;
 	}
 	
 	@Override
@@ -10190,12 +10200,12 @@ public final class L2PcInstance extends L2Playable
 		return _duelId;
 	}
 	
-	public void setDuelState(int mode)
+	public void setDuelState(DuelState mode)
 	{
 		_duelState = mode;
 	}
 	
-	public int getDuelState()
+	public DuelState getDuelState()
 	{
 		return _duelState;
 	}
@@ -10208,88 +10218,19 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (duelId > 0)
 		{
-			_isInDuel = true;
-			_duelState = Duel.DUELSTATE_DUELLING;
+			_duelState = DuelState.DUELLING;
 			_duelId = duelId;
 		}
 		else
 		{
-			if (_duelState == Duel.DUELSTATE_DEAD)
+			if (_duelState == DuelState.DEAD)
 			{
 				enableAllSkills();
 				getStatus().startHpMpRegeneration();
 			}
-			_isInDuel = false;
-			_duelState = Duel.DUELSTATE_NODUEL;
+			_duelState = DuelState.NO_DUEL;
 			_duelId = 0;
 		}
-	}
-	
-	/**
-	 * This returns a SystemMessage stating why the player is not available for duelling.
-	 * @return S1_CANNOT_DUEL... message
-	 */
-	public SystemMessage getNoDuelReason()
-	{
-		SystemMessage sm = SystemMessage.getSystemMessage(_noDuelReason);
-		sm.addPcName(this);
-		_noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
-		return sm;
-	}
-	
-	/**
-	 * Checks if this player might join / start a duel.<br>
-	 * To get the reason use getNoDuelReason() after calling this function.
-	 * @return true if the player might join/start a duel.
-	 */
-	public boolean canDuel()
-	{
-		if (isInCombat() || isJailed())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
-			return false;
-		}
-		if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2)) || (getCurrentMp() < (getMaxMp() / 2))))
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
-			return false;
-		}
-		if (isInDuel())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
-			return false;
-		}
-		if (isInOlympiadMode())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
-			return false;
-		}
-		if (isCursedWeaponEquipped())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
-			return false;
-		}
-		if (getPrivateStoreType() != PrivateStoreType.NONE)
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE;
-			return false;
-		}
-		if (isMounted() || isInBoat())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
-			return false;
-		}
-		if (isFishing())
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
-			return false;
-		}
-		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE))
-		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA;
-			return false;
-		}
-		return true;
 	}
 	
 	public boolean isNoble()
@@ -11959,7 +11900,7 @@ public final class L2PcInstance extends L2Playable
 				if (inst != null)
 				{
 					inst.removePlayer(getObjectId());
-					final Location loc = inst.getSpawnLoc();
+					final Location loc = inst.getExitLoc();
 					if (loc != null)
 					{
 						final int x = loc.getX() + Rnd.get(-30, 30);
@@ -12997,7 +12938,7 @@ public final class L2PcInstance extends L2Playable
 		
 		final SystemMessage sm;
 		
-		if (target.isInvul() && !target.isVulnerableFor(this) && !target.isNpc())
+		if ((target.isInvul() || target.isHpBlocked()) && !target.isVulnerableFor(this) && !target.isNpc())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 		}
