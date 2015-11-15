@@ -445,69 +445,87 @@
 		</for>
 	</item>
 	<item id="38565" name="Aria's Bracelet: CON" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.istina_bangel"/>
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13584-1"/>
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38566" name="Aria's Bracelet: MEN" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.istina_bangel"/>
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13585-1"/>
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38567" name="Aria's Bracelet: DEX" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.octavis_bangel"/>
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13586-1"/>
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38568" name="Aria's Bracelet: WIT" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
 		<set name="icon" val="icon.octavis_bangel"/>
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13587-1"/>
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38569" name="Aria's Bracelet: STR" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
-		<set name="icon" val="icon.accessory_bangel_of_tauti_i01"/>
+		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13588-1" />
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38570" name="Aria's Bracelet: INT" type="Armor">
+		<set name="bodypart" val="rbracelet"/>
 		<set name="crystal_type" val="R"/>
 		<set name="default_action" val="EQUIP"/>
-		<set name="icon" val="icon.accessory_bangel_of_tauti_i01"/>
+		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="immediate_effect" val="true"/>
 		<set name="is_depositable" val="false"/>
 		<set name="is_dropable" val="false"/>
 		<set name="is_sellable" val="false"/>
 		<set name="is_tradable" val="false"/>
-		<set name="weapon_type" val="ETC"/>
+		<set name="item_skill" val="13589-1" />
+		<set name="material" val="SILVER"/>
 		<set name="weight" val="150"/>
 	</item>
 	<item id="38571" name="Aria's Life Stone" type="EtcItem">

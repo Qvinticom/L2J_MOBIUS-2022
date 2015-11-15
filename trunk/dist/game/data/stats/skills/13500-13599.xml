@@ -807,43 +807,103 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. CON + 3. Max HP + 531. Max HP + 531. -->
 		<set name="icon" val="icon.istina_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13585" levels="1" name="Aria's Bracelet: MEN">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. MEN + 3. Max HP + 531. -->
 		<set name="icon" val="icon.istina_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="MEN" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13586" levels="1" name="Aria's Bracelet: DEX">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. DEX + 3. Max HP + 531. -->
 		<set name="icon" val="icon.octavis_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13587" levels="1" name="Aria's Bracelet: WIT">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. WIT + 3. Max HP + 531. -->
 		<set name="icon" val="icon.octavis_bangel" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="WIT" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13588" levels="1" name="Aria's Bracelet: STR">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. STR + 3. Max HP + 531. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13589" levels="1" name="Aria's Bracelet: INT">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. INT + 3. Max HP + 531. -->
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="INT" val="3" />
+				<add stat="maxHp" val="531"/>
+			</effect>
+			<effect name="TalismanSlot">
+				<param slots="5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="13590" levels="1" name="Augment Option - P. Def.">
 		<!-- AUTO GENERATED SKILL -->
