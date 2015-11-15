@@ -14506,16 +14506,12 @@ public final class L2PcInstance extends L2Playable
 	public void storeRecommendations()
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE rec_have=?, rec_left=?, time_left=?"))
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (?,?,?,?)"))
 		{
 			ps.setInt(1, getObjectId());
 			ps.setInt(2, getRecomHave());
 			ps.setInt(3, getRecomLeft());
 			ps.setLong(4, 0);
-			// Update part
-			ps.setInt(5, getRecomHave());
-			ps.setInt(6, getRecomLeft());
-			ps.setLong(7, 0);
 			ps.execute();
 		}
 		catch (Exception e)
