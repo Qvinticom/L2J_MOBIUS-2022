@@ -134,6 +134,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private final boolean _destroyable;
 	private final boolean _tradeable;
 	private final boolean _depositable;
+	private final boolean _auctionable;
 	private final int _enchantable;
 	private final boolean _elementable;
 	private final boolean _questItem;
@@ -194,6 +195,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_destroyable = set.getBoolean("is_destroyable", true);
 		_tradeable = set.getBoolean("is_tradable", true);
 		_depositable = set.getBoolean("is_depositable", true);
+		_auctionable = set.getBoolean("is_auctionable", true);
 		_elementable = set.getBoolean("element_enabled", false);
 		_enchantable = set.getInt("enchant_enabled", 0);
 		_questItem = set.getBoolean("is_questitem", false);
@@ -646,6 +648,14 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public final boolean isDepositable()
 	{
 		return _depositable;
+	}
+	
+	/**
+	 * @return {@code true} if the item can be put into auctionhouse, {@code false} otherwise.
+	 */
+	public final boolean isAuctionable()
+	{
+		return _auctionable;
 	}
 	
 	/**

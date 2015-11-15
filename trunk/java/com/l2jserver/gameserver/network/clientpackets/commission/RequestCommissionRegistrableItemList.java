@@ -18,10 +18,11 @@
  */
 package com.l2jserver.gameserver.network.clientpackets.commission;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 import com.l2jserver.gameserver.instancemanager.CommissionManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jserver.gameserver.network.serverpackets.commission.ExCloseCommission;
 import com.l2jserver.gameserver.network.serverpackets.commission.ExResponseCommissionItemList;
@@ -51,7 +52,16 @@ public class RequestCommissionRegistrableItemList extends L2GameClientPacket
 			return;
 		}
 		
-		player.sendPacket(new ExResponseCommissionItemList(Arrays.asList(player.getInventory().getAvailableItems(false, false, false))));
+		ArrayList<L2ItemInstance> auctionableItemList = new ArrayList<>();
+		for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
+		{
+			if (item.getItem().isAuctionable())
+			{
+				auctionableItemList.add(item);
+			}
+		}
+		
+		player.sendPacket(new ExResponseCommissionItemList(auctionableItemList));
 	}
 	
 	@Override
