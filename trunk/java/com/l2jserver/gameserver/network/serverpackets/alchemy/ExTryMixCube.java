@@ -16,27 +16,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.alchemy;
 
-/**
- * @author Mobius
- */
-public class ExAlchemyConversion extends L2GameServerPacket
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
+
+public class ExTryMixCube extends L2GameServerPacket
 {
-	private final int _itemCount;
-	private final int _failCount;
+	public static final L2GameServerPacket FAIL = new ExTryMixCube(6);
+	private final int _result;
+	private final int _itemId;
+	private final long _itemCount;
 	
-	public ExAlchemyConversion(int itemCount, int failCount)
+	public ExTryMixCube(final int result)
 	{
+		_result = result;
+		_itemId = 0;
+		_itemCount = 0;
+	}
+	
+	public ExTryMixCube(final int itemId, final long itemCount)
+	{
+		_result = 0;
+		_itemId = itemId;
 		_itemCount = itemCount;
-		_failCount = failCount;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x00); // Unk
-		writeD(_itemCount);
-		writeD(_failCount);
+		writeC(_result);
+		writeD(0x01);
+		writeC(0x00);
+		writeD(_itemId);
+		writeQ(_itemCount);
 	}
 }

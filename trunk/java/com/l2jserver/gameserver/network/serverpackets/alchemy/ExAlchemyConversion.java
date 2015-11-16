@@ -16,32 +16,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.alchemy;
+
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
- * @author GenCloud
+ * @author Mobius
  */
-public class ExTryMixCube extends L2GameServerPacket
+public class ExAlchemyConversion extends L2GameServerPacket
 {
-	private final int _stoneID;
-	private final long _count;
-	@SuppressWarnings("unused")
-	private final int _typePacket;
+	private final int _itemCount;
+	private final int _failCount;
 	
-	public ExTryMixCube(long count, int stoneId, int type)
+	public ExAlchemyConversion(int itemCount, int failCount)
 	{
-		_count = count;
-		_typePacket = type;
-		_stoneID = stoneId;
+		_itemCount = itemCount;
+		_failCount = failCount;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x00); // Unk
-		writeC(0x01); // Type
-		writeD(0x00); // Unk
-		writeD(_stoneID); // StoneID
-		writeQ(_count); // Count
+		writeC(0x00); // Unk???
+		writeD(_itemCount);
+		writeD(_failCount);
 	}
 }

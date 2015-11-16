@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jserver.gameserver.network.serverpackets;
+package com.l2jserver.gameserver.network.serverpackets.alchemy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +24,14 @@ import java.util.List;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.Skill;
+import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * @author UnAfraid
  */
 public class ExAlchemySkillList extends L2GameServerPacket
 {
+	private final static int ALCHEMY_CUBE_SKILL = 17943;
 	private final List<Skill> _skills = new ArrayList<>();
 	
 	public ExAlchemySkillList(final L2PcInstance player)
@@ -55,7 +57,7 @@ public class ExAlchemySkillList extends L2GameServerPacket
 			writeD(skill.getId());
 			writeD(skill.getLevel());
 			writeQ(0x00); // Always 0 on Naia, SP i guess?
-			writeC(0x01); // Always 1 on Naia
+			writeC(skill.getId() == ALCHEMY_CUBE_SKILL ? 0 : 1);
 		}
 	}
 }
