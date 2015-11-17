@@ -193,9 +193,16 @@
 		<acquire exp="148977405" sp="357545" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3777" magical="3955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -203,7 +210,11 @@
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 		</skill_list>
-		<ai aggroRange="500" clanHelpRange="500" />
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
@@ -231,9 +242,16 @@
 		<acquire exp="187575027" sp="450180" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -244,7 +262,11 @@
 			<skill id="4413" level="14" />
 			<skill id="4440" level="5" />
 		</skill_list>
-		<ai aggroRange="500" clanHelpRange="500" />
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
@@ -270,6 +292,13 @@
 		<acquire exp="148977405" sp="357545" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+	     <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3777" magical="3955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -280,6 +309,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -303,11 +337,18 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="187575027" sp="450180" />
-		<stats>
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -318,6 +359,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -339,13 +385,20 @@
 	<npc id="23509" level="102" type="L2Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="229580271" sp="550992" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5080" magical="5650" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -355,6 +408,11 @@
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -376,13 +434,20 @@
 	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="229580271" sp="550992" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+	     <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5080" magical="5650" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -392,6 +457,11 @@
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -417,9 +487,16 @@
 		<acquire exp="267891659" sp="642940" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -430,6 +507,11 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -455,9 +537,16 @@
 		<acquire exp="267891659" sp="642940" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+	     <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -468,6 +557,11 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -493,9 +587,16 @@
 		<acquire exp="187575027" sp="450180" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -506,6 +607,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -531,9 +637,16 @@
 		<acquire exp="187575027" sp="450180" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+	     <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -544,6 +657,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -569,9 +687,16 @@
 		<acquire exp="267891659" sp="642940" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -582,6 +707,11 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -607,9 +737,16 @@
 		<acquire exp="267891659" sp="642940" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -620,6 +757,11 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -646,9 +788,16 @@
 		<acquire exp="187575027" sp="450180" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -659,6 +808,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -684,9 +838,16 @@
 		<acquire exp="267891659" sp="642940" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -697,6 +858,11 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -743,9 +909,16 @@
 		<acquire exp="144017880" sp="345643" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3421" magical="3605" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -754,6 +927,11 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -777,9 +955,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -788,6 +973,11 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -813,9 +1003,16 @@
 		<acquire exp="144017880" sp="345643" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3421" magical="3605" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -824,6 +1021,11 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -849,9 +1051,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> 
+				<run ground="200" /> 
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -860,6 +1069,11 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -884,6 +1098,13 @@
 		<acquire exp="17848068" sp="42835" />
 		<stats>
 			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="2431" magical="2000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -895,6 +1116,11 @@
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -919,9 +1145,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -930,6 +1163,11 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -942,9 +1180,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -953,6 +1198,11 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -977,9 +1227,16 @@
 		<acquire exp="133866840" sp="321280" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3021" magical="3105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -987,6 +1244,11 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1009,9 +1271,16 @@
 		<acquire exp="133866840" sp="321280" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3021" magical="3105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1019,6 +1288,11 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attacks -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1042,9 +1316,16 @@
 		<acquire exp="144017880" sp="345643" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3421" magical="3605" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1053,6 +1334,11 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1076,9 +1362,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1087,6 +1380,11 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1112,9 +1410,16 @@
 		<acquire exp="144017880" sp="345643" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3421" magical="3605" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1123,6 +1428,11 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1145,9 +1455,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1156,6 +1473,11 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1181,6 +1503,10 @@
 		<acquire exp="17848068" sp="42835" />
 		<stats>
 			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="2431" magical="2000" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1192,6 +1518,11 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1216,9 +1547,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1227,6 +1565,11 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1238,9 +1581,16 @@
 		<acquire exp="160274270" sp="384658" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4431" magical="4000" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1249,6 +1599,11 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1274,9 +1629,16 @@
 		<acquire exp="133866840" sp="321280" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3021" magical="3105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1284,6 +1646,11 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1307,9 +1674,16 @@
 		<acquire exp="133866840" sp="321280" />
 		<stats>
 			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3021" magical="3105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1317,6 +1691,11 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1339,6 +1718,13 @@
 		<acquire exp="27915360" sp="66996" />
 		<stats>
 			<vitals hp="209304" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3131" magical="2680" />	
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1351,6 +1737,11 @@
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1376,6 +1767,13 @@
 		<acquire exp="27915360" sp="66996" />
 		<stats>
 			<vitals hp="209304" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3131" magical="2680" />	
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1388,6 +1786,11 @@
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 		</skill_list>
+		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>GARDEN_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1436,9 +1839,16 @@
 		<acquire exp="5177752173" sp="12426574" />
 		<stats>
 			<vitals hp="1360308" hpRegen="11.5" mp="48616" mpRegen="3.9" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3021" magical="3105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2266,9 +2676,16 @@
 		<acquire exp="5639744400" sp="13535386" />
 		<stats>
 			<vitals hp="1360094" hpRegen="11.5" mp="50148" mpRegen="3.9" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="59121" magical="64961" random="50" critical="4" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4321" magical="4105" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2276,6 +2693,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2287,9 +2709,16 @@
 		<acquire exp="18973578624" sp="45536588" />
 		<stats>
 			<vitals hp="3320431" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+		    <!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="9" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5921" magical="5405" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2373,9 +2802,16 @@
 		<acquire exp="3456666576" sp="8295999" />
 		<stats>
 			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2394,9 +2830,16 @@
 		<acquire exp="3456666576" sp="8295999" />
 		<stats>
 			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5975" magical="6244" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" /> <!-- Need retail value -->
+				<run ground="200" /> <!-- Need retail value -->
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2404,6 +2847,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2550,9 +2998,16 @@
 		<acquire exp="148977405" sp="357545" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3777" magical="3955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2560,6 +3015,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2585,9 +3045,16 @@
 		<acquire exp="187575027" sp="450180" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="4718" magical="4955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2598,6 +3065,11 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2622,9 +3094,16 @@
 		<acquire exp="148977405" sp="357545" />
 		<stats>
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="3777" magical="3955" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2632,6 +3111,11 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2657,9 +3141,16 @@
 		<acquire exp="229580271" sp="550992" />
 		<stats>
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<!-- "Guessed" - Based on xp and sp reward -->
+			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<!-- "Guessed" - Based on level -->
+			<defence physical="5080" magical="5650" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -2669,6 +3160,11 @@
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
