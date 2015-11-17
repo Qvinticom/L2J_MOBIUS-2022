@@ -228,7 +228,7 @@
 	<npc id="32909" level="85" type="L2Npc" name="Jonah" title="Ceremony Executor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -241,7 +241,7 @@
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" talkable="false" targetable="false" />
+		<status attackable="false" />
 		<skill_list>
 			<skill id="4416" level="4" />
 		</skill_list>
