@@ -27,14 +27,14 @@ public class ExTryMixCube extends L2GameServerPacket
 	private final int _itemId;
 	private final long _itemCount;
 	
-	public ExTryMixCube(final int result)
+	public ExTryMixCube(int result)
 	{
 		_result = result;
 		_itemId = 0;
 		_itemCount = 0;
 	}
 	
-	public ExTryMixCube(final int itemId, final long itemCount)
+	public ExTryMixCube(int itemId, long itemCount)
 	{
 		_result = 0;
 		_itemId = itemId;

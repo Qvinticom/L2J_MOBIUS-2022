@@ -81,12 +81,9 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 			return;
 		}
 		
-		final double chance = 80; // 80% ?
 		for (int i = 0; i < _skillUseCount; i++)
 		{
-			boolean ok = Rnd.get(1, 100) < chance;
-			
-			if (ok)
+			if (Rnd.get(1, 100) < 90) // 90% ?
 			{
 				_resultItemCount += alchemySkill.getTransmutedItem().getCount();
 			}
@@ -94,7 +91,6 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 			{
 				_resultFailCount++;
 			}
-			
 			alchemySkill.getIngridientItems().forEach(holder -> activeChar.getInventory().destroyItemByItemId("Alchemy", holder.getId(), holder.getCount(), activeChar, null));
 		}
 		
@@ -107,7 +103,7 @@ public class RequestAlchemyConversion extends L2GameClientPacket
 			for (ItemHolder item : alchemySkill.getIngridientItems())
 			{
 				activeChar.getInventory().destroyItemByItemId("Alchemy", item.getId(), _resultFailCount, activeChar, null);
-				break; // FIXME: Take only 1st ingridient.
+				break; // FIXME: Takes only 1st ingredient (client has specific item and quantity).
 			}
 			activeChar.sendPacket(SystemMessageId.FAILURE_TO_TRANSMUTE_WILL_DESTROY_SOME_INGREDIENTS);
 		}

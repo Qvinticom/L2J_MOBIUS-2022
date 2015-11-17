@@ -34,7 +34,7 @@ public class ExAlchemySkillList extends L2GameServerPacket
 	private final static int ALCHEMY_CUBE_SKILL = 17943;
 	private final List<Skill> _skills = new ArrayList<>();
 	
-	public ExAlchemySkillList(final L2PcInstance player)
+	public ExAlchemySkillList(L2PcInstance player)
 	{
 		for (Skill skill : player.getAllSkills())
 		{
