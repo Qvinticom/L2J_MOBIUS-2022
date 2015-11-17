@@ -37,7 +37,9 @@ public class ExAlchemyConversion extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeC(0x00); // Unk???
+		writeC(0xFE);
+		writeH(0x176);
+		writeC(0x00);
 		writeD(_itemCount);
 		writeD(_failCount);
 	}

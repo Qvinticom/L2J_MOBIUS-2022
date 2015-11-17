@@ -57,7 +57,7 @@ public class ExAlchemySkillList extends L2GameServerPacket
 			writeD(skill.getId());
 			writeD(skill.getLevel());
 			writeQ(0x00); // Always 0 on Naia, SP i guess?
-			writeC(skill.getId() == ALCHEMY_CUBE_SKILL ? 0 : 1);
+			writeC(skill.getId() == ALCHEMY_CUBE_SKILL ? 0x00 : 0x01);
 		}
 	}
 }

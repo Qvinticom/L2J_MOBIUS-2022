@@ -44,9 +44,11 @@ public class ExTryMixCube extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
+		writeC(0xFE);
+		writeH(0x175);
 		writeC(_result);
-		writeD(0x01);
-		writeC(0x00);
+		writeC(0x01);
+		writeD(0x00); // 1=show bonus card, but cant't understand bonus count
 		writeD(_itemId);
 		writeQ(_itemCount);
 	}
