@@ -54,6 +54,7 @@ public final class Nomi extends AbstractNpcAI
 	// Others
 	private static final Location[] SPAWN_LOCATIONS =
 	{
+		new Location(-114764, 255335, -1512, 49489), // Faeron
 		new Location(-79687, 247655, -3480, 29783), // Faeron
 		new Location(83505, 148375, -3405, 31863), // Giran
 		new Location(147445, 26874, -2204, 48319), // Aden
