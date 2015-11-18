@@ -66,6 +66,7 @@ public final class Nomi extends AbstractNpcAI
 		new Location(87340, -141620, -1341, 16383), // Schuttgart
 		new Location(111728, 219962, -3659, 473), // Heine
 		new Location(116514, 75899, -2730, 6558), // Hunters
+		new Location(207393, 89693, -1104, 388), // Arcan
 	};
 	private static final int MAX_BLESS_PROTECTION_LEVEL = 40;
 	private static final int MAX_BUFF_LEVEL = 90;
