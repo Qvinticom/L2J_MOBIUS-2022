@@ -561,10 +561,10 @@
 		</collision>
 	</npc>
 	<npc id="33933" level="99" type="L2Npc" name="Karla">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="35197" /> <!-- rhand: Bloody Amaranthine Fighter -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -714,10 +714,10 @@
 		</collision>
 	</npc>
 	<npc id="33942" level="99" type="L2Npc" name="Ayanthe" title="Magister">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="17300" /> <!-- rhand: Requiem Retributer -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -731,10 +731,10 @@
 		</collision>
 	</npc>
 	<npc id="33943" level="99" type="L2Npc" name="Katalin" title="Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="17328" /> <!-- rhand: Apocalypse Fighter -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -1393,10 +1393,10 @@
 		</collision>
 	</npc>
 	<npc id="33982" level="99" type="L2Guard" name="Tahlia" title="Guard">
-		<!-- TODO: Confirm me -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
@@ -1412,10 +1412,10 @@
 		</collision>
 	</npc>
 	<npc id="33983" level="99" type="L2Guard" name="Lenoa" title="Guard">
-		<!-- TODO: Confirm me -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
@@ -1431,10 +1431,10 @@
 		</collision>
 	</npc>
 	<npc id="33984" level="99" type="L2Guard" name="Nairu" title="Guard">
-		<!-- TODO: Confirm me -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341.375" magical="249.80341" />
@@ -1453,10 +1453,10 @@
 		</collision>
 	</npc>
 	<npc id="33985" level="99" type="L2Guard" name="Namee" title="Guard">
-		<!-- TODO: Confirm me -->
-		<race>HUMAN</race>
+		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="341.375" magical="249.80341" />
