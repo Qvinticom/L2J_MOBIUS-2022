@@ -18,29 +18,55 @@
  */
 package ai.npc.DragonVortex;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Dragon Vortex AI.
- * @author UnAfraid, improved by Adry_85
+ * @author UnAfraid, improved by Adry_85 & DreamStage
  */
 public final class DragonVortex extends AbstractNpcAI
 {
 	// NPC
 	private static final int VORTEX = 32871;
 	// Raids
-	private static final int[] RAIDS =
+	private static final int[][] RAIDS =
 	{
-		25718, // Emerald Horn
-		25719, // Dust Rider
-		25720, // Bleeding Fly
-		25721, // Blackdagger Wing
-		25722, // Shadow Summoner
-		25723, // Spike Slasher
-		25724, // Muscle Bomber
+		{
+			25718, // Emerald Horn 29.2%
+			292
+		},
+		{
+			25719, // Dust Rider 22.4%
+			224
+		},
+		{
+			25720, // Bleeding Fly 17.6%
+			176
+		},
+		{
+			25721, // Blackdagger Wing 11.6%
+			116
+		},
+		{
+			25723, // Spike Slasher 9.2%
+			92
+		},
+		{
+			25722, // Shadow Summoner 5.6%
+			56
+		},
+		{
+			25724, // Muscle Bomber 4.4%
+			44
+		}
 	};
 	// Item
 	private static final int LARGE_DRAGON_BONE = 17248;
@@ -56,51 +82,104 @@ public final class DragonVortex extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		return "32871.html";
+	}
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if ("Spawn".equals(event))
 		{
 			if (hasQuestItems(player, LARGE_DRAGON_BONE))
 			{
-				takeItems(player, LARGE_DRAGON_BONE, 1);
-				final int random = getRandom(1000);
-				int raid = 0;
-				if (random < 292)
+				final int chance = getRandom(1000);
+				final List<int[]> unspawnedRaids = new ArrayList<>();
+				final List<int[]> unspawnedCandidates = new ArrayList<>();
+				int raidChanceIncrease = 0;
+				
+				// Iterate over all Raids and check which ones are currently spawned, sum spawned Raids chance for unspawnedRaids List distribution
+				for (int[] raidsList : RAIDS)
 				{
-					raid = RAIDS[0]; // Emerald Horn 29.2%
+					final int raidChance = raidsList[1];
+					if (checkIfNpcSpawned(raidsList[0]))
+					{
+						raidChanceIncrease += raidChance;
+					}
+					else
+					{
+						unspawnedRaids.add(new int[]
+						{
+							raidsList[0],
+							raidChance
+						});
+					}
 				}
-				else if (random < 516)
+				
+				// If there are unspawnedRaids onto the new List, distribute the amount of increased chances for each one and spawn a new Raid from the new chances
+				if (!unspawnedRaids.isEmpty())
 				{
-					raid = RAIDS[1]; // Dust Rider 22.4%
+					final int unspawnedRaidsSize = unspawnedRaids.size();
+					final int chanceIncrease = (raidChanceIncrease / unspawnedRaidsSize);
+					int raidChanceValue = 0;
+					
+					for (int[] unspawnedRaidsList : unspawnedRaids)
+					{
+						raidChanceValue += unspawnedRaidsList[1] + chanceIncrease;
+						unspawnedCandidates.add(new int[]
+						{
+							unspawnedRaidsList[0],
+							raidChanceValue
+						});
+					}
+					
+					for (int[] unspawnedCandidatesList : unspawnedCandidates)
+					{
+						if (chance <= unspawnedCandidatesList[1])
+						{
+							spawnRaid(unspawnedCandidatesList[0], npc, player);
+							break;
+						}
+					}
+					return null;
 				}
-				else if (random < 692)
-				{
-					raid = RAIDS[2]; // Bleeding Fly 17.6%
-				}
-				else if (random < 808)
-				{
-					raid = RAIDS[3]; // Blackdagger Wing 11.6%
-				}
-				else if (random < 900)
-				{
-					raid = RAIDS[4]; // Spike Slasher 9.2%
-				}
-				else if (random < 956)
-				{
-					raid = RAIDS[5]; // Shadow Summoner 5.6%
-				}
-				else
-				{
-					raid = RAIDS[6]; // Muscle Bomber 4.4%
-				}
-				addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true);
+				return "32871-noboss.html";
 			}
-			else
-			{
-				return "32871-no.html";
-			}
+			return "32871-no.html";
 		}
 		return super.onAdvEvent(event, npc, player);
+	}
+	
+	/**
+	 * Method used for spawning a Dragon Vortex Raid and take a Large Dragon Bone from the Player
+	 * @param raidId
+	 * @param npc
+	 * @param player
+	 */
+	public void spawnRaid(int raidId, L2Npc npc, L2PcInstance player)
+	{
+		L2Spawn spawnDat = addSpawn(raidId, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true).getSpawn();
+		SpawnTable.getInstance().addNewSpawn(spawnDat, false);
+		takeItems(player, LARGE_DRAGON_BONE, 1);
+	}
+	
+	/**
+	 * Method used for checking if npc is spawned
+	 * @param npcId
+	 * @return if npc is spawned
+	 */
+	public boolean checkIfNpcSpawned(int npcId)
+	{
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
+		{
+			L2Npc spawnedWarpgate = spawn.getLastSpawn();
+			if ((spawnedWarpgate != null))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static void main(String[] args)
