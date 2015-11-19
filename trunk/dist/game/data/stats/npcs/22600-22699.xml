@@ -1673,6 +1673,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Subordinate">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" /> <!-- NPC AE Strike -->
 			<skill name="PhysicalSpecial2" id="6167" level="9" /> <!-- Shock -->
@@ -1681,8 +1682,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
 		<acquire exp="162643" sp="39" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+		<stats>
+			<vitals hp="18220" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -1699,8 +1700,6 @@
 		<skill_list>
 			<skill id="4116" level="2" /> <!-- Resist M. Atk. -->
 			<skill id="4232" level="8" /> <!-- NPC AE Strike -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -1731,20 +1730,20 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="153" max="358" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
-				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
 				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.500" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.609" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
-				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22625" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="6168" level="9" /> <!-- Shock -->
 			<skill name="buff" id="4028" level="3" /> <!-- NPC Might -->
@@ -1754,8 +1753,8 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="178972" sp="42" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="23016" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -1772,8 +1771,6 @@
 		<skill_list>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4116" level="2" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
@@ -1806,22 +1803,22 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="166" max="386" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80  -->
-				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
 				<item id="5272" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
 				<item id="5277" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.800" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.801" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrad -->
-				<item id="36882" min="1" max="1" chance="0.006" /> <!-- Recipe: Thin Braid - upgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22626" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6167" level="9" /> <!-- Shock -->
 			<skill name="SelfRangeDDMagic" id="4571" level="8" /> <!-- NPC Blazing Circle -->
@@ -1831,7 +1828,7 @@
 		<sex>MALE</sex>
 		<acquire exp="247666" sp="59" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+			<vitals hp="23016" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -1848,8 +1845,6 @@
 		<skill_list>
 			<skill id="4029" level="3" /> <!-- NPC Shield -->
 			<skill id="4116" level="2" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
@@ -1874,41 +1869,25 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6281" max="12679" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5901000499725342">
-					<item id="9452" min="1" max="1" chance="0.4382" /> <!-- Sealed Dynasty Earring -->
-					<item id="9453" min="1" max="1" chance="0.3286" /> <!-- Sealed Dynasty Necklace -->
-					<item id="9454" min="1" max="1" chance="0.6573" /> <!-- Sealed Dynasty Ring -->
-					<item id="9991" min="1" max="1" chance="31.0688" /> <!-- Sealed Dynasty Earring Gemstone -->
-					<item id="9992" min="1" max="1" chance="23.8445" /> <!-- Sealed Dynasty Necklace Gemstone -->
-					<item id="9993" min="1" max="1" chance="43.6626" /> <!-- Sealed Dynasty Ring Gemstone -->
-				</group>
-				<group chance="38.819400787353516">
-					<item id="1879" min="1" max="1" chance="60.3104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1552" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8381" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9045" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5733" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.5129" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6282" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0628" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="959" min="1" max="1" chance="0.0146" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="9624" min="1" max="1" chance="1.3815" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="960" min="1" max="1" chance="1.0266" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9630" min="1" max="1" chance="13.5076" /> <!-- Orichalcum -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="40" />
 			<height normal="42" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="229" max="535" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="2.452" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="22627" level="83" type="L2Monster" name="Spiked Stakato Soldier">
 		<parameters>
@@ -3846,6 +3825,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22654" level="83" type="L2Monster" name="Contaminated Mucrokian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4067" level="9" /> <!-- NPC Mortal Blow -->
@@ -3855,8 +3835,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
 		<acquire exp="29095" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="5754" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3872,8 +3852,6 @@
 		<skill_list>
 			<skill id="4067" level="9" /> <!-- NPC Mortal Blow -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -3893,18 +3871,19 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="25" max="57" chance="70" /> <!-- Adena -->
 				<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
-				<item id="9542" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Circlet Piece -->
-				<item id="9991" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Earring Gemstone -->
-				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
-				<item id="36523" min="1" max="1" chance="0.0055" /> <!-- Adamantite -->
+				<item id="57" min="25" max="57" chance="70" /> <!-- Adena -->
+				<item id="9542" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Circlet Piece -->
+				<item id="9991" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36523" min="1" max="1" chance="0.0075" /> <!-- Adamantite -->
 				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
 				<item id="36874" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
 				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
 				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->

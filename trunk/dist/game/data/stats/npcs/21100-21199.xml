@@ -661,6 +661,7 @@
 		</collision>
 	</npc>
 	<npc id="21106" level="34" type="L2Monster" name="Cursed Watchman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -673,19 +674,19 @@
 			<skill name="W_ShortRangeDDMagic" id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 			<skill name="DeBuff" id="4038" level="1" /> <!-- Decrease Atk. Spd. -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
-		<acquire exp="3086" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+		<acquire exp="3086" sp="0" />
+		<stats>
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
 				<defence fire="20" water="20" wind="-5" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="90" />
-				<run ground="160" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 			<hit_time>390</hit_time>
 		</stats>
@@ -695,8 +696,6 @@
 			<skill id="4151" level="3" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -712,25 +711,17 @@
 				<clan>MONSTER_EYE</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" grown="13" />
+			<height normal="20" grown="24" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="288" max="574" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1501999944448471">
-					<item id="628" min="1" max="1" chance="58.8353" /> <!-- Hoplon -->
-					<item id="47" min="1" max="1" chance="41.1647" /> <!-- Helmet -->
-				</group>
-				<group chance="17.226900100708008">
-					<item id="1875" min="1" max="1" chance="1.7526" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="4.3814" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="2.1907" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="0.3505" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="2.6289" /> <!-- Metallic Thread -->
-					<item id="2186" min="1" max="1" chance="0.8792" /> <!-- Recipe: Brigandine Tunic -->
-					<item id="8317" min="1" max="1" chance="0.1878" /> <!-- Recipe: Titan Hammer (100%) -->
-					<item id="1341" min="10" max="30" chance="87.6289" /> <!-- Bone Arrow -->
-				</group>
+				<item id="57" min="11" max="27" chance="70" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
+				<item id="36537" min="1" max="1" chance="0.075" /> <!-- Leather Braid -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -764,15 +755,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1938" min="1" max="1" chance="4.5809" /> <!-- Mithril Banded Mail Material -->
-				<item id="1885" min="1" max="1" chance="5.6785" /> <!-- High-Grade Suede -->
-				<item id="5550" min="1" max="1" chance="0.9086" /> <!-- Durable Metal Plate -->
+				<item id="36531" min="1" max="1" chance="12.14" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" grown="13" />
-			<height normal="20" grown="24" />
-		</collision>
 	</npc>
 	<npc id="21107" level="35" type="L2Monster" name="Delu Lizardman Commander">
 		<parameters>

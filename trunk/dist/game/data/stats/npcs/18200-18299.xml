@@ -1358,6 +1358,7 @@
 		</collision>
 	</npc>
 	<npc id="18226" level="78" type="L2SepulcherMonster" name="Caster of Darkness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1368,8 +1369,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="73576" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="8.5" mp="1742" mpRegen="3" />
 			<attack physical="1274.97858" magical="1187.754369768" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="296.877222" magical="179.842014" evasion="3" />
 			<attribute>
@@ -1385,8 +1386,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

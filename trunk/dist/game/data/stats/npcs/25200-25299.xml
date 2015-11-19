@@ -3475,6 +3475,7 @@
 		</collision>
 	</npc>
 	<npc id="25273" level="50" type="L2RaidBoss" name="Carnamakos" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25274" count="3" respawnTime="360" weightPoint="1" /> <!-- Carnabarun -->
@@ -3483,11 +3484,11 @@
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="RangeHold_a" id="4197" level="5" /> <!-- Hold -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="1775596" sp="426" raidPoints="1700" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="334950" hpRegen="73.9338965895966" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="334950" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="857.796934516553" magical="196.056732211217" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="600.71532" magical="293.06" evasion="-18" />
 			<attribute>
@@ -3504,8 +3505,6 @@
 			<skill id="4197" level="5" /> <!-- Hold -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3524,20 +3523,21 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="9817" min="2" max="5" chance="77" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="3" chance="68" /> <!-- Destruction Tombstone -->
-				<item id="358" min="1" max="1" chance="5.550" /> <!-- Blue Wolf Breastplate -->
-				<item id="2380" min="1" max="1" chance="9" /> <!-- Blue Wolf Gaiters -->
-				<item id="2381" min="1" max="1" chance="3.450" /> <!-- Doom Plate Armor -->
-				<item id="287" min="1" max="1" chance="1.300" /> <!-- Bow of Peril -->
-				<item id="4078" min="9" max="27" chance="52.50" /> <!-- Blue Wolf Breastplate Part -->
-				<item id="4121" min="3" max="9" chance="32.75" /> <!-- Bow of Peril Shaft -->
-				<item id="4080" min="32" max="96" chance="23" /> <!-- Blue Wolf Gaiters Material -->
-				<item id="4081" min="22" max="66" chance="12.75" /> <!-- Doom Plate Armor Temper -->
-				<item id="4619" min="1" max="1" chance="12.80" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
-				<item id="4620" min="1" max="1" chance="12.80" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
-				<item id="4621" min="1" max="1" chance="12.80" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
-				<item id="6571" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
+				<item id="2380" min="1" max="1" chance="9.018" /> <!-- Blue Wolf Gaiters -->
+				<item id="358" min="1" max="1" chance="5.565" /> <!-- Blue Wolf Breastplate -->
+				<item id="2381" min="1" max="1" chance="3.519" /> <!-- Doom Plate Armor -->
+				<item id="287" min="1" max="1" chance="1.306" /> <!-- Bow of Peril -->
+				<item id="9817" min="2" max="5" chance="76.63" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="3" chance="66.77" /> <!-- Destruction Tombstone -->
+				<item id="4078" min="9" max="27" chance="52.53" /> <!-- Blue Wolf Breastplate Part -->
+				<item id="4121" min="3" max="9" chance="32.73" /> <!-- Bow of Peril Shaft -->
+				<item id="4080" min="32" max="96" chance="22.91" /> <!-- Blue Wolf Gaiter Material -->
+				<item id="4620" min="1" max="1" chance="12.81" /> <!-- Greater INT Dye (Int   4 Wit - 4) -->
+				<item id="4081" min="22" max="66" chance="12.74" /> <!-- Doom Plate Armor Temper -->
+				<item id="4621" min="1" max="1" chance="12.69" /> <!-- Greater MEN Dye (Men   4 Int - 4) -->
+				<item id="4619" min="1" max="1" chance="12.24" /> <!-- Greater INT Dye (Int   4 Men - 4) -->
+				<item id="6571" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.006943" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</drop_lists>
 	</npc>

@@ -2281,6 +2281,7 @@
 		</collision>
 	</npc>
 	<npc id="20460" level="15" type="L2Monster" name="Crimson Spider">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2288,9 +2289,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="817" sp="26" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="246.95422" hpRegen="2.5" mp="149.2" mpRegen="1.2" />
+		<acquire exp="817" sp="0" />
+		<stats>
+			<vitals hp="247" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="73.55216" magical="48.9718589929237" />
 			<attribute>
@@ -2304,8 +2305,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2320,21 +2319,16 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="25.5" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="119" max="180" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.22579999268054962">
-					<item id="66" min="1" max="1" chance="9.9075" /> <!-- Gladius -->
-					<item id="1333" min="1" max="1" chance="9.9075" /> <!-- Brandish -->
-					<item id="2010" min="1" max="1" chance="80.185" /> <!-- Brandish Blade -->
-				</group>
-				<group chance="19.298099517822266">
-					<item id="1867" min="1" max="1" chance="32.1429" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="32.1429" /> <!-- Animal Bone -->
-					<item id="1799" min="1" max="1" chance="35.7142" /> <!-- Recipe: Leather Gloves -->
-				</group>
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="8.243" /> <!-- Bandage -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2368,15 +2362,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1833" min="1" max="1" chance="62.9988" /> <!-- Bandage -->
-				<item id="1866" min="1" max="1" chance="15.7497" /> <!-- Suede -->
-				<item id="1792" min="1" max="1" chance="1.7371" /> <!-- Recipe: Short Spear -->
+				<item id="36531" min="1" max="1" chance="4.395" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="26" />
-			<height normal="25.5" />
-		</collision>
 	</npc>
 	<npc id="20463" level="13" type="L2Monster" name="Dungeon Skeleton Archer">
 		<parameters>
@@ -3847,17 +3835,18 @@
 		</drop_lists>
 	</npc>
 	<npc id="20483" level="17" type="L2Monster" name="Corpse Candle">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<skill name="SelfRangeDDMagic" id="4033" level="1" /> <!-- NPC Burn -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
-		<acquire exp="906" sp="25" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
+		<acquire exp="906" sp="0" />
+		<stats>
+			<vitals hp="283" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="78.68469" magical="52.3891528929827" />
 			<attribute>
@@ -3872,8 +3861,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4033" level="1" /> <!-- NPC Burn -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3897,6 +3884,7 @@
 			<death>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->

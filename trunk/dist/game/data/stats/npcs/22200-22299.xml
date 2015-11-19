@@ -4484,6 +4484,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22264" level="82" type="L2Monster" name="Castalia">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4498,8 +4499,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- rhand: Tears r1 lhand: Tears r1 -->
 		<acquire exp="84816" sp="20" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+		<stats>
+			<vitals hp="3644" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -4514,8 +4515,6 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4541,8 +4540,9 @@
 		</collision>
 		<drop_lists>
 			<death>
+				<item id="6371" min="1" max="1" chance="0.0009" /> <!-- Demon Splinter -->
 				<item id="57" min="74" max="172" chance="70" /> <!-- Adena -->
-				<item id="6371" min="1" max="1" chance="0.0009" /> <!-- Demon Splinter-->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4576,11 +4576,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36518" min="1" max="1" chance="1.800" /> <!-- Durable Leather -->
+				<item id="36518" min="1" max="1" chance="1.831" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22265" level="83" type="L2Monster" name="Chrysocolla">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -4591,11 +4592,11 @@
 			<skill name="W_LongRangeDDMagic" id="4257" level="10" /> <!-- NPC Hydroblast - Magic -->
 			<skill name="debuff" id="5242" level="1" /> <!-- Sickness -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="100389" sp="24" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="3836" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -4613,8 +4614,6 @@
 			<skill id="4073" level="10" /> <!-- Stun -->
 			<skill id="4257" level="10" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4286" level="1" /> <!-- Greater Resist Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4638,25 +4637,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1778" max="3566" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.21860000491142273">
-					<item id="11973" min="1" max="1" chance="6.0856" /> <!-- Common Item - Soul Separator -->
-					<item id="5537" min="1" max="1" chance="93.9144" /> <!-- Soul Separator Head -->
-				</group>
-				<group chance="5.029600143432617">
-					<item id="1895" min="1" max="1" chance="85.0063" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.9504" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.3335" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.5659" /> <!-- Orichalcum -->
-					<item id="960" min="1" max="1" chance="0.119" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="9573" min="1" max="1" chance="2.0661" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.5165" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0517" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9576" min="1" max="1" chance="0.0103" /> <!-- Top-Grade Life Stone - Level 80 -->
-					<item id="9546" min="1" max="1" chance="2.3803" /> <!-- Fire Stone -->
-				</group>
+				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
+				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4690,9 +4675,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="6901" min="1" max="1" chance="0.3038" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6688" min="1" max="1" chance="0.6566" /> <!-- Forgotten Blade Edge -->
-				<item id="959" min="1" max="1" chance="0.0122" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
 			</corpse>
 		</drop_lists>
 	</npc>

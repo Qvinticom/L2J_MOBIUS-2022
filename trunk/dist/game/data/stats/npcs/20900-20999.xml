@@ -3287,6 +3287,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20965" level="73" type="L2Monster" name="Chimera Piece">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3298,11 +3299,11 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Skill01_ID" id="4032" level="8" /> <!-- NPC Strike -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="54238" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+		<stats>
+			<vitals hp="5174" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="226.8662" />
 			<attribute>
@@ -3317,8 +3318,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3334,31 +3333,15 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="22" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="3002" max="6130" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.7411000728607178">
-					<item id="12345" min="1" max="1" chance="3.8667" /> <!-- Common Item - Sealed Phoenix Earring -->
-					<item id="6341" min="1" max="1" chance="27.6997" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="12344" min="1" max="1" chance="2.9028" /> <!-- Common Item - Sealed Phoenix Necklace -->
-					<item id="6343" min="1" max="1" chance="21.4129" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="12346" min="1" max="1" chance="5.8057" /> <!-- Common Item - Sealed Phoenix Ring -->
-					<item id="6345" min="1" max="1" chance="38.3122" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="48.66960144042969">
-					<item id="1869" min="1" max="1" chance="46.1886" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="3" chance="46.1886" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="4.6189" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.6158" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="1.5396" /> <!-- Asofe -->
-					<item id="4161" min="1" max="1" chance="0.1917" /> <!-- Recipe: Blue Wolf Tunic (100%) -->
-					<item id="8730" min="1" max="1" chance="0.5132" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1283" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0128" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0025" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="130" max="303" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="20.0">
 					<item id="8601" min="1" max="1" chance="70" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="30" /> <!-- Superior Herb of Life -->
@@ -3390,15 +3373,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="4089" min="1" max="1" chance="23.0094" /> <!-- Doom Helmet Pattern -->
-				<item id="5482" min="1" max="1" chance="8.0357" /> <!-- Sealed Dark Crystal Leggings Design -->
-				<item id="4043" min="1" max="1" chance="20.2943" /> <!-- Asofe -->
+				<item id="36532" min="1" max="1" chance="1.039" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="13" />
-			<height normal="22" />
-		</collision>
 	</npc>
 	<npc id="20966" level="74" type="L2Monster" name="Mutated Creation">
 		<parameters>
@@ -3515,17 +3494,18 @@
 		</collision>
 	</npc>
 	<npc id="20967" level="76" type="L2Monster" name="Creature of the Past">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<skill name="Skill01_ID" id="4032" level="8" /> <!-- NPC Strike -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="66073" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2758.05923328" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+		<stats>
+			<vitals hp="5518" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<attribute>
@@ -3540,8 +3520,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3556,30 +3534,16 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="3159" max="6468" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.9453999996185303">
-					<item id="12345" min="1" max="1" chance="3.8667" /> <!-- Common Item - Sealed Phoenix Earring -->
-					<item id="6341" min="1" max="1" chance="27.6997" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="12344" min="1" max="1" chance="2.9028" /> <!-- Common Item - Sealed Phoenix Necklace -->
-					<item id="6343" min="1" max="1" chance="21.4129" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="12346" min="1" max="1" chance="5.8057" /> <!-- Common Item - Sealed Phoenix Ring -->
-					<item id="6345" min="1" max="1" chance="38.3122" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-				<group chance="36.785099029541016">
-					<item id="1867" min="1" max="3" chance="47.7392" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="3" chance="31.8261" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="15.9131" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="2.5126" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="1.1935" /> <!-- Enria -->
-					<item id="5001" min="1" max="1" chance="0.0547" /> <!-- Recipe: Lance (60%) -->
-					<item id="8732" min="1" max="1" chance="0.5967" /> <!-- Life Stone - Level 76 -->
-					<item id="8742" min="1" max="1" chance="0.1492" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8752" min="1" max="1" chance="0.0149" /> <!-- High-Grade Life Stone - Level 76 -->
-				</group>
+				<item id="57" min="133" max="310" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="20.0">
 					<item id="8601" min="1" max="1" chance="70" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="30" /> <!-- Superior Herb of Life -->
@@ -3611,15 +3575,12 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="5485" min="1" max="1" chance="5.3992" /> <!-- Sealed Tallum Tunic Texture -->
-				<item id="5156" min="1" max="1" chance="0.8561" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-				<item id="4041" min="1" max="1" chance="5.5832" /> <!-- Mold Hardener -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="20968" level="78" type="L2Monster" name="Forgotten Face">
 		<parameters>

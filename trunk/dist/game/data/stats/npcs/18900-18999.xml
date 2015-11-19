@@ -2559,11 +2559,11 @@
 		</collision>
 	</npc>
 	<npc id="18974" level="90" type="L2Monster" name="Centaur Archer" title="Scout">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>FAIRY</race>
-		<acquire exp="2667974" sp="11603" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+		<acquire exp="2667974" sp="640" />
+		<stats>
+			<vitals hp="28829" hpRegen="9.5" mp="2023" mpRegen="3.3" />
 			<attack physical="32375" magical="23125" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1350" magical="1300" />
 			<attribute>
@@ -2577,10 +2577,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5464" level="1" />
 			<skill id="14056" level="2" />
 			<skill id="14055" level="2" />
-			<skill id="4416" level="13" />
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skill_list>
 		<collision>
 			<radius normal="14" />

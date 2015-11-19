@@ -1758,6 +1758,7 @@
 		</collision>
 	</npc>
 	<npc id="18544" level="45" type="L2Monster" name="Cruma Border" title="Event Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="DespawnTime" value="60" />
 			<skill name="Skill01_ID" id="4357" level="2" /> <!-- Haste -->
@@ -1765,10 +1766,10 @@
 			<skill name="Skill03_ID" id="4359" level="3" /> <!-- Focus -->
 			<skill name="Skill04_ID" id="4354" level="3" /> <!-- Vampiric Rage -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="296" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -1786,8 +1787,6 @@
 			<skill id="4357" level="2" /> <!-- Haste -->
 			<skill id="4358" level="3" /> <!-- Guidance -->
 			<skill id="4359" level="3" /> <!-- Focus -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
@@ -1799,6 +1798,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="20.4" />
+		</collision>
 		<drop_lists>
 			<death>
 				<group chance="42.0">
@@ -1833,10 +1836,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="20.4" />
-		</collision>
 	</npc>
 	<npc id="18545" level="45" type="L2Monster" name="Ancient Giants' Experiment" title="Event Monster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2762,6 +2761,7 @@
 		</collision>
 	</npc>
 	<npc id="18558" level="33" type="L2Monster" name="Crimson Hatu Otis" title="Kaneus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="aoe_skill" id="4737" level="3" /> <!-- BOSS Spinning Slash -->
 			<skill name="haste_skill" id="4175" level="3" /> <!-- BOSS Haste -->
@@ -2769,8 +2769,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="823757" sp="197" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="77012.3816279503" hpRegen="14.597633812675" mp="1864.8" mpRegen="6.48" />
+		<stats>
+			<vitals hp="77013" hpRegen="4.5" mp="1864" mpRegen="1.8" />
 			<attack physical="191.57829994383" magical="130.82315780595" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="206.76952" magical="226.95744" />
 			<attribute>
@@ -2786,8 +2786,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4175" level="3" /> <!-- BOSS Haste -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -2801,36 +2799,22 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="72.7499008178711">
-					<item id="63" min="3" max="9" chance="3.6608" /> <!-- Gauntlets -->
-					<item id="553" min="4" max="10" chance="3.1379" /> <!-- Iron Boots -->
-					<item id="1940" min="60" max="180" chance="5.341" /> <!-- Iron Boots Design -->
-					<item id="2422" min="1" max="1" chance="21.9651" /> <!-- Reinforced Leather Boots -->
-					<item id="2423" min="1" max="1" chance="21.9651" /> <!-- Boots of Knowledge -->
-					<item id="2446" min="1" max="1" chance="21.9651" /> <!-- Reinforced Leather Gloves -->
-					<item id="2447" min="1" max="1" chance="21.965" /> <!-- Gloves of Knowledge -->
-				</group>
-				<group chance="66.84480285644531">
-					<item id="63" min="3" max="9" chance="5.9763" /> <!-- Gauntlets -->
-					<item id="553" min="4" max="10" chance="5.1225" /> <!-- Iron Boots -->
-					<item id="1940" min="60" max="180" chance="8.7192" /> <!-- Iron Boots Design -->
-					<item id="2422" min="4" max="12" chance="4.4822" /> <!-- Reinforced Leather Boots -->
-					<item id="2423" min="5" max="13" chance="3.9842" /> <!-- Boots of Knowledge -->
-					<item id="2446" min="1" max="1" chance="35.8578" /> <!-- Reinforced Leather Gloves -->
-					<item id="2447" min="1" max="1" chance="35.8578" /> <!-- Gloves of Knowledge -->
-				</group>
-				<group chance="57.2848014831543">
-					<item id="955" min="1" max="1" chance="74.2268" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="12" max="36" chance="25.7732" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="19" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2446" min="1" max="1" chance="15.13" /> <!-- Reinforced Leather Gloves -->
+				<item id="63" min="1" max="1" chance="15.01" /> <!-- Gauntlets -->
+				<item id="2423" min="1" max="1" chance="14.81" /> <!-- Boots of Knowledge -->
+				<item id="2447" min="1" max="1" chance="14.58" /> <!-- Gloves of Knowledge -->
+				<item id="2422" min="1" max="1" chance="14.41" /> <!-- Reinforced Leather Boots -->
+				<item id="553" min="1" max="1" chance="13.93" /> <!-- Iron Boots -->
+				<item id="1940" min="60" max="180" chance="100" /> <!-- Iron Boot Design -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="18559" level="36" type="L2Monster" name="Seer Flouros" title="Kaneus">
 		<parameters>

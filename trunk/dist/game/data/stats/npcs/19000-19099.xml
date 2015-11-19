@@ -2040,11 +2040,12 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19084" level="97" type="L2Npc" name="Cursed Priest">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19084" level="97" type="L2Monster" name="Cursed Priest">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DIVINE</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="13190" hpRegen="7.5" mp="13190" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="7915" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="63000" magical="47250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2688" magical="3420" />
 			<attribute>
@@ -2056,11 +2057,10 @@
 			</speed>
 			<hit_time>333</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
-			<skill id="14365" level="1" />
-			<skill id="4416" level="8" />
-			<skill id="4414" level="3" />
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>

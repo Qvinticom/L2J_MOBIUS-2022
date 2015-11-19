@@ -120,11 +120,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23203" level="95" type="L2Monster" name="Centa the Standing Beast">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<acquire exp="12348772" sp="33498" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
+		<acquire exp="12348772" sp="2963" />
+		<stats>
+			<vitals hp="650630" hpRegen="10.5" mp="22058" mpRegen="3.6" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
 			<attribute>
@@ -138,9 +138,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="4" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="40" />
@@ -148,14 +148,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="9219" max="21502" chance="70" /> <!-- Adena -->
-				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter fragment -->
-				<item id="35424" min="1" max="1" chance="0.03" /> <!-- recipe: Specter Fighter (60%) -->
 				<item id="17386" min="1" max="1" chance="0.003" /> <!-- Specter Fighter -->
+				<item id="57" min="7836" max="18277" chance="70" /> <!-- Adena -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
+				<item id="35424" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="13.86" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36559" min="1" max="1" chance="1.305" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36558" min="1" max="1" chance="14.24" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.384" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -2747,11 +2748,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23258" level="94" type="L2Monster" name="Crane Golem">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>CONSTRUCT</race>
-		<acquire exp="1453348" sp="6160" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1453348" sp="348" />
+		<stats>
+			<vitals hp="45302" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
 			<attribute>
@@ -2765,13 +2766,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="2" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3794,11 +3793,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23276" level="95" type="L2Monster" name="Chief Scout">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="5694446" sp="24380" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="281771" hpRegen="7.5" mp="281771" mpRegen="2.7" />
+		<acquire exp="5694446" sp="1366" />
+		<stats>
+			<vitals hp="169066" hpRegen="10.5" mp="2205" mpRegen="3.6" />
 			<attack physical="13310" magical="43800" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3960" magical="3355" />
 			<attribute>
@@ -3812,13 +3811,13 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="13" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -3827,14 +3826,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="2125" max="4963" chance="70" />
-				<item id="35310" min="1" max="1" chance="0.2" />
-				<item id="35434" min="1" max="1" chance="0.02" />
-				<item id="17399" min="1" max="1" chance="0.01" />
+				<item id="17399" min="1" max="1" chance="0.003" /> <!-- Seraph Gauntlets -->
+				<item id="57" min="1240" max="2892" chance="70" /> <!-- Adena -->
+				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35434" min="1" max="1" chance="0.0075" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="25" />
-				<item id="9554" min="1" max="1" chance="0.5" />
+				<item id="36532" min="1" max="1" chance="21.27" /> <!-- Thin Braid -->
+				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -4784,31 +4784,31 @@
 		</drop_lists>
 	</npc>
 	<npc id="23294" level="97" type="L2Monster" name="Chief Magician">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<acquire exp="1176698" sp="5119" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="27135" hpRegen="7.5" mp="27135" mpRegen="2.7" />
+		<acquire exp="1176698" sp="753" />
+		<stats>
+			<vitals hp="16282" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3481" magical="975" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4414" level="3" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="15" />
@@ -4816,15 +4816,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="746" max="1741" chance="70" />
-				<item id="9550" min="1" max="1" chance="0.1" />
-				<item id="35351" min="1" max="1" chance="0.05" />
-				<item id="17527" min="1" max="1" chance="0.05" />
-				<item id="17526" min="1" max="1" chance="0.0125" />
-				<item id="35475" min="1" max="1" chance="0.005" />
+				<item id="57" min="435" max="1014" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35351" min="1" max="1" chance="0.03" /> <!-- Eternal Stocking Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35475" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="7.5" />
+				<item id="36533" min="1" max="1" chance="3" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -4877,11 +4878,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23296" level="97" type="L2Monster" name="Chief Quartermaster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DIVINE</race>
-		<acquire exp="1176698" sp="5119" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="27135" hpRegen="7.5" mp="27135" mpRegen="2.7" />
+		<acquire exp="1176698" sp="753" />
+		<stats>
+			<vitals hp="16282" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5221" magical="975" />
 			<attribute>
@@ -4895,32 +4896,33 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="8" />
-			<skill id="5467" level="1" />
-			<!-- <skill id="4413" level="5" /> -->
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="32.4" />
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="747" max="1741" chance="70" />
-				<item id="36528" min="1" max="1" chance="0.4" />
-				<item id="36529" min="1" max="1" chance="0.2" />
-				<item id="9546" min="1" max="1" chance="0.13333" />
-				<item id="9548" min="1" max="1" chance="0.13333" />
-				<item id="9550" min="1" max="1" chance="0.13333" />
-				<item id="17527" min="1" max="1" chance="0.05" />
-				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="57" min="435" max="1014" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="1.867" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36528" min="1" max="1" chance="10" />
-				<item id="36529" min="1" max="1" chance="1" />
+				<item id="36528" min="1" max="1" chance="4.924" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
 			</corpse>
 		</drop_lists>
 	</npc>

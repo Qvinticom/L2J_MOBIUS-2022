@@ -1052,10 +1052,12 @@
 		</collision>
 	</npc>
 	<npc id="18119" level="63" type="L2Monster" name="Corpse of Deadman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="2194" hpRegen="7.5" mp="1188" mpRegen="2.7" />
 			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="158.831806262641" />
 			<attribute>
@@ -1070,8 +1072,6 @@
 		</stats>
 		<status undying="false" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

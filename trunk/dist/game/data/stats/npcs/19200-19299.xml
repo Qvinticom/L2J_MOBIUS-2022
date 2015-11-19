@@ -2501,11 +2501,11 @@
 		</collision>
 	</npc>
 	<npc id="19294" level="93" type="L2Monster" name="Cocoon Destroyer" title="Violent">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="2594700" sp="10500" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
+		<acquire exp="2594700" sp="622" />
+		<stats>
+			<vitals hp="75089" hpRegen="10.5" mp="2132" mpRegen="3.6" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1997" magical="1603" />
 			<attribute>
@@ -2519,17 +2519,22 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17376" min="1" max="1" chance="4.995" /> <!-- Trace of Kimerian's Cavern -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="19295" level="90" type="L2Npc" name="Wisp">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->

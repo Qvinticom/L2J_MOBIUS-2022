@@ -2653,27 +2653,27 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23080" level="94" type="L2Npc" name="Corrupted Poison Cloud">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="23080" level="94" type="L2Monster" name="Corrupted Poison Cloud">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
+		<acquire exp="0" sp="0" />
 		<stats>
-			<!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="17" hpRegen="7.5" mp="17" mpRegen="2.7" />
+			<vitals hp="11" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<attack physical="204750" magical="146250" random="30" critical="1" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
 			<attribute>
 				<defence fire="240" water="240" wind="240" earth="240" holy="187" dark="273" />
 			</attribute>
 			<speed>
-				<walk ground="90" />
-				<run ground="180" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>

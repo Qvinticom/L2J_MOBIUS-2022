@@ -641,10 +641,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23428" level="80" type="L2Monster" name="Captain" title="Dragonblood">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="356719" sp="85" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
+		<stats>
+			<vitals hp="19742" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="12370" magical="10790" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1712" magical="1670" />
 			<attribute>
@@ -658,11 +659,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="10" />
-			<skill id="5465" level="1" /> <!-- Not Done -->
-			<skill id="4410" level="14" />
-			<skill id="4412" level="14" />
-			<skill id="4413" level="14" />
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -676,15 +677,14 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.0055" /> <!-- Wind Stone -->
+				<item id="9549" min="1" max="1" chance="0.0075" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
 				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="10485" min="1" max="1" chance="0.003009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.675" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="1.669" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1057,25 +1057,28 @@
 		</drop_lists>
 	</npc>
 	<npc id="23437" level="78" type="L2Monster" name="Cave Servant Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
 		<acquire exp="306497" sp="73" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="17848" hpRegen="7.5" mp="1607" mpRegen="2.7" />
+		<stats>
+			<vitals hp="17848" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="11770" magical="10255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1412" magical="1185" />
 			<attribute>
 				<defence fire="80" water="80" wind="180" earth="80" holy="180" dark="180" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="1" />
-			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -1088,16 +1091,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.0075" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
 				<item id="9555" min="1" max="1" chance="0.0009" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="1.225" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="1.272" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1435,64 +1437,72 @@
 		</drop_lists>
 	</npc>
 	<npc id="23445" level="77" type="L2Monster" name="Chaos Dragon">
-		<!-- http://2wiki.com -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="6620" hpRegen="7.5" mp="1540" mpRegen="2.7" />
+		<acquire exp="365544" sp="87" />
+		<stats>
+			<vitals hp="6620" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+		</skill_list>
 		<collision>
 			<radius normal="24" />
 			<height normal="20" />
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="18" max="42" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="57" min="18" max="43" chance="70" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.003" /> <!-- Fire Stone -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23446" level="81" type="L2Monster" name="Crag Dragon">
-		<!-- http://2wiki.com -->
-		<race>HUMAN</race>
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8310" hpRegen="7.5" mp="1708" mpRegen="2.7" />
+		<acquire exp="414685" sp="99" />
+		<stats>
+			<vitals hp="8310" hpRegen="9.5" mp="1708" mpRegen="3.3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+		</skill_list>
 		<collision>
-			<radius normal="32" />
-			<height normal="32" />
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
 			<death>
 				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
 				<item id="9546" min="1" max="1" chance="0.003" /> <!-- Fire Stone -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="9552" min="1" max="1" chance="0.0009" /> <!-- Fire Crystal -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>

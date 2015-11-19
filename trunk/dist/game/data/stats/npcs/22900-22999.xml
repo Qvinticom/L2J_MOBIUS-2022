@@ -3330,11 +3330,11 @@
 		</collision>
 	</npc>
 	<npc id="22991" level="10" type="L2Monster" name="Crawler" title="Husk">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="413" sp="3" />
-		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="258" hpRegen="7.5" mp="258" mpRegen="2.7" />
+		<acquire exp="413" sp="0" />
+		<stats>
+			<vitals hp="164" hpRegen="2" mp="108" mpRegen="0.9" />
 			<attack physical="23" magical="13" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="51" magical="31" />
 			<attribute>
@@ -3348,11 +3348,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<!-- <skill id="4412" level="9" /> -->
-			<skill id="14158" level="1" />
-			<!-- <skill id="4413" level="8" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 		</skill_list>
 		<collision>
 			<radius normal="6.5" />
@@ -3360,17 +3359,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="26" max="59" chance="70" />
-				<item id="1061" min="1" max="1" chance="4.88857" />
-				<item id="1103" min="1" max="1" chance="0.34965" />
-				<item id="463" min="1" max="1" chance="0.27855" />
-				<item id="36546" min="1" max="1" chance="0.19646" />
-				<item id="22" min="1" max="1" chance="0.19646" />
-				<item id="12" min="1" max="1" chance="0.04369" />
-				<item id="1102" min="1" max="1" chance="0.02731" />
+				<item id="8" min="1" max="1" chance="0.3" /> <!-- Willow Staff -->
+				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="15.0442" />
+				<item id="36531" min="1" max="1" chance="1.228" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.0075" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3422,11 +3419,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="22993" level="16" type="L2Monster" name="Critter" title="Husk">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<acquire exp="232" sp="2" />
-		<stats> <!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="209" hpRegen="7.5" mp="209" mpRegen="2.7" />
+		<acquire exp="232" sp="0" />
+		<stats>
+			<vitals hp="133" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="23" magical="13" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="51" magical="31" />
 			<attribute>
@@ -3440,11 +3437,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="14166" level="1" />
-			<skill id="4416" level="4" />
-			<!-- <skill id="4412" level="9" /> -->
-			<!-- <skill id="4413" level="8" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 		</skill_list>
 		<collision>
 			<radius normal="14.5" />
@@ -3452,15 +3448,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="11" max="26" chance="70" />
-				<item id="1061" min="1" max="1" chance="4.97041" />
-				<item id="36556" min="1" max="1" chance="0.53191" />
-				<item id="907" min="1" max="1" chance="0.07502" />
-				<item id="255" min="1" max="1" chance="0.0055" />
-				<item id="273" min="1" max="1" chance="0.003" />
+				<item id="216" min="1" max="1" chance="0.03" /> <!-- Dirk -->
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.0009" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.33333" />
+				<item id="36561" min="1" max="1" chance="0.03" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0009" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
 			</corpse>
 		</drop_lists>
 	</npc>

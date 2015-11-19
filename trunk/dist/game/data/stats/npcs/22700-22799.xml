@@ -311,6 +311,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="22703" level="81" type="L2Monster" name="Contaminated Morek Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Probablity" value="1000" />
 			<skill name="Skill01_ID" id="4160" level="10" />
@@ -318,11 +319,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="135" />
-		<!-- rhand: Samurai Longsword -->
+		<equipment rhand="135" /> <!-- rhand: Samurai Longsword -->
 		<acquire exp="126984" sp="30" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3461.77253215841" hpRegen="8.5" mp="1708.8" mpRegen="3" />
+		<stats>
+			<vitals hp="13848" hpRegen="9.5" mp="1708" mpRegen="3.3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -337,36 +337,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4116" level="9" />
-			<!-- Resist M. Atk. -->
-			<skill id="4160" level="10" />
-			<!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="12" />
-			<!-- HP Increase (4x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="15" />
-			<!-- Strong P. Atk. -->
-			<skill id="4411" level="14" />
-			<!-- Strong M. Atk. -->
-			<skill id="4412" level="11" />
-			<!-- Average P. Def. -->
-			<skill id="4413" level="16" />
-			<!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="6" />
-			<!-- Humanoids -->
-			<skill id="4444" level="4" />
-			<!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4458" level="4" />
-			<!-- Spear Weapon Weak Point -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
-			<skill id="5620" level="9" />
-			<!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
@@ -377,28 +355,20 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="167" max="389" chance="70" />
-				<!-- Adena -->
-				<item id="5162" min="1" max="1" chance="0.03" />
-				<!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-				<item id="9573" min="1" max="1" chance="0.75" />
-				<!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.3" />
-				<!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.3" />
-				<!-- High-Grade Life Stone - Level 80 -->
-				<item id="36548" min="1" max="1" chance="0.3" />
-				<!-- Weapon Fragment (Mid-grade) Piece -->
+				<item id="57" min="167" max="389" chance="70" /> <!-- Adena -->
+				<item id="5162" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36547" min="1" max="1" chance="0.75" />
-				<!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.3" />
-				<!-- Weapon Fragment (Mid-grade) Piece -->
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22704" level="81" type="L2Monster" name="Contaminated Batur Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -410,8 +380,8 @@
 		<equipment rhand="127" />
 		<!-- rhand: Crimson Sword -->
 		<acquire exp="158735" sp="38" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3461.77253215841" hpRegen="8.5" mp="1708.8" mpRegen="3" />
+		<stats>
+			<vitals hp="17310" hpRegen="9.5" mp="1708" mpRegen="3.3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<attribute>
@@ -426,48 +396,21 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4116" level="9" />
-			<!-- Resist M. Atk. -->
-			<skill id="4160" level="10" />
-			<!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="13" />
-			<!-- HP Increase (5x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="16" />
-			<!-- Very Strong P. Atk. -->
-			<skill id="4411" level="15" />
-			<!-- Strong M. Atk. -->
-			<skill id="4412" level="15" />
-			<!-- Strong P. Def. -->
-			<skill id="4413" level="16" />
-			<!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="6" />
-			<!-- Humanoids -->
-			<skill id="4425" level="4" />
-			<!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" />
-			<!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" />
-			<!-- Resist Swords -->
-			<skill id="4442" level="4" />
-			<!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" />
-			<!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" />
-			<!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" />
-			<!-- Greater Resist Two-handed Weapons -->
-			<skill id="4458" level="4" />
-			<!-- Spear Weapon Weak Point -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
-			<skill id="5620" level="9" />
-			<!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4444" level="4" /> <!-- Greater Bow/Crossbow Resistance -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
+			<skill id="4448" level="4" /> <!-- Greater Dagger/Rapier Resistance -->
+			<skill id="4442" level="4" /> <!-- Greater  -->
+			<skill id="4425" level="4" /> <!-- Blunt Weapon Resistance -->
+			<skill id="4426" level="4" /> <!-- Dualsword Resistance -->
+			<skill id="4427" level="4" /> <!-- Sword Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
@@ -482,32 +425,22 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="207" max="483" chance="70" />
-				<!-- Adena -->
-				<item id="1808" min="1" max="1" chance="0.03" />
-				<!-- Recipe: Soulshot (S-grade) -->
-				<item id="3036" min="1" max="1" chance="0.03" />
-				<!-- Recipe: Spiritshot (S-grade) -->
-				<item id="36548" min="1" max="1" chance="0.03" />
-				<!-- Weapon Fragment (Mid-grade) -->
-				<item id="9573" min="1" max="1" chance="0.75" />
-				<!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.3" />
-				<!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.03" />
-				<!-- High-Grade Life Stone - Level 80 -->
-				<item id="5167" min="1" max="1" chance="0.03" />
-				<!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="57" min="207" max="483" chance="70" /> <!-- Adena -->
+				<item id="3036" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
+				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5167" min="1" max="1" chance="0.003" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36547" min="1" max="1" chance="0.75" />
-				<!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.3" />
-				<!-- Weapon Fragment (Mid-grade) Piece -->
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="22705" level="82" type="L2Monster" name="Contaminated Batur Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="1000" />
@@ -516,11 +449,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="127" />
-		<!-- rhand: Crimson Sword -->
+		<equipment rhand="127" />	<!-- rhand: Crimson Sword -->
 		<acquire exp="167545" sp="40" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
+		<stats>
+			<vitals hp="18220" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -535,48 +467,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4116" level="9" />
-			<!-- Resist M. Atk. -->
-			<skill id="4408" level="13" />
-			<!-- HP Increase (5x) -->
-			<skill id="4409" level="1" />
-			<!-- MP Increase (1x) -->
-			<skill id="4410" level="17" />
-			<!-- Very Strong P. Atk. -->
-			<skill id="4411" level="16" />
-			<!-- Very Strong M. Atk. -->
-			<skill id="4412" level="15" />
-			<!-- Strong P. Def. -->
-			<skill id="4413" level="16" />
-			<!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" />
-			<!-- Standard Type -->
-			<skill id="4415" level="3" />
-			<!-- One-handed Sword -->
-			<skill id="4416" level="6" />
-			<!-- Humanoids -->
-			<skill id="4425" level="4" />
-			<!-- Resist Blunt Weapons -->
-			<skill id="4426" level="4" />
-			<!-- Resist Dual-Sword Weapons -->
-			<skill id="4427" level="4" />
-			<!-- Resist Swords -->
-			<skill id="4442" level="4" />
-			<!-- Greater Resist Hand-to-hand Weapons -->
-			<skill id="4444" level="4" />
-			<!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4448" level="4" />
-			<!-- Higher resist Daggers/Rapier Weapon -->
-			<skill id="4449" level="4" />
-			<!-- Greater Resist Two-handed Weapons -->
-			<skill id="4458" level="4" />
-			<!-- Spear Weapon Weak Point -->
-			<skill id="4561" level="10" />
-			<!-- NPC Fire Burn - Magic -->
-			<skill id="5465" level="1" />
-			<!-- Earth Attacks -->
-			<skill id="5620" level="9" />
-			<!-- Short-Range Physical Attack Weakness -->
+			<skill id="4116" level="9" />	<!-- Resist M. Atk. -->
+			<skill id="4410" level="17" />	<!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" />	<!-- Very Strong M. Atk. -->
+			<skill id="4412" level="15" />	<!-- Strong P. Def. -->
+			<skill id="4413" level="16" />	<!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" />	<!-- Standard Type -->
+			<skill id="4415" level="3" />	<!-- One-handed Sword -->
+			<skill id="4416" level="6" />	<!-- Humanoids -->
+			<skill id="4425" level="4" />	<!-- Resist Blunt Weapons -->
+			<skill id="4426" level="4" />	<!-- Resist Dual-Sword Weapons -->
+			<skill id="4427" level="4" />	<!-- Resist Swords -->
+			<skill id="4442" level="4" />	<!-- Greater Resist Hand-to-hand Weapons -->
+			<skill id="4444" level="4" />	<!-- Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4448" level="4" />	<!-- Higher resist Daggers/Rapier Weapon -->
+			<skill id="4449" level="4" />	<!-- Greater Resist Two-handed Weapons -->
+			<skill id="4458" level="4" />	<!-- Spear Weapon Weak Point -->
+			<skill id="4561" level="10" />	<!-- NPC Fire Burn - Magic -->
+			<skill id="5465" level="1" />	<!-- Earth Attacks -->
+			<skill id="5620" level="9" />	<!-- Short-Range Physical Attack Weakness -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>
@@ -591,22 +500,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="213" max="498" chance="70" />
-				<!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.950" />
-				<!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.3" />
-				<!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.03" />
-				<!-- High-Grade Life Stone - Level 80 -->
-				<item id="36548" min="1" max="1" chance="0.075" />
-				<!-- Weapon Fragment (Mid-grade) -->
+				<item id="57" min="213" max="498" chance="70" />	<!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.075" />	<!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.075" />	<!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" />	<!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36547" min="1" max="1" chance="0.75" />
-				<!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.3" />
-				<!-- Weapon Fragment (Mid-grade) Piece -->
+				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>

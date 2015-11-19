@@ -113,6 +113,7 @@
 		</collision>
 	</npc>
 	<npc id="22801" level="72" type="L2Monster" name="Cruel Pincer Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Privates01_sil" value="22802" /> <!-- Cruel Pincer Golem -->
 			<param name="Privates01_ai" value="golem_cannon2_p" />
@@ -120,11 +121,11 @@
 			<param name="Privates02_ai" value="golem_cannon3_p" />
 			<skill name="Skill01_ID" id="6598" level="9" /> <!-- NPC earth attack -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="15160" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+		<stats>
+			<vitals hp="2541" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -139,8 +140,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -161,6 +160,7 @@
 				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -199,14 +199,15 @@
 		</drop_lists>
 	</npc>
 	<npc id="22802" level="72" type="L2Monster" name="Cruel Pincer Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9" /> <!-- NPC earth attack -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="10822" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+		<stats>
+			<vitals hp="2541" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -221,8 +222,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
@@ -244,6 +243,7 @@
 				<item id="57" min="38" max="88" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -282,14 +282,15 @@
 		</drop_lists>
 	</npc>
 	<npc id="22803" level="72" type="L2Monster" name="Cruel Pincer Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6598" level="9" /> <!-- NPC earth attack -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="13900" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+		<stats>
+			<vitals hp="2541" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -303,8 +304,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
@@ -325,6 +324,7 @@
 				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->

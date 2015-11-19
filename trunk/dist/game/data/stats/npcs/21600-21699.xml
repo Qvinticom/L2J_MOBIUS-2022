@@ -2932,6 +2932,7 @@
 		</collision>
 	</npc>
 	<npc id="21634" level="92" type="L2Monster" name="Crimson Doll Blader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2947,8 +2948,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+		<stats>
+			<vitals hp="59017" hpRegen="10.5" mp="2096" mpRegen="3.6" />
 			<attack physical="353.71092" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="142.605626325743" shield="94" />
 			<attribute>
@@ -2966,8 +2967,6 @@
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -2986,27 +2985,22 @@
 				<clan>ZAKEN</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1204" max="2811" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.7527999877929688">
-					<item id="36547" min="1" max="1" chance="4.592" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="0.5072000026702881">
-					<item id="36548" min="1" max="1" chance="1" /> <!-- Weapon Fragment (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36547" min="1" max="1" chance="2.933" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.5" /> <!-- Weapon Fragment (Mid-grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1204" max="2811" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="4.153" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36547" min="1" max="1" chance="3.24" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="21635" level="92" type="L2Monster" name="Veil Master">
 		<parameters>
@@ -3223,6 +3217,7 @@
 		</collision>
 	</npc>
 	<npc id="21637" level="92" type="L2Monster" name="Crimson Veil Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3240,8 +3235,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+		<stats>
+			<vitals hp="59017" hpRegen="10.5" mp="2096" mpRegen="3.6" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>
@@ -3262,8 +3257,6 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
 			<skill id="4094" level="5" /> <!-- NPC Cancel Magic -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -3280,27 +3273,22 @@
 				<clan>ZAKEN</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1106" max="2583" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.075000047683716">
-					<item id="36552" min="1" max="1" chance="3.752" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="0.5072000026702881">
-					<item id="36553" min="1" max="1" chance="1" /> <!-- Armor Fragment (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36552" min="1" max="1" chance="2.425" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.5" /> <!-- Armor Fragment (Mid-grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="14.5" />
 			<height normal="48" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="1106" max="2583" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="3.424" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36552" min="1" max="1" chance="2.646" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="21639" level="36" type="L2Monster" name="Tasaba Lizardman">
 		<parameters>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23300" level="98" type="L2Monster" name="Commander of Operations">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DIVINE</race>
-		<acquire exp="2799200" sp="12263" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="54535" hpRegen="7.5" mp="54535" mpRegen="2.7" />
+		<acquire exp="2799200" sp="1791" />
+		<stats>
+			<vitals hp="32722" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<attack physical="92020" magical="148028" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5346" magical="1322" />
 			<attribute>
@@ -19,13 +19,13 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="8" />
-			<skill id="5467" level="1" />
-			<!-- <skill id="4411" level="19" /> -->
-			<!-- <skill id="4410" level="19" /> -->
-			<!-- <skill id="4412" level="21" /> -->
-			<!-- <skill id="4413" level="8" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<collision>
 			<radius normal="14" />
@@ -33,17 +33,19 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="1116" max="2604" chance="70" />
-				<item id="9554" min="1" max="1" chance="0.2" />
-				<item id="9556" min="1" max="1" chance="0.2" />
-				<item id="35356" min="1" max="1" chance="0.1" />
-				<item id="19448" min="1" max="1" chance="0.03333" />
-				<item id="19447" min="1" max="1" chance="0.01111" />
-				<item id="35480" min="1" max="1" chance="0.01" />
-				<item id="17448" min="1" max="1" chance="0.00667" />
+				<item id="17448" min="1" max="1" chance="0.0009" /> <!-- Eternal Earring -->
+				<item id="57" min="651" max="1516" chance="70" /> <!-- Adena -->
+				<item id="35356" min="1" max="1" chance="0.03" /> <!-- Eternal Earring Gem -->
+				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
+				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="10" />
+				<item id="36533" min="1" max="1" chance="4.436" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -232,11 +234,12 @@
 		</drop_lists>
 	</npc>
 	<npc id="23305" level="55" type="L2Monster" name="Corroded Skeleton">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<equipment rhand="78" />
 		<race>UNDEAD</race>
-		<acquire exp="31990" sp="51" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="2894" hpRegen="7.5" mp="2894" mpRegen="2.7" />
+		<acquire exp="31990" sp="7" />
+		<stats>
+			<vitals hp="1738" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<attack physical="671" magical="361" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="388" magical="262" />
 			<attribute>
@@ -250,8 +253,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="1" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clan_list>
@@ -264,19 +267,21 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
-				<item id="7898" min="1" max="1" chance="0.003" /> <!-- Karik Horn -->
+				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
 				<item id="7882" min="1" max="1" chance="0.003" /> <!-- Pa'agrian Sword -->
+				<item id="5286" min="1" max="1" chance="0.003" /> <!-- Berserker Blade -->
+				<item id="299" min="1" max="1" chance="0.003" /> <!-- Orcish Poleaxe -->
 				<item id="200" min="1" max="1" chance="0.003" /> <!-- Sage's Staff -->
 				<item id="199" min="1" max="1" chance="0.003" /> <!-- Pa'agrio Hammer -->
 				<item id="198" min="1" max="1" chance="0.003" /> <!-- Inferno Staff -->
 				<item id="197" min="1" max="1" chance="0.003" /> <!-- Paradia Staff -->
 				<item id="195" min="1" max="1" chance="0.003" /> <!-- Cursed Staff -->
-				<item id="299" min="1" max="1" chance="0.0009" /> <!-- Orcish Poleaxe -->
-				<item id="5286" min="1" max="1" chance="0.0009" /> <!-- Berserker Blade -->
+				<item id="7898" min="1" max="1" chance="0.003" /> <!-- Karik Horn -->
 				<item id="7883" min="1" max="1" chance="0.0009" /> <!-- Guardian's Sword -->
-				<item id="78" min="1" max="1" chance="0.0009" /> <!-- Great Sword -->
-				<item id="36524" min="1" max="1" chance="0.0009" /> <!-- Orichalcum -->
+				<item id="57" min="210" max="488" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.0075" /> <!-- Orichalcum -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
@@ -332,11 +337,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23307" level="54" type="L2Monster" name="Corpse Spider">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BUG</race>
-		<acquire exp="31000" sp="49" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="2805" hpRegen="7.5" mp="2805" mpRegen="2.7" />
+		<acquire exp="31000" sp="7" />
+		<stats>
+			<vitals hp="1684" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<attack physical="637" magical="340" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="377" magical="255" />
 			<attribute>
@@ -350,8 +355,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="12" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
@@ -364,7 +369,6 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
 				<item id="64" min="1" max="1" chance="0.03" /> <!-- Compound Boots -->
 				<item id="2437" min="1" max="1" chance="0.03" /> <!-- Drake Leather Boots -->
 				<item id="2436" min="1" max="1" chance="0.03" /> <!-- Theca Leather Boots -->
@@ -375,9 +379,11 @@
 				<item id="1126" min="1" max="1" chance="0.03" /> <!-- Crimson Boots -->
 				<item id="603" min="1" max="1" chance="0.03" /> <!-- Divine Boots -->
 				<item id="2438" min="1" max="1" chance="0.03" /> <!-- Full Plate Boots -->
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
 				<item id="1539" min="1" max="1" chance="0.75" /> <!-- Major Healing Potion -->
-				<item id="8724" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 49 -->
+				<item id="45929" min="1" max="1" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
@@ -436,11 +442,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23309" level="57" type="L2Monster" name="Corpse Looter Stakato">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="34010" sp="56" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="3073" hpRegen="7.5" mp="3073" mpRegen="2.7" />
+		<acquire exp="34010" sp="8" />
+		<stats>
+			<vitals hp="1845" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<attack physical="637" magical="340" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="377" magical="255" />
 			<attribute>
@@ -454,8 +460,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="6" />
-			<skill id="4414" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skill_list>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clan_list>
@@ -468,28 +474,30 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="2453" min="1" max="1" chance="0.075" /> <!-- Chain Gloves -->
+				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
 				<item id="107" min="1" max="1" chance="0.03" /> <!-- Compound Shield -->
-				<item id="2463" min="1" max="1" chance="0.3" /> <!-- Divine Gloves -->
-				<item id="2462" min="1" max="1" chance="0.03" /> <!--  Full Plate Gauntlets -->
-				<item id="2461" min="1" max="1" chance="0.03" /> <!--  Drake Leather Gloves -->
+				<item id="2463" min="1" max="1" chance="0.03" /> <!-- Divine Gloves -->
+				<item id="2462" min="1" max="1" chance="0.03" /> <!-- Full Plate Gauntlets -->
+				<item id="2461" min="1" max="1" chance="0.03" /> <!-- Drake Leather Gloves -->
 				<item id="2460" min="1" max="1" chance="0.03" /> <!-- Theca Leather Gloves -->
 				<item id="2459" min="1" max="1" chance="0.03" /> <!-- Demon's Gloves -->
 				<item id="2458" min="1" max="1" chance="0.03" /> <!-- Rind Leather Gloves -->
 				<item id="2457" min="1" max="1" chance="0.03" /> <!-- Gloves of Seal -->
 				<item id="2456" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gloves -->
-				<item id="2455" min="1" max="1" chance="0.03" /> <!-- Plated Leather Gloves -->
-				<item id="2453" min="1" max="1" chance="0.03" /> <!-- Chain Gloves -->
 				<item id="608" min="1" max="1" chance="0.03" /> <!-- Mithril Gauntlets -->
-				<item id="2464" min="1" max="1" chance="0.0055" /> <!-- Sealed Avadon Gloves -->
-				<item id="948" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="36523" min="1" max="1" chance="0.0055" /> <!-- Adamantite -->
+				<item id="2464" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Gloves -->
+				<item id="57" min="214" max="500" chance="70" /> <!-- Adena -->
+				<item id="948" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.003" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
@@ -1093,11 +1101,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23324" level="99" type="L2Monster" name="Captain" title="Nerva Bloodlust">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
-		<race>ORC</race>
-		<acquire exp="171101178" sp="334021" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1096245" hpRegen="7.5" mp="1096245" mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="171101178" sp="273761" />
+		<stats>
+			<vitals hp="657749" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="20000" magical="10000" random="30" critical="4" accuracy="4.75" attackSpeed="698" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="9000" magical="9000" />
 			<attribute>
@@ -1111,8 +1119,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="17" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
@@ -1121,14 +1129,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="50848" max="116835" chance="70" />
-				<item id="36524" min="1" max="1" chance="5.09847" />
-				<item id="17418" min="1" max="1" chance="0.005" />
-				<item id="36945" min="1" max="1" chance="0.00153" />
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
+				<item id="57" min="29350" max="68369" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="2.341" /> <!-- Orichalcum -->
+				<item id="36945" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Synthetic Cokes - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36524" min="1" max="1" chance="20" />
-				<item id="36886" min="1" max="1" chance="1" />
+				<item id="36524" min="1" max="1" chance="8.9" /> <!-- Orichalcum -->
+				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -1642,11 +1651,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23348" level="99" type="L2Monster" name="Chaos Horn">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<acquire exp="17315720" sp="76396" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
+		<acquire exp="17315720" sp="27705" />
+		<stats>
+			<vitals hp="328875" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="18000" magical="3300" random="30" critical="4" accuracy="4.75" attackSpeed="753" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="20000" magical="17700" />
 			<attribute>
@@ -1660,8 +1669,8 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
 		<collision>
 			<radius normal="16" />
@@ -1669,15 +1678,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="4165" max="8713" chance="70" />
-				<item id="36929" min="1" max="1" chance="0.05" />
-				<item id="36935" min="1" max="1" chance="0.05" />
-				<item id="36936" min="1" max="1" chance="0.05" />
-				<item id="17421" min="1" max="1" chance="0.0009" />
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
+				<item id="57" min="2202" max="5131" chance="70" /> <!-- Adena -->
+				<item id="36936" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
+				<item id="36929" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36563" min="1" max="1" chance="2" />
-				<item id="36564" min="1" max="1" chance="0.5" />
+				<item id="40207" min="1" max="1" chance="18.46" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>

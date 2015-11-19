@@ -474,6 +474,7 @@
 		</collision>
 	</npc>
 	<npc id="20804" level="41" type="L2Monster" name="Crokian Lad">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -489,8 +490,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
 		<acquire exp="19276" sp="4" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2018" hpRegen="5.5" mp="504" mpRegen="2.1" />
 			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="160.69002" magical="106.989225133249" />
 			<attribute>
@@ -505,8 +506,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -523,29 +522,21 @@
 				<clan>CROC2</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="36" />
+			<height normal="61" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="830" max="1660" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.388700008392334">
-					<item id="630" min="1" max="1" chance="0.8051" /> <!-- Square Shield -->
-					<item id="1956" min="1" max="1" chance="36.0955" /> <!-- Square Shield Fragment -->
-					<item id="2494" min="1" max="1" chance="0.8051" /> <!-- Plate Shield -->
-					<item id="2934" min="1" max="1" chance="36.0955" /> <!-- Plate Shield Fragment -->
-					<item id="2412" min="1" max="1" chance="0.5638" /> <!-- Plate Helmet -->
-					<item id="2930" min="1" max="1" chance="25.635" /> <!-- Plate Helmet Design -->
-				</group>
-				<group chance="40.26490020751953">
-					<item id="1864" min="1" max="3" chance="31.9203" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="31.9203" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="12.7681" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="19.6433" /> <!-- Cord -->
-					<item id="2207" min="1" max="1" chance="0.8422" /> <!-- Recipe: Karmian Tunic -->
-					<item id="2298" min="1" max="1" chance="0.1394" /> <!-- Recipe: Stormbringer -->
-					<item id="5274" min="1" max="1" chance="0.1064" /> <!-- Recipe: Greater Spiritshot (C) Compressed Package(100%) -->
-					<item id="735" min="1" max="1" chance="2.66" /> <!-- Alacrity Potion -->
-				</group>
+				<item id="2401" min="1" max="1" chance="0.3" /> <!-- Mithril Stockings -->
+				<item id="2424" min="1" max="1" chance="0.3" /> <!-- Manticore Skin Boots -->
+				<item id="2425" min="1" max="1" chance="0.3" /> <!-- Brigandine Boots -->
+				<item id="2426" min="1" max="1" chance="0.3" /> <!-- Elven Mithril Boots -->
+				<item id="2396" min="1" max="1" chance="0.075" /> <!-- Elven Mithril Tunic -->
+				<item id="57" min="306" max="713" chance="70" /> <!-- Adena -->
+				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -579,15 +570,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2160" min="1" max="1" chance="13.2104" /> <!-- Recipe: Moonstone Earring -->
-				<item id="1953" min="1" max="1" chance="6.5586" /> <!-- Sage's Rag Lining -->
-				<item id="4470" min="1" max="1" chance="1.1701" /> <!-- Dye of STR <Str+1 Dex-1> -->
+				<item id="36556" min="1" max="1" chance="11.83" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="36" />
-			<height normal="61" />
-		</collision>
 	</npc>
 	<npc id="20805" level="42" type="L2Monster" name="Dailaon Lad">
 		<parameters>
@@ -706,6 +693,7 @@
 		</collision>
 	</npc>
 	<npc id="20806" level="43" type="L2Monster" name="Crokian Lad Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -721,8 +709,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
 		<acquire exp="20056" sp="4" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2190" hpRegen="5.5" mp="557" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
 			<attribute>
@@ -737,8 +725,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -755,26 +741,20 @@
 				<clan>CROC2</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="36" />
+			<height normal="61" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="846" max="1718" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.47679999470710754">
-					<item id="70" min="1" max="1" chance="0.8123" /> <!-- Claymore -->
-					<item id="2047" min="1" max="1" chance="49.5227" /> <!-- Claymore Blade -->
-					<item id="2499" min="1" max="1" chance="0.8123" /> <!-- Elven Long Sword -->
-					<item id="2967" min="1" max="1" chance="48.8527" /> <!-- Elven Long Sword Blade -->
-				</group>
-				<group chance="35.42319869995117">
-					<item id="1865" min="1" max="1" chance="43.3248" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="43.3248" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.2208" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.8883" /> <!-- Stone of Purity -->
-					<item id="2999" min="1" max="1" chance="2.9077" /> <!-- Recipe: Plated Leather Gloves -->
-					<item id="5159" min="1" max="1" chance="0.1444" /> <!-- Recipe: Spiritshot (C) Compressed Package (100%) -->
-					<item id="2300" min="1" max="1" chance="0.1892" /> <!-- Recipe: Scythe -->
-				</group>
+				<item id="497" min="1" max="1" chance="0.3" /> <!-- Chain Helmet -->
+				<item id="1124" min="1" max="1" chance="0.3" /> <!-- Boots of Strength -->
+				<item id="1125" min="1" max="1" chance="0.3" /> <!-- Assault Boots -->
+				<item id="2494" min="1" max="1" chance="0.3" /> <!-- Plate Shield -->
+				<item id="57" min="309" max="718" chance="70" /> <!-- Adena -->
+				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -808,15 +788,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2204" min="1" max="1" chance="4.2364" /> <!-- Recipe: Chain Mail Shirt -->
-				<item id="2934" min="1" max="1" chance="24.2834" /> <!-- Plate Shield Fragment -->
-				<item id="1805" min="1" max="1" chance="0.7131" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="36531" min="1" max="1" chance="26.59" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="36" />
-			<height normal="61" />
-		</collision>
 	</npc>
 	<npc id="20807" level="44" type="L2Monster" name="Farhite Lad">
 		<parameters>

@@ -2256,6 +2256,7 @@
 		</collision>
 	</npc>
 	<npc id="22464" level="45" type="L2Monster" name="Callous Kanabion">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2278,8 +2279,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="7887" /> <!-- rhand: Mysterious Sword -->
 		<acquire exp="5059" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1184" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -2294,8 +2295,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2311,9 +2310,13 @@
 				<clan>RIM</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.101" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -2347,12 +2350,9 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="22465" level="45" type="L2Monster" name="Callous Kanabion" title="Doppler">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2377,8 +2377,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="298" /> <!-- rhand: Orcish Glaive -->
 		<acquire exp="5059" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1184" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -2393,8 +2393,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2411,9 +2409,13 @@
 				<ignore_npc_id>22464</ignore_npc_id> <!-- Callous Kanabion -->
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="13" grown="22" />
+			<height normal="35" grown="42.2" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.082" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -2447,12 +2449,9 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="13" grown="22" />
-			<height normal="35" grown="42.2" />
-		</collision>
 	</npc>
 	<npc id="22466" level="47" type="L2Monster" name="Callous Kanabion" title="Void">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2478,8 +2477,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- rhand: Cursed Dagger -->
 		<acquire exp="6091" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+		<stats>        
+			<vitals hp="1277" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<attribute>
@@ -2495,8 +2494,6 @@
 		<skill_list>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2513,9 +2510,13 @@
 				<ignore_npc_id>22464</ignore_npc_id> <!-- Callous Kanabion -->
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="20" grown="24" />
+			<height normal="40" grown="48" />
+		</collision>
 		<drop_lists>
 			<death>
-				<item id="952" min="1" max="1" chance="1.22554368" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.196" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -2549,10 +2550,6 @@
 				</group>
 			</death>
 		</drop_lists>
-		<collision>
-			<radius normal="20" grown="24" />
-			<height normal="40" grown="48" />
-		</collision>
 	</npc>
 	<npc id="22467" level="50" type="L2Monster" name="Savage Kanabion">
 		<parameters>

@@ -2845,6 +2845,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20789" level="36" type="L2Monster" name="Crokian">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2859,9 +2860,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
-		<acquire exp="3599" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+		<acquire exp="3599" sp="0" />
+		<stats>
+			<vitals hp="810" hpRegen="4.5" mp="417" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="93.5949427192352" />
 			<attribute>
@@ -2876,8 +2877,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4030" level="2" /> <!-- NPC Clan Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2899,8 +2898,9 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
 				<item id="7881" min="1" max="1" chance="0.03" /> <!-- Lesser Giant's Sword -->
+				<item id="57" min="129" max="302" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2934,9 +2934,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36551" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36551" min="1" max="1" chance="1.284" /> <!-- Armor Fragment (Low-grade) -->
 				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -3036,6 +3036,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20791" level="38" type="L2Monster" name="Crokian Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3051,8 +3052,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
 		<acquire exp="7960" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+		<stats>
+			<vitals hp="1774" hpRegen="4.5" mp="447" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="98.8349371271581" />
 			<attribute>
@@ -3067,8 +3068,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3091,10 +3090,11 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="30" max="68" chance="70" /> <!-- Adena -->
-				<item id="7881" min="1" max="1" chance="0.03" /> <!-- Lesser Giant's Sword -->
+				<item id="7881" min="1" max="1" chance="0.075" /> <!-- Lesser Giant's Sword -->
+				<item id="57" min="276" max="644" chance="70" /> <!-- Adena -->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -3128,8 +3128,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="7.1256" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="1.9395" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="31.43" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
 	</npc>

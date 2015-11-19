@@ -365,6 +365,7 @@
 		</collision>
 	</npc>
 	<npc id="20134" level="59" type="L2Monster" name="Cave Maiden">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -380,8 +381,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="68" /> <!-- rhand: Falchion -->
 		<acquire exp="9203" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1880.92519" hpRegen="6.5" mp="1007.0" mpRegen="2.4" />
+		<stats>
+			<vitals hp="1881" hpRegen="6.5" mp="1007" mpRegen="2.4" />
 			<attack physical="461.94387" magical="315.44778" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="242.81593" magical="161.669585254993" />
 			<attribute>
@@ -396,8 +397,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -409,46 +408,24 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="821" max="1673" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.7125999927520752">
-					<item id="357" min="1" max="1" chance="0.135" /> <!-- Zubei's Breastplate -->
-					<item id="4056" min="1" max="1" chance="19.5049" /> <!-- Zubei's Breastplate Part -->
-					<item id="2376" min="1" max="1" chance="0.135" /> <!-- Avadon Breastplate -->
-					<item id="4064" min="1" max="1" chance="19.5049" /> <!-- Avadon Breastplate Part -->
-					<item id="383" min="1" max="1" chance="0.216" /> <!-- Zubei's Gaiters -->
-					<item id="4057" min="1" max="1" chance="30.144" /> <!-- Zubei's Gaiter Material -->
-					<item id="2379" min="1" max="1" chance="0.216" /> <!-- Avadon Gaiters -->
-					<item id="4065" min="1" max="1" chance="30.1442" /> <!-- Avadon Gaiters Material -->
-				</group>
-				<group chance="9.384900093078613">
-					<item id="1866" min="1" max="1" chance="36.3577" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="54.5366" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="2.1815" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="4.5447" /> <!-- High-Grade Suede -->
-					<item id="4041" min="1" max="1" chance="0.4742" /> <!-- Mold Hardener -->
-					<item id="947" min="1" max="1" chance="0.0218" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="4993" min="1" max="1" chance="0.6783" /> <!-- Recipe: Sealed Doom Gloves (60%) -->
-					<item id="4192" min="1" max="1" chance="0.0416" /> <!-- Recipe: Sword of Damascus (100%) -->
-					<item id="8728" min="1" max="1" chance="0.9089" /> <!-- Life Stone - Level 61 -->
-					<item id="8738" min="1" max="1" chance="0.2272" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8748" min="1" max="1" chance="0.0227" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8758" min="1" max="1" chance="0.0048" /> <!-- Top-Grade Life Stone - Level 61 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="947" min="1" max="1" chance="0.0832" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="356" min="1" max="1" chance="0.0233" /> <!-- Full Plate Armor -->
-				<item id="1871" min="1" max="5" chance="69.3087" /> <!-- Charcoal -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="22" max="51" chance="70" /> <!-- Adena -->
+				<item id="947" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="7.938" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20135" level="40" type="L2Monster" name="Alligator">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->

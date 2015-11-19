@@ -3731,6 +3731,7 @@
 		</collision>
 	</npc>
 	<npc id="20635" level="45" type="L2Monster" name="Carinkain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3742,11 +3743,11 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="DDMagic" id="4039" level="4" /> <!-- NPC MP Drain -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="5353" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1184" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="118.372898457316" />
 			<attribute>
@@ -3761,8 +3762,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4039" level="4" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3774,28 +3773,15 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="20" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="470" max="955" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.22020000219345093">
-					<item id="263" min="1" max="1" chance="1.4465" /> <!-- Chakram -->
-					<item id="2073" min="1" max="1" chance="98.5535" /> <!-- Chakram Edge -->
-				</group>
-				<group chance="10.079400062561035">
-					<item id="1866" min="1" max="1" chance="33.7703" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="50.6555" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="2.0262" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="4.2213" /> <!-- High-Grade Suede -->
-					<item id="4041" min="1" max="1" chance="0.4405" /> <!-- Mold Hardener -->
-					<item id="3004" min="1" max="1" chance="3.1463" /> <!-- Recipe: Rind Leather Gloves -->
-					<item id="3002" min="1" max="1" chance="3.1463" /> <!-- Recipe: Dwarven Chain Gloves -->
-					<item id="8723" min="1" max="1" chance="2.0262" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.5066" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0507" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0101" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
+				<item id="57" min="19" max="46" chance="70" /> <!-- Adena -->
+				<item id="36914" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Low-grade) - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3829,15 +3815,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2215" min="1" max="1" chance="1.5138" /> <!-- Recipe: Robe of Seal -->
-				<item id="1959" min="1" max="1" chance="3.2009" /> <!-- Chain Mail Shirt Material -->
-				<item id="2163" min="1" max="1" chance="6.063" /> <!-- Recipe: Earring of Protection -->
+				<item id="36531" min="1" max="1" chance="10.63" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
 	</npc>
 	<npc id="20636" level="46" type="L2Monster" name="Forest of Mirrors Ghost">
 		<parameters>

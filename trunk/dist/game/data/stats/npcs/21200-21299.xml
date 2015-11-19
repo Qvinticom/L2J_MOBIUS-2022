@@ -2528,6 +2528,7 @@
 		</collision>
 	</npc>
 	<npc id="21270" level="38" type="L2Monster" name="Cave Ant Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2542,8 +2543,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="7005" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+		<stats>
+			<vitals hp="887" hpRegen="4.5" mp="447" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="98.8349371271581" />
 			<attribute>
@@ -2558,8 +2559,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2575,30 +2574,16 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="647" max="1291" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.40059998631477356">
-					<item id="88" min="1" max="1" chance="0.3676" /> <!-- Morning Star -->
-					<item id="2031" min="1" max="1" chance="19.9807" /> <!-- Morning Star Head -->
-					<item id="90" min="1" max="1" chance="0.3676" /> <!-- Goat Head Staff -->
-					<item id="2032" min="1" max="1" chance="18.2395" /> <!-- Goat Head Staff Head -->
-					<item id="21735" min="1" max="1" chance="0.3676" /> <!-- Tarbar - Event -->
-					<item id="2035" min="1" max="1" chance="19.9807" /> <!-- Tarbar Head -->
-					<item id="169" min="1" max="1" chance="0.3676" /> <!-- Skull Breaker -->
-					<item id="2036" min="1" max="1" chance="19.9807" /> <!-- Skull Breaker Head -->
-					<item id="172" min="1" max="1" chance="0.3676" /> <!-- Heavy Bone Club -->
-					<item id="2037" min="1" max="1" chance="19.9804" /> <!-- Heavy Bone Club Head -->
-				</group>
-				<group chance="41.72710037231445">
-					<item id="1868" min="1" max="1" chance="75.8123" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="15.1625" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.7906" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.5271" /> <!-- Compound Braid -->
-					<item id="2145" min="1" max="1" chance="2.7075" /> <!-- Recipe: Mithril Alloy -->
-				</group>
+ 				<item id="57" min="26" max="60" chance="70" /> <!-- Adena -->
+				<item id="6036" min="1" max="1" chance="0.75" /> <!-- Greater Magic Haste Potion -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2632,15 +2617,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1903" min="1" max="1" chance="25.5201" /> <!-- Elven Ring Piece -->
-				<item id="6036" min="1" max="1" chance="5.0998" /> <!-- Greater Magic Haste Potion -->
-				<item id="1902" min="1" max="1" chance="15.5008" /> <!-- Elven Earring Beads -->
+				<item id="36531" min="1" max="1" chance="9.466" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="21271" level="37" type="L2Monster" name="Cave Ant">
 		<parameters>
@@ -2755,6 +2736,7 @@
 		</collision>
 	</npc>
 	<npc id="21272" level="38" type="L2Monster" name="Cave Ant Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2773,8 +2755,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="7353" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+		<stats>
+			<vitals hp="887" hpRegen="4.5" mp="447" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="98.8349371271581" />
 			<attribute>
@@ -2789,8 +2771,6 @@
 		<status undying="false" />
 		<skill_list>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2806,22 +2786,15 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="679" max="1355" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4462999999523163">
-					<item id="21732" min="1" max="1" chance="1.732" /> <!-- Sword of Revolution - Event -->
-					<item id="2034" min="1" max="1" chance="98.268" /> <!-- Sword of Revolution Blade -->
-				</group>
-				<group chance="40.77259826660156">
-					<item id="1864" min="3" max="9" chance="13.5734" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="40.7202" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="16.2881" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="25.0586" /> <!-- Cord -->
-					<item id="2154" min="1" max="1" chance="4.3597" /> <!-- Recipe: Elven Earring -->
-				</group>
+				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2855,15 +2828,11 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="7" chance="80.2957" /> <!-- Stem -->
-				<item id="1869" min="1" max="3" chance="80.2957" /> <!-- Iron Ore -->
-				<item id="1901" min="1" max="1" chance="22.1811" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="9.904" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="21273" level="39" type="L2Monster" name="Cave Noble Ant">
 		<parameters>
@@ -4436,6 +4405,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="21294" level="70" type="L2Monster" name="Canyon Antelope">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4450,8 +4420,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="57369" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7748" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+		<stats>
+			<vitals hp="4890" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -4466,8 +4436,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4490,17 +4458,19 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="92" max="215" chance="70" /> <!-- Adena -->
+				<item id="57" min="448" max="1047" chance="70" /> <!-- Adena -->
 				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21295" level="72" type="L2Monster" name="Canyon Antelope Slave">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4518,8 +4488,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="62509" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8052" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+		<stats>
+			<vitals hp="5082" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -4535,8 +4505,6 @@
 		<skill_list>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4559,17 +4527,19 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
+				<item id="57" min="449" max="1048" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21296" level="71" type="L2Monster" name="Canyon Bandersnatch">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -4585,8 +4555,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="87805" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7901" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats>
+			<vitals hp="4986" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -4600,8 +4570,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -4625,17 +4593,19 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="100" max="233" chance="70" /> <!-- Adena -->
-				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="57" min="471" max="1099" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.075" /> <!-- Orichalcum -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="21297" level="73" type="L2Monster" name="Canyon Bandersnatch Slave">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -4653,8 +4623,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="90605" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8199" hpRegen="8.5" mp="1377.8" mpRegen="3" />
+		<stats>
+			<vitals hp="5174" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
@@ -4670,8 +4640,6 @@
 		<skill_list>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4695,13 +4663,14 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="97" max="227" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="36529" min="1" max="1" chance="0.075" /> <!-- Quality Fiber -->
+				<item id="57" min="430" max="1003" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36517" min="1" max="1" chance="3.500" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="6.999" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="1.423" /> <!-- Durable Leather -->
 			</corpse>
 		</drop_lists>
 	</npc>

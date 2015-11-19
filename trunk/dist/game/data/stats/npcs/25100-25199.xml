@@ -4578,6 +4578,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="25189" level="34" type="L2RaidBoss" name="Cronos' Servitor Mumu" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25190" count="3" respawnTime="360" weightPoint="1" /> <!-- Mumu's Wizard -->
@@ -4589,8 +4590,8 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2417862" sp="580" raidPoints="496" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="65791.6741786232" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
+		<stats>
+			<vitals hp="103390" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="151.742801059792" magical="12.040611940131" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="398.8458" magical="194.58" evasion="-18" />
 			<attribute>
@@ -4606,8 +4607,6 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="3" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4620,25 +4619,20 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
-			<death>
-				<group chance="72.56089782714844">
-					<item id="438" min="1" max="1" chance="29.0162" /> <!-- Sage's Rag -->
-					<item id="1953" min="12" max="36" chance="70.9838" /> <!-- Sage's Rag Lining -->
-				</group>
-				<group chance="28.87540054321289">
-					<item id="280" min="1" max="1" chance="28.9083" /> <!-- Light Crossbow -->
-					<item id="2054" min="12" max="36" chance="71.0917" /> <!-- Light Crossbow Shaft -->
-				</group>
-				<group chance="41.689701080322266">
-					<item id="952" min="12" max="36" chance="100" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
-		</drop_lists>
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="280" min="1" max="1" chance="7.996" /> <!-- Light Bow -->
+				<item id="438" min="1" max="1" chance="3.78" /> <!-- Sage's Rags -->
+				<item id="952" min="3" max="9" chance="33.73" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="1953" min="105" max="315" chance="8.407" /> <!-- Sage's Rag Lining -->
+				<item id="2054" min="108" max="324" chance="2.115" /> <!-- Light Bow Shaft -->
+				<item id="39629" min="1" max="1" chance="0.005111" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25190" level="33" type="L2Monster" name="Mumu's Wizard" title="Raid Fighter">
 		<parameters>

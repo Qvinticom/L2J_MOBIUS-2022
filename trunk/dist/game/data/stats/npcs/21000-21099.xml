@@ -2984,6 +2984,7 @@
 		</collision>
 	</npc>
 	<npc id="21035" level="42" type="L2Monster" name="Catherok">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -3007,8 +3008,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="144" /> <!-- rhand: Sword of Occult -->
 		<acquire exp="16327" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2102" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2102" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<attribute>
@@ -3025,8 +3026,6 @@
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4072" level="4" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3050,8 +3049,9 @@
 		<drop_lists>
 			<death>
 				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
-				<item id="36552" min="1" max="1" chance="0.3" /> <!--  Armor Fragment -->
-				<group chance="42.0">
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -3084,7 +3084,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36552" min="1" max="1" chance="0.3" /> <!--  Armor Fragment -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 			</corpse>
 		</drop_lists>
 	</npc>
@@ -6652,6 +6652,7 @@
 		</collision>
 	</npc>
 	<npc id="21096" level="22" type="L2Monster" name="Cloudy Beast">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -6664,9 +6665,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="1507" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="387.02878" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
+		<acquire exp="1507" sp="0" />
+		<stats>
+			<vitals hp="388" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="92.65694" magical="61.6920289224665" />
 			<attribute>
@@ -6680,8 +6681,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6697,21 +6696,16 @@
 				<clan>BEAST</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="14.5" grown="18" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="168" max="301" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.171299934387207">
-					<item id="39" min="1" max="1" chance="7.0524" /> <!-- Boots -->
-					<item id="1930" min="1" max="1" chance="85.8951" /> <!-- Boot Lining -->
-					<item id="51" min="1" max="1" chance="7.0525" /> <!-- Bracer -->
-				</group>
-				<group chance="15.603099822998047">
-					<item id="1866" min="1" max="1" chance="31.0781" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="46.6171" /> <!-- Charcoal -->
-					<item id="2179" min="1" max="1" chance="22.3048" /> <!-- Recipe: Crafted Leather Gloves -->
-				</group>
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="11.1" /> <!-- Fiber -->
+				<item id="36516" min="1" max="1" chance="9.656" /> <!-- Worn Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6745,15 +6739,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1926" min="1" max="1" chance="3.731" /> <!-- Piece Bone Breastplate Fragment -->
-				<item id="1866" min="1" max="1" chance="24.6245" /> <!-- Suede -->
-				<item id="1871" min="1" max="1" chance="36.9368" /> <!-- Charcoal -->
+				<item id="36531" min="1" max="1" chance="6.828" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="14.5" grown="18" />
-		</collision>
 	</npc>
 	<npc id="21097" level="23" type="L2Monster" name="Young Araneid">
 		<parameters>
@@ -6968,6 +6956,7 @@
 		</collision>
 	</npc>
 	<npc id="21099" level="25" type="L2Monster" name="Cloudy Beast Turen">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -6980,9 +6969,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="1821" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+		<acquire exp="1821" sp="0" />
+		<stats>
+			<vitals hp="461" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="67.8031159084826" />
 			<attribute>
@@ -6996,8 +6985,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -7013,23 +7000,18 @@
 				<clan>BEAST</clan>
 			</clan_list>
 		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="14.5" grown="18" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="188" max="353" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4323999881744385">
-					<item id="626" min="1" max="1" chance="6.6164" /> <!-- Bronze Shield -->
-					<item id="45" min="1" max="1" chance="4.6397" /> <!-- Bone Helmet -->
-					<item id="1932" min="1" max="1" chance="88.7439" /> <!-- Bone Helmet Design -->
-				</group>
-				<group chance="2.5650999546051025">
-					<item id="1875" min="1" max="1" chance="12.4881" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="31.2204" /> <!-- Cokes -->
-					<item id="5549" min="1" max="1" chance="18.7322" /> <!-- Metallic Thread -->
-					<item id="2152" min="1" max="1" chance="32.9793" /> <!-- Recipe: Enchanted Necklace -->
-					<item id="8294" min="1" max="1" chance="4.58" /> <!-- Recipe: Steel Sword (100%) -->
-				</group>
+				<item id="57" min="7" max="17" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="6.071" /> <!-- Fiber -->
+				<item id="36541" min="1" max="1" chance="1.065" /> <!-- Steel Wire -->
+				<item id="2152" min="1" max="1" chance="0.75" /> <!-- Recipe: Magic Necklace -->
+				<item id="8294" min="1" max="1" chance="0.075" /> <!-- Recipe: Steel Sword -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7063,14 +7045,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1875" min="1" max="1" chance="2.8539" /> <!-- Stone of Purity -->
-				<item id="1899" min="1" max="1" chance="6.6888" /> <!-- Necklace of Devotion Chain -->
-				<item id="2152" min="1" max="1" chance="7.5366" /> <!-- Recipe: Enchanted Necklace -->
+				<item id="36531" min="1" max="1" chance="7.947" /> <!-- Thread -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="14.5" grown="18" />
-		</collision>
 	</npc>
 </list>

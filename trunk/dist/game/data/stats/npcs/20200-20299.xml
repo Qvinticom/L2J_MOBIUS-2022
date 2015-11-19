@@ -268,6 +268,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20206" level="25" type="L2Monster" name="Cardiff Werewolf">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -280,9 +281,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1768" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="460.96247" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+		<acquire exp="1768" sp="0" />
+		<stats>
+			<vitals hp="461" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="67.8031159084826" />
 			<attribute>
@@ -296,8 +297,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -309,22 +308,15 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="26" />
+		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="183" max="343" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.125900000333786">
-					<item id="391" min="1" max="1" chance="38.4419" /> <!-- Puma Skin Shirt -->
-					<item id="413" min="1" max="1" chance="61.5581" /> <!-- Puma Skin Gaiters -->
-				</group>
-				<group chance="19.6830997467041">
-					<item id="1869" min="1" max="1" chance="23.6964" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="47.3928" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="2.3696" /> <!-- Steel -->
-					<item id="2182" min="1" max="1" chance="2.8447" /> <!-- Recipe: Scale Gaiters -->
-					<item id="6666" min="1" max="1" chance="23.6965" /> <!-- Deluxe Chest Key - Grade 2 -->
-				</group>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -358,15 +350,10 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2182" min="1" max="1" chance="4.9884" /> <!-- Recipe: Scale Gaiters -->
-				<item id="376" min="1" max="1" chance="0.2072" /> <!-- Iron Plate Gaiters -->
-				<item id="1899" min="1" max="1" chance="6.4927" /> <!-- Necklace of Devotion Chain -->
+				<item id="36531" min="1" max="1" chance="3.903" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</drop_lists>
-		<collision>
-			<radius normal="10" />
-			<height normal="26" />
-		</collision>
 	</npc>
 	<npc id="20207" level="26" type="L2Monster" name="Ol Mahum Guerilla">
 		<parameters>
@@ -3104,6 +3091,7 @@
 		</collision>
 	</npc>
 	<npc id="20236" level="46" type="L2Monster" name="Cave Servant">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3118,8 +3106,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="945" /> <!-- rhand: Sword of Damascus lhand: Skeleton Buckler -->
 		<acquire exp="5539" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1230" hpRegen="5.5" mp="637" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="121.302932993263" shield="91" shieldRate="20" />
 			<attribute>
@@ -3135,8 +3123,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3152,54 +3138,21 @@
 				<clan>CAVE_SERVANT</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="484" max="990" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.671600103378296">
-					<item id="62" min="1" max="1" chance="0.2489" /> <!-- Reinforced Mithril Boots -->
-					<item id="1958" min="1" max="1" chance="10.8622" /> <!-- Reinforced Mithril Boots Design -->
-					<item id="2429" min="1" max="1" chance="0.2489" /> <!-- Chain Boots -->
-					<item id="2937" min="1" max="1" chance="10.8622" /> <!-- Chain Boots Part -->
-					<item id="2430" min="1" max="1" chance="0.2489" /> <!-- Karmian Boots -->
-					<item id="2938" min="1" max="1" chance="10.8622" /> <!-- Karmian Boots Fabric -->
-					<item id="2431" min="1" max="1" chance="0.2489" /> <!-- Plated Leather Boots -->
-					<item id="2939" min="1" max="1" chance="10.8622" /> <!-- Plate Leather Boots Lining -->
-					<item id="2432" min="1" max="1" chance="0.2489" /> <!-- Dwarven Chain Boots -->
-					<item id="2940" min="1" max="1" chance="10.8622" /> <!-- Dwarven Chain Boots Part -->
-					<item id="2433" min="1" max="1" chance="0.2489" /> <!-- Boots of Seal -->
-					<item id="2941" min="1" max="1" chance="10.8622" /> <!-- Boots of Seal Pattern -->
-					<item id="2452" min="1" max="1" chance="0.2489" /> <!-- Reinforced Mithril Gloves -->
-					<item id="2942" min="1" max="1" chance="10.8622" /> <!-- Reinforced Mithril Gloves Design -->
-					<item id="2453" min="1" max="1" chance="0.2489" /> <!-- Chain Gloves -->
-					<item id="2943" min="1" max="1" chance="10.8622" /> <!-- Chain Gloves Design -->
-					<item id="2454" min="1" max="1" chance="0.2489" /> <!-- Karmian Gloves -->
-					<item id="2944" min="1" max="1" chance="10.8623" /> <!-- Karmian Gloves Fabric -->
-				</group>
-				<group chance="12.934599876403809">
-					<item id="1870" min="1" max="1" chance="44.9265" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="44.9265" /> <!-- Varnish -->
-					<item id="1874" min="1" max="1" chance="2.9951" /> <!-- Oriharukon Ore -->
-					<item id="4043" min="1" max="1" chance="1.4976" /> <!-- Asofe -->
-					<item id="4039" min="1" max="1" chance="1.4976" /> <!-- Mold Glue -->
-					<item id="2216" min="1" max="1" chance="1.8565" /> <!-- Recipe: Great Helmet -->
-					<item id="8723" min="1" max="1" chance="1.7971" /> <!-- Life Stone - Level 46 -->
-					<item id="8733" min="1" max="1" chance="0.4493" /> <!-- Mid-Grade Life Stone - Level 46 -->
-					<item id="8743" min="1" max="1" chance="0.0449" /> <!-- High-Grade Life Stone - Level 46 -->
-					<item id="8753" min="1" max="1" chance="0.0089" /> <!-- Top-Grade Life Stone - Level 46 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2219" min="1" max="1" chance="7.637" /> <!-- Recipe: Crimson Boots -->
-				<item id="3021" min="1" max="1" chance="0.4284" /> <!-- Recipe: Dwarven War Hammer -->
-				<item id="1908" min="1" max="1" chance="11.6435" /> <!-- Moonstone Earring Wire -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="25" grown="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="7.102" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20237" level="47" type="L2Monster" name="Cave Servant Archer">
 		<parameters>
@@ -3268,6 +3221,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="20238" level="48" type="L2Monster" name="Cave Servant Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -3283,8 +3237,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="77" lhand="2495" /> <!-- rhand: Tsurugi lhand: Chain Shield -->
 		<acquire exp="7177" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1325" hpRegen="5.5" mp="692" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="191.12803" magical="127.255200286259" shield="96" shieldRate="20" />
 			<attribute>
@@ -3301,8 +3255,6 @@
 		<skill_list>
 			<skill id="4075" level="4" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -3324,21 +3276,18 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<group chance="70">
-					<item id="57" min="17" max="39" chance="70" /> <!-- Adena -->
-					<item id="8724" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.075" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0055" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 49 -->
-				</group>
+				<item id="57" min="17" max="39" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="9.500" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="9.264" /> <!-- Thread -->
 				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="20239" level="49" type="L2Monster" name="Cave Servant Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3354,8 +3303,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="73" lhand="2495" /> <!-- rhand: Shamshir lhand: Chain Shield -->
 		<acquire exp="7629" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1373" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="195.66302" magical="130.274648808072" shield="98" shieldRate="20" />
 			<attribute>
@@ -3372,8 +3321,6 @@
 		<skill_list>
 			<skill id="4075" level="4" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3395,46 +3342,21 @@
 				<ignore_npc_id>20274</ignore_npc_id> <!-- Cave Servant Warrior -->
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="669" max="1365" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.25290000438690186">
-					<item id="73" min="1" max="1" chance="0.336" /> <!-- Shamshir -->
-					<item id="2077" min="1" max="1" chance="24.664" /> <!-- Shamshir Blade -->
-					<item id="74" min="1" max="1" chance="0.336" /> <!-- Katana -->
-					<item id="2078" min="1" max="1" chance="24.664" /> <!-- Katana Blade -->
-					<item id="131" min="1" max="1" chance="0.336" /> <!-- Spirit Sword -->
-					<item id="2080" min="1" max="1" chance="24.664" /> <!-- Spirit Sword Blade -->
-					<item id="133" min="1" max="1" chance="0.336" /> <!-- Raid Sword -->
-					<item id="2081" min="1" max="1" chance="24.664" /> <!-- Raid Sword Blade -->
-				</group>
-				<group chance="18.58880043029785">
-					<item id="1872" min="1" max="1" chance="44.8961" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="44.8961" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.4896" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2448" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.2928" /> <!-- Mold Hardener -->
-					<item id="3007" min="1" max="1" chance="1.2244" /> <!-- Recipe: Theca Leather Boots -->
-					<item id="2351" min="1" max="1" chance="0.0704" /> <!-- Recipe: Scorpion -->
-					<item id="952" min="1" max="1" chance="0.449" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="8724" min="1" max="1" chance="1.1224" /> <!-- Life Stone - Level 49 -->
-					<item id="8734" min="1" max="1" chance="0.2806" /> <!-- Mid-Grade Life Stone - Level 49 -->
-					<item id="8744" min="1" max="1" chance="0.0281" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8754" min="1" max="1" chance="0.0057" /> <!-- Top-Grade Life Stone - Level 49 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="3007" min="1" max="1" chance="6.1644" /> <!-- Recipe: Theca Leather Boots -->
-				<item id="2079" min="1" max="1" chance="1.1647" /> <!-- Bec De Corbin Blade -->
-				<item id="1867" min="1" max="5" chance="75.3426" /> <!-- Animal Skin -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="18" max="41" chance="70" /> <!-- Adena -->
+				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="9.85" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20240" level="51" type="L2Monster" name="Royal Cave Servant">
 		<parameters>
@@ -3977,6 +3899,7 @@
 		</collision>
 	</npc>
 	<npc id="20246" level="58" type="L2Monster" name="Cave Keeper">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3992,8 +3915,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
 		<acquire exp="10479" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+		<stats>
+			<vitals hp="1829" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="158.459289236126" />
 			<attribute>
@@ -4008,8 +3931,6 @@
 		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4035,44 +3956,22 @@
 				<ignore_npc_id>20276</ignore_npc_id> <!-- Royal Cave Servant -->
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="933" max="1900" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.091900110244751">
-					<item id="12338" min="1" max="1" chance="4.5566" /> <!-- Common Item - Adamantite Earring -->
-					<item id="4049" min="1" max="1" chance="29.1581" /> <!-- Adamantite Earring Gemstone -->
-					<item id="12339" min="1" max="1" chance="3.4209" /> <!-- Common Item - Adamantite Necklace -->
-					<item id="4051" min="1" max="1" chance="21.559" /> <!-- Adamantite Necklace Chain -->
-					<item id="12340" min="1" max="1" chance="6.863" /> <!-- Common Item - Adamantite Ring -->
-					<item id="4050" min="1" max="1" chance="34.4424" /> <!-- Adamantite Ring Wire -->
-				</group>
-				<group chance="18.552799224853516">
-					<item id="1869" min="1" max="1" chance="31.3398" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="62.6796" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.134" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4179" /> <!-- Durable Metal Plate -->
-					<item id="4043" min="1" max="1" chance="1.0447" /> <!-- Asofe -->
-					<item id="4969" min="1" max="1" chance="0.0361" /> <!-- Recipe: Hell Knife (60%) -->
-					<item id="4176" min="1" max="1" chance="0.3898" /> <!-- Recipe: Sealed Doom Boots (100%) -->
-					<item id="4157" min="1" max="1" chance="0.1559" /> <!-- Recipe: Blue Wolf Gaiters (100%) -->
-					<item id="8727" min="1" max="1" chance="0.6268" /> <!-- Life Stone - Level 58 -->
-					<item id="8737" min="1" max="1" chance="0.1567" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8747" min="1" max="1" chance="0.0157" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8757" min="1" max="1" chance="0.003" /> <!-- Top-Grade Life Stone - Level 58 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="2964" min="1" max="1" chance="12.862" /> <!-- Divine Gloves Pattern -->
-				<item id="4049" min="1" max="1" chance="12.3897" /> <!-- Adamantite Earring Gemstone -->
-				<item id="947" min="1" max="1" chance="0.0945" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-			</corpse>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="46" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="25" max="58" chance="70" /> <!-- Adena -->
+				<item id="947" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="9.128" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20248" level="31" type="L2Monster" name="Turak Bugbear">
 		<parameters>

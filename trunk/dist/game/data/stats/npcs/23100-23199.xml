@@ -2553,10 +2553,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23162" level="87" type="L2Monster" name="Corpse Devourer">
-		<race>BUG</race>
-		<acquire exp="765498" sp="3011" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="42033" hpRegen="7.5" mp="1917  " mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+	<race>BUG</race>
+		<acquire exp="1088188" sp="261" />
+		<stats>
+			<vitals hp="42033" hpRegen="9.5" mp="1917" mpRegen="3.3" />
 			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="960" magical="940" />
 			<attribute>
@@ -2570,9 +2571,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="12" />
-			<skill id="5465" level="1" />
-			<skill id="14627" level="1" />
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -2581,22 +2582,25 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="403" max="938" chance="70" /> <!-- Adena -->
+				<item id="57" min="483" max="1126" chance="70" /> <!-- Adena -->
 				<item id="36794" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper Fragment -->
-				<item id="36732" min="1" max="1" chance="0.0055" /> <!-- Recipe: Requiem Shaper (60%) -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36732" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Shaper (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="40205" min="1" max="1" chance="9" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.01" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
 	</npc>
 	<npc id="23163" level="87" type="L2Monster" name="Corpse Absorber">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<acquire exp="765498" sp="3011" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="42033" hpRegen="7.5" mp="2875" mpRegen="2.7" />
+		<acquire exp="1088188" sp="261" />
+		<stats>
+			<vitals hp="42033" hpRegen="9.5" mp="2875" mpRegen="3.3" />
 			<attack physical="24000" magical="16000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="960" magical="940" />
 			<attribute>
@@ -2610,9 +2614,9 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="14628" level="1" />
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -2621,12 +2625,13 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="415" max="967" chance="70" /> <!-- Adena -->
-				<item id="36816" min="1" max="1" chance="2.500" /> <!-- Immortal Circlet Ingredient -->
-				<item id="36754" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Circlet (60%) -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17315" min="1" max="1" chance="0.03" /> <!-- Immortal Circlet -->
-				<item id="30423" min="1" max="1" chance="0.0055" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="57" min="498" max="1160" chance="70" /> <!-- Adena -->
+				<item id="36816" min="1" max="1" chance="2.928" /> <!-- Immortal Circlet Ingredient -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="30423" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="36754" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Circlet (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
@@ -2634,10 +2639,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23164" level="88" type="L2Monster" name="Corpse Shredder">
-		<race>UNDEAD</race>
-		<acquire exp="869224" sp="3455" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="42254" hpRegen="7.5" mp="1952" mpRegen="2.7" />
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+	<race>UNDEAD</race>
+		<acquire exp="1235533" sp="296" />
+		<stats>
+			<vitals hp="42254" hpRegen="9.5" mp="1952" mpRegen="3.3" />
 			<attack physical="27225" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1089" magical="1056" />
 			<attribute>
@@ -2651,12 +2657,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="1" />
-			<skill id="14629" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2665,15 +2670,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="418" max="974" chance="70" /> <!-- Adena -->
+				<item id="17295" min="1" max="1" chance="0.003" /> <!-- Requiem Stormer -->
+				<item id="57" min="501" max="1169" chance="70" /> <!-- Adena -->
 				<item id="36799" min="1" max="1" chance="0.3" /> <!-- Requiem Stormer Fragment -->
 				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
-				<item id="36737" min="1" max="1" chance="0.0055" /> <!-- Recipe: Requiem Stormer (60%) -->
-				<item id="17295" min="1" max="1" chance="0.003" /> <!-- Requiem Stormer -->
+				<item id="36737" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Stormer (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="5" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="5.884" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.165" /> <!-- Synthetic Braid -->
 				<item id="36886" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</corpse>
 		</drop_lists>
@@ -2724,10 +2730,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23166" level="88" type="L2Monster" name="Contaminated Rotten Root">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="915974" sp="3640" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="42254" hpRegen="7.5" mp="2928" mpRegen="2.7" />
+		<acquire exp="1302318" sp="312" />
+		<stats>
+			<vitals hp="42254" hpRegen="9.5" mp="2928" mpRegen="3.3" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1198" magical="1162" />
 			<attribute>
@@ -2741,11 +2748,11 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="5465" level="1" />
-			<skill id="4416" level="5" />
-			<skill id="14630" level="1" />
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4412" level="13" /> -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -2754,13 +2761,15 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="432" max="1014" chance="70" /> <!-- Adena -->
-				<item id="36817" min="1" max="1" chance="2" /> <!-- Immortal Tunic Ingredient -->
+				<item id="57" min="522" max="1216" chance="70" /> <!-- Adena -->
+				<item id="36817" min="1" max="1" chance="2.363" /> <!-- Immortal Tunic Ingredient -->
 				<item id="36755" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Tunic (60%) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="40205" min="1" max="1" chance="10.98" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.15" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</drop_lists>
@@ -2940,10 +2949,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23171" level="90" type="L2Monster" name="Corpse Collector">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<acquire exp="877465" sp="3573" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="43244" hpRegen="7.5" mp="3035" mpRegen="2.7" />
+		<acquire exp="1247606" sp="299" />
+		<stats>
+			<vitals hp="43244" hpRegen="9.5" mp="3035" mpRegen="3.3" />
 			<attack physical="33688" magical="21875" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1300" magical="1375" />
 			<attribute>
@@ -2957,11 +2967,10 @@
 		</stats>
 		<status attackable="true" />
 		<skill_list>
-			<skill id="14635" level="1" />
-			<skill id="5467" level="1" />
-			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -2970,14 +2979,16 @@
 		</collision>
 		<drop_lists>
 			<death>
-				<item id="57" min="443" max="1035" chance="70" /> <!-- Adena -->
-				<item id="36818" min="1" max="1" chance="3.150" /> <!-- Immortal Stocking Ingredient -->
+				<item id="57" min="532" max="1242" chance="70" /> <!-- Adena -->
+				<item id="36818" min="1" max="1" chance="3.907" /> <!-- Immortal Stocking Ingredient -->
 				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
 				<item id="36756" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Stockings (60%) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="7.900" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="9.469" /> <!-- Thin Braid -->
 				<item id="32816" min="1" max="1" chance="0.075" /> <!-- Recipe: Blessed Spiritshot R -->
 			</corpse>
 		</drop_lists>

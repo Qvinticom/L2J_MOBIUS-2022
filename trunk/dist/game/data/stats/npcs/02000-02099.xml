@@ -1,79 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="2081" level="82" type="L2Npc" name="Canabion of Plague">
-		<!-- TODO: Must be confirmed -->
+	<npc id="2081" level="82" type="L2Monster" name="Canabion of Plague">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="6303" mp="2444.0" />
+		<acquire exp="12708" sp="3" />
+		<stats>
+			<vitals hp="3782" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
+		<status attackable="true" />
 		<skill_list>
-			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
 		</skill_list>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="18.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="2082" level="82" type="L2Npc" name="Canabion of Plague" title="Doppler">
-		<!-- TODO: Must be confirmed -->
+	<npc id="2082" level="82" type="L2Monster" name="Canabion of Plague" title="Doppler">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="6303" mp="2444.0" />
+		<acquire exp="12708" sp="3" />
+		<stats>
+			<vitals hp="3782" hpRegen="9.5" mp="1743" mpRegen="3.3" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
+		<status attackable="true" />
 		<skill_list>
-			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
 		</skill_list>
 		<collision>
 			<radius normal="9.4" />
 			<height normal="20" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
-	<npc id="2083" level="83" type="L2Npc" name="Canabion of Plague" title="Void">
-		<!-- TODO: Must be confirmed -->
+	<npc id="2083" level="83" type="L2Monster" name="Canabion of Plague" title="Void">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="6635" mp="2444.0" />
+		<acquire exp="13020" sp="3" />
+		<stats>        
+			<vitals hp="3982" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<attribute>
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="160" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
+		<status attackable="true" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5565" level="1" /> <!-- Expose Weak Point -->
 		</skill_list>
 		<collision>
 			<radius normal="9" />
 			<height normal="22.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 </list>
