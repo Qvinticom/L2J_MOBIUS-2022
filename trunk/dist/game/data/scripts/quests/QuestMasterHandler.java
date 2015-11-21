@@ -245,6 +245,7 @@ import quests.Q10743_StrangeFungus.Q10743_StrangeFungus;
 import quests.Q10744_StrongerThanSteel.Q10744_StrongerThanSteel;
 import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
 import quests.Q10746_SeeTheWorld.Q10746_SeeTheWorld;
+import quests.Q10756_AnInterdimensionalDraft.Q10756_AnInterdimensionalDraft;
 
 /**
  * @author NosBit
@@ -478,7 +479,8 @@ public class QuestMasterHandler
 		Q10743_StrangeFungus.class,
 		Q10744_StrongerThanSteel.class,
 		Q10745_TheSecretIngredients.class,
-		Q10746_SeeTheWorld.class
+		Q10746_SeeTheWorld.class,
+		Q10756_AnInterdimensionalDraft.class
 	};
 	
 	public static void main(String[] args)
