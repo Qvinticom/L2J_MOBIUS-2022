@@ -1,2488 +1,2674 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14300" type="EtcItem" name="Corroded Yaksa Mace">
+	<item id="14300" name="Corroded Yaksa Mace" type="Weapon">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1640" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1640" />
 		<for>
-			<set stat="pAtk" val="156" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14301" type="EtcItem" name="Shamshir*Shamshir">
+	<item id="14301" name="Shamshir*Shamshir" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-8" /> <!-- Special Ability: Guidance -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="2330" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3046-8" />
-		<for>
-			<set stat="pAtk" val="190" />
-			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
-	</item>
-	<item id="14302" type="EtcItem" name="Berserker Blade">
-		<set name="icon" val="icon.weapon_berserker_blade_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="252" />
-		<set name="crystal_type" val="C" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1380" />
-		<set name="price" val="942700" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="2330" />
 		<for>
-			<set stat="pAtk" val="190" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14303" type="EtcItem" name="Crystal Dagger">
-		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
+	<item id="14302" name="Berserker Blade" type="Weapon">
+		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
-		<set name="material" val="CRYSTAL" />
-		<set name="weight" val="1000" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3043-4" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1380" />
 		<for>
-			<set stat="pAtk" val="136" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="12" />
+			<set stat="pAtk" val="190" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14303" name="Crystal Dagger" type="Weapon">
+		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="252" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3043-4" /> <!-- Special Ability: Critical Damage -->
+		<set name="material" val="CRYSTAL" />
+		<set name="price" val="942700" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1000" />
+		<for>
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14304" type="EtcItem" name="Ecliptic Sword">
+	<item id="14304" name="Ecliptic Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="942700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1380" />
-		<set name="price" val="942700" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set stat="pAtk" val="125" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="111" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14305" type="EtcItem" name="Ecliptic Axe">
+	<item id="14305" name="Ecliptic Axe" type="Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1640" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1640" />
 		<for>
-			<set stat="pAtk" val="125" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="111" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14306" type="EtcItem" name="Dwarven Hammer">
+	<item id="14306" name="Dwarven Hammer" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2010" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="190" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14307" type="EtcItem" name="Admiral's Estoc">
+	<item id="14307" name="Corroded Admiral's Estoc" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="RAPIER" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1380" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="40" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1380" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="141" />
-			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="14308" type="EtcItem" name="Saber Tooth">
+	<item id="14308" name="Saber Tooth" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1950" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="15" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1950" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="169" />
-			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="169" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14309" type="EtcItem" name="Sharpshooter">
+	<item id="14309" name="Sharpshooter" type="Weapon">
 		<set name="icon" val="icon.weapon_taslam_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="942700" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1740" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="198" />
-			<set stat="mAtk" val="83" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="14310" type="EtcItem" name="Damascus Sword">
+	<item id="14310" name="Damascus Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="1350" />
 		<set name="price" val="2018280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<set stat="pAtk" val="194" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
-	<item id="14311" type="EtcItem" name="Lance">
-		<set name="icon" val="icon.weapon_lancia_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1350" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="194" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14311" name="Lance" type="Weapon">
+		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="180" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="1920" />
-		<set name="price" val="2018280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
-		<for>
-			<set stat="pAtk" val="194" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
-	</item>
-	<item id="14312" type="EtcItem" name="Deadman's Glory">
-		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="180" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="BONE" />
-		<set name="weight" val="1600" />
-		<set name="price" val="2018280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<set stat="pAtk" val="194" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
-	<item id="14313" type="EtcItem" name="Art of Battle Axe">
-		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="180" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="CHRYSOLITE" />
-		<set name="weight" val="1570" />
-		<set name="price" val="2018280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<for>
-			<set stat="pAtk" val="194" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
-	<item id="14314" type="EtcItem" name="Staff of Evil Spirits">
-		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="930" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="BLOOD_STEEL" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="1920" />
 		<for>
-			<set stat="pAtk" val="189" />
-			<set stat="mAtk" val="145" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14315" type="EtcItem" name="Demon's Dagger">
-		<set name="icon" val="icon.weapon_demons_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
+	<item id="14312" name="Deadman's Glory" type="Weapon">
+		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="970" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BONE" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1600" />
 		<for>
-			<set stat="pAtk" val="170" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="12" />
+			<set stat="pAtk" val="194" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14313" name="Art of Battle Axe" type="Weapon">
+		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="180" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="price" val="2018280" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1570" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="194" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14314" name="Staff of Evil Spirits" type="Weapon">
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="180" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="2018280" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="930" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="145" />
+			<set stat="pAtk" val="189" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14315" name="Demon's Dagger" type="Weapon">
+		<set name="icon" val="icon.weapon_demons_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="180" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="2018280" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="970" />
+		<for>
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14316" type="EtcItem" name="Bellion Cestus">
+	<item id="14316" name="Bellion Cestus" type="Weapon">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
-		<set name="weight" val="1390" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1390" />
 		<for>
-			<set stat="pAtk" val="236" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14317" type="EtcItem" name="Bow of Peril">
+	<item id="14317" name="Bow of Peril" type="Weapon">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="1700" />
+		<set name="mp_consume" val="4" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="4" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1700" />
 		<for>
-			<set stat="pAtk" val="400" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="400" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14318" type="EtcItem" name="Samurai Long Sword*Samurai Long Sword">
+	<item id="14318" name="Samurai Long Sword*Samurai Long Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="2080" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="2080" />
 		<for>
-			<set stat="pAtk" val="236" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14319" type="EtcItem" name="Demon's Dagger">
+	<item id="14319" name="Demon's Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3043-6" /> <!-- Special Ability: Critical Damage -->
 		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="970" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3043-6" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="970" />
 		<for>
-			<set stat="pAtk" val="170" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14320" type="EtcItem" name="Guardian's Sword">
+	<item id="14320" name="Guardian's Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1930" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1930" />
 		<for>
-			<set stat="pAtk" val="236" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14321" type="EtcItem" name="Wizard's Tear">
+	<item id="14321" name="Wizard's Tear" type="Weapon">
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="2018280" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1350" />
-		<set name="price" val="2018280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set stat="pAtk" val="155" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14322" type="EtcItem" name="Kaim Vanul's Bones">
+	<item id="14322" name="Kaim Vanul's Bones" type="Weapon">
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="BONE" />
-		<set name="weight" val="1570" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1570" />
 		<for>
-			<set stat="pAtk" val="155" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="132" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14323" type="EtcItem" name="Star Buster">
+	<item id="14323" name="Star Buster" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1930" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1930" />
 		<for>
-			<set stat="pAtk" val="236" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14324" type="EtcItem" name="Colichemarde">
+	<item id="14324" name="Colichemarde" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="RAPIER" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1350" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="40" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1350" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="176" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="14325" type="EtcItem" name="Dismantler">
+	<item id="14325" name="Dismantler" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1930" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="15" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1930" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="210" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="210" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14326" type="EtcItem" name="Hell Hound">
+	<item id="14326" name="Hell Hound" type="Weapon">
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1700" />
 		<set name="price" val="2018280" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1700" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="245" />
-			<set stat="mAtk" val="99" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="99" />
+			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="14327" type="EtcItem" name="Sirra's Blade">
+	<item id="14327" name="Sirra's Blade" type="Weapon">
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="26968400" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1300" />
-		<set name="price" val="26968400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
 		<for>
-			<set stat="pAtk" val="251" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14328" type="EtcItem" name="Sword of Ipos">
+	<item id="14328" name="Sword of Ipos" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
-		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1820" />
 		<for>
-			<set stat="pAtk" val="305" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="8" />
+			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14329" type="EtcItem" name="Barakiel's Axe">
+	<item id="14329" name="Corroded Barakiel's Axe" type="Weapon">
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1550" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1550" />
 		<for>
-			<set stat="pAtk" val="251" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14330" type="EtcItem" name="Behemoth's Tuning Fork">
+	<item id="14330" name="Behemoth' Tuning Fork" type="Weapon">
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1890" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1890" />
 		<for>
-			<set stat="pAtk" val="305" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14331" type="EtcItem" name="Naga Storm">
+	<item id="14331" name="Naga Storm" type="Weapon">
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="930" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="930" />
 		<for>
-			<set stat="pAtk" val="220" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14332" type="EtcItem" name="Tiphon's Spear">
+	<item id="14332" name="Tiphon's Spear" type="Weapon">
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="material" val="CHRYSOLITE" />
-		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3599-1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="1820" />
 		<for>
-			<set stat="pAtk" val="251" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14333" type="EtcItem" name="Shyeed's Bow">
+	<item id="14333" name="Shyeed's Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1640" />
+		<set name="mp_consume" val="5" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="820" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="5" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="820" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1640" />
 		<for>
-			<set stat="pAtk" val="570" />
-			<set stat="mAtk" val="133" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="133" />
+			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
-	<item id="14334" type="EtcItem" name="Sobekk's Hurricane">
+	<item id="14334" name="Sobekk's Hurricane" type="Weapon">
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="crystal_count" val="1438" />
+		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1438" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="price" val="26968400" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1330" />
-		<set name="price" val="26968400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
 		<for>
-			<set stat="pAtk" val="305" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14335" type="EtcItem" name="Themis' Tongue">
+	<item id="14335" name="Themis' Tongue" type="Weapon">
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="820" />
 		<set name="price" val="26968400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="202" />
-			<set stat="mAtk" val="161" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
-	<item id="14336" type="EtcItem" name="Cabrio's Hand">
-		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1438" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1510" />
-		<set name="price" val="26968400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="202" />
-			<set stat="mAtk" val="161" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
-	</item>
-	<item id="14337" type="EtcItem" name="Corroded Daimon Crystal">
-		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1438" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="880" />
-		<set name="price" val="26968400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="245" />
-			<set stat="mAtk" val="177" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
-	</item>
-	<item id="14338" type="EtcItem" name="Tallum Blade*Damascus">
-		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
 		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1438" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1890" />
-		<set name="price" val="26968400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="820" />
 		<for>
-			<set stat="pAtk" val="305" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="8" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="161" />
+			<set stat="pAtk" val="202" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14336" name="Cabrio's Hand" type="Weapon">
+		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="1438" />
+		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="26968400" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1510" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="161" />
+			<set stat="pAtk" val="202" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14337" name="Corroded Daimon Crystal" type="Weapon">
+		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="1438" />
+		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="26968400" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="880" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="177" />
+			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14339" type="EtcItem" name="Éclair Bijou">
-		<set name="icon" val="icon.weapon_greed_stinger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
+	<item id="14338" name="Tallum Blade*Damascus" type="Weapon">
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1300" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1890" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="305" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14339" name="Éclair Bijou" type="Weapon">
+		<set name="icon" val="icon.weapon_greed_stinger_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="1438" />
+		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
 		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="26968400" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1300" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="228" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="14340" type="EtcItem" name="Corroded Durendal">
+	<item id="14340" name="Corroded Durendal" type="Weapon">
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1820" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="15" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1820" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="272" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="272" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14341" type="EtcItem" name="Screaming Vengeance">
+	<item id="14341" name="Screaming Vengeance" type="Weapon">
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="1438" />
 		<set name="crystal_type" val="A" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1640" />
 		<set name="price" val="26968400" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1640" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="318" />
-			<set stat="mAtk" val="121" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="121" />
+			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="14342" type="EtcItem" name="Necklace of Seal">
+	<item id="14342" name="Necklace of Seal" type="Armor">
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<set name="crystal_count" val="24" />
 		<set name="crystal_type" val="C" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="150" />
-		<set name="price" val="86880" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="price" val="86880" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="64" />
 		</for>
 	</item>
-	<item id="14343" type="EtcItem" name="Nassen's Earring">
+	<item id="14343" name="Nassen's Earring" type="Armor">
 		<set name="icon" val="icon.accessary_nassens_earing_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
 		<set name="crystal_count" val="18" />
 		<set name="crystal_type" val="C" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="65160" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="65160" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="48" />
 		</for>
 	</item>
-	<item id="14344" type="EtcItem" name="Ring of Seal">
+	<item id="14344" name="Ring of Seal" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="12" />
 		<set name="crystal_type" val="C" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="43440" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="43440" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="32" />
 		</for>
 	</item>
-	<item id="14345" type="EtcItem" name="Black Ore Earring">
+	<item id="14345" name="Black Ore Earring" type="Armor">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
 		<set name="crystal_count" val="13" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="142200" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="142200" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="54" />
 		</for>
 	</item>
-	<item id="14346" type="EtcItem" name="Black Ore Ring">
+	<item id="14346" name="Black Ore Ring" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="9" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="94800" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="94800" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="36" />
 		</for>
 	</item>
-	<item id="14347" type="EtcItem" name="Black Ore Necklace">
+	<item id="14347" name="Black Ore Necklace" type="Armor">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<set name="crystal_count" val="17" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="189600" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="189600" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="72" />
 		</for>
 	</item>
-	<item id="14348" type="EtcItem" name="Majestic Earring">
+	<item id="14348" name="Majestic Earring" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
 		<set name="crystal_count" val="79" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1498000" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="1498000" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<add stat="maxMp" val="25" />
 		</for>
 	</item>
-	<item id="14349" type="EtcItem" name="Majestic Ring">
+	<item id="14349" name="Majestic Ring" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="price" val="999000" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="999000" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 		</for>
 	</item>
-	<item id="14350" type="EtcItem" name="Majestic Necklace">
+	<item id="14350" name="Majestic Necklace" type="Armor">
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<set name="crystal_count" val="106" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
-		<set name="price" val="1998000" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="1998000" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<add stat="maxMp" val="33" />
 		</for>
 	</item>
-	<item id="14351" type="EtcItem" name="Gracian Anniversary Coins">
+	<item id="14351" name="Gracian Anniversary Coins" type="EtcItem">
+		<!-- Gracian Anniversary Coins can be used at an Item Merchant in order to receive a reward. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="14352" type="EtcItem" name="Mysterious Sculpture">
-		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="CLOTH" />
 	</item>
-	<item id="14353" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14352" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14354" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14353" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14355" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14354" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14356" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14355" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14357" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14356" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14358" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14357" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14359" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14358" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14360" type="EtcItem" name="Mysterious Sculpture">
+	<item id="14359" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_dropable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14361" type="EtcItem" name="Blood-stained Cloth">
+	<item id="14360" name="Mysterious Sculpture" type="EtcItem">
+		<!-- The Mysterious Sculpture possesses a mysterious power left from a dying creature. -->
+		<set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="14361" name="Blood-stained Cloth" type="EtcItem">
+		<!-- Piece of cloth soaked in the blood of angels and Platinum race that Magister Kaspar asked for. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14362" type="EtcItem" name="White Cloth">
+	<item id="14362" name="White Cloth" type="EtcItem">
+		<!-- Large piece of white cloth given by Magister Kaspar. Stain the cloth with the blood of angels and the Platinum race in the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_questitem" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
-	<item id="14363" type="Weapon" name="Icarus Sawsword {PvP}">
+	<item id="14363" name="Icarus Sawsword {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3651-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3651-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14364" type="Weapon" name="Icarus Disperser {PvP}">
+	<item id="14364" name="Icarus Disperser {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3650-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3650-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="318" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14365" type="Weapon" name="Icarus Spirit {PvP}">
+	<item id="14365" name="Icarus Spirit {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3651-1;3652-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-3;3651-1;3652-1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14366" type="Weapon" name="Icarus Heavy Arms {PvP}">
+	<item id="14366" name="Icarus Heavy Arms {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="442" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14367" type="Weapon" name="Icarus Trident {PvP}">
+	<item id="14367" name="Icarus Trident {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3653-1;3599-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3653-1;3599-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Polearm Multi-attack -->
+		<set name="material" val="BRONZE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14368" type="Weapon" name="Icarus Hammer {PvP}">
+	<item id="14368" name="Icarus Hammer {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-4;3653-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-4;3653-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14369" type="Weapon" name="Icarus Hand {PvP}">
+	<item id="14369" name="Icarus Hand {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
 		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3650-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain -->
 		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3650-1" />
 		<for>
-			<set stat="pAtk" val="442" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14370" type="Weapon" name="Icarus Hall {PvP}">
+	<item id="14370" name="Icarus Hall {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3651-1;3652-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-3;3651-1;3652-1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14371" type="Weapon" name="Icarus Spitter {PvP}">
+	<item id="14371" name="Icarus Spitter {PvP}" type="Weapon">
+		<!-- Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting -->
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="689" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14372" type="Weapon" name="Icarus Stinger {PvP}">
+	<item id="14372" name="Icarus Stinger {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Sawsword Conversion. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a C -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire -->
+		<set name="material" val="STEEL" />
 		<set name="random_damage" val="40" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
+			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="329" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="10" />
-			<add stat="accCombat" val="-1.5" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="406" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14373" type="Weapon" name="Icarus Wingblade {PvP}">
+	<item id="14373" name="Icarus Wingblade {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3656-1;3657-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Decrease Range, PvP Weapon - Decrease Resist -->
+		<set name="material" val="STEEL" />
 		<set name="random_damage" val="15" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="1800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3656-1;3657-1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="393" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="393" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14374" type="Weapon" name="Icarus Shooter {PvP}">
+	<item id="14374" name="Icarus Shooter {PvP}" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Icarus Spitter Conversion. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3653-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3653-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="422" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="422" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="303" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14375" type="Weapon" name="Icarus Dual Sword {PvP}">
+	<item id="14375" name="Icarus Dualsword {PvP}" type="Weapon">
+		<!-- P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fist weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damag -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3411-1" /> <!-- Special Ability: Focus -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3656-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Decrease Range -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3411-1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3656-1" />
 		<for>
-			<set stat="pAtk" val="442" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14376" type="Weapon" name="Icarus Sawsword {PvP} - Focus">
+	<item id="14376" name="Icarus Sawsword {PvP} - Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3566-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3566-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14377" type="Weapon" name="Icarus Sawsword {PvP} - Health">
+	<item id="14377" name="Icarus Sawsword {PvP} - Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Health -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14378" type="Weapon" name="Icarus Sawsword {PvP} - Light">
+	<item id="14378" name="Icarus Sawsword {PvP} - Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3650-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability: Light, Special Ability: PvP Damage, PvP Weapon - CP Drain -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14379" type="Weapon" name="Icarus Heavy Arms {PvP} - Focus">
+	<item id="14379" name="Icarus Heavy Arms {PvP} - Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3566-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3566-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="442" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14380" type="Weapon" name="Icarus Heavy Arms {PvP} - Health">
+	<item id="14380" name="Icarus Heavy Arms {PvP} - Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Health -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="442" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="442" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14381" type="Weapon" name="Icarus Heavy Arms {PvP} - Light">
+	<item id="14381" name="Icarus Heavy Arms {PvP} - Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3498-1;3552-3;3653-1" /> <!-- Special Ability: Light, Special Ability: PvP Damage, PvP Weapon - Attack Rate -->
 		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3653-1" />
 		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="442" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14382" type="Weapon" name="Icarus Spirit {PvP} - Acumen">
+	<item id="14382" name="Icarus Spirit {PvP} - Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3047-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Acumen -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-2" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14383" type="Weapon" name="Icarus Spirit {PvP} - Mana Up">
+	<item id="14383" name="Icarus Spirit {PvP} - Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3014-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Mana Up -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-2" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14384" type="Weapon" name="Icarus Spirit {PvP} - Conversion">
+	<item id="14384" name="Icarus Spirit {PvP} - Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3048-2" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3048-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Conversion -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="8" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14385" type="Weapon" name="Icarus Spitter {PvP} - Cheap Shot">
+	<item id="14385" name="Icarus Spitter {PvP} - Cheap Shot" type="Weapon">
+		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1;8312-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3655-1;8312-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Cheap Shot -->
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="689" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14386" type="Weapon" name="Icarus Spitter {PvP} - Guidance">
+	<item id="14386" name="Icarus Spitter {PvP} - Guidance" type="Weapon">
+		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;3573-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3655-1;3573-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Guidance -->
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="689" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="689" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14387" type="Weapon" name="Icarus Spitter {PvP} - Focus">
+	<item id="14387" name="Icarus Spitter {PvP} - Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3655-1;3567-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Focus -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="enchant_enabled" val="1" />
+		<set name="random_damage" val="5" />
 		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;3567-2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="689" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
-			<add stat="accCombat" val="-3.75" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14388" type="Weapon" name="Icarus Disperser {PvP} - Focus">
+	<item id="14388" name="Icarus Disperser {PvP} - Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3651-1;3652-1;3567-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3651-1;3652-1;3567-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="318" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14389" type="Weapon" name="Icarus Disperser {PvP} - Evasion">
+	<item id="14389" name="Icarus Disperser {PvP} - Evasion" type="Weapon">
+		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3009-8;3552-3;3651-1;3652-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3009-8;3552-3;3651-1;3652-1" /> <!-- Special Ability: Evasion, Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="318" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14390" type="Weapon" name="Icarus Disperser {PvP} - Critical Damage">
+	<item id="14390" name="Icarus Disperser {PvP} - Critical Damage" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3651-1;3652-1;3066-4" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3651-1;3652-1;3066-4" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense, Special Ability: Critical Damage -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="318" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="318" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14391" type="Weapon" name="Icarus Trident {PvP} - Anger">
+	<item id="14391" name="Icarus Trident {PvP} - Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3600-10" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3600-10" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate,  -->
+		<set name="material" val="BRONZE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14392" type="Weapon" name="Icarus Trident {PvP} - Critical Stun">
+	<item id="14392" name="Icarus Trident {PvP} - Critical Stun" type="Weapon">
+		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-4;3653-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate -->
+		<set name="material" val="BRONZE" />
 		<set name="oncrit_chance" val="48" />
-		<set name="oncrit_skill" val="3070-4" />
-		<set name="item_skill" val="3552-4;3653-1" />
-		<for>
-			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14393" type="Weapon" name="Icarus Trident {PvP} - Light">
-		<set name="icon" val="icon.weapon_icarus_trident_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
+		<set name="oncrit_skill" val="3070-4" /> <!-- Special Ability: Critical Stun -->
 		<set name="random_damage" val="10" />
-		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-4;3653-1" />
 		<for>
-			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="163" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14394" type="Weapon" name="Icarus Hammer {PvP} - Anger">
-		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+	<item id="14393" name="Icarus Trident {PvP} - Light Armor" type="Weapon">
+		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_icarus_trident_i01" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3057-4" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3498-1;3552-4;3653-1" /> <!-- Special Ability: Light, Special Ability: PvP Damage, PvP Weapon - Attack Rate -->
+		<set name="material" val="BRONZE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14395" type="Weapon" name="Icarus Hammer {PvP} - Health">
-		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3310" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
-		<for>
 			<set stat="pAtk" val="363" />
-			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14396" type="Weapon" name="Icarus Hammer {PvP} - Rsk. Focus">
+	<item id="14394" name="Icarus Hammer {PvP} - Anger" type="Weapon">
+		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3057-4" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Anger -->
 		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3027-7" />
 		<for>
-			<set stat="pAtk" val="363" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="163" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14397" type="Weapon" name="Icarus Hall {PvP} - Mana Up">
-		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
+	<item id="14395" name="Icarus Hammer {PvP} - Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Health -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="290" />
-			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14398" type="Weapon" name="Icarus Hall {PvP} - Conversion">
-		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
+	<item id="14396" name="Icarus Hammer {PvP} - Rsk. Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3048-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3027-7" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Rsk. Focus -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="290" />
-			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="363" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14399" type="Weapon" name="Icarus Hall {PvP} - Acumen">
+	<item id="14397" name="Icarus Hall {PvP} - Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="3310" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3014-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Mana Up -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-2" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="290" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="217" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14398" name="Icarus Hall {PvP} - Conversion" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_icarus_stick_i01" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3048-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Conversion -->
+		<set name="material" val="WOOD" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="217" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14399" name="Icarus Hall {PvP} - Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_icarus_stick_i01" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="3310" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3047-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Acumen -->
+		<set name="material" val="WOOD" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="217" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="290" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

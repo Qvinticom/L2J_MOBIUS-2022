@@ -3,404 +3,419 @@
 	<item id="18000" name="Blessed Immortal Ring" type="Armor">
 		<!-- Blessed Immortal Ring. MP + 26 effect. -->
 		<set name="icon" val="icon.r1_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="75" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<set name="price" val="3550475" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="64.0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="64" />
 		</for>
 	</item>
 	<item id="18001" name="Blessed Apocalypse Shaper" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_phasian_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13280-3" /> <!-- Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13280-3" />
-		<set name="commissionItemType" val="DAGGER" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="454.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="454" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18002" name="Blessed Apocalypse Cutter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pasis_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13252-3" />
-		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="519.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="519" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18003" name="Blessed Apocalypse Slasher" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_volver_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13259-3" /> <!-- Two-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13259-3" />
-		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="632" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18004" name="Blessed Apocalypse Avenger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_raksilion_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13254-3" /> <!-- One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13254-3" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="519.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="519" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18005" name="Blessed Apocalypse Fighter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_kirche_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13265-3" /> <!-- Fist Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1550" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13265-3" />
-		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="632" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18006" name="Blessed Apocalypse Stormer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_grave_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13263-3" />
-		<set name="item_skill" val="3599-1" />
-		<set name="commissionItemType" val="SPEAR" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="519.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="519" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18007" name="Blessed Apocalypse Thrower" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_spina_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13290-3" /> <!-- Bow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="enchant4_skill" val="13290-3" />
-		<set name="commissionItemType" val="BOW" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="1022.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="1022" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="18008" name="Blessed Apocalypse Shooter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_medianox_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="enchant4_skill" val="13294-3" />
-		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="920.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="920" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18009" name="Blessed Apocalypse Buster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_imerose_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13295-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="415.0" />
-			<set stat="mAtk" val="301.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="415" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18010" name="Blessed Apocalypse Caster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_yuke_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13297-3" /> <!-- Magic One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13297-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="415.0" />
-			<set stat="mAtk" val="301.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="415" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18011" name="Blessed Apocalypse Retributer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="3723" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13302-3" /> <!-- Magic Two-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="174548336" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13302-3" />
-		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="505.0" />
-			<set stat="mAtk" val="332.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
+			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="6" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="mAtk" val="332" />
+			<set stat="pAtk" val="505" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18012" name="Blessed Apocalypse Dualsword" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="4654" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13275-3" /> <!-- Dualsword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="218185419" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13275-3" />
-		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="632" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18013" name="Blessed Apocalypse Dual Dagger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="crystal_count" val="4654" />
 		<set name="crystal_type" val="R" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13285-3" /> <!-- Dual Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2050" />
 		<set name="price" val="218185419" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13285-3" />
-		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<cond msgId="1518">
 			<and>
 				<player level="85" />
@@ -408,780 +423,819 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="519.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="519" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18014" name="Blessed Apocalypse Dual Blunt Weapon" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="crystal_count" val="4654" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13270-3" /> <!-- Dual Blunt Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="218185419" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13270-3" />
-		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="632.0" />
-			<set stat="mAtk" val="226.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="632" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18015" name="Blessed Twilight Helmet" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="454" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="21308498" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="130.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="130" />
 		</for>
 	</item>
 	<item id="18016" name="Blessed Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="1212" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="7520" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="56822662" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="348.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="348" />
 		</for>
 	</item>
 	<item id="18017" name="Blessed Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="757" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="3170" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="35514164" />
+		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="217.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="217" />
 		</for>
 	</item>
 	<item id="18018" name="Blessed Twilight Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
 	<item id="18019" name="Blessed Twilight Boots" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t601_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
-		<set name="commissionItemType" val="FEET" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
-	<item id="18020" name="Blessed Twilight Shield" additionalName="Heavy Armor" type="Weapon">
+	<item id="18020" name="Blessed Twilight Shield" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.kratere_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="crystal_count" val="303" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1130" />
+		<set name="material" val="DAMASCUS" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="sDef" val="476.0" />
-			<set stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="-8" />
+			<set stat="rShld" val="20" />
 			<enchant val="0" stat="sDef" />
+			<set stat="sDef" val="476" />
 		</for>
 	</item>
 	<item id="18021" name="Blessed Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="454" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="21308498" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="130.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="130" />
 		</for>
 	</item>
 	<item id="18022" name="Blessed Twilight Leather Armor" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="1212" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="4140" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="56822662" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="278.0" />
-			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
+			<add order="0" stat="pDef" val="278" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="18023" name="Blessed Twilight Leather Leggings" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="757" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1320" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="35514164" />
+		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="173.0" />
-			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
+			<add order="0" stat="pDef" val="173" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="18024" name="Blessed Twilight Leather Gloves" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
 	<item id="18025" name="Blessed Twilight Leather Boots" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t602_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
 	<item id="18026" name="Blessed Twilight Circlet" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="454" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="21308498" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="130.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="130" />
 		</for>
 	</item>
 	<item id="18027" name="Blessed Twilight Tunic" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="1212" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1750" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="56822662" />
+		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="191.0" />
-			<add order="0" stat="mDef" val="41.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="41" />
+			<add order="0" stat="pDef" val="191" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18028" name="Blessed Twilight Stockings" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="757" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="850" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="35514164" />
-		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="pDef" val="119.0" />
-			<add order="0" stat="mDef" val="27.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="27" />
+			<add order="0" stat="pDef" val="119" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18029" name="Blessed Twilight Gloves" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
-		<set name="commissionItemType" val="GLOVES" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
 	<item id="18030" name="Blessed Twilight Shoes" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t603_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="87.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="87" />
 		</for>
 	</item>
 	<item id="18031" name="Blessed Twilight Sigil" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.weapon_dynaksus_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="crystal_count" val="303" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="920" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="14205666" />
+		<set name="weight" val="920" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<add order="0" stat="pDef" val="43.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="43" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="18032" name="Blessed Twilight Necklace" type="Armor">
 		<!-- Blessed Twilight Necklace. MP + 58 effect. -->
 		<set name="icon" val="icon.r2_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="NECKLACE" />
 		<set name="crystal_count" val="394" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<set name="price" val="18497590" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="146.0" />
+			<add order="0" stat="mDef" val="146" />
 			<enchant stat="mDef" val="0" />
+			<add stat="maxMp" val="58" />
 		</for>
 	</item>
 	<item id="18033" name="Blessed Twilight Earring" type="Armor">
 		<!-- Blessed Twilight Earring. MP + 43 effect. -->
 		<set name="icon" val="icon.r2_earring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R" />
-		<set name="crystal_count" val="295" />
-		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
-		<set name="price" val="13873193" />
 		<set name="commissionItemType" val="EARRING" />
+		<set name="crystal_count" val="295" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="13873193" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="109.0" />
+			<add order="0" stat="mDef" val="109" />
 			<enchant stat="mDef" val="0" />
+			<add stat="maxMp" val="43" />
 		</for>
 	</item>
 	<item id="18034" name="Blessed Twilight Ring" type="Armor">
 		<!-- Blessed Twilight Ring. MP + 29 effect. -->
 		<set name="icon" val="icon.r2_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="197" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<set name="price" val="9248795" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="73.0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="73" />
 		</for>
 	</item>
 	<item id="18035" name="Blessed Specter Shaper" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ignicion_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13281-3" /> <!-- Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13281-3" />
-		<set name="commissionItemType" val="DAGGER" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="526.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="526" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18036" name="Blessed Specter Cutter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ninfea_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13252-3" />
-		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="602.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="602" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18037" name="Blessed Specter Slasher" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_skia_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13260-3" /> <!-- Two-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13260-3" />
-		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="732.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="732" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18038" name="Blessed Specter Avenger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_ikeon_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13255-3" /> <!-- One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13255-3" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="602.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="602" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18039" name="Blessed Specter Fighter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13266-3" /> <!-- Fist Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1550" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13266-3" />
-		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
-			<set stat="pAtk" val="732.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="732" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18040" name="Blessed Specter Stormer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13263-3" />
-		<set name="item_skill" val="3599-1" />
-		<set name="commissionItemType" val="SPEAR" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="602.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="602" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18041" name="Blessed Specter Thrower" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13291-3" /> <!-- Bow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="enchant4_skill" val="13291-3" />
-		<set name="commissionItemType" val="BOW" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="1185.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="1185" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="18042" name="Blessed Specter Shooter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_lapis_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="enchant4_skill" val="13294-3" />
-		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="1067.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="1067" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18043" name="Blessed Specter Buster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_zihel_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13295-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="481.0" />
-			<set stat="mAtk" val="349.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="481" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18044" name="Blessed Specter Caster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13298-3" /> <!-- Magic One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13298-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="481.0" />
-			<set stat="mAtk" val="349.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="481" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18045" name="Blessed Specter Retributer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="7825" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13303-3" /> <!-- Magic Two-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="366803000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13303-3" />
-		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="586.0" />
-			<set stat="mAtk" val="384.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
+			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="6" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="mAtk" val="384" />
+			<set stat="pAtk" val="586" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18046" name="Blessed Specter Dualsword" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="9390" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13276-3" /> <!-- Dualsword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="440163600" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13276-3" />
-		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="732.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="732" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18047" name="Blessed Specter Dual Dagger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="crystal_count" val="9390" />
 		<set name="crystal_type" val="R95" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13286-3" /> <!-- Dual Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2050" />
 		<set name="price" val="440163600" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13286-3" />
-		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<cond msgId="1518">
 			<and>
 				<player level="95" />
@@ -1189,780 +1243,819 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="602.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="602" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18048" name="Blessed Specter Dual Blunt Weapon" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="crystal_count" val="9390" />
 		<set name="crystal_type" val="R95" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13271-3" /> <!-- Dual Blunt Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="440163600" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13271-3" />
-		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="732.0" />
-			<set stat="mAtk" val="262.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="732" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18049" name="Blessed Seraph Helmet" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="1533" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="71863000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="144.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="144" />
 		</for>
 	</item>
 	<item id="18050" name="Blessed Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="4088" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="7520" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="191636000" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="384.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="384" />
 		</for>
 	</item>
 	<item id="18051" name="Blessed Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="2555" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="3170" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="119772000" />
+		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="240.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="240" />
 		</for>
 	</item>
 	<item id="18052" name="Blessed Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="18053" name="Blessed Seraph Boots" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t401_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
-	<item id="18054" name="Blessed Seraph Shield" additionalName="Heavy Armor" type="Weapon">
+	<item id="18054" name="Blessed Seraph Shield" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.beranka_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="crystal_count" val="1073" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1130" />
+		<set name="material" val="DAMASCUS" />
 		<set name="price" val="50304000" />
+		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="sDef" val="525.0" />
-			<set stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="-8" />
+			<set stat="rShld" val="20" />
 			<enchant val="0" stat="sDef" />
+			<set stat="sDef" val="525" />
 		</for>
 	</item>
 	<item id="18055" name="Blessed Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="1533" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="71863000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="144.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="144" />
 		</for>
 	</item>
 	<item id="18056" name="Blessed Seraph Leather Armor" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="4088" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="4140" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="191636000" />
+		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="307.0" />
-			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
+			<add order="0" stat="pDef" val="307" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="18057" name="Blessed Seraph Leather Leggings" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="2555" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1320" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="119772000" />
+		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="192.0" />
-			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
+			<add order="0" stat="pDef" val="192" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="18058" name="Blessed Seraph Leather Gloves" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="18059" name="Blessed Seraph Leather Boots" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t402_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="18060" name="Blessed Seraph Circlet" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="1533" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="71863000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="144.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="144" />
 		</for>
 	</item>
 	<item id="18061" name="Blessed Seraph Tunic" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="4088" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1750" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="191636000" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="211.0" />
-			<add order="0" stat="mDef" val="47.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="47" />
+			<add order="0" stat="pDef" val="211" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18062" name="Blessed Seraph Stockings" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="2555" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="850" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="119772000" />
-		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="pDef" val="132.0" />
-			<add order="0" stat="mDef" val="31.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="31" />
+			<add order="0" stat="pDef" val="132" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18063" name="Blessed Seraph Gloves" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
-		<set name="commissionItemType" val="GLOVES" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="18064" name="Blessed Seraph Shoes" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t403_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="1022" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="47909000" />
-		<set name="commissionItemType" val="FEET" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="96.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="96" />
 		</for>
 	</item>
 	<item id="18065" name="Blessed Seraph Sigil" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.airtoil_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="crystal_count" val="1073" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="920" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="50304000" />
+		<set name="weight" val="920" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<add order="0" stat="pDef" val="48.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="48" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="18066" name="Blessed Seraph Necklace" type="Armor">
 		<!-- Blessed Seraph Necklace. MP + 62 effect. -->
 		<set name="icon" val="icon.r95_necklace_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
-		<set name="crystal_type" val="R95" />
-		<set name="crystal_count" val="1064" />
-		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
-		<set name="price" val="49905000" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<set name="crystal_count" val="1064" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="SILVER" />
+		<set name="price" val="49905000" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="165.0" />
+			<add order="0" stat="mDef" val="165" />
 			<enchant stat="mDef" val="0" />
+			<add stat="maxMp" val="62" />
 		</for>
 	</item>
 	<item id="18067" name="Blessed Seraph Earring" type="Armor">
 		<!-- Blessed Seraph Earring. MP + 46 effect. -->
 		<set name="icon" val="icon.r95_earring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="EARRING" />
 		<set name="crystal_count" val="798" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<set name="price" val="37428000" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="124.0" />
+			<add order="0" stat="mDef" val="124" />
 			<enchant stat="mDef" val="0" />
+			<add stat="maxMp" val="46" />
 		</for>
 	</item>
 	<item id="18068" name="Blessed Seraph Ring" type="Armor">
 		<!-- Blessed Seraph Ring. MP + 31 effect. -->
 		<set name="icon" val="icon.r95_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="crystal_type" val="R95" />
+		<set name="commissionItemType" val="RING" />
 		<set name="crystal_count" val="532" />
+		<set name="crystal_type" val="R95" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<set name="price" val="24952000" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="82.0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="82" />
 		</for>
 	</item>
 	<item id="18069" name="Blessed Amaranthine Shaper" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stanpid_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13282-3" /> <!-- Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13282-3" />
-		<set name="commissionItemType" val="DAGGER" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="575.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="575" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18070" name="Blessed Amaranthine Cutter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_plenitas_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13252-3" /> <!-- One-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13252-3" />
-		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="658.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="658" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18071" name="Blessed Amaranthine Slasher" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_bauen_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13261-3" /> <!-- Two-handed Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13261-3" />
-		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="800.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="800" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18072" name="Blessed Amaranthine Avenger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_qutram_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13256-3" /> <!-- One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13256-3" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="658.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="658" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18073" name="Blessed Amaranthine Fighter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_durga_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13267-3" /> <!-- Fist Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1550" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13267-3" />
-		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
-			<set stat="pAtk" val="800.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="800" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18074" name="Blessed Amaranthine Stormer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_crabel_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
 		<set name="material" val="BRONZE" />
-		<set name="weight" val="2010" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13263-3" />
-		<set name="item_skill" val="3599-1" />
-		<set name="commissionItemType" val="SPEAR" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="658.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="8.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="658" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18075" name="Blessed Amaranthine Thrower" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_castron_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13292-3" /> <!-- Bow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="enchant4_skill" val="13292-3" />
-		<set name="commissionItemType" val="BOW" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="1295.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="1295" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
 	<item id="18076" name="Blessed Amaranthine Shooter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_stilla_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13294-3" /> <!-- Crossbow Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="enchant4_skill" val="13294-3" />
-		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="1166.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="1166" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18077" name="Blessed Amaranthine Buster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
 		<set name="icon" val="icon.weaon_serapear_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13295-3" /> <!-- Magic Sword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13295-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="526.0" />
-			<set stat="mAtk" val="382.0" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="526" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18078" name="Blessed Amaranthine Caster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_pilia_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13299-3" /> <!-- Magic One-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13299-3" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="526.0" />
-			<set stat="mAtk" val="382.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="379.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="526" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="18079" name="Blessed Amaranthine Retributer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_count" val="17243" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13304-3" /> <!-- Magic Two-handed Blunt Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
 		<set name="price" val="808295000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="enchant4_skill" val="13304-3" />
-		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="640.0" />
-			<set stat="mAtk" val="420.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
+			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="6" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="mAtk" val="420" />
+			<set stat="pAtk" val="640" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18080" name="Blessed Amaranthine Dualsword" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Rate and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_count" val="20692" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13277-3" /> <!-- Dualsword Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
 		<set name="price" val="969954000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13277-3" />
-		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="800.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="800" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18081" name="Blessed Amaranthine Dual Dagger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage increases P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="crystal_count" val="20692" />
 		<set name="crystal_type" val="R99" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13287-3" /> <!-- Dual Dagger Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2050" />
 		<set name="price" val="969954000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13287-3" />
-		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<cond msgId="1518">
 			<and>
 				<player level="99" />
@@ -1970,344 +2063,365 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="658.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="12.0" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="658" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="18082" name="Blessed Amaranthine Dual Blunt Weapon" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power and P. Atk. when enchanted to + 4. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="crystal_count" val="20692" />
 		<set name="crystal_type" val="R99" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1740" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="13272-3" /> <!-- Dual Blunt Weapon Special Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="969954000" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="13272-3" />
-		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="800.0" />
-			<set stat="mAtk" val="286.0" />
-			<set stat="critRate" val="6.0" />
-			<add stat="accCombat" val="8.0" />
-			<set stat="pAtkSpd" val="325.0" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="800" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="18083" name="Blessed Eternal Helmet" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="3378" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="158359000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="153.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="153" />
 		</for>
 	</item>
 	<item id="18084" name="Blessed Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to + 4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="9008" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="7520" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="422292000" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="408.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="408" />
 		</for>
 	</item>
 	<item id="18085" name="Blessed Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="5630" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="3170" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="263933000" />
+		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="255.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="255" />
 		</for>
 	</item>
 	<item id="18086" name="Blessed Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
 	<item id="18087" name="Blessed Eternal Boots" additionalName="Heavy Armor" type="Armor">
-		<set name="armor_type" val="HEAVY" />
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.armor_t701_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
-	<item id="18088" name="Blessed Eternal Shield" additionalName="Heavy Armor" type="Weapon">
+	<item id="18088" name="Blessed Eternal Shield" additionalName="Heavy Armor" type="Armor">
 		<!-- Bestows an attack or defense type set option. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="SHIELD" />
 		<set name="crystal_count" val="2364" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1130" />
+		<set name="material" val="DAMASCUS" />
 		<set name="price" val="110851000" />
+		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<set stat="sDef" val="557.0" />
-			<set stat="rShld" val="20.0" />
+			<sub stat="rEvas" val="-8" />
+			<set stat="rShld" val="20" />
 			<enchant val="0" stat="sDef" />
+			<set stat="sDef" val="557" />
 		</for>
 	</item>
 	<item id="18089" name="Blessed Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="3378" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="158359000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="153.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="153" />
 		</for>
 	</item>
 	<item id="18090" name="Blessed Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="9008" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="4140" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="422292000" />
+		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="326.0" />
-			<add stat="rEvas" val="5.0" />
 			<add stat="mEvas" val="5.0" />
+			<add order="0" stat="pDef" val="326" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="18091" name="Blessed Eternal Leather Leggings" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="5630" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1320" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="263933000" />
+		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="204.0" />
-			<add stat="rEvas" val="3.0" />
 			<add stat="mEvas" val="3.0" />
+			<add order="0" stat="pDef" val="204" />
 			<enchant stat="pDef" val="0" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="18092" name="Blessed Eternal Leather Gloves" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
 	<item id="18093" name="Blessed Eternal Leather Boots" additionalName="Light Armor" type="Armor">
-		<set name="armor_type" val="LIGHT" />
 		<!-- Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="icon.armor_t702_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
-		<set name="commissionItemType" val="FEET" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
 	<item id="18094" name="Blessed Eternal Circlet" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="HELMET" />
 		<set name="crystal_count" val="3378" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<set name="price" val="158359000" />
+		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="153.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="153" />
 		</for>
 	</item>
 	<item id="18095" name="Blessed Eternal Tunic" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. When enchanted to + 4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="crystal_count" val="9008" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1750" />
+		<set name="material" val="BRONZE" />
 		<set name="price" val="422292000" />
+		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="224.0" />
-			<add order="0" stat="mDef" val="49.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="49" />
+			<add order="0" stat="pDef" val="224" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18096" name="Blessed Eternal Stockings" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_l_i00" />
-		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="crystal_count" val="5630" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="850" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="263933000" />
+		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="pDef" val="140.0" />
-			<add order="0" stat="mDef" val="33.0" />
-			<enchant stat="pDef" val="0" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="33" />
+			<add order="0" stat="pDef" val="140" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18097" name="Blessed Eternal Gloves" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="GLOVES" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
+		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
 	<item id="18098" name="Blessed Eternal Shoes" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<!-- Bestows a magic or recovery type set option. -->
 		<set name="icon" val="icon.armor_t703_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="FEET" />
 		<set name="crystal_count" val="2252" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="105573000" />
+		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="102.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="102" />
 		</for>
 	</item>
 	<item id="18099" name="Blessed Eternal Sigil" additionalName="Robe" type="Armor">
-		<set name="armor_type" val="MAGIC" />
 		<set name="icon" val="icon.elos_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
-		<set name="crystal_type" val="R99" />
+		<set name="commissionItemType" val="SIGIL" />
 		<set name="crystal_count" val="2364" />
+		<set name="crystal_type" val="R99" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="weight" val="920" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="110851000" />
-		<set name="commissionItemType" val="SIGIL" />
+		<set name="weight" val="920" />
 		<for>
-			<sub stat="rEvas" val="8" />
-			<add order="0" stat="pDef" val="51.0" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="51" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 </list>

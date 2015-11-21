@@ -1,927 +1,1136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46100" type="EtcItem" name="Treasure Map - High Priest Raymond">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46100" name="Treasure Map - High Priest Raymond" type="EtcItem">
+		<!-- A map showing the location of some treasure. It says For the High Priest, so it's probably a gift for the temple. -->
+		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46101" type="EtcItem" name="Treasure Map - Turek Orc's Legacy">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46101" name="Treasure Map - Turek Orc's Legacy" type="EtcItem">
+		<!-- A map showing the location of some treasure. It says, Glory to the Turek Orcs. It looks like it is related to the Turek Orcs. -->
+		<set name="icon" val="icon.etc_map_yellow_i05" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46102" type="EtcItem" name="Zaken's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46103" type="EtcItem" name="Leona Blackbird's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46104" type="EtcItem" name="Beora's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46105" type="EtcItem" name="Gladiator's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46106" type="EtcItem" name="Raymond's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46107" type="EtcItem" name="Turek Orc's Treasure Chest">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46108" type="EtcItem" name="Drake Maul Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46109" type="EtcItem" name="Freya's Staff Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46110" type="EtcItem" name="Spezion's Claw Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46111" type="EtcItem" name="Maliss Stormer Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46112" type="EtcItem" name="Steregos' Dagger Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46113" type="EtcItem" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46114" type="EtcItem" name="Drake Maul Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46115" type="EtcItem" name="Freya's Staff Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46116" type="EtcItem" name="Spezion's Claw Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46117" type="EtcItem" name="Maliss Stormer Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46118" type="EtcItem" name="Steregos' Dagger Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46119" type="EtcItem" name="Ron's Dual Blunt Weapon Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46120" type="EtcItem" name="Little Girls' Hat Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46121" type="EtcItem" name="Little Boy's Hat Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46122" type="EtcItem" name="Little Girls' Hat Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46123" type="EtcItem" name="Little Boy's Hat Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46124" type="EtcItem" name="Uniform Hat Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46125" type="EtcItem" name="Afro - Gold Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46126" type="EtcItem" name="Afro - Pink Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46127" type="EtcItem" name="Uniform Hat Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46128" type="EtcItem" name="Afro - Gold Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46129" type="EtcItem" name="Afro - Pink Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46130" type="EtcItem" name="Spirit Evil Thought Piece">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46131" type="EtcItem" name="Kelbim Exclusive Weapon">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46132" type="EtcItem" name="Blackbird Seal">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="material" val="LEATHER" />
+	</item>
+	<item id="46102" name="Zaken's Treasure Chest" type="EtcItem">
+		<!-- Zaken's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46103" name="Leona Blackbird's Treasure Chest" type="EtcItem">
+		<!-- Leona Blackbird's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46104" name="Beora's Treasure Chest" type="EtcItem">
+		<!-- Beora's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46105" name="Gladiator's Treasure Chest" type="EtcItem">
+		<!-- Gladiator's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46106" name="Raymond's Treasure Chest" type="EtcItem">
+		<!-- Raymond's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46107" name="Turek Orc's Treasure Chest" type="EtcItem">
+		<!-- Turek Orc's treasure chest. Double-click to get an item. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul. 30-day.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. 30-day.  -->
+		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46114" name="Drake Maul Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul's. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46115" name="Freya's Staff Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. -->
+		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46116" name="Spezion's Claw Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46117" name="Maliss Stormer Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46118" name="Steregos' Dagger Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46119" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Female only. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46122" name="Little Girls' Hat Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. Can be used only on hair accessories that take up 2 slots. Female only. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. Can be used only on hair accessories that take up 2 slots. Male only. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. 30-day. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. 30-day. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. 30-day. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46127" name="Uniform Hat Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46128" name="Afro - Gold Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46129" name="Afro - Pink Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. Can be used only on hair accessories that take up 2 slots.  -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46130" name="Spirit Evil Thought Piece" type="EtcItem">
+		<!-- A piece of El Floato's evil thoughts. Use it to open the door to get to Harpe in the Garden of Spirits. -->
+		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46131" name="Kelbim Exclusive Weapon" type="Weapon">
+		<!-- Exclusive weapon of Kelbim. -->
+		<set name="icon" val="icon.weapon_monster_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="crystal_type" val="D" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="time" val="43200" />
+		<set name="weapon_type" val="BOW" />
+		<for>
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<add stat="critRate" val="12" />
+			<add stat="accCombat" val="-3.75" />
+			<set stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="46132" name="Blackbird Seal" type="EtcItem">
+		<!-- Seal that proves that one is a member of the Blackbird Clan. The seal proves that one is a member of the clan or is someone trusted by the clan. -->
+		<set name="icon" val="icon.etc_piece_holy_light" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46133" type="EtcItem" name="Dark Atelia Neutralizer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46134" type="EtcItem" name="Blackbird Report - Glenkinchie">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46135" type="EtcItem" name="Blackbird Report - Hurak">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46133" name="Dark Atelia Neutralizer" type="EtcItem">
+		<!-- A neutralizer that prevents addiction of the by-product that is produced when creating Dark Atelia. All the Embryo in the Atelia Fortress carry this neutralizer. -->
+		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46136" type="EtcItem" name="Blackbird Report - Laffian">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46134" name="Blackbird Report - Glenkinchie" type="EtcItem">
+		<!-- Glenkinchie's report to Elikia. It says stuff about the Embryo. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46137" type="EtcItem" name="Blackbird Report - Sherry">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46135" name="Blackbird Report - Hurak" type="EtcItem">
+		<!-- Hurak's report to Elikia. It says stuff about the Embryo. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46138" type="EtcItem" name="Low-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46136" name="Blackbird Report - Laffian" type="EtcItem">
+		<!-- Laffian's report to Elikia. It says stuff about the Embryo. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46139" type="EtcItem" name="Low-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46137" name="Blackbird Report - Sherry" type="EtcItem">
+		<!-- Sherry's report to Elikia. It says stuff about the Embryo. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46140" type="EtcItem" name="Low-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46138" name="Low-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
+		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46141" type="EtcItem" name="Mid-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46139" name="Low-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
+		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46142" type="EtcItem" name="Stronghold Flag Repair Cloth">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46140" name="Low-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
+		<set name="icon" val="icon.etc_london_olympic_bronze" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46143" type="EtcItem" name="Stronghold Repair Tools">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46141" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
+		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46144" type="EtcItem" name="Kelbim's Armor Piece">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46142" name="Stronghold Flag Repair Cloth" type="EtcItem">
+		<!-- A piece of cloth to fix the flag that represents the stronghold. Take it to the Aden Vanguard. -->
+		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46145" type="EtcItem" name="Black Atelia Powder">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46143" name="Stronghold Repair Tools" type="EtcItem">
+		<!-- Tools to repair the stronghold. Take it to the Aden Stronghold. -->
+		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46146" type="EtcItem" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46144" name="Kelbim's Armor Piece" type="EtcItem">
+		<!-- A piece of the armor that Kelbim was wearing. Kaysia needs it in order to find out what the Embryo are using the Atelia for. Take it to Kaysia in the Town of Oren. -->
+		<set name="icon" val="icon.etc_plate_black_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46147" type="EtcItem" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46145" name="Black Atelia Powder" type="EtcItem">
+		<!-- Powder from the Giant Atelia that turned black. It will be useful in finding out how it's different from the Atelia of the Wind Spirit Realm. Take it to Kaysia in the Town of Oren. -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46148" type="EtcItem" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
+		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46149" type="EtcItem" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
+		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
+		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
+		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
+		<set name="icon" val="icon.etc_mechanic_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46153" name="Immortal Scroll Chapter 1" type="EtcItem">
 		<!-- Enchants a skill between + 11~+ 20 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
-		<set name="weight" val="10" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
-		<set name="weight" val="10" />
-		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46157" name="Immortal Scroll Chapter 2" type="EtcItem">
 		<!-- Enchants a skill between + 21~+ 30 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
-		<set name="weight" val="10" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-	</item>
-	<item id="46158" type="EtcItem" name="Scroll of Escape: Blackbird Campsite">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46159" type="EtcItem" name="Mid-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="46158" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
+		<!-- Scroll for teleporting to Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
+		<set name="icon" val="icon.etc_london_olympic_silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46160" type="EtcItem" name="Mid-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46160" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
+		<set name="icon" val="icon.etc_london_olympic_silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46161" type="EtcItem" name="Mid-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46161" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
+		<set name="icon" val="icon.etc_london_olympic_silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46162" type="EtcItem" name="Mid-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46162" name="Mid-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
+		<set name="icon" val="icon.etc_london_olympic_silver" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46163" type="EtcItem" name="High-grade Honorary Member Certificate">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46163" name="High-grade Honorary Member Certificate" type="EtcItem">
+		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You are being trusted with various stories.  -->
+		<set name="icon" val="icon.etc_london_olympic_gold" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46164" type="EtcItem" name="Aden Vanguard Reward Box">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46165" type="EtcItem" name="Ferin's Reward Box">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46164" name="Aden Vanguard Reward Box" type="EtcItem">
+		<!-- A reward for finishing the missions as an honorary member of the Aden Vanguard. Double-click to use. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46166" type="EtcItem" name="Barton's Letter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46165" name="Ferin's Reward Box" type="EtcItem">
+		<!-- Reward for helping Ferin and her people. Double-click to open. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46167" type="EtcItem" name="Hayuk's Letter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46166" name="Barton's Letter" type="EtcItem">
+		<!-- A letter from the first stronghold's Barton to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46168" type="EtcItem" name="Elise's Letter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46167" name="Hayuk's Letter" type="EtcItem">
+		<!-- A letter from the second stronghold's Hayuk to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46169" type="EtcItem" name="Eliyah's Letter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46168" name="Elise's Letter" type="EtcItem">
+		<!-- A letter from the third stronghold's Elise to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46170" type="EtcItem" name="Atelia Fortress Protection Box" additionalName="Event">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46169" name="Eliyah's Letter" type="EtcItem">
+		<!-- A letter from the fourth stronghold's Elliyah to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
+		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46171" type="EtcItem" name="Garden of the Spirits Protection Box" additionalName="Event">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46170" name="Atelia Fortress Protection Box" additionalName="Event" type="EtcItem">
+		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
+		<set name="icon" val="BranchSys.br_bright_gold_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46172" type="EtcItem" name="Drew Protection Box" additionalName="Event">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46171" name="Garden of the Spirits Protection Box" additionalName="Event" type="EtcItem">
+		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
+		<set name="icon" val="BranchSys.br_gold_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46172" name="Drew Protection Box" additionalName="Event" type="EtcItem">
+		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
+		<set name="icon" val="BranchSys.br_silver_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46173" type="EtcItem" name="Male Swimsuit No.1 Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46174" type="EtcItem" name="Male Swimsuit No.2 Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46175" type="EtcItem" name="Bikini No.1 Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46176" type="EtcItem" name="Bikini No.2 Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46177" type="EtcItem" name="Soul Bottle Pack">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46178" type="EtcItem" name="Heavenly Cocktail">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46173" name="Male Swimsuit No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46179" type="EtcItem" name="Male Swimwear No.1">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="time" val="43200" />
 	</item>
-	<item id="46180" type="EtcItem" name="Male Swimwear No.2">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46174" name="Male Swimsuit No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="time" val="43200" />
 	</item>
-	<item id="46181" type="EtcItem" name="Bikini No.1">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46175" name="Bikini No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of upper armor into that of Bikini No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="time" val="43200" />
 	</item>
-	<item id="46182" type="EtcItem" name="Bikini No.2">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46176" name="Bikini No.2 Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of upper armor into that of Bikini No. 2. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of a bikini. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="time" val="43200" />
 	</item>
-	<item id="46183" type="EtcItem" name="Joyful Birthday Pack">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46177" name="Soul Bottle Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 1 bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46178" name="Heavenly Cocktail" type="EtcItem">
+		<!-- For 60 minutes, it receives the following level 2 effects: Horn Melody, Lute Melody, Pipe Organ Melody, Guitar Melody, Harp Melody, and Drum Melody. Cooldown is 60 min. -->
+		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="LIQUID" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46184" type="EtcItem" name="Happy Birthday Potion">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46179" name="Male Swimwear No.1" type="Armor">
+		<!-- Swimwear for male characters.  -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="bodypart" val="onepiece" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46180" name="Male Swimwear No.2" type="Armor">
+		<!-- Swimwear for male characters.  -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="bodypart" val="onepiece" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46181" name="Bikini No.1" type="Armor">
+		<!-- Bikini for female characters.  -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="bodypart" val="onepiece" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46182" name="Bikini No.2" type="Armor">
+		<!-- Bikini for female characters.  -->
+		<set name="icon" val="icon.london_olympic_bikini" />
+		<set name="bodypart" val="onepiece" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46183" name="Joyful Birthday Pack" type="EtcItem">
+		<!-- A gift from Alegria for your character's birthday. Double-click to get 10 Happy Birthday Potions and a Birthday Hat. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46184" name="Happy Birthday Potion" type="EtcItem">
+		<!-- 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
+		<set name="icon" val="icon.etc_potion_blue_i00" />
+		<set name="default_action" val="CALL_SKILL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46185" type="EtcItem" name="Agathion - Anakim Holy Barrier">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46186" type="EtcItem" name="Agathion - Anakim Holy Barrier" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="material" val="SILVER" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46187" type="EtcItem" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46188" type="EtcItem" name="Agathion - Anakim Holy Barrier Pack">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46189" type="EtcItem" name="Vampiric Style Appearance Stone">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46190" type="EtcItem" name="Vampiric Style Appearance Stone" additionalName="30-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46191" type="EtcItem" name="Vampiric Style Appearance Stone Pack">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46192" type="EtcItem" name="Vampiric Outfit">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
-	</item>
-	<item id="46198" type="EtcItem" name="Gold Medal">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="SILVER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="capsuled_items" val="46186,1,1,100" /> <!-- Agathion - Anakim Holy Barrier - 30-day -->
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
+		<!-- Wrapped Pack containing an Agathion - Anakim Holy Barrier (30-day) or an Agathion - Anakim Holy Barrier. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
+		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of your armor into that of a Vampiric Style. 30-day. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
+		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="46192" name="Vampiric Outfit" type="Armor">
+		<!-- Vampiric outfit. -->
+		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="46198" name="Gold Medal" type="EtcItem">
+		<!-- A shiny gold medal. Sell it at the shop for a lot of money. -->
+		<set name="icon" val="icon.etc_event_medal_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="time" val="43200" />
 	</item>
-	<item id="46199" type="EtcItem" name="Halloween Appearance Stone" additionalName="7-day">
-		<!-- AUTO GENERATED INFINITE ODYSSEY ITEM TODO: FIX IT -->
+	<item id="46199" name="Halloween Appearance Stone" additionalName="7-day" type="EtcItem">
+		<!-- Changes the appearance of a top armor or a one-piece into that of a Halloween outfit. It changes everything, making the appearance of all armor into that of the Halloween outfit. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_sellable" val="true" />
-		<set name="is_stackable" val="true" /> <!-- ? -->
+		<set name="time" val="10080" />
 	</item>
 </list>

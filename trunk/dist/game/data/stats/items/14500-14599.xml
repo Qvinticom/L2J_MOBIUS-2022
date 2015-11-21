@@ -1,858 +1,862 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14500" type="Weapon" name="Vesper Retributer {PvP} - Health">
+	<item id="14500" name="Vesper Retributer {PvP} - Health" type="Weapon">
+		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Health -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="482" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14501" type="Weapon" name="Vesper Retributer {PvP} - HP Drain">
+	<item id="14501" name="Vesper Retributer {PvP} - HP Drain" type="Weapon">
+		<!-- <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3568-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: HP Drain -->
 		<set name="material" val="FINE_STEEL" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3568-2" />
 		<for>
-			<set stat="pAtk" val="482" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="482" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14502" type="Weapon" name="Vesper Caster {PvP} - Acumen">
+	<item id="14502" name="Vesper Caster {PvP} - Acumen" type="Weapon">
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3047-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Acumen -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3047-2" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="317" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="234" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14503" type="Weapon" name="Vesper Caster {PvP} - MP Regeneration">
+	<item id="14503" name="Vesper Caster {PvP} - MP Regeneration" type="Weapon">
+		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3576-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: MP Regeneration -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3576-2" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="317" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="234" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14504" type="Weapon" name="Vesper Caster {PvP} - Mana Up">
+	<item id="14504" name="Vesper Caster {PvP} - Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3014-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Mana Up -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3014-2" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="317" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="234" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="317" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
-	<item id="14505" type="Weapon" name="Vesper Singer {PvP} - Empower">
+	<item id="14505" name="Vesper Singer {PvP} - Empower" type="Weapon">
+		<!-- <Special Option>. M. Atk. + 151. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3575-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: Empower -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3575-2" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="386" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="257" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14506" type="Weapon" name="Vesper Singer {PvP} - MP Regeneration">
-		<set name="icon" val="icon.weapon_vesper_singer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="4587" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3552-1;3654-1;3576-2" />
-		<for>
 			<set stat="pAtk" val="386" />
-			<set stat="mAtk" val="257" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14507" type="Weapon" name="Vesper Singer {PvP} - Magic Hold">
+	<item id="14506" name="Vesper Singer {PvP} - MP Regeneration" type="Weapon">
+		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3654-1;3576-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting, Special Ability: MP Regeneration -->
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1080" />
+		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="257" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14507" name="Vesper Singer {PvP} - Magic Hold" type="Weapon">
+		<!-- <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked.. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_vesper_singer_i01" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3654-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Casting -->
+		<set name="material" val="WOOD" />
 		<set name="onmagic_chance" val="20" />
-		<set name="onmagic_skill" val="3577-2" />
-		<set name="item_skill" val="3552-3;3654-1" />
+		<set name="onmagic_skill" val="3577-2" /> <!-- Special Ability: Magic Hold -->
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="386" />
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="257" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="386" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14508" type="Weapon" name="Vesper Thrower {PvP} - Cheap Shot">
+	<item id="14508" name="Vesper Thrower {PvP} - Cheap Shot" type="Weapon">
+		<!-- <Special Option>. Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3655-1;8312-2" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3655-1;8312-2" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Cheap Shot -->
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="724" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14509" type="Weapon" name="Vesper Thrower {PvP} - Focus">
+	<item id="14509" name="Vesper Thrower {PvP} - Focus" type="Weapon">
+		<!-- <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;3567-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3655-1;3567-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="724" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
-	<item id="14510" type="Weapon" name="Vesper Thrower {PvP} - Critical Slow">
+	<item id="14510" name="Vesper Thrower {PvP} - Critical Slow" type="Weapon">
+		<!-- <Special Option>. Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack.. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="4587" />
-		<set name="crystal_type" val="S80" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1520" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="enchant_enabled" val="1" />
+		<set name="oncrit_skill" val="3574-3" /> <!-- Special Ability: Critical Slow -->
+		<set name="random_damage" val="5" />
 		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="oncrit_skill" val="3574-3" />
-		<set name="item_skill" val="3552-3;3655-1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="724" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="724" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14511" type="Weapon" name="Vesper Pincer {PvP} - Haste">
+	<item id="14511" name="Vesper Pincer {PvP} - Haste" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion . <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. When enchanted to 4 or more, there is a chance that party membe -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
 		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3564-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3564-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Haste -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1280" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="359" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="406" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="14512" type="Weapon" name="Vesper Pincer {PvP} - Health">
+	<item id="14512" name="Vesper Pincer {PvP} - Health" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion . <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack.. When enchanted to 4 or more, there is a chance that party members includ -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
 		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;3013-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Health -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1280" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="359" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="406" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="359" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
-	<item id="14513" type="Weapon" name="Vesper Pincer {PvP} - Focus">
+	<item id="14513" name="Vesper Pincer {PvP} - Focus" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Kamael-exclusive Weapon: Vesper Cutter Conversion . <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP, and chance to recover CP during an attack.. When enchanted to 4 or more, there i -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
+		<set name="crystal_count" val="4587" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3650-1;8289-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - CP Drain, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
 		<set name="random_damage" val="40" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="4587" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="3426-1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3650-1;8289-1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
+			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="359" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
-			<add stat="accCombat" val="-1.5" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="406" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14514" type="Weapon" name="Vesper Shooter {PvP} - Cheap Shot">
+	<item id="14514" name="Vesper Shooter {PvP} - Cheap Shot" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the . Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3360-1;3552-3;3655-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3360-1;3552-3;3655-1" /> <!-- Special Ability: Cheap Shot, Special Ability: PvP Damage, PvP Weapon - Rapid Fire -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="444" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="303" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="14515" type="Weapon" name="Vesper Shooter {PvP} - Focus">
+	<item id="14515" name="Vesper Shooter {PvP} - Focus" type="Weapon">
+		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3655-1;8289-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3655-1;8289-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="444" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="303" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
-	<item id="14516" type="Weapon" name="Vesper Shooter {PvP} - Critical Slow">
+	<item id="14516" name="Vesper Shooter {PvP} - Critical Slow" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3655-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Rapid Fire -->
+		<set name="material" val="STEEL" />
+		<set name="oncrit_skill" val="3574-2" /> <!-- Special Ability: Critical Slow -->
+		<set name="random_damage" val="10" />
 		<set name="reuse_delay" val="400" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="oncrit_skill" val="3574-2" />
-		<set name="item_skill" val="3552-3;3655-1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="444" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="176" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="444" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="303" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14517" type="Weapon" name="Vesper Nagan {PvP} - Haste">
+	<item id="14517" name="Vesper Nagan {PvP} - Haste" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance that additional damage is applied during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3564-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3564-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Haste -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1800" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="429" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14518" type="Weapon" name="Vesper Nagan {PvP} - Health">
+	<item id="14518" name="Vesper Nagan {PvP} - Health" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3013-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3013-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Health -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1800" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="429" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14519" type="Weapon" name="Vesper Nagan {PvP} - Focus">
+	<item id="14519" name="Vesper Nagan {PvP} - Focus" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="4587" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3566-3" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-1;3653-1;3566-3" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Focus -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1800" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="429" />
-			<set stat="mAtk" val="176" />
-			<set stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="429" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14520" type="Armor" name="Vesper Breastplate {PvP}">
+	<item id="14520" name="Vesper Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="7520" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="250" />
 		</for>
 	</item>
-	<item id="14521" type="Armor" name="Vesper Leather Breastplate {PvP}">
+	<item id="14521" name="Vesper Leather Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0" stat="pDef" val="187" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="187" />
 		</for>
 	</item>
-	<item id="14522" type="Armor" name="Vesper Tunic {PvP}">
+	<item id="14522" name="Vesper Tunic {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
-		<set name="material" val="BRONZE" />
-		<set name="weight" val="1750" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="125" />
-			<add stat="maxMp" val="637" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="125" />
 		</for>
 	</item>
-	<item id="14523" type="Armor" name="Vesper Noble Breastplate {PvP}">
+	<item id="14523" name="Vesper Noble Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing all Speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0" stat="pDef" val="250" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="250" />
 		</for>
 	</item>
-	<item id="14524" type="Armor" name="Vesper Noble Leather Breastplate {PvP}">
+	<item id="14524" name="Vesper Noble Leather Breastplate {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of canceling the opponent's target when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0" stat="pDef" val="187" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="187" />
 		</for>
 	</item>
-	<item id="14525" type="Armor" name="Vesper Noble Tunic {PvP}">
+	<item id="14525" name="Vesper Noble Tunic {PvP}" type="Armor">
+		<!-- Decreases damage received during PvP. Has a chance of decreasing the chance of receiving Critical Damage and P. Critical Damage amount. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
-			<add order="0" stat="pDef" val="125" />
-			<add stat="maxMp" val="637" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="125" />
 		</for>
 	</item>
-	<item id="14526" type="Weapon" name="Dynasty Dual Dagger - Great Gale">
+	<item id="14526" name="Dynasty Dual Dagger - Great Gale" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd.. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2812" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="2150" />
-		<set name="price" val="87901000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="8295-1" />
-		<set name="item_skill" val="3859-2;3552-1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
-		<cond msgId="1518">
-			<and>
-				<player level="81" />
-				<player categoryType="DAGGER_MASTER" />
-			</and>
-		</cond>
-		<for>
-			<set stat="pAtk" val="304" />
-			<set stat="mAtk" val="157" />
-			<set stat="critRate" val="12" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14527" type="Weapon" name="Icarus Dual Daggers - Confusion">
-		<set name="icon" val="icon.dual_dagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="3896" />
-		<set name="crystal_type" val="S80" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="2100" />
-		<set name="price" val="121780000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="8296-1" />
-		<set name="item_skill" val="3858-3;3552-1" />
-		<cond msgId="1518">
-			<and>
-				<player level="81" />
-				<player categoryType="DAGGER_MASTER" />
-			</and>
-		</cond>
-		<for>
-			<set stat="pAtk" val="332" />
-			<set stat="mAtk" val="169" />
-			<set stat="critRate" val="12" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14528" type="Weapon" name="Dynasty Dual Daggers - Great Gale {PvP}">
-		<set name="icon" val="icon.dual_dagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="2812" />
 		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="8295-1" /> <!-- Special Ability: Focus -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3859-2;3552-1" /> <!-- Dagger of Haste, Special Ability: PvP Damage -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2150" />
+		<set name="price" val="87901000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="8295-1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3859-2;3552-3;3651-1;3652-1" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2150" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -860,36 +864,37 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="304" />
-			<set stat="mAtk" val="157" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="157" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="304" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14529" type="Weapon" name="Icarus Dual Daggers - Confusion {PvP}">
+	<item id="14527" name="Icarus Dual Daggers - Confusion" type="Weapon">
+		<!-- Masterwork Item that increases Evasion.. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="crystal_count" val="3896" />
 		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant4_skill" val="8296-1" /> <!-- Special Ability: Focus -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3858-3;3552-1" /> <!-- Dagger of Avoid, Special Ability: PvP Damage -->
 		<set name="material" val="STEEL" />
-		<set name="weight" val="2100" />
+		<set name="price" val="121780000" />
+		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="8296-1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3858-3;3552-3;3651-1;3652-1" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2100" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -897,401 +902,568 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="332" />
-			<set stat="mAtk" val="169" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="169" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="332" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14530" type="EtcItem" name="Maxwell House Pack">
-		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="default_action" val="PEEL" />
+	<item id="14528" name="Dynasty Dual Dagger - Great Gale {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Atk. Spd.. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's -->
+		<set name="icon" val="icon.dual_dagger_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="2812" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="8295-1" /> <!-- Special Ability: Focus -->
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3859-2;3552-3;3651-1;3652-1" /> <!-- Dagger of Haste, Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2150" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="157" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="304" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="14529" name="Icarus Dual Daggers - Confusion {PvP}" type="Weapon">
+		<!-- Masterwork Item that increases Evasion. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's S -->
+		<set name="icon" val="icon.dual_dagger_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_count" val="3896" />
+		<set name="crystal_type" val="S80" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="8296-1" /> <!-- Special Ability: Focus -->
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3858-3;3552-3;3651-1;3652-1" /> <!-- Dagger of Avoid, Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2100" />
+		<cond msgId="1518">
+			<and>
+				<player level="81" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="169" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="332" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="14530" name="Maxwell House Pack" type="EtcItem">
+		<!-- The wrapped pack containing 3 sheets of Feather of Resurrection, 3 sheets of Minion Pet Coupon (5-hour), 1 Mount - Darkmane Pacer (7-day) and one of Ornithomimus Hat (30-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="capsuled_items" val="13300,3,3,100;13383,3,3,100;13308,1,1,100;13316,1,1,100" /> <!-- Feather of Blessing (Event) -  -->
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="13300,3,3,100;13383,3,3,100;13308,1,1,100;13316,1,1,100" />
 	</item>
-	<item id="14531" type="EtcItem" name="Gludio Supply Box - Magic Pin - Grade S, A">
+	<item id="14531" name="Gludio Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2948-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2948-1" /> <!-- Gludio Supply Box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14532" type="EtcItem" name="Dion Supply Box - Magic Pin - Grade S, A">
+	<item id="14532" name="Dion Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2949-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2949-1" /> <!-- Dion supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14533" type="EtcItem" name="Giran Supply Box - Magic Pin - Grade S, A">
+	<item id="14533" name="Giran Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2950-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2950-1" /> <!-- Giran supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14534" type="EtcItem" name="Oren Supply Box - Magic Pin - Grade S, A">
+	<item id="14534" name="Oren Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2951-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2951-1" /> <!-- Oren supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14535" type="EtcItem" name="Aden Supply Box - Magic Pin - Grade S, A">
+	<item id="14535" name="Aden Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2952-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2952-1" /> <!-- Aden supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14536" type="EtcItem" name="Innadril Supply Box - Magic Pin - Grade S, A">
+	<item id="14536" name="Innadril Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2953-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2953-1" /> <!-- Innadril supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14537" type="EtcItem" name="Goddard Supply Box: Magic Pin - Grade S, A">
+	<item id="14537" name="Goddard Supply Box: Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2954-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2954-1" /> <!-- Goddard Supply Box: magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14538" type="EtcItem" name="Rune Supply Box - Magic Pin - Grade S, A">
+	<item id="14538" name="Rune Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2955-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2955-1" /> <!-- Rune supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14539" type="EtcItem" name="Schuttgart Supply Box - Magic Pin - Grade S, A">
+	<item id="14539" name="Schuttgart Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Schuttgart. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2956-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2956-1" /> <!-- Schuttgart supply box - magic pin -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14540" type="EtcItem" name="Gludio Supply Box - Magic Pouch - Grade S, A">
+	<item id="14540" name="Gludio Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2957-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2957-1" /> <!-- Gludio supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14541" type="EtcItem" name="Dion Supply Box - Magic Pouch - Grade S, A">
+	<item id="14541" name="Dion Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2958-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2958-1" /> <!-- Dion supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14542" type="EtcItem" name="Giran Supply Box - Magic Pouch - Grade S, A">
+	<item id="14542" name="Giran Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2959-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2959-1" /> <!-- Giran supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14543" type="EtcItem" name="Oren Supply Box - Magic Pouch - Grade S, A">
+	<item id="14543" name="Oren Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2960-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2960-1" /> <!-- Oren supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14544" type="EtcItem" name="Aden Supply Box - Magic Pouch - Grade S, A">
+	<item id="14544" name="Aden Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2961-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2961-1" /> <!-- Aden supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14545" type="EtcItem" name="Innadril Supply Box - Magic Pouch - Grade S, A">
+	<item id="14545" name="Innadril Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2962-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2962-1" /> <!-- Innadril supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14546" type="EtcItem" name="Goddard Supply Box: Magic Pouch - Grade S, A">
+	<item id="14546" name="Goddard Supply Box: Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2963-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2963-1" /> <!-- Goddard Supply Box: magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14547" type="EtcItem" name="Rune Supply Box - Magic Pouch - Grade S, A">
+	<item id="14547" name="Rune Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2964-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2964-1" /> <!-- Rune supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14548" type="EtcItem" name="Schuttgart Supply Box - Magic Pouch - Grade S, A">
+	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Schuttgart. High grade magic pouch that can be attached to the belt is packaged. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2965-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2965-1" /> <!-- Schuttgart supply box - magic pouch -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14549" type="EtcItem" name="Gludio Supply Box - Belt - Grade S, A">
+	<item id="14549" name="Gludio Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2966-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2966-1" /> <!-- Gludio supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14550" type="EtcItem" name="Dion Supply Box - Belt - Grade S, A">
+	<item id="14550" name="Dion Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Dion. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2967-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2967-1" /> <!-- Dion supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14551" type="EtcItem" name="Giran Supply Box - Belt - Grade S, A">
+	<item id="14551" name="Giran Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Giran. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2968-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2968-1" /> <!-- Giran supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14552" type="EtcItem" name="Oren Supply Box - Belt - Grade S, A">
+	<item id="14552" name="Oren Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Oren. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2969-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2969-1" /> <!-- Oren supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14553" type="EtcItem" name="Aden Supply Box - Belt - Grade S, A">
+	<item id="14553" name="Aden Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Aden. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2970-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2970-1" /> <!-- Aden supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14554" type="EtcItem" name="Innadril Supply Box - Belt - Grade S, A">
+	<item id="14554" name="Innadril Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2971-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2971-1" /> <!-- Innadril supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14555" type="EtcItem" name="Goddard Supply Box: Belt - Grade S, A">
+	<item id="14555" name="Goddard Supply Box: Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2972-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2972-1" /> <!-- Goddard Supply Box: belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14556" type="EtcItem" name="Rune Supply Box - Belt - Grade S, A">
+	<item id="14556" name="Rune Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Rune. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2973-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2973-1" /> <!-- Rune supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14557" type="EtcItem" name="Schuttgart Supply Box - Belt - Grade S, A">
+	<item id="14557" name="Schuttgart Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+		<!-- Box that has the symbol of Schuttgart. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2974-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2974-1" /> <!-- Schuttgart supply box - belt -->
+		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14558" type="Weapon" name="Dynasty Dual Daggers {PvP}">
+	<item id="14558" name="Dynasty Dual Dagger {PvP}" type="Weapon">
+		<!-- Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be e -->
 		<set name="icon" val="icon.dual_dagger_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
 		<set name="crystal_count" val="2812" />
 		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="2150" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="8295-1" /> <!-- Special Ability: Focus -->
 		<set name="enchant_enabled" val="1" />
-		<set name="enchant4_skill" val="8295-1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3552-3;3651-1;3652-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3552-3;3651-1;3652-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Cancel, PvP Weapon - Ignore Shield Defense -->
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2150" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -1299,1063 +1471,1168 @@
 			</and>
 		</cond>
 		<for>
-			<set stat="pAtk" val="304" />
-			<set stat="mAtk" val="157" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="157" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="304" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14559" type="EtcItem" name="Player Commendation Points">
+	<item id="14559" name="Player Commendation Points" type="EtcItem">
+		<!-- When double-clicked, 700 Player Commendation Points can be acquired. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2841-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2841-1" /> <!-- PC Points -->
+		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
 	</item>
-	<item id="14560" type="Weapon" name="Dagger of Val Turner Family">
+	<item id="14560" name="Dagger of Val Turner Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="rhand" />
 		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="713" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="713" />
 		<for>
-			<set stat="pAtk" val="271" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="119" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="271" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
-	<item id="14561" type="Weapon" name="Slasher of Val Turner Family">
+	<item id="14561" name="Slasher of Val Turner Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1035" />
+		<set name="bodypart" val="lrhand" />
 		<set name="change_weaponId" val="14578" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14562" type="Weapon" name="Sword of Ashton Family">
-		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="975" />
-		<set name="change_weaponId" val="14579" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="310" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14563" type="Weapon" name="Claw of Ashton Family">
-		<set name="icon" val="icon.weapon_demon_splinter_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;32;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1013" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14564" type="Weapon" name="Slasher of Esthus Family">
-		<set name="icon" val="icon.weapon_heavens_divider_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1035" />
-		<set name="change_weaponId" val="14580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
-			<set stat="pAtk" val="376" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14565" type="Weapon" name="Great Hammer of Esthus Family">
-		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1365" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
 			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
-	<item id="14566" type="Weapon" name="Staff of Dake Family">
-		<set name="icon" val="icon.weapon_imperial_staff_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
+	<item id="14562" name="Sword of Ashton Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="683" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="247" />
-			<set stat="mAtk" val="212" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14567" type="Weapon" name="Hall of Dake Family">
-		<set name="icon" val="icon.weapon_arcana_mace_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="change_weaponId" val="14579" />
 		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="975" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
 		<for>
-			<set stat="pAtk" val="203" />
-			<set stat="mAtk" val="193" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="310" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14568" type="Weapon" name="Bow of Cadmus Family">
-		<set name="icon" val="icon.weapon_draconic_bow_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
-		<set name="attack_range" val="500" />
-		<set name="damage_range" val="0;0;10;0" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1238" />
-		<set name="change_weaponId" val="14581" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="mp_consume" val="6" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="1500" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="640" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="12" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="293" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14569" type="Weapon" name="Mace of Cadmus Family">
-		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1178" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="310" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14570" type="Weapon" name="Dualsword of Hunter Family">
-		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1560" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14571" type="Weapon" name="Spear of Hunter Family">
-		<set name="icon" val="icon.weapon_saint_spear_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1350" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3599-1" />
-		<for>
-			<set stat="pAtk" val="310" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14572" type="Weapon" name="Staff of Abygail Family">
-		<set name="icon" val="icon.weapon_imperial_staff_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;46;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="683" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
-		<for>
-			<set stat="pAtk" val="247" />
-			<set stat="mAtk" val="212" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14573" type="Weapon" name="Great Hammer of Abygail Family">
-		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1365" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14574" type="Weapon" name="Spear of Halter Family">
-		<set name="icon" val="icon.weapon_saint_spear_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="10" />
-		<set name="attack_range" val="80" />
-		<set name="damage_range" val="0;0;66;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1350" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3599-1" />
-		<for>
-			<set stat="pAtk" val="310" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14575" type="Weapon" name="Dagger of Halter Family">
-		<set name="icon" val="icon.weapon_angel_slayer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="5" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="713" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="271" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="12" />
-			<add stat="accCombat" val="-3.75" />
-			<set stat="pAtkSpd" val="433" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14576" type="Weapon" name="Mace of Orwen Family">
-		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="20" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1178" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<for>
-			<set stat="pAtk" val="310" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
-			<set stat="pAtkSpd" val="379" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14577" type="Weapon" name="Claw of Orwen Family">
+	<item id="14563" name="Claw of Ashton Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="5" />
 		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
 		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1013" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="376" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="4" />
-			<add stat="accCombat" val="4.75" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
 		</for>
 	</item>
-	<item id="14578" type="Weapon" name="Slicer of Val Turner Family">
-		<set name="icon" val="icon.weapon_gram_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
+	<item id="14564" name="Slasher of Esthus Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="14580" />
 		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1350" />
-		<set name="change_weaponId" val="14561" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="KAMAEL" />
-		</cond>
-		<for>
-			<set stat="pAtk" val="334" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14579" type="Weapon" name="Épée of Ashton Family">
-		<set name="icon" val="icon.weapon_leavatein_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="random_damage" val="40" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="975" />
-		<set name="change_weaponId" val="14562" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="KAMAEL" />
-		</cond>
-		<for>
-			<set stat="pAtk" val="281" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="10" />
-			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="406" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14580" type="Weapon" name="Slicer of Esthus Family">
-		<set name="icon" val="icon.weapon_gram_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="random_damage" val="15" />
-		<set name="attack_range" val="40" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1350" />
-		<set name="change_weaponId" val="14564" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="element_enabled" val="true" />
-		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="KAMAEL" />
-		</cond>
-		<for>
-			<set stat="pAtk" val="334" />
-			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="8" />
-			<add stat="accCombat" val="2" />
-			<set stat="pAtkSpd" val="350" />
-			<enchant val="0" stat="pAtk" />
-			<enchant val="0" stat="mAtk" />
-		</for>
-	</item>
-	<item id="14581" type="Weapon" name="Estoc of Cadmus Family">
-		<set name="icon" val="icon.weapon_sarnga_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
+		<set name="material" val="ADAMANTAITE" />
 		<set name="random_damage" val="10" />
-		<set name="attack_range" val="400" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="1200" />
-		<set name="change_weaponId" val="14568" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1035" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="376" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14565" name="Great Hammer of Esthus Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="reuse_delay" val="400" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1365" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="376" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14566" name="Staff of Dake Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="683" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="212" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="247" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14567" name="Hall of Dake Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_arcana_mace_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="975" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="193" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="203" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14568" name="Bow of Cadmus Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_draconic_bow_i00" />
+		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="14581" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="mp_consume" val="6" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1238" />
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="640" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="293" />
+		</for>
+	</item>
+	<item id="14569" name="Mace of Cadmus Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1178" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="310" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14570" name="Dualsword of Hunter Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1560" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="376" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14571" name="Spear of Hunter Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_saint_spear_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="1350" />
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="310" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14572" name="Staff of Abygail Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_imperial_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="683" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="212" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="247" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14573" name="Great Hammer of Abygail Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1365" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="376" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14574" name="Spear of Halter Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_saint_spear_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="1350" />
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="310" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14575" name="Dagger of Halter Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_angel_slayer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="713" />
+		<for>
+			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="271" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="433" />
+		</for>
+	</item>
+	<item id="14576" name="Mace of Orwen Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1178" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="310" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="379" />
+		</for>
+	</item>
+	<item id="14577" name="Claw of Orwen Family" type="Weapon">
+		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_demon_splinter_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1013" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="376" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="325" />
+		</for>
+	</item>
+	<item id="14578" name="Slicer of Val Turner Family" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Val Turner Family's Slasher Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_gram_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="14561" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1350" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<set stat="pAtk" val="392" />
+			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="119" />
-			<set stat="critRate" val="10" />
-			<add stat="accCombat" val="-1.5" />
-			<set stat="pAtkSpd" val="303" />
-			<enchant val="0" stat="pAtk" />
 			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="334" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
-	<item id="14582" type="Armor" name="Apella Combat Helmet">
-		<set name="icon" val="icon.armor_helmet_i00" />
+	<item id="14579" name="Épée of Ashton Family" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Ashton Family's Sword conversion. Enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during  -->
+		<set name="icon" val="icon.weapon_leavatein_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="14562" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="975" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="281" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="406" />
+		</for>
+	</item>
+	<item id="14580" name="Slicer of Esthus Family" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Esthus Family's Slasher Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_gram_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="14564" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1350" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="334" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="350" />
+		</for>
+	</item>
+	<item id="14581" name="Estoc of Cadmus Family" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Cadmus Family's Bow Conversion. Soul Crystal Enhancement and Augmentation not allowed. -->
+		<set name="icon" val="icon.weapon_sarnga_i00" />
+		<set name="attack_range" val="400" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="14568" />
+		<set name="crystal_type" val="S" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1200" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="119" />
+			<enchant val="0" stat="mAtk" />
+			<set stat="pAtk" val="392" />
+			<enchant val="0" stat="pAtk" />
+			<set stat="pAtkSpd" val="303" />
+		</for>
+	</item>
+	<item id="14582" name="Apella Combat Helmet" type="Armor">
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="570" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" /> <!-- Elder -->
+			<player pledgeClass="4" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="73" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="73" />
 		</for>
 	</item>
-	<item id="14583" type="Armor" name="Apella Combat Armor">
+	<item id="14583" name="Apella Combat Armor" type="Armor">
+		<!-- A one-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9780" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="293" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="293" />
 		</for>
 	</item>
-	<item id="14584" type="Armor" name="Apella Combat Gauntlets">
+	<item id="14584" name="Apella Combat Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14585" type="Armor" name="Apella Combat Boots">
+	<item id="14585" name="Apella Combat Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1004_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14586" type="Armor" name="Apella Combat Clothes">
+	<item id="14586" name="Apella Combat Clothes" type="Armor">
+		<!-- A one-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5400" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" /> <!-- Elder -->
+			<player pledgeClass="4" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="220" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="220" />
 		</for>
 	</item>
-	<item id="14587" type="Armor" name="Apella Combat Leather Gloves">
+	<item id="14587" name="Apella Combat Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" /> <!-- Elder -->
+			<player pledgeClass="4" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14588" type="Armor" name="Apella Combat Shoes">
+	<item id="14588" name="Apella Combat Shoes" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t1005_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
-			<player pledgeClass="4" /> <!-- Elder -->
+			<player pledgeClass="4" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14589" type="Armor" name="Apella Combat Overcoat">
+	<item id="14589" name="Apella Combat Overcoat" type="Armor">
+		<!-- A one-piece upper and lower body armor for clans. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="2450" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="147" />
-			<add stat="maxMp" val="718" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="147" />
 		</for>
 	</item>
-	<item id="14590" type="Armor" name="Apella Combat Silk Gloves">
+	<item id="14590" name="Apella Combat Silk Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_g_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="580" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14591" type="Armor" name="Apella Combat Sandals">
+	<item id="14591" name="Apella Combat Sandals" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t1006_b_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1130" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
 			<and>
-				<player pledgeClass="4" /> <!-- Elder -->
+				<player pledgeClass="4" />
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="49" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="49" />
 		</for>
 	</item>
-	<item id="14592" type="Armor" name="Gludio Earth Resistance Ring">
+	<item id="14592" name="Gludio Earth Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Gludio territory. Earth Resistance + 12. Only one effect is applied even when wearing two earrings having the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8379-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8379-1" /> <!-- Protection Ring - Gludio -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="earthRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14593" type="Armor" name="Dion Water Resistance Ring">
+	<item id="14593" name="Dion Water Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Dion territory. Water Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8380-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8380-1" /> <!-- Protection Ring - Dion -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
-			<add stat="waterRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add stat="waterRes" val="12" />
 		</for>
 	</item>
-	<item id="14594" type="Armor" name="Giran Fire Resistance Ring">
+	<item id="14594" name="Giran Fire Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Giran territory. Fire Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8381-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8381-1" /> <!-- Protection Ring - Giran -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="fireRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14595" type="Armor" name="Oren Earth Resistance Ring">
+	<item id="14595" name="Oren Earth Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Oren territory. Earth Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8382-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8382-1" /> <!-- Protection Ring - Oren -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="earthRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14596" type="Armor" name="Aden Holy Resistance Ring">
+	<item id="14596" name="Aden Holy Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Aden territory. Holy Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8383-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8383-1" /> <!-- Protection Ring - Aden -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="holyRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14597" type="Armor" name="Innadril Holy Resistance Ring">
+	<item id="14597" name="Innadril Holy Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Innadril territory. Holy Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8384-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8384-1" /> <!-- Protection Ring - Innadril -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="holyRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14598" type="Armor" name="Goddard Dark Resistance Ring">
+	<item id="14598" name="Goddard Dark Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Goddard territory. Dark Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8385-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8385-1" /> <!-- Protection Ring - Goddard -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
 			<add stat="darkRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="42" />
 		</for>
 	</item>
-	<item id="14599" type="Armor" name="Rune Wind Resistance Ring">
+	<item id="14599" name="Rune Wind Resistance Ring" type="Armor">
+		<!-- Ring given to the guardian of Rune territory. Wind Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_tradable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8386-1" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8386-1" /> <!-- Protection Ring - Rune -->
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="42" />
-			<add stat="maxMp" val="17" />
-			<add stat="windRes" val="12" />
 			<enchant stat="mDef" val="0" />
+			<add stat="windRes" val="12" />
 		</for>
 	</item>
 </list>
