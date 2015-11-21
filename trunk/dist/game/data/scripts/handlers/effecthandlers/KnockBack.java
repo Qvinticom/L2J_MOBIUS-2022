@@ -57,6 +57,11 @@ public final class KnockBack extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Character effected = info.getEffected();
+		if (!effected.isPlayer() && !effected.isMonster())
+		{
+			return;
+		}
+		
 		final double radians = Math.toRadians(Util.calculateAngleFrom(info.getEffector(), info.getEffected()));
 		final int x = (int) (info.getEffected().getX() + (_distance * Math.cos(radians)));
 		final int y = (int) (info.getEffected().getY() + (_distance * Math.sin(radians)));
