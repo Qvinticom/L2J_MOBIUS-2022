@@ -216,5 +216,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeH(item.getCustomType2());
 		writeItemElementalAndEnchant(item);
 		writeD(item.getVisualId());
+		writeC(0);
+		writeC(0);
 	}
 }
