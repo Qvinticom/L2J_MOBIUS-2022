@@ -1480,15 +1480,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1244" levels="10" name="Freezing Flame">
-		<!-- Updated to Ertheia -->
-		<table name="#abnormalLvls"> 5 6 7 8 9 10 11 12 13 14 </table>
-		<table name="#dot"> 112 137 158 172 198 330 358 377 394 412 </table>
-		<table name="#dotPvP"> 132 162 187 204 234 390 423 445 466 487 </table>
-		<table name="#effectPoints"> -379 -495 -597 -646 -696 -746 -796 -846 -896 -946 </table> <!-- Guessed -->
-		<table name="#magicLvl"> 40 52 64 72 76 80 85 90 95 99</table>
-		<table name="#mpConsume"> 44 46 49 51 54 56 58 63 69 73 </table>
-		<table name="#mpInitialConsume"> 11 12 12 13 13 14 15 16 17 18 </table>
+	<skill id="1244" levels="13" name="Freezing Flame">
+		<!-- Updated to Underground -->
+		<table name="#abnormalLvls"> 5 6 7 8 9 10 11 12 13 14 15 16 17 </table>
+		<table name="#dot"> 112 137 158 172 198 330 358 377 394 412 421 430 439 </table>
+		<table name="#dotPvP"> 132 162 187 204 234 390 423 445 466 487 498 509 520 </table>
+		<table name="#effectPoints"> -379 -495 -597 -646 -696 -746 -796 -846 -896 -946 -996 -1046 -1096 </table> <!-- Guessed -->
+		<table name="#magicLvl"> 40 52 64 72 76 80 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 55 58 61 64 67 70 73 79 86 91 96 101 106 </table>
+		<table name="#mpInitialConsume"> 11 12 12 13 13 14 15 16 17 18 19 20 21 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
