@@ -278,14 +278,14 @@
 	<appearance_stone id="23715" targetType="ARMOR" type="FIXED" visualId="23711" bodyPart="feet" /> <!-- Metal Shoes Appearance Stone -->
 
 	<!-- Military Suit -->
-	<appearance_stone id="23503" targetType="ARMOR" type="FIXED" visualId="23453" raceNot="ERTHEIA"> <!-- Military Top Appearance Stone -->
+	<appearance_stone id="23503" targetType="ARMOR" type="FIXED" visualId="23453"> <!-- Military Top Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23504" targetType="ARMOR" type="FIXED" visualId="23454" bodyPart="legs" raceNot="ERTHEIA" /> <!-- Military Pants Appearance Stone -->
-	<appearance_stone id="23505" targetType="ARMOR" type="FIXED" visualId="23455" bodyPart="gloves" raceNot="ERTHEIA" /> <!-- Military Gloves Appearance Stone -->
-	<appearance_stone id="23506" targetType="ARMOR" type="FIXED" visualId="23456" bodyPart="feet" raceNot="ERTHEIA" /> <!-- Military Shoes Appearance Stone -->
-	<appearance_stone id="23507" targetType="ACCESSORY" type="FIXED" visualId="23457" raceNot="ERTHEIA"> <!-- Military Hair Accessory Appearance Stone -->
+	<appearance_stone id="23504" targetType="ARMOR" type="FIXED" visualId="23454" bodyPart="legs" /> <!-- Military Pants Appearance Stone -->
+	<appearance_stone id="23505" targetType="ARMOR" type="FIXED" visualId="23455" bodyPart="gloves" /> <!-- Military Gloves Appearance Stone -->
+	<appearance_stone id="23506" targetType="ARMOR" type="FIXED" visualId="23456" bodyPart="feet" /> <!-- Military Shoes Appearance Stone -->
+	<appearance_stone id="23507" targetType="ACCESSORY" type="FIXED" visualId="23457"> <!-- Military Hair Accessory Appearance Stone -->
 		<bodyPart>hair</bodyPart>
 		<bodyPart>hair2</bodyPart>
 		<bodyPart>hairall</bodyPart>
@@ -342,11 +342,11 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23234" targetType="ARMOR" type="FIXED" visualId="23173" raceNot="ERTHEIA"> <!-- Alluring Swimsuit Appearance Stone -->
+	<appearance_stone id="23234" targetType="ARMOR" type="FIXED" visualId="23173"> <!-- Alluring Swimsuit Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
-	<appearance_stone id="23235" targetType="ARMOR" type="FIXED" visualId="23226" raceNot="ERTHEIA"> <!-- Seductive Swimsuit Appearance Stone -->
+	<appearance_stone id="23235" targetType="ARMOR" type="FIXED" visualId="23226"> <!-- Seductive Swimsuit Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
@@ -374,7 +374,7 @@
 	<appearance_stone id="22882" targetType="ACCESSORY" type="RESTORE" /> <!-- Hair Accessory Appearance Restoration Stone -->
 
 	<!--Anakim Outfit -->
-	<appearance_stone id="23882" targetType="ARMOR" type="FIXED" visualId="23881" raceNot="ERTHEIA">
+	<appearance_stone id="23882" targetType="ARMOR" type="FIXED" visualId="23881">
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
@@ -425,6 +425,18 @@
 	<appearance_stone id="46584" targetType="ARMOR" type="FIXED" visualId="46549" bodyPart="legs" />
 	<appearance_stone id="46585" targetType="ARMOR" type="FIXED" visualId="46550" bodyPart="gloves" />
 	<appearance_stone id="46586" targetType="ARMOR" type="FIXED" visualId="46551" bodyPart="feet" />
+
+	<!-- Maid Costume -->
+	<appearance_stone id="23513" targetType="ARMOR" type="FIXED" visualId="23458">
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+
+	<!-- Dark Knight Suit -->
+	<appearance_stone id="46270" targetType="ARMOR" type="FIXED" visualId="46260">
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
 
 	<!--Samurai Outfit -->
 	<appearance_stone id="23880" targetType="ARMOR" type="FIXED" visualId="23879">
