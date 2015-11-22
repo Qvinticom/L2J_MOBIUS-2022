@@ -116,29 +116,81 @@
 	<skill id="13816" levels="1" name="Kelbim's Dagger">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
+				<add stat="reflectDam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- PvP Damage + 15%%, Max HP + 25%%, P. Atk. + 10%%, Atk. Spd. + 15%%, P. Critical Damage + 15%%, and 20%% of it is reflected back to the attacker. --> 
 	<skill id="13817" levels="1" name="Kelbim's Dual Dagger">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
+				<add stat="reflectDam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- PvP Damage + 15%%, Max HP + 25%%, P. Atk. + 10%%, Atk. Spd. + 15%%, P. Critical Damage + 15%%, and 20%% of it is reflected back to the attacker. --> 
 	<skill id="13818" levels="1" name="Kelbim's Bow">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
+				<add stat="reflectDam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- PvP Damage + 15%%, Max HP + 25%%, P. Atk. + 10%%, Atk. Spd. + 15%%, P. Critical Damage + 15%%, and 20%% of it is reflected back to the attacker. --> 
 	<skill id="13819" levels="1" name="Kelbim's Crossbow">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvpPhysDmg" val="1.15" />
+				<mul stat="pvpPhysSkillsDmg" val="1.15" />
+				<mul stat="pvpMagicalDmg" val="1.15" />
+				<mul stat="maxHp" val="1.25" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pAtkSpd" val="1.15" />
+				<mul stat="critDmg" val="1.15" />
+				<add stat="reflectDam" val="20" />
+			</effect>
+		</for>
 	</skill>
 	<!-- For 30 min., Damage Reflect Resistance + 20%%. --> 
 	<skill id="13820" levels="1" name="Kelbim's Shout">
@@ -260,81 +312,227 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13837" levels="1" name="Shadow Cutter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13837" levels="12" name="Shadow Cutter">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13838" levels="1" name="Shadow Slasher">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13838" levels="12" name="Shadow Slasher">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13839" levels="1" name="Shadow Fighter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13839" levels="12" name="Shadow Fighter">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13840" levels="1" name="Shadow Stormer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13840" levels="12" name="Shadow Stormer">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13841" levels="1" name="Shadow Dualsword">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13841" levels="12" name="Shadow Dualsword">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<add stat="critRate" val="#critRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13842" levels="1" name="Shadow Shaper">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13842" levels="12" name="Shadow Shaper">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critDamage"> 1 1 1 1 1 1.03 1.06 1.1 1.1 1.1 1.1 1.1 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<mul stat="critDmg" val="#critDamage" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13843" levels="1" name="Shadow Thrower">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13843" levels="12" name="Shadow Thrower">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critDamage"> 1 1 1 1 1 1.03 1.06 1.1 1.1 1.1 1.1 1.1 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<mul stat="critDmg" val="#critDamage" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Atk. Spd + $s1. --> 
-	<skill id="13844" levels="1" name="Shadow Shooter">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13844" levels="12" name="Shadow Shooter">
+		<table name="#atkSpeed"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#critDamage"> 1 1 1 1 1 1.03 1.06 1.1 1.1 1.1 1.1 1.1 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#atkSpeed" />
+				<mul stat="critDmg" val="#critDamage" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Casting Spd. + $s1. --> 
-	<skill id="13845" levels="1" name="Shadow Buster">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13845" levels="12" name="Shadow Buster">
+		<table name="#mAtkSpd"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Casting Spd. + $s1. --> 
-	<skill id="13846" levels="1" name="Shadow Retributer">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
+	<skill id="13846" levels="12" name="Shadow Retributer">
+		<table name="#mAtkSpd"> 1.05 1.07 1.1 1.12 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
+		<table name="#mCritRate"> 0 0 0 0 0 30 60 100 100 100 100 100 </table>
+		<table name="#maxHp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#maxMp"> 1 1 1 1 1 1 1 1 1.05 1.1 1.15 1.15 </table>
+		<table name="#pAtk"> 1 1 1 1 1 1 1 1 1 1 1 1.07 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="magicLvl" val="85" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<add stat="mCritRate" val="#mCritRate" />
+				<mul stat="maxHp" val="#maxHp" />
+				<mul stat="maxMp" val="#maxMp" />
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<!-- NPC Damage + 10%%. --> 
 	<skill id="13847" levels="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pvePhysDmg" val="1.10" />
+				<mul stat="pvePhysSkillsDmg" val="1.10" />
+				<mul stat="pveMagicalDmg" val="1.10" />
+			</effect>
+		</for>
 	</skill>
 	<!-- Allows the use of Blessed Resurrection. Cooldown is 12 hours. --> 
 	<skill id="13848" levels="1" name="Blessed Resurrection">

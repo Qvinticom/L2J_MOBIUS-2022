@@ -448,15 +448,17 @@
 	<item id="46327" name="Shadow Shaper" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13842-12;13847-1" /> <!-- Shadow Shaper, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -470,15 +472,17 @@
 	<item id="46328" name="Shadow Cutter" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13837-12;13847-1" /> <!-- Shadow Cutter, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -491,15 +495,17 @@
 	<item id="46329" name="Shadow Slasher" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13838-12;13847-1" /> <!-- Shadow Slasher, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -512,15 +518,17 @@
 	<item id="46330" name="Shadow Fighter" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_fist" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13839-12;13847-1" /> <!-- Shadow Fighter, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
@@ -534,15 +542,17 @@
 	<item id="46331" name="Shadow Stormer" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_spear" />
+		<set name="attack_range" val="80" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13840-12;13847-1" /> <!-- Shadow Stormer, PvE Damage Increase -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
@@ -556,15 +566,18 @@
 	<item id="46332" name="Shadow Thrower" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
+		<set name="attack_range" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13843-12;13847-1" /> <!-- Shadow Thrower, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -578,17 +591,23 @@
 	<item id="46333" name="Shadow Shooter" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Damage + 10%, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
+		<set name="attack_range" val="400" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13844-12;13847-1" /> <!-- Shadow Shooter, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
@@ -600,15 +619,17 @@
 	<item id="46334" name="Shadow Buster" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 15%, M. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
-		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13845-12;13847-1" /> <!-- Shadow Buster, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -621,15 +642,17 @@
 	<item id="46335" name="Shadow Retributer" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Casting Spd. + 15%, M. Critical Rate + 100, Max HP/MP + 15%, M. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13846-12;13847-1" /> <!-- Shadow Retributer, PvE Damage Increase -->
 		<set name="material" val="WOOD" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -644,15 +667,17 @@
 	<item id="46336" name="Shadow Dualsword" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Atk. Spd. + 15%, P. Critical Rate + 100, Max HP/MP + 15%, P. Atk. + 7%, NPC Damage + 10% when equipped. . Augmentation, crystallization, modification is impossible. Can bestow 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13841-12;13847-1" /> <!-- Shadow Dualsword, PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>

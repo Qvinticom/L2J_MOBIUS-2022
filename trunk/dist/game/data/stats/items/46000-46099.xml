@@ -789,6 +789,7 @@
 	<item id="46060" name="Kelbim Dagger" type="Weapon">
 		<!-- Weapon created by augmenting Kelbim's Atelia Fragments. PVP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%. Return 20% of additional damage to the enemy. . Enchantment, Augmentation, Crystallization, Appearance Change -->
 		<set name="icon" val="icon.weapon_kelbim_cutter_i01" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="rhand" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_type" val="R" />
@@ -796,11 +797,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13816-1" /> <!-- Kelbim's Dagger -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
 			<set stat="pAtk" val="707" />
 			<set stat="mAtk" val="352" />
@@ -812,6 +815,7 @@
 	<item id="46061" name="Kelbim Dual Dagger" type="Weapon">
 		<!-- Weapon created by augmenting Kelbim's Atelia Fragments. PVP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%. Return 20% of additional damage to the enemy. . Enchantment, Augmentation, Crystallization, Appearance Change -->
 		<set name="icon" val="icon.weapon_kelbim_dual_dagger_i01" />
+		<set name="attack_range" val="40" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="crystal_type" val="R" />
@@ -819,11 +823,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13817-1" /> <!-- Kelbim's Dual Dagger -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
+		<cond msgId="1518">
+			<and>
+				<player level="85" />
+				<player categoryType="DAGGER_MASTER" />
+			</and>
+		</cond>
 		<for>
 			<set stat="pAtk" val="809" />
 			<set stat="mAtk" val="352" />
@@ -835,6 +847,7 @@
 	<item id="46062" name="Kelbim Bow" type="Weapon">
 		<!-- Weapon created by augmenting Kelbim's Atelia Fragments. PVP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%. Return 20% of additional damage to the enemy. . Enchantment, Augmentation, Crystallization, Appearance Change -->
 		<set name="icon" val="icon.weapon_kelbim_bow_i01" />
+		<set name="attack_range" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_type" val="R" />
@@ -842,11 +855,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13818-1" /> <!-- Kelbim's Bow -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
 			<set stat="pAtk" val="1592" />
 			<set stat="mAtk" val="352" />
@@ -858,6 +874,7 @@
 	<item id="46063" name="Kelbim Crossbow" type="Weapon">
 		<!-- Weapon created by augmenting Kelbim's Atelia Fragments. PVP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%. Return 20% of additional damage to the enemy. . Enchantment, Augmentation, Crystallization, Appearance Change -->
 		<set name="icon" val="icon.weapon_kelbim_crossbow_i01" />
+		<set name="attack_range" val="400" />
 		<set name="bodypart" val="lrhand" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
@@ -865,11 +882,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="13819-1" /> <!-- Kelbim's Crossbow -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<for>
 			<set stat="pAtk" val="1434" />
 			<set stat="mAtk" val="352" />
