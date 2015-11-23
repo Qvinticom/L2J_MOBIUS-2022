@@ -78,7 +78,7 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32972-03.html":
+			case "32972-03.htm":
 			{
 				qs.startQuest();
 				qs.setCond(2); // Show arrow hack
