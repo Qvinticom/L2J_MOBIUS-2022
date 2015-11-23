@@ -19,10 +19,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="333" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -45,9 +45,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="333" />
-			<set stat="mAtk" val="151" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -70,9 +70,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="405" />
-			<set stat="mAtk" val="151" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -95,10 +95,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="405" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -121,9 +121,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="405" />
-			<set stat="mAtk" val="151" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -146,10 +146,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="333" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -172,10 +172,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<for>
-			<set stat="pAtk" val="361" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="361" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -198,10 +198,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="RAPIER" />
 		<for>
-			<set stat="pAtk" val="302" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -224,10 +224,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="401" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -267,7 +267,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45812" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies.\r\n -->
@@ -281,7 +280,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45813" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies.\r\n -->
@@ -295,7 +293,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45814" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies.\r\n -->
@@ -309,7 +306,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45815" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies.\r\n -->
@@ -323,7 +319,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45816" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies.\r\n -->
@@ -337,7 +332,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45817" name="Weapon Attribute Change Crystal (R-grade)" type="EtcItem">
 		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
@@ -348,7 +342,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45818" name="Player Commendation Points Coupon (360 Points)" type="EtcItem">
 		<!-- When double-clicked, 360 Player Commendation Points can be acquired. -->
@@ -362,7 +355,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45819" name="Player Commendation Points Coupon (720 Points)" type="EtcItem">
 		<!-- When double-clicked, 720 Player Commendation Points can be acquired. -->
@@ -376,7 +368,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45820" name="Observation Report" type="EtcItem">
 		<!-- Research results received from Cardinal Seresin at the Town of Oren. It talks about the anomaly in the Dark Elf region after the appearance of Shilen and the epidemic. Double-click to read the details.  -->
@@ -391,7 +382,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45821" name="Unstable Spirit's Energy" type="EtcItem">
 		<!-- Unstable energy obtained from defeating the mutated spirits in the Garden of Spirits. Take it to Master Cyphona. -->
@@ -406,7 +396,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45822" name="Unbalanced Energy" type="EtcItem">
 		<!-- Energy obtained from defeating El Floato in the Garden of Spirits. Take it to Magister Belas. -->
@@ -421,7 +410,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45823" name="Apocalypse Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical + 82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.. No Soul Crystal option. -->
@@ -443,10 +431,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="441" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="441" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -470,9 +458,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="504" />
-			<set stat="mAtk" val="219" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -496,9 +484,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="613" />
-			<set stat="mAtk" val="219" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -522,10 +510,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="504" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -549,10 +537,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="613" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -576,10 +564,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="504" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -603,10 +591,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="992" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="992" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -630,10 +618,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="894" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="894" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -657,9 +645,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="403" />
-			<set stat="mAtk" val="293" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="293" />
+			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -683,10 +671,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="403" />
-			<set stat="mAtk" val="293" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="293" />
+			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -710,10 +698,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="491" />
-			<set stat="mAtk" val="322" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="322" />
+			<set stat="pAtk" val="491" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -737,9 +725,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="613" />
-			<set stat="mAtk" val="219" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -763,10 +751,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<set stat="pAtk" val="504" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -790,10 +778,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<for>
-			<set stat="pAtk" val="613" />
-			<set stat="mAtk" val="219" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="219" />
+			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -810,7 +798,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45838" name="Angry Energy" type="EtcItem">
 		<!-- Item obtained from defeating Harpe in the Garden of Spirits. You can feel the spirit's anger. Take it to Magister Belas. -->
@@ -825,7 +812,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45839" name="Isabella's Evil Thoughts" type="EtcItem">
 		<!-- Item obtained from defeating Isabella in the Garden of Spirits. Take it to Ferin. -->
@@ -840,7 +826,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45840" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -854,7 +839,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45841" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -868,7 +852,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45842" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -882,7 +865,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45843" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -896,7 +878,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45844" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -910,7 +891,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45845" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -924,7 +904,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45846" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -938,7 +917,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45847" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -952,7 +930,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45848" name="Mark of Trust (High-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -966,7 +943,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45849" name="Mutated Spirit's Soul" type="EtcItem">
 		<!-- A mutated spirit's soul obtained from defeating the mutated spirits in the Garden of Spirits. It's proof that you've put them to rest in peace. Take it to Master Cyphona. -->
@@ -981,7 +957,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45850" name="Detector" type="EtcItem">
 		<!-- Item obtained from defeating the Embryo in the Dimensional Raid. It's the item that Merlot requested. Take it to Merlot to receive the certificate for finishing the mission. -->
@@ -995,7 +970,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45851" name="Specter Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical + 82.1. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.. No Soul Crystal option. -->
@@ -1017,10 +991,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="511" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1044,9 +1018,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="584" />
-			<set stat="mAtk" val="254" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="584" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1070,9 +1044,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="711" />
-			<set stat="mAtk" val="254" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="711" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1096,10 +1070,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="584" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="584" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1123,10 +1097,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="711" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="711" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1150,10 +1124,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="584" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="584" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1177,10 +1151,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="1151" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="1151" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1204,10 +1178,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="1036" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="1036" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1231,9 +1205,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="467" />
-			<set stat="mAtk" val="339" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="339" />
+			<set stat="pAtk" val="467" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1257,10 +1231,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="467" />
-			<set stat="mAtk" val="339" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="339" />
+			<set stat="pAtk" val="467" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1284,10 +1258,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="569" />
-			<set stat="mAtk" val="373" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="373" />
+			<set stat="pAtk" val="569" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1311,9 +1285,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="711" />
-			<set stat="mAtk" val="254" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="711" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1337,10 +1311,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<set stat="pAtk" val="584" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="584" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1364,10 +1338,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<for>
-			<set stat="pAtk" val="711" />
-			<set stat="mAtk" val="254" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="254" />
+			<set stat="pAtk" val="711" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1383,7 +1357,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45866" name="Golden Festival Coin" additionalName="Event" type="EtcItem">
 		<!-- A golden festival coin that can be obtained from Kableon's game in the Talkity Talk Talk Troupe Festival. Take it to Nostra Gibbs to exchange for a Lucky Tarot Card. Will be deleted once the event ends. -->
@@ -1393,7 +1366,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45867" name="Summon Scroll: Kableon" additionalName="Event" type="EtcItem">
 		<!-- Summon Kableon to get a star rating. If you get 5 stars, you'll receive a Golden Festival Coin. It can only be used in a Peaceful Zone. Will be deleted once the event ends. -->
@@ -1407,7 +1379,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45868" name="Regular Lucky Tarot Card" additionalName="Event" type="EtcItem">
 		<!-- An item needed to play the Regular Lucky Game. It looks like a tarot card. Play a Regular Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
@@ -1417,7 +1388,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45869" name="Premium Lucky Tarot Card" additionalName="Event" type="EtcItem">
 		<!-- An item needed to play the Premium Lucky Game. It looks like a tarot card. Play a Premium Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
@@ -1427,7 +1397,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45870" name="Spellbook: Favor of the Exalted" additionalName="Lv. 2" type="EtcItem">
 		<!-- Needed to learn active skill, Favor of the Exalted Lv. 2, used to buff a target with 10% Bonus XP and SP.. Can be obtained in the main class status. -->
@@ -1441,7 +1410,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45871" name="Proof of Disposal" type="EtcItem">
 		<!-- Item obtained from defeating the monsters that Elikia requested. Take it to Elikia in Heine. -->
@@ -1455,7 +1423,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45872" name="Proof of Battle" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Mysterious Butler to receive the certificate for finishing the mission. -->
@@ -1469,7 +1436,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45873" name="Proof of Battle" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Olympiad Manager to receive the certificate for finishing the mission.  -->
@@ -1483,7 +1449,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45874" name="Kokko's Friend Summon Scroll" additionalName="Event" type="EtcItem">
 		<!-- Item containing the magic of Kokko. Can summon a friend once every 30 minutes. Target a party member an double-click to activate the skill.  -->
@@ -1509,7 +1474,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45876" name="Kokko's Fishing Shot Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a Fishing Shot. Will be deleted once the event ends. -->
@@ -1523,7 +1487,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45877" name="Kokko's Bait Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get bait to fish. Will be deleted once the event ends. -->
@@ -1571,10 +1534,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="558" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="558" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1598,9 +1561,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="638" />
-			<set stat="mAtk" val="278" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1624,9 +1587,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="777" />
-			<set stat="mAtk" val="278" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1650,10 +1613,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="638" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1677,10 +1640,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="777" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1704,10 +1667,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="638" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1731,10 +1694,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="1257" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1758,10 +1721,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="1132" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1785,9 +1748,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="511" />
-			<set stat="mAtk" val="371" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="371" />
+			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1811,10 +1774,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="511" />
-			<set stat="mAtk" val="371" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="371" />
+			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1838,10 +1801,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="622" />
-			<set stat="mAtk" val="408" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="408" />
+			<set stat="pAtk" val="622" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1865,9 +1828,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="777" />
-			<set stat="mAtk" val="278" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1891,10 +1854,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<set stat="pAtk" val="638" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1918,10 +1881,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<for>
-			<set stat="pAtk" val="777" />
-			<set stat="mAtk" val="278" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="278" />
+			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>

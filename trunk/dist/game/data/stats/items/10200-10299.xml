@@ -100,8 +100,8 @@
 		<set name="weight" val="130" />
 		<for>
 			<mul stat="magicSuccRes" val="1.15" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="26" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10208" name="Enhanced Striped Mithril Shirt" type="Armor">
@@ -120,8 +120,8 @@
 		<set name="weight" val="130" />
 		<for>
 			<mul stat="magicSuccRes" val="1.5" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="30" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10209" name="Enhanced Steel Bracelet" type="Armor">
@@ -172,8 +172,8 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10212" name="For NPC (Bow)" type="Weapon">
@@ -228,8 +228,8 @@
 			<player categoryType="SUMMON_MASTER" />
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10215" name="Icarus Sawsword" type="Weapon">
@@ -255,10 +255,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -285,10 +285,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -315,10 +315,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="217" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -345,10 +345,10 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -376,10 +376,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -406,10 +406,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="363" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -436,10 +436,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="442" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -467,10 +467,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="217" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="290" />
+			<set stat="mAtk" val="217" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -500,10 +500,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="689" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -535,10 +535,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="329" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="329" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -569,10 +569,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="393" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="393" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -604,10 +604,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="163" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -625,8 +625,8 @@
 		<set name="price" val="33673000" />
 		<set name="weight" val="7570" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="226" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10228" name="Dynasty Platinum Plate" additionalName="Shield Master" type="Armor">
@@ -649,8 +649,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="226" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10229" name="Dynasty Platinum Plate" additionalName="Weapon Master" type="Armor">
@@ -673,8 +673,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="226" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10230" name="Dynasty Platinum Plate" additionalName="Force Master" type="Armor">
@@ -697,8 +697,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="226" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10231" name="Dynasty Platinum Plate" additionalName="Bard" type="Armor">
@@ -721,8 +721,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="226" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10232" name="Dynasty Jewel Leather Armor" type="Armor">
@@ -740,8 +740,8 @@
 		<set name="price" val="25255000" />
 		<set name="weight" val="4180" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10233" name="Dynasty Jewel Leather Armor" additionalName="Dagger Master" type="Armor">
@@ -763,8 +763,8 @@
 			<player categoryType="DAGGER_MASTER" />
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10234" name="Dynasty Jewel Leather Armor" additionalName="Bow Master" type="Armor">
@@ -786,8 +786,8 @@
 			<player categoryType="BOW_MASTER" />
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10235" name="Dynasty Silver Satin Tunic" type="Armor">
@@ -805,8 +805,8 @@
 		<set name="price" val="25255000" />
 		<set name="weight" val="1780" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="113" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10236" name="Dynasty Silver Satin Tunic" additionalName="Healer" type="Armor">
@@ -830,8 +830,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="113" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10237" name="Dynasty Silver Satin Tunic" additionalName="Enchanter" type="Armor">
@@ -855,8 +855,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="113" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10238" name="Dynasty Silver Satin Tunic" additionalName="Summoner" type="Armor">
@@ -880,8 +880,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="113" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10239" name="Dynasty Silver Satin Tunic" additionalName="Wizard" type="Armor">
@@ -905,8 +905,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="113" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10240" name="Bird Nest" type="Armor">
@@ -1068,10 +1068,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="222" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="325" />
+			<set stat="mAtk" val="222" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="325" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1098,10 +1098,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="151" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="405" />
+			<set stat="mAtk" val="151" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1498,10 +1498,10 @@
 		<set name="weight" val="2530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="37" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="73" />
+			<set stat="mAtk" val="37" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="73" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>

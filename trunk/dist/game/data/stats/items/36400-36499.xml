@@ -25,7 +25,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 6 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 2 Feathers of Blessing, 2 Heavenly Cocktails, and 1 High-grade Lucky Enchant Stone: Armor (R-grade). -->
@@ -38,7 +37,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 12 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 3 Feathers of Blessing, 2 Heavenly Cocktails, 2 unit s of Energy of Destruction, and a Rare Accessory Pack (Expiratory). If you are very lucky, you might get a Rare A -->
@@ -63,7 +61,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36405" name="Rare Accessory Pack (Expiratory)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring for 14 days. -->
@@ -162,8 +159,8 @@
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36412" name="Earth Wyrm Heart Ring (14-day)" additionalName="Event" type="Armor">
@@ -181,8 +178,8 @@
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36413" name="Single Mesh Armor" type="Armor">
@@ -198,7 +195,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="price" val="5000000" />
-		<set name="time" val="20160" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="36414" name="Dragon Claw" type="EtcItem">
@@ -207,7 +203,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="20160" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="36415" name="Dragon Blood" type="EtcItem">
@@ -216,7 +211,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="20160" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="36416" name="Dragon Tooth" type="EtcItem">
@@ -225,7 +219,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="20160" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="36417" name="Antharas Shaper" additionalName="Fragment" type="Weapon">
@@ -241,7 +234,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -265,7 +257,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -288,7 +279,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -312,7 +302,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -335,7 +324,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -358,7 +346,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
@@ -382,7 +369,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
@@ -406,7 +392,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -430,7 +415,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -454,7 +438,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>
@@ -477,7 +460,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -501,7 +483,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -524,7 +505,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -547,7 +527,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -571,7 +550,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -594,7 +572,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -618,7 +595,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -643,7 +619,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -667,7 +642,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -691,7 +665,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -714,7 +687,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1520" />
 		<for>
@@ -737,7 +709,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -760,7 +731,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
@@ -784,7 +754,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
@@ -809,7 +778,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -834,7 +802,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -858,7 +825,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -883,7 +849,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -907,7 +872,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -931,7 +895,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
@@ -956,7 +919,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
@@ -981,7 +943,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1006,7 +967,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1031,7 +991,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1055,7 +1014,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1080,7 +1038,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1104,7 +1061,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1128,7 +1084,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1153,7 +1108,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1177,7 +1131,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -1202,7 +1155,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -1228,7 +1180,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1253,7 +1204,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1278,7 +1228,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1302,7 +1251,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1326,7 +1274,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1350,7 +1297,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
@@ -1375,7 +1321,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
@@ -1400,7 +1345,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1425,7 +1369,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1449,7 +1392,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1474,7 +1416,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1498,7 +1439,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1522,7 +1462,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
@@ -1547,7 +1486,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
@@ -1572,7 +1510,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1597,7 +1534,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1622,7 +1558,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1646,7 +1581,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1671,7 +1605,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1695,7 +1628,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1719,7 +1651,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1744,7 +1675,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1768,7 +1698,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -1793,7 +1722,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -1819,7 +1747,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1844,7 +1771,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1869,7 +1795,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -1893,7 +1818,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1917,7 +1841,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -1941,7 +1864,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
@@ -1966,7 +1888,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
@@ -1991,7 +1912,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
@@ -2016,7 +1936,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
@@ -2040,7 +1959,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
@@ -2065,7 +1983,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -2089,7 +2006,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
@@ -2113,7 +2029,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
@@ -2138,7 +2053,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
@@ -2163,7 +2077,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -2188,7 +2101,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="1740" />
 		<for>
@@ -2213,7 +2125,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>
@@ -2237,7 +2148,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>

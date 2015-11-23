@@ -35,7 +35,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21045-1;23051-1" /> <!-- Seal Agathion, Release Agathion's Seal - Great Sumo Match, Great Sumo Match Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -74,7 +73,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21046-1;23052-1" /> <!-- Seal Agathion, Release Agathion's Seal - Button-eyed Bear Doll, Button-eyed Bear Doll Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -151,7 +149,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21047-1;23053-1" /> <!-- Seal Agathion, Release Agathion's Seal - God of Fortune, God of Fortune Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -190,7 +187,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21048-1;23054-1" /> <!-- Seal Agathion, Release Agathion's Seal - Dryad, Agathion Cute Trick - Dryad -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -210,7 +206,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21049-1;23055-1" /> <!-- Seal Agathion, Release Agathion's Seal - Wonboso, Wonboso Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -249,7 +244,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21050-1;23056-1" /> <!-- Seal Agathion, Release Agathion's Seal - Daewoonso, Daewoonso Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -415,7 +409,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20322" name="Napoleon Hat" type="Armor">
@@ -432,7 +425,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20323" name="Horn Hairband" type="Armor">
@@ -449,7 +441,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="1" />
@@ -469,7 +460,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20325" name="Plastic Hair" type="Armor">
@@ -486,7 +476,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20326" name="Beast Soulshot Pack" type="EtcItem">
@@ -590,7 +579,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22036-1" /> <!-- Beast Soulshot -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20333" name="Beast Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. Used from the master's inventory. -->
@@ -609,7 +597,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22037-1" /> <!-- Beast Spiritshot -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20334" name="Blessed Beast Spiritshot" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory. -->
@@ -628,7 +615,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22038-1" /> <!-- Blessed Beast Spiritshot -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20335" name="XP Rune III (Lv. 1-100+) 30%" additionalName="5-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, increases acquired XP by 30%. The timer decreases even during log-off state. Only one XP Rune can be applied at any given time regardless of additional XP Runes in ones inventory. -->
@@ -954,7 +940,6 @@
 		<set name="item_skill" val="22042-1" /> <!-- Greater CP Potion -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="100" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="20354" name="Elixir of CP (D-grade)" type="EtcItem">
@@ -978,7 +963,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20355" name="Elixir of CP (C-grade)" type="EtcItem">
@@ -1002,7 +986,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20356" name="Elixir of CP (B-grade)" type="EtcItem">
@@ -1026,7 +1009,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20357" name="Elixir of CP (A-grade)" type="EtcItem">
@@ -1050,7 +1032,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20358" name="Elixir of CP (S-grade)" type="EtcItem">
@@ -1074,7 +1055,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20359" name="Elixir of Life (D-grade)" type="EtcItem">
@@ -1098,7 +1078,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="2" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20360" name="Elixir of Life (C-grade)" type="EtcItem">
@@ -1122,7 +1101,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="3" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20361" name="Elixir of Life (B-grade)" type="EtcItem">
@@ -1146,7 +1124,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="4" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20362" name="Elixir of Life (A-grade)" type="EtcItem">
@@ -1170,7 +1147,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="5" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20363" name="Elixir of Life (S-grade)" type="EtcItem">
@@ -1194,7 +1170,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="6" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20364" name="Transformation Scroll: Onyx Beast" type="EtcItem">
@@ -1214,7 +1189,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22045-1" /> <!-- Transformation Scroll: Onyx Beast -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20365" name="Transformation Scroll: Doom Wraith" type="EtcItem">
@@ -1234,7 +1208,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22046-1" /> <!-- Transformation Scroll: Doom Wraith -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20366" name="Transformation Scroll: Grail Apostle" type="EtcItem">
@@ -1254,7 +1227,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22047-1" /> <!-- Transformation Scroll: Grail Apostle -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20367" name="Transformation Scroll: Unicorn" type="EtcItem">
@@ -1274,7 +1246,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22048-1" /> <!-- Transformation Scroll: Unicorn -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20368" name="Transformation Scroll: Lilim Knight" type="EtcItem">
@@ -1294,7 +1265,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22049-1" /> <!-- Transformation Scroll: Lilim Knight -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20369" name="Transformation Scroll: Golem Guardian" type="EtcItem">
@@ -1314,7 +1284,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22050-1" /> <!-- Transformation Scroll: Golem Guardian -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20370" name="Transformation Scroll: Inferno Drake" type="EtcItem">
@@ -1334,7 +1303,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22051-1" /> <!-- Transformation Scroll: Inferno Drake -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20371" name="Transformation Scroll: Dragon Bomber" type="EtcItem">
@@ -1354,7 +1322,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22052-1" /> <!-- Transformation Scroll: Dragon Bomber -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="20372" name="Scroll of Escape: Talking Island Village" type="EtcItem">
@@ -1373,7 +1340,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-1" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1395,7 +1361,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-2" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1417,7 +1382,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-3" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1439,7 +1403,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-4" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1461,7 +1424,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-5" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1483,7 +1445,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-6" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1505,7 +1466,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-7" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1527,7 +1487,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-8" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1549,7 +1508,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-9" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1571,7 +1529,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-10" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1593,7 +1550,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-11" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1615,7 +1571,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-12" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1637,7 +1592,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-13" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1659,7 +1613,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-14" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1681,7 +1634,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-15" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1703,7 +1655,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-16" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1725,7 +1676,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-17" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1747,7 +1697,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-18" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1769,7 +1718,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22053-19" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1795,7 +1743,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="shared_reuse_group" val="15" />
-		<set name="time" val="10080" />
 		<set name="weight" val="36" />
 	</item>
 	<item id="20392" name="Vitality Replenishing Potion" type="EtcItem">
@@ -1818,7 +1765,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="shared_reuse_group" val="15" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20393" name="Sweet Fruit Cocktail" type="EtcItem">
 		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour . -->
@@ -1839,7 +1785,6 @@
 		<set name="item_skill" val="22056-1;22057-1;22064-1;22058-1;22059-1;22060-1;22061-1;22065-1" /> <!-- Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance, Blessed Body -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20394" name="Fresh Fruit Cocktail" type="EtcItem">
@@ -1861,7 +1806,6 @@
 		<set name="item_skill" val="22066-1;22067-1;22068-1;22062-1;22063-1;22069-1;22065-1;22070-1" /> <!-- Berserker Spirit, Magic Barrier, Blessed Soul, Empower, Greater Acumen, Clarity, Blessed Body, Wild Magic -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20395" name="Mount - Steam Beetle Pack" type="EtcItem">
@@ -1897,7 +1841,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21051-1" /> <!-- Ride Steam Beetle -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="839-1" /> <!-- Dismount -->
 		<set name="weight" val="30" />
 	</item>

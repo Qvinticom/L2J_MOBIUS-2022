@@ -130,7 +130,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46312" name="Emergency Whistle - Barton" type="EtcItem">
 		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/Speed/P. Atk./P. Accuracy/P. Def./Atk. Spd./Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. + -->
@@ -144,7 +143,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46313" name="Emergency Whistle - Hayuk" type="EtcItem">
 		<!-- Send a signal to Hayuk, who will use the Phoenix Arrow skill. The whistle disappears after 2 uses. -->
@@ -158,7 +156,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46314" name="Emergency Whistle - Elise" type="EtcItem">
 		<!-- Send a signal to Elise, who will use the Celestial Party Protection skill. The whistle disappears after 2 uses. -->
@@ -172,7 +169,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46315" name="Emergency Whistle - Eliyah" type="EtcItem">
 		<!-- Send a signal to Eliyah, who will use the Shadow Hell skill. The whistle disappears after 2 uses. -->
@@ -186,7 +182,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46316" name="System Control Room Key" type="EtcItem">
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
@@ -197,7 +192,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46317" name="Shadow Shaper" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. . Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. . Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
@@ -213,14 +207,13 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="443" />
-			<set stat="mAtk" val="176" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="443" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -238,13 +231,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="526" />
-			<set stat="mAtk" val="176" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -262,13 +254,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
-			<set stat="pAtk" val="646" />
-			<set stat="mAtk" val="176" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="646" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -286,14 +277,13 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
-			<set stat="pAtk" val="646" />
-			<set stat="mAtk" val="176" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="646" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -311,14 +301,13 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<set stat="pAtk" val="526" />
-			<set stat="mAtk" val="176" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -336,14 +325,13 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="1031" />
-			<set stat="mAtk" val="176" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="1031" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -361,14 +349,13 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<set stat="pAtk" val="1012" />
-			<set stat="mAtk" val="176" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="1012" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -386,13 +373,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="394" />
-			<set stat="mAtk" val="272" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="272" />
+			<set stat="pAtk" val="394" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -410,14 +396,13 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
-			<set stat="pAtk" val="486" />
-			<set stat="mAtk" val="310" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="310" />
+			<set stat="pAtk" val="486" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -435,13 +420,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="60" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1520" />
 		<for>
-			<set stat="pAtk" val="646" />
-			<set stat="mAtk" val="176" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="646" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -453,8 +437,7 @@
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13842-12;13847-1" /> <!-- Shadow Shaper, PvE Damage Increase -->
+		<set name="item_skill" val="13842-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
@@ -477,8 +460,7 @@
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13837-12;13847-1" /> <!-- Shadow Cutter, PvE Damage Increase -->
+		<set name="item_skill" val="13837-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -500,8 +482,7 @@
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13838-12;13847-1" /> <!-- Shadow Slasher, PvE Damage Increase -->
+		<set name="item_skill" val="13838-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -523,8 +504,7 @@
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13839-12;13847-1" /> <!-- Shadow Fighter, PvE Damage Increase -->
+		<set name="item_skill" val="13839-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
@@ -547,8 +527,7 @@
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13840-12;13847-1" /> <!-- Shadow Stormer, PvE Damage Increase -->
+		<set name="item_skill" val="13840-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -571,8 +550,7 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13843-12;13847-1" /> <!-- Shadow Thrower, PvE Damage Increase -->
+		<set name="item_skill" val="13843-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="reuse_delay" val="1500" />
@@ -596,8 +574,7 @@
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13844-12;13847-1" /> <!-- Shadow Shooter, PvE Damage Increase -->
+		<set name="item_skill" val="13844-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="5" />
 		<set name="reuse_delay" val="400" />
@@ -624,8 +601,7 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13845-12;13847-1" /> <!-- Shadow Buster, PvE Damage Increase -->
+		<set name="item_skill" val="13845-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -647,8 +623,7 @@
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13846-12;13847-1" /> <!-- Shadow Retributer, PvE Damage Increase -->
+		<set name="item_skill" val="13846-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="WOOD" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
@@ -672,8 +647,7 @@
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="13841-12;13847-1" /> <!-- Shadow Dualsword, PvE Damage Increase -->
+		<set name="item_skill" val="13841-12;13847-1" /> <!-- , PvE Damage Increase -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -695,7 +669,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="46338" name="Sigel Knight Transformation Appearance" type="Armor">
 		<!-- Sigel Knight Transformation appearance. -->
@@ -709,7 +682,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -726,7 +698,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -743,7 +714,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -760,7 +730,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -777,7 +746,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -794,7 +762,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -811,7 +778,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -828,7 +794,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -1155,7 +1120,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46371" name="Ashen Certificate" type="EtcItem">
 		<!-- Certificate of the Revolutionaries that Refugee Neti has requested. -->
@@ -1170,7 +1134,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46372" name="Revolutionaries' Strategic Map Piece" type="EtcItem">
 		<!-- Part of the map that shows the strategy of the Ashen Shadow Revolutionaries. If you've collected them all, take them to Sir Klaus Vasper. -->
@@ -1185,7 +1148,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46373" name="Transport Goods" type="EtcItem">
 		<!-- Goods that Blacksmith Kluto has requested from you. If you've collected them all, take them to Blacksmith Kluto. -->
@@ -1200,7 +1162,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46374" name="Destroyed Mark Fragment" type="EtcItem">
 		<!-- Proof that you've completed that Yuyuria has requested from you. If you've collected them all, take them to Wanderer Yuyuria. -->
@@ -1215,7 +1176,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46375" name="Gludin Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Gludin from danger. Double-click to use. -->
@@ -1230,7 +1190,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46376" name="Shadow Weapon Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Shadow Weapon. -->
@@ -1244,7 +1203,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46377" name="Frozen One-handed Sword" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
@@ -1260,12 +1218,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="92" />
-			<set stat="mAtk" val="54" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1283,13 +1240,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="80" />
-			<set stat="mAtk" val="54" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1307,12 +1263,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="112" />
-			<set stat="mAtk" val="54" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1330,13 +1285,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="112" />
-			<set stat="mAtk" val="54" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1354,13 +1308,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="92" />
-			<set stat="mAtk" val="54" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1379,13 +1332,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="191" />
-			<set stat="mAtk" val="54" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1403,13 +1355,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="117" />
-			<set stat="mAtk" val="54" />
-			<add stat="critRate" val="10" />
 			<add stat="accCombat" val="-1.5" />
+			<add stat="critRate" val="10" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -1427,12 +1378,11 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="92" />
-			<set stat="mAtk" val="54" />
 			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1450,12 +1400,11 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="90" />
-			<set stat="mAtk" val="79" />
 			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="79" />
+			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1473,12 +1422,11 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="92" />
-			<set stat="mAtk" val="54" />
 			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="54" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1496,12 +1444,11 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="152" />
-			<set stat="mAtk" val="122" />
 			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="122" />
+			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1519,12 +1466,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="107" />
-			<set stat="mAtk" val="51" />
 			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="51" />
+			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1542,13 +1488,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<set stat="pAtk" val="107" />
-			<set stat="mAtk" val="181" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="181" />
+			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1566,12 +1511,11 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<for>
-			<set stat="pAtk" val="125" />
-			<set stat="mAtk" val="186" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="186" />
+			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1585,7 +1529,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="25" />
 		</for>
@@ -1601,7 +1544,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46393" name="NPC Ashen Shadow Revolutionary Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
@@ -1609,7 +1551,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="7" />
 		</for>
@@ -1621,7 +1562,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46395" name="Shadow Ingot" type="EtcItem">
 		<!-- Item needed to craft a Shadow Weapon. Take a + 10 Shadow Weapon and 10 Shadow Ingots to Neti in Gludio to get an enhanced Shadow weapon. -->
@@ -1630,7 +1570,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46396" name="NPC Sigel Knight Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
@@ -1639,7 +1578,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="7" />
 		</for>
@@ -1650,7 +1588,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="7" />
 		</for>
@@ -1661,7 +1598,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="7" />
 		</for>
@@ -1672,7 +1608,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="7" />
 		</for>

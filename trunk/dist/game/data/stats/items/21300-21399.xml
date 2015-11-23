@@ -339,7 +339,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="21324" name="Buff Pouch" additionalName="Event" type="EtcItem">
@@ -354,7 +353,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="21325" name="Agathion - Griffin Pack (7-day)" type="EtcItem">
@@ -520,7 +518,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8255-1;23252-1;3267-1" /> <!-- Release Agathion's Seal - Griffin, Agathion Cute Trick - Griffin, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -537,7 +534,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8255-1;23252-1;3267-1" /> <!-- Release Agathion's Seal - Griffin, Agathion Cute Trick - Griffin, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -705,7 +701,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21239-1;23250-1" /> <!-- Seal Agathion, Release Agathion's Seal - Cow, Agathion Cute Trick - Cow -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -722,7 +717,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21239-1;23250-1" /> <!-- Seal Agathion, Release Agathion's Seal - Cow, Agathion Cute Trick - Cow -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -889,7 +883,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="23251-1;3267-1" /> <!-- Agathion Cute Trick - Makeshift Bat, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -906,7 +899,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="23251-1;3267-1" /> <!-- Agathion Cute Trick - Makeshift Bat, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -1093,7 +1085,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
@@ -1115,7 +1106,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
@@ -1277,7 +1267,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="item_skill" val="8247-1" /> <!-- Ride Darkmane Pacer -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="21384" name="Mount - Darkmane Pacer" additionalName="Event" type="Armor">
@@ -1293,7 +1282,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8247-1" /> <!-- Ride Darkmane Pacer -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="21385" name="Mount - Steam Beetle Pack (7-day)" type="EtcItem">
@@ -1451,7 +1439,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8261-1" /> <!-- Ride Steam Beetle -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="21396" name="Mount - Steam Beetle" additionalName="Event" type="Armor">
 		<!-- Can mount a Steam Beetle when equipped. -->
@@ -1466,7 +1453,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8261-1" /> <!-- Ride Steam Beetle -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="21397" name="Mount - Gold Maned Lion Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Gold Maned Lion (7-day). -->

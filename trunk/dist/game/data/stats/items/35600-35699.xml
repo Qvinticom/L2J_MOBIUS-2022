@@ -27,8 +27,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35602" name="Earth Royal Guard Ring" type="Armor">
@@ -42,8 +42,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35603" name="Fire Royal Guard Ring" type="Armor">
@@ -57,8 +57,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35604" name="Holy Royal Guard Ring" type="Armor">
@@ -72,8 +72,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35605" name="Dark Royal Guard Ring" type="Armor">
@@ -87,8 +87,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35606" name="Wind Royal Guard Ring" type="Armor">
@@ -102,8 +102,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35607" name="Resistance Earring A" type="Armor">
@@ -1501,7 +1501,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35696" name="Holiday Tree - Globe Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
@@ -1510,7 +1509,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35697" name="Holiday Tree - Garland Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
@@ -1519,7 +1517,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35698" name="Holiday Tree - Bow Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the trees. -->
@@ -1528,7 +1525,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35699" name="Santa Girl's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak Box and Hat Box (1-day). If you are lucky, you can acquire an additional reward.  -->

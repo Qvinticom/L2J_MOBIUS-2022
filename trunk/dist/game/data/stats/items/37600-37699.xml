@@ -1036,7 +1036,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="37660" name="Magmeld's Instrument" type="Weapon">
@@ -1051,7 +1050,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
 			<add stat="accCombat" val="8" />
@@ -1072,7 +1070,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37662" name="Refined Romantic Chapeau: Gold" type="Armor">
@@ -1086,7 +1083,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37663" name="Refined Romantic Chapeau: Green" type="Armor">
@@ -1100,7 +1096,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37664" name="Refined Romantic Chapeau: Red" type="Armor">
@@ -1114,7 +1109,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37665" name="Refined Romantic Chapeau: Yellow" type="Armor">
@@ -1128,7 +1122,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
@@ -1198,8 +1191,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
@@ -1217,8 +1210,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37671" name="Heavenly Recovery Potion" type="EtcItem">
@@ -1229,7 +1222,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="37672" name="Mysterious Friend Summon Bracelet" additionalName="30-day" type="Armor">
 		<!-- Bracelet that can summon another character. The summoning character and the summoned character must both be equipped with it and in the same party. 30-day. Cooldown is 60 minutes. Cannot be used in the Olympiad. Cannot be shared within the same account th -->
@@ -1288,7 +1280,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="37677" name="GM's Buff Scroll" additionalName="P. Def." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Guardian's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -1301,7 +1292,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37678" name="GM's Buff Scroll" additionalName="P. Atk." type="EtcItem">
@@ -1315,7 +1305,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37679" name="GM's Buff Scroll" additionalName="M. Atk." type="EtcItem">
@@ -1329,7 +1318,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37680" name="Transformation Scroll: Makeshift Bat" type="EtcItem">
@@ -1340,7 +1328,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
@@ -1355,7 +1342,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
 		<!-- Test Item; do not open to public -->
@@ -1366,7 +1352,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
 		<!-- Demonic Sword Zariche skin. -->
@@ -1383,7 +1368,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="10" />
 		<for>
@@ -1408,7 +1392,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="10" />
 		<for>
@@ -1426,7 +1409,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37686" name="Transformation Scroll: Angry Tow" type="EtcItem">
@@ -1437,7 +1419,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37687" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
@@ -1448,7 +1429,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37688" name="Valentine Dagger" type="Weapon">
@@ -1465,7 +1445,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
@@ -1490,7 +1469,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -1514,7 +1492,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -1538,7 +1515,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -1563,7 +1539,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="500" />
 		<for>
@@ -1588,7 +1563,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
@@ -1613,7 +1587,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
@@ -1638,7 +1611,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
@@ -1663,7 +1635,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -1687,7 +1658,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -1712,7 +1682,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -1737,7 +1706,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="500" />
 		<for>

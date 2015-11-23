@@ -34,6 +34,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="272" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45702" name="Twilight Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -52,6 +53,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="170" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45703" name="Twilight Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -121,8 +123,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="187" />
 			<add stat="mDef" val="41" />
+			<add stat="pDef" val="187" />
 		</for>
 	</item>
 	<item id="45707" name="Twilight Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -140,8 +142,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="117" />
 			<add stat="mDef" val="27" />
+			<add stat="pDef" val="117" />
 		</for>
 	</item>
 	<item id="45708" name="Twilight Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -193,6 +195,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="42" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="45711" name="Twilight Circlet" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -228,8 +231,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="187" />
 			<add stat="mDef" val="41" />
+			<add stat="pDef" val="187" />
 		</for>
 	</item>
 	<item id="45713" name="Twilight Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -247,8 +250,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="117" />
 			<add stat="mDef" val="27" />
+			<add stat="pDef" val="117" />
 		</for>
 	</item>
 	<item id="45714" name="Twilight Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -296,7 +299,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45717" name="Eternal Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Eternal Attack Type Heavy set. Deleted after event. -->
@@ -608,6 +610,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="320" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45737" name="Eternal Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -626,6 +629,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="200" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45738" name="Eternal Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -696,6 +700,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="320" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45742" name="Eternal Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -714,6 +719,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="200" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45743" name="Eternal Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -783,8 +789,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="220" />
 			<add stat="mDef" val="49" />
+			<add stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="45747" name="Eternal Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -802,8 +808,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="137" />
 			<add stat="mDef" val="33" />
+			<add stat="pDef" val="137" />
 		</for>
 	</item>
 	<item id="45748" name="Eternal Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -855,6 +861,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="50" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="45751" name="Eternal Circlet" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -890,8 +897,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="220" />
 			<add stat="mDef" val="49" />
+			<add stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="45753" name="Eternal Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -909,8 +916,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="137" />
 			<add stat="mDef" val="33" />
+			<add stat="pDef" val="137" />
 		</for>
 	</item>
 	<item id="45754" name="Eternal Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -962,6 +969,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="50" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="45757" name="Seraph Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
@@ -1274,6 +1282,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="301" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45777" name="Seraph Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1292,6 +1301,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="188" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45778" name="Seraph Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1362,6 +1372,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="301" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45782" name="Seraph Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1380,6 +1391,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="188" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45783" name="Seraph Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1449,8 +1461,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="207" />
 			<add stat="mDef" val="47" />
+			<add stat="pDef" val="207" />
 		</for>
 	</item>
 	<item id="45787" name="Seraph Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1468,8 +1480,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="129" />
 			<add stat="mDef" val="31" />
+			<add stat="pDef" val="129" />
 		</for>
 	</item>
 	<item id="45788" name="Seraph Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1521,6 +1533,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="47" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="45791" name="Seraph Circlet" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1556,8 +1569,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="207" />
 			<add stat="mDef" val="47" />
+			<add stat="pDef" val="207" />
 		</for>
 	</item>
 	<item id="45793" name="Seraph Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1575,8 +1588,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
 		<for>
-			<add stat="pDef" val="129" />
 			<add stat="mDef" val="31" />
+			<add stat="pDef" val="129" />
 		</for>
 	</item>
 	<item id="45794" name="Seraph Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1628,6 +1641,7 @@
 		<set name="time" val="43200" />
 		<for>
 			<add stat="pDef" val="47" />
+			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="45797" name="Dynasty Phantom of Fortune" additionalName="30-day" type="Weapon">
@@ -1649,9 +1663,9 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="267" />
-			<set stat="mAtk" val="202" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="202" />
+			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1674,10 +1688,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="291" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1701,10 +1715,10 @@
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="654" />
-			<set stat="mAtk" val="151" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="151" />
+			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>

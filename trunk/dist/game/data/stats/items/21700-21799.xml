@@ -468,7 +468,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21249-1;23307-1;3267-1" /> <!-- Release Agathion's Seal - Yanzi, Yanzi Agathion Cute Trick, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="120" />
 	</item>
@@ -479,7 +478,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="21731" name="Maingauche" additionalName="Event" type="Weapon">
@@ -494,16 +492,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1070" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="69" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -519,15 +516,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -543,15 +539,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="2020" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -567,16 +562,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1720" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="63" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="63" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -592,16 +586,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1730" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -617,16 +610,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1000" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="69" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="77" />
+			<set stat="mAtk" val="69" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="77" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -642,16 +634,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="2100" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -667,16 +658,15 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2060" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -693,16 +683,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="51" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="179" />
+			<set stat="mAtk" val="51" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="179" />
 			<set stat="pAtkSpd" val="227" />
 		</for>
 	</item>
@@ -718,16 +707,15 @@
 		<set name="random_damage" val="40" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="72" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="72" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -743,15 +731,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="63" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="63" />
+			<set stat="mAtk" val="63" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="63" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -767,15 +754,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -791,16 +777,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1510" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="96" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -816,7 +801,6 @@
 		<set name="random_damage" val="15" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="2020" />
 		<cond msgId="1518">
@@ -825,10 +809,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="86" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -844,16 +828,15 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="100" />
+			<set stat="mAtk" val="47" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -868,7 +851,6 @@
 		<set name="item_skill" val="22271-1" /> <!-- Maestro's Key -->
 		<set name="material" val="COTTON" />
 		<set name="price" val="1800" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<target levelRange="21;85" />
@@ -918,7 +900,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21751" name="Rune Jewelry Box - Crystal" type="EtcItem">
 		<!-- Jewelry box containing the precious treasure of Rune. When used, you can obtain 15 Crystals of Life with a certain chance. -->
@@ -958,7 +939,6 @@
 		<set name="random_damage" val="1" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="100" />
 		<for>
@@ -979,7 +959,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21756" name="Rank 1 Scholar's Hat" type="Armor">
@@ -993,7 +972,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21757" name="Rank 2 Scholar's Hat" type="Armor">
@@ -1007,7 +985,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21758" name="Rank 3 Scholar's Hat" type="Armor">
@@ -1021,7 +998,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21759" name="Illumination - Red" type="EtcItem">
@@ -1030,7 +1006,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21760" name="Illumination - Pink" type="EtcItem">
@@ -1039,7 +1014,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21761" name="Illumination - Rose Pink" type="EtcItem">
@@ -1048,7 +1022,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21762" name="Illumination - Orange" type="EtcItem">
@@ -1057,7 +1030,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21763" name="Illumination - Mint Green" type="EtcItem">
@@ -1066,7 +1038,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21764" name="Illumination - Green" type="EtcItem">
@@ -1075,7 +1046,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21765" name="Illumination - Sky Blue" type="EtcItem">
@@ -1084,7 +1054,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21766" name="Illumination - Blue" type="EtcItem">
@@ -1093,7 +1062,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21767" name="Illumination - Purple" type="EtcItem">
@@ -1102,7 +1070,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21768" name="Illumination - White" type="EtcItem">
@@ -1111,7 +1078,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="21769" name="Unrefined Ore" type="EtcItem">
@@ -1120,7 +1086,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21770" name="Unrefined Jewel" type="EtcItem">
 		<!-- Jewel before augmenting. Absolutely necessary for the craftsman to make a jewel. It should still fetch a certain price at the shop. -->
@@ -1128,7 +1093,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21771" name="Jewel of Dusk" type="EtcItem">
 		<!-- Jewel carved with ancient skills. It shines brightly. It should still fetch a certain price at the shop. -->
@@ -1136,7 +1100,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21772" name="Jewel of Dawn" type="EtcItem">
 		<!-- The jewel of dawn that was created by the craftsman using ancient skills. It shines brightly. It should still fetch a considerable price at the shop. -->
@@ -1144,7 +1107,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21773" name="Jewel of Splendor" type="EtcItem">
 		<!-- The jewel of dawn that was created by the craftsman using ancient skills. It shines brightly. It should still fetch a considerable price at the shop. -->
@@ -1152,7 +1114,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21774" name="Giant's Jewel" type="EtcItem">
 		<!-- The giant's jewel that was created by the craftsman using ancient skills. It shines brightly. It should still fetch a considerable price at the shop. -->
@@ -1160,7 +1121,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="21775" name="Imperial Crusader Breastplate of Fortune" additionalName="90-day" type="Armor">
 		<!--  Can be assigned an attribute. -->

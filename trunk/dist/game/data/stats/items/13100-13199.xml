@@ -622,8 +622,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13138" name="Vesper Leather Helmet" type="Armor">
@@ -640,8 +640,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13139" name="Vesper Circlet" type="Armor">
@@ -658,8 +658,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13140" name="Vesper Noble Helmet" type="Armor">
@@ -676,8 +676,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13141" name="Vesper Noble Leather Helmet" type="Armor">
@@ -694,8 +694,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13142" name="Vesper Noble Circlet" type="Armor">
@@ -712,8 +712,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13143" name="Sealed Vesper Helmet" type="Armor">
@@ -731,8 +731,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13144" name="Sealed Vesper Leather Helmet" type="Armor">
@@ -750,8 +750,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13145" name="Sealed Vesper Circlet" type="Armor">
@@ -769,8 +769,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13146" name="Sealed Vesper Noble Helmet" type="Armor">
@@ -788,8 +788,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13147" name="Sealed Vesper Noble Leather Helmet" type="Armor">
@@ -807,8 +807,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13148" name="Sealed Vesper Noble Circlet" type="Armor">
@@ -826,8 +826,8 @@
 		<set name="price" val="17500000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="101" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13149" name="Pailaka Final Key" type="EtcItem">
@@ -1216,10 +1216,10 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="51" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="51" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1247,10 +1247,10 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="112" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1279,10 +1279,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1312,10 +1312,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="90" />
+			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1345,10 +1345,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="90" />
+			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1378,10 +1378,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="74" />
+			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="74" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1411,10 +1411,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="90" />
+			<set stat="mAtk" val="79" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1443,10 +1443,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1475,10 +1475,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="112" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1510,10 +1510,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1544,10 +1544,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1575,10 +1575,10 @@
 		<set name="weight" val="1440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1611,10 +1611,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -1646,10 +1646,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="100" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -1682,10 +1682,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -1715,10 +1715,10 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1751,10 +1751,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="152" />
+			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1786,10 +1786,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="152" />
+			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1822,10 +1822,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="152" />
+			<set stat="mAtk" val="122" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1856,10 +1856,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="136" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1890,10 +1890,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1926,10 +1926,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="323" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="323" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1960,10 +1960,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1994,10 +1994,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2027,10 +2027,10 @@
 		<set name="weight" val="2330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2065,10 +2065,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -2102,10 +2102,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="169" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="169" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -2140,10 +2140,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -2174,10 +2174,10 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="111" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="125" />
+			<set stat="mAtk" val="111" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2210,10 +2210,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="111" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="125" />
+			<set stat="mAtk" val="111" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2244,10 +2244,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="190" />
+			<set stat="mAtk" val="83" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2277,10 +2277,10 @@
 		<set name="weight" val="1350" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2312,10 +2312,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2346,10 +2346,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2380,10 +2380,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2416,10 +2416,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="145" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="189" />
+			<set stat="mAtk" val="145" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2450,10 +2450,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="170" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>

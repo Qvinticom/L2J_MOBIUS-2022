@@ -170,7 +170,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="mDef" val="1" />
 		</for>
@@ -186,7 +185,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="mDef" val="1" />
 		</for>
@@ -202,7 +200,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22916" name="Salvation Bow" type="Weapon">
 		<!-- Shoots a heart with love. Can use the 'Heart Shot' active skill. . Note: If you use this skill against a monster, you can be attacked by another player. -->
@@ -219,7 +216,6 @@
 		<set name="random_damage" val="1" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
@@ -240,7 +236,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22918" name="Assassin's Bamboo Hat" type="Armor">
 		<!-- Wide-brimmed hat fashioned out of bamboo. Uses 2 hair accessory slots. -->
@@ -253,7 +248,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22919" name="Fire Stone" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -271,7 +265,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2329-1" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22920" name="Water Stone" type="EtcItem">
 		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -289,7 +282,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2330-1" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22921" name="Earth Stone" type="EtcItem">
 		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -307,7 +299,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2332-1" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22922" name="Wind Stone" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -325,7 +316,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2331-1" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22923" name="Dark Stone" type="EtcItem">
 		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-3 only. Additional Elemental attributes cannot be bestowed. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -343,7 +333,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2334-1" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22924" name="Holy Stone" type="EtcItem">
 		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-3 only. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -361,7 +350,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2333-1" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22925" name="Fire Crystal" type="EtcItem">
 		<!-- When used with your weapon, Fire + 5. When used with your armor, Fire + 6 with increased resistance against Water. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -379,7 +367,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2329-2" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22926" name="Water Crystal" type="EtcItem">
 		<!-- When used with your weapon, Water + 5. When used with your armor, Water + 6 with increased resistance against Fire. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -397,7 +384,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2330-2" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22927" name="Earth Crystal" type="EtcItem">
 		<!-- When used with your weapon, Earth + 5. When used with your armor, Earth + 6 with increased resistance against Wind. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -415,7 +401,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2332-2" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22928" name="Wind Crystal" type="EtcItem">
 		<!-- When used with your weapon, Wind + 5. When used with your armor, Wind + 6 with increased resistance against Earth. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -433,7 +418,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2331-2" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22929" name="Dark Crystal" type="EtcItem">
 		<!-- When used with your weapon, Dark + 5. When used with your armor, Dark + 6 with increased resistance against Holy. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -451,7 +435,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2334-2" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22930" name="Holy Crystal" type="EtcItem">
 		<!-- When used with your weapon, Holy + 5. When used with your armor, Holy + 6 with increased resistance against Dark. Attribute Lv. 1-6 only; any further would break the crystal's power. Armor can have up to 3 unopposing attributes bestowed. -->
@@ -469,7 +452,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2333-2" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22931" name="Warrior's Helmet" type="Armor">
 		<!-- Helmet of a brave ancient warrior. Uses 2 hair accessory slots. -->
@@ -482,7 +464,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22932" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 85 solo dungeon. Can be used only once a day. -->
@@ -492,7 +473,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22933" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 90 solo dungeon. Can be used only once a day. -->
@@ -502,7 +482,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22934" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 95 solo dungeon. Can be used only once a day. -->
@@ -512,7 +491,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22935" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 85 party dungeon. Can be used only once a day. -->
@@ -522,7 +500,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22936" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 90 party dungeon. Can be used only once a day. -->
@@ -532,7 +509,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22937" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset the instance timer of the level 95 party dungeon. Can be used only once a day. -->
@@ -542,7 +518,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22938" name="Castle Siege Equipment Repair Tool - Aden Castle" type="Armor">
 		<!-- Repairs the Broken Ballista outside the Aden battleground. Can use the Siege Equipment Repair skill. -->
@@ -554,7 +529,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22939" name="Castle Siege Equipment Repair Tool - Rune Castle" type="Armor">
@@ -567,7 +541,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22940" name="Corrosive Chemical Container - Aden Castle" type="Armor">
@@ -580,7 +553,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22941" name="Corrosive Chemical Container - Rune Castle" type="Armor">
@@ -593,7 +565,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22942" name="Engraving Activation Stone - Aden Castle" type="Armor">
@@ -606,7 +577,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22943" name="Engraving Activation Stone - Rune Castle" type="Armor">
@@ -619,7 +589,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22944" name="XP Rune III (Lv. 1-100+) 50%" additionalName="1-hour" type="EtcItem">
@@ -656,7 +625,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22947" name="Agathion - Singer &amp; Dancer" additionalName="30-day" type="Armor">
 		<!-- Can summon Singer & Dancer that gleefully sings and dances when equipped. -->
@@ -853,7 +821,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22963" name="Shiny Platform Summon Bracelet" type="Armor">
 		<!-- Can summon a bright stage to stand on when equipped. -->
@@ -866,7 +833,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22964" name="Pink Paper Mask Set" type="Armor">
 		<!-- Fancy mask and hat made of pink paper. -->
@@ -879,7 +845,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22965" name="Arrow-pierced Apple" type="Armor">
 		<!-- Arrow-pierced Apple that can be worn on the head. Uses 2 hair accessory slots. -->
@@ -891,7 +856,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22966" name="Vitality Maintaining Potion (1-hour)" type="EtcItem">
 		<!-- Maintains Vitality for 1 hr. Vitality item with limited usage. -->
@@ -1095,7 +1059,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22983" name="Lv. 1 Giant DEX Dye" additionalName="DEX + 3 / CON - 2" type="EtcItem">
 		<!-- DEX + 3 / CON - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -1106,7 +1069,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22984" name="Lv. 1 Giant CON Dye" additionalName="CON + 3 / STR - 2" type="EtcItem">
 		<!-- CON + 3 / STR - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -1117,7 +1079,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22985" name="Lv. 1 Giant INT Dye" additionalName="INT + 3 / WIT - 2" type="EtcItem">
 		<!-- INT + 3 / WIT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -1128,7 +1089,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22986" name="Lv. 1 Giant WIT Dye" additionalName="WIT + 3 / MEN - 2" type="EtcItem">
 		<!-- WIT + 3 / MEN - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -1139,7 +1099,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22987" name="Lv. 1 Giant MEN Dye" additionalName="MEN + 3 / INT - 2" type="EtcItem">
 		<!-- MEN + 3 / INT - 2. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after Awakening, or 3rd Liberation. All classes. -->
@@ -1150,7 +1109,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22988" name="Lv. 1 Ancient STR Dye" additionalName="STR + 3 / DEX - 2 / Fire Resistance + 5" type="EtcItem">
 		<!-- STR + 3 / DEX - 2 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1161,7 +1119,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22989" name="Lv. 1 Ancient DEX Dye" additionalName="DEX + 3 / CON - 2 / Earth Resistance + 5" type="EtcItem">
 		<!-- DEX + 3 / CON - 2 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used  -->
@@ -1172,7 +1129,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22990" name="Lv. 1 Ancient CON Dye" additionalName="CON + 3 / STR - 2 / Dark Resistance + 5" type="EtcItem">
 		<!-- CON + 3 / STR - 2 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1183,7 +1139,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22991" name="Lv. 1 Ancient INT Dye" additionalName="INT + 3 / WIT - 2 / Water Resistance + 5" type="EtcItem">
 		<!-- INT + 3 / WIT - 2 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used  -->
@@ -1194,7 +1149,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22992" name="Lv. 1 Ancient WIT Dye" additionalName="WIT + 3 / MEN - 2 / Wind Resistance + 5" type="EtcItem">
 		<!-- WIT + 3 / MEN - 2 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1205,7 +1159,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22993" name="Lv. 1 Ancient MEN Dye" additionalName="MEN + 3 / INT - 2 / Holy Resistance + 5" type="EtcItem">
 		<!-- MEN + 3 / INT - 2 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1216,7 +1169,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22994" name="Lv. 1 Legendary STR Dye" additionalName="STR + 3 / DEX - 1 / Fire Resistance + 5" type="EtcItem">
 		<!-- STR + 3 / DEX - 1 / Fire Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1227,7 +1179,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22995" name="Lv. 1 Legendary DEX Dye" additionalName="DEX + 3 / CON - 1 / Earth Resistance + 5" type="EtcItem">
 		<!-- DEX + 3 / CON - 1 / Earth Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used  -->
@@ -1238,7 +1189,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22996" name="Lv. 1 Legendary CON Dye" additionalName="CON + 3 / STR - 1 / Dark Resistance + 5" type="EtcItem">
 		<!-- CON + 3 / STR - 1 / Dark Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1249,7 +1199,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22997" name="Lv. 1 Legendary INT Dye" additionalName="INT + 3 / WIT - 1 / Water Resistance + 5" type="EtcItem">
 		<!-- INT + 3 / WIT - 1 / Water Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used  -->
@@ -1260,7 +1209,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22998" name="Lv. 1 Legendary WIT Dye" additionalName="WIT + 3 / MEN - 1 / Wind Resistance + 5" type="EtcItem">
 		<!-- WIT + 3 / MEN - 1 / Wind Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1271,7 +1219,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22999" name="Lv. 1 Legendary MEN Dye" additionalName="MEN + 3 / INT - 1 / Holy Resistance + 5" type="EtcItem">
 		<!-- MEN + 3 / INT - 1 / Holy Resistance + 5. Collect and take 10 unit s of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Equipping 2 or more gives the effect of 1 for Attribute Resistance. Can be used a -->
@@ -1282,6 +1229,5 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 </list>

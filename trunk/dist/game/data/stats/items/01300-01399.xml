@@ -556,8 +556,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="71" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="1329" name="Shield of Victory" type="Armor">
@@ -575,8 +575,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="71" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="1330" name="Zubei's Shield" type="Armor">
@@ -594,8 +594,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="71" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="1331" name="Otherworldly Shield" type="Armor">
@@ -613,8 +613,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="71" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="1332" name="Knight's Shield" type="Armor">
@@ -632,8 +632,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="71" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="1333" name="Brandish" type="Weapon">
@@ -1216,10 +1216,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="26" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="50" />
+			<set stat="mAtk" val="26" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="50" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>

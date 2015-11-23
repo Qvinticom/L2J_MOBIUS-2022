@@ -417,7 +417,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="144" />
 		<for>
@@ -441,7 +440,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
@@ -466,7 +464,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="209" />
 		<for>
@@ -490,7 +487,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="152" />
 		<for>
@@ -515,7 +511,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
@@ -541,7 +536,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
@@ -566,7 +560,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
@@ -591,7 +584,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="172" />
 		<for>
@@ -615,7 +607,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -639,7 +630,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="172" />
 		<for>
@@ -663,7 +653,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -687,7 +676,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="247" />
 		<for>
@@ -711,7 +699,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
@@ -736,7 +723,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="250" />
 		<for>
@@ -756,11 +742,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="200" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="25" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="36647" name="Emerald Weapon: Sigil" type="Armor">
@@ -774,7 +759,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<sub stat="rEvas" val="-8" />
@@ -1033,7 +1017,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36665" name="Nerva's Temporary Prison Key" type="EtcItem">
@@ -1044,7 +1027,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36666" name="Unidentified Suspicious Badge" type="EtcItem">
 		<!-- Suspicious badge from a dead monster in the Sea of Spores. Take it to Paterson's Disciple, Bacon, in the Sea of Spores to receive a reward. -->
@@ -1056,7 +1038,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36667" name="Giant's Alphabet" type="EtcItem">
 		<!-- Giant's Alphabet that Stakatos are collecting in the Sea of Spores. Take it to Paterson's Disciple, Bacon, in the Sea of Spores to receive a reward. -->
@@ -1068,7 +1049,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36668" name="Intact Stakato Shell" type="EtcItem">
 		<!-- Stakato Shell from the Swamp of Screams. Take it to Mercenary Captain Pierce at the Swamp of Screams to receive a reward. -->
@@ -1080,7 +1060,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36669" name="Intact Stakato Talon" type="EtcItem">
 		<!-- Stakato Claw from the Swamp of Screams. Take it to Mercenary Captain Pierce at the Swamp of Screams to receive a reward. -->
@@ -1092,7 +1071,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36670" name="Monster Bone" type="EtcItem">
 		<!-- Monster bone from the Forest of the Dead. Take it to the Mysterious Wizard at the Forest of the Dead to receive a reward. -->
@@ -1104,7 +1082,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36671" name="Monster Blood" type="EtcItem">
 		<!-- Monster blood from the Forest of the Dead. Take it to the Mysterious Wizard at the Forest of the Dead to receive a reward. -->
@@ -1116,7 +1093,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36672" name="Evil Eye of Darkness" type="EtcItem">
 		<!-- Mark of Daimon the White-Eyed instilled in monsters at the Wall of Argos. Take it to Giant's Minion Janitt at the Wall of Argos to receive a reward. -->
@@ -1128,7 +1104,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36673" name="Powerful Dark Malice" type="EtcItem">
 		<!-- Thought of Daimon the White-Eyed instilled in monsters at the Wall of Argos. Take it to Giant's Minion Janitt at the Wall of Argos to receive a reward. -->
@@ -1140,7 +1115,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36674" name="Varka's Badge: Soldier" type="EtcItem">
 		<!-- Badge of Silenos Soldiers at Varka Silenos Barracks. Take it to Giant's Minion Hansen at Varka Silenos Barracks to receive a reward. -->
@@ -1152,7 +1126,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36675" name="Varka's Badge: General" type="EtcItem">
 		<!-- Badge of Silenos Officers at Varka Silenos Barracks. Take it to Giant's Minion Hansen at Varka Silenos Barracks to receive a reward. -->
@@ -1164,7 +1137,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36676" name="Ketra's Badge: Soldier" type="EtcItem">
 		<!-- Badge of Orc Soldiers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
@@ -1176,7 +1148,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36677" name="Ketra's Badge: General" type="EtcItem">
 		<!-- Badge of Orc Officers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
@@ -1188,7 +1159,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36678" name="Refugee's Necklace" type="EtcItem">
 		<!-- Refugee's Necklace. Take it to Rune Backup Trooper Falk in the Land of Chaos to receive a reward. -->
@@ -1201,7 +1171,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36679" name="Chunk of a Corpse" type="EtcItem">
 		<!-- Corpse Piece obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
@@ -1214,7 +1183,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36680" name="Soul of Darkness" type="EtcItem">
 		<!-- Soul of Darkness obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
@@ -1227,7 +1195,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36681" name="Curious Letter" type="EtcItem">
 		<!-- Curious Letter from Rune Captain Mathias. Take it to Flame Patrol Vice Captain Tuska near Gainak. -->
@@ -1240,7 +1207,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36682" name="Turakan's Secret Letter" type="EtcItem">
 		<!-- Turakan's Secret Letter obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
@@ -1253,7 +1219,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36683" name="Broken Weapon Fragment" type="EtcItem">
 		<!-- Broken Weapon Fragment obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
@@ -1266,7 +1231,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36684" name="Mark of a Thief" type="EtcItem">
 		<!-- Mark of a Thief obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads to receive a reward. -->
@@ -1278,7 +1242,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36685" name="Reinforcements' Badge" type="EtcItem">
 		<!-- Reinforcements' Badge received from Flame Patrol Vice Captain Tuska. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads. -->
@@ -1291,7 +1254,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36686" name="Demon Heart" type="EtcItem">
 		<!-- Demon Heart obtained after killing a monster at Gainak. Take it to Flame Patrol Vice Captain Tuska near Gainak. -->
@@ -1303,7 +1265,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36687" name="Embryo's Suspicious Fragment" type="EtcItem">
 		<!-- Suspicious Fragment obtained after killing monsters in the Plains of the Lizardmen. Take it to Investigator Laki in the Plains of the Lizardmen to receive a reward. -->
@@ -1316,7 +1277,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36688" name="Fantasy Mushroom's Spore Sac" type="EtcItem">
 		<!-- Fantasy Mushroom's Spore obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
@@ -1329,7 +1289,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36689" name="Sticky Mushroom's Spore Sac" type="EtcItem">
 		<!-- Sticky Mushroom Pouch obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
@@ -1342,7 +1301,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36690" name="Vitality Leaf Pouch" type="EtcItem">
 		<!-- Vitality Leaf obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
@@ -1355,7 +1313,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36691" name="Lizard Blood" type="EtcItem">
 		<!-- Vial of Tanta Blood obtained after killing monsters in the Plains of the Lizardmen. Take it to Researcher Ankumi at the Sel Mahum Training Grounds to receive a reward. -->
@@ -1368,7 +1325,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36692" name="Evidence of a Conspiracy" type="EtcItem">
 		<!-- Evidence of a Conspiracy obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
@@ -1381,7 +1337,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36693" name="Sel Mahum Signet" type="EtcItem">
 		<!-- Sel Mahum ID Tag obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
@@ -1394,7 +1349,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="36694" name="Mark of Glory" type="EtcItem">
 		<!-- Mark obtained at the siege of dimension. 14-day. -->
@@ -1417,7 +1371,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="36696" name="Faint Soul of Light" type="EtcItem">
 		<!-- Faint Soul of Light obtained after killing monsters in the Land of Chaos. Take it to Investigator Quincy in the Land of Chaos to receive a reward. -->
@@ -1430,7 +1383,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="36697" name="Precious Blood Stone" type="EtcItem">
 		<!-- Precious Blood Stone obtained after killing monsters in the Plains of the Lizardmen. Take it to Researcher Ankumi at the Sel Mahum Training Grounds to receive a reward. -->
@@ -1443,7 +1395,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="36698" name="Elite Mahum ID Tag" type="EtcItem">
 		<!-- Elite Mahum ID Tag obtained after killing monsters at the Sel Mahum Training Grounds. Take it to Investigator Roa at the Sel Mahum Training Grounds to receive a reward. -->
@@ -1456,7 +1407,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="36699" name="Nerva's Icon" type="EtcItem">
 		<!-- Nerva's Icon obtained after killing monsters at Raider's Crossroads. Take it to Flame Patrol Warrior Bruener at the entrance of Raider's Crossroads to receive a reward. -->
@@ -1468,6 +1418,5 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="20160" />
 	</item>
 </list>

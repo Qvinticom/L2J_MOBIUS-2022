@@ -642,10 +642,10 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="305" />
+			<set stat="mAtk" val="121" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>

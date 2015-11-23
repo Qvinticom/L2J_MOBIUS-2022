@@ -145,8 +145,8 @@
 		<set name="price" val="28671000" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="20" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="17716" name="Agninoa Dualsword" type="Weapon">

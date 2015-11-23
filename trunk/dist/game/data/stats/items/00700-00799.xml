@@ -818,10 +818,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="32" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="21" />
+			<set stat="mAtk" val="32" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="21" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>

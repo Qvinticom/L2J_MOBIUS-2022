@@ -15,8 +15,8 @@
 		<set name="price" val="3971000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11601" name="Dynasty Earring" type="Armor">
@@ -72,8 +72,8 @@
 		<set name="price" val="2688000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="53" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11604" name="Sealed Dynasty Earring" type="Armor">

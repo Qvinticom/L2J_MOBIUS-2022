@@ -352,10 +352,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="76" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -380,8 +380,8 @@
 			</and>
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10127" name="Dynasty Leather Armor" additionalName="Weapon Master" type="Armor">
@@ -403,8 +403,8 @@
 			<player categoryType="WEAPON_MASTER" />
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10128" name="For Monster only (Crossbow)" type="Weapon">
@@ -605,8 +605,8 @@
 		<set name="useSkillDisTime" val="2" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10141" name="Grey Talisman - Yeti Transform" type="Armor">
@@ -1094,8 +1094,8 @@
 			<player categoryType="BUFF_MASTER" />
 		</cond>
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10169" name="Enchanter Circlet (Kamael only)" type="Armor">
@@ -1129,8 +1129,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="30" />
-			<add order="0" stat="mDef" val="71" />
 			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
 		</for>
 	</item>

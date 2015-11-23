@@ -266,9 +266,9 @@
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="1" />
-			<set stat="mAtk" val="1" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="1" />
+			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -320,10 +320,10 @@
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="31" />
-			<set stat="mAtk" val="21" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="21" />
+			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -396,7 +396,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -409,7 +408,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="250" />
 		</for>
@@ -421,7 +419,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -433,7 +430,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -445,7 +441,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="150" />
 		</for>
@@ -458,9 +453,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="320" />
+			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="46544" name="Kelbim Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -471,9 +466,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="200" />
+			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="46545" name="Kelbim Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -483,7 +478,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -495,7 +489,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -507,7 +500,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="150" />
 		</for>
@@ -520,10 +512,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
-			<add stat="pDef" val="220" />
 			<add stat="mDef" val="49" />
+			<add stat="pDef" val="220" />
 		</for>
 	</item>
 	<item id="46549" name="Freya Stockings" additionalName="Robe" type="Armor">
@@ -534,10 +525,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
-		<set name="time" val="10080" />
 		<for>
-			<add stat="pDef" val="137" />
 			<add stat="mDef" val="33" />
+			<add stat="pDef" val="137" />
 		</for>
 	</item>
 	<item id="46550" name="Freya Gloves" additionalName="Robe" type="Armor">
@@ -547,7 +537,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -559,7 +548,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="100" />
 		</for>
@@ -577,7 +565,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46553" name="Mystic Soul Crystal" type="EtcItem">
 		<!-- Crystal fragment containing the soul of one of the progatonists of the stories told in the Mystic Tavern. Since it contains the soul of a legend within the stories, it can bestow a special Soul Crystal effect to weapons. -->
@@ -597,7 +584,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46555" name="Altar of Earth Sealing Stone" type="EtcItem">
 		<!-- Mystic Tavern - Use it on the Altar of Earth in Kelbim's dungeon to seal the altar. -->
@@ -607,7 +593,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46556" name="Altar of Wind Sealing Stone" type="EtcItem">
 		<!-- Mystic Tavern - Use it on the Altar of Wind in Kelbim's dungeon to seal the altar. -->
@@ -617,7 +602,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46557" name="High-grade Fragment of Chaos" type="EtcItem">
 		<!-- Item obtained from defeating the monsters in Hellbound's Phantasmal Ridge. Collect these and take them to Leona Blackbird in the Refugee Village. -->
@@ -631,7 +615,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46558" name="Leona's Reward Box (High-grade)" type="EtcItem">
 		<!-- Reward box received from Leona Blackbird for helping her in Hellbound. Double-click to open. -->
@@ -645,7 +628,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46559" name="Leona's Reward Box" type="EtcItem">
 		<!-- Reward box received from Leona Blackbird for helping her in Hellbound. Double-click to open. -->
@@ -659,7 +641,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46560" name="Curtiz's Reward Box" type="EtcItem">
 		<!-- Reward box received from Captain Kurtiz for helping him with the monsters of the Nightmare Kamaloka. Double-click to open. -->
@@ -673,7 +654,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46561" name="Blue Dynasty" type="EtcItem">
 		<!-- L2 Assist App item. Blue Dynasty armor. -->
@@ -682,7 +662,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46562" name="Red Zubei" type="EtcItem">
 		<!-- L2 Assist App item. Red Zubei armor. -->
@@ -691,7 +670,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46563" name="Epic Tale Pouch" additionalName="Not In Use" type="EtcItem">
 		<!-- Pouch received as reward for listening to Freya's story and enjoying your time at the epic tales pub. Double-click to use. -->
@@ -705,7 +683,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46564" name="Scroll of Escape: Mystic Tavern" type="EtcItem">
 		<!-- Teleports you to the Mystic Tavern. -->
@@ -719,7 +696,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46565" name="Soul Crystal Coupon" additionalName="Stage 1" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 1 or Mermoden's Soul Crystal Stage 1. -->
@@ -730,7 +706,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46566" name="Soul Crystal Coupon" additionalName="Stage 2" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 2 or Mermoden's Soul Crystal Stage 2. -->
@@ -741,7 +716,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46567" name="Soul Crystal Coupon" additionalName="Stage 3" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 3 or Mermoden's Soul Crystal Stage 3. -->
@@ -752,7 +726,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46568" name="Soul Crystal Coupon" additionalName="Stage 4" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 4 or Mermoden's Soul Crystal Stage 4. -->
@@ -763,7 +736,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46569" name="Soul Crystal Coupon" additionalName="Stage 5" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 5 or Mermoden's Soul Crystal Stage 5. -->
@@ -774,7 +746,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46570" name="Soul Crystal Coupon Pack" additionalName="Stage 5" type="EtcItem">
 		<!-- Double-click to get a Soul Crystal Coupon Stage 5. There's a chance that you might not get anything. -->
@@ -799,13 +770,12 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="FIST" />
 		<for>
-			<set stat="pAtk" val="31" />
-			<set stat="mAtk" val="21" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="21" />
+			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -814,11 +784,11 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46573" name="Tauti's Breastplate Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of breastplates into Tauti's Breastplate. Changed items cannot be equipped by Ertheia. -->
@@ -827,12 +797,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46574" name="Tauti's Gaiters Appearance Stone" type="EtcItem">
@@ -842,12 +808,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46575" name="Tauti's Gauntlets Appearance Stone" type="EtcItem">
@@ -857,12 +819,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46576" name="Tauti's Boots Appearance Stone" type="EtcItem">
@@ -872,12 +830,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46577" name="Kelbim's Leather Helmet Appearance Stone" additionalName="Not In Use" type="EtcItem">
@@ -885,11 +839,11 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46578" name="Kelbim's Leather Armor Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of leather armor into Kelbim's Leather Armor. -->
@@ -898,12 +852,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46579" name="Kelbim's Leather Leggings Appearance Stone" type="EtcItem">
@@ -913,12 +863,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46580" name="Kelbim's Leather Gloves Appearance Stone" type="EtcItem">
@@ -928,12 +874,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46581" name="Kelbim's Leather Boots Appearance Stone" type="EtcItem">
@@ -943,12 +885,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46582" name="Freya's Circlet Appearance Stone" additionalName="Not In Use" type="EtcItem">
@@ -956,11 +894,11 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46583" name="Freya's Tunic Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of tunics into Freya's Tunic. -->
@@ -969,12 +907,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46584" name="Freya's Stockings Appearance Stone" type="EtcItem">
@@ -984,12 +918,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46585" name="Freya's Gloves Appearance Stone" type="EtcItem">
@@ -999,12 +929,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46586" name="Freya's Shoes Appearance Stone" type="EtcItem">
@@ -1014,12 +940,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46587" name="Mystic Armor Piece" type="EtcItem">
@@ -1029,7 +951,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46588" name="For UI Test_Special Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- Will be deleted on 3/13. -->
@@ -1038,7 +959,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46589" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-10 to absorb the soul. -->
@@ -1048,7 +968,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46590" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-11 to absorb the soul. -->
@@ -1058,7 +977,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46591" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-12 to absorb the soul. -->
@@ -1068,7 +986,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46592" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-13 to absorb the soul. -->
@@ -1078,7 +995,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46593" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-14 to absorb the soul. -->
@@ -1088,7 +1004,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46594" name="Ice Crystal Shard" additionalName="Mystic Tavern - Freya" type="EtcItem">
 		<!-- Shards of a shattered Ice Crystal. The knights and monsters of the Labyrinth have turned violent because of the effect of the Ice Crystal, and Melissa's health has deteriorated. Collect these and take them to Sayan. -->
@@ -1102,7 +1017,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="46595" name="Blue Dynasty" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
@@ -1110,7 +1024,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -1121,7 +1034,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -1132,7 +1044,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -1143,7 +1054,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -1154,7 +1064,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="10080" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>

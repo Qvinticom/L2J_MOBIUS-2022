@@ -61,8 +61,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant stat="sDef" val="0" />
 			<set stat="sDef" val="546" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="37703" name="Valentine Sigil" type="Armor">
@@ -77,8 +77,8 @@
 		<set name="price" val="88681000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="150" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37704" name="Love Potion" type="EtcItem">
@@ -350,7 +350,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37729" name="Dandy's Scroll: Faith" type="EtcItem">
 		<!-- For 60 minutes, decreases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same tim -->
@@ -363,7 +362,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37730" name="Dandy's Scroll: Passion" type="EtcItem">
 		<!-- For 60 minutes, decreases all received damage by 10%. Dandy's Cheer and Dandy's Faith buffs are not applied at the same time. -->
@@ -376,7 +374,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37731" name="Dandy's Scroll: Challenge" type="EtcItem">
 		<!-- For 60 minutes, increases acquired XP and SP by 30%. Energy of Glory, Midsummer Passion, and Emperor's Growth scrolls are not applied at the same time. -->
@@ -389,7 +386,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37732" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, H -->
@@ -502,7 +498,6 @@
 		<set name="default_action" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37739" name="Test Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
@@ -512,7 +507,6 @@
 		<set name="default_action" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37740" name="Reinforced Soulshot (No-grade)" additionalName="Not in Use" type="EtcItem">
@@ -523,7 +517,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37741" name="Reinforced Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
@@ -534,7 +527,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37742" name="Reinforced Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
@@ -545,7 +537,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37743" name="Reinforced Soulshot (B-grade)" additionalName="Not in Use" type="EtcItem">
@@ -556,7 +547,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37744" name="Reinforced Soulshot (A-grade)" additionalName="Not in Use" type="EtcItem">
@@ -567,7 +557,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37745" name="Reinforced Soulshot (S-grade)" additionalName="Not in Use" type="EtcItem">
@@ -578,7 +567,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37746" name="Reinforced Soulshot (R-grade)" additionalName="Not in Use" type="EtcItem">
@@ -589,7 +577,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37747" name="Reinforced Spiritshot (No-grade)" additionalName="Not in Use" type="EtcItem">
@@ -600,7 +587,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37748" name="Reinforced Spiritshot (D-grade)" additionalName="Not in Use" type="EtcItem">
@@ -611,7 +597,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37749" name="Reinforced Spiritshot (C-grade)" additionalName="Not in Use" type="EtcItem">
@@ -622,7 +607,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37750" name="Reinforced Spiritshot (B-grade)" additionalName="Not in Use" type="EtcItem">
@@ -633,7 +617,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37751" name="Reinforced Spiritshot (A-grade)" additionalName="Not in Use" type="EtcItem">
@@ -644,7 +627,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37752" name="Reinforced Spiritshot (S-grade)" additionalName="Not in Use" type="EtcItem">
@@ -655,7 +637,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37753" name="Reinforced Spiritshot (R-grade)" additionalName="Not in Use" type="EtcItem">
@@ -666,7 +647,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37754" name="All-purpose Soulshot" additionalName="Not in Use" type="EtcItem">
@@ -677,7 +657,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37755" name="All-purpose Spiritshot" additionalName="Not in Use" type="EtcItem">
@@ -688,7 +667,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="14" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37756" name="Mysterious Fragment" type="EtcItem">
@@ -697,7 +675,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37757" name="Certificate: 50 Olympiad Matches" type="EtcItem">
 		<!-- Document that proves participation in the Olympiad Match 50. Take this document to the Olympiad Manager to receive a whole reward. -->
@@ -709,7 +686,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37758" name="Indomitable Hero's Olympiad Treasure Chest" type="EtcItem">
 		<!-- Treasure box given to a warrior participating in the Olympiad Match 50 with an indomitable will. -->
@@ -722,7 +698,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37759" name="Faint Dimensional Energy - Stage 1" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage for even greater rewards. But, in order to raise to stage 2, the next period's defense must be successful. 15-day. -->
@@ -770,7 +745,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37763" name="Exalted Cloak" type="Armor">
 		<!-- A cloak that symbolizes the Exalted status. STR/DEX/CON/INT/WIT/MEN/LUC/CHA +1. -->
@@ -784,12 +758,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="21600" />
 		<set name="weight" val="220" />
 		<for>
 			<add stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37764" name="Superior CP Potion" type="EtcItem">
@@ -803,7 +776,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37765" name="Elikia's Letter" type="EtcItem">
@@ -816,7 +788,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37766" name="Chaos Fragment" type="EtcItem">
 		<!-- Item obtained by defeating the evil creatures of Hellbound.  -->
@@ -829,7 +800,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37767" name="Vitality Replenishing Potion" type="EtcItem">
 		<!-- Potion that replenishes a certain amount of vitality points. -->
@@ -842,7 +812,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37768" name="Crane Activator" type="EtcItem">
 		<!-- Activates the Crane at the Desert Quarry. Place it inside for a chance at a reward. -->
@@ -854,7 +823,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37769" name="Dimensional Energy - Stage 5" type="EtcItem">
 		<!-- Energy of the dimensions. It is the highest stage for receiving rewards from Mermoden. -->
@@ -866,7 +834,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37770" name="Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
 		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Requiem or Apocalypse equipment for Blessed equipment. -->
@@ -875,7 +842,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="5267574" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37771" name="Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
@@ -885,7 +851,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="70637960" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37772" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
@@ -895,7 +860,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="155659040" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37773" name="Recipe: Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
@@ -906,7 +870,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="526757" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37774" name="Recipe: Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
@@ -917,7 +880,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="7063796" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37775" name="Recipe: Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
@@ -928,7 +890,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="15565904" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37776" name="Scroll of Blessing Scraps: Weapon (R-grade)" type="EtcItem">
@@ -938,7 +899,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="47408" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37777" name="Scroll of Blessing Scraps: Weapon (R95-grade)" type="EtcItem">
@@ -948,7 +908,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="635742" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37778" name="Scroll of Blessing Scraps: Weapon (R99-grade)" type="EtcItem">
@@ -958,7 +917,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="1400931" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37779" name="Scroll of Blessing: Armor (R-grade)" type="EtcItem">
@@ -968,7 +926,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="1371850" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37780" name="Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
@@ -978,7 +935,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="19162980" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37781" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
@@ -988,7 +944,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="42227840" />
-		<set name="time" val="21600" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="37782" name="Recipe: Scroll of Blessing: Armor (R-grade)" type="EtcItem">
@@ -999,7 +954,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="137185" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37783" name="Recipe: Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
@@ -1010,7 +964,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1916298" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37784" name="Recipe: Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
@@ -1021,7 +974,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="4222784" />
-		<set name="time" val="21600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37785" name="Scroll of Blessing Scraps: Armor (R-grade)" type="EtcItem">
@@ -1031,7 +983,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="12347" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37786" name="Scroll of Blessing Scraps: Armor (R95-grade)" type="EtcItem">
@@ -1041,7 +992,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="172467" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37787" name="Scroll of Blessing Scraps: Armor (R99-grade)" type="EtcItem">
@@ -1051,7 +1001,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="380051" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37788" name="SP Rune (Low-grade)" additionalName="1-day" type="EtcItem">
@@ -1097,7 +1046,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="37792" name="Potion of Protection: Stun" type="EtcItem">
@@ -1107,7 +1055,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37793" name="Potion of Protection: Hold" type="EtcItem">
@@ -1117,7 +1064,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37794" name="Potion of Protection: Bleed" type="EtcItem">
@@ -1127,7 +1073,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37795" name="Potion of Protection: Paralyze" type="EtcItem">
@@ -1137,7 +1082,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37796" name="Potion of Protection: Mental" type="EtcItem">
@@ -1147,7 +1091,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37797" name="Potion of Protection: Sleep" type="EtcItem">
@@ -1157,7 +1100,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37798" name="Potion of Protection: Poison" type="EtcItem">
@@ -1167,7 +1109,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" type="EtcItem">
@@ -1177,7 +1118,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 </list>

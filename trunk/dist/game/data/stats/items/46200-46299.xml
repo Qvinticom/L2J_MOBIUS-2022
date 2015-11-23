@@ -5,6 +5,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -16,6 +17,7 @@
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -27,6 +29,7 @@
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -42,7 +45,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46204" name="Halloween Shaper" type="Weapon">
 		<set name="icon" val="icon.ev_wp_halloween" />
@@ -54,7 +56,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
@@ -75,7 +76,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -95,7 +95,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -115,7 +114,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -136,7 +134,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="500" />
 		<for>
@@ -157,7 +154,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
@@ -178,7 +174,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
@@ -199,7 +194,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
@@ -220,7 +214,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="500" />
 		<for>
@@ -240,7 +233,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -261,7 +253,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -282,7 +273,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="500" />
 		<for>
@@ -302,7 +292,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
@@ -323,7 +312,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="500" />
 		<for>
@@ -345,7 +333,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46219" name="Summon Scroll: Piero" additionalName="Event" type="EtcItem">
 		<!-- Scroll that summons Market Eleven's mascot, Piero. Use it to play 'Win Against Piero'. Will be deleted once the event ends. -->
@@ -358,7 +345,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46220" name="Membership Card - Market Eleven" additionalName="Event" type="EtcItem">
 		<!-- A membership card for the Eleven Market that was opened to celebrate Lineage 2's 11th anniversary. Will be deleted once the event ends. -->
@@ -372,7 +358,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46221" name="L2 Market R99 Armor Enhancement Stone Pack" additionalName="Event" type="EtcItem">
 		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Eternal Enhancement Stones. Will be deleted once the event ends. -->
@@ -682,7 +667,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46245" name="Piero's Victory Box" additionalName="Event" type="EtcItem">
 		<!-- Piero's victory box. Will be deleted once the event ends. -->
@@ -696,7 +680,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46246" name="Piero's Jackpot Box" additionalName="Event" type="EtcItem">
 		<!-- Piero's jackpot box. Will be deleted once the event ends. -->
@@ -710,7 +693,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46247" name="Halloween Shield" type="Armor">
 		<set name="icon" val="icon.ev_wp_halloween" />
@@ -718,7 +700,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="DAMASCUS" />
-		<set name="time" val="129600" />
 		<set name="weight" val="1130" />
 		<for>
 			<sub stat="rEvas" val="-8" />
@@ -733,7 +714,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 		<for>
 			<add stat="pDef" val="150" />
 		</for>
@@ -749,7 +729,6 @@
 		<set name="random_damage" val="1" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="2530" />
 		<for>
@@ -770,7 +749,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46251" name="Blessed Venezia Rune Pack" additionalName="15-day" type="EtcItem">
 		<!-- Wrapped Pack containing an 11th Anniversary Venezia Runes that can be used at all levels. Will be deleted once the event ends. -->
@@ -796,7 +774,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46253" name="Venezia Rune Pack" additionalName="15-day" type="EtcItem">
 		<!-- Wrapped Pack containing Venezia Runes for characters below Lv. 99. Will be deleted once the event ends. -->
@@ -824,7 +801,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46255" name="Automatic Appearance: Halloween Outfit" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Halloween Outfit. Works on one-pieces too. -->
@@ -834,7 +810,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="COTTON" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46256" name="Automatic Appearance: Halloween Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into that of the corresponding Halloween Weapon. Can be used on shields and sigils. -->
@@ -844,7 +819,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="COTTON" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46257" name="Scroll of Escape: Enchanted Valley" type="EtcItem">
 		<!-- Teleports you to the Enchanted Valley. -->
@@ -859,7 +833,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46258" name="Nymph Stamen" type="EtcItem">
 		<!-- Nymph Stamen obtained from defeating the Nymphs in the Enchanted Valley. Take it to Mimyu to receive a reward. -->
@@ -874,7 +847,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46259" name="Mimyu's Reward Box" type="EtcItem">
 		<!-- Reward obtained from defeating Nymphs in the Enchanted Valley. Double-click to use. -->
@@ -889,7 +861,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46260" name="Dark Knight Suit" type="Armor">
 		<!-- Dark Knight suit. -->
@@ -899,7 +870,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="129600" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -912,7 +882,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="129600" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -925,7 +894,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="129600" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -939,7 +907,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46264" name="Freya's Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%, Skill MP Consumption - 15%. Cannot be stacked with Art of Seduction. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. Cooldown is 5 min. -->
@@ -950,7 +917,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46265" name="Freya's Wish-filled Gift" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random rare item. -->
@@ -986,6 +952,7 @@
 		<!-- Changes the appearance of a weapon into that of a Frozen weapon. Can be used on shields and sigils. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1001,7 +968,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="COTTON" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46270" name="Dark Knight Suit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Dark Knight Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Dark Knight suit. -->
@@ -1010,34 +976,31 @@
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="46271" name="Ninja Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Ninja Outfit. Works on one-piece armor. It changes everything, making the appearance of all armor into that of a Ninja's outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46272" name="Metal Suit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Metal Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Metal suit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46273" name="Freya's Kindness" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, Metal Suit, or Vampiric Style. -->
@@ -1073,6 +1036,7 @@
 		<!-- Wrapped Pack containing a Ninja Outfit Appearance Stone and a Ninja Hair Accessory Appearance Stone. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1093,34 +1057,34 @@
 		<!-- Changes the appearance of a hair accessory into that of a Vamparic style. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46279" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja style. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46280" name="Metal Suit Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46281" name="Freya Agathion Pack" type="EtcItem">
 		<!-- Double-click to get Agathion - Freya (30-day). Cannot be used in the Olympiad. Will be deleted once the event ends. -->
@@ -1145,7 +1109,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46283" name="Aden Vanguard Supply Box" type="EtcItem">
 		<!-- Reward received after incapacitating the Embryo Command Post in the Atelia Fortress. Double-click to use. -->
@@ -1159,7 +1122,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46284" name="Exclusive Christmas Bait" type="EtcItem">
 		<!-- Exclusive Christmas bait. Use it to catch Fish Gift Boxes. Will be deleted after the event. -->
@@ -1173,7 +1135,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46285" name="Christmas Bait Box" type="EtcItem">
 		<!-- Box containing Exclusive Christmas Bait. Double-click to get 120 of them. Will be deleted after the event. -->
@@ -1201,7 +1162,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="random_damage" val="1" />
-		<set name="time" val="129600" />
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
@@ -1223,7 +1183,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46288" name="Holiday Blessing" type="EtcItem">
 		<!-- Double-click to get + 10% XP/SP for 2 hours, Vitality Consumption - 20%. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. Will be deleted after the event. -->
@@ -1237,7 +1196,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46289" name="Miraculous Christmas Gift Box" type="EtcItem">
 		<!-- Santa's gift for bringing back Santa's Small Gift Boxes. Double-click to get the reward. Will be deleted after the event. -->
@@ -1248,7 +1206,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46290" name="Santa's Small Gift Box" type="EtcItem">
 		<!-- Santa's gifts spread throughout Aden. Collect these and take them to Santa Claus. Will be deleted after the event. -->
@@ -1258,7 +1215,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46291" name="Christmas Talisman" additionalName="ALL STAT +2" type="Armor">
 		<!-- Event item. All Stats + 2 when equipped. Effect does not stack with additional Talismans of the same type. -->
@@ -1269,7 +1225,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46292" name="Christmas Talisman" additionalName="ALL STAT +1" type="Armor">
 		<!-- Event item. All Stats + 1 when equipped. Effect does not stack with additional Talismans of the same type. -->
@@ -1280,7 +1235,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->

@@ -339,8 +339,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="10" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="36725" name="Practice Magic Pin (C-grade)" type="EtcItem">
@@ -370,8 +370,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="10" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="36727" name="Theor's Orders" type="EtcItem">
@@ -415,7 +415,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="36731" name="Life Stone Instilled with Giants' Power" type="EtcItem">
 		<!-- Mineral with mysterious power. Can be augmented to high-grade and used by characters of level 85 or higher. -->
@@ -423,7 +422,6 @@
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="20160" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="36732" name="Recipe: Requiem Shaper (60%)" type="EtcItem">
@@ -434,7 +432,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36733" name="Recipe: Requiem Cutter (60%)" type="EtcItem">
@@ -445,7 +442,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36734" name="Recipe: Requiem Slasher (60%)" type="EtcItem">
@@ -456,7 +452,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36735" name="Recipe: Requiem Avenger (60%)" type="EtcItem">
@@ -467,7 +462,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36736" name="Recipe: Requiem Fighter (60%)" type="EtcItem">
@@ -478,7 +472,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36737" name="Recipe: Requiem Stormer (60%)" type="EtcItem">
@@ -489,7 +482,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36738" name="Recipe: Requiem Thrower (60%)" type="EtcItem">
@@ -500,7 +492,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36739" name="Recipe: Requiem Shooter (60%)" type="EtcItem">
@@ -511,7 +502,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36740" name="Recipe: Requiem Buster (60%)" type="EtcItem">
@@ -522,7 +512,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36741" name="Recipe: Requiem Caster (60%)" type="EtcItem">
@@ -533,7 +522,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36742" name="Recipe: Requiem Retributer (60%)" type="EtcItem">
@@ -544,7 +532,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3387132" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36743" name="Recipe: Immortal Helmet (60%)" type="EtcItem">
@@ -555,7 +542,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="458841" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36744" name="Recipe: Immortal Breastplate (60%)" type="EtcItem">
@@ -566,7 +552,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1139818" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36745" name="Recipe: Immortal Gaiters (60%)" type="EtcItem">
@@ -577,7 +562,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="731232" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36746" name="Recipe: Immortal Gauntlets (60%)" type="EtcItem">
@@ -588,7 +572,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="277299" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36747" name="Recipe: Immortal Boots (60%)" type="EtcItem">
@@ -599,7 +582,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="285479" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36748" name="Recipe: Immortal Shield (60%)" type="EtcItem">
@@ -610,7 +592,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="280571" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36749" name="Recipe: Immortal Leather Helmet (60%)" type="EtcItem">
@@ -621,7 +602,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="411858" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36750" name="Recipe: Immortal Leather Armor (60%)" type="EtcItem">
@@ -632,7 +612,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1092835" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36751" name="Recipe: Immortal Leather Leggings (60%)" type="EtcItem">
@@ -643,7 +622,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="684249" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36752" name="Recipe: Immortal Leather Gloves (60%)" type="EtcItem">
@@ -654,7 +632,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="277299" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36753" name="Recipe: Immortal Leather Boots (60%)" type="EtcItem">
@@ -665,7 +642,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="285479" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36754" name="Recipe: Immortal Circlet (60%)" type="EtcItem">
@@ -676,7 +652,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="416766" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36755" name="Recipe: Immortal Tunic (60%)" type="EtcItem">
@@ -687,7 +662,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1092835" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36756" name="Recipe: Immortal Stockings (60%)" type="EtcItem">
@@ -698,7 +672,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="684249" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36757" name="Recipe: Immortal Gloves (60%)" type="EtcItem">
@@ -709,7 +682,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="277299" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36758" name="Recipe: Immortal Shoes (60%)" type="EtcItem">
@@ -720,7 +692,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="285479" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36759" name="Recipe: Immortal Sigil (60%)" type="EtcItem">
@@ -731,7 +702,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="280571" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36760" name="Recipe: Immortal Necklace (60%)" type="EtcItem">
@@ -742,7 +712,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="357959" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36761" name="Recipe: Immortal Earring (60%)" type="EtcItem">
@@ -753,7 +722,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="269288" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36762" name="Recipe: Immortal Ring (60%)" type="EtcItem">
@@ -764,7 +732,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="180616" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36763" name="Recipe: Apocalypse Shaper (60%)" type="EtcItem">
@@ -775,7 +742,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36764" name="Recipe: Apocalypse Cutter (60%)" type="EtcItem">
@@ -786,7 +752,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36765" name="Recipe: Apocalypse Slasher (60%)" type="EtcItem">
@@ -797,7 +762,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36766" name="Recipe: Apocalypse Avenger (60%)" type="EtcItem">
@@ -808,7 +772,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36767" name="Recipe: Apocalypse Fighter (60%)" type="EtcItem">
@@ -819,7 +782,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36768" name="Recipe: Apocalypse Stormer (60%)" type="EtcItem">
@@ -830,7 +792,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36769" name="Recipe: Apocalypse Thrower (60%)" type="EtcItem">
@@ -841,7 +802,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36770" name="Recipe: Apocalypse Shooter (60%)" type="EtcItem">
@@ -852,7 +812,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36771" name="Recipe: Apocalypse Buster (60%)" type="EtcItem">
@@ -863,7 +822,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36772" name="Recipe: Apocalypse Caster (60%)" type="EtcItem">
@@ -874,7 +832,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36773" name="Recipe: Apocalypse Retributer (60%)" type="EtcItem">
@@ -885,7 +842,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="9221324" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36774" name="Recipe: Twilight Helmet (60%)" type="EtcItem">
@@ -896,7 +852,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1217664" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36775" name="Recipe: Twilight Breastplate (60%)" type="EtcItem">
@@ -907,7 +862,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3072556" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36776" name="Recipe: Twilight Gaiters (60%)" type="EtcItem">
@@ -918,7 +872,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1959621" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36777" name="Recipe: Twilight Gauntlets (60%)" type="EtcItem">
@@ -929,7 +882,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="872868" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36778" name="Recipe: Twilight Boots (60%)" type="EtcItem">
@@ -940,7 +892,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="872868" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36779" name="Recipe: Twilight Shield (60%)" type="EtcItem">
@@ -951,7 +902,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="872868" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36780" name="Recipe: Twilight Leather Helmet (60%)" type="EtcItem">
@@ -962,7 +912,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1125720" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36781" name="Recipe: Twilight Leather Armor (60%)" type="EtcItem">
@@ -973,7 +922,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3001920" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36782" name="Recipe: Twilight Leather Leggings (60%)" type="EtcItem">
@@ -984,7 +932,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1876200" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36783" name="Recipe: Twilight Leather Gloves (60%)" type="EtcItem">
@@ -995,7 +942,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="750480" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36784" name="Recipe: Twilight Leather Boots (60%)" type="EtcItem">
@@ -1006,7 +952,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="750480" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36785" name="Recipe: Twilight Circlet (60%)" type="EtcItem">
@@ -1017,7 +962,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1121458" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36786" name="Recipe: Twilight Tunic (60%)" type="EtcItem">
@@ -1028,7 +972,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="2980612" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36787" name="Recipe: Twilight Stockings (60%)" type="EtcItem">
@@ -1039,7 +982,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1888985" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36788" name="Recipe: Twilight Gloves (60%)" type="EtcItem">
@@ -1050,7 +992,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="763265" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36789" name="Recipe: Twilight Shoes (60%)" type="EtcItem">
@@ -1061,7 +1002,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="750480" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36790" name="Recipe: Twilight Sigil (60%)" type="EtcItem">
@@ -1072,7 +1012,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="750480" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36791" name="Recipe: Twilight Necklace (60%)" type="EtcItem">
@@ -1083,7 +1022,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="978907" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36792" name="Recipe: Twilight Earring (60%)" type="EtcItem">
@@ -1094,7 +1032,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="758685" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36793" name="Recipe: Twilight Ring (60%)" type="EtcItem">
@@ -1105,7 +1042,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="504370" />
-		<set name="time" val="20160" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="36794" name="Requiem Shaper Fragment" type="EtcItem">
@@ -1115,7 +1051,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="36795" name="Requiem Cutter Fragment" type="EtcItem">
@@ -1125,7 +1060,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="36796" name="Requiem Slasher Fragment" type="EtcItem">
@@ -1135,7 +1069,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="36797" name="Requiem Avenger Fragment" type="EtcItem">
@@ -1145,7 +1078,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="36798" name="Requiem Fighter Fragment" type="EtcItem">
@@ -1155,7 +1087,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 	<item id="36799" name="Requiem Stormer Fragment" type="EtcItem">
@@ -1165,7 +1096,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="338713" />
-		<set name="time" val="20160" />
 		<set name="weight" val="60" />
 	</item>
 </list>

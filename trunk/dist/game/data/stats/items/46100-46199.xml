@@ -89,6 +89,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -99,6 +100,7 @@
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -109,6 +111,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -119,6 +122,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -129,6 +133,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -139,6 +144,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -149,66 +155,67 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46115" name="Freya's Staff Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46116" name="Spezion's Claw Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46117" name="Maliss Stormer Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46118" name="Steregos' Dagger Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46119" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
@@ -219,6 +226,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
@@ -229,26 +237,27 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. 30-day. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
@@ -259,6 +268,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
@@ -269,6 +279,7 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
@@ -279,30 +290,30 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46128" name="Afro - Gold Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46129" name="Afro - Pink Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. Can be used only on hair accessories that take up 2 slots.  -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46130" name="Spirit Evil Thought Piece" type="EtcItem">
 		<!-- A piece of El Floato's evil thoughts. Use it to open the door to get to Harpe in the Garden of Spirits. -->
@@ -314,7 +325,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46131" name="Kelbim Exclusive Weapon" type="Weapon">
 		<!-- Exclusive weapon of Kelbim. -->
@@ -328,13 +338,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="5" />
-			<set stat="mAtk" val="5" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="5" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -350,7 +359,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46133" name="Dark Atelia Neutralizer" type="EtcItem">
 		<!-- A neutralizer that prevents addiction of the by-product that is produced when creating Dark Atelia. All the Embryo in the Atelia Fortress carry this neutralizer. -->
@@ -365,7 +373,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46134" name="Blackbird Report - Glenkinchie" type="EtcItem">
 		<!-- Glenkinchie's report to Elikia. It says stuff about the Embryo. -->
@@ -379,7 +386,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46135" name="Blackbird Report - Hurak" type="EtcItem">
 		<!-- Hurak's report to Elikia. It says stuff about the Embryo. -->
@@ -393,7 +399,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46136" name="Blackbird Report - Laffian" type="EtcItem">
 		<!-- Laffian's report to Elikia. It says stuff about the Embryo. -->
@@ -407,7 +412,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46137" name="Blackbird Report - Sherry" type="EtcItem">
 		<!-- Sherry's report to Elikia. It says stuff about the Embryo. -->
@@ -421,7 +425,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46138" name="Low-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
@@ -435,7 +438,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46139" name="Low-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
@@ -449,7 +451,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46140" name="Low-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You haven't been recognized by every member yet. -->
@@ -463,7 +464,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46141" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -477,7 +477,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46142" name="Stronghold Flag Repair Cloth" type="EtcItem">
 		<!-- A piece of cloth to fix the flag that represents the stronghold. Take it to the Aden Vanguard. -->
@@ -492,7 +491,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46143" name="Stronghold Repair Tools" type="EtcItem">
 		<!-- Tools to repair the stronghold. Take it to the Aden Stronghold. -->
@@ -506,7 +504,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46144" name="Kelbim's Armor Piece" type="EtcItem">
 		<!-- A piece of the armor that Kelbim was wearing. Kaysia needs it in order to find out what the Embryo are using the Atelia for. Take it to Kaysia in the Town of Oren. -->
@@ -520,7 +517,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46145" name="Black Atelia Powder" type="EtcItem">
 		<!-- Powder from the Giant Atelia that turned black. It will be useful in finding out how it's different from the Atelia of the Wind Spirit Realm. Take it to Kaysia in the Town of Oren. -->
@@ -534,7 +530,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -548,7 +543,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -562,7 +556,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -576,7 +569,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -590,7 +582,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
@@ -599,7 +590,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" type="EtcItem">
@@ -609,7 +599,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" type="EtcItem">
@@ -619,7 +608,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46153" name="Immortal Scroll Chapter 1" type="EtcItem">
@@ -633,7 +621,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
@@ -643,7 +630,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" type="EtcItem">
@@ -653,7 +639,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" type="EtcItem">
@@ -663,7 +648,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46157" name="Immortal Scroll Chapter 2" type="EtcItem">
@@ -677,7 +661,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46158" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
@@ -688,7 +671,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -702,7 +684,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46160" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -716,7 +697,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46161" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -730,7 +710,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46162" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -744,7 +723,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46163" name="High-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You are being trusted with various stories.  -->
@@ -758,7 +736,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46164" name="Aden Vanguard Reward Box" type="EtcItem">
 		<!-- A reward for finishing the missions as an honorary member of the Aden Vanguard. Double-click to use. -->
@@ -772,7 +749,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46165" name="Ferin's Reward Box" type="EtcItem">
 		<!-- Reward for helping Ferin and her people. Double-click to open. -->
@@ -786,7 +762,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46166" name="Barton's Letter" type="EtcItem">
 		<!-- A letter from the first stronghold's Barton to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
@@ -799,7 +774,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46167" name="Hayuk's Letter" type="EtcItem">
 		<!-- A letter from the second stronghold's Hayuk to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
@@ -812,7 +786,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46168" name="Elise's Letter" type="EtcItem">
 		<!-- A letter from the third stronghold's Elise to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
@@ -825,7 +798,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46169" name="Eliyah's Letter" type="EtcItem">
 		<!-- A letter from the fourth stronghold's Elliyah to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
@@ -838,7 +810,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46170" name="Atelia Fortress Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
@@ -852,7 +823,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46171" name="Garden of the Spirits Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
@@ -866,7 +836,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46172" name="Drew Protection Box" additionalName="Event" type="EtcItem">
 		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
@@ -880,13 +849,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46173" name="Male Swimsuit No.1 Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of Male Swimwear No. 1. Works on one-pieces too. It modifies everything, making the appearance of all armor into that of swimwear. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -898,6 +867,7 @@
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -909,6 +879,7 @@
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -920,6 +891,7 @@
 		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -948,7 +920,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46179" name="Male Swimwear No.1" type="Armor">
 		<!-- Swimwear for male characters.  -->
@@ -959,7 +930,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46180" name="Male Swimwear No.2" type="Armor">
 		<!-- Swimwear for male characters.  -->
@@ -970,7 +940,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46181" name="Bikini No.1" type="Armor">
 		<!-- Bikini for female characters.  -->
@@ -981,7 +950,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46182" name="Bikini No.2" type="Armor">
 		<!-- Bikini for female characters.  -->
@@ -992,7 +960,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46183" name="Joyful Birthday Pack" type="EtcItem">
 		<!-- A gift from Alegria for your character's birthday. Double-click to get 10 Happy Birthday Potions and a Birthday Hat. -->
@@ -1019,7 +986,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
@@ -1030,7 +996,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
@@ -1072,17 +1037,18 @@
 		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of a Vampiric Style. 30-day. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1109,7 +1075,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46198" name="Gold Medal" type="EtcItem">
 		<!-- A shiny gold medal. Sell it at the shop for a lot of money. -->
@@ -1120,13 +1085,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46199" name="Halloween Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a top armor or a one-piece into that of a Halloween outfit. It changes everything, making the appearance of all armor into that of the Halloween outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

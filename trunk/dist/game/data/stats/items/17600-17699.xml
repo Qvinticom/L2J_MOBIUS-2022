@@ -109,8 +109,8 @@
 		<set name="price" val="15192000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="125" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="17610" name="Tissue Energy Residue" type="EtcItem">
@@ -271,8 +271,8 @@
 		<set name="price" val="15192000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="17624" name="Token of Insolence Tower" type="EtcItem">

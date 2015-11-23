@@ -59,7 +59,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22099-1" /> <!-- Soul Silver Foil -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20603" name="Soul Scent (Event)" type="EtcItem">
 		<!-- Scent to comfort a spirit of monster.. When used on a corpse of monster, increases max HP by 40%, max CP by 40%, P. Def. by 30%, Magic Def. by 30%, Speed by 20, P. Atk. by 45%, and decreases skill MP consumption by 10% for 2 min. -->
@@ -75,7 +74,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22100-1" /> <!-- Soul Scent -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20604" name="Low-Class Certificate (Event)" type="EtcItem">
 		<!-- A Certificate that shows you received the Event Small Scroll Chest. -->
@@ -88,7 +86,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20605" name="Mid-grade Certificate (Event)" type="EtcItem">
 		<!-- A Certificate that shows you received the Event Large Scroll Chest. -->
@@ -101,7 +98,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20606" name="High-class Certificate (Event)" additionalName="8-hour" type="EtcItem">
 		<!-- A Certificate that shows you received the Event Chest of Experience. -->
@@ -239,7 +235,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21092-1" /> <!-- Theme - Town -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20614" name="Headphone" additionalName="Hero Theme" type="Armor">
@@ -257,7 +252,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21093-1" /> <!-- Theme - Hero -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20615" name="Headphone" additionalName="Theme Park" type="Armor">
@@ -509,7 +503,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22101-1" /> <!-- Fortune Box of Love -->
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20630" name="Soul Magic Box" type="EtcItem">
 		<!-- If you Double-click, Soul Silver Foil and Soul Scent items are created. (You can only use on every 24 hours.) -->
@@ -526,7 +519,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22102-1" /> <!-- Soul Magic Box -->
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20631" name="Watermelon Hat Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Laborer Hat (7-day). -->
@@ -596,7 +588,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20635" name="Beginner's Adventurer Support Pack (No-grade)" type="EtcItem">
@@ -682,7 +673,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="100" />
 		<for>
@@ -713,7 +703,6 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="100" />
 		<for>
@@ -742,7 +731,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="100" />
 		<for>
@@ -765,7 +753,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="29" />
@@ -784,7 +771,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="29" />
@@ -802,7 +788,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<sub stat="rEvas" val="-8" />
@@ -823,7 +808,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="44" />
@@ -843,7 +827,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="70" />
@@ -863,7 +846,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="111" />
@@ -882,7 +864,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="136" />
@@ -907,7 +888,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="100" />
 		<for>
@@ -932,7 +912,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="52" />
@@ -952,7 +931,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="32" />
@@ -971,7 +949,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="29" />
@@ -990,7 +967,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="time" val="10080" />
 		<set name="weight" val="100" />
 		<for>
 			<add order="0" stat="pDef" val="29" />
@@ -1012,7 +988,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21105-1;23079-1" /> <!-- Seal Agathion, Release Agathion's Seal - Lucky Girl, Lucky Girl Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1051,7 +1026,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21106-1;23081-1" /> <!-- Seal Agathion, Release Agathion's Seal - Lucky Boy, Lucky Boy Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1090,7 +1064,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21107-1;23083-1" /> <!-- Seal Agathion, Release Agathion's Seal - Dancing Lucky Kid, Dancing Child Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1129,7 +1102,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21108-1;23085-1" /> <!-- Seal Agathion, Release Agathion's Seal - Monkey King, Agathion Cute Trick - Monkey King -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1168,7 +1140,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21109-1;23087-1" /> <!-- Seal Agathion, Release Agathion's Seal - Uthanka, Uthanka Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1207,7 +1178,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21110-1;23089-1" /> <!-- Seal Agathion, Release Agathion's Seal - Bonus B, Bonus B Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1245,7 +1215,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20667" name="Valkyrie Hat" additionalName="Great Adventurer's Soul Power (7-day)" type="Armor">
@@ -1281,7 +1250,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20669" name="Tiger Hat" additionalName="Brave Warrior's Soul Power (7-day)" type="Armor">
@@ -1317,7 +1285,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20671" name="Maid Hairband" additionalName="Great Wizard's Soul Power (7-day)" type="Armor">
@@ -1353,7 +1320,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20673" name="Baby Panda Hat" additionalName="Blessed Escape (7-day)" type="Armor">
@@ -1389,7 +1355,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20675" name="Bamboo Panda Hat" additionalName="Great Adventurer's Soul Power (7-day)" type="Armor">
@@ -1425,7 +1390,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20677" name="Sexy Panda Hat" additionalName="Blessed Resurrection (7-day)" type="Armor">
@@ -1461,7 +1425,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20679" name="Gatekeeper Hat" additionalName="Appetite for Destruction (7-day)" type="Armor">

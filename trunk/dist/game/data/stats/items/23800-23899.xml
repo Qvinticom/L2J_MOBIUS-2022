@@ -193,7 +193,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="23817" name="Uthanka's Ring" type="Armor">
@@ -204,7 +203,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
@@ -241,7 +239,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23821" name="Agathion - Pirate Captain Uthanka" type="Armor">
 		<!-- Summon Uthanka Agathion. -->
@@ -251,7 +248,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23822" name="Agathion - Pirate Captain Uthanka" additionalName="7-day" type="Armor">
 		<!-- Summon Uthanka Agathion (7-day). -->
@@ -283,7 +279,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="23825" name="Mysterious Human Dye" additionalName="Aim, Mental, Unbind, 7-day" type="EtcItem">
@@ -379,7 +374,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
@@ -389,7 +383,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
@@ -399,7 +392,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
@@ -409,7 +401,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
@@ -419,7 +410,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
@@ -429,7 +419,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
@@ -439,7 +428,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
@@ -449,7 +437,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">
@@ -459,7 +446,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23842" name="Abundance Gift Box" additionalName="Tactics" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Tactics, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's War -->
@@ -468,7 +454,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23843" name="Abundance Gift Box" additionalName="Morale" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Morale, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm -->
@@ -477,7 +462,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23844" name="Abundance Gift Box" additionalName="Physique" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: Physique, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Wa -->
@@ -486,7 +470,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23845" name="Mysterious Hunt Dye" additionalName="P. Def., Speed, 1-day" type="EtcItem">
 		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only.. . Note: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
@@ -519,7 +502,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23848" name="Luxury Fortune Reading Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
@@ -531,7 +513,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23849" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
@@ -540,7 +521,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23850" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Luxury Fortune Reading Ticket through Eve's Fortune Shop. -->
@@ -552,7 +532,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23851" name="Royal Training Camp Ticket" type="EtcItem">
 		<!-- Ticket for entering the Royal Training Camp. Talk to the manager to enter. You can stay up to 5 hours inside, and must leave when the time resets at 6:30 am. -->
@@ -564,7 +543,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23852" name="Transparent Armor" type="Armor">
 		<!-- Transparent armor that shows your underwear. Your cloak also becomes invisible. -->
@@ -575,7 +553,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="23853" name="Transparent Armor Appearance Stone" type="EtcItem">
@@ -588,7 +565,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23854" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (3-hour). -->
@@ -608,7 +584,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23856" name="Silver Crate" type="EtcItem">
 		<!-- Has a chance of obtaining either a Scroll of Blessing (R99-grade), Scroll of Blessing (R95-grade), Scroll of Blessing (R2-grade), Scroll of Blessing (R1-grade), Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant We -->
@@ -639,7 +614,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="23859" name="Change Clan Name" type="EtcItem">
 		<!-- To change your clan name:. 1. Request through your own account.. 2. Send a request with the title Change Clan Name.. 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
@@ -653,7 +627,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="23860" name="Raid Boss' Soul Pack" type="EtcItem">
@@ -725,7 +698,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23869" name="Angel Cat's Blessing Pack" type="EtcItem">
@@ -751,7 +723,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="23871" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
@@ -831,7 +802,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23878" name="Samurai Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories.. . Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
@@ -846,7 +816,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23879" name="Samurai Outfit" type="Armor">
 		<!-- Samurai look. -->
@@ -859,7 +828,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23880" name="Samurai Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
@@ -874,7 +842,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23881" name="Anakim Outfit" type="Armor">
 		<!-- Anakim's look. -->
@@ -887,7 +854,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23882" name="Anakim Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
@@ -902,7 +868,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23883" name="Vampire Top" type="Armor">
 		<!-- Vampiric wear. -->
@@ -914,7 +879,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23884" name="Vampire Pants" type="Armor">
 		<!-- Vampiric wear. -->
@@ -928,7 +892,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23885" name="Vampire Gloves" type="Armor">
 		<!-- Vampiric wear. -->
@@ -941,7 +904,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23886" name="Vampire Shoes" type="Armor">
 		<!-- Vampiric wear. -->
@@ -954,7 +916,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23887" name="Vampire Hair Accessory" type="Armor">
 		<!-- Vampiric wear in the form of a mask. -->
@@ -967,7 +928,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23888" name="Vampire Top Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->
@@ -982,7 +942,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23889" name="Vampire Pants Appearance Stone" type="EtcItem">
 		<!--  Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->
@@ -997,7 +956,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23890" name="Vampire Gloves Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
@@ -1012,7 +970,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23891" name="Vampire Shoes Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
@@ -1027,7 +984,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23892" name="Vampire Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit. Only for 2-slot hair accessories. -->
@@ -1042,7 +998,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="23893" name="Life Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing various Life Stones. Double-click to obtain either a  Life Stone Instilled with Giants' Power, Top-grade Life Stone (R-grade), High-grade Life Stone (R-grade), Mid-grade Life Stone (R-grade), or Life Stone (R-grade). -->

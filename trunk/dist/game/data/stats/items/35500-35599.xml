@@ -676,8 +676,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="35565" name="Mysterious Belt" additionalName="3-day" type="Armor">
@@ -695,8 +695,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="35566" name="Dark Amaranthine Enhancement Stone" type="EtcItem">
@@ -705,7 +705,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35567" name="Dark Eternal Enhancement Stone" type="EtcItem">
 		<!-- Bestows the PvP option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
@@ -713,7 +712,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35568" name="Bloody Amaranthine Enhancement Stone" type="EtcItem">
 		<!-- Bestows the PvE option on an Amaranthine weapon through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
@@ -721,7 +719,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35569" name="Bloody Eternal Enhancement Stone" type="EtcItem">
 		<!-- Bestows the PvE option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are additionally requested. -->
@@ -729,7 +726,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="35570" name="Tauti's Ring" type="Armor">
 		<!-- Tauti's Ring. Fire/Dark Resistance + 25, MP + 38, Critical Damage + 15%, Skill Power + 5%, PvP damage + 5%, Paralysis/Binding/Banishment Resistance + 10, Damage Reflect Resistance + 5, Absorption Resistance + 5, received PvP damage - 5%, and critical + 54 -->
@@ -742,11 +738,10 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="GOLD" />
 		<set name="price" val="15192000" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="108" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35571" name="Water Resistance Necklace" type="Armor">
@@ -758,7 +753,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -775,7 +769,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -792,7 +785,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -809,7 +801,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -826,7 +817,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -843,7 +833,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
@@ -860,7 +849,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -877,7 +865,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -894,7 +881,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -911,7 +897,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -928,7 +913,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -945,7 +929,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
@@ -962,11 +945,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35584" name="Water Resistance Ring" type="Armor">
@@ -978,11 +960,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35585" name="Fire Resistance Ring" type="Armor">
@@ -994,11 +975,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35586" name="Holy Resistance Ring" type="Armor">
@@ -1010,11 +990,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35587" name="Dark Resistance Ring" type="Armor">
@@ -1026,11 +1005,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35588" name="Wind Resistance Ring" type="Armor">
@@ -1042,11 +1020,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35589" name="Top-grade Earth Resistance Ring" type="Armor">
@@ -1058,11 +1035,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35590" name="Top-grade Water Resistance Ring" type="Armor">
@@ -1074,11 +1050,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35591" name="Top-grade Fire Resistance Ring" type="Armor">
@@ -1090,11 +1065,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35592" name="Top-grade Holy Resistance Ring" type="Armor">
@@ -1106,11 +1080,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35593" name="Top-grade Dark Resistance Ring" type="Armor">
@@ -1122,11 +1095,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35594" name="Top-grade Wind Resistance Ring" type="Armor">
@@ -1138,11 +1110,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35595" name="Water Royal Guard Necklace" type="Armor">
@@ -1154,7 +1125,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1171,7 +1141,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1188,7 +1157,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1205,7 +1173,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1222,7 +1189,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />

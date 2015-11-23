@@ -285,7 +285,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36334" name="Adrenaline Energy Drink" additionalName="Event" type="EtcItem">
@@ -296,7 +295,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36335" name="Caffeine Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX + 10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not re -->
@@ -306,7 +304,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36336" name="Protein Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that creates monstrous muscle mass. STR + 10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 minutes. -->
@@ -316,7 +313,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36337" name="DHA Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that increases brain power. INT + 10. Formulated for special events, this energy drink sharpens Mental/magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. Cannot be used in Olympiad. The body does not r -->
@@ -326,7 +322,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36338" name="Omega3 Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT + 10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect -->
@@ -336,7 +331,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36339" name="Medal of Glory" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. It is rarer and more precious than the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
@@ -345,7 +339,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36340" name="Medal of Victory" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. There are the Medal of Glory, the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
@@ -354,7 +347,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36341" name="Medal of Friendship" additionalName="Event" type="EtcItem">
 		<!-- Medal used in the festival hosted by Amadeo Cadmus, the king of Aden. There are the Medal of Glory, the Medal of Victory and the Medal of Friendship. Event Manager Cocoring can exchange it for a Golden Chest for you. -->
@@ -363,7 +355,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36342" name="Agathion Bracelet" additionalName="Jr. Cocoring" type="Armor">
 		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hour for -->
@@ -376,7 +367,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="36343" name="Male Swimsuit No. 1" additionalName="Event" type="Armor">
@@ -386,7 +376,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="60" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="36344" name="Male Swimsuit No. 2" additionalName="Event" type="Armor">
@@ -396,7 +385,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="60" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="36345" name="Female Swimsuit No. 1" additionalName="Event" type="Armor">
@@ -406,7 +394,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="60" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="36346" name="Female Swimsuit No. 2" additionalName="Event" type="Armor">
@@ -416,7 +403,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="60" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="36347" name="Scroll: Energy of Glory" additionalName="Event" type="EtcItem">
@@ -427,7 +413,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36348" name="Red Horns" additionalName="Event" type="Armor">
 		<!-- Hair accessory that can be used with a pendant. -->
@@ -437,7 +422,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36349" name="Bracelet of Glory: Glory" additionalName="Event" type="Armor">
@@ -448,7 +432,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="36350" name="Bracelet of Glory: Victory" additionalName="Event" type="Armor">
@@ -459,7 +442,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="36351" name="Bracelet of Glory: Friendship" additionalName="Event" type="Armor">
@@ -470,7 +452,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="36352" name="Red Horns" additionalName="STR (Event)" type="Armor">
@@ -481,7 +462,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36353" name="Red Horns" additionalName="DEX (Event)" type="Armor">
@@ -492,7 +472,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36354" name="Red Horns" additionalName="CON (Event)" type="Armor">
@@ -503,7 +482,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36355" name="Red Horns" additionalName="MEN (Event)" type="Armor">
@@ -514,7 +492,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36356" name="Red Horns" additionalName="INT (Event)" type="Armor">
@@ -525,7 +502,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36357" name="Red Horns" additionalName="WIT (Event)" type="Armor">
@@ -536,7 +512,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36358" name="Red Horns" additionalName="Critical Rate (Event)" type="Armor">
@@ -547,7 +522,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36359" name="Red Horns" additionalName="Critical Damage (Event)" type="Armor">
@@ -558,7 +532,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36360" name="Red Horns" additionalName="P. Def. (Event)" type="Armor">
@@ -569,7 +542,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36361" name="Red Horns" additionalName="M. Def. (Event)" type="Armor">
@@ -580,7 +552,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36362" name="Red Horns" additionalName="Evasion (Event)" type="Armor">
@@ -591,7 +562,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36363" name="Red Horns" additionalName="P. Atk. (Event)" type="Armor">
@@ -602,7 +572,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36364" name="Red Horns" additionalName="M. Atk. (Event)" type="Armor">
@@ -613,7 +582,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36365" name="Red Horns" additionalName="Accuracy (Event)" type="Armor">
@@ -624,7 +592,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36366" name="Golden Chest" additionalName="Event" type="EtcItem">
@@ -635,7 +602,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36367" name="Luminous Golden Chest" additionalName="Event" type="EtcItem">
 		<!-- Luminous Golden Chest with bright energy. Special reward prepared by Amadeo Cadmus, the king of Aden. Double-click to get the reward. -->
@@ -645,7 +611,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36368" name="Treasure Chest" additionalName="Aden Reconstruction" type="EtcItem">
 		<!-- Small Reward Box for your help in the reconstruction of Aden. -->
@@ -655,7 +620,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36369" name="Hero's Treasure Chest" additionalName="Aden Reconstruction" type="EtcItem">
@@ -666,7 +630,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36370" name="Hair Accessory Pack" additionalName="Aden Reconstruction" type="EtcItem">
@@ -842,7 +805,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9254-1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36387" name="Giant's Scroll: Enchant Weapon (S-grade)" type="EtcItem">
@@ -858,7 +820,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9252-1" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36388" name="Giant's Scroll: Enchant Weapon (A-grade)" type="EtcItem">
@@ -874,7 +835,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9250-1" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36389" name="Giant's Scroll: Enchant Armor (R-grade)" type="EtcItem">
@@ -890,7 +850,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9255-1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36390" name="Giant's Scroll: Enchant Armor (S-grade)" type="EtcItem">
@@ -906,7 +865,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9253-1" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36391" name="Giant's Scroll: Enchant Armor (A-grade)" type="EtcItem">
@@ -922,7 +880,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9251-1" /> <!-- Giant's Scroll: Enchant Armor (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36392" name="Mark of Travis" type="EtcItem">
@@ -936,7 +893,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36393" name="Returner's Soul" type="EtcItem">
 		<!-- Soul of those who resurrected and returned with Travis. Take this to the Aden Vanguard Quartermaster at the border of the cemetery and the Seal of Shilen to get a reward. -->
@@ -949,7 +905,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36394" name="Escort's Supply Box" type="EtcItem">
 		<!-- Small reward received for killing those who resurrected and returned with Travis. Double-click to use it. Cannot be used in the Olympiad. -->
@@ -963,7 +918,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36395" name="Golden Chest (Reward)" type="EtcItem">
@@ -974,7 +928,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36396" name="Energy Drink Pack" type="EtcItem">
 		<!-- Each energy drink pack randomly contains 1 of 5 different energy drinks. Open the pack to receive 3 units of one energy drink. -->
@@ -996,7 +949,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36398" name="Chest of Victory" type="EtcItem">
 		<!-- Chest of Victory given by Cocoring to celebrate the winning of the glorious silver medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
@@ -1009,7 +961,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="36399" name="Chest of Friendship" type="EtcItem">
 		<!-- Chest of Friendship given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
@@ -1022,6 +973,5 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 </list>

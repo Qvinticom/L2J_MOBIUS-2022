@@ -1303,7 +1303,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="21864" name="Player Commendation - Blessing Pack" type="EtcItem">
 		<!-- Player Commendation - Blessing pack. Wrapped Pack containing Player Commendation - Blessing. -->
@@ -1367,7 +1366,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="240" />
 	</item>
 	<item id="21869" name="Hero's Gold Chest Pack" type="EtcItem">
 		<!-- Hero's Gold Chest Pack. Wrapped Pack that contains a Hero's Gold Chest. -->
@@ -1416,7 +1414,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="21873" name="Santa's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Santa's Gift Box. When used, you can receive Santa's gift. -->
@@ -1425,7 +1422,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="21874" name="Medal of Glory" type="EtcItem">
@@ -1439,7 +1435,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="21875" name="Campfire Flint" type="EtcItem">
 		<!-- You can start a campfire by using this flint. Campfire near a battleground can help raise HP, MP, and CP Recovery Rate, but only when far away from towns.  -->
@@ -1448,7 +1443,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 	</item>
 	<item id="21876" name="Pa'agrio's Christmas Package" type="EtcItem">
 		<!-- Wrapped Pack containing each of Pa'agrio's Warm Breeze (4-hour) pack, XP Buff 50% Pack (4-hour), party cake, and shiny party hat. -->
@@ -1528,7 +1522,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21882" name="Shiny Party Hat" additionalName="Blessed Body (90-day)" type="Armor">
@@ -1556,7 +1549,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="21884" name="(Not in Use)" type="EtcItem">
 		<!-- (Not in Use) -->
@@ -1569,7 +1561,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="21885" name="Rose Spirit Coupon Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Rose Spirit Coupons. -->
@@ -1670,7 +1661,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="6000000" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21893" name="Halisha's Helmet" type="Armor">
@@ -1682,7 +1672,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="6000000" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21894" name="Ice Queen's Tiara" type="Armor">
@@ -1694,7 +1683,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="6000000" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21895" name="Scroll: Valakas Call" type="EtcItem">
@@ -1713,7 +1701,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22290-1" /> <!-- Scroll: Valakas Call -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1734,7 +1721,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22291-1" /> <!-- Jewel of Valakas -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1756,7 +1742,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22292-1" /> <!-- Scroll: Antharas Call -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1777,7 +1762,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22293-1" /> <!-- Jewel of Antharas -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1796,7 +1780,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22294-1" /> <!-- Totem of Body -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="12010, 12001" />

@@ -1563,7 +1563,6 @@
 		<set name="item_skill" val="2608-1" /> <!-- Blue Crystal of Fantasy -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="1000" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="13387" name="Fantasy Green Crystal" type="EtcItem">
@@ -1582,7 +1581,6 @@
 		<set name="item_skill" val="2608-2" /> <!-- Blue Crystal of Fantasy -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="1000" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="13388" name="Fantasy Red Crystal" type="EtcItem">
@@ -1601,7 +1599,6 @@
 		<set name="item_skill" val="2608-3" /> <!-- Blue Crystal of Fantasy -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="1000" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="13389" name="Kratei Scale Shirt" additionalName="CP" type="Armor">
@@ -1619,11 +1616,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="300" />
 		<set name="weight" val="130" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="23" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13390" name="Kratei Mithril Shirt" additionalName="CP" type="Armor">
@@ -1641,11 +1637,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="300" />
 		<set name="weight" val="130" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="28" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13391" name="Kratei Striped Scale Shirt" additionalName="CP" type="Armor">
@@ -1663,11 +1658,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="300" />
 		<set name="weight" val="130" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="26" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13392" name="Kratei Striped Mithril Shirt" additionalName="CP" type="Armor">
@@ -1685,11 +1679,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="300" />
 		<set name="weight" val="130" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="30" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13393" name="Shadow Item: Monkey Hat" type="Armor">
@@ -1705,7 +1698,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="13394" name="Shadow Item: Pig Hat" type="Armor">
@@ -1721,7 +1713,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="13395" name="Scroll of Escape: Talking Island Village" type="EtcItem">
@@ -1737,7 +1728,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2609-1" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="300" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1756,7 +1746,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2609-2" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="300" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1775,7 +1764,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2609-3" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="300" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1794,7 +1782,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2609-4" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="300" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1813,7 +1800,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2609-5" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="300" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />

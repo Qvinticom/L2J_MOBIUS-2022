@@ -245,8 +245,8 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="62" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="34832" name="Squash Earring (Wizard)" additionalName="Event" type="Armor">
@@ -264,8 +264,8 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="92" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="34833" name="Afro Hair" type="Armor">
@@ -278,7 +278,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="21600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34834" name="Afro Hair" additionalName="7-day" type="Armor">
@@ -327,7 +326,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="6000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="34838" name="Soulshot Compressed Package (R-grade)" type="EtcItem">
@@ -368,7 +366,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="34842" name="Recipe: Spiritshot (R-grade) Compressed Package" type="EtcItem">
@@ -379,7 +376,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="34843" name="Recipe: Blessed Spiritshot (R-grade) Compressed Package" type="EtcItem">
@@ -390,18 +386,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="34844" name="Mysterious Herb" type="EtcItem">
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="34845" name="Mysterious Herb" type="EtcItem">
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="34846" name="Bard's Gift" type="EtcItem">
 		<!-- Wrapped Pack containing Bard's heart. -->
@@ -446,13 +439,11 @@
 		<set name="icon" val="icon.etc_warrior_set_i00" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34850" name="Mysterious Herb of Magic" type="EtcItem">
 		<set name="icon" val="icon.etc_magic_set_i00" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34851" name="Cube Fragment Armor - R" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Armor Enchant (R-grade). -->
@@ -460,7 +451,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34852" name="Cube Fragment Weapon - R" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Scroll: Weapon Enchant (R-grade). -->
@@ -468,7 +458,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34853" name="Shiny Cube Fragment Armor - R" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Armor Enchant (R-grade). -->
@@ -476,7 +465,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34854" name="Shiny Cube Fragment Weapon - R" type="EtcItem">
 		<!-- Speak with a warehouse keeper to exchange this for a Blessed Scroll: Weapon Enchant (R-grade). -->
@@ -484,7 +472,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34855" name="Raina's Box" type="EtcItem">
 		<!-- Raina's Box exchanged for the XP Bottle. Small chance of acquiring an Scroll: XP. -->
@@ -497,7 +484,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34856" name="Echo Crystal - Theme of Love" additionalName="Campaign" type="EtcItem">
@@ -508,7 +494,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34857" name="Echo Crystal - Theme of Festival" additionalName="Campaign" type="EtcItem">
@@ -519,7 +504,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34858" name="Echo Crystal - Theme of Celebration" additionalName="Campaign" type="EtcItem">
@@ -530,7 +514,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34859" name="Enhanced Istina's Bracelet" type="Armor">
@@ -547,7 +530,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="13378-1" /> <!-- Enhanced Istina's Bracelet -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 		<for/>
 	</item>
@@ -565,7 +547,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="13379-1" /> <!-- Enhanced Octavis' Bracelet -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 		<for/>
 	</item>
@@ -589,7 +570,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34863" name="Contaminated Draco Egg" type="EtcItem">
@@ -603,7 +583,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34864" name="Small Draco Egg" type="EtcItem">
 		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Small Draco Egg. When the egg's temperature rises, it can be hatched. -->
@@ -612,7 +591,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34865" name="Large Draco Egg" type="EtcItem">
 		<!-- Draco Egg that has been purified of evil energy. Double-click on it to summon a Large Draco Egg. When the egg's temperature rises, it can be hatched. Multiple players are required to hatch the egg. -->
@@ -621,7 +599,6 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34866" name="Shattered Egg Shell" type="EtcItem">
 		<!-- You can receive a reward if you bring it to the Flame Servant Aslan. -->
@@ -629,7 +606,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34867" name="Draco's Gift" type="EtcItem">
 		<!-- Gift from the Draco that was resurrected from a purified Draco Egg. -->
@@ -638,7 +614,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34868" name="Draco's Shiny Gift" type="EtcItem">
 		<!-- Gift from the Draco that was resurrected from a purified Draco Egg. It shines for some unknown reason. -->
@@ -647,7 +622,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34869" name="Agathion - Flame Spirit" type="Armor">
 		<!-- Bracelet distributed by Pa'agrio's servant Aslan in order to resurrect the purified Draco Eggs. When equipped, you can summon a Flame Spirit. -->
@@ -660,7 +634,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="34870" name="Mentee Certificate Pack" type="EtcItem">
@@ -686,11 +659,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34872" name="Standard Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
@@ -703,11 +675,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34873" name="High-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
@@ -720,11 +691,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34874" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="HP Recovery" type="Armor">
@@ -737,11 +707,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34875" name="Low-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
@@ -754,11 +723,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34876" name="Standard Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
@@ -771,11 +739,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34877" name="High-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
@@ -788,11 +755,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34878" name="Top-grade Magic Rune Clip Immortal Belt" additionalName="MP Recovery" type="Armor">
@@ -805,11 +771,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="86400" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="34879" name="Low-grade Magic Rune Clip (R-grade)" type="EtcItem">
@@ -821,7 +786,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34880" name="Mid-grade Magic Rune Clip (R-grade)" type="EtcItem">
@@ -833,7 +797,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34881" name="High-grade Magic Rune Clip (R-grade)" type="EtcItem">
@@ -845,7 +808,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34882" name="Top-grade Magic Rune Clip (R-grade)" type="EtcItem">
@@ -857,7 +819,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34883" name="Bottle of Istina's Soul" type="EtcItem">
@@ -906,7 +867,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34887" name="Empty Hot Spring Water Bottle" type="EtcItem">
 		<!-- Empty bottle for holding hot spring water. Double-click on it while in the hot springs to fill it with hot spring water. -->
@@ -919,7 +879,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34888" name="Hot Springs Water Bottle" type="EtcItem">
@@ -931,7 +890,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34889" name="Durable Leather" type="EtcItem">
 		<!-- Durable Leather. Ingredient for making a weapon that purifies water. -->
@@ -943,7 +901,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34890" name="Trowel" type="EtcItem">
 		<!-- Trowel. Double-click on it to collect flame flowers from the Forge of the Gods. -->
@@ -956,7 +913,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34891" name="Energy of Fire" type="EtcItem">
@@ -969,7 +925,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34892" name="Hard Fossil Containing Energy of Water" type="EtcItem">
 		<!-- Hard fossil containing Energy of Water. Ingredient for making a weapon that purifies water. -->
@@ -992,7 +947,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34894" name="Herb Remnants" type="EtcItem">
 		<!-- Herb Remnants. If you plant a Helping Herb in a siege battle area, you can obtain Herb Remnants. -->
@@ -1003,7 +957,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34895" name="Spellbook: Clan Flag" type="EtcItem">
 		<!-- Item needed to learn the Clan Flag Skill. When you use the Clan Flag Skill, 100 Clan Reputation are consumed. Can be used by Count or higher. -->
@@ -1015,7 +968,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="34896" name="Rabbit Ears" additionalName="Campaign" type="Armor">
@@ -1028,7 +980,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34897" name="Angel Circlet" additionalName="Campaign" type="Armor">
@@ -1042,7 +993,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="86400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="34898" name="Proof of Survival" type="EtcItem">
@@ -1054,7 +1004,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="86400" />
 	</item>
 	<item id="34899" name="Key of Darkness" type="EtcItem">
 		<!-- Key that activates a device that allows you to go and meet Tauti through the temple. Must be used by a group leader in order to activate the device. -->
@@ -1063,6 +1012,5 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="86400" />
 	</item>
 </list>

@@ -1151,7 +1151,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="12785" name="Wolf Hat" type="Armor">
@@ -1167,7 +1166,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="12786" name="Monster Eye Hat" additionalName="30-day" type="Armor">
@@ -1424,7 +1422,6 @@
 		<set name="item_skill" val="3418-1" /> <!-- Active Skill: Transform Pig -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
@@ -1450,7 +1447,6 @@
 		<set name="item_skill" val="3418-1" /> <!-- Active Skill: Transform Pig -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />

@@ -380,8 +380,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="45438" name="Baium's Ring Pack (30-day)" type="EtcItem">
@@ -409,7 +409,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="45440" name="Agathion - Bae Kisung" additionalName="1-day" type="Armor">
@@ -446,7 +445,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="45443" name="Transformation Potion: L2B2" additionalName="Event" type="EtcItem">
@@ -457,7 +455,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="45444" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
@@ -472,7 +469,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="45445" name="Sealed Visitation Scroll: Hellbound" additionalName="30-min" type="EtcItem">
@@ -481,7 +477,6 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="45446" name="Visitation Scroll: Hellbound" additionalName="30-min" type="EtcItem">
@@ -493,7 +488,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="45447" name="Sealed Visitation Scroll: Hellbound" additionalName="90-min" type="EtcItem">
@@ -502,7 +496,6 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="45448" name="Visitation Scroll: Hellbound" additionalName="90-min" type="EtcItem">
@@ -514,7 +507,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="45449" name="Magma Ore" type="EtcItem">
@@ -529,7 +521,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45450" name="Test Arrow" additionalName="Atk. Spd." type="EtcItem">
 		<!-- Atk. Spd. Test. -->
@@ -543,7 +534,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="price" val="100" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45451" name="Harp's Reward Box" type="EtcItem">
 		<!-- Reward for killing monsters in the Blazing Swamp. Double-click to use. -->
@@ -557,7 +547,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45452" name="Flower Petal" additionalName="Event" type="EtcItem">
 		<!-- A flower petal that marks the beginning of spring. Collect a certain amount and exchange them for a reward by clicking on the Points button in the Player Commendation Points screen. -->
@@ -569,7 +558,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45453" name="Cool Hat Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either a Napoleon Hat Appearance Stone (1-day), Zorro Hat Appearance Stone (1-day), or a Ruthless Tribe Mask Appearance Stone (1-day). -->
@@ -588,7 +576,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45455" name="Appearance Stone: Zorro Hat" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Zorro Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -678,7 +665,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="45464" name="Zorro Hat" type="Armor">
@@ -692,7 +678,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45465" name="Ruthless Tribe Mask" type="Armor">
@@ -706,7 +691,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45466" name="Damaged PK Pack" type="EtcItem">
@@ -789,7 +773,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="45473" name="Fresh Blue Mackerel" type="EtcItem">
@@ -799,7 +782,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45474" name="Fresh Minnow" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -808,7 +790,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45475" name="Fresh Flatfish" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -817,7 +798,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45476" name="Fresh Mandarin Fish" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -826,7 +806,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45477" name="Fresh Rockfish" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -835,7 +814,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45478" name="Fresh Goldfish" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -844,7 +822,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45479" name="Fresh Salmon" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -853,7 +830,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45480" name="Fresh Eel" type="EtcItem">
 		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -862,7 +838,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45481" name="Fresh Marlin" type="EtcItem">
 		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -871,7 +846,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45482" name="Fresh Catfish" type="EtcItem">
 		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -880,7 +854,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45483" name="Fresh Tuna" type="EtcItem">
 		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -889,7 +862,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45484" name="Fresh Carp" type="EtcItem">
 		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -898,7 +870,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45485" name="Fresh Whale" type="EtcItem">
 		<!-- Double-click to get a Fish Pearl or Fresh Whale Blubber. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -907,7 +878,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45486" name="Wooden Treasure Chest" type="EtcItem">
 		<!-- Double-click to get an item. -->
@@ -916,7 +886,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45487" name="Silver Treasure Chest" type="EtcItem">
@@ -926,7 +895,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45488" name="Golden Treasure Chest" type="EtcItem">
@@ -936,7 +904,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45489" name="Crafted Fish" type="EtcItem">
@@ -945,7 +912,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45490" name="Fish Pearl" type="EtcItem">
 		<!-- Can be used as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -953,7 +919,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45491" name="Fresh Whale Blubber" type="EtcItem">
 		<!-- Can be used as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
@@ -961,7 +926,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="45492" name="Normal Fishing Rod" additionalName="30-day" type="Weapon">
 		<!-- A 30-day fishing rod. Consumes 1 Fishing Shot. -->
@@ -1011,7 +975,6 @@
 		<set name="material" val="BONE" />
 		<set name="price" val="38800000" />
 		<set name="random_damage" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
@@ -1029,7 +992,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="3000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45496" name="Special Bait" type="EtcItem">
 		<!-- Special bait for fishing. Use to catch shiny fish. -->
@@ -1038,7 +1000,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="45497" name="Fishing Shot (Not in Use)" type="EtcItem">
 		<!-- Soulshot for fishing rods. Doubles the fishing success rate. -->
@@ -1046,7 +1007,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="3" />
 	</item>
 	<item id="45498" name="Fishing Pack" additionalName="Event" type="EtcItem">

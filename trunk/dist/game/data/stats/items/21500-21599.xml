@@ -85,7 +85,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21506" name="Kai the Cat Hat" additionalName="Event" type="Armor">
@@ -100,7 +99,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21507" name="Feline Queen Hat Pack (7-day)" type="EtcItem">
@@ -257,7 +255,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21518" name="Feline Queen Hat" additionalName="Event" type="Armor">
@@ -272,7 +269,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21519" name="Feline King Hat Pack (7-day)" type="EtcItem">
@@ -429,7 +425,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21530" name="Feline King Hat" additionalName="Event" type="Armor">
@@ -444,7 +439,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21531" name="Ribbon Hairband Pack (7-day)" type="EtcItem">
@@ -607,7 +601,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="0" />
@@ -625,7 +618,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="0" />
@@ -779,7 +771,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21554" name="Refined Dapper Cap" additionalName="Event" type="Armor">
@@ -794,7 +785,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21555" name="Valkyrie Circlet Pack (7-day)" type="EtcItem">
@@ -945,7 +935,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21566" name="Valkyrie Circlet" additionalName="Event" type="Armor">
@@ -960,7 +949,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21567" name="Plastic Hair Pack (7-day)" type="EtcItem">
@@ -1117,7 +1105,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21578" name="Plastic Hair" additionalName="Event" type="Armor">
@@ -1132,7 +1119,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21579" name="Neolithic Crystal (S84-grade)" type="EtcItem">
@@ -1141,7 +1127,6 @@
 		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="21580" name="Power Shirt" type="Armor">
@@ -1156,7 +1141,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="43200" />
 		<set name="weight" val="130" />
 		<for>
 			<add order="0" stat="pDef" val="28" />
@@ -1174,7 +1158,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22247-1" /> <!-- Scroll: Enchant Power Shirt -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="21582" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
@@ -1189,7 +1172,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22248-1" /> <!-- Blessed Scroll: Enchant Power Shirt -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="21583" name="Festival's Cloak - Pitch Black" type="Armor">
@@ -1203,7 +1185,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1237,7 +1218,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1272,7 +1252,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1292,7 +1271,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1326,7 +1304,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1369,7 +1346,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="21594" name="Birthday Hat" type="Armor">
 		<!-- It's your birthday! Hair accessory that shows you are 1 year older. Uses 2 hair accessory slots. -->
@@ -1382,7 +1358,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="21595" name="Birthday Cake" type="EtcItem">
@@ -1400,7 +1375,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22249-1" /> <!-- Birthday Cake -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
 			<player vehicleMounted="false" />

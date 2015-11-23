@@ -561,10 +561,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -589,10 +589,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -617,10 +617,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -645,10 +645,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -673,10 +673,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -701,10 +701,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1172,8 +1172,8 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="70" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="33" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9670" name="Native Tunic" type="Armor">
@@ -1192,8 +1192,8 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="4720" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="53" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9671" name="Native Pants" type="Armor">
@@ -1212,8 +1212,8 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="1700" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="29" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="9672" name="Magic Bottle" type="EtcItem">
@@ -1297,8 +1297,8 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="9678" name="Magic Gem" type="EtcItem">

@@ -1204,8 +1204,8 @@
 		<set name="price" val="1730000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22174" name="Reinforced Queen Ant's Ring" type="Armor">
@@ -1223,8 +1223,8 @@
 		<set name="price" val="123200" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22175" name="Reinforced Blessed Zaken's Earring" type="Armor">
@@ -1387,7 +1387,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22312-1" /> <!-- Birthday Vitality Buff -->
 		<set name="material" val="LIQUID" />
-		<set name="time" val="300" />
 		<set name="weight" val="80" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1404,7 +1403,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22190" name="Child's Hat - Girl" type="Armor">
@@ -1418,7 +1416,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="300" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22191" name="Mount - Rocking Horse" additionalName="7-day" type="Armor">
@@ -1465,7 +1462,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21258-1" /> <!-- Ride Rocking Horse -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="30" />
 	</item>
@@ -1476,7 +1472,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22195" name="2nd Place Treasure Sack" type="EtcItem">
 		<!-- When Double-clicked, a random 2nd Place prize is granted. -->
@@ -1485,7 +1480,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22196" name="3rd Place Treasure Sack" type="EtcItem">
 		<!-- When Double-clicked, a random 3rd Place prize is granted. -->
@@ -1494,7 +1488,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22197" name="4th Place Treasure Sack" type="EtcItem">
 		<!-- When Double-clicked, a random 4th Place prize is granted. -->
@@ -1503,7 +1496,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22198" name="5th Place Treasure Sack" type="EtcItem">
 		<!-- When Double-clicked, a random 5th Place prize is granted. -->
@@ -1512,7 +1504,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="22199" name="6th Place Treasure Sack" type="EtcItem">
 		<!-- When Double-clicked, a random 6th Place prize is granted. -->
@@ -1521,6 +1512,5 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 </list>

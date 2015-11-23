@@ -766,7 +766,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40057" name="Magic Broom" type="Weapon">
 		<!-- A basic for appearance modification. -->
@@ -782,7 +781,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -806,7 +804,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -828,7 +825,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40060" name="Dark Fragment" type="EtcItem">
 		<!-- An ingredient for making a jewel of the Wind Spirit Realm. Take them all to the Blacksmith of Mammon. -->
@@ -842,7 +838,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40061" name="Apprentice's Staff" type="Weapon">
 		<set name="icon" val="icon.weapon_willow_staff_i00" />
@@ -857,7 +852,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -875,7 +869,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40063" name="Secret Ancient Tome Fragment" type="EtcItem">
@@ -884,7 +877,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40064" name="Ancient Book: Divine Inspiration (Beginner)" type="EtcItem">
 		<!-- Tome used for learning Divine Inspiration Lv. 5. -->
@@ -892,7 +884,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="40065" name="Ancient Book: Divine Inspiration (Intermediate)" type="EtcItem">
@@ -901,7 +892,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="40066" name="Recipe: Requiem Shaper Disassembly" type="EtcItem">
@@ -911,7 +901,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40067" name="Recipe: Requiem Cutter Disassembly" type="EtcItem">
@@ -921,7 +910,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40068" name="Recipe: Requiem Slasher Disassembly" type="EtcItem">
@@ -931,7 +919,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40069" name="Recipe: Requiem Avenger Disassembly" type="EtcItem">
@@ -941,7 +928,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40070" name="Recipe: Requiem Fighter Disassembly" type="EtcItem">
@@ -951,7 +937,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40071" name="Recipe: Requiem Stormer Disassembly" type="EtcItem">
@@ -961,7 +946,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40072" name="Recipe: Requiem Thrower Disassembly" type="EtcItem">
@@ -971,7 +955,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40073" name="Recipe: Requiem Shooter Disassembly" type="EtcItem">
@@ -981,7 +964,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40074" name="Recipe: Requiem Buster Disassembly" type="EtcItem">
@@ -991,7 +973,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40075" name="Recipe: Requiem Caster Disassembly" type="EtcItem">
@@ -1001,7 +982,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40076" name="Recipe: Requiem Retributer Disassembly" type="EtcItem">
@@ -1011,7 +991,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40077" name="Recipe: Immortal Helmet Disassembly" type="EtcItem">
@@ -1021,7 +1000,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40078" name="Recipe: Immortal Breastplate Disassembly" type="EtcItem">
@@ -1031,7 +1009,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40079" name="Recipe: Immortal Gaiters Disassembly" type="EtcItem">
@@ -1041,7 +1018,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40080" name="Recipe: Immortal Gauntlets Disassembly" type="EtcItem">
@@ -1051,7 +1027,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40081" name="Recipe: Immortal Boots Disassembly" type="EtcItem">
@@ -1061,7 +1036,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40082" name="Recipe: Immortal Shield Disassembly" type="EtcItem">
@@ -1071,7 +1045,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40083" name="Recipe: Immortal Leather Helmet Disassembly" type="EtcItem">
@@ -1081,7 +1054,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40084" name="Recipe: Immortal Leather Armor Disassembly" type="EtcItem">
@@ -1091,7 +1063,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40085" name="Recipe: Immortal Leather Leggings Disassembly" type="EtcItem">
@@ -1101,7 +1072,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40086" name="Recipe: Immortal Leather Gloves Disassembly" type="EtcItem">
@@ -1111,7 +1081,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40087" name="Recipe: Immortal Leather Boots Disassembly" type="EtcItem">
@@ -1121,7 +1090,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40088" name="Recipe: Immortal Circlet Disassembly" type="EtcItem">
@@ -1131,7 +1099,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40089" name="Recipe: Immortal Tunic Disassembly" type="EtcItem">
@@ -1141,7 +1108,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40090" name="Recipe: Immortal Stockings Disassembly" type="EtcItem">
@@ -1151,7 +1117,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40091" name="Recipe: Immortal Gloves Disassembly" type="EtcItem">
@@ -1161,7 +1126,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40092" name="Recipe: Immortal Shoes Disassembly" type="EtcItem">
@@ -1171,7 +1135,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40093" name="Recipe: Immortal Sigil Disassembly" type="EtcItem">
@@ -1181,7 +1144,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40094" name="Recipe: Immortal Necklace Disassembly" type="EtcItem">
@@ -1191,7 +1153,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40095" name="Recipe: Immortal Earring Disassembly" type="EtcItem">
@@ -1201,7 +1162,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40096" name="Recipe: Immortal Ring Disassembly" type="EtcItem">
@@ -1211,7 +1171,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40097" name="Recipe: Apocalypse Shaper Disassembly" type="EtcItem">
@@ -1221,7 +1180,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40098" name="Recipe: Apocalypse Cutter Disassembly" type="EtcItem">
@@ -1231,7 +1189,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40099" name="Recipe: Apocalypse Slasher Disassembly" type="EtcItem">
@@ -1241,7 +1198,6 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 </list>

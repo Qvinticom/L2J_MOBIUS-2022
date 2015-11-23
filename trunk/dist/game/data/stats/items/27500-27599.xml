@@ -123,8 +123,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="pDef" val="28" />
 			<add stat="mDef" val="11" />
+			<add stat="pDef" val="28" />
 		</for>
 	</item>
 	<item id="27512" name="Novice Adventurer's Circlet" type="Armor">
@@ -180,8 +180,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="pDef" val="28" />
 			<add stat="mDef" val="12" />
+			<add stat="pDef" val="28" />
 		</for>
 	</item>
 	<item id="27516" name="Experienced Adventurer's Circlet" type="Armor">
@@ -237,8 +237,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="pDef" val="28" />
 			<add stat="mDef" val="13" />
+			<add stat="pDef" val="28" />
 		</for>
 	</item>
 	<item id="27520" name="Adventurer's Circlet" type="Armor">
@@ -302,7 +302,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27526" name="Immortal Armor Set Coupon" type="EtcItem">
 		<!-- Take it to the Dimensional Merchant to exchange for an Immortal armor set box. -->
@@ -312,7 +311,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27527" name="Immortal Heavy Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal heavy armor. -->
@@ -364,7 +362,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27532" name="Diana's Ring" additionalName="Quest" type="EtcItem">
 		<!-- Diana's sapphire ring. Take it to Diana in the Talking Island Village. -->
@@ -376,7 +373,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27533" name="Diana's Necklace" additionalName="Quest" type="EtcItem">
 		<!-- Diana's ruby necklace. Take it to Diana in the Talking Island Village. -->
@@ -388,7 +384,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27534" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
 		<!-- Diana's recommendation. You can participate in the Miss/Mr. event. -->
@@ -400,7 +395,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Shiny Elemental Shirt. -->
@@ -451,7 +445,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27540" name="Clan Name Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. Clan leaders only! -->
@@ -465,7 +458,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27541" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance + 20 / Buff-canceling Attack Resistance + 20 / 5% chance of reflecting physical and magical ab -->
@@ -484,7 +476,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27543" name="Lv. 41 Equipment Pack" type="EtcItem">
 		<!-- Double-click to receive a variety of items. -->
@@ -620,7 +611,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="27554" name="Blessed Griffin Egg" additionalName="1-day" type="EtcItem">
 		<!-- This Blessed Griffin Egg will be of great help to you. -->
@@ -643,7 +633,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27556" name="Lv. 4 Legendary Dye Exchange Coupon" type="EtcItem">
 		<!-- Take it to the Dimensional Merchant to exchange for one of the Lv. 4 Legendary Dyes: STR, DEX, CON, INT, WIT, or MEN. -->
@@ -653,7 +642,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27557" name="Lineage II Baseball Uniform" type="Armor">
 		<!-- Lineage II baseball uniform. -->
@@ -664,7 +652,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27558" name="Lineage II Baseball Cap" type="Armor">
 		<!-- Lineage II baseball cap. -->
@@ -674,29 +661,28 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27559" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored th -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27560" name="Lineage II Baseball Cap Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="27561" name="Ultimate Support Cube Box" type="EtcItem">
 		<!-- Obtain an Ultimate Support Cube (30-day). Cubes cannot be dropped or exchanged. -->
@@ -998,7 +984,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27585" name="Special Supply Box" additionalName="Standard" type="EtcItem">
 		<!-- Reward box containing various rewards. -->
@@ -1064,7 +1049,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27590" name="Supply Box" additionalName="Mid-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1078,7 +1062,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27591" name="Supply Box" additionalName="High-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1092,7 +1075,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27592" name="Supply Box" additionalName="Top-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1106,7 +1088,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27593" name="Daily Coin" type="EtcItem">
 		<!-- Take it to High Priest Franco in Talking Island to exchange for various consumable items.  -->
@@ -1119,7 +1100,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27594" name="Maphr's Wind Scroll" type="EtcItem">
 		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
@@ -1133,7 +1113,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27595" name="Vitality Maintaining Potion" type="EtcItem">
 		<!-- Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage. -->
@@ -1147,7 +1126,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27596" name="Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Requiem or Apocalypse equipment for Blessed equipment. -->
@@ -1160,7 +1138,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27597" name="Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Specter equipment for Blessed equipment. -->
@@ -1173,7 +1150,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27598" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Amaranthine equipment for Blessed equipment. -->
@@ -1186,7 +1162,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27599" name="Scroll of Blessing: Armor (R-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Immortal or Hell equipment for Blessed equipment. -->
@@ -1199,7 +1174,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27600" name="Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Seraph equipment for Blessed equipment. -->
@@ -1212,7 +1186,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27601" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
@@ -1225,7 +1198,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
 		<!-- Get 1 of the following:  1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bo -->
@@ -1236,7 +1208,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27603" name="Daily Mission Reward Chest" type="EtcItem">
 		<!-- Reward chest for completing daily missions. You can obtain one of various rewards. -->
@@ -1250,7 +1221,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27604" name="Amaranthine Double Crystal Enhancement Box" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for Double Crystal Enhancement of R99 weapons. -->
@@ -1261,7 +1231,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27605" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -1274,7 +1243,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27606" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -1287,7 +1255,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="27607" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -1300,7 +1267,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45578" name="Enhanced Orichalcum Arrow" additionalName="Atk. Spd." type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with + 5% Atk. Spd. Used as arrows for R-grade bows. -->
@@ -1313,7 +1279,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45579" name="Enhanced Orichalcum Arrow" additionalName="P. Atk." type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with + 5% P. Atk. Used as arrows for R-grade bows. -->
@@ -1326,7 +1291,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45580" name="Enhanced Orichalcum Arrow" additionalName="Additional Hit" type="EtcItem">
 		<!-- Enhanced Orichalcum arrow with Additional Hit. Used as arrows for R-grade bows. -->
@@ -1339,7 +1303,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45581" name="Enhanced Orichalcum Bolt" additionalName="Atk. Spd." type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with + 5% Atk. Spd. Used as bolts for R-grade Crossbows. -->
@@ -1352,7 +1315,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45582" name="Enhanced Orichalcum Bolt" additionalName="P. Atk." type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with + 5% P. Atk. Used as bolts for R-grade Crossbows. -->
@@ -1365,7 +1327,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45583" name="Enhanced Orichalcum Bolt" additionalName="Additional Hit" type="EtcItem">
 		<!-- Enhanced Orichalcum bolt with Additional Hit. Used as bolts for R-grade Crossbows. -->
@@ -1378,7 +1339,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="MITHRIL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45584" name="Mark of Battle" type="EtcItem">
 		<!-- Proof received for performing well in the Olympiad and the Ceremony of Chaos. Can exchange for a special gift from the Olympiad Manager and the Mysterious Butler in each village. -->
@@ -1392,7 +1352,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
-		<set name="time" val="60" />
 	</item>
 	<item id="45585" name="Special Water Resistance Necklace" type="Armor">
 		<!-- Necklace purchased with a Mark of Battle. MP + 65, Max CP + 10%, and M. Skill Cooldown - 5%. -->
@@ -1404,7 +1363,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1420,7 +1378,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1436,7 +1393,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1452,7 +1408,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1468,7 +1423,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1484,7 +1438,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
@@ -1500,7 +1453,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1515,7 +1467,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1530,7 +1481,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1545,7 +1495,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1560,7 +1509,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1575,7 +1523,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="87" />
 		</for>
@@ -1590,7 +1537,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="130" />
 			<add stat="maxMp" val="49" />
@@ -1606,7 +1552,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="130" />
 			<add stat="maxMp" val="49" />
@@ -1622,7 +1567,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="60" />
 		<for>
 			<add stat="mDef" val="130" />
 			<add stat="maxMp" val="49" />

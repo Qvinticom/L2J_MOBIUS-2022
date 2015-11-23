@@ -451,8 +451,8 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="170" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36949" name="Chaos Essence" type="EtcItem">
@@ -479,7 +479,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36951" name="9th Anniversary Instrument" type="Weapon">
@@ -494,7 +493,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
 			<add stat="accCombat" val="8" />
@@ -511,7 +509,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="36953" name="Support Box" type="EtcItem">
@@ -526,7 +523,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36954" name="No-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a no-grade item and a D-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -540,7 +536,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36955" name="D-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a D-grade item and a C-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -554,7 +549,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36956" name="C-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a C-grade item and a B-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -568,7 +562,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36957" name="B-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a B-grade item and an A-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -582,7 +575,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36958" name="A-grade" type="EtcItem">
 		<!-- Double-click to receive a box with an A-grade item and an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -596,7 +588,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36959" name="S-grade" type="EtcItem">
 		<!-- Double-click to receive an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -610,7 +601,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="36960" name="Fire Stone (+ 60)" type="EtcItem">
 		<!-- Can bestow fire attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
@@ -624,7 +614,6 @@
 		<set name="item_skill" val="2329-1" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36961" name="Water Stone (+ 60)" type="EtcItem">
@@ -639,7 +628,6 @@
 		<set name="item_skill" val="2330-1" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36962" name="Earth Stone (+ 60)" type="EtcItem">
@@ -654,7 +642,6 @@
 		<set name="item_skill" val="2332-1" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36963" name="Wind Stone (+ 60)" type="EtcItem">
@@ -669,7 +656,6 @@
 		<set name="item_skill" val="2331-1" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36964" name="Dark Stone (+ 60)" type="EtcItem">
@@ -684,7 +670,6 @@
 		<set name="item_skill" val="2334-1" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36965" name="Holy Stone (+ 60)" type="EtcItem">
@@ -699,7 +684,6 @@
 		<set name="item_skill" val="2333-1" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36966" name="Fire Stone (+ 150)" type="EtcItem">
@@ -714,7 +698,6 @@
 		<set name="item_skill" val="2329-1" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36967" name="Water Stone (+ 150)" type="EtcItem">
@@ -729,7 +712,6 @@
 		<set name="item_skill" val="2330-1" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36968" name="Earth Stone (+ 150)" type="EtcItem">
@@ -744,7 +726,6 @@
 		<set name="item_skill" val="2332-1" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36969" name="Wind Stone (+ 150)" type="EtcItem">
@@ -759,7 +740,6 @@
 		<set name="item_skill" val="2331-1" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36970" name="Dark Stone (+ 150)" type="EtcItem">
@@ -774,7 +754,6 @@
 		<set name="item_skill" val="2334-1" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36971" name="Holy Stone (+ 150)" type="EtcItem">
@@ -789,7 +768,6 @@
 		<set name="item_skill" val="2333-1" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="25000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36972" name="Fire Crystal - Super" type="EtcItem">
@@ -804,7 +782,6 @@
 		<set name="item_skill" val="2329-2" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36973" name="Water Crystal - Super" type="EtcItem">
@@ -819,7 +796,6 @@
 		<set name="item_skill" val="2330-2" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36974" name="Earth Crystal - Super" type="EtcItem">
@@ -834,7 +810,6 @@
 		<set name="item_skill" val="2332-2" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36975" name="Wind Crystal - Super" type="EtcItem">
@@ -849,7 +824,6 @@
 		<set name="item_skill" val="2331-2" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36976" name="Dark Crystal - Super" type="EtcItem">
@@ -864,7 +838,6 @@
 		<set name="item_skill" val="2334-2" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36977" name="Holy Crystal - Super" type="EtcItem">
@@ -879,7 +852,6 @@
 		<set name="item_skill" val="2333-2" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="100000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="36978" name="Scroll: Enchant Hair Accessory" type="EtcItem">
@@ -894,7 +866,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="9234-1" /> <!-- Scroll: Enchant Hair Accessory -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36979" name="Life Stone: Hair Accessory" type="EtcItem">
@@ -903,7 +874,6 @@
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="36980" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" type="Armor">
@@ -914,7 +884,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36981" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - STR" type="Armor">
@@ -925,7 +894,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36982" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - DEX" type="Armor">
@@ -936,7 +904,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36983" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - CON" type="Armor">
@@ -947,7 +914,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36984" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - MEN" type="Armor">
@@ -958,7 +924,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36985" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - INT" type="Armor">
@@ -969,7 +934,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36986" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - WIT" type="Armor">
@@ -980,7 +944,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36987" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Rate" type="Armor">
@@ -991,7 +954,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36988" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Damage" type="Armor">
@@ -1002,7 +964,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36989" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Def." type="Armor">
@@ -1013,7 +974,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36990" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Def." type="Armor">
@@ -1024,7 +984,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36991" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Evasion" type="Armor">
@@ -1035,7 +994,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36992" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Atk." type="Armor">
@@ -1046,7 +1004,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36993" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Atk." type="Armor">
@@ -1057,7 +1014,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36994" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Accuracy" type="Armor">
@@ -1068,7 +1024,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="36995" name="9th Anniversary Gift Box" type="EtcItem">

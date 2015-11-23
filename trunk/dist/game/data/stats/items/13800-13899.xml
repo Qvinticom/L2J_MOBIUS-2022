@@ -604,10 +604,10 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="39" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="78" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -636,10 +636,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -683,10 +683,10 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="120" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="120" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1177,10 +1177,10 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="120" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="140" />
+			<set stat="mAtk" val="120" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1215,10 +1215,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="157" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1253,10 +1253,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="169" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="332" />
+			<set stat="mAtk" val="169" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="332" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1291,10 +1291,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
 			<enchant stat="mAtk" val="0" />
-			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
 			<enchant stat="pAtk" val="0" />
+			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1366,8 +1366,8 @@
 		<set name="price" val="28671000" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="2" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13889" name="Holy Spirit's Cloak (Kamael)" type="Armor">
@@ -1484,8 +1484,8 @@
 		<set name="price" val="45100" />
 		<set name="weight" val="500" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="10" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13895" name="Leather Belt" type="Armor">
@@ -1502,8 +1502,8 @@
 		<set name="price" val="165000" />
 		<set name="weight" val="480" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="11" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13896" name="Iron Belt" type="Armor">
@@ -1520,8 +1520,8 @@
 		<set name="price" val="371300" />
 		<set name="weight" val="460" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="12" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13897" name="Mithril Belt" type="Armor">
@@ -1538,8 +1538,8 @@
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="14" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13898" name="Sealed Magic Pin (C-grade)" type="EtcItem">

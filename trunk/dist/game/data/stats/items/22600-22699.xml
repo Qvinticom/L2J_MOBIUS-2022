@@ -341,7 +341,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9185-1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22628" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
@@ -361,7 +360,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9186-1" /> <!-- Scroll: Enchant Armor (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22629" name="High-grade Life Stone (R-grade)" type="EtcItem">
@@ -374,7 +372,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="85" />
@@ -390,7 +387,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="85" />
@@ -406,7 +402,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="95" />
@@ -422,7 +417,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="95" />
@@ -438,7 +432,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="99" />
@@ -453,7 +446,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="2" />
 	</item>
 	<item id="22635" name="Fire Stone" type="EtcItem">
@@ -470,7 +462,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2329-1" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22636" name="Water Stone" type="EtcItem">
@@ -487,7 +478,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2330-1" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22637" name="Earth Stone" type="EtcItem">
@@ -504,7 +494,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2332-1" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22638" name="Wind Stone" type="EtcItem">
@@ -521,7 +510,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2331-1" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22639" name="Dark Stone" type="EtcItem">
@@ -538,7 +526,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2334-1" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22640" name="Holy Stone" type="EtcItem">
@@ -555,7 +542,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2333-1" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22641" name="Fire Crystal" type="EtcItem">
@@ -572,7 +558,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2329-2" /> <!-- Fire Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22642" name="Water Crystal" type="EtcItem">
@@ -589,7 +574,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2330-2" /> <!-- Water Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22643" name="Earth Crystal" type="EtcItem">
@@ -606,7 +590,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2332-2" /> <!-- Earth Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22644" name="Wind Crystal" type="EtcItem">
@@ -623,7 +606,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2331-2" /> <!-- Wind Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22645" name="Dark Crystal" type="EtcItem">
@@ -640,7 +622,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2334-2" /> <!-- Dark Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22646" name="Holy Crystal" type="EtcItem">
@@ -657,7 +638,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2333-2" /> <!-- Holy Stone -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
@@ -676,7 +656,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9187-1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22648" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
@@ -695,7 +674,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9196-1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22649" name="Blessed Three-headed Dragon's Egg" additionalName="1-day" type="EtcItem">
@@ -724,7 +702,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="144" />
 		<for>
@@ -748,7 +725,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
@@ -773,7 +749,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="209" />
 		<for>
@@ -797,7 +772,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="152" />
 		<for>
@@ -822,7 +796,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
@@ -848,7 +821,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
@@ -873,7 +845,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
@@ -898,7 +869,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="172" />
 		<for>
@@ -923,7 +893,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -948,7 +917,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="172" />
 		<for>
@@ -973,7 +941,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="101" />
 		<for>
@@ -998,7 +965,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="247" />
 		<for>
@@ -1022,7 +988,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
@@ -1047,7 +1012,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="weight" val="250" />
 		<for>
@@ -1068,11 +1032,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 		<set name="weight" val="200" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add stat="pDef" val="25" />
+			<enchant stat="pDef" val="0" />
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
@@ -1089,7 +1052,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 		<set name="weight" val="100" />
 		<for>
 			<sub stat="rEvas" val="-8" />
@@ -1110,7 +1072,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22667" name="Emerald Weapon Appearance Stone: Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of an Emerald weapon. -->
@@ -1125,7 +1086,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22668" name="Emerald Weapon Appearance Stone: Two-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of an Emerald weapon. -->
@@ -1140,7 +1100,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22669" name="Emerald Weapon Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of an Emerald weapon. -->
@@ -1155,7 +1114,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22670" name="Emerald Weapon Appearance Stone: Spear" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of an Emerald weapon. -->
@@ -1170,7 +1128,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22671" name="Emerald Weapon Appearance Stone: Bow" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of an Emerald weapon. -->
@@ -1185,7 +1142,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22672" name="Emerald Weapon Appearance Stone: Crossbow" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of an Emerald weapon. -->
@@ -1200,7 +1156,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22673" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald weapon. -->
@@ -1215,7 +1170,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22674" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald weapon. -->
@@ -1230,7 +1184,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22675" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of an Emerald weapon. -->
@@ -1245,7 +1198,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22676" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of an Emerald weapon. -->
@@ -1260,7 +1212,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22677" name="Emerald Weapon Appearance Stone: Dualsword" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of an Emerald weapon. -->
@@ -1275,7 +1226,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22678" name="Emerald Weapon Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of an Emerald weapon. -->
@@ -1290,7 +1240,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22679" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of an Emerald weapon. -->
@@ -1305,7 +1254,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22680" name="Emerald Weapon Appearance Stone: Shield" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of an Emerald weapon. -->
@@ -1320,7 +1268,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22681" name="Emerald Weapon Appearance Stone: Sigil" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of an Emerald weapon. -->
@@ -1335,7 +1282,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22682" name="Armor Appearance Stone (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double cli -->
@@ -1350,7 +1296,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22683" name="Armor Appearance Stone (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double cli -->
@@ -1365,7 +1310,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22684" name="Armor Appearance Stone (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double cli -->
@@ -1380,7 +1324,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22685" name="Armor Appearance Stone (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double clic -->
@@ -1395,7 +1338,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22686" name="Armor Appearance Stone (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double clic -->
@@ -1410,7 +1352,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22687" name="Armor Appearance Stone (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double clic -->
@@ -1425,7 +1366,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22688" name="Blessed Armor Appearance Stone (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double c -->
@@ -1440,7 +1380,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22689" name="Blessed Armor Appearance Stone (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double c -->
@@ -1455,7 +1394,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22690" name="Blessed Armor Appearance Stone (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double c -->
@@ -1470,7 +1408,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22691" name="Blessed Armor Appearance Stone (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double cl -->
@@ -1485,7 +1422,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22692" name="Blessed Armor Appearance Stone (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double cl -->
@@ -1500,7 +1436,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22693" name="Blessed Armor Appearance Stone (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double cl -->
@@ -1515,7 +1450,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22694" name="Armor Restoration Stone (R-grade)" type="EtcItem">
 		<!-- Restores the original appearance of R-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1530,7 +1464,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22695" name="Armor Restoration Stone (S-grade)" type="EtcItem">
 		<!-- Restores the original appearance of S-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1545,7 +1478,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22696" name="Armor Restoration Stone (A-grade)" type="EtcItem">
 		<!-- Restores the original appearance of A-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1560,7 +1492,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22697" name="Armor Restoration Stone (B-grade)" type="EtcItem">
 		<!-- Restores the original appearance of B-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1575,7 +1506,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22698" name="Armor Restoration Stone (C-grade)" type="EtcItem">
 		<!-- Restores the original appearance of C-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1590,7 +1520,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="22699" name="Armor Restoration Stone (D-grade)" type="EtcItem">
 		<!-- Restores the original appearance of D-grade armor (no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -1605,6 +1534,5 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 </list>

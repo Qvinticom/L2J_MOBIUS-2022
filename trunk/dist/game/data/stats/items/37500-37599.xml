@@ -120,8 +120,8 @@
 		<set name="price" val="46311000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="103" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37508" name="Enhanced Octavis' Earring" additionalName="Warrior" type="Armor">
@@ -179,8 +179,8 @@
 		<set name="price" val="46311000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="103" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37511" name="Enhanced Istina's Earring" additionalName="Warrior" type="Armor">
@@ -238,8 +238,8 @@
 		<set name="price" val="46311000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="103" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37514" name="Enhanced Octavis' Earring" additionalName="Wizard" type="Armor">
@@ -297,8 +297,8 @@
 		<set name="price" val="46311000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="103" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37517" name="Enhanced Istina's Earring" additionalName="Wizard" type="Armor">
@@ -370,8 +370,8 @@
 		<set name="price" val="1730000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37522" name="Frintezza's Soul Necklace" type="Armor">
@@ -433,7 +433,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37528" name="Transformation Sealbook: Part-time Seller" additionalName="Smiling ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Smiling ParaPara Cat. -->
@@ -443,7 +442,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37529" name="Transformation Sealbook: Part-time Seller" additionalName="Charming ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Charming ParaPara Cat. -->
@@ -453,7 +451,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37530" name="Transformation Sealbook: Part-time Seller" additionalName="Ferocious ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Ferocious ParaPara Cat. -->
@@ -463,7 +460,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37531" name="Transformation Sealbook: Part-time Seller" additionalName="Merchant ParaPara Cat" type="EtcItem">
 		<!-- Sealbook for learning the skill of transforming yourself into a Merchant ParaPara Cat. -->
@@ -473,7 +469,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37532" name="Lindvior's Egg" type="EtcItem">
 		<!-- Wind Dragon's egg. 10th anniversary item that brings you luck. -->
@@ -485,7 +480,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37533" name="NC Messenger's Hat" type="Armor">
 		<!-- NC Messenger's Hat. Uses 2 hair accessory slots. When equipped, STR/DEX/INT/WIT each increase by 1. -->
@@ -497,7 +491,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37534" name="Santa Suit" type="Armor">
 		<!-- Santa Suit. -->
@@ -507,7 +500,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37535" name="Santa Hat" type="Armor">
 		<!-- Santa Hat. -->
@@ -517,7 +509,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37536" name="Santa's Blessing" type="EtcItem">
 		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death.. . Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disapp -->
@@ -530,7 +521,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37537" name="Pomona's Gift Box" type="EtcItem">
 		<!-- Double-click to receive 10 Rose Essences as well as a Passion Treasure Chest at a low probability. -->
@@ -540,7 +530,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37538" name="Pomona Agathion Pack" type="EtcItem">
@@ -591,7 +580,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37543" name="Nectar" type="EtcItem">
 		<!-- Go to Santa to trade in for Wintermelon Seed or Large Wintermelon Seed. You can also use it to grow Wintermelon and Large Wintermelon. -->
@@ -601,7 +589,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37544" name="Snowball" type="EtcItem">
 		<!-- Shaken off of a Wintermelon, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
@@ -611,7 +598,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37545" name="Large Snowball" type="EtcItem">
 		<!-- Shaken off of a Large Wintermelon, this snow lump is popular among merchants as a bringer of fortune. Perhaps you could invest this in Aden Reconstruction for the future? -->
@@ -621,7 +607,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="30000" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37546" name="Rudolph's Gift" additionalName="Stage 1" type="EtcItem">
 		<!-- Winter Holiday Gift for 2013. Gives 10 Nectars for the Wintermelon Event. Deleted after event. -->
@@ -630,7 +615,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37547" name="Rudolph's Gift" additionalName="Stage 2" type="EtcItem">
@@ -640,7 +624,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37548" name="Rudolph's Gift" additionalName="Stage 3" type="EtcItem">
@@ -650,7 +633,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37549" name="Rudolph's Gift" additionalName="Stage 4" type="EtcItem">
@@ -660,7 +642,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="129600" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37550" name="Snowman's Buff" type="EtcItem">
@@ -670,7 +651,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37551" name="Winter Holiday Gift" type="EtcItem">
@@ -681,7 +661,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37552" name="Wintermelon Seed" type="EtcItem">
 		<!-- Double-click to have a Young Wintermelon appear. -->
@@ -690,7 +669,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37553" name="Large Wintermelon Seed" type="EtcItem">
 		<!-- Double-click to have a Young Large Wintermelon appear. -->
@@ -699,7 +677,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37554" name="Kisung's Cherry Nose Buff Scroll" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive Bae Kisung's Power Up buff for 30 min. Cooldown is 15 sec. Cannot be used in the Olympiad. -->
@@ -712,7 +689,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37555" name="Snow Crystal" type="EtcItem">
 		<!-- PC event item for 2013. One received per hour spent in a PC Café. The more you have, the better your chances to win! -->
@@ -725,7 +701,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="37556" name="Promise Cube" additionalName="100-day" type="EtcItem">
 		<!-- Promise Cube. Double click to acquire one of the following: Dark/Bloody Eternal Enhancement Stone (Annihilation/Hellfire/Desire), Blessed Scroll of Resurrection, High-grade Elixir Box, or Energy of Destruction. Can use 1 time per 1 day. Cannot be used in  -->
@@ -836,7 +811,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
@@ -848,7 +822,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37568" name="Legendary Card Pouch: Dragon" type="EtcItem">
@@ -859,7 +832,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37569" name="Legendary Card Pouch: Hero" type="EtcItem">
@@ -870,7 +842,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37570" name="Legendary Card Pouch: Demon" type="EtcItem">
@@ -881,7 +852,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37571" name="Legendary Card: Antharas" type="EtcItem">
@@ -890,7 +860,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37572" name="Legendary Card: Valakas" type="EtcItem">
 		<set name="icon" val="icon.card_dragon_vala" />
@@ -898,7 +867,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37573" name="Legendary Card: Lindvior" type="EtcItem">
 		<set name="icon" val="icon.card_dragon_rind" />
@@ -906,7 +874,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37574" name="Legendary Card: Astair van Halter" type="EtcItem">
 		<set name="icon" val="icon.card_hero_holter" />
@@ -914,7 +881,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37575" name="Legendary Card: Amadeo Cadmus" type="EtcItem">
 		<set name="icon" val="icon.card_hero_amadeose" />
@@ -922,7 +888,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37576" name="Legendary Card: Lionel Hunter" type="EtcItem">
 		<set name="icon" val="icon.card_hero_hunter" />
@@ -930,7 +895,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37577" name="Legendary Card: Sieghardt Ein" type="EtcItem">
 		<set name="icon" val="icon.card_hero_zigharte" />
@@ -938,7 +902,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37578" name="Legendary Card: Elcadia" type="EtcItem">
 		<set name="icon" val="icon.card_hero_elcardia" />
@@ -946,7 +909,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37579" name="Legendary Card: Baium" type="EtcItem">
 		<set name="icon" val="icon.card_devil_baium" />
@@ -954,7 +916,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37580" name="Legendary Card: Beleth" type="EtcItem">
 		<set name="icon" val="icon.card_devil_verese" />
@@ -962,7 +923,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37581" name="Legendary Card: Tiat" type="EtcItem">
 		<set name="icon" val="icon.card_devil_tiate" />
@@ -970,7 +930,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37582" name="Legendary Card: Lilith" type="EtcItem">
 		<set name="icon" val="icon.card_devil_lilith" />
@@ -978,7 +937,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37583" name="Legendary Card: Paulina" type="EtcItem">
 		<set name="icon" val="icon.card_angel_polline" />
@@ -986,7 +944,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37584" name="Legendary Card: Anakim" type="EtcItem">
 		<set name="icon" val="icon.card_angel_anakim" />
@@ -994,7 +951,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37585" name="Aspiring Orc Ruler of Aden" type="EtcItem">
 		<set name="icon" val="icon.card_orc" />
@@ -1002,7 +958,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37586" name="Hidden Card" type="EtcItem">
 		<set name="icon" val="icon.card_hidden" />
@@ -1010,7 +965,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37587" name="Legendary Card: Lucky Pouch" type="EtcItem">
 		<!-- Test your luck! You could receive up to 4 cards including Lindvior, Lionel Hunter, Beleth, and Paulina - or you could receive nothing at all. -->
@@ -1020,7 +974,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37588" name="Snake's Gift" additionalName="Not in Use" type="EtcItem">
@@ -1031,7 +984,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37589" name="Lord of the Western Winds" type="EtcItem">
@@ -1042,7 +994,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37590" name="Successors of Destiny" type="EtcItem">
 		<!-- Red card obtained from combining the Successors of Destiny. For 30 min., STR + 5, INT + 5, and P. Def. + 10%. -->
@@ -1052,7 +1003,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37591" name="Dragon Rising" type="EtcItem">
 		<!-- Black card obtained from combining the Dragon Rising. For 30 min., STR + 5, INT + 5, and M. Def. + 10%. -->
@@ -1062,7 +1012,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37592" name="Awakening Darkness" type="EtcItem">
 		<!-- Blue card obtained from combining the Awakening Darkness. For 30 min., STR + 5, INT + 5, and Attribute Resistance + 100. -->
@@ -1072,7 +1021,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37593" name="Returning Hero's Vitality Replenishing Juice" additionalName="Event" type="EtcItem">
 		<!-- 1 out of 4 bars on the vitality gauge are replenished. -->
@@ -1085,7 +1033,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37594" name="Returning Hero's Vitality Replenishing Juice 4-unit Pack" additionalName="Event" type="EtcItem">
 		<!-- It contains 4 Returning Hero's Vitality Replenishing Juices that can replenish 1 out of 4 bars on the vitality gauge. -->
@@ -1118,7 +1065,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37597" name="Weapon Coupon (R95-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (R95-grade) for a small fee. Temporary event item. -->
@@ -1127,7 +1073,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37598" name="Weapon Coupon (R99-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (R99-grade) for a small fee. Temporary event item. -->
@@ -1136,7 +1081,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 	<item id="37599" name="Weapon Coupon (S-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (S-grade) for a small fee. Temporary event item. -->
@@ -1145,6 +1089,5 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="480" />
 	</item>
 </list>

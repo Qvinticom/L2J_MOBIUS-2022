@@ -793,8 +793,8 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<add order="0" stat="pDef" val="126" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="126" />
 			<sub stat="rEvas" val="1.04999995" />
 		</for>
 	</item>
@@ -813,8 +813,8 @@
 		<set name="weight" val="7520" />
 		<for>
 			<set stat="pAtk" val="26" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="335" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32196" name="Blessed Twilight Gaiters" additionalName="Attack Type" type="Armor">
@@ -833,8 +833,8 @@
 		<for>
 			<add stat="critRate" val="2.5999999" />
 			<add stat="mCritRate" val="2.6" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="209" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32197" name="Blessed Twilight Gauntlets" additionalName="Attack Type" type="Armor">
@@ -852,8 +852,8 @@
 		<for>
 			<add stat="accCombat" val="1" />
 			<add stat="accMagic" val="1.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="84" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32198" name="Blessed Twilight Boots" additionalName="Attack Type" type="Armor">
@@ -889,8 +889,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="458" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 </list>

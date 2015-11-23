@@ -90,8 +90,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20205" name="Queen Ant's Ring (Event)" additionalName="7-day" type="Armor">
@@ -112,8 +112,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20206" name="Queen Ant's Ring (Event)" additionalName="15-day" type="Armor">
@@ -134,8 +134,8 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20207" name="Zaken's Earring (Event)" additionalName="3-day" type="Armor">
@@ -258,7 +258,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21031-1;23025-1" /> <!-- Seal Agathion, Release Agathion's Seal - Charming Cupid, Charming Cupid Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="21600" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -277,7 +276,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21032-1;23026-1" /> <!-- Seal Agathion, Release Agathion's Seal - Naughty Cupid, Naughty Cupid Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="21600" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -299,7 +297,6 @@
 		<set name="item_skill" val="22028-1" /> <!-- Chocolate Cookie -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="20215" name="Agathion - White Maneki Neko Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - White Maneki Neko. -->
@@ -424,7 +421,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21033-1;23027-1;23046-1" /> <!-- Seal Agathion, Release Agathion's Seal - White Maneki Neko, White Maneki Neko Agathion Cute Trick I, White Maneki Neko Agathion Cute Trick II -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="21600" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -443,7 +439,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21034-1;23028-1;23047-1" /> <!-- Seal Agathion, Release Agathion's Seal - Black Maneki Neko, Black Maneki Neko Agathion Cute Trick I, Black Maneki Neko Agathion Cute Trick II -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="21600" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -462,7 +457,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21035-1;23029-1;23048-1" /> <!-- Seal Agathion, Release Agathion's Seal - Brown Maneki Neko, Brown Maneki Neko Agathion Cute Trick I, Brown Maneki Neko Agathion Cute Trick II -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="21600" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -592,7 +586,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21036-1;23033-1" /> <!-- Seal Agathion, Release Agathion's Seal - One-eyed Bat Drove, One-eyed Bat Drove Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -703,7 +696,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21037-1;23036-1" /> <!-- Seal Agathion, Release Agathion's Seal - Pegasus, Pegasus Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -868,7 +860,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21038-1;23039-1" /> <!-- Seal Agathion, Release Agathion's Seal - Yellow-robed Tojigong, Yellow-robed Tojigong Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -887,7 +878,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21039-1;23040-1" /> <!-- Seal Agathion, Release Agathion's Seal - Blue-robed Tojigong, Blue-robed Tojigong Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -906,7 +896,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21040-1;23041-1" /> <!-- Seal Agathion, Release Agathion's Seal - Green-robed Tojigong, Green-robed Tojigong Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1000,7 +989,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21041-1;23045-1" /> <!-- Seal Agathion, Release Agathion's Seal - Bugbear, Bugbear Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1017,7 +1005,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="5763-1;8245-1;3267-1" /> <!-- Wink, Release Agathion's Seal - Love, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1549,7 +1536,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22032-1" /> <!-- Baguette Legacy -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20272" name="Baguette's Herb" type="EtcItem">
@@ -1562,7 +1548,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22029-1" /> <!-- Baguette's Herb -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20273" name="Cream Puff Herb" type="EtcItem">
 		<!-- Event item. Mysterious herb that recovers Vitality upon acquiring XP. -->
@@ -1574,7 +1559,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22030-1" /> <!-- Cream Puff Herb -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20274" name="Cheesecake Herb" type="EtcItem">
 		<!-- Event item. Mysterious herb that increases Casting Spd. -->
@@ -1586,7 +1570,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22031-1" /> <!-- Cheesecake Herb -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="20275" name="Gold Afro" type="Armor">
 		<!-- Gold Afro. Uses 2 hair accessory slots. -->
@@ -1603,7 +1586,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20276" name="Pink Afro" type="Armor">
@@ -1621,7 +1603,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20277" name="Baguette Legacy - Kamael" type="EtcItem">
@@ -1641,7 +1622,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22033-1" /> <!-- Baguette Legacy - Kamael -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20278" name="Gold Afro Hair Pack" type="EtcItem">
@@ -2004,7 +1984,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21043-1;23049-1" /> <!-- Seal Agathion, Release Agathion's Seal - Red Sumo Wrestler, Red Sumo Wrestler Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -2043,7 +2022,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21044-1;23050-1" /> <!-- Seal Agathion, Release Agathion's Seal - Blue Sumo Wrestler Agathion, Blue Sumo Wrestler Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>

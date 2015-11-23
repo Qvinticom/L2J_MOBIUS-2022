@@ -2466,10 +2466,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="313" />
-			<set stat="pAtk" val="629" />
+			<enchant val="0" stat="mAtk" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="629" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -2497,10 +2497,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="313" />
-			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="719" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2528,10 +2528,10 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="313" />
-			<enchant val="0" stat="pAtk" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="875" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2560,10 +2560,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="313" />
 			<enchant val="0" stat="mAtk" />
-			<enchant val="0" stat="pAtk" />
+			<set stat="mAtk" val="313" />
 			<set stat="pAtk" val="719" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -2592,10 +2592,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="313" />
 			<enchant val="0" stat="mAtk" />
-			<enchant val="0" stat="pAtk" />
+			<set stat="mAtk" val="313" />
 			<set stat="pAtk" val="875" />
+			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2613,8 +2613,8 @@
 		<set name="enchant4_skill" val="13263-3" /> <!-- Spear Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8854-1" /> <!-- PvE Damage Increase -->
 		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="item_skill" val="8854-1" /> <!-- PvE Damage Increase -->
 		<set name="material" val="BRONZE" />
 		<set name="price" val="808295000" />
 		<set name="random_damage" val="10" />
@@ -2625,10 +2625,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="313" />
-			<set stat="pAtk" val="719" />
+			<enchant val="0" stat="mAtk" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="719" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2658,10 +2658,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="313" />
-			<set stat="pAtk" val="1415" />
+			<enchant val="0" stat="mAtk" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1415" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>

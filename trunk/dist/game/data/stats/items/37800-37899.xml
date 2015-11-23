@@ -234,7 +234,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="37822" name="Scroll of Escape: Hellbound" type="EtcItem">
@@ -244,7 +243,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37823" name="Leona's Gift" type="EtcItem">
@@ -257,7 +255,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37824" name="Hair Accessory Appearance Stone Coupon" additionalName="15-day" type="EtcItem">
@@ -744,7 +741,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37865" name="Hero's SP Scroll (Experienced)" type="EtcItem">
@@ -755,7 +751,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37866" name="Hero's SP Scroll (Expert)" type="EtcItem">
@@ -766,7 +761,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
@@ -777,7 +771,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="37868" name="Hero's Weapon: Dagger" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
@@ -1156,7 +1149,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37885" name="Hero's Energy" type="EtcItem">
 		<!-- Hero's episode event item. After the event ends, characters will be allowed to exchange them for XP scrolls and SP runes through the Adventurers' Guide on the live server. -->
@@ -1168,7 +1160,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="37886" name="Hero's XP Scroll" type="EtcItem">
 		<!-- Scroll the replenishes 100,000,000 XP. Can only be used by characters above level 85. When used by characters below level 98, the XP is only replenished by 30%. Cannot be used by chaotic characters. Cannot be used in the Olympiad. -->
@@ -1181,7 +1172,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="21600" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="37887" name="Hero's SP Rune" additionalName="1-day" type="EtcItem">
@@ -1202,7 +1192,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="1440" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
@@ -1210,21 +1199,18 @@
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="37890" name="Major Herb of Growth" type="EtcItem">
 		<!-- For 10 min., XP/SP obtained through hunting + 100%. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="37891" name="Superior Herb of Growth" type="EtcItem">
 		<!-- For 5 min., XP/SP obtained through hunting + 200%. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_baguette_i00" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="37892" name="Leona's Reward Box" type="EtcItem">
 		<!-- Reward box given by Leona Blackbird of Hellbound for your help. Double click to acquire the item. -->
@@ -1237,7 +1223,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="37893" name="Bloodied Demonic Tome" type="EtcItem">
 		<!-- Ancient book of the demon stained with the blood of the caravan. The ancient book managing caravan Budenka is collecting it in the Refugee Village. -->
@@ -1250,7 +1235,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="37894" name="Enhanced Warrior's Quick Healing Potion" type="EtcItem">
 		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
@@ -1259,7 +1243,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 		<set name="weight" val="180" />
 	</item>
 	<item id="37895" name="SP Rune (Low-grade)" additionalName="7-day" type="EtcItem">

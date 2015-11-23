@@ -140,12 +140,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="26361" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit for 30 days. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -161,6 +161,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -172,6 +173,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -183,6 +185,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -194,6 +197,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -204,6 +208,7 @@
 		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit for 30 days. Can be used only on hair accessories that take up 2 slots. Gives you active skills upon modification. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -219,6 +224,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -230,6 +236,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -241,6 +248,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -252,6 +260,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -262,6 +271,7 @@
 		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit for 30 days. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -277,6 +287,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -288,6 +299,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -299,6 +311,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -310,6 +323,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -320,6 +334,7 @@
 		<!-- Changes the appearance of a hair accessory into that of a Military look for 30 days. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -335,6 +350,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -346,6 +362,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -357,6 +374,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -368,6 +386,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -378,6 +397,7 @@
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories.. . Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -392,6 +412,7 @@
 		<!-- Modifies the appearance of armor into that of a Samurai for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appe -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -406,6 +427,7 @@
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -420,6 +442,7 @@
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -434,6 +457,7 @@
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -448,6 +472,7 @@
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -462,6 +487,7 @@
 		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit for 30 days. Only for 2-slot hair accessories. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -476,6 +502,7 @@
 		<!-- Modifies the appearance of armor into that of Anakim for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appeara -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -508,7 +535,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
@@ -543,7 +569,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26394" name="Transformation Scroll: Rose (M)" type="EtcItem">
 		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 30 min. -->
@@ -557,7 +582,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26395" name="Sealed Shadow Shaper" type="EtcItem">
 		<!-- Double-click to get a Shadow Shaper. Cannot be exchanged or dropped once open. -->
@@ -568,7 +592,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26396" name="Sealed Shadow Cutter" type="EtcItem">
 		<!-- Double-click to get a Shadow Cutter. Cannot be exchanged or dropped once open. -->
@@ -579,7 +602,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26397" name="Sealed Shadow Slasher" type="EtcItem">
 		<!-- Double-click to get a Shadow Slasher. Cannot be exchanged or dropped once open. -->
@@ -590,7 +612,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26398" name="Sealed Shadow Fighter" type="EtcItem">
 		<!-- Double-click to get a Shadow Fighter. Cannot be exchanged or dropped once open. -->
@@ -601,7 +622,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="26399" name="Sealed Shadow Stormer" type="EtcItem">
 		<!-- Double-click to get a Shadow Stormer. Cannot be exchanged or dropped once open. -->
@@ -612,6 +632,5 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 </list>

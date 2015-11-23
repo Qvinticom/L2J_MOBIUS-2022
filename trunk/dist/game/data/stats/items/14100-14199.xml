@@ -86,7 +86,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8251-1;3267-1;5780-3" /> <!-- Collection Agathion Release Seal, Seal Agathion, Agathion Collection -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="useSkillDisTime" val="1" />
 		<set name="weight" val="150" />
@@ -105,11 +104,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="price" val="46668000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="7520" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="236" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14106" name="Sealed Vesper Leather Breastplate" type="Armor">
@@ -126,11 +124,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="price" val="35000000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="4140" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="177" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14107" name="Sealed Vesper Tunic" type="Armor">
@@ -147,11 +144,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="price" val="35000000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="118" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14108" name="Sealed Vesper Gaiters" type="Armor">
@@ -168,11 +164,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="29168000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="3170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="148" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14109" name="Sealed Vesper Gauntlets" type="Armor">
@@ -188,11 +183,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14110" name="Sealed Vesper Boots" type="Armor">
@@ -208,11 +202,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14111" name="Sealed Vesper Shield" type="Armor">
@@ -226,13 +219,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="DAMASCUS" />
 		<set name="price" val="12250000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1130" />
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="352" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="14112" name="Sealed Vesper Leather Leggings" type="Armor">
@@ -249,11 +241,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="21876000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1320" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="111" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14113" name="Sealed Vesper Leather Gloves" type="Armor">
@@ -269,11 +260,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14114" name="Sealed Vesper Leather Boots" type="Armor">
@@ -289,11 +279,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14115" name="Sealed Vesper Stockings" type="Armor">
@@ -310,11 +299,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="price" val="21876000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="74" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14116" name="Sealed Vesper Gloves" type="Armor">
@@ -330,11 +318,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14117" name="Sealed Vesper Shoes" type="Armor">
@@ -350,11 +337,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="price" val="11667000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="68" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="14118" name="Vesper Cutter" additionalName="Haste" type="Weapon">
@@ -377,15 +363,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -409,15 +394,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -441,15 +425,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -473,15 +456,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -505,15 +487,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -537,15 +518,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -569,15 +549,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -601,15 +580,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -635,15 +613,14 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -666,16 +643,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -698,16 +674,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -730,16 +705,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -762,16 +736,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -794,16 +767,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -828,16 +800,15 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -860,16 +831,15 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -892,16 +862,15 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -924,16 +893,15 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -956,16 +924,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -988,16 +955,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1020,16 +986,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1052,16 +1017,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1084,16 +1048,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1116,16 +1079,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="482" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1149,16 +1111,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1182,16 +1143,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1215,16 +1175,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="317" />
+			<set stat="mAtk" val="234" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1248,16 +1207,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="386" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1281,16 +1239,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="386" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1316,16 +1273,15 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="386" />
+			<set stat="mAtk" val="257" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="386" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1351,16 +1307,15 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1386,16 +1341,15 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1423,16 +1377,15 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1457,7 +1410,6 @@
 		<set name="random_damage" val="40" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<cond msgId="1518">
@@ -1466,10 +1418,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -1494,7 +1446,6 @@
 		<set name="random_damage" val="40" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<cond msgId="1518">
@@ -1503,10 +1454,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -1531,7 +1482,6 @@
 		<set name="random_damage" val="40" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<cond msgId="1518">
@@ -1540,10 +1490,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
 		</for>
 	</item>
@@ -1568,7 +1518,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<cond msgId="1518">
@@ -1577,10 +1526,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -1605,7 +1554,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<cond msgId="1518">
@@ -1614,10 +1562,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -1644,7 +1592,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<cond msgId="1518">
@@ -1653,10 +1600,10 @@
 		<for>
 			<add stat="accCombat" val="-1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
@@ -1680,7 +1627,6 @@
 		<set name="random_damage" val="15" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="1800" />
 		<cond msgId="1518">
@@ -1689,10 +1635,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="429" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -1716,7 +1662,6 @@
 		<set name="random_damage" val="15" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="1800" />
 		<cond msgId="1518">
@@ -1725,10 +1670,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="429" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -1752,7 +1697,6 @@
 		<set name="random_damage" val="15" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="1800" />
 		<cond msgId="1518">
@@ -1761,10 +1705,10 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="429" />
+			<set stat="mAtk" val="176" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="429" />
 			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
@@ -1780,7 +1724,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="price" val="7713000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="83" />
@@ -1800,7 +1743,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="price" val="10284000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="110" />
@@ -1820,11 +1762,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="price" val="5142000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="55" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14163" name="Vesper Earring" type="Armor">
@@ -1839,7 +1780,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="price" val="11394000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
@@ -1859,7 +1799,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="price" val="15192000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="125" />
@@ -1879,11 +1818,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="price" val="7596000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="62" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14166" name="Life Stone - Lv. 84" type="EtcItem">
@@ -1894,7 +1832,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="41400" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="84" />
@@ -1908,7 +1845,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="165800" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="84" />
@@ -1922,7 +1858,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="829000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="84" />
@@ -1936,7 +1871,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="4146000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="2" />
 		<cond msgId="113">
 			<player level="84" />
@@ -1952,7 +1886,6 @@
 		<set name="item_skill" val="2803-1" /> <!-- Seed of Revenge -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14171" name="Forgotten Scroll: Hell Scream" type="EtcItem">
@@ -1965,7 +1898,6 @@
 		<set name="item_skill" val="2804-1" /> <!-- Hell Scream -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14172" name="Forgotten Scroll: Spirit of the Phoenix" type="EtcItem">
@@ -1978,7 +1910,6 @@
 		<set name="item_skill" val="2805-1" /> <!-- Spirit of the Phoenix -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14173" name="Forgotten Scroll: Eva's Will" type="EtcItem">
@@ -1991,7 +1922,6 @@
 		<set name="item_skill" val="2806-1" /> <!-- Eva's Will -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14174" name="Forgotten Scroll: Pain of Shilen" type="EtcItem">
@@ -2004,7 +1934,6 @@
 		<set name="item_skill" val="2807-1" /> <!-- Pain of Shilen -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14175" name="Forgotten Scroll: Exciting Adventure" type="EtcItem">
@@ -2017,7 +1946,6 @@
 		<set name="item_skill" val="2808-1" /> <!-- Exciting Adventure -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14176" name="Forgotten Scroll: Wind Riding" type="EtcItem">
@@ -2030,7 +1958,6 @@
 		<set name="item_skill" val="2809-1" /> <!-- Wind Riding -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14177" name="Forgotten Scroll: Ghost Walking" type="EtcItem">
@@ -2043,7 +1970,6 @@
 		<set name="item_skill" val="2810-1" /> <!-- Ghost Walking -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14178" name="Forgotten Scroll: Flame Hawk" type="EtcItem">
@@ -2056,7 +1982,6 @@
 		<set name="item_skill" val="2811-1" /> <!-- Flame Hawk -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14179" name="Forgotten Scroll: Arrow Rain" type="EtcItem">
@@ -2069,7 +1994,6 @@
 		<set name="item_skill" val="2812-1" /> <!-- Arrow Rain -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14180" name="Forgotten Scroll: Ghost Piercing" type="EtcItem">
@@ -2082,7 +2006,6 @@
 		<set name="item_skill" val="2813-1" /> <!-- Ghost Piercing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14181" name="Forgotten Scroll: Dread Pool" type="EtcItem">
@@ -2095,7 +2018,6 @@
 		<set name="item_skill" val="2814-1" /> <!-- Dread Pool -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14182" name="Forgotten Scroll: Force of Destruction" type="EtcItem">
@@ -2108,7 +2030,6 @@
 		<set name="item_skill" val="2815-1" /> <!-- Force of Destruction -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14183" name="Forgotten Scroll: Demolition Impact" type="EtcItem">
@@ -2121,7 +2042,6 @@
 		<set name="item_skill" val="2816-1" /> <!-- Demolition Impact -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14184" name="Forgotten Scroll: Golem Armor" type="EtcItem">
@@ -2134,7 +2054,6 @@
 		<set name="item_skill" val="2817-1" /> <!-- Golem Armor -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14185" name="Forgotten Scroll: Wild Shot" type="EtcItem">
@@ -2147,7 +2066,6 @@
 		<set name="item_skill" val="2818-1" /> <!-- Wild Shot -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14186" name="Forgotten Scroll: Lightning Shock" type="EtcItem">
@@ -2160,7 +2078,6 @@
 		<set name="item_skill" val="2819-1" /> <!-- Lightning Shock -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14187" name="Forgotten Scroll: Flame Armor" type="EtcItem">
@@ -2173,7 +2090,6 @@
 		<set name="item_skill" val="2820-1" /> <!-- Flame Armor -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14188" name="Forgotten Scroll: Frost Armor" type="EtcItem">
@@ -2186,7 +2102,6 @@
 		<set name="item_skill" val="2821-1" /> <!-- Frost Armor -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14189" name="Forgotten Scroll: Hurricane Armor" type="EtcItem">
@@ -2199,7 +2114,6 @@
 		<set name="item_skill" val="2822-1" /> <!-- Hurricane Armor -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14190" name="Forgotten Scroll: Vampiric Mist" type="EtcItem">
@@ -2212,7 +2126,6 @@
 		<set name="item_skill" val="2823-1" /> <!-- Vampiric Mist -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14191" name="Forgotten Scroll: Meteor" type="EtcItem">
@@ -2225,7 +2138,6 @@
 		<set name="item_skill" val="2824-1" /> <!-- Meteor -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14192" name="Forgotten Scroll: Star Fall" type="EtcItem">
@@ -2238,7 +2150,6 @@
 		<set name="item_skill" val="2825-1" /> <!-- Starfall -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14193" name="Forgotten Scroll: Sublime Self-sacrifice" type="EtcItem">
@@ -2251,7 +2162,6 @@
 		<set name="item_skill" val="2826-1" /> <!-- Sublime Self-Sacrifice -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14194" name="Forgotten Scroll: Blessing of Eva" type="EtcItem">
@@ -2264,7 +2174,6 @@
 		<set name="item_skill" val="2827-1" /> <!-- Blessing of Eva -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14195" name="Forgotten Scroll: Lord of Vampires" type="EtcItem">
@@ -2277,7 +2186,6 @@
 		<set name="item_skill" val="2828-1" /> <!-- Lord of Vampires -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14196" name="Forgotten Scroll: Thorn Root" type="EtcItem">
@@ -2293,7 +2201,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2829-1" /> <!-- Thorn Root -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14197" name="Forgotten Scroll: Seal of Limit" type="EtcItem">
@@ -2306,7 +2213,6 @@
 		<set name="item_skill" val="2830-1" /> <!-- Seal of Limit -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14198" name="Forgotten Scroll: Song of Purification" type="EtcItem">
@@ -2319,7 +2225,6 @@
 		<set name="item_skill" val="2652-1" /> <!-- Song of Purification -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="14199" name="Forgotten Scroll: Dance of Berserker" type="EtcItem">
@@ -2332,7 +2237,6 @@
 		<set name="item_skill" val="2653-1" /> <!-- Dance of Berserker -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="120000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 </list>

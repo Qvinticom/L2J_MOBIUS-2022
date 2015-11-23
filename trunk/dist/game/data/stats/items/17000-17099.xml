@@ -606,7 +606,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9090-1" /> <!-- Fighter's Will -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17035" name="Forgotten Scroll: Archer's Will (Event)" type="EtcItem">
@@ -623,7 +622,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9091-1" /> <!-- Archer's Will -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17036" name="Forgotten Scroll: Magician's Will (Event)" type="EtcItem">
@@ -640,7 +638,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9092-1" /> <!-- Magician's Will -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17037" name="Forgotten Scroll: Protection of Rune (Event)" type="EtcItem">
@@ -657,7 +654,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9093-1" /> <!-- Protection of Rune -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17038" name="Forgotten Scroll: Protection of Elemental (Event)" type="EtcItem">
@@ -674,7 +670,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9094-1" /> <!-- Protection of Elemental -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17039" name="Forgotten Scroll: Protection of Alignment (Event)" type="EtcItem">
@@ -691,7 +686,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9095-1" /> <!-- Protection of Alignment -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="17040" name="Love Box Pack" type="EtcItem">
@@ -770,7 +764,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17045" name="Sentiment Box" type="EtcItem">
 		<!-- Contains a Talisman for WIT, MEN and INT.  -->
@@ -784,7 +777,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17046" name="Confession Box" type="EtcItem">
 		<!-- Contains a Talisman for Stun/Sleep/Hold/Paralysis Resistance.  -->
@@ -798,7 +790,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17047" name="Joy Box" type="EtcItem">
 		<!-- Contains a Love Box, Sentiment Box, and Confession Box. -->
@@ -812,7 +803,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17048" name="Shiny Bracelet Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Bracelet. -->
@@ -841,7 +831,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3324-1" /> <!-- Steel Bracelet -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17050" name="Shiny Couple Ring" type="Armor">
 		<!-- Summons another player. Both the summoner and the one being summoned must have it equipped. Cooldown is 1 hour. -->
@@ -856,7 +845,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8510-1" /> <!-- Summon Friend -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="mDef" val="7" />
 		</for>
@@ -876,7 +864,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8498-1" /> <!-- Pink Talisman - STR -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17052" name="Talisman - DEX" type="Armor">
@@ -894,7 +881,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8499-1" /> <!-- Pink Talisman - DEX -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17053" name="Talisman - CON" type="Armor">
@@ -912,7 +898,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8500-1" /> <!-- Pink Talisman - CON -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17054" name="Talisman - WIT" type="Armor">
@@ -930,7 +915,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8502-1" /> <!-- Pink Talisman - WIT -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17055" name="Talisman - INT" type="Armor">
@@ -948,7 +932,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8501-1" /> <!-- Pink Talisman - INT -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17056" name="Talisman - MEN" type="Armor">
@@ -966,7 +949,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8503-1" /> <!-- Pink Talisman - MEN -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17057" name="Talisman - Stun Resistance" type="Armor">
@@ -984,7 +966,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8504-1" /> <!-- Pink Talisman - Stun Resistance -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17058" name="Talisman - Sleep Resistance" type="Armor">
@@ -1002,7 +983,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8505-1" /> <!-- Pink Talisman - Sleep Resistance -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17059" name="Talisman - Hold Resistance" type="Armor">
@@ -1020,7 +1000,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8506-1" /> <!-- Pink Talisman - Hold Resistance -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17060" name="Talisman - Paralysis Resistance" type="Armor">
@@ -1038,7 +1017,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8507-1" /> <!-- Pink Talisman - Paralysis Resistance -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17061" name="Talisman - ALL STATS" type="Armor">
@@ -1056,7 +1034,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8508-1" /> <!-- Pink Talisman - All STAT -->
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="17062" name="Event - Summon Scroll: Baby White Tiger" type="EtcItem">
@@ -1071,7 +1048,6 @@
 		<set name="item_skill" val="9096-1" /> <!-- Event - Summon Scroll: Baby White Tiger -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17063" name="Event - Summon Scroll: Gloomy Baby White Tiger" type="EtcItem">
 		<!-- Scroll that summons a Gloomy Baby White Tiger. Can sometimes transform into a White Tiger while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
@@ -1085,7 +1061,6 @@
 		<set name="item_skill" val="9098-1" /> <!-- Event - Summon Scroll: Gloomy Baby White Tiger -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17064" name="Event - Summon Scroll: Baby White Tiger Captain" type="EtcItem">
 		<!-- Scroll that summons a baby White Tiger Captain. If you relieve the Baby White Tiger Captain's fatigue, you can acquire Apiga. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Potion.) -->
@@ -1099,7 +1074,6 @@
 		<set name="item_skill" val="9097-1" /> <!-- Event - Summon Scroll: Baby White Tiger Captain -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17065" name="Event - Summon Scroll: Gloomy Baby White Tiger Captain" type="EtcItem">
 		<!-- Scroll that summons a Gloomy Baby White Tiger Captain. Can sometimes transform into a White Tiger Captain while trying to recover the Baby White Tiger. (Recovery is only possible through Cupid's Fatigue Relief Potion or Cupid's Powerful Fatigue Relief Pot -->
@@ -1113,7 +1087,6 @@
 		<set name="item_skill" val="9099-1" /> <!-- Event - Summon Scroll: Gloomy Baby White Tiger Captain -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
 		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and Cupid's Fatigue Relief Potion that are needed for the event. -->
@@ -1145,7 +1118,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="2000" />
 		<set name="shared_reuse_group" val="13" />
-		<set name="time" val="43200" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1163,7 +1135,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="4000" />
 		<set name="shared_reuse_group" val="14" />
-		<set name="time" val="43200" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1438,7 +1409,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="1000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17088" name="Seed: Alternative Twin Coba" type="EtcItem">
@@ -1452,7 +1422,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="1000" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17089" name="Seed: Red Coba" type="EtcItem">
@@ -1466,7 +1435,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="500" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17090" name="Seed: Alternative Red Coba" type="EtcItem">
@@ -1480,7 +1448,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="500" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17091" name="Seed: Golden Coba" type="EtcItem">
@@ -1494,7 +1461,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="650" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17092" name="Seed: Alternative Golden Coba" type="EtcItem">
@@ -1508,7 +1474,6 @@
 		<set name="item_skill" val="2097-3" /> <!-- Sowing -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="650" />
-		<set name="time" val="43200" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="17093" name="Vitality Maintaining Potion (10-minute) (Event)" type="EtcItem">
@@ -1525,7 +1490,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="9113-1" /> <!-- Vitality Maintaining Potion -->
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="17094" name="Nevit's Voice" type="EtcItem">
 		<!-- Seashell containing Nevit's voice. Item that raises your evaluation value by 10. Can acquire 100,000 Adena by Double-clicking. -->

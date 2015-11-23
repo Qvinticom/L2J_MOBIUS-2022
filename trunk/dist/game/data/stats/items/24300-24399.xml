@@ -722,7 +722,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="4320" />
 		<set name="weight" val="1" />
 	</item>
 	<item id="24356" name="Draco's Hat: Wizard" additionalName="7-day" type="Armor">
@@ -764,7 +763,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="24359" name="Antharas' Earring" additionalName="3-day" type="Armor">
@@ -842,8 +840,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="24363" name="Baium's Ring" additionalName="3-day" type="Armor">
@@ -861,8 +859,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="24364" name="Dark Assassin Suit" type="Armor">
@@ -877,7 +875,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="4320" />
 		<for>
 			<add stat="pDef" val="400" />
 		</for>
@@ -892,7 +889,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24366" name="Luck Box 1" additionalName="Gemini" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade Augmentation Pack (R95-grade), Top-grade Augmentation Pack (R99-grade), or Agathion  -->
@@ -923,7 +919,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24369" name="Sayha's Rune: Growth" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 3%. -->
@@ -934,7 +929,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24370" name="Sayha's Rune: Growth" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 6%. -->
@@ -945,7 +939,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24371" name="Sayha's Rune: Growth" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 10%. -->
@@ -956,7 +949,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24372" name="Sayha's Rune: Skill" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 1%. -->
@@ -967,7 +959,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24373" name="Sayha's Rune: Skill" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 3%. -->
@@ -978,7 +969,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24374" name="Sayha's Rune: Skill" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 6%. -->
@@ -989,7 +979,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24375" name="Sayha's Rune: Skill" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 10%. -->
@@ -1000,7 +989,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24376" name="Sayha's Rune: Luck" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting + 1%. -->
@@ -1011,7 +999,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24377" name="Sayha's Rune: Luck" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting + 3%. -->
@@ -1022,7 +1009,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24378" name="Sayha's Rune: Luck" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting + 6%. -->
@@ -1033,7 +1019,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24379" name="Sayha's Rune: Luck" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting + 10%. -->
@@ -1044,7 +1029,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24380" name="Sayha's Rune" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, XP/SP/Drop Rate + 1%. -->
@@ -1055,7 +1039,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24381" name="Sayha's Rune" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, XP/SP/Drop Rate + 3%. -->
@@ -1066,7 +1049,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24382" name="Sayha's Rune" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, XP/SP/Drop Rate + 6%. -->
@@ -1077,7 +1059,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24383" name="Sayha's Rune" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, XP/SP/Drop Rate + 10%. -->
@@ -1088,7 +1069,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="4320" />
 	</item>
 	<item id="24384" name="Sayha's Rune: Growth Pack Stage 1" type="EtcItem">
 		<!-- Wrapped Pack containing Sayha's Rune: Growth Stage 1. -->

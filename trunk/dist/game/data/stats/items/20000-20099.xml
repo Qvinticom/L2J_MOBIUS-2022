@@ -190,7 +190,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21003-1;23003-1" /> <!-- Seal Agathion, Release Agathion's Seal - Plaipitak, Plaipitak Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -266,7 +265,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21005-3" /> <!-- Agility -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20017" name="Afro Hair" type="Armor">
@@ -279,7 +277,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20018" name="Afro Hair" additionalName="Big Head, Firework" type="Armor">
@@ -293,7 +290,6 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="21006-1;21007-1" /> <!-- Large Firecracker's Ability, Mysterious Ability -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20019" name="Afro Hair" additionalName="Wind Walk" type="Armor">
@@ -307,7 +303,6 @@
 		<set name="is_premium" val="true" />
 		<set name="item_skill" val="21004-1" /> <!-- Wind Walk -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20020" name="Uniform Hat" type="Armor">
@@ -320,7 +315,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20021" name="Assassin's Bamboo Hat" type="Armor">
@@ -333,7 +327,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20022" name="Ruthless Tribe Mask" type="Armor">
@@ -346,7 +339,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20023" name="Ribbon Hairband" type="Armor">
@@ -359,7 +351,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="1" />
@@ -375,7 +366,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="0" />
@@ -389,7 +379,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20026" name="Extra Pass: Kamaloka (Hall of the Abyss)" type="EtcItem">
@@ -402,7 +391,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22019-1" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20027" name="Extra Pass: Near Kamaloka" type="EtcItem">
@@ -415,7 +403,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22020-1" /> <!-- Extra Pass: Near Kamaloka -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20028" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)" type="EtcItem">
@@ -428,7 +415,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="22021-1" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20029" name="Mount - Darkmane Pacer" type="Armor">
@@ -446,7 +432,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8247-1" /> <!-- Ride Darkmane Pacer -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="30" />
 	</item>
@@ -478,7 +463,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20032" name="Skull Hat" type="Armor">
@@ -491,7 +475,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20033" name="My Teleport Flag" type="EtcItem">
@@ -502,7 +485,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="20034" name="Revita-Pop (Event)" type="EtcItem">
@@ -522,7 +504,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="shared_reuse_group" val="15" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="20035" name="Agathion - Majo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Majo. -->
@@ -968,7 +949,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21008-1;23010-1" /> <!-- Seal Agathion, Release Agathion's Seal - Baby Panda, Baby Panda Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -987,7 +967,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21009-1;23011-1" /> <!-- Seal Agathion, Release Agathion's Seal - Bamboo Panda, Bamboo Panda Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1006,7 +985,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21010-1;23012-1" /> <!-- Seal Agathion, Release Agathion's Seal - Sexy Panda, Sexy Panda Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1295,7 +1273,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22007-1" /> <!-- Good Luck Bag -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20082" name="Lucky Four-leaf Clover" type="EtcItem">
@@ -1316,7 +1293,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22008-1" /> <!-- Lucky Four-leaf Clover -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20083" name="Afro Hair" additionalName="Vitality (3-hour)" type="Armor">
@@ -1516,7 +1492,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22009-1" /> <!-- Holiday Miracle -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="20094" name="Agathion - Rudolph" additionalName="Vitality (30-day)" type="Armor">
@@ -1551,7 +1526,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20096" name="Mysterious Formal Wear (Event) Pack" type="EtcItem">
@@ -1584,7 +1558,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22010-1" /> <!-- Mysterious Formal Wear -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20098" name="Formal Wear (Event)" additionalName="Shadow (1-hour)" type="Armor">

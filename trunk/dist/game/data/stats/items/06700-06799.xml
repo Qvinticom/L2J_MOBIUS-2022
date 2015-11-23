@@ -284,10 +284,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="104" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="104" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -330,8 +330,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="47" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="6722" name="Monster Only (Ahrimanes)" type="Weapon">
@@ -354,10 +354,10 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="236" />
+			<set stat="mAtk" val="99" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -380,10 +380,10 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="112" />
+			<set stat="mAtk" val="54" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -420,8 +420,8 @@
 		<set name="price" val="2180000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6726" name="Sealed Tateossian Necklace" type="Armor">

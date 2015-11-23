@@ -30,8 +30,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
 		<for>
-			<add stat="pDef" val="50" />
 			<add stat="mDef" val="40" />
+			<add stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
@@ -39,6 +39,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -49,6 +50,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -59,6 +61,7 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -271,7 +274,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="46627" name="Blue Dynasty Circlet" additionalName="LUC" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. LUC + 3 when equipped. -->
@@ -281,7 +283,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="46628" name="Blue Dynasty Circlet" additionalName="CHA" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
@@ -291,7 +292,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="46629" name="Practice StormBringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
@@ -310,12 +310,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="1440" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="107" />
-			<set stat="mAtk" val="68" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="68" />
+			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -499,7 +498,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46640" name="Assistant Roa's Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift box full of Roa's love. Double-click to get a random gift from Roa. -->
@@ -513,7 +511,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46641" name="Entrance Pass: Crystal Caverns" type="EtcItem">
 		<!-- Double-click to reset cooldown to Crystal Cavern's Coral Garden, Steam Corridor, and Emerald Square. Can only be used once a day outside of the instance zone. Can enter twice each time it is used. -->
@@ -523,7 +520,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46642" name="Proof of Red" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Proof given to those who carry out the missions given by the Red Libra merchants. Use with Elder Green to change a dual class or with Elder Black to exchange for a weapon. Deleted when the Red Libra merchants leave. -->
@@ -536,7 +532,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Oil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive 10 Lv.5 Giant Dyes. -->
@@ -547,7 +542,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46644" name="Red Libra Supplies Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -561,7 +555,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46645" name="Red Libra Supplies Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -575,7 +568,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46646" name="Red Libra Supplies Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -589,7 +581,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46647" name="Red Libra Supplies Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -603,7 +594,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46648" name="Red Libra Talisman - Resurrection" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Revives all party members. Additionally, restores 100% XP. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -615,7 +605,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Restores HP/MP/CP of all party members and cancels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -627,7 +616,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Cancel" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Cancels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -639,7 +627,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Increases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -651,7 +638,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Decreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -663,7 +649,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
 		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -681,13 +666,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<set stat="pAtk" val="690" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -707,12 +691,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="770" />
-			<set stat="mAtk" val="388" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="770" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -732,12 +715,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="931" />
-			<set stat="mAtk" val="388" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="931" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -757,13 +739,12 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="770" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="770" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -783,13 +764,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
 		<for>
-			<set stat="pAtk" val="931" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="931" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -809,13 +789,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<set stat="pAtk" val="770" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="8" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="770" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -835,13 +814,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<set stat="pAtk" val="1521" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="1521" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -861,13 +839,12 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<set stat="pAtk" val="1286" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="1286" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -887,12 +864,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="pAtk" val="643" />
-			<set stat="mAtk" val="481" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="481" />
+			<set stat="pAtk" val="643" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -912,13 +888,12 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="643" />
-			<set stat="mAtk" val="481" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="481" />
+			<set stat="pAtk" val="643" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -938,13 +913,12 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
 		<for>
-			<set stat="pAtk" val="776" />
-			<set stat="mAtk" val="518" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="518" />
+			<set stat="pAtk" val="776" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -964,12 +938,11 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
 		<for>
-			<set stat="pAtk" val="931" />
-			<set stat="mAtk" val="388" />
 			<add stat="critRate" val="8" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="931" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -989,13 +962,12 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<set stat="pAtk" val="792" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="12" />
 			<add stat="accCombat" val="-3.75" />
+			<add stat="critRate" val="12" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="792" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1015,13 +987,12 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<for>
-			<set stat="pAtk" val="931" />
-			<set stat="mAtk" val="388" />
-			<add stat="critRate" val="6" />
 			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="mAtk" val="388" />
+			<set stat="pAtk" val="931" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1047,7 +1018,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<for>
 			<add stat="mDef" val="101" />
 		</for>
@@ -1060,7 +1030,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46670" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 3%. Effect does not stack with additional jewels of the same type. -->
@@ -1074,7 +1043,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46671" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 6%. Effect does not stack with additional jewels of the same type. -->
@@ -1088,7 +1056,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46672" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 12%. Effect does not stack with additional jewels of the same type. -->
@@ -1102,7 +1069,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46673" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 20% and decreases Vitality Point Consumption Speed by 7%. Effect does not stack with additional jewels of the same type. -->
@@ -1116,7 +1082,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46674" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 30% and decreases Vitality Point Consumption Speed by 15%. Effect does not stack with additional jewels of the same type. -->
@@ -1127,7 +1092,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46675" name="Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Debuffs + 3%. Effect does not stack with additional jewels of the same type. -->
@@ -1141,7 +1105,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46676" name="Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Resistance to Debuffs + 6%. Effect does not stack with additional jewels of the same type. -->
@@ -1155,7 +1118,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46677" name="Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Resistance to Debuffs + 12%. Effect does not stack with additional jewels of the same type. -->
@@ -1169,7 +1131,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46678" name="Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Resistance to Debuffs + 20%. Effect does not stack with additional jewels of the same type. -->
@@ -1183,7 +1144,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46679" name="Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Resistance to Debuffs + 30%. Cancels your debuffs. Effect does not stack with additional jewels of the same type. -->
@@ -1194,7 +1154,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46680" name="Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
@@ -1208,7 +1167,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46681" name="Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
@@ -1222,7 +1180,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46682" name="Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
@@ -1236,7 +1193,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46683" name="Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
@@ -1250,7 +1206,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46684" name="Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
@@ -1261,7 +1216,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46685" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
@@ -1272,7 +1226,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46686" name="La Vie En Rose's Garnet Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
@@ -1283,7 +1236,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46687" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
@@ -1294,7 +1246,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46688" name="La Vie En Rose's Radiant Brooch Chest" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
@@ -1305,7 +1256,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46689" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. -->
@@ -1316,7 +1266,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46690" name="Shadai's Shiny Jewelry Box" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
@@ -1327,7 +1276,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46691" name="Function Test Item" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
@@ -1341,7 +1289,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. -->
@@ -1355,6 +1302,5 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 </list>

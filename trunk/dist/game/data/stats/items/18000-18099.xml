@@ -13,8 +13,8 @@
 		<set name="price" val="3550475" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="64" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="18001" name="Blessed Apocalypse Shaper" type="Weapon">
@@ -41,10 +41,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="454" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -71,10 +71,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="519" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -101,10 +101,10 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="632" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -132,10 +132,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="519" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -163,10 +163,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="632" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -195,10 +195,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="519" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -227,10 +227,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="1022" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1022" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -262,10 +262,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="920" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="920" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -293,10 +293,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="415" />
+			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -325,10 +325,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="415" />
+			<set stat="mAtk" val="301" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -358,8 +358,8 @@
 			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="332" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="505" />
 			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
@@ -388,10 +388,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="632" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -425,10 +425,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="519" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -456,10 +456,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="632" />
+			<set stat="mAtk" val="226" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -477,8 +477,8 @@
 		<set name="price" val="21308498" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="130" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18016" name="Blessed Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
@@ -496,8 +496,8 @@
 		<set name="price" val="56822662" />
 		<set name="weight" val="7520" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="348" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18017" name="Blessed Twilight Gaiters" additionalName="Heavy Armor" type="Armor">
@@ -515,8 +515,8 @@
 		<set name="price" val="35514164" />
 		<set name="weight" val="3170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="217" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18018" name="Blessed Twilight Gauntlets" additionalName="Heavy Armor" type="Armor">
@@ -533,8 +533,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18019" name="Blessed Twilight Boots" additionalName="Heavy Armor" type="Armor">
@@ -551,8 +551,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18020" name="Blessed Twilight Shield" additionalName="Heavy Armor" type="Armor">
@@ -570,8 +570,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="476" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="18021" name="Blessed Twilight Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -588,8 +588,8 @@
 		<set name="price" val="21308498" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="130" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18022" name="Blessed Twilight Leather Armor" additionalName="Light Armor" type="Armor">
@@ -608,8 +608,8 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="278" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="278" />
 			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
@@ -629,8 +629,8 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="173" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="173" />
 			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
@@ -648,8 +648,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18025" name="Blessed Twilight Leather Boots" additionalName="Light Armor" type="Armor">
@@ -666,8 +666,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18026" name="Blessed Twilight Circlet" additionalName="Robe" type="Armor">
@@ -684,8 +684,8 @@
 		<set name="price" val="21308498" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="130" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18027" name="Blessed Twilight Tunic" additionalName="Robe" type="Armor">
@@ -705,8 +705,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="41" />
-			<add order="0" stat="pDef" val="191" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="191" />
 		</for>
 	</item>
 	<item id="18028" name="Blessed Twilight Stockings" additionalName="Robe" type="Armor">
@@ -726,8 +726,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="27" />
-			<add order="0" stat="pDef" val="119" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="119" />
 		</for>
 	</item>
 	<item id="18029" name="Blessed Twilight Gloves" additionalName="Robe" type="Armor">
@@ -744,8 +744,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18030" name="Blessed Twilight Shoes" additionalName="Robe" type="Armor">
@@ -762,8 +762,8 @@
 		<set name="price" val="14205666" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="87" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18031" name="Blessed Twilight Sigil" additionalName="Robe" type="Armor">
@@ -833,8 +833,8 @@
 		<set name="price" val="9248795" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="73" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="18035" name="Blessed Specter Shaper" type="Weapon">
@@ -861,10 +861,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="526" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -891,10 +891,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="602" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -921,10 +921,10 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="732" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -952,10 +952,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="602" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -983,10 +983,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="732" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1015,10 +1015,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="602" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1047,10 +1047,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="1185" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1185" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1082,10 +1082,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="1067" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1067" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1113,10 +1113,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="481" />
+			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1145,10 +1145,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="481" />
+			<set stat="mAtk" val="349" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1178,8 +1178,8 @@
 			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="384" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="586" />
 			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
@@ -1208,10 +1208,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="732" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1245,10 +1245,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="602" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1276,10 +1276,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="732" />
+			<set stat="mAtk" val="262" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1297,8 +1297,8 @@
 		<set name="price" val="71863000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="144" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18050" name="Blessed Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
@@ -1316,8 +1316,8 @@
 		<set name="price" val="191636000" />
 		<set name="weight" val="7520" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="384" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18051" name="Blessed Seraph Gaiters" additionalName="Heavy Armor" type="Armor">
@@ -1335,8 +1335,8 @@
 		<set name="price" val="119772000" />
 		<set name="weight" val="3170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="240" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18052" name="Blessed Seraph Gauntlets" additionalName="Heavy Armor" type="Armor">
@@ -1353,8 +1353,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18053" name="Blessed Seraph Boots" additionalName="Heavy Armor" type="Armor">
@@ -1371,8 +1371,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18054" name="Blessed Seraph Shield" additionalName="Heavy Armor" type="Armor">
@@ -1390,8 +1390,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="525" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="18055" name="Blessed Seraph Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -1408,8 +1408,8 @@
 		<set name="price" val="71863000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="144" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18056" name="Blessed Seraph Leather Armor" additionalName="Light Armor" type="Armor">
@@ -1428,8 +1428,8 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="307" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="307" />
 			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
@@ -1449,8 +1449,8 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="192" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="192" />
 			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
@@ -1468,8 +1468,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18059" name="Blessed Seraph Leather Boots" additionalName="Light Armor" type="Armor">
@@ -1486,8 +1486,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18060" name="Blessed Seraph Circlet" additionalName="Robe" type="Armor">
@@ -1504,8 +1504,8 @@
 		<set name="price" val="71863000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="144" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18061" name="Blessed Seraph Tunic" additionalName="Robe" type="Armor">
@@ -1525,8 +1525,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="47" />
-			<add order="0" stat="pDef" val="211" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="211" />
 		</for>
 	</item>
 	<item id="18062" name="Blessed Seraph Stockings" additionalName="Robe" type="Armor">
@@ -1546,8 +1546,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="31" />
-			<add order="0" stat="pDef" val="132" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="132" />
 		</for>
 	</item>
 	<item id="18063" name="Blessed Seraph Gloves" additionalName="Robe" type="Armor">
@@ -1564,8 +1564,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18064" name="Blessed Seraph Shoes" additionalName="Robe" type="Armor">
@@ -1582,8 +1582,8 @@
 		<set name="price" val="47909000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="96" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18065" name="Blessed Seraph Sigil" additionalName="Robe" type="Armor">
@@ -1653,8 +1653,8 @@
 		<set name="price" val="24952000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="82" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="18069" name="Blessed Amaranthine Shaper" type="Weapon">
@@ -1681,10 +1681,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="575" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="575" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -1711,10 +1711,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="658" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1741,10 +1741,10 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="800" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1772,10 +1772,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="658" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1803,10 +1803,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="800" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1835,10 +1835,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="658" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1867,10 +1867,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="1295" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1295" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
 	</item>
@@ -1902,10 +1902,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="1166" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="1166" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1933,10 +1933,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="526" />
+			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1965,10 +1965,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="526" />
+			<set stat="mAtk" val="382" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
@@ -1998,8 +1998,8 @@
 			<add stat="accCombat" val="8" />
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="420" />
+			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="640" />
 			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
@@ -2028,10 +2028,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="800" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2065,10 +2065,10 @@
 		<for>
 			<add stat="accCombat" val="-3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="658" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
@@ -2096,10 +2096,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="800" />
+			<set stat="mAtk" val="286" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -2117,8 +2117,8 @@
 		<set name="price" val="158359000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="153" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18084" name="Blessed Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
@@ -2136,8 +2136,8 @@
 		<set name="price" val="422292000" />
 		<set name="weight" val="7520" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="408" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18085" name="Blessed Eternal Gaiters" additionalName="Heavy Armor" type="Armor">
@@ -2155,8 +2155,8 @@
 		<set name="price" val="263933000" />
 		<set name="weight" val="3170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="255" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18086" name="Blessed Eternal Gauntlets" additionalName="Heavy Armor" type="Armor">
@@ -2173,8 +2173,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18087" name="Blessed Eternal Boots" additionalName="Heavy Armor" type="Armor">
@@ -2191,8 +2191,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18088" name="Blessed Eternal Shield" additionalName="Heavy Armor" type="Armor">
@@ -2210,8 +2210,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="557" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="18089" name="Blessed Eternal Leather Helmet" additionalName="Light Armor" type="Armor">
@@ -2228,8 +2228,8 @@
 		<set name="price" val="158359000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="153" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18090" name="Blessed Eternal Leather Armor" additionalName="Light Armor" type="Armor">
@@ -2248,8 +2248,8 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="326" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="326" />
 			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
@@ -2269,8 +2269,8 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="204" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="204" />
 			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
@@ -2288,8 +2288,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18093" name="Blessed Eternal Leather Boots" additionalName="Light Armor" type="Armor">
@@ -2306,8 +2306,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18094" name="Blessed Eternal Circlet" additionalName="Robe" type="Armor">
@@ -2324,8 +2324,8 @@
 		<set name="price" val="158359000" />
 		<set name="weight" val="530" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="153" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18095" name="Blessed Eternal Tunic" additionalName="Robe" type="Armor">
@@ -2345,8 +2345,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="224" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="224" />
 		</for>
 	</item>
 	<item id="18096" name="Blessed Eternal Stockings" additionalName="Robe" type="Armor">
@@ -2366,8 +2366,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="33" />
-			<add order="0" stat="pDef" val="140" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="140" />
 		</for>
 	</item>
 	<item id="18097" name="Blessed Eternal Gloves" additionalName="Robe" type="Armor">
@@ -2384,8 +2384,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18098" name="Blessed Eternal Shoes" additionalName="Robe" type="Armor">
@@ -2402,8 +2402,8 @@
 		<set name="price" val="105573000" />
 		<set name="weight" val="1070" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="102" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="18099" name="Blessed Eternal Sigil" additionalName="Robe" type="Armor">

@@ -15,8 +15,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="360" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37201" name="Steel Dynasty Sigil (60-day)" type="Armor">
@@ -55,8 +55,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="1390" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37203" name="Steel Dynasty Leather Leggings (60-day)" type="Armor">
@@ -75,8 +75,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="460" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="106" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37204" name="Steel Dynasty Leather Helmet (60-day)" type="Armor">
@@ -94,8 +94,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="92" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37205" name="Steel Dynasty Leather Gloves (60-day)" type="Armor">
@@ -113,8 +113,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37206" name="Steel Dynasty Leather Boots (60-day)" type="Armor">
@@ -132,8 +132,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="360" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="61" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37207" name="Steel Immortal Breastplate (30-day)" type="Armor">
@@ -152,8 +152,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="2510" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="309" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37208" name="Steel Immortal Gaiters (30-day)" type="Armor">
@@ -172,8 +172,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1060" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="193" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37209" name="Steel Immortal Helmet (30-day)" type="Armor">
@@ -191,8 +191,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="116" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37210" name="Steel Immortal Gauntlets (30-day)" type="Armor">
@@ -210,8 +210,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37211" name="Steel Immortal Boots (30-day)" type="Armor">
@@ -229,8 +229,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37212" name="Steel Immortal Shield (30-day)" type="Armor">
@@ -249,8 +249,8 @@
 		<for>
 			<sub stat="rEvas" val="-8" />
 			<set stat="rShld" val="20" />
-			<enchant val="0" stat="sDef" />
 			<set stat="sDef" val="422" />
+			<enchant val="0" stat="sDef" />
 		</for>
 	</item>
 	<item id="37213" name="Steel Immortal Leather Armor (30-day)" type="Armor">
@@ -270,8 +270,8 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="247" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="247" />
 			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
@@ -292,8 +292,8 @@
 		<set name="weight" val="440" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="154" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="154" />
 			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
@@ -312,8 +312,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="116" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37216" name="Steel Immortal Leather Gloves (30-day)" type="Armor">
@@ -331,8 +331,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37217" name="Steel Immortal Leather Boots (30-day)" type="Armor">
@@ -350,8 +350,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37218" name="Steel Immortal Tunic (30-day)" type="Armor">
@@ -372,8 +372,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="169" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="169" />
 		</for>
 	</item>
 	<item id="37219" name="Steel Immortal Stockings (30-day)" type="Armor">
@@ -394,8 +394,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="106" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="106" />
 		</for>
 	</item>
 	<item id="37220" name="Steel Immortal Circlet (30-day)" type="Armor">
@@ -413,8 +413,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="116" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37221" name="Steel Immortal Gloves (30-day)" type="Armor">
@@ -432,8 +432,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37222" name="Steel Immortal Shoes (30-day)" type="Armor">
@@ -451,8 +451,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="77" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="37223" name="Steel Immortal Sigil (30-day)" type="Armor">
@@ -490,8 +490,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="39" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37225" name="Steel Aquastone Necklace (60-day)" type="Armor">
@@ -509,8 +509,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="52" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37226" name="Steel Aquastone Ring (60-day)" type="Armor">
@@ -528,8 +528,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37227" name="Steel Adamantite Earring (60-day)" type="Armor">
@@ -547,8 +547,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="51" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37228" name="Steel Adamantite Necklace (60-day)" type="Armor">
@@ -566,8 +566,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="68" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37229" name="Steel Adamantite Ring (60-day)" type="Armor">
@@ -585,8 +585,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="34" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37230" name="Steel Phoenix Earring (60-day)" type="Armor">
@@ -604,8 +604,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37231" name="Steel Phoenix Necklace (60-day)" type="Armor">
@@ -623,8 +623,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="80" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37232" name="Steel Phoenix Ring (60-day)" type="Armor">
@@ -642,8 +642,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37233" name="Steel Tateossian Earring (60-day)" type="Armor">
@@ -661,8 +661,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="71" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37234" name="Steel Tateossian Necklace (60-day)" type="Armor">
@@ -680,8 +680,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="95" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37235" name="Steel Tateossian Ring (60-day)" type="Armor">
@@ -699,8 +699,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37236" name="Steel Dynasty Earring (60-day)" type="Armor">
@@ -718,8 +718,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="79" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37237" name="Steel Dynasty Necklace (60-day)" type="Armor">
@@ -737,8 +737,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37238" name="Steel Dynasty Ring (60-day)" type="Armor">
@@ -756,8 +756,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37239" name="Steel Immortal Earring (30-day)" type="Armor">
@@ -775,8 +775,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="94" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37240" name="Steel Immortal Necklace (30-day)" type="Armor">
@@ -794,8 +794,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="126" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37241" name="Steel Immortal Ring (30-day)" type="Armor">
@@ -813,8 +813,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="37242" name="Steel StormBringer (60-day)" type="Weapon">

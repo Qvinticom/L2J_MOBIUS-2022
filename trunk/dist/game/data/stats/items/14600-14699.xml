@@ -18,8 +18,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="12" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14601" name="Ancient Cloak" additionalName="Kamaels Only" type="Armor">
@@ -140,10 +140,10 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="39" />
 			<enchant val="0" stat="mAtk" />
-			<set stat="pAtk" val="78" />
+			<set stat="mAtk" val="39" />
 			<enchant val="0" stat="pAtk" />
+			<set stat="pAtk" val="78" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -256,7 +256,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14613" name="Rock-Paper-Scissors Santa Hat" type="Armor">
@@ -272,7 +271,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="6097-1;6098-1;6099-1" /> <!-- Scissors, Rock, Paper -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="20160" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="14614" name="Santa's Buff Gift Set" type="EtcItem">
@@ -289,7 +287,6 @@
 		<set name="item_skill" val="2856-1" /> <!-- Santa's Buff Gift Set -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14615" name="Holiday Scroll (Wizard)" type="EtcItem">
@@ -306,7 +303,6 @@
 		<set name="item_skill" val="2857-1" /> <!-- Holiday Event - Enchant Scroll (Wizard) -->
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14616" name="Santa's Gift" type="EtcItem">
@@ -319,7 +315,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2858-1" /> <!-- Holiday Red Sock -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14617" name="Agathion - Rudolph" type="Armor">
@@ -351,7 +346,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="5537-1;3425-1;3267-1" /> <!-- Rudolph Cuteness Trick, Release Agathion's Seal - Rudolph, Seal Agathion -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -366,7 +360,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14620" name="Santa's Weapon Coupon" type="EtcItem">
@@ -380,7 +373,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14621" name="Santa's Sirra Blade" type="Weapon">
@@ -399,7 +391,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1300" />
 		<for>
@@ -425,7 +416,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="BONE" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1820" />
 		<for>
@@ -451,7 +441,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="ORIHARUKON" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1550" />
 		<for>
@@ -478,7 +467,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1890" />
 		<for>
@@ -505,7 +493,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="ORIHARUKON" />
 		<set name="random_damage" val="5" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
@@ -532,7 +519,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3599-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Polearm Multi-attack -->
 		<set name="material" val="CHRYSOLITE" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
@@ -561,7 +547,6 @@
 		<set name="mp_consume" val="6" />
 		<set name="random_damage" val="5" />
 		<set name="reuse_delay" val="820" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
@@ -588,7 +573,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="ADAMANTAITE" />
 		<set name="random_damage" val="5" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="1330" />
 		<for>
@@ -616,7 +600,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Special Ability: Acumen -->
 		<set name="material" val="ADAMANTAITE" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="820" />
 		<for>
@@ -643,7 +626,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Special Ability: Acumen -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1510" />
 		<for>
@@ -671,7 +653,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1;3047-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Special Ability: Acumen -->
 		<set name="material" val="WOOD" />
 		<set name="random_damage" val="20" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="880" />
 		<for>
@@ -699,7 +680,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="40" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1300" />
 		<cond msgId="1518">
@@ -730,7 +710,6 @@
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="10" />
 		<set name="reuse_delay" val="400" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1640" />
 		<cond msgId="1518">
@@ -760,7 +739,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="STEEL" />
 		<set name="random_damage" val="15" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="weight" val="1820" />
 		<cond msgId="1518">
@@ -788,7 +766,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2852-1" /> <!-- Duel Reward Box -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14636" name="Battle Reward Box (Mid-grade)" type="EtcItem">
@@ -805,7 +782,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2853-1" /> <!-- Duel Reward Box -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14637" name="Battle Reward Box (High-grade)" type="EtcItem">
@@ -822,7 +798,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2854-1" /> <!-- Duel Reward Box -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14638" name="Battle Reward Box (Top-grade)" type="EtcItem">
@@ -839,7 +814,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2855-1" /> <!-- Duel Reward Box -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14639" name="Event - Claymore" type="EtcItem">
@@ -856,7 +830,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14640" name="Event - Bonebreaker" type="EtcItem">
@@ -873,7 +846,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14641" name="Event - Atuba Hammer" type="EtcItem">
@@ -890,7 +862,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14642" name="Event - Ghost Staff" type="EtcItem">
@@ -907,7 +878,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14643" name="Event - Staff of Life" type="EtcItem">
@@ -924,7 +894,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14644" name="Event - Atuba Mace" type="EtcItem">
@@ -941,7 +910,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14645" name="Event - Mithril Dagger" type="EtcItem">
@@ -958,7 +926,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14646" name="Event - Scallop Jamadhr" type="EtcItem">
@@ -975,7 +942,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14647" name="Event - Light Crossbow" type="EtcItem">
@@ -992,7 +958,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14648" name="Event - Glaive" type="EtcItem">
@@ -1009,7 +974,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14649" name="Event - Elven Long Sword" type="EtcItem">
@@ -1026,7 +990,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14650" name="Event - Samurai Long Sword" type="EtcItem">
@@ -1043,7 +1006,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14651" name="Event - Deadman's Staff" type="EtcItem">
@@ -1060,7 +1022,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14652" name="Event - Ghoul's Staff" type="EtcItem">
@@ -1077,7 +1038,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14653" name="Event - Demon's Staff" type="EtcItem">
@@ -1094,7 +1054,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14654" name="Event - Crystal Dagger" type="EtcItem">
@@ -1111,7 +1070,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14655" name="Event - Great Pata" type="EtcItem">
@@ -1128,7 +1086,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14656" name="Event - Eminence Bow" type="EtcItem">
@@ -1145,7 +1102,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14657" name="Event - Orcish Poleaxe" type="EtcItem">
@@ -1162,7 +1118,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14658" name="Event - Yaksa Mace" type="EtcItem">
@@ -1179,7 +1134,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14659" name="Event - Berserker Blade" type="EtcItem">
@@ -1196,7 +1150,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14660" name="Event - Ecliptic Sword" type="EtcItem">
@@ -1213,7 +1166,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14661" name="Event - Ecliptic Axe" type="EtcItem">
@@ -1230,7 +1182,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14662" name="Event - Dwarven Hammer" type="EtcItem">
@@ -1247,7 +1198,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14663" name="Event - Katana*Katana" type="EtcItem">
@@ -1264,7 +1214,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14664" name="Gludio Resistance Earring" type="Armor">
@@ -1282,7 +1231,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8348-1" /> <!-- Resistance Earring - Gludio -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
@@ -1305,12 +1253,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8349-1" /> <!-- Resistance Earring - Dion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="holyRes" val="8" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14666" name="Giran Resistance Earring" type="Armor">
@@ -1328,7 +1275,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8350-1" /> <!-- Resistance Earring - Giran -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
@@ -1351,12 +1297,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8351-1" /> <!-- Resistance Earring - Oren -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="8" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14668" name="Aden Resistance Earring" type="Armor">
@@ -1374,12 +1319,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8352-1" /> <!-- Resistance Earring - Aden -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="earthRes" val="8" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14669" name="Innadril Resistance Earring" type="Armor">
@@ -1397,7 +1341,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8353-1" /> <!-- Resistance Earring - Innadril -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
@@ -1420,12 +1363,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8354-1" /> <!-- Resistance Earring - Goddard -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="8" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14671" name="Rune Resistance Earring" type="Armor">
@@ -1443,12 +1385,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8355-1" /> <!-- Resistance Earring - Rune -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="8" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="63" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14672" name="Schuttgart Resistance Earring" type="Armor">
@@ -1466,7 +1407,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8356-1" /> <!-- Resistance Earring - Schuttgart -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
@@ -1481,7 +1421,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="14674" name="Santa's Tallum Blade*Damascus" type="Weapon">
@@ -1501,7 +1440,6 @@
 		<set name="item_skill" val="8315-1;8316-1;8317-1;8318-1;8319-1;8320-1;8321-1;8322-1" /> <!-- Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon, Santa's Blessed Weapon -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="random_damage" val="10" />
-		<set name="time" val="20160" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="1890" />
 		<for>
@@ -1525,7 +1463,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8314-1;6124-1;8323-1;3267-1" /> <!-- Release Agathion's Seal - Neolithica, Agathion Cute Trick - Neolithica, Notifier, Seal Agathion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="20160" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1539,7 +1476,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2865-1" /> <!-- Agathion's New Year's Gift 1 -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14677" name="Agathion's New Year's Gift" type="EtcItem">
@@ -1552,7 +1488,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="item_skill" val="2866-1" /> <!-- Agathion's New Year's Gift 2 -->
 		<set name="material" val="FISH" />
-		<set name="time" val="20160" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="14678" name="Neolithic Crystal (B-grade)" type="EtcItem">
@@ -1562,7 +1497,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14679" name="Neolithic Crystal (A-grade)" type="EtcItem">
@@ -1572,7 +1506,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14680" name="Neolithic Crystal (S-grade)" type="EtcItem">
@@ -1582,7 +1515,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14681" name="Neolithic Crystal (S80-grade)" type="EtcItem">
@@ -1592,7 +1524,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="20160" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="14682" name="Superior Elixir of Life (No-grade)" type="EtcItem">
@@ -1609,7 +1540,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="1" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1630,7 +1560,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="2" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1651,7 +1580,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="3" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1672,7 +1600,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="4" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1693,7 +1620,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="5" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1714,7 +1640,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="6" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1734,7 +1659,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="1" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1755,7 +1679,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="2" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1776,7 +1699,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="3" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1797,7 +1719,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="4" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1818,7 +1739,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="5" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1839,7 +1759,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="6" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -1859,7 +1778,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14695" name="Superior Elixir of CP (D-grade)" type="EtcItem">
@@ -1877,7 +1795,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14696" name="Superior Elixir of CP (C-grade)" type="EtcItem">
@@ -1895,7 +1812,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14697" name="Superior Elixir of CP (B-grade)" type="EtcItem">
@@ -1913,7 +1829,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14698" name="Superior Elixir of CP (A-grade)" type="EtcItem">
@@ -1931,7 +1846,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="14699" name="Superior Elixir of CP (S-grade)" type="EtcItem">
@@ -1949,7 +1863,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="300000" />
 		<set name="shared_reuse_group" val="7" />
-		<set name="time" val="20160" />
 		<set name="weight" val="5" />
 	</item>
 </list>

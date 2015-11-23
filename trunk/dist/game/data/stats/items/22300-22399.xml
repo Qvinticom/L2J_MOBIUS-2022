@@ -23,7 +23,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="21600" />
 	</item>
 	<item id="22302" name="Antharas' Earring" additionalName="3-day (Event)" type="Armor">
 		<!-- MP + 37, Bleed Resistance + 40%, Bleed Attack Rate + 40%, increases Heal Amount, Vampiric Rage Effect, Stun/Mental Attack Resistance + 30%, Stun/Mental attack rate + 30%, decreases MP consumption, and increases Heal Amount and Earth Resistance. Only one e -->
@@ -112,7 +111,6 @@
 		<set name="item_skill" val="2021-1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="5000000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22307" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
@@ -128,7 +126,6 @@
 		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="1800000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22308" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
@@ -144,7 +141,6 @@
 		<set name="item_skill" val="2022-1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="500000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22309" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
@@ -160,7 +156,6 @@
 		<set name="item_skill" val="2007-1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="240000" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22310" name="Allegra Box" type="EtcItem">
@@ -170,7 +165,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22311" name="Latus Box" type="EtcItem">
 		<!-- A Heavenly Scroll: Enchant Weapon and a high -grade Ancient Scroll: Enchant Weapon can be acquired at a constant rate. -->
@@ -179,7 +173,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22312" name="Top-grade Magic Pin Cloth Belt" type="Armor">
 		<!-- Weight + 6000. -->
@@ -193,7 +186,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="500" />
 		<for>
 			<add order="0" stat="pDef" val="10" />
@@ -211,7 +203,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="500" />
 		<for>
 			<add order="0" stat="pDef" val="10" />
@@ -233,7 +224,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2026-1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22315" name="Blessed Scroll: Enchant Armor (S-grade)" type="EtcItem">
@@ -252,7 +242,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2208-1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22316" name="Blessed Scroll: Enchant Weapon (A-grade)" type="EtcItem">
@@ -271,7 +260,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2027-1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22317" name="Blessed Scroll: Enchant Weapon (B-grade)" type="EtcItem">
@@ -290,7 +278,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2028-1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22318" name="Blessed Scroll: Enchant Armor (A-grade)" type="EtcItem">
@@ -309,7 +296,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2209-1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22319" name="Blessed Scroll: Enchant Armor (B-grade)" type="EtcItem">
@@ -328,7 +314,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2210-1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22320" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
@@ -347,7 +332,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22321" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
@@ -366,7 +350,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2015-1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22322" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
@@ -385,7 +368,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2007-1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22323" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
@@ -404,7 +386,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2016-1" /> <!-- Scroll: Enchant Armor (B-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22324" name="Transformation Scroll: Ranku" type="EtcItem">
@@ -418,7 +399,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22325" name="Transformation Scroll: Zaken" type="EtcItem">
@@ -432,7 +412,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22326" name="Blue Talisman - Buff Cancel" type="Armor">
@@ -447,7 +426,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="22327" name="Blue Talisman - Buff Steal" type="Armor">
@@ -462,7 +440,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="22328" name="Superior Elixir of Life (Battleground)" type="EtcItem">
@@ -476,7 +453,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22329" name="Superior Elixir of Mind (Battleground)" type="EtcItem">
@@ -490,7 +466,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22330" name="Superior Elixir of CP (Battleground)" type="EtcItem">
@@ -504,7 +479,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22331" name="7th Anniversary Box" type="EtcItem">
@@ -517,7 +491,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22332" name="7th Anniversary Bonus Gift Box" type="EtcItem">
 		<!-- Bonus gift given to commemorate the 7th anniversary. Upon use, can receive various items such as rocket gun hats. -->
@@ -529,7 +502,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22333" name="Hero's Treasure Chest" type="EtcItem">
 		<!-- Contains a 90-day equipment set pack. -->
@@ -565,7 +537,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
-		<set name="time" val="60" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22336" name="Pathfinder's Reward - Relief" type="EtcItem">
@@ -579,7 +550,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="22337" name="Extra Pass: Rim Kamaloka" type="EtcItem">
@@ -593,7 +563,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22338" name="Extra Pass: Rim Kamaloka Pack" type="EtcItem">
@@ -637,7 +606,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2029-1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22342" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
@@ -656,7 +624,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2017-1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22343" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
@@ -675,7 +642,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2018-1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22344" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
@@ -694,7 +660,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2019-1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22345" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
@@ -713,7 +678,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2020-1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22346" name="Enchanting Tool Box" type="EtcItem">
@@ -737,7 +701,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22348" name="Adventurer's Song - Energy of Recovery" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. -->
@@ -749,7 +712,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="60" />
 	</item>
 	<item id="22349" name="Adventurer's Song - Eva's Protection" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hour upon use. Can only be used by characters level 1 - 84. -->
@@ -762,7 +724,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22350" name="Adventurer's Song - Eva's Protection" additionalName="R-grade" type="EtcItem">
@@ -776,7 +737,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22351" name="Auction House Fee 30% Voucher" type="EtcItem">
@@ -789,7 +749,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22352" name="Auction House Fee 100% Voucher" type="EtcItem">
@@ -802,7 +761,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="60" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22353" name="Auction House Extension Voucher (15-day)" type="EtcItem">
@@ -854,7 +812,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22357" name="Mount - Tame Princess Ant Pack (7-day)" type="EtcItem">
@@ -894,7 +851,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" type="EtcItem">
@@ -908,7 +864,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="10080" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="22361" name="Emerald Sword" type="Weapon">
@@ -923,7 +878,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1600" />
 		<for>
@@ -943,7 +897,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="2520" />
 		<for>
@@ -974,7 +927,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22365" name="Black Bear Claw" additionalName="7-day" type="Weapon">
@@ -1014,7 +966,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="450" />
 		<for>
@@ -1048,7 +999,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22369" name="Mount - Black Bear Pack (7-day)" type="EtcItem">
@@ -1154,7 +1104,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22377" name="Stylish Straw Hat" additionalName="7-day" type="Armor">
@@ -1182,7 +1131,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" type="EtcItem">
@@ -1260,7 +1208,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="22385" name="Halloween Cookie" additionalName="Event" type="EtcItem">
@@ -1274,7 +1221,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22386" name="Halloween Special Cookie" additionalName="Event" type="EtcItem">
@@ -1288,7 +1234,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="120" />
 	</item>
 	<item id="22387" name="Halloween Scythe" additionalName="7-day (Event)" type="Weapon">
@@ -1326,7 +1271,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="10080" />
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
@@ -1361,7 +1305,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="220" />
 		<for>
 			<add stat="pDef" val="20" />
@@ -1392,7 +1335,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="22393" name="Halloween Gift Box" additionalName="Event" type="EtcItem">
@@ -1402,7 +1344,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="22394" name="Agathion - Valakas" additionalName="Lv. 1" type="Armor">
 		<!-- Bracelet that can summon a level 1 Valakas Agathion. -->
@@ -1417,7 +1358,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1434,7 +1374,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1451,7 +1390,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1468,7 +1406,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1485,7 +1422,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1502,7 +1438,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21273-1;23346-1" /> <!-- Seal Agathion, Release Agathion's Seal - Valakas, Valakas Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>

@@ -17,8 +17,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40201" name="Sayha's Cloak" additionalName="Sayha's Seer" type="Armor">
@@ -38,8 +38,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40202" name="Supply Box (R-grade)" type="EtcItem">
@@ -279,7 +279,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40225" name="Scroll of Escape: Pagan Temple" type="EtcItem">
@@ -293,7 +292,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 		<set name="weight" val="30" />
 	</item>
 	<item id="40226" name="Freya's Frozen Lamp" type="EtcItem">
@@ -304,7 +302,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40227" name="Freya's Frozen Scroll" type="EtcItem">
 		<!-- Vitality consumption + 100% and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
@@ -314,7 +311,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40228" name="Freya's Wish Box" type="EtcItem">
 		<!-- Double-click to obtain a very rare item at a random rate. -->
@@ -324,7 +320,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40229" name="Sirra's Wish Box" type="EtcItem">
 		<!-- Double-click for a chance to obtain one of the following items: Lucky Enchant Stone, High-grade Lucky Enchant Stone, Blessed Lucky Enchant Stone, Elemental Shirt Pack, Dark/Bloody Eternal Enhancement Stone, Blessed High-grade Lucky Enchant Stone, Freya’ -->
@@ -355,7 +350,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40232" name="Freya's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
@@ -367,7 +361,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40233" name="Freya's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
@@ -379,7 +372,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="129600" />
 	</item>
 	<item id="40234" name="Giant's Energy 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain 3 Giant's Energy. -->
@@ -436,7 +428,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40239" name="Freya's Heart" type="EtcItem">
 		<!-- For 60 min., P. Atk. + 5%, M. Atk. + 20%, P./M. Def. + 5%, Atk./Casting Spd. + 5%, Max HP/MP + 5%. XP/SP acquisition + 50% while hunting. Does not stack with event buffs. -->
@@ -449,7 +440,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="43200" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="40240" name="Dark Assassin Suit" type="Armor">
@@ -459,7 +449,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
-		<set name="time" val="43200" />
 		<for>
 			<add order="0" stat="pDef" val="400" />
 		</for>
@@ -475,7 +464,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="40242" name="Agathion - Freya Pack" type="EtcItem">
 		<!-- Double-click to obtain Agathion - Freya (30-day). Cannot be used in the Olympiad. -->
@@ -504,8 +492,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40244" name="Greater Sapyros Cloak (20-day)" additionalName="Tyrr Warrior" type="Armor">
@@ -526,8 +514,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40245" name="Greater Ashagen Cloak (20-day)" additionalName="Othell Rogue" type="Armor">
@@ -548,8 +536,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40246" name="Greater Cranigg Cloak (20-day)" additionalName="Yul Archer" type="Armor">
@@ -570,8 +558,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40247" name="Greater Soltkreig Cloak (20-day)" additionalName="Feoh Wizard" type="Armor">
@@ -592,8 +580,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40248" name="Greater Naviarope Cloak (20-day)" additionalName="Wynn Summoner" type="Armor">
@@ -614,8 +602,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40249" name="Greater Leister Cloak (20-day)" additionalName="Iss Enchanter" type="Armor">
@@ -636,8 +624,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40250" name="Greater Lakcis Cloak (20-day)" additionalName="Aeore Healer" type="Armor">
@@ -658,8 +646,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40251" name="Greater Sayha Cloak (20-day)" additionalName="Eviscerator" type="Armor">
@@ -680,8 +668,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40252" name="Greater Sayha Cloak (20-day)" additionalName="Sayha's Seer" type="Armor">
@@ -702,8 +690,8 @@
 		<for>
 			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
 			<enchant stat="pDef" val="0" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="40253" name="Potion of Protection: Stun" additionalName="Top-grade" type="EtcItem">
@@ -713,7 +701,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40254" name="Potion of Protection: Hold" additionalName="Top-grade" type="EtcItem">
@@ -723,7 +710,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40255" name="Potion of Protection: Bleed" additionalName="Top-grade" type="EtcItem">
@@ -733,7 +719,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40256" name="Potion of Protection: Paralyze" additionalName="Top-grade" type="EtcItem">
@@ -743,7 +728,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40257" name="Potion of Protection: Mental" additionalName="Top-grade" type="EtcItem">
@@ -753,7 +737,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40258" name="Potion of Protection: Sleep" additionalName="Top-grade" type="EtcItem">
@@ -763,7 +746,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40259" name="Potion of Protection: Poison" additionalName="Top-grade" type="EtcItem">
@@ -773,7 +755,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40260" name="Potion of Protection: Knock Back / Knock Down" additionalName="Top-grade" type="EtcItem">
@@ -783,7 +764,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40261" name="Potion of Protection: Aerial Yoke" additionalName="Top-grade" type="EtcItem">
@@ -793,7 +773,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
@@ -811,7 +790,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
@@ -828,7 +806,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
@@ -845,7 +822,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
@@ -862,7 +838,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40266" name="Navari's Support Box" additionalName="Marauder" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
@@ -876,7 +851,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40267" name="Navari's Support Box" additionalName="Cloud Breaker" type="EtcItem">
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
@@ -890,7 +864,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40268" name="Sayha's Box" additionalName="Eviscerator" type="EtcItem">
 		<!-- Box containing Sayha's power. Double-click to use. -->
@@ -926,7 +899,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40271" name="Orc's Normal Old Box" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
@@ -936,7 +908,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40272" name="Orc's Luxury Old Box" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
@@ -946,7 +917,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40273" name="Ertheia's Boost Scroll" type="EtcItem">
 		<!-- For 30 min., P./M. Atk. + 30%, P./M. Critical Damage + 15%, Speed + 20. MP Consumption - 15%. -->
@@ -959,7 +929,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40274" name="Buff Helmet" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. -->
@@ -969,7 +938,6 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
@@ -980,7 +948,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
@@ -991,7 +958,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
@@ -1002,7 +968,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
@@ -1013,7 +978,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
@@ -1024,7 +988,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
@@ -1035,7 +998,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
@@ -1046,7 +1008,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
@@ -1057,7 +1018,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
@@ -1068,7 +1028,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
@@ -1079,7 +1038,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
@@ -1090,7 +1048,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
@@ -1101,7 +1058,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
@@ -1112,7 +1068,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
@@ -1123,7 +1078,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
@@ -1136,7 +1090,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40290" name="Lara's Key Card Pack" additionalName="Normal" type="EtcItem">
 		<!-- Double-click to obtain Lara's Key Card. -->
@@ -1166,7 +1119,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="990" />
 		<for>
@@ -1187,7 +1139,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="28800" />
 		<set name="weight" val="960" />
 		<for>
 			<add stat="accCombat" val="8" />
@@ -1213,7 +1164,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="920" />
 		<for>
@@ -1240,7 +1190,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="910" />
 		<for>
@@ -1267,7 +1216,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1080" />
 		<for>
@@ -1286,7 +1234,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40297" name="Monster Weapon Appearance Stone: Tayga Archer's Bow" type="EtcItem">
 		<!-- Changes the appearance of a bow into that of a Tayga Archer's Bow. An appearance-modified item has no change in abilities. Double-click to use. -->
@@ -1296,7 +1243,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="28800" />
 	</item>
 	<item id="40298" name="Turikki's Blunt Weapon" type="Weapon">
 		<!-- Monster weapon. -->
@@ -1312,7 +1258,6 @@
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="250" />
 		<for>
@@ -1337,7 +1282,6 @@
 		<set name="random_damage" val="5" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
-		<set name="time" val="28800" />
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>

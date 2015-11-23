@@ -291,7 +291,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22109-1" /> <!-- Shiny Halloween Toy Box -->
 		<set name="material" val="STEEL" />
-		<set name="time" val="120" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="20718" name="Shiny Reanimated Corpse Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
@@ -392,7 +391,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="240" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20724" name="Golden Jack O'Lantern Mask" additionalName="Golden Jack O'Lantern's Authority (7-day)" type="Armor">
@@ -428,7 +426,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20726" name="Agathion - Zombie" type="Armor">
@@ -447,7 +444,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21133-1;23117-1" /> <!-- Seal Agathion, Release Agathion's Seal - Zombie, Zombie Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -486,7 +482,6 @@
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="14400000" />
 		<set name="shared_reuse_group" val="101" />
-		<set name="time" val="10080" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
 	<item id="20729" name="Summon Scroll: Ambience Sky Lantern" type="EtcItem">
@@ -505,7 +500,6 @@
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="14400000" />
 		<set name="shared_reuse_group" val="101" />
-		<set name="time" val="10080" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
 	<item id="20730" name="Summon Scroll: Rolling Lamp" type="EtcItem">
@@ -524,7 +518,6 @@
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="14400000" />
 		<set name="shared_reuse_group" val="101" />
-		<set name="time" val="10080" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
 	<item id="20731" name="Summon Scroll: Comfort Sky Lantern" type="EtcItem">
@@ -543,7 +536,6 @@
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="14400000" />
 		<set name="shared_reuse_group" val="101" />
-		<set name="time" val="10080" />
 		<set name="use_condition" val="{{uc_restart_point;7}}" />
 	</item>
 	<item id="20732" name="Agathion - Bluebird" type="Armor">
@@ -562,7 +554,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21134-1;23119-1" /> <!-- Seal Agathion, Release Agathion's Seal - Bluebird, Bluebird Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -582,7 +573,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21135-1;23120-1" /> <!-- Seal Agathion, Release Agathion's Seal - Hatbird, Hatbird Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1012,7 +1002,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22115-1" /> <!-- Santa's Weapon Coupon Box -->
 		<set name="material" val="STEEL" />
-		<set name="time" val="1440" />
 		<set name="weight" val="100" />
 	</item>
 	<item id="20759" name="Holiday Shirt" additionalName="24-hour" type="Armor">
@@ -1045,7 +1034,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2046-1" /> <!-- Summon Pet -->
 		<set name="material" val="LEATHER" />
-		<set name="time" val="1440" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
@@ -1068,7 +1056,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2046-1" /> <!-- Summon Pet -->
 		<set name="material" val="LEATHER" />
-		<set name="time" val="1440" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<set name="weight" val="10" />
 		<cond msgId="113" addName="1">
@@ -1213,7 +1200,6 @@
 		<set name="item_skill" val="22126-1" /> <!-- Baby Food Skill -->
 		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="10000" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20770" name="Apple Basket Herb" type="EtcItem">
 		<!-- Fruit basket full of delicious-looking apples. -->
@@ -1225,7 +1211,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22128-1" /> <!-- Rudolph's Joy -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20771" name="Orange Basket Herb" type="EtcItem">
 		<!-- Fruit basket full of delicious-looking oranges. -->
@@ -1237,7 +1222,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22128-2" /> <!-- Rudolph's Joy -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20772" name="Banana Basket Herb" type="EtcItem">
 		<!-- Fruit basket full of delicious-looking bananas. -->
@@ -1249,7 +1233,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="item_skill" val="22128-3" /> <!-- Rudolph's Joy -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="1440" />
 	</item>
 	<item id="20773" name="Rudolph's Gift" type="EtcItem">
 		<!-- Rudolph's Gift filled with Christmas fortune. Contains a wrapped Rudolph Pet Coupon, 4 Vitality Star Candy, Mysterious Food, and Transformation Scroll Pack. -->
@@ -1381,7 +1364,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21147-1;23132-1" /> <!-- Seal Agathion, Release Agathion's Seal - Opera, Opera Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1439,7 +1421,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21149-1;23135-1" /> <!-- Seal Agathion, Release Agathion's Seal - Nepal Snow, Nepal Snow Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1459,7 +1440,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21150-1;23137-1" /> <!-- Seal Agathion, Release Agathion's Seal - Round Ball Snow, Round Ball Snow Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1479,7 +1459,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3267-1;21151-1;23139-1" /> <!-- Seal Agathion, Release Agathion's Seal - Ladder Snow, Ladder Snow Agathion Cute Trick -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="10080" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
 		<set name="weight" val="150" />
 	</item>
@@ -1557,7 +1536,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="22116-1" /> <!-- Summon Flame Box -->
 		<set name="material" val="PAPER" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20789" name="Rocket Gun Hat" additionalName="Chain Fireworks" type="Armor">
@@ -1576,7 +1554,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="21152-1" /> <!-- Chain Fireworks -->
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20790" name="Yellow Paper Hat" additionalName="Blessed Body (7-day)" type="Armor">
@@ -1630,7 +1607,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20793" name="Sweet Cheese Hat" type="Armor">
@@ -1648,7 +1624,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="10080" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="20794" name="Flavorful Cheese Hat" additionalName="Scent of Flavorful Cheese (7-day)" type="Armor">

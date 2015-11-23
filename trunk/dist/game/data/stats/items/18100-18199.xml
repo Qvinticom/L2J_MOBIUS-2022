@@ -49,8 +49,8 @@
 		<set name="price" val="54986000" />
 		<set name="weight" val="150" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="89" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="18103" name="Unidentified Requiem Shaper" type="EtcItem">

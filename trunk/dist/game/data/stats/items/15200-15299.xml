@@ -339,7 +339,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
-		<set name="time" val="14400" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="15222" name="Fortune Heavy Armor of Nightmare Set Pack" additionalName="10-day" type="EtcItem">
@@ -1218,7 +1217,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 		<set name="reuse_delay" val="3000" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="15279" name="Friend Recommendation Proof" type="EtcItem">
 		<!-- Take this proof to the Dimensional Merchant in front of the warehouse to receive a special gift. -->
@@ -1231,7 +1229,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
-		<set name="time" val="43200" />
 	</item>
 	<item id="15280" name="Transparent 1HS (NPC)" type="Weapon">
 		<set name="icon" val="icon.weapon_long_sword_i00" />
@@ -1246,7 +1243,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1560" />
 		<for>
@@ -1270,7 +1266,6 @@
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="2180" />
 		<for>
@@ -1294,7 +1289,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1316,12 +1310,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="holyRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15284" name="Giran Wind Royal Guard Necklace" type="Armor">
@@ -1338,7 +1331,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1360,12 +1352,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15286" name="Aden Earth Royal Guard Necklace" type="Armor">
@@ -1382,12 +1373,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="earthRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15287" name="Innadril Water Royal Guard Necklace" type="Armor">
@@ -1404,7 +1394,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1426,12 +1415,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15289" name="Rune Fire Royal Guard Necklace" type="Armor">
@@ -1448,12 +1436,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="106" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15290" name="Schuttgart Wind Royal Guard Necklace" type="Armor">
@@ -1470,7 +1457,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
@@ -1493,12 +1479,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8379-2" /> <!-- Protection Ring - Gludio -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="earthRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15292" name="Dion Water Royal Guard Ring" type="Armor">
@@ -1516,7 +1501,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8380-2" /> <!-- Protection Ring - Dion -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
@@ -1539,12 +1523,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8381-2" /> <!-- Protection Ring - Giran -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15294" name="Oren Earth Royal Guard Ring" type="Armor">
@@ -1562,12 +1545,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8382-2" /> <!-- Protection Ring - Oren -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="earthRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15295" name="Aden Holy Royal Guard Ring" type="Armor">
@@ -1585,12 +1567,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8383-2" /> <!-- Protection Ring - Aden -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="holyRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15296" name="Innadril Holy Royal Guard Ring" type="Armor">
@@ -1608,12 +1589,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8384-2" /> <!-- Protection Ring - Innadril -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="holyRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15297" name="Goddard Dark Royal Guard Ring" type="Armor">
@@ -1631,12 +1611,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8385-2" /> <!-- Protection Ring - Goddard -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15298" name="Rune Wind Royal Guard Ring" type="Armor">
@@ -1654,7 +1633,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8386-2" /> <!-- Protection Ring - Rune -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
@@ -1677,12 +1655,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="8387-2" /> <!-- Protection Ring - Schuttgart -->
 		<set name="material" val="SILVER" />
-		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="15" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="60" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 </list>
