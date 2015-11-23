@@ -1101,3 +1101,7 @@ INSERT INTO `teleport` VALUES ('HellfireTeleport2', 990002, -147728, 152787, -14
 INSERT INTO `teleport` VALUES ('HellfireTeleport3', 990003, -150131, 143145, -11960, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('HellfireTeleport4', 990004, -150169, 241022, -11928, 0, 0, 57);
 INSERT INTO `teleport` VALUES ('DevicetoHellfire', 999001, -147642, 152827, -14059, 0, 0, 57);
+
+-- Enchnated Valley
+UPDATE `teleport` SET `Description`='Hunters --> Enchnated Valley',`loc_x`=114681,`loc_y`=48255,`loc_z`=4576 WHERE `Id`=100;
+INSERT INTO `teleport` VALUES ('Herb Collector --> Enchanted Valley ', '3408701', '116703', '53018', '-3632', '0', '0', '57');
