@@ -57,7 +57,7 @@ public final class KnockBack extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Character effected = info.getEffected();
-		if (!effected.isPlayer() && !effected.isMonster())
+		if ((!effected.isPlayer() && !effected.isMonster()) || effected.isRaid() || effected.isRaidMinion())
 		{
 			return;
 		}

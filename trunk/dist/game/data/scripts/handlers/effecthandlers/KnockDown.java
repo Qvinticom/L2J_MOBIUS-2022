@@ -71,6 +71,11 @@ public final class KnockDown extends AbstractEffect
 	public void onStart(BuffInfo info)
 	{
 		final L2Character effected = info.getEffected();
+		if ((!effected.isPlayer() && !effected.isMonster()) || effected.isRaid() || effected.isRaidMinion())
+		{
+			return;
+		}
+		
 		final double radians = Math.toRadians(Util.calculateAngleFrom(info.getEffector(), info.getEffected()));
 		final int newHeading = Util.calculateHeadingFrom(info.getEffected(), info.getEffector());
 		final int x = (int) (info.getEffected().getX() + (_distance * Math.cos(radians)));
