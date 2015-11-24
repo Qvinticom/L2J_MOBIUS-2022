@@ -62,6 +62,7 @@ import com.l2jserver.gameserver.network.clientpackets.dailymission.RequestTodoLi
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDel;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
+import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendInvite;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendList;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestSendFriendMsg;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestUpdateBlockMemo;
