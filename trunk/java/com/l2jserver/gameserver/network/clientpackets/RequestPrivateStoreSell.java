@@ -61,9 +61,10 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			readH(); // TODO analyse this
 			long cnt = readQ();
 			long price = readQ();
+			readD(); // TODO analyse this
 			readH(); // TODO analyse this
 			
-			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
+			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return;
