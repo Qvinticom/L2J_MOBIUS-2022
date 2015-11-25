@@ -188,6 +188,7 @@ public class OfflineTradersTable
 					client.setActiveChar(player);
 					player.setOnlineStatus(true, false);
 					client.setAccountName(player.getAccountNamePlayer());
+					L2World.getInstance().addPlayerToWorld(player);
 					client.setState(GameClientState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineStartTime(time);
