@@ -39,7 +39,7 @@ public class PledgePowerGradeList extends L2GameServerPacket
 		for (RankPrivs temp : _clan.getAllRankPrivs())
 		{
 			writeD(temp.getRank());
-			writeD(_clan.getPowerGradeParty(temp.getRank()));
+			writeD(_clan.getPowerGradeMemberCount(temp.getRank()));
 		}
 	}
 }

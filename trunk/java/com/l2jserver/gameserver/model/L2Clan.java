@@ -544,7 +544,7 @@ public class L2Clan implements IIdentifiable, INamable
 		return result;
 	}
 	
-	public int getPowerGradeParty(int grade)
+	public int getPowerGradeMemberCount(int grade)
 	{
 		int result = 0;
 		for (L2ClanMember temp : _members.values())
