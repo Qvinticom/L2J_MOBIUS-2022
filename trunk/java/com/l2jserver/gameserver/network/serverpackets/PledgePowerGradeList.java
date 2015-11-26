@@ -18,15 +18,16 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Clan.RankPrivs;
 
 public class PledgePowerGradeList extends L2GameServerPacket
 {
-	private final RankPrivs[] _privs;
+	private final L2Clan _clan;
 	
-	public PledgePowerGradeList(RankPrivs[] privs)
+	public PledgePowerGradeList(L2Clan clan)
 	{
-		_privs = privs;
+		_clan = clan;
 	}
 	
 	@Override
@@ -34,11 +35,11 @@ public class PledgePowerGradeList extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x3D);
-		writeD(_privs.length);
-		for (RankPrivs temp : _privs)
+		writeD(_clan.getAllRankPrivs().length);
+		for (RankPrivs temp : _clan.getAllRankPrivs())
 		{
 			writeD(temp.getRank());
-			writeD(temp.getParty());
+			writeD(_clan.getPowerGradeParty(temp.getRank()));
 		}
 	}
 }

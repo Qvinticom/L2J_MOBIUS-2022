@@ -544,6 +544,19 @@ public class L2Clan implements IIdentifiable, INamable
 		return result;
 	}
 	
+	public int getPowerGradeParty(int grade)
+	{
+		int result = 0;
+		for (L2ClanMember temp : _members.values())
+		{
+			if (temp.getPowerGrade() == grade)
+			{
+				result++;
+			}
+		}
+		return result;
+	}
+	
 	/**
 	 * @param pledgeType the Id of the pledge type.
 	 * @return the maximum number of members allowed for a given {@code pledgeType}.
@@ -1736,31 +1749,23 @@ public class L2Clan implements IIdentifiable, INamable
 	public static class RankPrivs
 	{
 		private final int _rankId;
-		private final int _party;// TODO find out what this stuff means and implement it
 		private final EnumIntBitmask<ClanPrivilege> _rankPrivs;
 		
-		public RankPrivs(int rank, int party, int privs)
+		public RankPrivs(int rank, int privs)
 		{
 			_rankId = rank;
-			_party = party;
 			_rankPrivs = new EnumIntBitmask<>(ClanPrivilege.class, privs);
 		}
 		
-		public RankPrivs(int rank, int party, EnumIntBitmask<ClanPrivilege> rankPrivs)
+		public RankPrivs(int rank, EnumIntBitmask<ClanPrivilege> rankPrivs)
 		{
 			_rankId = rank;
-			_party = party;
 			_rankPrivs = rankPrivs;
 		}
 		
 		public int getRank()
 		{
 			return _rankId;
-		}
-		
-		public int getParty()
-		{
-			return _party;
 		}
 		
 		public EnumIntBitmask<ClanPrivilege> getPrivs()
@@ -2005,7 +2010,7 @@ public class L2Clan implements IIdentifiable, INamable
 	{
 		for (int i = 1; i < 10; i++)
 		{
-			_privs.put(i, new RankPrivs(i, 0, new EnumIntBitmask<>(ClanPrivilege.class, false)));
+			_privs.put(i, new RankPrivs(i, new EnumIntBitmask<>(ClanPrivilege.class, false)));
 		}
 	}
 	
@@ -2058,7 +2063,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		else
 		{
-			_privs.put(rank, new RankPrivs(rank, 0, privs));
+			_privs.put(rank, new RankPrivs(rank, privs));
 			
 			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)"))

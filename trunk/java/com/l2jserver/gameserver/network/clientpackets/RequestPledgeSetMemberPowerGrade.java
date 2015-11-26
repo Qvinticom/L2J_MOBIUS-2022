@@ -81,7 +81,11 @@ public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 		}
 		
 		member.setPowerGrade(_powerGrade);
-		member.getPlayerInstance().sendPacket(new PledgeReceiveUpdatePower(member.getClan().getRankPrivs(_powerGrade).getBitmask()));
+		L2PcInstance player = member.getPlayerInstance();
+		if (player != null)
+		{
+			player.sendPacket(new PledgeReceiveUpdatePower(member.getClan().getRankPrivs(_powerGrade).getBitmask()));
+		}
 		clan.broadcastToOnlineMembers(new PledgeReceiveMemberInfo(member));
 	}
 	
