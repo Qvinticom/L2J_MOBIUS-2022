@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.L2Clan;
 
 public class ManagePledgePower extends L2GameServerPacket
 {
-	
 	private final int _action;
 	private final L2Clan _clan;
 	private final int _rank;
@@ -37,12 +36,9 @@ public class ManagePledgePower extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		if (_action == 1)
-		{
-			writeC(0x2A);
-			writeD(_rank);
-			writeD(_action);
-			writeD(_clan.getRankPrivs(_rank).getBitmask());
-		}
+		writeC(0x2A);
+		writeD(_rank);
+		writeD(_action);
+		writeD(_clan.getRankPrivs(_rank).getBitmask());
 	}
 }

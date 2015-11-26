@@ -65,6 +65,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
+import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveUpdatePower;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jserver.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
@@ -1863,7 +1864,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		if (_leader.getObjectId() == leaderId)
 		{
-			player.sendMessage("Leader is not correct");
+			player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_CAN_CREATE_A_CLAN_ACADEMY);
 			return null;
 		}
 		
@@ -2048,12 +2049,12 @@ public class L2Clan implements IIdentifiable, INamable
 						if (cm.getPlayerInstance() != null)
 						{
 							cm.getPlayerInstance().getClanPrivileges().setBitmask(privs);
+							cm.getPlayerInstance().sendPacket(new PledgeReceiveUpdatePower(privs));
 							cm.getPlayerInstance().sendPacket(new UserInfo(cm.getPlayerInstance()));
 						}
 					}
 				}
 			}
-			broadcastClanStatus();
 		}
 		else
 		{
@@ -2072,6 +2073,20 @@ public class L2Clan implements IIdentifiable, INamable
 			catch (Exception e)
 			{
 				_log.log(Level.WARNING, "Could not create new rank and store clan privs for rank: " + e.getMessage(), e);
+			}
+		}
+	}
+	
+	public void updateRankPrivs(int rank, int privs)
+	{
+		if (_privs.get(rank) != null)
+		{
+			for (L2ClanMember cm : getMembers())
+			{
+				if (cm.isOnline() && (cm.getPowerGrade() == rank) && (cm.getPlayerInstance() != null))
+				{
+					cm.getPlayerInstance().sendPacket(new PledgeReceiveUpdatePower(privs));
+				}
 			}
 		}
 	}

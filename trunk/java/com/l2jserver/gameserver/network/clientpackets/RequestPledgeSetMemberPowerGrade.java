@@ -22,6 +22,8 @@ import com.l2jserver.gameserver.model.ClanPrivilege;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
+import com.l2jserver.gameserver.network.serverpackets.PledgeReceiveUpdatePower;
 
 /**
  * Format: (ch) Sd
@@ -79,7 +81,8 @@ public final class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 		}
 		
 		member.setPowerGrade(_powerGrade);
-		clan.broadcastClanStatus();
+		member.getPlayerInstance().sendPacket(new PledgeReceiveUpdatePower(member.getClan().getRankPrivs(_powerGrade).getBitmask()));
+		clan.broadcastToOnlineMembers(new PledgeReceiveMemberInfo(member));
 	}
 	
 	@Override

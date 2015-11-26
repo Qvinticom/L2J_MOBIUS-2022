@@ -24,45 +24,71 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Clan.SubPledge;
 import com.l2jserver.gameserver.model.L2ClanMember;
-import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 public class PledgeShowMemberListAll extends L2GameServerPacket
 {
 	private final L2Clan _clan;
+	private final SubPledge _subPledge;
 	private final Collection<L2ClanMember> _members;
 	private int _pledgeType;
 	
 	public PledgeShowMemberListAll(L2Clan clan)
 	{
 		_clan = clan;
+		_subPledge = null;
+		_members = _clan.getMembers();
+	}
+	
+	public PledgeShowMemberListAll(L2Clan clan, SubPledge subPledge)
+	{
+		_clan = clan;
+		_subPledge = subPledge;
 		_members = _clan.getMembers();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		// write main Clan
-		writePledge(null, _clan.getLeaderName());
-		
-		for (SubPledge subPledge : _clan.getAllSubPledges())
+		if (_subPledge == null)
 		{
-			L2PcInstance pLeader = L2World.getInstance().getPlayer(subPledge.getLeaderId());
-			writePledge(subPledge, (pLeader == null ? "" : pLeader.getName()));
+			// write main Clan
+			writePledge(null, _clan.getName(), _clan.getLeaderName());
+			
+			for (SubPledge subPledge : _clan.getAllSubPledges())
+			{
+				getClient().sendPacket(new PledgeShowMemberListAll(_clan, subPledge));
+			}
+		}
+		else
+		{
+			writePledge(_subPledge, _subPledge.getName(), getLeaderName());
 		}
 	}
 	
-	private void writePledge(SubPledge pledge, String name)
+	private void writePledge(SubPledge pledge, String name, String ldname)
 	{
-		final int pledgeId = (pledge == null ? 0x00 : pledge.getId());
+		_pledgeType = (pledge == null ? 0x00 : pledge.getId());
 		writeC(0x5a);
 		
-		writeD(pledge == null ? 0 : 1);
+		String _name = "";
+		for (SubPledge subPledge : _clan.getAllSubPledges())
+		{
+			_name = subPledge.getName();
+		}
+		if ((_name == "") || (_name == name))
+		{
+			writeD(0);
+		}
+		else
+		{
+			writeD(1);
+		}
 		writeD(_clan.getId());
 		writeD(Config.SERVER_ID);
-		writeD(pledgeId);
-		writeS(_clan.getName());
-		writeS(_clan.getLeaderName());
+		writeD(_pledgeType);
+		writeS(name);
+		writeS(ldname);
 		
 		writeD(_clan.getCrestId()); // crest id .. is used again
 		writeD(_clan.getLevel());
@@ -103,6 +129,25 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 			}
 			writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
 			writeD(m.getSponsor() != 0 ? 1 : 0);
+			writeC(0x00);
+		}
+	}
+	
+	private String getLeaderName()
+	{
+		int LeaderId = _subPledge.getLeaderId();
+		if ((_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY) || (LeaderId == 0))
+		{
+			return "";
+		}
+		else if (_clan.getClanMember(LeaderId) == null)
+		{
+			_log.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");
+			return "";
+		}
+		else
+		{
+			return _clan.getClanMember(LeaderId).getName();
 		}
 	}
 }

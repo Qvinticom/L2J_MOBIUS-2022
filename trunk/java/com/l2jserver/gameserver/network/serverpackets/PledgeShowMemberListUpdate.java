@@ -98,5 +98,6 @@ public final class PledgeShowMemberListUpdate extends L2GameServerPacket
 			writeD(0);
 		}
 		writeD(_hasSponsor);
+		writeC(0);
 	}
 }

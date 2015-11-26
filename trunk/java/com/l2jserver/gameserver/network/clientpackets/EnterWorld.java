@@ -163,7 +163,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		else
 		{
-			int instanceId = InstanceManager.getInstance().getPlayerInstance(activeChar.getObjectId());
+			final int instanceId = InstanceManager.getInstance().getPlayerInstance(activeChar.getObjectId());
 			if (instanceId > 0)
 			{
 				InstanceManager.getInstance().getInstance(instanceId).removePlayer(activeChar.getObjectId());
@@ -277,9 +277,8 @@ public class EnterWorld extends L2GameClientPacket
 		if (activeChar.getClan() != null)
 		{
 			final L2Clan clan = activeChar.getClan();
-			clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
+			activeChar.sendPacket(new PledgeShowMemberListUpdate(activeChar));
 			sendPacket(new PledgeShowMemberListAll(clan));
-			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 			activeChar.sendPacket(new PledgeSkillList(clan));
 		}
 		else
@@ -727,6 +726,7 @@ public class EnterWorld extends L2GameClientPacket
 			msg.addString(activeChar.getName());
 			clan.broadcastToOtherOnlineMembers(msg, activeChar);
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(activeChar), activeChar);
+			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 		}
 	}
 	
