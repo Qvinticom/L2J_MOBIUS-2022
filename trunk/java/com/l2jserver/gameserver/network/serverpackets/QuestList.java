@@ -18,18 +18,21 @@
  */
 package com.l2jserver.gameserver.network.serverpackets;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 public class QuestList extends L2GameServerPacket
 {
-	private Quest[] _quests;
+	private List<Quest> _activeQuests;
+	private List<Quest> _completedQuests;
 	private L2PcInstance _activeChar;
+	private final static byte[] _info = new byte[128];
 	
 	public QuestList()
 	{
-		
 	}
 	
 	@Override
@@ -38,7 +41,8 @@ public class QuestList extends L2GameServerPacket
 		if ((getClient() != null) && (getClient().getActiveChar() != null))
 		{
 			_activeChar = getClient().getActiveChar();
-			_quests = _activeChar.getAllActiveQuests();
+			_activeQuests = _activeChar.getAllActiveQuests();
+			_completedQuests = _activeChar.getAllCompletedQuests();
 		}
 	}
 	
@@ -79,10 +83,10 @@ public class QuestList extends L2GameServerPacket
 		 */
 		
 		writeC(0x86);
-		if (_quests != null)
+		if (_activeQuests != null)
 		{
-			writeH(_quests.length);
-			for (Quest q : _quests)
+			writeH(_activeQuests.size());
+			for (Quest q : _activeQuests)
 			{
 				writeD(q.getId());
 				QuestState qs = _activeChar.getQuestState(q.getName());
@@ -108,6 +112,62 @@ public class QuestList extends L2GameServerPacket
 			// write empty size
 			writeH(0x00);
 		}
-		writeB(new byte[128]);
+		
+		for (Quest q : _completedQuests)
+		{
+			// add completed quests
+			int questId = q.getId();
+			if (questId > 10000)
+			{
+				questId -= 10000;
+			}
+			int pos = questId / 8;
+			int add = questId - (pos * 8);
+			switch (add)
+			{
+				case 0:
+				{
+					add = 0x01;
+					break;
+				}
+				case 1:
+				{
+					add = 0x2;
+					break;
+				}
+				case 2:
+				{
+					add = 0x4;
+					break;
+				}
+				case 3:
+				{
+					add = 0x8;
+					break;
+				}
+				case 4:
+				{
+					add = 0x10;
+					break;
+				}
+				case 5:
+				{
+					add = 0x20;
+					break;
+				}
+				case 6:
+				{
+					add = 0x40;
+					break;
+				}
+				case 7:
+				{
+					add = 0x80;
+					break;
+				}
+			}
+			_info[pos] = (byte) (_info[pos] + add);
+		}
+		writeB(_info);
 	}
 }

@@ -225,7 +225,7 @@ public class QuestLink implements IBypassHandler
 				if ((q.getId() >= 1) && (q.getId() < 20000))
 				{
 					// Too many ongoing quests.
-					if (player.getAllActiveQuests().length > 40)
+					if (player.getAllActiveQuests().size() > 40)
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/fullquest.html");

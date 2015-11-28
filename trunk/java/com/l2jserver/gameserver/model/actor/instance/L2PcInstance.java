@@ -1475,7 +1475,7 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * @return a table containing all Quest in progress from the table _quests.
 	 */
-	public Quest[] getAllActiveQuests()
+	public List<Quest> getAllActiveQuests()
 	{
 		List<Quest> quests = new ArrayList<>();
 		for (QuestState qs : _quests.values())
@@ -1491,8 +1491,26 @@ public final class L2PcInstance extends L2Playable
 			}
 			quests.add(qs.getQuest());
 		}
-		
-		return quests.toArray(new Quest[quests.size()]);
+		return quests;
+	}
+	
+	public List<Quest> getAllCompletedQuests()
+	{
+		List<Quest> quests = new ArrayList<>();
+		for (QuestState qs : _quests.values())
+		{
+			if ((qs == null) || (qs.getQuest() == null) || (!qs.isCompleted()))
+			{
+				continue;
+			}
+			final int questId = qs.getQuest().getId();
+			if ((questId > 19999) || (questId < 1))
+			{
+				continue;
+			}
+			quests.add(qs.getQuest());
+		}
+		return quests;
 	}
 	
 	public void processQuestEvent(String questName, String event)
