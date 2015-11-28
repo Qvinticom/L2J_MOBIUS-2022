@@ -49,11 +49,11 @@ public final class CharacterDelete extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
-		{
-			sendPacket(new CharDeleteFail(CharDeleteFail.REASON_DELETION_FAILED));
-			return;
-		}
+		// if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
+		// {
+		// sendPacket(new CharDeleteFail(CharDeleteFail.REASON_DELETION_FAILED));
+		// return;
+		// }
 		
 		if (Config.DEBUG)
 		{
