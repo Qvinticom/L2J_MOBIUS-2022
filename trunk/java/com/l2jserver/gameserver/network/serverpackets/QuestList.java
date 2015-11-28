@@ -29,7 +29,7 @@ public class QuestList extends L2GameServerPacket
 	private List<Quest> _activeQuests;
 	private List<Quest> _completedQuests;
 	private L2PcInstance _activeChar;
-	private final static byte[] _info = new byte[128];
+	private byte[] _info;
 	
 	public QuestList()
 	{
@@ -43,6 +43,7 @@ public class QuestList extends L2GameServerPacket
 			_activeChar = getClient().getActiveChar();
 			_activeQuests = _activeChar.getAllActiveQuests();
 			_completedQuests = _activeChar.getAllCompletedQuests();
+			_info = new byte[128];
 		}
 	}
 	
@@ -132,17 +133,17 @@ public class QuestList extends L2GameServerPacket
 				}
 				case 1:
 				{
-					add = 0x2;
+					add = 0x02;
 					break;
 				}
 				case 2:
 				{
-					add = 0x4;
+					add = 0x04;
 					break;
 				}
 				case 3:
 				{
-					add = 0x8;
+					add = 0x08;
 					break;
 				}
 				case 4:
