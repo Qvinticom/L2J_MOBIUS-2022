@@ -60,11 +60,11 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
-		{
-			activeChar.sendMessage("You are crystallizing too fast.");
-			return;
-		}
+		// if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		// {
+		// activeChar.sendMessage("You are crystallizing too fast.");
+		// return;
+		// }
 		
 		if (_count <= 0)
 		{
