@@ -46,7 +46,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		List<L2Character> targetList = new ArrayList<>();
 		L2PcInstance player = activeChar.getActingPlayer();
 		
-		if (!checkTarget(player, target) && (skill.getCastRange() >= 0))
+		if ((target == null) || (!checkTarget(player, target) && (skill.getCastRange() >= 0)))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return EMPTY_TARGET_LIST;
@@ -69,28 +69,25 @@ public class AreaFriendly implements ITargetTypeHandler
 		}
 		targetList.add(target); // Add target to target list
 		
-		if (target != null)
+		int maxTargets = skill.getAffectLimit();
+		final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
+		
+		// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
+		Collections.sort(targetList, new CharComparator());
+		
+		for (L2Character obj : objs)
 		{
-			int maxTargets = skill.getAffectLimit();
-			final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
-			
-			// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
-			Collections.sort(targetList, new CharComparator());
-			
-			for (L2Character obj : objs)
+			if (!checkTarget(player, obj) || (obj == activeChar))
 			{
-				if (!checkTarget(player, obj) || (obj == activeChar))
-				{
-					continue;
-				}
-				
-				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
-				{
-					break;
-				}
-				
-				targetList.add(obj);
+				continue;
 			}
+			
+			if ((maxTargets > 0) && (targetList.size() >= maxTargets))
+			{
+				break;
+			}
+			
+			targetList.add(obj);
 		}
 		
 		if (targetList.isEmpty())
