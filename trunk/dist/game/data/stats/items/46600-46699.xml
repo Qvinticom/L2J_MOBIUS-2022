@@ -1019,6 +1019,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<for>
+			<set stat="broochJewels" val="5" />
+			<add stat="inventoryLimit" val="12" />
 			<add stat="mDef" val="101" />
 		</for>
 	</item>
