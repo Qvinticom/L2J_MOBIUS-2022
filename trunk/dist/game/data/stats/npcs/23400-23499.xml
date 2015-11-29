@@ -249,22 +249,38 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="23414" level="21" type="L2Npc" name="Windima">
+	<npc id="23414" level="21" type="L2Monster" name="Windima">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="577" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<race>ELEMENTAL</race>
+		<acquire exp="1184" sp="0" />
+		<stats>
+			<vitals hp="411" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="23.37" /> <!-- Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="23415" level="23" type="L2Monster" name="Windima Feri">
 		<!-- Source: www.l2wiki.com (2015-10-31) -->
