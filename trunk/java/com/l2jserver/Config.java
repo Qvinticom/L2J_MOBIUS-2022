@@ -767,10 +767,6 @@ public final class Config
 	public static boolean WELCOME_MESSAGE_ENABLED;
 	public static String WELCOME_MESSAGE_TEXT;
 	public static int WELCOME_MESSAGE_TIME;
-	public static boolean L2JMOD_ANTIFEED_ENABLE;
-	public static boolean L2JMOD_ANTIFEED_DUALBOX;
-	public static boolean L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX;
-	public static int L2JMOD_ANTIFEED_INTERVAL;
 	public static boolean ANNOUNCE_PK_PVP;
 	public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
 	public static String ANNOUNCE_PK_MSG;
@@ -912,6 +908,10 @@ public final class Config
 	public static String KARMA_NONDROPPABLE_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_PET_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_ITEMS;
+	public static boolean ANTIFEED_ENABLE;
+	public static boolean ANTIFEED_DUALBOX;
+	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
+	public static int ANTIFEED_INTERVAL;
 	
 	// --------------------------------------------------
 	// Rate Settings
@@ -2474,10 +2474,6 @@ public final class Config
 			WELCOME_MESSAGE_TEXT = CustomSettings.getString("ScreenWelcomeMessageText", "Welcome to L2J server!");
 			WELCOME_MESSAGE_TIME = CustomSettings.getInt("ScreenWelcomeMessageTime", 10) * 1000;
 			
-			L2JMOD_ANTIFEED_ENABLE = CustomSettings.getBoolean("AntiFeedEnable", false);
-			L2JMOD_ANTIFEED_DUALBOX = CustomSettings.getBoolean("AntiFeedDualbox", true);
-			L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = CustomSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-			L2JMOD_ANTIFEED_INTERVAL = CustomSettings.getInt("AntiFeedInterval", 120) * 1000;
 			ANNOUNCE_PK_PVP = CustomSettings.getBoolean("AnnouncePkPvP", false);
 			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = CustomSettings.getBoolean("AnnouncePkPvPNormalMessage", true);
 			ANNOUNCE_PK_MSG = CustomSettings.getString("AnnouncePkMsg", "$killer has slaughtered $target");
@@ -2732,6 +2728,11 @@ public final class Config
 			{
 				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
 			}
+			
+			ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
+			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
+			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
+			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
 			
 			// sorting so binarySearch can be used later
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
@@ -3684,16 +3685,16 @@ public final class Config
 				L2JMOD_DISPLAY_SERVER_TIME = Boolean.parseBoolean(pValue);
 				break;
 			case "antifeedenable":
-				L2JMOD_ANTIFEED_ENABLE = Boolean.parseBoolean(pValue);
+				ANTIFEED_ENABLE = Boolean.parseBoolean(pValue);
 				break;
 			case "antifeeddualbox":
-				L2JMOD_ANTIFEED_DUALBOX = Boolean.parseBoolean(pValue);
+				ANTIFEED_DUALBOX = Boolean.parseBoolean(pValue);
 				break;
 			case "antifeeddisconnectedasdualbox":
-				L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = Boolean.parseBoolean(pValue);
+				ANTIFEED_DISCONNECTED_AS_DUALBOX = Boolean.parseBoolean(pValue);
 				break;
 			case "antifeedinterval":
-				L2JMOD_ANTIFEED_INTERVAL = 1000 * Integer.parseInt(pValue);
+				ANTIFEED_INTERVAL = 1000 * Integer.parseInt(pValue);
 				break;
 			case "cangmdropequipment":
 				KARMA_DROP_GM = Boolean.parseBoolean(pValue);
