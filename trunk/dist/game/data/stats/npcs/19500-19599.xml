@@ -30,11 +30,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16179" level="1" /> <!-- Beleth -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
@@ -70,15 +70,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2318" max="5401" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
@@ -89,7 +89,7 @@
 				<item id="40050" min="1" max="1" chance="1.099" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19504" level="99" type="L2Npc" name="Deathmoz" title="Disciplined">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -206,10 +206,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
@@ -228,11 +228,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
@@ -319,10 +319,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
@@ -646,15 +646,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="40063" min="4" max="8" chance="51.15" /> <!-- Secret Ancient Tome Fragment -->
 				<item id="40042" min="1" max="2" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -666,7 +666,7 @@
 				<item id="40044" min="1" max="2" chance="11.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40048" min="1" max="2" chance="11.97" /> <!-- Dimensional Bracelet Enhancement Stone -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19556" level="99" type="L2Npc" name="Dimensional Trap">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

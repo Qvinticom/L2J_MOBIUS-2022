@@ -15,16 +15,16 @@
 				<walk ground="120" />
 				<run ground="240" />
 			</speed>
-			<hit_time>3819</hit_time>
+			<hitTime>3819</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5238" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14716" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -44,10 +44,10 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="6268" level="1" />
 			<skill id="4441" level="5" />
 			<skill id="4440" level="5" />
@@ -55,7 +55,7 @@
 			<skill id="4416" level="12" />
 			<skill id="5465" level="1" />
 			<skill id="14747" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="90" />
 			<height normal="190" />
@@ -76,14 +76,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5463" level="1" />
 			<skill id="14074" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="42" />
 			<height normal="73" />
@@ -103,14 +103,14 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14099" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -130,14 +130,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14100" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -157,14 +157,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14099" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -184,14 +184,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14100" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -211,14 +211,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14108" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -238,14 +238,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14100" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="20" />
@@ -271,19 +271,19 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" />
 			<skill id="14327" level="1" />
 			<skill id="14758" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="948" min="1" max="3" chance="75" />
 				<item id="2475" min="1" max="1" chance="66" />
@@ -292,7 +292,7 @@
 				<item id="210" min="1" max="1" chance="5" />
 				<item id="7901" min="1" max="1" chance="5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25810" level="58" type="L2Npc" name="Vladimir's Follower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -308,13 +308,13 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="14420" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="25" />
@@ -340,19 +340,19 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14421" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="14759" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="730" min="1" max="1" chance="75" />
 				<item id="5289" min="1" max="1" chance="40" />
@@ -362,7 +362,7 @@
 				<item id="8688" min="1" max="1" chance="5" />
 				<item id="8678" min="1" max="1" chance="2.5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25812" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -379,14 +379,14 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14421" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="14759" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
@@ -412,20 +412,20 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14760" level="1" /> <!-- Raid Boss (Lv. 66) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="14423" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="5313" min="1" max="1" chance="9.946" /> <!-- Sealed Gauntlets of Nightmare -->
 				<item id="5314" min="1" max="1" chance="4.926" /> <!-- Sealed Boots of Nightmare -->
@@ -435,7 +435,7 @@
 				<item id="730" min="1" max="1" chance="17.92" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="39629" min="1" max="1" chance="0.008057" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25814" level="65" type="L2Npc" name="Byron's Maid">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -451,13 +451,13 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="14295" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="40" />
@@ -478,19 +478,19 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14424" level="1" />
 			<skill id="14761" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="19" />
 			<height normal="48" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="730" min="1" max="1" chance="75" />
 				<item id="5294" min="1" max="1" chance="66" />
@@ -499,7 +499,7 @@
 				<item id="8685" min="1" max="1" chance="2.5" />
 				<item id="8686" min="1" max="1" chance="2.5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25816" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -516,19 +516,19 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14293" level="1" />
 			<skill id="14762" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="5295" min="1" max="1" chance="71.8187" />
 				<item id="5304" min="1" max="1" chance="23.8234" />
@@ -536,7 +536,7 @@
 				<item id="8683" min="1" max="1" chance="2.17897" />
 				<item id="8684" min="1" max="1" chance="2.17897" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25817" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -553,14 +553,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14429" level="1" />
 			<skill id="14762" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
@@ -586,19 +586,19 @@
 				<walk ground="40" />
 				<run ground="150" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14763" level="1" />
 			<skill id="14431" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="44" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="730" min="1" max="1" chance="40.07" />
 				<item id="5318" min="1" max="1" chance="29.8894" />
@@ -609,7 +609,7 @@
 				<item id="8687" min="1" max="1" chance="2.61698" />
 				<item id="6569" min="1" max="1" chance="0.75188" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25819" level="75" type="L2Npc" name="Heaven's Palace Healer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -625,13 +625,13 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14329" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="38.5" />
@@ -657,19 +657,19 @@
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14764" level="1" />
 			<skill id="14431" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="5308" min="1" max="1" chance="36.6525" />
 				<item id="5329" min="1" max="1" chance="24.0969" />
@@ -679,7 +679,7 @@
 				<item id="729" min="1" max="1" chance="5.383" />
 				<item id="6570" min="1" max="1" chance="5.294" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25821" level="75" type="L2Npc" name="Heaven's Palace Goddess Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -695,13 +695,13 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="14293" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
@@ -721,14 +721,14 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="5259" level="12" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="14" />
@@ -750,14 +750,14 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="14265" level="1" />
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="14" />
@@ -779,16 +779,16 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14728" level="1" />
 			<skill id="4172" level="12" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="30" />
@@ -816,22 +816,22 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5462" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14728" level="1" />
 			<skill id="4172" level="12" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="15" />
 			<height normal="62" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.075" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Crafting Pack -->
@@ -865,7 +865,7 @@
 				<item id="38014" min="1" max="1" chance="0.075" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.075" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25826" level="95" type="L2Monster" name="Nameless Subject" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -881,14 +881,14 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5462" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="14258" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="28" />
 			<height normal="41" />
@@ -908,13 +908,13 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="14264" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
@@ -935,18 +935,18 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="14286" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2438" min="1" max="1" chance="31.7" />
 				<item id="2497" min="1" max="1" chance="28.41" />
@@ -956,7 +956,7 @@
 				<item id="2503" min="1" max="1" chance="1.135" />
 				<item id="7897" min="1" max="1" chance="1.124" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25829" level="45" type="L2Monster" name="Mertes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -977,12 +977,12 @@
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="86" />
 			<height normal="133.5" />
@@ -1002,13 +1002,13 @@
 				<walk ground="100" />
 				<run ground="170" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="14276" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
@@ -1028,13 +1028,13 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14159" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="29" />
@@ -1054,13 +1054,13 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="14172" level="1" />
 			<skill id="4416" level="14" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="22" />
@@ -1081,14 +1081,14 @@
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14001" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="51" />
@@ -1109,23 +1109,23 @@
 				<walk ground="1" />
 				<run ground="190" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14005" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17724" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25835" level="97" type="L2Monster" name="Orbis' Thrower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1142,14 +1142,14 @@
 				<walk ground="1" />
 				<run ground="190" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14008" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
@@ -1170,14 +1170,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="56" />
@@ -1199,10 +1199,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="12" />
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
@@ -1213,13 +1213,13 @@
 			<skill id="5467" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14729" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="10" />
 			<height normal="37.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="62.82051" /> <!-- Elcyum Powder -->
 				<item id="36836" min="1" max="1" chance="2.2203" /> <!-- Twilight Helmet Ingredient -->
@@ -1247,7 +1247,7 @@
 				<item id="36790" min="1" max="1" chance="1.28205" /> <!-- Recipe: Twilight Sigil (60%) -->
 				<item id="17527" min="1" max="1" chance="38.46153" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25838" level="93" type="L2RaidBoss" name="Mukshu the Coward" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1264,10 +1264,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1277,13 +1277,13 @@
 			<skill id="5467" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14733" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="16" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="65.78947" /> <!-- Elcyum Powder -->
 				<item id="36837" min="1" max="1" chance="5.26315" /> <!-- Twilight Breastplate Ingredient -->
@@ -1301,7 +1301,7 @@
 				<item id="36787" min="1" max="1" chance="1.31578" /> <!-- Recipe: Twilight Stockings (60%) -->
 				<item id="17527" min="1" max="1" chance="43.42105" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25839" level="96" type="L2RaidBoss" name="Blind Hornafi" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1318,22 +1318,22 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="12" />
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14734" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
 				<item id="17527" min="1" max="1" chance="51" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -1361,7 +1361,7 @@
 				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25840" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1379,10 +1379,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1394,13 +1394,13 @@
 			<skill id="4486" level="12" />
 			<skill id="4494" level="1" />
 			<skill id="14730" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="3" max="3" chance="32.05128" /> <!-- Elcyum Powder -->
 				<item id="37992" min="1" max="1" chance="0.5751" /> <!-- Twilight Helmet Crafting Pack Heavy Armor -->
@@ -1423,7 +1423,7 @@
 				<item id="38008" min="1" max="1" chance="0.82159" /> <!-- Twilight Sigil Crafting Pack Robe -->
 				<item id="36574" min="1" max="1" chance="28.68" /> <!-- Scroll: Modify Weapon (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25841" level="95" type="L2RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1446,10 +1446,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1461,13 +1461,13 @@
 			<skill id="14731" level="1" />
 			<skill id="4414" level="1" />
 			<skill id="14357" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="79.22077" /> <!-- Elcyum Powder -->
 				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Helmet (60%) -->
@@ -1495,7 +1495,7 @@
 				<item id="35322" min="1" max="1" chance="0.0823" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35323" min="1" max="1" chance="0.3292" /> <!-- Seraph Sigil Ingredient -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25842" level="95" type="L2Monster" name="Black Beast" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1511,14 +1511,14 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="4065" level="12" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="23.5" />
@@ -1539,10 +1539,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1553,7 +1553,7 @@
 			<skill id="14358" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14732" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="18" />
@@ -1575,10 +1575,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1589,7 +1589,7 @@
 			<skill id="14359" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14732" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="14.5" />
@@ -1611,22 +1611,22 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5462" level="1" />
 			<skill id="14360" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14732" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="25" />
 			<height normal="49.9" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="90.90909" /> <!-- Elcyum Powder -->
 				<item id="35315" min="1" max="1" chance="0.4115" /> <!-- Seraph Leather Legging Ingredient -->
@@ -1638,7 +1638,7 @@
 				<item id="35309" min="1" max="1" chance="0.57609" /> <!-- Seraph Gaiter Ingredient -->
 				<item id="35439" min="1" max="1" chance="0.4115" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25846" level="96" type="L2RaidBoss" name="Yoentumak the Waiter" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1655,10 +1655,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1669,13 +1669,13 @@
 			<skill id="4118" level="12" />
 			<skill id="4494" level="1" />
 			<skill id="14735" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="96.10389" /> <!-- Elcyum Powder -->
 				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Seraph Breastplate (60%) -->
@@ -1693,7 +1693,7 @@
 				<item id="35319" min="1" max="1" chance="0.25179" /> <!-- Seraph Tunic Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.1679" /> <!-- Seraph Stocking Ingredient -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25855" level="96" type="L2Npc" name="Maliss" title="Grand Priest of Blood">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1709,10 +1709,10 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1724,7 +1724,7 @@
 			<skill id="14516" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14713" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
@@ -1744,10 +1744,10 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1759,7 +1759,7 @@
 			<skill id="14519" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14712" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
@@ -1780,24 +1780,24 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17413" min="1" max="1" chance="0.3" /> <!-- Seraph Necklace -->
 				<item id="17414" min="1" max="1" chance="0.3" /> <!-- Seraph Earring -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25858" level="95" type="L2Monster" name="Corrupted High Priest">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1814,24 +1814,24 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17415" min="1" max="1" chance="0.75" /> <!-- Seraph Ring -->
 				<item id="17414" min="1" max="1" chance="0.3" /> <!-- Seraph Earring -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25859" level="97" type="L2RaidBoss" name="Flynt" title="Raid Boss">
 		<!-- Autogenerated Npc Source: http://l2on.net/en/?c=npc&id=25859 (Ertheia) -->
@@ -1855,21 +1855,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14710" level="1" />
 			<skill id="4191" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17410" min="1" max="1" chance="1.889" /> <!-- Seraph Gloves Robe -->
 				<item id="17526" min="1" max="1" chance="6.468" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -1880,7 +1880,7 @@
 				<item id="17406" min="1" max="1" chance="1.956" /> <!-- Seraph Leather Boots Light Armor -->
 				<item id="17407" min="1" max="1" chance="1.2189" /> <!-- Seraph Circlet Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25860" level="96" type="L2Monster" name="Flynt's Disciple" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1896,10 +1896,10 @@
 				<walk ground="46" />
 				<run ground="200" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1908,7 +1908,7 @@
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4192" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21.12" />
 			<height normal="40.48" />
@@ -1928,10 +1928,10 @@
 				<walk ground="46" />
 				<run ground="200" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -1940,7 +1940,7 @@
 			<skill id="5467" level="1" />
 			<skill id="4739" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21.12" />
 			<height normal="40.48" />
@@ -1968,21 +1968,21 @@
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4192" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14711" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="44" />
 			<height normal="78" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17411" min="1" max="1" chance="1.964" /> <!-- Seraph Shoes Robe -->
 				<item id="17396" min="1" max="1" chance="1.252" /> <!-- Seraph Helmet Heavy Armor -->
@@ -1990,7 +1990,7 @@
 				<item id="30297" min="1" max="1" chance="18.75" /> <!-- Superior Giant's Codex -->
 				<item id="17405" min="1" max="1" chance="1.896" /> <!-- Seraph Leather Gloves Light Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25863" level="96" type="L2Monster" name="Harp's Guard" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2006,10 +2006,10 @@
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2018,7 +2018,7 @@
 			<skill id="5467" level="1" />
 			<skill id="4739" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -2038,10 +2038,10 @@
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4171" level="1" />
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
@@ -2050,7 +2050,7 @@
 			<skill id="4438" level="5" />
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="34" />
@@ -2070,14 +2070,14 @@
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14466" level="1" />
 			<skill id="4416" level="5" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="76.5" />
@@ -2099,22 +2099,22 @@
 				<walk ground="100" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14087" level="1" />
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14723" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="35" />
 			<height normal="93" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17347" min="1" max="1" chance="5.315" /> <!-- Twilight Leather Gloves -->
 				<item id="17352" min="1" max="1" chance="5.297" /> <!-- Twilight Gloves -->
@@ -2123,7 +2123,7 @@
 				<item id="17526" min="1" max="1" chance="5.537" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25867" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
 		<!-- Source http://l2on.net/en/?c=npc&id=25867 -->
@@ -2141,10 +2141,10 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2155,13 +2155,13 @@
 			<skill id="14152" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14722" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="30" />
 			<height normal="81" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2204,7 +2204,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25868" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2221,10 +2221,10 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2235,7 +2235,7 @@
 			<skill id="14152" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14722" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="30" />
@@ -2256,10 +2256,10 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2270,7 +2270,7 @@
 			<skill id="14152" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14722" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="81" />
@@ -2291,28 +2291,28 @@
 				<walk ground="30" />
 				<run ground="150" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" />
 			<skill id="4414" level="3" />
 			<skill id="4494" level="1" />
 			<skill id="14724" level="1" />
 			<skill id="4175" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="7" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2437" min="1" max="1" chance="33.3333" />
 				<item id="2462" min="4" max="4" chance="33.3333" />
 				<item id="2463" min="1" max="1" chance="33.3333" />
 				<item id="6574" min="1" max="1" chance="33.3333" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25871" level="43" type="L2RaidBoss" name="Thorn" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2329,20 +2329,20 @@
 				<walk ground="30" />
 				<run ground="150" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" />
 			<skill id="4494" level="1" />
 			<skill id="14725" level="1" />
 			<skill id="4175" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="17" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="6574" min="1" max="1" chance="37.5" />
 				<item id="886" min="4" max="4" chance="25" />
@@ -2357,7 +2357,7 @@
 				<item id="9296" min="1" max="1" chance="1.5" />
 				<item id="206" min="1" max="1" chance="1.5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25872" level="97" type="L2Npc" name="Spezion's Subordinate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2373,13 +2373,13 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -2399,13 +2399,13 @@
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="60" />
@@ -2425,13 +2425,13 @@
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
@@ -2447,28 +2447,28 @@
 			<defence physical="2341" magical="2250" evasion="3" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="90" />
 				<run ground="200" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14720" level="1" />
 			<skill id="14645" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="33.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
 				<item id="17313" min="1" max="1" chance="2.057" /> <!-- Immortal Leather Gloves Light Armor -->
@@ -2483,7 +2483,7 @@
 				<item id="17308" min="1" max="1" chance="4.176" /> <!-- Immortal Boots Heavy Armor -->
 				<item id="17310" min="1" max="1" chance="2.819" /> <!-- Immortal Leather Helmet Light Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25876" level="96" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- Source http://l2on.net/en/?c=npc&id=25876 -->
@@ -2495,16 +2495,16 @@
 			<defence physical="6560" magical="6720" evasion="3" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2516,12 +2516,12 @@
 			<skill id="14516" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14713" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Robe -->
 				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Robe -->
@@ -2543,7 +2543,7 @@
 				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Light Armor -->
 				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25877" level="96" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<!-- Source http://l2on.net/en/?c=npc&id=25877 -->
@@ -2555,17 +2555,17 @@
 			<defence physical="6560" magical="6720" evasion="3" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -2577,12 +2577,12 @@
 			<skill id="14519" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="14712" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Robe -->
 				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Robe -->
@@ -2604,7 +2604,7 @@
 				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Light Armor -->
 				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Light Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25878" level="85" type="L2Monster" name="Arbitor of Darkness" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2621,14 +2621,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="14638" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="38" />
@@ -2649,14 +2649,14 @@
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14470" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="33.5" />
@@ -2672,27 +2672,27 @@
 			<defence physical="3360" magical="3420" evasion="3" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14012" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="14749" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="91" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9557" min="1" max="1" chance="2.304" /> <!-- Holy Crystal -->
 				<item id="17526" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (R-grade) -->
@@ -2700,7 +2700,7 @@
 				<item id="17390" min="1" max="1" chance="0.03" /> <!-- Specter Buster -->
 				<item id="17391" min="1" max="1" chance="0.03" /> <!-- Specter Caster -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25881" level="98" type="L2RaidBoss" name="Veridan" title="Hell's Warden">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2718,11 +2718,11 @@
 				<walk ground="34" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5463" level="1" />
 			<skill id="4494" level="1" />
@@ -2735,12 +2735,12 @@
 			<skill id="4435" level="3" />
 			<skill id="4439" level="3" />
 			<skill id="14714" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
 				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
@@ -2799,7 +2799,7 @@
 				<item id="35322" min="1" max="1" chance="0.1262" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35323" min="1" max="1" chance="0.2525" /> <!-- Seraph Sigil Ingredient -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25882" level="88" type="L2RaidBoss" name="Zellaka" title="Lord of Kartia">
 		<!-- Source http://l2on.net/en/?c=npc&id=25882 -->
@@ -2811,16 +2811,16 @@
 			<defence physical="1980" magical="1920" evasion="3" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14951" level="1" />
 			<skill id="14950" level="1" />
 			<skill id="4416" level="9" />
@@ -2830,13 +2830,13 @@
 			<skill id="14940" level="1" />
 			<skill id="14943" level="1" />
 			<skill id="14949" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<collision>
 			<radius normal="30" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36736" min="1" max="1" chance="1.73913" /> <!-- Recipe: Requiem Fighter (60%) -->
 				<item id="36737" min="1" max="1" chance="4.34782" /> <!-- Recipe: Requiem Stormer (60%) -->
@@ -2900,7 +2900,7 @@
 				<item id="36734" min="1" max="1" chance="0.86956" /> <!-- Recipe: Requiem Slasher (60%) -->
 				<item id="36735" min="1" max="1" chance="4.34782" /> <!-- Recipe: Requiem Avenger (60%) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25883" level="93" type="L2RaidBoss" name="Pelline" title="Lord of Kartia">
 		<!-- Source http://l2on.net/en/?c=npc&id=25883 -->
@@ -2918,10 +2918,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14955" level="1" />
 			<skill id="14954" level="1" />
 			<skill id="4416" level="9" />
@@ -2932,13 +2932,13 @@
 			<skill id="14941" level="1" />
 			<skill id="14944" level="1" />
 			<skill id="14953" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<collision>
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36763" min="1" max="1" chance="3.33333" /> <!-- Recipe: Apocalypse Shaper (60%) -->
 				<item id="36764" min="1" max="1" chance="4.44444" /> <!-- Recipe: Apocalypse Cutter (60%) -->
@@ -3002,7 +3002,7 @@
 				<item id="17526" min="1" max="1" chance="52.22222" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="1" max="1" chance="47.77777" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25884" level="98" type="L2RaidBoss" name="Kalios" title="Lord of Kartia">
 		<!-- Source http://l2on.net/en/?c=npc&id=25884 -->
@@ -3020,10 +3020,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14946" level="1" />
 			<skill id="14960" level="1" />
 			<skill id="14959" level="1" />
@@ -3034,13 +3034,13 @@
 			<skill id="14942" level="1" />
 			<skill id="14945" level="1" />
 			<skill id="14958" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<collision>
 			<radius normal="25" />
 			<height normal="65.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="2" max="2" chance="85.56701" /> <!-- Elcyum Powder -->
 				<item id="35420" min="1" max="1" chance="3.43642" /> <!-- Recipe:Β Specter Shaper (60%) -->
@@ -3105,7 +3105,7 @@
 				<item id="35322" min="1" max="1" chance="3.78006" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35323" min="1" max="1" chance="3.09278" /> <!-- Seraph Sigil Ingredient -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25885" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3122,20 +3122,20 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="15078" level="1" />
 			<skill id="15215" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="64" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="1" max="2" chance="50" />
 				<item id="36979" min="1" max="1" chance="35" />
@@ -3234,7 +3234,7 @@
 				<item id="17411" min="1" max="1" chance="0.5" />
 				<item id="17396" min="1" max="1" chance="0.5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) and http://l2on.net/en/?c=npc&id=25886 -->
@@ -3246,27 +3246,27 @@
 			<defence physical="3360" magical="3420" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4494" level="1" />
 			<skill id="15217" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="52" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe:Β Specter Shaper (60%) -->
 				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe:Β Specter Cutter (60%) -->
@@ -3333,7 +3333,7 @@
 				<item id="35325" min="1" max="1" chance="6.241" /> <!-- Seraph Earring Gem -->
 				<item id="35326" min="1" max="1" chance="9.407" /> <!-- Seraph Ring Gem -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3345,27 +3345,27 @@
 			<defence physical="3360" magical="3420" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="15216" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="35326" min="1" max="1" chance="9.441" /> <!-- Seraph Ring Gem -->
 				<item id="35313" min="1" max="1" chance="8.257" /> <!-- Seraph Leather Helmet Ingredient -->
@@ -3433,7 +3433,7 @@
 				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3449,15 +3449,15 @@
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4736" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="15215" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="58" />
@@ -3477,10 +3477,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -3488,7 +3488,7 @@
 			<skill id="4438" level="5" />
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -3508,10 +3508,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -3519,7 +3519,7 @@
 			<skill id="4438" level="5" />
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="63" />
@@ -3539,10 +3539,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -3550,7 +3550,7 @@
 			<skill id="4438" level="5" />
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="54" />
@@ -3566,28 +3566,28 @@
 			<defence physical="6720" magical="6840" />
 			<attribute>
 				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
-				<attack type="dark" value="360" />
+				<attack type="DARK" value="360" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="15077" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="15078" level="1" />
 			<skill id="15215" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="82" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36513" min="1" max="2" chance="50" />
 				<item id="35319" min="1" max="1" chance="5" />
@@ -3696,7 +3696,7 @@
 				<item id="17406" min="1" max="1" chance="1.726" /> <!-- Seraph Leather Boots Light Armor -->
 				<item id="17407" min="1" max="1" chance="1.748" /> <!-- Seraph Circlet Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25893" level="97" type="L2Npc" name="Strain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3712,7 +3712,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
 		<ai aggroRange="300" clanHelpRange="300" />
@@ -3736,10 +3736,10 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4441" level="5" />
 			<skill id="4435" level="5" />
 			<skill id="4440" level="5" />
@@ -3748,7 +3748,7 @@
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="900" />
 		<collision>
 			<radius normal="15" />
@@ -3769,13 +3769,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="22" />
@@ -3795,13 +3795,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="37" />
@@ -3821,13 +3821,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="50" />
@@ -3847,14 +3847,14 @@
 				<walk ground="20" />
 				<run ground="40" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
 			<skill id="15599" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="400" clanHelpRange="400" />
 		<collision>
 			<radius normal="30" />
@@ -3875,13 +3875,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="350" />
 			<height normal="210" />

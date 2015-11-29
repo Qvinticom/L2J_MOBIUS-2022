@@ -14,16 +14,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
@@ -44,16 +44,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
@@ -74,16 +74,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -103,16 +103,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -132,16 +132,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -161,7 +161,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -183,17 +183,17 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -213,17 +213,17 @@
 				<walk ground="40" />
 				<run ground="130" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -242,17 +242,17 @@
 				<walk ground="0" />
 				<run ground="0" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="true" targetable="true" showName="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4411" level="14" />
 			<skill id="4410" level="14" />
 			<skill id="4414" level="1" />
 			<skill id="4413" level="12" />
 			<skill id="4412" level="12" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="25" />
 			<height normal="50" />
@@ -271,7 +271,7 @@
 				<walk ground="72" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
@@ -292,17 +292,17 @@
 				<walk ground="50" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -321,7 +321,7 @@
 				<walk ground="72" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
@@ -342,17 +342,17 @@
 				<walk ground="50" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -371,7 +371,7 @@
 				<walk ground="72" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 	<status attackable="false" targetable="false" showName="true" talkable="false" />
 		<collision>
@@ -393,17 +393,17 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="30" />
@@ -423,7 +423,7 @@
 				<walk ground="130" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -445,17 +445,17 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
@@ -475,7 +475,7 @@
 				<walk ground="13" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -497,17 +497,17 @@
 				<walk ground="10" />
 				<run ground="10" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="43" />
@@ -527,7 +527,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -548,7 +548,7 @@
 				<walk ground="0" />
 				<run ground="0" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -570,7 +570,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -592,7 +592,7 @@
 				<walk ground="50" />
 				<run ground="130" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -614,7 +614,7 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -636,7 +636,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -658,7 +658,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -680,7 +680,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -702,21 +702,21 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36586" min="1" max="1" chance="66.6" />
 				<item id="36979" min="1" max="1" chance="50" />
@@ -756,7 +756,7 @@
 				<item id="17353" min="1" max="1" chance="5.88" />
 				<item id="36169" min="1" max="1" chance="5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19328" level="95" type="L2Npc" name="Gustav" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -772,16 +772,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -801,16 +801,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -830,16 +830,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -859,16 +859,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -888,16 +888,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="31" />
@@ -917,7 +917,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -939,7 +939,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -961,7 +961,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -983,22 +983,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1006,7 +1006,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19337" level="94" type="L2Monster" name="Doom Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1022,22 +1022,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1045,7 +1045,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19338" level="94" type="L2Monster" name="Doom Archer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1061,22 +1061,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1084,7 +1084,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19339" level="95" type="L2Monster" name="Doom Trooper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1100,22 +1100,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="10" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1123,7 +1123,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19340" level="95" type="L2Monster" name="Doom Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1139,22 +1139,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1162,7 +1162,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19341" level="95" type="L2Monster" name="Doom Knight">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1178,22 +1178,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" />
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36059" min="1" max="1" chance="16" />
 				<item id="36058" min="1" max="1" chance="8" />
@@ -1201,7 +1201,7 @@
 				<item id="36056" min="1" max="1" chance="2" />
 				<item id="36055" min="1" max="1" chance="1" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19342" level="95" type="L2Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1217,21 +1217,21 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="25.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36586" min="1" max="1" chance="66.6" />
 				<item id="36979" min="1" max="1" chance="50" />
@@ -1271,7 +1271,7 @@
 				<item id="17353" min="1" max="1" chance="5.88" />
 				<item id="36168" min="1" max="1" chance="5" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19343" level="95" type="L2Npc" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1287,16 +1287,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5.5" />
 			<height normal="28" />
@@ -1316,16 +1316,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5.5" />
 			<height normal="28" />
@@ -1345,16 +1345,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="19" />
 			<height normal="35" />
@@ -1374,16 +1374,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="21.5" />
@@ -1403,16 +1403,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="23.5" />
@@ -1432,16 +1432,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="21.5" />
@@ -1461,16 +1461,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5.5" />
 			<height normal="28" />
@@ -1490,16 +1490,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="31.5" />
@@ -1519,16 +1519,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="7.5" />
 			<height normal="25.8" />
@@ -1548,16 +1548,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="25.5" />
@@ -1577,16 +1577,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="14" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="22" />
@@ -1606,16 +1606,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<!-- <skill id="4411" level="15" /> -->
 			<!-- <skill id="4410" level="15" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="22" />
@@ -1635,14 +1635,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="34990" min="1" max="1" chance="22.449" />
 				<item id="34992" min="1" max="1" chance="22.449" />
@@ -1650,7 +1650,7 @@
 				<item id="34991" min="1" max="1" chance="18.3673" />
 				<item id="19310" min="1" max="1" chance="17.3469" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19356" level="95" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1666,7 +1666,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1688,22 +1688,22 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<!-- <skill id="4410" level="14" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="37" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="36979" min="1" max="1" chance="80.9524" />
 				<item id="36574" min="1" max="1" chance="57.1428" />
@@ -1746,7 +1746,7 @@
 				<item id="17345" min="1" max="1" chance="4.7619" />
 				<item id="17414" min="1" max="1" chance="4.7619" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19358" level="95" type="L2Npc" name="Nurka's Royal Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1762,16 +1762,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
@@ -1792,16 +1792,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
@@ -1822,16 +1822,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="13.5" />
@@ -1852,16 +1852,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
@@ -1882,16 +1882,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
@@ -1912,16 +1912,16 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
@@ -1942,7 +1942,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1964,7 +1964,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1986,7 +1986,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2008,13 +2008,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -2034,7 +2034,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2056,7 +2056,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2078,7 +2078,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2100,13 +2100,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="25" />
@@ -2126,13 +2126,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8.5" />
 			<height normal="25" />
@@ -2152,7 +2152,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2174,13 +2174,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2200,13 +2200,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
@@ -2226,7 +2226,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2248,7 +2248,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2270,7 +2270,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2292,7 +2292,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2314,7 +2314,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2336,13 +2336,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="19" />
@@ -2362,7 +2362,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2384,7 +2384,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2406,7 +2406,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2428,13 +2428,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -2454,13 +2454,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="41.5" />
@@ -2480,13 +2480,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="28.5" />
@@ -2506,7 +2506,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2528,7 +2528,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2550,7 +2550,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2572,7 +2572,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2594,7 +2594,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2616,7 +2616,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2638,7 +2638,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2660,7 +2660,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2682,7 +2682,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2704,7 +2704,7 @@
 				<walk ground="30" />
 				<run ground="250" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2726,7 +2726,7 @@
 				<walk ground="53" />
 				<run ground="200" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2748,7 +2748,7 @@
 				<walk ground="130" />
 				<run ground="160" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>

@@ -16,10 +16,10 @@
 				<walk ground="60" />
 				<run ground="240" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
@@ -30,13 +30,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16249" level="1" /> <!-- 92Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17306" min="1" max="1" chance="15.62" /> <!-- Immortal Gaiters -->
 				<item id="17305" min="1" max="1" chance="14.79" /> <!-- Immortal Breastplate -->
@@ -83,7 +83,7 @@
 				<item id="37986" min="1" max="1" chance="2.219" /> <!-- Apocalypse Stormer Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26001" level="92" type="L2RaidBoss" name="Amden Orc Turation" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -101,10 +101,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
@@ -113,13 +113,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16250" level="1" /> <!-- 92Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17312" min="1" max="1" chance="14.73" /> <!-- Immortal Leather Leggings -->
 				<item id="17311" min="1" max="1" chance="14.61" /> <!-- Immortal Leather Armor -->
@@ -166,7 +166,7 @@
 				<item id="37989" min="1" max="1" chance="2.203" /> <!-- Apocalypse Buster Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26002" level="92" type="L2RaidBoss" name="Amden Orc Turamathia" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -184,10 +184,10 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
@@ -196,13 +196,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16250" level="1" /> <!-- 92Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17317" min="1" max="1" chance="14.71" /> <!-- Immortal Stockings -->
 				<item id="17316" min="1" max="1" chance="14.55" /> <!-- Immortal Tunic -->
@@ -249,7 +249,7 @@
 				<item id="37990" min="1" max="1" chance="2.203" /> <!-- Apocalypse Caster Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26003" level="92" type="L2RaidBoss" name="Amden Orc Turabait" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -267,10 +267,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
@@ -279,13 +279,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16252" level="1" /> <!-- 92Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17305" min="1" max="1" chance="15.57" /> <!-- Immortal Breastplate -->
 				<item id="17306" min="1" max="1" chance="15.02" /> <!-- Immortal Gaiters -->
@@ -332,7 +332,7 @@
 				<item id="37990" min="1" max="1" chance="2.207" /> <!-- Apocalypse Caster Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26004" level="92" type="L2RaidBoss" name="Nerva Orc Nermion" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -351,17 +351,17 @@
 			</speed>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17679" min="3" max="3" chance="17.8571" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
 				<item id="17680" min="3" max="3" chance="15.98" /> <!-- Lv. 4 Giant DEX Dye DEX +5 / CON - 2 -->
@@ -407,7 +407,7 @@
 				<item id="38007" min="2" max="2" chance="2.996" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="2" max="2" chance="2.981" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26005" level="92" type="L2RaidBoss" name="Nerva Orc Nergatt" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -424,21 +424,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17679" min="3" max="3" chance="11.7647" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
 				<item id="17680" min="3" max="3" chance="5.8823" /> <!-- Lv. 4 Giant DEX Dye DEX +5 / CON - 2 -->
@@ -484,7 +484,7 @@
 				<item id="38007" min="2" max="2" chance="2.875" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="2" max="2" chance="3.0259" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26006" level="92" type="L2Npc" name="Encroached Orc Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -584,7 +584,7 @@
 			</speed>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4290" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
@@ -595,13 +595,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16242" level="1" /> <!-- 88Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="50" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17309" min="1" max="1" chance="12.46" /> <!-- Immortal Shield -->
 				<item id="17304" min="1" max="1" chance="12.25" /> <!-- Immortal Helmet -->
@@ -651,7 +651,7 @@
 				<item id="37953" min="1" max="1" chance="3.576" /> <!-- Requiem Avenger Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26012" level="88" type="L2RaidBoss" name="Demon Fardune" title="Raid Boss">
 		<race>DEMONIC</race>
@@ -668,20 +668,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4298" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.649" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.653" /> <!-- Requiem Avenger Crafting Pack -->
@@ -730,7 +730,7 @@
 				<item id="37950" min="1" max="1" chance="3.65" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.571" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26013" level="88" type="L2Npc" name="Demon Harsia" title="Raid Boss">
 		<race>DEMONIC</race>
@@ -747,20 +747,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4298" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.6859" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.687" /> <!-- Requiem Avenger Crafting Pack -->
@@ -809,7 +809,7 @@
 				<item id="37950" min="1" max="1" chance="3.628" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.624" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26014" level="88" type="L2RaidBoss" name="Demon Bedukel" title="Raid Boss">
 		<race>DEMONIC</race>
@@ -826,20 +826,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4298" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.655" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.634" /> <!-- Requiem Avenger Crafting Pack -->
@@ -888,7 +888,7 @@
 				<item id="37950" min="1" max="1" chance="3.678" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.688" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26015" level="88" type="L2RaidBoss" name="Bloody Witch Rumilla" title="Raid Boss">
 		<race>UNDEAD</race>
@@ -905,10 +905,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4290" level="1" />
 			<skill id="4312" level="1" />
@@ -917,13 +917,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16246" level="1" /> <!-- 88Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17309" min="1" max="1" chance="12.52" /> <!-- Immortal Shield -->
 				<item id="17313" min="1" max="1" chance="12.44" /> <!-- Immortal Leather Gloves -->
@@ -973,7 +973,7 @@
 				<item id="37952" min="1" max="1" chance="3.571" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26016" level="88" type="L2RaidBoss" name="Shilen's Priest Sasia" title="Raid Boss">
 		<race>BEAST</race>
@@ -990,21 +990,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4292" level="1" />
 			<skill id="4280" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.678" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.68" /> <!-- Requiem Avenger Crafting Pack -->
@@ -1053,7 +1053,7 @@
 				<item id="37950" min="1" max="1" chance="3.615" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.659" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26017" level="88" type="L2Npc" name="Demon Collector" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1155,17 +1155,17 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -1211,7 +1211,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="50" />
@@ -1232,21 +1232,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -1292,7 +1292,7 @@
 				<item id="38014" min="1" max="1" chance="22.2222" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26024" level="98" type="L2RaidBoss" name="Chaos Wizard Amormio" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1310,23 +1310,23 @@
 				<walk ground="100" />
 				<run ground="220" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16306" level="1" /> <!-- 98Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -1373,7 +1373,7 @@
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26025" level="98" type="L2Npc" name="Insolence Knight Lahav" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -1390,21 +1390,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -1450,7 +1450,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26026" level="98" type="L2Npc" name="Death Priest Borhunt" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26026 -->
@@ -1468,21 +1468,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4411" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -1528,7 +1528,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26027" level="98" type="L2RaidBoss" name="Destruction Knight Zeruel" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -1545,21 +1545,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Robe -->
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
@@ -1605,7 +1605,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26028" level="98" type="L2Npc" name="Unsealed Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1707,21 +1707,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4275" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4297" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -1767,7 +1767,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26034" level="98" type="L2RaidBoss" name="Corrupted Goblier" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1785,23 +1785,23 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16293" level="1" /> <!-- 98Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -1848,7 +1848,7 @@
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26035" level="98" type="L2RaidBoss" name="Corrupted Cherkia" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1866,10 +1866,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4298" level="1" />
@@ -1880,13 +1880,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16294" level="1" /> <!-- 98Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17409" min="1" max="1" chance="0.75" /> <!-- Seraph Stockings -->
@@ -1933,7 +1933,7 @@
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26036" level="98" type="L2RaidBoss" name="Corrupted Harthemon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1951,23 +1951,23 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16295" level="1" /> <!-- 98Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
 				<item id="17398" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiters -->
@@ -2014,7 +2014,7 @@
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26037" level="98" type="L2RaidBoss" name="Corrupted Sarboth" title="Raid Boss">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2032,10 +2032,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4298" level="1" />
@@ -2046,13 +2046,13 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16296" level="1" /> <!-- 98Lv. Raid Boss -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17404" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Leggings -->
@@ -2100,7 +2100,7 @@
 				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			<!-- FIXME: Also drops herbs. -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26038" level="98" type="L2RaidBoss" name="Fallen Angel Eloule" title="Raid Boss">
 		<race>DIVINE</race>
@@ -2117,21 +2117,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4275" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4297" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic Robe -->
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
@@ -2177,7 +2177,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26039" level="98" type="L2Npc" name="Aenkazel Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2279,21 +2279,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4292" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4281" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2342,7 +2342,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26045" level="97" type="L2RaidBoss" name="Kerfaus" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -2359,21 +2359,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2422,7 +2422,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26046" level="97" type="L2RaidBoss" name="Milinaus" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -2439,21 +2439,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="4411" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2502,7 +2502,7 @@
 				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Robe -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26047" level="97" type="L2RaidBoss" name="Sarkaus" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -2519,21 +2519,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2582,7 +2582,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26048" level="97" type="L2RaidBoss" name="Shimeus" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -2599,21 +2599,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="4411" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2662,7 +2662,7 @@
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26049" level="97" type="L2RaidBoss" name="Evil Kinigos" title="Raid Boss">
 		<race>BEAST</race>
@@ -2679,21 +2679,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4292" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4281" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
@@ -2742,7 +2742,7 @@
 				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Robe -->
 				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26050" level="97" type="L2Npc" name="Centaur Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2845,21 +2845,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17354" min="1" max="1" chance="2.9411" /> <!-- Twilight Sigil Robe -->
 				<item id="17679" min="3" max="3" chance="14.7058" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
@@ -2908,7 +2908,7 @@
 				<item id="17342" min="1" max="1" chance="2.9411" /> <!-- Twilight Boots Heavy Armor -->
 				<item id="17343" min="1" max="1" chance="2.9411" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26056" level="93" type="L2RaidBoss" name="Ekidna's Statue Abelsnif" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26056 -->
@@ -2926,20 +2926,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17344" min="1" max="1" chance="5.994" /> <!-- Twilight Leather Helmet Light Armor -->
 				<item id="17347" min="1" max="1" chance="6.001" /> <!-- Twilight Leather Gloves Light Armor -->
@@ -2988,7 +2988,7 @@
 				<item id="38008" min="1" max="1" chance="19.23069" /> <!-- Twilight Sigil Crafting Pack Robe -->
 				<item id="17343" min="1" max="1" chance="5.963" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26057" level="93" type="L2RaidBoss" name="Ekidna's Statue Kimesis" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26057 -->
@@ -3006,20 +3006,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4280" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17349" min="1" max="1" chance="1.88669" /> <!-- Twilight Circlet Robe -->
 				<item id="17352" min="1" max="1" chance="1.88669" /> <!-- Twilight Gloves Robe -->
@@ -3068,7 +3068,7 @@
 				<item id="38008" min="1" max="1" chance="3.5929" /> <!-- Twilight Sigil Crafting Pack Robe -->
 				<item id="17343" min="1" max="1" chance="7.5471" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26058" level="93" type="L2RaidBoss" name="Ekidna's Statue Kathargon" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26058 -->
@@ -3086,20 +3086,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17354" min="1" max="1" chance="6.04" /> <!-- Twilight Sigil Robe -->
 				<item id="17679" min="3" max="3" chance="12.5" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
@@ -3148,7 +3148,7 @@
 				<item id="17342" min="1" max="1" chance="5" /> <!-- Twilight Boots Heavy Armor -->
 				<item id="17343" min="1" max="1" chance="2.5" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26059" level="93" type="L2RaidBoss" name="Ekidna's Statue Pantasaus" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26059 -->
@@ -3166,20 +3166,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4280" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17344" min="1" max="1" chance="3.2786" /> <!-- Twilight Leather Helmet Light Armor -->
 				<item id="17347" min="1" max="1" chance="3.2786" /> <!-- Twilight Leather Gloves Light Armor -->
@@ -3228,7 +3228,7 @@
 				<item id="38008" min="1" max="1" chance="3.59" /> <!-- Twilight Sigil Crafting Pack Robe -->
 				<item id="17343" min="1" max="1" chance="6.056" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26060" level="93" type="L2RaidBoss" name="Ekidna's Statue Ixignon" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -3245,21 +3245,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4280" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17349" min="1" max="1" chance="6.045" /> <!-- Twilight Circlet Robe -->
 				<item id="17352" min="1" max="1" chance="6.003" /> <!-- Twilight Gloves Robe -->
@@ -3308,7 +3308,7 @@
 				<item id="38008" min="1" max="1" chance="3.479" /> <!-- Twilight Sigil Crafting Pack Robe -->
 				<item id="17343" min="1" max="1" chance="6.0569" /> <!-- Twilight Shield Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26061" level="93" type="L2Npc" name="Warrior Statue" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3411,21 +3411,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17679" min="3" max="3" chance="8.6956" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
 				<item id="17680" min="3" max="3" chance="8.6956" /> <!-- Lv. 4 Giant DEX Dye DEX +5 / CON - 2 -->
@@ -3471,7 +3471,7 @@
 				<item id="17339" min="1" max="1" chance="2.1739" /> <!-- Twilight Breastplate Heavy Armor -->
 				<item id="17340" min="1" max="1" chance="6.5217" /> <!-- Twilight Gaiters Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26067" level="94" type="L2RaidBoss" name="Typheron" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26067 -->
@@ -3489,20 +3489,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17345" min="1" max="1" chance="3.4482" /> <!-- Twilight Leather Armor Light Armor -->
 				<item id="17346" min="1" max="1" chance="5.17239" /> <!-- Twilight Leather Leggings Light Armor -->
@@ -3548,7 +3548,7 @@
 				<item id="38007" min="1" max="1" chance="3.4482" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="1" max="1" chance="3.586" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26068" level="94" type="L2RaidBoss" name="Timarga" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26068 -->
@@ -3566,20 +3566,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17350" min="1" max="1" chance="17.3076" /> <!-- Twilight Tunic Robe -->
 				<item id="17351" min="1" max="1" chance="9.6153" /> <!-- Twilight Stockings Robe -->
@@ -3625,7 +3625,7 @@
 				<item id="38007" min="1" max="1" chance="3.474" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="1" max="1" chance="3.511" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26069" level="94" type="L2RaidBoss" name="Tycepton" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26069 -->
@@ -3643,20 +3643,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17679" min="3" max="3" chance="14.2857" /> <!-- Lv. 4 Giant STR Dye STR +5 / DEX - 2 -->
 				<item id="17680" min="3" max="3" chance="26.1904" /> <!-- Lv. 4 Giant DEX Dye DEX +5 / CON - 2 -->
@@ -3702,7 +3702,7 @@
 				<item id="17339" min="1" max="1" chance="9.5238" /> <!-- Twilight Breastplate Heavy Armor -->
 				<item id="17340" min="1" max="1" chance="14.2857" /> <!-- Twilight Gaiters Heavy Armor -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26070" level="94" type="L2RaidBoss" name="Tiverga" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26070 -->
@@ -3720,20 +3720,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17345" min="1" max="1" chance="10.00189" /> <!-- Twilight Leather Armor Light Armor -->
 				<item id="17346" min="1" max="1" chance="6.38289" /> <!-- Twilight Leather Leggings Light Armor -->
@@ -3779,7 +3779,7 @@
 				<item id="38007" min="1" max="1" chance="3.462" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="1" max="1" chance="3.482" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26071" level="94" type="L2RaidBoss" name="Enhanced Mahum Supercium" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26071 -->
@@ -3797,21 +3797,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17350" min="1" max="1" chance="9.975" /> <!-- Twilight Tunic Robe -->
 				<item id="17351" min="1" max="1" chance="9.986" /> <!-- Twilight Stockings Robe -->
@@ -3857,7 +3857,7 @@
 				<item id="38007" min="1" max="1" chance="3.546" /> <!-- Twilight Shoes Crafting Pack Robe -->
 				<item id="38008" min="1" max="1" chance="3.472" /> <!-- Twilight Sigil Crafting Pack Robe -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26072" level="94" type="L2Npc" name="Tayga Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3960,21 +3960,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.574" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.618" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4023,7 +4023,7 @@
 				<item id="37950" min="1" max="1" chance="3.679" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.624" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26078" level="88" type="L2RaidBoss" name="Monster Minotaur" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26078 -->
@@ -4041,20 +4041,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.6249" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.603" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4103,7 +4103,7 @@
 				<item id="37950" min="1" max="1" chance="3.66" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.662" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26079" level="88" type="L2RaidBoss" name="Monster Sarga" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26079 -->
@@ -4121,20 +4121,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.576" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.627" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4183,7 +4183,7 @@
 				<item id="37950" min="1" max="1" chance="3.66799" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.613" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26080" level="88" type="L2RaidBoss" name="Monster Hogliff" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26080 -->
@@ -4201,20 +4201,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.591" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.636" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4263,7 +4263,7 @@
 				<item id="37950" min="1" max="1" chance="3.653" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.6609" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26081" level="88" type="L2RaidBoss" name="Monster Artarot" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26081 -->
@@ -4281,20 +4281,20 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.692" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.645" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4343,7 +4343,7 @@
 				<item id="37950" min="1" max="1" chance="3.64" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.657" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26082" level="88" type="L2RaidBoss" name="Monster Centaur" title="Raid Boss">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26082 -->
@@ -4361,21 +4361,21 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4295" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="4282" level="1" />
 			<skill id="141" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="37952" min="1" max="1" chance="3.627" /> <!-- Requiem Slasher Crafting Pack -->
 				<item id="37953" min="1" max="1" chance="3.656" /> <!-- Requiem Avenger Crafting Pack -->
@@ -4424,7 +4424,7 @@
 				<item id="37950" min="1" max="1" chance="3.6929" /> <!-- Requiem Shaper Crafting Pack -->
 				<item id="37951" min="1" max="1" chance="3.667" /> <!-- Requiem Cutter Crafting Pack -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26083" level="88" type="L2Npc" name="Minotaur Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4557,18 +4557,18 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="68" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="40043" min="1" max="2" chance="12.94" /> <!-- Dimensional Bracelet Enhancement Stone -->
 				<item id="40045" min="1" max="2" chance="12.72" /> <!-- Dimensional Bracelet Enhancement Stone -->
@@ -4582,7 +4582,7 @@
 				<item id="40065" min="1" max="1" chance="0.75" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
 			<!-- FIXME: Also drops herbs. -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26091" level="40" type="L2Npc" name="Aspiring Orc Ruler of Aden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -4682,11 +4682,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="49" />

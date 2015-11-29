@@ -24,7 +24,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -42,15 +42,15 @@
 			<skill id="6320" level="1" /> <!-- Summon Sacred Magic Force -->
 			<skill id="6321" level="1" /> <!-- Divine Flash -->
 			<skill id="6322" level="1" /> <!-- Divine Impact -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>N_DIVINE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="70">
 					<item id="57" min="11913" max="24348" chance="100" /> <!-- Adena -->
@@ -106,7 +106,7 @@
 				<item id="15808" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
 				<item id="15807" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="44" />
@@ -135,10 +135,10 @@
 				<walk ground="130" />
 				<run ground="160" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -148,14 +148,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6598" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23.5" />
 			<height normal="34.7" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -196,7 +196,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22802" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -217,10 +217,10 @@
 				<walk ground="130" />
 				<run ground="160" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
@@ -231,14 +231,14 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="6598" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23.5" />
 			<height normal="34.7" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="38" max="88" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
@@ -279,7 +279,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22803" level="72" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -300,10 +300,10 @@
 				<walk ground="130" />
 				<run ground="160" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
@@ -312,14 +312,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6598" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23.5" />
 			<height normal="34.7" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -360,7 +360,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22804" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -384,10 +384,10 @@
 				<walk ground="72" />
 				<run ground="190" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -399,14 +399,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6599" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="56" max="130" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -446,7 +446,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22805" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -466,10 +466,10 @@
 				<walk ground="72" />
 				<run ground="190" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -482,14 +482,14 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="6599" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -529,7 +529,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22806" level="73" type="L2Monster" name="Horrifying Jackhammer Golem">
 		<parameters>
@@ -549,10 +549,10 @@
 				<walk ground="72" />
 				<run ground="190" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -563,14 +563,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6599" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="32.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="51" max="119" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -610,7 +610,7 @@
 			<corpse>
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22807" level="72" type="L2Monster" name="Scout-type Golem No. 28">
 		<parameters>
@@ -631,10 +631,10 @@
 				<walk ground="72" />
 				<run ground="190" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -647,14 +647,14 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6610" level="9" /> <!-- NPC earth magic -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="23" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
@@ -694,7 +694,7 @@
 			<corpse>
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22808" level="72" type="L2Monster" name="Scout-type Golem No. 2">
 		<parameters>
@@ -716,10 +716,10 @@
 				<walk ground="30" />
 				<run ground="170" />
 			</speed>
-			<hit_time>720</hit_time>
+			<hitTime>720</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -732,18 +732,18 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6597" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>GOLEM_P</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="5" />
 			<height normal="19" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
@@ -783,7 +783,7 @@
 			<corpse>
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22809" level="73" type="L2Monster" name="Guard Golem">
 		<parameters>
@@ -807,7 +807,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -820,19 +820,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6599" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GOLEM_P</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" />
 			<height normal="37.2" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="112" max="261" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
@@ -842,7 +842,7 @@
 				<item id="36522" min="1" max="1" chance="1" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22810" level="72" type="L2Monster" name="Micro Scout Golem">
 		<parameters>
@@ -864,10 +864,10 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4156" level="7" /> <!-- NPC Curve Beam Cannon - Magic -->
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
@@ -880,19 +880,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6599" level="9" /> <!-- NPC earth attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GOLEM_P</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="43.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -902,7 +902,7 @@
 				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22811" level="73" type="L2Monster" name="Great Chaos Golem">
 		<parameters>
@@ -925,7 +925,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -937,19 +937,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6262" level="1" /> <!-- EMP Power -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GOLEM_P</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="46.3765" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="159" max="371" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
@@ -959,7 +959,7 @@
 				<item id="36522" min="1" max="1" chance="1.500" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22812" level="72" type="L2Monster" name="Boom Golem">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -982,7 +982,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
@@ -992,19 +992,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="6264" level="1" /> <!-- Golem Boom -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>GOLEM_P</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="6" />
 			<height normal="13" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="91" max="212" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
@@ -1015,7 +1015,7 @@
 				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22838" level="85" type="L2Monster" name="Maluk Leader">
 		<parameters>
@@ -1031,7 +1031,7 @@
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1040,7 +1040,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1053,14 +1053,14 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6748" level="1" /> <!-- Stun Attack -->
 			<skill id="6750" level="1" /> <!-- Power Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="24809" max="57874" chance="100" /> <!-- Adena -->
@@ -1098,7 +1098,7 @@
 				<item id="15636" min="1" max="1" chance="2.3272" /> <!-- Vesper Buster Piece -->
 				<item id="15638" min="1" max="1" chance="2.3073" /> <!-- Vesper Fighter Piece -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="45" />
@@ -1118,7 +1118,7 @@
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1127,7 +1127,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -1140,14 +1140,14 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6752" level="1" /> <!-- Revival -->
 			<skill id="6755" level="1" /> <!-- Death Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="23997" max="55980" chance="100" /> <!-- Adena -->
@@ -1190,7 +1190,7 @@
 				<item id="15669" min="1" max="1" chance="25.6924" /> <!-- Sealed Vesper Verteidiger Piece -->
 				<item id="15825" min="1" max="1" chance="0.2644" /> <!-- Recipe - Vesper Thrower (60%) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="60" />
@@ -1210,7 +1210,7 @@
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1219,7 +1219,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1233,15 +1233,15 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6753" level="1" /> <!-- Death Blow -->
 			<skill id="6754" level="1" /> <!-- Bleed -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="8612" max="20089" chance="100" /> <!-- Adena -->
@@ -1282,7 +1282,7 @@
 				<item id="6578" min="1" max="1" chance="0.0518" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 				<item id="13458" min="1" max="1" chance="0.0016" /> <!-- Vesper Slasher -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -1302,7 +1302,7 @@
 			<attack physical="10327.681831868" magical="7052.46788014386" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1311,7 +1311,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1324,15 +1324,15 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6749" level="1" /> <!-- Death Strike -->
 			<skill id="6756" level="1" /> <!-- Death Talon -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="14790" max="34502" chance="100" /> <!-- Adena -->
@@ -1366,7 +1366,7 @@
 				<item id="15639" min="1" max="1" chance="1.3915" /> <!-- Vesper Stormer Piece -->
 				<item id="13459" min="1" max="1" chance="0.0033" /> <!-- Vesper Buster -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="41" />
@@ -1387,7 +1387,7 @@
 			<attack physical="10327.681831868" magical="7052.46788014386" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1396,7 +1396,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1410,15 +1410,15 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6757" level="1" /> <!-- Slow -->
 			<skill id="6758" level="1" /> <!-- Rage -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="14790" max="34502" chance="100" /> <!-- Adena -->
@@ -1452,7 +1452,7 @@
 				<item id="959" min="1" max="1" chance="0.0801" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
 				<item id="13458" min="1" max="1" chance="0.0028" /> <!-- Vesper Slasher -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -1472,7 +1472,7 @@
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -1481,7 +1481,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1494,15 +1494,15 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="6759" level="1" /> <!-- Death Shot -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="8451" max="19715" chance="100" /> <!-- Adena -->
@@ -1537,7 +1537,7 @@
 				<item id="15636" min="1" max="1" chance="0.7928" /> <!-- Vesper Buster Piece -->
 				<item id="15638" min="1" max="1" chance="0.786" /> <!-- Vesper Fighter Piece -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="26" />
@@ -1564,10 +1564,10 @@
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<hit_time>420</hit_time>
+			<hitTime>420</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1580,15 +1580,15 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="26239" max="61210" chance="100" /> <!-- Adena -->
@@ -1625,7 +1625,7 @@
 				<item id="6578" min="1" max="1" chance="0.1842" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 				<item id="13457" min="1" max="1" chance="0.0058" /> <!-- Vesper Cutter -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />
@@ -1652,10 +1652,10 @@
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<hit_time>420</hit_time>
+			<hitTime>420</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1668,15 +1668,15 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="26983" max="62945" chance="100" /> <!-- Adena -->
@@ -1713,7 +1713,7 @@
 				<item id="13467" min="1" max="1" chance="0.0051" /> <!-- Vesper Thrower -->
 				<item id="13457" min="1" max="1" chance="0.0051" /> <!-- Vesper Cutter -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="29" />
 			<height normal="49.9" />
@@ -1740,10 +1740,10 @@
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<hit_time>420</hit_time>
+			<hitTime>420</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1756,15 +1756,15 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="35741" max="83374" chance="100" /> <!-- Adena -->
@@ -1800,7 +1800,7 @@
 				<item id="15820" min="1" max="1" chance="0.3375" /> <!-- Recipe - Vesper Stormer (60%) -->
 				<item id="13893" min="1" max="1" chance="0.0337" /> <!-- Sealed Holy Spirit's Cloak -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="29" />
 			<height normal="49.9" />
@@ -1827,10 +1827,10 @@
 				<walk ground="55" />
 				<run ground="210" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -1843,14 +1843,14 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6760" level="1" /> <!-- Dragon Strike -->
 			<skill id="6762" level="1" /> <!-- Rage -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="17676" max="41234" chance="100" /> <!-- Adena -->
@@ -1887,7 +1887,7 @@
 				<item id="6577" min="1" max="1" chance="0.014" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 				<item id="6578" min="1" max="1" chance="0.093" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="33" />
@@ -1915,10 +1915,10 @@
 				<walk ground="43" />
 				<run ground="170" />
 			</speed>
-			<hit_time>420</hit_time>
+			<hitTime>420</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1934,14 +1934,14 @@
 			<skill id="6763" level="1" /> <!-- Dragon Earth Strike -->
 			<skill id="6818" level="1" /> <!-- Powerful Rage -->
 			<skill id="6820" level="1" /> <!-- P. Def. Enhance -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAKE_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="30896" max="72072" chance="100" /> <!-- Adena -->
@@ -1974,7 +1974,7 @@
 				<item id="15642" min="1" max="1" chance="3.4481" /> <!-- Vesper Caster Piece -->
 				<item id="13893" min="1" max="1" chance="0.0408" /> <!-- Sealed Holy Spirit's Cloak -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="29" />
 			<height normal="49.9" />
@@ -2000,10 +2000,10 @@
 				<walk ground="56" />
 				<run ground="210" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2016,15 +2016,15 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="6760" level="1" /> <!-- Dragon Strike -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAKE_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="17732" max="41364" chance="100" /> <!-- Adena -->
@@ -2059,7 +2059,7 @@
 				<item id="15817" min="1" max="1" chance="0.1674" /> <!-- Recipe - Vesper Buster (60%) -->
 				<item id="13457" min="1" max="1" chance="0.0033" /> <!-- Vesper Cutter -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="42" />
@@ -2088,7 +2088,7 @@
 			</speed>
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -2101,15 +2101,15 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6761" level="1" /> <!-- Dragon Blow Strike -->
 			<skill id="6764" level="1" /> <!-- Dragon Earth Shot -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAKE_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="8361" max="19504" chance="100" /> <!-- Adena -->
@@ -2145,7 +2145,7 @@
 				<item id="6578" min="1" max="1" chance="0.0503" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 				<item id="13459" min="1" max="1" chance="0.0016" /> <!-- Vesper Buster -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="36" />
@@ -2171,10 +2171,10 @@
 				<walk ground="92" />
 				<run ground="170" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2188,14 +2188,14 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6765" level="1" /> <!-- Complete Recovery -->
 			<skill id="6766" level="1" /> <!-- Earth Tremor -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAKE_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="18219" max="42501" chance="100" /> <!-- Adena -->
@@ -2227,7 +2227,7 @@
 				<item id="15815" min="1" max="1" chance="0.2408" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
 				<item id="13458" min="1" max="1" chance="0.0048" /> <!-- Vesper Slasher -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="39.5" />
@@ -2253,10 +2253,10 @@
 				<walk ground="100" />
 				<run ground="200" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2268,15 +2268,15 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6768" level="1" /> <!-- Stun Attack -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="45317" max="105714" chance="100" /> <!-- Adena -->
@@ -2309,7 +2309,7 @@
 				<item id="15669" min="1" max="1" chance="72.7776" /> <!-- Sealed Vesper Verteidiger Piece -->
 				<item id="13459" min="1" max="1" chance="0.015" /> <!-- Vesper Buster -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="55" />
@@ -2337,10 +2337,10 @@
 				<walk ground="82" />
 				<run ground="170" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2353,14 +2353,14 @@
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="6769" level="1" /> <!-- Petrify -->
 			<skill id="6770" level="1" /> <!-- Heal -->
-		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="24497" max="57145" chance="100" /> <!-- Adena -->
@@ -2393,7 +2393,7 @@
 				<item id="15816" min="1" max="1" chance="0.3238" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
 				<item id="13460" min="1" max="1" chance="0.0065" /> <!-- Vesper Shaper -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="34.5" />
@@ -2415,7 +2415,7 @@
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
-				<attack type="UNHOLY" value="270" />
+				<attack type="DARK" value="270" />
 				<defence fire="240" water="240" wind="240" earth="240" holy="190" dark="270" default="250" />
 			</attribute>
 			<speed>
@@ -2424,7 +2424,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -2438,19 +2438,19 @@
 			<skill id="6771" level="1" /> <!-- Death Strike -->
 			<skill id="6772" level="1" /> <!-- Power Strike -->
 			<skill id="6773" level="1" /> <!-- Rage -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="57" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4278" max="9971" chance="70" /> <!-- Adena -->
 				<item id="9549" min="1" max="1" chance="0.75" /> <!-- Wind Stone -->
@@ -2465,7 +2465,7 @@
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22855" level="85" type="L2Monster" name="Bloody Berserker">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2482,7 +2482,7 @@
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
-				<attack type="UNHOLY" value="270" />
+				<attack type="DARK" value="270" />
 				<defence fire="240" water="240" wind="240" earth="240" holy="190" dark="270" default="250" />
 			</attribute>
 			<speed>
@@ -2491,7 +2491,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -2504,19 +2504,19 @@
 			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6774" level="1" /> <!-- Stun Attack -->
 			<skill id="6775" level="1" /> <!-- Soul Breath -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2907" max="6775" chance="70" /> <!-- Adena -->
 				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
@@ -2533,7 +2533,7 @@
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22856" level="85" type="L2Monster" name="Bloody Karinness">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2551,7 +2551,7 @@
 			<attack physical="10714.2988085721" magical="7316.4772660902" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="584.99232" magical="642.108" />
 			<attribute>
-				<attack type="UNHOLY" value="270" />
+				<attack type="DARK" value="270" />
 				<defence fire="240" water="240" wind="240" earth="240" holy="190" dark="270" default="250" />
 			</attribute>
 			<speed>
@@ -2560,7 +2560,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
@@ -2574,19 +2574,19 @@
 			<skill id="6776" level="1" /> <!-- Paralysis -->
 			<skill id="6777" level="1" /> <!-- Bleeding Gash -->
 			<skill id="6778" level="1" /> <!-- Death Strike -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="500">
-			<clan_list>
+			<clanList>
 				<clan>DRAGON_IN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2907" max="6775" chance="70" /> <!-- Adena -->
 				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
@@ -2604,7 +2604,7 @@
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22857" level="85" type="L2Monster" name="Knoriks" title="Land Dragon's Patrol">
 		<race>HUMANOID</race>
@@ -2615,7 +2615,7 @@
 			<attack physical="10107.8290646906" magical="6902.33704348132" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
-				<attack type="UNHOLY" value="250" />
+				<attack type="DARK" value="250" />
 				<defence fire="220" water="220" wind="220" earth="220" holy="170" dark="250" default="230" />
 			</attribute>
 			<speed>
@@ -2624,7 +2624,7 @@
 			</speed>
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2638,10 +2638,10 @@
 			<skill id="5467" level="1" /> <!-- Dark Attacks -->
 			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6743" level="1" /> <!-- Dark Wind -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" />
-		<drop_lists>
+		<dropLists>
 			<death>
 				<group chance="66">
 					<item id="57" min="195846" max="456862" chance="100" /> <!-- Adena -->
@@ -2684,7 +2684,7 @@
 				<item id="6577" min="1" max="1" chance="0.3093" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
 				<item id="6578" min="1" max="1" chance="2.0619" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -2705,22 +2705,22 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="400" clanHelpRange="400" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="809" max="1889" chance="70" />
 				<item id="36517" min="1" max="1" chance="4.60509" />
@@ -2733,7 +2733,7 @@
 				<item id="36517" min="1" max="1" chance="47.03" />
 				<item id="36518" min="1" max="1" chance="8.969" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22864" level="90" type="L2Monster" name="Fairy Warrior" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2750,10 +2750,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
@@ -2761,12 +2761,12 @@
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1198" max="2790" chance="70" />
 				<item id="36517" min="1" max="1" chance="5.68057" />
@@ -2780,7 +2780,7 @@
 				<item id="36517" min="1" max="1" chance="68.14" />
 				<item id="36518" min="1" max="1" chance="13.59" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22865" level="89" type="L2Monster" name="Fairy Warrior" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2797,21 +2797,21 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1036" max="2414" chance="70" />
 				<item id="36517" min="1" max="1" chance="7.39336" />
@@ -2824,7 +2824,7 @@
 				<item id="36517" min="1" max="1" chance="59.87" />
 				<item id="36518" min="1" max="1" chance="11.67" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22866" level="89" type="L2Monster" name="Fairy Warrior" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2841,21 +2841,21 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="875" max="2042" chance="70" />
 				<item id="36517" min="1" max="1" chance="6.41269" />
@@ -2868,7 +2868,7 @@
 				<item id="36517" min="1" max="1" chance="48.74" />
 				<item id="36518" min="1" max="1" chance="9.69699" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22867" level="91" type="L2Monster" name="Fairy Warrior" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2885,10 +2885,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
@@ -2897,12 +2897,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1094" max="2553" chance="70" />
 				<item id="36517" min="1" max="1" chance="6.39882" />
@@ -2915,7 +2915,7 @@
 				<item id="36517" min="1" max="1" chance="60.89" />
 				<item id="36518" min="1" max="1" chance="12.25" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22868" level="93" type="L2Monster" name="Fairy Warrior" title="Brutal">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2932,10 +2932,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
@@ -2945,12 +2945,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="9" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1542" max="3589" chance="70" />
 				<item id="17374" min="1" max="1" chance="10.1486" />
@@ -2965,7 +2965,7 @@
 				<item id="36517" min="1" max="1" chance="90.755" />
 				<item id="36518" min="1" max="1" chance="16.87" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22869" level="92" type="L2Monster" name="Fairy Warrior" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2982,10 +2982,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
@@ -2995,12 +2995,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1402" max="3254" chance="70" />
 				<item id="36517" min="1" max="1" chance="9.79166" />
@@ -3013,7 +3013,7 @@
 				<item id="36517" min="1" max="1" chance="81.16" />
 				<item id="36518" min="1" max="1" chance="15.06" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22870" level="92" type="L2Monster" name="Fairy Warrior" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3030,10 +3030,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="14040" level="4" />
@@ -3042,12 +3042,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1265" max="2950" chance="70" />
 				<item id="36517" min="1" max="1" chance="6.15268" />
@@ -3061,7 +3061,7 @@
 				<item id="36517" min="1" max="1" chance="70.28" />
 				<item id="36518" min="1" max="1" chance="13.39" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22871" level="88" type="L2Monster" name="Fairy Rogue">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3078,22 +3078,22 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="400" clanHelpRange="400" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="809" max="1889" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.15633" />
@@ -3103,7 +3103,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22872" level="90" type="L2Monster" name="Fairy Rogue" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3120,10 +3120,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
@@ -3131,12 +3131,12 @@
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1197" max="2790" chance="70" />
 				<item id="17374" min="1" max="1" chance="5.09175" />
@@ -3147,7 +3147,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22873" level="89" type="L2Monster" name="Fairy Rogue" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3164,21 +3164,21 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1038" max="2413" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.12244" />
@@ -3188,7 +3188,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22874" level="89" type="L2Monster" name="Fairy Rogue" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3205,21 +3205,21 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="875" max="2043" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.15495" />
@@ -3229,7 +3229,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22875" level="91" type="L2Monster" name="Fairy Rogue" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3246,10 +3246,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
@@ -3257,12 +3257,12 @@
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1094" max="2553" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.42452" />
@@ -3272,7 +3272,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22876" level="93" type="L2Monster" name="Fairy Rogue" title="Brutal">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3289,10 +3289,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5467" level="1" />
 			<skill id="4414" level="3" />
@@ -3302,12 +3302,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1541" max="3589" chance="70" />
 				<item id="17374" min="1" max="1" chance="9.87948" />
@@ -3319,7 +3319,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.07502" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22877" level="92" type="L2Monster" name="Fairy Rogue" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3336,10 +3336,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
@@ -3349,12 +3349,12 @@
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1399" max="3235" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.03305" />
@@ -3364,7 +3364,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22878" level="92" type="L2Monster" name="Fairy Rogue" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3381,10 +3381,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14043" level="1" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
@@ -3392,12 +3392,12 @@
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="6914" level="3" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1265" max="2950" chance="70" />
 				<item id="36843" min="1" max="1" chance="1.61106" />
@@ -3407,7 +3407,7 @@
 			<corpse>
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22879" level="88" type="L2Monster" name="Fairy Knight">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3424,20 +3424,20 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="809" max="1889" chance="70" />
 				<item id="36517" min="1" max="1" chance="4.74785" />
@@ -3451,7 +3451,7 @@
 				<item id="36518" min="1" max="1" chance="5.963" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22880" level="90" type="L2Monster" name="Fairy Knight" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3468,22 +3468,22 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="14040" level="2" />
 			<skill id="4414" level="1" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1197" max="2790" chance="70" />
 				<item id="36517" min="1" max="1" chance="6.91673" />
@@ -3498,7 +3498,7 @@
 				<item id="36518" min="1" max="1" chance="8.75" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22881" level="89" type="L2Monster" name="Fairy Knight" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3515,20 +3515,20 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1038" max="2412" chance="70" />
 				<item id="36517" min="1" max="1" chance="5.69715" />
@@ -3542,7 +3542,7 @@
 				<item id="36518" min="1" max="1" chance="7.542" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22882" level="89" type="L2Monster" name="Fairy Knight" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3559,20 +3559,20 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="2" />
 			<skill id="4414" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="876" max="2043" chance="70" />
 				<item id="36517" min="1" max="1" chance="5.20868" />
@@ -3586,7 +3586,7 @@
 				<item id="36518" min="1" max="1" chance="6.387" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22883" level="91" type="L2Monster" name="Fairy Knight" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3603,10 +3603,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
 			<!-- <skill id="4412" level="4" /> -->
@@ -3614,12 +3614,12 @@
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1094" max="2553" chance="70" />
 				<item id="36517" min="1" max="1" chance="8.4129" />
@@ -3631,7 +3631,7 @@
 				<item id="36517" min="1" max="1" chance="62.94" />
 				<item id="36518" min="1" max="1" chance="12.64" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22884" level="93" type="L2Monster" name="Fairy Knight" title="Brutal">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3648,10 +3648,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="14040" level="5" />
 			<skill id="4414" level="1" />
@@ -3660,12 +3660,12 @@
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1540" max="3589" chance="70" />
 				<item id="17374" min="1" max="1" chance="10.5921" />
@@ -3680,7 +3680,7 @@
 				<item id="36517" min="1" max="1" chance="90.18" />
 				<item id="36518" min="1" max="1" chance="17.27" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22885" level="92" type="L2Monster" name="Fairy Knight" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3697,10 +3697,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
 			<skill id="4414" level="1" />
@@ -3709,12 +3709,12 @@
 			<!-- <skill id="4410" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1446" max="3242" chance="70" />
 				<item id="36517" min="1" max="1" chance="8.2725" />
@@ -3729,7 +3729,7 @@
 				<item id="36518" min="1" max="1" chance="9.9" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22886" level="92" type="L2Monster" name="Fairy Knight" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3746,10 +3746,10 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="14040" level="5" />
 			<!-- <skill id="4412" level="4" /> -->
@@ -3757,12 +3757,12 @@
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1265" max="2950" chance="70" />
 				<item id="36517" min="1" max="1" chance="7.82945" />
@@ -3776,7 +3776,7 @@
 				<item id="36518" min="1" max="1" chance="9.251" />
 				<item id="17527" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22887" level="88" type="L2Monster" name="Satyr Wizard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3793,21 +3793,21 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="830" max="1940" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.37736" />
@@ -3819,7 +3819,7 @@
 				<item id="36533" min="1" max="1" chance="2.003" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22888" level="90" type="L2Monster" name="Satyr Wizard" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3836,10 +3836,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -3847,12 +3847,12 @@
 			<skill id="14048" level="1" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1218" max="2834" chance="70" />
 				<item id="17374" min="1" max="1" chance="5.26595" />
@@ -3865,7 +3865,7 @@
 				<item id="36533" min="1" max="1" chance="2.972" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22889" level="89" type="L2Monster" name="Satyr Wizard" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3882,21 +3882,21 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1056" max="2445" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.9901" />
@@ -3908,7 +3908,7 @@
 				<item id="36533" min="1" max="1" chance="2.602" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22890" level="89" type="L2Monster" name="Satyr Wizard" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3925,21 +3925,21 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="2" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14046" level="2" />
 			<skill id="14048" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="893" max="2085" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.38911" />
@@ -3952,7 +3952,7 @@
 				<item id="36533" min="1" max="1" chance="2.178" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22891" level="91" type="L2Monster" name="Satyr Wizard" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3969,10 +3969,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -3981,12 +3981,12 @@
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1106" max="2580" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.5988" />
@@ -3998,7 +3998,7 @@
 				<item id="36533" min="1" max="1" chance="2.641" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22892" level="93" type="L2Monster" name="Satyr Wizard" title="Brutal">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4015,10 +4015,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -4028,12 +4028,12 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1542" max="3591" chance="70" />
 				<item id="17374" min="1" max="1" chance="10.989" />
@@ -4047,7 +4047,7 @@
 				<item id="36533" min="1" max="1" chance="3.708" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22893" level="92" type="L2Monster" name="Satyr Wizard" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4064,10 +4064,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -4077,12 +4077,12 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1410" max="3267" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.22075" />
@@ -4095,7 +4095,7 @@
 				<item id="36533" min="1" max="1" chance="3.425" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22894" level="92" type="L2Monster" name="Satyr Wizard" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4112,10 +4112,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -4124,12 +4124,12 @@
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1272" max="2967" chance="70" />
 				<item id="36835" min="1" max="1" chance="0.5618" />
@@ -4142,7 +4142,7 @@
 				<item id="36533" min="1" max="1" chance="3.076" />
 				<item id="36883" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22895" level="88" type="L2Monster" name="Satyr Summoner">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4159,20 +4159,20 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14047" level="3" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="830" max="1940" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.22124" />
@@ -4183,7 +4183,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22896" level="90" type="L2Monster" name="Satyr Summoner" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4200,22 +4200,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14047" level="3" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1217" max="2834" chance="70" />
 				<item id="17374" min="1" max="1" chance="5.1315" />
@@ -4227,7 +4227,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22897" level="89" type="L2Monster" name="Satyr Summoner" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4244,20 +4244,20 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14047" level="3" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1055" max="2463" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.3003" />
@@ -4268,7 +4268,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22898" level="89" type="L2Monster" name="Satyr Summoner" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4285,20 +4285,20 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14047" level="3" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="893" max="2085" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.1385" />
@@ -4310,7 +4310,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22899" level="91" type="L2Monster" name="Satyr Summoner" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -4327,22 +4327,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14047" level="4" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1106" max="2580" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.20367" />
@@ -4353,6 +4353,6 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

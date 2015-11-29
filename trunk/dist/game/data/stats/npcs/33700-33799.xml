@@ -14,7 +14,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -36,7 +36,7 @@
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -58,7 +58,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -80,14 +80,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -106,7 +106,7 @@
 				<item id="6570" min="1" max="1" chance="0.8" />
 				<item id="6569" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33704" level="1" type="L2Monster" name="Destiny Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -122,14 +122,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -148,7 +148,7 @@
 				<item id="6578" min="1" max="1" chance="0.8" />
 				<item id="6577" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33705" level="1" type="L2Monster" name="Destiny Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -164,14 +164,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9546" min="1" max="1" chance="9" />
 				<item id="9547" min="1" max="1" chance="9" />
@@ -190,7 +190,7 @@
 				<item id="19448" min="1" max="1" chance="0.8" />
 				<item id="19447" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33706" level="1" type="L2Npc" name="Destiny Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -206,7 +206,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -228,14 +228,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -254,7 +254,7 @@
 				<item id="6570" min="1" max="1" chance="0.8" />
 				<item id="6569" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33708" level="1" type="L2Monster" name="Fortune Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -270,14 +270,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -296,7 +296,7 @@
 				<item id="6578" min="1" max="1" chance="0.8" />
 				<item id="6577" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33709" level="1" type="L2Monster" name="Fortune Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -312,14 +312,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9546" min="1" max="1" chance="9" />
 				<item id="9547" min="1" max="1" chance="9" />
@@ -338,7 +338,7 @@
 				<item id="19448" min="1" max="1" chance="0.8" />
 				<item id="19447" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33710" level="1" type="L2Npc" name="Fortune Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -354,7 +354,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -376,14 +376,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -402,7 +402,7 @@
 				<item id="6570" min="1" max="1" chance="0.8" />
 				<item id="6569" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33712" level="1" type="L2Monster" name="Hope Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -418,14 +418,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9550" min="1" max="1" chance="9" />
 				<item id="9551" min="1" max="1" chance="9" />
@@ -444,7 +444,7 @@
 				<item id="6578" min="1" max="1" chance="0.8" />
 				<item id="6577" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33713" level="1" type="L2Monster" name="Hope Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -460,14 +460,14 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="12" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9546" min="1" max="1" chance="9" />
 				<item id="9547" min="1" max="1" chance="9" />
@@ -486,7 +486,7 @@
 				<item id="19448" min="1" max="1" chance="0.8" />
 				<item id="19447" min="1" max="1" chance="0.2" />
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="33714" level="1" type="L2Npc" name="Hope Treasure Chest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -502,7 +502,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -524,7 +524,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -546,7 +546,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -568,7 +568,7 @@
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -590,7 +590,7 @@
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -612,7 +612,7 @@
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -634,7 +634,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -656,7 +656,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -678,7 +678,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -700,7 +700,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -722,7 +722,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -744,7 +744,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -766,7 +766,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -788,7 +788,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -810,7 +810,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -832,7 +832,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -854,7 +854,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -876,7 +876,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -898,7 +898,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -920,7 +920,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -942,7 +942,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -964,12 +964,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="2" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="10" />
@@ -989,12 +989,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1014,12 +1014,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1039,12 +1039,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1064,12 +1064,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1089,12 +1089,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1114,12 +1114,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1139,12 +1139,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1164,12 +1164,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="18" />
@@ -1189,7 +1189,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1211,7 +1211,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1233,7 +1233,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1255,7 +1255,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1277,7 +1277,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1299,7 +1299,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1321,7 +1321,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1343,7 +1343,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1365,7 +1365,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1387,7 +1387,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1409,7 +1409,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1431,7 +1431,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1453,7 +1453,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1475,7 +1475,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1497,7 +1497,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1519,7 +1519,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1541,7 +1541,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1563,7 +1563,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1585,7 +1585,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1607,7 +1607,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1629,7 +1629,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1651,7 +1651,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1673,7 +1673,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1695,7 +1695,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1717,7 +1717,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1739,7 +1739,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1761,7 +1761,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1783,7 +1783,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1805,7 +1805,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1827,7 +1827,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1849,7 +1849,7 @@
 				<walk ground="20" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1871,7 +1871,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1893,7 +1893,7 @@
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1915,7 +1915,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1937,7 +1937,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1959,7 +1959,7 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1981,7 +1981,7 @@
 				<walk ground="50" />
 				<run ground="100" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2003,7 +2003,7 @@
 				<walk ground="45" />
 				<run ground="300" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2025,7 +2025,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2047,7 +2047,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2069,7 +2069,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2091,7 +2091,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2113,7 +2113,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2135,7 +2135,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2157,7 +2157,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2179,7 +2179,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2201,7 +2201,7 @@
 				<walk ground="50" />
 				<run ground="1" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2223,12 +2223,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="18.5" />
@@ -2248,12 +2248,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="18" />
@@ -2273,12 +2273,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="18.5" />
@@ -2298,12 +2298,12 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="18" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="18.5" />
@@ -2323,7 +2323,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2345,7 +2345,7 @@
 				<walk ground="28" />
 				<run ground="1" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2367,7 +2367,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2389,7 +2389,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2411,7 +2411,7 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
 		<collision>

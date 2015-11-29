@@ -93,11 +93,11 @@ public class NpcData implements IXmlReader
 		{
 			if ("list".equalsIgnoreCase(node.getNodeName()))
 			{
-				for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
+				for (Node listNode = node.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
 				{
-					if ("npc".equalsIgnoreCase(list_node.getNodeName()))
+					if ("npc".equalsIgnoreCase(listNode.getNodeName()))
 					{
-						NamedNodeMap attrs = list_node.getAttributes();
+						NamedNodeMap attrs = listNode.getAttributes();
 						final StatsSet set = new StatsSet();
 						final int npcId = parseInteger(attrs, "id");
 						Map<String, Object> parameters = null;
@@ -113,10 +113,10 @@ public class NpcData implements IXmlReader
 						set.set("usingServerSideName", parseBoolean(attrs, "usingServerSideName"));
 						set.set("title", parseString(attrs, "title"));
 						set.set("usingServerSideTitle", parseBoolean(attrs, "usingServerSideTitle"));
-						for (Node npc_node = list_node.getFirstChild(); npc_node != null; npc_node = npc_node.getNextSibling())
+						for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 						{
-							attrs = npc_node.getAttributes();
-							switch (npc_node.getNodeName().toLowerCase())
+							attrs = npcNode.getAttributes();
+							switch (npcNode.getNodeName().toLowerCase())
 							{
 								case "parameters":
 								{
@@ -125,10 +125,10 @@ public class NpcData implements IXmlReader
 										parameters = new HashMap<>();
 									}
 									
-									for (Node parameters_node = npc_node.getFirstChild(); parameters_node != null; parameters_node = parameters_node.getNextSibling())
+									for (Node parametersNode = npcNode.getFirstChild(); parametersNode != null; parametersNode = parametersNode.getNextSibling())
 									{
-										attrs = parameters_node.getAttributes();
-										switch (parameters_node.getNodeName().toLowerCase())
+										attrs = parametersNode.getAttributes();
+										switch (parametersNode.getNodeName().toLowerCase())
 										{
 											case "param":
 											{
@@ -143,18 +143,18 @@ public class NpcData implements IXmlReader
 											case "minions":
 											{
 												final List<MinionHolder> minions = new ArrayList<>(1);
-												for (Node minions_node = parameters_node.getFirstChild(); minions_node != null; minions_node = minions_node.getNextSibling())
+												for (Node minionsNode = parametersNode.getFirstChild(); minionsNode != null; minionsNode = minionsNode.getNextSibling())
 												{
-													if (minions_node.getNodeName().equalsIgnoreCase("npc"))
+													if (minionsNode.getNodeName().equalsIgnoreCase("npc"))
 													{
-														attrs = minions_node.getAttributes();
+														attrs = minionsNode.getAttributes();
 														minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), parseInteger(attrs, "weightPoint")));
 													}
 												}
 												
 												if (!minions.isEmpty())
 												{
-													parameters.put(parseString(parameters_node.getAttributes(), "name"), minions);
+													parameters.put(parseString(parametersNode.getAttributes(), "name"), minions);
 												}
 												
 												break;
@@ -165,7 +165,7 @@ public class NpcData implements IXmlReader
 								}
 								case "race":
 								case "sex":
-									set.set(npc_node.getNodeName(), npc_node.getTextContent().toUpperCase());
+									set.set(npcNode.getNodeName(), npcNode.getTextContent().toUpperCase());
 									break;
 								case "equipment":
 								{
@@ -190,10 +190,10 @@ public class NpcData implements IXmlReader
 									set.set("baseWIT", parseInteger(attrs, "wit"));
 									set.set("baseCON", parseInteger(attrs, "con"));
 									set.set("baseMEN", parseInteger(attrs, "men"));
-									for (Node stats_node = npc_node.getFirstChild(); stats_node != null; stats_node = stats_node.getNextSibling())
+									for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling())
 									{
-										attrs = stats_node.getAttributes();
-										switch (stats_node.getNodeName().toLowerCase())
+										attrs = statsNode.getAttributes();
+										switch (statsNode.getNodeName().toLowerCase())
 										{
 											case "vitals":
 											{
@@ -229,10 +229,10 @@ public class NpcData implements IXmlReader
 											}
 											case "attribute":
 											{
-												for (Node attribute_node = stats_node.getFirstChild(); attribute_node != null; attribute_node = attribute_node.getNextSibling())
+												for (Node attributeNode = statsNode.getFirstChild(); attributeNode != null; attributeNode = attributeNode.getNextSibling())
 												{
-													attrs = attribute_node.getAttributes();
-													switch (attribute_node.getNodeName().toLowerCase())
+													attrs = attributeNode.getAttributes();
+													switch (attributeNode.getNodeName().toLowerCase())
 													{
 														case "attack":
 														{
@@ -277,10 +277,10 @@ public class NpcData implements IXmlReader
 											}
 											case "speed":
 											{
-												for (Node speed_node = stats_node.getFirstChild(); speed_node != null; speed_node = speed_node.getNextSibling())
+												for (Node speedNode = statsNode.getFirstChild(); speedNode != null; speedNode = speedNode.getNextSibling())
 												{
-													attrs = speed_node.getAttributes();
-													switch (speed_node.getNodeName().toLowerCase())
+													attrs = speedNode.getAttributes();
+													switch (speedNode.getNodeName().toLowerCase())
 													{
 														case "walk":
 														{
@@ -300,8 +300,8 @@ public class NpcData implements IXmlReader
 												}
 												break;
 											}
-											case "hit_time":
-												set.set("hit_time", npc_node.getTextContent());// TODO: Implement me default 600 (value in ms)
+											case "hitTime":
+												set.set("hitTime", npcNode.getTextContent());// TODO: Implement me default 600 (value in ms)
 												break;
 										}
 									}
@@ -323,14 +323,14 @@ public class NpcData implements IXmlReader
 									set.set("canBeSown", parseBoolean(attrs, "canBeSown"));
 									break;
 								}
-								case "skill_list":
+								case "skilllist":
 								{
 									skills = new HashMap<>();
-									for (Node skill_list_node = npc_node.getFirstChild(); skill_list_node != null; skill_list_node = skill_list_node.getNextSibling())
+									for (Node skillListNode = npcNode.getFirstChild(); skillListNode != null; skillListNode = skillListNode.getNextSibling())
 									{
-										if ("skill".equalsIgnoreCase(skill_list_node.getNodeName()))
+										if ("skill".equalsIgnoreCase(skillListNode.getNodeName()))
 										{
-											attrs = skill_list_node.getAttributes();
+											attrs = skillListNode.getAttributes();
 											final int skillId = parseInteger(attrs, "id");
 											final int skillLevel = parseInteger(attrs, "level");
 											final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
@@ -354,14 +354,14 @@ public class NpcData implements IXmlReader
 									set.set("spiritShotChance", parseInteger(attrs, "spiritChance"));
 									break;
 								}
-								case "corpse_time":
-									set.set("corpseTime", npc_node.getTextContent());
+								case "corpsetime":
+									set.set("corpseTime", npcNode.getTextContent());
 									break;
-								case "ex_crt_effect":
-									set.set("ex_crt_effect", npc_node.getTextContent()); // TODO: Implement me default ? type boolean
+								case "excrteffect":
+									set.set("exCrtEffect", npcNode.getTextContent()); // TODO: Implement me default ? type boolean
 									break;
-								case "s_npc_prop_hp_rate":
-									set.set("s_npc_prop_hp_rate", npc_node.getTextContent()); // TODO: Implement me default 1 type double
+								case "snpcprophprate":
+									set.set("sNpcPropHpRate", npcNode.getTextContent()); // TODO: Implement me default 1 type double
 									break;
 								case "ai":
 								{
@@ -371,10 +371,10 @@ public class NpcData implements IXmlReader
 									set.set("dodge", parseInteger(attrs, "dodge"));
 									set.set("isChaos", parseBoolean(attrs, "isChaos"));
 									set.set("isAggressive", parseBoolean(attrs, "isAggressive"));
-									for (Node ai_node = npc_node.getFirstChild(); ai_node != null; ai_node = ai_node.getNextSibling())
+									for (Node aiNode = npcNode.getFirstChild(); aiNode != null; aiNode = aiNode.getNextSibling())
 									{
-										attrs = ai_node.getAttributes();
-										switch (ai_node.getNodeName().toLowerCase())
+										attrs = aiNode.getAttributes();
+										switch (aiNode.getNodeName().toLowerCase())
 										{
 											case "skill":
 											{
@@ -387,12 +387,12 @@ public class NpcData implements IXmlReader
 												set.set("longRangeSkillChance", parseInteger(attrs, "longRangeChance"));
 												break;
 											}
-											case "clan_list":
+											case "clanList":
 											{
-												for (Node clan_list_node = ai_node.getFirstChild(); clan_list_node != null; clan_list_node = clan_list_node.getNextSibling())
+												for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling())
 												{
-													attrs = clan_list_node.getAttributes();
-													switch (clan_list_node.getNodeName().toLowerCase())
+													attrs = clanListNode.getAttributes();
+													switch (clanListNode.getNodeName().toLowerCase())
 													{
 														case "clan":
 														{
@@ -400,16 +400,16 @@ public class NpcData implements IXmlReader
 															{
 																clans = new HashSet<>(1);
 															}
-															clans.add(getOrCreateClanId(clan_list_node.getTextContent()));
+															clans.add(getOrCreateClanId(clanListNode.getTextContent()));
 															break;
 														}
-														case "ignore_npc_id":
+														case "ignoreNpcId":
 														{
 															if (ignoreClanNpcIds == null)
 															{
 																ignoreClanNpcIds = new HashSet<>(1);
 															}
-															ignoreClanNpcIds.add(Integer.parseInt(clan_list_node.getTextContent()));
+															ignoreClanNpcIds.add(Integer.parseInt(clanListNode.getTextContent()));
 															break;
 														}
 													}
@@ -420,15 +420,15 @@ public class NpcData implements IXmlReader
 									}
 									break;
 								}
-								case "drop_lists":
+								case "droplists":
 								{
-									for (Node drop_lists_node = npc_node.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
+									for (Node dropListsNode = npcNode.getFirstChild(); dropListsNode != null; dropListsNode = dropListsNode.getNextSibling())
 									{
 										DropListScope dropListScope = null;
 										
 										try
 										{
-											dropListScope = Enum.valueOf(DropListScope.class, drop_lists_node.getNodeName().toUpperCase());
+											dropListScope = Enum.valueOf(DropListScope.class, dropListsNode.getNodeName().toUpperCase());
 										}
 										catch (Exception e)
 										{
@@ -442,7 +442,7 @@ public class NpcData implements IXmlReader
 											}
 											
 											List<IDropItem> dropList = new ArrayList<>();
-											parseDropList(f, drop_lists_node, dropListScope, dropList);
+											parseDropList(f, dropListsNode, dropListScope, dropList);
 											dropLists.put(dropListScope, Collections.unmodifiableList(dropList));
 										}
 									}
@@ -450,20 +450,20 @@ public class NpcData implements IXmlReader
 								}
 								case "collision":
 								{
-									for (Node collision_node = npc_node.getFirstChild(); collision_node != null; collision_node = collision_node.getNextSibling())
+									for (Node collisionNode = npcNode.getFirstChild(); collisionNode != null; collisionNode = collisionNode.getNextSibling())
 									{
-										attrs = collision_node.getAttributes();
-										switch (collision_node.getNodeName().toLowerCase())
+										attrs = collisionNode.getAttributes();
+										switch (collisionNode.getNodeName().toLowerCase())
 										{
 											case "radius":
 											{
-												set.set("collision_radius", parseDouble(attrs, "normal"));
+												set.set("collisionRadius", parseDouble(attrs, "normal"));
 												set.set("collisionRadiusGrown", parseDouble(attrs, "grown"));
 												break;
 											}
 											case "height":
 											{
-												set.set("collision_height", parseDouble(attrs, "normal"));
+												set.set("collisionHeight", parseDouble(attrs, "normal"));
 												set.set("collisionHeightGrown", parseDouble(attrs, "grown"));
 												break;
 											}
@@ -520,7 +520,7 @@ public class NpcData implements IXmlReader
 								}
 								
 								final List<AISkillScope> aiSkillScopes = new ArrayList<>();
-								final AISkillScope shortOrLongRangeScope = skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.SHORT_RANGE;
+								final AISkillScope shortOrLongRangeScope = skill.getCastRange() <= 150 ? AISkillScope.SHORT_RANGE : AISkillScope.LONG_RANGE;
 								if (skill.isSuicideAttack())
 								{
 									aiSkillScopes.add(AISkillScope.SUICIDE);
@@ -625,20 +625,20 @@ public class NpcData implements IXmlReader
 		}
 	}
 	
-	private void parseDropList(File f, Node drop_list_node, DropListScope dropListScope, List<IDropItem> drops)
+	private void parseDropList(File f, Node dropListNode, DropListScope dropListScope, List<IDropItem> drops)
 	{
-		for (Node drop_node = drop_list_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling())
+		for (Node dropNode = dropListNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 		{
-			NamedNodeMap attrs = drop_node.getAttributes();
-			switch (drop_node.getNodeName().toLowerCase())
+			NamedNodeMap attrs = dropNode.getAttributes();
+			switch (dropNode.getNodeName().toLowerCase())
 			{
 				case "group":
 				{
 					GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(attrs, "chance"));
 					List<IDropItem> groupedDropList = new ArrayList<>(2);
-					for (Node group_node = drop_node.getFirstChild(); group_node != null; group_node = group_node.getNextSibling())
+					for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
 					{
-						parseDropListItem(group_node, dropListScope, groupedDropList);
+						parseDropListItem(groupNode, dropListScope, groupedDropList);
 					}
 					
 					List<GeneralDropItem> items = new ArrayList<>(groupedDropList.size());
@@ -660,17 +660,17 @@ public class NpcData implements IXmlReader
 				}
 				default:
 				{
-					parseDropListItem(drop_node, dropListScope, drops);
+					parseDropListItem(dropNode, dropListScope, drops);
 					break;
 				}
 			}
 		}
 	}
 	
-	private void parseDropListItem(Node drop_list_item, DropListScope dropListScope, List<IDropItem> drops)
+	private void parseDropListItem(Node dropListItem, DropListScope dropListScope, List<IDropItem> drops)
 	{
-		NamedNodeMap attrs = drop_list_item.getAttributes();
-		switch (drop_list_item.getNodeName().toLowerCase())
+		NamedNodeMap attrs = dropListItem.getAttributes();
+		switch (dropListItem.getNodeName().toLowerCase())
 		{
 			case "item":
 			{
@@ -833,18 +833,18 @@ public class NpcData implements IXmlReader
 			{
 				if ("list".equals(node.getNodeName()))
 				{
-					for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
+					for (Node listNode = node.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
 					{
-						if ("npc".equals(list_node.getNodeName()))
+						if ("npc".equals(listNode.getNodeName()))
 						{
 							final List<MinionHolder> minions = new ArrayList<>(1);
-							NamedNodeMap attrs = list_node.getAttributes();
+							NamedNodeMap attrs = listNode.getAttributes();
 							int id = parseInteger(attrs, "id");
-							for (Node npc_node = list_node.getFirstChild(); npc_node != null; npc_node = npc_node.getNextSibling())
+							for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 							{
-								if ("minion".equals(npc_node.getNodeName()))
+								if ("minion".equals(npcNode.getNodeName()))
 								{
-									attrs = npc_node.getAttributes();
+									attrs = npcNode.getAttributes();
 									minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), 0));
 								}
 							}

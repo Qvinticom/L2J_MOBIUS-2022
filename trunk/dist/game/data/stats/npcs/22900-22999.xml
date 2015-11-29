@@ -15,10 +15,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -27,13 +27,13 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1542" max="3591" chance="70" />
 				<item id="17374" min="1" max="1" chance="10.0911" />
@@ -46,7 +46,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22901" level="92" type="L2Monster" name="Satyr Summoner" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -63,10 +63,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -75,13 +75,13 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1414" max="3275" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.3003" />
@@ -92,7 +92,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22902" level="92" type="L2Monster" name="Satyr Summoner" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -109,23 +109,23 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14047" level="4" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1272" max="2966" chance="70" />
 				<item id="36834" min="1" max="1" chance="0.2907" />
@@ -137,7 +137,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22903" level="88" type="L2Monster" name="Satyr Witch">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -154,22 +154,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
 			<skill id="14046" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="830" max="1939" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.21834" />
@@ -182,7 +182,7 @@
 				<item id="36532" min="1" max="1" chance="16.38" />
 				<item id="36533" min="1" max="1" chance="3.111" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22904" level="90" type="L2Monster" name="Satyr Witch" title="Wicked">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -199,10 +199,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -210,13 +210,13 @@
 			<skill id="14046" level="3" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1217" max="2834" chance="70" />
 				<item id="17374" min="1" max="1" chance="5.28386" />
@@ -229,7 +229,7 @@
 				<item id="36532" min="1" max="1" chance="22.51" />
 				<item id="36533" min="1" max="1" chance="4.41599" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22905" level="89" type="L2Monster" name="Satyr Witch" title="Mature">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -246,22 +246,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
 			<skill id="14046" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1067" max="2463" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.3003" />
@@ -273,7 +273,7 @@
 				<item id="36532" min="1" max="1" chance="19.68" />
 				<item id="36533" min="1" max="1" chance="3.834" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22906" level="89" type="L2Monster" name="Satyr Witch" title="Imperfect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -290,22 +290,22 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="3" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14049" level="1" />
 			<skill id="14046" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="894" max="2085" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.44248" />
@@ -318,7 +318,7 @@
 				<item id="36532" min="1" max="1" chance="17.77" />
 				<item id="36533" min="1" max="1" chance="3.252" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22907" level="91" type="L2Monster" name="Satyr Witch" title="Violent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -335,10 +335,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -346,13 +346,13 @@
 			<skill id="14046" level="4" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1106" max="2580" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.26178" />
@@ -364,7 +364,7 @@
 				<item id="36532" min="1" max="1" chance="21.99" />
 				<item id="36533" min="1" max="1" chance="4.1" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22908" level="93" type="L2Monster" name="Satyr Witch" title="Brutal">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -381,10 +381,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
@@ -394,13 +394,13 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="42.25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1541" max="3590" chance="70" />
 				<item id="17374" min="1" max="1" chance="9.75247" />
@@ -414,7 +414,7 @@
 				<item id="36532" min="1" max="1" chance="29.96" />
 				<item id="36533" min="1" max="1" chance="5.593" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22909" level="92" type="L2Monster" name="Satyr Witch" title="Fully Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -431,10 +431,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -444,13 +444,13 @@
 			<!-- <skill id="4413" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
 			<!-- <skill id="4412" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1406" max="3274" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.3003" />
@@ -462,7 +462,7 @@
 				<item id="36532" min="1" max="1" chance="27.84" />
 				<item id="36533" min="1" max="1" chance="5.106" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22910" level="92" type="L2Monster" name="Satyr Witch" title="Slightly Enraged">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -479,10 +479,10 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14045" level="4" />
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
@@ -490,13 +490,13 @@
 			<skill id="14046" level="4" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1272" max="2967" chance="70" />
 				<item id="36833" min="1" max="1" chance="0.37736" />
@@ -508,7 +508,7 @@
 				<item id="36532" min="1" max="1" chance="23.17" />
 				<item id="36533" min="1" max="1" chance="4.678" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22911" level="95" type="L2Monster" name="Orbis' Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -525,20 +525,20 @@
 				<walk ground="80" />
 				<run ground="190" />
 			</speed>
-			<hit_time>393</hit_time>
+			<hitTime>393</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14001" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6167" max="14382" chance="70" />
 				<item id="36553" min="1" max="1" chance="0.3003" />
@@ -551,7 +551,7 @@
 				<item id="19440" min="1" max="1" chance="0.75188" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22912" level="96" type="L2Monster" name="Orbis' Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -568,21 +568,21 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4410" level="9" /> -->
 			<skill id="14001" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6367" max="14654" chance="70" />
 				<item id="35297" min="1" max="1" chance="0.5814" />
@@ -596,7 +596,7 @@
 				<item id="19440" min="1" max="1" chance="0.75188" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22913" level="97" type="L2Monster" name="Orbis' Victim">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -613,20 +613,20 @@
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14001" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9626" max="22447" chance="70" />
 				<item id="36553" min="1" max="1" chance="0.60606" />
@@ -640,7 +640,7 @@
 				<item id="19440" min="1" max="1" chance="1.407" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22914" level="95" type="L2Monster" name="Orbis' Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -657,20 +657,20 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14004" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6183" max="14326" chance="70" />
 				<item id="35301" min="1" max="1" chance="0.3003" />
@@ -681,7 +681,7 @@
 				<item id="36534" min="1" max="1" chance="2.13" />
 				<item id="17526" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22915" level="96" type="L2Monster" name="Orbis' Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -698,21 +698,21 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4410" level="9" /> -->
 			<skill id="14004" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6346" max="14704" chance="70" />
 				<item id="35301" min="1" max="1" chance="0.3413" />
@@ -723,7 +723,7 @@
 				<item id="36534" min="1" max="1" chance="2.14699" />
 				<item id="17526" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22916" level="97" type="L2Monster" name="Orbis' Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -740,20 +740,20 @@
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14004" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9626" max="22448" chance="70" />
 				<item id="35301" min="1" max="1" chance="0.26455" />
@@ -765,7 +765,7 @@
 				<item id="36534" min="1" max="1" chance="3.327" />
 				<item id="17526" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22917" level="95" type="L2Monster" name="Orbis' Thrower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -782,20 +782,20 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14006" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5002" max="11500" chance="70" />
 				<item id="36553" min="1" max="1" chance="0.3003" />
@@ -809,7 +809,7 @@
 				<item id="17527" min="1" max="1" chance="0.75188" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22918" level="96" type="L2Monster" name="Orbis' Thrower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -826,21 +826,21 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14006" level="1" />
 			<!-- <skill id="4410" level="9" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5054" max="11702" chance="70" />
 				<item id="36553" min="1" max="1" chance="0.3003" />
@@ -854,7 +854,7 @@
 				<item id="17527" min="1" max="1" chance="0.75188" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22919" level="97" type="L2Monster" name="Orbis' Thrower">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -871,20 +871,20 @@
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14006" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="7718" max="17943" chance="70" />
 				<item id="36553" min="1" max="1" chance="0.4065" />
@@ -900,7 +900,7 @@
 				<item id="17527" min="1" max="1" chance="1.063" />
 				<item id="36554" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22920" level="96" type="L2Monster" name="Orbis' Thrower" title="Scout">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -917,21 +917,21 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14007" level="1" />
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="54" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="20055" max="46740" chance="70" />
 				<item id="35312" min="1" max="1" chance="0.75188" />
@@ -946,7 +946,7 @@
 				<item id="36885" min="1" max="1" chance="0.03" />
 				<item id="36886" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22921" level="95" type="L2Monster" name="Orbis' Curator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -963,20 +963,20 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6162" max="14394" chance="70" />
 				<item id="35306" min="1" max="1" chance="0.3003" />
@@ -986,7 +986,7 @@
 				<item id="36533" min="1" max="1" chance="22.97" />
 				<item id="36534" min="1" max="1" chance="2.16699" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22922" level="96" type="L2Monster" name="Orbis' Curator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1003,21 +1003,21 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<!-- <skill id="4411" level="9" /> -->
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6310" max="14707" chance="70" />
 				<item id="35306" min="1" max="1" chance="0.3003" />
@@ -1027,7 +1027,7 @@
 				<item id="36533" min="1" max="1" chance="22.73" />
 				<item id="36534" min="1" max="1" chance="2.128" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22923" level="97" type="L2Monster" name="Orbis' Curator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1044,20 +1044,20 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="11" />
 			<height normal="56" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9626" max="22449" chance="70" />
 				<item id="35306" min="1" max="1" chance="0.75188" />
@@ -1067,7 +1067,7 @@
 				<item id="36533" min="1" max="1" chance="35.59" />
 				<item id="36534" min="1" max="1" chance="3.321" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22924" level="96" type="L2Monster" name="Orbis' Ancient Hero">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1084,20 +1084,20 @@
 				<walk ground="90" />
 				<run ground="210" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14012" level="1" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="22" />
 			<height normal="60" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="13714" max="28570" chance="70" />
 				<item id="17527" min="1" max="1" chance="0.75188" />
@@ -1109,7 +1109,7 @@
 				<item id="36533" min="1" max="1" chance="48.39" />
 				<item id="36534" min="1" max="1" chance="4.43" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22925" level="97" type="L2Monster" name="Orbis' Ancient Hero">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1126,21 +1126,21 @@
 				<walk ground="45" />
 				<run ground="210" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14012" level="1" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4410" level="14" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="22" />
 			<height normal="58" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="15208" max="34288" chance="70" />
 				<item id="9551" min="1" max="1" chance="1.691" />
@@ -1153,7 +1153,7 @@
 				<item id="36534" min="1" max="1" chance="3.393" />
 				<item id="9557" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22926" level="96" type="L2Monster" name="Orbis' Chief Curator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1170,20 +1170,20 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="16" />
 			<height normal="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="13191" max="30742" chance="70" />
 				<item id="35306" min="1" max="1" chance="0.75188" />
@@ -1193,7 +1193,7 @@
 				<item id="36533" min="1" max="1" chance="47.31" />
 				<item id="36534" min="1" max="1" chance="4.53599" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22927" level="97" type="L2Monster" name="Orbis' Chief Curator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1210,21 +1210,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<!-- <skill id="4411" level="14" /> -->
 			<skill id="14009" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="16" />
 			<height normal="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="15129" max="35280" chance="70" />
 				<item id="9550" min="1" max="1" chance="1.72" />
@@ -1236,7 +1236,7 @@
 				<item id="36534" min="1" max="1" chance="3.42" />
 				<item id="9556" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22928" level="97" type="L2Npc" name="Octavis' Gladiator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1252,17 +1252,17 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14032" level="1" />
 			<skill id="11556" level="1" />
 			<skill id="14034" level="1" />
 			<skill id="14033" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="1200"  />
 		<collision>
 			<radius normal="25" />
@@ -1283,15 +1283,15 @@
 				<walk ground="50" />
 				<run ground="190" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14037" level="1" />
 			<skill id="14036" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="1200"  />
 		<collision>
 			<radius normal="40" />
@@ -1312,17 +1312,17 @@
 				<walk ground="90" />
 				<run ground="190" />
 			</speed>
-			<hit_time>373</hit_time>
+			<hitTime>373</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14282" level="1" />
 			<skill id="14010" level="3" />
 			<skill id="14011" level="3" />
 			<skill id="14009" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="1200"  />
 		<collision>
 			<radius normal="16" />
@@ -1344,21 +1344,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4410" level="15" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1071" max="2499" chance="70" />
 				<item id="36797" min="1" max="1" chance="0.70922" />
@@ -1371,7 +1371,7 @@
 				<item id="36532" min="1" max="1" chance="20.52" />
 				<item id="36533" min="1" max="1" chance="3.86999" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22932" level="86" type="L2Monster" name="Krakia Carcass">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1388,21 +1388,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4410" level="14" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1071" max="2499" chance="70" />
 				<item id="36810" min="1" max="1" chance="8.20717" />
@@ -1416,7 +1416,7 @@
 				<item id="36558" min="1" max="1" chance="1.221" />
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22933" level="87" type="L2Monster" name="Krakia Lotus">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1433,21 +1433,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4410" level="15" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1102" max="2572" chance="70" />
 				<item id="36808" min="1" max="1" chance="8.77764" />
@@ -1459,7 +1459,7 @@
 				<item id="36532" min="1" max="1" chance="20.95" />
 				<item id="36533" min="1" max="1" chance="4.073" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22934" level="86" type="L2Monster" name="Rakzan">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1476,21 +1476,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="42" />
 			<height normal="78" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1071" max="2499" chance="70" />
 				<item id="36796" min="1" max="1" chance="0.73529" />
@@ -1501,7 +1501,7 @@
 				<item id="36532" min="1" max="1" chance="19.58" />
 				<item id="36533" min="1" max="1" chance="3.883" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22935" level="85" type="L2Monster" name="Weiss Khan">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1518,22 +1518,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>1195</hit_time>
+			<hitTime>1195</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1045" max="2435" chance="70" />
 				<item id="36809" min="1" max="1" chance="5.85872" />
@@ -1546,7 +1546,7 @@
 				<item id="36532" min="1" max="1" chance="27.57" />
 				<item id="36533" min="1" max="1" chance="5.192" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22936" level="85" type="L2Monster" name="Weiss Ele">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1563,23 +1563,23 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14609" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1045" max="2435" chance="70" />
 				<item id="36517" min="1" max="1" chance="4.5356" />
@@ -1593,7 +1593,7 @@
 				<item id="36517" min="1" max="1" chance="80.46" />
 				<item id="36518" min="1" max="1" chance="15" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22937" level="86" type="L2Monster" name="Bamonti">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1610,22 +1610,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14448" level="1" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
 				<item id="57" min="624" max="1455" chance="70" /> <!-- Adena -->
@@ -1640,7 +1640,7 @@
 				<item id="36557" min="1" max="1" chance="5.127" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22938" level="85" type="L2Monster" name="Seknus">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1657,22 +1657,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14448" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1045" max="2435" chance="70" />
 				<item id="36517" min="1" max="1" chance="4.43713" />
@@ -1687,7 +1687,7 @@
 				<item id="36518" min="1" max="1" chance="10.63" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22939" level="86" type="L2Monster" name="Demonic Bathus">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1704,21 +1704,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<!-- <skill id="4410" level="19" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1266" max="2953" chance="70" />
 				<item id="36517" min="1" max="1" chance="7.23646" />
@@ -1732,7 +1732,7 @@
 				<item id="36517" min="1" max="1" chance="71.91" />
 				<item id="36518" min="1" max="1" chance="13.89" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22940" level="86" type="L2Monster" name="Demonic Carcass">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1749,21 +1749,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<!-- <skill id="4410" level="18" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1266" max="2953" chance="70" />
 				<item id="36810" min="1" max="1" chance="9.86665" />
@@ -1776,7 +1776,7 @@
 				<item id="36533" min="1" max="1" chance="3.026" />
 				<item id="19440" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22941" level="87" type="L2Monster" name="Demonic Lotus">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1793,21 +1793,21 @@
 				<walk ground="40" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5463" level="1" />
 			<!-- <skill id="4410" level="18" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="28" />
 			<height normal="46.15" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1302" max="3039" chance="70" />
 				<item id="36808" min="1" max="1" chance="10.7952" />
@@ -1818,7 +1818,7 @@
 				<item id="36532" min="1" max="1" chance="23.5" />
 				<item id="36533" min="1" max="1" chance="4.771" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22942" level="86" type="L2Monster" name="Demonic Rakzan">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1835,21 +1835,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="42" />
 			<height normal="78" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1266" max="2953" chance="70" />
 				<item id="36796" min="1" max="1" chance="0.91743" />
@@ -1864,7 +1864,7 @@
 				<item id="36532" min="1" max="1" chance="24.06" />
 				<item id="36533" min="1" max="1" chance="4.591" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22943" level="85" type="L2Monster" name="Demonic Weiss Khan">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1881,22 +1881,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1234" max="2878" chance="70" />
 				<item id="36809" min="1" max="1" chance="7.03691" />
@@ -1908,7 +1908,7 @@
 				<item id="36532" min="1" max="1" chance="32.32" />
 				<item id="36533" min="1" max="1" chance="6.024" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22944" level="85" type="L2Monster" name="Demonic Weiss Ele">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1925,22 +1925,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1234" max="2878" chance="70" />
 				<item id="36517" min="1" max="1" chance="7.01112" />
@@ -1953,7 +1953,7 @@
 				<item id="36517" min="1" max="1" chance="92.39" />
 				<item id="36518" min="1" max="1" chance="18.89" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22945" level="86" type="L2Monster" name="Demonic Bamonti">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1970,21 +1970,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4410" level="19" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1266" max="2953" chance="70" />
 				<item id="36824" min="1" max="1" chance="15.7614" />
@@ -1999,7 +1999,7 @@
 				<item id="36557" min="1" max="1" chance="10.72" />
 				<item id="36558" min="1" max="1" chance="2.11499" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22946" level="85" type="L2Monster" name="Demonic Seknus">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2016,22 +2016,22 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="17" /> -->
 			<!-- <skill id="4410" level="17" /> -->
 			<skill id="14447" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="50" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1234" max="2878" chance="70" />
 				<item id="36517" min="1" max="1" chance="5.09866" />
@@ -2047,7 +2047,7 @@
 				<item id="36897" min="1" max="1" chance="0.3003" />
 				<item id="36896" min="1" max="1" chance="0.25" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22947" level="90" type="L2Monster" name="Garden Sentry">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2064,21 +2064,21 @@
 				<walk ground="23" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14068" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="53" />
 			<height normal="45.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3977" max="9275" chance="70" />
 				<item id="36852" min="1" max="3" chance="11.6445" />
@@ -2089,7 +2089,7 @@
 			<corpse>
 				<item id="9553" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22948" level="90" type="L2Monster" name="Garden Scout">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2106,20 +2106,20 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="5464" level="1" />
 			<skill id="14069" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="42.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3977" max="9277" chance="70" />
 				<item id="36527" min="3" max="9" chance="29.1949" />
@@ -2130,7 +2130,7 @@
 				<item id="36527" min="1" max="5" chance="80.28" />
 				<item id="36528" min="1" max="1" chance="48.74" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22949" level="91" type="L2Monster" name="Garden Commander">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2147,21 +2147,21 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14070" level="1" />
 			<!-- <skill id="4410" level="15" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="44" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4165" max="9704" chance="70" />
 				<item id="36842" min="1" max="1" chance="16.2681" />
@@ -2172,7 +2172,7 @@
 				<item id="36532" min="1" max="1" chance="77.82" />
 				<item id="36533" min="1" max="1" chance="15.71" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22950" level="92" type="L2Monster" name="Outdoor Gardener">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2189,20 +2189,20 @@
 				<walk ground="51" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
 			<skill id="14072" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="43" />
 			<height normal="51.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5646" max="13162" chance="70" />
 				<item id="36527" min="1" max="1" chance="36.6096" />
@@ -2216,7 +2216,7 @@
 				<item id="36528" min="1" max="1" chance="44.45" />
 				<item id="36895" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22951" level="90" type="L2Monster" name="Garden Destroyer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2233,21 +2233,21 @@
 				<walk ground="36" />
 				<run ground="90" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="14073" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="26.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3978" max="9276" chance="70" />
 				<item id="36846" min="1" max="1" chance="12.656" />
@@ -2259,7 +2259,7 @@
 			<corpse>
 				<item id="9556" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22952" level="92" type="L2Monster" name="Garden Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2276,20 +2276,20 @@
 				<walk ground="40" />
 				<run ground="140" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="6578" level="1" />
 			<skill id="5464" level="1" />
 			<skill id="4416" level="13" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4406" max="9861" chance="70" />
 				<item id="36527" min="1" max="1" chance="28.8889" />
@@ -2303,7 +2303,7 @@
 				<item id="36527" min="1" max="5" chance="87.98" />
 				<item id="36528" min="1" max="1" chance="50.89" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22953" level="92" type="L2Monster" name="Garden Scout">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2320,20 +2320,20 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="5464" level="1" />
 			<skill id="14069" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="42.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4278" max="9861" chance="70" />
 				<item id="36527" min="3" max="9" chance="24.1071" />
@@ -2346,7 +2346,7 @@
 				<item id="36528" min="1" max="1" chance="34.44" />
 				<item id="9552" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22954" level="94" type="L2Monster" name="Sun Garden Manager">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2363,21 +2363,21 @@
 				<walk ground="13" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="14077" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6181" max="13832" chance="70" />
 				<item id="36847" min="1" max="1" chance="9.2233" />
@@ -2390,7 +2390,7 @@
 			<corpse>
 				<item id="9556" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22955" level="94" type="L2Monster" name="Sun Gardener">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2407,20 +2407,20 @@
 				<walk ground="51" />
 				<run ground="150" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="5464" level="1" />
 			<skill id="14078" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="43" />
 			<height normal="51.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5995" max="13980" chance="70" />
 				<item id="36853" min="1" max="3" chance="14.1684" />
@@ -2432,7 +2432,7 @@
 				<item id="36532" min="1" max="3" chance="56.12" />
 				<item id="36533" min="1" max="1" chance="22.04" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22956" level="93" type="L2Monster" name="Garden Commander">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2449,21 +2449,21 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14079" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="44" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5926" max="13681" chance="70" />
 				<item id="36829" min="1" max="1" chance="2.94117" />
@@ -2475,7 +2475,7 @@
 				<item id="36532" min="1" max="3" chance="54.61" />
 				<item id="36533" min="1" max="1" chance="20.69" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22957" level="93" type="L2Monster" name="Garden Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2492,21 +2492,21 @@
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14081" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="35" />
 			<height normal="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4463" max="10286" chance="70" />
 				<item id="36854" min="1" max="1" chance="11.5942" />
@@ -2518,7 +2518,7 @@
 				<item id="36532" min="1" max="1" chance="85.65" />
 				<item id="36533" min="1" max="1" chance="16.26" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22958" level="94" type="L2Monster" name="Moon Garden Manager">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2540,21 +2540,21 @@
 				<walk ground="13" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14082" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6070" max="13812" chance="70" />
 				<item id="36847" min="1" max="1" chance="11.7647" />
@@ -2566,7 +2566,7 @@
 			<corpse>
 				<item id="9557" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22959" level="92" type="L2Monster" name="Garden Protector">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2583,21 +2583,21 @@
 				<walk ground="51" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
 			<skill id="6602" level="1" />
 			<!-- <skill id="4410" level="10" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="25" />
 			<height normal="31" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2421" max="5590" chance="70" />
 				<item id="36844" min="1" max="1" chance="3.86473" />
@@ -2608,7 +2608,7 @@
 				<item id="36532" min="1" max="1" chance="46.24" />
 				<item id="36533" min="1" max="1" chance="8.767" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22960" level="94" type="L2Monster" name="Moon Gardener">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2625,20 +2625,20 @@
 				<walk ground="51" />
 				<run ground="150" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="5465" level="1" />
 			<skill id="14084" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="43" />
 			<height normal="51.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6002" max="13960" chance="70" />
 				<item id="36853" min="1" max="3" chance="11.6906" />
@@ -2649,7 +2649,7 @@
 			<corpse>
 				<item id="9555" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22961" level="92" type="L2Monster" name="Garden Sentry">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2666,21 +2666,21 @@
 				<walk ground="23" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5464" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14068" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="53" />
 			<height normal="45.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4502" max="9833" chance="70" />
 				<item id="36831" min="1" max="1" chance="2.008" />
@@ -2691,7 +2691,7 @@
 			<corpse>
 				<item id="9554" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22962" level="93" type="L2Monster" name="Garden Commander">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2708,21 +2708,21 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="3" />
 			<skill id="14079" level="1" />
 			<!-- <skill id="4410" level="15" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="44" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5905" max="13543" chance="70" />
 				<item id="36829" min="1" max="1" chance="1.345" />
@@ -2734,7 +2734,7 @@
 				<item id="36532" min="1" max="3" chance="57.02" />
 				<item id="36533" min="1" max="1" chance="22.52" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22963" level="93" type="L2Monster" name="Garden Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2751,21 +2751,21 @@
 				<walk ground="57" />
 				<run ground="180" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14081" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="35" />
 			<height normal="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4436" max="10278" chance="70" />
 				<item id="36854" min="1" max="1" chance="15.1515" />
@@ -2777,7 +2777,7 @@
 				<item id="36532" min="1" max="1" chance="81.47" />
 				<item id="36533" min="1" max="1" chance="16.56" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22964" level="93" type="L2Monster" name="Apherus Lookout" title="Bewildered">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2794,20 +2794,20 @@
 				<walk ground="13" />
 				<run ground="100" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14085" level="1" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="13354" max="31115" chance="70" /> <!-- Adena -->
 				<item id="36562" min="1" max="1" chance="33.21" /> <!-- Greater Cokes -->
@@ -2818,7 +2818,7 @@
 				<item id="36562" min="1" max="1" chance="25.93" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="5.16" /> <!-- Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22965" level="92" type="L2Monster" name="Novice Phantom">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2835,20 +2835,20 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="28" />
 			<height normal="41.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4149" max="9677" chance="70" />
 				<item id="17611" min="1" max="1" chance="10" />
@@ -2863,7 +2863,7 @@
 				<item id="36883" min="1" max="1" chance="0.4" />
 				<item id="36884" min="1" max="1" chance="0.4" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22966" level="92" type="L2Monster" name="Novice Phantom Wizard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2880,20 +2880,20 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14132" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4149" max="9676" chance="70" />
 				<item id="17611" min="1" max="1" chance="10" />
@@ -2907,7 +2907,7 @@
 				<item id="36883" min="1" max="1" chance="0.33333" />
 				<item id="36884" min="1" max="1" chance="0.33333" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22967" level="92" type="L2Monster" name="Median Phantom">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2924,21 +2924,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="44.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4149" max="9676" chance="70" />
 				<item id="17611" min="1" max="1" chance="10" />
@@ -2953,7 +2953,7 @@
 				<item id="36883" min="1" max="1" chance="0.33333" />
 				<item id="36884" min="1" max="1" chance="0.33333" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22968" level="94" type="L2Monster" name="Median Escort Swordsman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -2970,21 +2970,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14134" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4410" level="14" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5862" max="13670" chance="70" />
 				<item id="36562" min="1" max="1" chance="1.75" />
@@ -2998,7 +2998,7 @@
 				<item id="36883" min="1" max="1" chance="0.33333" />
 				<item id="36884" min="1" max="1" chance="0.33333" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22969" level="93" type="L2Monster" name="Wraith Guardian">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3015,21 +3015,21 @@
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<skill id="14130" level="1" />
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="23" />
 			<height normal="52" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5745" max="13386" chance="70" />
 				<item id="36889" min="1" max="1" chance="1" />
@@ -3041,7 +3041,7 @@
 				<item id="36883" min="1" max="1" chance="0.4" />
 				<item id="36884" min="1" max="1" chance="0.4" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22970" level="93" type="L2Monster" name="Wraith Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3058,21 +3058,21 @@
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
-			<hit_time>398</hit_time>
+			<hitTime>398</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14131" level="1" />
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="22" />
 			<height normal="43" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5765" max="13385" chance="70" />
 				<item id="36890" min="1" max="1" chance="0.1" />
@@ -3085,7 +3085,7 @@
 				<item id="36883" min="1" max="1" chance="0.4" />
 				<item id="36884" min="1" max="1" chance="0.4" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22979" level="94" type="L2Monster" name="Novice Escort Swordsman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3102,20 +3102,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14143" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17612" min="1" max="1" chance="80" />
 				<item id="57" min="5864" max="13676" chance="70" />
@@ -3132,7 +3132,7 @@
 				<item id="36883" min="1" max="1" chance="0.5" />
 				<item id="36884" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22980" level="94" type="L2Monster" name="Novice Escort Wizard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3149,20 +3149,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14145" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17612" min="1" max="1" chance="80" />
 				<item id="57" min="5860" max="13675" chance="70" />
@@ -3177,7 +3177,7 @@
 				<item id="36883" min="1" max="1" chance="0.5" />
 				<item id="36884" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22981" level="95" type="L2Monster" name="Median Escort Swordsman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3194,20 +3194,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="14147" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17612" min="1" max="1" chance="80" />
 				<item id="57" min="6166" max="14389" chance="70" />
@@ -3223,7 +3223,7 @@
 				<item id="36883" min="1" max="1" chance="0.5" />
 				<item id="36884" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22983" level="93" type="L2Monster" name="Escort Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3240,18 +3240,18 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="740" max="1698" chance="70" />
 				<item id="36924" min="1" max="1" chance="0.03" />
@@ -3264,7 +3264,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22984" level="20" type="L2Monster" name="Nemertess" title="Escort">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3281,18 +3281,18 @@
 				<walk ground="90" />
 				<run ground="90" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" targetable="true" showName="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="14136" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="432" max="1006" chance="70" />
 				<item id="1957" min="1" max="1" chance="2.04918" />
@@ -3300,7 +3300,7 @@
 			<corpse>
 				<item id="36531" min="6" max="6" chance="14.2857" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22985" level="92" type="L2Npc" name="Spezion's Pawn" title="Prison Raider">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3316,14 +3316,14 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="14143" level="1" />
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -3344,20 +3344,20 @@
 				<walk ground="8" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="18.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="8" min="1" max="1" chance="0.3" /> <!-- Willow Staff -->
 				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
@@ -3369,7 +3369,7 @@
 				<item id="36531" min="1" max="1" chance="1.228" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.0075" /> <!-- Synthetic Braid -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22992" level="8" type="L2Monster" name="Stalker" title="Husk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3386,22 +3386,22 @@
 				<walk ground="10" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14156" level="1" />
 			<skill id="4416" level="14" />
 			<!-- <skill id="4412" level="9" /> -->
 			<!-- <skill id="4413" level="8" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="200" clanHelpRange="200" />
 		<collision>
 			<radius normal="9.4" />
 			<height normal="20" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="18" max="42" chance="70" />
 				<item id="1061" min="1" max="1" chance="5.00429" />
@@ -3416,7 +3416,7 @@
 			<corpse>
 				<item id="36531" min="1" max="1" chance="11.2" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22993" level="16" type="L2Monster" name="Critter" title="Husk">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3433,20 +3433,20 @@
 				<walk ground="30" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14.5" />
 			<height normal="18" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="216" min="1" max="1" chance="0.03" /> <!-- Dirk -->
 				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
@@ -3459,7 +3459,7 @@
 				<item id="36562" min="1" max="1" chance="0.0009" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22994" level="14" type="L2Monster" name="Avian" title="Husk">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3476,21 +3476,21 @@
 				<walk ground="25" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14161" level="1" />
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="11" />
 			<height normal="16.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="9" min="1" max="1" chance="0.075" /> <!-- Cedar Staff -->
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
@@ -3503,7 +3503,7 @@
 				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22995" level="18" type="L2Monster" name="Rider" title="Husk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3520,21 +3520,21 @@
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<!-- <skill id="4413" level="9" /> -->
 			<!-- <skill id="4412" level="8" /> -->
 			<skill id="14162" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="31" />
 			<height normal="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="34" max="82" chance="70" />
 				<item id="1061" min="1" max="1" chance="5.64593" />
@@ -3545,7 +3545,7 @@
 			<corpse>
 				<item id="36531" min="1" max="1" chance="9.0909" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22996" level="14" type="L2Monster" name="Krapher" title="Husk">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3562,22 +3562,22 @@
 				<walk ground="15" />
 				<run ground="120" />
 			</speed>
-			<hit_time>334</hit_time>
+			<hitTime>334</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="14164" level="1" />
 			<!-- <skill id="4413" level="9" /> -->
 			<!-- <skill id="4412" level="8" /> -->
 			<!-- <skill id="4411" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="200" clanHelpRange="200" />
 		<collision>
 			<radius normal="9" />
 			<height normal="22.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="30" max="72" chance="70" />
 				<item id="1061" min="1" max="1" chance="4.95658" />
@@ -3590,7 +3590,7 @@
 				<item id="36531" min="1" max="1" chance="22.9358" />
 				<item id="17578" min="1" max="1" chance="0.45872" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22997" level="18" type="L2Monster" name="Handyman" title="Embryo">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3607,22 +3607,22 @@
 				<walk ground="90" />
 				<run ground="90" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" targetable="true" showName="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<!-- <skill id="4413" level="9" /> -->
 			<!-- <skill id="4412" level="8" /> -->
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<skill id="14167" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="37" max="86" chance="70" />
 				<item id="1061" min="1" max="1" chance="4.75862" />
@@ -3634,7 +3634,7 @@
 			<corpse>
 				<item id="36531" min="1" max="1" chance="27.3333" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="22998" level="18" type="L2Monster" name="Operative" title="Embryo">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -3651,22 +3651,22 @@
 				<walk ground="90" />
 				<run ground="90" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" targetable="true" showName="true" />
-		<skill_list>
+		<skillList>
 			<skill id="14169" level="1" />
 			<skill id="4416" level="6" />
 			<!-- <skill id="4413" level="9" /> -->
 			<!-- <skill id="4412" level="8" /> -->
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="37" max="86" chance="70" />
 				<item id="1061" min="1" max="1" chance="5.25015" />
@@ -3677,6 +3677,6 @@
 			<corpse>
 				<item id="36531" min="1" max="1" chance="24.2991" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

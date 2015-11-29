@@ -71,8 +71,8 @@ public class AirShipManager
 		npcDat.set("baseEvasRate", 38);
 		npcDat.set("baseCritRate", 38);
 		
-		npcDat.set("collision_radius", 0);
-		npcDat.set("collision_height", 0);
+		npcDat.set("collisionRadius", 0);
+		npcDat.set("collisionHeight", 0);
 		npcDat.set("sex", "male");
 		npcDat.set("type", "");
 		npcDat.set("baseAtkRange", 0);

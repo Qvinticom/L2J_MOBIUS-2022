@@ -25,10 +25,10 @@
 				<walk ground="25" />
 				<run ground="175" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -41,19 +41,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4643" level="6" /> <!-- Decrease Speed -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
 				<item id="5318" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Gauntlets -->
@@ -63,7 +63,7 @@
 				<item id="36522" min="1" max="1" chance="1.125" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21509" level="67" type="L2Monster" name="Splinter Stakato Worker">
 		<parameters>
@@ -91,10 +91,10 @@
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -107,19 +107,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="20" spiritChance="20" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="72" max="169" chance="70" /> <!-- Adena -->
 				<item id="270" min="1" max="1" chance="0.0009" /> <!-- Dragon Grinder -->
@@ -130,7 +130,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21510" level="68" type="L2Monster" name="Splinter Stakato Soldier">
 		<parameters>
@@ -157,10 +157,10 @@
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -173,19 +173,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="73" max="170" chance="70" /> <!-- Adena -->
 				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
@@ -196,7 +196,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21511" level="69" type="L2Monster" name="Splinter Stakato Drone">
 		<parameters>
@@ -225,10 +225,10 @@
 				<walk ground="25" />
 				<run ground="185" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -241,19 +241,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4579" level="6" /> <!-- Bleed -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="103" max="239" chance="70" /> <!-- Adena -->
 				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
@@ -265,7 +265,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21512" level="70" type="L2Monster" name="Splinter Stakato Drone">
 		<parameters>
@@ -295,10 +295,10 @@
 				<walk ground="25" />
 				<run ground="185" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -311,19 +311,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>STAKATO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="106" max="246" chance="70" /> <!-- Adena -->
 				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
@@ -334,7 +334,7 @@
 				<item id="36522" min="1" max="1" chance="1.450" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21513" level="70" type="L2Monster" name="Needle Stakato">
 		<parameters>
@@ -361,10 +361,10 @@
 				<walk ground="25" />
 				<run ground="185" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -377,19 +377,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4643" level="6" /> <!-- Decrease Speed -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATONEW</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="113" max="263" chance="70" /> <!-- Adena -->
 				<item id="5313" min="1" max="1" chance="0.03" /> <!-- Sealed Gauntlets of Nightmare -->
@@ -400,7 +400,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21514" level="71" type="L2Monster" name="Needle Stakato Worker">
 		<parameters>
@@ -428,10 +428,10 @@
 				<walk ground="25" />
 				<run ground="190" />
 			</speed>
-			<hit_time>760</hit_time>
+			<hitTime>760</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -444,19 +444,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATONEW</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="96" max="223" chance="70" /> <!-- Adena -->
 				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
@@ -467,7 +467,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21515" level="72" type="L2Monster" name="Needle Stakato Soldier">
 		<parameters>
@@ -494,10 +494,10 @@
 				<walk ground="25" />
 				<run ground="190" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -510,19 +510,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATONEW</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="96" max="224" chance="70" /> <!-- Adena -->
 				<item id="213" min="1" max="1" chance="0.003" /> <!-- Branch of the Mother Tree -->
@@ -533,7 +533,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21516" level="73" type="L2Monster" name="Needle Stakato Drone">
 		<parameters>
@@ -562,10 +562,10 @@
 				<walk ground="25" />
 				<run ground="195" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4072" level="7" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -578,19 +578,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>STAKATONEW</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="72" max="169" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
@@ -600,7 +600,7 @@
 				<item id="36522" min="1" max="1" chance="1.675" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21517" level="74" type="L2Monster" name="Needle Stakato Drone">
 		<parameters>
@@ -630,10 +630,10 @@
 				<walk ground="25" />
 				<run ground="195" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4244" level="7" /> <!-- NPC Wild Sweep -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -646,19 +646,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>STAKATONEW</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="120" max="279" chance="70" /> <!-- Adena -->
 				<item id="8681" min="1" max="1" chance="0.003" /> <!-- Behemoth' Tuning Fork -->
@@ -669,7 +669,7 @@
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21518" level="68" type="L2Monster" name="Frenzied Stakato Soldier">
 		<parameters>
@@ -696,10 +696,10 @@
 				<walk ground="25" />
 				<run ground="185" />
 			</speed>
-			<hit_time>740</hit_time>
+			<hitTime>740</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -710,15 +710,15 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="91" max="214" chance="70" /> <!-- Adena -->
 				<item id="8682" min="1" max="1" chance="0.0009" /> <!-- Naga Storm -->
@@ -729,7 +729,7 @@
 				<item id="36522" min="1" max="1" chance="1.240" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21519" level="72" type="L2Monster" name="Frenzied Stakato Drone">
 		<parameters>
@@ -756,10 +756,10 @@
 				<walk ground="25" />
 				<run ground="195" />
 			</speed>
-			<hit_time>580</hit_time>
+			<hitTime>580</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="7" /> <!-- NPC Mortal Blow -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -770,15 +770,15 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="121" max="281" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
@@ -788,7 +788,7 @@
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21520" level="60" type="L2Monster" name="Eye of Splendor">
 		<parameters>
@@ -819,10 +819,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -836,19 +836,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4631" level="3" /> <!-- NPC Buff - Acumen Shield WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="50" max="117" chance="70" /> <!-- Adena -->
 				<item id="119" min="1" max="1" chance="0.3" /> <!-- Necklace of Seal -->
@@ -889,7 +889,7 @@
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21521" level="60" type="L2Monster" name="Claws of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -924,10 +924,10 @@
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
@@ -939,19 +939,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4638" level="3" /> <!-- NPC Clan Buff - Acumen Empower WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="855" min="1" max="1" chance="0.3" /> <!-- Nassen's Earring -->
 				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
@@ -993,7 +993,7 @@
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21522" level="60" type="L2Monster" name="Claws of Splendor">
 		<parameters>
@@ -1023,10 +1023,10 @@
 				<walk ground="25" />
 				<run ground="155" />
 			</speed>
-			<hit_time>200</hit_time>
+			<hitTime>200</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -1041,19 +1041,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="50" max="115" chance="70" /> <!-- Adena -->
 				<item id="855" min="1" max="1" chance="0.3" /> <!-- Nassen's Earring -->
@@ -1094,7 +1094,7 @@
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid  -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21523" level="61" type="L2Monster" name="Flash of Splendor">
 		<parameters>
@@ -1126,10 +1126,10 @@
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1145,19 +1145,19 @@
 			<skill id="4569" level="6" /> <!-- NPC AE Solar Flare - Magic -->
 			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
 				<item id="886" min="1" max="1" chance="0.3" /> <!-- Ring of Seal -->
@@ -1200,7 +1200,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade  -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade  -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21524" level="61" type="L2Monster" name="Blade of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1235,10 +1235,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
@@ -1251,19 +1251,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- NPC Super Strike -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
 				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
@@ -1307,7 +1307,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21525" level="61" type="L2Monster" name="Blade of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1340,10 +1340,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
@@ -1356,19 +1356,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- NPC Super Strike -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
 				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
@@ -1412,7 +1412,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21526" level="62" type="L2Monster" name="Wisdom of Splendor">
 		<parameters>
@@ -1443,10 +1443,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4104" level="6" /> <!-- Flame -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1460,19 +1460,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4634" level="3" /> <!-- NPC Buff - Acumen Empower DamageShield -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="60" max="141" chance="70" /> <!-- Adena -->
 				<item id="887" min="1" max="1" chance="0.3" /> <!-- Adamantite Ring -->
@@ -1513,7 +1513,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21527" level="63" type="L2Monster" name="Fury of Splendor">
 		<parameters>
@@ -1547,10 +1547,10 @@
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4102" level="2" /> <!-- Surrender To Fire -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1565,19 +1565,19 @@
 			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
 			<skill id="4632" level="3" /> <!-- NPC Buff - Acumen Empower WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="918" min="1" max="1" chance="0.3" /> <!-- Adamantite Necklace -->
@@ -1617,7 +1617,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21528" level="63" type="L2Monster" name="Fury of Splendor">
 		<parameters>
@@ -1647,10 +1647,10 @@
 				<walk ground="25" />
 				<run ground="155" />
 			</speed>
-			<hit_time>200</hit_time>
+			<hitTime>200</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -1665,19 +1665,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7" />
 			<height normal="13" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="918" min="1" max="1" chance="0.3" /> <!-- Adamantite Necklace -->
@@ -1718,7 +1718,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21529" level="63" type="L2Monster" name="Soul of Splendor">
 		<parameters>
@@ -1751,10 +1751,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4035" level="6" /> <!-- Poison -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -1770,19 +1770,19 @@
 			<skill id="4630" level="6" /> <!-- NPC MR - Twister -->
 			<skill id="4635" level="3" /> <!-- NPC Buff - Acumen Berserk WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="63" max="147" chance="70" /> <!-- Adena -->
 				<item id="891" min="1" max="1" chance="0.3" /> <!-- Sage's Ring -->
@@ -1823,7 +1823,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21530" level="64" type="L2Monster" name="Victory of Splendor">
 		<parameters>
@@ -1854,10 +1854,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1871,19 +1871,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4636" level="3" /> <!-- NPC Buff - Acumen Berserk DamageShield -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="54" max="125" chance="70" /> <!-- Adena -->
 				<item id="922" min="1" max="1" chance="0.075" /> <!-- Sage's Necklace -->
@@ -1924,7 +1924,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21531" level="64" type="L2Monster" name="Punishment of Splendor">
 		<parameters>
@@ -1958,10 +1958,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
@@ -1976,19 +1976,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- NPC Super Strike -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="60" max="140" chance="70" /> <!-- Adena -->
 				<item id="864" min="1" max="1" chance="0.3" /> <!-- Black Ore Earring -->
@@ -2029,7 +2029,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21532" level="65" type="L2Monster" name="Shout of Splendor">
 		<parameters>
@@ -2061,10 +2061,10 @@
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4104" level="6" /> <!-- Flame -->
 			<skill id="4158" level="6" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
@@ -2080,19 +2080,19 @@
 			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
 			<skill id="4638" level="3" /> <!-- NPC Clan Buff - Acumen Empower WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="62" max="145" chance="70" /> <!-- Adena -->
 				<item id="895" min="1" max="1" chance="0.3" /> <!-- Black Ore Ring -->
@@ -2133,7 +2133,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21533" level="65" type="L2Monster" name="Alliance of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2168,10 +2168,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
@@ -2183,19 +2183,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="926" min="1" max="1" chance="0.075" /> <!-- Black Ore Necklace -->
@@ -2236,7 +2236,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21534" level="65" type="L2Monster" name="Alliance of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2267,10 +2267,10 @@
 				<walk ground="25" />
 				<run ground="155" />
 			</speed>
-			<hit_time>200</hit_time>
+			<hitTime>200</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2283,19 +2283,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7" />
 			<height normal="13" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
 				<item id="926" min="1" max="1" chance="0.075" /> <!-- Black Ore Necklace -->
@@ -2336,7 +2336,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21535" level="66" type="L2Monster" name="Signet of Splendor">
 		<parameters>
@@ -2369,10 +2369,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4104" level="6" /> <!-- Flame -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2388,19 +2388,19 @@
 			<skill id="4630" level="6" /> <!-- NPC MR - Twister -->
 			<skill id="4636" level="3" /> <!-- NPC Buff - Acumen Berserk DamageShield -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="63" max="147" chance="70" /> <!-- Adena -->
 				<item id="6324" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Earring -->
@@ -2441,7 +2441,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21536" level="66" type="L2Monster" name="Crown of Splendor">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2473,10 +2473,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4102" level="2" /> <!-- Surrender To Fire -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
@@ -2488,19 +2488,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4637" level="3" /> <!-- NPC Buff - Acumen WildMagic DamageShield -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="6323" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Necklace -->
 				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
@@ -2542,7 +2542,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21537" level="67" type="L2Monster" name="Fang of Splendor">
 		<parameters>
@@ -2576,10 +2576,10 @@
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4104" level="6" /> <!-- Flame -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
@@ -2594,19 +2594,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4639" level="3" /> <!-- NPC Clan Buff - Acumen Empower Berserk -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
 				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
@@ -2647,7 +2647,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21538" level="67" type="L2Monster" name="Fang of Splendor">
 		<parameters>
@@ -2677,10 +2677,10 @@
 				<walk ground="25" />
 				<run ground="155" />
 			</speed>
-			<hit_time>200</hit_time>
+			<hitTime>200</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
@@ -2695,19 +2695,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="7" />
 			<height normal="13" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="61" max="142" chance="70" /> <!-- Adena -->
 				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
@@ -2748,7 +2748,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21539" level="67" type="L2Monster" name="Wailing of Splendor">
 		<parameters>
@@ -2782,10 +2782,10 @@
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
@@ -2800,19 +2800,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- NPC Super Strike -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="66" max="155" chance="70" /> <!-- Adena -->
 				<item id="6323" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Necklace -->
@@ -2853,7 +2853,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21540" level="67" type="L2Monster" name="Wailing of Splendor">
 		<parameters>
@@ -2885,10 +2885,10 @@
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
@@ -2903,19 +2903,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4641" level="6" /> <!-- NPC Super Strike -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="66" max="155" chance="70" /> <!-- Adena -->
 				<item id="6323" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Necklace -->
@@ -2956,7 +2956,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21541" level="63" type="L2Monster" name="Pilgrim of Splendor">
 		<parameters>
@@ -2991,10 +2991,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4036" level="6" /> <!-- Poison -->
 			<skill id="4158" level="6" /> <!-- NPC Prominence - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3009,19 +3009,19 @@
 			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
 			<skill id="4638" level="3" /> <!-- NPC Clan Buff - Acumen Empower WildMagic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="125" chance="70" /> <!-- Adena -->
 				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
@@ -3031,7 +3031,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21542" level="62" type="L2Monster" name="Pilgrim's Disciple">
 		<parameters>
@@ -3060,10 +3060,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4158" level="6" /> <!-- NPC Prominence - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3076,19 +3076,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="47" max="109" chance="70" /> <!-- Adena -->
 				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
@@ -3098,7 +3098,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade  -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade  -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21543" level="62" type="L2Monster" name="Pilgrim's Servant">
 		<parameters>
@@ -3128,10 +3128,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4097" level="6" /> <!-- NPC Chant of Life -->
 			<skill id="4158" level="6" /> <!-- NPC Prominence - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3145,19 +3145,19 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="53" max="125" chance="70" /> <!-- Adena -->
 				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
@@ -3167,7 +3167,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade  -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade  -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21544" level="67" type="L2Monster" name="Judge of Splendor">
 		<parameters>
@@ -3202,10 +3202,10 @@
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
-			<hit_time>560</hit_time>
+			<hitTime>560</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3220,19 +3220,19 @@
 			<skill id="4635" level="3" /> <!-- NPC Buff - Acumen Berserk WildMagic -->
 			<skill id="4640" level="6" /> <!-- Sleep -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="74" max="174" chance="70" /> <!-- Adena -->
 				<item id="6327" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Earring -->
@@ -3242,7 +3242,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21545" level="66" type="L2Monster" name="Judge of Fire">
 		<parameters>
@@ -3271,10 +3271,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>280</hit_time>
+			<hitTime>280</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3287,19 +3287,19 @@
 			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="74" max="174" chance="70" /> <!-- Adena -->
 				<item id="6327" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Earring -->
@@ -3309,7 +3309,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade  -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade  -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21546" level="66" type="L2Monster" name="Judge of Light">
 		<parameters>
@@ -3339,10 +3339,10 @@
 				<walk ground="50" />
 				<run ground="165" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4097" level="6" /> <!-- NPC Chant of Life -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3356,19 +3356,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4563" level="6" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4642" level="3" /> <!-- NPC Fast Spell Casting -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SAINT</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="74" max="174" chance="70" /> <!-- Adena -->
 				<item id="6327" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Earring -->
@@ -3378,7 +3378,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade  -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21547" level="65" type="L2Monster" name="Corrupted Knight">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3404,17 +3404,17 @@
 			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="191.86238" shield="131" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<hit_time>170</hit_time>
+			<hitTime>170</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3426,20 +3426,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="7884" min="1" max="1" chance="0.003" /> <!-- Infernal Master -->
 				<item id="81" min="1" max="1" chance="0.0009" /> <!-- Dragon Slayer -->
@@ -3483,7 +3483,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21548" level="66" type="L2Monster" name="Resurrected Knight">
 		<parameters>
@@ -3506,17 +3506,17 @@
 			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="191.86238" shield="131" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<hit_time>170</hit_time>
+			<hitTime>170</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3528,20 +3528,20 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="83" max="194" chance="70" /> <!-- Adena -->
 				<item id="81" min="1" max="1" chance="0.0009" /> <!-- Dragon Slayer -->
@@ -3583,7 +3583,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21549" level="65" type="L2Monster" name="Corrupted Royal Guard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3608,17 +3608,17 @@
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -3629,20 +3629,20 @@
 			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="235" min="1" max="1" chance="0.003" /> <!-- Bloody Orchid -->
 				<item id="236" min="1" max="1" chance="0.0009" /> <!-- Soul Separator -->
@@ -3686,7 +3686,7 @@
 				<item id="36522" min="1" max="1" chance="2.772" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21550" level="65" type="L2Monster" name="Corrupted Royal Guard">
 		<parameters>
@@ -3711,17 +3711,17 @@
 			<attack physical="562.02275" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" shield="134" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3735,20 +3735,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="102" max="239" chance="70" /> <!-- Adena -->
 				<item id="235" min="1" max="1" chance="0.0009" /> <!-- Bloody Orchid -->
@@ -3791,7 +3791,7 @@
 				<item id="36552" min="1" max="1" chance="1.400" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21551" level="66" type="L2Monster" name="Resurrected Royal Guard">
 		<parameters>
@@ -3815,17 +3815,17 @@
 			<attack physical="603.79903" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3838,19 +3838,19 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4579" level="6" /> <!-- Bleed -->
 			<skill id="4649" level="6" /> <!-- Poison -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="106" max="247" chance="70" /> <!-- Adena -->
 				<item id="235" min="1" max="1" chance="0.0009" /> <!-- Bloody Orchid -->
@@ -3894,7 +3894,7 @@
 				<item id="36552" min="1" max="1" chance="1.450" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21552" level="66" type="L2Monster" name="Resurrected Royal Guard">
 		<parameters>
@@ -3919,17 +3919,17 @@
 			<attack physical="603.79903" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" shield="138" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3943,19 +3943,19 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="106" max="247" chance="70" /> <!-- Adena -->
 				<item id="235" min="1" max="1" chance="0.0009" /> <!-- Bloody Orchid -->
@@ -3999,7 +3999,7 @@
 				<item id="36552" min="1" max="1" chance="1.450" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21553" level="65" type="L2Monster" name="Trampled Man">
 		<parameters>
@@ -4022,17 +4022,17 @@
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="40" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4001" level="6" /> <!-- NPC Windstrike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4044,20 +4044,20 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="67" max="158" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!--Synthetic Cokes -->
@@ -4097,7 +4097,7 @@
 				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21554" level="65" type="L2Monster" name="Trampled Man">
 		<parameters>
@@ -4120,17 +4120,17 @@
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="40" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -4142,20 +4142,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="67" max="158" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!--Synthetic Cokes -->
@@ -4195,7 +4195,7 @@
 				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21555" level="65" type="L2Monster" name="Slaughter Executioner">
 		<parameters>
@@ -4218,17 +4218,17 @@
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="160" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4240,19 +4240,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4581" level="6" /> <!-- Hold -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="81" max="191" chance="70" /> <!-- Adena -->
 				<item id="5326" min="1" max="1" chance="0.003" /> <!-- Sealed Robe of Nightmare -->
@@ -4294,7 +4294,7 @@
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21556" level="65" type="L2Monster" name="Slaughter Executioner">
 		<parameters>
@@ -4317,17 +4317,17 @@
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="160" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hitTime>370</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4339,19 +4339,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="81" max="191" chance="70" /> <!-- Adena -->
 				<item id="5326" min="1" max="1" chance="0.003" /> <!-- Sealed Robe of Nightmare -->
@@ -4393,7 +4393,7 @@
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21557" level="66" type="L2Monster" name="Bone Snatcher">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -4429,10 +4429,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4446,19 +4446,19 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -4500,7 +4500,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21558" level="66" type="L2Monster" name="Bone Snatcher">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -4533,10 +4533,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
@@ -4549,19 +4549,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4652" level="1" /> <!-- NPC AE - Dispel Silence -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -4603,7 +4603,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21559" level="66" type="L2Monster" name="Bone Maker">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -4639,10 +4639,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4656,19 +4656,19 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -4710,7 +4710,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21560" level="66" type="L2Monster" name="Bone Shaper">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -4743,10 +4743,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -4759,19 +4759,19 @@
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4652" level="1" /> <!-- NPC AE - Dispel Silence -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -4814,7 +4814,7 @@
 				<item id="36522" min="1" max="1" chance="2.546" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21561" level="67" type="L2Monster" name="Sacrificed Man">
 		<parameters>
@@ -4838,17 +4838,17 @@
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="40" />
 			</speed>
-			<hit_time>430</hit_time>
+			<hitTime>430</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4861,20 +4861,20 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
@@ -4914,7 +4914,7 @@
 				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21562" level="67" type="L2Monster" name="Guillotine's Ghost">
 		<parameters>
@@ -4943,10 +4943,10 @@
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -4959,19 +4959,19 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
 			<skill id="4635" level="3" /> <!-- NPC Buff - Acumen Berserk WildMagic -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
@@ -5013,7 +5013,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21563" level="67" type="L2Monster" name="Bone Collector">
  		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -5049,10 +5049,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -5066,19 +5066,19 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="472" max="1098" chance="70" /> <!-- Adena -->
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
@@ -5121,7 +5121,7 @@
 				<item id="36522" min="1" max="1" chance="2.546" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21564" level="67" type="L2Monster" name="Skull Collector">
 		<parameters>
@@ -5156,10 +5156,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -5175,19 +5175,19 @@
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4658" level="6" /> <!-- Hold -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
@@ -5230,7 +5230,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21565" level="68" type="L2Monster" name="Bone Animator">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -5263,10 +5263,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4155" level="6" /> <!-- NPC Twister - Magic -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -5279,19 +5279,19 @@
 			<skill id="4561" level="6" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -5330,7 +5330,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21566" level="68" type="L2Monster" name="Skull Animator">
 		<parameters>
@@ -5362,10 +5362,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="6" /> <!-- Silence -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -5380,19 +5380,19 @@
 			<skill id="4597" level="6" /> <!-- Bleed -->
 			<skill id="4652" level="1" /> <!-- NPC AE - Dispel Silence -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="94" max="220" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
@@ -5435,7 +5435,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21567" level="68" type="L2Monster" name="Bone Slayer">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -5467,10 +5467,10 @@
 				<walk ground="19" />
 				<run ground="180" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4138" level="6" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -5481,19 +5481,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="6" /> <!-- NPC Sonic Blaster -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="164" min="1" max="1" chance="0.003" /> <!-- Elysian -->
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
@@ -5536,7 +5536,7 @@
 				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21568" level="68" type="L2Monster" name="Devil Bat">
 		<parameters>
@@ -5567,10 +5567,10 @@
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4029" level="3" /> <!-- NPC Shield -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5585,19 +5585,19 @@
 			<skill id="4584" level="6" /> <!-- Reducing P. Def Stun -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
 			<skill id="4664" level="6" /> <!-- NPC 100% HP Drain -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
@@ -5639,7 +5639,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21569" level="68" type="L2Monster" name="Devil Bat">
 		<parameters>
@@ -5667,10 +5667,10 @@
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -5682,19 +5682,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4664" level="6" /> <!-- NPC 100% HP Drain -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
@@ -5736,7 +5736,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21570" level="69" type="L2Monster" name="Ghost of Betrayer">
 		<parameters>
@@ -5760,17 +5760,17 @@
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="10" />
 				<run ground="174" />
 			</speed>
-			<hit_time>540</hit_time>
+			<hitTime>540</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -5783,20 +5783,20 @@
 			<skill id="4592" level="6" /> <!-- Decrease P. Def. -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="21" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
 				<item id="80" min="1" max="1" chance="0.0009" /> <!-- Tallum Blade-->
@@ -5837,7 +5837,7 @@
 				<item id="36517" min="1" max="1" chance="2.996" /> <!--  Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21571" level="69" type="L2Monster" name="Ghost of Rebel Soldier">
 		<parameters>
@@ -5861,17 +5861,17 @@
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" shield="146" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="40" />
 				<run ground="165" />
 			</speed>
-			<hit_time>170</hit_time>
+			<hitTime>170</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5884,19 +5884,19 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4581" level="6" /> <!-- Hold -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
 				<item id="81" min="1" max="1" chance="0.0009" /> <!-- Dragon Slayer -->
@@ -5939,7 +5939,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21572" level="69" type="L2Monster" name="Bone Sweeper">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -5975,10 +5975,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4076" level="3" /> <!-- Decrease Speed -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -5992,19 +5992,19 @@
 			<skill id="4651" level="3" /> <!-- NPC AE - Dispel Slow -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -6048,7 +6048,7 @@
 				<item id="36522" min="1" max="1" chance="2.815" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21573" level="69" type="L2Monster" name="Atrox">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->  
@@ -6080,10 +6080,10 @@
 				<walk ground="105" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -6095,19 +6095,19 @@
 			<skill id="4582" level="6" /> <!-- Poison -->
 			<skill id="4596" level="6" /> <!-- Bleed -->
 			<skill id="4664" level="6" /> <!-- NPC 100% HP Drain -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="45" grown="50" />
 			<height normal="39" grown="46" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="5314" min="1" max="1" chance="0.03" /> <!-- Sealed Boots of Nightmare -->
 				<item id="57" min="475" max="1109" chance="70" /> <!-- Adena -->
@@ -6150,7 +6150,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21574" level="70" type="L2Monster" name="Bone Grinder">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -6182,10 +6182,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4138" level="7" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -6196,19 +6196,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="7" /> <!-- NPC Sonic Blaster -->
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -6252,7 +6252,7 @@
 				<item id="36557" min="1" max="1" chance="1.358" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21575" level="70" type="L2Monster" name="Bone Grinder">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -6282,10 +6282,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -6295,19 +6295,19 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4658" level="7" /> <!-- Hold -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -6351,7 +6351,7 @@
 				<item id="36557" min="1" max="1" chance="1.358" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21576" level="70" type="L2Monster" name="Ghost of Guillotine">
 		<parameters>
@@ -6381,10 +6381,10 @@
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -6399,19 +6399,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4622" level="7" /> <!-- NPC AE - 80% HP Drain - Magic -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="100" max="232" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
@@ -6453,7 +6453,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21577" level="70" type="L2Monster" name="Ghost of Guillotine">
 		<parameters>
@@ -6482,10 +6482,10 @@
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<hit_time>340</hit_time>
+			<hitTime>340</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -6499,19 +6499,19 @@
 			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4593" level="7" /> <!-- Decrease P. Def. -->
 			<skill id="4596" level="7" /> <!-- Bleed -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="100" max="232" chance="70" /> <!-- Adena -->
 				<item id="5312" min="1" max="1" chance="0.03" /> <!-- Sealed Helm of Nightmare -->
@@ -6553,7 +6553,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21578" level="71" type="L2Monster" name="Behemoth Zombie">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -6578,17 +6578,17 @@
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="90" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4073" level="7" /> <!-- Stun -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
@@ -6600,20 +6600,20 @@
 			<skill id="4649" level="7" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<corpse_time>30</corpse_time>
-		<ex_crt_effect>false</ex_crt_effect>
+		<corpseTime>30</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="546" max="1274" chance="70" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
@@ -6655,7 +6655,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21579" level="71" type="L2Monster" name="Ghost of Rebel Leader">
 		<parameters>
@@ -6679,17 +6679,17 @@
 			<attack physical="710.2185" magical="484.98717" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" shield="150" shieldRate="20" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="175" />
 			</speed>
-			<hit_time>520</hit_time>
+			<hitTime>520</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -6703,19 +6703,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4635" level="3" /> <!-- NPC Buff - Acumen Berserk WildMagic -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="132" max="307" chance="70" /> <!-- Adena -->
 				<item id="150" min="1" max="1" chance="0.0009" /> <!-- Elemental Sword -->
@@ -6759,7 +6759,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21580" level="71" type="L2Monster" name="Bone Caster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -6792,10 +6792,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4155" level="7" /> <!-- NPC Twister - Magic -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -6809,19 +6809,19 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -6864,7 +6864,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21581" level="71" type="L2Monster" name="Bone Puppeteer">
  		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -6897,10 +6897,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -6914,19 +6914,19 @@
 			<skill id="4652" level="1" /> <!-- NPC AE - Dispel Silence -->
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="164" min="1" max="1" chance="0.003" /> <!-- Elysian -->
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
@@ -6970,7 +6970,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21582" level="71" type="L2Monster" name="Vampire Soldier">
 		<parameters>
@@ -6997,17 +6997,17 @@
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -7024,19 +7024,19 @@
 			<skill id="4663" level="1" /> <!-- NPC Hate -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="23.5" grown="29" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="114" max="264" chance="70" /> <!-- Adena -->
 				<item id="6675" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Gaiters -->
@@ -7077,7 +7077,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21583" level="72" type="L2Monster" name="Bone Scavenger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -7113,10 +7113,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="7" /> <!-- Hold -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -7131,19 +7131,19 @@
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -7188,7 +7188,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21584" level="72" type="L2Monster" name="Bone Scavenger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -7221,10 +7221,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4098" level="7" /> <!-- Silence -->
 			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
@@ -7238,19 +7238,19 @@
 			<skill id="4652" level="1" /> <!-- NPC AE - Dispel Silence -->
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2504" min="1" max="1" chance="0.003" /> <!-- Meteor Shower -->
 				<item id="7899" min="1" max="1" chance="0.003" /> <!-- Destroyer Hammer -->
@@ -7295,7 +7295,7 @@
 				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21585" level="72" type="L2Monster" name="Vampire Magician">
 		<parameters>
@@ -7322,17 +7322,17 @@
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -7350,19 +7350,19 @@
 			<skill id="4650" level="1" /> <!-- NPC AE - Dispel Hold -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="6" grown="7" />
 			<height normal="21.5" grown="25.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="104" max="242" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -7406,7 +7406,7 @@
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21586" level="72" type="L2Monster" name="Vampire Adept">
 		<parameters>
@@ -7432,17 +7432,17 @@
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="7" /> <!-- NPC Burn -->
 			<skill id="4152" level="7" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
@@ -7459,19 +7459,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
@@ -7512,7 +7512,7 @@
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21587" level="72" type="L2Monster" name="Vampire Warrior">
 		<parameters>
@@ -7539,17 +7539,17 @@
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
 			</speed>
-			<hit_time>450</hit_time>
+			<hitTime>450</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -7566,19 +7566,19 @@
 			<skill id="4663" level="1" /> <!-- NPC Hate -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" grown="11" />
 			<height normal="29" grown="35.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="116" max="271" chance="70" /> <!-- Adena -->
 				<item id="6675" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Gaiters -->
@@ -7621,7 +7621,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21588" level="73" type="L2Monster" name="Vampire Wizard">
 		<parameters>
@@ -7647,17 +7647,17 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4152" level="7" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -7674,19 +7674,19 @@
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="6" grown="7" />
 			<height normal="21.5" grown="25.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="101" max="234" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -7726,7 +7726,7 @@
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21589" level="73" type="L2Monster" name="Vampire Wizard">
 		<parameters>
@@ -7752,17 +7752,17 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -7779,19 +7779,19 @@
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="6" grown="7" />
 			<height normal="21.5" grown="25.8" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="101" max="234" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -7831,7 +7831,7 @@
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21590" level="73" type="L2Monster" name="Vampire Magister">
 		<parameters>
@@ -7856,17 +7856,17 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4157" level="7" /> <!-- NPC Blaze - Magic -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -7882,19 +7882,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -7935,7 +7935,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21591" level="73" type="L2Monster" name="Vampire Magister">
 		<parameters>
@@ -7961,17 +7961,17 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4033" level="7" /> <!-- NPC Burn -->
 			<skill id="4157" level="7" /> <!-- NPC Blaze - Magic -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
@@ -7988,19 +7988,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -8041,7 +8041,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21592" level="73" type="L2Monster" name="Vampire Magister">
 		<parameters>
@@ -8064,17 +8064,17 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
 				<walk ground="46" />
 				<run ground="180" />
 			</speed>
-			<hit_time>460</hit_time>
+			<hitTime>460</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -8088,19 +8088,19 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4561" level="7" /> <!-- NPC Fire Burn - Magic -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="5.5" grown="6.5" />
 			<height normal="28" grown="34.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="107" max="249" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
@@ -8141,7 +8141,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21593" level="73" type="L2Monster" name="Vampire Warlord">
 		<parameters>
@@ -8167,7 +8167,7 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
@@ -8176,7 +8176,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -8192,19 +8192,19 @@
 			<skill id="4596" level="7" /> <!-- Bleed -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
@@ -8245,7 +8245,7 @@
 				<item id="36522" min="1" max="1" chance="1.893" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21594" level="73" type="L2Monster" name="Vampire Warlord">
 		<parameters>
@@ -8272,7 +8272,7 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
@@ -8281,7 +8281,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -8298,19 +8298,19 @@
 			<skill id="4663" level="1" /> <!-- NPC Hate -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
@@ -8351,7 +8351,7 @@
 				<item id="36522" min="1" max="1" chance="1.893" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21595" level="73" type="L2Monster" name="Vampire Warlord">
 		<parameters>
@@ -8376,7 +8376,7 @@
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="310.02959" magical="206.421198742611" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="20" water="20" wind="20" earth="20" holy="-34" dark="184" />
 			</attribute>
 			<speed>
@@ -8385,7 +8385,7 @@
 			</speed>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4078" level="7" /> <!-- NPC Flamestrike -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -8400,19 +8400,19 @@
 			<skill id="4663" level="1" /> <!-- NPC Hate -->
 			<skill id="4664" level="7" /> <!-- NPC 100% HP Drain -->
 			<skill id="4789" level="3" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>VAMPIRE</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="135" max="314" chance="70" /> <!-- Adena -->
 				<item id="6372" min="1" max="1" chance="0.0009" /> <!-- Heaven's Divider -->
@@ -8453,7 +8453,7 @@
 				<item id="36522" min="1" max="1" chance="1.893" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21596" level="68" type="L2Monster" name="Requiem Lord">
 		<parameters>
@@ -8491,10 +8491,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4138" level="6" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -8509,19 +8509,19 @@
 			<skill id="4593" level="6" /> <!-- Decrease P. Def. -->
 			<skill id="4654" level="6" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="95" max="223" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
@@ -8533,7 +8533,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21597" level="67" type="L2Monster" name="Requiem Behemoth">
 		<parameters>
@@ -8558,17 +8558,17 @@
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="100" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -8581,19 +8581,19 @@
 			<skill id="4592" level="6" /> <!-- Decrease P. Def. -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="83" max="195" chance="70" /> <!-- Adena -->
 				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
@@ -8604,7 +8604,7 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21598" level="67" type="L2Monster" name="Requiem Behemoth">
 		<parameters>
@@ -8629,17 +8629,17 @@
 			<attack physical="624.93199" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="187.460838840844" />
 			<attribute>
-				<attack type="UNHOLY" value="20" />
+				<attack type="DARK" value="20" />
 				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
 			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="100" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -8652,19 +8652,19 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4649" level="6" /> <!-- Poison -->
 			<skill id="4671" level="1" /> <!-- AV - Teleport -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="97" max="226" chance="70" /> <!-- Adena -->
 				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
@@ -8673,7 +8673,7 @@
 				<item id="36517" min="1" max="1" chance="3.537" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="21599" level="71" type="L2Monster" name="Requiem Priest">
 		<parameters>
@@ -8711,10 +8711,10 @@
 				<walk ground="19" />
 				<run ground="185" />
 			</speed>
-			<hit_time>480</hit_time>
+			<hitTime>480</hitTime>
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4138" level="7" /> <!-- NPC AE - Corpse Burst -->
 			<skill id="4257" level="7" /> <!-- NPC Hydroblast - Magic -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -8730,19 +8730,19 @@
 			<skill id="4654" level="7" /> <!-- NPC Death Link -->
 			<skill id="4672" level="1" /> <!-- NPC Corpse Remove -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
-		</skill_list>
+		</skillList>
 		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
+		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
-			<clan_list>
+			<clanList>
 				<clan>NECRO</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
@@ -8754,6 +8754,6 @@
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

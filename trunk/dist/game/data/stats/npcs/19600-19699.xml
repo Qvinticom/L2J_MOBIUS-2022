@@ -12,15 +12,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
@@ -30,7 +30,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="19601" level="104" type="L2Npc" name="">
 		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->

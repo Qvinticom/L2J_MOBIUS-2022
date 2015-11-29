@@ -15,10 +15,10 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -26,12 +26,12 @@
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17448" min="1" max="1" chance="0.0009" /> <!-- Eternal Earring -->
 				<item id="57" min="651" max="1516" chance="70" /> <!-- Adena -->
@@ -47,7 +47,7 @@
 			<corpse>
 				<item id="36533" min="1" max="1" chance="4.436" /> <!-- Synthetic Braid -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23301" level="95" type="L2Monster" name="Laido Destruction Golem">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -69,22 +69,22 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2026" max="4734" chance="70" />
 				<item id="9546" min="1" max="1" chance="0.25" />
@@ -94,7 +94,7 @@
 			<corpse>
 				<item id="19440" min="1" max="1" chance="0.75188" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23302" level="94" type="L2Monster" name="Laido Golem of Repairs">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -111,21 +111,21 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
 			<skill id="4414" level="1" />
 			<!-- <skill id="4411" level="12" /> -->
 			<!-- <skill id="4410" level="12" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="19" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1963" max="4582" chance="70" />
 				<item id="9548" min="1" max="1" chance="0.75188" />
@@ -137,7 +137,7 @@
 				<item id="36910" min="1" max="1" chance="0.3003" />
 				<item id="36564" min="1" max="1" chance="0.07502" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23303" level="94" type="L2Monster" name="Spicula Elite Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -154,20 +154,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="1000" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1720" max="4014" chance="70" />
 				<item id="36528" min="1" max="1" chance="4.78" />
@@ -186,7 +186,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23304" level="96" type="L2Monster" name="Spicula Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -203,21 +203,21 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4414" level="3" />
 			<!-- <skill id="4413" level="14" /> -->
 			<!-- <skill id="4412" level="14" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2271" max="5292" chance="70" />
 				<item id="35322" min="1" max="1" chance="0.23981" />
@@ -231,7 +231,7 @@
 				<item id="9554" min="1" max="1" chance="0.3003" />
 				<item id="17526" min="1" max="1" chance="0.03" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23305" level="55" type="L2Monster" name="Corroded Skeleton">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -249,23 +249,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
 				<item id="7882" min="1" max="1" chance="0.003" /> <!-- Pa'agrian Sword -->
@@ -286,7 +286,7 @@
 			<corpse>
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23306" level="57" type="L2Monster" name="Rotten Corpse">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -303,23 +303,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
 				<item id="498" min="1" max="1" chance="0.03" /> <!-- Steel Plate Helmet -->
@@ -334,7 +334,7 @@
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23307" level="54" type="L2Monster" name="Corpse Spider">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -351,23 +351,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="64" min="1" max="1" chance="0.03" /> <!-- Compound Boots -->
 				<item id="2437" min="1" max="1" chance="0.03" /> <!-- Drake Leather Boots -->
@@ -389,7 +389,7 @@
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23308" level="57" type="L2Monster" name="Explosive Spider">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -406,23 +406,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
 				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
@@ -439,7 +439,7 @@
 				<item id="36534" min="1" max="1" chance="0.003" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23309" level="57" type="L2Monster" name="Corpse Looter Stakato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -456,23 +456,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="2453" min="1" max="1" chance="0.075" /> <!-- Chain Gloves -->
 				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
@@ -500,7 +500,7 @@
 				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23310" level="58" type="L2Monster" name="Lesser Laikel">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -517,23 +517,23 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" />
 			<skill id="4414" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>SPORES</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
 				<item id="2502" min="1" max="1" chance="0.003" /> <!-- Dwarven War Hammer -->
@@ -562,7 +562,7 @@
 				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23311" level="72" type="L2Monster" name="Valley Buffalo">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -578,21 +578,21 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" />
 			<skill id="4032" level="1" />
 			<!-- <skill id="4412" level="9" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="31" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2606" max="6078" chance="70" />
 				<item id="36517" min="1" max="1" chance="18.3" />
@@ -602,7 +602,7 @@
 				<item id="36532" min="1" max="1" chance="9.29752" />
 				<item id="36881" min="1" max="1" chance="0.20661" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23312" level="73" type="L2Monster" name="Valley Grendel">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -618,21 +618,21 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" />
 			<skill id="4032" level="1" />
 			<!-- <skill id="4412" level="9" /> -->
 			<skill id="4414" level="1" />
 			<!-- <skill id="4413" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2574" max="6006" chance="70" />
 				<item id="36858" min="1" max="1" chance="0.04" />
@@ -647,7 +647,7 @@
 				<item id="36532" min="1" max="1" chance="10.3512" />
 				<item id="36882" min="1" max="1" chance="0.18484" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23313" level="76" type="L2Monster" name="Disciple of Protection">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -663,10 +663,10 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" />
 			<skill id="4085" level="1" />
 			<!-- <skill id="4413" level="14" /> -->
@@ -674,12 +674,12 @@
 			<!-- <skill id="4411" level="8" /> -->
 			<!-- <skill id="4410" level="8" /> -->
 			<skill id="4086" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="8" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3014" max="7022" chance="70" />
 				<item id="36527" min="1" max="1" chance="9.5" />
@@ -689,7 +689,7 @@
 				<item id="36532" min="1" max="1" chance="10.849" />
 				<item id="36533" min="1" max="1" chance="1.41509" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23314" level="99" type="L2Monster" name="Nerva Orc Raider">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -706,19 +706,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="39330" max="91794" chance="70" />
 				<item id="36560" min="1" max="1" chance="0.33333" />
@@ -728,7 +728,7 @@
 				<item id="36560" min="1" max="1" chance="0.5" />
 				<item id="36885" min="1" max="1" chance="0.33333" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23315" level="99" type="L2Monster" name="Nerva Orc Archer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -745,19 +745,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="40948" max="95252" chance="70" />
 				<item id="36565" min="1" max="1" chance="0.11111" />
@@ -768,7 +768,7 @@
 				<item id="36565" min="1" max="1" chance="0.66667" />
 				<item id="36886" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23316" level="99" type="L2Monster" name="Nerva Orc Priest">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -785,20 +785,20 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="15629" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="8" />
 			<height normal="24.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="50370" max="117330" chance="70" />
 				<item id="36861" min="1" max="1" chance="0.05" />
@@ -810,7 +810,7 @@
 				<item id="36535" min="1" max="1" chance="0.66667" />
 				<item id="36887" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23317" level="99" type="L2Monster" name="Nerva Orc Wizard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -827,20 +827,20 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="15629" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="42618" max="99170" chance="70" />
 				<item id="36869" min="1" max="1" chance="0.05" />
@@ -852,7 +852,7 @@
 				<item id="36535" min="1" max="1" chance="0.66667" />
 				<item id="36885" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23318" level="99" type="L2Monster" name="Nerva Orc Assassin">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -869,19 +869,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="46010" max="107324" chance="70" />
 				<item id="36877" min="1" max="1" chance="0.05" />
@@ -893,7 +893,7 @@
 				<item id="36535" min="1" max="1" chance="0.66667" />
 				<item id="36886" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23319" level="99" type="L2Monster" name="Nerva Orc Ambusher">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -910,19 +910,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="38098" max="88162" chance="70" />
 				<item id="36912" min="1" max="1" chance="0.05" />
@@ -934,7 +934,7 @@
 				<item id="36535" min="1" max="1" chance="0.66667" />
 				<item id="36887" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23320" level="99" type="L2Monster" name="Nerva Orc Merchant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -951,19 +951,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="18" />
 			<height normal="31.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5000000" max="5000000" chance="100" />
 				<item id="36913" min="1" max="1" chance="0.05" />
@@ -975,7 +975,7 @@
 				<item id="36535" min="1" max="1" chance="0.66667" />
 				<item id="36885" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23321" level="99" type="L2Monster" name="Nerva Orc Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -992,19 +992,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="59449" max="138677" chance="70" />
 				<item id="36921" min="1" max="1" chance="0.05" />
@@ -1016,7 +1016,7 @@
 				<item id="36535" min="1" max="1" chance="1" />
 				<item id="36886" min="1" max="1" chance="0.66667" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23322" level="99" type="L2Monster" name="Nerva Orc Prefect">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1033,20 +1033,20 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="15629" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="67130" max="154434" chance="70" />
 				<item id="36929" min="1" max="1" chance="0.06667" />
@@ -1058,7 +1058,7 @@
 				<item id="36535" min="1" max="1" chance="1.5" />
 				<item id="36887" min="1" max="1" chance="1" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23323" level="99" type="L2Monster" name="Nerva Orc Elite">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1075,19 +1075,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="40738" max="91220" chance="70" />
 				<item id="36519" min="1" max="1" chance="0.5" />
@@ -1098,7 +1098,7 @@
 				<item id="36519" min="1" max="1" chance="5" />
 				<item id="36885" min="1" max="1" chance="1" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23324" level="99" type="L2Monster" name="Captain" title="Nerva Bloodlust">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1115,19 +1115,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
 				<item id="57" min="29350" max="68369" chance="70" /> <!-- Adena -->
@@ -1139,7 +1139,7 @@
 				<item id="36524" min="1" max="1" chance="8.9" /> <!-- Orichalcum -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23325" level="99" type="L2Monster" name="Archer" title="Nerva Bloodlust">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1156,23 +1156,23 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
 				<item id="57" min="22025" max="51306" chance="70" /> <!-- Adena -->
@@ -1184,7 +1184,7 @@
 				<item id="36520" min="1" max="1" chance="0.75" /> <!-- Exquisite Leather -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23326" level="99" type="L2Monster" name="Wizard" title="Nerva Bloodlust">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1201,10 +1201,10 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="15629" level="1" />
 			<skill id="4416" level="17" />
@@ -1212,13 +1212,13 @@
 			<!-- <skill id="4413" level="7" /> -->
 			<!-- <skill id="4410" level="8" /> -->
 			<!-- <skill id="4412" level="7" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="37771" max="83195" chance="70" />
 				<item id="36525" min="1" max="1" chance="0.5" />
@@ -1228,7 +1228,7 @@
 				<item id="36525" min="1" max="1" chance="2" />
 				<item id="36885" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23327" level="99" type="L2Monster" name="Soldier" title="Nerva Bloodlust">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1245,23 +1245,23 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="17" />
 			<!-- <skill id="4411" level="8" /> -->
 			<!-- <skill id="4413" level="7" /> -->
 			<!-- <skill id="4410" level="8" /> -->
 			<!-- <skill id="4412" level="7" /> -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="38173" max="88034" chance="70" />
 				<item id="36530" min="1" max="1" chance="0.5" />
@@ -1271,7 +1271,7 @@
 				<item id="36544" min="1" max="1" chance="2.5" />
 				<item id="36886" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23328" level="99" type="L2Monster" name="Assassin" title="Nerva Bloodlust">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1288,23 +1288,23 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="22025" max="51306" chance="70" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="1.093" /> <!-- Weapon Fragment (High-grade) -->
@@ -1315,7 +1315,7 @@
 				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23329" level="99" type="L2Monster" name="Nerva Kaiser">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1332,19 +1332,19 @@
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5465" level="1" />
 			<skill id="4416" level="2" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="20" />
 			<height normal="36.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="37998" max="86831" chance="70" />
 				<item id="36545" min="1" max="1" chance="0.5" />
@@ -1354,7 +1354,7 @@
 				<item id="36554" min="1" max="1" chance="2.5" />
 				<item id="36887" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23330" level="99" type="L2Monster" name="Rubble">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1371,20 +1371,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3779" max="8809" chance="70" />
 				<item id="36563" min="1" max="1" chance="0.4" />
@@ -1396,7 +1396,7 @@
 				<item id="36533" min="1" max="1" chance="2.5" />
 				<item id="36534" min="1" max="1" chance="2.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23332" level="99" type="L2Monster" name="One-armed Zombie">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1413,20 +1413,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="34" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3775" max="8810" chance="70" />
 				<item id="36563" min="1" max="1" chance="0.5" />
@@ -1438,7 +1438,7 @@
 				<item id="36533" min="1" max="1" chance="12.5" />
 				<item id="36534" min="1" max="1" chance="1.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23333" level="99" type="L2Monster" name="Putrefied Zombie">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1455,20 +1455,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3774" max="8810" chance="70" />
 				<item id="36861" min="1" max="1" chance="0.05" />
@@ -1479,7 +1479,7 @@
 				<item id="36563" min="1" max="1" chance="2" />
 				<item id="36564" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23334" level="99" type="L2Monster" name="Shelop">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1496,20 +1496,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="30" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3774" max="8810" chance="70" />
 				<item id="36869" min="1" max="1" chance="0.05" />
@@ -1521,7 +1521,7 @@
 				<item id="36563" min="1" max="1" chance="2" />
 				<item id="36564" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23335" level="99" type="L2Monster" name="Poras">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1538,20 +1538,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="53" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3774" max="8802" chance="70" />
 				<item id="36877" min="1" max="1" chance="0.05" />
@@ -1563,7 +1563,7 @@
 				<item id="36563" min="1" max="1" chance="2" />
 				<item id="36564" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23336" level="99" type="L2Monster" name="Death Worm">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1580,20 +1580,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="70" />
 			<height normal="41" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3787" max="8796" chance="70" />
 				<item id="36913" min="1" max="1" chance="0.05" />
@@ -1606,7 +1606,7 @@
 				<item id="36563" min="1" max="1" chance="2" />
 				<item id="36564" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23337" level="99" type="L2Monster" name="Large Rubble">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1623,20 +1623,20 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="5467" level="1" />
 			<skill id="4416" level="1" />
 			<skill id="4458" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3774" max="8809" chance="70" />
 				<item id="36921" min="1" max="1" chance="0.05" />
@@ -1648,7 +1648,7 @@
 				<item id="36563" min="1" max="1" chance="2" />
 				<item id="36564" min="1" max="1" chance="0.5" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23348" level="99" type="L2Monster" name="Chaos Horn">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1665,18 +1665,18 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="27" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
 				<item id="57" min="2202" max="5131" chance="70" /> <!-- Adena -->
@@ -1688,7 +1688,7 @@
 				<item id="40207" min="1" max="1" chance="18.46" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23349" level="87" type="L2Monster" name="Noctum" title="Gravekeeper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1711,20 +1711,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1466" max="3421" chance="70" />
 				<item id="36557" min="1" max="1" chance="0.84746" />
@@ -1744,7 +1744,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23350" level="87" type="L2Monster" name="Demonic Noctum" title="Gravekeeper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1767,20 +1767,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="1732" max="4042" chance="70" />
 				<item id="36810" min="1" max="1" chance="7.35" />
@@ -1803,7 +1803,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23351" level="99" type="L2Monster" name="Wild Guardian Tree">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1820,20 +1820,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2281" max="5326" chance="70" />
 				<item id="36557" min="1" max="1" chance="4.75" />
@@ -1852,7 +1852,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23352" level="98" type="L2Monster" name="Wild Protector Tree">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1869,20 +1869,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="44" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2235" max="5210" chance="70" />
 				<item id="36557" min="1" max="1" chance="4.3" />
@@ -1901,7 +1901,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23353" level="99" type="L2Monster" name="Wilderness Protector">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
@@ -1918,20 +1918,20 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 			<!-- <skill id="4412" level="13" /> -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="46.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2282" max="5325" chance="70" />
 				<item id="36557" min="1" max="1" chance="4.5" />
@@ -1950,7 +1950,7 @@
 				<item id="36883" min="1" max="1" chance="0.3003" />
 				<item id="36884" min="1" max="1" chance="0.3003" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23354" level="99" type="L2Npc" name="Decay Hannibal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1968,7 +1968,7 @@
 			<radius normal="23" />
 			<height normal="44" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -1980,7 +1980,7 @@
 				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23355" level="99" type="L2Monster" name="Armor Beast">  
 		<!-- Source: www.l2wiki.com (2015-04-08) --> 
@@ -1995,16 +1995,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>		
+		</skillList>		
 		<collision>
 			<radius normal="31" />
 			<height normal="15.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2015,7 +2015,7 @@
 				<item id="40050" min="1" max="1" chance="1.883" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23356" level="99" type="L2Npc" name="Klein Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2033,7 +2033,7 @@
 			<radius normal="20" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2044,7 +2044,7 @@
 				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23357" level="99" type="L2Npc" name="Disorder Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2062,7 +2062,7 @@
 			<radius normal="55" />
 			<height normal="62" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3368" max="7847" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2072,7 +2072,7 @@
 				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23358" level="99" type="L2Monster" name="Blow Archer">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2087,15 +2087,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2106,7 +2106,7 @@
 				<item id="40050" min="1" max="1" chance="1.999" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23359" level="99" type="L2Monster" name="Blow Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2121,17 +2121,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2143,7 +2143,7 @@
 				<item id="40050" min="1" max="1" chance="1.918" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23360" level="99" type="L2Monster" name="Bizuard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2158,16 +2158,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4045" max="9424" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2178,7 +2178,7 @@
 				<item id="40050" min="1" max="1" chance="2.017" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23361" level="99" type="L2Npc" name="Mutated Fly">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2196,7 +2196,7 @@
 			<radius normal="35" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3371" max="7853" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2207,7 +2207,7 @@
 				<item id="40050" min="1" max="1" chance="1.950" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23362" level="99" type="L2Monster" name="Amos Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2222,15 +2222,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2242,7 +2242,7 @@
 				<item id="40050" min="1" max="1" chance="1.939" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23363" level="99" type="L2Monster" name="Amos Officer">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2257,15 +2257,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="46" />
 			<height normal="71.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2276,7 +2276,7 @@
 				<item id="40050" min="1" max="1" chance="1.95" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23364" level="99" type="L2Monster" name="Amos Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2291,16 +2291,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="42.51" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2312,7 +2312,7 @@
 				<item id="40050" min="1" max="1" chance="1.987" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23365" level="99" type="L2Monster" name="Ailith Hunter">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2327,16 +2327,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2348,7 +2348,7 @@
 				<item id="40050" min="1" max="1" chance="1.933" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23366" level="99" type="L2Npc" name="Durable Charger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2366,7 +2366,7 @@
 			<radius normal="14" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2335" max="5905" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2376,7 +2376,7 @@
 				<item id="40050" min="1" max="1" chance="1.500" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23367" level="99" type="L2Monster" name="Armor Beast"> 
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2391,16 +2391,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>		
+		</skillList>		
 		<collision>
 			<radius normal="31" />
 			<height normal="15.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -2411,7 +2411,7 @@
 				<item id="40050" min="1" max="1" chance="4.703" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23368" level="99" type="L2Npc" name="Klein Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2429,7 +2429,7 @@
 			<radius normal="20" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2441,7 +2441,7 @@
 				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23369" level="99" type="L2Npc" name="Disorder Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2459,7 +2459,7 @@
 			<radius normal="55" />
 			<height normal="62" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="8243" max="19201" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -2471,7 +2471,7 @@
 				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23370" level="99" type="L2Monster" name="Blow Archer">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2486,15 +2486,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -2505,7 +2505,7 @@
 				<item id="40050" min="1" max="1" chance="4.775" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23371" level="99" type="L2Monster" name="Blow Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2520,17 +2520,17 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="35" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
@@ -2542,7 +2542,7 @@
 				<item id="40050" min="1" max="1" chance="1.918" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23372" level="99" type="L2Monster" name="Bizuard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2557,16 +2557,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="9888" max="23034" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -2577,7 +2577,7 @@
 				<item id="40050" min="1" max="1" chance="4.764" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23373" level="99" type="L2Npc" name="Mutated Fly">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2595,7 +2595,7 @@
 			<radius normal="35" />
 			<height normal="33" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="8240" max="19195" chance="50" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -2605,7 +2605,7 @@
 				<item id="40050" min="1" max="1" chance="4.750" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23374" level="99" type="L2Npc" name="Lavi" title="Disciplined">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2799,7 +2799,7 @@
 			<radius normal="48" />
 			<height normal="53.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="17109" max="1016822" chance="13.8" />
 				<item id="37890" min="1" max="1" chance="0.9" />
@@ -2810,7 +2810,7 @@
 				<item id="40050" min="1" max="1" chance="5.8" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23385" level="99" type="L2Monster" name="Lunatikan">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -2834,7 +2834,7 @@
 			<radius normal="40" />
 			<height normal="73" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="17263" max="1294257" chance="12.9" />
 				<item id="37791" min="1" max="1" chance="0.6" />
@@ -2845,7 +2845,7 @@
 				<item id="40050" min="1" max="1" chance="5.9" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23386" level="99" type="L2Monster" name="Jabberwok">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -2869,7 +2869,7 @@
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="68375" max="148631" chance="24.8" />
 				<item id="37791" min="1" max="1" chance="1.8" />
@@ -2881,7 +2881,7 @@
 				<item id="40050" min="1" max="1" chance="22.9" />
 				<item id="40051" min="1" max="1" chance="2.2" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23387" level="99" type="L2Monster" name="Kanzaroth">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -2905,7 +2905,7 @@
 			<radius normal="28" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="17195" max="1154758" chance="18.9" />
 				<item id="37890" min="1" max="1" chance="0.3" />
@@ -2917,7 +2917,7 @@
 				<item id="40050" min="1" max="1" chance="5.9" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23388" level="99" type="L2Monster" name="Kandiloth">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -2941,7 +2941,7 @@
 			<radius normal="38.7" />
 			<height normal="54.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="17385" max="640211" chance="15.3" />
 				<item id="37791" min="1" max="1" chance="0.3" />
@@ -2952,7 +2952,7 @@
 				<item id="40050" min="1" max="1" chance="5.9" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23389" level="99" type="L2Npc" name="Viper" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3078,7 +3078,7 @@
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21993" max="1631033" chance="13.6" />
 				<item id="37791" min="1" max="1" chance="0.8" />
@@ -3089,7 +3089,7 @@
 				<item id="40050" min="1" max="1" chance="7.6" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23396" level="99" type="L2Monster" name="Garion Neti">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -3113,7 +3113,7 @@
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="22033" max="1552806" chance="13" />
 				<item id="37791" min="1" max="1" chance="0.8" />
@@ -3125,7 +3125,7 @@
 				<item id="40050" min="1" max="1" chance="7.6" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23397" level="99" type="L2Monster" name="Desert Wendigo">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -3149,7 +3149,7 @@
 			<radius normal="40" />
 			<height normal="45" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21883" max="1732301" chance="13.6" />
 				<item id="37791" min="1" max="1" chance="0.4" />
@@ -3161,7 +3161,7 @@
 				<item id="40050" min="1" max="1" chance="7.5" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23398" level="99" type="L2Monster" name="Koraza">
 		<!-- GUESSED STATS TODO: FIX IT -->
@@ -3185,7 +3185,7 @@
 			<radius normal="28" />
 			<height normal="28.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21796" max="1412884" chance="14.1" />
 				<item id="37791" min="1" max="1" chance="0.6" />
@@ -3197,7 +3197,7 @@
 				<item id="40050" min="1" max="1" chance="7.5" />
 				<item id="40051" min="1" max="1" chance="0.8" />
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23399" level="99" type="L2Monster" name="Bend Beetle">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3216,7 +3216,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -3226,13 +3226,13 @@
 			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
 			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="4225" level="3" /> <!-- Stun Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="600" clanHelpRange="600" />
 		<collision>
 			<radius normal="40" />
 			<height normal="67" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="36635" max="85342" chance="30" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
@@ -3244,6 +3244,6 @@
 				<item id="40050" min="1" max="1" chance="10.61" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="1.086" /> <!-- Scroll: 100,000 SP -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

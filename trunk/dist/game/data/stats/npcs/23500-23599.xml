@@ -11,18 +11,18 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5462" level="1" />
 			<skill id="4410" level="16" />
 			<skill id="4379" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -35,7 +35,7 @@
 				<item id="36543" min="1" max="1" chance="1.600" /> <!-- Item 36543.jpg Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Item 36519.jpg Quality Leather -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23501" level="99" type="L2Npc" name="Flame Rael">
 		<race>HUMAN</race>
@@ -48,18 +48,18 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5465" level="1" />
 			<skill id="4411" level="13" />
 			<skill id="4379" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -72,7 +72,7 @@
 				<item id="36538" min="1" max="1" chance="2.275" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23502" level="99" type="L2Npc" name="Flame Salamander">
 		<race>HUMAN</race>
@@ -85,18 +85,18 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" />
 			<skill id="5465" level="1" />
 			<skill id="4410" level="16" />
 			<skill id="4379" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -109,7 +109,7 @@
 				<item id="36518" min="1" max="1" chance="9" /> <!-- Durable Leather -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23503" level="99" type="L2Npc" name="Flame Drake">
 		<race>HUMAN</race>
@@ -122,18 +122,18 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5462" level="1" />
 			<skill id="4411" level="16" />
 			<skill id="4379" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -146,7 +146,7 @@
 				<item id="36543" min="1" max="1" chance="1.500" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23504" level="99" type="L2Npc" name="Flame Votis">
 		<race>HUMAN</race>
@@ -159,18 +159,18 @@
 			</speed>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="13" />
 			<skill id="5465" level="1" />
 			<skill id="4410" level="16" />
 			<skill id="4379" level="4" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="872" max="2030" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
@@ -183,7 +183,7 @@
 				<item id="36538" min="1" max="1" chance="2.250" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23505" level="101" type="L2Monster" name="Fortress Raider">
         <!-- "TODO" font https://l2wiki.com/Fortress_Raider -->
@@ -206,20 +206,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="4" /> <!-- Quality Leather -->
@@ -232,7 +232,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23506" level="101" type="L2Monster" name="Fortress Guardian Captain">
         <!-- "TODO" font https://l2wiki.com/Fortress_Raider -->
@@ -255,23 +255,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" />
 			<skill id="5467" level="1" />
 			<skill id="4412" level="14" />
 			<skill id="4413" level="14" />
 			<skill id="4440" level="5" />
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -283,7 +283,7 @@
 			<corpse>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23507" level="101" type="L2Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -305,20 +305,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.855" /> <!-- Quality Leather -->
@@ -331,7 +331,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23508" level="101" type="L2Monster" name="Atelia Elite Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -352,23 +352,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -380,7 +380,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23509" level="102" type="L2Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -402,22 +402,22 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
@@ -429,7 +429,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -451,22 +451,22 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
@@ -478,7 +478,7 @@
 			<corpse>
 				<item id="36554" min="1" max="1" chance="2.103" /> <!-- Armor Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23511" level="102" type="L2Monster" name="Fortress Archon">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -500,23 +500,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
@@ -528,7 +528,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23512" level="102" type="L2Monster" name="Atelia High Priest">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -550,23 +550,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
@@ -578,7 +578,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23530" level="101" type="L2Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -600,23 +600,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -628,7 +628,7 @@
 			<corpse>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="25532" level="101" type="L2Monster" name="Atelia Elite Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -650,23 +650,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -678,7 +678,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23535" level="102" type="L2Monster" name="Atelia Archon" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -700,23 +700,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
 				<item id="57" min="30484" max="71016" chance="70" /> <!-- Adena -->
@@ -728,7 +728,7 @@
 			<corpse>
 				<item id="46081" min="1" max="1" chance="0.75" /> <!-- Recipe: Mysterious Blessed Spiritshot (R-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23536" level="102" type="L2Monster" name="Atelia High Priest" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -750,23 +750,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
@@ -778,7 +778,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23537" level="101" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -801,23 +801,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -829,7 +829,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23538" level="102" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -851,23 +851,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
@@ -879,7 +879,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23539" level="104" type="L2Monster" name="Atelia Trial Guardian Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -894,10 +894,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -922,21 +922,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="6.629" /> <!-- Orichalcum -->
@@ -947,7 +947,7 @@
 			<corpse>
 				<item id="36549" min="1" max="1" chance="2.08" /> <!-- Weapon Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23542" level="101" type="L2Monster" name="Kerberos Fort">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -968,21 +968,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="1.499" /> <!-- Orichalcum -->
@@ -995,7 +995,7 @@
 			<corpse>
 				<item id="36549" min="1" max="1" chance="2.314" /> <!-- Weapon Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23543" level="100" type="L2Monster" name="Kerberos Nero">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1016,21 +1016,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate -->
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
@@ -1043,7 +1043,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="1.478" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23544" level="101" type="L2Monster" name="Fury Sylph Barrena">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1064,21 +1064,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate -->
 				<item id="57" min="27009" max="63122" chance="70" /> <!-- Adena -->
@@ -1090,7 +1090,7 @@
 			<corpse>
 				<item id="19448" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23545" level="100" type="L2Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1111,21 +1111,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
@@ -1137,7 +1137,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23546" level="101" type="L2Monster" name="Fury Sylph Temptress">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
@@ -1158,15 +1158,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1193,21 +1193,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
@@ -1219,7 +1219,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="1.6355" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23548" level="100" type="L2Monster" name="Fury Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1240,20 +1240,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="4.39" /> <!-- Orichalcum -->
@@ -1263,7 +1263,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="1.689" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23549" level="100" type="L2Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
@@ -1284,20 +1284,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
@@ -1308,7 +1308,7 @@
 			<corpse>
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23550" level="100" type="L2Monster" name="Kerberos Liger" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1329,21 +1329,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="6.629" /> <!-- Orichalcum -->
@@ -1354,7 +1354,7 @@
 			<corpse>
 				<item id="36549" min="1" max="1" chance="2.08" /> <!-- Weapon Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23551" level="101" type="L2Monster" name="Kerberos Fort" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1375,21 +1375,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="1.499" /> <!-- Orichalcum -->
@@ -1402,7 +1402,7 @@
 			<corpse>
 				<item id="36549" min="1" max="1" chance="2.314" /> <!-- Weapon Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23552" level="100" type="L2Monster" name="Kerberos Nero" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1423,21 +1423,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="4.609" /> <!-- Orichalcum Wire -->
@@ -1447,7 +1447,7 @@
 			<corpse>
 				<item id="36549" min="1" max="1" chance="2.104" /> <!-- Weapon Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23553" level="101" type="L2Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1468,21 +1468,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="27009" max="63122" chance="70" /> <!-- Adena -->
@@ -1495,7 +1495,7 @@
 			<corpse>
 				<item id="19448" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23554" level="100" type="L2Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1513,21 +1513,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
@@ -1539,7 +1539,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23555" level="101" type="L2Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
@@ -1560,15 +1560,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -1594,21 +1594,21 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
@@ -1621,7 +1621,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="1.645" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23557" level="100" type="L2Monster" name="Fury Kerberos Leger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1642,20 +1642,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="2.235" /> <!-- Orichalcum -->
@@ -1666,7 +1666,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="1.631" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23558" level="100" type="L2Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
@@ -1687,20 +1687,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
@@ -1710,7 +1710,7 @@
 			<corpse>
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23559" level="100" type="L2Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1731,22 +1731,22 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Amaranthine Avenger -->
 				<item id="57" min="38695" max="90213" chance="70" /> <!-- Adena -->
@@ -1759,7 +1759,7 @@
 			<corpse>
 				<item id="19448" min="1" max="1" chance="1.056" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23560" level="100" type="L2Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1780,22 +1780,22 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>GARDEN_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="38695" max="90213" chance="70" /> <!-- Adena -->
@@ -1808,7 +1808,7 @@
 			<corpse>
 				<item id="19447" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23561" level="100" type="L2Monster" name="Harpe">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1822,16 +1822,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
-		</drop_lists>
+		<dropLists>
+		</dropLists>
 	</npc>
 	<npc id="23562" level="101" type="L2Monster" name="Harpe" title="Separated Evil Thoughts">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1852,15 +1852,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="12000000" max="12000000" chance="100" /> <!-- Adena -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
@@ -1896,7 +1896,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23563" level="101" type="L2Monster" name="Croamis" title="Gatekeeper">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1910,10 +1910,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -1931,16 +1931,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
-		</drop_lists>
+		<dropLists>
+		</dropLists>
 	</npc>
 	<npc id="23565" level="100" type="L2Monster" name="Amis">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1954,16 +1954,16 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
-		</drop_lists>
+		<dropLists>
+		</dropLists>
 	</npc>
 	<npc id="23566" level="100" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
@@ -1977,15 +1977,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
@@ -1997,7 +1997,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23567" level="100" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
@@ -2011,15 +2011,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
@@ -2030,7 +2030,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2044,15 +2044,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
@@ -2064,7 +2064,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2078,7 +2078,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2087,12 +2087,12 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="35349" min="1" max="1" chance="0.075" /> <!-- Eternal Circlet Ingredient -->
@@ -2103,7 +2103,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>	
 	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2117,15 +2117,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
@@ -2135,7 +2135,7 @@
 			<corpse>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 		<npc id="23571" level="103" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2149,7 +2149,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2158,12 +2158,12 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves -->
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
@@ -2174,7 +2174,7 @@
 			<corpse>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23572" level="100" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2188,15 +2188,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="1.273" /> <!-- Quality Fiber -->
@@ -2206,7 +2206,7 @@
 			<corpse>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23573" level="103" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2220,7 +2220,7 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2229,12 +2229,12 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes -->
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
@@ -2245,7 +2245,7 @@
 			<corpse>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>	
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
 		<!-- Source: www.l2wiki.com -->
@@ -2259,19 +2259,19 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> 
 			<skill id="4411" level="12" /> 
 			<skill id="4412" level="12" /> 
 			<skill id="4413" level="12" /> 
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
 				<item id="57" min="9360" max="21823" chance="30" /> <!-- Adena -->
@@ -2282,7 +2282,7 @@
 			<corpse>
 				<item id="19448" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Armor (R-grade)-->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23575" level="101" type="L2Monster" name="Nymph Lily" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2296,15 +2296,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
@@ -2314,7 +2314,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23576" level="101" type="L2Monster" name="Nymph Tulip" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2328,15 +2328,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
@@ -2346,7 +2346,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23577" level="101" type="L2Monster" name="Nymph Cosmos" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2360,15 +2360,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
@@ -2378,7 +2378,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23578" level="102" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2392,15 +2392,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Amaranthine Buster -->
 				<item id="57" min="19032" max="44338" chance="100" /> <!-- Adena -->
@@ -2414,7 +2414,7 @@
 				<item id="19447" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="36513" min="1" max="1" chance="0.3" /> <!-- Elcyum Powder -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23579" level="100" type="L2Monster" name="Buoyant Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2428,15 +2428,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4804" max="11201" chance="30" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
@@ -2447,7 +2447,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23580" level="100" type="L2Monster" name="Fluttering Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2461,15 +2461,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="4804" max="11201" chance="30" /> <!-- Adena -->
 				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
@@ -2479,7 +2479,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23581" level="100" type="L2Monster" name="Apherus" title="Instilled with life">
 		<!-- Source: www.l2on.net -->
@@ -2493,15 +2493,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6425" max="29942" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.7" /> <!-- Quality Fiber -->
@@ -2540,7 +2540,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23582" level="101" type="L2Monster" name="Nymph Rose" title="Elegant">
 		<!-- Source: www.l2wiki.com -->
@@ -2554,15 +2554,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade)-->
@@ -2572,7 +2572,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23583" level="101" type="L2Monster" name="Nymph Lily" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2586,15 +2586,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
@@ -2604,7 +2604,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23584" level="101" type="L2Monster" name="Nymph Tulip" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2618,15 +2618,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
@@ -2636,7 +2636,7 @@
 			<corpse>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23585" level="101" type="L2Monster" name="Nymph Cosmos" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2650,15 +2650,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
@@ -2668,7 +2668,7 @@
 			<corpse>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23586" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2689,14 +2689,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2722,15 +2722,15 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17527" min="1" max="1" chance="60.7" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36586" min="1" max="1" chance="51.23" /> <!-- Scroll: Modify Armor (R-grade) -->
@@ -2794,7 +2794,7 @@
 				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
 				<item id="39629" min="3" max="3" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23588" level="102" type="L2Monster" name="Hummel" title="Embryo Quartermaster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2815,10 +2815,10 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
@@ -2843,14 +2843,14 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2872,13 +2872,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2899,13 +2899,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2926,13 +2926,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2953,13 +2953,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -2980,13 +2980,13 @@
 				<walk ground="50" />
 				<run ground="186" />
 			</speed>
-			<hit_time>500</hit_time>
+			<hitTime>500</hitTime>
 		</stats>
 		<status attackable="false" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="14" />
 			<skill id="6748" level="1" />
-		</skill_list>
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="24.5" />
@@ -3011,20 +3011,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.944" /> <!-- Quality Leather -->
@@ -3037,7 +3037,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23596" level="101" type="L2Monster" name="Fortress Guardian Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -3058,23 +3058,23 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
@@ -3086,7 +3086,7 @@
 			<corpse>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23597" level="101" type="L2Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08)HAS 2 MOBS NEED FIX -->
@@ -3107,20 +3107,20 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.855" /> <!-- Quality Leather -->
@@ -3133,7 +3133,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="23599" level="102" type="L2Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08)HAS 2 MOBS NEED FIX -->
@@ -3154,22 +3154,22 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skill_list>
+		</skillList>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
+			<clanList>
 				<clan>ATELIA_CLAN</clan>
-			</clan_list>
+			</clanList>
 		</ai>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
@@ -3181,6 +3181,6 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</drop_lists>
+		</dropLists>
 	</npc>
 </list>

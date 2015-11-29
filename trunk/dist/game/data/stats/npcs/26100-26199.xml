@@ -50,15 +50,15 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4279" level="1" />
 			<skill id="4299" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="35328" min="1" max="1" chance="1.787" /> <!-- Amaranthine Cutter Fragment -->
 				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Amaranthine Stormer (60%) -->
@@ -156,7 +156,7 @@
 				<item id="35327" min="1" max="1" chance="1.812" /> <!-- Amaranthine Shaper Fragment -->
 				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Amaranthine Fighter (60%) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="51" />
@@ -212,10 +212,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4436" level="1" />
@@ -225,13 +225,13 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38023" min="1" max="1" chance="1.395" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
 				<item id="38024" min="1" max="1" chance="1.42" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
@@ -253,7 +253,7 @@
 				<item id="38039" min="1" max="1" chance="1.422" /> <!-- Seraph Sigil Crafting Pack Robe -->
 				<item id="19448" min="1" max="1" chance="92.30769" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26106" level="98" type="L2RaidBoss" name="Veridan" title="Wealthy">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26106 -->
@@ -271,10 +271,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4436" level="1" />
@@ -284,20 +284,20 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3797993" max="3797993" chance="100" /> <!-- Adena -->
 				<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="7.4626" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26107" level="98" type="L2RaidBoss" name="Veridan" title="Wise">
 		<!-- Source: http://l2on.net/en/?c=npc&id=26107 -->
@@ -315,10 +315,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4436" level="1" />
@@ -328,20 +328,20 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17526" min="1" max="1" chance="33.33333" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="1" max="1" chance="66.66666" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="7.5757" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26108" level="98" type="L2Npc" name="Veridan" title="Armed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -375,10 +375,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4436" level="1" />
@@ -388,16 +388,16 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="3887823" max="3887823" chance="100" /> <!-- Adena -->
 				<item id="19440" min="1" max="1" chance="100" /> <!-- Gemstone (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="1.4492" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -418,10 +418,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4436" level="1" />
@@ -431,16 +431,16 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17526" min="1" max="1" chance="23.80952" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="1" max="1" chance="76.19047" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="4.513" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -461,10 +461,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4279" level="1" />
@@ -473,13 +473,13 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38023" min="1" max="1" chance="1.359" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
 				<item id="38024" min="1" max="1" chance="1.333" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
@@ -501,7 +501,7 @@
 				<item id="38039" min="1" max="1" chance="1.378" /> <!-- Seraph Sigil Crafting Pack Robe -->
 				<item id="19448" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<!--Source: http://l2on.net/en/?c=npc&id=26112 -->
 	<npc id="26112" level="98" type="L2RaidBoss" name="Kechi" title="Wealthy">
@@ -519,10 +519,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4279" level="1" />
@@ -531,20 +531,20 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="8100786" max="8100786" chance="100" /> <!-- Adena -->
 				<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="9.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26113" level="98" type="L2RaidBoss" name="Kechi" title="Wise">
 		<!--- Source: http://l2on.net/en/?c=npc&id=26113 -->
@@ -562,10 +562,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4288" level="1" />
 			<skill id="4435" level="1" />
 			<skill id="4279" level="1" />
@@ -574,20 +574,20 @@
 			<skill id="4441" level="1" />
 			<skill id="4298" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17526" min="2" max="2" chance="19.52" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="8.987" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<!--- Source: http://l2on.net/en/?c=npc&id=26114 -->
 	<npc id="26114" level="98" type="L2RaidBoss" name="Michaela" title="Armed">
@@ -605,10 +605,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4288" level="1" />
 			<skill id="4290" level="1" />
@@ -616,13 +616,13 @@
 			<skill id="4440" level="1" />
 			<skill id="4441" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="38023" min="1" max="1" chance="1.426" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
 				<item id="38024" min="1" max="1" chance="1.3559" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
@@ -644,7 +644,7 @@
 				<item id="38039" min="1" max="1" chance="1.404" /> <!-- Seraph Sigil Crafting Pack Robe -->
 				<item id="19448" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<!-- Source: http://l2on.net/en/?c=npc&id=26115 -->
 	<npc id="26115" level="98" type="L2RaidBoss" name="Michaela" title="Wealthy">
@@ -662,10 +662,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4288" level="1" />
 			<skill id="4290" level="1" />
@@ -673,20 +673,20 @@
 			<skill id="4440" level="1" />
 			<skill id="4441" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="57" min="8170143" max="8170143" chance="100" /> <!-- Adena -->
 				<item id="19440" min="2" max="2" chance="100" /> <!-- Gemstone (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="27.7777" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<!-- Source: http://l2on.net/en/?c=npc&id=26116 -->
 	<npc id="26116" level="98" type="L2RaidBoss" name="Michaela" title="Wise">
@@ -704,10 +704,10 @@
 				<walk ground="120" />
 				<run ground="300" />
 			</speed>
-			<hit_time>333</hit_time>
+			<hitTime>333</hitTime>
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
-		<skill_list>
+		<skillList>
 			<skill id="4336" level="1" />
 			<skill id="4288" level="1" />
 			<skill id="4290" level="1" />
@@ -715,20 +715,20 @@
 			<skill id="4440" level="1" />
 			<skill id="4441" level="1" />
 			<skill id="4286" level="1" />
-		</skill_list>
+		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="77" />
 		</collision>
-		<drop_lists>
+		<dropLists>
 			<death>
 				<item id="17526" min="2" max="2" chance="11.1111" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="2" max="2" chance="85.71428" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="25.9259" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</death>
-		</drop_lists>
+		</dropLists>
 	</npc>
 	<npc id="26120" level="98" type="L2Npc" name="Michaela" title="Armed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

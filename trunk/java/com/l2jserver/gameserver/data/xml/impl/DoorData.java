@@ -109,8 +109,8 @@ public class DoorData implements IXmlReader
 			collisionRadius = 20;
 		}
 		
-		set.set("collision_radius", collisionRadius);
-		set.set("collision_height", height);
+		set.set("collisionRadius", collisionRadius);
+		set.set("collisionHeight", height);
 	}
 	
 	/**
