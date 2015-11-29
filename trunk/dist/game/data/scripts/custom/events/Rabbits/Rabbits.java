@@ -118,7 +118,7 @@ public final class Rabbits extends Event
 		// Announce event start
 		Broadcast.toAllOnlinePlayers("Rabbits Event: Chests spawned!");
 		Broadcast.toAllOnlinePlayers("Rabbits Event: Go to Fantasy Isle and grab some rewards!");
-		Broadcast.toAllOnlinePlayers("Rabbits Event: You have " + EVENT_TIME + " minuntes!");
+		Broadcast.toAllOnlinePlayers("Rabbits Event: You have " + EVENT_TIME + " minutes!");
 		Broadcast.toAllOnlinePlayers("Rabbits Event: After that time all chests will disappear...");
 		// Schedule event end
 		startQuestTimer("END_RABBITS_EVENT", EVENT_TIME * 60000, null, eventMaker);

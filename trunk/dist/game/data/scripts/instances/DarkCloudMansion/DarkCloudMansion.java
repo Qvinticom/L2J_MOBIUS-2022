@@ -122,7 +122,6 @@ public final class DarkCloudMansion extends AbstractInstance
 	// private static int W5 = 24230011; // Wall 5
 	// private static int W6 = 24230012; // Wall 6
 	// private static int W7 = 24230013; // Wall 7
-	private static boolean debug = false;
 	private static boolean noRndWalk = true;
 	private static NpcStringId[] _spawnChat =
 	{
@@ -241,11 +240,6 @@ public final class DarkCloudMansion extends AbstractInstance
 	@Override
 	protected boolean checkConditions(L2PcInstance player)
 	{
-		if (debug)
-		{
-			return true;
-		}
-		
 		final L2Party party = player.getParty();
 		if (party == null)
 		{
@@ -289,15 +283,10 @@ public final class DarkCloudMansion extends AbstractInstance
 		if (firstEntrance)
 		{
 			runStartRoom((DMCWorld) world);
-			// teleport players
-			if (debug && (player.getParty() == null))
+			final L2Party party = player.getParty();
+			if (party != null)
 			{
-				world.addAllowed(player.getObjectId());
-				teleportPlayer(player, new Location(146534, 180464, -6117), world.getInstanceId());
-			}
-			else
-			{
-				for (L2PcInstance partyMember : player.getParty().getMembers())
+				for (L2PcInstance partyMember : party.getMembers())
 				{
 					if (partyMember.getQuestState(getName()) == null)
 					{
@@ -336,10 +325,6 @@ public final class DarkCloudMansion extends AbstractInstance
 			thisnpc.npc.setIsNoRndWalk(true);
 		}
 		world.rooms.put("StartRoom", StartRoom);
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: first room spawned in instance " + world.getInstanceId());
-		}
 	}
 	
 	protected void spawnHall(DMCWorld world)
@@ -413,10 +398,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		Hall.npcList.add(thisnpc);
 		
 		world.rooms.put("Hall", Hall);
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: hall spawned");
-		}
 	}
 	
 	protected void runHall(DMCWorld world)
@@ -466,10 +447,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.rooms.put("FirstRoom", FirstRoom);
 		world.setStatus(2);
 		openDoor(D2, world.getInstanceId());
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned first room");
-		}
 	}
 	
 	protected void runHall2(DMCWorld world)
@@ -527,10 +504,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.rooms.put("SecondRoom", SecondRoom);
 		world.setStatus(4);
 		openDoor(D3, world.getInstanceId());
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned second room");
-		}
 	}
 	
 	protected void runHall3(DMCWorld world)
@@ -584,10 +557,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.rooms.put("ThirdRoom", ThirdRoom);
 		world.setStatus(6);
 		openDoor(D4, world.getInstanceId());
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned third room");
-		}
 	}
 	
 	protected void runThirdRoom2(DMCWorld world)
@@ -634,10 +603,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		ThirdRoom.npcList.add(thisnpc);
 		world.rooms.put("ThirdRoom2", ThirdRoom);
 		world.setStatus(8);
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned third room second time");
-		}
 	}
 	
 	protected void runForthRoom(DMCWorld world)
@@ -685,10 +650,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.rooms.put("ForthRoom", ForthRoom);
 		world.setStatus(7);
 		openDoor(D5, world.getInstanceId());
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned forth room");
-		}
 	}
 	
 	protected void runFifthRoom(DMCWorld world)
@@ -696,10 +657,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		spawnFifthRoom(world);
 		world.setStatus(9);
 		openDoor(D6, world.getInstanceId());
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: spawned fifth room");
-		}
 	}
 	
 	private void spawnFifthRoom(DMCWorld world)
@@ -800,10 +757,6 @@ public final class DarkCloudMansion extends AbstractInstance
 		world.setStatus(10);
 		addSpawn(SOTruth, 148911, 181940, -6117, 16383, false, 0, false, world.getInstanceId());
 		world.rooms.clear();
-		if (debug)
-		{
-			_log.info("DarkCloudMansion: finished");
-		}
 	}
 	
 	protected void checkBelethSample(DMCWorld world, L2Npc npc, L2PcInstance player)
@@ -1087,7 +1040,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon, Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		final DMCWorld world;
@@ -1103,22 +1056,18 @@ public final class DarkCloudMansion extends AbstractInstance
 					{
 						if (mob.npc.isInvul() && (getRandom(100) < 12))
 						{
-							if (debug)
-							{
-								_log.info("DarkCloudMansion: spawn room 4 guard");
-							}
-							addSpawn(BM[getRandom(BM.length)], player.getX(), player.getY(), player.getZ(), 0, false, 0, false, world.getInstanceId());
+							addSpawn(BM[getRandom(BM.length)], attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, world.getInstanceId());
 						}
 					}
 				}
 			}
 			if (world.getStatus() == 9)
 			{
-				checkBelethSample(world, npc, player);
+				checkBelethSample(world, npc, attacker);
 			}
 		}
 		
-		return "";
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
@@ -1186,10 +1135,6 @@ public final class DarkCloudMansion extends AbstractInstance
 			{
 				if (world.isAllowed(player.getObjectId()))
 				{
-					if (debug)
-					{
-						_log.info("DarkCloudMansion - id " + player.getObjectId() + " removed from allowed player in this Instances.");
-					}
 					world.removeAllowed(player.getObjectId());
 				}
 				teleportPlayer(player, new Location(139968, 150367, -3111), 0);

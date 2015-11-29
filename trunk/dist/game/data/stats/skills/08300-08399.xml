@@ -675,7 +675,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="weightPenalty" val="5000" />
+				<add stat="weightLimit" val="5000" />
 			</effect>
 		</for>
 	</skill>

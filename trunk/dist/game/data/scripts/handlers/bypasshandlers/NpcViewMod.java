@@ -317,7 +317,12 @@ public class NpcViewMod implements IBypassHandler
 						final L2Item item = ItemTable.getInstance().getTemplate(generalDropItem.getItemId());
 						sb.append("<table width=291 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 						sb.append("<tr><td width=32 valign=top>");
-						sb.append("<img src=\"" + item.getIcon() + "\" width=32 height=32>");
+						String icon = item.getIcon();
+						if (icon == null)
+						{
+							icon = "icon.etc_question_mark_i00";
+						}
+						sb.append("<img src=\"" + icon + "\" width=32 height=32>");
 						sb.append("</td><td fixwidth=259 align=center><font name=\"hs9\" color=\"CD9000\">");
 						sb.append(item.getName());
 						sb.append("</font></td></tr><tr><td width=32></td><td width=259><table width=253 cellpadding=0 cellspacing=0>");

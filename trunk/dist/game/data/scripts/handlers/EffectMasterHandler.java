@@ -168,6 +168,7 @@ public final class EffectMasterHandler
 		ShiftTarget.class,
 		ShilensBreath.class,
 		SilentMove.class,
+		SingleTarget.class,
 		SkillTurning.class,
 		Sleep.class,
 		SoulBlow.class,

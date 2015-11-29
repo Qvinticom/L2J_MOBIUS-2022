@@ -1773,6 +1773,11 @@ public final class Formulas
 		
 		int defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
 		
+		if (attack_attribute <= defence_attribute)
+		{
+			return 1;
+		}
+		
 		double attack_attribute_mod = 0;
 		double defence_attribute_mod = 0;
 		

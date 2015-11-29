@@ -1358,6 +1358,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	private boolean doAttackHitByPole(Attack attack, L2Character target, int sAtk)
 	{
+		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
+		
+		if (isAffected(EffectFlag.SINGLE_TARGET))
+		{
+			return hitted;
+		}
+		
 		// double angleChar;
 		int maxRadius = getStat().getPhysicalAttackRange();
 		int maxAngleDiff = getStat().getPhysicalAttackAngle();
@@ -1391,8 +1398,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		int attackcount = 0;
 		
 		// if (angleChar <= 0) angleChar += 360;
-		
-		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
 		double attackpercent = 85;
 		L2Character temp;
 		Collection<L2Object> objs = getKnownList().getKnownObjects().values();

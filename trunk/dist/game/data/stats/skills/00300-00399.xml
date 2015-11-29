@@ -644,16 +644,13 @@
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff">
+			<effect name="SingleTarget">
 				<mul stat="critDmg" val="#cAtk">
 					<using kind="POLE" />
 				</mul>
 				<add stat="accCombat" val="#accCombat">
 					<using kind="POLE" />
 				</add>
-				<set stat="atkCountMax" val="1">
-					<using kind="POLE" />
-				</set>
 			</effect>
 		</for>
 	</skill>

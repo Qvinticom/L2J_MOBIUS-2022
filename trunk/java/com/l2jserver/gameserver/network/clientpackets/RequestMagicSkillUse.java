@@ -56,6 +56,19 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 			return;
 		}
 		
+		if (activeChar.isDead())
+		{
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (activeChar.isFakeDeath())
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING);
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
 		// Get the level of the used skill
 		Skill skill = activeChar.getKnownSkill(_magicId);
 		if (skill == null)
