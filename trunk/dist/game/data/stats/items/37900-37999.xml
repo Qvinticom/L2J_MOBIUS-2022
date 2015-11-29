@@ -804,8 +804,10 @@
 	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36732,1,1,100;36794,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Shaper (60%), Requiem Shaper Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -813,8 +815,10 @@
 	<item id="37951" name="Requiem Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36733,1,1,100;36795,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Cutter (60%), Requiem Cutter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -822,8 +826,10 @@
 	<item id="37952" name="Requiem Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36734,1,1,100;36796,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Slasher (60%), Requiem Slasher Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -831,8 +837,10 @@
 	<item id="37953" name="Requiem Avenger Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36735,1,1,100;36797,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Avenger (60%), Requiem Avenger Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -840,8 +848,10 @@
 	<item id="37954" name="Requiem Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36736,1,1,100;36798,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Fighter (60%), Requiem Fighter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -849,8 +859,10 @@
 	<item id="37955" name="Requiem Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36737,1,1,100;36799,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Stormer (60%), Requiem Stormer Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -858,8 +870,10 @@
 	<item id="37956" name="Requiem Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36738,1,1,100;36800,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Thrower (60%), Requiem Thrower Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -867,8 +881,10 @@
 	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36739,1,1,100;36801,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Shooter (60%), Requiem Shooter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -876,8 +892,10 @@
 	<item id="37958" name="Requiem Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36740,1,1,100;36802,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Buster (60%), Requiem Buster Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -885,8 +903,10 @@
 	<item id="37959" name="Requiem Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36741,1,1,100;36803,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Caster (60%), Requiem Caster Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -894,8 +914,10 @@
 	<item id="37960" name="Requiem Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36742,1,1,100;36804,10,10,100;36523,28,28,100;36543,13,13,100;36548,11,11,100;36563,9,9,100;19440,4,4,100;17371,181,181,100" /> <!-- Recipe: Requiem Retributer (60%), Requiem Retributer Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -903,8 +925,10 @@
 	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36743,1,1,100;36805,10,10,100;36523,4,4,100;36543,2,2,100;36553,2,2,100;36563,1,1,100;19440,1,1,100;17371,23,23,100" /> <!-- Recipe: Immortal Helmet (60%), Immortal Helmet Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -912,8 +936,10 @@
 	<item id="37962" name="Immortal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36744,1,1,100;36806,10,10,100;36523,9,9,100;36543,5,5,100;36553,4,4,100;36563,3,3,100;19440,2,2,100;17371,59,59,100" /> <!-- Recipe: Immortal Breastplate (60%), Immortal Breastplate Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -921,8 +947,10 @@
 	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36745,1,1,100;36807,10,10,100;36523,6,6,100;36543,3,3,100;36553,2,2,100;36563,2,2,100;19440,1,1,100;17371,37,37,100" /> <!-- Recipe: Immortal Gaiters (60%), Immortal Gaiter Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -930,8 +958,10 @@
 	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36746,1,1,100;36808,10,10,100;36523,3,3,100;36543,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Gauntlets (60%), Immortal Gauntlet Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -939,8 +969,10 @@
 	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36747,1,1,100;36809,10,10,100;36523,3,3,100;36543,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Boots (60%), Immortal Boot Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -948,8 +980,10 @@
 	<item id="37966" name="Immortal Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36748,1,1,100;36810,10,10,100;36523,3,3,100;36543,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Shield (60%), Immortal Shield Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -957,8 +991,10 @@
 	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36749,1,1,100;36811,10,10,100;36518,9,9,100;36538,3,3,100;36553,2,2,100;36563,1,1,100;19440,1,1,100;17371,23,23,100" /> <!-- Recipe: Immortal Leather Helmet (60%), Immortal Leather Helmet Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -966,8 +1002,10 @@
 	<item id="37968" name="Immortal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36750,1,1,100;36812,10,10,100;36518,24,24,100;36538,6,6,100;36553,4,4,100;36563,3,3,100;19440,2,2,100;17371,59,59,100" /> <!-- Recipe: Immortal Leather Armor (60%), Immortal Leather Armor Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -975,8 +1013,10 @@
 	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36751,1,1,100;36813,10,10,100;36518,15,15,100;36538,4,4,100;36553,2,2,100;36563,2,2,100;19440,1,1,100;17371,37,37,100" /> <!-- Recipe: Immortal Leather Leggings (60%), Immortal Leather Legging Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -984,8 +1024,10 @@
 	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36752,1,1,100;36814,10,10,100;36518,6,6,100;36538,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Leather Gloves (60%), Immortal Leather Glove Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -993,8 +1035,10 @@
 	<item id="37971" name="Immortal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36753,1,1,100;36815,10,10,100;36518,6,6,100;36538,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Leather Boots (60%), Immortal Leather Boot Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="FEET" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1002,8 +1046,10 @@
 	<item id="37972" name="Immortal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36754,1,1,100;36816,10,10,100;36528,10,10,100;36533,3,3,100;36553,2,2,100;36563,1,1,100;19440,1,1,100;17371,23,23,100" /> <!-- Recipe: Immortal Circlet (60%), Immortal Circlet Ingredient, Metallic Fiber, Synthetic Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1011,8 +1057,10 @@
 	<item id="37973" name="Immortal Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36755,1,1,100;36817,10,10,100;36528,26,26,100;36533,8,8,100;36553,4,4,100;36563,3,3,100;19440,2,2,100;17371,59,59,100" /> <!-- Recipe: Immortal Tunic (60%), Immortal Tunic Ingredient, Metallic Fiber, Synthetic Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1020,8 +1068,10 @@
 	<item id="37974" name="Immortal Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36756,1,1,100;36818,10,10,100;36528,16,16,100;36533,5,5,100;36553,2,2,100;36563,2,2,100;19440,1,1,100;17371,37,37,100" /> <!-- Recipe: Immortal Stockings (60%), Immortal Stocking Ingredient, Metallic Fiber, Synthetic Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1029,8 +1079,10 @@
 	<item id="37975" name="Immortal Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36757,1,1,100;36819,10,10,100;36528,7,7,100;36533,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Gloves (60%), Immortal Glove Ingredient, Metallic Fiber, Synthetic Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1038,8 +1090,10 @@
 	<item id="37976" name="Immortal Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36758,1,1,100;36820,10,10,100;36528,7,7,100;36533,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Shoes (60%), Immortal Shoe Ingredient, Metallic Fiber, Synthetic Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="FEET" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1047,8 +1101,10 @@
 	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36759,1,1,100;36821,10,10,100;36518,7,7,100;36538,2,2,100;36553,1,1,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Sigil (60%), Immortal Sigil Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1056,8 +1112,10 @@
 	<item id="37978" name="Immortal Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36760,1,1,100;36822,10,10,100;36523,6,6,100;36558,4,4,100;36563,1,1,100;19440,1,1,100;17371,20,20,100" /> <!-- Recipe: Immortal Necklace (60%), Immortal Necklace Gem, Adamantite, Accessory Gem (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1065,8 +1123,10 @@
 	<item id="37979" name="Immortal Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36761,1,1,100;36823,10,10,100;36523,5,5,100;36558,3,3,100;36563,1,1,100;19440,1,1,100;17371,15,15,100" /> <!-- Recipe: Immortal Earring (60%), Immortal Earring Gem, Adamantite, Accessory Gem (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1074,8 +1134,10 @@
 	<item id="37980" name="Immortal Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36762,1,1,100;36824,10,10,100;36523,3,3,100;36558,2,2,100;36563,1,1,100;19440,1,1,100;17371,10,10,100" /> <!-- Recipe: Immortal Ring (60%), Immortal Ring Gem, Adamantite, Accessory Gem (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1083,8 +1145,10 @@
 	<item id="37981" name="Apocalypse Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36763,1,1,100;36825,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Shaper (60%), Apocalypse Shaper Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1092,8 +1156,10 @@
 	<item id="37982" name="Apocalypse Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36764,1,1,100;36826,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Cutter (60%), Apocalypse Cutter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1101,8 +1167,10 @@
 	<item id="37983" name="Apocalypse Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36765,1,1,100;36827,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Slasher (60%), Apocalypse Slasher Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1110,8 +1178,10 @@
 	<item id="37984" name="Apocalypse Avenger Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36766,1,1,100;36828,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Avenger (60%), Apocalypse Avenger Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1119,8 +1189,10 @@
 	<item id="37985" name="Apocalypse Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36767,1,1,100;36829,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Fighter (60%), Apocalypse Fighter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1128,8 +1200,10 @@
 	<item id="37986" name="Apocalypse Stormer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36768,1,1,100;36830,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Stormer (60%), Apocalypse Stormer Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1137,8 +1211,10 @@
 	<item id="37987" name="Apocalypse Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36769,1,1,100;36831,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Thrower (60%), Apocalypse Thrower Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="BOW" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1146,8 +1222,10 @@
 	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36770,1,1,100;36832,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Shooter (60%), Apocalypse Shooter Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1155,8 +1233,10 @@
 	<item id="37989" name="Apocalypse Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36771,1,1,100;36833,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Buster (60%), Apocalypse Buster Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1164,8 +1244,10 @@
 	<item id="37990" name="Apocalypse Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36772,1,1,100;36834,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Caster (60%), Apocalypse Caster Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1173,8 +1255,10 @@
 	<item id="37991" name="Apocalypse Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36773,1,1,100;36835,10,10,100;36523,75,75,100;36543,35,35,100;36548,30,30,100;36563,22,22,100;19440,9,9,100;17371,492,492,100" /> <!-- Recipe: Apocalypse Retributer (60%), Apocalypse Retributer Fragment, Adamantite, Adamantite Wire, Weapon Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1182,8 +1266,10 @@
 	<item id="37992" name="Twilight Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36774,1,1,100;36836,10,10,100;36523,10,10,100;36543,5,5,100;36553,4,4,100;36563,3,3,100;19440,2,2,100;17371,60,60,100" /> <!-- Recipe: Twilight Helmet (60%), Twilight Helmet Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="HELMET" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1191,8 +1277,10 @@
 	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36775,1,1,100;36837,10,10,100;36523,25,25,100;36543,12,12,100;36553,9,9,100;36563,8,8,100;19440,3,3,100;17371,160,160,100" /> <!-- Recipe: Twilight Breastplate (60%), Twilight Breastplate Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1200,8 +1288,10 @@
 	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36776,1,1,100;36838,10,10,100;36523,16,16,100;36543,8,8,100;36553,6,6,100;36563,5,5,100;19440,2,2,100;17371,100,100,100" /> <!-- Recipe: Twilight Gaiters (60%), Twilight Gaiter Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1209,8 +1299,10 @@
 	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36777,1,1,100;36839,10,10,100;36523,7,7,100;36543,3,3,100;36553,3,3,100;36563,2,2,100;19440,1,1,100;17371,40,40,100" /> <!-- Recipe: Twilight Gauntlets (60%), Twilight Gauntlet Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1218,8 +1310,10 @@
 	<item id="37996" name="Twilight Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36778,1,1,100;36840,10,10,100;36523,7,7,100;36543,3,3,100;36553,3,3,100;36563,2,2,100;19440,1,1,100;17371,2,2,100" /> <!-- Recipe: Twilight Boots (60%), Twilight Boot Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="FEET" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1227,8 +1321,10 @@
 	<item id="37997" name="Twilight Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36779,1,1,100;36841,10,10,100;36523,7,7,100;36543,3,3,100;36553,3,3,100;36563,2,2,100;19440,1,1,100;17371,3,3,100" /> <!-- Recipe: Twilight Shield (60%), Twilight Shield Ingredient, Adamantite, Adamantite Wire, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1236,8 +1332,10 @@
 	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36780,1,1,100;36842,10,10,100;36518,24,24,100;36538,6,6,100;36553,4,4,100;36563,3,3,100;19440,2,2,100;17371,60,60,100" /> <!-- Recipe: Twilight Leather Helmet (60%), Twilight Leather Helmet Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="HELMET" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1245,8 +1343,10 @@
 	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="36781,1,1,100;36843,10,10,100;36518,64,64,100;36538,16,16,100;36553,9,9,100;36563,8,8,100;19440,3,3,100;17371,160,160,100" /> <!-- Recipe: Twilight Leather Armor (60%), Twilight Leather Armor Ingredient, Durable Leather, Durable Leather Braid, Armor Fragment (Mid-grade), Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
