@@ -799,7 +799,7 @@
 	<skill id="6061" levels="1" name="Decrease Weight">
 		<set name="icon" val="icon.skill1257" />
 		<set name="magicLvl" val="52" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

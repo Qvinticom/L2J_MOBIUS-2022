@@ -741,7 +741,7 @@
 	<skill id="26049" levels="1" name="Rune of Feather">
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="P" />
+		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
