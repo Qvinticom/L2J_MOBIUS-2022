@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
@@ -88,6 +89,22 @@ public abstract class AbstractPlayerGroup
 	public int getMemberCount()
 	{
 		return getMembers().size();
+	}
+	
+	/**
+	 * @return the count of all player races in this group
+	 */
+	public int getRaceCount()
+	{
+		List<Race> partyRaces = new ArrayList<>();
+		for (L2PcInstance member : getMembers())
+		{
+			if (!partyRaces.contains(member.getRace()))
+			{
+				partyRaces.add(member.getRace());
+			}
+		}
+		return partyRaces.size();
 	}
 	
 	/**

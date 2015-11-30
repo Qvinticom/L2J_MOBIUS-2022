@@ -161,6 +161,7 @@ public final class EffectMasterHandler
 		RestorationRandom.class,
 		Resurrection.class,
 		ResurrectionSpecial.class,
+		RewardItemOnExit.class,
 		Root.class,
 		RunAway.class,
 		ServitorShare.class,

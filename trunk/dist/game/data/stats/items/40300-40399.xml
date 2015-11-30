@@ -125,6 +125,10 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -141,6 +145,7 @@
 	<item id="40312" name="Santa's Cloak" type="Armor">
 		<!-- Light and cozy cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -325,6 +330,10 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>

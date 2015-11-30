@@ -181,37 +181,78 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16419" levels="2" name="Stocking Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., STR + 3, INT + 3, Speed + 7. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalVisualEffect" val="XMAS_SOCKS" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="3" />
+				<add stat="INT" val="3" />
+				<add stat="runSpd" val="7" />
+			</effect>
+			<effect name="RewardItemOnExit">
+				<param itemId="40313" /> <!-- Santa's Mark -->
+				<param itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="16420" levels="2" name="Tree Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., CON + 3, MEN + 3, P. Critical Rate + 30, M. Critical Rate + 30. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalVisualEffect" val="XMAS_TREE" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="CON" val="3" />
+				<add stat="MEN" val="3" />
+				<add stat="critRate" val="30" />
+				<add stat="mCritRate" val="30" />
+			</effect>
+			<effect name="RewardItemOnExit">
+				<param itemId="40313" /> <!-- Santa's Mark -->
+				<param itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="16421" levels="2" name="Snowman Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., DEX + 3, WIT + 3, Max HP/MP + 2013. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="30" />
+		<set name="abnormalVisualEffect" val="XMAS_SNOWMAN" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="DEX" val="3" />
+				<add stat="WIT" val="3" />
+				<add stat="maxHp" val="2013" />
+				<add stat="maxMp" val="2013" />
+			</effect>
+			<effect name="RewardItemOnExit">
+				<param itemId="40313" /> <!-- Santa's Mark -->
+				<param itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="16422" levels="1" name="Winter Holiday Reward">
 		<!-- AUTO GENERATED SKILL -->
