@@ -5721,11 +5721,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			if (mut.isSimultaneous())
 			{
-				_skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, 0);
+				_skillCast2 = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
 			}
 			else
 			{
-				_skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, 0);
+				_skillCast = ThreadPoolManager.getInstance().scheduleEffect(mut, 300);
 			}
 		}
 	}
