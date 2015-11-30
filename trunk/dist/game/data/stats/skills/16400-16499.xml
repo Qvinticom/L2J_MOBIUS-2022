@@ -184,7 +184,7 @@
 		<!-- For 2 hr., STR + 3, INT + 3, Speed + 7. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="abnormalTime" val="30" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalVisualEffect" val="XMAS_SOCKS" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
@@ -208,7 +208,7 @@
 		<!-- For 2 hr., CON + 3, MEN + 3, P. Critical Rate + 30, M. Critical Rate + 30. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
-		<set name="abnormalTime" val="30" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalVisualEffect" val="XMAS_TREE" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
@@ -233,7 +233,7 @@
 		<!-- For 2 hr., DEX + 3, WIT + 3, Max HP/MP + 2013. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<table name="#hitTimes"> 1000 0 </table>
 		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00" />
-		<set name="abnormalTime" val="30" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalVisualEffect" val="XMAS_SNOWMAN" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
