@@ -250,17 +250,27 @@
 		</collision>
 	</npc>
 	<npc id="23414" level="21" type="L2Monster" name="Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DeBuff" id="4098" level="1" /> <!-- Silence -->
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="1184" sp="0" />
 		<stats>
 			<vitals hp="411" hpRegen="3.5" mp="231" mpRegen="1.5" />
+			<attack physical="101.09" magical="22.77" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="101.948" magical="72.519" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -271,11 +281,47 @@
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>ELEMENTAL2</clan>
+			</clanList>
+		</ai>	
 		<dropLists>
 			<death>
-				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="23.37" /> <!-- Fiber -->
-				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+					<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+					<item id="36526" min="1" max="1" chance="23.37" /> <!-- Fiber -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
@@ -283,7 +329,13 @@
 		</dropLists>
 	</npc>
 	<npc id="23415" level="23" type="L2Monster" name="Windima Feri">
-		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DeBuff" id="4098" level="1" /> <!-- Silence -->
+		</parameters>
 		<race>ELEMENTAL</race>
 		<acquire exp="1184" sp="0" />
 		<stats>
@@ -304,33 +356,128 @@
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ELEMENTAL2</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<death>
-				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="23.37" /> <!-- Fiber -->
-				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+					<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+					<item id="36526" min="1" max="1" chance="23.37" /> <!-- Fiber -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
 			</death>
 			<corpse>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 	</npc>
-	<npc id="23416" level="25" type="L2Npc" name="Windima Resh">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23416" level="25" type="L2Monster" name="Windima Resh">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DeBuff" id="4098" level="1" /> <!-- Silence -->
+		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="730" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="1894" sp="0" />
+		<stats>
+			<vitals hp="461" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skillList>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>ELEMENTAL2</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<dropLists>
+			<death>
+					<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+					<item id="36551" min="1" max="1" chance="1.113" /> <!-- Armor Fragment (Low-grade) -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="23417" level="26" type="L2Monster" name="Wind Vortex" title="Cyclone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -350,39 +497,92 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23418" level="35" type="L2Npc" name="Marionette Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+	<npc id="23418" level="35" type="L2Monster" name="Marionette Spirit">
+		<!-- Source: http://l2on.net/en/?c=npc&id=23418 -->
+		<race>PLANT</race>
+		<stats>
 			<vitals hp="1224" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
 		</collision>
+		<dropLists>
+			<death>
+					<item id="57" min="13" max="30" chance="61" /> <!-- Adena -->
+					<item id="1879" min="1" max="1" chance="0.9" /> <!-- Cokes -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
-	<npc id="23419" level="25" type="L2Npc" name="Giant Windima">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4899" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="23419" level="25" type="L2Monster" name="Giant Windima">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>PLANT</race>
+		<acquire exp="2956" sp="0" />
+		<stats>
+			<vitals hp="3092" hpRegen="3.5" mp="402" mpRegen="1.5" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="120" /> 
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.75" /> <!-- Synthetic Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="23420" level="25" type="L2Monster" name="Immense Windima">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -395,7 +595,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
@@ -416,38 +615,98 @@
 		</dropLists>
 	</npc>
 	<npc id="23421" level="25" type="L2Npc" name="Chertuba Mirage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<!-- http://l2on.net/en/?c=npc&id=23422 -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="7276" sp="1" />
+		<stats>
 			<vitals hp="7505" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoides -->
+		</skillList>
 		<status attackable="false" />
 		<collision>
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
-	<npc id="23422" level="35" type="L2Npc" name="Chertuba Illusion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+	<npc id="23422" level="35" type="L2Monster" name="Chertuba Illusion">
+		<!-- http://l2on.net/en/?c=npc&id=23422 -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="7276" sp="1" />
+		<stats>
 			<vitals hp="7505" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoides -->
+            <skill id="4413" level="5" /> <!-- Weak M. Def. -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="13" max="30" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="23423" level="77" type="L2Monster" name="Mesmer Dragon">
 		<race>DRAGON</race>

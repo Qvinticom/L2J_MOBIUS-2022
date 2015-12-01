@@ -5422,9 +5422,9 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1507" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="690" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+		<acquire exp="1507" sp="0" />
+		<stats>
+			<vitals hp="436" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -5439,8 +5439,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="3" /> <!-- Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5458,26 +5456,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="224" max="448" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.7972000241279602">
-					<item id="433" min="1" max="1" chance="1.1833" /> <!-- Elven Tunic -->
-					<item id="434" min="1" max="1" chance="1.1833" /> <!-- White Tunic -->
-					<item id="1936" min="1" max="1" chance="37.2337" /> <!-- White Tunic Pattern -->
-					<item id="435" min="1" max="1" chance="1.1833" /> <!-- Mystic's Tunic -->
-					<item id="466" min="1" max="1" chance="1.8958" /> <!-- Elven Stockings -->
-					<item id="467" min="1" max="1" chance="1.8958" /> <!-- Dark Stockings -->
-					<item id="1933" min="1" max="1" chance="53.5289" /> <!-- Dark Stockings Fabric -->
-					<item id="468" min="1" max="1" chance="1.8959" /> <!-- Mystic's Stockings -->
-				</group>
-				<group chance="17.79640007019043">
-					<item id="1868" min="1" max="1" chance="65.2174" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="13.0435" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.2609" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.1739" /> <!-- Compound Braid -->
-					<item id="736" min="1" max="1" chance="16.3043" /> <!-- Scroll of Escape -->
-				</group>
+					<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
+					<item id="36556" min="1" max="1" chance="1.555" /> <!-- Accessory Gem (Low-grade) -->
+					<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5511,9 +5493,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2024" min="1" max="1" chance="0.7564" /> <!-- Elven Bow Shaft -->
-				<item id="2023" min="1" max="1" chance="0.658" /> <!-- Conjuror's Staff Head -->
-				<item id="1900" min="1" max="1" chance="5.8094" /> <!-- Enchanted Necklace Chain -->
+					<item id="36556" min="1" max="1" chance="3.378" /> <!-- Accessory Gem (Low-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

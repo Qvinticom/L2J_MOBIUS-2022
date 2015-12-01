@@ -486,7 +486,7 @@
 			</death>
 		</dropLists>
 	</npc>
-	<npc id="26006" level="92" type="L2Npc" name="Encroached Orc Warrior" title="Raid Minion">
+	<npc id="26006" level="92" type="L2Monster" name="Encroached Orc Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -497,13 +497,12 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="26007" level="92" type="L2Npc" name="Encroached Orc Thrower" title="Raid Minion">
+	<npc id="26007" level="92" type="L2Monster" name="Encroached Orc Thrower" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -514,13 +513,12 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="26008" level="92" type="L2Npc" name="Encroached Orc Wizard" title="Raid Minion">
+	<npc id="26008" level="92" type="L2Monster" name="Encroached Orc Wizard" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -531,7 +529,6 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />

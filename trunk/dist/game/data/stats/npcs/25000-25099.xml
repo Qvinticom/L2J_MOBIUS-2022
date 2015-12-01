@@ -168,8 +168,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="124" /> <!-- rhand: Two-Handed Sword -->
 		<acquire exp="2417862" sp="580" raidPoints="792" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="70742.0690017771" hpRegen="28.5646425862605" mp="329.4" mpRegen="1.5" />
+		<stats>
+			<vitals hp="336876" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="208.03648068846" magical="25.0177222049995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.39281" magical="173.38" evasion="-18" />
 			<attribute>
@@ -184,8 +184,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -201,22 +199,42 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="60.14440155029297">
-					<item id="352" min="1" max="1" chance="23.9206" /> <!-- Brigandine Tunic -->
-					<item id="2377" min="6" max="16" chance="3.4785" /> <!-- Mithril Scale Gaiters -->
-					<item id="2378" min="1" max="1" chance="38.263" /> <!-- Brigandine Gaiters -->
-					<item id="1941" min="140" max="420" chance="3.9021" /> <!-- Brigandine Temper -->
-					<item id="2918" min="40" max="120" chance="20.3744" /> <!-- Mithril Scale Gaiters Material -->
-					<item id="2919" min="81" max="243" chance="10.0614" /> <!-- Brigandine Gaiters Material -->
+				<item id="2377" min="1" max="1" chance="3.007" /> <!-- Mithril Scale Gaiters -->
+				<item id="2378" min="1" max="1" chance="2.974" /> <!-- Brigandine Gaiters -->
+				<item id="352" min="1" max="1" chance="1.939" /> <!-- Brigandine -->
+				<item id="224" min="1" max="1" chance="0.3" /> <!-- Maingauche -->
+				<item id="1660" min="1" max="1" chance="0.3" /> <!-- Cursed Maingauche -->
+				<item id="39629" min="1" max="1" chance="0.004961" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
 				</group>
-				<group chance="48.21739959716797">
-					<item id="21731" min="1" max="1" chance="14.3583" /> <!-- Maingauche - Event -->
-					<item id="1660" min="1" max="1" chance="14.3583" /> <!-- Cursed Maingauche -->
-					<item id="2038" min="24" max="72" chance="16.9722" /> <!-- Maingauche Edge -->
-					<item id="2044" min="8" max="22" chance="54.3112" /> <!-- Cursed Maingauche Edge -->
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
 				</group>
-				<group chance="32.128700256347656">
-					<item id="6387" min="60" max="180" chance="100" /> <!-- Blessed Scroll of Resurrection for Pets -->
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 		</dropLists>
@@ -232,8 +250,8 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="271" /> <!-- rhand: Hunting Bow -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7224.12981331993" hpRegen="27.4866850745812" mp="315.12" mpRegen="1.5" />
+		<stats>
+			<vitals hp="233166" hpRegen="27.4866850745812" mp="315.12" mpRegen="1.5" />
 			<attack physical="384.046074440949" magical="90.88351131428" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="172.50897" magical="168.32" evasion="-18" />
 			<attribute>
@@ -248,8 +266,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -270,8 +286,8 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="5391.14165173129" hpRegen="27.4866850745812" mp="315.12" mpRegen="1.5" />
+		<stats>
+			<vitals hp="233166" hpRegen="27.4866850745812" mp="315.12" mpRegen="1.5" />
 			<attack physical="384.046074440949" magical="90.88351131428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="168.32" evasion="-18" />
 			<attribute>
@@ -286,8 +302,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

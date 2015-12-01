@@ -4023,8 +4023,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5225" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2015" hpRegen="3.5" mp="245.52" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1272" hpRegen="4.5" mp="343" mpRegen="1.8" />
 			<attack physical="60.19687" magical="41.10666" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="98.70919" magical="65.7216907961494" />
 			<attribute>
@@ -4038,8 +4038,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4058,19 +4056,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="330" max="609" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.04670000076293945">
-					<item id="257" min="1" max="1" chance="100" /> <!-- Viper Fang -->
-				</group>
-				<group chance="15.925800323486328">
-					<item id="1871" min="1" max="1" chance="55.1131" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="36.7421" /> <!-- Suede -->
-					<item id="2258" min="1" max="1" chance="1.3475" /> <!-- Recipe: Temptation of Abyss -->
-					<item id="5268" min="1" max="1" chance="2.2045" /> <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
-					<item id="735" min="1" max="1" chance="4.5928" /> <!-- Alacrity Potion -->
-				</group>
+					<item id="40" min="1" max="1" chance="1.627" /> <!-- Leather Boots -->
+					<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
+					<item id="735" min="1" max="1" chance="0.75" /> <!-- Haste Potion -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4104,9 +4093,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1881" min="1" max="1" chance="9.9048" /> <!-- Coarse Bone Powder -->
-				<item id="2179" min="1" max="1" chance="35.5437" /> <!-- Recipe: Crafted Leather Gloves -->
-				<item id="1804" min="1" max="1" chance="2.9714" /> <!-- Recipe: Soulshot (D-Grade) -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4130,8 +4117,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<acquire exp="8460" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2934" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1852" hpRegen="4.5" mp="463" mpRegen="1.8" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -4146,8 +4133,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4166,27 +4151,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="476" max="952" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.17560000717639923">
-					<item id="69" min="1" max="1" chance="2.8343" /> <!-- Bastard Sword -->
-					<item id="125" min="1" max="1" chance="2.8343" /> <!-- Spinebone Sword -->
-					<item id="2021" min="1" max="1" chance="88.6626" /> <!-- Spinebone Sword Blade -->
-					<item id="126" min="1" max="1" chance="2.8343" /> <!-- Artisan's Sword -->
-					<item id="128" min="1" max="1" chance="2.8345" /> <!-- Knight's Sword -->
-				</group>
-				<group chance="7.915200233459473">
-					<item id="1875" min="1" max="1" chance="5.7699" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="14.4247" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="7.2123" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="1.154" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="8.6548" /> <!-- Metallic Thread -->
-					<item id="955" min="1" max="1" chance="0.3462" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="2274" min="1" max="1" chance="0.6182" /> <!-- Recipe: Skull Breaker -->
-					<item id="2975" min="1" max="1" chance="7.7275" /> <!-- Recipe: Brigandine Helmet -->
-					<item id="6667" min="1" max="1" chance="54.0924" /> <!-- Deluxe Chest Key - Grade 3 -->
-				</group>
+					<item id="45" min="1" max="1" chance="2.417" /> <!-- Bone Helmet -->
+					<item id="57" min="38" max="87" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4220,9 +4187,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2267" min="1" max="1" chance="1.1668" /> <!-- Recipe: Gastraphetes -->
-				<item id="1936" min="1" max="1" chance="9.2328" /> <!-- White Tunic Pattern -->
-				<item id="1900" min="1" max="1" chance="12.3441" /> <!-- Enchanted Necklace Chain -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4244,8 +4209,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
 		<acquire exp="6892" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2566" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1620" hpRegen="4.5" mp="417" mpRegen="1.8" />
 			<attack physical="74.99121" magical="51.20928" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="108.28767" magical="72.0991544841329" />
 			<attribute>
@@ -4259,8 +4224,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4279,21 +4242,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="386" max="743" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03180000185966492">
-					<item id="274" min="1" max="1" chance="100" /> <!-- Reinforced Bow -->
-				</group>
-				<group chance="12.251299858093262">
-					<item id="1876" min="1" max="1" chance="11.6885" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="5.8443" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="2.3377" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="7.7923" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="12.9872" /> <!-- Leather -->
-					<item id="2260" min="1" max="1" chance="0.9075" /> <!-- Recipe: Mace of Judgment -->
-					<item id="6666" min="1" max="1" chance="58.4425" /> <!-- Deluxe Chest Key - Grade 2 -->
-				</group>
+					<item id="604" min="1" max="1" chance="2.84" /> <!-- Quality Leather Gloves -->
+					<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4327,9 +4278,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1885" min="1" max="1" chance="7.442" /> <!-- High-Grade Suede -->
-				<item id="465" min="1" max="1" chance="0.5934" /> <!-- Cursed Stockings -->
-				<item id="2152" min="1" max="1" chance="15.7224" /> <!-- Recipe: Enchanted Necklace -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4352,7 +4301,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="121" /> <!-- rhand: Sword of Watershadow -->
 		<acquire exp="7026" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="2685" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="111.61368" magical="74.3136496629463" />
@@ -4367,8 +4316,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4380,28 +4327,16 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="395" max="773" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.27880001068115234">
-					<item id="391" min="1" max="1" chance="38.4419" /> <!-- Puma Skin Shirt -->
-					<item id="413" min="1" max="1" chance="61.5581" /> <!-- Puma Skin Gaiters -->
-				</group>
-				<group chance="10.368599891662598">
-					<item id="1874" min="1" max="1" chance="5.536" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="33.2158" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="51.1012" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.536" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.3216" /> <!-- Metal Hardener -->
-					<item id="2261" min="1" max="1" chance="1.2894" /> <!-- Recipe: Conjuror's Staff -->
-				</group>
+					<item id="123" min="1" max="1" chance="0.3" /> <!-- Saber -->
+					<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4435,9 +4370,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2259" min="1" max="1" chance="1.4293" /> <!-- Recipe: Spinebone Sword -->
-				<item id="2018" min="1" max="1" chance="1.2232" /> <!-- Assassin Knife Edge -->
-				<item id="1899" min="1" max="1" chance="14.3825" /> <!-- Necklace of Devotion Chain -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4460,8 +4393,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="11" /> <!-- rhand: Bone Dagger -->
 		<acquire exp="5910" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2336" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1474" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="74.99121" magical="51.20928" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="72.0991544841329" />
 			<attribute>
@@ -4475,8 +4408,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4495,22 +4426,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="371" max="714" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.8726999759674072">
-					<item id="626" min="1" max="1" chance="6.6164" /> <!-- Bronze Shield -->
-					<item id="45" min="1" max="1" chance="4.6397" /> <!-- Bone Helmet -->
-					<item id="1932" min="1" max="1" chance="88.7439" /> <!-- Bone Helmet Design -->
-				</group>
-				<group chance="3.5778000354766846">
-					<item id="1875" min="1" max="1" chance="14.9635" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="37.4088" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="18.7044" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="2.9927" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="22.4453" /> <!-- Metallic Thread -->
-					<item id="2261" min="1" max="1" chance="3.4853" /> <!-- Recipe: Conjuror's Staff -->
-				</group>
+					<item id="221" min="1" max="1" chance="0.3" /> <!-- Assassin Knife -->
+					<item id="57" min="25" max="58" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4544,9 +4462,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2262" min="1" max="1" chance="1.3331" /> <!-- Recipe: Elven Bow -->
-				<item id="3953" min="1" max="1" chance="3.4341" /> <!-- Recipe: Blessed Spiritshot D -->
-				<item id="1885" min="1" max="1" chance="7.1544" /> <!-- High-Grade Suede -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4569,8 +4485,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
 		<acquire exp="5360" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2119" hpRegen="3.5" mp="273.0" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1338" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="69.75926" magical="47.63653" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="105.02818" magical="69.9289432036824" />
 			<attribute>
@@ -4584,8 +4500,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4604,23 +4518,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="357" max="682" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.302799940109253">
-					<item id="40" min="1" max="1" chance="4.3392" /> <!-- Leather Boots -->
-					<item id="1931" min="1" max="1" chance="45.6608" /> <!-- Leather Boots Lining -->
-					<item id="604" min="1" max="1" chance="4.3392" /> <!-- Crafted Leather Gloves -->
-					<item id="1934" min="1" max="1" chance="45.6608" /> <!-- Crafted Leather Gloves Lining -->
-				</group>
-				<group chance="6.2729997634887695">
-					<item id="1876" min="1" max="1" chance="24.5217" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="12.2609" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="4.9043" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="16.3478" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="27.2464" /> <!-- Leather -->
-					<item id="2182" min="1" max="1" chance="14.7189" /> <!-- Recipe: Scale Gaiters -->
-				</group>
+					<item id="291" min="1" max="1" chance="0.3" /> <!-- Trident -->
+					<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4654,9 +4554,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="82.2258" /> <!-- Coal -->
-				<item id="2017" min="1" max="1" chance="1.0927" /> <!-- Saber Blade -->
-				<item id="1880" min="1" max="1" chance="8.2226" /> <!-- Steel -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>

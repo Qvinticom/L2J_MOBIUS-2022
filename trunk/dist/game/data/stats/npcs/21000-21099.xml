@@ -2564,8 +2564,8 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1362" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="613" hpRegen="3.5" mp="273.0" mpRegen="1.5" />
+		<stats>
+			<vitals hp="388" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="69.75926" magical="47.63653" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="105.02818" magical="69.9289432036824" />
 			<attribute>
@@ -2581,8 +2581,6 @@
 		<skillList>
 			<skill id="4046" level="2" /> <!-- Sleep -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2600,22 +2598,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="192" max="367" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.015799999237060547">
-					<item id="156" min="1" max="1" chance="33.3333" /> <!-- Hand Axe -->
-					<item id="167" min="1" max="1" chance="33.3333" /> <!-- Scalpel -->
-					<item id="178" min="1" max="1" chance="33.3334" /> <!-- Bone Staff -->
-				</group>
-				<group chance="25.150400161743164">
-					<item id="1864" min="1" max="1" chance="32.8829" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="16.4414" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.961" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.5766" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="32.8829" /> <!-- Thread -->
-					<item id="2260" min="1" max="1" chance="0.2552" /> <!-- Recipe: Mace of Judgment -->
-				</group>
+					<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+					<item id="36556" min="1" max="1" chance="1.443" /> <!-- Accessory Gem (Low-grade) -->
+					<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2649,9 +2635,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2019" min="1" max="1" chance="0.9507" /> <!-- Trident Edge -->
-				<item id="2263" min="1" max="1" chance="0.6865" /> <!-- Recipe: Dwarven Trident -->
-				<item id="1866" min="1" max="1" chance="29.4716" /> <!-- Suede -->
+					<item id="36556" min="1" max="1" chance="3.115" /> <!-- Accessory Gem (Low-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2714,10 +2698,10 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="36556" min="1" max="1" chance="1.875" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
-				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+					<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+					<item id="36556" min="1" max="1" chance="1.875" /> <!-- Accessory Gem (Low-grade) -->
+					<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2772,8 +2756,8 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2120" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="543.79576" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
+		<stats>
+			<vitals hp="544" hpRegen="3.5" mp="300" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="111.61368" magical="74.3136496629463" />
 			<attribute>
@@ -2791,8 +2775,6 @@
 			<skill id="4047" level="2" /> <!-- Hold -->
 			<skill id="4098" level="2" /> <!-- Silence -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2810,21 +2792,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="208" max="407" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.30140000581741333">
-					<item id="291" min="1" max="1" chance="2.8677" /> <!-- Trident -->
-					<item id="2019" min="1" max="1" chance="97.1323" /> <!-- Trident Edge -->
-				</group>
-				<group chance="27.87350082397461">
-					<item id="1864" min="1" max="1" chance="32.5635" /> <!-- Stem -->
-					<item id="1865" min="1" max="1" chance="16.2817" /> <!-- Varnish -->
-					<item id="1866" min="1" max="1" chance="10.8545" /> <!-- Suede -->
-					<item id="1873" min="1" max="1" chance="6.5127" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="32.5635" /> <!-- Thread -->
-					<item id="2180" min="1" max="1" chance="1.2241" /> <!-- Recipe: Scale Mail -->
-				</group>
+					<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
+					<item id="36556" min="1" max="1" chance="2.001" /> <!-- Accessory Gem (Low-grade) -->
+					<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2858,9 +2829,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1871" min="1" max="1" chance="48.518" /> <!-- Charcoal -->
-				<item id="1868" min="1" max="3" chance="48.518" /> <!-- Thread -->
-				<item id="2152" min="1" max="1" chance="8.5419" /> <!-- Recipe: Enchanted Necklace -->
+					<item id="36556" min="1" max="1" chance="4.145" /> <!-- Accessory Gem (Low-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2885,8 +2854,8 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2283" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+		<stats>
+			<vitals hp="574" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -2904,8 +2873,6 @@
 			<skill id="4038" level="3" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4066" level="2" /> <!-- NPC Twister -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2916,30 +2883,18 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="500" clanHelpRange="300">
+		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ELEMENTAL2</clan>
 			</clanList>
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="220" max="435" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1420000046491623">
-					<item id="275" min="1" max="1" chance="2.6815" /> <!-- Long Bow -->
-					<item id="276" min="1" max="1" chance="2.6815" /> <!-- Elven Bow -->
-					<item id="2024" min="1" max="1" chance="94.637" /> <!-- Elven Bow Shaft -->
-				</group>
-				<group chance="12.565500259399414">
-					<item id="1872" min="1" max="1" chance="42.9045" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="42.9045" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.2904" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.1452" /> <!-- Stone of Purity -->
-					<item id="737" min="1" max="1" chance="3.2178" /> <!-- Scroll of Resurrection -->
-					<item id="2274" min="1" max="1" chance="0.2298" /> <!-- Recipe: Skull Breaker -->
-					<item id="2191" min="1" max="1" chance="4.3078" /> <!-- Recipe: RIP Gauntlets -->
-				</group>
+					<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
+					<item id="1834" min="1" max="1" chance="5.103" /> <!-- Emergency Dressing -->
+					<item id="36556" min="1" max="1" chance="1.451" /> <!-- Accessory Gem (Low-grade) -->
+					<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2973,9 +2928,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1834" min="1" max="1" chance="57.5495" /> <!-- Emergency Dressing -->
-				<item id="2025" min="1" max="1" chance="0.7174" /> <!-- Dwarven Trident Edge -->
-				<item id="1900" min="1" max="1" chance="5.6668" /> <!-- Enchanted Necklace Chain -->
+					<item id="36556" min="1" max="1" chance="4.473" /> <!-- Accessory Gem (Low-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

@@ -14,8 +14,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="3" /> <!-- rhand: Broadsword -->
 		<acquire exp="5788" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2225" hpRegen="3.5" mp="259.2" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1406" hpRegen="4.5" mp="372" mpRegen="1.8" />
 			<attack physical="64.83203" magical="44.27187" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="67.8031159084826" />
 			<attribute>
@@ -29,8 +29,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -49,21 +47,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="344" max="644" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.055299997329712">
-					<item id="847" min="1" max="1" chance="5.1488" /> <!-- Red Crescent Earring -->
-					<item id="910" min="1" max="1" chance="3.8616" /> <!-- Necklace of Devotion -->
-					<item id="1899" min="1" max="1" chance="83.2663" /> <!-- Necklace of Devotion Chain -->
-					<item id="890" min="1" max="1" chance="7.7233" /> <!-- Ring of Devotion -->
-				</group>
-				<group chance="5.719399929046631">
-					<item id="1874" min="1" max="1" chance="12.7666" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="76.5998" /> <!-- Braided Hemp -->
-					<item id="5220" min="1" max="1" chance="7.66" /> <!-- Metal Hardener -->
-					<item id="2262" min="1" max="1" chance="2.9736" /> <!-- Recipe: Elven Bow -->
-				</group>
+					<item id="5285" min="1" max="1" chance="0.3" /> <!-- Heavy Sword -->
+					<item id="57" min="24" max="56" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -97,9 +83,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1867" min="1" max="3" chance="52.0412" /> <!-- Animal Skin -->
-				<item id="1932" min="1" max="1" chance="12.3908" /> <!-- Bone Helmet Design -->
-				<item id="1931" min="1" max="1" chance="10.2042" /> <!-- Leather Boots Lining -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -123,8 +107,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<acquire exp="7148" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2808" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+		<stats>
+			<vitals hp="1774" hpRegen="4.5" mp="447" mpRegen="1.8" />
 			<attack physical="86.42002" magical="59.01367" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -139,8 +123,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4002" level="2" /> <!-- NPC HP Drain -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -159,28 +141,9 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="400" max="793" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4179999828338623">
-					<item id="433" min="1" max="1" chance="1.1833" /> <!-- Elven Tunic -->
-					<item id="434" min="1" max="1" chance="1.1833" /> <!-- White Tunic -->
-					<item id="1936" min="1" max="1" chance="37.2337" /> <!-- White Tunic Pattern -->
-					<item id="435" min="1" max="1" chance="1.1833" /> <!-- Mystic's Tunic -->
-					<item id="466" min="1" max="1" chance="1.8958" /> <!-- Elven Stockings -->
-					<item id="467" min="1" max="1" chance="1.8958" /> <!-- Dark Stockings -->
-					<item id="1933" min="1" max="1" chance="53.5289" /> <!-- Dark Stockings Fabric -->
-					<item id="468" min="1" max="1" chance="1.8959" /> <!-- Mystic's Stockings -->
-				</group>
-				<group chance="3.2994000911712646">
-					<item id="1875" min="1" max="1" chance="14.8981" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="37.2453" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="18.6226" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="2.9796" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="22.3472" /> <!-- Metallic Thread -->
-					<item id="2264" min="1" max="1" chance="2.311" /> <!-- Recipe: Two-handed Sword -->
-					<item id="2274" min="1" max="1" chance="1.5962" /> <!-- Recipe: Skull Breaker -->
-				</group>
+					<item id="7880" min="1" max="1" chance="0.3" /> <!-- Steel Sword -->
+					<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -214,9 +177,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1870" min="1" max="1" chance="94.4489" /> <!-- Coal -->
-				<item id="1933" min="1" max="1" chance="11.1116" /> <!-- Dark Stockings Fabric -->
-				<item id="2153" min="1" max="1" chance="14.6888" /> <!-- Recipe: Tiger's Eye Earring -->
+					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2390,8 +2351,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
 		<acquire exp="4272" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1532" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+		<stats>
+			<vitals hp="967" hpRegen="4.5" mp="478" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
@@ -2406,8 +2367,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2418,32 +2377,16 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai type="BALANCED" aggroRange="500" clanHelpRange="300">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="288" max="574" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3701000213623047">
-					<item id="849" min="1" max="1" chance="2.6765" /> <!-- Tiger's Eye Earring -->
-					<item id="1901" min="1" max="1" chance="91.3106" /> <!-- Tiger's Eye Earring Stone -->
-					<item id="912" min="1" max="1" chance="2.0063" /> <!-- Near Forest Necklace -->
-					<item id="880" min="1" max="1" chance="4.0066" /> <!-- Black Pearl Ring -->
-				</group>
-				<group chance="3.821000099182129">
-					<item id="1876" min="1" max="1" chance="23.7048" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="11.8524" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="4.741" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="15.8032" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="26.3387" /> <!-- Leather -->
-					<item id="2276" min="1" max="1" chance="0.8466" /> <!-- Recipe: Maingauche -->
-					<item id="2274" min="1" max="1" chance="0.8466" /> <!-- Recipe: Skull Breaker -->
-					<item id="2976" min="1" max="1" chance="15.8667" /> <!-- Recipe: Manticore Skin Boots -->
-				</group>
+					<item id="7885" min="1" max="1" chance="0.075" /> <!-- Priest Sword -->
+					<item id="57" min="19" max="44" chance="70" /> <!-- Adena -->
+					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2477,9 +2420,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2279" min="1" max="1" chance="0.4867" /> <!-- Recipe: War Pick -->
-				<item id="2979" min="1" max="1" chance="9.122" /> <!-- Recipe: Manticore Skin Gloves -->
-				<item id="1877" min="1" max="1" chance="2.7257" /> <!-- Adamantite Nugget -->
+					<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
