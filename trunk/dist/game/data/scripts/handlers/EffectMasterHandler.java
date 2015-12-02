@@ -101,6 +101,7 @@ public final class EffectMasterHandler
 		GetAgro.class,
 		GiveRecommendation.class,
 		GiveSp.class,
+		GiveXp.class,
 		Grow.class,
 		HairAccessorySet.class,
 		Harvesting.class,

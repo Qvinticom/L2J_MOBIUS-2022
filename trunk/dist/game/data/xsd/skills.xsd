@@ -344,6 +344,7 @@
 				<xs:attribute type="xs:string" name="slots" use="optional" />
 				<xs:attribute type="xs:string" name="value" use="optional" />
 				<xs:attribute type="xs:string" name="sp" use="optional" />
+				<xs:attribute type="xs:string" name="xp" use="optional" />
 				<xs:attribute type="xs:string" name="x" use="optional" />
 				<xs:attribute type="xs:string" name="y" use="optional" />
 				<xs:attribute type="xs:string" name="z" use="optional" />
@@ -611,6 +612,7 @@
 					<xs:enumeration value="GetAgro" />
 					<xs:enumeration value="GiveRecommendation" />
 					<xs:enumeration value="GiveSp" />
+					<xs:enumeration value="GiveXp" />
 					<xs:enumeration value="Grow" />
 					<xs:enumeration value="HairAccessorySet" />
 					<xs:enumeration value="Harvesting" />
