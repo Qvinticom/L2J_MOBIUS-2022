@@ -1351,10 +1351,10 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="33752" level="85" type="L2Npc" name="Physical Punch Machine">
+	<npc id="33752" level="85" type="L2Monster" name="Physical Punch Machine">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1730000000" hpRegen="7.5" mp="1730000000" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -1367,16 +1367,16 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" targetable="true" talkable="false" undying="true" /> <!-- Custom -->
 		<collision>
 			<radius normal="13" />
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="33753" level="85" type="L2Npc" name="Magical Punch Machine">
+	<npc id="33753" level="85" type="L2Monster" name="Magical Punch Machine">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1730000000" hpRegen="7.5" mp="1730000000" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -1389,7 +1389,7 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" targetable="true" talkable="false" undying="true" /> <!-- Custom -->
 		<collision>
 			<radius normal="13" />
 			<height normal="30" />

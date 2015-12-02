@@ -29,13 +29,15 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 public final class Scarecrow extends AbstractNpcAI
 {
 	// NPCs
-	private static final int SCARECROW = 27457;
 	private static final int TRAINING_DUMMY = 19546;
+	private static final int SCARECROW = 27457;
+	private static final int PHYSICAL_PUNCH_MACHINE = 33752;
+	private static final int MAGICAL_PUNCH_MACHINE = 33753;
 	
 	private Scarecrow()
 	{
 		super(Scarecrow.class.getSimpleName(), "ai");
-		addSpawnId(SCARECROW, TRAINING_DUMMY);
+		addSpawnId(TRAINING_DUMMY, SCARECROW, PHYSICAL_PUNCH_MACHINE, MAGICAL_PUNCH_MACHINE);
 	}
 	
 	@Override
