@@ -138,62 +138,140 @@
 		<set name="reuseDelay" val="600000" />
 	</skill>
 	<skill id="18017" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 400,000 XP. Can combine 2 Lv. 1 pouches. Below Lv. 85 only. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39629" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;84" />
+		</cond>
+		<for>
+			<effect name="GiveXp">
+				<param xp="400000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18018" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 1,600,000 XP. Can combine 2 Lv. 2 pouches. Below Lv. 85 only. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39630" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;84" />
+		</cond>
+		<for>
+			<effect name="GiveXp">
+				<param xp="1600000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18019" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 6,400,000 XP. Below Lv. 85 only. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39631" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;84" />
+		</cond>
+		<for>
+			<effect name="GiveXp">
+				<param xp="6400000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18020" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Random Prize. -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			39631,10,1;39386,1,4.5;39387,1,3.5;39388,1,0.5;39720,1,2;57,20000,30;57,200000,30;57,2000000,30;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="-1000" />
+		<cond msgId="129">
+			<and>
+				<player invSize="1" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="18021" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 80,000 XP. Can combine 2 Lv. 4 pouches. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39632" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="3000" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player level="85" />
+			</and>
+		</cond>
+		<for>
+			<effect name="GiveSp">
+				<param sp="80000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18022" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Use to obtain 256,000 SP. -->
-		<set name="icon" val="icon.skill0000" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39633" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="200" />
-		<set name="reuseDelay" val="3000" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player level="85" />
+			</and>
+		</cond>
+		<for>
+			<effect name="GiveSp">
+				<param sp="256000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="18023" levels="1" name="Maphr's Pouch">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Random Prize. -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			39633,10,4.5;39389,1,2;39390,1,0.5;39720,1,15.5;57,100000000,3;57,1000000000,0.5;57,100000,30;57,1000000,30;57,10000000,30;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="-1000" />
+		<cond msgId="129">
+			<and>
+				<player invSize="1" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="18024" levels="24" name="Venir's Talisman">
 		<!--<table name="#icons"> icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i00 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i01 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 icon.etc_all_stat_talisman_i02 </table> -->
