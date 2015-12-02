@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46400" name="NPC Feoh Wizard Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
+		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -12,6 +13,7 @@
 	</item>
 	<item id="46401" name="NPC Iss Enchanter Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
+		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -22,6 +24,7 @@
 	</item>
 	<item id="46402" name="NPC Wynn Summoner Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
+		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -32,6 +35,7 @@
 	</item>
 	<item id="46403" name="NPC Aeore Healer Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
+		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -588,6 +592,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="60" />
+		<set name="compoundItem" val="46445" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -596,6 +602,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="51" />
+		<set name="compoundItem" val="46446" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -604,6 +612,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="35" />
+		<set name="compoundItem" val="46447" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -612,6 +622,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="27" />
+		<set name="compoundItem" val="46448" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -620,6 +632,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="23" />
+		<set name="compoundItem" val="46449" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -628,6 +642,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="20" />
+		<set name="compoundItem" val="46450" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -636,6 +652,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="18" />
+		<set name="compoundItem" val="46451" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -644,6 +662,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="17" />
+		<set name="compoundItem" val="46452" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -652,6 +672,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="16" />
+		<set name="compoundItem" val="46453" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -660,6 +682,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46454" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -668,6 +692,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46455" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -676,6 +702,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46456" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -684,6 +712,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46457" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -692,6 +722,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46458" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -708,6 +740,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="60" />
+		<set name="compoundItem" val="46460" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -716,6 +750,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="51" />
+		<set name="compoundItem" val="46461" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -724,6 +760,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="35" />
+		<set name="compoundItem" val="46462" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -732,6 +770,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="27" />
+		<set name="compoundItem" val="46463" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -740,6 +780,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="23" />
+		<set name="compoundItem" val="46464" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -748,6 +790,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="20" />
+		<set name="compoundItem" val="46465" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -756,6 +800,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="18" />
+		<set name="compoundItem" val="46466" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -764,6 +810,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="17" />
+		<set name="compoundItem" val="46467" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -772,6 +820,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="16" />
+		<set name="compoundItem" val="46468" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -780,6 +830,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46469" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -788,6 +840,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46470" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -796,6 +850,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46471" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -804,6 +860,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46472" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -812,6 +870,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46473" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -828,6 +888,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="60" />
+		<set name="compoundItem" val="46475" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -836,6 +898,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="51" />
+		<set name="compoundItem" val="46476" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -844,6 +908,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="35" />
+		<set name="compoundItem" val="46477" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -852,6 +918,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="27" />
+		<set name="compoundItem" val="46478" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -860,6 +928,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="23" />
+		<set name="compoundItem" val="46479" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -868,6 +938,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="20" />
+		<set name="compoundItem" val="46480" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -876,6 +948,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="18" />
+		<set name="compoundItem" val="46481" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -884,6 +958,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="17" />
+		<set name="compoundItem" val="46482" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -892,6 +968,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="16" />
+		<set name="compoundItem" val="46483" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -900,6 +978,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46484" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -908,6 +988,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46485" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -916,6 +998,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46486" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -924,6 +1008,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46487" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -932,6 +1018,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="14" />
+		<set name="compoundItem" val="46488" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -948,6 +1036,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="60" />
+		<set name="compoundItem" val="46490" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -956,6 +1046,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="51" />
+		<set name="compoundItem" val="46491" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -964,6 +1056,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="35" />
+		<set name="compoundItem" val="46492" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -972,6 +1066,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="27" />
+		<set name="compoundItem" val="46493" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -980,6 +1076,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="23" />
+		<set name="compoundItem" val="46494" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -988,6 +1086,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="20" />
+		<set name="compoundItem" val="46495" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -996,6 +1096,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="18" />
+		<set name="compoundItem" val="46496" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1004,6 +1106,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="17" />
+		<set name="compoundItem" val="46497" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1012,6 +1116,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="16" />
+		<set name="compoundItem" val="46498" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1020,6 +1126,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46499" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1028,6 +1136,8 @@
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="compoundChance" val="15" />
+		<set name="compoundItem" val="46500" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
