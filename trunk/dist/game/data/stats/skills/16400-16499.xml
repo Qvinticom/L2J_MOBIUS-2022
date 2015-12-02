@@ -271,7 +271,7 @@
 		<set name="isMagic" val="4" />
 		<for>
 			<effect name="RecoverVitalityInPeaceZone" ticks="10">
-				<param power="10" />
+				<param amount="100" />
 			</effect>
 		</for>
 	</skill>

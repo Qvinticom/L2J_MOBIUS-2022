@@ -31,13 +31,13 @@ import com.l2jserver.gameserver.model.zone.ZoneId;
  */
 public final class RecoverVitalityInPeaceZone extends AbstractEffect
 {
-	private final double _power;
+	private final double _amount;
 	
 	public RecoverVitalityInPeaceZone(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		super(attachCond, applyCond, set, params);
 		
-		_power = params.getDouble("power", 0);
+		_amount = params.getDouble("amount", 0);
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 		}
 		
 		long vitality = info.getEffected().getActingPlayer().getVitalityPoints();
-		vitality += _power;
+		vitality += _amount;
 		if (vitality >= PcStat.MAX_VITALITY_POINTS)
 		{
 			vitality = PcStat.MAX_VITALITY_POINTS;
@@ -65,7 +65,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 		if (info.getEffected().isPlayer() && !info.isRemoved())
 		{
 			long vitality = info.getEffected().getActingPlayer().getVitalityPoints();
-			vitality += 10000;
+			vitality += _amount * 100;
 			if (vitality >= PcStat.MAX_VITALITY_POINTS)
 			{
 				vitality = PcStat.MAX_VITALITY_POINTS;
