@@ -88,7 +88,7 @@ public final class L2EtcItem extends L2Item
 					continue;
 				}
 				String[] data = part.split(",");
-				if (data.length != 4)
+				if ((data.length != 4) && (data.length != 6))
 				{
 					_log.info(StringUtil.concat("> Couldnt parse ", part, " in capsuled_items! item ", toString()));
 					continue;
@@ -96,14 +96,25 @@ public final class L2EtcItem extends L2Item
 				int itemId = Integer.parseInt(data[0]);
 				int min = Integer.parseInt(data[1]);
 				int max = Integer.parseInt(data[2]);
-				double chance = Double.parseDouble(data[3]);
 				if (max < min)
 				{
 					_log.info(StringUtil.concat("> Max amount < Min amount in ", part, ", item ", toString()));
 					continue;
 				}
-				L2ExtractableProduct product = new L2ExtractableProduct(itemId, min, max, chance);
-				_extractableItems.add(product);
+				double chance = Double.parseDouble(data[3]);
+				int minEnchant = 0;
+				int maxEnchant = 0;
+				if (data.length == 6)
+				{
+					minEnchant = Integer.parseInt(data[4]);
+					maxEnchant = Integer.parseInt(data[5]);
+					if (maxEnchant < minEnchant)
+					{
+						_log.info(StringUtil.concat("> Max enchant < Min enchant in ", part, ", item ", toString()));
+						continue;
+					}
+				}
+				_extractableItems.add(new L2ExtractableProduct(itemId, min, max, chance, minEnchant, maxEnchant));
 			}
 			((ArrayList<?>) _extractableItems).trimToSize();
 			

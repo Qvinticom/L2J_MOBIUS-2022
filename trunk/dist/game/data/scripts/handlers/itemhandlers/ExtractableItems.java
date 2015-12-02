@@ -18,6 +18,7 @@
  */
 package handlers.itemhandlers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jserver.Config;
@@ -28,11 +29,13 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2EtcItem;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 /**
  * Extractable Items handler.
- * @author HorridoJoho
+ * @author HorridoJoho, Mobius
  */
 public class ExtractableItems implements IItemHandler
 {
@@ -61,6 +64,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		boolean created = false;
+		List<L2ItemInstance> enchantedItems = new ArrayList<>();
 		for (L2ExtractableProduct expi : exitem)
 		{
 			if (Rnd.get(100000) <= expi.getChance())
@@ -76,15 +80,28 @@ public class ExtractableItems implements IItemHandler
 				
 				if (item.isStackable() || (createItemAmount == 1))
 				{
-					activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, true);
+					final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+					if (expi.getMaxEnchant() > 0)
+					{
+						newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+						enchantedItems.add(newItem);
+					}
+					sendMessage(activeChar, newItem);
 				}
 				else
 				{
 					while (createItemAmount > 0)
 					{
-						activeChar.addItem("Extract", expi.getId(), 1, activeChar, true);
+						final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+						if (expi.getMaxEnchant() > 0)
+						{
+							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+							enchantedItems.add(newItem);
+						}
+						sendMessage(activeChar, newItem);
 						createItemAmount--;
 					}
+					
 				}
 				created = true;
 			}
@@ -94,6 +111,40 @@ public class ExtractableItems implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}
+		if (!enchantedItems.isEmpty())
+		{
+			InventoryUpdate playerIU = new InventoryUpdate();
+			for (L2ItemInstance i : enchantedItems)
+			{
+				playerIU.addModifiedItem(i);
+			}
+			activeChar.sendPacket(playerIU);
+		}
+		
 		return true;
+	}
+	
+	private void sendMessage(L2PcInstance player, L2ItemInstance item)
+	{
+		if (item.getCount() > 1)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			sm.addItemName(item);
+			sm.addLong(item.getCount());
+			player.sendPacket(sm);
+		}
+		else if (item.getEnchantLevel() > 0)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm.addInt(item.getEnchantLevel());
+			sm.addItemName(item);
+			player.sendPacket(sm);
+		}
+		else
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			sm.addItemName(item);
+			player.sendPacket(sm);
+		}
 	}
 }
