@@ -258,40 +258,52 @@
 		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. . . Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="capsuled_items" val="34623,1,1,100;37718,1,1,5" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
 	</item>
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. . . Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="capsuled_items" val="34626,1,1,100;37718,1,1,5" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
 	</item>
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. . . Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="capsuled_items" val="34624,1,1,100;37718,1,1,5" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
 	</item>
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. . . Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="capsuled_items" val="34625,1,1,100;37718,1,1,5" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
 	</item>
 	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
