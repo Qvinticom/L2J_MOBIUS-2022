@@ -137,7 +137,9 @@
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="16423-1" /> <!-- Noelle's Gift -->
 		<set name="material" val="LIQUID" />
 		<set name="time" val="360" />
 		<set name="weight" val="5" />

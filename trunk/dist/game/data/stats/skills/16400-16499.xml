@@ -262,13 +262,18 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16423" levels="1" name="Noelle's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="abnormalTime" val="21600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="30000" />
+		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="4" />
+		<for>
+			<effect name="RecoverVitalityInPeaceZone" ticks="10">
+				<param power="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="16424" levels="1" name="Appearance Stone: Santa Hat">
 		<!-- AUTO GENERATED SKILL -->

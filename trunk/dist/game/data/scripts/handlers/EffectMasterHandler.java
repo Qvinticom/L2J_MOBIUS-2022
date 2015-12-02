@@ -150,6 +150,7 @@ public final class EffectMasterHandler
 		ProtectionBlessing.class,
 		RandomizeHate.class,
 		RebalanceHP.class,
+		RecoverVitalityInPeaceZone.class,
 		Recovery.class,
 		Reeling.class,
 		RefuelAirship.class,
