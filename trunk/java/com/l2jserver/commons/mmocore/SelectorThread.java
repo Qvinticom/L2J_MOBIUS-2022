@@ -33,7 +33,7 @@ import java.util.LinkedList;
 /**
  * Parts of design based on network core from WoodenGil
  * @param <T>
- * @author KenM, Zoey76
+ * @author KenM
  */
 public final class SelectorThread<T extends MMOClient<?>> extends Thread
 {
@@ -54,6 +54,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	private final int MAX_SEND_PER_PASS;
 	private final int MAX_READ_PER_PASS;
 	private final long SLEEP_TIME;
+	public boolean TCP_NODELAY;
 	// Main Buffers
 	private final ByteBuffer DIRECT_WRITE_BUFFER;
 	private final ByteBuffer WRITE_BUFFER;
@@ -76,6 +77,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		MAX_SEND_PER_PASS = sc.MAX_SEND_PER_PASS;
 		MAX_READ_PER_PASS = sc.MAX_READ_PER_PASS;
 		SLEEP_TIME = sc.SLEEP_TIME;
+		TCP_NODELAY = sc.TCP_NODELAY;
 		
 		DIRECT_WRITE_BUFFER = ByteBuffer.allocateDirect(sc.WRITE_BUFFER_SIZE).order(BYTE_ORDER);
 		WRITE_BUFFER = ByteBuffer.wrap(new byte[sc.WRITE_BUFFER_SIZE]).order(BYTE_ORDER);
@@ -198,9 +200,16 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 			{
 				while (!_pendingClose.isEmpty())
 				{
-					con = _pendingClose.removeFirst();
-					writeClosePacket(con);
-					closeConnectionImpl(con.getSelectionKey(), con);
+					try
+					{
+						con = _pendingClose.removeFirst();
+						writeClosePacket(con);
+						closeConnectionImpl(con.getSelectionKey(), con);
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+					}
 				}
 			}
 			
@@ -249,7 +258,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 				{
 					sc.configureBlocking(false);
 					SelectionKey clientKey = sc.register(_selector, SelectionKey.OP_READ);
-					con = new MMOConnection<>(this, sc.socket(), clientKey);
+					con = new MMOConnection<>(this, sc.socket(), clientKey, TCP_NODELAY);
 					con.setClient(_clientFactory.create(con));
 					clientKey.attach(con);
 				}
@@ -275,9 +284,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 				buf = READ_BUFFER;
 			}
 			
-			// if we try to to do a read with no space in the buffer it will
-			// read 0 bytes
-			// going into infinite loop
+			// if we try to to do a read with no space in the buffer it will read 0 bytes going into infinite loop
 			if (buf.position() == buf.limit())
 			{
 				System.exit(0);
@@ -348,9 +355,9 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		switch (buf.remaining())
 		{
 			case 0:
-				// buffer is full
-				// nothing to read
+				// buffer is full nothing to read
 				return false;
+				
 			case 1:
 				// we don`t have enough data for header so we need to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
@@ -367,6 +374,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 					buf.compact();
 				}
 				return false;
+				
 			default:
 				// data size excluding header size :>
 				final int dataPending = (buf.getShort() & 0xFFFF) - HEADER_SIZE;
@@ -398,6 +406,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 					}
 					return true;
 				}
+				
 				// we don`t have enough bytes for the dataPacket so we need
 				// to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
@@ -604,6 +613,8 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		
 		// set the write buffer
 		sp._buf = WRITE_BUFFER;
+		// set the client.
+		sp._client = client;
 		// write content to buffer
 		sp.write();
 		// delete the write buffer

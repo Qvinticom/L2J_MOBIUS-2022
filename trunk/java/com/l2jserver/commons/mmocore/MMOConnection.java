@@ -20,6 +20,7 @@ package com.l2jserver.commons.mmocore;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
 import java.nio.ByteBuffer;
 import java.nio.channels.CancelledKeyException;
 import java.nio.channels.ReadableByteChannel;
@@ -48,8 +49,6 @@ public class MMOConnection<T extends MMOClient<?>>
 	
 	private final SelectionKey _selectionKey;
 	
-	// private SendablePacket<T> _closePacket;
-	
 	private ByteBuffer _readBuffer;
 	
 	private ByteBuffer _primaryWriteBuffer;
@@ -60,7 +59,7 @@ public class MMOConnection<T extends MMOClient<?>>
 	
 	private T _client;
 	
-	public MMOConnection(final SelectorThread<T> selectorThread, final Socket socket, final SelectionKey key)
+	public MMOConnection(final SelectorThread<T> selectorThread, final Socket socket, final SelectionKey key, boolean tcpNoDelay)
 	{
 		_selectorThread = selectorThread;
 		_socket = socket;
@@ -71,6 +70,15 @@ public class MMOConnection<T extends MMOClient<?>>
 		_selectionKey = key;
 		
 		_sendQueue = new NioNetStackList<>();
+		
+		try
+		{
+			_socket.setTcpNoDelay(tcpNoDelay);
+		}
+		catch (SocketException e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	final void setClient(final T client)
