@@ -34,11 +34,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Queue;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
@@ -412,7 +410,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public static final String WORLD_CHAT_VARIABLE_NAME = "WORLD_CHAT_POINTS";
 	
-	private final Queue<IEventListener> _eventListeners = new ConcurrentLinkedQueue<>();
+	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
 	
 	private L2GameClient _client;
 	

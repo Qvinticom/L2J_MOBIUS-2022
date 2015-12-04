@@ -2041,14 +2041,14 @@ public final class Formulas
 				}
 				
 				// Prevent initialization.
-				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
+				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs().values()) : new ArrayList<>(1);
 				if (target.getEffectList().hasTriggered())
 				{
-					buffs.addAll(target.getEffectList().getTriggered());
+					buffs.addAll(target.getEffectList().getTriggered().values());
 				}
 				if (target.getEffectList().hasDances())
 				{
-					buffs.addAll(target.getEffectList().getDances());
+					buffs.addAll(target.getEffectList().getDances().values());
 				}
 				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
 				{
@@ -2067,7 +2067,7 @@ public final class Formulas
 			}
 			case "debuff":
 			{
-				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs());
+				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs().values());
 				for (int i = debuffs.size() - 1; i >= 0; i--)
 				{
 					BuffInfo info = debuffs.get(i);

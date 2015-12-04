@@ -240,7 +240,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		else
 		{
-			effects.addAll(target.getEffectList().getPassives());
+			effects.addAll(target.getEffectList().getPassives().values());
 		}
 		
 		if ((page > ((effects.size() / PAGE_LIMIT) + 1)) || (page < 1))
