@@ -148,7 +148,6 @@ public class Q10415_KekropusLetter_WithWisdom extends Quest implements IBypassHa
 				if (qs.isCond(1))
 				{
 					htmltext = "33851-01.html";
-					break;
 				}
 				break;
 			}
