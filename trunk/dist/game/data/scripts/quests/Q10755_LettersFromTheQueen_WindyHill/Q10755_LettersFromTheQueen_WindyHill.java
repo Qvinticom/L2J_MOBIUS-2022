@@ -218,7 +218,7 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() != Race.ERTHEIA) || !command.equals("Q10755_Teleport"))
+		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() != Race.ERTHEIA))
 		{
 			return false;
 		}

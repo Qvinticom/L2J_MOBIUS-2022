@@ -44,17 +44,17 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Q10404_KekropusLetter_AHiddenMeaning extends Quest implements IBypassHandler
 {
-	// Npcs
+	// NPCs
 	private static final int PATERSON = 33864;
 	private static final int SHUVANN = 33867;
 	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_FIELDS_OF_MASSACRE = new ItemHolder(37029, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 71);
 	private static final ItemHolder ENCHANT_WEAPON_A = new ItemHolder(729, 1);
-	// Level Condition
+	// Requirements
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 64;
-	// Others
+	// Teleport
 	private static final Location TELE_LOCATION = new Location(147619, 24681, -1984);
 	private static final String[] COMMAND =
 	{
@@ -156,10 +156,7 @@ public class Q10404_KekropusLetter_AHiddenMeaning extends Quest implements IBypa
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
@@ -168,8 +165,6 @@ public class Q10404_KekropusLetter_AHiddenMeaning extends Quest implements IBypa
 				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10404_KekropusLetter_AHiddenMeaning/Announce.html"));
 				player.sendPacket(html);
 			}
-			return;
-			
 		}
 	}
 	

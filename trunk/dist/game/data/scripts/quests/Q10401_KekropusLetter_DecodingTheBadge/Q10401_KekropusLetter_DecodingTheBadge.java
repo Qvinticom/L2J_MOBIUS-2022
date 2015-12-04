@@ -44,17 +44,17 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Q10401_KekropusLetter_DecodingTheBadge extends Quest implements IBypassHandler
 {
-	// Npcs
+	// NPCs
 	private static final int PATERSON = 33864;
 	private static final int EBLUNE = 33865;
 	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_FORSAKEN_PLAINS = new ItemHolder(37028, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 30);
 	private static final ItemHolder ENCHANT_ARMOR_B = new ItemHolder(948, 5);
-	// Level Condition
+	// Requirements
 	private static final int MIN_LEVEL = 58;
 	private static final int MAX_LEVEL = 60;
-	// Others
+	// Teleport
 	private static final Location TELE_LOCATION = new Location(147619, 24681, -1984);
 	private static final String[] COMMAND =
 	{
@@ -156,10 +156,7 @@ public class Q10401_KekropusLetter_DecodingTheBadge extends Quest implements IBy
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
@@ -168,7 +165,6 @@ public class Q10401_KekropusLetter_DecodingTheBadge extends Quest implements IBy
 				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10401_KekropusLetter_DecodingTheBadge/Announce.html"));
 				player.sendPacket(html);
 			}
-			return;
 		}
 	}
 	

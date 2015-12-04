@@ -44,17 +44,17 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Q10393_KekropusLetter_AClueCompleted extends Quest implements IBypassHandler
 {
-	// Npcs
+	// NPCs
 	private static final int FLUTTER = 30677;
 	private static final int KELIOS = 33862;
 	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_OUTLAW_FOREST = new ItemHolder(37026, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 15);
 	private static final ItemHolder ENCHANT_ARMOR_C = new ItemHolder(952, 4);
-	// Level Condition
+	// Requirements
 	private static final int MIN_LEVEL = 46;
 	private static final int MAX_LEVEL = 51;
-	// Other
+	// Teleport
 	private static final Location TELE_LOCATION = new Location(83697, 55446, -1512);
 	private static final String[] COMMAND =
 	{
@@ -151,10 +151,7 @@ public class Q10393_KekropusLetter_AClueCompleted extends Quest implements IBypa
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
@@ -163,7 +160,6 @@ public class Q10393_KekropusLetter_AClueCompleted extends Quest implements IBypa
 				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10393_KekropusLetter_AClueCompleted/Announce.html"));
 				player.sendPacket(html);
 			}
-			return;
 		}
 	}
 	

@@ -44,17 +44,17 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Q10414_KekropusLetter_WithCourage extends Quest implements IBypassHandler
 {
-	// Npcs
+	// NPCs
 	private static final int ANDREI = 31292;
 	private static final int JANITT = 33851;
 	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_WALL_OF_ARGOS = new ItemHolder(37032, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 123);
 	private static final ItemHolder ENCHANT_ARMOR_A = new ItemHolder(730, 5);
-	// Level Condition
+	// Requirements
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
-	// Others
+	// Teleport
 	private static final Location TELE_LOCATION = new Location(147404, -56707, -2784);
 	private static final String[] COMMAND =
 	{
@@ -160,10 +160,7 @@ public class Q10414_KekropusLetter_WithCourage extends Quest implements IBypassH
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA) && !player.isMageClass())
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
@@ -172,8 +169,6 @@ public class Q10414_KekropusLetter_WithCourage extends Quest implements IBypassH
 				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10414_KekropusLetter_WithCourage/Announce.html"));
 				player.sendPacket(html);
 			}
-			return;
-			
 		}
 	}
 	

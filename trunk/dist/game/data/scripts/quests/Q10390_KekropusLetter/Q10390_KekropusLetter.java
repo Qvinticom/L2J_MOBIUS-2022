@@ -70,7 +70,7 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 	// Rewards
 	private static final int EXP_REWARD = 370440;
 	private static final int SP_REWARD = 88;
-	// Teleport from announce stuff
+	// Teleports
 	// Town masters locations to teleport should be same order as the Race enum
 	private static final Location[] TP_LOCS =
 	{
@@ -297,20 +297,16 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA))
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10390_KekropusLetter/" + "Announce_" + player.getRace().name() + ".html"));
+				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10390_KekropusLetter/Announce_" + player.getRace().name() + ".html"));
 				player.sendPacket(html);
 				// todo: get proper announce html && handle it
 			}
-			return;
 		}
 	}
 	
@@ -318,7 +314,7 @@ public class Q10390_KekropusLetter extends Quest implements IBypassHandler
 	public boolean useBypass(String command, L2PcInstance player, L2Character bypassOrigin)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() == Race.ERTHEIA) || !command.equals("Q10390_Teleport"))
+		if ((qs != null) || (player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL) || (player.getRace() == Race.ERTHEIA))
 		{
 			return false;
 		}

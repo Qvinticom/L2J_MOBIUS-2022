@@ -44,17 +44,17 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class Q10408_KekropusLetter_TheSwampOfScream extends Quest implements IBypassHandler
 {
-	// Npcs
+	// NPCs
 	private static final int MATHIAS = 31340;
 	private static final int DOKARA = 33847;
 	// Items
 	private static final ItemHolder SCROLL_OF_ESCAPE_SEA_OF_SPORES = new ItemHolder(37027, 1);
 	private static final ItemHolder STEEL_DOOR_GUILD = new ItemHolder(37045, 91);
 	private static final ItemHolder ENCHANT_WEAPON_A = new ItemHolder(729, 2);
-	// Level Condition
+	// Requirements
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 69;
-	// Others
+	// Teleport
 	private static final Location TELE_LOCATION = new Location(42713, -48068, -801);
 	private static final String[] COMMAND =
 	{
@@ -160,10 +160,7 @@ public class Q10408_KekropusLetter_TheSwampOfScream extends Quest implements IBy
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		final int oldLevel = event.getOldLevel();
-		final int newLevel = event.getNewLevel();
-		
-		if (((oldLevel == (newLevel - 1)) && (player.getLevel() >= MIN_LEVEL)) && (player.getLevel() <= MAX_LEVEL) && !(player.getRace() == Race.ERTHEIA) && !player.isMageClass())
+		if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL) && (player.getRace() != Race.ERTHEIA))
 		{
 			final QuestState qs = getQuestState(player, false);
 			if (qs == null)
@@ -172,8 +169,6 @@ public class Q10408_KekropusLetter_TheSwampOfScream extends Quest implements IBy
 				html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "scripts/quests/Q10408_KekropusLetter_TheSwampOfScream/Announce.html"));
 				player.sendPacket(html);
 			}
-			return;
-			
 		}
 	}
 	
