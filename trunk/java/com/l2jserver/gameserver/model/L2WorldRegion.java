@@ -19,7 +19,6 @@
 package com.l2jserver.gameserver.model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -233,8 +232,7 @@ public final class L2WorldRegion
 		int c = 0;
 		if (!isOn)
 		{
-			Collection<L2Object> vObj = _visibleObjects.values();
-			for (L2Object o : vObj)
+			for (L2Object o : _visibleObjects.values())
 			{
 				if (o instanceof L2Attackable)
 				{
@@ -272,9 +270,7 @@ public final class L2WorldRegion
 		}
 		else
 		{
-			Collection<L2Object> vObj = _visibleObjects.values();
-			
-			for (L2Object o : vObj)
+			for (L2Object o : _visibleObjects.values())
 			{
 				if (o instanceof L2Attackable)
 				{
@@ -482,8 +478,7 @@ public final class L2WorldRegion
 	public void deleteVisibleNpcSpawns()
 	{
 		_log.fine("Deleting all visible NPC's in Region: " + getName());
-		Collection<L2Object> vNPC = _visibleObjects.values();
-		for (L2Object obj : vNPC)
+		for (L2Object obj : _visibleObjects.values())
 		{
 			if (obj instanceof L2Npc)
 			{
