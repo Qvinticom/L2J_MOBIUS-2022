@@ -428,7 +428,6 @@ public final class GameServer
 		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
 		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
 		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		sc.TCP_NODELAY = Config.MMO_TCP_NODELAY;
 		
 		_gamePacketHandler = new L2GamePacketHandler();
 		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler, new IPv4Filter());

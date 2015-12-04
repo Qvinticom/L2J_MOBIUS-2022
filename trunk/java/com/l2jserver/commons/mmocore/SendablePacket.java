@@ -45,8 +45,7 @@ public abstract class SendablePacket<T extends MMOClient<?>> extends AbstractPac
 	 */
 	protected final void writeC(final boolean data)
 	{
-		int value = data ? 0x01 : 0x00;
-		_buf.put((byte) value);
+		_buf.put((byte) (data ? 0x01 : 0x00));
 	}
 	
 	/**
@@ -96,8 +95,7 @@ public abstract class SendablePacket<T extends MMOClient<?>> extends AbstractPac
 	 */
 	protected final void writeD(final boolean value)
 	{
-		int val = value ? 0x01 : 0x00;
-		_buf.putInt(val);
+		_buf.putInt(value ? 0x01 : 0x00);
 	}
 	
 	/**

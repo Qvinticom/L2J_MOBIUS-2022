@@ -28,8 +28,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.LinkedList;
 
 /**
  * Parts of design based on network core from WoodenGil
@@ -55,7 +54,6 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	private final int MAX_SEND_PER_PASS;
 	private final int MAX_READ_PER_PASS;
 	private final long SLEEP_TIME;
-	public boolean TCP_NODELAY;
 	// Main Buffers
 	private final ByteBuffer DIRECT_WRITE_BUFFER;
 	private final ByteBuffer WRITE_BUFFER;
@@ -63,7 +61,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	// String Buffer
 	private final NioNetStringBuffer STRING_BUFFER;
 	// ByteBuffers General Purpose Pool
-	private final Queue<ByteBuffer> _bufferPool;
+	private final LinkedList<ByteBuffer> _bufferPool;
 	// Pending Close
 	private final NioNetStackList<MMOConnection<T>> _pendingClose;
 	
@@ -78,7 +76,6 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		MAX_SEND_PER_PASS = sc.MAX_SEND_PER_PASS;
 		MAX_READ_PER_PASS = sc.MAX_READ_PER_PASS;
 		SLEEP_TIME = sc.SLEEP_TIME;
-		TCP_NODELAY = sc.TCP_NODELAY;
 		
 		DIRECT_WRITE_BUFFER = ByteBuffer.allocateDirect(sc.WRITE_BUFFER_SIZE).order(BYTE_ORDER);
 		WRITE_BUFFER = ByteBuffer.wrap(new byte[sc.WRITE_BUFFER_SIZE]).order(BYTE_ORDER);
@@ -87,11 +84,11 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		STRING_BUFFER = new NioNetStringBuffer(64 * 1024);
 		
 		_pendingClose = new NioNetStackList<>();
-		_bufferPool = new ConcurrentLinkedQueue<>();
+		_bufferPool = new LinkedList<>();
 		
 		for (int i = 0; i < HELPER_BUFFER_COUNT; i++)
 		{
-			_bufferPool.add(ByteBuffer.wrap(new byte[HELPER_BUFFER_SIZE]).order(BYTE_ORDER));
+			_bufferPool.addLast(ByteBuffer.wrap(new byte[HELPER_BUFFER_SIZE]).order(BYTE_ORDER));
 		}
 		
 		_acceptFilter = acceptFilter;
@@ -127,7 +124,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 			return ByteBuffer.wrap(new byte[HELPER_BUFFER_SIZE]).order(BYTE_ORDER);
 		}
 		
-		return _bufferPool.remove();
+		return _bufferPool.removeFirst();
 	}
 	
 	final void recycleBuffer(ByteBuffer buf)
@@ -135,7 +132,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		if (_bufferPool.size() < HELPER_BUFFER_COUNT)
 		{
 			buf.clear();
-			_bufferPool.add(buf);
+			_bufferPool.addLast(buf);
 		}
 	}
 	
@@ -201,16 +198,9 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 			{
 				while (!_pendingClose.isEmpty())
 				{
-					try
-					{
-						con = _pendingClose.removeFirst();
-						writeClosePacket(con);
-						closeConnectionImpl(con.getSelectionKey(), con);
-					}
-					catch (Exception e)
-					{
-						e.printStackTrace();
-					}
+					con = _pendingClose.removeFirst();
+					writeClosePacket(con);
+					closeConnectionImpl(con.getSelectionKey(), con);
 				}
 			}
 			
@@ -259,7 +249,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 				{
 					sc.configureBlocking(false);
 					SelectionKey clientKey = sc.register(_selector, SelectionKey.OP_READ);
-					con = new MMOConnection<>(this, sc.socket(), clientKey, TCP_NODELAY);
+					con = new MMOConnection<>(this, sc.socket(), clientKey);
 					con.setClient(_clientFactory.create(con));
 					clientKey.attach(con);
 				}
@@ -408,7 +398,6 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 					}
 					return true;
 				}
-				
 				// we don`t have enough bytes for the dataPacket so we need
 				// to read
 				key.interestOps(key.interestOps() | SelectionKey.OP_READ);
@@ -615,8 +604,6 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 		
 		// set the write buffer
 		sp._buf = WRITE_BUFFER;
-		// set the client.
-		sp._client = client;
 		// write content to buffer
 		sp.write();
 		// delete the write buffer

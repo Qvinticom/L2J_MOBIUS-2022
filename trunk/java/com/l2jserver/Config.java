@@ -1002,7 +1002,6 @@ public final class Config
 	public static int MMO_MAX_SEND_PER_PASS;
 	public static int MMO_MAX_READ_PER_PASS;
 	public static int MMO_HELPER_BUFFER_COUNT;
-	public static boolean MMO_TCP_NODELAY;
 	
 	// --------------------------------------------------
 	// Vitality Settings
@@ -1750,7 +1749,6 @@ public final class Config
 			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
 			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
 			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 			
 			// Load IdFactory L2Properties file (if exists)
 			final PropertiesParser IdFactory = new PropertiesParser(ID_CONFIG_FILE);
@@ -2958,7 +2956,6 @@ public final class Config
 			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
 			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
 			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 			
 			// Load Telnet L2Properties file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
