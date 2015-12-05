@@ -2112,9 +2112,9 @@
 				<item id="229" min="1" max="1" chance="3.300" /> <!-- Kris -->
 				<item id="243" min="1" max="1" chance="3.300" /> <!-- Twilight Knife -->
 				<item id="4619" min="5" max="15" chance="7.700" /> <!-- Greater Dye of INT <Int+4 Men-4> -->
-				<item id="4620" min="2" max="4" chance="15.50" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
-				<item id="4621" min="2" max="6" chance="15.25" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
-				<item id="947" min="1" max="1" chance="4.500" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="4620" min="2" max="4" chance="15.50" /> <!-- Greater Dye of INT <Int+4 Wit-4> -->
+					<item id="4621" min="2" max="6" chance="15.25" /> <!-- Greater Dye of MEN <Men+4 Int-4> -->
+					<item id="947" min="1" max="1" chance="4.500" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 			</death>
 		</dropLists>
 	</npc>
@@ -2419,6 +2419,7 @@
 		</collision>
 	</npc>
 	<npc id="25248" level="72" type="L2RaidBoss" name="Doom Blade Thanatos" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="doSummonNPC" value="1" />
@@ -2430,8 +2431,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="244058947" sp="58574" raidPoints="3000" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="766919.841979224" hpRegen="299.92321639468" mp="1410.0" mpRegen="3" />
+		<stats>
+			<vitals hp="1826037" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="4561.13268672246" magical="3254.54886115175" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="916.07841" magical="446.9" evasion="-18" />
 			<attribute>
@@ -2450,8 +2451,6 @@
 			<skill id="4177" level="7" /> <!-- BOSS Cancel Magic -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4306,7 +4305,7 @@
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			<!-- FIXME: Also drops herbs. -->
 			</death>
-		</dropLists>        
+		</dropLists>
 	</npc>
 	<npc id="25287" level="91" type="L2Monster" name="Anakim's Guardian">
 		<parameters>

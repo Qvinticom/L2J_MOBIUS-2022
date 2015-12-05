@@ -379,12 +379,13 @@
 		</dropLists>
 	</npc>
 	<npc id="18808" level="82" type="L2Monster" name="Dark Shaman Varangka">
-		<race>HUMANOID</race>
+		<race>HUMANOID</race> <!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- rhand: Monster Only(Ketra Orc Chieftain) -->
 		<acquire exp="213500" sp="51" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="21860.34" hpRegen="41.206725" mp="17430.0" mpRegen="50" />
+		<stats>
+			<vitals hp="43722" hpRegen="9.5" mp="17430" mpRegen="3.3" />
 			<attack physical="492.298548642662" magical="720.623302603812" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -400,8 +401,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -420,16 +419,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="40.54079818725586">
-					<item id="9628" min="2" max="6" chance="14.6062" /> <!-- Leonard -->
-					<item id="9630" min="3" max="9" chance="6.5343" /> <!-- Orichalcum -->
-					<item id="9629" min="3" max="9" chance="4.6268" /> <!-- Adamantine -->
-					<item id="9573" min="2" max="6" chance="10.346" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="12.9325" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="1.2933" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="9550" min="1" max="3" chance="29.7965" /> <!-- Dark Stone -->
-					<item id="9551" min="1" max="3" chance="19.8644" /> <!-- Holy Stone -->
-				</group>
+				<item id="57" min="3990" max="9317" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.75" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.75" /> <!-- Spirit Stone -->
 			</death>
 		</dropLists>
 		<collision>
@@ -3546,7 +3539,7 @@
 					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
-		</dropLists>        
+		</dropLists>
 	</npc>
 	<npc id="18878" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
 		<parameters>
@@ -3735,7 +3728,7 @@
 		</collision>
 	</npc>
 	<npc id="18880" level="83" type="L2FeedableBeast" name="Baby Alpine Cougar">
- 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="1" />
@@ -5080,7 +5073,7 @@
 			<radius normal="9" />
 			<height normal="12.5" />
 		</collision>
-		<dropLists>		
+		<dropLists>
 			<death>
 				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
 				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->

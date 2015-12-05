@@ -910,7 +910,7 @@
 			<corpse>
 				<item id="1874" min="1" max="1" chance="5.7718" /> <!-- Oriharukon Ore -->
 				<item id="4472" min="1" max="1" chance="0.4947" /> <!-- Dye of CON <Con+1 Dex-1> -->
-				<item id="1869" min="1" max="1" chance="86.5765" /> <!-- Iron Ore -->
+					<item id="1869" min="1" max="1" chance="86.5765" /> <!-- Iron Ore -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2322,6 +2322,7 @@
 		</collision>
 	</npc>
 	<npc id="20345" level="16" type="L2Monster" name="Dark Terror">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2330,9 +2331,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="800" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="264.34345" hpRegen="2.5" mp="157.6" mpRegen="1.2" />
+		<acquire exp="800" sp="0" />
+		<stats>
+			<vitals hp="265" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="76.08628" magical="50.6590964478128" />
 			<attribute>
@@ -2348,8 +2349,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4035" level="1" /> <!-- Poison -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2372,26 +2371,28 @@
 		<dropLists>
 			<death>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="7.800" /> <!-- Antidote -->
+				<item id="1831" min="1" max="1" chance="7.797" /> <!-- Antidote -->
 				<item id="5268" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="4.100" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.086" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20346" level="13" type="L2Monster" name="Darkstone Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
 			<param name="MoveAroundSocial2" value="116" />
 			<skill name="DDMagicSlow" id="4249" level="1" /> <!-- Decrease Speed -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
-		<acquire exp="818" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="214.61578" hpRegen="2.5" mp="132.64" mpRegen="1.2" />
+		<acquire exp="818" sp="0" />
+		<stats>
+			<vitals hp="215" hpRegen="2.5" mp="132" mpRegen="1.2" />
 			<attack physical="25.04271" magical="17.10092" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="68.67458" magical="45.7243124542497" />
 			<attribute>
@@ -2409,8 +2410,6 @@
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
 			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2433,10 +2432,11 @@
 		<dropLists>
 			<death>
 				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2496,6 +2496,7 @@
 		</collision>
 	</npc>
 	<npc id="20351" level="20" type="L2Monster" name="Dre Vanul Tracker">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2504,9 +2505,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="908" sp="27" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
+		<acquire exp="908" sp="0" />
+		<stats>
+			<vitals hp="343" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.87049" magical="57.8393570613084" />
 			<attribute>
@@ -2522,8 +2523,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2548,13 +2547,15 @@
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
 				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="4.200" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.213" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20353" level="21" type="L2Monster" name="Dre Vanul Beholder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2568,9 +2569,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="1169" sp="36" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+		<acquire exp="1169" sp="0" />
+		<stats>
+			<vitals hp="365" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="89.73059" magical="59.7436374813816" />
 			<attribute>
@@ -2586,8 +2587,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4046" level="2" /> <!-- Sleep -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2614,9 +2613,10 @@
 				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
 				<item id="3953" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (D-grade) -->
 				<item id="5273" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="5.350" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.369" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>

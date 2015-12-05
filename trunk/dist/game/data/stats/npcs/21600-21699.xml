@@ -1122,6 +1122,7 @@
 		</collision>
 	</npc>
 	<npc id="21613" level="92" type="L2Monster" name="Dismal shout">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1136,8 +1137,8 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="59017" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="59017" hpRegen="10.5" mp="2096" mpRegen="3.6" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="121.302932993263" />
 			<attribute>
@@ -1153,8 +1154,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4088" level="4" /> <!-- Bleed -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -1174,19 +1173,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1094" max="2553" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="13.63599967956543">
-					<item id="36528" min="1" max="1" chance="0.7043" /> <!-- Metallic Fiber -->
-				</group>
-				<group chance="12.714699745178223">
-					<item id="36527" min="3" max="9" chance="42.2916" /> <!-- Synthetic Fiber -->
-				</group>
+				<item id="57" min="1094" max="2553" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="15.83" /> <!-- Metallic Fiber -->
+				<item id="36527" min="3" max="9" chance="13.5" /> <!-- Synthetic Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36527" min="1" max="1" chance="60.38" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="10.72" /> <!-- Metallic Fiber -->
+				<item id="36527" min="1" max="1" chance="62.25" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="12.29" /> <!-- Metallic Fiber -->
 			</corpse>
 		</dropLists>
 		<collision>

@@ -445,6 +445,7 @@
 		</collision>
 	</npc>
 	<npc id="21104" level="32" type="L2Monster" name="Delu Lizardman Supplier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -460,9 +461,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
-		<acquire exp="3158" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+		<acquire exp="3158" sp="0" />
+		<stats>
+			<vitals hp="669" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -477,8 +478,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -492,22 +491,12 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="296" max="595" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3003999888896942">
-					<item id="1123" min="1" max="1" chance="50" /> <!-- Blue Buckskin Boots -->
-					<item id="605" min="1" max="1" chance="50" /> <!-- Leather Gauntlets -->
-				</group>
-				<group chance="7.309999942779541">
-					<item id="1876" min="1" max="1" chance="15.0275" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="7.5137" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="3.0055" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="10.0183" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="16.6972" /> <!-- Leather -->
-					<item id="2264" min="1" max="1" chance="0.777" /> <!-- Recipe: Two-handed Sword -->
-					<item id="6667" min="1" max="1" chance="46.9608" /> <!-- Deluxe Chest Key - Grade 3 -->
-				</group>
+				<item id="57" min="12" max="27" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="2.736" /> <!-- Major Healing Potion -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -541,9 +530,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1876" min="1" max="1" chance="14.0715" /> <!-- Mithril Ore -->
-				<item id="1061" min="1" max="1" chance="42.6409" /> <!-- Greater Healing Potion -->
-				<item id="1935" min="1" max="1" chance="3.9306" /> <!-- Scale Mail Fragment -->
+				<item id="36531" min="1" max="1" chance="13.06" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -552,6 +539,7 @@
 		</collision>
 	</npc>
 	<npc id="21105" level="33" type="L2Monster" name="Delu Lizardman Special Agent">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="139" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -566,9 +554,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
-		<acquire exp="3640" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
+		<acquire exp="3640" sp="0" />
+		<stats>
+			<vitals hp="703" hpRegen="4.5" mp="372" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="129.23095" magical="86.043423444366" />
 			<attribute>
@@ -583,8 +571,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4124" level="3" /> <!-- NPC Spear Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -598,25 +584,10 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="342" max="683" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1749000549316406">
-					<item id="393" min="1" max="1" chance="1.0427" /> <!-- Mithril Banded Mail -->
-					<item id="1938" min="1" max="1" chance="41.0057" /> <!-- Mithril Banded Mail Material -->
-					<item id="394" min="1" max="1" chance="1.0427" /> <!-- Reinforced Leather Shirt -->
-					<item id="415" min="1" max="1" chance="1.6666" /> <!-- Mithril Banded Gaiters -->
-					<item id="1939" min="1" max="1" chance="53.5758" /> <!-- Mithril Banded Gaiters Material -->
-					<item id="416" min="1" max="1" chance="1.6665" /> <!-- Reinforced Leather Gaiters -->
-				</group>
-				<group chance="9.286100387573242">
-					<item id="1874" min="1" max="1" chance="5.1449" /> <!-- Oriharukon Ore -->
-					<item id="1878" min="1" max="1" chance="30.8693" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="47.4913" /> <!-- Cord -->
-					<item id="1889" min="1" max="1" chance="5.1449" /> <!-- Compound Braid -->
-					<item id="5220" min="1" max="1" chance="3.0869" /> <!-- Metal Hardener -->
-					<item id="2154" min="1" max="1" chance="8.2627" /> <!-- Recipe: Elven Earring -->
-				</group>
+				<item id="57" min="14" max="32" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -650,9 +621,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2154" min="1" max="1" chance="8.6586" /> <!-- Recipe: Elven Earring -->
-				<item id="1901" min="1" max="1" chance="11.17" /> <!-- Tiger's Eye Earring Stone -->
-				<item id="2155" min="1" max="1" chance="12.9809" /> <!-- Recipe: Elven Ring -->
+				<item id="36531" min="1" max="1" chance="14.89" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -678,7 +647,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3086" sp="0" />
 		<stats>
-			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
+			<vitals hp="1546" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
@@ -760,6 +729,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21107" level="35" type="L2Monster" name="Delu Lizardman Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -776,8 +746,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
 		<acquire exp="6531" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+		<stats>
+			<vitals hp="1546" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="91.0360303625432" />
 			<attribute>
@@ -792,8 +762,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4033" level="3" /> <!-- NPC Burn -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -808,20 +776,10 @@
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="607" max="1211" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.020600000396370888">
-					<item id="260" min="1" max="1" chance="100" /> <!-- Triple-Edged Jamadhr -->
-				</group>
-				<group chance="9.77079963684082">
-					<item id="1876" min="1" max="1" chance="26.0762" /> <!-- Mithril Ore -->
-					<item id="1880" min="1" max="1" chance="13.0381" /> <!-- Steel -->
-					<item id="1877" min="1" max="1" chance="5.2152" /> <!-- Adamantite Nugget -->
-					<item id="1881" min="1" max="1" chance="17.3841" /> <!-- Coarse Bone Powder -->
-					<item id="1882" min="1" max="1" chance="28.9735" /> <!-- Leather -->
-					<item id="2188" min="1" max="1" chance="9.3129" /> <!-- Recipe: Manticore Skin Gaiters -->
-				</group>
+				<item id="57" min="25" max="56" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -855,9 +813,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="1939" min="1" max="1" chance="12.6271" /> <!-- Mithril Banded Gaiters Material -->
-				<item id="2156" min="1" max="1" chance="11.5008" /> <!-- Recipe: Elven Necklace -->
-				<item id="1940" min="1" max="1" chance="21.4567" /> <!-- Iron Boots Design -->
+				<item id="36531" min="1" max="1" chance="27.01" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3040,7 +2996,7 @@
 			<corpse>
 				<item id="4129" min="1" max="1" chance="6.1196" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 				<item id="4610" min="1" max="1" chance="1.2566" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
-				<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3150,7 +3106,7 @@
 			</death>
 			<corpse>
 				<item id="4613" min="1" max="1" chance="0.7498" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
-				<item id="947" min="1" max="1" chance="0.2174" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="947" min="1" max="1" chance="0.2174" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 				<item id="1872" min="1" max="15" chance="90.6001" /> <!-- Animal Bone -->
 			</corpse>
 		</dropLists>
@@ -3977,7 +3933,7 @@
 			<corpse>
 				<item id="4129" min="1" max="1" chance="6.1196" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 				<item id="4611" min="1" max="1" chance="1.2566" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
-				<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="947" min="1" max="1" chance="0.2262" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

@@ -358,6 +358,7 @@
 		</collision>
 	</npc>
 	<npc id="20803" level="50" type="L2Monster" name="Doll Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -374,8 +375,8 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="21327" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="4266" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" />
 			<attribute>
@@ -392,8 +393,6 @@
 		<skillList>
 			<skill id="4074" level="2" /> <!-- NPC Haste -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -408,28 +407,9 @@
 		<ai aggroRange="500" clanHelpRange="300" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1665" max="3384" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4796000123023987">
-					<item id="231" min="1" max="1" chance="0.5492" /> <!-- Grace Dagger -->
-					<item id="2106" min="1" max="1" chance="49.4508" /> <!-- Grace Dagger Edge -->
-					<item id="233" min="1" max="1" chance="0.5492" /> <!-- Dark Screamer -->
-					<item id="2107" min="1" max="1" chance="49.4508" /> <!-- Dark Screamer Edge -->
-				</group>
-				<group chance="6.684599876403809">
-					<item id="1895" min="1" max="1" chance="67.6302" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="4.7341" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="3.9451" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="7.8902" /> <!-- Asofe -->
-					<item id="2356" min="1" max="1" chance="0.3861" /> <!-- Recipe: Demon's Staff -->
-					<item id="3014" min="1" max="1" chance="6.6119" /> <!-- Recipe: Full Plate Boots -->
-					<item id="2360" min="1" max="1" chance="0.3861" /> <!-- Recipe: Orcish Poleaxe -->
-					<item id="8725" min="1" max="1" chance="6.5752" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="1.6438" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.1644" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0329" /> <!-- Top-Grade Life Stone - Level 52 -->
-				</group>
+				<item id="57" min="70" max="162" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -463,9 +443,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="4044" min="1" max="1" chance="14.0295" /> <!-- Thons -->
-				<item id="4042" min="1" max="1" chance="7.0147" /> <!-- Enria -->
-				<item id="4043" min="1" max="1" chance="14.0295" /> <!-- Asofe -->
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -577,6 +555,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20805" level="42" type="L2Monster" name="Dailaon Lad">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -591,8 +570,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- rhand: Dailaon Knife -->
 		<acquire exp="20895" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2102" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="164.88513" magical="109.782377202178" />
 			<attribute>
@@ -607,8 +586,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4228" level="4" /> <!-- NPC Double Dagger Attack -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -627,28 +604,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="892" max="1803" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.47909998893737793">
-					<item id="159" min="1" max="1" chance="0.3349" /> <!-- Bonebreaker -->
-					<item id="2048" min="1" max="1" chance="19.2018" /> <!-- Bonebreaker Head -->
-					<item id="187" min="1" max="1" chance="0.3349" /> <!-- Atuba Hammer -->
-					<item id="2049" min="1" max="1" chance="19.2018" /> <!-- Atuba Hammer Head -->
-					<item id="188" min="1" max="1" chance="0.3349" /> <!-- Ghost Staff -->
-					<item id="2050" min="1" max="1" chance="20.3601" /> <!-- Ghost Staff Head -->
-					<item id="189" min="1" max="1" chance="0.3349" /> <!-- Staff of Life -->
-					<item id="2051" min="1" max="1" chance="20.3601" /> <!-- Staff of Life Shaft -->
-					<item id="190" min="1" max="1" chance="0.3349" /> <!-- Atuba Mace -->
-					<item id="2058" min="1" max="1" chance="19.2017" /> <!-- Atuba Mace Head -->
-				</group>
-				<group chance="15.180700302124023">
-					<item id="1895" min="1" max="1" chance="41.8811" /> <!-- Metallic Fiber -->
-					<item id="2305" min="1" max="1" chance="0.6401" /> <!-- Recipe: Crystal Staff -->
-					<item id="2205" min="1" max="1" chance="4.6387" /> <!-- Recipe: Chain Gaiters -->
-					<item id="5164" min="1" max="1" chance="0.4886" /> <!-- Recipe: Blessed Spiritshot (C) Compressed Package (100%) -->
-					<item id="6668" min="1" max="1" chance="52.3515" /> <!-- Deluxe Chest Key - Grade 4 -->
-				</group>
+				<item id="353" min="1" max="1" chance="0.3" /> <!-- Half Plate Armor -->
+				<item id="280" min="1" max="1" chance="0.03" /> <!-- Light Bow -->
+				<item id="1660" min="1" max="1" chance="0.03" /> <!-- Cursed Maingauche -->
+				<item id="57" min="327" max="760" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="45" /> <!-- Greater Herb of Life -->
@@ -682,9 +644,9 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2162" min="1" max="1" chance="10.7039" /> <!-- Recipe: Aquastone Necklace -->
-				<item id="2053" min="1" max="1" chance="1.8321" /> <!-- Scallop Jamadhr Edge -->
-				<item id="1905" min="1" max="1" chance="21.5536" /> <!-- Omen Beast's Eye Earring Gemstone -->
+				<item id="36531" min="1" max="1" chance="28.16" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -736,7 +698,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CROC2</clan>
 			</clanList>
@@ -964,7 +926,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CROC2</clan>
 			</clanList>
@@ -3742,6 +3704,7 @@
 		</collision>
 	</npc>
 	<npc id="20840" level="92" type="L2Monster" name="Death Flyer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3759,8 +3722,8 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="14754" hpRegen="10.5" mp="2096" mpRegen="3.6" />
 			<attack physical="261.69549" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="124.264149144103" />
 			<attribute>
@@ -3797,19 +3760,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.792900085449219">
-					<item id="36547" min="1" max="1" chance="7.096" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="1.1972999572753906">
-					<item id="36548" min="1" max="1" chance="1.447" /> <!-- Weapon Fragment (Mid-grade) -->
-				</group>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="6.496" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="1.294" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36547" min="1" max="1" chance="0.2759" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="6.4698" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36547" min="1" max="1" chance="5.04" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

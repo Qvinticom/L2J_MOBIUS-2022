@@ -21,7 +21,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="267891659" sp="642940" />   		
+		<acquire exp="267891659" sp="642940" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<speed>
@@ -36,7 +36,7 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-		</skillList>		
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -53,7 +53,7 @@
 			<corpse>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</corpse>
-		</dropLists>		
+		</dropLists>
 	</npc>
 	<npc id="23603" level="104" type="L2Npc" name="Guardian Sinistra">
 		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
@@ -855,22 +855,31 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23650" level="104" type="L2Npc" name="Dwarf Spy">
-		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="23650" level="101" type="L2Monster" name="Dwarf Spy">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="906703" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="45000000" max="65000000" chance="100" /> <!-- Adena -->
+			</death>
+			<corpse>
+				<item id="57" min="25000000" max="40000000" chance="100" /> <!-- Adena -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="23651" level="104" type="L2Npc" name="Unit Signalman">
 		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->
@@ -1352,7 +1361,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="148977405" sp="357545" /> 		
+		<acquire exp="148977405" sp="357545" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1364,7 +1373,7 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-		</skillList>		
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -1382,7 +1391,7 @@
 			<corpse>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</corpse>
-		</dropLists>		
+		</dropLists>
 	</npc>
 	<npc id="23680" level="104" type="L2Npc" name="Flame Golem">
 		<!-- AUTO GENERATED INFINITE ODYSSEY NPC TODO: FIX IT -->

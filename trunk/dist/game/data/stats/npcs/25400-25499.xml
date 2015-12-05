@@ -414,7 +414,10 @@
 					<item id="4115" min="12" max="36" chance="90.1686" /> <!-- Lance Blade -->
 				</group>
 				<group chance="71.82620239257812">
-					<item id="4613" min="1" max="3" chance="36.4078" /> <!-- Greater Dye of STR <Str+4 Con-4> --><item id="4614" min="2" max="4" chance="24.2718" /> <!-- Greater Dye of STR <Str+4 Dex-4> --><item id="4615" min="2" max="6" chance="18.2039" /> <!-- Greater Dye of CON <Con+4 Str-4> --><item id="947" min="1" max="1" chance="21.1165" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="4613" min="1" max="3" chance="36.4078" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+					<item id="4614" min="2" max="4" chance="24.2718" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
+					<item id="4615" min="2" max="6" chance="18.2039" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
+					<item id="947" min="1" max="1" chance="21.1165" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -677,7 +680,10 @@
 					<item id="2122" min="2" max="6" chance="55.7831" /> <!-- Orcish Poleaxe Blade -->
 				</group>
 				<group chance="70.54329681396484">
-					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> --><item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> --><item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> --><item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+					<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -929,6 +935,7 @@
 		</collision>
 	</npc>
 	<npc id="25418" level="57" type="L2RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" /> <!-- Dread Panther -->
@@ -940,8 +947,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- rhand: Caliburs -->
 		<acquire exp="6407453" sp="1537" raidPoints="736" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="965705" hpRegen="41.3470424277186" mp="584.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="965707" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<attack physical="312.062128648025" magical="32.6327246088761" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="520.30656" magical="253.82" evasion="-18" />
 			<attribute>
@@ -960,8 +967,6 @@
 			<skill id="4197" level="4" /> <!-- Hold -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1007,7 +1012,10 @@
 					<item id="2105" min="5" max="13" chance="7.3312" /> <!-- Mace of Underworld Head -->
 				</group>
 				<group chance="62.51100158691406">
-					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> --><item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> --><item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> --><item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+					<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -1118,7 +1126,10 @@
 					<item id="2120" min="3" max="9" chance="94.9668" /> <!-- Great Pata Blade -->
 				</group>
 				<group chance="49.9281005859375">
-					<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> --><item id="4605" min="1" max="1" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> --><item id="4606" min="1" max="1" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> --><item id="952" min="3" max="9" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+					<item id="4604" min="2" max="6" chance="32.9154" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
+					<item id="4605" min="1" max="1" chance="26.3323" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
+					<item id="4606" min="1" max="1" chance="21.9436" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
+					<item id="952" min="3" max="9" chance="18.8087" /> <!-- Scroll: Enchant Armor (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -1260,8 +1271,7 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>TIMINIEL</clan>
-				<ignoreNpcId>21797</ignoreNpcId>
-				<!-- Spirit of Timiniel -->
+				<ignoreNpcId>21797</ignoreNpcId> <!-- Spirit of Timiniel -->
 			</clanList>
 		</ai>
 		<dropLists>
@@ -1283,7 +1293,10 @@
 					<item id="4119" min="3" max="9" chance="97.3552" /> <!-- Demon's Dagger Edge -->
 				</group>
 				<group chance="84.70040130615234">
-					<item id="4622" min="1" max="3" chance="24.6711" /> <!-- Greater Dye of MEN <Men+4 Wit-4> --><item id="4623" min="2" max="4" chance="16.4474" /> <!-- Greater Dye of WIT <Wit+4 Int-4> --><item id="4624" min="1" max="1" chance="49.3421" /> <!-- Greater Dye of WIT <Wit+4 Men-4> --><item id="6572" min="1" max="1" chance="9.5394" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
+					<item id="4622" min="1" max="3" chance="24.6711" /> <!-- Greater Dye of MEN <Men+4 Wit-4> -->
+					<item id="4623" min="2" max="4" chance="16.4474" /> <!-- Greater Dye of WIT <Wit+4 Int-4> -->
+					<item id="4624" min="1" max="1" chance="49.3421" /> <!-- Greater Dye of WIT <Wit+4 Men-4> -->
+					<item id="6572" min="1" max="1" chance="9.5394" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -1325,8 +1338,7 @@
 		<ai clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>TIMINIEL</clan>
-				<ignoreNpcId>21797</ignoreNpcId>
-				<!-- Spirit of Timiniel -->
+				<ignoreNpcId>21797</ignoreNpcId> <!-- Spirit of Timiniel -->
 			</clanList>
 		</ai>
 		<collision>
@@ -1371,8 +1383,7 @@
 		<ai clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>TIMINIEL</clan>
-				<ignoreNpcId>21797</ignoreNpcId>
-				<!-- Spirit of Timiniel -->
+				<ignoreNpcId>21797</ignoreNpcId> <!-- Spirit of Timiniel -->
 			</clanList>
 		</ai>
 		<collision>
@@ -1682,7 +1693,10 @@
 					<item id="2108" min="12" max="36" chance="31.1578" /> <!-- Fisted Blade Piece -->
 				</group>
 				<group chance="75.2645034790039">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> --><item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> --><item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> --><item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -1983,7 +1997,10 @@
 					<item id="2108" min="96" max="288" chance="93.6503" /> <!-- Fisted Blade Piece -->
 				</group>
 				<group chance="65.03050231933594">
-					<item id="4607" min="1" max="1" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> --><item id="4608" min="1" max="1" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> --><item id="4609" min="1" max="1" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> --><item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4607" min="1" max="1" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+					<item id="4608" min="1" max="1" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="4609" min="1" max="1" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -2050,7 +2067,10 @@
 					<item id="2109" min="3" max="9" chance="93.917" /> <!-- Akat Longbow Shaft -->
 				</group>
 				<group chance="70.01439666748047">
-					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> --><item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> --><item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> --><item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+					<item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+					<item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+					<item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -2209,7 +2229,10 @@
 					<item id="2109" min="12" max="36" chance="79.423" /> <!-- Akat Longbow Shaft -->
 				</group>
 				<group chance="78.29810333251953">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> --><item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> --><item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> --><item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -2816,7 +2839,10 @@
 					<item id="2120" min="3" max="9" chance="94.9668" /> <!-- Great Pata Blade -->
 				</group>
 				<group chance="85.0416030883789">
-					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> --><item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> --><item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> --><item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4601" min="1" max="3" chance="40.0972" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+					<item id="4602" min="2" max="4" chance="26.7315" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+					<item id="4603" min="2" max="6" chance="20.0486" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+					<item id="951" min="3" max="7" chance="13.1227" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -2949,6 +2975,7 @@
 		</collision>
 	</npc>
 	<npc id="25460" level="51" type="L2RaidBoss" name="Deadman Ereve" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25461" count="2" respawnTime="360" weightPoint="1" /> <!-- Ereve's Knight -->
@@ -2961,8 +2988,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="194" /> <!-- rhand: Heavy Doom Axe -->
 		<acquire exp="7336176" sp="1760" raidPoints="940" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="162046.294593743" hpRegen="55.9818993783759" mp="775.8" mpRegen="2.4" />
+		<stats>
+			<vitals hp="254650" hpRegen="6.5" mp="775" mpRegen="2.4" />
 			<attack physical="486.776561681345" magical="67.954249090525" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="614.55582" magical="299.8" evasion="-18" />
 			<attribute>
@@ -2981,8 +3008,6 @@
 			<skill id="4197" level="5" /> <!-- Hold -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3001,14 +3026,18 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="9814" min="1" max="3" chance="85" /> <!-- Memento Mori -->
-				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
-				<item id="357" min="1" max="1" chance="1.150" /> <!-- Zubei's Breastplate -->
-				<item id="383" min="1" max="1" chance="7" /> <!-- Zubei's Gaiters -->
-				<item id="2376" min="1" max="1" chance="1.800" /> <!-- Avadon Breastplate -->
-				<item id="2379" min="1" max="1" chance="4.650" /> <!-- Avadon Gaiters -->
-				<item id="300" min="1" max="1" chance="5.50" /> <!-- Great Axe -->
-				<item id="4601" min="1" max="3" chance="6.600" /> <!-- Greater Dye of STR <Str+3 Con-3> --><item id="4602" min="1" max="1" chance="13.75" /> <!-- Greater Dye of STR <Str+3 Dex-3> --><item id="4603" min="1" max="1" chance="13.50" /> <!-- Greater Dye of CON <Con+3 Str-3> --><item id="951" min="1" max="1" chance="11.25" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="383" min="1" max="1" chance="7.107" /> <!-- Zubei's Gaiters -->
+				<item id="2379" min="1" max="1" chance="4.648" /> <!-- Avadon Gaiters -->
+				<item id="357" min="1" max="1" chance="2.208" /> <!-- Zubei's Breastplate -->
+				<item id="300" min="1" max="1" chance="2.125" /> <!-- Great Axe -->
+				<item id="2376" min="1" max="1" chance="1.831" /> <!-- Avadon Breastplate -->
+				<item id="8176" min="1" max="1" chance="82.67" /> <!-- Destruction Tombstone -->
+				<item id="9814" min="1" max="3" chance="81.33" /> <!-- Memento Mori -->
+				<item id="4603" min="1" max="1" chance="13.49" /> <!-- Greater CON Dye (Con	3 Str - 3) -->
+				<item id="4602" min="1" max="1" chance="12.87" /> <!-- Greater STR Dye (STR	3 DEX - 3) -->
+				<item id="951" min="1" max="1" chance="10.56" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="4601" min="1" max="3" chance="6.616" /> <!-- Greater STR Dye (STR	3 CON - 3) -->
+				<item id="39629" min="1" max="1" chance="0.006943" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -3676,7 +3705,10 @@
 					<item id="4106" min="8" max="22" chance="32.6175" /> <!-- Sprite's Staff Head -->
 				</group>
 				<group chance="73.76399993896484">
-					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> --><item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> --><item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> --><item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+					<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -4110,7 +4142,10 @@
 					<item id="4110" min="8" max="22" chance="32.9553" /> <!-- Hell Knife Edge -->
 				</group>
 				<group chance="71.777099609375">
-					<item id="4616" min="2" max="4" chance="19.7287" /> <!-- Greater Dye of CON <Con+4 Dex-4> --><item id="4617" min="2" max="6" chance="14.7965" /> <!-- Greater Dye of DEX <Dex+4 Str-4> --><item id="4618" min="3" max="7" chance="11.8372" /> <!-- Greater Dye of DEX <Dex+4 Con-4> --><item id="948" min="1" max="3" chance="53.6376" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+					<item id="4616" min="2" max="4" chance="19.7287" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
+					<item id="4617" min="2" max="6" chance="14.7965" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
+					<item id="4618" min="3" max="7" chance="11.8372" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
+					<item id="948" min="1" max="3" chance="53.6376" /> <!-- Scroll: Enchant Armor (B-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -4271,7 +4306,10 @@
 					<item id="4110" min="8" max="22" chance="32.9553" /> <!-- Hell Knife Edge -->
 				</group>
 				<group chance="73.9906997680664">
-					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> --><item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> --><item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> --><item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+					<item id="4607" min="1" max="3" chance="44.9102" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
+					<item id="4608" min="2" max="4" chance="29.9401" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="4609" min="2" max="6" chance="22.4551" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="6573" min="1" max="1" chance="2.6946" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -4753,7 +4791,10 @@
 					<item id="4106" min="8" max="22" chance="32.6175" /> <!-- Sprite's Staff Head -->
 				</group>
 				<group chance="96.16670227050781">
-					<item id="4613" min="1" max="3" chance="23.5479" /> <!-- Greater Dye of STR <Str+4 Con-4> --><item id="4614" min="2" max="4" chance="15.6986" /> <!-- Greater Dye of STR <Str+4 Dex-4> --><item id="4615" min="1" max="1" chance="47.0958" /> <!-- Greater Dye of CON <Con+4 Str-4> --><item id="947" min="1" max="1" chance="13.6577" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+					<item id="4613" min="1" max="3" chance="23.5479" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
+					<item id="4614" min="2" max="4" chance="15.6986" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
+					<item id="4615" min="1" max="1" chance="47.0958" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
+					<item id="947" min="1" max="1" chance="13.6577" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -4901,7 +4942,10 @@
 					<item id="4111" min="12" max="36" chance="88.8447" /> <!-- Arthro Nail Blade -->
 				</group>
 				<group chance="88.81330108642578">
-					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> --><item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> --><item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> --><item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+					<item id="4610" min="1" max="3" chance="37.3002" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
+					<item id="4611" min="2" max="4" chance="24.8668" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
+					<item id="4612" min="2" max="6" chance="18.6501" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
+					<item id="6574" min="1" max="1" chance="19.1829" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
 				</group>
 			</death>
 		</dropLists>
@@ -5012,7 +5056,10 @@
 				<item id="917" min="1" max="1" chance="1.500" /> <!-- Necklace of Mermaid -->
 				<item id="231" min="1" max="1" chance="3.750" /> <!-- Grace Dagger -->
 				<item id="233" min="1" max="1" chance="3.750" /> <!-- Dark Screamer -->
-				<item id="4601" min="1" max="3" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Con-3> --><item id="4602" min="2" max="4" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Dex-3> --><item id="4603" min="2" max="6" chance="11.50" /> <!-- Greater Dye of CON <Con+3 Str-3> --><item id="951" min="3" max="7" chance="9.500" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="4601" min="1" max="3" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
+					<item id="4602" min="2" max="4" chance="11.50" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
+					<item id="4603" min="2" max="6" chance="11.50" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
+					<item id="951" min="3" max="7" chance="9.500" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
 			</death>
 		</dropLists>
 	</npc>

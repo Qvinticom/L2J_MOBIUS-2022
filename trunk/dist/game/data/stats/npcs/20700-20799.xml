@@ -537,6 +537,7 @@
 		</collision>
 	</npc>
 	<npc id="20749" level="32" type="L2Monster" name="Death Fire">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -551,8 +552,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="5255" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+		<stats>
+			<vitals hp="1338" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -568,8 +569,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4087" level="3" /> <!-- NPC Blaze -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -588,24 +587,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="493" max="989" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4043999910354614">
-					<item id="627" min="1" max="1" chance="58.8055" /> <!-- Aspis -->
-					<item id="46" min="1" max="1" chance="41.1945" /> <!-- Bronze Helmet -->
-				</group>
-				<group chance="28.975200653076172">
-					<item id="1871" min="1" max="1" chance="55.1965" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="36.7977" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="2.2079" /> <!-- Adamantite Nugget -->
-					<item id="2184" min="1" max="1" chance="5.7979" /> <!-- Recipe: Mithril Banded Gaiters -->
-				</group>
+				<item id="604" min="1" max="1" chance="1.88" /> <!-- Quality Leather Gloves -->
+				<item id="57" min="20" max="46" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="2025" min="1" max="1" chance="1.6214" /> <!-- Dwarven Trident Edge -->
-				<item id="1871" min="1" max="3" chance="58.5341" /> <!-- Charcoal -->
-				<item id="2153" min="1" max="1" chance="18.2066" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="36531" min="1" max="1" chance="22.16" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -922,6 +909,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20753" level="50" type="L2Monster" name="Dark Lord">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -952,8 +940,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire exp="26715" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2844" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<attribute>
@@ -970,8 +958,6 @@
 		<skillList>
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
 			<skill id="4225" level="1" /> <!-- Resist Stun Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -995,9 +981,10 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="256" max="600" chance="70" /> <!-- Adena -->
+				<item id="57" min="257" max="600" chance="70" /> <!-- Adena -->
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
 				<item id="45929" min="1" max="4" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1036,6 +1023,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20754" level="48" type="L2Monster" name="Dark Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1054,8 +1042,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<acquire exp="29364" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+		<stats>
+			<vitals hp="2650" hpRegen="5.5" mp="692" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="191.12803" magical="139.8592" />
 			<attribute>
@@ -1071,8 +1059,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4077" level="4" /> <!-- NPC Aura Burn -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -1098,6 +1084,7 @@
 				<item id="57" min="256" max="600" chance="70" /> <!-- Adena -->
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
 				<item id="45929" min="1" max="4" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2251,6 +2238,7 @@
 		</collision>
 	</npc>
 	<npc id="20781" level="35" type="L2Monster" name="Delu Lizardman Shaman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2266,9 +2254,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- rhand: Apprentice's Rod -->
-		<acquire exp="3206" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+		<acquire exp="3206" sp="0" />
+		<stats>
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="91.0360303625432" />
 			<attribute>
@@ -2285,8 +2273,6 @@
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4158" level="3" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2304,23 +2290,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="298" max="595" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.08330000191926956">
-					<item id="436" min="1" max="1" chance="38.4858" /> <!-- Tunic of Knowledge -->
-					<item id="469" min="1" max="1" chance="61.5142" /> <!-- Stockings of Knowledge -->
-				</group>
-				<group chance="5.192299842834473">
-					<item id="1875" min="1" max="1" chance="6.0234" /> <!-- Stone of Purity -->
-					<item id="1879" min="1" max="1" chance="15.0586" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="7.5293" /> <!-- High-Grade Suede -->
-					<item id="5550" min="1" max="1" chance="1.2047" /> <!-- Durable Metal Plate -->
-					<item id="5549" min="1" max="1" chance="9.0352" /> <!-- Metallic Thread -->
-					<item id="2187" min="1" max="1" chance="4.0336" /> <!-- Recipe: Manticore Skin Shirt -->
-					<item id="2273" min="1" max="1" chance="0.6454" /> <!-- Recipe: Tarbar -->
-					<item id="6667" min="1" max="1" chance="56.4698" /> <!-- Deluxe Chest Key - Grade 3 -->
-				</group>
+				<item id="57" min="12" max="28" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="0.3" /> <!-- Synthetic Fiber -->
+				<item id="36542" min="1" max="1" chance="0.075" /> <!-- Silver Wire -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2354,9 +2327,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2192" min="1" max="1" chance="9.0034" /> <!-- Recipe: Kite Shield -->
-				<item id="1938" min="1" max="1" chance="4.7453" /> <!-- Mithril Banded Mail Material -->
-				<item id="1901" min="1" max="1" chance="9.7496" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="13.38" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2941,6 +2912,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20790" level="37" type="L2Monster" name="Dailaon">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2955,8 +2927,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- rhand: Dailaon Knife -->
 		<acquire exp="4621" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
+		<stats>
+			<vitals hp="848" hpRegen="4.5" mp="432" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="144.47758" magical="96.1948088105753" />
 			<attribute>
@@ -2972,8 +2944,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4228" level="3" /> <!-- NPC Double Dagger Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2995,8 +2965,9 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="17" max="40" chance="70" /> <!-- Adena -->
+				<item id="57" min="164" max="381" chance="70" /> <!-- Adena -->
 				<item id="224" min="1" max="1" chance="0.03" /> <!-- Maingauche -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -3030,8 +3001,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="9.500" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="1" chance="19.45" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 	</npc>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22800" level="84" type="L2Monster" name="Divinity Magus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6321" level="1" /> <!-- Divine Flash -->
@@ -10,8 +11,8 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="628919" sp="150" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32744.8265190398" hpRegen="110.577296732991" mp="1812.0" mpRegen="3" />
+		<stats>
+			<vitals hp="65490" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="5837.38675800657" magical="3986.17843618672" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="572.587568" magical="628.492104" />
 			<attribute>
@@ -25,20 +26,16 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
-			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="5601" level="3" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4285" level="4" /> <!-- Sleep Resistance -->
+			<skill id="4287" level="4" /> <!-- Hold Resistance -->
+			<skill id="5601" level="3" /> <!-- Melee Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="6320" level="1" /> <!-- Summon Sacred Magic Force -->
 			<skill id="6321" level="1" /> <!-- Divine Flash -->
 			<skill id="6322" level="1" /> <!-- Divine Impact -->
@@ -52,59 +49,47 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="11913" max="24348" chance="100" /> <!-- Adena -->
+				<item id="57" min="905" max="2114" chance="70" /> <!-- Adena -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+				<item id="9557" min="1" max="1" chance="0.03" /> <!-- Holy Crystal -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
 				</group>
-				<group chance="6.627699851989746">
-					<item id="13143" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Helmet -->
-					<item id="13144" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="13145" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Circlet -->
-					<item id="14111" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Shield -->
-					<item id="13887" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Sigil -->
-					<item id="15660" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Helmet Piece -->
-					<item id="15661" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Leather Helmet Piece -->
-					<item id="15662" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Circlet Piece -->
-					<item id="15669" min="1" max="1" chance="24.7544" /> <!-- Sealed Vesper Verteidiger Piece -->
-					<item id="15691" min="1" max="1" chance="24.7546" /> <!-- Sealed Vesper Sigil Piece -->
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
 				</group>
-				<group chance="36.0182991027832">
-					<item id="1879" min="1" max="3" chance="43.0384" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="43.0384" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="4.0507" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.7182" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="2.2455" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="2.495" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.623" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0623" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="15792" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
-					<item id="15793" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
-					<item id="15794" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
-					<item id="15808" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
-					<item id="15807" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
-					<item id="10578" min="1" max="1" chance="0.0500" /> <!-- Forgotten Scroll - Mutual Response -->
-					<item id="14191" min="1" max="1" chance="0.0500" /> <!-- Forgotten Scroll - Meteor -->
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
 				</group>
-				<group chance="7">
-					<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
-					<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
-					<item id="8056" min="1" max="1" chance="70" /> <!-- Key of Splendor Room -->
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
 				</group>
-				<group chance="16.0">
-					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="50" /> <!-- Greater Herb of Mana -->
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
 				</group>
 			</death>
 			<corpse>
-				<item id="15660" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Helmet Piece -->
-				<item id="15661" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Leather Helmet Piece -->
-				<item id="15662" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Circlet Piece -->
-				<item id="15669" min="1" max="1" chance="9.9846" /> <!-- Sealed Vesper Verteidiger Piece -->
-				<item id="15691" min="1" max="1" chance="9.9846" /> <!-- Sealed Vesper Sigil Piece -->
-				<item id="15792" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
-				<item id="15793" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
-				<item id="15794" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
-				<item id="15808" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
-				<item id="15807" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
+				<item id="9551" min="1" max="1" chance="1.076" /> <!-- Holy Stone -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1544,6 +1529,7 @@
 		</collision>
 	</npc>
 	<npc id="22844" level="85" type="L2Monster" name="Dragon Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -1552,8 +1538,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="743246" sp="178" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="18605.9337557173" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="44211" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10327.681831868" magical="7052.46788014386" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -1568,8 +1554,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -1590,40 +1574,23 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="26239" max="61210" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03680000081658363">
-					<item id="13462" min="1" max="1" chance="3.8651" /> <!-- Vesper Stormer -->
-					<item id="13461" min="1" max="1" chance="3.8651" /> <!-- Vesper Fighter -->
-					<item id="13893" min="1" max="1" chance="19.3256" /> <!-- Sealed Holy Spirit's Cloak -->
-					<item id="14162" min="1" max="1" chance="72.9442" /> <!-- Sealed Vesper Ring -->
-				</group>
-				<group chance="39.29389953613281">
-					<item id="1879" min="3" max="9" chance="19.2401" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="57.7204" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="5.4325" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="3.6455" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="3.0115" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="3.3461" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.8355" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0836" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0167" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.1385" /> <!-- Earth Crystal -->
-					<item id="959" min="1" max="1" chance="0.0277" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="5.5412" /> <!-- Earth Stone -->
-					<item id="15637" min="1" max="1" chance="0.4114" /> <!-- Vesper Shaper Piece -->
-					<item id="15635" min="1" max="1" chance="0.4107" /> <!-- Vesper Slasher Piece -->
-					<item id="9625" min="1" max="1" chance="0.1386" /> <!-- Giant's Codex - Oblivion -->
-				</group>
+				<item id="57" min="1323" max="3083" chance="70" /> <!-- Adena -->
+				<item id="2134" min="1" max="1" chance="1.221" /> <!-- Gemstone (S-grade) -->
+				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0075" /> <!-- Mid-grade Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
+				<item id="13893" min="1" max="1" chance="0.0009" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4039" min="1" max="3" chance="69.0623" /> <!-- Mold Glue -->
-				<item id="9630" min="1" max="1" chance="21.8092" /> <!-- Orichalcum -->
-				<item id="2134" min="1" max="1" chance="8.2875" /> <!-- Gemstone S -->
-				<item id="6577" min="1" max="1" chance="0.0276" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="0.1842" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="13457" min="1" max="1" chance="0.0058" /> <!-- Vesper Cutter -->
+				<item id="36532" min="1" max="1" chance="7.777" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.531" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1632,6 +1599,7 @@
 		</collision>
 	</npc>
 	<npc id="22845" level="85" type="L2Monster" name="Dragon Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -1640,8 +1608,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="745411" sp="178" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="18605.9337557173" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="44211" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10327.681831868" magical="7052.46788014386" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -1656,8 +1624,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -1678,40 +1644,21 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="26983" max="62945" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.026799999177455902">
-					<item id="13467" min="1" max="1" chance="7.2979" /> <!-- Vesper Thrower -->
-					<item id="13458" min="1" max="1" chance="7.2979" /> <!-- Vesper Slasher -->
-					<item id="14111" min="1" max="1" chance="85.4042" /> <!-- Sealed Vesper Shield -->
-				</group>
-				<group chance="42.72330093383789">
-					<item id="1894" min="1" max="1" chance="22.986" /> <!-- Crafted Leather -->
-					<item id="4039" min="1" max="1" chance="21.8367" /> <!-- Mold Glue -->
-					<item id="4041" min="1" max="1" chance="5.6965" /> <!-- Mold Hardener -->
-					<item id="4044" min="1" max="1" chance="21.8367" /> <!-- Thons -->
-					<item id="14166" min="1" max="1" chance="3.1647" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.7902" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.079" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.131" /> <!-- Earth Crystal -->
-					<item id="6577" min="1" max="1" chance="0.0044" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6578" min="1" max="1" chance="0.0291" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="5.2408" /> <!-- Earth Stone -->
-					<item id="15638" min="1" max="1" chance="0.3858" /> <!-- Vesper Fighter Piece -->
-					<item id="14052" min="1" max="1" chance="16.3776" /> <!-- Noble Enhancement Stone -->
-					<item id="2134" min="1" max="1" chance="1.3102" /> <!-- Gemstone S -->
-					<item id="9625" min="1" max="1" chance="0.1313" /> <!-- Giant's Codex - Oblivion -->
-				</group>
+				<item id="57" min="1380" max="3216" chance="70" /> <!-- Adena -->
+				<item id="14052" min="1" max="1" chance="10.85" /> <!-- Vesper Noble Enhancement Stone -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4040" min="1" max="1" chance="73.0488" /> <!-- Mold Lubricant -->
-				<item id="9628" min="1" max="1" chance="28.6466" /> <!-- Leonard -->
-				<item id="2134" min="1" max="1" chance="7.3049" /> <!-- Gemstone S -->
-				<item id="959" min="1" max="1" chance="0.1461" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15818" min="1" max="1" chance="0.2548" /> <!-- Recipe - Vesper Shaper (60%) -->
-				<item id="13467" min="1" max="1" chance="0.0051" /> <!-- Vesper Thrower -->
-				<item id="13457" min="1" max="1" chance="0.0051" /> <!-- Vesper Cutter -->
+				<item id="36532" min="1" max="1" chance="8.111" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.603" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1807,6 +1754,7 @@
 		</collision>
 	</npc>
 	<npc id="22847" level="85" type="L2Monster" name="Dragon Knight Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" /> <!-- Dragon Strike -->
 			<skill name="Skill02_ID" id="6762" level="1" /> <!-- Rage -->
@@ -1815,8 +1763,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="13978" /> <!-- rhand: Exclusive to Monsters (Mounted Troops High Level Leader) -->
 		<acquire exp="449029" sp="107" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32596.260118202" hpRegen="109.442978618283" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="32597" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="5858.11399706027" magical="4000.33245360119" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -1831,8 +1779,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -1852,40 +1798,20 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="17676" max="41234" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.024399999529123306">
-					<item id="13467" min="1" max="1" chance="7.8724" /> <!-- Vesper Thrower -->
-					<item id="14111" min="1" max="1" chance="92.1276" /> <!-- Sealed Vesper Shield -->
-				</group>
-				<group chance="36.29650115966797">
-					<item id="1895" min="1" max="3" chance="72.161" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="10.1025" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="3.9618" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.6586" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="2.4402" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.6093" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.0609" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0122" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.101" /> <!-- Earth Crystal -->
-					<item id="6577" min="1" max="1" chance="0.0034" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6578" min="1" max="1" chance="0.0225" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="4.041" /> <!-- Earth Stone -->
-					<item id="15634" min="1" max="1" chance="0.3" /> <!-- Vesper Cutter Piece -->
-					<item id="15669" min="1" max="1" chance="3.4246" /> <!-- Sealed Vesper Verteidiger Piece -->
-					<item id="9625" min="1" max="1" chance="0.101" /> <!-- Giant's Codex - Oblivion -->
-				</group>
+				<item id="57" min="929" max="2166" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="45930" min="1" max="1" chance="0.03" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4044" min="1" max="1" chance="69.7851" /> <!-- Thons -->
-				<item id="9630" min="1" max="1" chance="11.0187" /> <!-- Orichalcum -->
-				<item id="14052" min="1" max="1" chance="52.3388" /> <!-- Noble Enhancement Stone -->
-				<item id="13467" min="1" max="1" chance="0.0029" /> <!-- Vesper Thrower -->
-				<item id="15634" min="1" max="1" chance="1.2436" /> <!-- Vesper Cutter Piece -->
-				<item id="9554" min="1" max="1" chance="0.4187" /> <!-- Earth Crystal -->
-				<item id="6577" min="1" max="1" chance="0.014" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="0.093" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="36532" min="1" max="1" chance="5.552" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.073" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1894,6 +1820,7 @@
 		</collision>
 	</npc>
 	<npc id="22848" level="85" type="L2Monster" name="Drake Leader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6763" level="1" /> <!-- Dragon Earth Strike -->
@@ -1903,8 +1830,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="760465" sp="182" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="55817.8012671518" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="44210" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -1920,8 +1847,6 @@
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="1" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -1943,36 +1868,19 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="30896" max="72072" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.020099999383091927">
-					<item id="13459" min="1" max="1" chance="16.6666" /> <!-- Vesper Buster -->
-					<item id="13893" min="1" max="1" chance="83.3334" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-				<group chance="33.140201568603516">
-					<item id="1895" min="3" max="9" chance="49.3361" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="20.7212" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="8.1259" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="5.4529" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="5.0051" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="1.2498" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.125" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.2072" /> <!-- Earth Crystal -->
-					<item id="6577" min="1" max="1" chance="0.0069" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="6578" min="1" max="1" chance="0.046" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="8.2885" /> <!-- Earth Stone -->
-					<item id="15642" min="1" max="1" chance="0.6102" /> <!-- Vesper Caster Piece -->
-					<item id="15644" min="1" max="1" chance="0.618" /> <!-- Vesper Thrower Piece -->
-					<item id="9625" min="1" max="1" chance="0.2072" /> <!-- Giant's Codex - Oblivion -->
-				</group>
+				<item id="57" min="1648" max="3841" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="9629" min="1" max="1" chance="25.4558" /> <!-- Adamantine -->
-				<item id="2134" min="1" max="1" chance="11.7097" /> <!-- Gemstone S -->
-				<item id="13459" min="1" max="1" chance="0.0082" /> <!-- Vesper Buster -->
-				<item id="15642" min="1" max="1" chance="3.4481" /> <!-- Vesper Caster Piece -->
-				<item id="13893" min="1" max="1" chance="0.0408" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="36532" min="1" max="1" chance="9.68" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.812" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1981,6 +1889,7 @@
 		</collision>
 	</npc>
 	<npc id="22849" level="85" type="L2Monster" name="Drake Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6760" level="1" /> <!-- Dragon Strike -->
 		</parameters>
@@ -1988,8 +1897,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
 		<acquire exp="472121" sp="113" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="18605.9337557173" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="29474" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="10327.681831868" magical="7052.46788014386" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -2004,8 +1913,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -2026,38 +1933,20 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="17732" max="41364" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003800000064074993">
-					<item id="13465" min="1" max="1" chance="33.3333" /> <!-- Vesper Caster -->
-					<item id="13461" min="1" max="1" chance="33.3333" /> <!-- Vesper Fighter -->
-					<item id="13457" min="1" max="1" chance="33.3334" /> <!-- Vesper Cutter -->
-				</group>
-				<group chance="40.64080047607422">
-					<item id="1895" min="1" max="3" chance="74.5974" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="10.4436" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="4.0955" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.7483" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="2.5226" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.6299" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0209" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="4.1775" /> <!-- Earth Stone -->
-					<item id="15644" min="1" max="1" chance="0.3115" /> <!-- Vesper Thrower Piece -->
-					<item id="15642" min="1" max="1" chance="0.3075" /> <!-- Vesper Caster Piece -->
-					<item id="9626" min="1" max="1" chance="0.0697" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="920" max="2144" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="45930" min="1" max="1" chance="0.03" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4042" min="1" max="1" chance="40.0033" /> <!-- Enria -->
-				<item id="9629" min="1" max="1" chance="10.4356" /> <!-- Adamantine -->
-				<item id="14052" min="1" max="1" chance="60.005" /> <!-- Noble Enhancement Stone -->
-				<item id="959" min="1" max="1" chance="0.096" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15669" min="1" max="1" chance="16.2725" /> <!-- Sealed Vesper Verteidiger Piece -->
-				<item id="15817" min="1" max="1" chance="0.1674" /> <!-- Recipe - Vesper Buster (60%) -->
-				<item id="13457" min="1" max="1" chance="0.0033" /> <!-- Vesper Cutter -->
+				<item id="36532" min="1" max="1" chance="5.461" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.02" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2066,6 +1955,7 @@
 		</collision>
 	</npc>
 	<npc id="22850" level="85" type="L2Monster" name="Drake Scout">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6764" level="1" /> <!-- Dragon Earth Shot -->
 			<skill name="Skill02_ID" id="6761" level="1" /> <!-- Dragon Blow Strike -->
@@ -2074,8 +1964,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="13843" /> <!-- rhand: Draconic Peltast Weapon -->
 		<acquire exp="173004" sp="41" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32596.260118202" hpRegen="109.442978618283" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="16299" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="5858.11399706027" magical="4000.33245360119" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -2089,8 +1979,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -2111,39 +1999,21 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="8361" max="19504" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0017999999690800905">
-					<item id="13467" min="1" max="1" chance="50" /> <!-- Vesper Thrower -->
-					<item id="13458" min="1" max="1" chance="50" /> <!-- Vesper Slasher -->
-				</group>
-				<group chance="26.845800399780273">
-					<item id="1879" min="1" max="1" chance="53.8402" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="26.9201" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.5337" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.7002" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.4045" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="1.5606" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.3897" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.039" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0078" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.0646" /> <!-- Earth Crystal -->
-					<item id="9548" min="1" max="1" chance="2.5843" /> <!-- Earth Stone -->
-					<item id="15638" min="1" max="1" chance="0.1902" /> <!-- Vesper Fighter Piece -->
-					<item id="14052" min="1" max="1" chance="8.076" /> <!-- Noble Enhancement Stone -->
-					<item id="2134" min="1" max="1" chance="0.6461" /> <!-- Gemstone S -->
-					<item id="9626" min="1" max="1" chance="0.043" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="484" max="1127" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.03" /> <!-- Mid-grade Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="9554" min="1" max="1" chance="0.0075" /> <!-- Earth Crystal -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4041" min="1" max="1" chance="9.8412" /> <!-- Mold Hardener -->
-				<item id="9628" min="1" max="1" chance="8.8764" /> <!-- Leonard -->
-				<item id="2134" min="1" max="1" chance="2.2635" /> <!-- Gemstone S -->
-				<item id="9554" min="1" max="1" chance="0.2263" /> <!-- Earth Crystal -->
-				<item id="6577" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="0.0503" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="13459" min="1" max="1" chance="0.0016" /> <!-- Vesper Buster -->
+				<item id="36532" min="1" max="1" chance="2.808" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2152,6 +2022,7 @@
 		</collision>
 	</npc>
 	<npc id="22851" level="85" type="L2Monster" name="Drake Mage">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6766" level="1" /> <!-- Earth Tremor -->
 			<skill name="SpecialSkill01_ID" id="6765" level="1" /> <!-- Complete Recovery -->
@@ -2159,8 +2030,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="433245" sp="103" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="32596.260118202" hpRegen="109.442978618283" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="32597" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="5858.11399706027" magical="4000.33245360119" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -2176,8 +2047,6 @@
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
 			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -2197,35 +2066,19 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="18219" max="42501" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.004000000189989805">
-					<item id="13465" min="1" max="1" chance="33.3333" /> <!-- Vesper Caster -->
-					<item id="13461" min="1" max="1" chance="33.3333" /> <!-- Vesper Fighter -->
-					<item id="13457" min="1" max="1" chance="33.3334" /> <!-- Vesper Cutter -->
-				</group>
-				<group chance="45.22760009765625">
-					<item id="1895" min="1" max="3" chance="74.613" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="10.4458" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="4.0964" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.7489" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="2.5231" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="0.63" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0126" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="9548" min="1" max="1" chance="4.1783" /> <!-- Earth Stone -->
-					<item id="15642" min="1" max="1" chance="0.3076" /> <!-- Vesper Caster Piece -->
-					<item id="15644" min="1" max="1" chance="0.3115" /> <!-- Vesper Thrower Piece -->
-					<item id="9626" min="1" max="1" chance="0.0698" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="971" max="2263" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.03" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4042" min="1" max="1" chance="57.5431" /> <!-- Enria -->
-				<item id="9629" min="1" max="1" chance="15.0112" /> <!-- Adamantine -->
-				<item id="959" min="1" max="1" chance="0.1381" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15815" min="1" max="1" chance="0.2408" /> <!-- Recipe - Sealed Vesper Cutter (60%) -->
-				<item id="13458" min="1" max="1" chance="0.0048" /> <!-- Vesper Slasher -->
+				<item id="36532" min="1" max="1" chance="5.689" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.077" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2234,6 +2087,7 @@
 		</collision>
 	</npc>
 	<npc id="22852" level="85" type="L2Monster" name="Dragon Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6768" level="1" /> <!-- Stun Attack -->
@@ -2241,8 +2095,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="1316633" sp="315" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="55817.8012671518" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="88420" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -2257,8 +2111,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -2278,36 +2130,20 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="45317" max="105714" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.02930000051856041">
-					<item id="13462" min="1" max="1" chance="8.3929" /> <!-- Vesper Stormer -->
-					<item id="13461" min="1" max="1" chance="8.3929" /> <!-- Vesper Fighter -->
-					<item id="13893" min="1" max="1" chance="41.9647" /> <!-- Sealed Holy Spirit's Cloak -->
-					<item id="14108" min="1" max="1" chance="41.2495" /> <!-- Sealed Vesper Gaiters -->
-				</group>
-				<group chance="44.33369827270508">
-					<item id="1879" min="3" max="9" chance="33.9823" /> <!-- Cokes -->
-					<item id="1885" min="2" max="6" chance="25.4868" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="9.595" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="6.4388" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="5.319" /> <!-- Adamantine -->
-					<item id="14166" min="1" max="1" chance="5.91" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="1.4757" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.1476" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="9554" min="1" max="1" chance="0.2447" /> <!-- Earth Crystal -->
-					<item id="9548" min="1" max="1" chance="9.7869" /> <!-- Earth Stone -->
-					<item id="15644" min="1" max="1" chance="0.7297" /> <!-- Vesper Thrower Piece -->
-					<item id="15642" min="1" max="1" chance="0.7205" /> <!-- Vesper Caster Piece -->
-					<item id="9626" min="1" max="1" chance="0.163" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="2276" max="5306" chance="70" /> <!-- Adena -->
+				<item id="2134" min="1" max="1" chance="2.035" /> <!-- Gemstone (S-grade) -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="9628" min="1" max="1" chance="84.1937" /> <!-- Leonard -->
-				<item id="2134" min="1" max="1" chance="21.4694" /> <!-- Gemstone S -->
-				<item id="15669" min="1" max="1" chance="72.7776" /> <!-- Sealed Vesper Verteidiger Piece -->
-				<item id="13459" min="1" max="1" chance="0.015" /> <!-- Vesper Buster -->
+				<item id="36532" min="1" max="1" chance="12.99" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.608" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2316,6 +2152,7 @@
 		</collision>
 	</npc>
 	<npc id="22853" level="85" type="L2Monster" name="Dragon Mage">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6769" level="1" /> <!-- Petrify -->
@@ -2325,8 +2162,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
 		<acquire exp="696567" sp="167" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="55817.8012671518" hpRegen="187.410040552143" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="44210" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
 			<attribute>
@@ -2341,8 +2178,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2362,36 +2197,20 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66">
-					<item id="57" min="24497" max="57145" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.024299999698996544">
-					<item id="13460" min="1" max="1" chance="7.2979" /> <!-- Vesper Shaper -->
-					<item id="13463" min="1" max="1" chance="7.2979" /> <!-- Vesper Avenger -->
-					<item id="14111" min="1" max="1" chance="85.4042" /> <!-- Sealed Vesper Shield -->
-				</group>
-				<group chance="28.224300384521484">
-					<item id="1895" min="3" max="9" chance="49.4648" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="20.7752" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="8.1471" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="5.4672" /> <!-- Orichalcum -->
-					<item id="14166" min="1" max="1" chance="5.0182" /> <!-- Life Stone - Level 84 -->
-					<item id="14167" min="1" max="1" chance="1.253" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="14168" min="1" max="1" chance="0.1253" /> <!-- High-Grade Life Stone - Level 84 -->
-					<item id="14169" min="1" max="1" chance="0.0251" /> <!-- Top-Grade Life Stone - Level 84 -->
-					<item id="959" min="1" max="1" chance="0.0416" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="9548" min="1" max="1" chance="8.3101" /> <!-- Earth Stone -->
-					<item id="15636" min="1" max="1" chance="0.617" /> <!-- Vesper Buster Piece -->
-					<item id="15637" min="1" max="1" chance="0.617" /> <!-- Vesper Shaper Piece -->
-					<item id="9626" min="1" max="1" chance="0.1384" /> <!-- Giant's Codex - Discipline -->
-				</group>
+				<item id="57" min="1223" max="2851" chance="70" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="45930" min="1" max="1" chance="0.03" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4044" min="1" max="3" chance="77.371" /> <!-- Thons -->
-				<item id="9630" min="1" max="1" chance="24.433" /> <!-- Orichalcum -->
-				<item id="6578" min="1" max="1" chance="0.2063" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="15816" min="1" max="1" chance="0.3238" /> <!-- Recipe - Sealed Vesper Slasher (60%) -->
-				<item id="13460" min="1" max="1" chance="0.0065" /> <!-- Vesper Shaper -->
+				<item id="36532" min="1" max="1" chance="7.216" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.462" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2694,7 +2513,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="792" magical="960" />
@@ -2739,7 +2558,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
 			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1040" magical="1250" />
@@ -2786,7 +2605,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="816" magical="980" />
@@ -2830,7 +2649,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="816" magical="980" />
@@ -2874,7 +2693,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1458" magical="1275" />
@@ -2921,7 +2740,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
 			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1513" magical="1458" />
@@ -2971,7 +2790,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1485" magical="1430" />
@@ -3019,7 +2838,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1485" magical="1300" />
@@ -3067,7 +2886,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="792" magical="960" />
@@ -3109,7 +2928,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
 			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1040" magical="1250" />
@@ -3153,7 +2972,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="816" magical="980" />
@@ -3194,7 +3013,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="816" magical="980" />
@@ -3235,7 +3054,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1060" magical="1275" />
@@ -3278,7 +3097,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
 			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1513" magical="1458" />
@@ -3325,7 +3144,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1485" magical="1430" />
@@ -3370,7 +3189,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1080" magical="1300" />
@@ -3413,7 +3232,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="569701" sp="2264" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1188" magical="960" />
@@ -3457,7 +3276,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1211505" sp="4933" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
 			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1560" magical="1250" />
@@ -3504,7 +3323,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="892271" sp="3593" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1224" magical="980" />
@@ -3548,7 +3367,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="643256" sp="2590" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1224" magical="980" />
@@ -3592,7 +3411,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="998082" sp="4105" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="689" magical="1275" />
@@ -3637,7 +3456,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="2045722" sp="8596" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
 			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1513" magical="1458" />
@@ -3686,7 +3505,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1741611" sp="7250" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1485" magical="1430" />
@@ -3735,7 +3554,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="1287461" sp="5360" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="702" magical="1300" />
@@ -3782,7 +3601,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="569701" sp="2264" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
@@ -3825,7 +3644,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="1211505" sp="4933" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
 			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1300" magical="1250" />
@@ -3871,7 +3690,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="892271" sp="3593" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="980" />
@@ -3914,7 +3733,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="643256" sp="2590" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="980" />
@@ -3958,7 +3777,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="998082" sp="4105" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1325" magical="1403" />
@@ -4004,7 +3823,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="2045722" sp="8596" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="150172" hpRegen="7.5" mp="150172" mpRegen="2.7" />
 			<attack physical="40233" magical="34675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1513" magical="1458" />
@@ -4053,7 +3872,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="1741611" sp="7250" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="122945" hpRegen="7.5" mp="122945" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1485" magical="1430" />
@@ -4101,7 +3920,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="1287461" sp="5360" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="35613" magical="27981" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1350" magical="1430" />
@@ -4148,7 +3967,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="569701" sp="2264" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="41546" hpRegen="7.5" mp="41546" mpRegen="2.7" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
@@ -4189,7 +4008,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="1211505" sp="4933" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="96096" hpRegen="7.5" mp="96096" mpRegen="2.7" />
 			<attack physical="33688" magical="26469" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1300" magical="1250" />
@@ -4233,7 +4052,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="892271" sp="3593" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="71688" hpRegen="7.5" mp="71688" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="980" />
@@ -4274,7 +4093,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="643256" sp="2590" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="47792" hpRegen="7.5" mp="47792" mpRegen="2.7" />
 			<attack physical="25500" magical="17000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1020" magical="980" />
@@ -4316,7 +4135,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="998082" sp="4105" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1325" magical="1275" />

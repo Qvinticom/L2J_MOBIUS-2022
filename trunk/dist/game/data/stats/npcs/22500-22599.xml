@@ -592,6 +592,7 @@
 		</collision>
 	</npc>
 	<npc id="22537" level="95" type="L2Monster" name="Dragontroop Spellshifter">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -602,9 +603,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="131707" sp="2681" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="556923" hpRegen="110.577296732991" mp="1812.0" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="334154" hpRegen="10.5" mp="33087" mpRegen="3.6" />
 			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="582.692054494118" magical="639.583141129412" />
 			<attribute>
@@ -619,8 +620,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -640,42 +639,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6023" max="12057" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.312399864196777">
-					<item id="5313" min="1" max="1" chance="0.2166" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5514" min="1" max="1" chance="24.7834" /> <!-- Sealed Gauntlets of Nightmare Design -->
-					<item id="5314" min="1" max="1" chance="0.2166" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5502" min="1" max="1" chance="24.7834" /> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="5318" min="1" max="1" chance="0.2166" /> <!-- Sealed Majestic Gauntlets -->
-					<item id="5515" min="1" max="1" chance="24.7834" /> <!-- Sealed Majestic Gauntlets Design -->
-					<item id="5319" min="1" max="1" chance="0.2166" /> <!-- Sealed Majestic Boots -->
-					<item id="5503" min="1" max="1" chance="24.7834" /> <!-- Sealed Majestic Boots Lining -->
-				</group>
-				<group chance="22.62980079650879">
-					<item id="1879" min="1" max="1" chance="62.1431" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.0716" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9244" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9624" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6211" /> <!-- Adamantine -->
-					<item id="6855" min="1" max="1" chance="0.2774" /> <!-- Recipe: Sealed Imperial Crusader Gaiters (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="6703" min="1" max="1" chance="14.6325" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="6865" min="1" max="1" chance="0.3938" /> <!-- Recipe: Sealed Draconic Leather Armor (60%) -->
-				<item id="6704" min="1" max="1" chance="14.6325" /> <!-- Sealed Imperial Crusader Boots Design -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="29" />
 			<height normal="49.9" />
 		</collision>
 	</npc>
 	<npc id="22538" level="95" type="L2Monster" name="Dragontroop Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -687,9 +657,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13978" /> <!-- rhand: Exclusive to Monsters (Mounted Troops High Level Leader) -->
-		<acquire exp="174209" sp="3630" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="740707" hpRegen="111.50705124295" mp="1777.4" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="444425" hpRegen="10.5" mp="22058" mpRegen="3.6" />
 			<attack physical="5883.7041177888" magical="4065.07551523469" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="572.839225223529" magical="628.768339764706" />
 			<attribute>
@@ -704,8 +674,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -725,41 +693,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8154" max="16357" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.511600017547607">
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="37.30739974975586">
-					<item id="1879" min="1" max="1" chance="43.8104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="21.9052" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.0617" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.3835" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.1429" /> <!-- Adamantine -->
-					<item id="6857" min="1" max="1" chance="0.4895" /> <!-- Recipe: Sealed Imperial Crusader Gauntlets (60%) -->
-					<item id="1345" min="60" max="180" chance="29.2068" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="959" min="1" max="1" chance="0.0557" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="1894" min="1" max="1" chance="48.8959" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="48.8959" /> <!-- Crafted Leather -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="46.5" />
 		</collision>
 	</npc>
 	<npc id="22539" level="95" type="L2Monster" name="Dragontroop Commando">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -788,8 +728,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -809,35 +747,6 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="9574" max="19610" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0010000467300415">
-					<item id="81" min="1" max="1" chance="0.1131" /> <!-- Dragon Slayer -->
-					<item id="5529" min="1" max="1" chance="32.1652" /> <!-- Dragon Slayer Edge -->
-					<item id="151" min="1" max="1" chance="0.1131" /> <!-- Sword of Miracles -->
-					<item id="5546" min="1" max="1" chance="35.3304" /> <!-- Sword of Miracles Edge -->
-					<item id="2500" min="1" max="1" chance="0.1131" /> <!-- Dark Legion's Edge -->
-					<item id="5545" min="1" max="1" chance="32.1651" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="38.284000396728516">
-					<item id="1879" min="1" max="1" chance="43.8104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="21.9052" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.0617" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.3835" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.1429" /> <!-- Adamantine -->
-					<item id="6859" min="1" max="1" chance="0.4895" /> <!-- Recipe: Sealed Imperial Crusader Boots (60%) -->
-					<item id="1345" min="60" max="180" chance="29.2068" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5480" min="1" max="1" chance="6.4168" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.6356" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5481" min="1" max="1" chance="6.4168" /> <!-- Sealed Majestic Leather Armor Fabric -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="46.5" />
@@ -929,6 +838,7 @@
 		</collision>
 	</npc>
 	<npc id="22541" level="94" type="L2Monster" name="Dragontroop Infantry">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -940,9 +850,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
-		<acquire exp="150023" sp="3224" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="542125" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="21690" mpRegen="3.6" />
 			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="546.2" magical="599.528184" />
 			<attribute>
@@ -957,8 +867,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -978,37 +886,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8283" max="16910" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.8371000289916992">
-					<item id="270" min="1" max="1" chance="0.3503" /> <!-- Dragon Grinder -->
-					<item id="5538" min="1" max="1" chance="99.6497" /> <!-- Dragon Grinder Edge -->
-				</group>
-				<group chance="32.999298095703125">
-					<item id="1879" min="1" max="1" chance="43.882" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="21.941" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.065" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.3857" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.1447" /> <!-- Adamantine -->
-					<item id="6863" min="1" max="1" chance="0.3269" /> <!-- Recipe: Sealed Imperial Crusader Helmet (60%) -->
-					<item id="1345" min="60" max="180" chance="29.2547" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="43.3203" /> <!-- Crafted Leather -->
-				<item id="5488" min="1" max="1" chance="5.5596" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="3957" min="1" max="1" chance="0.5487" /> <!-- Recipe: Blessed Spiritshot S -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="42" />
 		</collision>
 	</npc>
 	<npc id="22542" level="95" type="L2Monster" name="Dragontroop Archmage">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -1020,9 +904,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="348337" sp="7618" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="740707" hpRegen="112.558039826218" mp="1743.0" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="444425" hpRegen="10.5" mp="33087" mpRegen="3.6" />
 			<attack physical="5827.40072171705" magical="4002.76724651153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="562.931629835294" magical="617.893411764706" />
 			<attribute>
@@ -1037,8 +921,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1058,36 +940,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="19603" max="40152" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.986899971961975">
-					<item id="289" min="1" max="1" chance="0.35" /> <!-- Soul Bow -->
-					<item id="5534" min="1" max="1" chance="99.65" /> <!-- Soul Bow Stave -->
-				</group>
-				<group chance="44.35419845581055">
-					<item id="1879" min="1" max="3" chance="45.1662" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="45.1662" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="4.2509" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="2.8526" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="2.3565" /> <!-- Adamantine -->
-					<item id="6865" min="1" max="1" chance="0.2076" /> <!-- Recipe: Sealed Draconic Leather Armor (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5495" min="1" max="1" chance="44.4619" /> <!-- Sealed Shield of Nightmare Fragment -->
-				<item id="5157" min="1" max="1" chance="1.3014" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="5502" min="1" max="1" chance="49.4518" /> <!-- Sealed Boots of Nightmare Lining -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="39.5" />
 		</collision>
 	</npc>
 	<npc id="22543" level="95" type="L2Monster" name="Dragontroop Wizard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -1099,9 +958,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="143086" sp="3023" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="556923" hpRegen="113.419259781018" mp="1708.8" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="334154" hpRegen="10.5" mp="33087" mpRegen="3.6" />
 			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="552.978032" magical="606.967992" />
 			<attribute>
@@ -1116,8 +975,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1181,9 +1038,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
-		<acquire exp="152884" sp="3273" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="542125" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="32535" mpRegen="3.6" />
 			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="546.2" magical="599.528184" />
 			<attribute>
@@ -1198,8 +1055,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1409,6 +1264,7 @@
 		</collision>
 	</npc>
 	<npc id="22547" level="93" type="L2Monster" name="Dragontroop Healer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
 			<skill name="Skill01_ID" id="5835" level="1" /> <!-- Major Heal -->
@@ -1418,9 +1274,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
-		<acquire exp="106262" sp="2238" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="541220" hpRegen="115.295936105422" mp="1641.0" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="324733" hpRegen="10.5" mp="31986" mpRegen="3.6" />
 			<attack physical="5679.07860126925" magical="3878.0744848375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="539.312128" magical="591.967824" />
 			<attribute>
@@ -1435,8 +1291,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1456,40 +1310,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="5890" max="12020" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.065899848937988">
-					<item id="6326" min="1" max="1" chance="0.1424" /> <!-- Sealed Majestic Necklace -->
-					<item id="6344" min="1" max="1" chance="20.8518" /> <!-- Sealed Majestic Necklace Beads -->
-					<item id="6327" min="1" max="1" chance="0.1899" /> <!-- Sealed Majestic Earring -->
-					<item id="6342" min="1" max="1" chance="32.2213" /> <!-- Sealed Majestic Earring Gemstone -->
-					<item id="6328" min="1" max="1" chance="0.2848" /> <!-- Sealed Majestic Ring -->
-					<item id="6346" min="1" max="1" chance="46.3098" /> <!-- Sealed Majestic Ring Gemstone -->
-				</group>
-				<group chance="19.408599853515625">
-					<item id="1879" min="1" max="1" chance="61.8851" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.9425" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.9122" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9543" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6144" /> <!-- Adamantine -->
-					<item id="6875" min="1" max="1" chance="0.6915" /> <!-- Recipe: Sealed Major Arcana Gloves (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5481" min="1" max="1" chance="3.9387" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="5277" min="1" max="1" chance="0.3901" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				<item id="5487" min="1" max="1" chance="3.9526" /> <!-- Sealed Robe of Nightmare Fabric -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="34.5" />
 		</collision>
 	</npc>
 	<npc id="22548" level="94" type="L2Monster" name="Dragontroop Lancer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -1499,9 +1326,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13843" /> <!-- rhand: Draconic Peltast Weapon -->
-		<acquire exp="170942" sp="3694" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="542125" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="21690" mpRegen="3.6" />
 			<attack physical="5746.81895750842" magical="3924.33235398589" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="546.2" magical="599.528184" />
 			<attribute>
@@ -1515,8 +1342,6 @@
 		</stats>
 		<status undying="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -1535,43 +1360,13 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="9493" max="19381" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.937600135803223">
-					<item id="5313" min="1" max="1" chance="0.2166" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5514" min="1" max="1" chance="24.7834" /> <!-- Sealed Gauntlets of Nightmare Design -->
-					<item id="5314" min="1" max="1" chance="0.2166" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5502" min="1" max="1" chance="24.7834" /> <!-- Sealed Boots of Nightmare Lining -->
-					<item id="5318" min="1" max="1" chance="0.2166" /> <!-- Sealed Majestic Gauntlets -->
-					<item id="5515" min="1" max="1" chance="24.7834" /> <!-- Sealed Majestic Gauntlets Design -->
-					<item id="5319" min="1" max="1" chance="0.2166" /> <!-- Sealed Majestic Boots -->
-					<item id="5503" min="1" max="1" chance="24.7834" /> <!-- Sealed Majestic Boots Lining -->
-				</group>
-				<group chance="37.8827018737793">
-					<item id="1879" min="1" max="1" chance="43.8104" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="21.9052" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.0617" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.3835" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.1429" /> <!-- Adamantine -->
-					<item id="6877" min="1" max="1" chance="0.4895" /> <!-- Recipe: Sealed Major Arcana Boots (60%) -->
-					<item id="1345" min="60" max="180" chance="29.2068" /> <!-- Shining Arrow -->
-				</group>
-			</death>
-			<corpse>
-				<item id="1894" min="1" max="1" chance="49.6499" /> <!-- Crafted Leather -->
-				<item id="1894" min="1" max="1" chance="49.6499" /> <!-- Crafted Leather -->
-				<item id="5488" min="1" max="1" chance="6.372" /> <!-- Sealed Majestic Robe Fabric -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="46.5" />
 		</collision>
 	</npc>
 	<npc id="22549" level="94" type="L2Monster" name="Dragontroop Lancer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -1597,8 +1392,6 @@
 		</stats>
 		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -1618,34 +1411,6 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="9493" max="19381" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.581200122833252">
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="31.215900421142578">
-					<item id="1879" min="1" max="1" chance="62.0281" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="31.014" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.919" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9588" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.6181" /> <!-- Adamantine -->
-					<item id="6879" min="1" max="1" chance="0.462" /> <!-- Recipe: Sealed Major Arcana Circlet (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5282" min="1" max="1" chance="0.6289" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				<item id="5495" min="1" max="1" chance="21.4869" /> <!-- Sealed Shield of Nightmare Fragment -->
-				<item id="1808" min="1" max="1" chance="0.6289" /> <!-- Recipe: Soulshot (S-Grade) -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="46.5" />
@@ -2119,6 +1884,7 @@
 		</collision>
 	</npc>
 	<npc id="22593" level="94" type="L2Monster" name="Dragontroop Magic Blader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -2131,9 +1897,9 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
-		<acquire exp="158040" sp="3388" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="542125" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="32535" mpRegen="3.6" />
 			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="546.2" magical="599.528184" />
 			<attribute>
@@ -2148,8 +1914,6 @@
 		</stats>
 		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2170,33 +1934,6 @@
 				<clan>DES_DRAGON</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8705" max="17772" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.200799942016602">
-					<item id="5312" min="1" max="1" chance="0.2496" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5527" min="1" max="1" chance="30.3187" /> <!-- Sealed Helm of Nightmare Design -->
-					<item id="5315" min="1" max="1" chance="0.3567" /> <!-- Sealed Shield of Nightmare -->
-					<item id="5495" min="1" max="1" chance="38.5067" /> <!-- Sealed Shield of Nightmare Fragment -->
-					<item id="5317" min="1" max="1" chance="0.2496" /> <!-- Sealed Majestic Circlet -->
-					<item id="5528" min="1" max="1" chance="30.3187" /> <!-- Sealed Majestic Circlet Design -->
-				</group>
-				<group chance="40.88399887084961">
-					<item id="1895" min="1" max="1" chance="89.3358" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="6.2535" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="2.4524" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.6457" /> <!-- Orichalcum -->
-					<item id="6901" min="1" max="1" chance="0.3126" /> <!-- Recipe: Shining Arrow (100%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="3036" min="1" max="1" chance="0.5767" /> <!-- Recipe: Spiritshot S -->
-				<item id="5488" min="1" max="1" chance="5.8428" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="1894" min="1" max="1" chance="45.527" /> <!-- Crafted Leather -->
-			</corpse>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="34.5" />

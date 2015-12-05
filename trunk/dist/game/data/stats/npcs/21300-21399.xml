@@ -443,6 +443,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21306" level="76" type="L2Monster" name="Disciple of Protection">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -459,8 +460,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- rhand: Monster Only(Einhasad Warrior) -->
 		<acquire exp="174825" sp="41" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8743" hpRegen="8.5" mp="1475.0" mpRegen="3" />
+		<stats>
+			<vitals hp="5518" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="209.50409325236" />
 			<attribute>
@@ -477,8 +478,6 @@
 		<skillList>
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -503,14 +502,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="108" max="252" chance="70" /> <!-- Adena -->
-				<item id="36524" min="1" max="1" chance="0.075" /> <!-- Orichalcum -->
+				<item id="57" min="455" max="1061" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -586,6 +584,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21308" level="77" type="L2Monster" name="Disciples of Punishment">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -601,8 +600,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- rhand: Monster Only(Einhasad Warrior) -->
 		<acquire exp="162676" sp="39" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="9055" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+		<stats>
+			<vitals hp="5714" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="212.557735094503" />
 			<attribute>
@@ -620,8 +619,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -647,11 +644,10 @@
 		<dropLists>
 			<death>
 				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
-				<item id="8731" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 70 -->
-				<item id="8741" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 70 -->
-				<item id="8751" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 70 -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="8761" min="1" max="1" chance="0.003" /> <!-- Top-grade Life Stone - Lv. 70 -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
@@ -662,6 +658,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21309" level="77" type="L2Monster" name="Disciples of Punishment">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -680,7 +677,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- rhand: Monster Only(Einhasad Warrior) -->
 		<acquire exp="169547" sp="40" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="10323" hpRegen="8.5" mp="1507.8" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="212.557735094503" />
@@ -700,8 +697,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -727,11 +722,10 @@
 		<dropLists>
 			<death>
 				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
-				<item id="8731" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 70 -->
-				<item id="8741" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 70 -->
-				<item id="8751" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 70 -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="8761" min="1" max="1" chance="0.003" /> <!-- Top-grade Life Stone - Lv. 70 -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
@@ -742,6 +736,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21310" level="78" type="L2Monster" name="Disciples of Authority">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -758,8 +753,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- rhand: Monster Only(Einhasad Shaman) -->
 		<acquire exp="166929" sp="40" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="9428" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+		<stats>
+			<vitals hp="5950" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="215.579412824268" />
 			<attribute>
@@ -777,8 +772,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -804,11 +797,10 @@
 		<dropLists>
 			<death>
 				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 76-->
-				<item id="8742" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 76 -->
-				<item id="8752" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 76-->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
 				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
@@ -819,6 +811,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21311" level="78" type="L2Monster" name="Disciples of Authority">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -834,7 +827,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- rhand: Monster Only(Einhasad Shaman) -->
 		<acquire exp="153910" sp="36" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="9428" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="215.579412824268" />
@@ -852,8 +845,6 @@
 		<skillList>
 			<skill id="4158" level="8" /> <!-- NPC Prominence - Magic -->
 			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -878,11 +869,10 @@
 		<dropLists>
 			<death>
 				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 76-->
-				<item id="8742" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 76 -->
-				<item id="8752" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 76-->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
 				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
@@ -3202,7 +3192,7 @@
 		<dropLists>
 			<death>
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
-				<item id="6681" min="1" max="1" chance="0.03" /> <!--Sealed Draconic Leather Gloves -->
+				<item id="6681" min="1" max="1" chance="0.03" /> <!-- Sealed Draconic Leather Gloves -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
@@ -4926,7 +4916,7 @@
 			<death>
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!--Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -7270,7 +7260,7 @@
 				<item id="305" min="1" max="1" chance="0.0009" /> <!-- Tallum Glaive -->
 				<item id="5541" min="1" max="1" chance="0.075" /> <!--  Tallum Glaive Edge -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite-->
-				<item id="36528" min="1" max="1" chance="0.3" /> <!--Metallic Fiber -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
 				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade)-->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade)-->
 				<item id="36558" min="1" max="1" chance="0.055" /> <!-- Accessory Gem (Mid-grade) -->

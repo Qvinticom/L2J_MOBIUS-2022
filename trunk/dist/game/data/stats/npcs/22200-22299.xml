@@ -3119,7 +3119,7 @@
 			<corpse>
 				<item id="36531" min="1" max="1" chance="0.75" /> <!-- Thread -->
 			</corpse>
-		</dropLists>        
+		</dropLists>
 	</npc>
 	<npc id="22233" level="5" type="L2Monster" name="Elder Black Wolf">
 		<parameters>
@@ -4772,6 +4772,7 @@
 		</dropLists>
 	</npc>
 	<npc id="22267" level="83" type="L2Monster" name="Dark Water Dragon">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4784,8 +4785,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="285365" sp="68" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="65569.2570829001" hpRegen="111.355378460862" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="65570" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="5589.57218651355" magical="3816.95321518099" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="566.178304" magical="621.45708" />
 			<attribute>
@@ -4799,8 +4800,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4821,25 +4820,23 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="24706" max="49558" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.036799907684326">
-					<item id="11976" min="1" max="1" chance="6.0879" /> <!-- Common Item - Tallum Glaive -->
-					<item id="5541" min="1" max="1" chance="93.9121" /> <!-- Tallum Glaive Edge -->
-				</group>
-				<group chance="33.59640121459961">
-					<item id="1895" min="3" max="9" chance="58.9598" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="24.7631" /> <!-- Mold Lubricant -->
-					<item id="9628" min="1" max="1" chance="9.711" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="6.5166" /> <!-- Orichalcum -->
-					<item id="959" min="1" max="1" chance="0.0495" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="305" min="1" max="1" chance="0.003" /> <!-- Tallum Glaive -->
+				<item id="57" min="431" max="1004" chance="70" /> <!-- Adena -->
+				<item id="5541" min="1" max="1" chance="0.75" /> <!-- Tallum Glaive Edge -->
+				<item id="6690" min="1" max="1" chance="0.3" /> <!-- Imperial Staff Head -->
+				<item id="36858" min="1" max="1" chance="0.0075" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="36891" min="1" max="1" chance="0.003" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36940" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
 			</death>
 			<corpse>
-				<item id="6901" min="1" max="1" chance="4.2222" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="6690" min="1" max="1" chance="9.1435" /> <!-- Imperial Staff Head -->
-				<item id="6901" min="1" max="1" chance="4.2222" /> <!-- Recipe: Shining Arrow (100%) -->
+				<item id="36532" min="1" max="1" chance="4.588" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>

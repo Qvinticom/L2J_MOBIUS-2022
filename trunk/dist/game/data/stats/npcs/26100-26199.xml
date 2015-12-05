@@ -35,11 +35,11 @@
 		</collision>
 	</npc>
 	<npc id="26102" level="99" type="L2RaidBoss" name="Dark Rider" title="Betrayed">
-		<!-- Source: http://l2on.net/en/?c=npc&id=26102 -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DRAGON</race>
 		<acquire exp="1121587236" sp="1794539" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="63772970" hpRegen="1500" mp="6377297" mpRegen="1000" />
+		<stats>
+			<vitals hp="63772973" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>

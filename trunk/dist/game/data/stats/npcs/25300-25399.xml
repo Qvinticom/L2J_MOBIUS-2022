@@ -860,6 +860,7 @@
 		</collision>
 	</npc>
 	<npc id="25322" level="66" type="L2RaidBoss" name="Demon's Agent Falston" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25323" count="3" respawnTime="360" weightPoint="1" /> <!-- Falston's Disciple -->
@@ -872,8 +873,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="6723" /> <!-- rhand: Monster Only(Vampire Warrior) -->
 		<acquire exp="111003598" sp="26640" raidPoints="2652" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="350517.310357172" hpRegen="112.374447843527" mp="1219.8" mpRegen="2.7" />
+		<stats>
+			<vitals hp="834583" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="1885.06250586742" magical="624.886061285576" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="830.18256" magical="405" evasion="-18" />
 			<attribute>
@@ -889,8 +890,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3627,6 +3626,7 @@
 		</collision>
 	</npc>
 	<npc id="25373" level="21" type="L2RaidBoss" name="Dagoniel's Herald Malex" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25374" count="3" respawnTime="360" weightPoint="1" /> <!-- Abyss Flyer -->
@@ -3637,8 +3637,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="529271" sp="127" raidPoints="248" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="59539" hpRegen="16.8269664693931" mp="205.2" mpRegen="1.5" />
+		<stats>
+			<vitals hp="59539" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="53.1275788089434" magical="3.16860505219161" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="269.19177" magical="131.32" evasion="-18" />
 			<attribute>
@@ -3655,8 +3655,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3675,12 +3673,13 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="315" min="1" max="1" chance="13.25" /> <!-- Divine Tome -->
-				<item id="46" min="1" max="1" chance="9.85" /> <!-- Bronze Helmet -->
-				<item id="627" min="1" max="1" chance="4" /> <!-- Aspis -->
-				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-				<item id="6576" min="1" max="1" chance="6.350" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-				<item id="6387" min="3" max="9" chance="21" /> <!-- Blessed Scroll of Resurrection for Pets -->
+				<item id="315" min="1" max="1" chance="12.87" /> <!-- Divine Tome -->
+				<item id="46" min="1" max="1" chance="9.71" /> <!-- Bronze Helmet -->
+				<item id="627" min="1" max="1" chance="3.976" /> <!-- Aspis -->
+				<item id="6387" min="3" max="9" chance="20.17" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="6576" min="1" max="1" chance="6.229" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.003966" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -4667,9 +4666,9 @@
 				<item id="2378" min="1" max="1" chance="3.900" /> <!-- Brigandine Gaiters -->
 				<item id="279" min="1" max="1" chance="1.150" /> <!-- Reinforced Long Bow -->
 				<item id="4562" min="1" max="3" chance="6.700" /> <!-- Greater Dye of MEN <Men+1 Wit-1> -->
-				<item id="4563" min="1" max="1" chance="13.25" /> <!-- Greater Dye of WIT <Wit+1 Int-1> -->
-				<item id="4564" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+1 Men-1> -->
-				<item id="955" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+					<item id="4563" min="1" max="1" chance="13.25" /> <!-- Greater Dye of WIT <Wit+1 Int-1> -->
+					<item id="4564" min="1" max="1" chance="13.50" /> <!-- Greater Dye of WIT <Wit+1 Men-1> -->
+					<item id="955" min="1" max="1" chance="13" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
 			</death>
 		</dropLists>
 	</npc>

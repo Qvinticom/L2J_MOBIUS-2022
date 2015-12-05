@@ -2367,6 +2367,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20463" level="13" type="L2Monster" name="Dungeon Skeleton Archer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2375,9 +2376,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="275" /> <!-- rhand: Long Bow -->
-		<acquire exp="595" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="214.61578" hpRegen="2.5" mp="132.64" mpRegen="1.2" />
+		<acquire exp="595" sp="0" />
+		<stats>
+			<vitals hp="215" hpRegen="2.5" mp="132" mpRegen="1.2" />
 			<attack physical="25.04271" magical="17.10092" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="68.67458" magical="45.7243124542497" />
 			<attribute>
@@ -2393,8 +2394,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -2417,13 +2416,15 @@
 			<death>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.475" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.484" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20464" level="12" type="L2Monster" name="Dungeon Skeleton Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -2432,9 +2433,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
-		<acquire exp="545" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
+		<acquire exp="545" sp="0" />
+		<stats>
+			<vitals hp="200" hpRegen="2.5" mp="124" mpRegen="1.2" />
 			<attack physical="22.99606" magical="15.70333" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="66.32989" magical="44.163184477748" />
 			<attribute>
@@ -2450,8 +2451,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2473,10 +2472,11 @@
 		<dropLists>
 			<death>
 				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="36556" min="1" max="1" chance="1.400" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36556" min="1" max="1" chance="1.421" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.300" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.314" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -4056,10 +4056,10 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="40" min="1" max="1" chance="1.627" /> <!-- Leather Boots -->
-					<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
-					<item id="735" min="1" max="1" chance="0.75" /> <!-- Haste Potion -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="40" min="1" max="1" chance="1.627" /> <!-- Leather Boots -->
+				<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
+				<item id="735" min="1" max="1" chance="0.75" /> <!-- Haste Potion -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4093,7 +4093,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4151,9 +4151,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="45" min="1" max="1" chance="2.417" /> <!-- Bone Helmet -->
-					<item id="57" min="38" max="87" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="45" min="1" max="1" chance="2.417" /> <!-- Bone Helmet -->
+				<item id="57" min="38" max="87" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4187,7 +4187,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4242,9 +4242,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="604" min="1" max="1" chance="2.84" /> <!-- Quality Leather Gloves -->
-					<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="604" min="1" max="1" chance="2.84" /> <!-- Quality Leather Gloves -->
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4278,7 +4278,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4334,9 +4334,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="123" min="1" max="1" chance="0.3" /> <!-- Saber -->
-					<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="123" min="1" max="1" chance="0.3" /> <!-- Saber -->
+				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4370,7 +4370,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4426,9 +4426,10 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="221" min="1" max="1" chance="0.3" /> <!-- Assassin Knife -->
-					<item id="57" min="25" max="58" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky -->
+				<item id="221" min="1" max="1" chance="0.3" /> <!-- Assassin Knife -->
+				<item id="57" min="25" max="58" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 -->
+				<!-- Lucky -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4462,7 +4463,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -4518,9 +4519,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="291" min="1" max="1" chance="0.3" /> <!-- Trident -->
-					<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="291" min="1" max="1" chance="0.3" /> <!-- Trident -->
+				<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4554,7 +4555,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>

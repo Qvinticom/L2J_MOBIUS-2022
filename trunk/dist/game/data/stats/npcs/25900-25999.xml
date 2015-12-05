@@ -3,7 +3,7 @@
 	<npc id="25900" level="99" type="L2Npc" name="Skill Lind">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="88000" magical="66000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="3540" />
@@ -191,7 +191,7 @@
 	<npc id="25903" level="95" type="L2Npc" name="Gigantic Golem Subordinate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="32481" hpRegen="7.5" mp="32481" mpRegen="2.7" />
 			<attack physical="80000" magical="60000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="4608" magical="3300" />
@@ -218,7 +218,7 @@
 	<npc id="25904" level="95" type="L2Npc" name="Gigantic Golem Subordinate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="32481" hpRegen="7.5" mp="32481" mpRegen="2.7" />
 			<attack physical="80000" magical="60000" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="4608" magical="3300" />
@@ -245,7 +245,7 @@
 	<npc id="25905" level="92" type="L2Npc" name="Queen Ant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="95760031" hpRegen="7.5" mp="95760031" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -273,7 +273,7 @@
 	<npc id="25906" level="92" type="L2Npc" name="Queen Ant Larva">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1023" hpRegen="7.5" mp="1023" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -299,7 +299,7 @@
 	<npc id="25907" level="92" type="L2Npc" name="Nurse Ant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="6920" hpRegen="7.5" mp="6920" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -326,7 +326,7 @@
 	<npc id="25908" level="92" type="L2Npc" name="Escort Ant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7513" hpRegen="7.5" mp="7513" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -352,7 +352,7 @@
 	<npc id="25909" level="92" type="L2Npc" name="Royal Guard Ant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="12198" hpRegen="7.5" mp="12198" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -378,7 +378,7 @@
 	<npc id="25910" level="92" type="L2Npc" name="Orfen">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="115920004" hpRegen="7.5" mp="115920004" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -406,7 +406,7 @@
 	<npc id="25911" level="92" type="L2Npc" name="Laikel">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -432,7 +432,7 @@
 	<npc id="25912" level="92" type="L2Npc" name="Laikel Leos">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -458,7 +458,7 @@
 	<npc id="25913" level="92" type="L2Npc" name="Riba">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -484,7 +484,7 @@
 	<npc id="25914" level="92" type="L2Npc" name="Riba Iren">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BUG</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="18370" hpRegen="7.5" mp="18370" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -511,7 +511,7 @@
 	<npc id="25915" level="92" type="L2Npc" name="Anakim" title="Flames of Sacred Fire">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DIVINE</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="1645147" hpRegen="7.5" mp="1645147" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -537,7 +537,7 @@
 	<npc id="25916" level="92" type="L2Npc" name="Anakim's Guardian">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DIVINE</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="172116" hpRegen="7.5" mp="172116" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -564,7 +564,7 @@
 	<npc id="25917" level="92" type="L2Npc" name="Anakim's Royal Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DIVINE</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="86058" hpRegen="7.5" mp="86058" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -591,7 +591,7 @@
 	<npc id="25918" level="92" type="L2Npc" name="Anakim's Executor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DIVINE</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="86058" hpRegen="7.5" mp="86058" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -618,7 +618,7 @@
 	<npc id="25919" level="92" type="L2Npc" name="Lilith" title="Holy Mother of Abyss">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="1645147" hpRegen="7.5" mp="1645147" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -645,7 +645,7 @@
 	<npc id="25920" level="92" type="L2Npc" name="Lilith' Agent">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="115318" hpRegen="7.5" mp="115318" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -672,7 +672,7 @@
 	<npc id="25921" level="92" type="L2Npc" name="Lilith' Escort">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="172116" hpRegen="7.5" mp="172116" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -769,7 +769,7 @@
 	<npc id="25924" level="99" type="L2Npc" name="Nerva Orc Linebreaker">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="548122" hpRegen="7.5" mp="548122" mpRegen="2.7" />
 			<attack physical="500000" magical="66000" random="30" critical="4" accuracy="4.75" attackSpeed="398" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3520" magical="3540" />
@@ -796,7 +796,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<acquire exp="5845590" sp="28929" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="246654" hpRegen="7.5" mp="246654" mpRegen="2.7" />
 			<attack physical="73040" magical="45540" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2429" magical="2443" />
@@ -826,7 +826,7 @@
 	<npc id="25926" level="99" type="L2Npc" name="Gel" title="Part of Krogel">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="246654" hpRegen="7.5" mp="246654" mpRegen="2.7" />
 			<attack physical="73040" magical="45540" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2429" magical="2443" />
@@ -1058,7 +1058,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
 		<acquire exp="1188371250" sp="4753485" />
-		<stats> <!-- str="164" int="188" dex="55" wit="78" con="111" men="149" -->
+		<stats>
 			<vitals hp="5116283" hpRegen="7.5" mp="5116283" mpRegen="2.7" />
 			<attack physical="1000000" magical="165000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="7320" magical="8850" />
@@ -1351,7 +1351,7 @@
 	<npc id="25934" level="93" type="L2Monster" name="Garden Patrol Minion" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2750" magical="2650" />
@@ -1377,7 +1377,7 @@
 	<npc id="25935" level="93" type="L2Monster" name="Gardener Minion" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2750" magical="2650" />
@@ -1403,7 +1403,7 @@
 	<npc id="25936" level="93" type="L2Monster" name="Garden Manager Minion" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2750" magical="2650" />
@@ -1512,7 +1512,7 @@
 	<npc id="25938" level="95" type="L2Monster" name="Spicula Fighter Minion" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
 			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3200" magical="3300" />
@@ -1538,7 +1538,7 @@
 	<npc id="25939" level="95" type="L2Monster" name="Spicula Archer Minion" title="Raid Fighter">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="556923" hpRegen="7.5" mp="556923" mpRegen="2.7" />
 			<attack physical="80000" magical="60000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3200" magical="3300" />
@@ -3426,11 +3426,11 @@
 		</dropLists>
 	</npc>
 	<npc id="25972" level="97" type="L2RaidBoss" name="Dephracor" title="Raid Boss">
-		<!-- Source: http://l2on.net/en/?c=npc&id=25972 -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="9058597718" sp="2174063" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="44259292" hpRegen="1500" mp="4425929" mpRegen="1000" />
+		<stats>
+			<vitals hp="44259295" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
 			<attribute>
@@ -3445,10 +3445,12 @@
 		</stats>
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<skillList>
-			<skill id="4295" level="1" />
-			<skill id="4279" level="1" />
-			<skill id="4312" level="1" />
-			<skill id="141" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16291" level="1" /> <!-- 97Lv. Raid Boss -->
 		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -3457,52 +3459,53 @@
 		</collision>
 		<dropLists>
 			<death>
+				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
+				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet -->
+				<item id="17410" min="1" max="1" chance="0.75" /> <!-- Seraph Gloves -->
+				<item id="17411" min="1" max="1" chance="0.75" /> <!-- Seraph Shoes -->
+				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="19513" min="1" max="1" chance="34.43" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
+				<item id="19511" min="1" max="1" chance="33.84" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
+				<item id="19512" min="1" max="1" chance="33.56" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
+				<item id="17685" min="3" max="3" chance="16.7" /> <!-- Lv. 4 Ancient STR Dye -->
+				<item id="17689" min="3" max="3" chance="16.56" /> <!-- Lv. 4 Ancient WIT Dye -->
+				<item id="17687" min="3" max="3" chance="16.32" /> <!-- Lv. 4 Ancient CON Dye -->
+				<item id="17690" min="3" max="3" chance="16.03" /> <!-- Lv. 4 Ancient MEN Dye -->
+				<item id="17688" min="3" max="3" chance="15.96" /> <!-- Lv. 4 Ancient INT Dye -->
+				<item id="17686" min="3" max="3" chance="15.83" /> <!-- Lv. 4 Ancient DEX Dye -->
+				<item id="38574" min="1" max="1" chance="2.366" /> <!-- Apparition Stone (Lv. 98) -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
-				<item id="17410" min="1" max="1" chance="0.75" /> <!-- Seraph Gloves Robe -->
 				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
-				<item id="17411" min="1" max="1" chance="0.75" /> <!-- Seraph Shoes Robe -->
 				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
-				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Robe -->
 				<item id="38020" min="1" max="1" chance="0.3" /> <!-- Specter Buster Crafting Pack -->
 				<item id="38021" min="1" max="1" chance="0.3" /> <!-- Specter Caster Crafting Pack -->
 				<item id="38022" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Crafting Pack -->
-				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack Light Armor -->
-				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack Light Armor -->
-				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack Robe -->
-				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack Robe -->
-				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack Robe -->
-				<item id="17685" min="3" max="3" chance="27.2727" /> <!-- Lv. 4 Ancient STR Dye STR +5 / DEX - 2 / Fire Resistance +20 -->
-				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack Robe -->
-				<item id="17686" min="3" max="3" chance="9.0909" /> <!-- Lv. 4 Ancient DEX Dye DEX +5 / CON - 2 / Earth Resistance +20 -->
-				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack Robe -->
-				<item id="17687" min="3" max="3" chance="9.0909" /> <!-- Lv. 4 Ancient CON Dye CON +5 / STR - 2 / Dark Resistance +20 -->
-				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack Robe -->
-				<item id="17688" min="3" max="3" chance="40.909" /> <!-- Lv. 4 Ancient INT Dye INT +5 / WIT - 2 / Water Resistance +20 -->
-				<item id="17689" min="3" max="3" chance="9.0909" /> <!-- Lv. 4 Ancient WIT Dye WIT +5 / MEN - 2 / Wind Resistance +20 -->
-				<item id="17690" min="3" max="3" chance="4.5454" /> <!-- Lv. 4 Ancient MEN Dye MEN +5 / INT - 2 / Holy Resistance +20 -->
-				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
-				<item id="38574" min="1" max="1" chance="2.286" /> <!-- Apparition Stone (Lv. 98) -->
-				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="19511" min="1" max="1" chance="36.3636" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
-				<item id="19512" min="1" max="1" chance="22.7272" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
-				<item id="19513" min="1" max="1" chance="40.909" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
-				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Heavy Armor -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack -->
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
-				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
-				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
-				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet Robe -->
-				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>

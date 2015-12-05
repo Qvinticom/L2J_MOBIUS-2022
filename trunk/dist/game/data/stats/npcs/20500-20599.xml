@@ -47,9 +47,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="5285" min="1" max="1" chance="0.3" /> <!-- Heavy Sword -->
-					<item id="57" min="24" max="56" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="5285" min="1" max="1" chance="0.3" /> <!-- Heavy Sword -->
+				<item id="57" min="24" max="56" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -83,7 +83,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -141,9 +141,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="7880" min="1" max="1" chance="0.3" /> <!-- Steel Sword -->
-					<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="7880" min="1" max="1" chance="0.3" /> <!-- Steel Sword -->
+				<item id="57" min="31" max="73" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -177,7 +177,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -280,6 +280,7 @@
 		</collision>
 	</npc>
 	<npc id="20504" level="14" type="L2Monster" name="Dread Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -288,9 +289,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- rhand: Skeleton Dagger -->
-		<acquire exp="636" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="230.38548" hpRegen="2.5" mp="140.88" mpRegen="1.2" />
+		<acquire exp="636" sp="0" />
+		<stats>
+			<vitals hp="231" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<attack physical="27.24646" magical="18.6058" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="71.08179" magical="47.3270583783809" />
 			<attribute>
@@ -306,8 +307,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -324,23 +323,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="97" max="143" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.888700008392334">
-					<item id="20" min="1" max="1" chance="58.8462" /> <!-- Buckler -->
-					<item id="43" min="1" max="1" chance="41.1538" /> <!-- Wooden Helmet -->
-				</group>
-				<group chance="7.7357001304626465">
-					<item id="1870" min="1" max="1" chance="48.227" /> <!-- Coal -->
-					<item id="1865" min="1" max="1" chance="48.227" /> <!-- Varnish -->
-					<item id="1792" min="1" max="1" chance="3.546" /> <!-- Recipe: Short Spear -->
-				</group>
+				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
+				<item id="36556" min="1" max="1" chance="1.479" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="2010" min="1" max="1" chance="0.7372" /> <!-- Brandish Blade -->
-				<item id="1792" min="1" max="1" chance="1.393" /> <!-- Recipe: Short Spear -->
-				<item id="1921" min="1" max="1" chance="12.2225" /> <!-- Leather Shoes Texture -->
+				<item id="36531" min="1" max="1" chance="3.484" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2384,9 +2372,9 @@
 		</ai>
 		<dropLists>
 			<death>
-					<item id="7885" min="1" max="1" chance="0.075" /> <!-- Priest Sword -->
-					<item id="57" min="19" max="44" chance="70" /> <!-- Adena -->
-					<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="7885" min="1" max="1" chance="0.075" /> <!-- Priest Sword -->
+				<item id="57" min="19" max="44" chance="70" /> <!-- Adena -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -2420,7 +2408,7 @@
 				</group>
 			</death>
 			<corpse>
-					<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 		<collision>

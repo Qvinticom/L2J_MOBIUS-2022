@@ -2840,6 +2840,7 @@
 		</collision>
 	</npc>
 	<npc id="20958" level="68" type="L2Monster" name="Death Agent">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2855,8 +2856,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire exp="8116" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+		<stats>
+			<vitals hp="1173" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -2873,8 +2874,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2893,34 +2892,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="742" max="1509" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5715000033378601">
-					<item id="12225" min="1" max="1" chance="6.7053" /> <!-- Common Item - Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="33.9386" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="12226" min="1" max="1" chance="4.6976" /> <!-- Common Item - Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="24.9804" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="12234" min="1" max="1" chance="4.6976" /> <!-- Common Item - Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="24.9805" /> <!-- Sealed Tallum Helm Design -->
-				</group>
-				<group chance="16.02039909362793">
-					<item id="1872" min="1" max="1" chance="46.1215" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="46.1215" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.6121" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.3061" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.3008" /> <!-- Mold Hardener -->
-					<item id="5156" min="1" max="1" chance="0.0461" /> <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
-					<item id="8730" min="1" max="1" chance="0.3843" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.0961" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0096" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0019" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="31" max="72" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="5478" min="1" max="1" chance="1.5776" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="1807" min="1" max="1" chance="0.2501" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="1807" min="1" max="1" chance="0.2501" /> <!-- Recipe: Soulshot (A-Grade) -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2929,6 +2908,7 @@
 		</collision>
 	</npc>
 	<npc id="20959" level="70" type="L2Monster" name="Dark Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2944,8 +2924,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="124" /> <!-- rhand: Two-Handed Sword -->
 		<acquire exp="12477" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats>
+			<vitals hp="1223" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -2961,8 +2941,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="7" /> <!-- Stun -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2981,35 +2959,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1195" max="2431" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4787999987602234">
-					<item id="12232" min="1" max="1" chance="4.5113" /> <!-- Common Item - Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="26.1184" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="12223" min="1" max="1" chance="2.7732" /> <!-- Common Item - Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="18.3787" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="12235" min="1" max="1" chance="7.2233" /> <!-- Common Item - Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="40.9951" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="14.35990047454834">
-					<item id="1871" min="1" max="1" chance="56.4912" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="1" chance="37.6608" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="2.2596" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.4912" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.1298" /> <!-- Mold Lubricant -->
-					<item id="4953" min="1" max="1" chance="1.0885" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
-					<item id="5281" min="1" max="1" chance="0.0753" /> <!-- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%) -->
-					<item id="8730" min="1" max="1" chance="0.6277" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.1569" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0157" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0033" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="50" max="116" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4054" min="1" max="1" chance="5.9502" /> <!-- Necklace of Black Ore Beads -->
-				<item id="5478" min="1" max="1" chance="2.5403" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="1807" min="1" max="1" chance="0.4028" /> <!-- Recipe: Soulshot (A-Grade) -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -5681,7 +5638,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CROC</clan>
 			</clanList>
@@ -5911,7 +5868,7 @@
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
 				<clan>CROC</clan>
 			</clanList>

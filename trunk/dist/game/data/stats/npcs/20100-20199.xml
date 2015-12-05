@@ -468,7 +468,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-			<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CROC2</clan>
 			</clanList>
@@ -523,6 +523,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20136" level="50" type="L2Monster" name="Death Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -548,8 +549,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- rhand: Caliburs -->
 		<acquire exp="32821" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="4266" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<attribute>
@@ -567,8 +568,6 @@
 			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
 			<skill id="4072" level="5" /> <!-- Stun -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -592,10 +591,11 @@
 		<dropLists>
 			<death>
 				<item id="57" min="275" max="642" chance="70" /> <!-- Adena -->
-				<item id="1539" min="1" max="1" chance="14.25" /> <!-- Major Healing Potion -->
+				<item id="1539" min="1" max="1" chance="14.18" /> <!-- Major Healing Potion -->
 				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<item id="45929" min="1" max="4" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -629,12 +629,13 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="36537" min="1" max="1" chance="2.500" /> <!-- Leather Braid -->
-				<item id="36557" min="1" max="1" chance="1.525" /> <!-- Accessory Gem -->
+				<item id="36537" min="1" max="1" chance="2.492" /> <!-- Leather Braid -->
+				<item id="36557" min="1" max="1" chance="1.539" /> <!-- Accessory Gem -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20137" level="57" type="L2Monster" name="Drake">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -649,8 +650,8 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="8675" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1776.58018" hpRegen="6.5" mp="948.0" mpRegen="2.4" />
+		<stats>
+			<vitals hp="1777" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<attack physical="424.23295" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="155.259456846417" />
 			<attribute>
@@ -666,8 +667,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -690,13 +689,12 @@
 		<dropLists>
 			<death>
 				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
-				<item id="8727" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 58 -->
-				<item id="8737" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 58 -->
-				<item id="8747" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 58 -->
-				<item id="8757" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 58 -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="7.500" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.462" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
@@ -1208,12 +1206,12 @@
 		</collision>
 		<dropLists>
 			<death>
-					<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
-					<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
 					<item id="8725" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8735" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 52 -->
+				<item id="8745" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 52 -->
+				<item id="8755" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 52 -->
 			</death>
 			<corpse>
 				<item id="36531" min="1" max="1" chance="8.500" /> <!-- Thread -->
@@ -3096,7 +3094,7 @@
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
-		</collision>        
+		</collision>
 		<dropLists>
 			<death>
 				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->

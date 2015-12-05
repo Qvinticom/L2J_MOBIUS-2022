@@ -91,39 +91,67 @@
 			</corpse>
 		</dropLists>
 	</npc>
-	<npc id="19504" level="99" type="L2Npc" name="Deathmoz" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="19504" level="99" type="L2Monster" name="Deathmoz" title="Disciplined">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="350797" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="21755475" sp="52213" />
+		<stats>
+			<vitals hp="210479" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="19505" level="99" type="L2Npc" name="Deathmoz" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="19505" level="99" type="L2Monster" name="Deathmoz" title="Magical">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="210479" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="4079150" sp="9789" />
+		<stats>
+			<vitals hp="144704" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="16" />
 			<height normal="52" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="57" min="8651" max="20148" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36898" min="1" max="1" chance="0.0075" /> <!-- Recipe: Quality Leather Braid - Combination -->
+				<item id="40049" min="1" max="1" chance="41.49" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="4.141" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="19506" level="99" type="L2Npc" name="Flox Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -600,22 +628,39 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="19553" level="99" type="L2Npc" name="Dimensional Imp" title="Treasure Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="19553" level="99" type="L2Monster" name="Dimensional Imp" title="Treasure Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="139204" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="41869872" sp="100487" />
+		<stats>
+			<vitals hp="87827" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="16.5" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="40045" min="1" max="1" chance="4.187" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40042" min="1" max="1" chance="4.1715" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="1" chance="4.569" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="1" chance="4.1535" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40043" min="1" max="1" chance="4.1455" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="1" chance="4.142" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="1" chance="4.0685" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="1" chance="4.0675" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</death>
+		</dropLists>
 	</npc>
 	<npc id="19554" level="99" type="L2Npc" name="Unworldly Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

@@ -1227,6 +1227,7 @@
 		</collision>
 	</npc>
 	<npc id="20611" level="32" type="L2Monster" name="Dre Vanul Warrior">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1242,9 +1243,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4155" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+		<acquire exp="4155" sp="0" />
+		<stats>
+			<vitals hp="1338" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -1262,8 +1263,6 @@
 			<skill id="4002" level="3" /> <!-- NPC HP Drain -->
 			<skill id="4047" level="3" /> <!-- Hold -->
 			<skill id="4098" level="3" /> <!-- Silence -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1282,30 +1281,10 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="390" max="782" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.15780000388622284">
-					<item id="86" min="1" max="1" chance="1.2938" /> <!-- Tomahawk -->
-					<item id="179" min="1" max="1" chance="1.2938" /> <!-- Mace of Prayer -->
-					<item id="180" min="1" max="1" chance="1.2938" /> <!-- Mace of Judgment -->
-					<item id="2022" min="1" max="1" chance="49.929" /> <!-- Mace of Judgment Head -->
-					<item id="181" min="1" max="1" chance="1.2938" /> <!-- Mace of Miracle -->
-					<item id="182" min="1" max="1" chance="1.2938" /> <!-- Doom Hammer -->
-					<item id="183" min="1" max="1" chance="1.2938" /> <!-- Mystic Staff -->
-					<item id="184" min="1" max="1" chance="1.2938" /> <!-- Conjuror's Staff -->
-					<item id="2023" min="1" max="1" chance="39.7205" /> <!-- Conjuror's Staff Head -->
-					<item id="185" min="1" max="1" chance="1.2939" /> <!-- Staff of Mana -->
-				</group>
-				<group chance="40.900001525878906">
-					<item id="1864" min="1" max="1" chance="35.3334" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="17.6667" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="7.0667" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="10.8718" /> <!-- Cord -->
-					<item id="1829" min="1" max="1" chance="7.0667" /> <!-- Scroll of Escape: Clan Hall -->
-					<item id="2193" min="1" max="1" chance="2.365" /> <!-- Recipe: Boots of Power -->
-					<item id="1834" min="1" max="1" chance="19.6297" /> <!-- Emergency Dressing -->
-				</group>
+				<item id="125" min="1" max="1" chance="0.03" /> <!-- Spinebone Sword -->
+				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="1834" min="1" max="1" chance="5.4085" /> <!-- Emergency Dressing -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -1339,9 +1318,7 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2153" min="1" max="1" chance="14.3948" /> <!-- Recipe: Tiger's Eye Earring -->
-				<item id="467" min="1" max="1" chance="0.3857" /> <!-- Dark Stockings -->
-				<item id="1884" min="1" max="1" chance="56.9592" /> <!-- Cord -->
+				<item id="36531" min="1" max="1" chance="17.43" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -5918,6 +5895,7 @@
 		</collision>
 	</npc>
 	<npc id="20664" level="50" type="L2Monster" name="Deprive">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -5929,11 +5907,11 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="DDMagic" id="4039" level="5" /> <!-- NPC MP Drain -->
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<sex>MALE</sex>
 		<acquire exp="6609" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1422" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" />
 			<attribute>
@@ -5948,8 +5926,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4039" level="5" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -5963,31 +5939,9 @@
 		<ai aggroRange="500" clanHelpRange="300" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="582" max="1182" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.8207999467849731">
-					<item id="64" min="1" max="1" chance="0.8845" /> <!-- Composite Boots -->
-					<item id="2956" min="1" max="1" chance="49.1155" /> <!-- Composite Boots Part -->
-					<item id="608" min="1" max="1" chance="0.8845" /> <!-- Mithril Gauntlets -->
-					<item id="1981" min="1" max="1" chance="49.1155" /> <!-- Mithril Gauntlets Design -->
-				</group>
-				<group chance="14.984700202941895">
-					<item id="1867" min="1" max="1" chance="38.6503" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="38.6503" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.4417" /> <!-- Leather -->
-					<item id="1894" min="1" max="1" chance="1.0171" /> <!-- Crafted Leather -->
-					<item id="4042" min="1" max="1" chance="0.4831" /> <!-- Enria -->
-					<item id="2234" min="1" max="1" chance="0.432" /> <!-- Recipe: Divine Stockings -->
-					<item id="4609" min="1" max="1" chance="0.0644" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="2356" min="1" max="1" chance="0.0473" /> <!-- Recipe: Demon's Staff -->
-					<item id="6669" min="1" max="1" chance="6.7413" /> <!-- Deluxe Chest Key - Grade 5 -->
-					<item id="8725" min="1" max="1" chance="0.8052" /> <!-- Life Stone - Level 52 -->
-					<item id="8735" min="1" max="1" chance="0.2013" /> <!-- Mid-Grade Life Stone - Level 52 -->
-					<item id="8745" min="1" max="1" chance="0.0201" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8755" min="1" max="1" chance="0.004" /> <!-- Top-Grade Life Stone - Level 52 -->
-					<item id="1539" min="1" max="1" chance="6.4419" /> <!-- Greater Healing Potion -->
-				</group>
+				<item id="57" min="24" max="57" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6021,9 +5975,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2098" min="1" max="1" chance="0.7876" /> <!-- Nirvana Axe Blade -->
-				<item id="1865" min="1" max="3" chance="73.5264" /> <!-- Varnish -->
-				<item id="1867" min="1" max="5" chance="65.3568" /> <!-- Animal Skin -->
+				<item id="36531" min="1" max="1" chance="14.02" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -6748,6 +6701,7 @@
 		</collision>
 	</npc>
 	<npc id="20674" level="65" type="L2Monster" name="Doom Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6765,8 +6719,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire exp="74543" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+		<stats>
+			<vitals hp="4388" hpRegen="7.5" mp="1188" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="181.027644954078" />
 			<attribute>
@@ -6784,8 +6738,6 @@
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
 			<skill id="4101" level="6" /> <!-- NPC Spinning Slash -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -6803,33 +6755,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1415" max="2868" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.3838999271392822">
-					<item id="601" min="1" max="1" chance="0.1787" /> <!-- Sealed Doom Boots -->
-					<item id="4099" min="1" max="1" chance="24.8213" /> <!-- Sealed Doom Boots Part -->
-					<item id="2439" min="1" max="1" chance="0.1787" /> <!-- Sealed Blue Wolf Boots -->
-					<item id="4090" min="1" max="1" chance="24.8213" /> <!-- Sealed Blue Wolf Boots Design -->
-					<item id="2475" min="1" max="1" chance="0.1787" /> <!-- Sealed Doom Gloves -->
-					<item id="4091" min="1" max="1" chance="24.8213" /> <!-- Sealed Doom Gloves Part -->
-					<item id="2487" min="1" max="1" chance="0.1787" /> <!-- Sealed Blue Wolf Gloves -->
-					<item id="4096" min="1" max="1" chance="24.8213" /> <!-- Sealed Blue Wolf Gloves Fabric -->
-				</group>
-				<group chance="25.474199295043945">
-					<item id="1872" min="1" max="1" chance="45.9912" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="45.9912" /> <!-- Animal Skin -->
-					<item id="1881" min="1" max="1" chance="4.5991" /> <!-- Coarse Bone Powder -->
-					<item id="1875" min="1" max="1" chance="2.2996" /> <!-- Stone of Purity -->
-					<item id="4041" min="1" max="1" chance="0.2999" /> <!-- Mold Hardener -->
-					<item id="4157" min="1" max="1" chance="0.1716" /> <!-- Recipe: Blue Wolf Gaiters (100%) -->
-					<item id="5276" min="1" max="1" chance="0.046" /> <!-- Recipe: Greater Spiritshot (A) Compressed Package(100%) -->
-					<item id="8316" min="1" max="1" chance="0.0128" /> <!-- Recipe: Flaming Dragon Skull (60%) -->
-					<item id="8729" min="1" max="1" chance="0.4599" /> <!-- Life Stone - Level 64 -->
-					<item id="8739" min="1" max="1" chance="0.115" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="8749" min="1" max="1" chance="0.0115" /> <!-- High-Grade Life Stone - Level 64 -->
-					<item id="8759" min="1" max="1" chance="0.0022" /> <!-- Top-Grade Life Stone - Level 64 -->
-				</group>
+				<item id="57" min="59" max="138" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
+				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
+				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -6863,9 +6794,8 @@
 				</group>
 			</death>
 			<corpse>
-				<item id="2089" min="1" max="1" chance="1.9453" /> <!-- Caliburs Edge -->
-				<item id="4124" min="1" max="1" chance="15.8653" /> <!-- Recipe: Craftsman Mold (100%) -->
-				<item id="4053" min="1" max="1" chance="15.3008" /> <!-- Ring of Black Ore Gemstone -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</corpse>
 		</dropLists>
 		<collision>

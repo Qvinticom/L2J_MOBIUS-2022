@@ -4060,7 +4060,7 @@
 		<dropLists>
 			<death>
 				<item id="57" min="67" max="158" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.03" /> <!--Synthetic Cokes -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -4465,7 +4465,7 @@
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
 				<item id="57" min="467" max="1089" chance="70" /> <!-- Adena -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			<group chance="42.0">
+				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -4568,7 +4568,7 @@
 				<item id="164" min="1" max="1" chance="0.0009" /> <!-- Elysian -->
 				<item id="57" min="467" max="1089" chance="70" /> <!-- Adena -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			<group chance="42.0">
+				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
@@ -5016,7 +5016,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21563" level="67" type="L2Monster" name="Bone Collector">
- 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -5539,6 +5539,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21568" level="68" type="L2Monster" name="Devil Bat">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5556,8 +5557,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="74252" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+		<stats>
+			<vitals hp="4692" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<attribute>
@@ -5573,8 +5574,6 @@
 		<skillList>
 			<skill id="4029" level="3" /> <!-- NPC Shield -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
@@ -5599,9 +5598,10 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="729" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="57" min="495" max="1155" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
@@ -5636,8 +5636,8 @@
 			</death>
 			<corpse>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -6051,7 +6051,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21573" level="69" type="L2Monster" name="Atrox">
-		<!-- Source: www.l2wiki.com (2015-04-08) -->  
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6070,7 +6070,7 @@
 		<sex>MALE</sex>
 		<acquire exp="73155" sp="17" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4792" hpRegen="7.5" mp="1314" mpRegen="2.7" /> 
+			<vitals hp="4792" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -6867,7 +6867,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21581" level="71" type="L2Monster" name="Bone Puppeteer">
- 		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -7258,7 +7258,7 @@
 				<item id="57" min="565" max="1319" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			<group chance="42.0">
+				<group chance="42.0">
 					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
 					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
 					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
