@@ -18,7 +18,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="7" />
+			<add order="0" stat="mDef" val="7" />
 		</for>
 	</item>
 	<item id="9901" name="Enhanced Falchion" type="Weapon">
@@ -39,11 +39,11 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9902" name="Enhanced Great Spear" type="Weapon">
@@ -64,13 +64,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9903" name="Enhanced Iron Hammer" type="Weapon">
@@ -92,11 +92,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9904" name="Enhanced Sword Breaker" type="Weapon">
@@ -116,13 +116,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1110" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="27" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9905" name="Enhanced Viper Fang" type="Weapon">
@@ -144,11 +144,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="38" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9906" name="Enhanced Compound Bow" type="Weapon">
@@ -170,13 +170,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1880" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9907" name="Enhanced Flanged Mace" type="Weapon">
@@ -198,11 +198,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="21" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9908" name="Enhanced Mage Staff" type="Weapon">
@@ -225,11 +225,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="31" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="30" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9909" name="Agathion Bracelet" type="Armor">
@@ -1360,6 +1360,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1373,6 +1374,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1386,6 +1388,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1399,6 +1402,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1412,6 +1416,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1425,6 +1430,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1438,6 +1444,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1451,6 +1458,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1464,6 +1472,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1519,6 +1528,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1532,6 +1542,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1545,6 +1556,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1623,13 +1635,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="32" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9996" name="Hand Crossbow" type="Weapon">
@@ -1657,13 +1669,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="32" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9997" name="Fire Potion" type="EtcItem">

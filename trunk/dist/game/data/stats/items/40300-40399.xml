@@ -5,6 +5,7 @@
 		<set name="icon" val="icon.freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -73,6 +74,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -87,6 +89,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -101,6 +104,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -127,8 +131,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -334,8 +336,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_auctionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -969,6 +969,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
@@ -1018,6 +1019,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />

@@ -793,9 +793,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32195" name="Blessed Twilight Breastplate" additionalName="Attack Type" type="Armor">
@@ -870,8 +870,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32199" name="Blessed Twilight Shield" additionalName="Attack Type" type="Armor">
@@ -887,10 +887,10 @@
 		<set name="price" val="39057000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="458" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 </list>

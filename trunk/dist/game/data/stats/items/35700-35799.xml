@@ -99,7 +99,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
@@ -121,8 +121,10 @@
 	<item id="35710" name="Santa Girl's Cloak Box" additionalName="1-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (1-day).  -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="22477,1,1,100" /> <!-- Santa Girl's Cloak - 1-day (Event) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -131,8 +133,10 @@
 	<item id="35711" name="Santa Girl's Cloak Box" additionalName="3-day (Event)" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak (3-day).  -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="35694,1,1,100" /> <!-- Santa Girl's Cloak - 3-day (Event) -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -609,7 +613,7 @@
 	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -726,6 +730,7 @@
 	<item id="35761" name="Rabbit Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
@@ -734,7 +739,8 @@
 	<item id="35762" name="Rabbit Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -742,7 +748,8 @@
 	<item id="35763" name="Rabbit Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -750,7 +757,8 @@
 	<item id="35764" name="Rabbit Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -758,7 +766,8 @@
 	<item id="35765" name="Rabbit Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -766,7 +775,8 @@
 	<item id="35766" name="Rabbit Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -774,7 +784,8 @@
 	<item id="35767" name="Rabbit Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -782,7 +793,8 @@
 	<item id="35768" name="Rabbit Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -790,7 +802,8 @@
 	<item id="35769" name="Rabbit Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -798,7 +811,8 @@
 	<item id="35770" name="Rabbit Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -806,7 +820,8 @@
 	<item id="35771" name="Rabbit Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -814,6 +829,7 @@
 	<item id="35772" name="Rabbit Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
@@ -822,7 +838,8 @@
 	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -830,7 +847,8 @@
 	<item id="35774" name="Raccoon Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -838,7 +856,8 @@
 	<item id="35775" name="Raccoon Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -846,7 +865,8 @@
 	<item id="35776" name="Raccoon Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -854,7 +874,8 @@
 	<item id="35777" name="Raccoon Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -862,7 +883,8 @@
 	<item id="35778" name="Raccoon Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -870,7 +892,8 @@
 	<item id="35779" name="Raccoon Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -878,6 +901,7 @@
 	<item id="35780" name="Raccoon Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
@@ -886,7 +910,8 @@
 	<item id="35781" name="Raccoon Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -894,7 +919,8 @@
 	<item id="35782" name="Raccoon Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -902,7 +928,8 @@
 	<item id="35783" name="Raccoon Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -910,7 +937,8 @@
 	<item id="35784" name="Raccoon Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -918,7 +946,8 @@
 	<item id="35785" name="Cat Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -926,7 +955,8 @@
 	<item id="35786" name="Cat Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -934,7 +964,8 @@
 	<item id="35787" name="Cat Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -942,7 +973,8 @@
 	<item id="35788" name="Cat Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -950,7 +982,8 @@
 	<item id="35789" name="Cat Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -958,7 +991,8 @@
 	<item id="35790" name="Cat Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -966,7 +1000,8 @@
 	<item id="35791" name="Cat Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -974,7 +1009,8 @@
 	<item id="35792" name="Cat Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -982,7 +1018,8 @@
 	<item id="35793" name="Cat Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -990,7 +1027,8 @@
 	<item id="35794" name="Cat Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -998,7 +1036,8 @@
 	<item id="35795" name="Cat Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1006,7 +1045,8 @@
 	<item id="35796" name="Cat Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1014,6 +1054,7 @@
 	<item id="35797" name="Romantic Chapeau" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
@@ -1022,7 +1063,8 @@
 	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1030,7 +1072,8 @@
 	<item id="35799" name="Romantic Chapeau" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />

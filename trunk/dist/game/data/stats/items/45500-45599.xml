@@ -1103,8 +1103,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1118,8 +1120,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1133,8 +1137,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1148,8 +1154,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1163,8 +1171,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1178,8 +1188,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -1193,8 +1205,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45592" name="Special Water Resistance Ring" type="Armor">
@@ -1207,8 +1221,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45593" name="Special Fire Resistance Ring" type="Armor">
@@ -1221,8 +1237,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45594" name="Special Holy Resistance Ring" type="Armor">
@@ -1235,8 +1253,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45595" name="Special Dark Resistance Ring" type="Armor">
@@ -1249,8 +1269,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45596" name="Special Wind Resistance Ring" type="Armor">
@@ -1263,8 +1285,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45597" name="Special Resistance Earring - Stun" type="Armor">
@@ -1277,8 +1301,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -1292,8 +1318,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -1307,8 +1335,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>

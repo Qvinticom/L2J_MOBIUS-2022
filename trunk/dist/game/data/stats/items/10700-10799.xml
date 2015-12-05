@@ -28,13 +28,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10701" name="Éclair Bijou {PvP} - Health" type="Weapon">
@@ -65,13 +65,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10702" name="Éclair Bijou {PvP} - Critical Poison" type="Weapon">
@@ -103,13 +103,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10703" name="Durendal {PvP} - Focus" type="Weapon">
@@ -141,11 +141,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="272" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10704" name="Durendal {PvP} - Haste" type="Weapon">
@@ -177,11 +177,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="272" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10705" name="Durendal {PvP} - Health" type="Weapon">
@@ -213,11 +213,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="272" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10706" name="Screaming Vengeance {PvP} - Cheap Shot" type="Weapon">
@@ -248,13 +248,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10707" name="Screaming Vengeance {PvP} - Focus" type="Weapon">
@@ -285,13 +285,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10708" name="Screaming Vengeance {PvP} - Quick Recovery" type="Weapon">
@@ -322,13 +322,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10709" name="Tallum Blade*Damascus {PvP}" type="Weapon">
@@ -340,7 +340,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -357,11 +357,11 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10710" name="Forgotten Blade {PvP} - Haste" type="Weapon">
@@ -389,11 +389,11 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10711" name="Forgotten Blade {PvP} - Health" type="Weapon">
@@ -421,11 +421,11 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10712" name="Forgotten Blade {PvP} - Focus" type="Weapon">
@@ -453,11 +453,11 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10713" name="Heaven's Divider {PvP} - Haste" type="Weapon">
@@ -485,11 +485,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10714" name="Heaven's Divider {PvP} - Health" type="Weapon">
@@ -517,11 +517,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10715" name="Heaven's Divider {PvP} - Focus" type="Weapon">
@@ -549,11 +549,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10716" name="Basalt Battlehammer {PvP} - HP Drain" type="Weapon">
@@ -582,11 +582,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10717" name="Basalt Battlehammer {PvP} - Health" type="Weapon">
@@ -615,11 +615,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10718" name="Basalt Battlehammer {PvP} - HP Regeneration" type="Weapon">
@@ -648,11 +648,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10719" name="Dragon Hunter Axe {PvP} - HP Regeneration" type="Weapon">
@@ -681,11 +681,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10720" name="Dragon Hunter Axe {PvP} - Health" type="Weapon">
@@ -714,11 +714,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10721" name="Dragon Hunter Axe {PvP} - HP Drain" type="Weapon">
@@ -747,11 +747,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10722" name="Angel Slayer {PvP} - Critical Damage" type="Weapon">
@@ -778,13 +778,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10723" name="Angel Slayer {PvP} - HP Drain" type="Weapon">
@@ -811,13 +811,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10724" name="Angel Slayer {PvP} - Haste" type="Weapon">
@@ -844,13 +844,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10725" name="Saint Spear {PvP} - Health" type="Weapon">
@@ -877,13 +877,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10726" name="Saint Spear {PvP} - Guidance" type="Weapon">
@@ -910,13 +910,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10727" name="Saint Spear {PvP} - Haste" type="Weapon">
@@ -943,13 +943,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10728" name="Demon Splinter {PvP} - Focus" type="Weapon">
@@ -978,11 +978,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10729" name="Demon Splinter {PvP} - Health" type="Weapon">
@@ -1011,11 +1011,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10730" name="Demon Splinter {PvP} - Critical Stun" type="Weapon">
@@ -1045,11 +1045,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10731" name="Arcana Mace {PvP} - Acumen" type="Weapon">
@@ -1079,11 +1079,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="175" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="225" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10732" name="Arcana Mace {PvP} - MP Regeneration" type="Weapon">
@@ -1113,11 +1113,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="175" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="225" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10733" name="Arcana Mace {PvP} - Mana Up" type="Weapon">
@@ -1147,11 +1147,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="175" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="225" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10734" name="Imperial Staff {PvP} - Empower" type="Weapon">
@@ -1181,11 +1181,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="193" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="274" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10735" name="Imperial Staff {PvP} - MP Regeneration" type="Weapon">
@@ -1215,11 +1215,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="193" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="274" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10736" name="Imperial Staff {PvP} - Magic Hold" type="Weapon">
@@ -1251,11 +1251,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="193" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="274" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10737" name="Draconic Bow {PvP} - Cheap Shot" type="Weapon">
@@ -1285,13 +1285,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10738" name="Draconic Bow {PvP} - Focus" type="Weapon">
@@ -1320,13 +1320,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10739" name="Draconic Bow {PvP} - Critical Slow" type="Weapon">
@@ -1356,13 +1356,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10740" name="Laevateinn {PvP} - Haste" type="Weapon">
@@ -1393,13 +1393,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10741" name="Laevateinn {PvP} - Health" type="Weapon">
@@ -1430,13 +1430,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10742" name="Laevateinn {PvP} - Focus" type="Weapon">
@@ -1467,13 +1467,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10743" name="Gram {PvP} - Haste" type="Weapon">
@@ -1505,11 +1505,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10744" name="Gram {PvP} - Health" type="Weapon">
@@ -1541,11 +1541,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10745" name="Gram {PvP} - Focus" type="Weapon">
@@ -1577,11 +1577,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10746" name="Sarunga {PvP} - Cheap Shot" type="Weapon">
@@ -1612,13 +1612,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10747" name="Sarunga {PvP} - Focus" type="Weapon">
@@ -1649,13 +1649,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10748" name="Sarunga {PvP} - Critical Slow" type="Weapon">
@@ -1687,13 +1687,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10749" name="Tallum Blade*Dark Legion's Edge {PvP}" type="Weapon">
@@ -1722,11 +1722,11 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10750" name="Dynasty Sword {PvP} - Focus" type="Weapon">
@@ -1754,11 +1754,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10751" name="Dynasty Sword {PvP} - Health" type="Weapon">
@@ -1786,11 +1786,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10752" name="Dynasty Sword {PvP} - Light Armor" type="Weapon">
@@ -1818,11 +1818,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10753" name="Dynasty Blade {PvP} - Focus" type="Weapon">
@@ -1850,11 +1850,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10754" name="Dynasty Blade {PvP} - Health" type="Weapon">
@@ -1882,11 +1882,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10755" name="Dynasty Blade {PvP} - Light Armor" type="Weapon">
@@ -1914,11 +1914,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10756" name="Dynasty Cudgel {PvP} - Anger" type="Weapon">
@@ -1947,11 +1947,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10757" name="Dynasty Cudgel {PvP} - Health" type="Weapon">
@@ -1980,11 +1980,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10758" name="Dynasty Cudgel {PvP} - Rsk. Focus" type="Weapon">
@@ -2013,11 +2013,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10759" name="Dynasty Crusher {PvP} - Anger" type="Weapon">
@@ -2046,11 +2046,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10760" name="Dynasty Crusher {PvP} - Health" type="Weapon">
@@ -2079,11 +2079,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10761" name="Dynasty Crusher {PvP} - Rsk. Focus" type="Weapon">
@@ -2112,11 +2112,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10762" name="Dynasty Knife {PvP} - Focus" type="Weapon">
@@ -2143,13 +2143,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10763" name="Dynasty Knife {PvP} - Evasion" type="Weapon">
@@ -2176,13 +2176,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10764" name="Dynasty Knife {PvP} - Critical Damage" type="Weapon">
@@ -2209,13 +2209,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10765" name="Dynasty Halberd {PvP} - Anger" type="Weapon">
@@ -2234,7 +2234,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="3653-1;3552-1;3600-10" /> <!-- PvP Weapon - Attack Rate, Special Ability: PvP Damage,  -->
+		<set name="item_skill" val="3653-1;3552-1;3600-10" /> <!-- PvP Weapon - Attack Rate, Special Ability: PvP Damage, Special Ability: Anger -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -2242,13 +2242,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10766" name="Dynasty Halberd {PvP} - Critical Stun" type="Weapon">
@@ -2277,13 +2277,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10767" name="Dynasty Halberd {PvP} - Light Armor" type="Weapon">
@@ -2310,13 +2310,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10768" name="Dynasty Bagh-Nakh {PvP} - Rsk. Evasion" type="Weapon">
@@ -2345,11 +2345,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10769" name="Dynasty Bagh-Nakh {PvP} - Focus" type="Weapon">
@@ -2378,11 +2378,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10770" name="Dynasty Bagh-Nakh {PvP} - Haste" type="Weapon">
@@ -2411,11 +2411,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10771" name="Dynasty Phantom {PvP} - Acumen" type="Weapon">
@@ -2444,11 +2444,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10772" name="Dynasty Phantom {PvP} - Mana Up" type="Weapon">
@@ -2477,11 +2477,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10773" name="Dynasty Phantom {PvP} - Conversion" type="Weapon">
@@ -2510,11 +2510,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10774" name="Dynasty Mace {PvP} - Mana Up" type="Weapon">
@@ -2544,11 +2544,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10775" name="Dynasty Mace {PvP} - Conversion" type="Weapon">
@@ -2578,11 +2578,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10776" name="Dynasty Mace {PvP} - Acumen" type="Weapon">
@@ -2612,11 +2612,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="202" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="267" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10777" name="Dynasty Staff {PvP} - Mana Up" type="Weapon">
@@ -2646,11 +2646,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="222" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="325" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10778" name="Dynasty Staff {PvP} - Conversion" type="Weapon">
@@ -2680,11 +2680,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="222" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="325" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10779" name="Dynasty Staff {PvP} - Acumen" type="Weapon">
@@ -2714,11 +2714,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="222" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="325" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10780" name="Dynasty Bow {PvP} - Cheap Shot" type="Weapon">
@@ -2747,13 +2747,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10781" name="Dynasty Bow {PvP} - Guidance" type="Weapon">
@@ -2782,13 +2782,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10782" name="Dynasty Bow {PvP} - Focus" type="Weapon">
@@ -2817,13 +2817,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10783" name="Dynasty Rapier {PvP} - Focus" type="Weapon">
@@ -2854,13 +2854,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10784" name="Dynasty Rapier {PvP} - Health" type="Weapon">
@@ -2891,13 +2891,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10785" name="Dynasty Rapier {PvP} - Light Armor" type="Weapon">
@@ -2928,13 +2928,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10786" name="Dynasty Ancient Sword {PvP} - Focus" type="Weapon">
@@ -2966,11 +2966,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="361" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10787" name="Dynasty Ancient Sword {PvP} - Health" type="Weapon">
@@ -3002,11 +3002,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="361" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10788" name="Dynasty Ancient Sword {PvP} - Light Armor" type="Weapon">
@@ -3038,11 +3038,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="361" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10789" name="Dynasty Crossbow {PvP} - Cheap Shot" type="Weapon">
@@ -3073,13 +3073,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10790" name="Dynasty Crossbow {PvP} - Guidance" type="Weapon">
@@ -3110,13 +3110,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10791" name="Dynasty Crossbow {PvP} - Focus" type="Weapon">
@@ -3147,13 +3147,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10792" name="Dynasty Dualsword {PvP}" type="Weapon">
@@ -3182,11 +3182,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10793" name="Armor of Nightmare {PvP}" type="Armor">

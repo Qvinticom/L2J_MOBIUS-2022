@@ -416,7 +416,8 @@
 	<item id="23636" name="Cloak (Poland)" type="Armor">
 		<!-- Cloak for Poland only. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_pl_cape" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -425,7 +426,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="23637" name="Blessed Antharas' Earring" additionalName="3-day" type="Armor">
@@ -442,7 +443,9 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="170" />
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
 		</for>
 	</item>
@@ -460,7 +463,9 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="170" />
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
 		</for>
 	</item>
@@ -478,7 +483,12 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="226" />
+			<add stat="INT" val="3" />
+			<add stat="STR" val="3" />
+			<add stat="darkRes" val="20" />
+			<add stat="fireRes" val="30" />
+			<add order="0" stat="mDef" val="226" />
+			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
 		</for>
 	</item>
@@ -496,7 +506,12 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="226" />
+			<add stat="INT" val="3" />
+			<add stat="STR" val="3" />
+			<add stat="darkRes" val="20" />
+			<add stat="fireRes" val="30" />
+			<add order="0" stat="mDef" val="226" />
+			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
 		</for>
 	</item>

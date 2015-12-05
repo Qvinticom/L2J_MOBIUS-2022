@@ -97,7 +97,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="136" />
@@ -206,7 +206,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -265,7 +265,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -317,7 +317,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="194" />
@@ -422,7 +422,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -476,7 +476,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1700" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="400" />
@@ -492,7 +492,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant4_skill" val="3045-14" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -529,7 +529,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -663,7 +663,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="176" />
@@ -722,7 +722,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="245" />
@@ -850,7 +850,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="220" />
@@ -877,7 +877,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
@@ -905,7 +905,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="133" />
 			<set stat="pAtk" val="570" />
@@ -1027,7 +1027,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -1067,7 +1067,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="228" />
@@ -1126,7 +1126,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="318" />
@@ -1458,11 +1458,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14364" name="Icarus Disperser {PvP}" type="Weapon">
@@ -1489,13 +1489,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14365" name="Icarus Spirit {PvP}" type="Weapon">
@@ -1524,11 +1524,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14366" name="Icarus Heavy Arms {PvP}" type="Weapon">
@@ -1556,11 +1556,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14367" name="Icarus Trident {PvP}" type="Weapon">
@@ -1587,13 +1587,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14368" name="Icarus Hammer {PvP}" type="Weapon">
@@ -1622,11 +1622,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14369" name="Icarus Hand {PvP}" type="Weapon">
@@ -1655,11 +1655,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14370" name="Icarus Hall {PvP}" type="Weapon">
@@ -1689,11 +1689,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14371" name="Icarus Spitter {PvP}" type="Weapon">
@@ -1722,13 +1722,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14372" name="Icarus Stinger {PvP}" type="Weapon">
@@ -1759,13 +1759,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="329" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14373" name="Icarus Wingblade {PvP}" type="Weapon">
@@ -1797,11 +1797,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="393" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14374" name="Icarus Shooter {PvP}" type="Weapon">
@@ -1832,13 +1832,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14375" name="Icarus Dualsword {PvP}" type="Weapon">
@@ -1867,11 +1867,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14376" name="Icarus Sawsword {PvP} - Focus" type="Weapon">
@@ -1899,11 +1899,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14377" name="Icarus Sawsword {PvP} - Health" type="Weapon">
@@ -1931,11 +1931,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14378" name="Icarus Sawsword {PvP} - Light Armor" type="Weapon">
@@ -1963,11 +1963,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14379" name="Icarus Heavy Arms {PvP} - Focus" type="Weapon">
@@ -1995,11 +1995,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14380" name="Icarus Heavy Arms {PvP} - Health" type="Weapon">
@@ -2027,11 +2027,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14381" name="Icarus Heavy Arms {PvP} - Light Armor" type="Weapon">
@@ -2059,11 +2059,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14382" name="Icarus Spirit {PvP} - Acumen" type="Weapon">
@@ -2092,11 +2092,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14383" name="Icarus Spirit {PvP} - Mana Up" type="Weapon">
@@ -2125,11 +2125,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14384" name="Icarus Spirit {PvP} - Conversion" type="Weapon">
@@ -2158,11 +2158,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14385" name="Icarus Spitter {PvP} - Cheap Shot" type="Weapon">
@@ -2191,13 +2191,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14386" name="Icarus Spitter {PvP} - Guidance" type="Weapon">
@@ -2226,13 +2226,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14387" name="Icarus Spitter {PvP} - Focus" type="Weapon">
@@ -2261,13 +2261,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14388" name="Icarus Disperser {PvP} - Focus" type="Weapon">
@@ -2294,13 +2294,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14389" name="Icarus Disperser {PvP} - Evasion" type="Weapon">
@@ -2327,13 +2327,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14390" name="Icarus Disperser {PvP} - Critical Damage" type="Weapon">
@@ -2360,13 +2360,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14391" name="Icarus Trident {PvP} - Anger" type="Weapon">
@@ -2385,7 +2385,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3600-10" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate,  -->
+		<set name="item_skill" val="3552-1;3653-1;3600-10" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Anger -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -2393,13 +2393,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14392" name="Icarus Trident {PvP} - Critical Stun" type="Weapon">
@@ -2428,13 +2428,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14393" name="Icarus Trident {PvP} - Light Armor" type="Weapon">
@@ -2461,13 +2461,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14394" name="Icarus Hammer {PvP} - Anger" type="Weapon">
@@ -2496,11 +2496,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14395" name="Icarus Hammer {PvP} - Health" type="Weapon">
@@ -2529,11 +2529,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14396" name="Icarus Hammer {PvP} - Rsk. Focus" type="Weapon">
@@ -2562,11 +2562,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14397" name="Icarus Hall {PvP} - Mana Up" type="Weapon">
@@ -2596,11 +2596,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14398" name="Icarus Hall {PvP} - Conversion" type="Weapon">
@@ -2630,11 +2630,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14399" name="Icarus Hall {PvP} - Acumen" type="Weapon">
@@ -2664,11 +2664,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

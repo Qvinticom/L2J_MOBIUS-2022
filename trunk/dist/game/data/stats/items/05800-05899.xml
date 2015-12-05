@@ -20,11 +20,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5801" name="For NPC (Dusk)" type="Weapon">
@@ -47,11 +47,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5802" name="For NPC (Dawn)" type="Weapon">
@@ -74,11 +74,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5803" name="Lucky Charm (D-grade)" type="EtcItem">
@@ -277,7 +277,7 @@
 		<set name="random_damage" val="10" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />

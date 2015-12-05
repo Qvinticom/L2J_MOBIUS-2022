@@ -858,7 +858,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="400" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="9" />
 			<set stat="pAtk" val="10" />

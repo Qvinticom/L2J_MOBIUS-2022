@@ -288,8 +288,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="mDef" val="15" />
-			<add stat="pDef" val="35" />
+			<add stat="darkRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add order="0" stat="mDef" val="15" />
+			<add order="0" stat="pDef" val="35" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
 		</for>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
@@ -303,8 +309,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="mDef" val="15" />
-			<add stat="pDef" val="35" />
+			<add stat="darkRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add order="0" stat="mDef" val="15" />
+			<add order="0" stat="pDef" val="35" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
 		</for>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
@@ -318,8 +330,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="mDef" val="15" />
-			<add stat="pDef" val="35" />
+			<add stat="darkRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add order="0" stat="mDef" val="15" />
+			<add order="0" stat="pDef" val="35" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
 		</for>
 	</item>
 	<item id="23727" name="Life Stone: Tattoo" type="EtcItem">
@@ -785,6 +803,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
@@ -794,6 +813,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />

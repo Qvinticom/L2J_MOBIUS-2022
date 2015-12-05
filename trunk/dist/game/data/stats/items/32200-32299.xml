@@ -14,9 +14,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32201" name="Blessed Twilight Leather Armor" additionalName="Assassin Type" type="Armor">
@@ -36,8 +36,8 @@
 			<add stat="mEvas" val="5.0" />
 			<set stat="pAtk" val="26" />
 			<add order="0" stat="pDef" val="268" />
+			<add stat="rEvas" val="5" />
 			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="32202" name="Blessed Twilight Leather Leggings" additionalName="Assassin Type" type="Armor">
@@ -58,8 +58,8 @@
 			<add stat="mCritRate" val="2.6" />
 			<add stat="mEvas" val="3.0" />
 			<add order="0" stat="pDef" val="168" />
+			<add stat="rEvas" val="3" />
 			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="32203" name="Blessed Twilight Leather Gloves" additionalName="Assassin Type" type="Armor">
@@ -95,8 +95,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32205" name="Blessed Twilight Circlet" additionalName="Magic Type" type="Armor">
@@ -113,9 +113,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32206" name="Blessed Twilight Tunic" additionalName="Magic Type" type="Armor">
@@ -133,9 +133,9 @@
 		<set name="weight" val="1750" />
 		<for>
 			<add order="0" stat="mDef" val="41" />
-			<enchant stat="mDef" val="0" />
 			<set stat="pAtk" val="26" />
 			<add order="0" stat="pDef" val="184" />
+			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -156,9 +156,9 @@
 			<add stat="critRate" val="2.5999999" />
 			<add stat="mCritRate" val="2.6" />
 			<add order="0" stat="mDef" val="27" />
+			<add order="0" stat="pDef" val="115" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
-			<add order="0" stat="pDef" val="115" />
 		</for>
 	</item>
 	<item id="32208" name="Blessed Twilight Gloves" additionalName="Magic Type" type="Armor">
@@ -194,8 +194,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32210" name="Blessed Twilight Helmet" additionalName="Defense Type" type="Armor">
@@ -212,9 +212,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32211" name="Blessed Twilight Breastplate" additionalName="Defense Type" type="Armor">
@@ -289,8 +289,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32215" name="Blessed Twilight Shield" additionalName="Defense Type" type="Armor">
@@ -306,10 +306,10 @@
 		<set name="price" val="19528000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="458" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="32216" name="Blessed Twilight Leather Helmet" additionalName="Enchant Type" type="Armor">
@@ -326,9 +326,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32217" name="Blessed Twilight Leather Armor" additionalName="Enchant Type" type="Armor">
@@ -348,8 +348,8 @@
 			<add stat="mEvas" val="5.0" />
 			<set stat="pAtk" val="26" />
 			<add order="0" stat="pDef" val="268" />
+			<add stat="rEvas" val="5" />
 			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="32218" name="Blessed Twilight Leather Leggings" additionalName="Enchant Type" type="Armor">
@@ -370,8 +370,8 @@
 			<add stat="mCritRate" val="2.6" />
 			<add stat="mEvas" val="3.0" />
 			<add order="0" stat="pDef" val="168" />
+			<add stat="rEvas" val="3" />
 			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="32219" name="Blessed Twilight Leather Gloves" additionalName="Enchant Type" type="Armor">
@@ -407,8 +407,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32221" name="Blessed Twilight Circlet" additionalName="Recovery Type" type="Armor">
@@ -425,9 +425,9 @@
 		<set name="weight" val="530" />
 		<for>
 			<add stat="mEvas" val="1.05" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="126" />
-			<sub stat="rEvas" val="1.04999995" />
+			<add stat="rEvas" val="1.04999995" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32222" name="Blessed Twilight Tunic" additionalName="Recovery Type" type="Armor">
@@ -445,9 +445,9 @@
 		<set name="weight" val="1750" />
 		<for>
 			<add order="0" stat="mDef" val="41" />
-			<enchant stat="mDef" val="0" />
 			<set stat="pAtk" val="26" />
 			<add order="0" stat="pDef" val="184" />
+			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -468,9 +468,9 @@
 			<add stat="critRate" val="2.5999999" />
 			<add stat="mCritRate" val="2.6" />
 			<add order="0" stat="mDef" val="27" />
+			<add order="0" stat="pDef" val="115" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
-			<add order="0" stat="pDef" val="115" />
 		</for>
 	</item>
 	<item id="32224" name="Blessed Twilight Gloves" additionalName="Recovery Type" type="Armor">
@@ -506,8 +506,8 @@
 		<set name="weight" val="1070" />
 		<for>
 			<add order="0" stat="pDef" val="84" />
-			<enchant stat="pDef" val="0" />
 			<add stat="runSpd" val="15.0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32226" name="Scroll of Escape: Talking Island Village" type="EtcItem">
@@ -957,7 +957,7 @@
 	<item id="32264" name="Abelius' Power" additionalName="Sigel Knight" type="EtcItem">
 		<!-- Chest that contains items helpful to Sigel Knights after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30310,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Abelius Cloak - Sigel Knight -->
+		<set name="capsuled_items" val="30310,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Abelius Cloak - Sigel Knight, Elixir of Blessing - Sigel Knight, Weapon Attribute Change Crystal (S-grade) - Sigel Knight -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -972,7 +972,7 @@
 	<item id="32265" name="Sapyros' Power" additionalName="Tyrr Warrior" type="EtcItem">
 		<!-- Chest that contains items helpful to Tyrr Warriors after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30311,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Sapyros Cloak - Tyrr Warrior -->
+		<set name="capsuled_items" val="30311,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Sapyros Cloak - Tyrr Warrior, Elixir of Blessing - Tyrr Warrior, Weapon Attribute Change Crystal (S-grade) - Tyrr Warrior -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -987,7 +987,7 @@
 	<item id="32266" name="Ashagen's Power" additionalName="Othell Rogue" type="EtcItem">
 		<!-- Chest that contains items helpful to Othell Rogues after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30312,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Ashagen Cloak - Othell Rogue -->
+		<set name="capsuled_items" val="30312,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Ashagen Cloak - Othell Rogue, Elixir of Blessing - Othell Rogue, Weapon Attribute Change Crystal (S-grade) - Othell Rogue -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1002,7 +1002,7 @@
 	<item id="32267" name="Cranigg's Power" additionalName="Yul Archer" type="EtcItem">
 		<!-- Chest that contains items helpful to Yul Archers after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30313,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Cranigg Cloak - Yul Archer -->
+		<set name="capsuled_items" val="30313,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Cranigg Cloak - Yul Archer, Elixir of Blessing - Yul Archer, Weapon Attribute Change Crystal (S-grade) - Yul Archer -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1017,7 +1017,7 @@
 	<item id="32268" name="Soltkreig's Power" additionalName="Feoh Wizard" type="EtcItem">
 		<!-- Chest that contains items helpful to Feoh Wizards after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30314,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Soltkreig Cloak - Feoh Wizard -->
+		<set name="capsuled_items" val="30314,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Soltkreig Cloak - Feoh Wizard, Elixir of Blessing - Feoh Wizard, Weapon Attribute Change Crystal (S-grade) - Feoh Wizard -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1032,7 +1032,7 @@
 	<item id="32269" name="Naviarope's Power" additionalName="Wynn Summoner" type="EtcItem">
 		<!-- Chest that contains items helpful to Wynn Summoners after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30316,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Leister Cloak - Iss Enchanter -->
+		<set name="capsuled_items" val="30316,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Leister Cloak - Iss Enchanter, Elixir of Blessing - Iss Enchanter, Weapon Attribute Change Crystal (S-grade) - Iss Enchanter -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1047,7 +1047,7 @@
 	<item id="32270" name="Leister's Power" additionalName="Iss Enchanter" type="EtcItem">
 		<!-- Chest that contains items helpful to Iss Enchanters after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30315,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Naviarope Cloak - Wynn Summoner -->
+		<set name="capsuled_items" val="30315,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Naviarope Cloak - Wynn Summoner, Elixir of Blessing - Wynn Summoner, Weapon Attribute Change Crystal (S-grade) - Wynn Summoner -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1062,7 +1062,7 @@
 	<item id="32271" name="Lakcis' Power" additionalName="Aeore Healer" type="EtcItem">
 		<!-- Chest that contains items helpful to Aeore Healers after Awakening. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="30317,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Lakcis Cloak - Aeore Healer -->
+		<set name="capsuled_items" val="30317,1,1,100;32316,5,5,100;33502,1,1,100" /> <!-- Lakcis Cloak - Aeore Healer, Elixir of Blessing - Aeore Healer, Weapon Attribute Change Crystal (S-grade) - Aeore Healer -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1092,6 +1092,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1101,6 +1102,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1110,6 +1112,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1119,6 +1122,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1128,6 +1132,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1137,6 +1142,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1146,6 +1152,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1155,6 +1162,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1164,6 +1172,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1173,6 +1182,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1182,6 +1192,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1191,6 +1202,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1200,6 +1212,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1209,6 +1222,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1218,6 +1232,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1227,6 +1242,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
@@ -1247,6 +1263,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="87" />
+			<add stat="maxMp" val="28" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1266,8 +1283,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="174" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="57" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="32291" name="Olympiad Guardian Warrior's Earring" type="Armor">
@@ -1286,8 +1303,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="131" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="32292" name="Recipe: Immortal Belt (60%)" type="EtcItem">
@@ -1295,6 +1312,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="199900" />
@@ -1305,6 +1323,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="355600" />
@@ -1315,6 +1334,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="399700" />
@@ -1325,6 +1345,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="597000" />
@@ -1335,6 +1356,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="355600" />
@@ -1345,6 +1367,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1194100" />
@@ -1355,6 +1378,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1364800" />
@@ -1365,6 +1389,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="355600" />

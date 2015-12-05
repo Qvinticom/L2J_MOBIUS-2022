@@ -382,7 +382,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1870" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="82" />
@@ -432,7 +432,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1140" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="9" />
 			<set stat="pAtk" val="10" />
@@ -795,6 +795,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -1151,7 +1152,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="21" />
@@ -1207,7 +1208,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1900" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="49" />
@@ -1292,7 +1293,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="105" />
@@ -1322,7 +1323,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="114" />
@@ -1490,7 +1491,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1090" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="45" />
@@ -1519,7 +1520,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2090" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />

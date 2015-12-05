@@ -802,7 +802,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1140" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="9" />
 			<set stat="pAtk" val="10" />
@@ -1051,11 +1051,11 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4682" name="Not used" additionalName="Not used" type="Weapon">
@@ -1081,11 +1081,11 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4683" name="Not used" additionalName="Not used" type="Weapon">
@@ -1111,11 +1111,11 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4684" name="Not used" additionalName="Not used" type="Weapon">
@@ -1141,11 +1141,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4685" name="Not used" additionalName="Not used" type="Weapon">
@@ -1171,11 +1171,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4686" name="Not used" additionalName="Not used" type="Weapon">
@@ -1201,11 +1201,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4687" name="Not used" additionalName="Not used" type="Weapon">
@@ -1231,11 +1231,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4688" name="Not used" additionalName="Not used" type="Weapon">
@@ -1261,11 +1261,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4689" name="Not used" additionalName="Not used" type="Weapon">
@@ -1291,11 +1291,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4690" name="Not used" additionalName="Not used" type="Weapon">
@@ -1321,11 +1321,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4691" name="Not used" additionalName="Not used" type="Weapon">
@@ -1352,11 +1352,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4692" name="Not used" additionalName="Not used" type="Weapon">
@@ -1382,11 +1382,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4693" name="Raid Sword" additionalName="Focus" type="Weapon">
@@ -1412,11 +1412,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4694" name="Raid Sword" additionalName="Critical Drain" type="Weapon">
@@ -1444,11 +1444,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4695" name="Raid Sword" additionalName="Critical Poison" type="Weapon">
@@ -1476,11 +1476,11 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4696" name="Caliburs" additionalName="Guidance" type="Weapon">
@@ -1506,11 +1506,11 @@
 		<set name="weight" val="1400" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4697" name="Caliburs" additionalName="Focus" type="Weapon">
@@ -1536,11 +1536,11 @@
 		<set name="weight" val="1400" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4698" name="Caliburs" additionalName="Critical Damage" type="Weapon">
@@ -1566,11 +1566,11 @@
 		<set name="weight" val="1400" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4699" name="Sword of Delusion" additionalName="Focus" type="Weapon">
@@ -1596,11 +1596,11 @@
 		<set name="weight" val="1400" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

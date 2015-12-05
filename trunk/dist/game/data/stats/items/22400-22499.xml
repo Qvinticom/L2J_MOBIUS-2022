@@ -1028,7 +1028,8 @@
 	<item id="22477" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1038,13 +1039,14 @@
 		<set name="time" val="1440" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22478" name="Santa Girl's Cloak" additionalName="7-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 7 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1054,13 +1056,14 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22479" name="Santa Girl's Cloak" additionalName="30-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Decreases weight. Increases inventory slots. Expires after 30 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1070,13 +1073,14 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22480" name="Santa Girl's Cloak" additionalName="Event" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. You can keep it forever!  -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1085,7 +1089,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22481" name="Improved Bronze Bracelet" additionalName="1-day" type="Armor">

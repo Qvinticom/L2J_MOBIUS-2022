@@ -1120,11 +1120,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="157" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5597" name="Dasparion's Staff" additionalName="Conversion" type="Weapon">
@@ -1151,11 +1151,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="157" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5598" name="Dasparion's Staff" additionalName="Acumen" type="Weapon">
@@ -1182,11 +1182,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="157" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5599" name="Meteor Shower" additionalName="Focus" type="Weapon">
@@ -1212,11 +1212,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

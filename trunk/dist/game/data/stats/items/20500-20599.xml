@@ -94,7 +94,7 @@
 	<item id="20505" name="Agathion - Pomona Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pomona. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20495,1,1,100" /> <!-- Agathion - Pomona -  -->
+		<set name="capsuled_items" val="20495,1,1,100" /> <!-- Agathion - Pomona -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -170,7 +170,7 @@
 	<item id="20509" name="Feline Queen Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Feline Queen Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20499,1,1,100" /> <!-- Feline Queen Hat -  -->
+		<set name="capsuled_items" val="20499,1,1,100" /> <!-- Feline Queen Hat - Blessing of Love (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -189,7 +189,7 @@
 	<item id="20510" name="Feline King Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Feline King Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20500,1,1,100" /> <!-- Feline King Hat -  -->
+		<set name="capsuled_items" val="20500,1,1,100" /> <!-- Feline King Hat - Blessing of Love (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -208,7 +208,7 @@
 	<item id="20511" name="Kai the Cat Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Kai the Cat Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20501,1,1,100" /> <!-- Kai the Cat Hat -  -->
+		<set name="capsuled_items" val="20501,1,1,100" /> <!-- Kai the Cat Hat - Blessing of Love (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 	<item id="20512" name="Mount - Gold Maned Lion Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Gold Maned Lion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20502,1,1,100" /> <!-- Mount - Gold Maned Lion -  -->
+		<set name="capsuled_items" val="20502,1,1,100" /> <!-- Mount - Gold Maned Lion - Blessing of Love (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1383,7 +1383,7 @@
 	<item id="20574" name="Large Scroll Chest (Event)" type="EtcItem">
 		<!-- Mysterious box containing the blessings of Eva. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="capsuled_items" val="20341,1,1,100;20392,4,4,100" /> <!-- SP Rune 30% - 5-hour -->
+		<set name="capsuled_items" val="20341,1,1,100;20392,4,4,100" /> <!-- SP Rune 30% - 5-hour, Vitality Replenishing Potion - 5-hour -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1399,7 +1399,7 @@
 	<item id="20575" name="Chest of Experience (Event)" type="EtcItem">
 		<!-- Mysterious box containing the blessings of Eva. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="capsuled_items" val="20342,1,1,100;20336,1,1,100" /> <!-- SP Rune 50% - 5-hour -->
+		<set name="capsuled_items" val="20342,1,1,100;20336,1,1,100" /> <!-- SP Rune 50% - 5-hour, XP Rune III (Lv. 1-100+) 50% - 5-hour -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1445,7 +1445,7 @@
 	<item id="20578" name="Eva's Circlet Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20569,1,1,100" /> <!-- Eva's Circlet -  -->
+		<set name="capsuled_items" val="20569,1,1,100" /> <!-- Eva's Circlet - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1578,7 +1578,7 @@
 	<item id="20587" name="Agathion - Weaver Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20591,1,1,100" /> <!-- Agathion - Weaver -  -->
+		<set name="capsuled_items" val="20591,1,1,100" /> <!-- Agathion - Weaver - 3-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />

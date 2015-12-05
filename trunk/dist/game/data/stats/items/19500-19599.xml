@@ -299,7 +299,7 @@
 		<set name="price" val="4585701" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="422" />
 			<enchant stat="sDef" val="0" />
@@ -338,9 +338,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="247" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19530" name="Immortal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
@@ -358,9 +358,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="154" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19531" name="Immortal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
@@ -429,10 +429,10 @@
 		<set name="price" val="18342805" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="169" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19535" name="Immortal Stockings" additionalName="Magic Type / Robe" type="Armor">
@@ -449,10 +449,10 @@
 		<set name="price" val="11464253" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="106" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19536" name="Immortal Gloves" additionalName="Magic Type / Robe" type="Armor">
@@ -590,7 +590,7 @@
 		<set name="price" val="12490853" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="466" />
 			<enchant stat="sDef" val="0" />
@@ -629,9 +629,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="272" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19546" name="Twilight Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
@@ -649,9 +649,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="170" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19547" name="Twilight Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
@@ -720,10 +720,10 @@
 		<set name="price" val="49963413" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="41" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="187" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19551" name="Twilight Stockings" additionalName="Magic Type / Robe" type="Armor">
@@ -740,10 +740,10 @@
 		<set name="price" val="31227133" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="27" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="117" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19552" name="Twilight Gloves" additionalName="Magic Type / Robe" type="Armor">
@@ -881,7 +881,7 @@
 		<set name="price" val="40243000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="515" />
 			<enchant stat="sDef" val="0" />
@@ -920,9 +920,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="301" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19562" name="Seraph Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
@@ -940,9 +940,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="188" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19563" name="Seraph Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
@@ -1011,10 +1011,10 @@
 		<set name="price" val="153308000" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="47" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="207" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19567" name="Seraph Stockings" additionalName="Magic Type / Robe" type="Armor">
@@ -1031,10 +1031,10 @@
 		<set name="price" val="95818000" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="31" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="129" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19568" name="Seraph Gloves" additionalName="Magic Type / Robe" type="Armor">
@@ -1172,7 +1172,7 @@
 		<set name="price" val="88681000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="546" />
 			<enchant stat="sDef" val="0" />
@@ -1211,9 +1211,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="320" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19578" name="Eternal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
@@ -1231,9 +1231,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="200" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19579" name="Eternal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
@@ -1302,10 +1302,10 @@
 		<set name="price" val="337834000" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="49" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="220" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19583" name="Eternal Stockings" additionalName="Magic Type / Robe" type="Armor">
@@ -1322,10 +1322,10 @@
 		<set name="price" val="211146000" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="33" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="137" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19584" name="Eternal Gloves" additionalName="Magic Type / Robe" type="Armor">
@@ -1485,7 +1485,7 @@
 		<set name="price" val="481000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="415" />
 			<enchant stat="sDef" val="0" />
@@ -1531,9 +1531,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="243" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19594" name="Bound Immortal Leather Leggings" additionalName="Assassin Type / Light" type="Armor">
@@ -1555,9 +1555,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="152" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19595" name="Bound Immortal Leather Gloves" additionalName="Assassin Type / Light" type="Armor">
@@ -1641,10 +1641,10 @@
 		<set name="price" val="1834000" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="167" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="19599" name="Bound Immortal Stockings" additionalName="Magic Type / Robe" type="Armor">
@@ -1665,10 +1665,10 @@
 		<set name="price" val="1146000" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="104" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 </list>

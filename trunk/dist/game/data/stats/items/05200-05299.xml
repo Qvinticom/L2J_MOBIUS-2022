@@ -422,7 +422,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -434,11 +434,11 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="259" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5234" name="Mysterious Potion" type="EtcItem">
@@ -1206,11 +1206,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="26" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="49" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5286" name="Berserker Blade" type="Weapon">
@@ -1235,11 +1235,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
@@ -1347,10 +1347,10 @@
 		<set name="price" val="935000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="5293" name="Sealed Tallum Plate Armor" type="Armor">

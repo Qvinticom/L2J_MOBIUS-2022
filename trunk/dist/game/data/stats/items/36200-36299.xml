@@ -17,7 +17,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1333" />
@@ -136,7 +136,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -175,6 +175,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -185,7 +186,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="881" />
@@ -200,6 +201,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -224,6 +226,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -248,6 +251,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
@@ -273,6 +277,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -298,6 +303,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
@@ -308,7 +314,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
@@ -323,6 +329,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -333,7 +340,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1983" />
@@ -348,6 +355,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -358,7 +366,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1786" />
@@ -373,6 +381,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -397,6 +406,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -422,6 +432,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -448,6 +459,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -472,6 +484,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -482,7 +495,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
@@ -497,6 +510,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
@@ -520,6 +534,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -534,6 +549,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
@@ -543,6 +559,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -552,6 +569,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -561,6 +579,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -570,6 +589,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -640,6 +660,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -664,12 +685,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="holyRes" val="35" />
 			<add order="0" stat="mDef" val="205" />
 			<add stat="maxMp" val="74" />
 		</for>
@@ -682,6 +705,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
@@ -689,6 +713,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="103" />
+			<add stat="waterRes" val="20" />
 		</for>
 	</item>
 	<item id="36237" name="Istina's Earring" additionalName="3-hour" type="Armor">
@@ -699,6 +724,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
@@ -717,12 +743,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="20" />
 			<add order="0" stat="mDef" val="103" />
 		</for>
 	</item>
@@ -734,12 +762,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="35" />
 			<add order="0" stat="mDef" val="205" />
 			<add stat="maxMp" val="74" />
 		</for>
@@ -752,12 +782,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="earthRes" val="30" />
 			<add order="0" stat="mDef" val="154" />
 			<add stat="maxMp" val="56" />
 		</for>
@@ -794,7 +826,10 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="20" />
+			<add stat="fireRes" val="30" />
 			<add order="0" stat="mDef" val="226" />
+			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
 		</for>
 	</item>
@@ -829,6 +864,7 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="25" />
 			<add order="0" stat="mDef" val="108" />
 		</for>
 	</item>
@@ -870,6 +906,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -882,6 +919,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -894,6 +932,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -906,6 +945,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -942,6 +982,8 @@
 		<set name="price" val="46311000" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="accCombat" val="4" />
+			<add stat="critRate" val="20" />
 			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -962,8 +1004,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36256" name="Transformation Scroll: Anakim" type="EtcItem">
@@ -971,6 +1013,7 @@
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -991,8 +1034,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="158" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="62" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="36258" name="Transformation Potion: Queen Ant" type="EtcItem">
@@ -1002,6 +1045,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1015,6 +1059,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1028,6 +1073,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1041,6 +1087,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1063,6 +1110,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -1072,6 +1120,7 @@
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />

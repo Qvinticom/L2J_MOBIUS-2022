@@ -48,7 +48,6 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="43200" />
 		<set name="weight" val="10" />
-		<for/>
 	</item>
 	<item id="21203" name="Queen Ant's Ring Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Queen Ant's Ring (30-day). -->
@@ -157,7 +156,7 @@
 	<item id="21209" name="MP Recovery Potion Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 MP Recovery (+ 50%) potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21210,3,3,100" /> <!-- MP Recovery Potion -  -->
+		<set name="capsuled_items" val="21210,3,3,100" /> <!-- MP Recovery Potion - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -191,7 +190,7 @@
 	<item id="21211" name="Vitality Recovering Potion 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Vitality Recovering Potion (30-minute). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21212,10,10,100" /> <!-- Vitality Recovering Potion -  -->
+		<set name="capsuled_items" val="21212,10,10,100" /> <!-- Vitality Recovering Potion - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -399,7 +398,7 @@
 	<item id="21223" name="Transformation Scroll: Anakim Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Anakim Transformation Scrolls. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21224,5,5,100" /> <!-- Transformation Scroll: Anakim -  -->
+		<set name="capsuled_items" val="21224,5,5,100" /> <!-- Transformation Scroll: Anakim - 180-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -431,7 +430,7 @@
 	<item id="21225" name="Sweet Concentrated Fruit Cocktail Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 Sweet Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21227,3,3,100" /> <!-- Sweet Concentrated Fruit Cocktail -  -->
+		<set name="capsuled_items" val="21227,3,3,100" /> <!-- Sweet Concentrated Fruit Cocktail - 180-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -499,7 +498,7 @@
 	<item id="21229" name="Fresh Concentrated Fruit Cocktail Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 Fresh Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21231,3,3,100" /> <!-- Fresh Concentrated Fruit Cocktail -  -->
+		<set name="capsuled_items" val="21231,3,3,100" /> <!-- Fresh Concentrated Fruit Cocktail - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -567,7 +566,7 @@
 	<item id="21233" name="Fresh Milk Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 fresh milks. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21235,3,3,100" /> <!-- Fresh Milk -  -->
+		<set name="capsuled_items" val="21235,3,3,100" /> <!-- Fresh Milk - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -636,7 +635,7 @@
 	<item id="21237" name="Super Healthy Juice Pack (HP)" type="EtcItem">
 		<!-- Wrapped Pack containing 3 Super Healthy Juices (HP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21239,3,3,100" /> <!-- Super Healthy Juice (HP) -  -->
+		<set name="capsuled_items" val="21239,3,3,100" /> <!-- Super Healthy Juice (HP) - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -701,7 +700,7 @@
 	<item id="21241" name="Super Healthy Juice Pack (CP)" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Super Healthy Juices (CP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21243,5,5,100" /> <!-- Super Healthy Juice (CP) -  -->
+		<set name="capsuled_items" val="21243,5,5,100" /> <!-- Super Healthy Juice (CP) - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -766,7 +765,7 @@
 	<item id="21245" name="Vitality Replenishing Potion Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vitality Replenishing Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21247,1,1,100" /> <!-- Vitality Replenishing Potion -  -->
+		<set name="capsuled_items" val="21247,1,1,100" /> <!-- Vitality Replenishing Potion - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -832,7 +831,7 @@
 	<item id="21249" name="Vitality Maintaining Potion (30-minute) Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vitality Maintaining Potion (30-minute). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21251,1,1,100" /> <!-- Vitality Maintaining Potion (30-minute) -  -->
+		<set name="capsuled_items" val="21251,1,1,100" /> <!-- Vitality Maintaining Potion (30-minute) - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />

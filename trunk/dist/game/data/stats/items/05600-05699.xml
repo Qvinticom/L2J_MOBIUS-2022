@@ -25,11 +25,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5601" name="Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
@@ -55,11 +55,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5602" name="Elysian" additionalName="Health" type="Weapon">
@@ -85,11 +85,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5603" name="Elysian" additionalName="Anger" type="Weapon">
@@ -115,11 +115,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5604" name="Elysian" additionalName="Critical Drain" type="Weapon">
@@ -147,11 +147,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5605" name="Branch of the Mother Tree" additionalName="Conversion" type="Weapon">
@@ -178,11 +178,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="167" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="226" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5606" name="Branch of the Mother Tree" additionalName="Magic Damage" type="Weapon">
@@ -211,11 +211,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="167" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="226" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5607" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
@@ -242,11 +242,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="167" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="226" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
@@ -273,13 +273,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="900" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="440" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5609" name="Carnage Bow" additionalName="Critical Bleed" type="Weapon">
@@ -308,13 +308,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1670" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="440" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5610" name="Carnage Bow" additionalName="Mana Up" type="Weapon">
@@ -341,13 +341,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1670" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="440" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5611" name="Soul Bow" additionalName="Cheap Shot" type="Weapon">
@@ -375,13 +375,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="125" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="528" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5612" name="Soul Bow" additionalName="Quick Recovery" type="Weapon">
@@ -408,13 +408,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="125" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="528" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5613" name="Soul Bow" additionalName="Critical Poison" type="Weapon">
@@ -443,13 +443,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="125" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="528" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
@@ -473,13 +473,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="960" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
@@ -503,13 +503,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="960" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5616" name="Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
@@ -535,13 +535,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="960" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5617" name="Soul Separator" additionalName="Guidance" type="Weapon">
@@ -565,13 +565,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5618" name="Soul Separator" additionalName="Critical Damage" type="Weapon">
@@ -595,13 +595,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5619" name="Soul Separator" additionalName="Rsk. Haste" type="Weapon">
@@ -625,13 +625,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5620" name="Blood Tornado" additionalName="Haste" type="Weapon">
@@ -657,11 +657,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="259" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5621" name="Blood Tornado" additionalName="Focus" type="Weapon">
@@ -687,11 +687,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="259" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5622" name="Blood Tornado" additionalName="Anger" type="Weapon">
@@ -717,11 +717,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="259" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5623" name="Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
@@ -747,11 +747,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5624" name="Dragon Grinder" additionalName="Guidance" type="Weapon">
@@ -777,11 +777,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5625" name="Dragon Grinder" additionalName="Health" type="Weapon">
@@ -807,11 +807,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5626" name="Halberd" additionalName="Haste" type="Weapon">
@@ -835,13 +835,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1900" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5627" name="Halberd" additionalName="Critical Stun" type="Weapon">
@@ -867,13 +867,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1900" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5628" name="Halberd" additionalName="Wide Blow" type="Weapon">
@@ -897,13 +897,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1900" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5629" name="Orcish Halberd" type="Weapon">
@@ -926,13 +926,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1880" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="109" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="219" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5630" name="Orcish Halberd" type="Weapon">
@@ -955,13 +955,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1880" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="109" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="219" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5631" name="Orcish Halberd" type="Weapon">
@@ -984,13 +984,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1880" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="109" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="219" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5632" name="Tallum Glaive" additionalName="Guidance" type="Weapon">
@@ -1014,13 +1014,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1840" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5633" name="Tallum Glaive" additionalName="Health" type="Weapon">
@@ -1044,13 +1044,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1840" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5634" name="Tallum Glaive" additionalName="Wide Blow" type="Weapon">
@@ -1074,13 +1074,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1840" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5635" name="Tallum Blade" additionalName="Critical Poison" type="Weapon">
@@ -1108,11 +1108,11 @@
 		<set name="weight" val="1330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5636" name="Tallum Blade" additionalName="Haste" type="Weapon">
@@ -1138,11 +1138,11 @@
 		<set name="weight" val="1330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5637" name="Tallum Blade" additionalName="Anger" type="Weapon">
@@ -1168,11 +1168,11 @@
 		<set name="weight" val="1330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5638" name="Elemental Sword" additionalName="M. Atk." type="Weapon">
@@ -1198,11 +1198,11 @@
 		<set name="weight" val="830" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
@@ -1230,11 +1230,11 @@
 		<set name="weight" val="830" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5640" name="Elemental Sword" additionalName="Empower" type="Weapon">
@@ -1260,11 +1260,11 @@
 		<set name="weight" val="830" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5641" name="Sword of Miracles" additionalName="M. Atk." type="Weapon">
@@ -1290,11 +1290,11 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="152" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
@@ -1322,11 +1322,11 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="152" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5643" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
@@ -1352,11 +1352,11 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="152" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5644" name="Dragon Slayer" additionalName="Health" type="Weapon">
@@ -1382,11 +1382,11 @@
 		<set name="weight" val="1840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5645" name="Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
@@ -1414,11 +1414,11 @@
 		<set name="weight" val="1840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5646" name="Dragon Slayer" additionalName="Critical Drain" type="Weapon">
@@ -1446,11 +1446,11 @@
 		<set name="weight" val="1840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5647" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
@@ -1476,11 +1476,11 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5648" name="Dark Legion's Edge" additionalName="Health" type="Weapon">
@@ -1506,11 +1506,11 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5649" name="Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
@@ -1536,11 +1536,11 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="5650" name="Seed: Alternative Dark Coda" type="EtcItem">

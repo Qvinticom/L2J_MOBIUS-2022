@@ -94,10 +94,10 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="355" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="16305" name="Moirai Sigil" type="Armor">
@@ -115,9 +115,9 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="16" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16306" name="Vesper Helmet" type="Armor">
@@ -440,10 +440,10 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="371" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="16322" name="Vesper Sigil" type="Armor">
@@ -461,9 +461,9 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="17" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16323" name="Sealed Moirai Helmet" type="Armor">
@@ -770,10 +770,10 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="337" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="16339" name="Sealed Moirai Sigil" type="Armor">
@@ -790,9 +790,9 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="16" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16340" name="Sealed Vesper Helmet" type="Armor">
@@ -1099,10 +1099,10 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="352" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="16356" name="Sealed Vesper Sigil" type="Armor">
@@ -1119,9 +1119,9 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="17" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="16357" name="Sealed Foundation Vesper Ring" type="EtcItem">
@@ -1133,9 +1133,6 @@
 		<set name="material" val="GOLD" />
 		<set name="price" val="5142000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="55" />
-		</for>
 	</item>
 	<item id="16358" name="Sealed Foundation Vesper Earring" type="EtcItem">
 		<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1146,9 +1143,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="7713000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="83" />
-		</for>
 	</item>
 	<item id="16359" name="Sealed Foundation Vesper Necklace" type="EtcItem">
 		<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1159,9 +1153,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="10284000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="110" />
-		</for>
 	</item>
 	<item id="16360" name="Sealed Foundation Moirai Ring" type="EtcItem">
 		<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1172,9 +1163,6 @@
 		<set name="material" val="GOLD" />
 		<set name="price" val="3710000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="53" />
-		</for>
 	</item>
 	<item id="16361" name="Sealed Foundation Moirai Earring" type="EtcItem">
 		<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1185,9 +1173,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="5565000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="76" />
-		</for>
 	</item>
 	<item id="16362" name="Sealed Foundation Moirai Necklace" type="EtcItem">
 		<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1198,9 +1183,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="7420000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="101" />
-		</for>
 	</item>
 	<item id="16363" name="Foundation Vesper Ring" type="EtcItem">
 		<!-- Rare Sealed Vesper Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1211,9 +1193,6 @@
 		<set name="material" val="GOLD" />
 		<set name="price" val="7596000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="62" />
-		</for>
 	</item>
 	<item id="16364" name="Foundation Vesper Earring" type="EtcItem">
 		<!-- Rare Sealed Vesper Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1224,9 +1203,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="11394000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="94" />
-		</for>
 	</item>
 	<item id="16365" name="Foundation Vesper Necklace" type="EtcItem">
 		<!-- Rare Sealed Vesper Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1237,9 +1213,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="15192000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="125" />
-		</for>
 	</item>
 	<item id="16366" name="Foundation Moirai Ring" type="EtcItem">
 		<!-- Rare Sealed Moirai Ring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1250,9 +1223,6 @@
 		<set name="material" val="GOLD" />
 		<set name="price" val="5480000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="53" />
-		</for>
 	</item>
 	<item id="16367" name="Foundation Moirai Earring" type="EtcItem">
 		<!-- Rare Sealed Moirai Earring that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1263,9 +1233,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="8221000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="86" />
-		</for>
 	</item>
 	<item id="16368" name="Foundation Moirai Necklace" type="EtcItem">
 		<!-- Rare Sealed Moirai Necklace that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1276,9 +1243,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="10961000" />
 		<set name="weight" val="150" />
-		<for>
-			<add order="0" stat="mDef" val="115" />
-		</for>
 	</item>
 	<item id="16369" name="Sealed Vesper Ring" type="Armor">
 		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is broken, Stun Resistance is increased. -->
@@ -1313,8 +1277,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="83" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16371" name="Sealed Vesper Necklace" type="Armor">
@@ -1332,8 +1296,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="110" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="50" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16372" name="Sealed Moirai Ring" type="Armor">
@@ -1369,8 +1333,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="76" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="36" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16374" name="Sealed Moirai Necklace" type="Armor">
@@ -1388,8 +1352,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="101" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16375" name="Vesper Ring" type="Armor">
@@ -1427,8 +1391,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16377" name="Vesper Necklace" type="Armor">
@@ -1447,8 +1411,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="125" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="50" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16378" name="Moirai Ring" type="Armor">
@@ -1486,8 +1450,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="86" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="36" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16380" name="Moirai Necklace" type="Armor">
@@ -1506,8 +1470,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="115" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="16381" name="Training Order Paper" type="EtcItem">
@@ -1539,7 +1503,7 @@
 	<item id="16383" name="Holiday Cake Pack" type="EtcItem">
 		<!-- Holiday Cake Pack. Contains a Holiday Cake box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16391,1,1,100" /> <!-- Holiday Cake Box -  -->
+		<set name="capsuled_items" val="16391,1,1,100" /> <!-- Holiday Cake Box -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1556,7 +1520,7 @@
 	<item id="16384" name="Special Holiday Cake Pack" type="EtcItem">
 		<!-- Special Holiday Cake Pack. Contains a Special Christmas box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16392,1,1,100" /> <!-- Special Holiday Cake Box -  -->
+		<set name="capsuled_items" val="16392,1,1,100" /> <!-- Special Holiday Cake Box -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1573,7 +1537,7 @@
 	<item id="16385" name="Teddy Boy Gift Box Pack" type="EtcItem">
 		<!-- Teddy Boy Wrapped Pack. Contains a Teddy Boy Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16395,1,1,100" /> <!-- Teddy Boy Gift Box -  -->
+		<set name="capsuled_items" val="16395,1,1,100" /> <!-- Teddy Boy Gift Box -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1590,7 +1554,7 @@
 	<item id="16386" name="Teddy Girl Gift Box Pack" type="EtcItem">
 		<!-- Teddy Girl Wrapped Pack. Contains a Teddy Girl Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16396,1,1,100" /> <!-- Teddy Girl Gift Box -  -->
+		<set name="capsuled_items" val="16396,1,1,100" /> <!-- Teddy Girl Gift Box -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1607,7 +1571,7 @@
 	<item id="16387" name="Holiday Cake Pack (Event)" type="EtcItem">
 		<!-- Holiday Cake Pack. Contains a Holiday Cake box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16393,1,1,100" /> <!-- Holiday Cake Box (Event) -  -->
+		<set name="capsuled_items" val="16393,1,1,100" /> <!-- Holiday Cake Box (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1624,7 +1588,7 @@
 	<item id="16388" name="Special Holiday Cake Pack (Event)" type="EtcItem">
 		<!-- Special Holiday Cake Pack. Contains a Special Christmas box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16394,1,1,100" /> <!-- Special Holiday Cake Box (Event) -  -->
+		<set name="capsuled_items" val="16394,1,1,100" /> <!-- Special Holiday Cake Box (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1641,7 +1605,7 @@
 	<item id="16389" name="Teddy Boy Gift Box Pack (Event)" type="EtcItem">
 		<!-- Teddy Boy Wrapped Pack. Contains a Teddy Boy Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16397,1,1,100" /> <!-- Teddy Boy Gift Box (Event) -  -->
+		<set name="capsuled_items" val="16397,1,1,100" /> <!-- Teddy Boy Gift Box (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1658,7 +1622,7 @@
 	<item id="16390" name="Teddy Girl Gift Box Pack (Event)" type="EtcItem">
 		<!-- Teddy Girl Wrapped Pack. Contains a Teddy Girl Wrapped Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16398,1,1,100" /> <!-- Teddy Girl Gift Box (Event) -  -->
+		<set name="capsuled_items" val="16398,1,1,100" /> <!-- Teddy Girl Gift Box (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1675,7 +1639,7 @@
 	<item id="16391" name="Holiday Cake Box" type="EtcItem">
 		<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16403,1,1,100;16404,1,1,100" /> <!-- Holiday Cake -  -->
+		<set name="capsuled_items" val="16403,1,1,100;16404,1,1,100" /> <!-- Holiday Cake, White Winter Wish Candle -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1689,7 +1653,7 @@
 	<item id="16392" name="Special Holiday Cake Box" type="EtcItem">
 		<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). -->
 		<set name="icon" val="icon.four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="16391,5,5,100;16407,1,1,100" /> <!-- Holiday Cake Box -  -->
+		<set name="capsuled_items" val="16391,5,5,100;16407,1,1,100" /> <!-- Holiday Cake Box, Santa's Stockings - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1703,7 +1667,7 @@
 	<item id="16393" name="Holiday Cake Box (Event)" type="EtcItem">
 		<!-- Holiday Cake Box. Contains 1 Holiday Cake and 1 White Winter Wish Candle. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16405,1,1,100;16406,1,1,100" /> <!-- Holiday Cake (Event) -  -->
+		<set name="capsuled_items" val="16405,1,1,100;16406,1,1,100" /> <!-- Holiday Cake (Event) - Event, White Winter Wish Candle (Event) - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1717,7 +1681,7 @@
 	<item id="16394" name="Special Holiday Cake Box (Event)" type="EtcItem">
 		<!-- Special Holiday Cake Box. Contains 5 Holiday Cake boxes and 1 Santa's Stockings (bonus). -->
 		<set name="icon" val="icon.four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="16393,5,5,100;16407,1,1,100" /> <!-- Holiday Cake Box (Event) -  -->
+		<set name="capsuled_items" val="16393,5,5,100;16407,1,1,100" /> <!-- Holiday Cake Box (Event) - Event, Santa's Stockings - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1731,7 +1695,7 @@
 	<item id="16395" name="Teddy Boy Gift Box" type="EtcItem">
 		<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16399,1,1,100;16404,3,3,100" /> <!-- Teddy Boy Summon Bracelet - Permanent -->
+		<set name="capsuled_items" val="16399,1,1,100;16404,3,3,100" /> <!-- Teddy Boy Summon Bracelet - Permanent, White Winter Wish Candle - Permanent -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1745,7 +1709,7 @@
 	<item id="16396" name="Teddy Girl Gift Box" type="EtcItem">
 		<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16400,1,1,100;16404,3,3,100" /> <!-- Teddy Girl Summon Bracelet - Permanent -->
+		<set name="capsuled_items" val="16400,1,1,100;16404,3,3,100" /> <!-- Teddy Girl Summon Bracelet - Permanent, White Winter Wish Candle - Permanent -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1759,7 +1723,7 @@
 	<item id="16397" name="Teddy Boy Gift Box (Event)" type="EtcItem">
 		<!-- Teddy Boy Wrapped Pack. Contains 1 Teddy Boy Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16401,1,1,100;16406,3,3,100" /> <!-- Teddy Boy Summon Bracelet (Event) - Permanent -->
+		<set name="capsuled_items" val="16401,1,1,100;16406,3,3,100" /> <!-- Teddy Boy Summon Bracelet (Event) - Permanent, White Winter Wish Candle (Event) - Permanent -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1773,7 +1737,7 @@
 	<item id="16398" name="Teddy Girl Gift Box (Event)" type="EtcItem">
 		<!-- Teddy Girl Wrapped Pack. Contains 1 Teddy Girl Summon Bracelet and 3 White Winter Wish Candles. -->
 		<set name="icon" val="icon.lucky_bag_box_i00" />
-		<set name="capsuled_items" val="16402,1,1,100;16406,3,3,100" /> <!-- Teddy Girl Summon Bracelet (Event) - Permanent -->
+		<set name="capsuled_items" val="16402,1,1,100;16406,3,3,100" /> <!-- Teddy Girl Summon Bracelet (Event) - Permanent, White Winter Wish Candle (Event) - Permanent -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

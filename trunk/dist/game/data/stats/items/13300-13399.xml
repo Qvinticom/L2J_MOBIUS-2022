@@ -788,7 +788,7 @@
 	<item id="13341" name="My Teleport Book Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing sheet of the Free Teleporter's Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13301,1,1,100" /> <!-- My Teleport Book (Event) -  -->
+		<set name="capsuled_items" val="13301,1,1,100" /> <!-- My Teleport Book (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -805,7 +805,7 @@
 	<item id="13342" name="My Teleport Scroll 30-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13302,30,30,100" /> <!-- My Teleport Scroll (Event) -  -->
+		<set name="capsuled_items" val="13302,30,30,100" /> <!-- My Teleport Scroll (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -822,7 +822,7 @@
 	<item id="13343" name="Feather of Blessing 3-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 3 sheets of the Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13300,3,3,100" /> <!-- Feather of Blessing (Event) -  -->
+		<set name="capsuled_items" val="13300,3,3,100" /> <!-- Feather of Blessing (Event) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -873,7 +873,7 @@
 	<item id="13346" name="Entrance Pass: Kamaloka 3-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13297,5,5,100;13298,5,5,100;13299,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -  -->
+		<set name="capsuled_items" val="13297,5,5,100;13298,5,5,100;13299,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) - 30-day, Extra Pass: Near Kamaloka (Event) - 30-day, Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1043,7 @@
 	<item id="13356" name="OX Stick Pack (30-day) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13319,1,1,100;13320,1,1,100" /> <!-- O Stick (Event) - 30-day -->
+		<set name="capsuled_items" val="13319,1,1,100;13320,1,1,100" /> <!-- O Stick (Event) - 30-day, X Stick (Event) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1060,7 +1060,7 @@
 	<item id="13357" name="Rock-Paper-Scissors Stick Pack (30-day) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13321,1,1,100;13322,1,1,100;13323,1,1,100" /> <!-- Scissors Stick (Event) - 30-day -->
+		<set name="capsuled_items" val="13321,1,1,100;13322,1,1,100;13323,1,1,100" /> <!-- Scissors Stick (Event) - 30-day, Rock Stick (Event) - 30-day, Paper Stick (Event) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1094,7 +1094,7 @@
 	<item id="13359" name="Color Title 3-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 3 sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13307,3,3,100" /> <!-- Color Title (Event) -  -->
+		<set name="capsuled_items" val="13307,3,3,100" /> <!-- Color Title (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1111,7 +1111,7 @@
 	<item id="13360" name="Color Title Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13307,1,1,100" /> <!-- Color Title (Event) -  -->
+		<set name="capsuled_items" val="13307,1,1,100" /> <!-- Color Title (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1128,7 +1128,7 @@
 	<item id="13361" name="My Teleport Scroll 10-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 10 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13016,10,10,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="13016,10,10,100" /> <!-- My Teleport Scroll - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1145,7 +1145,7 @@
 	<item id="13362" name="Kamaloka (Hall of the Abyss) 15-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13297,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -  -->
+		<set name="capsuled_items" val="13297,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1162,7 +1162,7 @@
 	<item id="13363" name="Near Kamaloka 15-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13298,15,15,100" /> <!-- Extra Pass: Near Kamaloka (Event) -  -->
+		<set name="capsuled_items" val="13298,15,15,100" /> <!-- Extra Pass: Near Kamaloka (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1179,7 @@
 	<item id="13364" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13299,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) -  -->
+		<set name="capsuled_items" val="13299,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1196,7 +1196,7 @@
 	<item id="13365" name="Kamaloka (Hall of the Abyss) 5-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13297,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -  -->
+		<set name="capsuled_items" val="13297,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1213,7 +1213,7 @@
 	<item id="13366" name="Near Kamaloka 5-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13298,5,5,100" /> <!-- Extra Pass: Near Kamaloka (Event) -  -->
+		<set name="capsuled_items" val="13298,5,5,100" /> <!-- Extra Pass: Near Kamaloka (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1230,7 +1230,7 @@
 	<item id="13367" name="Kamaloka (Labyrinth of the Abyss) 5-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13299,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) -  -->
+		<set name="capsuled_items" val="13299,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1247,7 +1247,7 @@
 	<item id="13368" name="Feather of Blessing Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing sheets of the Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13300,1,1,100" /> <!-- Feather of Blessing (Event) -  -->
+		<set name="capsuled_items" val="13300,1,1,100" /> <!-- Feather of Blessing (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1451,7 +1451,7 @@
 	<item id="13380" name="OX Stick Pack (7-day) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing OX Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13334,1,1,100;13335,1,1,100" /> <!-- O Stick (Event) - 7-day -->
+		<set name="capsuled_items" val="13334,1,1,100;13335,1,1,100" /> <!-- O Stick (Event) - 7-day, X Stick (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1468,7 +1468,7 @@
 	<item id="13381" name="Rock-Paper-Scissors Stick Pack (7-day) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13336,1,1,100;13337,1,1,100;13338,1,1,100" /> <!-- Scissors Stick (Event) - 7-day -->
+		<set name="capsuled_items" val="13336,1,1,100;13337,1,1,100;13338,1,1,100" /> <!-- Scissors Stick (Event) - 7-day, Rock Stick (Event) - 7-day, Paper Stick (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1516,7 +1516,7 @@
 	<item id="13384" name="Minion Coupon 3-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped box containing ticket that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13383,3,3,100" /> <!-- Minion Coupon (5-hour) (Event) -  -->
+		<set name="capsuled_items" val="13383,3,3,100" /> <!-- Minion Coupon (5-hour) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1533,7 +1533,7 @@
 	<item id="13385" name="Minion Coupon Pack (Event)" type="EtcItem">
 		<!-- Wrapped box containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13383,1,1,100" /> <!-- Minion Coupon (5-hour) (Event) -  -->
+		<set name="capsuled_items" val="13383,1,1,100" /> <!-- Minion Coupon (5-hour) (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1618,6 +1618,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
+			<add stat="maxCp" val="516" />
 			<add order="0" stat="pDef" val="23" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1639,6 +1640,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
+			<add stat="maxCp" val="672" />
 			<add order="0" stat="pDef" val="28" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1660,6 +1662,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
+			<add stat="maxCp" val="564" />
 			<add order="0" stat="pDef" val="26" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1681,6 +1684,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
+			<add stat="maxCp" val="744" />
 			<add order="0" stat="pDef" val="30" />
 			<enchant stat="pDef" val="0" />
 		</for>

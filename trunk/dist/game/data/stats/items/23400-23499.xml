@@ -639,7 +639,8 @@
 	<item id="23444" name="Russian Commemorative Cloak" type="Armor">
 		<!-- Cloak commemorating Lineage II's 4th anniversary. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_cloak_anniversary" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -648,7 +649,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="23445" name="Kokoshnik" type="Armor">
@@ -672,13 +673,14 @@
 	<item id="23447" name="Russian Commemorative Cloak" type="Armor">
 		<!-- Cloak commemorating Lineage II's 4th anniversary. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_cloak_anniversary" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="23448" name="Metal Suit Top" type="Armor">
@@ -1087,7 +1089,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 	</item>
-	<item id="23485" name="Santa Outfit" type="Armor">
+	<item id="23485" name="Santa Outfit " type="Armor">
 		<!-- Santa outfit to celebrate the holiday season. -->
 		<set name="icon" val="Branchsys3.icon1.armor_ev_santas_clothes" />
 		<set name="bodypart" val="onepiece" />

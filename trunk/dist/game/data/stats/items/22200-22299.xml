@@ -471,7 +471,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<for/>
 	</item>
 	<item id="22238" name="Scroll: Hair Accessory (Warrior)" type="EtcItem">
 		<!-- Scroll to add the options for a Warrior to a hair accessory. -->
@@ -505,7 +504,9 @@
 	<item id="22241" name="Sweet Chocolate Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing 3 Sweet Chocolates and 1 Valentine's Day Love Pouch. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="capsuled_items" val="22242,1,1,100" /> <!-- Sweet Chocolate - Event -->
 		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -535,7 +536,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
-		<for/>
 	</item>
 	<item id="22244" name="Mysterious Soulshot (C-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. -->
@@ -1104,7 +1104,8 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="47520" />
 		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
-</item>
+		<set name="weight" val="150" />
+	</item>
 	<item id="22288" name="Agathion - Juju Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive an Agathion - Juju. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
@@ -1130,6 +1131,7 @@
 		<!-- The recipe for Valentine Cake. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_recipe_i00" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />

@@ -81,9 +81,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
-		<for>
-			<add order="0" stat="pDef" val="20" />
-		</for>
 	</item>
 	<item id="14604" name="Red Talisman - Territory Guardian" type="Armor">
 		<!-- When used, Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item. -->
@@ -140,11 +137,11 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="39" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="78" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="14607" name="Mark of Gracia" type="EtcItem">
@@ -496,7 +493,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="45" />
@@ -522,7 +519,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="51" />
@@ -550,7 +547,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="42" />
 			<set stat="pAtk" val="116" />
@@ -686,7 +683,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="46" />
@@ -716,7 +713,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="56" />
@@ -819,7 +816,7 @@
 	<item id="14639" name="Event - Claymore" type="EtcItem">
 		<!-- When Double-clicked, Claymore and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_claymore_i00" />
-		<set name="capsuled_items" val="70,1,1,100;13421,5,5,100" /> <!-- Claymore -  -->
+		<set name="capsuled_items" val="70,1,1,100;13421,5,5,100" /> <!-- Claymore, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -835,7 +832,7 @@
 	<item id="14640" name="Event - Bonebreaker" type="EtcItem">
 		<!-- When Double-clicked, Bonebreaker and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
-		<set name="capsuled_items" val="159,1,1,100;13421,5,5,100" /> <!-- Bonebreaker -  -->
+		<set name="capsuled_items" val="159,1,1,100;13421,5,5,100" /> <!-- Bonebreaker, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -851,7 +848,7 @@
 	<item id="14641" name="Event - Atuba Hammer" type="EtcItem">
 		<!-- When Double-clicked, Atuba Hammer and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
-		<set name="capsuled_items" val="187,1,1,100;13421,5,5,100" /> <!-- Atuba Hammer -  -->
+		<set name="capsuled_items" val="187,1,1,100;13421,5,5,100" /> <!-- Atuba Hammer, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -867,7 +864,7 @@
 	<item id="14642" name="Event - Ghost Staff" type="EtcItem">
 		<!-- When Double-clicked, Ghost Staff and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
-		<set name="capsuled_items" val="188,1,1,100;13421,5,5,100" /> <!-- Ghost Staff -  -->
+		<set name="capsuled_items" val="188,1,1,100;13421,5,5,100" /> <!-- Ghost Staff, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -883,7 +880,7 @@
 	<item id="14643" name="Event - Staff of Life" type="EtcItem">
 		<!-- When Double-clicked, Staff of Life and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_life_stick_i00" />
-		<set name="capsuled_items" val="189,1,1,100;13421,5,5,100" /> <!-- Staff of Life -  -->
+		<set name="capsuled_items" val="189,1,1,100;13421,5,5,100" /> <!-- Staff of Life, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -899,7 +896,7 @@
 	<item id="14644" name="Event - Atuba Mace" type="EtcItem">
 		<!-- When Double-clicked, Atuba Mace and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_atuba_mace_i00" />
-		<set name="capsuled_items" val="190,1,1,100;13421,5,5,100" /> <!-- Atuba Mace -  -->
+		<set name="capsuled_items" val="190,1,1,100;13421,5,5,100" /> <!-- Atuba Mace, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -915,7 +912,7 @@
 	<item id="14645" name="Event - Mithril Dagger" type="EtcItem">
 		<!-- When Double-clicked, Mithril Dagger and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
-		<set name="capsuled_items" val="225,1,1,100;13421,5,5,100" /> <!-- Mithril Dagger -  -->
+		<set name="capsuled_items" val="225,1,1,100;13421,5,5,100" /> <!-- Mithril Dagger, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -931,7 +928,7 @@
 	<item id="14646" name="Event - Scallop Jamadhr" type="EtcItem">
 		<!-- When Double-clicked, Scallop Jamadhr and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
-		<set name="capsuled_items" val="262,1,1,100;13421,5,5,100" /> <!-- Scallop Jamadhr -  -->
+		<set name="capsuled_items" val="262,1,1,100;13421,5,5,100" /> <!-- Scallop Jamadhr, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -947,7 +944,7 @@
 	<item id="14647" name="Event - Light Crossbow" type="EtcItem">
 		<!-- When Double-clicked, Light Crossbow and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
-		<set name="capsuled_items" val="280,1,1,100;13421,5,5,100" /> <!-- Light Crossbow -  -->
+		<set name="capsuled_items" val="280,1,1,100;13421,5,5,100" /> <!-- Light Crossbow, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +960,7 @@
 	<item id="14648" name="Event - Glaive" type="EtcItem">
 		<!-- When Double-clicked, Glaive and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
-		<set name="capsuled_items" val="297,1,1,100;13421,5,5,100" /> <!-- Glaive -  -->
+		<set name="capsuled_items" val="297,1,1,100;13421,5,5,100" /> <!-- Glaive, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -979,7 +976,7 @@
 	<item id="14649" name="Event - Elven Long Sword" type="EtcItem">
 		<!-- When Double-clicked, Elven Long Sword and 5 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_elven_long_sword_i00" />
-		<set name="capsuled_items" val="2499,1,1,100;13421,5,5,100" /> <!-- Elven Long Sword -  -->
+		<set name="capsuled_items" val="2499,1,1,100;13421,5,5,100" /> <!-- Elven Long Sword, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -995,7 +992,7 @@
 	<item id="14650" name="Event - Samurai Long Sword" type="EtcItem">
 		<!-- When Double-clicked, Samurai Long Sword and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
-		<set name="capsuled_items" val="135,1,1,100;13421,3,3,100" /> <!-- Samurai Long Sword -  -->
+		<set name="capsuled_items" val="135,1,1,100;13421,3,3,100" /> <!-- Samurai Long Sword, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1008,7 @@
 	<item id="14651" name="Event - Deadman's Staff" type="EtcItem">
 		<!-- When Double-clicked, Deadman's Staff and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
-		<set name="capsuled_items" val="204,1,1,100;13421,3,3,100" /> <!-- Deadman's Staff -  -->
+		<set name="capsuled_items" val="204,1,1,100;13421,3,3,100" /> <!-- Deadman's Staff, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1027,7 +1024,7 @@
 	<item id="14652" name="Event - Ghoul's Staff" type="EtcItem">
 		<!-- When Double-clicked, Ghoul's Staff and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
-		<set name="capsuled_items" val="205,1,1,100;13421,3,3,100" /> <!-- Ghoul's Staff -  -->
+		<set name="capsuled_items" val="205,1,1,100;13421,3,3,100" /> <!-- Ghoul's Staff, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1040,7 @@
 	<item id="14653" name="Event - Demon's Staff" type="EtcItem">
 		<!-- When Double-clicked, Demon's Staff and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
-		<set name="capsuled_items" val="206,1,1,100;13421,3,3,100" /> <!-- Demon's Staff -  -->
+		<set name="capsuled_items" val="206,1,1,100;13421,3,3,100" /> <!-- Demon's Staff, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1059,7 +1056,7 @@
 	<item id="14654" name="Event - Crystal Dagger" type="EtcItem">
 		<!-- When Double-clicked, Crystal Dagger and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
-		<set name="capsuled_items" val="228,1,1,100;13421,3,3,100" /> <!-- Crystal Dagger -  -->
+		<set name="capsuled_items" val="228,1,1,100;13421,3,3,100" /> <!-- Crystal Dagger, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1075,7 +1072,7 @@
 	<item id="14655" name="Event - Great Pata" type="EtcItem">
 		<!-- When Double-clicked, Great Pata and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
-		<set name="capsuled_items" val="266,1,1,100;13421,3,3,100" /> <!-- Great Pata -  -->
+		<set name="capsuled_items" val="266,1,1,100;13421,3,3,100" /> <!-- Great Pata, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1091,7 +1088,7 @@
 	<item id="14656" name="Event - Eminence Bow" type="EtcItem">
 		<!-- When Double-clicked, Eminence Bow and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
-		<set name="capsuled_items" val="286,1,1,100;13421,3,3,100" /> <!-- Eminence Bow -  -->
+		<set name="capsuled_items" val="286,1,1,100;13421,3,3,100" /> <!-- Eminence Bow, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1107,7 +1104,7 @@
 	<item id="14657" name="Event - Orcish Poleaxe" type="EtcItem">
 		<!-- When Double-clicked, Orcish Poleaxe and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
-		<set name="capsuled_items" val="299,1,1,100;13421,3,3,100" /> <!-- Orcish Poleaxe -  -->
+		<set name="capsuled_items" val="299,1,1,100;13421,3,3,100" /> <!-- Orcish Poleaxe, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1123,7 +1120,7 @@
 	<item id="14658" name="Event - Yaksa Mace" type="EtcItem">
 		<!-- When Double-clicked, Yaksa Mace and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
-		<set name="capsuled_items" val="2503,1,1,100;13421,3,3,100" /> <!-- Yaksa Mace -  -->
+		<set name="capsuled_items" val="2503,1,1,100;13421,3,3,100" /> <!-- Yaksa Mace, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1139,7 +1136,7 @@
 	<item id="14659" name="Event - Berserker Blade" type="EtcItem">
 		<!-- When Double-clicked, Berserker Blade and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
-		<set name="capsuled_items" val="5286,1,1,100;13421,3,3,100" /> <!-- Berserker Blade -  -->
+		<set name="capsuled_items" val="5286,1,1,100;13421,3,3,100" /> <!-- Berserker Blade, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1155,7 +1152,7 @@
 	<item id="14660" name="Event - Ecliptic Sword" type="EtcItem">
 		<!-- When Double-clicked, Ecliptic Sword and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
-		<set name="capsuled_items" val="7888,1,1,100;13421,3,3,100" /> <!-- Ecliptic Sword -  -->
+		<set name="capsuled_items" val="7888,1,1,100;13421,3,3,100" /> <!-- Ecliptic Sword, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1171,7 +1168,7 @@
 	<item id="14661" name="Event - Ecliptic Axe" type="EtcItem">
 		<!-- When Double-clicked, Ecliptic Axe and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
-		<set name="capsuled_items" val="7891,1,1,100;13421,3,3,100" /> <!-- Ecliptic Axe -  -->
+		<set name="capsuled_items" val="7891,1,1,100;13421,3,3,100" /> <!-- Ecliptic Axe, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1187,7 +1184,7 @@
 	<item id="14662" name="Event - Dwarven Hammer" type="EtcItem">
 		<!-- When Double-clicked, Dwarven Hammer and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
-		<set name="capsuled_items" val="7897,1,1,100;13421,3,3,100" /> <!-- Dwarven Hammer -  -->
+		<set name="capsuled_items" val="7897,1,1,100;13421,3,3,100" /> <!-- Dwarven Hammer, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1203,7 +1200,7 @@
 	<item id="14663" name="Event - Katana*Katana" type="EtcItem">
 		<!-- When Double-clicked, Katana*Katana and 3 honey wheat cake can be acquired. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="capsuled_items" val="2582,1,1,100;13421,3,3,100" /> <!-- Katana*Katana -  -->
+		<set name="capsuled_items" val="2582,1,1,100;13421,3,3,100" /> <!-- Katana*Katana, Honey Wheat Cake -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1234,8 +1231,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14665" name="Dion Resistance Earring" type="Armor">
@@ -1278,8 +1275,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14667" name="Oren Resistance Earring" type="Armor">
@@ -1344,8 +1341,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14670" name="Goddard Resistance Earring" type="Armor">
@@ -1410,8 +1407,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14673" name="Rudolph's Nose" type="EtcItem">
@@ -1430,7 +1427,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1493,7 +1490,7 @@
 	<item id="14678" name="Neolithic Crystal (B-grade)" type="EtcItem">
 		<!-- If you bring it to the Dimensional Merchant, you can exchange a B-grade ordinary item for a Masterwork Item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -1502,7 +1499,7 @@
 	<item id="14679" name="Neolithic Crystal (A-grade)" type="EtcItem">
 		<!-- If you bring it to the Dimensional Merchant, you can exchange an A-grade ordinary item for a Masterwork Item. -->
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />

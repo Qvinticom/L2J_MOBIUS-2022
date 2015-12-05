@@ -824,7 +824,7 @@
 	<item id="17267" name="Sealed Blood Crystal" type="EtcItem">
 		<!-- Small crystal particles made from the blood of Antharas. After his blood was spilt, the land absorbed the blood and acted as a filter that separated the Poison from the blood creating a pure form of his blood that crystallized over time. Used to create an -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
@@ -1136,7 +1136,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="380" />
@@ -1259,7 +1259,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
@@ -1284,7 +1284,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="856" />
@@ -1309,7 +1309,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="771" />

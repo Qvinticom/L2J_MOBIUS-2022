@@ -614,8 +614,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="13741" name="Dion Holy Resistance Necklace" type="Armor">
@@ -656,8 +656,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="13743" name="Oren Dark Resistance Necklace" type="Armor">
@@ -719,8 +719,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="13746" name="Goddard Fire Resistance Necklace" type="Armor">
@@ -782,8 +782,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="13749" name="Emery Piece" type="EtcItem">
@@ -839,6 +839,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
+			<add stat="maxCp" val="672" />
 			<add order="0" stat="pDef" val="28" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1138,7 +1139,7 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
 		</for>
@@ -1458,11 +1459,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13790" name="Blue Boing Hammer" type="Weapon">
@@ -1487,11 +1488,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13791" name="Small Red Boing Hammer" type="Weapon">
@@ -1515,11 +1516,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13792" name="Small Blue Boing Hammer" type="Weapon">
@@ -1543,11 +1544,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13793" name="Scroll: Hide Kratei's Cube Name" type="EtcItem">
@@ -1637,7 +1638,7 @@
 	<item id="13799" name="Treasure Sack of Ancient Times" type="EtcItem">
 		<!-- Contains the treasure of the ancient Giants. Double-click to open it. -->
 		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
-		<set name="capsuled_items" val="9628,1,2,60;9629,1,2,30;9630,1,2,35" /> <!-- Corroded Leonard -  -->
+		<set name="capsuled_items" val="9628,1,2,60;9629,1,2,30;9630,1,2,35" /> <!-- Corroded Leonard, Corroded Adamantine, Corroded Orichalcum -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />

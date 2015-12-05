@@ -172,7 +172,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -199,7 +199,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -226,7 +226,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -253,7 +253,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -662,7 +662,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1100" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="35" />
@@ -998,7 +998,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -1025,7 +1025,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -1051,7 +1051,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -1078,7 +1078,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -1472,7 +1472,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1810" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -1498,7 +1498,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -1524,7 +1524,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1551,7 +1551,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1578,7 +1578,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1605,7 +1605,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1631,7 +1631,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1600" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -1658,7 +1658,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1600" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -1685,7 +1685,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1600" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -1712,7 +1712,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1600" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -1838,10 +1838,10 @@
 		<set name="price" val="3950" />
 		<set name="weight" val="1310" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="31173" name="Bound Bone Helmet" type="Armor">
@@ -1953,7 +1953,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -1979,7 +1979,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2005,7 +2005,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2031,7 +2031,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2057,7 +2057,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2084,7 +2084,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2111,7 +2111,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2138,7 +2138,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2165,7 +2165,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2192,7 +2192,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2219,7 +2219,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2246,7 +2246,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2273,7 +2273,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2300,7 +2300,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2327,7 +2327,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2354,7 +2354,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2381,7 +2381,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2408,7 +2408,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2435,7 +2435,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2462,7 +2462,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -2508,7 +2508,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="960" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="186" />
@@ -2535,7 +2535,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="960" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="186" />

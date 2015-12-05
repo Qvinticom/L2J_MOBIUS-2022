@@ -206,7 +206,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="item_skill" val="26068-10" />
+		<set name="item_skill" val="26068-10" /> <!-- Blessed Spiritshot Pack (D-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1000" />
 	</item>
@@ -281,7 +281,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="item_skill" val="26069-10" />
+		<set name="item_skill" val="26069-10" /> <!-- Spiritshot Pack (D-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1000" />
 	</item>
@@ -356,7 +356,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="item_skill" val="26070-10" />
+		<set name="item_skill" val="26070-10" /> <!-- Soulshot Pack (D-grade) -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1000" />
 	</item>
@@ -536,7 +536,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-10" />
+		<set name="item_skill" val="26071-10" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -554,7 +554,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-11" />
+		<set name="item_skill" val="26071-11" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -572,7 +572,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-12" />
+		<set name="item_skill" val="26071-12" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -590,7 +590,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-13" />
+		<set name="item_skill" val="26071-13" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -608,7 +608,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-14" />
+		<set name="item_skill" val="26071-14" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -626,7 +626,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-15" />
+		<set name="item_skill" val="26071-15" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -644,7 +644,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-16" />
+		<set name="item_skill" val="26071-16" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -662,7 +662,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="26071-17" />
+		<set name="item_skill" val="26071-17" /> <!-- Wrapped Daisy Hairpin -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 	</item>
@@ -1243,8 +1243,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="22176" name="Event - Summon Scroll: Bad Bunny" type="EtcItem">
@@ -1359,7 +1359,7 @@
 	<item id="22187" name="Birthday Present Pack" type="EtcItem">
 		<!-- Birthday present received from Alegria on the character's birthday. When used, you can obtain (3) Birthday Vitality Potion(s), a birthday cake, and a Birthday Hat. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="22188,3,3,100;21595,1,1,100;21594,1,1,100" /> <!-- Birthday Vitality Potion -  -->
+		<set name="capsuled_items" val="22188,3,3,100;21595,1,1,100;21594,1,1,100" /> <!-- Birthday Vitality Potion, Birthday Cake, Birthday Hat -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

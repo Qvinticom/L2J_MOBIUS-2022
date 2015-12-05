@@ -20,7 +20,7 @@
 	<item id="20101" name="Santa's Gift Set" type="EtcItem">
 		<!-- Gift set given by Santa Claus to show his appreciation. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="capsuled_items" val="20075,1,1,100;20076,1,1,100;20077,1,1,100" /> <!-- Santa's Gift - Joy - 4-hour -->
+		<set name="capsuled_items" val="20075,1,1,100;20076,1,1,100;20077,1,1,100" /> <!-- Santa's Gift - Joy - 4-hour, Santa's Gift - Enjoyment - 4-hour, Santa's Gift - Luck - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -31,7 +31,7 @@
 	<item id="20102" name="Santa's Gift Set" type="EtcItem">
 		<!-- Gift set given by Santa Claus to show his appreciation. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
-		<set name="capsuled_items" val="20075,1,1,100;20076,1,1,100;20078,1,1,100" /> <!-- Santa's Gift - Joy - 4-hour -->
+		<set name="capsuled_items" val="20075,1,1,100;20076,1,1,100;20078,1,1,100" /> <!-- Santa's Gift - Joy - 4-hour, Santa's Gift - Enjoyment - 4-hour, Santa's Gift - Luck - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -163,11 +163,11 @@
 		<set name="weight" val="483" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20110" name="Lesser Giant's Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -195,11 +195,11 @@
 		<set name="weight" val="673" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20111" name="Maingauche (Event)" additionalName="4-hour" type="Weapon">
@@ -226,13 +226,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="357" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="69" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20112" name="Tarbar (Event)" additionalName="4-hour" type="Weapon">
@@ -261,11 +261,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20113" name="Lesser Giant's Hammer (Event)" additionalName="4-hour" type="Weapon">
@@ -294,11 +294,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20114" name="Priest Mace (Event)" additionalName="4-hour" type="Weapon">
@@ -327,11 +327,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="63" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20115" name="Goat Head Staff (Event)" additionalName="4-hour" type="Weapon">
@@ -360,11 +360,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="77" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20116" name="Bich'Hwa (Event)" additionalName="4-hour" type="Weapon">
@@ -393,11 +393,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20117" name="Reinforced Longbow (Event)" additionalName="4-hour" type="Weapon">
@@ -426,13 +426,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="607" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="179" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20118" name="Winged Spear (Event)" additionalName="4-hour" type="Weapon">
@@ -459,13 +459,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="687" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20119" name="Artisan's Sword*Artisan's Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -493,11 +493,11 @@
 		<set name="weight" val="827" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20120" name="Épée (Event)" additionalName="4-hour" type="Weapon">
@@ -528,13 +528,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="72" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20121" name="Katzbalger (Event)" additionalName="4-hour" type="Weapon">
@@ -566,11 +566,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20122" name="Arm Breaker (Event)" additionalName="4-hour" type="Weapon">
@@ -601,13 +601,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20123" name="Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -635,11 +635,11 @@
 		<set name="weight" val="460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20124" name="Berserker Blade (Event)" additionalName="4-hour" type="Weapon">
@@ -667,11 +667,11 @@
 		<set name="weight" val="460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20125" name="Crystal Dagger (Event)" additionalName="4-hour" type="Weapon">
@@ -698,13 +698,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="333" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20126" name="Yaksa Mace (Event)" additionalName="4-hour" type="Weapon">
@@ -733,11 +733,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20127" name="Dwarven Hammer (Event)" additionalName="4-hour" type="Weapon">
@@ -766,11 +766,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20128" name="Ecliptic Axe (Event)" additionalName="4-hour" type="Weapon">
@@ -799,11 +799,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20129" name="Demon's Staff (Event)" additionalName="4-hour" type="Weapon">
@@ -832,11 +832,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20130" name="Great Pata (Event)" additionalName="4-hour" type="Weapon">
@@ -865,11 +865,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20131" name="Eminence Bow (Event)" additionalName="4-hour" type="Weapon">
@@ -898,13 +898,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="573" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="323" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20132" name="Orcish Poleaxe (Event)" additionalName="4-hour" type="Weapon">
@@ -931,13 +931,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20133" name="Katana*Katana (Event)" additionalName="4-hour" type="Weapon">
@@ -966,11 +966,11 @@
 		<set name="weight" val="757" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20134" name="Admiral's Estoc (Event)" additionalName="4-hour" type="Weapon">
@@ -1001,13 +1001,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20135" name="Saber Tooth (Event)" additionalName="4-hour" type="Weapon">
@@ -1039,11 +1039,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="169" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20136" name="Sharpshooter (Event)" additionalName="4-hour" type="Weapon">
@@ -1074,13 +1074,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20137" name="Damascus Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -1108,11 +1108,11 @@
 		<set name="weight" val="450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20138" name="Guardian's Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -1140,11 +1140,11 @@
 		<set name="weight" val="643" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20139" name="Demon's Dagger (Event)" additionalName="4-hour" type="Weapon">
@@ -1171,13 +1171,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="323" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20140" name="Art of Battle Axe (Event)" additionalName="4-hour" type="Weapon">
@@ -1206,11 +1206,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20141" name="Star Buster (Event)" additionalName="4-hour" type="Weapon">
@@ -1239,11 +1239,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20142" name="Kaim Vanul's Bones (Event)" additionalName="4-hour" type="Weapon">
@@ -1272,11 +1272,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20143" name="Staff of Evil Spirits (Event)" additionalName="4-hour" type="Weapon">
@@ -1305,11 +1305,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20144" name="Bellion Cestus (Event)" additionalName="4-hour" type="Weapon">
@@ -1338,11 +1338,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20145" name="Bow of Peril (Event)" additionalName="4-hour" type="Weapon">
@@ -1371,13 +1371,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="567" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="400" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20146" name="Lance (Event)" additionalName="4-hour" type="Weapon">
@@ -1404,13 +1404,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20147" name="Samurai Long Sword*Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
@@ -1421,7 +1421,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant4_skill" val="3045-14" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1439,11 +1439,11 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20148" name="Colichemarde (Event)" additionalName="4-hour" type="Weapon">
@@ -1474,13 +1474,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20149" name="Dismantler (Event)" additionalName="4-hour" type="Weapon">
@@ -1512,11 +1512,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="210" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20150" name="Hell Hound (Event)" additionalName="4-hour" type="Weapon">
@@ -1547,13 +1547,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20151" name="Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
@@ -1581,11 +1581,11 @@
 		<set name="weight" val="440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20152" name="Dragon Slayer (Event)" additionalName="4-hour" type="Weapon">
@@ -1613,11 +1613,11 @@
 		<set name="weight" val="613" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20153" name="Soul Separator (Event)" additionalName="4-hour" type="Weapon">
@@ -1644,13 +1644,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="317" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20154" name="Elysian (Event)" additionalName="4-hour" type="Weapon">
@@ -1679,11 +1679,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20155" name="Doom Crusher (Event)" additionalName="4-hour" type="Weapon">
@@ -1712,11 +1712,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20156" name="Flaming Dragon Skull (Event)" additionalName="4-hour" type="Weapon">
@@ -1745,11 +1745,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="152" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20157" name="Branch of the Mother Tree (Event)" additionalName="4-hour" type="Weapon">
@@ -1778,11 +1778,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="152" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="226" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20158" name="Dragon Grinder (Event)" additionalName="4-hour" type="Weapon">
@@ -1811,11 +1811,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20159" name="Soul Bow (Event)" additionalName="4-hour" type="Weapon">
@@ -1844,13 +1844,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="553" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="125" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="528" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20160" name="Tallum Glaive (Event)" additionalName="4-hour" type="Weapon">
@@ -1877,13 +1877,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="613" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20161" name="Damascus*Damascus (Event)" additionalName="4-hour" type="Weapon">
@@ -1894,7 +1894,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-20" />
+		<set name="enchant4_skill" val="3046-20" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1912,11 +1912,11 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20162" name="Lacerator (Event)" additionalName="4-hour" type="Weapon">
@@ -1947,13 +1947,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="210" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20163" name="Undertaker (Event)" additionalName="4-hour" type="Weapon">
@@ -1985,11 +1985,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20164" name="Reaper (Event)" additionalName="4-hour" type="Weapon">
@@ -2020,13 +2020,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="294" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20165" name="Forgotten Blade (Event)" additionalName="4-hour" type="Weapon">
@@ -2054,11 +2054,11 @@
 		<set name="weight" val="433" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20166" name="Heaven's Divider (Event)" additionalName="4-hour" type="Weapon">
@@ -2086,11 +2086,11 @@
 		<set name="weight" val="460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20167" name="Angel Slayer (Event)" additionalName="4-hour" type="Weapon">
@@ -2117,13 +2117,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="317" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20168" name="Basalt Battlehammer (Event)" additionalName="4-hour" type="Weapon">
@@ -2152,11 +2152,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20169" name="Dragon Hunter Axe (Event)" additionalName="4-hour" type="Weapon">
@@ -2185,11 +2185,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20170" name="Arcana Mace (Event)" additionalName="4-hour" type="Weapon">
@@ -2218,11 +2218,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="175" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="225" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20171" name="Imperial Staff (Event)" additionalName="4-hour" type="Weapon">
@@ -2251,11 +2251,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="175" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="274" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20172" name="Demon Splinter (Event)" additionalName="4-hour" type="Weapon">
@@ -2284,11 +2284,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20173" name="Draconic Bow (Event)" additionalName="4-hour" type="Weapon">
@@ -2317,13 +2317,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="550" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20174" name="Saint Spear (Event)" additionalName="4-hour" type="Weapon">
@@ -2350,13 +2350,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="600" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20175" name="Tallum Blade*Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
@@ -2385,11 +2385,11 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20176" name="Laevateinn (Event)" additionalName="4-hour" type="Weapon">
@@ -2420,13 +2420,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20177" name="Gram (Event)" additionalName="4-hour" type="Weapon">
@@ -2458,11 +2458,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20178" name="Sarunga (Event)" additionalName="4-hour" type="Weapon">
@@ -2493,19 +2493,19 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="20179" name="Extra Pass: Near Kamaloka 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20027,5,5,100" /> <!-- Extra Pass: Near Kamaloka -  -->
+		<set name="capsuled_items" val="20027,5,5,100" /> <!-- Extra Pass: Near Kamaloka - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2518,7 +2518,7 @@
 	<item id="20180" name="Extra Pass: Near Kamaloka 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20027,10,10,100" /> <!-- Extra Pass: Near Kamaloka -  -->
+		<set name="capsuled_items" val="20027,10,10,100" /> <!-- Extra Pass: Near Kamaloka - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2531,7 +2531,7 @@
 	<item id="20181" name="My Teleport Scroll 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20025,5,5,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="20025,5,5,100" /> <!-- My Teleport Scroll - 4-hour -->
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2544,7 +2544,7 @@
 	<item id="20182" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing My Teleport Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20025,10,10,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="20025,10,10,100" /> <!-- My Teleport Scroll - 4-hour -->
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2557,7 +2557,7 @@
 	<item id="20183" name="My Teleport Flag 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20033,5,5,100" /> <!-- My Teleport Flag -  -->
+		<set name="capsuled_items" val="20033,5,5,100" /> <!-- My Teleport Flag - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2570,7 +2570,7 @@
 	<item id="20184" name="My Teleport Flag 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing My Teleport Flag. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20033,10,10,100" /> <!-- My Teleport Flag -  -->
+		<set name="capsuled_items" val="20033,10,10,100" /> <!-- My Teleport Flag - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2583,7 +2583,7 @@
 	<item id="20185" name="Extra Pass: Kamaloka (Hall of the Abyss) 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20026,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="20026,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2596,7 +2596,7 @@
 	<item id="20186" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20028,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -  -->
+		<set name="capsuled_items" val="20028,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2609,7 +2609,7 @@
 	<item id="20187" name="Extra Pass: Kamaloka (Hall of the Abyss) 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20026,10,10,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="20026,10,10,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -2622,7 +2622,7 @@
 	<item id="20188" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20028,10,10,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -  -->
+		<set name="capsuled_items" val="20028,10,10,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) - 4-hour -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />

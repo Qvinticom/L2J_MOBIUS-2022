@@ -604,11 +604,11 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="39" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="78" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13843" name="Draconic Peltast Weapon" type="Weapon">
@@ -634,13 +634,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="5" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13844" name="Scroll: Extract Star Stone" type="EtcItem">
@@ -683,11 +683,11 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="120" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13846" name="Seal of Binding" type="EtcItem">
@@ -1177,11 +1177,11 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="120" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13882" name="Dynasty Dual Dagger" type="Weapon">
@@ -1213,13 +1213,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="157" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13883" name="Icarus Dual Daggers" type="Weapon">
@@ -1251,13 +1251,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="169" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="332" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13884" name="Vesper Dual Daggers" type="Weapon">
@@ -1289,13 +1289,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant stat="mAtk" val="0" />
 			<set stat="mAtk" val="181" />
-			<enchant stat="pAtk" val="0" />
 			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13885" name="Sealed Arcana Sigil" type="Armor">
@@ -1312,9 +1312,9 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="940" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13886" name="Sealed Dynasty Sigil" type="Armor">
@@ -1331,9 +1331,9 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="930" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13887" name="Sealed Vesper Sigil" type="Armor">
@@ -1350,15 +1350,15 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="17" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13888" name="Sealed Lord's Cloak" type="Armor">
 		<set name="icon" val="icon.feud_load_cloak_i01" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_type" val="S80" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1374,7 +1374,7 @@
 		<!-- Cloak covered with energy of the Holy Spirit. Dark Resistance + 30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael-exclusive cloak. Cannot be enchanted, augmented, or a -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_type" val="S80" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1466,9 +1466,6 @@
 		<set name="material" val="CLOTH" />
 		<set name="price" val="28671000" />
 		<set name="weight" val="220" />
-		<for>
-			<add order="0" stat="pDef" val="20" />
-		</for>
 	</item>
 	<item id="13894" name="Cloth Belt" type="Armor">
 		<!-- Functions can be added by using C-grade Magic Pin or Magic Pouch. -->

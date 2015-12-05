@@ -220,7 +220,7 @@
 		<set name="weight" val="930" />
 		<for>
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="21812" name="Dynasty Tunic of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
@@ -415,7 +415,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="246" />
@@ -443,7 +443,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="581" />
@@ -473,6 +473,7 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="132" />
+			<mul stat="maxHp" val="1.25" />
 			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -578,6 +579,8 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
+			<mul stat="maxCp" val="1.30" />
+			<mul stat="maxHp" val="1.15" />
 			<set stat="pAtk" val="342" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -602,7 +605,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -659,7 +662,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="255" />
@@ -686,7 +689,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1600" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -739,7 +742,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="291" />
@@ -767,7 +770,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="654" />
@@ -797,6 +800,7 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="151" />
+			<mul stat="maxHp" val="1.25" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -902,6 +906,7 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
+			<mul stat="maxHp" val="1.10" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -926,7 +931,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
@@ -983,7 +988,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="302" />
@@ -1010,7 +1015,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="401" />
@@ -1418,8 +1423,10 @@
 	<item id="21873" name="Santa's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Santa's Gift Box. When used, you can receive Santa's gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="capsuled_items" val="17003,1,1,100" /> <!-- Santa's Gift - Event -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />

@@ -18,7 +18,7 @@
 	<item id="20901" name="Santa Hat Set" type="EtcItem">
 		<!-- The Santa Hat and Rudolph's Nose are packaged together. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20900,1,1,100;14611,1,1,100" /> <!-- Santa Hat - 14-day -->
+		<set name="capsuled_items" val="20900,1,1,100;14611,1,1,100" /> <!-- Santa Hat - 14-day, Rudolph's Nose - 14-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -850,7 +850,7 @@
 	<item id="20950" name="Fox Mask Pack" type="EtcItem">
 		<!-- Wrapped Pack that has Fox Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20942,1,1,100" /> <!-- Fox Mask -  -->
+		<set name="capsuled_items" val="20942,1,1,100" /> <!-- Fox Mask - Mountain Echoes (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -886,7 +886,7 @@
 	<item id="20952" name="Paiwan Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack that has Paiwan Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20944,1,1,100" /> <!-- Paiwan Hat -  -->
+		<set name="capsuled_items" val="20944,1,1,100" /> <!-- Paiwan Hat - Silent Move (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1005,7 +1005,7 @@
 	<item id="20959" name="Vesper Royal Crown Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20929,1,1,100" /> <!-- Vesper Royal Crown -  -->
+		<set name="capsuled_items" val="20929,1,1,100" /> <!-- Vesper Royal Crown - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1023,7 +1023,7 @@
 	<item id="20960" name="Vesper Royal Circlet Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20930,1,1,100" /> <!-- Vesper Royal Circlet -  -->
+		<set name="capsuled_items" val="20930,1,1,100" /> <!-- Vesper Royal Circlet - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1041,7 +1041,7 @@
 	<item id="20961" name="Vesper Noble Mask Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20931,1,1,100" /> <!-- Vesper Noble Mask -  -->
+		<set name="capsuled_items" val="20931,1,1,100" /> <!-- Vesper Noble Mask - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1113,7 +1113,7 @@
 	<item id="20965" name="Vesper Royal Crown Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20935,1,1,100" /> <!-- Vesper Royal Crown -  -->
+		<set name="capsuled_items" val="20935,1,1,100" /> <!-- Vesper Royal Crown - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1131,7 +1131,7 @@
 	<item id="20966" name="Vesper Royal Circlet Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20936,1,1,100" /> <!-- Vesper Royal Circlet -  -->
+		<set name="capsuled_items" val="20936,1,1,100" /> <!-- Vesper Royal Circlet - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1149,7 +1149,7 @@
 	<item id="20967" name="Vesper Noble Mask Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20937,1,1,100" /> <!-- Vesper Noble Mask -  -->
+		<set name="capsuled_items" val="20937,1,1,100" /> <!-- Vesper Noble Mask - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1185,7 +1185,7 @@
 	<item id="20969" name="Agathion - Guangong Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Guangong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20968,1,1,100" /> <!-- Agathion - Guangong -  -->
+		<set name="capsuled_items" val="20968,1,1,100" /> <!-- Agathion - Guangong - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1727,7 +1727,7 @@
 	<item id="20998" name="Dragon Boat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Dragon Boat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20981,1,1,100" /> <!-- Dragon Boat -  -->
+		<set name="capsuled_items" val="20981,1,1,100" /> <!-- Dragon Boat - Vitality of Courage, Age of the Three Kingdoms -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

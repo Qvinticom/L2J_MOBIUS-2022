@@ -523,7 +523,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8290-10" />
+		<set name="item_skill" val="8290-10" /> <!-- Add Belt Inventory Slot -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="371300" />
 		<set name="weight" val="460" />
@@ -561,7 +561,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8290-10" />
+		<set name="item_skill" val="8290-10" /> <!-- Add Belt Inventory Slot -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -580,7 +580,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8290-11" />
+		<set name="item_skill" val="8290-11" /> <!-- Add Belt Inventory Slot -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -599,7 +599,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8290-12" />
+		<set name="item_skill" val="8290-12" /> <!-- Add Belt Inventory Slot -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -827,7 +827,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8291-10" />
+		<set name="item_skill" val="8291-10" /> <!-- Add Belt Weight Gauge -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="371300" />
 		<set name="weight" val="460" />
@@ -865,7 +865,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8291-10" />
+		<set name="item_skill" val="8291-10" /> <!-- Add Belt Weight Gauge -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -884,7 +884,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8291-11" />
+		<set name="item_skill" val="8291-11" /> <!-- Add Belt Weight Gauge -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -903,7 +903,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="8291-12" />
+		<set name="item_skill" val="8291-12" /> <!-- Add Belt Weight Gauge -->
 		<set name="material" val="CLOTH" />
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
@@ -947,11 +947,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13972" name="Fantasy Blue Boing Hammer" type="Weapon">
@@ -980,11 +980,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13973" name="Small Fantasy Red Boing Hammer" type="Weapon">
@@ -1013,11 +1013,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13974" name="Small Fantasy Blue Boing Hammer" type="Weapon">
@@ -1046,11 +1046,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13975" name="Poison Bottle 1" type="Armor">
@@ -1112,7 +1112,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
@@ -1152,7 +1152,7 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
 		</for>
@@ -1198,7 +1198,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2140" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
@@ -1225,11 +1225,11 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="39" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="78" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13984" name="Monster Only (Death Slayer_1hs)" type="Weapon">
@@ -1263,7 +1263,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-11" />
+		<set name="enchant4_skill" val="3046-11" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -1275,11 +1275,11 @@
 		<set name="weight" val="2150" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="91" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13986" name="Monster Only (Death Slayer_l)" type="Weapon">
@@ -1291,7 +1291,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-11" />
+		<set name="enchant4_skill" val="3046-11" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -1303,11 +1303,11 @@
 		<set name="weight" val="2150" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="91" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13987" name="Monster Only (Savage Warrior)" type="Weapon">
@@ -1331,11 +1331,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="91" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="175" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13988" name="Dynasty Weapon Pack (Event)" type="EtcItem">

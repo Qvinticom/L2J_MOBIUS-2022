@@ -27,11 +27,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13201" name="Player Commendation - Bow of Peril" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -60,13 +60,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1700" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="400" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13202" name="Player Commendation - Samurai Long Sword*Samurai Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -78,7 +78,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="duration" val="180" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant4_skill" val="3045-14" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="2" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -95,11 +95,11 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13203" name="Player Commendation - Guardian's Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -128,11 +128,11 @@
 		<set name="weight" val="1930" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13204" name="Player Commendation - Wizard's Tear" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -162,11 +162,11 @@
 		<set name="weight" val="1350" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13205" name="Player Commendation - Kaim Vanul's Bones" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -197,11 +197,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="132" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13206" name="Player Commendation - Star Buster" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -231,11 +231,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13207" name="Player Commendation - Colichemarde" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -267,13 +267,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13208" name="Player Commendation - Dismantler" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -306,11 +306,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="210" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13209" name="Player Commendation - Hell Hound" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -342,13 +342,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13210" name="Player Commendation - Sirra's Blade" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -377,11 +377,11 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13211" name="Player Commendation - Sword of Ipos" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -410,11 +410,11 @@
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13212" name="Player Commendation - Barakiel's Axe" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -444,11 +444,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13213" name="Player Commendation - Behemoth' Tuning Fork" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -478,11 +478,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13214" name="Player Commendation - Naga Storm" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -510,13 +510,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13215" name="Player Commendation - Tiphon's Spear" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -544,13 +544,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13216" name="Player Commendation - Shyeed's Bow" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -580,13 +580,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="133" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13217" name="Player Commendation - Sobekk's Hurricane" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -616,11 +616,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13218" name="Player Commendation - Themis' Tongue" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -650,11 +650,11 @@
 		<set name="weight" val="820" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="161" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="202" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13219" name="Player Commendation - Cabrio's Hand" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -685,11 +685,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="161" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="202" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13220" name="Player Commendation - Daimon Crystal" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -720,11 +720,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="177" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13221" name="Player Commendation - Tallum Blade*Damascus" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -736,7 +736,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="duration" val="180" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="2" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -753,11 +753,11 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13222" name="Player Commendation - Éclair Bijou" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -789,13 +789,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13223" name="Player Commendation - Durendal" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -828,11 +828,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="272" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13224" name="Player Commendation - Screaming Vengeance" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -864,19 +864,19 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13225" name="Kamaloka (Hall of the Abyss) 15-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13010,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 	<item id="13226" name="Near Kamaloka 15-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13011,15,15,100" /> <!-- Extra Pass: Near Kamaloka -  -->
+		<set name="capsuled_items" val="13011,15,15,100" /> <!-- Extra Pass: Near Kamaloka -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -910,7 +910,7 @@
 	<item id="13227" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack" type="EtcItem">
 		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13012,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -  -->
+		<set name="capsuled_items" val="13012,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -927,7 +927,7 @@
 	<item id="13228" name="Kamaloka (Hall of the Abyss) 15-unit Pack" type="EtcItem">
 		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13010,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,15,15,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 	<item id="13229" name="Near Kamaloka 15-unit Pack" type="EtcItem">
 		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13011,15,15,100" /> <!-- Extra Pass: Near Kamaloka -  -->
+		<set name="capsuled_items" val="13011,15,15,100" /> <!-- Extra Pass: Near Kamaloka -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -961,7 +961,7 @@
 	<item id="13230" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13012,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -  -->
+		<set name="capsuled_items" val="13012,15,15,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -978,7 +978,7 @@
 	<item id="13231" name="Kamaloka (Hall of the Abyss) 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13010,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -995,7 +995,7 @@
 	<item id="13232" name="Near Kamaloka 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13011,5,5,100" /> <!-- Extra Pass: Near Kamaloka -  -->
+		<set name="capsuled_items" val="13011,5,5,100" /> <!-- Extra Pass: Near Kamaloka -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1012,7 @@
 	<item id="13233" name="Kamaloka (Labyrinth of the Abyss) 5-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 5 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -  -->
+		<set name="capsuled_items" val="13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1672,7 +1672,7 @@
 	<item id="13270" name="Pathfinder's Reward - AU Karm" type="EtcItem">
 		<!-- Gift for adventurers with an especially high contribution level. Has a chance to create a AU Karm. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
-		<set name="capsuled_items" val="13236,1,1,30" /> <!-- AU Karm -  -->
+		<set name="capsuled_items" val="13236,1,1,30" /> <!-- AU Karm - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1688,7 +1688,7 @@
 	<item id="13271" name="Pathfinder's Reward - AR Karm" type="EtcItem">
 		<!-- Gift for adventurers with an especially high contribution level. Has a chance to create a AU Karm. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
-		<set name="capsuled_items" val="13237,1,1,30" /> <!-- AR Karm -  -->
+		<set name="capsuled_items" val="13237,1,1,30" /> <!-- AR Karm - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1704,7 +1704,7 @@
 	<item id="13272" name="Pathfinder's Reward - AE Karm" type="EtcItem">
 		<!-- Gift for adventurers with an especially high contribution level. Has a chance to create a AE Karm. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
-		<set name="capsuled_items" val="13238,1,1,30" /> <!-- AE Karm -  -->
+		<set name="capsuled_items" val="13238,1,1,30" /> <!-- AE Karm - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1749,7 +1749,7 @@
 	<item id="13275" name="Minion Coupon 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13273,3,3,100" /> <!-- Minion Coupon (5-hour) -  -->
+		<set name="capsuled_items" val="13273,3,3,100" /> <!-- Minion Coupon (5-hour) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1766,7 +1766,7 @@
 	<item id="13276" name="Minion Coupon Pack" type="EtcItem">
 		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13273,1,1,100" /> <!-- Minion Coupon (5-hour) -  -->
+		<set name="capsuled_items" val="13273,1,1,100" /> <!-- Minion Coupon (5-hour) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1805,7 +1805,7 @@
 	<item id="13279" name="Feather of Blessing Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="10649,1,1,100" /> <!-- Feather of Blessing -  -->
+		<set name="capsuled_items" val="10649,1,1,100" /> <!-- Feather of Blessing - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2009,7 +2009,7 @@
 	<item id="13291" name="OX Stick Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing OX Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13248,1,1,100;13249,1,1,100" /> <!-- O Stick - 7-day -->
+		<set name="capsuled_items" val="13248,1,1,100;13249,1,1,100" /> <!-- O Stick - 7-day, X Stick - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2026,7 +2026,7 @@
 	<item id="13292" name="Rock-Paper-Scissors Stick Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13250,1,1,100;13251,1,1,100;13252,1,1,100" /> <!-- Scissors Stick - 7-day -->
+		<set name="capsuled_items" val="13250,1,1,100;13251,1,1,100;13252,1,1,100" /> <!-- Scissors Stick - 7-day, Rock Stick - 7-day, Paper Stick - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2092,7 +2092,6 @@
 		<set name="item_skill" val="3323-1" /> <!-- Bronze Bracelet -->
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<for/>
 	</item>
 	<item id="13296" name="Pailaka Shirt" type="Armor">
 		<!-- Pailaka Varka Silenos reward item. Shirt with prominent P. Def. MP 40 effect. -->

@@ -19,7 +19,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="882" />
@@ -45,7 +45,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="794" />
@@ -71,7 +71,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="794" />
@@ -97,7 +97,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="794" />
@@ -432,7 +432,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="448" />
@@ -458,7 +458,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="448" />
@@ -484,7 +484,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="195" />
 			<set stat="pAtk" val="448" />
@@ -592,13 +592,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="441" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30023" name="Apocalypse Shaper" additionalName="Haste + Focus" type="Weapon">
@@ -624,13 +624,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="441" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30024" name="Apocalypse Shaper" additionalName="Focus + Guidance" type="Weapon">
@@ -656,13 +656,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="441" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30025" name="Apocalypse Cutter" additionalName="Haste + Focus" type="Weapon">
@@ -689,11 +689,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30026" name="Apocalypse Cutter" additionalName="Focus + Health" type="Weapon">
@@ -720,11 +720,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30027" name="Apocalypse Cutter" additionalName="Health + Haste" type="Weapon">
@@ -751,11 +751,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30028" name="Apocalypse Slasher" additionalName="Focus + Damage" type="Weapon">
@@ -782,11 +782,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30029" name="Apocalypse Slasher" additionalName="Damage Up + Haste" type="Weapon">
@@ -813,11 +813,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30030" name="Apocalypse Slasher" additionalName="Haste + Focus" type="Weapon">
@@ -844,11 +844,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30031" name="Apocalypse Avenger" additionalName="Haste + Critical Damage" type="Weapon">
@@ -876,11 +876,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30032" name="Apocalypse Avenger" additionalName="Critical Damage + Focus" type="Weapon">
@@ -908,11 +908,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30033" name="Apocalypse Avenger" additionalName="Focus + Haste" type="Weapon">
@@ -940,11 +940,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30034" name="Apocalypse Fighter" additionalName="Focus + Damage" type="Weapon">
@@ -972,11 +972,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30035" name="Apocalypse Fighter" additionalName="Damage Up + Haste" type="Weapon">
@@ -1004,11 +1004,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30036" name="Apocalypse Fighter" additionalName="Haste + Focus" type="Weapon">
@@ -1036,11 +1036,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30037" name="Apocalypse Stormer" additionalName="HP Drain + Guidance" type="Weapon">
@@ -1066,13 +1066,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30038" name="Apocalypse Stormer" additionalName="Guidance + Damage Up" type="Weapon">
@@ -1098,13 +1098,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30039" name="Apocalypse Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
@@ -1130,13 +1130,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30040" name="Apocalypse Thrower" additionalName="Damage Up + Focus" type="Weapon">
@@ -1163,13 +1163,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="992" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30041" name="Apocalypse Thrower" additionalName="Focus + Long Blow" type="Weapon">
@@ -1196,13 +1196,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="992" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30042" name="Apocalypse Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
@@ -1229,13 +1229,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="992" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30043" name="Apocalypse Shooter" additionalName="Focus + Critical Slow" type="Weapon">
@@ -1265,13 +1265,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="894" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30044" name="Apocalypse Shooter" additionalName="Critical Slow + Haste" type="Weapon">
@@ -1301,13 +1301,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="894" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30045" name="Apocalypse Shooter" additionalName="Haste + Focus" type="Weapon">
@@ -1337,13 +1337,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="894" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30046" name="Apocalypse Buster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -1373,11 +1373,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30047" name="Apocalypse Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
@@ -1407,11 +1407,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30048" name="Apocalypse Buster" additionalName="Mana Up + Acumen" type="Weapon">
@@ -1439,11 +1439,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30049" name="Apocalypse Caster" additionalName="Empower + Acumen" type="Weapon">
@@ -1472,11 +1472,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30050" name="Apocalypse Caster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -1507,11 +1507,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30051" name="Apocalypse Caster" additionalName="Magic Hold + Empower" type="Weapon">
@@ -1542,11 +1542,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="293" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="403" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30052" name="Apocalypse Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
@@ -1577,10 +1577,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="322" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="491" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30053" name="Apocalypse Retributer" additionalName="Acumen + Empower" type="Weapon">
@@ -1611,10 +1611,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="322" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="491" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30054" name="Apocalypse Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
@@ -1645,10 +1645,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="322" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="491" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30055" name="Apocalypse Dualsword" additionalName="Haste + Damage Up" type="Weapon">
@@ -1675,11 +1675,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30056" name="Apocalypse Dualsword" additionalName="Damage Up + Health" type="Weapon">
@@ -1706,11 +1706,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30057" name="Apocalypse Dualsword" additionalName="Health + Haste" type="Weapon">
@@ -1737,11 +1737,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30058" name="Apocalypse Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
@@ -1773,13 +1773,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30059" name="Apocalypse Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
@@ -1796,7 +1796,7 @@
 		<set name="enchant4_skill" val="13285-3" /> <!-- Dual Dagger Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="3566-10;3573-5" /> <!-- , Special Ability: Guidance -->
+		<set name="item_skill" val="3566-10;3573-5" /> <!-- Special Ability: Focus, Special Ability: Guidance -->
 		<set name="material" val="STEEL" />
 		<set name="price" val="249401811" />
 		<set name="random_damage" val="10" />
@@ -1811,13 +1811,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30060" name="Apocalypse Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
@@ -1849,13 +1849,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="504" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30061" name="Apocalypse Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
@@ -1872,7 +1872,7 @@
 		<set name="enchant4_skill" val="13270-3" /> <!-- Dual Blunt Weapon Special Ability -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="item_skill" val="3565-10;3573-5" /> <!-- , Special Ability: Guidance -->
+		<set name="item_skill" val="3565-10;3573-5" /> <!-- Special Ability: Focus, Special Ability: Guidance -->
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="249401811" />
 		<set name="random_damage" val="20" />
@@ -1883,11 +1883,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30062" name="Apocalypse Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
@@ -1915,11 +1915,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30063" name="Apocalypse Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
@@ -1947,11 +1947,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="219" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="613" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30064" name="Blessed Apocalypse Shaper" additionalName="Guidance + Haste" type="Weapon">
@@ -1977,13 +1977,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30065" name="Blessed Apocalypse Shaper" additionalName="Haste + Focus" type="Weapon">
@@ -2009,13 +2009,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30066" name="Blessed Apocalypse Shaper" additionalName="Focus + Guidance" type="Weapon">
@@ -2041,13 +2041,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30067" name="Blessed Apocalypse Cutter" additionalName="Haste + Focus" type="Weapon">
@@ -2074,11 +2074,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30068" name="Blessed Apocalypse Cutter" additionalName="Focus + Health" type="Weapon">
@@ -2105,11 +2105,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30069" name="Blessed Apocalypse Cutter" additionalName="Health + Haste" type="Weapon">
@@ -2136,11 +2136,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30070" name="Blessed Apocalypse Slasher" additionalName="Focus + Damage" type="Weapon">
@@ -2167,11 +2167,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30071" name="Blessed Apocalypse Slasher" additionalName="Damage Up + Haste" type="Weapon">
@@ -2198,11 +2198,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30072" name="Blessed Apocalypse Slasher" additionalName="Haste + Focus" type="Weapon">
@@ -2229,11 +2229,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30073" name="Blessed Apocalypse Avenger" additionalName="Haste + Critical Damage" type="Weapon">
@@ -2261,11 +2261,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30074" name="Blessed Apocalypse Avenger" additionalName="Critical Damage + Focus" type="Weapon">
@@ -2293,11 +2293,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30075" name="Blessed Apocalypse Avenger" additionalName="Focus + Haste" type="Weapon">
@@ -2325,11 +2325,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30076" name="Blessed Apocalypse Fighter" additionalName="Focus + Damage" type="Weapon">
@@ -2357,11 +2357,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30077" name="Blessed Apocalypse Fighter" additionalName="Damage Up + Haste" type="Weapon">
@@ -2389,11 +2389,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30078" name="Blessed Apocalypse Fighter" additionalName="Haste + Focus" type="Weapon">
@@ -2421,11 +2421,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30079" name="Blessed Apocalypse Stormer" additionalName="HP Drain + Guidance" type="Weapon">
@@ -2451,13 +2451,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30080" name="Blessed Apocalypse Stormer" additionalName="Guidance + Damage Up" type="Weapon">
@@ -2483,13 +2483,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30081" name="Blessed Apocalypse Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
@@ -2515,13 +2515,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="519" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30082" name="Blessed Apocalypse Thrower" additionalName="Damage Up + Focus" type="Weapon">
@@ -2548,13 +2548,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1022" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30083" name="Blessed Apocalypse Thrower" additionalName="Focus + Long Blow" type="Weapon">
@@ -2581,13 +2581,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1022" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30084" name="Blessed Apocalypse Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
@@ -2614,13 +2614,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1022" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30085" name="Blessed Apocalypse Shooter" additionalName="Focus + Critical Slow" type="Weapon">
@@ -2650,13 +2650,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="920" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30086" name="Blessed Apocalypse Shooter" additionalName="Critical Slow + Haste" type="Weapon">
@@ -2686,13 +2686,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="920" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30087" name="Blessed Apocalypse Shooter" additionalName="Haste + Focus" type="Weapon">
@@ -2722,13 +2722,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="920" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30088" name="Blessed Apocalypse Buster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -2758,11 +2758,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30089" name="Blessed Apocalypse Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
@@ -2792,11 +2792,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30090" name="Blessed Apocalypse Buster" additionalName="Mana Up + Acumen" type="Weapon">
@@ -2824,11 +2824,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30091" name="Blessed Apocalypse Caster" additionalName="Empower + Acumen" type="Weapon">
@@ -2857,11 +2857,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30092" name="Blessed Apocalypse Caster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -2892,11 +2892,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30093" name="Blessed Apocalypse Caster" additionalName="Magic Hold + Empower" type="Weapon">
@@ -2927,11 +2927,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="301" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30094" name="Blessed Apocalypse Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
@@ -2962,10 +2962,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="332" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="505" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30095" name="Blessed Apocalypse Retributer" additionalName="Acumen + Empower" type="Weapon">
@@ -2996,10 +2996,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="332" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="505" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30096" name="Blessed Apocalypse Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
@@ -3030,10 +3030,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="332" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="505" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30097" name="Blessed Apocalypse Dualsword" additionalName="Haste + Damage Up" type="Weapon">
@@ -3060,11 +3060,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30098" name="Blessed Apocalypse Dualsword" additionalName="Damage Up + Health" type="Weapon">
@@ -3091,11 +3091,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30099" name="Blessed Apocalypse Dualsword" additionalName="Health + Haste" type="Weapon">
@@ -3122,11 +3122,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="226" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="632" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

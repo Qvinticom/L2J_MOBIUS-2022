@@ -22,11 +22,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="91" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7901" name="Star Buster" type="Weapon">
@@ -51,11 +51,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7902" name="Doom Crusher" type="Weapon">
@@ -80,11 +80,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="282" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7903" name="Frintezza's Sword" type="Weapon">

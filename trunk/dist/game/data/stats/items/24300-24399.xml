@@ -718,6 +718,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -732,6 +733,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -746,6 +748,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -759,6 +762,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -780,9 +784,9 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="94" />
-			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="24360" name="Valakas' Necklace" additionalName="3-day" type="Armor">
@@ -794,15 +798,17 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="95" />
-			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="95" />
+			<add stat="maxHp" val="445" />
 			<add stat="maxMp" val="50" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="24361" name="Zaken's Earring" additionalName="3-day" type="Armor">
@@ -814,15 +820,16 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="71" />
-			<enchant stat="mDef" val="0" />
+			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="24362" name="Queen Ant's Ring" additionalName="3-day" type="Armor">
@@ -834,13 +841,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="48" />
+			<add order="0" stat="mDef" val="48" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -859,7 +867,7 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="48" />
+			<add order="0" stat="mDef" val="48" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -876,7 +884,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="24365" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">

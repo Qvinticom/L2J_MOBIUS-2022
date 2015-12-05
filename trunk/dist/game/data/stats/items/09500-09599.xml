@@ -6,6 +6,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -19,6 +20,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -32,6 +34,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -45,6 +48,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -58,6 +62,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -71,6 +76,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -84,6 +90,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -97,6 +104,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -110,6 +118,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -123,6 +132,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -136,6 +146,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -149,6 +160,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -162,6 +174,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -175,6 +188,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -486,10 +500,10 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="1150" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="305" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="9530" name="Sealed Dynasty Breastplate Piece" type="EtcItem">

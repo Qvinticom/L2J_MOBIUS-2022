@@ -39,11 +39,17 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39603" name="Dimensional Antharas Slasher" type="Weapon">
@@ -65,8 +71,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39604" name="Dimensional Antharas Thrower" type="Weapon">
@@ -86,11 +98,17 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39605" name="Dimensional Antharas Buster" type="Weapon">
@@ -112,8 +130,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1676" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39606" name="Dimensional Antharas Cutter" type="Weapon">
@@ -135,8 +159,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39607" name="Dimensional Antharas Stormer" type="Weapon">
@@ -156,11 +186,17 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39608" name="Dimensional Antharas Fighter" type="Weapon">
@@ -183,8 +219,14 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39609" name="Dimensional Antharas Avenger" type="Weapon">
@@ -207,8 +249,14 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39610" name="Dimensional Antharas Dual Blunt" type="Weapon">
@@ -231,8 +279,14 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39611" name="Dimensional Antharas Dualsword" type="Weapon">
@@ -254,8 +308,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39612" name="Dimensional Valakas Shaper" type="Weapon">
@@ -275,11 +335,17 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39613" name="Dimensional Valakas Cutter" type="Weapon">
@@ -301,8 +367,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39614" name="Dimensional Valakas Slasher" type="Weapon">
@@ -324,8 +396,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39615" name="Dimensional Valakas Thrower" type="Weapon">
@@ -345,11 +423,17 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39616" name="Dimensional Valakas Buster" type="Weapon">
@@ -371,8 +455,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1676" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39617" name="Dimensional Valakas Caster" type="Weapon">
@@ -395,8 +485,14 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="1676" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39621" name="Dimensional Valakas Retributer" type="Weapon">
@@ -420,8 +516,14 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="1843" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2809" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39622" name="Dimensional Lindvior Shaper" type="Weapon">
@@ -441,11 +543,17 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39623" name="Dimensional Lindvior Thrower" type="Weapon">
@@ -465,11 +573,17 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39624" name="Dimensional Lindvior Slasher" type="Weapon">
@@ -491,8 +605,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39625" name="Dimensional Lindvior Caster" type="Weapon">
@@ -514,8 +634,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1676" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39626" name="Dimensional Lindvior Cutter" type="Weapon">
@@ -537,8 +663,14 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39627" name="Dimensional Lindvior Shooter" type="Weapon">
@@ -558,11 +690,17 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="5113" />
 			<set stat="pAtkSpd" val="325" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39628" name="Dimensional Lindvior Dual Dagger" type="Weapon">
@@ -582,11 +720,17 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1257" />
+			<mul stat="maxCp" val="3.00" />
+			<mul stat="maxHp" val="2.00" />
+			<mul stat="maxMp" val="2.00" />
 			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="433" />
+			<mul stat="pvpMagicalDmg" val="1.30" />
+			<mul stat="pvpPhysDmg" val="1.30" />
+			<mul stat="pvpPhysSkillsDmg" val="1.30" />
 		</for>
 	</item>
 	<item id="39629" name="Fortune Pocket - Stage 1" type="EtcItem">
@@ -595,9 +739,9 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="18017-1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="18017-1" /> <!-- Maphr's Pouch -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="39630" name="Fortune Pocket - Stage 2" type="EtcItem">
@@ -606,9 +750,9 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="18018-1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="18018-1" /> <!-- Maphr's Pouch -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="39631" name="Fortune Pocket - Stage 3" type="EtcItem">
@@ -617,9 +761,9 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="18019-1;18020-1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="18019-1;18020-1" /> <!-- Maphr's Pouch, Maphr's Pouch -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="39632" name="Fortune Pocket - Stage 4" type="EtcItem">
@@ -628,9 +772,9 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="18021-1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="18021-1" /> <!-- Maphr's Pouch -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="39633" name="Fortune Pocket - Stage 5" type="EtcItem">
@@ -639,9 +783,9 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="18022-1;18023-1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="18022-1;18023-1" /> <!-- Maphr's Pouch, Maphr's Pouch -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="39634" name="Venir's Talisman" additionalName="Stage 1" type="Armor">
@@ -799,7 +943,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-10" />
+		<set name="item_skill" val="18024-10" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -815,7 +959,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-11" />
+		<set name="item_skill" val="18024-11" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -831,7 +975,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-12" />
+		<set name="item_skill" val="18024-12" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -847,7 +991,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-13" />
+		<set name="item_skill" val="18024-13" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -863,7 +1007,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-14" />
+		<set name="item_skill" val="18024-14" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -879,7 +1023,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-15" />
+		<set name="item_skill" val="18024-15" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -895,7 +1039,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-16" />
+		<set name="item_skill" val="18024-16" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -911,7 +1055,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-17" />
+		<set name="item_skill" val="18024-17" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -927,7 +1071,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-18" />
+		<set name="item_skill" val="18024-18" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -943,7 +1087,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-19" />
+		<set name="item_skill" val="18024-19" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -959,7 +1103,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-20" />
+		<set name="item_skill" val="18024-20" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -975,7 +1119,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-21" />
+		<set name="item_skill" val="18024-21" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -991,7 +1135,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-22" />
+		<set name="item_skill" val="18024-22" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -1007,7 +1151,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-23" />
+		<set name="item_skill" val="18024-23" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -1021,7 +1165,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="18024-24" />
+		<set name="item_skill" val="18024-24" /> <!-- Venir's Talisman -->
 		<set name="material" val="GOLD" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
@@ -1043,7 +1187,8 @@
 	<item id="39660" name="Rabbit Ears" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1051,7 +1196,8 @@
 	<item id="39661" name="Rabbit Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1059,7 +1205,8 @@
 	<item id="39662" name="Raccoon Ears" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1067,7 +1214,8 @@
 	<item id="39663" name="Raccoon Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1075,7 +1223,8 @@
 	<item id="39664" name="Cat Ears" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1083,7 +1232,8 @@
 	<item id="39665" name="Cat Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1091,7 +1241,8 @@
 	<item id="39666" name="Romantic Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1099,7 +1250,8 @@
 	<item id="39667" name="Romantic Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1233,7 +1385,8 @@
 	<item id="39682" name="Refined Devil Horn" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1241,7 +1394,8 @@
 	<item id="39683" name="Refined Devil Horn" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />

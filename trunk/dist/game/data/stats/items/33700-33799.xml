@@ -145,7 +145,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -173,7 +172,6 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -186,7 +184,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -202,7 +200,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -230,7 +227,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -258,7 +254,6 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -273,7 +268,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -289,7 +284,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -302,7 +296,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -318,7 +312,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -346,7 +339,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -374,7 +366,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -403,7 +394,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -432,7 +422,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -461,7 +450,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -489,7 +477,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -517,7 +504,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -530,7 +516,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -546,7 +532,6 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -561,7 +546,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -577,7 +562,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -605,7 +589,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -634,7 +617,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -663,7 +645,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -691,7 +672,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -719,7 +699,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -732,7 +711,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -748,7 +727,6 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -763,7 +741,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -779,7 +757,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -807,7 +784,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -835,7 +811,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -864,7 +839,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -892,7 +866,6 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -921,7 +894,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -948,7 +920,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -975,7 +946,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="default_action" val="EQUIP" />
 		<set name="element_enabled" val="false" />
-		<set name="enchant_enabled" val="0" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -988,7 +958,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="DAGGER" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />
@@ -1353,7 +1323,7 @@
 		<set name="spiritshots" val="6" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="30" />

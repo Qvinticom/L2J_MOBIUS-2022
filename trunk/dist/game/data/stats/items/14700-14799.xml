@@ -185,7 +185,7 @@
 	<item id="14713" name="Superior Elixir Gift Box (No-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (No-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="capsuled_items" val="14682,3,3,100;14688,3,3,100;14694,3,3,100" /> <!-- Superior Elixir of Life (No-grade) -  -->
+		<set name="capsuled_items" val="14682,3,3,100;14688,3,3,100;14694,3,3,100" /> <!-- Superior Elixir of Life (No-grade), Superior Elixir of Mind (No-grade), Superior Elixir of CP (No-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -201,7 +201,7 @@
 	<item id="14714" name="Superior Elixir Gift Box (D-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (D-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="capsuled_items" val="14683,3,3,100;14689,3,3,100;14695,3,3,100" /> <!-- Superior Elixir of Life (D-grade) -  -->
+		<set name="capsuled_items" val="14683,3,3,100;14689,3,3,100;14695,3,3,100" /> <!-- Superior Elixir of Life (D-grade), Superior Elixir of Mind (D-grade), Superior Elixir of CP (D-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -217,7 +217,7 @@
 	<item id="14715" name="Superior Elixir Gift Box (C-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (C-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="capsuled_items" val="14684,3,3,100;14690,3,3,100;14696,3,3,100" /> <!-- Superior Elixir of Life (C-grade) -  -->
+		<set name="capsuled_items" val="14684,3,3,100;14690,3,3,100;14696,3,3,100" /> <!-- Superior Elixir of Life (C-grade), Superior Elixir of Mind (C-grade), Superior Elixir of CP (C-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -233,7 +233,7 @@
 	<item id="14716" name="Superior Elixir Gift Box (B-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (B-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="capsuled_items" val="14685,2,2,100;14691,2,2,100;14697,2,2,100" /> <!-- Superior Elixir of Life (B-grade) -  -->
+		<set name="capsuled_items" val="14685,2,2,100;14691,2,2,100;14697,2,2,100" /> <!-- Superior Elixir of Life (B-grade), Superior Elixir of Mind (B-grade), Superior Elixir of CP (B-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -249,7 +249,7 @@
 	<item id="14717" name="Superior Elixir Gift Box (A-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (A-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
-		<set name="capsuled_items" val="14686,2,2,100;14692,2,2,100;14698,2,2,100" /> <!-- Superior Elixir of Life (A-grade) -  -->
+		<set name="capsuled_items" val="14686,2,2,100;14692,2,2,100;14698,2,2,100" /> <!-- Superior Elixir of Life (A-grade), Superior Elixir of Mind (A-grade), Superior Elixir of CP (A-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -265,7 +265,7 @@
 	<item id="14718" name="Superior Elixir Gift Box (S-grade)" type="EtcItem">
 		<!-- Wrapped gift containing assortment of Greater Elixirs (S-grade). Double-click this item in order to receive Greater Elixirs. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="capsuled_items" val="14687,2,2,100;14693,2,2,100;14699,2,2,100" /> <!-- Superior Elixir of Life (S-grade) -  -->
+		<set name="capsuled_items" val="14687,2,2,100;14693,2,2,100;14699,2,2,100" /> <!-- Superior Elixir of Life (S-grade), Superior Elixir of Mind (S-grade), Superior Elixir of CP (S-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 	<item id="14719" name="Full Vitality Event Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Neolithica. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="14675,1,1,100" /> <!-- Agathion - Neolithica -  -->
+		<set name="capsuled_items" val="14675,1,1,100" /> <!-- Agathion - Neolithica -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -520,7 +520,7 @@
 	<item id="14740" name="Event - Save the Cow Event Pack" type="EtcItem">
 		<!-- Even pack that can be obtained once every 12 hours per account. In order to use this item, Double-click it and you will obtain the Summon Scroll: Milk Cow and 'Cupid's Fatigue Relief Potion' that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="14722,60,60,100;14723,15,15,100;14724,1,1,100;14725,1,1,100" /> <!-- Event - Cupid's Fatigue Relief Potion -  -->
+		<set name="capsuled_items" val="14722,60,60,100;14723,15,15,100;14724,1,1,100;14725,1,1,100" /> <!-- Event - Cupid's Fatigue Relief Potion, Event - Cupid's Major Fatigue Relief Potion, Event - Summon Scroll: Milk Cow, Event - Summon Scroll: Milk Cow Captain -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -957,7 +957,7 @@
 	<item id="14768" name="Valentine's Day Solo Package" type="EtcItem">
 		<!-- Valentine's Day gift box for solo players. Contains 1 solo escape petition. Can receive a bonus limited item (wild rose pig candy) occasionally. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="capsuled_items" val="14770,1,1,100;14774,1,1,80" /> <!-- Solo Escape Petition -  -->
+		<set name="capsuled_items" val="14770,1,1,100;14774,1,1,80" /> <!-- Solo Escape Petition, Wild Rose Pig Candy - 14-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -984,6 +984,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="2894-1" /> <!-- Valentine's Day Candy -->
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="14770" name="Solo Escape Petition" type="EtcItem">
 		<!-- Fragrant grass that wishes for a solo player's escape. Vitality is maintained for 10 minutes upon use. Cooldown is 30 min. Vitality item with limited usage. -->
@@ -1040,7 +1041,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="time" val="20160" />
-		<for/>
 	</item>
 	<item id="14774" name="Wild Rose Pig Candy" additionalName="14-day" type="Weapon">
 		<!-- Even if I'm lonely or sad, I won't cry~ Let's laugh and run through the lush field~. When equipped, can find oneself laughing and running. Can use the head enlarging skill after equipped, and Speed increases by 20. 14-day. Cannot be restored once deleted. -->
@@ -1157,7 +1157,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1130" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 		</for>
 	</item>
@@ -1212,7 +1212,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2080" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 		</for>
 	</item>
@@ -1230,7 +1230,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 		</for>
 	</item>
@@ -1250,7 +1250,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1790" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 		</for>
 	</item>
@@ -1351,7 +1351,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="460" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
 		</for>
@@ -1374,7 +1374,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 		</for>
 	</item>
@@ -1420,7 +1420,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 		</for>
 	</item>
@@ -1455,7 +1455,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="930" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="14797" name="Baguette's Two-handed Dagger" type="Weapon">
@@ -1480,7 +1480,7 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 		</for>
 	</item>

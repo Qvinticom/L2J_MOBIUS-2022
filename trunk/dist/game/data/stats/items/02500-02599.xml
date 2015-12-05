@@ -22,11 +22,11 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="114" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2501" name="Bone Club" type="Weapon">
@@ -74,11 +74,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2503" name="Yaksa Mace" type="Weapon">
@@ -103,11 +103,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2504" name="Meteor Shower" type="Weapon">
@@ -132,11 +132,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="107" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2505" name="Iron Canine" type="Weapon">
@@ -202,13 +202,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2508" name="Cursed Bone" type="EtcItem">
@@ -342,11 +342,11 @@
 		<set name="weight" val="2530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="37" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="73" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2517" name="Saber*Bastard Sword" type="Weapon">
@@ -369,11 +369,11 @@
 		<set name="weight" val="2520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="41" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2518" name="Saber*Spinebone Sword" type="Weapon">
@@ -396,11 +396,11 @@
 		<set name="weight" val="2530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="41" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2519" name="Saber*Artisan's Sword" type="Weapon">
@@ -423,11 +423,11 @@
 		<set name="weight" val="2520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="41" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2520" name="Saber*Knight's Sword" type="Weapon">
@@ -450,11 +450,11 @@
 		<set name="weight" val="2510" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="41" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2521" name="Saber*Crimson Sword" type="Weapon">
@@ -477,11 +477,11 @@
 		<set name="weight" val="2530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2522" name="Saber*Elven Sword" type="Weapon">
@@ -504,11 +504,11 @@
 		<set name="weight" val="2510" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2523" name="Saber*Sword of Revolution" type="Weapon">
@@ -531,11 +531,11 @@
 		<set name="weight" val="2420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="56" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="118" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2524" name="Saber*Elven Long Sword" type="Weapon">
@@ -558,11 +558,11 @@
 		<set name="weight" val="2420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="61" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="130" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2525" name="Bastard Sword*Bastard Sword" type="Weapon">
@@ -585,11 +585,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2526" name="Bastard Sword*Spinebone Sword" type="Weapon">
@@ -612,11 +612,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2527" name="Bastard Sword*Artisan's Sword" type="Weapon">
@@ -639,11 +639,11 @@
 		<set name="weight" val="2480" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2528" name="Bastard Sword*Knight's Sword" type="Weapon">
@@ -666,11 +666,11 @@
 		<set name="weight" val="2500" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2529" name="Bastard Sword*Crimson Sword" type="Weapon">
@@ -693,11 +693,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2530" name="Bastard Sword*Elven Sword" type="Weapon">
@@ -720,11 +720,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2531" name="Bastard Sword*Sword of Revolution" type="Weapon">
@@ -747,11 +747,11 @@
 		<set name="weight" val="2450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="58" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="124" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2532" name="Bastard Sword*Elven Long Sword" type="Weapon">
@@ -774,11 +774,11 @@
 		<set name="weight" val="2430" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2533" name="Spinebone Sword*Spinebone Sword" type="Weapon">
@@ -801,11 +801,11 @@
 		<set name="weight" val="2520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2534" name="Spinebone Sword*Artisan's Sword" type="Weapon">
@@ -828,11 +828,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2535" name="Spinebone Sword*Knight's Sword" type="Weapon">
@@ -855,11 +855,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2536" name="Spinebone Sword*Crimson Sword" type="Weapon">
@@ -882,11 +882,11 @@
 		<set name="weight" val="2520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2537" name="Spinebone Sword*Elven Sword" type="Weapon">
@@ -909,11 +909,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2538" name="Spinebone Sword*Sword of Revolution" type="Weapon">
@@ -936,11 +936,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="58" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="124" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2539" name="Spinebone Sword*Elven Long Sword" type="Weapon">
@@ -963,11 +963,11 @@
 		<set name="weight" val="2390" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2540" name="Artisan's Sword*Artisan's Sword" type="Weapon">
@@ -990,11 +990,11 @@
 		<set name="weight" val="2480" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2541" name="Artisan's Sword*Knight's Sword" type="Weapon">
@@ -1017,11 +1017,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2542" name="Artisan's Sword*Crimson Sword" type="Weapon">
@@ -1044,11 +1044,11 @@
 		<set name="weight" val="2450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2543" name="Artisan's Sword*Elven Sword" type="Weapon">
@@ -1071,11 +1071,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2544" name="Artisan's Sword*Sword of Revolution" type="Weapon">
@@ -1098,11 +1098,11 @@
 		<set name="weight" val="2420" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="58" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="124" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2545" name="Artisan's Sword*Elven Long Sword" type="Weapon">
@@ -1125,11 +1125,11 @@
 		<set name="weight" val="2410" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2546" name="Knight's Sword*Knight's Sword" type="Weapon">
@@ -1152,11 +1152,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2547" name="Knight's Sword*Crimson Sword" type="Weapon">
@@ -1179,11 +1179,11 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2548" name="Knight's Sword*Elven Sword" type="Weapon">
@@ -1206,11 +1206,11 @@
 		<set name="weight" val="2450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2549" name="Knight's Sword*Sword of Revolution" type="Weapon">
@@ -1233,11 +1233,11 @@
 		<set name="weight" val="2430" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="58" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="124" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2550" name="Knight's Sword*Elven Long Sword" type="Weapon">
@@ -1260,11 +1260,11 @@
 		<set name="weight" val="2370" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2551" name="Crimson Sword*Crimson Sword" type="Weapon">
@@ -1287,11 +1287,11 @@
 		<set name="weight" val="2440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="56" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="118" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2552" name="Crimson Sword*Elven Sword" type="Weapon">
@@ -1314,11 +1314,11 @@
 		<set name="weight" val="2450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="56" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="118" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2553" name="Crimson Sword*Sword of Revolution" type="Weapon">
@@ -1341,11 +1341,11 @@
 		<set name="weight" val="2390" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2554" name="Crimson Sword*Elven Long Sword" type="Weapon">
@@ -1370,11 +1370,11 @@
 		<set name="weight" val="2360" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="148" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2555" name="Elven Sword*Elven Sword" type="Weapon">
@@ -1397,11 +1397,11 @@
 		<set name="weight" val="2440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="56" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="118" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2556" name="Elven Sword*Sword of Revolution" type="Weapon">
@@ -1424,11 +1424,11 @@
 		<set name="weight" val="2410" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2557" name="Elven Sword*Elven Long Sword" type="Weapon">
@@ -1453,11 +1453,11 @@
 		<set name="weight" val="2410" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="148" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2558" name="Sword of Revolution*Sword of Revolution" type="Weapon">
@@ -1482,11 +1482,11 @@
 		<set name="weight" val="2360" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="148" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2559" name="Sword of Revolution*Elven Long Sword" type="Weapon">
@@ -1511,11 +1511,11 @@
 		<set name="weight" val="2340" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="70" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2560" name="Elven Long Sword*Elven Long Sword" type="Weapon">
@@ -1540,11 +1540,11 @@
 		<set name="weight" val="2340" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="73" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="162" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2561" name="StormBringer*StormBringer" type="Weapon">
@@ -1569,11 +1569,11 @@
 		<set name="weight" val="2330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="78" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="175" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2562" name="StormBringer*Shamshir" type="Weapon">
@@ -1598,11 +1598,11 @@
 		<set name="weight" val="2300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="183" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2563" name="StormBringer*Katana" type="Weapon">
@@ -1627,11 +1627,11 @@
 		<set name="weight" val="2320" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="183" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2564" name="StormBringer*Spirit Sword" type="Weapon">
@@ -1656,11 +1656,11 @@
 		<set name="weight" val="2310" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="183" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2565" name="StormBringer*Raid Sword" type="Weapon">
@@ -1685,11 +1685,11 @@
 		<set name="weight" val="2340" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="183" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2566" name="StormBringer*Caliburs" type="Weapon">
@@ -1714,11 +1714,11 @@
 		<set name="weight" val="2260" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="86" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="197" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2567" name="StormBringer*Ultimate Sword" type="Weapon">
@@ -1743,11 +1743,11 @@
 		<set name="weight" val="2240" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="86" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="197" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2568" name="StormBringer*Sword of Delusion" type="Weapon">
@@ -1772,11 +1772,11 @@
 		<set name="weight" val="2230" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="86" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="197" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2569" name="StormBringer*Sword of Nightmare" type="Weapon">
@@ -1801,11 +1801,11 @@
 		<set name="weight" val="2250" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="86" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="197" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2570" name="StormBringer*Tsurugi" type="Weapon">
@@ -1830,11 +1830,11 @@
 		<set name="weight" val="2220" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="86" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="197" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2571" name="StormBringer*Samurai Long sword" type="Weapon">
@@ -1847,7 +1847,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-11" />
+		<set name="enchant4_skill" val="3046-11" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -1859,11 +1859,11 @@
 		<set name="weight" val="2150" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="91" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2572" name="Shamshir*Shamshir" type="Weapon">
@@ -1888,11 +1888,11 @@
 		<set name="weight" val="2330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2573" name="Shamshir*Katana" type="Weapon">
@@ -1917,11 +1917,11 @@
 		<set name="weight" val="2310" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2574" name="Shamshir*Spirit Sword" type="Weapon">
@@ -1946,11 +1946,11 @@
 		<set name="weight" val="2280" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2575" name="Shamshir*Raid Sword" type="Weapon">
@@ -1975,11 +1975,11 @@
 		<set name="weight" val="2280" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2576" name="Shamshir*Caliburs" type="Weapon">
@@ -1992,7 +1992,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2004,11 +2004,11 @@
 		<set name="weight" val="2230" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2577" name="Shamshir*Ultimate Sword" type="Weapon">
@@ -2021,7 +2021,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2033,11 +2033,11 @@
 		<set name="weight" val="2240" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2578" name="Shamshir*Sword of Delusion" type="Weapon">
@@ -2062,11 +2062,11 @@
 		<set name="weight" val="2200" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2579" name="Shamshir*Sword of Nightmare" type="Weapon">
@@ -2079,7 +2079,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2091,11 +2091,11 @@
 		<set name="weight" val="2210" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2580" name="Shamshir*Tsurugi" type="Weapon">
@@ -2108,7 +2108,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2120,11 +2120,11 @@
 		<set name="weight" val="2220" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2581" name="Shamshir*Samurai Long Sword" type="Weapon">
@@ -2137,7 +2137,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-12" />
+		<set name="enchant4_skill" val="3046-12" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2149,11 +2149,11 @@
 		<set name="weight" val="2110" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="94" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2582" name="Katana*Katana" type="Weapon">
@@ -2178,11 +2178,11 @@
 		<set name="weight" val="2270" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2583" name="Katana*Spirit Sword" type="Weapon">
@@ -2207,11 +2207,11 @@
 		<set name="weight" val="2250" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2584" name="Katana*Raid Sword" type="Weapon">
@@ -2236,11 +2236,11 @@
 		<set name="weight" val="2270" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2585" name="Katana*Caliburs" type="Weapon">
@@ -2253,7 +2253,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2265,11 +2265,11 @@
 		<set name="weight" val="2220" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2586" name="Katana*Ultimate Sword" type="Weapon">
@@ -2282,7 +2282,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2294,11 +2294,11 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2587" name="Katana*Sword of Delusion" type="Weapon">
@@ -2323,11 +2323,11 @@
 		<set name="weight" val="2190" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2588" name="Katana*Sword of Nightmare" type="Weapon">
@@ -2340,7 +2340,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2352,11 +2352,11 @@
 		<set name="weight" val="2170" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2589" name="Katana*Tsurugi" type="Weapon">
@@ -2369,7 +2369,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2381,11 +2381,11 @@
 		<set name="weight" val="2210" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2590" name="Katana*Samurai Long Sword" type="Weapon">
@@ -2398,7 +2398,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-12" />
+		<set name="enchant4_skill" val="3042-12" /> <!-- Special Ability: Critical Damage -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2410,11 +2410,11 @@
 		<set name="weight" val="2130" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="94" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2591" name="Spirit Sword*Spirit Sword" type="Weapon">
@@ -2439,11 +2439,11 @@
 		<set name="weight" val="2240" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2592" name="Spirit Sword*Raid Sword" type="Weapon">
@@ -2468,11 +2468,11 @@
 		<set name="weight" val="2260" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2593" name="Spirit Sword*Caliburs" type="Weapon">
@@ -2485,7 +2485,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2497,11 +2497,11 @@
 		<set name="weight" val="2240" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2594" name="Spirit Sword*Ultimate Sword" type="Weapon">
@@ -2514,7 +2514,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2526,11 +2526,11 @@
 		<set name="weight" val="2240" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2595" name="Spirit Sword*Sword of Delusion" type="Weapon">
@@ -2555,11 +2555,11 @@
 		<set name="weight" val="2250" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2596" name="Spirit Sword*Sword of Nightmare" type="Weapon">
@@ -2572,7 +2572,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2584,11 +2584,11 @@
 		<set name="weight" val="2250" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2597" name="Spirit Sword*Tsurugi" type="Weapon">
@@ -2601,7 +2601,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -2613,11 +2613,11 @@
 		<set name="weight" val="2220" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="89" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="204" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2598" name="Spirit Sword*Samurai Long Sword" type="Weapon">
@@ -2642,11 +2642,11 @@
 		<set name="weight" val="2110" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="94" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="2599" name="Raid Sword*Raid Sword" type="Weapon">
@@ -2671,11 +2671,11 @@
 		<set name="weight" val="2250" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

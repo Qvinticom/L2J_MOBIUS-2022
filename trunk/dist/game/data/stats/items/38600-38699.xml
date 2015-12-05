@@ -112,10 +112,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="407" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="203" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38607" name="Steel Karmian Tunic" type="Armor">
@@ -354,10 +354,10 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="400" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38620" name="Steel Avadon Robe" type="Armor">
@@ -448,10 +448,10 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="403" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38625" name="Steel Leather Armor of Doom" type="Armor">
@@ -599,10 +599,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="393" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38633" name="Steel Dark Crystal Robe" type="Armor">
@@ -693,10 +693,10 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="397" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38638" name="Steel Dark Crystal Leather Armor" type="Armor">
@@ -880,10 +880,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="390" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38648" name="Steel Major Arcana Robe" type="Armor">
@@ -973,9 +973,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="940" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="38653" name="Steel Draconic Leather Armor" type="Armor">
@@ -1156,10 +1156,10 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="380" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="38663" name="Steel Dynasty Tunic" type="Armor">
@@ -1268,9 +1268,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="310" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="38669" name="Steel Dynasty Leather Armor" type="Armor">
@@ -1737,6 +1737,7 @@
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="83" />
+			<mul stat="maxHp" val="1.25" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -1807,7 +1808,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="677" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1832,9 +1833,10 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="91" />
+			<mul stat="maxMp" val="1.30" />
 			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
@@ -1858,7 +1860,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="597" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="220" />

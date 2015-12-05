@@ -37,15 +37,11 @@
 		<set name="material" val="BONE" />
 		<set name="price" val="3355000" />
 		<set name="weight" val="1170" />
-		<for>
-			<sub stat="rEvas" val="-8" />
-			<set stat="rShld" val="20" />
-		</for>
 	</item>
 	<item id="13103" name="My Teleport Book Pack" type="EtcItem">
 		<!-- Wrapped Pack containing sheet of the Free Teleporter's Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13015,1,1,100" /> <!-- My Teleport Book -  -->
+		<set name="capsuled_items" val="13015,1,1,100" /> <!-- My Teleport Book -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -62,7 +58,7 @@
 	<item id="13104" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13016,30,30,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="13016,30,30,100" /> <!-- My Teleport Scroll -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -79,7 +75,7 @@
 	<item id="13105" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Entrance Pass: Kamaloka set. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss), Extra Pass: Near Kamaloka, Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -96,7 +92,7 @@
 	<item id="13106" name="Feather of Blessing 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Love Agathion Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="10649,3,3,100" /> <!-- Feather of Blessing -  -->
+		<set name="capsuled_items" val="10649,3,3,100" /> <!-- Feather of Blessing -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -147,7 +143,7 @@
 	<item id="13109" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - 30-day, Extra Pass: Near Kamaloka - 30-day, Extra Pass: Kamaloka (Labyrinth of the Abyss) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -317,7 +313,7 @@
 	<item id="13119" name="OX Stick Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" /> <!-- O Stick - 30-day -->
+		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" /> <!-- O Stick - 30-day, X Stick - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -334,7 +330,7 @@
 	<item id="13120" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" /> <!-- Scissors Stick - 30-day -->
+		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" /> <!-- Scissors Stick - 30-day, Rock Stick - 30-day, Paper Stick - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -368,7 +364,7 @@
 	<item id="13122" name="Color Title 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13021,3,3,100" /> <!-- Color Title -  -->
+		<set name="capsuled_items" val="13021,3,3,100" /> <!-- Color Title - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -394,7 +390,7 @@
 	<item id="13124" name="Color Title Pack" type="EtcItem">
 		<!-- Wrapped Pack containing sheets of Color Titles. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13021,1,1,100" /> <!-- Color Title -  -->
+		<set name="capsuled_items" val="13021,1,1,100" /> <!-- Color Title - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -411,7 +407,7 @@
 	<item id="13125" name="My Teleport Scroll 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="capsuled_items" val="13016,10,10,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="13016,10,10,100" /> <!-- My Teleport Scroll - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -428,7 +424,7 @@
 	<item id="13126" name="Dimensional Experience Pack (Event)" type="EtcItem">
 		<!-- Wrapped box containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="13307,1,1,100;13302,10,10,100;13301,1,1,100" /> <!-- Color Title (Event) -  -->
+		<set name="capsuled_items" val="13307,1,1,100;13302,10,10,100;13301,1,1,100" /> <!-- Color Title (Event) - 7-day, My Teleport Scroll (Event) - 7-day, My Teleport Book (Event) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -931,7 +927,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
@@ -1099,7 +1095,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1110" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="27" />
@@ -1157,7 +1153,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1880" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="64" />
@@ -1216,11 +1212,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13164" name="Player Commendation - Claymore" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1247,11 +1243,11 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13165" name="Player Commendation - Bonebreaker" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1279,11 +1275,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13166" name="Player Commendation - Atuba Hammer" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1312,11 +1308,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="79" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13167" name="Player Commendation - Ghost Staff" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1345,11 +1341,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="79" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13168" name="Player Commendation - Staff of Life" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1378,11 +1374,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="79" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="74" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13169" name="Player Commendation - Atuba Mace" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1411,11 +1407,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="79" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="90" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13170" name="Player Commendation - Mithril Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1441,13 +1437,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1060" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13171" name="Player Commendation - Scallop Jamadhr" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1475,11 +1471,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13172" name="Player Commendation - Light Crossbow" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1508,13 +1504,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1810" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13173" name="Player Commendation - Glaive" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1542,13 +1538,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13174" name="Player Commendation - Elven Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1575,11 +1571,11 @@
 		<set name="weight" val="1440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13175" name="Player Commendation - Grand Épée" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1609,13 +1605,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13176" name="Player Commendation - General's Katzbalger" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1646,11 +1642,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13177" name="Player Commendation - Cranequin" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1680,13 +1676,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13178" name="Player Commendation - Samurai Long Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1715,11 +1711,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13179" name="Player Commendation - Deadman's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1751,11 +1747,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13180" name="Player Commendation - Ghoul's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1786,11 +1782,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13181" name="Player Commendation - Demon's Staff" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1812,7 +1808,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="onmagic_chance" val="7" />
-		<set name="onmagic_skill" val="1164-10" />
+		<set name="onmagic_skill" val="1164-10" /> <!-- Curse Weakness -->
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1822,11 +1818,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="152" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13182" name="Player Commendation - Crystal Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1854,13 +1850,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13183" name="Player Commendation - Great Pata" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1890,11 +1886,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13184" name="Player Commendation - Eminence Bow" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1924,13 +1920,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1720" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="323" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13185" name="Player Commendation - Orcish Poleaxe" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1958,13 +1954,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13186" name="Player Commendation - Yaksa Mace" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -1994,11 +1990,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13187" name="Player Commendation - Shamshir*Shamshir" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2027,11 +2023,11 @@
 		<set name="weight" val="2330" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13188" name="Player Commendation - Admiral's Estoc" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2063,13 +2059,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13189" name="Player Commendation - Saber Tooth" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2102,11 +2098,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="169" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13190" name="Player Commendation - Sharpshooter" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2138,13 +2134,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13191" name="Player Commendation - Ecliptic Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2174,11 +2170,11 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13192" name="Player Commendation - Ecliptic Axe" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2200,7 +2196,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="onmagic_chance" val="10" />
-		<set name="onmagic_skill" val="1201-23" />
+		<set name="onmagic_skill" val="1201-23" /> <!-- Dryad Root -->
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -2210,11 +2206,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="125" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13193" name="Player Commendation - Dwarven Hammer" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2244,11 +2240,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="83" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="190" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13194" name="Player Commendation - Damascus Sword" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2277,11 +2273,11 @@
 		<set name="weight" val="1350" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13195" name="Player Commendation - Lance" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2310,13 +2306,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13196" name="Player Commendation - Deadman's Glory" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2346,11 +2342,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13197" name="Player Commendation - Art of Battle Axe" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2380,11 +2376,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13198" name="Player Commendation - Staff of Evil Spirits" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2416,11 +2412,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="145" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13199" name="Player Commendation - Demon's Dagger" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -2448,13 +2444,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

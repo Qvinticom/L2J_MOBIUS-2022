@@ -1547,7 +1547,7 @@
 	<item id="2490" name="Cloak of Silence" type="Armor">
 		<set name="icon" val="icon.armor_back01" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1560,7 +1560,7 @@
 	<item id="2491" name="Golden Yarn Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back01" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -1573,7 +1573,7 @@
 	<item id="2492" name="Shadow Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back01" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="42" />
 		<set name="crystal_type" val="C" />
 		<set name="default_action" val="EQUIP" />
@@ -1599,10 +1599,10 @@
 		<set name="price" val="12060" />
 		<set name="weight" val="1320" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2494" name="Plate Shield" type="Armor">
@@ -1617,10 +1617,10 @@
 		<set name="price" val="15800" />
 		<set name="weight" val="1310" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2495" name="Chain Shield" type="Armor">
@@ -1635,10 +1635,10 @@
 		<set name="price" val="20400" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="166" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2496" name="Dwarven Chain Shield" type="Armor">
@@ -1653,10 +1653,10 @@
 		<set name="price" val="24020" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="174" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2497" name="Full Plate Shield" type="Armor">
@@ -1671,10 +1671,10 @@
 		<set name="price" val="57760" />
 		<set name="weight" val="1220" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="203" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2498" name="Shield of Nightmare" type="Armor">
@@ -1689,10 +1689,10 @@
 		<set name="price" val="1422000" />
 		<set name="weight" val="1180" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="2499" name="Elven Long Sword" type="Weapon">
@@ -1716,11 +1716,11 @@
 		<set name="weight" val="1440" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

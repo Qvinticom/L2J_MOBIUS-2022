@@ -1096,11 +1096,11 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8679" name="Sword of Ipos" type="Weapon">
@@ -1125,11 +1125,11 @@
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8680" name="Barakiel's Axe" type="Weapon">
@@ -1154,11 +1154,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8681" name="Behemoth' Tuning Fork" type="Weapon">
@@ -1183,11 +1183,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8682" name="Naga Storm" type="Weapon">
@@ -1210,13 +1210,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8683" name="Tiphon's Spear" type="Weapon">
@@ -1240,13 +1240,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8684" name="Shyeed's Bow" type="Weapon">
@@ -1272,13 +1272,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="133" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8685" name="Sobekk's Hurricane" type="Weapon">
@@ -1303,11 +1303,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8686" name="Themis' Tongue" type="Weapon">
@@ -1332,11 +1332,11 @@
 		<set name="weight" val="820" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="161" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="202" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8687" name="Cabrio's Hand" type="Weapon">
@@ -1362,11 +1362,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="161" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="202" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8688" name="Daimon Crystal" type="Weapon">
@@ -1392,11 +1392,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="177" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8689" name="Blood Sword Akamanah" type="Weapon">
@@ -1421,11 +1421,11 @@
 		<set name="weight" val="1840" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="255" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1548" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8690" name="Recipe: Sirra's Blade (60%)" type="EtcItem">

@@ -193,7 +193,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="80" />
@@ -264,7 +264,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
@@ -289,7 +289,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -313,7 +313,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="117" />
@@ -456,7 +456,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
@@ -499,11 +499,11 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add stat="pDef" val="25" />
-			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="-8" />
+			<add order="0" stat="pDef" val="25" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="22726" name="Japanese Sigil" type="Armor">
@@ -519,7 +519,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
 		</for>
@@ -812,7 +812,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="22748" name="Scroll: Increase Vitality Pack (High-grade)" type="EtcItem">
+	<item id="22748" name="Scroll: Increase Vitality Pack (High-grade) " type="EtcItem">
 		<!-- Wrapped Pack containing Scroll: increase Vitality (High-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />

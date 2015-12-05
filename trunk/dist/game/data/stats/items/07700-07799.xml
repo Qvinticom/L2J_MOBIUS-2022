@@ -38,11 +38,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="85" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7702" name="Stick of Faith" additionalName="Magic Hold" type="Weapon">
@@ -61,7 +61,7 @@
 		<set name="item_skill" val="3577-1" /> <!-- Special Ability: Magic Hold -->
 		<set name="material" val="WOOD" />
 		<set name="onmagic_chance" val="10" />
-		<set name="onmagic_skill" val="1201-16" />
+		<set name="onmagic_skill" val="1201-16" /> <!-- Dryad Root -->
 		<set name="price" val="352580" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="2" />
@@ -71,11 +71,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="85" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7703" name="Stick of Faith" additionalName="Magic Mental Shield" type="Weapon">
@@ -103,11 +103,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="81" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="85" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7704" name="Stick of Eternity" additionalName="Empower" type="Weapon">
@@ -134,11 +134,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7705" name="Stick of Eternity" additionalName="Rsk. Evasion" type="Weapon">
@@ -165,11 +165,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7706" name="Stick of Eternity" additionalName="Blessed Body" type="Weapon">
@@ -197,11 +197,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7707" name="Nirvana Axe" additionalName="M. Atk." type="Weapon">
@@ -228,11 +228,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7708" name="Nirvana Axe" additionalName="Magic Poison" type="Weapon">
@@ -260,11 +260,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7709" name="Nirvana Axe" additionalName="Magic Weakness" type="Weapon">
@@ -292,11 +292,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7710" name="Club of Nature" additionalName="Acumen" type="Weapon">
@@ -323,11 +323,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7711" name="Club of Nature" additionalName="Magic Mental Shield" type="Weapon">
@@ -355,11 +355,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7712" name="Club of Nature" additionalName="Magic Hold" type="Weapon">
@@ -378,7 +378,7 @@
 		<set name="item_skill" val="3577-1" /> <!-- Special Ability: Magic Hold -->
 		<set name="material" val="WOOD" />
 		<set name="onmagic_chance" val="10" />
-		<set name="onmagic_skill" val="1201-21" />
+		<set name="onmagic_skill" val="1201-21" /> <!-- Dryad Root -->
 		<set name="price" val="660860" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="3" />
@@ -388,11 +388,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7713" name="Mace of Underworld" additionalName="Mana Up" type="Weapon">
@@ -419,11 +419,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7714" name="Mace of Underworld" additionalName="Magic Silence" type="Weapon">
@@ -452,11 +452,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7715" name="Mace of Underworld" additionalName="Conversion" type="Weapon">
@@ -483,11 +483,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="101" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7716" name="Inferno Staff" additionalName="Acumen" type="Weapon">
@@ -514,11 +514,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="135" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7717" name="Inferno Staff" additionalName="Magic Silence" type="Weapon">
@@ -547,11 +547,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="135" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7718" name="Inferno Staff" additionalName="Magic Paralyze" type="Weapon">
@@ -580,11 +580,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="111" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="135" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7719" name="Poleaxe" additionalName="Critical Stun" type="Weapon">
@@ -610,13 +610,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7720" name="Poleaxe" additionalName="Long Blow" type="Weapon">
@@ -640,14 +640,14 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
-			<enchant val="0" stat="pAtk" />
-			<set val="80" stat="pAtkRange" />
+			<set stat="pAtkRange" val="80" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7721" name="Poleaxe" additionalName="Wide Blow" type="Weapon">
@@ -671,13 +671,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7722" name="Sword of Valhalla" additionalName="Acumen" type="Weapon">
@@ -703,11 +703,11 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7723" name="Sword of Valhalla" additionalName="Magic Weakness" type="Weapon">
@@ -725,7 +725,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="onmagic_chance" val="7" />
-		<set name="onmagic_skill" val="1164-11" />
+		<set name="onmagic_skill" val="1164-11" /> <!-- Curse Weakness -->
 		<set name="price" val="1336100" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -734,11 +734,11 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7724" name="Sword of Valhalla" additionalName="Magic Regeneration" type="Weapon">
@@ -765,11 +765,11 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="122" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="140" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="7725" name="Booty - Grey Pouch" type="EtcItem">

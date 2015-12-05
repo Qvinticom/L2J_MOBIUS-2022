@@ -84,10 +84,10 @@
 		<set name="price" val="14658000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="399" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="15605" name="Vorpal Sigil" type="Armor">
@@ -103,9 +103,9 @@
 		<set name="price" val="14658000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="15606" name="Moirai Helmet" type="Armor">
@@ -396,10 +396,10 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="355" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="15622" name="Moirai Sigil" type="Armor">
@@ -415,9 +415,9 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="16" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="15623" name="XP" type="EtcItem">
@@ -1076,7 +1076,7 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="275" />
 			<set stat="pAtk" val="496" />
@@ -1222,7 +1222,7 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="275" />
 			<set stat="pAtk" val="567" />
@@ -1340,7 +1340,7 @@
 			<player isHero="true" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="275" />
 			<set stat="pAtk" val="1117" />
@@ -1377,7 +1377,7 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="183" />
 			<set stat="pAtk" val="344" />
@@ -1444,7 +1444,7 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="183" />
 			<set stat="pAtk" val="444" />

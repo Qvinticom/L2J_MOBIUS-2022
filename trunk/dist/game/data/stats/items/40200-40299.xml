@@ -15,10 +15,10 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40201" name="Sayha's Cloak" additionalName="Sayha's Seer" type="Armor">
@@ -36,10 +36,10 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40202" name="Supply Box (R-grade)" type="EtcItem">
@@ -109,6 +109,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="20000" />
@@ -119,6 +120,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="40000" />
@@ -129,6 +131,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="50000" />
@@ -141,6 +144,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -308,6 +312,7 @@
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -346,6 +351,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -424,6 +430,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -460,6 +467,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -470,6 +478,7 @@
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -490,10 +499,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40244" name="Greater Sapyros Cloak (20-day)" additionalName="Tyrr Warrior" type="Armor">
@@ -512,10 +525,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40245" name="Greater Ashagen Cloak (20-day)" additionalName="Othell Rogue" type="Armor">
@@ -534,10 +551,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40246" name="Greater Cranigg Cloak (20-day)" additionalName="Yul Archer" type="Armor">
@@ -556,10 +577,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40247" name="Greater Soltkreig Cloak (20-day)" additionalName="Feoh Wizard" type="Armor">
@@ -578,10 +603,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40248" name="Greater Naviarope Cloak (20-day)" additionalName="Wynn Summoner" type="Armor">
@@ -600,10 +629,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40249" name="Greater Leister Cloak (20-day)" additionalName="Iss Enchanter" type="Armor">
@@ -622,10 +655,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40250" name="Greater Lakcis Cloak (20-day)" additionalName="Aeore Healer" type="Armor">
@@ -644,10 +681,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40251" name="Greater Sayha Cloak (20-day)" additionalName="Eviscerator" type="Armor">
@@ -666,10 +707,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40252" name="Greater Sayha Cloak (20-day)" additionalName="Sayha's Seer" type="Armor">
@@ -688,10 +733,14 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<enchant stat="mDef" val="0" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="50" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="40253" name="Potion of Protection: Stun" additionalName="Top-grade" type="EtcItem">
@@ -699,6 +748,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -708,6 +758,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -717,6 +768,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -726,6 +778,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -735,6 +788,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -744,6 +798,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -753,6 +808,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -762,6 +818,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -771,6 +828,7 @@
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
@@ -778,7 +836,7 @@
 	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item - Salamander Skin Mail -  -->
+		<set name="capsuled_items" val="12074,1,1,100;12075,1,1,100;12076,1,1,100;12079,1,1,100" /> <!-- Common Item - Salamander Skin Mail - 7-day, Common Item - Salamander Skin Boots - 7-day, Common Item - Ogre Power Gauntlets - 7-day, Common Item - Plate Helmet - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -794,7 +852,7 @@
 	<item id="40263" name="Faeron Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="12071,1,1,100;12079,1,1,100;12082,1,1,100;12083,1,1,100" /> <!-- Common Item - Assault Boots -  -->
+		<set name="capsuled_items" val="12071,1,1,100;12079,1,1,100;12082,1,1,100;12083,1,1,100" /> <!-- Common Item - Assault Boots - 7-day, Common Item - Plate Helmet - 7-day, Common Item - Sage's Worn Gloves - 7-day, Common Item - Sage's Rags - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -810,7 +868,7 @@
 	<item id="40264" name="Emissary's Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="11691,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;1463,1500,1500,100" /> <!-- Common Item - Bich'Hwa -  -->
+		<set name="capsuled_items" val="11691,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;1463,1500,1500,100" /> <!-- Common Item - Bich'Hwa - 7-day, Common Item - Red Crescent - 7-day, Common Item - Necklace of Devotion - 7-day, Common Item - Ring of Devotion - 7-day, Soulshot (D-grade) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -826,7 +884,7 @@
 	<item id="40265" name="Emissary's Support Box" additionalName="Ertheia Wizard" type="EtcItem">
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="11693,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;2510,500,500,100" /> <!-- Common Item - Goat Head Staff -  -->
+		<set name="capsuled_items" val="11693,1,1,100;12311,2,2,100;12312,1,1,100;12313,2,2,100;2510,500,500,100" /> <!-- Common Item - Goat Head Staff - 7-day, Common Item - Red Crescent - 7-day, Common Item - Necklace of Devotion - 7-day, Common Item - Ring of Devotion - 7-day, Spiritshot (D-grade) - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />

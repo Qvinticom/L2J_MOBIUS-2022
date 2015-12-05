@@ -149,7 +149,8 @@
 	<item id="34716" name="Refined Devil Horn" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -172,7 +173,8 @@
 	<item id="34718" name="Refined Devil Horn" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -359,7 +361,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -387,7 +389,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
@@ -415,7 +417,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
@@ -443,7 +445,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -471,7 +473,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -499,7 +501,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1080,6 +1082,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />

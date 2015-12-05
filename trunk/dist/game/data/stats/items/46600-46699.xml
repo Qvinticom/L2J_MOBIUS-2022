@@ -7,7 +7,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="46601" name="White Assassin Suit" type="Armor">
@@ -18,20 +18,22 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="46602" name="Blue Dynasty Cloak" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Cloak. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
 		<for>
-			<add stat="mDef" val="40" />
-			<add stat="pDef" val="50" />
+			<add order="0" stat="mDef" val="40" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
@@ -75,6 +77,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46607" name="Blue Dynasty Circlet" additionalName="STR" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR + 3 when equipped. -->
@@ -84,6 +87,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46608" name="Blue Dynasty Circlet" additionalName="DEX" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. DEX + 3 when equipped. -->
@@ -93,6 +97,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46609" name="Blue Dynasty Circlet" additionalName="CON" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CON + 3 when equipped. -->
@@ -102,6 +107,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46610" name="Blue Dynasty Circlet" additionalName="MEN" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. MEN + 3 when equipped. -->
@@ -111,6 +117,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46611" name="Blue Dynasty Circlet" additionalName="INT" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
@@ -120,6 +127,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46612" name="Blue Dynasty Circlet" additionalName="WIT" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. WIT + 3 when equipped. -->
@@ -129,6 +137,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46613" name="Blue Dynasty Circlet" additionalName="Critical Rate" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Critical Rate + 50 when equipped. -->
@@ -138,6 +147,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46614" name="Blue Dynasty Circlet" additionalName="Critical Damage" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -147,6 +157,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46615" name="Blue Dynasty Circlet" additionalName="P. Def." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Def. + 5% when equipped. -->
@@ -156,6 +167,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46616" name="Blue Dynasty Circlet" additionalName="M. Def." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Def. + 5% when equipped. -->
@@ -165,6 +177,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46617" name="Blue Dynasty Circlet" additionalName="Evasion" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Evasion + 5 when equipped. -->
@@ -174,6 +187,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46618" name="Blue Dynasty Circlet" additionalName="P. Atk." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Atk. + 5% when equipped. -->
@@ -183,6 +197,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46619" name="Blue Dynasty Circlet" additionalName="M. Atk." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Atk. + 10% when equipped. -->
@@ -192,6 +207,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46620" name="Blue Dynasty Circlet" additionalName="Accuracy" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Accuracy + 5 when equipped. -->
@@ -201,6 +217,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46621" name="Shadow Blue Seal Bracelet" type="Armor">
 		<!-- L2 Assist App item. Can summon Shadow Blue. -->
@@ -211,6 +228,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
 	</item>
 	<item id="46622" name="1,000,000,000 Adana" additionalName="Event" type="EtcItem">
 		<!-- Adena? No, this is Adana. Receive the Abundant Blessing buff from Miss Patch when in possession of this Adana. Lv. 85 or above. Deleted after event. -->
@@ -223,6 +241,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46623" name="5,000,000,000 Adana" additionalName="Event" type="EtcItem">
 		<!-- Adena? No, this is Adana. Take it to Event Manager Miss Patch to exchange for a 30-day Armor Set (R-grade or above), or a Weapon (R-grade or above). Lv. 85 or above. Deleted after event. -->
@@ -236,8 +255,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1" />
 	</item>
-	<item id="46624" name="Entrance Pass: Embryo Command Post" additionalName="1-day" type="EtcItem">
+	<item id="46624" name="Entrance Pass: Embryo Command Post " additionalName="1-day" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -283,6 +303,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46628" name="Blue Dynasty Circlet" additionalName="CHA" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
@@ -292,6 +313,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46629" name="Practice StormBringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
@@ -311,6 +333,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="68" />
@@ -332,8 +355,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="142" />
+			<add order="0" stat="mDef" val="142" />
 			<add stat="maxMp" val="58" />
 		</for>
 	</item>
@@ -351,8 +375,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="107" />
+			<add order="0" stat="mDef" val="107" />
 			<add stat="maxMp" val="43" />
 		</for>
 	</item>
@@ -370,8 +395,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="71" />
+			<add order="0" stat="mDef" val="71" />
 		</for>
 	</item>
 	<item id="46633" name="Seraph Necklace" additionalName="30-day" type="Armor">
@@ -388,8 +414,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="161" />
+			<add order="0" stat="mDef" val="161" />
 			<add stat="maxMp" val="62" />
 		</for>
 	</item>
@@ -407,8 +434,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="121" />
+			<add order="0" stat="mDef" val="121" />
 			<add stat="maxMp" val="46" />
 		</for>
 	</item>
@@ -426,8 +454,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="80" />
+			<add order="0" stat="mDef" val="80" />
 		</for>
 	</item>
 	<item id="46636" name="Eternal Necklace" additionalName="30-day" type="Armor">
@@ -444,8 +473,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="174" />
+			<add order="0" stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
 		</for>
 	</item>
@@ -463,8 +493,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -482,8 +513,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="87" />
+			<add order="0" stat="mDef" val="87" />
 		</for>
 	</item>
 	<item id="46639" name="Roa's Lost Item" additionalName="Event" type="EtcItem">
@@ -603,8 +635,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Restores HP/MP/CP of all party members and cancels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -614,8 +648,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Cancel" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Cancels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -625,8 +661,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Increases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -636,8 +674,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Decreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -647,8 +687,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
 		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -660,6 +702,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -667,8 +710,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="690" />
@@ -685,6 +729,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -692,6 +737,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="388" />
@@ -709,6 +755,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -716,6 +763,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="388" />
@@ -733,6 +781,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
@@ -740,6 +789,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -758,6 +808,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -765,6 +816,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -783,6 +835,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
@@ -790,8 +843,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="770" />
@@ -808,6 +862,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -815,8 +870,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="1521" />
@@ -833,6 +889,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -840,8 +897,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="1286" />
@@ -858,6 +916,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -865,6 +924,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="481" />
@@ -882,6 +942,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -889,6 +950,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -907,6 +969,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
@@ -914,6 +977,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -932,6 +996,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -939,6 +1004,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="388" />
@@ -956,6 +1022,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
@@ -963,8 +1030,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="792" />
@@ -981,6 +1049,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FINE_STEEL" />
@@ -988,6 +1057,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1018,10 +1088,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
 		<for>
 			<set stat="broochJewels" val="5" />
 			<add stat="inventoryLimit" val="12" />
-			<add stat="mDef" val="101" />
+			<add order="0" stat="mDef" val="101" />
 		</for>
 	</item>
 	<item id="46669" name="Radiant Brooch Fragment" type="EtcItem">
@@ -1036,7 +1107,7 @@
 	<item id="46670" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1045,11 +1116,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46671" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 6%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1058,11 +1130,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46672" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 12%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1071,11 +1144,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46673" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 20% and decreases Vitality Point Consumption Speed by 7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1084,21 +1158,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46674" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 30% and decreases Vitality Point Consumption Speed by 15%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46675" name="Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Debuffs + 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1107,11 +1183,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46676" name="Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Resistance to Debuffs + 6%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1120,11 +1197,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46677" name="Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Resistance to Debuffs + 12%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1133,11 +1211,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46678" name="Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Resistance to Debuffs + 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1146,21 +1225,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46679" name="Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Resistance to Debuffs + 30%. Cancels your debuffs. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46680" name="Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1169,11 +1250,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46681" name="Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1182,11 +1264,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46682" name="Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1195,11 +1278,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46683" name="Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1208,16 +1292,18 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46684" name="Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="bodypart" val="deco1" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46685" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
@@ -1292,7 +1378,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 	</item>
-	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
+	<item id="46692" name="Entrance Pass: Embryo Command Post " type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

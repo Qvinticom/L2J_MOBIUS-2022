@@ -94,7 +94,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -155,7 +155,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1560" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -190,7 +190,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="4800" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
 		</for>
@@ -273,7 +273,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -398,7 +398,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
@@ -419,7 +419,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>

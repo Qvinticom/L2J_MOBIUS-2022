@@ -796,13 +796,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="42" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="62" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="1661" name="Thief Key" type="EtcItem">

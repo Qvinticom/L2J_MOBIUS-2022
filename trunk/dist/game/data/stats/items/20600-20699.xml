@@ -392,7 +392,7 @@
 	<item id="20623" name="Soul Silver Foil - Scent Pack" type="EtcItem">
 		<!-- Wrapped containing silver foil and scent that comfort the souls of monsters. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20602,100,100,100;20603,100,100,100" /> <!-- Soul Silver Foil (Event) -  -->
+		<set name="capsuled_items" val="20602,100,100,100;20603,100,100,100" /> <!-- Soul Silver Foil (Event) - Flute Sound (3-day), Soul Scent (Event) - Flute Sound (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -408,7 +408,7 @@
 	<item id="20624" name="Soul Scent 100-unit Pack" type="EtcItem">
 		<!-- Wrapped containing scent that comfort the souls of monsters. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20603,100,100,100" /> <!-- Soul Scent (Event) -  -->
+		<set name="capsuled_items" val="20603,100,100,100" /> <!-- Soul Scent (Event) - Flute Sound (3-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -541,7 +541,7 @@
 	<item id="20632" name="Watermelon Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Watermelon Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20634,1,1,100" /> <!-- Watermelon Hat -  -->
+		<set name="capsuled_items" val="20634,1,1,100" /> <!-- Watermelon Hat - Ability of a Cool Watermelon (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -593,7 +593,7 @@
 	<item id="20635" name="Beginner's Adventurer Support Pack (No-grade)" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains No-grade items and cocktail drinks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="8973,1,1,100;8977,1,1,100;9030,1,1,100;9031,1,1,100;9032,1,1,100;9033,1,1,100;9034,1,1,100;9035,1,1,100;21093,3,3,100;21094,3,3,100" /> <!-- Shadow Item: Falchion -  -->
+		<set name="capsuled_items" val="8973,1,1,100;8977,1,1,100;9030,1,1,100;9031,1,1,100;9032,1,1,100;9033,1,1,100;9034,1,1,100;9035,1,1,100;21093,3,3,100;21094,3,3,100" /> <!-- Shadow Item: Falchion - Ability of a Cool Watermelon (7-day), Shadow Item: Mage Staff - Ability of a Cool Watermelon (7-day), Shadow Item: Bronze Breastplate - Ability of a Cool Watermelon (7-day), Shadow Item: Bronze Gaiters - Ability of a Cool Watermelon (7-day), Shadow Item: Durable Leather Shirt - Ability of a Cool Watermelon (7-day), Shadow Item: Durable Leather Gaiters - Ability of a Cool Watermelon (7-day), Shadow Item: Tunic of Magic - Ability of a Cool Watermelon (7-day), Shadow Item: Stockings of Magic - Ability of a Cool Watermelon (7-day), Sweet Fruit Cocktail - Ability of a Cool Watermelon (7-day), Fresh Fruit Cocktail - Ability of a Cool Watermelon (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -609,7 +609,7 @@
 	<item id="20636" name="Warrior Support Pack (D-grade)" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains a D-grade Fighter item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20639,1,1,100;20640,1,1,100;20641,1,1,100;20642,1,1,100;20643,1,1,100;20644,1,1,100;20645,1,1,100;20646,1,1,100;20647,1,1,100;20648,1,1,100" /> <!-- Common Item - Elven Long Sword -  -->
+		<set name="capsuled_items" val="20639,1,1,100;20640,1,1,100;20641,1,1,100;20642,1,1,100;20643,1,1,100;20644,1,1,100;20645,1,1,100;20646,1,1,100;20647,1,1,100;20648,1,1,100" /> <!-- Common Item - Elven Long Sword - Ability of a Cool Watermelon (7-day), Common Item - Light Crossbow - Ability of a Cool Watermelon (7-day), Common Item - Knight's Sword*Elven Sword - Ability of a Cool Watermelon (7-day), Common Item - Mithril Gloves - Ability of a Cool Watermelon (7-day), Common Item - Plate Boots - Ability of a Cool Watermelon (7-day), Common Item - Plate Shield - Ability of a Cool Watermelon (7-day), Common Item - Plate Helmet - Ability of a Cool Watermelon (7-day), Common Item - Plate Gaiters - Ability of a Cool Watermelon (7-day), Common Item - Half Plate Armor - Ability of a Cool Watermelon (7-day), Common Item - Salamander Skin Mail - Ability of a Cool Watermelon (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -625,7 +625,7 @@
 	<item id="20637" name="Wizard Support Pack (D-grade)" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains a D-grade Mage item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20649,1,1,100;20650,1,1,100;20651,1,1,100;20652,1,1,100;20653,1,1,100;20645,1,1,100" /> <!-- Common Item - Ghost Staff -  -->
+		<set name="capsuled_items" val="20649,1,1,100;20650,1,1,100;20651,1,1,100;20652,1,1,100;20653,1,1,100;20645,1,1,100" /> <!-- Common Item - Ghost Staff - Ability of a Cool Watermelon (7-day), Common Item - Mithril Tunic - Ability of a Cool Watermelon (7-day), Common Item - Mithril Stockings - Ability of a Cool Watermelon (7-day), Common Item - Salamander Skin Boots - Ability of a Cool Watermelon (7-day), Common Item - Ogre Power Gauntlets - Ability of a Cool Watermelon (7-day), Common Item - Plate Helmet - Ability of a Cool Watermelon (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -641,7 +641,7 @@
 	<item id="20638" name="Novice Adventurer Support Back" type="EtcItem">
 		<!-- Pack provided for new adventurers in Aden World. Contains useful items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20415,1,1,100;21091,1,1,100;21092,1,1,100" /> <!-- Afro Hair - Big Head, Firework (7-day) -->
+		<set name="capsuled_items" val="20415,1,1,100;21091,1,1,100;21092,1,1,100" /> <!-- Afro Hair - Big Head, Firework (7-day), XP Rune III (Lv. 1-100+) 50% Pack (7-day) - Big Head, Firework (7-day), SP Rune 50% Pack (7-day) - Big Head, Firework (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -706,7 +706,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="100" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -790,7 +790,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
 		</for>
@@ -1448,7 +1448,7 @@
 	<item id="20680" name="Agathion - Lucky Girl Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Lucky Girl. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20654,1,1,100" /> <!-- Agathion - Lucky Girl -  -->
+		<set name="capsuled_items" val="20654,1,1,100" /> <!-- Agathion - Lucky Girl - Big Head, Firework (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1484,7 +1484,7 @@
 	<item id="20682" name="Agathion - Lucky Boy Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Lucky Boy. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20656,1,1,100" /> <!-- Agathion - Lucky Boy -  -->
+		<set name="capsuled_items" val="20656,1,1,100" /> <!-- Agathion - Lucky Boy - Brave Warrior's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1520,7 +1520,7 @@
 	<item id="20684" name="Agathion - Dancing Lucky Kid Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Dancing Lucky Kid. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20658,1,1,100" /> <!-- Agathion - Dancing Lucky Kid -  -->
+		<set name="capsuled_items" val="20658,1,1,100" /> <!-- Agathion - Dancing Lucky Kid - Great Wizard's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1556,7 +1556,7 @@
 	<item id="20686" name="Agathion - Monkey King Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Monkey King. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20660,1,1,100" /> <!-- Agathion - Monkey King -  -->
+		<set name="capsuled_items" val="20660,1,1,100" /> <!-- Agathion - Monkey King - Great Adventurer's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1592,7 +1592,7 @@
 	<item id="20688" name="Agathion - Uthanka Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20662,1,1,100" /> <!-- Agathion - Uthanka -  -->
+		<set name="capsuled_items" val="20662,1,1,100" /> <!-- Agathion - Uthanka - Great Wizard's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1628,7 +1628,7 @@
 	<item id="20690" name="Agathion - Bonus B Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Bonus B. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20664,1,1,100" /> <!-- Agathion - Bonus B -  -->
+		<set name="capsuled_items" val="20664,1,1,100" /> <!-- Agathion - Bonus B - Brave Warrior's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1664,7 +1664,7 @@
 	<item id="20692" name="Valkyrie Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Valkyrie Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20666,1,1,100" /> <!-- Valkyrie Hat -  -->
+		<set name="capsuled_items" val="20666,1,1,100" /> <!-- Valkyrie Hat - Great Adventurer's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1700,7 +1700,7 @@
 	<item id="20694" name="Tiger Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Tiger Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20668,1,1,100" /> <!-- Tiger Hat -  -->
+		<set name="capsuled_items" val="20668,1,1,100" /> <!-- Tiger Hat - Great Adventurer's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1736,7 +1736,7 @@
 	<item id="20696" name="Maid Hairband Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Maid Hairband. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20670,1,1,100" /> <!-- Maid Hairband -  -->
+		<set name="capsuled_items" val="20670,1,1,100" /> <!-- Maid Hairband - Brave Warrior's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1772,7 +1772,7 @@
 	<item id="20698" name="Baby Panda Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Baby Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20672,1,1,100" /> <!-- Baby Panda Hat -  -->
+		<set name="capsuled_items" val="20672,1,1,100" /> <!-- Baby Panda Hat - Great Wizard's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

@@ -3,7 +3,7 @@
 	<item id="20700" name="Bamboo Panda Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Bamboo Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20674,1,1,100" /> <!-- Bamboo Panda Hat -  -->
+		<set name="capsuled_items" val="20674,1,1,100" /> <!-- Bamboo Panda Hat -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -39,7 +39,7 @@
 	<item id="20702" name="Sexy Panda Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Sexy Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20676,1,1,100" /> <!-- Sexy Panda Hat -  -->
+		<set name="capsuled_items" val="20676,1,1,100" /> <!-- Sexy Panda Hat - Great Adventurer's Soul Power (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -75,7 +75,7 @@
 	<item id="20704" name="Gatekeeper Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Gatekeeper Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20678,1,1,100" /> <!-- Gatekeeper Hat -  -->
+		<set name="capsuled_items" val="20678,1,1,100" /> <!-- Gatekeeper Hat - Blessed Resurrection (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -597,7 +597,7 @@
 	<item id="20735" name="Agathion - Zombie Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Zombie. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20726,1,1,100" /> <!-- Agathion - Zombie -  -->
+		<set name="capsuled_items" val="20726,1,1,100" /> <!-- Agathion - Zombie - Golden Jack O'Lantern's Authority (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -633,7 +633,7 @@
 	<item id="20737" name="Agathion - Bluebird Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Bluebird. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20732,1,1,100" /> <!-- Agathion - Bluebird -  -->
+		<set name="capsuled_items" val="20732,1,1,100" /> <!-- Agathion - Bluebird - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -651,7 +651,7 @@
 	<item id="20738" name="Agathion - Hatbird Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Hatbird. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20733,1,1,100" /> <!-- Agathion - Hatbird -  -->
+		<set name="capsuled_items" val="20733,1,1,100" /> <!-- Agathion - Hatbird - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +684,7 @@
 	<item id="20740" name="Cocktail Pack" type="EtcItem">
 		<!-- Wrapped Pack with sweet fruit cocktail and refreshing fruit cocktail. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20393,1,1,100;20394,1,1,100" /> <!-- Sweet Fruit Cocktail -  -->
+		<set name="capsuled_items" val="20393,1,1,100;20394,1,1,100" /> <!-- Sweet Fruit Cocktail - Soul Stealth (7-day), Fresh Fruit Cocktail - Soul Stealth (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -914,7 +914,7 @@
 	<item id="20753" name="Santa's Gift Box" type="EtcItem">
 		<!-- Box containing Santas' Christmas Gift. You must receive this gift to end the year on a good note! -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20756,1,1,100;20758,1,1,100;5561,1,1,100" /> <!-- Santa's Shirt Coupon - 24-hour -->
+		<set name="capsuled_items" val="20756,1,1,100;20758,1,1,100;5561,1,1,100" /> <!-- Santa's Shirt Coupon - 24-hour, Santa's Weapon Coupon Box - 24-hour, Special Holiday Tree - 24-hour -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -931,7 +931,7 @@
 	<item id="20754" name="Santa's Gift Box - Jackpot" type="EtcItem">
 		<!-- Box containing Santas' Biggest Christmas Gift! You must receive this gift to end the year on a good note! -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20756,1,1,100;20757,1,1,100;5561,1,1,100" /> <!-- Santa's Shirt Coupon - 24-hour -->
+		<set name="capsuled_items" val="20756,1,1,100;20757,1,1,100;5561,1,1,100" /> <!-- Santa's Shirt Coupon - 24-hour, Santa's Weapon Coupon - Jackpot - 24-hour, Special Holiday Tree - 24-hour -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1237,7 +1237,7 @@
 	<item id="20773" name="Rudolph's Gift" type="EtcItem">
 		<!-- Rudolph's Gift filled with Christmas fortune. Contains a wrapped Rudolph Pet Coupon, 4 Vitality Star Candy, Mysterious Food, and Transformation Scroll Pack. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20762,1,1,100;20739,1,1,100;20764,1,1,100;20765,1,1,100;20766,1,1,100;20767,1,1,100;20768,1,1,100" /> <!-- Rudolph Pet Coupon - 7-day -->
+		<set name="capsuled_items" val="20762,1,1,100;20739,1,1,100;20764,1,1,100;20765,1,1,100;20766,1,1,100;20767,1,1,100;20768,1,1,100" /> <!-- Rudolph Pet Coupon - 7-day, Transformation Scroll Pack - 7-day, Purple Star Candy - 7-day, Blue Star Candy - 7-day, Red Star Candy - 7-day, Orange Star Candy - 7-day, Mysterious Food - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

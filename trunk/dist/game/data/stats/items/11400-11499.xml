@@ -325,10 +325,10 @@
 		<set name="price" val="935000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11417" name="Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
@@ -496,10 +496,10 @@
 		<set name="price" val="935000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11426" name="Sealed Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
@@ -692,7 +692,7 @@
 		<!-- Masterwork Item.  -->
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="61" />
 		<set name="crystal_type" val="A" />
 		<set name="default_action" val="EQUIP" />
@@ -1329,10 +1329,10 @@
 		<set name="price" val="1422000" />
 		<set name="weight" val="1180" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11470" name="Sealed Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
@@ -1541,10 +1541,10 @@
 		<set name="price" val="1422000" />
 		<set name="weight" val="1180" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11481" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">

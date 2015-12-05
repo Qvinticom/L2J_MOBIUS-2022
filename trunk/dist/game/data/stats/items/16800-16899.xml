@@ -309,7 +309,7 @@
 	<item id="16852" name="Hero's Treasure Chest" type="EtcItem">
 		<!-- Chest containing equipment set pack which. 90 days. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="16853,1,1,100;13273,1,1,100;15426,1,1,100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
+		<set name="capsuled_items" val="16853,1,1,100;13273,1,1,100;15426,1,1,100" /> <!-- Equipment Set Pack (90-day) - 90-day, Minion Coupon (5-hour) - 90-day, Hero's Escape Point - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -648,7 +648,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
 		</for>
@@ -745,7 +745,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
 		</for>
@@ -1128,7 +1128,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1200" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
 		</for>

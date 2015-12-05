@@ -10,8 +10,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -25,8 +27,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -40,8 +44,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -55,8 +61,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -70,8 +78,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -85,8 +95,10 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="130" />
+			<add order="0" stat="mDef" val="130" />
+			<mul stat="maxCp" val="1.10" />
 			<add stat="maxMp" val="49" />
 		</for>
 	</item>
@@ -99,8 +111,15 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add stat="inventoryLimit" val="18" />
+			<add order="0" stat="pDef" val="25" />
+			<mul stat="pveBowDmg" val="1.06" />
+			<mul stat="pveBowSkillsDmg" val="1.06" />
+			<mul stat="pveMagicalDmg" val="1.06" />
+			<mul stat="pvePhysDmg" val="1.06" />
+			<mul stat="pvePhysSkillsDmg" val="1.06" />
 		</for>
 	</item>
 	<item id="45607" name="Special Magic Ornament Eternal Belt" additionalName="PVE Defense" type="Armor">
@@ -112,8 +131,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add stat="inventoryLimit" val="18" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="45608" name="Special Magic Ornament Eternal Belt" additionalName="PVP Attack" type="Armor">
@@ -125,8 +146,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add stat="inventoryLimit" val="18" />
+			<add order="0" stat="pDef" val="25" />
+			<mul stat="pvpMagicalDmg" val="1.06" />
+			<mul stat="pvpPhysDmg" val="1.06" />
+			<mul stat="pvpPhysSkillsDmg" val="1.06" />
 		</for>
 	</item>
 	<item id="45609" name="Special Magic Ornament Eternal Belt" additionalName="PVP Defense" type="Armor">
@@ -138,8 +164,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add stat="inventoryLimit" val="18" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="45610" name="Atelia Energy Crystal" type="EtcItem">
@@ -208,6 +236,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="1440" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45615" name="Talisman - Battle: Attack (3-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./M. Atk./Skill Critical Rate/Skill Critical Damage + 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
@@ -223,6 +252,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45616" name="Talisman - Battle: Attack (30-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./M. Atk./Skill Critical Rate/Skill Critical Damage + 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
@@ -238,6 +268,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45617" name="Talisman - Battle: Speed (1-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
@@ -253,6 +284,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="1440" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45618" name="Talisman - Battle: Speed (3-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
@@ -268,6 +300,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45619" name="Talisman - Battle: Speed (30-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
@@ -283,6 +316,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45620" name="Talisman - Battle: Support (1-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
@@ -298,6 +332,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="1440" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45621" name="Talisman - Battle: Support (3-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
@@ -313,6 +348,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45622" name="Talisman - Battle: Support (30-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
@@ -328,6 +364,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45623" name="Elikia's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Elikia's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -559,6 +596,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45641" name="Rodemai's Rune" additionalName="15-day" type="EtcItem">
 		<!-- Keep this in your inventory to gain XP/SP + 7% when hunting. -->
@@ -572,6 +610,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="time" val="21600" />
+		<set name="weight" val="120" />
 	</item>
 	<item id="45642" name="Rodemai's Rune Pack (15-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Rodemai's Rune (15-day). -->
@@ -584,11 +623,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="45643" name="Recipe: Citrine Pendant (10%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Citrine Pendant. Requires Create Item - Skill Lv. 14. The success rate is 10%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -596,6 +637,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
 	</item>
 	<item id="45644" name="Exalted Tiara" type="Armor">
 		<!-- Hair accessory exclusively used by those with the Exalted status. Increases Atk. Attribute Bonus by 50 when equipped. -->
@@ -609,6 +651,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45645" name="Lady's Ornamental Silver Knife" type="Weapon">
 		<!-- An ornamental silver knife received from the Blacksmith of Mammon in order to test your qualifications. Not valuable as a weapon. Enchant this and take it to the Blacksmith of Mammon to be recognized for your qualifications. -->
@@ -628,6 +671,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1000" />
 		<for>
 			<set stat="mAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
@@ -645,6 +689,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45647" name="Returning Warrior's Bracelet" additionalName="Event" type="Armor">
 		<!-- MP + 187. Activates 5 Talisman slots when equipped. Will be deleted once the event ends. -->
@@ -658,6 +703,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45648" name="Pippi's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Pippi. Will be deleted once the event ends. -->
@@ -671,6 +717,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45649" name="Kokko's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Kokko. Will be deleted once the event ends. -->
@@ -684,6 +731,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
@@ -787,8 +835,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="7570" />
 		<for>
-			<add stat="pDef" val="226" />
+			<add order="0" stat="pDef" val="226" />
 		</for>
 	</item>
 	<item id="45658" name="Dynasty Gaiters of Fortune" additionalName="30-day" type="Armor">
@@ -805,8 +854,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="3210" />
 		<for>
-			<add stat="pDef" val="141" />
+			<add order="0" stat="pDef" val="141" />
 		</for>
 	</item>
 	<item id="45659" name="Dynasty Gauntlets of Fortune" additionalName="30-day" type="Armor">
@@ -822,8 +872,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="520" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45660" name="Dynasty Boots of Fortune" additionalName="30-day" type="Armor">
@@ -839,8 +890,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1090" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45661" name="Dynasty Helmet of Fortune" additionalName="30-day" type="Armor">
@@ -856,8 +908,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="45662" name="Dynasty Shield of Fortune" additionalName="30-day" type="Armor">
@@ -872,6 +925,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1150" />
 	</item>
 	<item id="45663" name="Dynasty Leather Armor of Fortune" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.armor_t92_u_i00" />
@@ -887,8 +941,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="4180" />
 		<for>
-			<add stat="pDef" val="170" />
+			<add order="0" stat="pDef" val="170" />
 		</for>
 	</item>
 	<item id="45664" name="Dynasty Leather Leggings of Fortune" additionalName="30-day" type="Armor">
@@ -905,8 +960,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1370" />
 		<for>
-			<add stat="pDef" val="106" />
+			<add order="0" stat="pDef" val="106" />
 		</for>
 	</item>
 	<item id="45665" name="Dynasty Leather Helmet of Fortune" additionalName="30-day" type="Armor">
@@ -922,8 +978,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="45666" name="Dynasty Leather Gloves of Fortune" additionalName="30-day" type="Armor">
@@ -939,8 +996,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="520" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45667" name="Dynasty Leather Boots of Fortune" additionalName="30-day" type="Armor">
@@ -956,8 +1014,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1090" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45668" name="Dynasty Tunic of Fortune" additionalName="30-day" type="Armor">
@@ -974,8 +1033,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1780" />
 		<for>
-			<add stat="pDef" val="113" />
+			<add order="0" stat="pDef" val="113" />
 		</for>
 	</item>
 	<item id="45669" name="Dynasty Stockings of Fortune" additionalName="30-day" type="Armor">
@@ -992,8 +1052,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="860" />
 		<for>
-			<add stat="pDef" val="71" />
+			<add order="0" stat="pDef" val="71" />
 		</for>
 	</item>
 	<item id="45670" name="Dynasty Circlet of Fortune" additionalName="30-day" type="Armor">
@@ -1009,8 +1070,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="92" />
+			<add order="0" stat="pDef" val="92" />
 		</for>
 	</item>
 	<item id="45671" name="Dynasty Gloves of Fortune" additionalName="30-day" type="Armor">
@@ -1026,8 +1088,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="520" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45672" name="Dynasty Shoes of Fortune" additionalName="30-day" type="Armor">
@@ -1043,8 +1106,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1090" />
 		<for>
-			<add stat="pDef" val="61" />
+			<add order="0" stat="pDef" val="61" />
 		</for>
 	</item>
 	<item id="45673" name="Dynasty Sigil of Fortune" additionalName="30-day" type="Armor">
@@ -1060,9 +1124,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="time" val="43200" />
+		<set name="weight" val="930" />
 		<for>
-			<add stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<add order="0" stat="pDef" val="15" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="45674" name="Dynasty Earring of Fortune" additionalName="30-day" type="Armor">
@@ -1078,8 +1143,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="79" />
+			<add order="0" stat="mDef" val="79" />
 		</for>
 	</item>
 	<item id="45675" name="Dynasty Necklace of Fortune" additionalName="30-day" type="Armor">
@@ -1095,8 +1161,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="106" />
+			<add order="0" stat="mDef" val="106" />
 		</for>
 	</item>
 	<item id="45676" name="Dynasty Ring of Fortune" additionalName="30-day" type="Armor">
@@ -1112,8 +1179,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="60" />
+			<add order="0" stat="mDef" val="60" />
 		</for>
 	</item>
 	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
@@ -1201,8 +1269,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="128" />
+			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
 	<item id="45684" name="Twilight Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1220,8 +1289,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="7520" />
 		<for>
-			<add stat="pDef" val="341" />
+			<add order="0" stat="pDef" val="341" />
 		</for>
 	</item>
 	<item id="45685" name="Twilight Gaiters" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1238,8 +1308,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="3170" />
 		<for>
-			<add stat="pDef" val="213" />
+			<add order="0" stat="pDef" val="213" />
 		</for>
 	</item>
 	<item id="45686" name="Twilight Gauntlets" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1255,8 +1326,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 	<item id="45687" name="Twilight Boots" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1272,8 +1344,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 	<item id="45688" name="Twilight Shield" additionalName="30-day" type="Armor">
@@ -1289,6 +1362,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1130" />
 	</item>
 	<item id="45689" name="Twilight Helmet" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -1303,8 +1377,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="128" />
+			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
 	<item id="45690" name="Twilight Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1322,8 +1397,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="7520" />
 		<for>
-			<add stat="pDef" val="341" />
+			<add order="0" stat="pDef" val="341" />
 		</for>
 	</item>
 	<item id="45691" name="Twilight Gaiters" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1340,8 +1416,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="3170" />
 		<for>
-			<add stat="pDef" val="213" />
+			<add order="0" stat="pDef" val="213" />
 		</for>
 	</item>
 	<item id="45692" name="Twilight Gauntlets" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1357,8 +1434,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 	<item id="45693" name="Twilight Boots" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1374,8 +1452,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 	<item id="45694" name="Twilight Shield" additionalName="30-day" type="Armor">
@@ -1391,6 +1470,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1130" />
 	</item>
 	<item id="45695" name="Twilight Leather Helmet" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
@@ -1405,8 +1485,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BONE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="530" />
 		<for>
-			<add stat="pDef" val="128" />
+			<add order="0" stat="pDef" val="128" />
 		</for>
 	</item>
 	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1424,9 +1505,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<set name="time" val="43200" />
+		<set name="weight" val="4140" />
 		<for>
-			<add stat="pDef" val="272" />
-			<sub stat="rEvas" val="5" />
+			<add order="0" stat="pDef" val="272" />
+			<add stat="rEvas" val="5" />
 		</for>
 	</item>
 	<item id="45697" name="Twilight Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1443,9 +1525,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1320" />
 		<for>
-			<add stat="pDef" val="170" />
-			<sub stat="rEvas" val="3" />
+			<add order="0" stat="pDef" val="170" />
+			<add stat="rEvas" val="3" />
 		</for>
 	</item>
 	<item id="45698" name="Twilight Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1461,8 +1544,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="510" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 	<item id="45699" name="Twilight Leather Boots" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1478,8 +1562,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="1070" />
 		<for>
-			<add stat="pDef" val="85" />
+			<add order="0" stat="pDef" val="85" />
 		</for>
 	</item>
 </list>

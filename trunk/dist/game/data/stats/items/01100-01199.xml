@@ -1111,7 +1111,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1850" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="16" />
 			<set stat="pAtk" val="45" />
@@ -1138,7 +1138,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="16" />
 			<set stat="pAtk" val="19" />

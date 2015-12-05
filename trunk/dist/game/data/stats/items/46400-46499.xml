@@ -3,45 +3,49 @@
 	<item id="46400" name="NPC Feoh Wizard Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
 		<for>
-			<add stat="pDef" val="7" />
+			<add order="0" stat="pDef" val="7" />
 		</for>
 	</item>
 	<item id="46401" name="NPC Iss Enchanter Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
 		<for>
-			<add stat="pDef" val="7" />
+			<add order="0" stat="pDef" val="7" />
 		</for>
 	</item>
 	<item id="46402" name="NPC Wynn Summoner Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
 		<for>
-			<add stat="pDef" val="7" />
+			<add order="0" stat="pDef" val="7" />
 		</for>
 	</item>
 	<item id="46403" name="NPC Aeore Healer Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="240" />
 		<for>
-			<add stat="pDef" val="7" />
+			<add order="0" stat="pDef" val="7" />
 		</for>
 	</item>
 	<item id="46404" name="Emergency Whistle - Aden Vanguard" type="EtcItem">
@@ -55,6 +59,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
 		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/Whi -->
@@ -69,6 +74,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="time" val="120" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46406" name="Angel Cat's Energy" type="EtcItem">
 		<!-- For 30 minutes, P. Atk. + 5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/MP by 5%, and XP and SP acquired through hunting increase by 30%. Cannot be used in the Olympiad. Cannot be applied along with event bu -->
@@ -79,9 +85,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46407" name="Tattered Monk Clothes" type="EtcItem">
 		<!-- Tattered clothes are the remains of the monks you battled in the Monastery of Silence. The clothes are nothing more than rags after their years of use. Let's take them to Greymore in the Monastery of Silence. -->
@@ -194,6 +202,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
 		<!-- INT + 3, M. Atk. + 5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -208,6 +217,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
 		<!-- CON + 3, P./M. Def + 3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -222,6 +232,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" type="EtcItem">
 		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
@@ -257,6 +268,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46420" name="Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch the same items as when fishing with regular bait, and get more XP. Under Lv. 85 only. Deleted after event. -->
@@ -323,6 +335,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="time" val="20160" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
 		<!-- Exchange for 30 Sheep Bait for your corresponding level through a fishing guild member. Deleted after event. -->
@@ -348,6 +361,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -368,6 +382,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -388,6 +403,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1850" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -407,6 +423,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="FIST" />
+		<set name="weight" val="1850" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -426,6 +443,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="FIST" />
+		<set name="weight" val="1850" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -457,6 +475,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -597,6 +616,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46445" name="Kain's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -607,6 +627,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46446" name="Kain's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -617,6 +638,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46447" name="Kain's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -627,6 +649,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46448" name="Kain's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -637,6 +660,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46449" name="Kain's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -647,6 +671,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46450" name="Kain's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -657,6 +682,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46451" name="Kain's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -667,6 +693,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46452" name="Kain's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -677,6 +704,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46453" name="Kain's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -687,6 +715,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46454" name="Kain's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -697,6 +726,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46455" name="Kain's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -707,6 +737,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46456" name="Kain's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -717,6 +748,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46457" name="Kain's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -727,6 +759,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46458" name="Kain's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -735,6 +768,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46459" name="Mermoden's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -745,6 +779,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46460" name="Mermoden's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -755,6 +790,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46461" name="Mermoden's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -765,6 +801,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46462" name="Mermoden's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -775,6 +812,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46463" name="Mermoden's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -785,6 +823,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46464" name="Mermoden's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -795,6 +834,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46465" name="Mermoden's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -805,6 +845,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46466" name="Mermoden's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -815,6 +856,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46467" name="Mermoden's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -825,6 +867,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46468" name="Mermoden's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -835,6 +878,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46469" name="Mermoden's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -845,6 +889,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46470" name="Mermoden's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -855,6 +900,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46471" name="Mermoden's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -865,6 +911,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46472" name="Mermoden's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -875,6 +922,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46473" name="Mermoden's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -883,6 +931,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46474" name="Leona's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -893,6 +942,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46475" name="Leona's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -903,6 +953,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46476" name="Leona's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -913,6 +964,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46477" name="Leona's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -923,6 +975,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46478" name="Leona's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -933,6 +986,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46479" name="Leona's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -943,6 +997,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46480" name="Leona's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -953,6 +1008,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46481" name="Leona's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -963,6 +1019,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46482" name="Leona's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -973,6 +1030,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46483" name="Leona's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -983,6 +1041,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46484" name="Leona's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -993,6 +1052,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46485" name="Leona's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1003,6 +1063,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46486" name="Leona's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1013,6 +1074,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46487" name="Leona's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1023,6 +1085,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46488" name="Leona's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1031,6 +1094,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46489" name="Pantheon's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -1041,6 +1105,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46490" name="Pantheon's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -1051,6 +1116,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46491" name="Pantheon's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -1061,6 +1127,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46492" name="Pantheon's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
@@ -1071,6 +1138,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46493" name="Pantheon's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1081,6 +1149,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46494" name="Pantheon's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1091,6 +1160,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46495" name="Pantheon's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1101,6 +1171,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46496" name="Pantheon's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1111,6 +1182,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46497" name="Pantheon's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1121,6 +1193,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46498" name="Pantheon's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1131,6 +1204,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="46499" name="Pantheon's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -1141,5 +1215,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="20" />
 	</item>
 </list>

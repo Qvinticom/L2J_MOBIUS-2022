@@ -443,7 +443,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="80" />
@@ -514,7 +514,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
@@ -539,7 +539,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -563,7 +563,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="117" />
@@ -702,7 +702,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="181" />
 			<set stat="pAtk" val="107" />
@@ -761,7 +761,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
 		</for>
@@ -1302,7 +1302,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 	</item>
-	<item id="36690" name="Vitality Leaf Pouch" type="EtcItem">
+	<item id="36690" name="Vitality Leaf Pouch " type="EtcItem">
 		<!-- Vitality Leaf obtained after collecting herbs in the Plains of the Lizardmen. Take it to Investigator Sally in the Plains of the Lizardmen to receive a reward. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="is_auctionable" val="false" />

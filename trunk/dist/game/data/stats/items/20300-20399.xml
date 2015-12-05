@@ -287,7 +287,7 @@
 	<item id="20315" name="Goggles Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Goggles. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20321,1,1,100" /> <!-- Goggles -  -->
+		<set name="capsuled_items" val="20321,1,1,100" /> <!-- Goggles - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -305,7 +305,7 @@
 	<item id="20316" name="Napoleon Hat Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Napoleon Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20322,1,1,100" /> <!-- Napoleon Hat -  -->
+		<set name="capsuled_items" val="20322,1,1,100" /> <!-- Napoleon Hat - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -323,7 +323,7 @@
 	<item id="20317" name="Horn Hairband Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Horn Hairband. Females only. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20323,1,1,100" /> <!-- Horn Hairband -  -->
+		<set name="capsuled_items" val="20323,1,1,100" /> <!-- Horn Hairband - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 	<item id="20318" name="Black Gem Mask Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Black Gem Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20324,1,1,100" /> <!-- Black Gem Mask -  -->
+		<set name="capsuled_items" val="20324,1,1,100" /> <!-- Black Gem Mask - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -359,7 +359,7 @@
 	<item id="20319" name="Plastic Hair Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Plastic Hair. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20325,1,1,100" /> <!-- Plastic Hair -  -->
+		<set name="capsuled_items" val="20325,1,1,100" /> <!-- Plastic Hair - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -481,7 +481,7 @@
 	<item id="20326" name="Beast Soulshot Pack" type="EtcItem">
 		<!-- If used, five thousand Beast Soulshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_beast_soul_shot_i00" />
-		<set name="capsuled_items" val="20332,5000,5000,100" /> <!-- Beast Soulshot -  -->
+		<set name="capsuled_items" val="20332,5000,5000,100" /> <!-- Beast Soulshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -495,7 +495,7 @@
 	<item id="20327" name="Beast Spiritshot Pack" type="EtcItem">
 		<!-- If used, five thousand Beast Spiritshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_beast_spirit_shot_i00" />
-		<set name="capsuled_items" val="20333,5000,5000,100" /> <!-- Beast Spiritshot -  -->
+		<set name="capsuled_items" val="20333,5000,5000,100" /> <!-- Beast Spiritshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -509,7 +509,7 @@
 	<item id="20328" name="Blessed Beast Spiritshot Pack" type="EtcItem">
 		<!-- If used, five thousand Blessed Beast Spiritshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00" />
-		<set name="capsuled_items" val="20334,5000,5000,100" /> <!-- Blessed Beast Spiritshot -  -->
+		<set name="capsuled_items" val="20334,5000,5000,100" /> <!-- Blessed Beast Spiritshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -523,7 +523,7 @@
 	<item id="20329" name="Beast Soulshot Large Pack" type="EtcItem">
 		<!-- If used, ten thousand Beast Soulshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_beast_soul_shot_i00" />
-		<set name="capsuled_items" val="20332,10000,10000,100" /> <!-- Beast Soulshot -  -->
+		<set name="capsuled_items" val="20332,10000,10000,100" /> <!-- Beast Soulshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -537,7 +537,7 @@
 	<item id="20330" name="Beast Spiritshot Large Pack" type="EtcItem">
 		<!-- If used, ten thousand Beast Spiritshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_beast_spirit_shot_i00" />
-		<set name="capsuled_items" val="20333,10000,10000,100" /> <!-- Beast Spiritshot -  -->
+		<set name="capsuled_items" val="20333,10000,10000,100" /> <!-- Beast Spiritshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -551,7 +551,7 @@
 	<item id="20331" name="Blessed Beast Spiritshot Large Pack" type="EtcItem">
 		<!-- If used, ten thousand Blessed Beast Spiritshots are acquired. -->
 		<set name="icon" val="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00" />
-		<set name="capsuled_items" val="20334,10000,10000,100" /> <!-- Blessed Beast Spiritshot -  -->
+		<set name="capsuled_items" val="20334,10000,10000,100" /> <!-- Blessed Beast Spiritshot - Vitality (24-hour) -->
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -1527,7 +1527,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-10" />
+		<set name="item_skill" val="22053-10" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1548,7 +1548,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-11" />
+		<set name="item_skill" val="22053-11" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1569,7 +1569,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-12" />
+		<set name="item_skill" val="22053-12" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1590,7 +1590,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-13" />
+		<set name="item_skill" val="22053-13" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1611,7 +1611,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-14" />
+		<set name="item_skill" val="22053-14" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1632,7 +1632,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-15" />
+		<set name="item_skill" val="22053-15" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1653,7 +1653,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-16" />
+		<set name="item_skill" val="22053-16" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1674,7 +1674,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-17" />
+		<set name="item_skill" val="22053-17" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1695,7 +1695,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-18" />
+		<set name="item_skill" val="22053-18" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1716,7 +1716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="22053-19" />
+		<set name="item_skill" val="22053-19" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<cond msgId="113" addName="1">
@@ -1811,7 +1811,7 @@
 	<item id="20395" name="Mount - Steam Beetle Pack" type="EtcItem">
 		<!-- Wrapped Pack containing bracelet that summons Steam Beetle. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="20396,1,1,100" /> <!-- Mount - Steam Beetle -  -->
+		<set name="capsuled_items" val="20396,1,1,100" /> <!-- Mount - Steam Beetle - Vitality (24-hour) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1847,7 +1847,7 @@
 	<item id="20397" name="Newbie Level-Up Pack" type="EtcItem">
 		<!-- When used, several types of items that help hunting can be acquired. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
-		<set name="capsuled_items" val="6354,1,1,100;6355,1,1,100;13121,1,1,100;1060,20,20,100;5789,1000,1000,100;5790,1000,1000,100;9191,1,1,100;5593,1,1,100" /> <!-- Falchion (Novice) -  -->
+		<set name="capsuled_items" val="6354,1,1,100;6355,1,1,100;13121,1,1,100;1060,20,20,100;5789,1000,1000,100;5790,1000,1000,100;9191,1,1,100;5593,1,1,100" /> <!-- Falchion (Novice) - Vitality (24-hour), Mage Staff (Novice) - Vitality (24-hour), Darkmane Pacer Pack (7-day) - Vitality (24-hour), Healing Potion - Vitality (24-hour), Soulshot (No-grade) (Novice) - Vitality (24-hour), Spiritshot (No-grade) (Novice) - Vitality (24-hour), Shadow Item: Teddy Bear Hat - Big Head, SP Scroll (Low-grade) - Big Head -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1863,7 +1863,7 @@
 	<item id="20398" name="Fast Growth Pack" type="EtcItem">
 		<!-- When used, several types of items that help hunting can be acquired. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
-		<set name="capsuled_items" val="13421,10,10,100;22000,1,1,100;22003,1,1,100;10649,3,3,100" /> <!-- Honey Wheat Cake -  -->
+		<set name="capsuled_items" val="13421,10,10,100;22000,1,1,100;22003,1,1,100;10649,3,3,100" /> <!-- Honey Wheat Cake - Big Head, Small Fortuna Box - Big Head, Small Fortuna Cube - Big Head, Feather of Blessing - Big Head -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

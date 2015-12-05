@@ -958,7 +958,7 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="251" />
@@ -991,7 +991,7 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="171" />
 			<set stat="pAtk" val="271" />
@@ -1024,7 +1024,7 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="181" />
 			<set stat="pAtk" val="291" />
@@ -1355,10 +1355,6 @@
 		<set name="material" val="BONE" />
 		<set name="price" val="3355000" />
 		<set name="weight" val="1170" />
-		<for>
-			<sub stat="rEvas" val="-8" />
-			<set stat="rShld" val="20" />
-		</for>
 	</item>
 	<item id="13078" name="Arcana Sigil" type="Armor">
 		<!-- Increases M. Def. Decreases Magic Cancel Rate. -->
@@ -1375,15 +1371,15 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="940" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13079" name="My Teleport Book Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Free Teleporter's Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13015,1,1,100" /> <!-- My Teleport Book -  -->
+		<set name="capsuled_items" val="13015,1,1,100" /> <!-- My Teleport Book -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1400,7 +1396,7 @@
 	<item id="13080" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13016,30,30,100" /> <!-- My Teleport Scroll -  -->
+		<set name="capsuled_items" val="13016,30,30,100" /> <!-- My Teleport Scroll -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1431,7 +1427,7 @@
 	<item id="13082" name="Feather of Blessing 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Love Agathion Seal Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="10649,3,3,100" /> <!-- Feather of Blessing -  -->
+		<set name="capsuled_items" val="10649,3,3,100" /> <!-- Feather of Blessing -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1482,7 +1478,7 @@
 	<item id="13085" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Feline Queen Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -  -->
+		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) - 30-day, Extra Pass: Near Kamaloka - 30-day, Extra Pass: Kamaloka (Labyrinth of the Abyss) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1652,7 +1648,7 @@
 	<item id="13095" name="OX Stick Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" /> <!-- O Stick - 30-day -->
+		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" /> <!-- O Stick - 30-day, X Stick - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1669,7 +1665,7 @@
 	<item id="13096" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Color Title. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" /> <!-- Scissors Stick - 30-day -->
+		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" /> <!-- Scissors Stick - 30-day, Rock Stick - 30-day, Paper Stick - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1703,7 +1699,7 @@
 	<item id="13098" name="Color Title 3-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Color Title. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13021,3,3,100" /> <!-- Color Title -  -->
+		<set name="capsuled_items" val="13021,3,3,100" /> <!-- Color Title - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

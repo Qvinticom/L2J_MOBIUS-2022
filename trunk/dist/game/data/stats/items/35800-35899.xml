@@ -3,7 +3,8 @@
 	<item id="35800" name="Romantic Chapeau" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -11,6 +12,7 @@
 	<item id="35801" name="Romantic Chapeau" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
@@ -19,7 +21,8 @@
 	<item id="35802" name="Romantic Chapeau" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -27,7 +30,8 @@
 	<item id="35803" name="Romantic Chapeau" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -35,7 +39,8 @@
 	<item id="35804" name="Romantic Chapeau" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -43,7 +48,8 @@
 	<item id="35805" name="Romantic Chapeau" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -51,7 +57,8 @@
 	<item id="35806" name="Romantic Chapeau" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -59,7 +66,8 @@
 	<item id="35807" name="Romantic Chapeau" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -67,7 +75,8 @@
 	<item id="35808" name="Romantic Chapeau" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -804,7 +813,8 @@
 	<item id="35890" name="Refined Devil Horn" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -812,7 +822,8 @@
 	<item id="35891" name="Refined Devil Horn" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -820,7 +831,8 @@
 	<item id="35892" name="Refined Devil Horn" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -828,7 +840,8 @@
 	<item id="35893" name="Refined Devil Horn" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -836,7 +849,8 @@
 	<item id="35894" name="Refined Devil Horn" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -844,7 +858,8 @@
 	<item id="35895" name="Refined Devil Horn" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -852,7 +867,8 @@
 	<item id="35896" name="Refined Devil Horn" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -860,7 +876,8 @@
 	<item id="35897" name="Refined Devil Horn" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -868,7 +885,8 @@
 	<item id="35898" name="Refined Devil Horn" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -876,7 +894,8 @@
 	<item id="35899" name="Refined Devil Horn" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />

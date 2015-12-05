@@ -50,7 +50,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
@@ -81,7 +81,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="114" />
@@ -144,7 +144,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="64" />
@@ -176,7 +176,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="36" />
@@ -212,7 +212,7 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="157" />
 			<set stat="pAtk" val="304" />
@@ -432,7 +432,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="246" />
@@ -496,7 +496,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
@@ -626,7 +626,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="581" />
@@ -662,7 +662,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="255" />
@@ -733,7 +733,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="356" />
@@ -1408,7 +1408,7 @@
 	<item id="15370" name="Special July 7th Package" type="EtcItem">
 		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15372,1,1,100" /> <!-- Special July 7th Parcel -  -->
+		<set name="capsuled_items" val="15372,1,1,100" /> <!-- Special July 7th Parcel - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1425,7 +1425,7 @@
 	<item id="15371" name="July 7th Package" type="EtcItem">
 		<!-- July 7th package. Contains a July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15373,1,1,100" /> <!-- July 7th Parcel -  -->
+		<set name="capsuled_items" val="15373,1,1,100" /> <!-- July 7th Parcel - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1456,7 +1456,7 @@
 	<item id="15373" name="July 7th Parcel" type="EtcItem">
 		<!-- July 7th parcel. Contains 1 steamed rice cake. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
-		<set name="capsuled_items" val="15379,1,1,100" /> <!-- Steamed Rice Cake -  -->
+		<set name="capsuled_items" val="15379,1,1,100" /> <!-- Steamed Rice Cake - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1470,7 +1470,7 @@
 	<item id="15374" name="Special July 7th Package (Event)" type="EtcItem">
 		<!-- Special July 7th package. Contains a Special July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15376,1,1,100" /> <!-- Special July 7th Parcel (Event) -  -->
+		<set name="capsuled_items" val="15376,1,1,100" /> <!-- Special July 7th Parcel (Event) - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1487,7 +1487,7 @@
 	<item id="15375" name="July 7th Package (Event)" type="EtcItem">
 		<!-- July 7th package. Contains a July 7th parcel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15377,1,1,100" /> <!-- July 7th Parcel (Event) -  -->
+		<set name="capsuled_items" val="15377,1,1,100" /> <!-- July 7th Parcel (Event) - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1518,7 +1518,7 @@
 	<item id="15377" name="July 7th Parcel (Event)" type="EtcItem">
 		<!-- July 7th parcel. Contains 1 steamed rice cake. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
-		<set name="capsuled_items" val="15380,1,1,100" /> <!-- Steamed Rice Cake (Event) -  -->
+		<set name="capsuled_items" val="15380,1,1,100" /> <!-- Steamed Rice Cake (Event) - 60-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1563,6 +1563,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="shared_reuse_group" val="15" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="15380" name="Steamed Rice Cake (Event)" type="EtcItem">
 		<!-- Delicious steamed rice cake. Some Vitality is replenished upon use. Cooldown is 60 min. Vitality item with limited usage. -->
@@ -1580,6 +1581,7 @@
 		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="shared_reuse_group" val="15" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="15381" name="Event - Herdsman's Love Scroll" additionalName="Event" type="EtcItem">
 		<!-- July 7th event. Enchant scroll exclusively for the Weaver's Colorful Dress. Increases the P. Def. and M. Def. of the Weaver's Colorful Dress. Can be safely enchanted to + 3, and the item disappears when the enchant fails. When the Weaver's Colorful Dress  -->

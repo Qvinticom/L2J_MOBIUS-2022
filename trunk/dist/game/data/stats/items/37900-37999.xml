@@ -318,6 +318,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
@@ -332,6 +333,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -357,6 +359,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -382,6 +385,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -408,6 +412,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3047-1" /> <!-- Special Ability: Acumen -->
@@ -434,6 +439,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -460,6 +466,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3047-1" /> <!-- Special Ability: Acumen -->
@@ -486,6 +493,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -497,7 +505,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="380" />
@@ -512,6 +520,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -538,6 +547,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -550,7 +560,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="856" />
@@ -565,6 +575,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -590,6 +601,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -601,7 +613,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
@@ -616,6 +628,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -627,7 +640,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="230" />
 			<set stat="pAtk" val="479" />
@@ -642,6 +655,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -668,6 +682,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="item_skill" val="3036-1" /> <!-- Special Ability: Haste -->
@@ -679,7 +694,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="771" />
@@ -757,7 +772,7 @@
 		<set name="time" val="21600" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />

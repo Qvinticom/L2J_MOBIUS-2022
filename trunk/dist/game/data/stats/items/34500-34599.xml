@@ -101,7 +101,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -128,7 +128,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -155,7 +155,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -182,7 +182,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -209,7 +209,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -236,7 +236,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="359" />
@@ -611,7 +611,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -639,7 +639,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="428" />
@@ -667,7 +667,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="428" />
@@ -695,7 +695,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -723,7 +723,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -751,7 +751,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -779,7 +779,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -807,7 +807,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="866" />
@@ -835,7 +835,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="866" />
@@ -863,7 +863,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -891,7 +891,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -919,7 +919,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -947,7 +947,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -975,7 +975,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="963" />
@@ -1003,7 +1003,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="963" />
@@ -1031,7 +1031,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1059,7 +1059,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1087,7 +1087,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1115,7 +1115,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1143,7 +1143,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
@@ -1171,7 +1171,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
@@ -1199,7 +1199,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1227,7 +1227,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
 			<set stat="mAtk" val="226" />
@@ -1255,7 +1255,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
 			<set stat="mAtk" val="226" />

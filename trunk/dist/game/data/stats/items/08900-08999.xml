@@ -342,7 +342,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="670" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
@@ -461,7 +461,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="340" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -492,7 +492,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -629,7 +629,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="item_skill" val="3552-1" /> <!-- Special Ability: PvP Damage -->
@@ -642,11 +642,11 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="121" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="305" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="8939" name="Dominic's Mark" type="EtcItem">
@@ -751,7 +751,7 @@
 		<!-- Hair accessory in the shape of Rabbit Ears. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="bodypart" val="hair2" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -1012,7 +1012,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-25" />
+		<set name="item_skill" val="2308-25" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1028,7 +1028,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-26" />
+		<set name="item_skill" val="2308-26" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1044,7 +1044,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-27" />
+		<set name="item_skill" val="2308-27" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1060,7 +1060,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-28" />
+		<set name="item_skill" val="2308-28" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1076,7 +1076,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-29" />
+		<set name="item_skill" val="2308-29" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1092,7 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="2308-30" />
+		<set name="item_skill" val="2308-30" /> <!-- Event Item -->
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 	</item>
@@ -1118,7 +1118,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="707" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
@@ -1286,7 +1286,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="370" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="27" />
@@ -1344,7 +1344,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="627" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="64" />
@@ -1516,7 +1516,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="360" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="56" />
@@ -1546,7 +1546,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="52" />
 			<set stat="pAtk" val="45" />
@@ -1606,7 +1606,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="620" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="132" />
@@ -1636,7 +1636,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="700" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
@@ -1694,7 +1694,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="670" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
@@ -1813,7 +1813,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="340" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -1844,7 +1844,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />

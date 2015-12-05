@@ -363,6 +363,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
@@ -373,6 +374,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
@@ -383,6 +385,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1350000" />
@@ -531,7 +534,6 @@
 		<set name="item_skill" val="13378-1" /> <!-- Enhanced Istina's Bracelet -->
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<for/>
 	</item>
 	<item id="34860" name="Enhanced Octavis' Bracelet" type="Armor">
 		<!-- Octavis' Bracelet with refined abilities. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, and Wit + 1. -->
@@ -548,7 +550,6 @@
 		<set name="item_skill" val="13379-1" /> <!-- Enhanced Octavis' Bracelet -->
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<for/>
 	</item>
 	<item id="34861" name="Ingredient and Hardener Pouch (R-grade)" type="EtcItem">
 		<!-- Pouch containing R-grade rafting ingredients and hardener -->
@@ -973,6 +974,7 @@
 	<item id="34896" name="Rabbit Ears" additionalName="Campaign" type="Armor">
 		<!-- When equipped, STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />

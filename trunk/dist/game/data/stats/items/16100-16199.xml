@@ -435,11 +435,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16135" name="Vesper Slasher - Great Gale {PvP}" type="Weapon">
@@ -467,11 +467,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16136" name="Vesper Buster - Cleverness {PvP}" type="Weapon">
@@ -500,11 +500,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="234" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16137" name="Vesper Shaper - Great Gale {PvP}" type="Weapon">
@@ -531,13 +531,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16138" name="Vesper Fighter - Great Gale {PvP}" type="Weapon">
@@ -566,11 +566,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16139" name="Vesper Stormer - Thunder {PvP}" type="Weapon">
@@ -597,13 +597,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16140" name="Vesper Avenger - Landslide {PvP}" type="Weapon">
@@ -632,11 +632,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16141" name="Vesper Retributer - Great Gale {PvP}" type="Weapon">
@@ -665,11 +665,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16142" name="Vesper Caster - Cleverness {PvP}" type="Weapon">
@@ -699,11 +699,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="234" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16143" name="Vesper Singer - Hail {PvP}" type="Weapon">
@@ -733,11 +733,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="257" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="386" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16144" name="Vesper Thrower - Clairvoyance {PvP}" type="Weapon">
@@ -766,13 +766,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16145" name="Vesper Pincer - Thunder {PvP}" type="Weapon">
@@ -803,13 +803,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16146" name="Vesper Shooter - Clairvoyance {PvP}" type="Weapon">
@@ -840,13 +840,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16147" name="Vesper Nagan - Great Gale {PvP}" type="Weapon">
@@ -878,11 +878,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="429" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16148" name="Vesper Dual Daggers - Great Gale" type="Weapon">
@@ -914,13 +914,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="181" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16149" name="Vesper Dual Daggers - Great Gale {PvP}" type="Weapon">
@@ -954,13 +954,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="181" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16150" name="Vesper Dualsword - Destruction" type="Weapon">
@@ -987,11 +987,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16151" name="Vesper Dualsword - Destruction {PvP}" type="Weapon">
@@ -1020,11 +1020,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16152" name="Skull Edge Dual Daggers" type="Weapon">
@@ -1056,13 +1056,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="183" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16153" name="Skull Edge Dual Daggers {PvP}" type="Weapon">
@@ -1096,13 +1096,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="183" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="415" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16154" name="Periel Dualsword" type="Weapon">
@@ -1129,11 +1129,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="183" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="505" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16155" name="Periel Dualsword {PvP}" type="Weapon">
@@ -1162,11 +1162,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="183" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="505" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16156" name="Mamba Edge Dual Daggers" type="Weapon">
@@ -1198,13 +1198,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="192" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="437" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16157" name="Mamba Edge Dual Daggers {PvP}" type="Weapon">
@@ -1238,13 +1238,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="192" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="437" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16158" name="Eternal Core Dualsword" type="Weapon">
@@ -1271,11 +1271,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="192" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="532" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16159" name="Eternal Core Dualsword {PvP}" type="Weapon">
@@ -1304,11 +1304,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="192" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="532" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16160" name="Life Stone - Lv. 85" type="EtcItem">
@@ -1664,11 +1664,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16180" name="Vesper Cutter - Thunder {PvP} - Health" type="Weapon">
@@ -1696,11 +1696,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16181" name="Vesper Cutter - Thunder {PvP} - Focus" type="Weapon">
@@ -1728,11 +1728,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16182" name="Vesper Slasher - Great Gale {PvP} - Haste" type="Weapon">
@@ -1760,11 +1760,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16183" name="Vesper Slasher - Great Gale {PvP} - Health" type="Weapon">
@@ -1792,11 +1792,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16184" name="Vesper Slasher - Great Gale {PvP} - Focus" type="Weapon">
@@ -1824,11 +1824,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16185" name="Vesper Buster - Cleverness {PvP} - Mana Up" type="Weapon">
@@ -1857,11 +1857,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="234" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16186" name="Vesper Buster - Cleverness {PvP} - Acumen" type="Weapon">
@@ -1890,11 +1890,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="234" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16187" name="Vesper Buster - Cleverness {PvP} - Magic Hold" type="Weapon">
@@ -1925,11 +1925,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="234" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="317" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16188" name="Vesper Shaper - Great Gale {PvP} - Critical Damage" type="Weapon">
@@ -1956,13 +1956,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16189" name="Vesper Shaper - Great Gale {PvP} - HP Drain" type="Weapon">
@@ -1989,13 +1989,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16190" name="Vesper Shaper - Great Gale {PvP} - Haste" type="Weapon">
@@ -2022,13 +2022,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16191" name="Vesper Fighter - Great Gale {PvP} - Focus" type="Weapon">
@@ -2057,11 +2057,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16192" name="Vesper Fighter - Great Gale {PvP} - Health" type="Weapon">
@@ -2090,11 +2090,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16193" name="Vesper Fighter - Great Gale {PvP} - Critical Stun" type="Weapon">
@@ -2124,11 +2124,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16194" name="Vesper Stormer - Thunder {PvP} - Health" type="Weapon">
@@ -2155,13 +2155,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16195" name="Vesper Stormer - Thunder {PvP} - Guidance" type="Weapon">
@@ -2180,7 +2180,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3602-10;3874-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, , Polearm of Critical Chance -->
+		<set name="item_skill" val="3552-1;3653-1;3602-10;3874-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Guidance, Polearm of Critical Chance -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -2188,13 +2188,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16196" name="Vesper Stormer - Thunder {PvP} - Haste" type="Weapon">
@@ -2213,7 +2213,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="item_skill" val="3552-1;3653-1;3601-10;3874-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, , Polearm of Critical Chance -->
+		<set name="item_skill" val="3552-1;3653-1;3601-10;3874-1" /> <!-- Special Ability: PvP Damage, PvP Weapon - Attack Rate, Special Ability: Haste, Polearm of Critical Chance -->
 		<set name="material" val="BRONZE" />
 		<set name="random_damage" val="10" />
 		<set name="soulshots" val="1" />
@@ -2221,13 +2221,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16197" name="Vesper Avenger - Landslide {PvP} - HP Drain" type="Weapon">
@@ -2256,11 +2256,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16198" name="Vesper Avenger - Landslide {PvP} - Health" type="Weapon">
@@ -2289,11 +2289,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="16199" name="Vesper Avenger - Landslide {PvP} - HP Regeneration" type="Weapon">
@@ -2322,11 +2322,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="176" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

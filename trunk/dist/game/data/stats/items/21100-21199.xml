@@ -868,7 +868,7 @@
 	<item id="21169" name="Birthday Present Pack" type="EtcItem">
 		<!-- Birthday present given to you by Alegria on your birthday. When used, you will obtain (1) Cake Topper hat, (1) Birthday Vitality Potion and (1) Birthday Cake. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="21170,1,1,100;21595,1,1,100;21594,1,1,100" /> <!-- Birthday Vitality Potion -  -->
+		<set name="capsuled_items" val="21170,1,1,100;21595,1,1,100;21594,1,1,100" /> <!-- Birthday Vitality Potion, Birthday Cake, Birthday Hat -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1176,7 +1176,7 @@
 	<item id="21198" name="Mysterious Scroll: Drum Melody 2-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Mysterious Scroll: Drum Melody. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21200,2,2,100" /> <!-- Mysterious Scroll: Drum Melody -  -->
+		<set name="capsuled_items" val="21200,2,2,100" /> <!-- Mysterious Scroll: Drum Melody -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -1191,7 +1191,7 @@
 	<item id="21199" name="Mysterious Scroll: Drum Melody 8-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 8 Mysterious Scroll: Drum Melody. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="21200,8,8,100" /> <!-- Mysterious Scroll: Drum Melody -  -->
+		<set name="capsuled_items" val="21200,8,8,100" /> <!-- Mysterious Scroll: Drum Melody -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />

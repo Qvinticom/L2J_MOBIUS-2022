@@ -5,6 +5,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="2729600" />
@@ -15,6 +16,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="355700" />
@@ -25,6 +27,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="355600" />
@@ -35,6 +38,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="7113200" />
@@ -169,6 +173,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -557,7 +562,7 @@
 		<for>
 			<add order="0" stat="mDef" val="1" />
 			<add order="0" stat="pDef" val="33" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="32342" name="Fantasy Tunic of Magic" additionalName="Not in Use" type="Armor">
@@ -571,7 +576,7 @@
 		<set name="price" val="284" />
 		<set name="weight" val="2080" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
@@ -589,7 +594,7 @@
 		<set name="price" val="177" />
 		<set name="weight" val="1030" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
@@ -635,7 +640,7 @@
 		<set name="price" val="142" />
 		<set name="weight" val="640" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
@@ -692,7 +697,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1080" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="724" />
@@ -713,7 +718,7 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1490" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="444" />
@@ -822,7 +827,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1850" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="396" />
@@ -1089,9 +1094,9 @@
 		<set name="weight" val="1280" />
 		<for>
 			<add order="0" stat="pDef" val="24" />
-			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32373" name="Fantasy Reinforced Leather Boots" additionalName="Not in Use" type="Armor">
@@ -1105,8 +1110,8 @@
 		<set name="weight" val="1280" />
 		<for>
 			<add order="0" stat="pDef" val="24" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="-8" />
 		</for>
 	</item>
 	<item id="32374" name="Fantasy Clan Oath Sabaton" additionalName="Not in Use" type="Armor">
@@ -1189,10 +1194,10 @@
 		<set name="price" val="2930" />
 		<set name="weight" val="640" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="1" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="37" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="32380" name="Fantasy Hoplon" additionalName="Not in Use" type="Weapon">
@@ -1206,10 +1211,10 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1340" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="128" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="32381" name="Fantasy Soulfire Dirk" additionalName="Not in Use" type="Weapon">
@@ -1227,7 +1232,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="750" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="86" />
@@ -1249,7 +1254,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
@@ -1271,7 +1276,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -1335,7 +1340,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="111" />
@@ -1357,7 +1362,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -1445,7 +1450,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1770" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="75" />
 			<set stat="pAtk" val="277" />
@@ -1468,7 +1473,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -1490,7 +1495,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1770" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="155" />
@@ -1512,7 +1517,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1760" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="176" />

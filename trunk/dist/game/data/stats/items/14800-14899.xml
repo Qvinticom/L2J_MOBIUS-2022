@@ -27,8 +27,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14802" name="Dion Guard Earring" type="Armor">
@@ -71,8 +71,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14804" name="Oren Guard Earring" type="Armor">
@@ -137,8 +137,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
 			<add stat="waterRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14807" name="Goddard Guard Earring" type="Armor">
@@ -203,8 +203,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
 			<add stat="windRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="14810" name="Blue Talisman - Buff Cancel" type="Armor">
@@ -728,7 +728,7 @@
 	<item id="14849" name="Kahman's Supply Box" type="EtcItem">
 		<!-- Supply box received from Mercenary Kahman as mission compensation. Double-click to check more information. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="9625,1,1,100;9626,1,1,80" /> <!-- Lesser Giant's Codex - Oblivion -  -->
+		<set name="capsuled_items" val="9625,1,1,100;9626,1,1,80" /> <!-- Lesser Giant's Codex - Oblivion, Lesser Giant's Codex - Discipline -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -744,7 +744,7 @@
 	<item id="14850" name="Droph's Support Items" type="EtcItem">
 		<!-- Support items received from Dwarven explorer Droph for defeating Hekaton Prime. Double-click to check more information. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="5575,140000,240000,100" /> <!-- Ancient Adena -  -->
+		<set name="capsuled_items" val="5575,140000,240000,100" /> <!-- Ancient Adena -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -788,6 +788,7 @@
 		<!-- Quest-type recipe. Needed to make soul energy. Requires the Create Item skill level 1. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />

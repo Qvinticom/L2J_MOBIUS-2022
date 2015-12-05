@@ -241,7 +241,7 @@
 	<item id="614" name="Knight's Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="32" />
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="EQUIP" />
@@ -258,7 +258,7 @@
 	<item id="615" name="Cobweb Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back05" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="51" />
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="EQUIP" />
@@ -275,7 +275,7 @@
 	<item id="616" name="Magic Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back06" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="114" />
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="EQUIP" />
@@ -292,7 +292,7 @@
 	<item id="617" name="Mithril Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back07" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="150" />
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="EQUIP" />
@@ -309,7 +309,7 @@
 	<item id="618" name="Cloak of Self Protection" type="Armor">
 		<set name="icon" val="icon.armor_back08" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="53" />
 		<set name="crystal_type" val="C" />
 		<set name="default_action" val="EQUIP" />
@@ -326,7 +326,7 @@
 	<item id="619" name="(Not in Use) Ancient Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="81" />
 		<set name="crystal_type" val="C" />
 		<set name="default_action" val="EQUIP" />
@@ -343,7 +343,7 @@
 	<item id="620" name="Cloak of Protection" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="C" />
 		<set name="default_action" val="EQUIP" />
@@ -360,7 +360,7 @@
 	<item id="621" name="Cloak of Hell" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="89" />
 		<set name="crystal_type" val="B" />
 		<set name="default_action" val="EQUIP" />
@@ -377,7 +377,7 @@
 	<item id="622" name="(Not in Use) Holy Spirit's Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="61" />
 		<set name="crystal_type" val="A" />
 		<set name="default_action" val="EQUIP" />
@@ -394,7 +394,7 @@
 	<item id="623" name="Divine Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="crystal_count" val="93" />
 		<set name="crystal_type" val="A" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 	<item id="624" name="Cloak of Invisibility" type="Armor">
 		<set name="icon" val="icon.armor_back09" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -432,10 +432,10 @@
 		<set name="price" val="1980" />
 		<set name="weight" val="1380" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="626" name="Bronze Shield" type="Armor">
@@ -450,10 +450,10 @@
 		<set name="price" val="3380" />
 		<set name="weight" val="1370" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="627" name="Aspis" type="Weapon">
@@ -470,10 +470,10 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1350" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="114" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="628" name="Hoplon" type="Weapon">
@@ -490,10 +490,10 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1340" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="128" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="629" name="Kite Shield" type="Armor">
@@ -508,10 +508,10 @@
 		<set name="price" val="12060" />
 		<set name="weight" val="1320" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="630" name="Square Shield" type="Armor">
@@ -526,10 +526,10 @@
 		<set name="price" val="15800" />
 		<set name="weight" val="1310" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="631" name="Eldarake" type="Weapon">
@@ -546,10 +546,10 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1290" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="166" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="632" name="Knight's Shield" type="Armor">
@@ -564,10 +564,10 @@
 		<set name="price" val="26020" />
 		<set name="weight" val="1260" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="178" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="633" name="Zubei's Shield" type="Armor">
@@ -582,10 +582,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="634" name="Dragon Shield" type="Armor">
@@ -601,10 +601,10 @@
 		<set name="price" val="1949000" />
 		<set name="weight" val="1170" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="269" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="635" name="Wolf Shield" type="Armor">
@@ -619,10 +619,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="640" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="636" name="Shining Dragon Shield" type="Armor">
@@ -637,10 +637,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="720" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="637" name="Shield of Valor" type="Armor">
@@ -655,10 +655,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="720" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="638" name="Glorious Shield" type="Armor">
@@ -673,10 +673,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="800" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="639" name="Red Flame Shield" type="Armor">
@@ -691,10 +691,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="960" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="640" name="Elven Crystal Shield" type="Armor">
@@ -709,10 +709,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="720" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="641" name="Dark Crystal Shield" type="Armor">
@@ -727,10 +727,10 @@
 		<set name="price" val="935000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="642" name="Elven Vagian Shield" type="Armor">
@@ -745,10 +745,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="643" name="Dark Vagian Shield" type="Armor">
@@ -763,10 +763,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="644" name="Twilight Shield" type="Armor">
@@ -781,10 +781,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="640" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="645" name="Art of Shield" type="Armor">
@@ -799,10 +799,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="646" name="Shield of Silence" type="Armor">
@@ -817,10 +817,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="640" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="647" name="Gust Shield" type="Armor">
@@ -835,10 +835,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="720" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="648" name="Prairie Shield" type="Armor">
@@ -853,10 +853,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="800" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="649" name="Shield of Underworld" type="Armor">
@@ -871,10 +871,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="880" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="650" name="Shield of Concentration" type="Armor">
@@ -889,10 +889,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="960" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="651" name="Ace's Shield" type="Armor">
@@ -907,10 +907,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="1040" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="652" name="Guardian's Shield" type="Armor">
@@ -925,10 +925,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="1120" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="653" name="Marksman Shield" type="Armor">
@@ -943,10 +943,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="1200" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="654" name="Shield of Mana" type="Armor">
@@ -961,10 +961,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="655" name="Sage's Shield" type="Armor">
@@ -979,10 +979,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="656" name="Paradia Shield" type="Armor">
@@ -997,10 +997,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="657" name="Inferno Shield" type="Armor">
@@ -1015,10 +1015,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="658" name="Black Ore Shield" type="Armor">
@@ -1033,10 +1033,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="659" name="Summoning Shield" type="Armor">
@@ -1051,10 +1051,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="660" name="Otherworldly Shield" type="Armor">
@@ -1069,10 +1069,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="661" name="Elemental Shield" type="Armor">
@@ -1087,10 +1087,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="662" name="Shield of Phantom" type="Armor">
@@ -1105,10 +1105,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="663" name="Shield of Grace" type="Armor">
@@ -1123,10 +1123,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="664" name="Shield of Holy Spirit" type="Armor">
@@ -1141,10 +1141,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="665" name="Phoenix Shield" type="Armor">
@@ -1159,10 +1159,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="666" name="Cerberus Shield" type="Armor">
@@ -1177,10 +1177,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="667" name="Shield of Aid" type="Armor">
@@ -1195,10 +1195,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="668" name="Shield of Blessing" type="Armor">
@@ -1213,10 +1213,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="669" name="Flame Shield" type="Armor">
@@ -1231,10 +1231,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="670" name="Shield of Bravery" type="Armor">
@@ -1249,10 +1249,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="671" name="Blood Shield" type="Armor">
@@ -1267,10 +1267,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="480" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="672" name="Absolute Shield" type="Armor">
@@ -1285,10 +1285,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="673" name="Avadon Shield" type="Armor">
@@ -1303,10 +1303,10 @@
 		<set name="price" val="83800" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="674" name="Divine Shield" type="Armor">
@@ -1321,10 +1321,10 @@
 		<set name="price" val="129960" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="675" name="Silk Yarn Undergarment Set" type="Armor">

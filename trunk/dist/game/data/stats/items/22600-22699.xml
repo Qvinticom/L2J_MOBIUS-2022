@@ -138,6 +138,7 @@
 	<item id="22611" name="New Lineage II Awakening Party Cloak" type="Armor">
 		<!-- Beautiful white cloak. Provided to celebrate the New Lineage II Awakening Party. Can be equipped only when the cloak slot is open. -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -147,7 +148,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="25" />
+			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
 	<item id="22612" name="XP Rune III (Lv. 1-100+) 30% Pack (3-hour)" type="EtcItem">
@@ -728,7 +729,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="80" />
@@ -799,7 +800,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
@@ -824,7 +825,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -848,7 +849,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="117" />
@@ -991,7 +992,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
@@ -1034,11 +1035,11 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add stat="pDef" val="25" />
-			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="-8" />
+			<add order="0" stat="pDef" val="25" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="22665" name="Emerald Weapon: Sigil" type="Armor">
@@ -1054,7 +1055,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
 		</for>

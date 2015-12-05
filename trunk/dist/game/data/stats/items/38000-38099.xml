@@ -432,7 +432,7 @@
 	<item id="38039" name="Seraph Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Seraph Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="35447,1,1,100;35323,10,10,100;36519,12,12,100;36539,3,3,100;36554,2,2,100;36564,2,2,100;19440,6,6,100;17371,307,307,100" /> <!-- Recipe: Seraph Sigil (60%), Seraph Sigil Ingredient, Quality Leather, Quality Leather Braid, Armor Fragment (High-grade), Greater Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
+		<set name="capsuled_items" val="35447,1,1,100;35323,10,10,100;36519,12,12,100;36539,3,3,100;36554,2,2,100;36564,2,2,100;19440,6,6,100;17371,307,307,100" /> <!-- Recipe: Seraph Sigil (60%), Seraph Sigil Ingredient, Quality Leather, Quality Leather Braid, Armor Fragment (High-grade), Greater Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -773,7 +773,7 @@
 	<item id="38070" name="Eternal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Eternal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="35478,1,1,100;35354,10,10,100;36519,25,25,100;36539,7,7,100;36554,4,4,100;36564,3,3,100;19440,13,13,100;17371,676,676,100" /> <!-- Recipe: Eternal Sigil (60%), Eternal Sigil Ingredient, Quality Leather, Quality Leather Braid, Armor Fragment (High-grade), Greater Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
+		<set name="capsuled_items" val="35478,1,1,100;35354,10,10,100;36519,25,25,100;36539,7,7,100;36554,4,4,100;36564,3,3,100;19440,13,13,100;17371,676,676,100" /> <!-- Recipe: Eternal Sigil (60%), Eternal Sigil Ingredient, Quality Leather, Quality Leather Braid, Armor Fragment (High-grade), Greater Synthetic Cokes, Gemstone (R-grade), Crystal (R-grade) -->
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -1031,6 +1031,7 @@
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />

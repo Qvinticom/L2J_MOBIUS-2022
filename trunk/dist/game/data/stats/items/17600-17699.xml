@@ -36,6 +36,7 @@
 		<!-- Can be crafted by all races. Quest-type recipe. Recipe for making a tonic needed by the tree that is by Timiniel's side. Requires level 1 of the create command item skill. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />

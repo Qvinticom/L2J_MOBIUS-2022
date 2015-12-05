@@ -3,7 +3,7 @@
 	<item id="21700" name="Power Shirt Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Power Shirt.  -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="21580,1,1,100" /> <!-- Power Shirt -  -->
+		<set name="capsuled_items" val="21580,1,1,100" /> <!-- Power Shirt -->
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -171,8 +171,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="94" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="37" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="21713" name="Zaken's Sealed Cloak" type="EtcItem">
@@ -495,13 +495,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="69" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21732" name="Sword of Revolution" additionalName="Event" type="Weapon">
@@ -520,11 +520,11 @@
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21733" name="Lesser Giant's Sword" additionalName="Event" type="Weapon">
@@ -543,11 +543,11 @@
 		<set name="weight" val="2020" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21734" name="Priest Mace" additionalName="Event" type="Weapon">
@@ -567,11 +567,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="63" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21735" name="Tarbar" additionalName="Event" type="Weapon">
@@ -591,11 +591,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21736" name="Goat Head Staff" additionalName="Event" type="Weapon">
@@ -615,11 +615,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="69" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="77" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21737" name="Lesser Giant's Hammer" additionalName="Event" type="Weapon">
@@ -639,11 +639,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21738" name="Winged Spear" additionalName="Event" type="Weapon">
@@ -661,13 +661,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2060" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21739" name="Reinforced Longbow" additionalName="Event" type="Weapon">
@@ -686,13 +686,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="51" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="179" />
 			<set stat="pAtkSpd" val="227" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21740" name="Épée" additionalName="Event" type="Weapon">
@@ -710,13 +710,13 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1450" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="72" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21741" name="Sword of Magic Fog" additionalName="Event" type="Weapon">
@@ -735,11 +735,11 @@
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="63" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="63" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21742" name="Bastard Sword*Bastard Sword" additionalName="Event" type="Weapon">
@@ -758,11 +758,11 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21743" name="Bich'Hwa" additionalName="Event" type="Weapon">
@@ -782,11 +782,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="96" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21744" name="Katzbalger" additionalName="Event" type="Weapon">
@@ -809,11 +809,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21745" name="Arm Breaker" additionalName="Event" type="Weapon">
@@ -831,13 +831,13 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="47" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="21746" name="Maestro's Key" type="EtcItem">
@@ -1232,7 +1232,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1170" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
 		</for>
@@ -1428,7 +1428,7 @@
 		<set name="weight" val="940" />
 		<for>
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
@@ -1552,7 +1552,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1150" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
 		</for>

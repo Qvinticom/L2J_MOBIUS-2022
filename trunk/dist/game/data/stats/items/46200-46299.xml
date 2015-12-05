@@ -59,7 +59,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="685" />
@@ -157,7 +157,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -177,7 +177,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1481" />
@@ -197,7 +197,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1333" />
@@ -295,7 +295,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -333,6 +333,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46219" name="Summon Scroll: Piero" additionalName="Event" type="EtcItem">
 		<!-- Scroll that summons Market Eleven's mascot, Piero. Use it to play 'Win Against Piero'. Will be deleted once the event ends. -->
@@ -358,6 +359,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46221" name="L2 Market R99 Armor Enhancement Stone Pack" additionalName="Event" type="EtcItem">
 		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Eternal Enhancement Stones. Will be deleted once the event ends. -->
@@ -667,6 +669,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46245" name="Piero's Victory Box" additionalName="Event" type="EtcItem">
 		<!-- Piero's victory box. Will be deleted once the event ends. -->
@@ -702,7 +705,7 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="546" />
 		</for>
@@ -714,8 +717,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="920" />
 		<for>
-			<add stat="pDef" val="150" />
+			<add order="0" stat="pDef" val="150" />
 		</for>
 	</item>
 	<item id="46249" name="Dual Candle Sword" additionalName="Event" type="Weapon">
@@ -833,6 +837,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
 	</item>
 	<item id="46258" name="Nymph Stamen" type="EtcItem">
 		<!-- Nymph Stamen obtained from defeating the Nymphs in the Enchanted Valley. Take it to Mimyu to receive a reward. -->
@@ -871,7 +876,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="46261" name="Ninja Outfit" type="Armor">
@@ -883,7 +888,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="46262" name="Metal Suit" type="Armor">
@@ -895,7 +900,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add stat="pDef" val="400" />
+			<add order="0" stat="pDef" val="400" />
 		</for>
 	</item>
 	<item id="46263" name="Freya's Wish Stick" type="EtcItem">
@@ -914,9 +919,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="46265" name="Freya's Wish-filled Gift" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random rare item. -->
@@ -1018,6 +1025,7 @@
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1092,6 +1100,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1165,7 +1174,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -1196,6 +1205,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="46289" name="Miraculous Christmas Gift Box" type="EtcItem">
 		<!-- Santa's gift for bringing back Santa's Small Gift Boxes. Double-click to get the reward. Will be deleted after the event. -->
@@ -1225,6 +1235,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46292" name="Christmas Talisman" additionalName="ALL STAT +1" type="Armor">
 		<!-- Event item. All Stats + 1 when equipped. Effect does not stack with additional Talismans of the same type. -->
@@ -1235,6 +1246,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1249,6 +1261,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46294" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1263,6 +1276,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46295" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Atk. + 5000 and M. Def. + 5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1277,6 +1291,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46296" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
 		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1291,6 +1306,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46297" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1305,6 +1321,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46298" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1319,6 +1336,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46299" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Def. + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1333,5 +1351,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
+		<set name="weight" val="150" />
 	</item>
 </list>

@@ -49,7 +49,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="100" />
@@ -80,7 +80,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="72" />
@@ -107,7 +107,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="687" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
@@ -185,7 +185,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="357" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="42" />
 			<set stat="pAtk" val="62" />
@@ -346,7 +346,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="683" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
@@ -655,7 +655,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="83" />
@@ -682,7 +682,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="683" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
@@ -708,7 +708,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="353" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="80" />
@@ -764,7 +764,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="603" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -958,7 +958,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="117" />
@@ -1237,7 +1237,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="347" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="94" />
@@ -1263,7 +1263,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="350" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="94" />
@@ -1316,7 +1316,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="677" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1369,7 +1369,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="680" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1425,7 +1425,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="97" />
@@ -1565,7 +1565,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="135" />
@@ -1594,7 +1594,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="597" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="220" />
@@ -1621,7 +1621,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="677" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
@@ -1673,7 +1673,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="347" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="94" />
@@ -2011,7 +2011,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="587" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="252" />
@@ -2116,7 +2116,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="86" />
@@ -2147,7 +2147,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="155" />
@@ -2178,7 +2178,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="155" />
@@ -2205,7 +2205,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="673" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="122" />
@@ -2262,7 +2262,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="111" />
@@ -2293,7 +2293,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="111" />
@@ -2324,7 +2324,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="111" />
@@ -2355,7 +2355,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="111" />
@@ -2381,7 +2381,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="343" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
@@ -2436,7 +2436,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="590" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="75" />
 			<set stat="pAtk" val="277" />

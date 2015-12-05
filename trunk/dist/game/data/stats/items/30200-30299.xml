@@ -25,11 +25,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30201" name="Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
@@ -57,11 +57,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30202" name="Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
@@ -89,11 +89,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30203" name="Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
@@ -121,11 +121,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30204" name="Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
@@ -153,11 +153,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30205" name="Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
@@ -183,13 +183,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30206" name="Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
@@ -215,13 +215,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30207" name="Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
@@ -247,13 +247,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30208" name="Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
@@ -280,13 +280,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30209" name="Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
@@ -313,13 +313,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30210" name="Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
@@ -346,13 +346,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30211" name="Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
@@ -382,13 +382,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30212" name="Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
@@ -418,13 +418,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30213" name="Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
@@ -454,13 +454,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30214" name="Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -490,11 +490,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30215" name="Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
@@ -524,11 +524,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30216" name="Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
@@ -556,11 +556,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30217" name="Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
@@ -589,11 +589,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30218" name="Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -624,11 +624,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30219" name="Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
@@ -659,11 +659,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30220" name="Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
@@ -694,10 +694,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30221" name="Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
@@ -728,10 +728,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30222" name="Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
@@ -762,10 +762,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30223" name="Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
@@ -792,11 +792,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30224" name="Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
@@ -823,11 +823,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30225" name="Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
@@ -854,11 +854,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30226" name="Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
@@ -890,13 +890,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30227" name="Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
@@ -928,13 +928,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30228" name="Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
@@ -966,13 +966,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30229" name="Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
@@ -1000,11 +1000,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30230" name="Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
@@ -1032,11 +1032,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30231" name="Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
@@ -1064,11 +1064,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30232" name="Blessed Amaranthine Shaper" additionalName="Guidance + Haste" type="Weapon">
@@ -1094,13 +1094,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="575" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30233" name="Blessed Amaranthine Shaper" additionalName="Haste + Focus" type="Weapon">
@@ -1126,13 +1126,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="575" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30234" name="Blessed Amaranthine Shaper" additionalName="Focus + Guidance" type="Weapon">
@@ -1158,13 +1158,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="575" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30235" name="Blessed Amaranthine Cutter" additionalName="Haste + Focus" type="Weapon">
@@ -1191,11 +1191,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30236" name="Blessed Amaranthine Cutter" additionalName="Focus + Health" type="Weapon">
@@ -1222,11 +1222,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30237" name="Blessed Amaranthine Cutter" additionalName="Health + Haste" type="Weapon">
@@ -1253,11 +1253,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30238" name="Blessed Amaranthine Slasher" additionalName="Focus + Damage" type="Weapon">
@@ -1284,11 +1284,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30239" name="Blessed Amaranthine Slasher" additionalName="Damage Up + Haste" type="Weapon">
@@ -1315,11 +1315,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30240" name="Blessed Amaranthine Slasher" additionalName="Haste + Focus" type="Weapon">
@@ -1346,11 +1346,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30241" name="Blessed Amaranthine Avenger" additionalName="Haste + Critical Damage" type="Weapon">
@@ -1378,11 +1378,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30242" name="Blessed Amaranthine Avenger" additionalName="Critical Damage + Focus" type="Weapon">
@@ -1410,11 +1410,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30243" name="Blessed Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
@@ -1442,11 +1442,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30244" name="Blessed Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
@@ -1474,11 +1474,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30245" name="Blessed Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
@@ -1506,11 +1506,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30246" name="Blessed Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
@@ -1538,11 +1538,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30247" name="Blessed Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
@@ -1568,13 +1568,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30248" name="Blessed Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
@@ -1600,13 +1600,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30249" name="Blessed Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
@@ -1632,13 +1632,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30250" name="Blessed Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
@@ -1665,13 +1665,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1295" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30251" name="Blessed Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
@@ -1698,13 +1698,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1295" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30252" name="Blessed Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
@@ -1731,13 +1731,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1295" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30253" name="Blessed Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
@@ -1767,13 +1767,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1166" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30254" name="Blessed Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
@@ -1803,13 +1803,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1166" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30255" name="Blessed Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
@@ -1839,13 +1839,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1166" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30256" name="Blessed Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -1875,11 +1875,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30257" name="Blessed Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
@@ -1909,11 +1909,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30258" name="Blessed Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
@@ -1941,11 +1941,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30259" name="Blessed Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
@@ -1974,11 +1974,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30260" name="Blessed Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
@@ -2009,11 +2009,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30261" name="Blessed Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
@@ -2044,11 +2044,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="382" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30262" name="Blessed Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
@@ -2079,10 +2079,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="420" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="640" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30263" name="Blessed Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
@@ -2113,10 +2113,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="420" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="640" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30264" name="Blessed Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
@@ -2147,10 +2147,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="420" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="640" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30265" name="Blessed Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
@@ -2177,11 +2177,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30266" name="Blessed Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
@@ -2208,11 +2208,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30267" name="Blessed Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
@@ -2239,11 +2239,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30268" name="Blessed Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
@@ -2275,13 +2275,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30269" name="Blessed Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
@@ -2313,13 +2313,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30270" name="Blessed Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
@@ -2351,13 +2351,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="658" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30271" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
@@ -2385,11 +2385,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30272" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
@@ -2417,11 +2417,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30273" name="Blessed Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
@@ -2449,11 +2449,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="286" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="800" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="30274" name="Luxury Cocktail" type="EtcItem">
@@ -2485,7 +2485,7 @@
 	<item id="30276" name="Soulshot Pack (R-grade)" type="EtcItem">
 		<!-- Can acquire 5,000 soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
-		<set name="capsuled_items" val="17754,5000,5000,100" /> <!-- Soulshot (R-grade) -  -->
+		<set name="capsuled_items" val="17754,5000,5000,100" /> <!-- Soulshot (R-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2542,7 +2542,7 @@
 	<item id="30280" name="Blessed Spiritshot Pack (R-grade)" type="EtcItem">
 		<!-- Can acquire 5,000 blessed spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
-		<set name="capsuled_items" val="22434,5000,5000,100" /> <!-- Blessed Spiritshot (R-grade) -  -->
+		<set name="capsuled_items" val="22434,5000,5000,100" /> <!-- Blessed Spiritshot (R-grade) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

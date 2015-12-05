@@ -29,11 +29,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="330" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18901" name="Bound Specter Caster" additionalName="Magic Hold" type="Weapon">
@@ -67,11 +67,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="330" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="454" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18902" name="Bound Specter Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -105,10 +105,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="363" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="553" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18903" name="Bound Specter Retributer" additionalName="Acumen" type="Weapon">
@@ -142,10 +142,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="363" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="553" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18904" name="Bound Specter Retributer" additionalName="Empower" type="Weapon">
@@ -179,10 +179,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="363" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="553" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18905" name="Bound Specter Dualsword" additionalName="Haste" type="Weapon">
@@ -212,11 +212,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18906" name="Bound Specter Dualsword" additionalName="Damage Up" type="Weapon">
@@ -246,11 +246,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18907" name="Bound Specter Dualsword" additionalName="Health" type="Weapon">
@@ -280,11 +280,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18908" name="Bound Specter Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -319,13 +319,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="567" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18909" name="Bound Specter Dual Dagger" additionalName="Focus" type="Weapon">
@@ -360,13 +360,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="567" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18910" name="Bound Specter Dual Dagger" additionalName="Guidance" type="Weapon">
@@ -401,13 +401,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="567" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18911" name="Bound Specter Dual Blunt Weapon" additionalName="Focus" type="Weapon">
@@ -438,11 +438,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18912" name="Bound Specter Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
@@ -473,11 +473,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18913" name="Bound Specter Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
@@ -508,11 +508,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="275" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18914" name="Blessed Specter Shaper" additionalName="Guidance" type="Weapon">
@@ -538,13 +538,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18915" name="Blessed Specter Shaper" additionalName="Haste" type="Weapon">
@@ -570,13 +570,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18916" name="Blessed Specter Shaper" additionalName="Focus" type="Weapon">
@@ -602,13 +602,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18917" name="Blessed Specter Cutter" additionalName="Haste" type="Weapon">
@@ -635,11 +635,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18918" name="Blessed Specter Cutter" additionalName="Focus" type="Weapon">
@@ -666,11 +666,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18919" name="Blessed Specter Cutter" additionalName="Health" type="Weapon">
@@ -697,11 +697,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18920" name="Blessed Specter Slasher" additionalName="Focus" type="Weapon">
@@ -728,11 +728,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18921" name="Blessed Specter Slasher" additionalName="Damage Up" type="Weapon">
@@ -759,11 +759,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18922" name="Blessed Specter Slasher" additionalName="Haste" type="Weapon">
@@ -790,11 +790,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18923" name="Blessed Specter Avenger" additionalName="Haste" type="Weapon">
@@ -822,11 +822,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18924" name="Blessed Specter Avenger" additionalName="Critical Damage" type="Weapon">
@@ -854,11 +854,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18925" name="Blessed Specter Avenger" additionalName="Focus" type="Weapon">
@@ -886,11 +886,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18926" name="Blessed Specter Fighter" additionalName="Focus" type="Weapon">
@@ -918,11 +918,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18927" name="Blessed Specter Fighter" additionalName="Damage Up" type="Weapon">
@@ -950,11 +950,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18928" name="Blessed Specter Fighter" additionalName="Haste" type="Weapon">
@@ -982,11 +982,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18929" name="Blessed Specter Stormer" additionalName="HP Drain" type="Weapon">
@@ -1012,13 +1012,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18930" name="Blessed Specter Stormer" additionalName="Guidance" type="Weapon">
@@ -1044,13 +1044,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18931" name="Blessed Specter Stormer" additionalName="Damage Up" type="Weapon">
@@ -1076,13 +1076,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18932" name="Blessed Specter Thrower" additionalName="Damage Up" type="Weapon">
@@ -1109,13 +1109,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1185" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18933" name="Blessed Specter Thrower" additionalName="Focus" type="Weapon">
@@ -1142,13 +1142,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1185" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18934" name="Blessed Specter Thrower" additionalName="Long Blow" type="Weapon">
@@ -1175,13 +1175,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1185" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18935" name="Blessed Specter Shooter" additionalName="Focus" type="Weapon">
@@ -1211,13 +1211,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1067" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18936" name="Blessed Specter Shooter" additionalName="Critical Slow" type="Weapon">
@@ -1247,13 +1247,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1067" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18937" name="Blessed Specter Shooter" additionalName="Haste" type="Weapon">
@@ -1283,13 +1283,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1067" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18938" name="Blessed Specter Buster" additionalName="Acumen" type="Weapon">
@@ -1317,11 +1317,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18939" name="Blessed Specter Buster" additionalName="Magic Hold" type="Weapon">
@@ -1351,11 +1351,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18940" name="Blessed Specter Buster" additionalName="Mana Up" type="Weapon">
@@ -1383,11 +1383,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18941" name="Blessed Specter Caster" additionalName="Empower" type="Weapon">
@@ -1416,11 +1416,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18942" name="Blessed Specter Caster" additionalName="Acumen" type="Weapon">
@@ -1449,11 +1449,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18943" name="Blessed Specter Caster" additionalName="Magic Hold" type="Weapon">
@@ -1484,11 +1484,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="349" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="481" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18944" name="Blessed Specter Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -1519,10 +1519,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="384" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="586" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18945" name="Blessed Specter Retributer" additionalName="Acumen" type="Weapon">
@@ -1553,10 +1553,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="384" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="586" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18946" name="Blessed Specter Retributer" additionalName="Empower" type="Weapon">
@@ -1587,10 +1587,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="384" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="586" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18947" name="Blessed Specter Dualsword" additionalName="Haste" type="Weapon">
@@ -1617,11 +1617,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18948" name="Blessed Specter Dualsword" additionalName="Damage Up" type="Weapon">
@@ -1648,11 +1648,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18949" name="Blessed Specter Dualsword" additionalName="Health" type="Weapon">
@@ -1679,11 +1679,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18950" name="Blessed Specter Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -1715,13 +1715,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18951" name="Blessed Specter Dual Dagger" additionalName="Focus" type="Weapon">
@@ -1753,13 +1753,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18952" name="Blessed Specter Dual Dagger" additionalName="Guidance" type="Weapon">
@@ -1791,13 +1791,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="602" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18953" name="Blessed Specter Dual Blunt Weapon" additionalName="Focus" type="Weapon">
@@ -1825,11 +1825,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18954" name="Blessed Specter Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
@@ -1857,11 +1857,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18955" name="Blessed Specter Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
@@ -1889,11 +1889,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="262" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="732" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18956" name="Amaranthine Shaper" additionalName="Guidance" type="Weapon">
@@ -1919,13 +1919,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="558" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18957" name="Amaranthine Shaper" additionalName="Haste" type="Weapon">
@@ -1951,13 +1951,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="558" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18958" name="Amaranthine Shaper" additionalName="Focus" type="Weapon">
@@ -1983,13 +1983,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="558" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18959" name="Amaranthine Cutter" additionalName="Haste" type="Weapon">
@@ -2016,11 +2016,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18960" name="Amaranthine Cutter" additionalName="Focus" type="Weapon">
@@ -2047,11 +2047,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18961" name="Amaranthine Cutter" additionalName="Health" type="Weapon">
@@ -2078,11 +2078,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18962" name="Amaranthine Slasher" additionalName="Focus" type="Weapon">
@@ -2109,11 +2109,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18963" name="Amaranthine Slasher" additionalName="Damage Up" type="Weapon">
@@ -2140,11 +2140,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18964" name="Amaranthine Slasher" additionalName="Haste" type="Weapon">
@@ -2171,11 +2171,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18965" name="Amaranthine Avenger" additionalName="Haste" type="Weapon">
@@ -2203,11 +2203,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18966" name="Amaranthine Avenger" additionalName="Critical Damage" type="Weapon">
@@ -2235,11 +2235,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18967" name="Amaranthine Avenger" additionalName="Focus" type="Weapon">
@@ -2267,11 +2267,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18968" name="Amaranthine Fighter" additionalName="Focus" type="Weapon">
@@ -2299,11 +2299,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18969" name="Amaranthine Fighter" additionalName="Damage Up" type="Weapon">
@@ -2331,11 +2331,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18970" name="Amaranthine Fighter" additionalName="Haste" type="Weapon">
@@ -2363,11 +2363,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18971" name="Amaranthine Stormer" additionalName="HP Drain" type="Weapon">
@@ -2393,13 +2393,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18972" name="Amaranthine Stormer" additionalName="Guidance" type="Weapon">
@@ -2425,13 +2425,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18973" name="Amaranthine Stormer" additionalName="Damage Up" type="Weapon">
@@ -2457,13 +2457,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18974" name="Amaranthine Thrower" additionalName="Damage Up" type="Weapon">
@@ -2490,13 +2490,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18975" name="Amaranthine Thrower" additionalName="Focus" type="Weapon">
@@ -2523,13 +2523,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18976" name="Amaranthine Thrower" additionalName="Long Blow" type="Weapon">
@@ -2556,13 +2556,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1257" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18977" name="Amaranthine Shooter" additionalName="Focus" type="Weapon">
@@ -2592,13 +2592,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18978" name="Amaranthine Shooter" additionalName="Critical Slow" type="Weapon">
@@ -2628,13 +2628,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18979" name="Amaranthine Shooter" additionalName="Haste" type="Weapon">
@@ -2664,13 +2664,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="1132" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18980" name="Amaranthine Buster" additionalName="Acumen" type="Weapon">
@@ -2698,11 +2698,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18981" name="Amaranthine Buster" additionalName="Magic Hold" type="Weapon">
@@ -2732,11 +2732,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18982" name="Amaranthine Buster" additionalName="Mana Up" type="Weapon">
@@ -2764,11 +2764,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18983" name="Amaranthine Caster" additionalName="Empower" type="Weapon">
@@ -2797,11 +2797,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18984" name="Amaranthine Caster" additionalName="Acumen" type="Weapon">
@@ -2830,11 +2830,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18985" name="Amaranthine Caster" additionalName="Magic Hold" type="Weapon">
@@ -2865,11 +2865,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="371" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="511" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18986" name="Amaranthine Retributer" additionalName="MP Regeneration" type="Weapon">
@@ -2900,10 +2900,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18987" name="Amaranthine Retributer" additionalName="Acumen" type="Weapon">
@@ -2934,10 +2934,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18988" name="Amaranthine Retributer" additionalName="Empower" type="Weapon">
@@ -2968,10 +2968,10 @@
 			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="408" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="pAtk" val="622" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18989" name="Amaranthine Dualsword" additionalName="Haste" type="Weapon">
@@ -2998,11 +2998,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18990" name="Amaranthine Dualsword" additionalName="Damage Up" type="Weapon">
@@ -3029,11 +3029,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18991" name="Amaranthine Dualsword" additionalName="Health" type="Weapon">
@@ -3060,11 +3060,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18992" name="Amaranthine Dual Dagger" additionalName="Damage Up" type="Weapon">
@@ -3096,13 +3096,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18993" name="Amaranthine Dual Dagger" additionalName="Focus" type="Weapon">
@@ -3134,13 +3134,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18994" name="Amaranthine Dual Dagger" additionalName="Guidance" type="Weapon">
@@ -3172,13 +3172,13 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="638" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18995" name="Amaranthine Dual Blunt Weapon" additionalName="Focus" type="Weapon">
@@ -3206,11 +3206,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18996" name="Amaranthine Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
@@ -3238,11 +3238,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18997" name="Amaranthine Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
@@ -3270,11 +3270,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="278" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="777" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18998" name="Bound Amaranthine Shaper" additionalName="Guidance" type="Weapon">
@@ -3303,13 +3303,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="270" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="542" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="18999" name="Bound Amaranthine Shaper" additionalName="Haste" type="Weapon">
@@ -3338,13 +3338,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="270" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="542" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 </list>

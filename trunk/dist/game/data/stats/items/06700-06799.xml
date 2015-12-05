@@ -184,7 +184,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="16" />
@@ -284,11 +284,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="104" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="6720" name="Monster Only (Halisha's Shadow)" type="Weapon">
@@ -310,7 +310,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="16" />
@@ -328,10 +328,10 @@
 		<set name="price" val="8" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="6722" name="Monster Only (Ahrimanes)" type="Weapon">
@@ -342,7 +342,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant4_skill" val="3045-14" /> <!-- Special Ability: Haste -->
 		<set name="for_npc" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -354,11 +354,11 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="99" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="236" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="6723" name="Monster Only (Vampire Warrior)" type="Weapon">
@@ -380,11 +380,11 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="54" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="112" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="6724" name="Sealed Tateossian Earring" type="Armor">
@@ -402,8 +402,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="68" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6725" name="Sealed Tateossian Ring" type="Armor">
@@ -439,8 +439,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="91" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="6727" name="Seed: Alternative Great Coba" type="EtcItem">

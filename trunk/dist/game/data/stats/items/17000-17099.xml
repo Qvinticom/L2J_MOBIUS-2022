@@ -3,7 +3,7 @@
 	<item id="17000" name="Jewelry Pack (B-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Jewelry Set of Fortune (B-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="16858,1,1,100;16857,2,2,100;16859,2,2,100" /> <!-- Black Ore Necklace of Fortune - 90-day -->
+		<set name="capsuled_items" val="16858,1,1,100;16857,2,2,100;16859,2,2,100" /> <!-- Black Ore Necklace of Fortune - 90-day, Black Ore Earring of Fortune - 90-day, Black Ore Ring of Fortune - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -18,7 +18,7 @@
 	<item id="17001" name="Jewelry Pack (C-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire a Jewelry Set of Fortune (C-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="16861,1,1,100;16860,2,2,100;16862,2,2,100" /> <!-- Sealed Necklace of Fortune - 90-day -->
+		<set name="capsuled_items" val="16861,1,1,100;16860,2,2,100;16862,2,2,100" /> <!-- Sealed Necklace of Fortune - 90-day, Sealed Earring of Fortune - 90-day, Sealed Ring of Fortune - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -33,7 +33,7 @@
 	<item id="17002" name="Jewelry Pack (D-grade)" additionalName="90-day" type="EtcItem">
 		<!-- When used, you acquire an Jewelry Set of Fortune (D-grade). Expires after 90 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="16864,1,1,100;16863,2,2,100;16865,2,2,100" /> <!-- Elven Necklace of Fortune - 90-day -->
+		<set name="capsuled_items" val="16864,1,1,100;16863,2,2,100;16865,2,2,100" /> <!-- Elven Necklace of Fortune - 90-day, Elven Earring of Fortune - 90-day, Elven Ring of Fortune - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -329,7 +329,7 @@
 	<item id="17019" name="Mounting Item 3 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Gold Maned Lion (7-day), 1 Mount - Darkmane Pacer (7-day), and 1 Mount - Steam Beetle (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="capsuled_items" val="13121,1,1,100;14231,1,1,100;14232,1,1,100" /> <!-- Darkmane Pacer Pack (7-day) -  -->
+		<set name="capsuled_items" val="13121,1,1,100;14231,1,1,100;14232,1,1,100" /> <!-- Darkmane Pacer Pack (7-day) - 90-day, Mount - Gold Maned Lion Pack (7-day) - 90-day, Mount - Steam Beetle Pack (7-day) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -347,7 +347,7 @@
 	<item id="17020" name="Fresh Milk Pack (Event)" type="EtcItem">
 		<!-- Event - Wrapped Pack containing fresh milk. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="14739,1,1,100" /> <!-- Event - Fresh Milk -  -->
+		<set name="capsuled_items" val="14739,1,1,100" /> <!-- Event - Fresh Milk - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -365,7 +365,7 @@
 	<item id="17021" name="Dimensional Experience Pack 30 (Event)" type="EtcItem">
 		<!-- Event - Wrapped Pack containing High-grade Minion Coupon 2-unit Pack, a Feather of Blessing 3-unit Pack, and an Entrance Pass: Kamaloka 3-unit Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="14239,1,1,100;13082,1,1,100;13085,1,1,100" /> <!-- Superior Minion Coupon 2-unit Pack -  -->
+		<set name="capsuled_items" val="14239,1,1,100;13082,1,1,100;13085,1,1,100" /> <!-- Superior Minion Coupon 2-unit Pack - 90-day, Feather of Blessing 3-unit Pack - 90-day, Entrance Pass: Kamaloka 3-unit Pack - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -383,7 +383,7 @@
 	<item id="17022" name="Varka Karm Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Varka Karm (used by Varka Silenos). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13234,1,1,100" /> <!-- Varka Circlet -  -->
+		<set name="capsuled_items" val="13234,1,1,100" /> <!-- Varka Circlet - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -401,7 +401,7 @@
 	<item id="17023" name="Ketra Karm Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Ketra Karm (used by Ketra Orcs). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="13235,1,1,100" /> <!-- Ketra Circlet -  -->
+		<set name="capsuled_items" val="13235,1,1,100" /> <!-- Ketra Circlet - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -419,7 +419,7 @@
 	<item id="17024" name="Vitality Maintaining Potion Pack (Event)" type="EtcItem">
 		<!-- Event - Wrapped Pack containing 5 Vitality Potions (30min). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="15440,5,5,100" /> <!-- Vitality Maintaining Potion (30-minute) -  -->
+		<set name="capsuled_items" val="15440,5,5,100" /> <!-- Vitality Maintaining Potion (30-minute) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -437,7 +437,7 @@
 	<item id="17025" name="PC Point Pack (700) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 700 PC Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
-		<set name="capsuled_items" val="14559,1,1,100" /> <!-- Player Commendation Points -  -->
+		<set name="capsuled_items" val="14559,1,1,100" /> <!-- Player Commendation Points - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -455,7 +455,7 @@
 	<item id="17026" name="First Mate Hat Pack (Event)" type="EtcItem">
 		<!-- First Mate Hat - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="8919,1,1,100" /> <!-- First Mate Hat (Event) -  -->
+		<set name="capsuled_items" val="8919,1,1,100" /> <!-- First Mate Hat (Event) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -473,7 +473,7 @@
 	<item id="17027" name="Straw Hat Pack (Event)" type="EtcItem">
 		<!-- Straw Hat - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="10616,1,1,100" /> <!-- Straw Hat (Event) -  -->
+		<set name="capsuled_items" val="10616,1,1,100" /> <!-- Straw Hat (Event) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -491,7 +491,7 @@
 	<item id="17028" name="Phantom Mask Pack (Event)" type="EtcItem">
 		<!-- Phantom Mask - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="9208,1,1,100" /> <!-- Phantom Mask (Event) -  -->
+		<set name="capsuled_items" val="9208,1,1,100" /> <!-- Phantom Mask (Event) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -509,7 +509,7 @@
 	<item id="17029" name="Black Phantom Mask Pack (Event)" type="EtcItem">
 		<!-- Black Phantom Mask - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="9409,1,1,100" /> <!-- Black Phantom Mask (Event) -  -->
+		<set name="capsuled_items" val="9409,1,1,100" /> <!-- Black Phantom Mask (Event) - 90-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -540,7 +540,7 @@
 	<item id="17031" name="Freya White Pack" type="EtcItem">
 		<!-- 3 Vitality Replenishing Potions. Fire, Water, Wind, Earth, Holy, and Dark Crystals. Circlet of Freezing - Wrapped Pack for event. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="17033,1,1,100;9552,1,1,100;9553,1,1,100;9554,1,1,100;9555,1,1,100;9556,1,1,100;9557,1,1,100;14055,3,3,100" /> <!-- Circlet of Ice (Event) - 30-day -->
+		<set name="capsuled_items" val="17033,1,1,100;9552,1,1,100;9553,1,1,100;9554,1,1,100;9555,1,1,100;9556,1,1,100;9557,1,1,100;14055,3,3,100" /> <!-- Circlet of Ice (Event) - 30-day, Fire Crystal - 30-day, Water Crystal - 30-day, Earth Crystal - 30-day, Wind Crystal - 30-day, Dark Crystal - 30-day, Holy Crystal - 30-day, Vitality Replenishing Potion - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +558,7 @@
 	<item id="17032" name="Hero's Treasure Chest Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Hero's Treasure Chest. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="16852,1,1,100" /> <!-- Hero's Treasure Chest -  -->
+		<set name="capsuled_items" val="16852,1,1,100" /> <!-- Hero's Treasure Chest - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -691,7 +691,7 @@
 	<item id="17040" name="Love Box Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Love Box. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
-		<set name="capsuled_items" val="17044,1,1,100" /> <!-- Love Box -  -->
+		<set name="capsuled_items" val="17044,1,1,100" /> <!-- Love Box - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -707,7 +707,7 @@
 	<item id="17041" name="Sentiment Box Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Sentiment Box. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="capsuled_items" val="17045,1,1,100" /> <!-- Sentiment Box -  -->
+		<set name="capsuled_items" val="17045,1,1,100" /> <!-- Sentiment Box - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -723,7 +723,7 @@
 	<item id="17042" name="Confession Box Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="capsuled_items" val="17046,1,1,100" /> <!-- Confession Box -  -->
+		<set name="capsuled_items" val="17046,1,1,100" /> <!-- Confession Box - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -739,7 +739,7 @@
 	<item id="17043" name="Joy Box Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Joy Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
-		<set name="capsuled_items" val="17047,1,1,100" /> <!-- Joy Box -  -->
+		<set name="capsuled_items" val="17047,1,1,100" /> <!-- Joy Box - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -755,7 +755,7 @@
 	<item id="17044" name="Love Box" type="EtcItem">
 		<!-- Contains Talismans for STR, DEX and CON. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
-		<set name="capsuled_items" val="17051,1,1,100;17052,1,1,100;17053,1,1,100" /> <!-- Talisman - STR -  -->
+		<set name="capsuled_items" val="17051,1,1,100;17052,1,1,100;17053,1,1,100" /> <!-- Talisman - STR - 30-day, Talisman - DEX - 30-day, Talisman - CON - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -768,7 +768,7 @@
 	<item id="17045" name="Sentiment Box" type="EtcItem">
 		<!-- Contains a Talisman for WIT, MEN and INT.  -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="capsuled_items" val="17054,1,1,100;17055,1,1,100;17056,1,1,100" /> <!-- Talisman - WIT -  -->
+		<set name="capsuled_items" val="17054,1,1,100;17055,1,1,100;17056,1,1,100" /> <!-- Talisman - WIT - 30-day, Talisman - INT - 30-day, Talisman - MEN - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -781,7 +781,7 @@
 	<item id="17046" name="Confession Box" type="EtcItem">
 		<!-- Contains a Talisman for Stun/Sleep/Hold/Paralysis Resistance.  -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="capsuled_items" val="17057,1,1,100;17058,1,1,100;17059,1,1,100;17060,1,1,100" /> <!-- Talisman - Stun Resistance -  -->
+		<set name="capsuled_items" val="17057,1,1,100;17058,1,1,100;17059,1,1,100;17060,1,1,100" /> <!-- Talisman - Stun Resistance - 30-day, Talisman - Sleep Resistance - 30-day, Talisman - Hold Resistance - 30-day, Talisman - Paralysis Resistance - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -794,7 +794,7 @@
 	<item id="17047" name="Joy Box" type="EtcItem">
 		<!-- Contains a Love Box, Sentiment Box, and Confession Box. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
-		<set name="capsuled_items" val="17044,1,1,100;17045,1,1,100;17046,1,1,100;17050,1,1,100;17061,1,1,100" /> <!-- Love Box -  -->
+		<set name="capsuled_items" val="17044,1,1,100;17045,1,1,100;17046,1,1,100;17050,1,1,100;17061,1,1,100" /> <!-- Love Box - 30-day, Sentiment Box - 30-day, Confession Box - 30-day, Shiny Couple Ring - 30-day, Talisman - ALL STATS - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -807,7 +807,7 @@
 	<item id="17048" name="Shiny Bracelet Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Bracelet. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="17049,1,1,100" /> <!-- Shiny Bracelet -  -->
+		<set name="capsuled_items" val="17049,1,1,100" /> <!-- Shiny Bracelet - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -846,7 +846,7 @@
 		<set name="item_skill" val="8510-1" /> <!-- Summon Friend -->
 		<set name="material" val="GOLD" />
 		<for>
-			<add stat="mDef" val="7" />
+			<add order="0" stat="mDef" val="7" />
 		</for>
 	</item>
 	<item id="17051" name="Talisman - STR" type="Armor">
@@ -1091,7 +1091,7 @@
 	<item id="17066" name="Event - Save the White Tiger Event Pack" type="EtcItem">
 		<!-- Event pack that can be obtained 1 time per account every 12 hours. By Double-clicking, you can obtain the Summon Scroll: Baby White Tiger and Cupid's Fatigue Relief Potion that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="capsuled_items" val="17067,60,60,100;17068,15,15,100;17062,1,1,100;17064,1,1,100" /> <!-- Event - Cupid's Fatigue Relief Potion -  -->
+		<set name="capsuled_items" val="17067,60,60,100;17068,15,15,100;17062,1,1,100;17064,1,1,100" /> <!-- Event - Cupid's Fatigue Relief Potion - 30-day, Event - Cupid's Major Fatigue Relief Potion - 30-day, Event - Summon Scroll: Baby White Tiger - 30-day, Event - Summon Scroll: Baby White Tiger Captain - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1311,7 +1311,7 @@
 	<item id="17082" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Transformation Scroll: Anakim..  -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="10296,1,1,100" /> <!-- Transformation Sealbook: Anakim -  -->
+		<set name="capsuled_items" val="10296,1,1,100" /> <!-- Transformation Sealbook: Anakim - 30-day -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1329,7 +1329,7 @@
 	<item id="17083" name="Bird Nest Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Bird Nest (Event)..  -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="10613,1,1,100" /> <!-- Bird Nest (Event) -  -->
+		<set name="capsuled_items" val="10613,1,1,100" /> <!-- Bird Nest (Event) - 30-day -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

@@ -227,8 +227,10 @@
 	<item id="39324" name="Eternal Armor Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Eternal armor piece. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -281,8 +283,10 @@
 	<item id="39330" name="Seraph Armor Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Seraph armor piece. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -335,8 +339,10 @@
 	<item id="39336" name="Twilight Armor Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Twilight armor piece. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -389,8 +395,10 @@
 	<item id="39342" name="Crafting Ingredients Pack" type="EtcItem">
 		<!-- Can acquire 10 units of an ingredient needed for item crafting. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -407,8 +415,10 @@
 	<item id="39344" name="Amaranthine Weapon Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Amaranthine weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -479,8 +489,10 @@
 	<item id="39352" name="Specter Weapon Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -551,8 +563,10 @@
 	<item id="39360" name="Apocalypse Weapon Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Apocalypse weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />

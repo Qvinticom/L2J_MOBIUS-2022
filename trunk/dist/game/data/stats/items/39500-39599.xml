@@ -801,7 +801,7 @@
 	<item id="39562" name="High-grade Wind Dye Pack" type="EtcItem">
 		<!-- Wrapped Pack containing aLv. 5 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="DYES" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -819,6 +819,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
@@ -827,6 +828,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
@@ -835,6 +837,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
@@ -843,6 +846,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
@@ -1121,6 +1125,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
@@ -1133,6 +1138,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />

@@ -11,6 +11,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="27601" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
@@ -23,6 +24,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
 		<!-- Get 1 of the following:  1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bo -->
@@ -37,7 +39,7 @@
 	<item id="27603" name="Daily Mission Reward Chest" type="EtcItem">
 		<!-- Reward chest for completing daily missions. You can obtain one of various rewards. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
-		<set name="capsuled_items" val="1538,1,1,100" /> <!-- Blessed Scroll of Escape -  -->
+		<set name="capsuled_items" val="1538,1,1,100" /> <!-- Blessed Scroll of Escape -->
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -48,6 +50,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="27604" name="Amaranthine Double Crystal Enhancement Box" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for Double Crystal Enhancement of R99 weapons. -->

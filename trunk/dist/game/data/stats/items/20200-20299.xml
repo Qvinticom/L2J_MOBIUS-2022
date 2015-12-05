@@ -157,8 +157,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20208" name="Zaken's Earring (Event)" additionalName="7-day" type="Armor">
@@ -180,8 +180,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20209" name="Zaken's Earring (Event)" additionalName="15-day" type="Armor">
@@ -203,14 +203,14 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="20210" name="Charming Valentine Gift Set" type="EtcItem">
 		<!-- Wrapped Pack containing Charming Cupid Agathion and some scrumptious Chocolate Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
-		<set name="capsuled_items" val="20212,1,1,100;20214,15,15,100" /> <!-- Agathion - Charming Cupid -  -->
+		<set name="capsuled_items" val="20212,1,1,100;20214,15,15,100" /> <!-- Agathion - Charming Cupid, Chocolate Cookie -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 	<item id="20211" name="Naughty Valentine Gift Set" type="EtcItem">
 		<!-- Wrapped Pack containing Naughty Cupid Agathion and some scrumptious Chocolate Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
-		<set name="capsuled_items" val="20213,1,1,100;20214,15,15,100" /> <!-- Agathion - Naughty Cupid -  -->
+		<set name="capsuled_items" val="20213,1,1,100;20214,15,15,100" /> <!-- Agathion - Naughty Cupid, Chocolate Cookie -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -301,7 +301,7 @@
 	<item id="20215" name="Agathion - White Maneki Neko Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - White Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20221,1,1,100" /> <!-- Agathion - White Maneki Neko -  -->
+		<set name="capsuled_items" val="20221,1,1,100" /> <!-- Agathion - White Maneki Neko -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 	<item id="20216" name="Agathion - Black Maneki Neko Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Black Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20222,1,1,100" /> <!-- Agathion - Black Maneki Neko -  -->
+		<set name="capsuled_items" val="20222,1,1,100" /> <!-- Agathion - Black Maneki Neko -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -337,7 +337,7 @@
 	<item id="20217" name="Agathion - Brown Maneki Neko Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Brown Maneki Neko. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20223,1,1,100" /> <!-- Agathion - Brown Maneki Neko -  -->
+		<set name="capsuled_items" val="20223,1,1,100" /> <!-- Agathion - Brown Maneki Neko -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -520,7 +520,7 @@
 	<item id="20227" name="Agathion - One-eyed Bat Drove Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - One-eyed Bat Drove. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20230,1,1,100" /> <!-- Agathion - One-eyed Bat Drove -  -->
+		<set name="capsuled_items" val="20230,1,1,100" /> <!-- Agathion - One-eyed Bat Drove - Vitality (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -630,7 +630,7 @@
 	<item id="20233" name="Agathion - Pegasus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pegasus. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20236,1,1,100" /> <!-- Agathion - Pegasus -  -->
+		<set name="capsuled_items" val="20236,1,1,100" /> <!-- Agathion - Pegasus - Vitality (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -740,7 +740,7 @@
 	<item id="20239" name="Yellow-robed Tojigong Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Yellow-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20245,1,1,100" /> <!-- Agathion - Yellow-robed Tojigong -  -->
+		<set name="capsuled_items" val="20245,1,1,100" /> <!-- Agathion - Yellow-robed Tojigong - Escape (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -758,7 +758,7 @@
 	<item id="20240" name="Blue-robed Tojigong Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blue-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20246,1,1,100" /> <!-- Agathion - Blue-robed Tojigong -  -->
+		<set name="capsuled_items" val="20246,1,1,100" /> <!-- Agathion - Blue-robed Tojigong - Escape (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -776,7 +776,7 @@
 	<item id="20241" name="Green-robed Tojigong Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Green-robed Tojigong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20247,1,1,100" /> <!-- Agathion - Green-robed Tojigong -  -->
+		<set name="capsuled_items" val="20247,1,1,100" /> <!-- Agathion - Green-robed Tojigong - Escape (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 	<item id="20251" name="Agathion - Bugbear Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Bugbear. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20252,1,1,100" /> <!-- Agathion - Bugbear -  -->
+		<set name="capsuled_items" val="20252,1,1,100" /> <!-- Agathion - Bugbear - Mana Regeneration (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1011,7 +1011,7 @@
 	<item id="20254" name="Love Agathion Pack (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing Love Agathion Seal Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20253,1,1,100" /> <!-- Agathion - Love (Event) -  -->
+		<set name="capsuled_items" val="20253,1,1,100" /> <!-- Agathion - Love (Event) - Mana Regeneration (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1078,7 +1078,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
@@ -1201,7 +1201,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
@@ -1234,7 +1234,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="3" />
 			<set stat="pAtk" val="1" />
@@ -1381,7 +1381,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="5" />
 		</for>
@@ -1414,7 +1414,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="3" />
 			<set stat="pAtk" val="1" />
@@ -1483,7 +1483,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="3" />
 			<set stat="pAtk" val="1" />
@@ -1627,7 +1627,7 @@
 	<item id="20278" name="Gold Afro Hair Pack" type="EtcItem">
 		<!-- Pack with Gold Afro. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20275,1,1,100" /> <!-- Gold Afro -  -->
+		<set name="capsuled_items" val="20275,1,1,100" /> <!-- Gold Afro - Mana Regeneration (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1646,7 +1646,7 @@
 	<item id="20279" name="Pink Afro Hair Pack" type="EtcItem">
 		<!-- Pack with Pink Afro. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20276,1,1,100" /> <!-- Pink Afro -  -->
+		<set name="capsuled_items" val="20276,1,1,100" /> <!-- Pink Afro - Mana Regeneration (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1665,7 +1665,7 @@
 	<item id="20280" name="Agathion - Red Sumo Wrestler Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Red Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20297,1,1,100" /> <!-- Agathion - Red Sumo Wrestler -  -->
+		<set name="capsuled_items" val="20297,1,1,100" /> <!-- Agathion - Red Sumo Wrestler - Mana Regeneration (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1701,7 +1701,7 @@
 	<item id="20282" name="Agathion - Blue Sumo Wrestler Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blue Sumo Wrestler. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20299,1,1,100" /> <!-- Agathion - Blue Sumo Wrestler -  -->
+		<set name="capsuled_items" val="20299,1,1,100" /> <!-- Agathion - Blue Sumo Wrestler - Death Whisper (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1737,7 +1737,7 @@
 	<item id="20284" name="Agathion - Great Sumo Match Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Great Sumo Match. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20301,1,1,100" /> <!-- Agathion - Great Sumo Match -  -->
+		<set name="capsuled_items" val="20301,1,1,100" /> <!-- Agathion - Great Sumo Match - Wild Magic (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1773,7 +1773,7 @@
 	<item id="20286" name="Agathion - Button-eyed Bear Doll Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Button-eyed Bear Doll. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20303,1,1,100" /> <!-- Agathion - Button-eyed Bear Doll -  -->
+		<set name="capsuled_items" val="20303,1,1,100" /> <!-- Agathion - Button-eyed Bear Doll - Big Head / Firework (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1845,7 +1845,7 @@
 	<item id="20290" name="Agathion - God of Fortune Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - God of Fortune. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20307,1,1,100" /> <!-- Agathion - God of Fortune -  -->
+		<set name="capsuled_items" val="20307,1,1,100" /> <!-- Agathion - God of Fortune - Vitality (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1881,7 +1881,7 @@
 	<item id="20292" name="Agathion - Dryad Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Dryad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20309,1,1,100" /> <!-- Agathion - Dryad -  -->
+		<set name="capsuled_items" val="20309,1,1,100" /> <!-- Agathion - Dryad - Vitality (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1899,7 +1899,7 @@
 	<item id="20293" name="Agathion - Wonboso Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Wonboso. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20310,1,1,100" /> <!-- Agathion - Wonboso -  -->
+		<set name="capsuled_items" val="20310,1,1,100" /> <!-- Agathion - Wonboso - Vitality (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1935,7 +1935,7 @@
 	<item id="20295" name="Agathion - Daewoonso Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Daewoonso. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="capsuled_items" val="20312,1,1,100" /> <!-- Agathion - Daewoonso -  -->
+		<set name="capsuled_items" val="20312,1,1,100" /> <!-- Agathion - Daewoonso - Wind Walk (7-day) -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

@@ -51,10 +51,10 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="1170" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="276" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11503" name="Sealed Imperial Crusader Helmet" type="Armor">
@@ -171,10 +171,10 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="1170" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11509" name="Imperial Crusader Helmet" type="Armor">
@@ -697,10 +697,10 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="1390" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11533" name="Dynasty Shoes" type="Armor">
@@ -1504,10 +1504,10 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="1370" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="305" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="11570" name="Sealed Dynasty Shoes" type="Armor">
@@ -1736,8 +1736,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="76" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11582" name="Sealed Phoenix Ring" type="Armor">
@@ -1773,8 +1773,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="57" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="20" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11584" name="Phoenix Necklace" type="Armor">
@@ -1793,8 +1793,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="80" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11585" name="Phoenix Ring" type="Armor">
@@ -1832,8 +1832,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="20" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11587" name="Majestic Necklace" type="Armor">
@@ -1852,8 +1852,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="33" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11588" name="Majestic Ring" type="Armor">
@@ -1891,8 +1891,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11590" name="Sealed Majestic Necklace" type="Armor">
@@ -1910,8 +1910,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="80" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="33" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11591" name="Sealed Majestic Ring" type="Armor">
@@ -1947,8 +1947,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11593" name="Sealed Tateossian Necklace" type="Armor">
@@ -1966,8 +1966,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="91" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11594" name="Sealed Tateossian Ring" type="Armor">
@@ -2003,8 +2003,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="68" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11596" name="Tateossian Necklace" type="Armor">
@@ -2023,8 +2023,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11597" name="Tateossian Ring" type="Armor">
@@ -2062,8 +2062,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="71" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="11599" name="Dynasty Necklace" type="Armor">
@@ -2082,8 +2082,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 </list>

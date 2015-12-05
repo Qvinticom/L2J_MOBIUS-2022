@@ -72,7 +72,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="750" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
@@ -99,7 +99,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="750" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="30000" />
@@ -151,7 +151,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="120" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="30000" />
@@ -177,7 +177,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="100" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
@@ -205,7 +205,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="150" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="120" />
@@ -554,10 +554,10 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="71" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="1329" name="Shield of Victory" type="Armor">
@@ -573,10 +573,10 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="350" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="71" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="1330" name="Zubei's Shield" type="Armor">
@@ -592,10 +592,10 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="71" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="1331" name="Otherworldly Shield" type="Armor">
@@ -611,10 +611,10 @@
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="350" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="71" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="1332" name="Knight's Shield" type="Armor">
@@ -630,10 +630,10 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="71" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="1333" name="Brandish" type="Weapon">
@@ -1214,13 +1214,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="26" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="50" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="1377" name="Spellbook: Poison Recovery" type="EtcItem">

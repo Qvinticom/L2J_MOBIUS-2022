@@ -159,7 +159,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
@@ -179,7 +179,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
@@ -199,7 +199,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
@@ -660,6 +660,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1500000" />
@@ -670,6 +671,7 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="price" val="1500000" />

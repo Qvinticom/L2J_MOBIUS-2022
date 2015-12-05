@@ -33,10 +33,10 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="167" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33902" name="Immortal Stockings" additionalName="Robe (Event)" type="Armor">
@@ -54,10 +54,10 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="104" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33903" name="Immortal Gloves" additionalName="Robe (Event)" type="Armor">
@@ -109,9 +109,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33906" name="Immortal Necklace" additionalName="Event" type="Armor">
@@ -129,8 +129,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="123" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="53" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="33907" name="Immortal Earring" additionalName="Event" type="Armor">
@@ -148,8 +148,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="92" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="40" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="33908" name="Immortal Ring" additionalName="Event" type="Armor">
@@ -189,7 +189,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="369" />
@@ -215,7 +215,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="369" />
@@ -241,7 +241,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="369" />
@@ -573,7 +573,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -599,7 +599,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -625,7 +625,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -651,7 +651,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="831" />
@@ -677,7 +677,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="831" />
@@ -703,7 +703,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="831" />
@@ -729,7 +729,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="748" />
@@ -755,7 +755,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="748" />
@@ -781,7 +781,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="748" />
@@ -1116,7 +1116,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -1142,7 +1142,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -1168,7 +1168,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
@@ -1354,10 +1354,10 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="415" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="33957" name="Immortal Leather Helmet" additionalName="Assassin Type / Light (Event)" type="Armor">
@@ -1393,9 +1393,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="243" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33959" name="Immortal Leather Leggings" additionalName="Assassin Type / Light (Event)" type="Armor">
@@ -1413,9 +1413,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="152" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33960" name="Immortal Leather Gloves" additionalName="Assassin Type / Light (Event)" type="Armor">
@@ -1484,10 +1484,10 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="167" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33964" name="Immortal Stockings" additionalName="Magic Type / Robe (Event)" type="Armor">
@@ -1504,10 +1504,10 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="104" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33965" name="Immortal Gloves" additionalName="Magic Type / Robe (Event)" type="Armor">
@@ -1645,10 +1645,10 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="415" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="33973" name="Immortal Leather Helmet" additionalName="Enchant Type / Light (Event)" type="Armor">
@@ -1684,9 +1684,9 @@
 		<set name="weight" val="4140" />
 		<for>
 			<add stat="mEvas" val="5.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="243" />
-			<sub stat="rEvas" val="5" />
+			<add stat="rEvas" val="5" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33975" name="Immortal Leather Leggings" additionalName="Enchant Type / Light (Event)" type="Armor">
@@ -1704,9 +1704,9 @@
 		<set name="weight" val="1320" />
 		<for>
 			<add stat="mEvas" val="3.0" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="152" />
-			<sub stat="rEvas" val="3" />
+			<add stat="rEvas" val="3" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33976" name="Immortal Leather Gloves" additionalName="Enchant Type / Light (Event)" type="Armor">
@@ -1775,10 +1775,10 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="36" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="167" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33980" name="Immortal Stockings" additionalName="Recovery Type / Robe (Event)" type="Armor">
@@ -1795,10 +1795,10 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="24" />
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="104" />
+			<enchant stat="mDef" val="0" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33981" name="Immortal Gloves" additionalName="Recovery Type / Robe (Event)" type="Armor">

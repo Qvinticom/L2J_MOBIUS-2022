@@ -179,6 +179,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
@@ -195,11 +196,6 @@
 		<set name="material" val="STEEL" />
 		<set name="price" val="6404000" />
 		<set name="weight" val="1370" />
-		<for>
-			<sub stat="rEvas" val="-8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="305" />
-		</for>
 	</item>
 	<item id="10118" name="Foundation Dynasty Sigil" type="EtcItem">
 		<!-- Rare Sealed Dynasty Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -210,11 +206,6 @@
 		<set name="material" val="STEEL" />
 		<set name="price" val="6404000" />
 		<set name="weight" val="1390" />
-		<for>
-			<sub stat="rEvas" val="-8" />
-			<set stat="rShld" val="20" />
-			<set stat="sDef" val="321" />
-		</for>
 	</item>
 	<item id="10119" name="Dynasty Sigil" type="Armor">
 		<!-- Increases Magic Resistance and Dark Resistance. -->
@@ -231,9 +222,9 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="930" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10120" name="Sealed Dynasty Sigil" type="Armor">
@@ -250,9 +241,9 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="930" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10121" name="Sealed Arcana Sigil" type="Armor">
@@ -269,9 +260,9 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="940" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="10122" name="Red Crescent" type="Armor">
@@ -352,11 +343,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="76" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="139" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10126" name="Dynasty Leather Armor" additionalName="Force Master" type="Armor">
@@ -1129,9 +1120,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="30" />
-			<enchant stat="mDef" val="0" />
 			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="10171" name="Seed: Dark Coda" type="EtcItem">

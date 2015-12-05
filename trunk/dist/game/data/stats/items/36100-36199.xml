@@ -231,6 +231,7 @@
 	<item id="36120" name="Clan Cloak - Clan Hall (Contestable)" type="Armor">
 		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a contestable Clan Hall. STR + 1 / INT + 1 effect. Can use a private warehouse. When S or S80-grade ar -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -241,6 +242,8 @@
 		<set name="price" val="10000000" />
 		<set name="weight" val="220" />
 		<for>
+			<add stat="INT" val="1" />
+			<add stat="STR" val="1" />
 			<add order="0" stat="mDef" val="40" />
 			<add order="0" stat="pDef" val="50" />
 		</for>
@@ -248,6 +251,7 @@
 	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
 		<!-- STR + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -261,6 +265,7 @@
 	<item id="36122" name="Rabbit Ears: DEX (3-day)" additionalName="Campaign" type="Armor">
 		<!-- DEX + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -274,6 +279,7 @@
 	<item id="36123" name="Rabbit Ears: WIT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- WIT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -287,6 +293,7 @@
 	<item id="36124" name="Rabbit Ears: INT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- INT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="bodypart" val="hairall" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -529,7 +536,7 @@
 	<item id="36148" name="Kaliel's Scroll of Escape Pack" type="EtcItem">
 		<!-- Double-click to receive a Scroll of Escape: Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -602,7 +609,7 @@
 	<item id="36156" name="Enhanced Kaliel's Attribute Crystal Pack" type="EtcItem">
 		<!-- Double-click to receive one of the super-150 Attribute Crystals. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -715,6 +722,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="inventoryLimit" val="18" />
 			<add order="0" stat="pDef" val="25" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -730,6 +738,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="inventoryLimit" val="18" />
 			<add order="0" stat="pDef" val="25" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -745,6 +754,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="inventoryLimit" val="18" />
 			<add order="0" stat="pDef" val="25" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -988,6 +998,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="inventoryLimit" val="12" />
 			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
@@ -1004,6 +1015,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="inventoryLimit" val="18" />
 			<add order="0" stat="pDef" val="25" />
 		</for>
 	</item>
@@ -1049,7 +1061,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="685" />
@@ -1167,7 +1179,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -1191,7 +1203,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1481" />

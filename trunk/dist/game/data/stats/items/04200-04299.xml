@@ -232,7 +232,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1110" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="27" />
@@ -280,10 +280,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1380" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="4223" name="Ubiquitous Shield" type="Armor">
@@ -300,10 +300,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1380" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="4224" name="Dream Armor" type="Armor">
@@ -477,11 +477,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="68" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="148" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4234" name="Hatchling's Lv. 65 Armor" type="Armor">

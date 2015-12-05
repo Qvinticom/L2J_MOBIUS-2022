@@ -19,7 +19,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="340" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -98,7 +98,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="337" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -235,7 +235,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -266,7 +266,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -297,7 +297,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -328,7 +328,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -359,7 +359,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="126" />
@@ -414,7 +414,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -658,7 +658,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="176" />
@@ -739,7 +739,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="670" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
@@ -845,7 +845,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="663" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="78" />
 			<set stat="pAtk" val="144" />
@@ -898,7 +898,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="660" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="78" />
 			<set stat="pAtk" val="144" />
@@ -1218,7 +1218,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -1487,7 +1487,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -1569,7 +1569,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="573" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="323" />
@@ -1596,7 +1596,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="650" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
@@ -1727,7 +1727,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="333" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="136" />
@@ -1874,7 +1874,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -1926,7 +1926,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -1952,7 +1952,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -1978,7 +1978,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2004,7 +2004,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2056,7 +2056,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2082,7 +2082,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2108,7 +2108,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2134,7 +2134,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2186,7 +2186,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2212,7 +2212,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2238,7 +2238,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2264,7 +2264,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-10" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2316,7 +2316,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-10" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2342,7 +2342,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-10" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2368,7 +2368,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-10" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="65920" />
@@ -2430,7 +2430,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="647" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="175" />
@@ -2447,7 +2447,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-11" />
+		<set name="enchant4_skill" val="3042-11" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="69900" />
@@ -2499,7 +2499,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3044-11" />
+		<set name="enchant4_skill" val="3044-11" /> <!-- Special Ability: Focus -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="69900" />
@@ -2525,7 +2525,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-11" />
+		<set name="enchant4_skill" val="3045-11" /> <!-- Special Ability: Haste -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="69900" />
@@ -2593,7 +2593,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="573" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="100" />
 			<set stat="pAtk" val="397" />
@@ -2610,7 +2610,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3046-11" />
+		<set name="enchant4_skill" val="3046-11" /> <!-- Special Ability: Guidance -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="69900" />
@@ -2636,7 +2636,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3042-11" />
+		<set name="enchant4_skill" val="3042-11" /> <!-- Special Ability: Critical Damage -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="69900" />

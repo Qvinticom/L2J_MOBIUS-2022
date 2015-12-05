@@ -44,7 +44,7 @@
 		<set name="price" val="272800" />
 		<set name="weight" val="390" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 		</for>
 	</item>
@@ -142,7 +142,7 @@
 		<set name="price" val="272800" />
 		<set name="weight" val="390" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
 		</for>
@@ -1220,12 +1220,6 @@
 		<set name="material" val="STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1930" />
-		<for>
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12376" name="Foundation Great Axe" type="EtcItem">
 		<!-- Rare Great Axe that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1236,13 +1230,6 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1940" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
 	</item>
 	<item id="12377" name="Foundation Innominate Victory" type="EtcItem">
 		<!-- Rare Innominate Victory that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1256,13 +1243,6 @@
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
-		<for>
-			<add stat="accCombat" val="2" />
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="350" />
-		</for>
 	</item>
 	<item id="12378" name="Foundation Dark Elven Longbow" type="EtcItem">
 		<!-- Rare Dark Elven Long Blow that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1273,13 +1253,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1720" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="100" />
-			<set stat="pAtk" val="397" />
-			<set stat="pAtkSpd" val="227" />
-		</for>
 	</item>
 	<item id="12379" name="Foundation Sword of Valhalla" type="EtcItem">
 		<!-- Rare Sword of Valhalla that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1290,12 +1263,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="900" />
-		<for>
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12380" name="Foundation Spell Breaker" type="EtcItem">
 		<!-- Rare Spell Breaker that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1306,13 +1273,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1620" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12381" name="Foundation Arthro Nail" type="EtcItem">
 		<!-- Rare Arthro Nail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1323,13 +1283,6 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1420" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
 	</item>
 	<item id="12382" name="Foundation Ice Storm Hammer" type="EtcItem">
 		<!-- Rare Ice Storm Hammer that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1340,13 +1293,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1950" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12383" name="Foundation Military Fleuret" type="EtcItem">
 		<!-- Rare Military Fleuret that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1360,13 +1306,6 @@
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
-		<for>
-			<add stat="accCombat" val="-1.5" />
-			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="159" />
-			<set stat="pAtkSpd" val="406" />
-		</for>
 	</item>
 	<item id="12384" name="Foundation Spirit's Staff" type="EtcItem">
 		<!-- Rare Spirit's Staff that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1377,13 +1316,6 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="960" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12385" name="Foundation Kris" type="EtcItem">
 		<!-- Rare Kris that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1394,13 +1326,6 @@
 		<set name="material" val="MITHRIL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="980" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="153" />
-			<set stat="pAtkSpd" val="433" />
-		</for>
 	</item>
 	<item id="12386" name="Foundation Keshanberk" type="EtcItem">
 		<!-- Rare Keshanberk that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1411,12 +1336,6 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1370" />
-		<for>
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12387" name="Foundation Peacemaker" type="EtcItem">
 		<!-- Rare Peacemaker that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1430,13 +1349,6 @@
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
-		<for>
-			<add stat="accCombat" val="-1.5" />
-			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="221" />
-			<set stat="pAtkSpd" val="303" />
-		</for>
 	</item>
 	<item id="12388" name="Foundation Heavy War Axe" type="EtcItem">
 		<!-- Rare Heavy War Axe that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1447,13 +1359,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="1620" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12389" name="Foundation Twilight Knife" type="EtcItem">
 		<!-- Rare Twilight Knife that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1464,13 +1369,6 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="price" val="6680500" />
 		<set name="weight" val="740" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="153" />
-			<set stat="pAtkSpd" val="433" />
-		</for>
 	</item>
 	<item id="12390" name="Foundation Guardian's Sword" type="EtcItem">
 		<!-- Rare Guardian's Sword that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1481,12 +1379,6 @@
 		<set name="material" val="STEEL" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1930" />
-		<for>
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12391" name="Foundation Damascus Sword" type="EtcItem">
 		<!-- Rare Damascus Sword that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1497,12 +1389,6 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1350" />
-		<for>
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12392" name="Foundation Dismantler" type="EtcItem">
 		<!-- Rare Dismantler that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1516,13 +1402,6 @@
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
-		<for>
-			<add stat="accCombat" val="2" />
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="210" />
-			<set stat="pAtkSpd" val="350" />
-		</for>
 	</item>
 	<item id="12393" name="Foundation Lance" type="EtcItem">
 		<!-- Rare Lance that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1533,13 +1412,6 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1920" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
 	</item>
 	<item id="12394" name="Foundation Bellion Cestus" type="EtcItem">
 		<!-- Rare Bellion Cestus that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1550,13 +1422,6 @@
 		<set name="material" val="MITHRIL" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1390" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="325" />
-		</for>
 	</item>
 	<item id="12395" name="Foundation Staff of Evil Spirits" type="EtcItem">
 		<!-- Rare Staff of Evil Spirits that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1567,13 +1432,6 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="930" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12396" name="Foundation Deadman's Glory" type="EtcItem">
 		<!-- Rare Deadman's Glory that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1584,13 +1442,6 @@
 		<set name="material" val="BONE" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1600" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12397" name="Foundation Star Buster" type="EtcItem">
 		<!-- Rare Star Buster that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1601,13 +1452,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1930" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12398" name="Foundation Art of Battle Axe" type="EtcItem">
 		<!-- Rare Art of Battle Axe that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1618,13 +1462,6 @@
 		<set name="material" val="CHRYSOLITE" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="1570" />
-		<for>
-			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
-		</for>
 	</item>
 	<item id="12399" name="Foundation Demon's Dagger" type="EtcItem">
 		<!-- Rare Demon's Dagger that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
@@ -1635,12 +1472,5 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="price" val="10091400" />
 		<set name="weight" val="970" />
-		<for>
-			<add stat="accCombat" val="-3.75" />
-			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="170" />
-			<set stat="pAtkSpd" val="433" />
-		</for>
 	</item>
 </list>

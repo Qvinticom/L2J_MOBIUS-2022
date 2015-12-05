@@ -885,7 +885,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add stat="pDef" val="28" />
+			<add order="0" stat="pDef" val="28" />
 		</for>
 	</item>
 	<item id="23086" name="Easter Egg" additionalName="Event" type="EtcItem">
@@ -1067,7 +1067,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="346" />
@@ -1119,9 +1119,10 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="176" />
+			<mul stat="maxHp" val="1.25" />
 			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
 		</for>

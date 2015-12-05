@@ -339,8 +339,9 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
@@ -543,6 +544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -556,6 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -569,6 +572,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
 		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
@@ -582,6 +586,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
@@ -671,6 +676,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
 	</item>
 	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
 		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets.  -->
@@ -930,6 +936,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="46180" name="Male Swimwear No.2" type="Armor">
 		<!-- Swimwear for male characters.  -->
@@ -940,6 +947,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="46181" name="Bikini No.1" type="Armor">
 		<!-- Bikini for female characters.  -->
@@ -950,6 +958,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="46182" name="Bikini No.2" type="Armor">
 		<!-- Bikini for female characters.  -->
@@ -960,6 +969,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="46183" name="Joyful Birthday Pack" type="EtcItem">
 		<!-- A gift from Alegria for your character's birthday. Double-click to get 10 Happy Birthday Potions and a Birthday Hat. -->
@@ -973,6 +983,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="46184" name="Happy Birthday Potion" type="EtcItem">
 		<!-- 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
@@ -982,10 +993,12 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="80" />
 	</item>
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
@@ -996,6 +1009,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims.. . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1.. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. . 3. Anakim Blessing : Acq -->
@@ -1010,6 +1024,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
@@ -1022,6 +1037,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
 		<!-- Wrapped Pack containing an Agathion - Anakim Holy Barrier (30-day) or an Agathion - Anakim Holy Barrier. -->
@@ -1032,6 +1048,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
 		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
@@ -1065,6 +1082,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="46192" name="Vampiric Outfit" type="Armor">
 		<!-- Vampiric outfit. -->

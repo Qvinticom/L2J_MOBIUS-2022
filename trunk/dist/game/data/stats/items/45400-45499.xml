@@ -381,6 +381,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="48" />
+			<add stat="maxMp" val="21" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -947,7 +948,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -978,7 +979,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />

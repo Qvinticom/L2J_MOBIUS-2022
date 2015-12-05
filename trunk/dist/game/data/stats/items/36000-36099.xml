@@ -20,7 +20,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 	</item>
-	<item id="36002" name="Heavenly CP Cookie" type="EtcItem">
+	<item id="36002" name="Heavenly CP Cookie " type="EtcItem">
 		<!-- For 1 hour, increases maximum CP by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -149,7 +149,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 	</item>
-	<item id="36013" name="Heavenly CP Cookie" additionalName="Event" type="EtcItem">
+	<item id="36013" name="Heavenly CP Cookie " additionalName="Event" type="EtcItem">
 		<!-- For 1 hr., increases Max CP by 20%. Cooldown is 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -634,7 +634,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
@@ -672,7 +672,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -709,7 +709,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtkSpd" val="433" />
 		</for>
@@ -729,7 +729,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="pAtkSpd" val="293" />
 		</for>
@@ -737,6 +737,7 @@
 	<item id="36051" name="Clan Cloak - Standard" type="Armor">
 		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be acquired through a clan request. Can be used only on clan members. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -753,6 +754,7 @@
 	<item id="36052" name="Clan Cloak - Clan Hall (Auction)" type="Armor">
 		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own auction-type Clan Halls. When S or S80-grade armor set is all equipped, or upper armor above R-grade i -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -770,6 +772,7 @@
 	<item id="36053" name="Clan Cloak - Castle" type="Armor">
 		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be used only on members of clans that own a castle. STR + 2 / INT + 2 effect. When S or S80-grade armor set is all equipped, or upper armor abov -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -780,6 +783,8 @@
 		<set name="price" val="15000000" />
 		<set name="weight" val="220" />
 		<for>
+			<add stat="INT" val="2" />
+			<add stat="STR" val="2" />
 			<add order="0" stat="mDef" val="40" />
 			<add order="0" stat="pDef" val="50" />
 		</for>

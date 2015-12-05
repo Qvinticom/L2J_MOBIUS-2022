@@ -1305,7 +1305,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
 		</for>
@@ -1402,7 +1402,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
 		</for>

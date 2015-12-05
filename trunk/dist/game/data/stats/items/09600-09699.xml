@@ -559,13 +559,13 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9639" name="Tears r2" type="Weapon">
@@ -587,13 +587,13 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9640" name="Tears r3" type="Weapon">
@@ -615,13 +615,13 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9641" name="Tears l1" type="Weapon">
@@ -643,13 +643,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9642" name="Tears l2" type="Weapon">
@@ -671,13 +671,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9643" name="Tears l3" type="Weapon">
@@ -699,13 +699,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="5" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="9644" name="For NPC (Crossbow)" type="Weapon">
@@ -782,7 +782,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
-		<set name="item_skill" val="2213-22" />
+		<set name="item_skill" val="2213-22" /> <!-- Scroll of Escape: Talking Island Village -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="35000" />
 		<set name="weight" val="30" />

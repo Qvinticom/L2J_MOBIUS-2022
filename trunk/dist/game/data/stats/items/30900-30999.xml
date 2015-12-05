@@ -355,7 +355,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -382,7 +382,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -409,7 +409,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -435,7 +435,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -462,7 +462,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="970" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="170" />
@@ -722,7 +722,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -750,7 +750,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -778,7 +778,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -805,7 +805,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="84" />
 			<set stat="pAtk" val="316" />
@@ -935,10 +935,10 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1350" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="114" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="30939" name="Bound Arthro Nail" type="Weapon">
@@ -1099,10 +1099,10 @@
 		<set name="price" val="20950" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="30946" name="Bound Avadon Circlet" type="Armor">
@@ -1296,7 +1296,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1380" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -1323,7 +1323,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1380" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -1350,7 +1350,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1380" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -1377,7 +1377,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1380" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -1398,9 +1398,9 @@
 		<set name="price" val="167750" />
 		<set name="weight" val="940" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="13" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="30960" name="Bound Arcana Mace" type="Weapon">

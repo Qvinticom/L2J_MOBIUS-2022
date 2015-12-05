@@ -354,7 +354,7 @@
 	<item id="26229" name="Fated Support Box: Ertheia Wizard (C-grade)" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for Ertheia wizard-type characters. Can be used by characters Lv. 40 - 84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="11855,1,1,100;12097,1,1,100;12098,1,1,100;12099,1,1,100;12100,1,1,100;12145,1,1,100" /> <!-- Common Item - Demon's Staff -  -->
+		<set name="capsuled_items" val="11855,1,1,100;12097,1,1,100;12098,1,1,100;12099,1,1,100;12100,1,1,100;12145,1,1,100" /> <!-- Common Item - Demon's Staff, Common Item - Karmian Gloves, Common Item - Karmian Boots, Common Item - Karmian Tunic, Common Item - Karmian Stockings, Common Item - Full Plate Helmet -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -370,7 +370,7 @@
 	<item id="26230" name="Fated Support Box: Ertheia Fighter (C-grade)" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for Ertheia fighter-type characters. Can be used by characters Lv. 40 - 84. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="11839,1,1,100;12135,1,1,100;12136,1,1,100;12137,1,1,100;12145,1,1,100" /> <!-- Common Item - Great Pata -  -->
+		<set name="capsuled_items" val="11839,1,1,100;12135,1,1,100;12136,1,1,100;12137,1,1,100;12145,1,1,100" /> <!-- Common Item - Great Pata, Common Item - Drake Leather Armor, Common Item - Drake Leather Boots, Common Item - Divine Gloves, Common Item - Full Plate Helmet -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
@@ -615,6 +615,7 @@
 	<item id="26249" name="Cloak of Light for the Chosen" type="Armor">
 		<!-- Cloak of Light for those who have proven themselves as testers in Lineage II. P. Def. + 100, M. Def. + 80, and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -623,13 +624,20 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<for>
-			<add stat="mDef" val="40" />
-			<add stat="pDef" val="50" />
+			<add stat="CON" val="2" />
+			<add stat="DEX" val="2" />
+			<add stat="INT" val="2" />
+			<add stat="MEN" val="2" />
+			<add stat="STR" val="2" />
+			<add stat="WIT" val="2" />
+			<add order="0" stat="mDef" val="40" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="26250" name="Cloak of Darkness for the Chosen" type="Armor">
 		<!-- Cloak of Darkness for those who have proven themselves as testers in Lineage II. P. Def. + 100, M. Def. + 80, and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -638,8 +646,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
 		<for>
-			<add stat="mDef" val="40" />
-			<add stat="pDef" val="50" />
+			<add stat="CON" val="2" />
+			<add stat="DEX" val="2" />
+			<add stat="INT" val="2" />
+			<add stat="MEN" val="2" />
+			<add stat="STR" val="2" />
+			<add stat="WIT" val="2" />
+			<add order="0" stat="mDef" val="40" />
+			<add order="0" stat="pDef" val="50" />
 		</for>
 	</item>
 	<item id="26251" name="Lilith Server Mask" type="Armor">
@@ -712,8 +726,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="685" />
@@ -735,6 +750,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -757,6 +773,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -779,6 +796,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -802,6 +820,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -825,8 +844,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -848,8 +868,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1481" />
@@ -871,8 +892,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1333" />
@@ -894,6 +916,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="486" />
@@ -916,6 +939,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -939,6 +963,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -962,6 +987,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -984,8 +1010,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -1007,6 +1034,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1025,8 +1053,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="546" />
 		</for>
@@ -1043,7 +1072,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<for>
-			<add stat="pDef" val="150" />
+			<add order="0" stat="pDef" val="150" />
 		</for>
 	</item>
 	<item id="26272" name="Mysterious Halloween Potion" type="EtcItem">
@@ -1090,8 +1119,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="685" />
@@ -1113,6 +1143,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -1135,6 +1166,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -1157,6 +1189,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1180,6 +1213,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1203,8 +1237,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -1226,8 +1261,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1481" />
@@ -1249,8 +1285,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="1333" />
@@ -1272,6 +1309,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="486" />
@@ -1294,6 +1332,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1317,6 +1356,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1340,6 +1380,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="414" />
@@ -1362,8 +1403,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="500" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
@@ -1385,6 +1427,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1403,8 +1446,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="546" />
 		</for>
@@ -1421,7 +1465,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<for>
-			<add stat="pDef" val="150" />
+			<add order="0" stat="pDef" val="150" />
 		</for>
 	</item>
 	<item id="26291" name="Kaliel's Energy" additionalName="Longing" type="EtcItem">

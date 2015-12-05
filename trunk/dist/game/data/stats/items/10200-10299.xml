@@ -100,6 +100,7 @@
 		<set name="weight" val="130" />
 		<for>
 			<mul stat="magicSuccRes" val="1.15" />
+			<add stat="maxMp" val="35" />
 			<add order="0" stat="pDef" val="26" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -137,7 +138,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="1144000" />
 		<set name="weight" val="150" />
-		<for/>
 	</item>
 	<item id="10210" name="Enhanced Mithril Bracelet" type="Armor">
 		<!-- Activates 4 talisman slots when equipped. Increases Max MP by 120. -->
@@ -152,7 +152,6 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="3556000" />
 		<set name="weight" val="150" />
-		<for/>
 	</item>
 	<item id="10211" name="Blessed Ring of Resurrection" type="Armor">
 		<!-- Makes a Blessed Resurrection available for up to 180 min. Only one effect is applied, even if you wear two identical rings. -->
@@ -255,11 +254,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10216" name="Icarus Disperser" type="Weapon">
@@ -283,13 +282,13 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="433" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10217" name="Icarus Spirit" type="Weapon">
@@ -315,11 +314,11 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10218" name="Icarus Heavy Arms" type="Weapon">
@@ -345,11 +344,11 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10219" name="Icarus Trident" type="Weapon">
@@ -374,13 +373,13 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10220" name="Icarus Hammer" type="Weapon">
@@ -406,11 +405,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="363" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10221" name="Icarus Hand" type="Weapon">
@@ -436,11 +435,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="442" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10222" name="Icarus Hall" type="Weapon">
@@ -467,11 +466,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="217" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="290" />
 			<set stat="pAtkSpd" val="379" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10223" name="Icarus Spitter" type="Weapon">
@@ -498,13 +497,13 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="689" />
 			<set stat="pAtkSpd" val="293" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10224" name="Icarus Stinger" type="Weapon">
@@ -533,13 +532,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="329" />
 			<set stat="pAtkSpd" val="406" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10225" name="Icarus Wingblade" type="Weapon">
@@ -569,11 +568,11 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="393" />
 			<set stat="pAtkSpd" val="350" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10226" name="Icarus Shooter" type="Weapon">
@@ -602,13 +601,13 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="163" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="303" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10227" name="Dynasty Platinum Plate" type="Armor">
@@ -1068,11 +1067,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="222" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="325" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10253" name="Dynasty Crusher" type="Weapon">
@@ -1098,11 +1097,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="151" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10254" name="1st Place Treasure Sack" additionalName="Event" type="EtcItem">
@@ -1472,7 +1471,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2140" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
@@ -1498,11 +1497,11 @@
 		<set name="weight" val="2530" />
 		<for>
 			<add stat="critRate" val="8" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="37" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="73" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="10279" name="Transformation Scroll: Onyx Beast" type="EtcItem">

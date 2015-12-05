@@ -171,7 +171,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<for>
-			<add stat="mDef" val="1" />
+			<add order="0" stat="mDef" val="1" />
 		</for>
 	</item>
 	<item id="22914" name="Wedding Ring - Female" type="Armor">
@@ -186,7 +186,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<for>
-			<add stat="mDef" val="1" />
+			<add order="0" stat="mDef" val="1" />
 		</for>
 	</item>
 	<item id="22915" name="Flower Shower" type="EtcItem">
@@ -218,7 +218,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
@@ -752,7 +752,7 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="22957" name="Pink Paper Mask Set" additionalName="Blessed Soul (30-day)" type="Armor">
+	<item id="22957" name="Pink Paper Mask Set " additionalName="Blessed Soul (30-day)" type="Armor">
 		<!-- Fancy mask and hat made of pink paper. Cooldown is 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
 		<set name="bodypart" val="hair" />

@@ -26,11 +26,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="145" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4901" name="Staff of Evil Spirits" additionalName="Blessed Body" type="Weapon">
@@ -58,11 +58,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="145" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Poison" type="Weapon">
@@ -90,11 +90,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="145" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="189" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4903" name="Dasparion's Staff" type="Weapon">
@@ -119,11 +119,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4904" name="Dasparion's Staff" type="Weapon">
@@ -140,7 +140,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="onmagic_chance" val="4" />
-		<set name="onmagic_skill" val="1164-14" />
+		<set name="onmagic_skill" val="1164-14" /> <!-- Curse Weakness -->
 		<set name="price" val="18300000" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
@@ -150,11 +150,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4905" name="Dasparion's Staff" type="Weapon">
@@ -171,7 +171,7 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="onmagic_chance" val="4" />
-		<set name="onmagic_skill" val="1222-10" />
+		<set name="onmagic_skill" val="1222-10" /> <!-- Curse Chaos -->
 		<set name="price" val="18300000" />
 		<set name="random_damage" val="20" />
 		<set name="soulshots" val="1" />
@@ -181,11 +181,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="143" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="207" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="4906" name="Spellbook: Solar Spark" type="EtcItem">

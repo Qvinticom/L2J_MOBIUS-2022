@@ -401,7 +401,8 @@
 	<item id="34634" name="Refined Devil Horn" type="Armor">
 		<!-- Refined Devil Horn -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hairall" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="500000" />

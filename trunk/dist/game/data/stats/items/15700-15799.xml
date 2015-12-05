@@ -188,9 +188,9 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="16" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="15710" name="Sealed Moirai Shield" type="Armor">
@@ -206,10 +206,10 @@
 		<set name="price" val="8839000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="337" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="15711" name="War Veteran Voucher" type="EtcItem">
@@ -305,6 +305,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="69" />
+			<add stat="maxMp" val="27" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -323,8 +324,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="104" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="39" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15719" name="Elegia Necklace" type="Armor">
@@ -342,8 +343,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="138" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="52" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15720" name="Vorpal Ring" type="Armor">
@@ -379,8 +380,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="98" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="38" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15722" name="Vorpal Necklace" type="Armor">
@@ -398,8 +399,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="131" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="51" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15723" name="Moirai Ring" type="Armor">
@@ -435,8 +436,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="86" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="36" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15725" name="Moirai Necklace" type="Armor">
@@ -454,8 +455,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="115" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15726" name="Sealed Elegia Helmet" type="Armor">
@@ -762,10 +763,10 @@
 		<set name="price" val="17575000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="392" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="15742" name="Sealed Elegia Sigil" type="Armor">
@@ -782,9 +783,9 @@
 		<set name="price" val="17575000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="21" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="15743" name="Sealed Vorpal Helmet" type="Armor">
@@ -1091,10 +1092,10 @@
 		<set name="price" val="14658000" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="379" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="15759" name="Sealed Vorpal Sigil" type="Armor">
@@ -1111,9 +1112,9 @@
 		<set name="price" val="14658000" />
 		<set name="weight" val="920" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="19" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="15760" name="Sealed Elegia Ring" type="Armor">
@@ -1149,8 +1150,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="92" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="39" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15762" name="Sealed Elegia Necklace" type="Armor">
@@ -1168,8 +1169,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="121" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="52" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15763" name="Sealed Vorpal Ring" type="Armor">
@@ -1205,8 +1206,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="86" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="38" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15765" name="Sealed Vorpal Necklace" type="Armor">
@@ -1224,8 +1225,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="115" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="51" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15766" name="Sealed Moirai Ring" type="Armor">
@@ -1261,8 +1262,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="76" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="36" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15768" name="Sealed Moirai Necklace" type="Armor">
@@ -1280,8 +1281,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="101" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="48" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="15769" name="Sealed Vesper Ring Gem" type="EtcItem">

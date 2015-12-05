@@ -48,7 +48,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="317" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="246" />
@@ -292,7 +292,7 @@
 		<set name="price" val="187" />
 		<set name="weight" val="457" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
 		</for>
@@ -496,7 +496,7 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="450" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="114" />
 		</for>
@@ -927,7 +927,7 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="447" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="128" />
 		</for>
@@ -1126,7 +1126,7 @@
 		<set name="price" val="584" />
 		<set name="weight" val="440" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
 		</for>
@@ -1223,7 +1223,7 @@
 		<set name="price" val="584" />
 		<set name="weight" val="440" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
 		</for>
@@ -1288,7 +1288,7 @@
 		<set name="price" val="746" />
 		<set name="weight" val="437" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
 		</for>
@@ -1369,7 +1369,7 @@
 		<set name="price" val="746" />
 		<set name="weight" val="437" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
 		</for>
@@ -1583,7 +1583,7 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="430" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="166" />
 		</for>
@@ -1665,7 +1665,7 @@
 		<set name="price" val="944" />
 		<set name="weight" val="427" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="166" />
 		</for>

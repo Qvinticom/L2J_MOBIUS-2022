@@ -209,7 +209,7 @@
 	<item id="15411" name="6th Anniversary Party Gift Set (2003)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 30-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15418,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15418,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 30-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 	<item id="15412" name="6th Anniversary Party Gift Set (2004)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 25-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15419,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15419,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 25-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -245,7 +245,7 @@
 	<item id="15413" name="6th Anniversary Party Gift Set (2005)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 20-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15420,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15420,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 20-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -263,7 +263,7 @@
 	<item id="15414" name="6th Anniversary Party Gift Set (2006)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 15-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15421,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15421,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 15-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 	<item id="15415" name="6th Anniversary Party Gift Set (2007)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 10-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15422,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15422,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -299,7 +299,7 @@
 	<item id="15416" name="6th Anniversary Party Gift Set (2008)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 5-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15423,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15423,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 5-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -317,7 +317,7 @@
 	<item id="15417" name="6th Anniversary Party Gift Set (2009)" additionalName="Event" type="EtcItem">
 		<!-- Hero's Treasure Chest. Contains the 6th Anniversary Party Cube, a 3-day expiratory item. It automatically disappears at the end of the 6th anniversary cube event. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="capsuled_items" val="15425,1,1,100;15424,1,1,100" /> <!-- Hero's Treasure Chest - Event -->
+		<set name="capsuled_items" val="15425,1,1,100;15424,1,1,100" /> <!-- Hero's Treasure Chest - Event, 6th Anniversary Party Cube (Event) - 3-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -440,7 +440,7 @@
 	<item id="15425" name="Hero's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Contains an armor set Pack (30-day), a Minion Coupon, and a Hero's Escape Point item. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="capsuled_items" val="15211,1,1,100;13273,1,1,100;15426,1,1,100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
+		<set name="capsuled_items" val="15211,1,1,100;13273,1,1,100;15426,1,1,100" /> <!-- Equipment Set Pack (30-day) - 30-day, Minion Coupon (5-hour) - 30-day, Hero's Escape Point - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -914,7 +914,7 @@
 	<item id="15454" name="Shiny Alien Mask Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Alien Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15449,1,1,100" /> <!-- Shiny Alien Mask -  -->
+		<set name="capsuled_items" val="15449,1,1,100" /> <!-- Shiny Alien Mask - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -930,7 +930,7 @@
 	<item id="15455" name="Shiny Reanimated Corpse Mask Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Reanimated Corpse Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15450,1,1,100" /> <!-- Shiny Reanimated Corpse Mask -  -->
+		<set name="capsuled_items" val="15450,1,1,100" /> <!-- Shiny Reanimated Corpse Mask - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -946,7 +946,7 @@
 	<item id="15456" name="Shiny Shriek Mask Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Shriek Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15451,1,1,100" /> <!-- Shiny Shriek Mask -  -->
+		<set name="capsuled_items" val="15451,1,1,100" /> <!-- Shiny Shriek Mask - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -962,7 +962,7 @@
 	<item id="15457" name="Shiny Red Devil Mask Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Red Devil Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15452,1,1,100" /> <!-- Shiny Red Devil Mask -  -->
+		<set name="capsuled_items" val="15452,1,1,100" /> <!-- Shiny Red Devil Mask - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -978,7 +978,7 @@
 	<item id="15458" name="Shiny Mummy Mask Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Shiny Mummy Mask. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="capsuled_items" val="15453,1,1,100" /> <!-- Shiny Mummy Mask -  -->
+		<set name="capsuled_items" val="15453,1,1,100" /> <!-- Shiny Mummy Mask - Event -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1038,7 +1038,7 @@
 	<item id="15462" name="Halloween King Pumpkin" additionalName="Event" type="EtcItem">
 		<!-- Halloween King Pumpkin. Contains 6 Halloween nectar pumpkins and a Golden Jack O'Lantern Mask (7 day). -->
 		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
-		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" /> <!-- Halloween Nectar Pumpkin - Event -->
+		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" /> <!-- Halloween Nectar Pumpkin - Event, Golden Jack O'Lantern Mask - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -1128,7 +1128,7 @@
 	<item id="15468" name="Halloween King Pumpkin (Event)" additionalName="Event" type="EtcItem">
 		<!-- Halloween King Pumpkin. Contains 6 Halloween nectar pumpkins and a Golden Jack O'Lantern Mask (7 day). -->
 		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
-		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" /> <!-- Halloween Nectar Pumpkin - Event -->
+		<set name="capsuled_items" val="15461,6,6,100;15464,1,1,100" /> <!-- Halloween Nectar Pumpkin - Event, Golden Jack O'Lantern Mask - 7-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

@@ -476,7 +476,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -494,7 +494,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -512,7 +512,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -529,7 +529,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
@@ -654,6 +654,7 @@
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="default_action" val="RECIPE" />
+		<set name="handler" val="Recipes" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="10000" />
@@ -691,7 +692,7 @@
 	<item id="38176" name="Crystal Dagger Appearance Stone" type="EtcItem">
 		<!-- Turns the appearance of a one-handed dagger into that of a Crystal Dagger . -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />

@@ -12,8 +12,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="106" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="46" />
+			<add stat="windRes" val="30" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35601" name="Water Royal Guard Ring" type="Armor">
@@ -28,6 +29,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
+			<add stat="waterRes" val="15" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -42,6 +44,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="earthRes" val="15" />
 			<add order="0" stat="mDef" val="60" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -57,6 +60,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="15" />
 			<add order="0" stat="mDef" val="60" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -72,6 +76,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="holyRes" val="15" />
 			<add order="0" stat="mDef" val="60" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -87,6 +92,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="15" />
 			<add order="0" stat="mDef" val="60" />
 			<enchant stat="mDef" val="0" />
 		</for>
@@ -103,6 +109,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="60" />
+			<add stat="windRes" val="15" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -118,8 +125,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35608" name="Resistance Earring B" type="Armor">
@@ -133,9 +141,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="holyRes" val="8" />
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35609" name="Resistance Earring C" type="Armor">
@@ -150,8 +159,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35610" name="Resistance Earring D" type="Armor">
@@ -165,9 +175,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="8" />
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35611" name="Resistance Earring E" type="Armor">
@@ -181,9 +192,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="earthRes" val="8" />
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35612" name="Resistance Earring F" type="Armor">
@@ -198,8 +210,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<add stat="waterRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35613" name="Resistance Earring G" type="Armor">
@@ -213,9 +226,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="8" />
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35614" name="Resistance Earring H" type="Armor">
@@ -229,9 +243,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="8" />
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35615" name="Resistance Earring I" type="Armor">
@@ -246,8 +261,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="63" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="25" />
+			<add stat="windRes" val="8" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35616" name="Top-grade Resistance Earring - Stun" type="Armor">
@@ -262,8 +278,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35617" name="Top-grade Resistance Earring - Hold" type="Armor">
@@ -278,8 +295,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35618" name="Top-grade Resistance Earring - Bleed" type="Armor">
@@ -294,8 +312,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35619" name="Top-grade Resistance Earring - Paralyze" type="Armor">
@@ -310,8 +329,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35620" name="Top-grade Resistance Earring - Mental Attack" type="Armor">
@@ -326,8 +346,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35621" name="Top-grade Resistance Earring - Sleep" type="Armor">
@@ -342,8 +363,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35622" name="Top-grade Resistance Earring - Poison" type="Armor">
@@ -358,8 +380,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35623" name="Top-grade Resistance Earring - Knock Back/Knock Down" type="Armor">
@@ -374,8 +397,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35624" name="Top-grade Resistance Earring - Aerial Yoke" type="Armor">
@@ -390,8 +414,9 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="118" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="46" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35625" name="Royal Guard Earring A" type="Armor">
@@ -406,8 +431,10 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<add stat="waterRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35626" name="Royal Guard Earring B" type="Armor">
@@ -421,9 +448,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="holyRes" val="10" />
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35627" name="Royal Guard Earring C" type="Armor">
@@ -438,8 +467,10 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<add stat="windRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35628" name="Royal Guard Earring D" type="Armor">
@@ -453,9 +484,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="darkRes" val="10" />
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35629" name="Royal Guard Earring E" type="Armor">
@@ -469,9 +502,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="earthRes" val="10" />
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35630" name="Royal Guard Earring F" type="Armor">
@@ -486,8 +521,10 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<add stat="waterRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35631" name="Royal Guard Earring G" type="Armor">
@@ -501,9 +538,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="10" />
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35632" name="Royal Guard Earring H" type="Armor">
@@ -517,9 +556,11 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="fireRes" val="10" />
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35633" name="Royal Guard Earring I" type="Armor">
@@ -534,8 +575,10 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="79" />
-			<enchant stat="mDef" val="0" />
+			<mul stat="maxCp" val="1.05" />
 			<add stat="maxMp" val="35" />
+			<add stat="windRes" val="10" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="35634" name="Sword of Protection" type="Weapon">
@@ -581,7 +624,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="654" />
@@ -630,7 +673,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="291" />
@@ -836,7 +879,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="602" />
@@ -1013,6 +1056,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
@@ -1085,7 +1129,7 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="302" />
@@ -1158,7 +1202,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="527" />
@@ -1261,7 +1305,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="602" />
@@ -1282,7 +1326,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="1185" />
@@ -1303,7 +1347,7 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="1067" />
@@ -1407,7 +1451,7 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="298" />
 			<set stat="pAtk" val="602" />
@@ -1461,6 +1505,7 @@
 	<item id="35693" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 1 day. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="duration" val="180" />
 		<set name="is_auctionable" val="false" />
@@ -1479,6 +1524,7 @@
 	<item id="35694" name="Santa Girl's Cloak" additionalName="3-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. This Santa Girl's Holiday Event reward item. 3 days. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
+		<set name="bodypart" val="back" />
 		<set name="default_action" val="EQUIP" />
 		<set name="duration" val="540" />
 		<set name="is_auctionable" val="false" />

@@ -330,7 +330,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
 		</for>
@@ -351,7 +351,7 @@
 	<item id="13527" name="Test Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back01" />
 		<set name="bodypart" val="back" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -394,10 +394,10 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1430" />
 		<for>
-			<enchant stat="pDef" val="0" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="13530" name="Flag of Gludio" type="Weapon">
@@ -642,11 +642,11 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<enchant val="0" stat="mAtk" />
 			<set stat="mAtk" val="12" />
-			<enchant val="0" stat="pAtk" />
 			<set stat="pAtk" val="11" />
 			<set stat="pAtkSpd" val="325" />
+			<enchant stat="mAtk" val="0" />
+			<enchant stat="pAtk" val="0" />
 		</for>
 	</item>
 	<item id="13540" name="Master Yogi's Scroll: Enchant Weapon" type="EtcItem">

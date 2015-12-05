@@ -18,10 +18,12 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
 			<set stat="mAtk" val="151" />
+			<mul stat="maxHp" val="1.25" />
 			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="379" />
 		</for>
@@ -44,6 +46,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
@@ -69,6 +72,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
@@ -94,6 +98,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -120,9 +125,11 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
+			<mul stat="maxHp" val="1.10" />
 			<set stat="pAtk" val="405" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -145,8 +152,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
@@ -171,6 +179,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="1800" />
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
@@ -197,8 +206,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="1280" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="302" />
@@ -223,8 +233,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="401" />
@@ -355,6 +366,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="45819" name="Player Commendation Points Coupon (720 Points)" type="EtcItem">
 		<!-- When double-clicked, 720 Player Commendation Points can be acquired. -->
@@ -368,6 +380,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="45820" name="Observation Report" type="EtcItem">
 		<!-- Research results received from Cardinal Seresin at the Town of Oren. It talks about the anomaly in the Dark Elf region after the appearance of Shilen and the epidemic. Double-click to read the details.  -->
@@ -430,8 +443,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="219" />
 			<set stat="pAtk" val="441" />
@@ -457,6 +471,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="219" />
@@ -483,6 +498,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="219" />
@@ -509,6 +525,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -536,6 +553,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -563,8 +581,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="219" />
 			<set stat="pAtk" val="504" />
@@ -590,8 +609,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="219" />
 			<set stat="pAtk" val="992" />
@@ -617,8 +637,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="219" />
 			<set stat="pAtk" val="894" />
@@ -644,6 +665,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="293" />
@@ -670,6 +692,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -697,6 +720,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -724,6 +748,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="219" />
@@ -750,8 +775,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="219" />
 			<set stat="pAtk" val="504" />
@@ -777,6 +803,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -990,8 +1017,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="254" />
 			<set stat="pAtk" val="511" />
@@ -1017,6 +1045,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="254" />
@@ -1043,6 +1072,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="254" />
@@ -1069,6 +1099,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1096,6 +1127,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1123,8 +1155,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="254" />
 			<set stat="pAtk" val="584" />
@@ -1150,8 +1183,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="254" />
 			<set stat="pAtk" val="1151" />
@@ -1177,8 +1211,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="254" />
 			<set stat="pAtk" val="1036" />
@@ -1204,6 +1239,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="339" />
@@ -1230,6 +1266,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1257,6 +1294,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1284,6 +1322,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="254" />
@@ -1310,8 +1349,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="254" />
 			<set stat="pAtk" val="584" />
@@ -1337,6 +1377,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1357,6 +1398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="45866" name="Golden Festival Coin" additionalName="Event" type="EtcItem">
 		<!-- A golden festival coin that can be obtained from Kableon's game in the Talkity Talk Talk Troupe Festival. Take it to Nostra Gibbs to exchange for a Lucky Tarot Card. Will be deleted once the event ends. -->
@@ -1366,6 +1408,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 	</item>
 	<item id="45867" name="Summon Scroll: Kableon" additionalName="Event" type="EtcItem">
 		<!-- Summon Kableon to get a star rating. If you get 5 stars, you'll receive a Golden Festival Coin. It can only be used in a Peaceful Zone. Will be deleted once the event ends. -->
@@ -1410,6 +1453,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LEATHER" />
+		<set name="weight" val="20" />
 	</item>
 	<item id="45871" name="Proof of Disposal" type="EtcItem">
 		<!-- Item obtained from defeating the monsters that Elikia requested. Take it to Elikia in Heine. -->
@@ -1461,6 +1505,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="45875" name="Kokko's Fishing Rod Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a Normal Fishing Rod. -->
@@ -1474,6 +1519,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45876" name="Kokko's Fishing Shot Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a Fishing Shot. Will be deleted once the event ends. -->
@@ -1487,6 +1533,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45877" name="Kokko's Bait Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get bait to fish. Will be deleted once the event ends. -->
@@ -1500,6 +1547,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45878" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
 		<!-- A mysterious box with an unidentified item along with Tomas' Support Box. Double-click to find out what it is. Will be deleted once the event ends. -->
@@ -1513,6 +1561,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="45879" name="Amaranthine Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical + 81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.. No Soul Crystal option. -->
@@ -1533,8 +1582,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="558" />
@@ -1560,6 +1610,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="278" />
@@ -1586,6 +1637,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="278" />
@@ -1612,6 +1664,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1639,6 +1692,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1666,8 +1720,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="638" />
@@ -1693,8 +1748,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="1257" />
@@ -1720,8 +1776,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="1132" />
@@ -1747,6 +1804,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="371" />
@@ -1773,6 +1831,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1800,6 +1859,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1827,6 +1887,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="278" />
@@ -1853,8 +1914,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="638" />
@@ -1880,6 +1942,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weight" val="1740" />
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
@@ -1914,8 +1977,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="125" />
+			<add order="0" stat="mDef" val="125" />
+			<add stat="maxHp" val="445" />
 			<add stat="maxMp" val="62" />
 		</for>
 	</item>
@@ -1933,8 +1998,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="95" />
+			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="62" />
 		</for>
 	</item>
@@ -1952,8 +2018,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="94" />
+			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="46" />
 		</for>
 	</item>
@@ -1971,8 +2038,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="71" />
+			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="46" />
 		</for>
 	</item>
@@ -1990,8 +2058,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="48" />
+			<add order="0" stat="mDef" val="48" />
 		</for>
 	</item>
 	<item id="45899" name="Filled Ring (Queen Ant Energy)" additionalName="30-day" type="Armor">
@@ -2008,8 +2077,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 		<for>
-			<add stat="mDef" val="48" />
+			<add order="0" stat="mDef" val="48" />
 		</for>
 	</item>
 </list>

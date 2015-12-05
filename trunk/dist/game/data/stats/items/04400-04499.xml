@@ -114,7 +114,7 @@
 	<item id="4411" name="Echo Crystal - Theme of Journey" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a journey. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -140,7 +140,7 @@
 	<item id="4413" name="Echo Crystal - Theme of Love" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of love. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i02" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -153,7 +153,7 @@
 	<item id="4414" name="Echo Crystal - Theme of Solitude" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of solitude. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i03" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -166,7 +166,7 @@
 	<item id="4415" name="Echo Crystal - Theme of Festival" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -179,7 +179,7 @@
 	<item id="4416" name="Echo Crystal - Theme of Celebration" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -192,7 +192,7 @@
 	<item id="4417" name="Echo Crystal - Theme of Comedy" type="EtcItem">
 		<!-- Echo crystal that plays the theme music of a comedy. May only be used once. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="commissionItemType" val="CRYSTAL" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />

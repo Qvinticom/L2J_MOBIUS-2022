@@ -205,6 +205,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<for>
+			<add stat="inventoryLimit" val="18" />
 			<add order="0" stat="pDef" val="10" />
 		</for>
 	</item>
@@ -1253,7 +1254,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -1274,7 +1275,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2040" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
@@ -1282,7 +1283,8 @@
 	<item id="22389" name="Halloween Cloak" additionalName="7-day (Event)" type="Armor">
 		<!-- Cloak that gives off charisma. It is a Halloween event reward item that 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1292,13 +1294,14 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22390" name="Halloween Cloak" additionalName="Event" type="Armor">
 		<!-- Cloak that gives off charisma. It is a Halloween event reward item. -->
 		<set name="icon" val="BranchSys3.Icon.g_halloween_cloack_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="back" />
+		<set name="commissionItemType" val="CLOAK" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1307,7 +1310,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="pDef" val="20" />
+			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="22391" name="Halloween Pumpkin Hat" additionalName="7-day (Event)" type="Armor">

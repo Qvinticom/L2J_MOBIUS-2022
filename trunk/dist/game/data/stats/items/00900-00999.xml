@@ -49,6 +49,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="40" />
+			<add stat="maxMp" val="13" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -342,8 +343,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="95" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="42" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="921" name="Necklace of Mana" type="Armor">
@@ -412,8 +413,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="85" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="33" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="925" name="Necklace of Solar Eclipse" type="Armor">
@@ -567,8 +568,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add order="0" stat="mDef" val="80" />
-			<enchant stat="mDef" val="0" />
 			<add stat="maxMp" val="26" />
+			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
 	<item id="934" name="Cerberus Necklace" type="Armor">
@@ -721,10 +722,10 @@
 		<set name="price" val="528" />
 		<set name="weight" val="1400" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="69" />
-			<enchant val="0" stat="sDef" />
+			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
 	<item id="946" name="Skeleton Dagger" type="Weapon">
@@ -743,7 +744,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1100" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="13" />
 			<set stat="pAtk" val="16" />
@@ -1332,7 +1333,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1130" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="10" />
 			<set stat="pAtk" val="11" />

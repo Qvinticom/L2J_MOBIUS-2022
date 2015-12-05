@@ -134,9 +134,9 @@
 		<set name="price" val="320200" />
 		<set name="weight" val="930" />
 		<for>
-			<enchant stat="pDef" val="0" />
 			<add order="0" stat="pDef" val="15" />
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
+			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="33608" name="Unidentified Dynasty Knife" additionalName="Event" type="EtcItem">
@@ -415,9 +415,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
-		<for>
-			<add order="0" stat="pDef" val="37" />
-		</for>
 	</item>
 	<item id="33642" name="Kukurin Bracelet" type="Armor">
 		<!-- When equipped, you can mount a Kukurin. -->

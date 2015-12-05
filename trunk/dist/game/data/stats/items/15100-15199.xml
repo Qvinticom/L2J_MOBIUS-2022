@@ -34,7 +34,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
 		</for>
@@ -417,7 +417,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1200" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
 		</for>
@@ -584,7 +584,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1220" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="203" />
 		</for>
@@ -768,7 +768,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1320" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
 		</for>
@@ -865,7 +865,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1180" />
 		<for>
-			<sub stat="rEvas" val="-8" />
+			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
 		</for>
@@ -1017,7 +1017,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="220" />
@@ -1048,7 +1048,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="980" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="153" />
@@ -1079,7 +1079,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1010" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="122" />
@@ -1108,7 +1108,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1060" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="80" />
@@ -1141,7 +1141,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="133" />
 			<set stat="pAtk" val="570" />
@@ -1174,7 +1174,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1700" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="400" />
@@ -1207,7 +1207,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1720" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="323" />
@@ -1239,7 +1239,7 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1810" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="191" />
@@ -1734,7 +1734,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-17" />
+		<set name="enchant4_skill" val="3045-17" /> <!-- Special Ability: Haste -->
 		<set name="enchanted" val="4" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1764,7 +1764,7 @@
 		<set name="crystal_type" val="B" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="default_action" val="EQUIP" />
-		<set name="enchant4_skill" val="3045-14" />
+		<set name="enchant4_skill" val="3045-14" /> <!-- Special Ability: Haste -->
 		<set name="enchanted" val="4" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
@@ -1868,7 +1868,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
@@ -1899,7 +1899,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="194" />
@@ -1930,7 +1930,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1950" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
@@ -1960,7 +1960,7 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2050" />
 		<for>
-			<add stat="accCombat" val="-3.75" />
+			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
@@ -2130,7 +2130,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="228" />
@@ -2165,7 +2165,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="176" />
@@ -2200,7 +2200,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="141" />
@@ -2234,7 +2234,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="83" />
@@ -2269,7 +2269,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="318" />
@@ -2304,7 +2304,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="245" />
@@ -2339,7 +2339,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="198" />
@@ -2373,7 +2373,7 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<add stat="accCombat" val="-1.5" />
+			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="117" />
@@ -2383,7 +2383,7 @@
 	<item id="15194" name="Knight Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the knight occupation class. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15237,1,1,100;15238,1,1,100;15241,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day -->
+		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15237,1,1,100;15238,1,1,100;15241,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day, Doom Plate Armor of Fortune Set Pack - 10-day, Full Plate of Fortune Set Pack - 10-day, Brigandine of Fortune Set Pack - 10-day, Blunt Weapon of Fortune Set - 10-day, One-handed Sword of Fortune Set - 10-day, Dualsword of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2398,7 +2398,7 @@
 	<item id="15195" name="Mage Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the magic classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15230,1,1,100;15231,1,1,100;15232,1,1,100;15233,1,1,100;15234,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Robe of Fortune Set Pack - 10-day -->
+		<set name="capsuled_items" val="15230,1,1,100;15231,1,1,100;15232,1,1,100;15233,1,1,100;15234,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Robe of Fortune Set Pack - 10-day, Avadon Robe of Fortune Set Pack - 10-day, Karmian of Fortune Set Pack - 10-day, Mithril Tunic of Fortune Set Pack - 10-day, Magic Weapon of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2413,7 +2413,7 @@
 	<item id="15196" name="Warrior Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the warrior classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15237,1,1,100;15241,1,1,100;15242,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day -->
+		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15237,1,1,100;15241,1,1,100;15242,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day, Doom Plate Armor of Fortune Set Pack - 10-day, Full Plate of Fortune Set Pack - 10-day, Brigandine of Fortune Set Pack - 10-day, Blunt Weapon of Fortune Set - 10-day, Dualsword of Fortune Set - 10-day, Spear of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2428,7 +2428,7 @@
 	<item id="15197" name="Rogue Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the Rogue classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15235,1,1,100;15236,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack - 10-day -->
+		<set name="capsuled_items" val="15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15235,1,1,100;15236,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack - 10-day, Leather Armor of Doom of Fortune Set Pack - 10-day, Plated Leather of Fortune Set Pack - 10-day, Manticore Leather of Fortune Set Pack - 10-day, Dagger of Fortune Set - 10-day, Bow of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2443,7 +2443,7 @@
 	<item id="15198" name="Kamael Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the Kamael classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15243,1,1,100;15244,1,1,100;15245,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack - 10-day -->
+		<set name="capsuled_items" val="15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15243,1,1,100;15244,1,1,100;15245,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Dark Crystal Light Armor of Fortune Set Pack - 10-day, Leather Armor of Doom of Fortune Set Pack - 10-day, Plated Leather of Fortune Set Pack - 10-day, Manticore Leather of Fortune Set Pack - 10-day, Ancient Sword of Fortune Set - 10-day, Rapier of Fortune Set - 10-day, Crossbow of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
@@ -2458,7 +2458,7 @@
 	<item id="15199" name="Orc Fighter Class Equipment Set" additionalName="10-day" type="EtcItem">
 		<!-- Friend recommend service exclusive item set for the Orc Fighter classes. Expires after 10 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15239,1,1,100;15240,1,1,100;15242,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day -->
+		<set name="capsuled_items" val="15222,1,1,100;15223,1,1,100;15224,1,1,100;15225,1,1,100;15226,1,1,100;15227,1,1,100;15228,1,1,100;15229,1,1,100;15239,1,1,100;15240,1,1,100;15242,1,1,100;15270,1,1,100;15271,1,1,100;15272,1,1,100;15273,1,1,100" /> <!-- Fortune Heavy Armor of Nightmare Set Pack - 10-day, Doom Plate Armor of Fortune Set Pack - 10-day, Full Plate of Fortune Set Pack - 10-day, Brigandine of Fortune Set Pack - 10-day, Dark Crystal Light Armor of Fortune Set Pack - 10-day, Leather Armor of Doom of Fortune Set Pack - 10-day, Plated Leather of Fortune Set Pack - 10-day, Manticore Leather of Fortune Set Pack - 10-day, Two-handed Sword of Fortune Set - 10-day, Fist Weapon of Fortune Set - 10-day, Spear of Fortune Set - 10-day, Jewelry Pack (A-grade) - 10-day, Jewelry Pack (B-grade) - 10-day, Jewelry Pack (C-grade) - 10-day, Jewelry Pack (D-grade) - 10-day -->
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />

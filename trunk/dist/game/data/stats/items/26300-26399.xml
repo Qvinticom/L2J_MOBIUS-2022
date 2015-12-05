@@ -82,6 +82,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="26356" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed.  -->
@@ -93,6 +94,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="26357" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration -->
@@ -526,6 +528,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
+		<set name="weight" val="150" />
 	</item>
 	<item id="26390" name="Mysterious Quick Healing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that greatly restores HP for 15 seconds. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
@@ -533,8 +536,10 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
@@ -544,6 +549,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
 	</item>
 	<item id="26392" name="Rune of Feather" additionalName="7-day" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases the weight limit by 20%. The remaining time decreases even when not playing. -->
@@ -556,6 +562,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="time" val="10080" />
+		<set name="weight" val="120" />
 	</item>
 	<item id="26393" name="Transformation Scroll: Rose (F)" type="EtcItem">
 		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 30 min. -->
