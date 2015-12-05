@@ -372,6 +372,7 @@
 		</collision>
 	</npc>
 	<npc id="21604" level="92" type="L2Monster" name="Zaken's Elite Pikeman">
+	<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -387,7 +388,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- rhand: Pike -->
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="59017" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="169.13417" magical="112.611442266143" />
@@ -401,11 +402,9 @@
 			</speed>
 			<hitTime>210</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status  attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4244" level="4" /> <!-- NPC Wild Sweep -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -424,19 +423,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1121" max="2617" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="27.24799919128418">
-					<item id="36522" min="1" max="1" chance="33.12" /> <!-- Silver -->
-				</group>
-				<group chance="5.065899848937988">
-					<item id="36523" min="1" max="1" chance="6.201" /> <!-- Adamantite -->
-				</group>
+				<item id="57" min="1121" max="2617" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="28.86" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="5.652" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36522" min="1" max="1" chance="19.60" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="3.968" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="1" chance="22.2" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="4.441" /> <!-- Adamantite -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -617,6 +611,7 @@
 		</collision>
 	</npc>
 	<npc id="21607" level="92" type="L2Monster" name="Zaken's Elite Archer">
+	<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -631,7 +626,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="59017" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
 			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="173.43552" magical="115.475328468187" />
@@ -645,11 +640,9 @@
 			</speed>
 			<hitTime>800</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4040" level="4" /> <!-- NPC Bow Attack -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -668,17 +661,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1151" max="2687" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.5594000816345215">
-					<item id="36547" min="1" max="1" chance="4.929" /> <!-- Weapon Fragment -->
-					<item id="36548" min="1" max="1" chance="0.30" /> <!-- Weapon Fragment (Mid-grade) -->
-				</group>
+				<item id="57" min="1151" max="2687" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="4.041" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36547" min="1" max="1" chance="2.816" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="0.5" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36547" min="1" max="1" chance="3.1865" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -867,6 +857,7 @@
 		</collision>
 	</npc>
 	<npc id="21610" level="92" type="L2Monster" name="Zaken's Senior Watchman">
+	<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -881,7 +872,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="42789" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="59017" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="118.372898457316" />
@@ -894,7 +885,7 @@
 			</speed>
 			<hitTime>340</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status  attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4151" level="4" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="4" /> <!-- NPC Aura Burn - Magic -->
@@ -2128,6 +2119,7 @@
 		</collision>
 	</npc>
 	<npc id="21625" level="92" type="L2Monster" name="Zaken's Elite Royal Guard">
+	<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2143,7 +2135,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="225" lhand="945" /> <!-- rhand: Mithril Dagger lhand: Skeleton Buckler -->
 		<acquire exp="725986" sp="174" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1264193" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" shield="100" shieldRate="20" />
@@ -2157,14 +2149,12 @@
 			</speed>
 			<hitTime>520</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -2183,16 +2173,12 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="24.137399673461914">
-					<item id="36557" min="1" max="3" chance="29.50" /> <!-- Accessory Gem -->
-				</group>
-				<group chance="8.976900100708008">
-					<item id="36558" min="1" max="1" chance="11.04" /> <!-- Accessory Gem (Mid-grade) -->
-				</group>
+				<item id="36557" min="1" max="3" chance="26.98" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="10.34" /> <!-- Accessory Gem (Mid-grade) -->
 			</death>
 			<corpse>
-				<item id="36557" min="1" max="1" chance="30.81" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="5.792" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36557" min="1" max="1" chance="34.15" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="6.367" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2661,6 +2647,7 @@
 		</collision>
 	</npc>
 	<npc id="21631" level="92" type="L2Monster" name="Zombie Captain's Spiritual Body">
+	<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2676,7 +2663,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
 		<acquire exp="65107" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="59017" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="139.488165444537" />
@@ -2690,11 +2677,9 @@
 			</speed>
 			<hitTime>760</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status attackable="true" undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="5" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -2713,19 +2698,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1276" max="2979" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.49780011177063">
-					<item id="36552" min="1" max="1" chance="4.285" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="0.5012000203132629">
-					<item id="36553" min="1" max="1" chance="1" /> <!-- Armor Fragment (Mid-grade) -->
-				</group>
+				<item id="57" min="1276" max="2979" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="3.863" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36552" min="1" max="1" chance="2.780" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.5" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36552" min="1" max="1" chance="3.055" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

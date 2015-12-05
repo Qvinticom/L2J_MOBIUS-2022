@@ -605,11 +605,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23215" level="98" type="L2Monster" name="Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="5516540" sp="15313" />
-		<stats>
-			<vitals hp="767500" hpRegen="7.5" mp="767500" mpRegen="2.7" />
+		<acquire exp="5516540" sp="1323" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="1444" />
 			<attribute>
@@ -623,10 +623,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<!-- <skill id="4413" level="9" /> -->
-			<skill id="4414" level="1" />
 			<!-- <skill id="4411" level="13" /> -->
 			<!-- <skill id="4410" level="13" /> -->
 		</skillList>
@@ -636,44 +638,43 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="15504" max="36140" chance="70" />
-				<item id="36558" min="1" max="1" chance="3.38" />
-				<item id="35342" min="1" max="1" chance="0.6993" />
-				<item id="36559" min="1" max="1" chance="0.42017" />
-				<item id="35466" min="1" max="1" chance="0.02" />
-				<item id="17434" min="1" max="1" chance="0.0055" />
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="17.61" />
-				<item id="36559" min="1" max="1" chance="1.6555" />
-				<item id="36906" min="1" max="1" chance="0.54945" />
+				<item id="36558" min="1" max="1" chance="7.935" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="23216" level="98" type="L2Monster" name="Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="5516540" sp="15313" />
-		<stats>
-			<vitals hp="767500" hpRegen="7.5" mp="767500" mpRegen="2.7" />
+		<acquire exp="5516540" sp="1323" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="43000" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="1444" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="200" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<!-- <skill id="4413" level="9" /> -->
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -681,17 +682,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="15504" max="36140" chance="70" />
-				<item id="36558" min="1" max="1" chance="3.38" />
-				<item id="35342" min="1" max="1" chance="0.6993" />
-				<item id="36559" min="1" max="1" chance="0.42017" />
-				<item id="35466" min="1" max="1" chance="0.02" />
-				<item id="17434" min="1" max="1" chance="0.0055" />
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="18.15" />
-				<item id="36559" min="1" max="1" chance="1.6375" />
-				<item id="36906" min="1" max="1" chance="0.54945" />
+				<item id="36558" min="1" max="1" chance="7.864" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1226,11 +1226,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23229" level="98" type="L2Monster" name="Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="17467748" sp="48487" />
-		<stats>
-			<vitals hp="1535000" hpRegen="7.5" mp="1535000" mpRegen="2.7" />
+		<acquire exp="17467748" sp="4192" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="2105" />
 			<attribute>
@@ -1244,12 +1244,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -1257,26 +1257,25 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="20628" max="48127" chance="70" />
-				<item id="36558" min="1" max="1" chance="5" />
-				<item id="35342" min="1" max="1" chance="0.66667" />
-				<item id="36559" min="1" max="1" chance="0.4" />
-				<item id="35466" min="1" max="1" chance="0.02" />
-				<item id="17434" min="1" max="1" chance="0.0055" />
+				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
+				<item id="57" min="10020" max="23350" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="23.16" />
-				<item id="36559" min="1" max="1" chance="2.154" />
-				<item id="36906" min="1" max="1" chance="0.3003" />
+				<item id="36558" min="1" max="1" chance="13.19" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.211" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.0075" /> <!-- Recipe: Adamantite Wire - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="23230" level="98" type="L2Monster" name="Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="9982682" sp="27710" />
-		<stats>
-			<vitals hp="767500" hpRegen="7.5" mp="767500" mpRegen="2.7" />
+		<acquire exp="9982682" sp="2395" />
+		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="2105" />
 			<attribute>
@@ -1290,12 +1289,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="1" />
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
-			<!-- <skill id="4410" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -1303,17 +1302,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="15509" max="36185" chance="70" />
-				<item id="36558" min="1" max="1" chance="3.9" />
-				<item id="35342" min="1" max="1" chance="0.55866" />
-				<item id="36559" min="1" max="1" chance="0.33003" />
-				<item id="35466" min="1" max="1" chance="0.02" />
-				<item id="17434" min="1" max="1" chance="0.0055" />
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7533" max="17555" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="17.79" />
-				<item id="36559" min="1" max="1" chance="1.552" />
-				<item id="36906" min="1" max="1" chance="0.54945" />
+				<item id="36558" min="1" max="1" chance="7.888" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>

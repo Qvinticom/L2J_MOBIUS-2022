@@ -1426,10 +1426,10 @@
 		</collision>
 	</npc>
 	<npc id="19253" level="88" type="L2Monster" name="Zellaka" title="Lord of Kartia">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1193411" hpRegen="7.5" mp="1193411" mpRegen="2.7" />
+			<vitals hp="716048" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
 			<attribute>
@@ -1457,11 +1457,6 @@
 			<radius normal="30" />
 			<height normal="54" />
 		</collision>
-		<dropLists>
-			<death>
-				<item id="23232" min="1" max="1" chance="2.436" />
-			</death>
-		</dropLists>
 	</npc>
 	<npc id="19254" level="93" type="L2Monster" name="Pelline" title="Lord of Kartia">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->

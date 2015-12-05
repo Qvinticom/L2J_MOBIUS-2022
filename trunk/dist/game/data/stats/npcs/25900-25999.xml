@@ -3021,10 +3021,10 @@
 		</collision>
 	</npc>
 	<npc id="25967" level="97" type="L2RaidBoss" name="Zetahl" title="Raid Boss">
-		<!-- Source: http://l2on.net/en/?c=npc&id=25967 -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
 		<acquire exp="9058597718" sp="2174063" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="52069755" hpRegen="1500" mp="5206976" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -3044,6 +3044,12 @@
 			<skill id="4279" level="1" />
 			<skill id="4312" level="1" />
 			<skill id="141" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16286" level="1" /> <!-- 97Lv. Raid Boss -->
 		</skillList>
 		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
 		<collision>
@@ -3052,52 +3058,51 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
-				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
-				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
-				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
-				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil Robe -->
+				<item id="17396" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet -->
+				<item id="17399" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets -->
+				<item id="17400" min="1" max="1" chance="0.75" /> <!-- Seraph Boots -->
+				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
+				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
+				<item id="17688" min="3" max="3" chance="17.24" /> <!-- Lv. 4 Ancient INT Dye -->
+				<item id="17687" min="3" max="3" chance="17.04" /> <!-- Lv. 4 Ancient CON Dye -->
+				<item id="17685" min="3" max="3" chance="16.94" /> <!-- Lv. 4 Ancient STR Dye -->
+				<item id="17689" min="3" max="3" chance="16.9" /> <!-- Lv. 4 Ancient WIT Dye -->
+				<item id="17690" min="3" max="3" chance="16.28" /> <!-- Lv. 4 Ancient MEN Dye -->
+				<item id="17686" min="3" max="3" chance="15.84" /> <!-- Lv. 4 Ancient DEX Dye -->
+				<item id="38574" min="1" max="1" chance="2.283" /> <!-- Apparition Stone (Lv. 98) -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack -->
 				<item id="38020" min="1" max="1" chance="0.3" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
 				<item id="38021" min="1" max="1" chance="0.3" /> <!-- Specter Caster Crafting Pack -->
 				<item id="38022" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Crafting Pack -->
-				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
-				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
-				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack Heavy Armor -->
-				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack Heavy Armor -->
-				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack Heavy Armor -->
-				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack Heavy Armor -->
-				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack Light Armor -->
-				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack Light Armor -->
-				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack Light Armor -->
-				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack Light Armor -->
-				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack Light Armor -->
-				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack Robe -->
-				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack Robe -->
-				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack Robe -->
-				<item id="17685" min="3" max="3" chance="16.78" /> <!-- Lv. 4 Ancient STR Dye STR +5 / DEX - 2 / Fire Resistance +20 -->
-				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack Robe -->
-				<item id="17686" min="3" max="3" chance="17.3913" /> <!-- Lv. 4 Ancient DEX Dye DEX +5 / CON - 2 / Earth Resistance +20 -->
-				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack Robe -->
-				<item id="17687" min="3" max="3" chance="21.7391" /> <!-- Lv. 4 Ancient CON Dye CON +5 / STR - 2 / Dark Resistance +20 -->
-				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack Robe -->
-				<item id="17688" min="3" max="3" chance="17.3913" /> <!-- Lv. 4 Ancient INT Dye INT +5 / WIT - 2 / Water Resistance +20 -->
-				<item id="17689" min="3" max="3" chance="30.4347" /> <!-- Lv. 4 Ancient WIT Dye WIT +5 / MEN - 2 / Wind Resistance +20 -->
-				<item id="17690" min="3" max="3" chance="13.0434" /> <!-- Lv. 4 Ancient MEN Dye MEN +5 / INT - 2 / Holy Resistance +20 -->
-				<item id="38571" min="2" max="2" chance="100" /> <!-- Aria's Life Stone -->
-				<item id="38574" min="1" max="1" chance="2.3539" /> <!-- Apparition Stone (Lv. 98) -->
-				<item id="17396" min="1" max="1" chance="0.75" /> <!-- Seraph Helmet Heavy Armor -->
-				<item id="17526" min="1" max="1" chance="50" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="19511" min="1" max="1" chance="32.5" /> <!-- Yellow Soul Crystal Fragment (R95-grade) -->
-				<item id="17399" min="1" max="1" chance="0.75" /> <!-- Seraph Gauntlets Heavy Armor -->
-				<item id="19512" min="1" max="1" chance="43.4782" /> <!-- Teal Soul Crystal Fragment (R95-grade) -->
-				<item id="17400" min="1" max="1" chance="0.75" /> <!-- Seraph Boots Heavy Armor -->
-				<item id="19513" min="1" max="1" chance="56.5217" /> <!-- Purple Soul Crystal Fragment (R95-grade) -->
-				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield Heavy Armor -->
-				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
-				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
-				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
-				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>

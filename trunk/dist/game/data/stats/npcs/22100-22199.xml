@@ -3340,6 +3340,7 @@
 		</collision>
 	</npc>
 	<npc id="22140" level="98" type="L2Monster" name="Resurrected Worker">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3351,8 +3352,8 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="123" /> <!-- rhand: Saber -->
-		<acquire exp="4453839" sp="2850" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<acquire exp="8417713" sp="20202" />
+		<stats>
 			<vitals hp="196331" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
 			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="348.2025" magical="254.7994782" evasion="2" />
@@ -3366,16 +3367,15 @@
 			</speed>
 			<hitTime>430</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status  attackable="true" undying="false" canBeSown="true" />
 		<skillList>
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4417" level="35" /> <!-- Undead -->
@@ -3391,15 +3391,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="100.0">
-					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
-					<item id="36523" min="1" max="1" chance="2.720" /> <!-- Adamantite -->
-					<item id="36524" min="1" max="1" chance="0.1" /> <!-- Orichalcum -->
-					<item id="17526" min="1" max="1" chance="0.01" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
+				<item id="57" min="1373" max="3199" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="24.4" /> <!-- Silver -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40207" min="1" max="1" chance="7.959" /> <!-- Amaranthine Fragment -->
+				<item id="40207" min="1" max="1" chance="13.13" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
 			</corpse>
 		</dropLists>

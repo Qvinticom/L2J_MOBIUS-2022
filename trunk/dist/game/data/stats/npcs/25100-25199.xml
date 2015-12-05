@@ -2571,6 +2571,7 @@
 		</collision>
 	</npc>
 	<npc id="25149" level="25" type="L2RaidBoss" name="Zombie Lord Crowl" title="Raid Boss">
+	<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25150" count="3" respawnTime="360" weightPoint="1" /> <!-- Evil Spirit Archer -->
@@ -2582,7 +2583,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="2615583" sp="627" raidPoints="320" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="43316.3085364372" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
 			<attack physical="74.2223188804512" magical="4.67967242276365" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.50599" magical="149.04" evasion="-18" />
@@ -2595,11 +2596,11 @@
 				<run ground="190" />
 			</speed>
 		</stats>
-		<status undying="false" />
+		<status attackable="true" undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2615,21 +2616,17 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="56.87189865112305">
-					<item id="436" min="2" max="4" chance="29.4331" /> <!-- Tunic of Knowledge -->
-					<item id="469" min="1" max="3" chance="70.5669" /> <!-- Stockings of Knowledge -->
-				</group>
-				<group chance="51.986000061035156">
-					<item id="83" min="1" max="1" chance="10.2596" /> <!-- Sword of Magic -->
-					<item id="144" min="1" max="1" chance="10.2596" /> <!-- Sword of Occult -->
-					<item id="124" min="1" max="1" chance="7.6006" /> <!-- Two-Handed Sword -->
-					<item id="127" min="1" max="1" chance="7.6006" /> <!-- Crimson Sword -->
-					<item id="130" min="1" max="1" chance="7.6006" /> <!-- Elven Sword -->
-					<item id="2026" min="3" max="9" chance="56.679" /> <!-- Two-Handed Sword Edge -->
-				</group>
-				<group chance="57.122398376464844">
-					<item id="6576" min="1" max="3" chance="100" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-				</group>
+				<item id="144" min="1" max="1" chance="7.623" /> <!-- Sword of Occult -->
+				<item id="436" min="1" max="1" chance="5.907" /> <!-- Tunic of Knowledge -->
+				<item id="124" min="1" max="1" chance="5.698" /> <!-- Two-handed Sword -->
+				<item id="127" min="1" max="1" chance="5.619" /> <!-- Crimson Sword -->
+				<item id="130" min="1" max="1" chance="5.611" /> <!-- Elven Sword -->
+				<item id="469" min="1" max="1" chance="1.976" /> <!-- Stockings of Knowledge -->
+				<item id="83" min="1" max="1" chance="0.75" /> <!-- Sword of Magic -->
+				<item id="6576" min="1" max="1" chance="21.49" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="2026" min="120" max="360" chance="1.017" /> <!-- Two-handed Sword Edge -->
+				<item id="39629" min="1" max="1" chance="0.004097" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>

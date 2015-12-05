@@ -2874,6 +2874,7 @@
 		</collision>
 	</npc>
 	<npc id="25259" level="55" type="L2RaidBoss" name="Zaken's Butcher Krantz" title="Raid Boss">
+	<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
@@ -2885,7 +2886,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="297" /> <!-- rhand: Glaive -->
 		<acquire exp="1991548" sp="477" raidPoints="1988" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="524759.695853166" hpRegen="221.738396239018" mp="889.8" mpRegen="2.4" />
 			<attack physical="2285.51806823986" magical="1298.16213238743" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
@@ -2898,13 +2899,11 @@
 			</speed>
 			<hitTime>820</hitTime>
 		</stats>
-		<status undying="false" />
+		<status attackable="true" undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="5" /> <!-- BOSS Might -->
 			<skill id="4177" level="5" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2921,26 +2920,17 @@
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="9817" min="2" max="6" chance="80" /> <!-- Nonliving Nucleus -->
-				<item id="8176" min="1" max="3" chance="80" /> <!-- Destruction Tombstone -->
-				<group chance="68.81600189208984">
-					<item id="2397" min="1" max="1" chance="9.4025" /> <!-- Tunic of Zubei -->
-					<item id="2402" min="1" max="1" chance="15.0405" /> <!-- Stockings of Zubei -->
-					<item id="2406" min="1" max="1" chance="5.7836" /> <!-- Avadon Robe -->
-					<item id="4069" min="81" max="243" chance="8.1898" /> <!-- Tunic of Zubei Fabric -->
-					<item id="4070" min="40" max="120" chance="25.1809" /> <!-- Stockings of Zubei Fabric -->
-					<item id="4071" min="14" max="42" chance="36.4027" /> <!-- Avadon Robe Fabric -->
-				</group>
-				<group chance="35.129600524902344">
-					<item id="97" min="1" max="1" chance="9.8314" /> <!-- Lance -->
-					<item id="4115" min="12" max="36" chance="90.1686" /> <!-- Lance Blade -->
-				</group>
-				<group chance="72.78410339355469">
-					<item id="4622" min="2" max="4" chance="35.6745" /> <!-- Greater Dye of MEN <Men+4 Wit-4> -->
-					<item id="4623" min="2" max="6" chance="26.7559" /> <!-- Greater Dye of WIT <Wit+4 Int-4> -->
-					<item id="4624" min="3" max="7" chance="21.4047" /> <!-- Greater Dye of WIT <Wit+4 Men-4> -->
-					<item id="948" min="6" max="18" chance="16.1649" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				</group>
+				<item id="2402" min="1" max="1" chance="5.484" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="3.417" /> <!-- Avadon Robe -->
+				<item id="97" min="1" max="1" chance="3.335" /> <!-- Lance -->
+				<item id="2397" min="1" max="1" chance="1.585" /> <!-- Tunic of Zubei -->
+				<item id="9817" min="2" max="6" chance="80.87" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="3" chance="79.64" /> <!-- Destruction Tombstone -->
+				<item id="4624" min="1" max="1" chance="19.63" /> <!-- Greater WIT Dye (Wit   4 Men - 4) -->
+				<item id="4622" min="1" max="3" chance="10.16" /> <!-- Greater MEN Dye (Men   4 Wit - 4) -->
+				<item id="4623" min="1" max="3" chance="6.882" /> <!-- Greater WIT Dye (Wit   4 Int - 4) -->
+				<item id="39629" min="1" max="1" chance="0.006912" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>

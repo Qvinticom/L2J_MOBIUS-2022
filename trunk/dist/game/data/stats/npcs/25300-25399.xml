@@ -3724,6 +3724,7 @@
 		</collision>
 	</npc>
 	<npc id="25375" level="20" type="L2RaidBoss" name="Zombie Lord Ferkel" title="Raid Boss">
+	<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25376" count="2" respawnTime="360" weightPoint="1" /> <!-- Ferkel's Warrior -->
@@ -3735,7 +3736,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1452604" sp="348" raidPoints="232" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="57906" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
 			<attack physical="48.8251644288713" magical="2.38238750889189" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="260.61147" magical="127.14" evasion="-18" />
@@ -3749,14 +3750,14 @@
 			</speed>
 			<hitTime>430</hitTime>
 		</stats>
-		<status undying="false" />
+		<status attackable="true" undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="2" /> <!-- BOSS Flamestrike -->
 			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3775,14 +3776,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="347" min="1" max="1" chance="6.420" /> <!-- Ring Breastplate -->
-				<item id="376" min="1" max="1" chance="2.150" /> <!-- Iron Plate Gaiters -->
-				<item id="156" min="1" max="1" chance="3.300" /> <!-- Hand Axe -->
-				<item id="167" min="1" max="1" chance="2.800" /> <!-- Scalpel -->
-				<item id="178" min="1" max="1" chance="2.500" /> <!-- Bone Staff -->
-				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-				<item id="6576" min="1" max="1" chance="6.850" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-				<item id="955" min="1" max="1" chance="14.25" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="347" min="1" max="1" chance="6.468" /> <!-- Ring Breastplate -->
+				<item id="156" min="1" max="1" chance="3.289" /> <!-- Hand Axe -->
+				<item id="167" min="1" max="1" chance="2.823" /> <!-- Scalpel -->
+				<item id="178" min="1" max="1" chance="2.385" /> <!-- Bone Staff -->
+				<item id="376" min="1" max="1" chance="2.067" /> <!-- Iron Plate Gaiters -->
+				<item id="955" min="1" max="1" chance="14.39" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="6576" min="1" max="1" chance="6.843" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.003957" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>
