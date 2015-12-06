@@ -85,6 +85,16 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 			}
 		}
 		
+		// Check inventory capacity
+		for (ItemHolder reward : rewards)
+		{
+			if ((!_activeChar.getInventory().validateCapacityByItemId(reward.getId(), reward.getCount())) || (!_activeChar.getInventory().validateWeightByItemId(reward.getId(), reward.getCount())))
+			{
+				_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
+				return;
+			}
+		}
+		
 		writeC(0xFE);
 		writeH(0x161);
 		writeD(0x01); // 0 disabled, 1 enabled
