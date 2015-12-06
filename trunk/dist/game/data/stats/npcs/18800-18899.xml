@@ -379,7 +379,8 @@
 		</dropLists>
 	</npc>
 	<npc id="18808" level="82" type="L2Monster" name="Dark Shaman Varangka">
-		<race>HUMANOID</race> <!-- Source: www.l2wiki.com (2015-04-08) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- rhand: Monster Only(Ketra Orc Chieftain) -->
@@ -3187,6 +3188,7 @@
 		</dropLists>
 	</npc>
 	<npc id="18874" level="83" type="L2FeedableBeast" name="Young Kookaburra">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />
@@ -3197,7 +3199,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="50694" sp="12" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
@@ -3211,14 +3213,12 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true"/>
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3245,41 +3245,13 @@
 				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
 				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
 				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="18875" level="83" type="L2FeedableBeast" name="Young Kookaburra">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="my_type" value="1" />
 			<param name="my_grade" value="2" />
@@ -3290,7 +3262,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="67512" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
@@ -3304,14 +3276,12 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true"/>
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3326,41 +3296,6 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="21" />
@@ -3815,6 +3750,7 @@
 		</dropLists>
 	</npc>
 	<npc id="18881" level="83" type="L2FeedableBeast" name="Young Cougar">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3825,8 +3761,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="50694" sp="12" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="7672" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3839,14 +3775,12 @@
 			</speed>
 			<hitTime>480</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3873,41 +3807,13 @@
 				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
 				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
 				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="18882" level="83" type="L2FeedableBeast" name="Young Cougar">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="2" />
 			<param name="my_grade" value="2" />
@@ -3918,8 +3824,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="67512" sp="16" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="7672" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3932,14 +3838,12 @@
 			</speed>
 			<hitTime>480</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -3954,41 +3858,6 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -4442,6 +4311,7 @@
 		</dropLists>
 	</npc>
 	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -4452,8 +4322,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="56458" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+		<stats>
+			<vitals hp="8080" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4466,14 +4336,12 @@
 			</speed>
 			<hitTime>480</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true"/>
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4492,101 +4360,21 @@
 			<radius normal="16" />
 			<height normal="22" />
 		</collision>
-	</npc>
-	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
-		<parameters>
-			<param name="my_type" value="3" />
-			<param name="my_grade" value="2" />
-			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="6556" level="17" /> <!-- NPC water attack -->
-			<skill name="Buff" id="4028" level="2" /> <!-- NPC Might -->
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<acquire exp="56458" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
-			<attribute>
-				<attack type="WATER" value="170" />
-				<defence fire="100" water="180" wind="140" earth="140" holy="140" dark="140" default="150" />
-			</attribute>
-			<speed>
-				<walk ground="30" />
-				<run ground="110" />
-			</speed>
-			<hitTime>480</hitTime>
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlets -->
 				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
 				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
-				<item id="15654" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15654" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gauntlets Piece -->
 				<item id="15655" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Gloves Piece -->
 				<item id="15656" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gloves Piece -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="22" />
-		</collision>
 	</npc>
 	<npc id="18889" level="84" type="L2FeedableBeast" name="Young Buffalo">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="3" />
 			<param name="my_grade" value="2" />
@@ -4597,8 +4385,8 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="74101" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+		<stats>
+			<vitals hp="8080" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4611,14 +4399,12 @@
 			</speed>
 			<hitTime>480</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -4633,41 +4419,6 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="22" />
@@ -5117,6 +4868,7 @@
 		</dropLists>
 	</npc>
 	<npc id="18895" level="84" type="L2FeedableBeast" name="Young Grendel">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -5127,7 +4879,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="56458" sp="13" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -5140,14 +4892,12 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5174,41 +4924,13 @@
 				<item id="15657" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Boots Piece -->
 				<item id="15658" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Boots Piece -->
 				<item id="15659" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Shoes Piece -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="18896" level="84" type="L2FeedableBeast" name="Young Grendel">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="my_type" value="4" />
 			<param name="my_grade" value="2" />
@@ -5219,8 +4941,8 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="74101" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+		<stats>
+			<vitals hp="8080" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -5232,14 +4954,12 @@
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -5254,41 +4974,6 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="9" />
 			<height normal="12.5" />

@@ -266,6 +266,7 @@
 		</collision>
 	</npc>
 	<npc id="20746" level="35" type="L2Monster" name="Young Gigantiops">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -280,8 +281,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="4732" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1224" hpRegen="4.5" mp="343.8" mpRegen="1.8" />
+		<stats>
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="121.98819" magical="81.2211098160515" />
 			<attribute>
@@ -293,11 +294,9 @@
 			</speed>
 			<hitTime>260</hitTime>
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" canBeSown="true" attackable="true" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -315,56 +314,15 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="352" max="702" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.018400000408291817">
-					<item id="259" min="1" max="1" chance="100" /> <!-- Single-Edged Jamadhr -->
-				</group>
-				<group chance="17.780500411987305">
-					<item id="1865" min="1" max="1" chance="42.6345" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="42.6345" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.1058" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.8423" /> <!-- Stone of Purity -->
-					<item id="2184" min="1" max="1" chance="4.4784" /> <!-- Recipe: Mithril Banded Gaiters -->
-					<item id="2272" min="1" max="1" chance="0.3045" /> <!-- Recipe: Sword of Revolution -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="21" max="49" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="2153" min="1" max="1" chance="12.9445" /> <!-- Recipe: Tiger's Eye Earring -->
-				<item id="1900" min="1" max="1" chance="9.1065" /> <!-- Enchanted Necklace Chain -->
-				<item id="1061" min="1" max="1" chance="50.4445" /> <!-- Greater Healing Potion -->
+				<item id="36531" min="1" max="1" chance="7.701" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>

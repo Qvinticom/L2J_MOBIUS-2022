@@ -608,7 +608,7 @@
 		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
 		<acquire exp="5516540" sp="1323" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="1444" />
@@ -655,7 +655,7 @@
 		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
 		<acquire exp="5516540" sp="1323" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="43000" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="1444" />
@@ -696,11 +696,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23217" level="97" type="L2Monster" name="Young Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="3433144" sp="14936" />
+		<acquire exp="3433144" sp="823" />
 		<stats>
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1419" />
 			<attribute>
@@ -714,11 +714,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -726,27 +726,23 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="5551" max="12935" chance="70" />
-				<item id="36558" min="1" max="1" chance="0.84746" />
-				<item id="35348" min="1" max="1" chance="0.3003" />
-				<item id="35355" min="1" max="1" chance="0.3003" />
-				<item id="36559" min="1" max="1" chance="0.07502" />
-				<item id="35472" min="1" max="1" chance="0.02" />
-				<item id="35479" min="1" max="1" chance="0.02" />
-				<item id="17440" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2692" max="6284" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="9.347" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="4.19" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="23218" level="97" type="L2Monster" name="Young Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
 		<acquire exp="3433144" sp="14936" />
 		<stats>
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="1419" />
 			<attribute>
@@ -760,11 +756,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4413" level="9" /> -->
-			<!-- <skill id="4411" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -772,18 +768,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="5550" max="12933" chance="70" />
-				<item id="36558" min="1" max="1" chance="1" />
-				<item id="35348" min="1" max="1" chance="0.3003" />
-				<item id="35355" min="1" max="1" chance="0.3003" />
-				<item id="36559" min="1" max="1" chance="0.07502" />
-				<item id="35472" min="1" max="1" chance="0.02" />
-				<item id="35479" min="1" max="1" chance="0.02" />
-				<item id="17440" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2692" max="6284" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="9.32799" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="4.247" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -1229,7 +1221,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="17467748" sp="4192" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="2105" />
@@ -1274,7 +1266,7 @@
 		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
 		<acquire exp="9982682" sp="2395" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2064" magical="2105" />
@@ -1316,11 +1308,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23231" level="97" type="L2Monster" name="Young Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="9291987" sp="40425" />
+		<acquire exp="9291987" sp="2230" />
 		<stats>
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="2069" />
 			<attribute>
@@ -1334,12 +1326,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4410" level="15" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1347,27 +1339,23 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="5567" max="12982" chance="70" />
-				<item id="36558" min="1" max="1" chance="1.027" />
-				<item id="35348" min="1" max="1" chance="0.2" />
-				<item id="35355" min="1" max="1" chance="0.2" />
-				<item id="36559" min="1" max="1" chance="0.08703" />
-				<item id="35472" min="1" max="1" chance="0.01667" />
-				<item id="35479" min="1" max="1" chance="0.01667" />
-				<item id="17440" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="9.445" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="4.258" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="23232" level="97" type="L2Monster" name="Young Zofan">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="9291987" sp="40425" />
+		<acquire exp="9291987" sp="2230" />
 		<stats>
-			<vitals hp="615748" hpRegen="7.5" mp="615748" mpRegen="2.7" />
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1344" magical="2069" />
 			<attribute>
@@ -1381,12 +1369,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5462" level="1" />
-			<skill id="4414" level="3" />
-			<!-- <skill id="4410" level="15" /> -->
-			<!-- <skill id="4411" level="13" /> -->
-			<!-- <skill id="4413" level="13" /> -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="24" />
@@ -1394,18 +1382,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="5567" max="12982" chance="70" />
-				<item id="36558" min="1" max="1" chance="1.045" />
-				<item id="36559" min="1" max="1" chance="0.2" />
-				<item id="35348" min="1" max="1" chance="0.2" />
-				<item id="35355" min="1" max="1" chance="0.2" />
-				<item id="35472" min="1" max="1" chance="0.01667" />
-				<item id="35479" min="1" max="1" chance="0.01667" />
-				<item id="17440" min="1" max="1" chance="0.0055" />
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36558" min="1" max="1" chance="9.459" />
-				<item id="36559" min="1" max="1" chance="0.75188" />
+				<item id="36558" min="1" max="1" chance="4.258" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2388,11 +2372,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23252" level="93" type="L2Monster" name="Yin Spicula 1">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="1386150" sp="5824" />
+		<acquire exp="1386150" sp="332" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1749" magical="1403" />
 			<attribute>
@@ -2425,11 +2409,11 @@
 		</collision>
 	</npc>
 	<npc id="23253" level="93" type="L2Monster" name="Yin Spicula 2">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="1386150" sp="5824" />
+		<acquire exp="1386150" sp="332" />
 		<stats>
-			<vitals hp="73367" hpRegen="7.5" mp="73367" mpRegen="2.7" />
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
 			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1749" magical="1403" />
 			<attribute>
@@ -2462,10 +2446,11 @@
 		</collision>
 	</npc>
 	<npc id="23254" level="93" type="L2Monster" name="Yin Spicula">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<acquire exp="1853594" sp="444" />
+		<acquire exp="1386150" sp="332" />
 		<stats>
-			<vitals hp="75089" hpRegen="7.5" mp="2132" mpRegen="2.7" />
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
 			<attack physical="18975" magical="28738" random="30" critical="4" accuracy="4.75" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1419" magical="1128" />
 			<attribute>
@@ -2498,44 +2483,15 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="1418" max="3306" chance="70" />
-				<item id="36837" min="1" max="1" chance="1.5" />
-				<item id="36775" min="1" max="1" chance="0.03333" />
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="826" max="1925" chance="70" /> <!-- Adena -->
+				<item id="36837" min="1" max="1" chance="1.338" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36775" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="16" />
-				<item id="36533" min="1" max="1" chance="4" />
+				<item id="36532" min="1" max="1" chance="13.99" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.88" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 	</npc>

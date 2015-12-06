@@ -2597,6 +2597,7 @@
 		</collision>
 	</npc>
 	<npc id="25641" level="81" type="L2Monster" name="Yehan Cravenizad" title="Bloodsucker">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5884" level="2" /> <!-- Weakened Sweep -->
@@ -2609,7 +2610,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="13982" /> <!-- rhand: Exclusive to Monsters (Death Knight_pole) -->
 		<acquire exp="4650677" sp="1116" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
@@ -2625,8 +2626,6 @@
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2649,24 +2648,19 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66.46209716796875">
-					<item id="6684" min="1" max="1" chance="1.531" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="3" max="9" chance="98.469" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="55.825599670410156">
-					<item id="6365" min="1" max="1" chance="0.249" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.249" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.249" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="0.249" /> <!-- Arcana Mace -->
-					<item id="6689" min="2" max="6" chance="28.227" /> <!-- Basalt Battlehammer Head -->
-					<item id="6690" min="2" max="4" chance="38.4319" /> <!-- Imperial Staff Head -->
-					<item id="6693" min="6" max="18" chance="9.7635" /> <!-- Dragon Hunter Axe Blade -->
-					<item id="6697" min="3" max="7" chance="22.5816" /> <!-- Arcana Mace Head -->
-				</group>
-				<group chance="41.94889831542969">
-					<item id="6578" min="1" max="1" chance="8.1633" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="1" chance="91.8367" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="6684" min="1" max="1" chance="0.3" /> <!-- Sealed Major Arcana Robe -->
+				<item id="3936" min="1" max="1" chance="13.38" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6690" min="2" max="6" chance="5.825" /> <!-- Imperial Staff Head -->
+				<item id="6693" min="3" max="9" chance="4.962" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6697" min="3" max="9" chance="4.204" /> <!-- Arcana Mace Head -->
+				<item id="6711" min="24" max="72" chance="1.683" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6578" min="1" max="1" chance="1.215" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6689" min="18" max="54" chance="0.75" /> <!-- Basalt Battlehammer Head -->
+				<item id="39629" min="1" max="1" chance="0.008673" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -2675,6 +2669,7 @@
 		</collision>
 	</npc>
 	<npc id="25642" level="81" type="L2Monster" name="Yehan Jaxsibhan" title="Dark Guardian">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="raise" value="5" />
 			<skill name="Skill01_ID" id="5885" level="2" />
@@ -2687,7 +2682,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="13983" /> <!-- rhand: Exclusive to Monsters (Death Knight_2hs) -->
 		<acquire exp="4650677" sp="1116" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="440657.534754126" hpRegen="188.168628266824" mp="1846.8" mpRegen="3" />
 			<attack physical="1845.69199234965" magical="1103.56024381395" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1110.90240635294" magical="541.938352941177" evasion="-18" />
@@ -2703,8 +2698,6 @@
 		<status undying="false" noSleepMode="true" attackable="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2727,20 +2720,15 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="66.46209716796875">
-					<item id="6684" min="1" max="1" chance="1.531" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="3" max="9" chance="98.469" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="59.697601318359375">
-					<item id="6364" min="1" max="1" chance="0.4657" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.4657" /> <!-- Heaven's Divider -->
-					<item id="6688" min="2" max="4" chance="71.739" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="4" max="12" chance="27.3296" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="41.94889831542969">
-					<item id="6578" min="1" max="1" chance="8.1633" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="1" chance="91.8367" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="6684" min="1" max="1" chance="0.75" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
+				<item id="3936" min="1" max="1" chance="13.85" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6696" min="2" max="6" chance="9.742" /> <!-- Heaven's Divider Edge -->
+				<item id="6711" min="18" max="54" chance="3.697" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6688" min="14" max="42" chance="1.709" /> <!-- Forgotten Blade Edge -->
+				<item id="6578" min="1" max="1" chance="1.242" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008887" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 		<collision>
@@ -4247,6 +4235,7 @@
 		</collision>
 	</npc>
 	<npc id="25665" level="81" type="L2RaidBoss" name="Yehan Klodekus" title="Soul Destroyer">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<skill name="pan_skill" id="5933" level="1" /> <!-- Dark Blade -->
 			<skill name="donut_skill" id="5936" level="1" /> <!-- Earth Ring -->
@@ -4257,7 +4246,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="13982" /> <!-- rhand: Exclusive to Monsters (Death Knight_pole) -->
 		<acquire exp="5044000" sp="1210" raidPoints="344" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="148936.33253589" hpRegen="53.2190190842186" mp="1743.0" mpRegen="3" />
 			<attack physical="2153.20693445914" magical="1624.01432535894" random="30" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="703.664537294118" magical="514.911176470588" />
@@ -4270,10 +4259,9 @@
 				<run ground="180" />
 			</speed>
 		</stats>
+		<status attackable="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4297,23 +4285,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="64.23560333251953">
-					<item id="6724" min="1" max="1" chance="5.9961" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="8.9942" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="4.4961" /> <!-- Sealed Tateossian Necklace -->
-					<item id="6698" min="81" max="243" chance="11.8869" /> <!-- Sealed Tateossian Earring Part -->
-					<item id="6699" min="40" max="120" chance="26.71" /> <!-- Sealed Tateossian Ring Gem -->
-					<item id="6700" min="14" max="42" chance="41.9167" /> <!-- Sealed Tateossian Necklace Chain -->
-				</group>
-				<group chance="26.36669921875">
-					<item id="6371" min="1" max="1" chance="5.0271" /> <!-- Demon Splinter -->
-					<item id="6695" min="12" max="36" chance="94.9729" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="54.69430160522461">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
+				<item id="6726" min="1" max="1" chance="10.52" /> <!-- Sealed Tateossian Necklace -->
+				<item id="6724" min="1" max="1" chance="4.511" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="2.472" /> <!-- Sealed Tateossian Ring -->
+				<item id="6371" min="1" max="1" chance="0.961" /> <!-- Demon Splinter -->
+				<item id="959" min="1" max="1" chance="2.532" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008834" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>
@@ -4322,6 +4301,7 @@
 		</collision>
 	</npc>
 	<npc id="25666" level="81" type="L2RaidBoss" name="Yehan Klanikus" title="Guide of Darkness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="pan_skill" id="5932" level="1" /> <!-- Dark Blade -->
 			<skill name="donut_skill" id="5935" level="1" /> <!-- Dark Ring -->
@@ -4332,7 +4312,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="13983" /> <!-- rhand: Exclusive to Monsters (Death Knight_2hs) -->
 		<acquire exp="5044000" sp="1210" raidPoints="344" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+		<stats>
 			<vitals hp="148936.33253589" hpRegen="53.2190190842186" mp="1743.0" mpRegen="3" />
 			<attack physical="2153.20693445914" magical="1624.01432535894" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="703.664537294118" magical="514.911176470588" />
@@ -4345,10 +4325,9 @@
 				<run ground="180" />
 			</speed>
 		</stats>
+		<status attackable="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4372,34 +4351,19 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="60.94309997558594">
-					<item id="6676" min="1" max="1" chance="3.2342" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6677" min="1" max="1" chance="3.2342" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6681" min="1" max="1" chance="3.2342" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6682" min="1" max="1" chance="3.2342" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6685" min="1" max="1" chance="3.2342" /> <!-- Sealed Major Arcana Glove -->
-					<item id="6686" min="1" max="1" chance="3.2342" /> <!-- Sealed Major Arcana Boots -->
-					<item id="6703" min="112" max="336" chance="3.284" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-					<item id="6704" min="14" max="40" chance="27.2451" /> <!-- Sealed Imperial Crusader Boots Design -->
-					<item id="6708" min="20" max="60" chance="18.3904" /> <!-- Sealed Draconic Leather Gloves Fabric -->
-					<item id="6709" min="28" max="82" chance="13.3748" /> <!-- Sealed Draconic Leather Boots Design -->
-					<item id="6712" min="36" max="108" chance="10.2169" /> <!-- Sealed Major Arcana Gloves fabric -->
-					<item id="6713" min="46" max="136" chance="8.0836" /> <!-- Sealed Major Arcana Boots Design -->
-				</group>
-				<group chance="56.3650016784668">
-					<item id="6365" min="1" max="1" chance="0.5879" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.5879" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.5879" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="0.5879" /> <!-- Arcana Mace -->
-					<item id="6689" min="16" max="48" chance="8.3295" /> <!-- Basalt Battlehammer Head -->
-					<item id="6690" min="11" max="31" chance="12.961" /> <!-- Imperial Staff Head -->
-					<item id="6693" min="6" max="18" chance="23.0489" /> <!-- Dragon Hunter Axe Blade -->
-					<item id="6697" min="3" max="7" chance="53.309" /> <!-- Arcana Mace Head -->
-				</group>
-				<group chance="54.08209991455078">
-					<item id="6578" min="1" max="1" chance="15.0943" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-					<item id="3936" min="1" max="3" chance="84.9057" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
+				<item id="6686" min="1" max="1" chance="5.5" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6685" min="1" max="1" chance="5.459" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="6676" min="1" max="1" chance="2.781" /> <!-- Sealed Imperial Crusader Gauntlets -->
+				<item id="6677" min="1" max="1" chance="1.78" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6681" min="1" max="1" chance="1.348" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="6682" min="1" max="1" chance="1.07" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="21959" min="1" max="1" chance="0.3" /> <!-- Blood Brother -->
+				<item id="6578" min="1" max="1" chance="5.532" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="39629" min="1" max="1" chance="0.009102" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>
