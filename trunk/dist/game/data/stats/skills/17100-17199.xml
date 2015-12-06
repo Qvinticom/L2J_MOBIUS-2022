@@ -247,112 +247,293 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="17131" levels="1" name="Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			37608,1,20;37609,1,20;37610,1,20;37611,1,20;37612,1,20;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37607" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17132" levels="1" name="Hair Accessory Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			7840,1,8.3;7680,1,8.3;6843,1,8.3;8565,1,8.3;15484,1,8.3;8921,1,8.3;6845,1,8.3;7681,1,8.3;8916,1,8.3;8184,1,8.3;13494,1,8.3;13495,1,8.3;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37608" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17133" levels="1" name="Pendant Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			35901,1,8;35902,1,8;35903,1,8;35904,1,8;35905,1,8;35906,1,8;35907,1,8;35908,1,8;35909,1,8;35910,1,8;35911,1,8;35912,1,8;35913,1,8;35914,1,8;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37609" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17134" levels="1" name="Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			959,1,20;960,1,40;17526,1,10;17527,1,30;19447,1,2.5;19448,1,5;6577,1,5;6578,1,7.5;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37610" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17135" levels="1" name="Attribute Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			9546,1,17;9547,1,17;9548,1,17;9549,1,17;9550,1,17;9551,1,17;9552,1,4.5;9553,1,4.5;9554,1,4.5;9555,1,4.5;9556,1,4.5;9557,1,4.5;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37611" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17136" levels="1" name="Ingredient Box">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			35562,1,15;36526,1,6;36527,1,6;36528,1,6;36529,1,3;36516,1,6;36517,1,6;36518,1,6;36519,1,3;36521,1,6;36522,1,6;36523,1,6;36524,1,6;36531,1,6;36561,1,6;36562,1,6;36563,1,6;36564,1,3;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37612" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17137" levels="1" name="Hero's Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			37614,1,9;37615,1,9;37616,1,9;37617,1,9;37618,1,9;37619,1,9;37620,1,9;37621,1,9;37622,1,9;37623,1,9;37624,1,9;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37613" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17138" levels="1" name="Hero's Lucky Enchant Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			12366,1,30;12371,1,60;30381,1,20;30382,1,40;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37614" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17139" levels="1" name="Hero's Giant Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			33810,1,60;33811,1,40;33816,1,30;33817,1,20;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37615" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17140" levels="1" name="Hero's Blessed Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			6577,1,60;6578,1,40;19447,1,40;19448,1,20;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37616" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17141" levels="1" name="Hero's Unbind Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			36285,1,30;36286,1,30;36287,1,30;36288,1,10;36289,1,10;36290,1,10;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37617" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17142" levels="1" name="Hero's Attribute Crystal Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			33481,1,15;33482,1,15;33483,1,15;33484,1,15;33485,1,15;33486,1,15;33487,1,5;33488,1,5;33489,1,5;33490,1,5;33491,1,5;33492,1,5;36972,1,3;36973,1,3;36974,1,3;36975,1,3;36976,1,3;36977,1,3;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37618" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17143" levels="1" name="PK Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			35741,1,40;35752,1,30;35753,1,20;35754,1,10;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37619" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17144" levels="1" name="Reputation Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			35742,1,40;35755,1,30;35756,1,20;35757,1,10;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37620" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17145" levels="1" name="Mysterious Shot Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			22890,1,17;22891,1,17;22892,1,17;22893,1,17;23083,1,17;23084,1,17;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37621" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17146" levels="1" name="Kaliel's Energy Box">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			36184,1,60;36185,1,40;36186,1,7;36191,1,3;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37622" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17147" levels="1" name="Soul Bottle Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			19465,1,50;19466,1,50;
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37623" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17148" levels="1" name="Top-grade Life Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<table name="#extractableItems">
+			45932,1,20;45936,1,20;18566,1,20;18571,1,20;18576,1,20;
+
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="37624" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="RestorationRandom" />
+		</for>
 	</skill>
 	<skill id="17149" levels="1" name="Legendary Card Pouch: Dragon">
 		<!-- AUTO GENERATED SKILL -->

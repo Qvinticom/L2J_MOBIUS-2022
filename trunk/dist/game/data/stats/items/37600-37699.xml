@@ -67,8 +67,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17131-1" /> <!-- Treasure Chest -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -77,8 +79,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17132-1" /> <!-- Hair Accessory Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -87,8 +91,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17133-1" /> <!-- Pendant Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -97,8 +103,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17134-1" /> <!-- Enchant Scroll Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -107,8 +115,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17135-1" /> <!-- Attribute Stone Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -117,8 +127,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17136-1" /> <!-- Ingredient Box -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -127,8 +139,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17137-1" /> <!-- Hero's Treasure Chest -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -137,8 +151,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17138-1" /> <!-- Hero's Lucky Enchant Stone Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -147,8 +163,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17139-1" /> <!-- Hero's Giant Enchant Scroll Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -157,28 +175,34 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17140-1" /> <!-- Hero's Blessed Enchant Scroll Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37617" name="Hero's Unbind Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Unbind Scroll (R, R95, or R99-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17141-1" /> <!-- Hero's Unbind Scroll Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37618" name="Hero's Attribute Crystal Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17142-1" /> <!-- Hero's Attribute Crystal Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -187,8 +211,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17143-1" /> <!-- PK Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -197,8 +223,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17144-1" /> <!-- Reputation Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -207,8 +235,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17145-1" /> <!-- Mysterious Shot Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -217,8 +247,10 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17146-1" /> <!-- Kaliel's Energy Box -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
@@ -227,18 +259,22 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17147-1" /> <!-- Soul Bottle Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Spirit Stone, or a Life Stone Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="LIFE_STONE" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="17148-1" /> <!-- Top-grade Life Stone Pack -->
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 	</item>
