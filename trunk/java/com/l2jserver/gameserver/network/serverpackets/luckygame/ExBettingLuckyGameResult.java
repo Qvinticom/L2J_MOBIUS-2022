@@ -49,8 +49,46 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		final L2PcInstance _activeChar = getClient().getActiveChar();
-		if (_activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1) < 1)
+		
+		// Calculate rewards
+		List<ItemHolder> rewards = new ArrayList<>();
+		int totalWeight = 0;
+		for (int rewardCounter = 0; rewardCounter < _count; rewardCounter++)
 		{
+			if (Rnd.get(3) == 0) // 1 out of 3 chance
+			{
+				ItemHolder reward = null;
+				if (_type == 2)
+				{
+					if (_count >= 40)
+					{
+						reward = LuckyGameRewards.getRandomRare(); // Rare
+					}
+					else
+					{
+						reward = LuckyGameRewards.getRandomLuxury(); // Luxury
+					}
+				}
+				else
+				{
+					reward = LuckyGameRewards.getRandomNormal(); // Normal
+				}
+				rewards.add(reward);
+				totalWeight += new L2ItemInstance(reward.getId()).getItem().getWeight() * reward.getCount();
+			}
+		}
+		
+		// Check inventory capacity
+		if ((rewards.size() > 0) && ((!_activeChar.getInventory().validateCapacity(rewards.size())) || (!_activeChar.getInventory().validateWeight(totalWeight))))
+		{
+			_activeChar.sendPacket(new ExStartLuckyGame(_type));
+			_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
+			return;
+		}
+		
+		if (_activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1) < _count)
+		{
+			_activeChar.sendPacket(new ExStartLuckyGame(_type));
 			_activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_TICKETS);
 			return;
 		}
@@ -58,48 +96,12 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 		// Remove tickets
 		_activeChar.getInventory().destroyItemByItemId("FortuneTelling", _type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, _count, _activeChar, "FortuneTelling");
 		
-		// Count remaining tickets
-		final long remainingTickets = _activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1);
-		
-		// Calculate rewards
-		List<ItemHolder> rewards = new ArrayList<>();
-		for (int rewardCounter = 0; rewardCounter < _count; rewardCounter++)
-		{
-			if (Rnd.get(3) == 0) // 1 out of 3 chance
-			{
-				if (_type == 2)
-				{
-					if (_count >= 40)
-					{
-						rewards.add(LuckyGameRewards.getRandomRare()); // Rare
-					}
-					else
-					{
-						rewards.add(LuckyGameRewards.getRandomLuxury()); // Luxury
-					}
-				}
-				else
-				{
-					rewards.add(LuckyGameRewards.getRandomNormal()); // Normal
-				}
-			}
-		}
-		
-		// Check inventory capacity
-		for (ItemHolder reward : rewards)
-		{
-			if ((!_activeChar.getInventory().validateCapacityByItemId(reward.getId(), reward.getCount())) || (!_activeChar.getInventory().validateWeightByItemId(reward.getId(), reward.getCount())))
-			{
-				_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
-				return;
-			}
-		}
-		
 		writeC(0xFE);
 		writeH(0x161);
 		writeD(0x01); // 0 disabled, 1 enabled
 		writeD(0x01); // ?
-		writeD((int) remainingTickets);
+		writeD((int) _activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1)); // Count remaining tickets
+		
 		if (rewards.size() > 0)
 		{
 			writeD(rewards.size());
@@ -116,7 +118,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 					sm.addPcName(_activeChar);
 					sm.addLong(reward.getCount());
 					sm.addItemName(new L2ItemInstance(reward.getId()));
-					_activeChar.sendPacket(sm);
+					_activeChar.broadcastPacket(sm, 1000);
 				}
 				else
 				{
@@ -125,7 +127,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 					sm.addPcName(_activeChar);
 					sm.addLong(reward.getCount());
 					sm.addItemName(new L2ItemInstance(reward.getId()));
-					_activeChar.sendPacket(sm);
+					_activeChar.broadcastPacket(sm, 1000);
 				}
 			}
 		}
