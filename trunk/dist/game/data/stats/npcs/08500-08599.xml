@@ -934,17 +934,16 @@
 		</collision>
 	</npc>
 	<npc id="8540" level="90" type="L2Npc" name="Jayce" title="Fortunetelling Mentor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<stats>
 			<vitals hp="615901" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" />
 		<collision>
 			<radius normal="9.5" />
 			<height normal="22.4" />
@@ -968,10 +967,9 @@
 		</collision>
 	</npc>
 	<npc id="8542" level="70" type="L2Npc" name="Eve" title="Crystal Seer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="4228" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />

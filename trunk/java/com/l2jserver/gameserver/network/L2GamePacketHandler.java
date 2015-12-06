@@ -67,6 +67,7 @@ import com.l2jserver.gameserver.network.clientpackets.friend.RequestFriendList;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestSendFriendMsg;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestUpdateBlockMemo;
 import com.l2jserver.gameserver.network.clientpackets.friend.RequestUpdateFriendMemo;
+import com.l2jserver.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeAdd;
 import com.l2jserver.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
@@ -1630,7 +1631,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new ExPCCafeRequestOpenWindowWithoutNPC();
 								break;
 							case 0xF2:
-								// msg = new RequestLuckyGamePlay();
+								msg = new RequestLuckyGamePlay();
 								break;
 							case 0xF3:
 								// msg = new NotifyTrainingRoomEnd();
