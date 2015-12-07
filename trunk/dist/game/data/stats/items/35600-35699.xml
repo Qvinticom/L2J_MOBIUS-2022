@@ -822,8 +822,10 @@
 	<item id="35649" name="Sealed Talisman - Longing" type="EtcItem">
 		<!-- Can be used at level 85 or above. Double-click to acquire the Talisman - Longing. The acquired Talisman - Longing cannot be exchanged, dropped or sold in a private store. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="default_action" val="CALL_SKILL" />
+		<set name="capsuled_items" val="34989,1,1,100" /> <!-- Talisman - Longing -->
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
