@@ -179,6 +179,7 @@
 	<npc id="33608" level="88" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17291" lhand="17309"/> <!-- rhand: Requiem Cutter lhand: Immortal Shield Heavy Armor -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="8452" hpRegen="7.5" mp="8452" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -201,9 +202,10 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="33609" level="88" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
+	<npc id="33609" level="88" type="L2QuestGuard" name="Adolph" title="Aden Vanguard Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17291" lhand="17309"/> <!-- rhand: Requiem Cutter lhand: Immortal Shield Heavy Armor -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="1491762" hpRegen="7.5" mp="1491762" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -235,6 +237,7 @@
 	<npc id="33610" level="88" type="L2Npc" name="Barton" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
+		<equipment rhand="17301" /> <!-- rhand: Requiem Dualsword -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="8452" hpRegen="7.5" mp="8452" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -257,9 +260,10 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="33611" level="88" type="L2Npc" name="Barton" title="Aden Vanguard">
+	<npc id="33611" level="88" type="L2QuestGuard" name="Barton" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
+		<equipment rhand="17301" /> <!-- rhand: Requiem Dualsword -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="497254" hpRegen="7.5" mp="497254" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -290,6 +294,7 @@
 	<npc id="33612" level="88" type="L2Npc" name="Hayuk" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELF</race>
+		<equipment rhand="15302" /> <!-- rhand: Transpareny Bow -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="8452" hpRegen="7.5" mp="8452" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
@@ -312,9 +317,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33613" level="88" type="L2Npc" name="Hayuk" title="Aden Vanguard">
+	<npc id="33613" level="88" type="L2QuestGuard" name="Hayuk" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELF</race>
+		<equipment rhand="15302" /> <!-- rhand: Transpareny Bow -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="497254" hpRegen="7.5" mp="497254" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
@@ -367,7 +373,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33615" level="88" type="L2Npc" name="Eliyah" title="Aden Vanguard">
+	<npc id="33615" level="88" type="L2QuestGuard" name="Eliyah" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -397,6 +403,7 @@
 	<npc id="33616" level="88" type="L2Npc" name="Elise" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17300" /> <!-- rhand: Requiem Retributer -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="8452" hpRegen="7.5" mp="8452" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -419,9 +426,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33617" level="88" type="L2Npc" name="Elise" title="Aden Vanguard">
+	<npc id="33617" level="88" type="L2QuestGuard" name="Elise" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17300" /> <!-- rhand: Requiem Retributer -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="497254" hpRegen="7.5" mp="497254" mpRegen="2.7" />
 			<attack physical="8250" magical="5500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -500,9 +508,10 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="33620" level="93" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
+	<npc id="33620" level="93" type="L2QuestGuard" name="Adolph" title="Aden Vanguard Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17291" lhand="17309"/> <!-- rhand: Requiem Cutter lhand: Immortal Shield Heavy Armor -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="1623662" hpRegen="7.5" mp="1623662" mpRegen="2.7" />
 			<attack physical="9500" magical="6350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -556,9 +565,10 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="33622" level="93" type="L2Npc" name="Barton" title="Aden Vanguard">
+	<npc id="33622" level="93" type="L2QuestGuard" name="Barton" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
+		<equipment rhand="17301" /> <!-- rhand: Requiem Dualsword -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="9500" magical="6350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -611,9 +621,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33624" level="93" type="L2Npc" name="Hayuk" title="Aden Vanguard">
+	<npc id="33624" level="93" type="L2QuestGuard" name="Hayuk" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELF</race>
+		<equipment rhand="15302" /> <!-- rhand: Transpareny Bow -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="9500" magical="6350" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
@@ -666,7 +677,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33626" level="93" type="L2Npc" name="Eliyah" title="Aden Vanguard">
+	<npc id="33626" level="93" type="L2QuestGuard" name="Eliyah" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -718,9 +729,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33628" level="93" type="L2Npc" name="Elise" title="Aden Vanguard">
+	<npc id="33628" level="93" type="L2QuestGuard" name="Elise" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17300" /> <!-- rhand: Requiem Retributer -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="9500" magical="6350" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -799,9 +811,10 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="33631" level="98" type="L2Npc" name="Adolph" title="Aden Vanguard Captain">
+	<npc id="33631" level="98" type="L2QuestGuard" name="Adolph" title="Aden Vanguard Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17291" lhand="17309"/> <!-- rhand: Requiem Cutter lhand: Immortal Shield Heavy Armor -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="1847705" hpRegen="7.5" mp="1847705" mpRegen="2.7" />
 			<attack physical="10750" magical="7150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -855,9 +868,10 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="33633" level="98" type="L2Npc" name="Barton" title="Aden Vanguard">
+	<npc id="33633" level="98" type="L2QuestGuard" name="Barton" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ORC</race>
+		<equipment rhand="17301" /> <!-- rhand: Requiem Dualsword -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
 			<attack physical="10750" magical="7150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -910,9 +924,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33635" level="98" type="L2Npc" name="Hayuk" title="Aden Vanguard">
+	<npc id="33635" level="98" type="L2QuestGuard" name="Hayuk" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELF</race>
+		<equipment rhand="15302" /> <!-- rhand: Transpareny Bow -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
 			<attack physical="10750" magical="7150" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
@@ -965,7 +980,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33637" level="98" type="L2Npc" name="Eliyah" title="Aden Vanguard">
+	<npc id="33637" level="98" type="L2QuestGuard" name="Eliyah" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -1017,9 +1032,10 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="33639" level="98" type="L2Npc" name="Elise" title="Aden Vanguard">
+	<npc id="33639" level="98" type="L2QuestGuard" name="Elise" title="Aden Vanguard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
+		<equipment rhand="17300" /> <!-- rhand: Requiem Retributer -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="615901" hpRegen="7.5" mp="615901" mpRegen="2.7" />
 			<attack physical="10750" magical="7150" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1101,6 +1117,7 @@
 	<npc id="33642" level="88" type="L2Npc" name="Support Troop">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
+		<equipment rhand="17295"/> <!-- rhand: Requiem Stormer -->
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
 			<vitals hp="44994" hpRegen="7.5" mp="44994" mpRegen="2.7" />
 			<attack physical="8250" magical="4200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

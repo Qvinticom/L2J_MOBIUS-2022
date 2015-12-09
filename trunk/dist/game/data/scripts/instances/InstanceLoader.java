@@ -42,6 +42,7 @@ import instances.JiniaGuildHideout3.JiniaGuildHideout3;
 import instances.JiniaGuildHideout4.JiniaGuildHideout4;
 import instances.Kamaloka.Kamaloka;
 import instances.KaraphonHabitat.KaraphonHabitat;
+import instances.KartiasLabyrinth.KartiasLabyrinth;
 import instances.LabyrinthOfBelis.LabyrinthOfBelis;
 import instances.LibraryOfSages.LibraryOfSages;
 import instances.MithrilMine.MithrilMine;
@@ -90,6 +91,7 @@ public final class InstanceLoader
 		JiniaGuildHideout4.class,
 		Kamaloka.class,
 		KaraphonHabitat.class,
+		KartiasLabyrinth.class,
 		LabyrinthOfBelis.class,
 		LibraryOfSages.class,
 		MithrilMine.class,

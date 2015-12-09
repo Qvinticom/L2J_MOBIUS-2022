@@ -527,11 +527,12 @@
 			<height normal="22.4" />
 		</collision>
 	</npc>
-	<npc id="19220" level="88" type="L2Npc" name="Kartia Guard">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19220" level="88" type="L2Monster" name="Kartia Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<acquire exp="0" sp="0" />
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="7824" hpRegen="7.5" mp="7824" mpRegen="2.7" />
+		<stats>
+			<vitals hp="4695" hpRegen="9.5" mp="1952" mpRegen="3.3" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
 			<attribute>
@@ -543,7 +544,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="1" />
 			<skill id="14917" level="1" />
@@ -555,11 +556,12 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="19221" level="88" type="L2Npc" name="Kartia Watchman">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19221" level="88" type="L2Monster" name="Kartia Watchman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="7824" hpRegen="7.5" mp="7824" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="4695" hpRegen="9.5" mp="2928" mpRegen="3.3" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
 			<attribute>
@@ -571,10 +573,12 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="14924" level="1" />
 			<skill id="14918" level="1" />
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4416" level="1" />
 		</skillList>
 		<ai aggroRange="600" clanHelpRange="800" />
@@ -583,11 +587,11 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="19222" level="88" type="L2Npc" name="Kartia Dimensional Watchman">
+	<npc id="19222" level="88" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="268258" hpRegen="7.5" mp="268258" mpRegen="2.7" />
+		<stats>
+			<vitals hp="268258" hpRegen="9.5" mp="1952" mpRegen="3.3" />
 			<attack physical="24750" magical="16500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="990" magical="960" />
 			<attribute>
@@ -599,10 +603,12 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="1" />
 			<skill id="14930" level="1" />
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skillList>
 		<ai aggroRange="600" clanHelpRange="800" />
 		<collision>
@@ -610,7 +616,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="19223" level="93" type="L2Npc" name="Kartia Guard">
+	<npc id="19223" level="93" type="L2Monster" name="Kartia Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -626,7 +632,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5462" level="1" />
@@ -639,7 +645,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="19224" level="93" type="L2Npc" name="Kartia Watchman">
+	<npc id="19224" level="93" type="L2Monster" name="Kartia Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -655,7 +661,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="9" />
 			<skill id="5462" level="1" />
@@ -668,7 +674,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19225" level="93" type="L2Npc" name="Kartia Dimensional Watchman">
+	<npc id="19225" level="93" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -684,7 +690,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="5462" level="1" />
 			<skill id="4416" level="1" />
@@ -698,7 +704,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="19226" level="98" type="L2Npc" name="Kartia Guard">
+	<npc id="19226" level="98" type="L2Monster" name="Kartia Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -714,7 +720,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
@@ -727,7 +733,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="19227" level="98" type="L2Npc" name="Kartia Watchman">
+	<npc id="19227" level="98" type="L2Monster" name="Kartia Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -743,7 +749,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
@@ -756,7 +762,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19228" level="98" type="L2Npc" name="Kartia Dimensional Watchman">
+	<npc id="19228" level="98" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DRAGON</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -772,7 +778,7 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="10" />
 			<skill id="5464" level="1" />
@@ -1458,11 +1464,12 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="19254" level="93" type="L2Monster" name="Pelline" title="Lord of Kartia">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19254" level="93" type="L2Monster" name="Pelline">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1298930" hpRegen="7.5" mp="1298930" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="779359" hpRegen="10.5" mp="21324" mpRegen="3.6" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1375" magical="1325" />
 			<attribute>
@@ -1498,11 +1505,12 @@
 			</death>
 		</dropLists>
 	</npc>
-	<npc id="19255" level="98" type="L2Monster" name="Kalios" title="Lord of Kartia">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19255" level="98" type="L2Monster" name="Kalios">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="1773796" hpRegen="7.5" mp="1773796" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="1064279" hpRegen="10.5" mp="23174" mpRegen="3.6" />
 			<attack physical="43000" magical="32250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1720" magical="1740" />
 			<attribute>

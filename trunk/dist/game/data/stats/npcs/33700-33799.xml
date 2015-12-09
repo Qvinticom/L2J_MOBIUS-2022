@@ -2375,7 +2375,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="33798" level="85" type="L2Npc" name="Life Plunderer">
+	<npc id="33798" level="85" type="L2Monster" name="Life Plunderer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -2391,13 +2391,13 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="33799" level="90" type="L2Npc" name="Life Plunderer">
+	<npc id="33799" level="90" type="L2Monster" name="Life Plunderer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
@@ -2413,7 +2413,7 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="78" />
