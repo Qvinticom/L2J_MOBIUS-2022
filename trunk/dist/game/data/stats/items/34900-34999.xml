@@ -1229,6 +1229,8 @@
 		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="bodypart" val="deco1" />
+		<set name="compoundChance" val="5" />
+		<set name="compoundItem" val="39572" />
 		<set name="default_action" val="EQUIP" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="equip_skill" val="13389-1" />
