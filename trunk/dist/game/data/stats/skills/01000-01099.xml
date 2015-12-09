@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1001" levels="15" name="Soul Cry" enchantGroup1="1">
+	<skill id="1001" levels="15" name="Soul Cry">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 1 14 25 35 40 48 56 60 66 72 78 85 90 95 99 </table>
 		<table name="#mdot"> 0 0 1 2 2 2 3 3 4 4 5 5 6 6 7 </table> <!-- Guessed -->
@@ -17,7 +17,6 @@
 		<set name="operateType" val="TOGGLE" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="#mdot" />
@@ -30,12 +29,6 @@
 				<mul stat="physicalSkillPower" val="#skillPower" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="ManaDamOverTime" ticks="5">
-				<param power="4" />
-				<add stat="pAtk" val="#ench1patk" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1002" levels="3" name="Chant of Flame" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>

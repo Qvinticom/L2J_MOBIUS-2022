@@ -288,9 +288,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1509" levels="6" name="Seal of Limit">
-		<table name="#magicLvl"> 81 82 85 90 95 99 </table>
-		<table name="#mpConsume"> 90 130 252 278 306 332 </table>
+	<skill id="1509" levels="9" name="Seal of Limit" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<table name="#magicLvl"> 81 82 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 90 130 252 278 306 332 358 384 410 </table>
+		<table name="#maxRec"> 0.8 0.7 0.6 0.5 0.4 0.4 0.4 0.4 0.3 </table> <!-- Guess -->
+		<table name="#enchant1activateRate"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 </table>
+		<table name="#enchant2hex"> 0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914 </table>
+		<table name="#enchant3mind"> 0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="LIMIT" />
@@ -313,11 +317,21 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
-				<mul stat="maxRecoverableHp" val="0.3" />
-				<mul stat="maxRecoverableMp" val="0.3" />
-				<mul stat="maxRecoverableCp" val="0.3" />
+				<mul stat="maxRecoverableHp" val="#maxRec" /><!-- TODO : Need check again maxRec -->
+				<mul stat="maxRecoverableMp" val="#maxRec" /><!-- TODO : Need check again -->
+				<mul stat="maxRecoverableCp" val="#maxRec" /><!-- TODO : Need check again -->
 			</effect>
 		</for>
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchant2hex" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="mDef" val="#enchant3mind" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="1510" levels="1" name="Soul Cleanse">
 		<!-- Confirmed CT2.5 -->

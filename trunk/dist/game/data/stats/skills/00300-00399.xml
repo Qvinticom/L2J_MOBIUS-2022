@@ -716,15 +716,12 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="320" levels="17" name="Wrath" enchantGroup1="2" enchantGroup2="2">
+	<skill id="320" levels="17" name="Wrath">
 		<!-- Updated to Infinite Odyssey -->
 		<table name="#effectPoints"> -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -339 -402 -402 -402 -402 </table> <!-- Guessed -->
 		<table name="#magicLvl"> 65 66 67 68 69 70 71 72 73 74 85 90 95 99 101 103 105 </table> <!-- Confirmed -->
 		<table name="#mpConsume"> 66 67 68 69 70 71 72 73 74 75 80 85 90 100 0 0 0 </table> <!-- Confirmed -->
 		<table name="#power"> 7 10 12 15 17 20 22 25 27 30 33 36 40 45 50 55 60 </table> <!-- Confirmed -->
-		<table name="#ench1Power"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 </table> <!-- Guessed -->
-		<table name="#ench2MpConsume"> 74 72 71 69 68 67 65 64 62 61 59 58 56 55 53 52 50 49 48 46 45 43 42 40 39 37 36 34 33 32 31 30 29 </table> <!-- Guessed -->
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 </table> <!-- Guessed -->
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="80" />
 		<set name="castRange" val="40" />
@@ -740,10 +737,6 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="POLE" />
 		</cond>

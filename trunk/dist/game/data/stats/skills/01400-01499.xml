@@ -614,12 +614,16 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1416" levels="1" name="Pa'agrio's Fist" enchantGroup1="5" enchantGroup2="5">
-		<table name="#ench1amount"> 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
-		<table name="#ench2mpConsume"> 219 212 205 196 189 181 174 166 159 151 143 136 128 121 113 </table>
-		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
+	<skill id="1416" levels="8" name="Pa'agrio's Fist" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<table name="#ench1abnormalTime"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50  </table>
+		<table name="#ench2shield"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086 </table>
+		<table name="#ench3magicShield"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086 </table>
+		<table name="#cp"> 1.02 1.03 1.04 1.05 1.06 1.07 1.1 1.15 </table>
+		<table name="#magicLvl"> 79 81 83 85 90 95 99 101 </table>
+		<table name="#mpConsume"> 105 112 119 127 139 153 166 179 </table>
+		<table name="#mpInitialConsume"> 26 27 29 31 38 41 44 45 </table> <!-- Guess -->
 		<set name="abnormalLvl" val="2" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CP_UP" />
 		<set name="affectLimit" val="50-100" />
 		<set name="affectRange" val="1000" />
@@ -629,31 +633,32 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="20" />
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
-		<set name="magicLvl" val="79" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="228" />
 		<set name="mpInitialConsume" val="56" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="300000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
 		<for>
 			<effect name="Buff">
-				<add stat="maxCp" val="800" />
+				<mul stat="maxCp" val="#cp" />
 			</effect>
 			<effect name="CpHeal">
-				<param power="800" />
+				<param power="#cp" /> <!-- Is true that ? recovery cp? -->
 			</effect>
 		</for>
-		<enchant1for>
+		<enchant2for>
 			<effect name="Buff">
-				<add stat="maxCp" val="#ench1amount" />
+				<mul stat="pDef" val="#ench2shield" />
 			</effect>
-			<effect name="CpHeal">
-				<param power="#ench1amount" />
+		</enchant2for>
+		<enchant3for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#ench3magicShield" />
 			</effect>
-		</enchant1for>
+		</enchant3for>
 	</skill>
 	<skill id="1417" levels="5" name="Aura Flash" enchantGroup1="2" enchantGroup2="2">
 		<table name="#chance"> 20 25 30 35 40 </table>
@@ -2267,15 +2272,17 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1462" levels="7" name="Seal of Blockade" enchantGroup1="6" enchantGroup2="6">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#magicLvl"> 79 81 83 85 90 95 99 </table>
-		<table name="#mpConsume"> 80 104 136 202 222 245 266 </table>
-		<table name="#mpInitialConsume"> 20 26 34 50 56 61 68 </table>
-		<table name="#ench1ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench2MpConsume"> 84 81 78 75 72 69 66 63 61 58 55 52 49 46 43 </table>
-		<table name="#ench2MpInitialConsume"> 21 20 19 18 18 17 16 15 15 14 13 13 12 11 10  </table>
-		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+	<skill id="1462" levels="10" name="Seal of Blockade" enchantGroup1="10" enchantGroup2="10">
+		<!-- Confirmed CT2.5 and Updated to Underground -->
+		<table name="#magicLvl"> 79 81 83 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 80 104 136 252 278 306 332 358 384 410 </table>
+		<table name="#mpInitialConsume"> 20 26 34 50 56 61 68 70 74 78 </table> <!-- Guess -->
+		<table name="#ench1ActivateRates"> 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100</table>
+		<table name="#ench2Hex"> 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914 0.913 </table> <!-- Update 2/12/2014 from l2wiki -->
+		<table name="#ench2MpConsume"> 84 81 78 75 72 69 66 63 61 58 55 52 49 46 43 40 37 34 </table> <!-- Guess -->
+		<table name="#ench2MpInitialConsume"> 21 20 19 18 18 17 16 15 15 14 13 13 12 11 10 9 8 7  </table> <!-- Guess -->
+		<table name="#ench3Mind"> 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914 0.913 </table> <!-- Update 2/12/2014 from l2wiki-->
+		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 85 85 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="NORMAL_ATTACK_BLOCK" />
@@ -2310,10 +2317,16 @@
 			<effect name="MagicalAttack" />
 			<effect name="PhysicalAttackMute" />
 		</for>
-		<enchant1for>
-			<effect name="MagicalAttack" />
-			<effect name="PhysicalAttackMute" />
-		</enchant1for>
+		<enchant2for>
+		<effect name="Debuff">
+				<mul stat="pDef" val="#ench2Hex" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="mDef" val="#ench3Mind" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="1463" levels="1" name="Fire Weapon">
 		<set name="abnormalLvl" val="1" />

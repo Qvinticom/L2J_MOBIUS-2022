@@ -1480,7 +1480,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1244" levels="13" name="Freezing Flame">
+	<skill id="1244" levels="13" name="Freezing Flame" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
 		<!-- Updated to Underground -->
 		<table name="#abnormalLvls"> 5 6 7 8 9 10 11 12 13 14 15 16 17 </table>
 		<table name="#dot"> 112 137 158 172 198 330 358 377 394 412 421 430 439 </table>
@@ -1489,6 +1489,12 @@
 		<table name="#magicLvl"> 40 52 64 72 76 80 85 90 95 99 101 103 105 </table>
 		<table name="#mpConsume"> 55 58 61 64 67 70 73 79 86 91 96 101 106 </table>
 		<table name="#mpInitialConsume"> 11 12 12 13 13 14 15 16 17 18 19 20 21 </table>
+		<!-- Increases Skill Success Rate by x%.  -->
+		<table name="#enchant1activateRate"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 </table>
+		<!-- Hex  Decreases P. Def. -->
+		<table name="#enchant2hex"> 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914 </table>
+		<!-- Slow -->
+		<table name="#enchant3Slow"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 </table> 
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
@@ -1523,6 +1529,17 @@
 				<param power="#dot" />
 			</effect>
 		</pveEffects>
+		<enchant1 name="activateRate" val="#enchant1activateRate" />
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#enchant2hex" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Debuff">
+				<sub stat="runSpd" val="#enchant3Slow" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="1245" levels="14" name="Steal Essence" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#effectPoints"> -379 -418 -457 -495 -532 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
