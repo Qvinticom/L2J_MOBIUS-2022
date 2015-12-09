@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets.luckygame;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.data.xml.impl.LuckyGameData;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -62,16 +63,16 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 				{
 					if (_count >= 40)
 					{
-						reward = LuckyGameRewards.getRandomRare(); // Rare
+						reward = LuckyGameData.getRandomRareReward();
 					}
 					else
 					{
-						reward = LuckyGameRewards.getRandomLuxury(); // Luxury
+						reward = LuckyGameData.getRandomLuxuryReward();
 					}
 				}
 				else
 				{
-					reward = LuckyGameRewards.getRandomNormal(); // Normal
+					reward = LuckyGameData.getRandomNormalReward();
 				}
 				rewards.add(reward);
 				totalWeight += new L2ItemInstance(reward.getId()).getItem().getWeight() * reward.getCount();

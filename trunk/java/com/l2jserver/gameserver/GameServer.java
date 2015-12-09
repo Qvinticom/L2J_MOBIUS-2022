@@ -70,6 +70,7 @@ import com.l2jserver.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jserver.gameserver.data.xml.impl.InitialShortcutData;
 import com.l2jserver.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jserver.gameserver.data.xml.impl.KarmaData;
+import com.l2jserver.gameserver.data.xml.impl.LuckyGameData;
 import com.l2jserver.gameserver.data.xml.impl.MultisellData;
 import com.l2jserver.gameserver.data.xml.impl.NpcData;
 import com.l2jserver.gameserver.data.xml.impl.OptionData;
@@ -233,6 +234,7 @@ public final class GameServer
 		CommissionManager.getInstance();
 		PrimeShopData.getInstance();
 		AppearanceItemData.getInstance();
+		LuckyGameData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
