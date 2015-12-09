@@ -26,8 +26,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
 			<add stat="waterRes" val="10" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -48,8 +48,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="79" order="0" />
 			<add stat="holyRes" val="10" />
-			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -70,8 +70,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -92,8 +92,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="79" order="0" />
 			<add stat="darkRes" val="10" />
-			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -114,8 +114,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="79" order="0" />
 			<add stat="earthRes" val="10" />
-			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -136,8 +136,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
 			<add stat="waterRes" val="10" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -158,8 +158,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="79" order="0" />
 			<add stat="fireRes" val="10" />
-			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -180,8 +180,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="79" order="0" />
 			<add stat="fireRes" val="10" />
-			<add order="0" stat="mDef" val="79" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -202,8 +202,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

@@ -22,9 +22,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34501" name="Player Commendation - Vesper Fighter (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -49,9 +49,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34502" name="Player Commendation - Vesper Fighter (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -76,9 +76,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34503" name="Player Commendation - Vesper Pincer (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -101,11 +101,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34504" name="Player Commendation - Vesper Pincer (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -128,11 +128,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34505" name="Player Commendation - Vesper Pincer (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -155,11 +155,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34506" name="Player Commendation - Vesper Pincer (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -182,11 +182,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34507" name="Player Commendation - Vesper Pincer (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -209,11 +209,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34508" name="Player Commendation - Vesper Pincer (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -236,11 +236,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34509" name="Player Commendation - Apocalypse Retributer (Earth) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -265,12 +265,12 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<add stat="earthPower" val="250" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34510" name="Player Commendation - Apocalypse Retributer (Water) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -294,13 +294,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="108" />
 		<for>
+			<add stat="waterPower" val="250" />
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34511" name="Player Commendation - Apocalypse Retributer (Wind) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -324,13 +324,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="108" />
 		<for>
+			<add stat="windPower" val="250" />
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34512" name="Player Commendation - Apocalypse Retributer (Fire) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -355,12 +355,12 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<add stat="firePower" val="250" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34513" name="Player Commendation - Apocalypse Retributer (Holy) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -385,12 +385,12 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<add stat="holyPower" val="250" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34514" name="Player Commendation - Apocalypse Retributer (Dark) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -415,12 +415,12 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
 			<add stat="darkPower" val="250" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="314" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34515" name="Player Commendation - Apocalypse Buster (Earth) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -446,9 +446,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34516" name="Player Commendation - Apocalypse Buster (Water) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -473,10 +473,10 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="285" />
-			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 			<add stat="waterPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="392" />
+			<set stat="mAtk" val="285" />
 		</for>
 	</item>
 	<item id="34517" name="Player Commendation - Apocalypse Buster (Wind) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -501,10 +501,10 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="285" />
-			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 			<add stat="windPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="392" />
+			<set stat="mAtk" val="285" />
 		</for>
 	</item>
 	<item id="34518" name="Player Commendation - Apocalypse Buster (Fire) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -530,9 +530,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34519" name="Player Commendation - Apocalypse Buster (Holy) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -558,9 +558,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34520" name="Player Commendation - Apocalypse Buster (Dark) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -586,9 +586,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34521" name="Player Commendation - Apocalypse Shaper (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -611,12 +611,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="428" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="428" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34522" name="Player Commendation - Apocalypse Shaper (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -639,12 +639,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="waterPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="428" />
-			<set stat="pAtkSpd" val="433" />
-			<add stat="waterPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34523" name="Player Commendation - Apocalypse Shaper (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -667,12 +667,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="windPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="428" />
-			<set stat="pAtkSpd" val="433" />
-			<add stat="windPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34524" name="Player Commendation - Apocalypse Shaper (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -695,12 +695,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="428" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="428" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34525" name="Player Commendation - Apocalypse Shaper (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -723,12 +723,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="428" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="428" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34526" name="Player Commendation - Apocalypse Shaper (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -751,12 +751,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="428" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="428" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34527" name="Player Commendation - Apocalypse Shooter (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -779,12 +779,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="866" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="866" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34528" name="Player Commendation - Apocalypse Shooter (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -807,12 +807,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="waterPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="866" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="waterPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34529" name="Player Commendation - Apocalypse Shooter (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -835,12 +835,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="windPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="866" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="windPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34530" name="Player Commendation - Apocalypse Shooter (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -863,12 +863,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="866" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="866" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34531" name="Player Commendation - Apocalypse Shooter (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -891,12 +891,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="866" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="866" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34532" name="Player Commendation - Apocalypse Shooter (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -919,12 +919,12 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="866" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="866" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34533" name="Player Commendation - Apocalypse Thrower (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -947,12 +947,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="963" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="963" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34534" name="Player Commendation - Apocalypse Thrower (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -975,12 +975,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="waterPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="293" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="963" />
-			<set stat="pAtkSpd" val="293" />
-			<add stat="waterPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34535" name="Player Commendation - Apocalypse Thrower (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1003,12 +1003,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="windPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="293" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="963" />
-			<set stat="pAtkSpd" val="293" />
-			<add stat="windPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34536" name="Player Commendation - Apocalypse Thrower (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1031,12 +1031,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="963" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="963" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34537" name="Player Commendation - Apocalypse Thrower (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1059,12 +1059,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="963" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="963" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34538" name="Player Commendation - Apocalypse Thrower (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1087,12 +1087,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="963" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="963" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34539" name="Player Commendation - Apocalypse Stormer (Earth) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1115,12 +1115,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34540" name="Player Commendation - Apocalypse Stormer (Water) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1143,12 +1143,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="waterPower" val="250" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="waterPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34541" name="Player Commendation - Apocalypse Stormer (Wind) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1171,12 +1171,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="windPower" val="250" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="windPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34542" name="Player Commendation - Apocalypse Stormer (Fire) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1199,12 +1199,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34543" name="Player Commendation - Apocalypse Stormer (Holy) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1227,12 +1227,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34544" name="Player Commendation - Apocalypse Stormer (Dark) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -1255,12 +1255,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34545" name="Player Commendation - Apocalypse Slasher (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1285,9 +1285,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34546" name="Player Commendation - Apocalypse Slasher (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1311,10 +1311,10 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 			<add stat="waterPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="595" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34547" name="Player Commendation - Apocalypse Slasher (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1338,10 +1338,10 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 			<add stat="windPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="595" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34548" name="Player Commendation - Apocalypse Slasher (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1366,9 +1366,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34549" name="Player Commendation - Apocalypse Slasher (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1393,9 +1393,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34550" name="Player Commendation - Apocalypse Slasher (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1420,9 +1420,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34551" name="Player Commendation - Apocalypse Avenger (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1446,11 +1446,11 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="earthPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34552" name="Player Commendation - Apocalypse Avenger (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1473,12 +1473,12 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="174" />
 		<for>
+			<add stat="waterPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
-			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34553" name="Player Commendation - Apocalypse Avenger (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1501,12 +1501,12 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="174" />
 		<for>
+			<add stat="windPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
-			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34554" name="Player Commendation - Apocalypse Avenger (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1530,11 +1530,11 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="firePower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34555" name="Player Commendation - Apocalypse Avenger (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1558,11 +1558,11 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="holyPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34556" name="Player Commendation - Apocalypse Avenger (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1586,11 +1586,11 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="darkPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34557" name="Player Commendation - Apocalypse Caster (Earth) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1615,11 +1615,11 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="earthPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34558" name="Player Commendation - Apocalypse Caster (Water) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1643,12 +1643,12 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="108" />
 		<for>
+			<add stat="waterPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
-			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34559" name="Player Commendation - Apocalypse Caster (Wind) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1672,12 +1672,12 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="108" />
 		<for>
+			<add stat="windPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
-			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34560" name="Player Commendation - Apocalypse Caster (Fire) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1702,11 +1702,11 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="firePower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34561" name="Player Commendation - Apocalypse Caster (Holy) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1731,11 +1731,11 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="holyPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34562" name="Player Commendation - Apocalypse Caster (Dark) - Acumen" additionalName="PC-exclusive" type="Weapon">
@@ -1760,11 +1760,11 @@
 		<set name="weight" val="108" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="darkPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="285" />
 			<set stat="pAtk" val="392" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34563" name="Player Commendation - Apocalypse Cutter (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1789,9 +1789,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34564" name="Player Commendation - Apocalypse Cutter (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1815,10 +1815,10 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 			<add stat="waterPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34565" name="Player Commendation - Apocalypse Cutter (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1842,10 +1842,10 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 			<add stat="windPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34566" name="Player Commendation - Apocalypse Cutter (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1870,9 +1870,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34567" name="Player Commendation - Apocalypse Cutter (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1897,9 +1897,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34568" name="Player Commendation - Apocalypse Cutter (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1924,9 +1924,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34569" name="Player Commendation - Apocalypse Fighter (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1950,11 +1950,11 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="earthPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34570" name="Player Commendation - Apocalypse Fighter (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1977,12 +1977,12 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="155" />
 		<for>
+			<add stat="waterPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="waterPower" val="250" />
 		</for>
 	</item>
 	<item id="34571" name="Player Commendation - Apocalypse Fighter (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2005,12 +2005,12 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="weight" val="155" />
 		<for>
+			<add stat="windPower" val="250" />
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
-			<add stat="windPower" val="250" />
 		</for>
 	</item>
 	<item id="34572" name="Player Commendation - Apocalypse Fighter (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2034,11 +2034,11 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="firePower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34573" name="Player Commendation - Apocalypse Fighter (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2062,11 +2062,11 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="holyPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34574" name="Player Commendation - Apocalypse Fighter (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2090,11 +2090,11 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="6" />
 			<add stat="darkPower" val="250" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34575" name="Player Commendation - Scroll: Enchant Weapon (A-grade)" additionalName="PC-exclusive" type="EtcItem">
@@ -2216,6 +2216,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="111" />
+		</for>
 	</item>
 	<item id="34584" name="Player Commendation - Talisman - M. Atk. (Passive)" additionalName="PC-exclusive" type="Armor">
 		<!-- M. Atk. + 37 when equipped. Shadow weapon. -->
@@ -2230,6 +2233,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="37" />
+		</for>
 	</item>
 	<item id="34585" name="Player Commendation - Talisman - P. Atk. (Active)" additionalName="PC-exclusive" type="Armor">
 		<!-- Physical P. Atk. + 111 when used. Shadow weapon. -->
@@ -2244,6 +2250,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="111" />
+		</for>
 	</item>
 	<item id="34586" name="Player Commendation - Talisman - P. Atk. (Passive)" additionalName="PC-exclusive" type="Armor">
 		<!-- Physical P. Atk. + 37 when equipped. Shadow weapon. -->
@@ -2258,6 +2267,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="37" />
+		</for>
 	</item>
 	<item id="34587" name="Player Commendation - Talisman - P. Def. (Active)" additionalName="PC-exclusive" type="Armor">
 		<!-- P. Def. Increases by 114 when used. Shadow weapon. -->
@@ -2356,6 +2368,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="327" />
+		</for>
 	</item>
 	<item id="34594" name="Player Commendation - Talisman - MP (Passive)" additionalName="PC-exclusive" type="Armor">
 		<!-- MP increases by 109 when equipped. Shadow weapon. -->

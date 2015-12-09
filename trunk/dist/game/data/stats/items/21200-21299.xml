@@ -110,7 +110,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="21207" name="Baium's Ring" additionalName="30-day" type="Armor">
@@ -129,7 +129,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="21208" name="Zaken's Earring" additionalName="30-day" type="Armor">
@@ -149,8 +149,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="21209" name="MP Recovery Potion Pack" type="EtcItem">
@@ -312,7 +312,7 @@
 		<set name="time" val="115200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="21219" name="Baium's Ring" additionalName="180-day" type="Armor">
@@ -331,7 +331,7 @@
 		<set name="time" val="115200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="21220" name="Zaken's Earring" additionalName="180-day" type="Armor">
@@ -351,8 +351,8 @@
 		<set name="time" val="115200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="21221" name="Valakas' Necklace" additionalName="180-day" type="Armor">
@@ -371,8 +371,8 @@
 		<set name="time" val="115200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="50" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="21222" name="Antharas' Earring" additionalName="180-day" type="Armor">
@@ -391,8 +391,8 @@
 		<set name="time" val="115200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="21223" name="Transformation Scroll: Anakim Pack" type="EtcItem">

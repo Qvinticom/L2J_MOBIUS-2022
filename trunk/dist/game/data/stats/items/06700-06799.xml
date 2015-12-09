@@ -184,11 +184,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="6" />
-			<set stat="pAtk" val="16" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="16" />
+			<set stat="mAtk" val="6" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="6716" name="Monster Only (Silenos Shaman)" type="Weapon">
@@ -211,9 +211,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="6717" name="Monster Only (Einhasad Warrior)" type="Weapon">
@@ -234,9 +234,9 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="6718" name="Monster Only (Einhasad Shaman)" type="Weapon">
@@ -258,9 +258,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="6719" name="Monster Only (Ketra Orc Chieftain)" type="Weapon">
@@ -284,9 +284,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="104" />
 			<set stat="pAtk" val="141" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -310,11 +310,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="6" />
-			<set stat="pAtk" val="16" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="16" />
+			<set stat="mAtk" val="6" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="6721" name="Monster Only (Shield of Imperial Warlord Zombie)" type="Armor">
@@ -328,9 +328,9 @@
 		<set name="price" val="8" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -354,9 +354,9 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -380,9 +380,9 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -401,8 +401,8 @@
 		<set name="price" val="3270000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="68" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="68" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -420,7 +420,7 @@
 		<set name="price" val="2180000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="46" />
+			<add stat="mDef" val="46" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -438,8 +438,8 @@
 		<set name="price" val="4361000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="91" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="91" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

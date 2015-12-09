@@ -8,6 +8,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="35901" name="STR Pendant" type="EtcItem">
 		<!-- You can bestow STR + 3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin,  Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow- -->
@@ -116,6 +119,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="35916" name="Draco's Hat" additionalName="DEX (Event)" type="Armor">
 		<!-- DEX + 3 when equipped. -->
@@ -126,6 +132,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="35917" name="Draco's Hat" additionalName="CON (Event)" type="Armor">
 		<!-- CON + 3 when equipped. -->
@@ -136,6 +145,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="35918" name="Draco's Hat" additionalName="MEN (Event)" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -146,6 +158,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="35919" name="Draco's Hat" additionalName="INT (Event)" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -156,6 +171,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="35920" name="Draco's Hat" additionalName="WIT (Event)" type="Armor">
 		<!-- WIT + 3 when equipped. -->
@@ -166,6 +184,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="35921" name="Draco's Hat" additionalName="Critical Rate (Event)" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
@@ -176,6 +197,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="35922" name="Draco's Hat" additionalName="Critical Damage (Event)" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -186,6 +210,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="35923" name="Draco's Hat" additionalName="P. Def. (Event)" type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -196,6 +224,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35924" name="Draco's Hat" additionalName="M. Def. (Event)" type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -206,6 +237,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35925" name="Draco's Hat" additionalName="Evasion (Event)" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -216,6 +250,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="35926" name="Draco's Hat" additionalName="P. Atk. (Event)" type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -226,6 +263,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35927" name="Draco's Hat" additionalName="M. Atk. (Event)" type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
@@ -236,6 +276,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35928" name="Draco's Hat" additionalName="Accuracy (Event)" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
@@ -246,6 +289,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="35929" name="Mysterious Ring" type="Armor">
 		<!-- Ring purchased at the Mysterious Mansion. 60 days. It summons the selected clan member to your location. Cooldown is 1 hour. Cannot be used in the Olympiad. -->
@@ -340,6 +386,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="mDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35937" name="Star Agathion - Hyuk Jang" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -355,6 +413,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35938" name="Star Agathion - Sooro Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, Max HP 5%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -370,6 +440,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35939" name="Star Agathion - Jaebum Park" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Atk. 6%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -385,6 +467,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pAtk" val="1.06" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35940" name="Star Agathion - Shin-young Kim" additionalName="15-day" type="Armor">
 		<!-- 15-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, and Attribute Resistance + 10. Skill cooldown 3% and skill MP consumption - 3%. . Used skill: Blessed Escape ability.  -->
@@ -400,6 +494,17 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35941" name="Star Agathion - Heejin Jang" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, M. Def. 5%, Max HP 5%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -415,6 +520,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="mDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35942" name="Star Agathion - Hyuk Jang" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -430,6 +547,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35943" name="Star Agathion - Sooro Kim" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Def. 5%, Max HP 5%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -445,6 +574,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35944" name="Star Agathion - Jaebum Park" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, P. Atk. 6%, and Attribute Resistance + 10. . Used skill: Blessed Escape ability.  -->
@@ -460,6 +601,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pAtk" val="1.06" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35945" name="Star Agathion - Shin-young Kim" additionalName="30-day" type="Armor">
 		<!-- 30-day. When equipped, it increases CON + 3, MEN + 3, weight gauge + 10000, Max HP, MP, and CP 300, and Attribute Resistance+ 10. Skill cooldown 3% and skill MP consumption - 3%. . Used skill: Blessed Escape ability.  -->
@@ -475,6 +628,17 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="35946" name="Agathion - Heejin Jang Pack (7-day)" type="EtcItem">
 		<!-- Box containing Agathion - Heejin Jang (7-day). -->
@@ -934,6 +1098,12 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+			<set stat="pAtk" val="103" />
+			<set stat="mAtk" val="156" />
+			<add stat="mAtkSpd" val="20" />
+		</for>
 	</item>
 	<item id="35981" name="Talisman - Annihilation" additionalName="7-day (Event)" type="Armor">
 		<!-- Talisman - Annihilation (7-day). When equipped, increases Max HP, MP, and CP by 300, P./M. Accuracy by 2, P./M. Evasion by 2, Vampiric Rage 3%, Atk. Spd./Casting Spd. by 20, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, and M. Atk. by 156. -->
@@ -949,6 +1119,12 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+			<set stat="pAtk" val="103" />
+			<set stat="mAtk" val="156" />
+			<add stat="mAtkSpd" val="20" />
+		</for>
 	</item>
 	<item id="35982" name="Ruler's Consideration" type="EtcItem">
 		<!-- Pouch acquired by those who fought bravely in the Ceremony of Chaos but failed to win. Double-click to acquire a Spirit Stone and Scroll: Enchant Weapon (R-grade). You may acquire more than one, or you may acquire none. -->
@@ -1137,11 +1313,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="298" />
-			<set stat="pAtk" val="1067" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1067" />
+			<set stat="mAtk" val="298" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="35997" name="Test - M. Accuracy Heavy Armor" type="Armor">
@@ -1155,8 +1331,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="100" />
 		<for>
+			<add stat="pDef" val="385" order="0" />
 			<add stat="accMagic" val="10.0" />
-			<add order="0" stat="pDef" val="385" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1171,8 +1347,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="100" />
 		<for>
+			<add stat="pDef" val="385" order="0" />
 			<add stat="mEvas" val="11.0" />
-			<add order="0" stat="pDef" val="385" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

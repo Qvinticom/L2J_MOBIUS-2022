@@ -17,11 +17,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="1333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1333" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36201" name="Buster Sealed with Heroes' Power" type="Weapon">
@@ -42,9 +42,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="486" />
 			<set stat="pAtk" val="602" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36202" name="Caster Sealed with Heroes' Power" type="Weapon">
@@ -66,9 +66,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="486" />
 			<set stat="pAtk" val="602" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36203" name="Retributer Sealed with Heroes' Power" type="Weapon">
@@ -89,11 +89,11 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="535" />
 			<set stat="pAtk" val="733" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36204" name="Dualsword Sealed with Heroes' Power" type="Weapon">
@@ -114,9 +114,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36205" name="Dual Dagger Sealed with Heroes' Power" type="Weapon">
@@ -136,11 +136,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="752" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="752" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" type="Weapon">
@@ -162,9 +162,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36207" name="Shaper Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -186,11 +186,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="881" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="881" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36208" name="Cutter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -213,9 +213,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36209" name="Slasher Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -238,9 +238,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36210" name="Avenger Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -264,9 +264,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36211" name="Fighter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -290,9 +290,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36212" name="Stormer Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -314,11 +314,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36213" name="Thrower Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -340,11 +340,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1983" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1983" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36214" name="Shooter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -366,11 +366,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1786" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1786" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36215" name="Buster Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -393,9 +393,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36216" name="Caster Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -419,9 +419,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36217" name="Retributer Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -444,11 +444,11 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="765" />
 			<set stat="pAtk" val="981" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36218" name="Dualsword Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -471,9 +471,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36219" name="Dual Dagger Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -495,11 +495,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36220" name="Dual Blunt Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
@@ -523,9 +523,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36221" name="Scroll Imbued with Heroes' Power" type="EtcItem">
@@ -693,8 +693,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="holyRes" val="35" />
-			<add order="0" stat="mDef" val="205" />
 			<add stat="maxMp" val="74" />
+			<add stat="mDef" val="205" order="0" />
 		</for>
 	</item>
 	<item id="36236" name="Istina's Ring" additionalName="3-hour" type="Armor">
@@ -712,8 +712,8 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="103" />
 			<add stat="waterRes" val="20" />
+			<add stat="mDef" val="103" order="0" />
 		</for>
 	</item>
 	<item id="36237" name="Istina's Earring" additionalName="3-hour" type="Armor">
@@ -731,8 +731,8 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="154" />
 			<add stat="maxMp" val="56" />
+			<add stat="mDef" val="154" order="0" />
 		</for>
 	</item>
 	<item id="36238" name="Octavis' Ring" additionalName="3-hour" type="Armor">
@@ -751,7 +751,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="fireRes" val="20" />
-			<add order="0" stat="mDef" val="103" />
+			<add stat="mDef" val="103" order="0" />
 		</for>
 	</item>
 	<item id="36239" name="Octavis' Necklace" additionalName="3-hour" type="Armor">
@@ -770,8 +770,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="35" />
-			<add order="0" stat="mDef" val="205" />
 			<add stat="maxMp" val="74" />
+			<add stat="mDef" val="205" order="0" />
 		</for>
 	</item>
 	<item id="36240" name="Octavis' Earring" additionalName="3-hour" type="Armor">
@@ -790,8 +790,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="earthRes" val="30" />
-			<add order="0" stat="mDef" val="154" />
 			<add stat="maxMp" val="56" />
+			<add stat="mDef" val="154" order="0" />
 		</for>
 	</item>
 	<item id="36241" name="Blessed Antharas' Earring" additionalName="3-hour" type="Armor">
@@ -808,8 +808,8 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
+			<add stat="mDef" val="170" order="0" />
 		</for>
 	</item>
 	<item id="36242" name="Blessed Valakas' Necklace" additionalName="3-hour" type="Armor">
@@ -828,9 +828,9 @@
 		<for>
 			<add stat="darkRes" val="20" />
 			<add stat="fireRes" val="30" />
-			<add order="0" stat="mDef" val="226" />
 			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
+			<add stat="mDef" val="226" order="0" />
 		</for>
 	</item>
 	<item id="36243" name="Earth Wyrm Heart Ring" additionalName="3-hour" type="Armor">
@@ -847,7 +847,7 @@
 		<set name="time" val="180" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 		</for>
 	</item>
 	<item id="36244" name="Tauti's Ring" additionalName="3-hour" type="Armor">
@@ -865,7 +865,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="25" />
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 		</for>
 	</item>
 	<item id="36245" name="Charlotte's Vitality Replenishing Potion" type="EtcItem">
@@ -984,7 +984,7 @@
 		<for>
 			<add stat="accCombat" val="4" />
 			<add stat="critRate" val="20" />
-			<add order="0" stat="mDef" val="79" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1003,8 +1003,8 @@
 		<set name="price" val="69466000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="118" />
 			<add stat="maxMp" val="46" />
+			<add stat="mDef" val="118" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1033,8 +1033,8 @@
 		<set name="price" val="92622000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="158" />
 			<add stat="maxMp" val="62" />
+			<add stat="mDef" val="158" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1224,6 +1224,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="36281" name="Pagan Devil Circlet" type="Armor">
 		<!-- A Devil Circlet given by Andreas Van Halter. M. Atk. + 10% when equipped. -->
@@ -1233,6 +1236,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="36282" name="Error Compensation Package" type="EtcItem">
 		<!-- We apologize for the inconvenience caused by the downed server. We will try our best to provide our customers with stable environments for fun play.. Double-click to receive 5 scrolls imbued with the power of heroes, 1 unit of PC Vitality and 1 Boss Acces -->

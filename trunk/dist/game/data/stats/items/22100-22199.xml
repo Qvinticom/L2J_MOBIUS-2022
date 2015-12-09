@@ -958,6 +958,7 @@
 		<set name="weight" val="10" />
 		<cond msgId="1518">
 			<player sex="1" />
+			<player sex="1" />
 		</cond>
 	</item>
 	<item id="22157" name="Forget-me-not Hairpin" type="Armor">
@@ -974,6 +975,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
+			<player sex="1" />
 			<player sex="1" />
 		</cond>
 	</item>
@@ -1204,7 +1206,7 @@
 		<set name="price" val="1730000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1223,7 +1225,7 @@
 		<set name="price" val="123200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1242,8 +1244,8 @@
 		<set name="price" val="11394000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

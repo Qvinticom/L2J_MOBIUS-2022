@@ -70,11 +70,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -103,9 +103,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -136,11 +136,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -172,9 +172,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="55" />
-			<set stat="pAtkSpd" val="350" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -205,11 +205,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -240,11 +240,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="126" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -276,9 +276,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="151" />
-			<set stat="pAtkSpd" val="350" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -309,11 +309,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="176" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -342,9 +342,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -450,7 +450,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="8820" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 		</for>
 	</item>
 	<item id="10020" name="Iron Plate Gaiters" type="Armor">
@@ -469,7 +469,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="3820" />
 		<for>
-			<add order="0" stat="pDef" val="48" />
+			<add stat="pDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="10021" name="Puma Skin Shirt" type="Armor">
@@ -488,7 +488,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4700" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 		</for>
 	</item>
 	<item id="10022" name="Puma Skin Gaiters" type="Armor">
@@ -507,7 +507,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="10023" name="Cursed Tunic" type="Armor">
@@ -526,7 +526,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2090" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 		</for>
 	</item>
 	<item id="10024" name="Cursed Stockings" type="Armor">
@@ -545,7 +545,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1020" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="10025" name="Battle Manual - Fallen Arrow" type="EtcItem">

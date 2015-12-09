@@ -1190,9 +1190,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17176" name="Balloon Stick of Cheers - Orange" type="Weapon">
@@ -1210,9 +1210,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17177" name="Balloon Stick of Cheers - Yellow" type="Weapon">
@@ -1230,9 +1230,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17178" name="Balloon Stick of Cheers - Green" type="Weapon">
@@ -1250,9 +1250,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17179" name="Balloon Stick of Cheers - Blue" type="Weapon">
@@ -1270,9 +1270,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17180" name="Balloon Stick of Cheers - Indigo Blue" type="Weapon">
@@ -1290,9 +1290,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17181" name="Balloon Stick of Cheers - Purple" type="Weapon">
@@ -1310,9 +1310,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17182" name="Balloon Stick of Cheers - Black" type="Weapon">
@@ -1330,9 +1330,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17183" name="Balloon Stick of Cheers - White" type="Weapon">
@@ -1350,9 +1350,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="17184" name="Scroll: 5,000 SP" type="EtcItem">
@@ -1395,7 +1395,7 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="17187" name="Olympic Athlete's Necklace" additionalName="3-day" type="Armor">
@@ -1412,8 +1412,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="17188" name="Olympic Athlete's Earring" additionalName="3-day" type="Armor">
@@ -1430,8 +1430,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="17189" name="Olympic Athlete's Ring" additionalName="7-day" type="Armor">
@@ -1448,7 +1448,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="17190" name="Olympic Athlete's Necklace" additionalName="7-day" type="Armor">
@@ -1465,8 +1465,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="17191" name="Olympic Athlete's Earring" additionalName="7-day" type="Armor">
@@ -1483,8 +1483,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="17192" name="Olympic Athlete's Ring" additionalName="10-day" type="Armor">
@@ -1501,7 +1501,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="17193" name="Olympic Athlete's Necklace" additionalName="10-day" type="Armor">
@@ -1518,8 +1518,8 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="17194" name="Olympic Athlete's Earring" additionalName="10-day" type="Armor">
@@ -1536,8 +1536,8 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="17195" name="Olympic Athlete's Ring" additionalName="30-day" type="Armor">
@@ -1554,7 +1554,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="17196" name="Olympic Athlete's Necklace" additionalName="30-day" type="Armor">
@@ -1571,8 +1571,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="17197" name="Olympic Athlete's Earring" additionalName="30-day" type="Armor">
@@ -1589,8 +1589,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="17198" name="Olympic Athlete's Ring" type="Armor">
@@ -1606,7 +1606,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="17199" name="Olympic Athlete's Necklace" type="Armor">
@@ -1622,8 +1622,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="95" order="0" />
 		</for>
 	</item>
 </list>

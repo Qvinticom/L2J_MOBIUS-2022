@@ -574,7 +574,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="24134" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">

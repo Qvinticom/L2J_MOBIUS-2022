@@ -400,11 +400,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="800" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="17" />
-			<set stat="pAtk" val="24" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="24" />
+			<set stat="mAtk" val="17" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="3027" name="Old Knight Sword" type="Weapon">
@@ -428,9 +428,9 @@
 		<set name="weight" val="2100" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="29" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="3028" name="Crescent Moon Bow" type="Weapon">
@@ -455,11 +455,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="600" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="12" />
-			<set stat="pAtk" val="34" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="34" />
+			<set stat="mAtk" val="12" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="3029" name="Sword of Seal" type="Weapon">
@@ -483,9 +483,9 @@
 		<set name="weight" val="1200" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="17" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="3030" name="Lesser Giant's Key" type="EtcItem">

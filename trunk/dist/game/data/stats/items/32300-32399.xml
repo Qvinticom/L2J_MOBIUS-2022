@@ -205,6 +205,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="pAtk" val="1.02" />
+		</for>
 	</item>
 	<item id="32320" name="Basic Talisman - P. Def." type="Armor">
 		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
@@ -219,6 +222,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="pDef" val="1.03" />
+		</for>
 	</item>
 	<item id="32321" name="Basic Talisman - Casting Spd." type="Armor">
 		<!-- Casting Spd. + 2% when equipped. Shadow weapon. -->
@@ -233,6 +239,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mAtkSpd" val="1.02" />
+		</for>
 	</item>
 	<item id="32322" name="Basic Talisman - M. Def." type="Armor">
 		<!-- M. Def. + 3% when equipped. Shadow weapon. -->
@@ -247,6 +256,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mDef" val="1.03" />
+		</for>
 	</item>
 	<item id="32323" name="Basic Talisman - M. Atk." type="Armor">
 		<!-- M. Atk. + 2% when equipped. Shadow weapon. -->
@@ -261,6 +273,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mAtk" val="1.02" />
+		</for>
 	</item>
 	<item id="32324" name="Fantasy Shining Knife" additionalName="Not in Use" type="Weapon">
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
@@ -277,9 +292,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32325" name="Fantasy Sword Breaker" additionalName="Not in Use" type="Weapon">
@@ -297,9 +312,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32326" name="Fantasy Long Sword" additionalName="Not in Use" type="Weapon">
@@ -317,9 +332,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32327" name="Falchion with a fantastically long item name" additionalName="Not in Use" type="Weapon">
@@ -337,9 +352,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32328" name="Forest Bow with a fantastically long item name and addname" additionalName="Not in Use" type="Weapon">
@@ -357,9 +372,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32329" name="Fantasy Compound Bow" additionalName="Not in Use" type="Weapon">
@@ -472,8 +487,8 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
+			<add stat="mDef" val="1" order="0" />
 			<set stat="mAtk" val="21" />
-			<add order="0" stat="mDef" val="1" />
 		</for>
 	</item>
 	<item id="32336" name="Fantasy Cestus" additionalName="Not in Use" type="Weapon">
@@ -518,8 +533,8 @@
 		<set name="price" val="379" />
 		<set name="weight" val="8920" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="32339" name="Fantasy Bronze Gaiters" additionalName="Not in Use" type="Armor">
@@ -532,8 +547,8 @@
 		<set name="price" val="236" />
 		<set name="weight" val="3960" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="32340" name="Fantasy Durable Leather Shirt" additionalName="Not in Use" type="Armor">
@@ -546,8 +561,8 @@
 		<set name="price" val="284" />
 		<set name="weight" val="4720" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="32341" name="Fantasy Durable Leather Gaiters" additionalName="Not in Use" type="Armor">
@@ -560,8 +575,8 @@
 		<set name="price" val="177" />
 		<set name="weight" val="1610" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
-			<add order="0" stat="pDef" val="33" />
+			<add stat="mDef" val="1" order="0" />
+			<add stat="pDef" val="33" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -576,11 +591,10 @@
 		<set name="price" val="284" />
 		<set name="weight" val="2080" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="pDef" val="34" order="0" />
 			<add stat="critRate" val="12" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
-			<add order="0" stat="pDef" val="34" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32343" name="Fantasy Stockings of Magic" additionalName="Not in Use" type="Armor">
@@ -594,11 +608,10 @@
 		<set name="price" val="177" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="pDef" val="21" order="0" />
 			<add stat="critRate" val="12" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
-			<add order="0" stat="pDef" val="21" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32344" name="Fantasy Bracer" additionalName="Not in Use" type="Armor">
@@ -610,9 +623,8 @@
 		<set name="weight" val="650" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="pAtk" val="317" />
+			<add stat="pDef" val="17" order="0" />
 			<set stat="pAtkSpd" val="379" />
-			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
 	<item id="32345" name="Fantasy Boots" additionalName="Not in Use" type="Armor">
@@ -624,11 +636,10 @@
 		<set name="price" val="95" />
 		<set name="weight" val="1310" />
 		<for>
+			<add stat="pDef" val="17" order="0" />
+			<add stat="mDef" val="1" order="0" />
 			<add stat="critRate" val="8" />
-			<add order="0" stat="mDef" val="1" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="379" />
-			<add order="0" stat="pDef" val="17" />
 		</for>
 	</item>
 	<item id="32346" name="Fantasy Durable Leather Helmet" additionalName="Not in Use" type="Armor">
@@ -640,11 +651,10 @@
 		<set name="price" val="142" />
 		<set name="weight" val="640" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
+			<add stat="pDef" val="26" order="0" />
 			<add stat="critRate" val="10" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
-			<add order="0" stat="pDef" val="26" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32347" name="Fantasy Bone Shield" additionalName="Not in Use" type="Armor">
@@ -657,9 +667,8 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 			<set stat="sDef" val="90" />
+			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32348" name="Fantasy Dagger of Mana" additionalName="Not in Use" type="Weapon">
@@ -678,9 +687,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="52" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32349" name="Fantasy Kukuri" additionalName="Not in Use" type="Weapon">
@@ -697,11 +706,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1080" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32350" name="Fantasy Crimson Sword" additionalName="Not in Use" type="Weapon">
@@ -718,11 +727,11 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="weight" val="1490" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32351" name="Fantasy Fleuret" additionalName="Not in Use" type="Weapon">
@@ -742,9 +751,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32352" name="Fantasy Two-handed Sword" additionalName="Not in Use" type="Weapon">
@@ -763,9 +772,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32353" name="Fantasy Military Talwar" additionalName="Not in Use" type="Weapon">
@@ -785,9 +794,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32354" name="Fantasy Gastraphetes" additionalName="Not in Use" type="Weapon">
@@ -807,9 +816,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32355" name="Fantasy Hand Crossbow" additionalName="Not in Use" type="Weapon">
@@ -827,11 +836,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1850" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32356" name="Fantasy Spiked Club" additionalName="Not in Use" type="Weapon">
@@ -850,9 +859,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32357" name="Fantasy Staff of Magic" additionalName="Not in Use" type="Weapon">
@@ -870,9 +879,9 @@
 		<set name="weight" val="1020" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="57" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32358" name="Fantasy War Hammer" additionalName="Not in Use" type="Weapon">
@@ -920,7 +929,7 @@
 		<set name="price" val="1411" />
 		<set name="weight" val="8670" />
 		<for>
-			<add order="0" stat="pDef" val="95" />
+			<add stat="pDef" val="95" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -935,7 +944,7 @@
 		<set name="price" val="976" />
 		<set name="weight" val="3830" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -950,7 +959,7 @@
 		<set name="price" val="1170" />
 		<set name="weight" val="4570" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -965,7 +974,7 @@
 		<set name="price" val="732" />
 		<set name="weight" val="1570" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -980,7 +989,7 @@
 		<set name="price" val="1170" />
 		<set name="weight" val="2020" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -995,7 +1004,7 @@
 		<set name="price" val="732" />
 		<set name="weight" val="1000" />
 		<for>
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1009,7 +1018,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1023,7 +1032,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1037,7 +1046,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1051,7 +1060,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1065,7 +1074,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1079,7 +1088,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1093,9 +1102,9 @@
 		<set name="price" val="391" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
-			<sub stat="rEvas" val="8" />
+			<add stat="pDef" val="24" order="0" />
 			<set stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1109,7 +1118,7 @@
 		<set name="price" val="391" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1124,7 +1133,7 @@
 		<set name="price" val="1955" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1138,7 +1147,7 @@
 		<set name="price" val="1955" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1152,7 +1161,7 @@
 		<set name="price" val="1955" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1166,7 +1175,7 @@
 		<set name="price" val="1955" />
 		<set name="weight" val="1270" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1180,7 +1189,7 @@
 		<set name="price" val="2930" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1194,8 +1203,8 @@
 		<set name="price" val="2930" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
+			<add stat="mDef" val="1" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1211,9 +1220,9 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="1340" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="128" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1232,11 +1241,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="750" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="86" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32382" name="Fantasy Stiletto" additionalName="Not in Use" type="Weapon">
@@ -1254,11 +1263,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32383" name="Fantasy Dark Screamer" additionalName="Not in Use" type="Weapon">
@@ -1276,11 +1285,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32384" name="Fantasy Katana" additionalName="Not in Use" type="Weapon">
@@ -1299,9 +1308,9 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="122" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32385" name="Fantasy Sword of Delusion" additionalName="Not in Use" type="Weapon">
@@ -1320,9 +1329,9 @@
 		<set name="weight" val="1400" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32386" name="Fantasy Chevalier Rapier" additionalName="Not in Use" type="Weapon">
@@ -1340,11 +1349,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32387" name="Fantasy Blinzlasher" additionalName="Not in Use" type="Weapon">
@@ -1362,11 +1371,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1400" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="126" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32388" name="Fantasy Pa'agrian Sword" additionalName="Not in Use" type="Weapon">
@@ -1385,9 +1394,9 @@
 		<set name="weight" val="1980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32389" name="Fantasy Schlager" additionalName="Not in Use" type="Weapon">
@@ -1407,9 +1416,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32390" name="Fantasy Immortal Edge" additionalName="Not in Use" type="Weapon">
@@ -1429,9 +1438,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="151" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32391" name="Fantasy Elemental Bow" additionalName="Not in Use" type="Weapon">
@@ -1450,11 +1459,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1770" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="75" />
-			<set stat="pAtk" val="277" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="277" />
+			<set stat="mAtk" val="75" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32392" name="Fantasy Akat Longbow" additionalName="Not in Use" type="Weapon">
@@ -1473,11 +1482,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1740" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="84" />
-			<set stat="pAtk" val="316" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="316" />
+			<set stat="mAtk" val="84" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32393" name="Fantasy Ballista" additionalName="Not in Use" type="Weapon">
@@ -1495,11 +1504,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1770" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="155" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="155" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32394" name="Fantasy Tathlum" additionalName="Not in Use" type="Weapon">
@@ -1517,11 +1526,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1760" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="176" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32395" name="Fantasy Stick of Eternity" additionalName="Not in Use" type="Weapon">
@@ -1541,9 +1550,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="101" />
 			<set stat="pAtk" val="111" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32396" name="Fantasy Dwarven War Hammer" additionalName="Not in Use" type="Weapon">
@@ -1563,9 +1572,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="122" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32397" name="Fantasy War Axe" additionalName="Not in Use" type="Weapon">
@@ -1585,9 +1594,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="139" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32398" name="Fantasy Cursed Staff" additionalName="Not in Use" type="Weapon">
@@ -1607,9 +1616,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="100" />
 			<set stat="pAtk" val="119" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32399" name="Fantasy Inferno Staff" additionalName="Not in Use" type="Weapon">
@@ -1629,9 +1638,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="135" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

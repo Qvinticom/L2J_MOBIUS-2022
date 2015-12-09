@@ -1039,7 +1039,7 @@
 		<set name="time" val="1440" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="22478" name="Santa Girl's Cloak" additionalName="7-day (Event)" type="Armor">
@@ -1056,7 +1056,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="22479" name="Santa Girl's Cloak" additionalName="30-day (Event)" type="Armor">
@@ -1073,7 +1073,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="22480" name="Santa Girl's Cloak" additionalName="Event" type="Armor">
@@ -1089,7 +1089,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="22481" name="Improved Bronze Bracelet" additionalName="1-day" type="Armor">

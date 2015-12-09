@@ -796,11 +796,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1070" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="42" />
-			<set stat="pAtk" val="62" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="62" />
+			<set stat="mAtk" val="42" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>

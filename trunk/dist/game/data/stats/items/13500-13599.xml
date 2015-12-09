@@ -310,9 +310,9 @@
 		<set name="weight" val="1500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13525" name="Gracian Soldier Shield" type="Armor">
@@ -330,9 +330,9 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="13526" name="Test Belt" type="Armor">
@@ -345,7 +345,7 @@
 		<set name="price" val="113" />
 		<set name="weight" val="4830" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="13527" name="Test Cloak" type="Armor">
@@ -358,7 +358,7 @@
 		<set name="price" val="37" />
 		<set name="weight" val="260" />
 		<for>
-			<add order="0" stat="pDef" val="2" />
+			<add stat="pDef" val="2" order="0" />
 		</for>
 	</item>
 	<item id="13528" name="Test Dual Daggers" type="Weapon">
@@ -380,9 +380,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="200" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13529" name="Test Sigil" type="Armor">
@@ -394,9 +394,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -642,9 +642,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -913,9 +913,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13557" name="Airship Cannon" type="Weapon">
@@ -933,9 +933,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13558" name="Airship Cannon Briquet" type="Weapon">
@@ -953,9 +953,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13559" name="Airship Summon License" type="EtcItem">

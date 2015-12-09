@@ -171,7 +171,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="22914" name="Wedding Ring - Female" type="Armor">
@@ -186,7 +186,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="22915" name="Flower Shower" type="EtcItem">
@@ -218,11 +218,11 @@
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="BOW" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22917" name="Refined Jester Hat" type="Armor">

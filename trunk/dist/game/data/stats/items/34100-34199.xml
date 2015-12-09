@@ -19,11 +19,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34101" name="Player Commendation - Bastard Sword*Crimson Sword (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -46,9 +46,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34102" name="Player Commendation - Bastard Sword*Crimson Sword (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -71,9 +71,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34103" name="Player Commendation - Bastard Sword*Crimson Sword (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -96,9 +96,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34104" name="Player Commendation - Bastard Sword*Crimson Sword (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -121,9 +121,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34105" name="Player Commendation - Bastard Sword*Crimson Sword (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -146,9 +146,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34106" name="Player Commendation - Bastard Sword*Crimson Sword (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -171,9 +171,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34107" name="Player Commendation - Bonebreaker (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -197,9 +197,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34108" name="Player Commendation - Bonebreaker (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -223,9 +223,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34109" name="Player Commendation - Bonebreaker (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -249,9 +249,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34110" name="Player Commendation - Bonebreaker (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -275,9 +275,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34111" name="Player Commendation - Bonebreaker (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -301,9 +301,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34112" name="Player Commendation - Bonebreaker (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -327,9 +327,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34113" name="Player Commendation - Light Crossbow (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -353,11 +353,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34114" name="Player Commendation - Light Crossbow (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -381,11 +381,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34115" name="Player Commendation - Light Crossbow (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -409,11 +409,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34116" name="Player Commendation - Light Crossbow (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -437,11 +437,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34117" name="Player Commendation - Light Crossbow (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -465,11 +465,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34118" name="Player Commendation - Light Crossbow (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -493,11 +493,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34119" name="Player Commendation - Staff of Life (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -521,9 +521,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34120" name="Player Commendation - Staff of Life (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -547,9 +547,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34121" name="Player Commendation - Staff of Life (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -573,9 +573,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34122" name="Player Commendation - Staff of Life (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -599,9 +599,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34123" name="Player Commendation - Staff of Life (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -625,9 +625,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34124" name="Player Commendation - Staff of Life (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -651,9 +651,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34125" name="Player Commendation - Scallop Jamadhr (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -677,9 +677,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34126" name="Player Commendation - Scallop Jamadhr (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -703,9 +703,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34127" name="Player Commendation - Scallop Jamadhr (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -729,9 +729,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34128" name="Player Commendation - Scallop Jamadhr (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -755,9 +755,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34129" name="Player Commendation - Scallop Jamadhr (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -781,9 +781,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34130" name="Player Commendation - Scallop Jamadhr (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -807,9 +807,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34131" name="Player Commendation - Atuba Hammer (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -833,9 +833,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34132" name="Player Commendation - Atuba Hammer (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -859,9 +859,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34133" name="Player Commendation - Atuba Hammer (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -885,9 +885,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34134" name="Player Commendation - Atuba Hammer (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -911,9 +911,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34135" name="Player Commendation - Atuba Hammer (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -937,9 +937,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34136" name="Player Commendation - Atuba Hammer (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -963,9 +963,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34137" name="Player Commendation - Elven Long Sword (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -988,9 +988,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34138" name="Player Commendation - Elven Long Sword (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -1013,9 +1013,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34139" name="Player Commendation - Elven Long Sword (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -1038,9 +1038,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34140" name="Player Commendation - Elven Long Sword (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -1063,9 +1063,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34141" name="Player Commendation - Elven Long Sword (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -1088,9 +1088,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34142" name="Player Commendation - Elven Long Sword (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -1113,9 +1113,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34143" name="Player Commendation - General's Katzbalger (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -1139,9 +1139,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34144" name="Player Commendation - General's Katzbalger (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -1165,9 +1165,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34145" name="Player Commendation - General's Katzbalger (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -1191,9 +1191,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34146" name="Player Commendation - General's Katzbalger (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -1217,9 +1217,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34147" name="Player Commendation - General's Katzbalger (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -1243,9 +1243,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34148" name="Player Commendation - General's Katzbalger (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -1269,9 +1269,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34149" name="Player Commendation - Cranequin (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -1293,11 +1293,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34150" name="Player Commendation - Cranequin (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -1319,11 +1319,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34151" name="Player Commendation - Cranequin (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -1345,11 +1345,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34152" name="Player Commendation - Cranequin (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -1371,11 +1371,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34153" name="Player Commendation - Cranequin (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -1397,11 +1397,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34154" name="Player Commendation - Cranequin (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -1423,11 +1423,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34155" name="Player Commendation - Claymore (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -1450,9 +1450,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34156" name="Player Commendation - Claymore (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -1475,9 +1475,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34157" name="Player Commendation - Claymore (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -1500,9 +1500,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34158" name="Player Commendation - Claymore (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -1525,9 +1525,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34159" name="Player Commendation - Claymore (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -1550,9 +1550,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34160" name="Player Commendation - Claymore (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -1575,9 +1575,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34161" name="Player Commendation - Great Pata (Earth) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1602,9 +1602,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34162" name="Player Commendation - Great Pata (Water) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1629,9 +1629,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34163" name="Player Commendation - Great Pata (Wind) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1656,9 +1656,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34164" name="Player Commendation - Great Pata (Fire) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1683,9 +1683,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34165" name="Player Commendation - Great Pata (Holy) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1710,9 +1710,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34166" name="Player Commendation - Great Pata (Dark) - Rsk. Haste" additionalName="PC-exclusive" type="Weapon">
@@ -1737,9 +1737,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34167" name="Player Commendation - Deadman's Staff (Earth) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1763,9 +1763,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34168" name="Player Commendation - Deadman's Staff (Water) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1789,9 +1789,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34169" name="Player Commendation - Deadman's Staff (Wind) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1815,9 +1815,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34170" name="Player Commendation - Deadman's Staff (Fire) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1841,9 +1841,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34171" name="Player Commendation - Deadman's Staff (Holy) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1867,9 +1867,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34172" name="Player Commendation - Deadman's Staff (Dark) - Magic Regeneration" additionalName="PC-exclusive" type="Weapon">
@@ -1893,9 +1893,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34173" name="Player Commendation - Berserker Blade (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1919,9 +1919,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34174" name="Player Commendation - Berserker Blade (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1945,9 +1945,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34175" name="Player Commendation - Berserker Blade (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1971,9 +1971,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34176" name="Player Commendation - Berserker Blade (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -1997,9 +1997,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34177" name="Player Commendation - Berserker Blade (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2023,9 +2023,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34178" name="Player Commendation - Berserker Blade (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2049,9 +2049,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34179" name="Player Commendation - Sharpshooter (Earth) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2074,11 +2074,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34180" name="Player Commendation - Sharpshooter (Water) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2101,11 +2101,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34181" name="Player Commendation - Sharpshooter (Wind) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2128,11 +2128,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34182" name="Player Commendation - Sharpshooter (Fire) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2155,11 +2155,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34183" name="Player Commendation - Sharpshooter (Holy) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2182,11 +2182,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34184" name="Player Commendation - Sharpshooter (Dark) - Guidance" additionalName="PC-exclusive" type="Weapon">
@@ -2209,11 +2209,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="174" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="34185" name="Player Commendation - Shamshir*Shamshir (Earth)" additionalName="PC-exclusive" type="Weapon">
@@ -2236,9 +2236,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34186" name="Player Commendation - Shamshir*Shamshir (Water)" additionalName="PC-exclusive" type="Weapon">
@@ -2261,9 +2261,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34187" name="Player Commendation - Shamshir*Shamshir (Wind)" additionalName="PC-exclusive" type="Weapon">
@@ -2286,9 +2286,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34188" name="Player Commendation - Shamshir*Shamshir (Fire)" additionalName="PC-exclusive" type="Weapon">
@@ -2311,9 +2311,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34189" name="Player Commendation - Shamshir*Shamshir (Holy)" additionalName="PC-exclusive" type="Weapon">
@@ -2336,9 +2336,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34190" name="Player Commendation - Shamshir*Shamshir (Dark)" additionalName="PC-exclusive" type="Weapon">
@@ -2361,9 +2361,9 @@
 		<set name="weight" val="233" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34191" name="Player Commendation - Saber Tooth (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2388,9 +2388,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34192" name="Player Commendation - Saber Tooth (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2415,9 +2415,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34193" name="Player Commendation - Saber Tooth (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2442,9 +2442,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34194" name="Player Commendation - Saber Tooth (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2469,9 +2469,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34195" name="Player Commendation - Saber Tooth (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2496,9 +2496,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34196" name="Player Commendation - Saber Tooth (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2523,9 +2523,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="34197" name="Player Commendation - Samurai Long Sword (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2549,9 +2549,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34198" name="Player Commendation - Samurai Long Sword (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2575,9 +2575,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34199" name="Player Commendation - Samurai Long Sword (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -2601,9 +2601,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

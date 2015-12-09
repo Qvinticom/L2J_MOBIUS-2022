@@ -104,7 +104,7 @@
 		<set name="price" val="46668000" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="236" />
+			<add stat="pDef" val="236" order="0" />
 		</for>
 	</item>
 	<item id="17007" name="Sealed Vesper Noble Leather Breastplate" type="Armor">
@@ -123,7 +123,7 @@
 		<set name="price" val="35000000" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="177" />
+			<add stat="pDef" val="177" order="0" />
 		</for>
 	</item>
 	<item id="17008" name="Sealed Vesper Noble Tunic" type="Armor">
@@ -142,7 +142,7 @@
 		<set name="price" val="35000000" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="118" />
+			<add stat="pDef" val="118" order="0" />
 		</for>
 	</item>
 	<item id="17009" name="Sealed Vesper Noble Gaiters" type="Armor">
@@ -161,7 +161,7 @@
 		<set name="price" val="29168000" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="148" />
+			<add stat="pDef" val="148" order="0" />
 		</for>
 	</item>
 	<item id="17010" name="Sealed Vesper Noble Gauntlets" type="Armor">
@@ -179,7 +179,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17011" name="Sealed Vesper Noble Boots" type="Armor">
@@ -197,7 +197,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17012" name="Sealed Vesper Noble Leather Leggings" type="Armor">
@@ -216,7 +216,7 @@
 		<set name="price" val="21876000" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="111" />
+			<add stat="pDef" val="111" order="0" />
 		</for>
 	</item>
 	<item id="17013" name="Sealed Vesper Noble Leather Gloves" type="Armor">
@@ -234,7 +234,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17014" name="Sealed Vesper Noble Leather Boots" type="Armor">
@@ -252,7 +252,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17015" name="Sealed Vesper Noble Stockings" type="Armor">
@@ -271,7 +271,7 @@
 		<set name="price" val="21876000" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="pDef" val="74" />
+			<add stat="pDef" val="74" order="0" />
 		</for>
 	</item>
 	<item id="17016" name="Sealed Vesper Noble Gloves" type="Armor">
@@ -289,7 +289,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17017" name="Sealed Vesper Noble Shoes" type="Armor">
@@ -307,7 +307,7 @@
 		<set name="price" val="11667000" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="17018" name="Hot Springs Recovery Potion" type="EtcItem">
@@ -846,7 +846,7 @@
 		<set name="item_skill" val="8510-1" /> <!-- Summon Friend -->
 		<set name="material" val="GOLD" />
 		<for>
-			<add order="0" stat="mDef" val="7" />
+			<add stat="mDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="17051" name="Talisman - STR" type="Armor">

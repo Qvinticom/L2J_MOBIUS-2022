@@ -21,9 +21,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="252" />
 			<set stat="pAtk" val="348" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37301" name="Steel Requiem Buster (30-day)" type="Weapon">
@@ -46,9 +47,10 @@
 		<set name="weight" val="510" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="252" />
-			<set stat="pAtk" val="348" />
+			<mul stat="mAtkSpd" val="1.15" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="348" />
+			<set stat="mAtk" val="252" />
 		</for>
 	</item>
 	<item id="37302" name="Steel Requiem Stormer (30-day)" type="Weapon">
@@ -70,11 +72,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="670" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="435" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="435" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37303" name="Steel Requiem Slasher (30-day)" type="Weapon">
@@ -97,9 +99,9 @@
 		<set name="weight" val="580" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37304" name="Steel Requiem Dualsword (30-day)" type="Weapon">
@@ -122,9 +124,9 @@
 		<set name="weight" val="510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37305" name="Steel Requiem Fighter (30-day)" type="Weapon">
@@ -148,9 +150,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37306" name="Steel Requiem Dual Blunt (30-day)" type="Weapon">
@@ -174,9 +176,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37307" name="Steel Requiem Shaper (30-day)" type="Weapon">
@@ -198,11 +200,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="510" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="380" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="380" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37308" name="Steel Requiem Dual Dagger (30-day)" type="Weapon">
@@ -224,11 +226,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="680" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="435" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="435" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37309" name="Steel Requiem Thrower (30-day)" type="Weapon">
@@ -250,11 +252,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="510" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="856" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="856" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37310" name="Steel Requiem Shooter (30-day)" type="Weapon">
@@ -276,11 +278,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="530" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="771" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="771" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37311" name="Steel Requiem Avenger (30-day)" type="Weapon">
@@ -304,9 +306,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37312" name="Steel Requiem Retributer (30-day)" type="Weapon">
@@ -329,11 +331,12 @@
 		<set name="weight" val="360" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="423" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37313" name="Toma's Support Box" type="EtcItem">
@@ -1179,11 +1182,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="550" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="581" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37377" name="Steel Dynasty Bow (60-day)" type="Weapon">
@@ -1206,11 +1209,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="510" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37378" name="Emerald Weapon Appearance Stone" type="EtcItem">

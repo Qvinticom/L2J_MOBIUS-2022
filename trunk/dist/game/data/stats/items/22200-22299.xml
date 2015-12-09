@@ -116,8 +116,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="125" />
 			<add stat="maxMp" val="300" />
+			<add stat="mDef" val="125" order="0" />
 		</for>
 	</item>
 	<item id="22212" name="Bad Bunny's Earring" additionalName="7-day (Event)" type="Armor">
@@ -134,8 +134,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="22213" name="Bad Bunny's Ring" additionalName="7-day (Event)" type="Armor">
@@ -152,7 +152,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="62" />
+			<add stat="mDef" val="62" order="0" />
 		</for>
 	</item>
 	<item id="22214" name="Bad Bunny's Necklace" additionalName="30-day (Event)" type="Armor">
@@ -169,8 +169,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="125" />
 			<add stat="maxMp" val="300" />
+			<add stat="mDef" val="125" order="0" />
 		</for>
 	</item>
 	<item id="22215" name="Bad Bunny's Earring" additionalName="30-day (Event)" type="Armor">
@@ -187,8 +187,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="22216" name="Bad Bunny's Ring" additionalName="30-day (Event)" type="Armor">
@@ -205,7 +205,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="30" />
 		<for>
-			<add order="0" stat="mDef" val="62" />
+			<add stat="mDef" val="62" order="0" />
 		</for>
 	</item>
 	<item id="22217" name="Lantern Agathion's Gift Set" additionalName="Event" type="EtcItem">
@@ -1018,9 +1018,9 @@
 		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
 		</for>
 	</item>
 	<item id="22282" name="Sujin Transformation Stick Pack (7-day)" additionalName="Event" type="EtcItem">
@@ -1050,9 +1050,9 @@
 		<set name="time" val="10080" />
 		<set name="weapon_type" val="SWORD" />
 		<for>
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
 		</for>
 	</item>
 	<item id="22284" name="Trejuo Transformation Stick Pack (7-day)" additionalName="Event" type="EtcItem">

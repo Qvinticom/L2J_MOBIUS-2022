@@ -245,7 +245,7 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="62" />
+			<add stat="mDef" val="62" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -264,7 +264,8 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="92" />
+			<add stat="mDef" val="92" order="0" />
+			<mul stat="mAtkSpd" val="1.04" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -662,7 +663,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -678,7 +679,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -694,7 +695,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -710,7 +711,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -726,7 +727,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -742,7 +743,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -758,7 +759,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -774,7 +775,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -983,6 +984,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+			<add stat="DEX" val="1" />
+			<add stat="CON" val="1" />
+			<add stat="pSkillEvas" val="1" />
+		</for>
 	</item>
 	<item id="34897" name="Angel Circlet" additionalName="Campaign" type="Armor">
 		<!-- Increases INT + 3, WIT + 1, MEN + 1, Physical Attack Resistance + 1, and Mental Attack Resistance + 1. -->
@@ -996,6 +1003,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+			<add stat="WIT" val="1" />
+			<add stat="MEN" val="1" />
+		</for>
 	</item>
 	<item id="34898" name="Proof of Survival" type="EtcItem">
 		<!-- Someone who possesses the Proof of Survival can be suddenly challenged by the rare monster Scaldisect of Hellfire. Always be prepared for the attack. -->

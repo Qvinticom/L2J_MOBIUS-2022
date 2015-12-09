@@ -15,7 +15,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="45701" name="Twilight Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -35,8 +35,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="272" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="272" order="0" />
 		</for>
 	</item>
 	<item id="45702" name="Twilight Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -55,8 +55,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="170" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="170" order="0" />
 		</for>
 	</item>
 	<item id="45703" name="Twilight Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -74,7 +74,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45704" name="Twilight Leather Boots" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -92,7 +92,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45705" name="Twilight Circlet" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -110,7 +110,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="45706" name="Twilight Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -130,8 +130,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="41" />
-			<add order="0" stat="pDef" val="187" />
+			<add stat="pDef" val="187" order="0" />
+			<add stat="mDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="45707" name="Twilight Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -150,8 +150,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="27" />
-			<add order="0" stat="pDef" val="117" />
+			<add stat="pDef" val="117" order="0" />
+			<add stat="mDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="45708" name="Twilight Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -169,7 +169,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45709" name="Twilight Shoes" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -187,7 +187,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45710" name="Twilight Sigel" additionalName="30-day" type="Armor">
@@ -205,7 +205,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -224,7 +224,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="45712" name="Twilight Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -244,8 +244,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="41" />
-			<add order="0" stat="pDef" val="187" />
+			<add stat="pDef" val="187" order="0" />
+			<add stat="mDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="45713" name="Twilight Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -264,8 +264,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="27" />
-			<add order="0" stat="pDef" val="117" />
+			<add stat="pDef" val="117" order="0" />
+			<add stat="mDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="45714" name="Twilight Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -283,7 +283,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45715" name="Twilight Shoes" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -301,7 +301,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="85" />
+			<add stat="pDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="45716" name="Returning Warrior's Support Goods Coupon" additionalName="Event" type="EtcItem">
@@ -404,7 +404,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45724" name="Eternal Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -424,7 +424,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="45725" name="Eternal Gaiters" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -443,7 +443,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="250" />
+			<add stat="pDef" val="250" order="0" />
 		</for>
 	</item>
 	<item id="45726" name="Eternal Gauntlets" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -461,7 +461,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45727" name="Eternal Boots" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -479,7 +479,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45728" name="Eternal Shield" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -496,6 +496,11 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
+		<for>
+			<sub stat="rEvas" val="8" />
+			<add stat="rShld" val="20" />
+			<add stat="sDef" val="546" />
+		</for>
 	</item>
 	<item id="45729" name="Eternal Helmet" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -512,7 +517,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45730" name="Eternal Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -532,7 +537,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="45731" name="Eternal Gaiters" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -551,7 +556,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="250" />
+			<add stat="pDef" val="250" order="0" />
 		</for>
 	</item>
 	<item id="45732" name="Eternal Gauntlets" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -569,7 +574,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45733" name="Eternal Boots" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -587,7 +592,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45734" name="Eternal Shield" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -604,6 +609,11 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
+		<for>
+			<sub stat="rEvas" val="8" />
+			<add stat="rShld" val="20" />
+			<add stat="sDef" val="546" />
+		</for>
 	</item>
 	<item id="45735" name="Eternal Leather Helmet" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
@@ -620,7 +630,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45736" name="Eternal Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -640,8 +650,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="320" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="320" order="0" />
 		</for>
 	</item>
 	<item id="45737" name="Eternal Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -660,8 +670,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="200" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="200" order="0" />
 		</for>
 	</item>
 	<item id="45738" name="Eternal Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -679,7 +689,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45739" name="Eternal Leather Boots" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -697,7 +707,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45740" name="Eternal Leather Helmet" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -715,7 +725,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45741" name="Eternal Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -735,8 +745,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="320" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="320" order="0" />
 		</for>
 	</item>
 	<item id="45742" name="Eternal Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -755,8 +765,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="200" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="200" order="0" />
 		</for>
 	</item>
 	<item id="45743" name="Eternal Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -774,7 +784,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45744" name="Eternal Leather Boots" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -792,7 +802,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45745" name="Eternal Circlet" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -810,7 +820,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45746" name="Eternal Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -830,8 +840,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="45747" name="Eternal Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -850,8 +860,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="33" />
-			<add order="0" stat="pDef" val="137" />
+			<add stat="pDef" val="137" order="0" />
+			<add stat="mDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="45748" name="Eternal Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -869,7 +879,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45749" name="Eternal Shoes" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -887,7 +897,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45750" name="Eternal Sigil" additionalName="30-day" type="Armor">
@@ -905,7 +915,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -924,7 +934,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="45752" name="Eternal Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -944,8 +954,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="45753" name="Eternal Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -964,8 +974,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="33" />
-			<add order="0" stat="pDef" val="137" />
+			<add stat="pDef" val="137" order="0" />
+			<add stat="mDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="45754" name="Eternal Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -983,7 +993,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45755" name="Eternal Shoes" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1001,7 +1011,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="45756" name="Eternal Sigil" additionalName="30-day" type="Armor">
@@ -1019,7 +1029,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -1110,7 +1120,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45764" name="Seraph Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1130,7 +1140,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="377" />
+			<add stat="pDef" val="377" order="0" />
 		</for>
 	</item>
 	<item id="45765" name="Seraph Gaiters" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1149,7 +1159,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="235" />
+			<add stat="pDef" val="235" order="0" />
 		</for>
 	</item>
 	<item id="45766" name="Seraph Gauntlets" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1167,7 +1177,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45767" name="Seraph Boots" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1185,7 +1195,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45768" name="Seraph Shield" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1202,6 +1212,11 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
+		<for>
+			<sub stat="rEvas" val="8" />
+			<add stat="rShld" val="20" />
+			<add stat="sDef" val="515" />
+		</for>
 	</item>
 	<item id="45769" name="Seraph Helmet" additionalName="Defense Type / Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -1218,7 +1233,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45770" name="Seraph Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1238,7 +1253,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="377" />
+			<add stat="pDef" val="377" order="0" />
 		</for>
 	</item>
 	<item id="45771" name="Seraph Gaiters" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1257,7 +1272,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="235" />
+			<add stat="pDef" val="235" order="0" />
 		</for>
 	</item>
 	<item id="45772" name="Seraph Gauntlets" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1275,7 +1290,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45773" name="Seraph Boots" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1293,7 +1308,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45774" name="Seraph Shield" additionalName="Defense Type / Heavy (30-day)" type="Armor">
@@ -1310,6 +1325,11 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
+		<for>
+			<sub stat="rEvas" val="8" />
+			<add stat="rShld" val="20" />
+			<add stat="sDef" val="515" />
+		</for>
 	</item>
 	<item id="45775" name="Seraph Leather Helmet" additionalName="Assassin Type / Light (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
@@ -1326,7 +1346,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45776" name="Seraph Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1346,8 +1366,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="301" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="301" order="0" />
 		</for>
 	</item>
 	<item id="45777" name="Seraph Leather Leggings" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1366,8 +1386,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="188" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="188" order="0" />
 		</for>
 	</item>
 	<item id="45778" name="Seraph Leather Gloves" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1385,7 +1405,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45779" name="Seraph Leather Boots" additionalName="Assassin Type / Light (30-day)" type="Armor">
@@ -1403,7 +1423,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45780" name="Seraph Leather Helmet" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1421,7 +1441,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45781" name="Seraph Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1441,8 +1461,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="301" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="301" order="0" />
 		</for>
 	</item>
 	<item id="45782" name="Seraph Leather Leggings" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1461,8 +1481,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="188" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="188" order="0" />
 		</for>
 	</item>
 	<item id="45783" name="Seraph Leather Gloves" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1480,7 +1500,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45784" name="Seraph Leather Boots" additionalName="Enchant Type / Light (30-day)" type="Armor">
@@ -1498,7 +1518,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45785" name="Seraph Circlet" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1516,7 +1536,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45786" name="Seraph Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1536,8 +1556,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="47" />
-			<add order="0" stat="pDef" val="207" />
+			<add stat="pDef" val="207" order="0" />
+			<add stat="mDef" val="47" order="0" />
 		</for>
 	</item>
 	<item id="45787" name="Seraph Stockings" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1556,8 +1576,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="31" />
-			<add order="0" stat="pDef" val="129" />
+			<add stat="pDef" val="129" order="0" />
+			<add stat="mDef" val="31" order="0" />
 		</for>
 	</item>
 	<item id="45788" name="Seraph Gloves" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1575,7 +1595,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45789" name="Seraph Shoes" additionalName="Magic Type / Robe (30-day)" type="Armor">
@@ -1593,7 +1613,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45790" name="Seraph Sigil" additionalName="30-day" type="Armor">
@@ -1611,7 +1631,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="47" />
+			<add stat="pDef" val="47" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -1630,7 +1650,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="45792" name="Seraph Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1650,8 +1670,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="47" />
-			<add order="0" stat="pDef" val="207" />
+			<add stat="pDef" val="207" order="0" />
+			<add stat="mDef" val="47" order="0" />
 		</for>
 	</item>
 	<item id="45793" name="Seraph Stockings" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1670,8 +1690,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="31" />
-			<add order="0" stat="pDef" val="129" />
+			<add stat="pDef" val="129" order="0" />
+			<add stat="mDef" val="31" order="0" />
 		</for>
 	</item>
 	<item id="45794" name="Seraph Gloves" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1689,7 +1709,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45795" name="Seraph Shoes" additionalName="Recovery Type / Robe (30-day)" type="Armor">
@@ -1707,7 +1727,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="45796" name="Seraph Sigil_not used" additionalName="30-day" type="Armor">
@@ -1725,7 +1745,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="47" />
+			<add stat="pDef" val="47" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -1750,9 +1770,10 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="202" />
-			<set stat="pAtk" val="267" />
+			<mul stat="mAtkSpd" val="1.15" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="267" />
+			<set stat="mAtk" val="202" />
 		</for>
 	</item>
 	<item id="45798" name="Dynasty Knife of Fortune" additionalName="30-day" type="Weapon">
@@ -1775,11 +1796,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="45799" name="Dynasty Bow of Fortune" additionalName="30-day" type="Weapon">
@@ -1803,11 +1824,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 </list>

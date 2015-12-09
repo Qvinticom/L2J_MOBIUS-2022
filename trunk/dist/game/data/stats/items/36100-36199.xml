@@ -244,8 +244,8 @@
 		<for>
 			<add stat="INT" val="1" />
 			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="36121" name="Rabbit Ears: STR (3-day)" additionalName="Campaign" type="Armor">
@@ -261,6 +261,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="1" />
+		</for>
 	</item>
 	<item id="36122" name="Rabbit Ears: DEX (3-day)" additionalName="Campaign" type="Armor">
 		<!-- DEX + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
@@ -275,6 +278,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="1" />
+		</for>
 	</item>
 	<item id="36123" name="Rabbit Ears: WIT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- WIT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
@@ -289,6 +295,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="1" />
+		</for>
 	</item>
 	<item id="36124" name="Rabbit Ears: INT (3-day)" additionalName="Campaign" type="Armor">
 		<!-- INT + 1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
@@ -303,6 +312,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="1" />
+		</for>
 	</item>
 	<item id="36125" name="Angel Circlet - STR (7-day)" additionalName="Campaign" type="Armor">
 		<!-- STR + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
@@ -317,6 +329,9 @@
 		<set name="material" val="STEEL" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="2" />
+		</for>
 	</item>
 	<item id="36126" name="Angel Circlet - DEX (7-day)" additionalName="Campaign" type="Armor">
 		<!-- DEX + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
@@ -331,6 +346,9 @@
 		<set name="material" val="STEEL" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="2" />
+		</for>
 	</item>
 	<item id="36127" name="Angel Circlet - WIT (7-day)" additionalName="Campaign" type="Armor">
 		<!-- WIT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
@@ -345,6 +363,9 @@
 		<set name="material" val="STEEL" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="2" />
+		</for>
 	</item>
 	<item id="36128" name="Angel Circlet - INT (7-day)" additionalName="Campaign" type="Armor">
 		<!-- INT + 2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
@@ -359,6 +380,9 @@
 		<set name="material" val="STEEL" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="2" />
+		</for>
 	</item>
 	<item id="36129" name="Clan Request - 14 Members" type="EtcItem">
 		<!-- Contains details about clan requests. If you get disconnected after summoning the Clan Request Manager, you cannot start any clan request. (Can be used only once a-day) -->
@@ -536,7 +560,7 @@
 	<item id="36148" name="Kaliel's Scroll of Escape Pack" type="EtcItem">
 		<!-- Double-click to receive a Scroll of Escape: Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -609,7 +633,7 @@
 	<item id="36156" name="Enhanced Kaliel's Attribute Crystal Pack" type="EtcItem">
 		<!-- Double-click to receive one of the super-150 Attribute Crystals. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -722,8 +746,12 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="pDef" val="25" order="0" />
+			<add stat="weightLimit" val="12800" />
 			<add stat="inventoryLimit" val="18" />
-			<add order="0" stat="pDef" val="25" />
+			<mul stat="mAtk" val="1.05" />
+			<mul stat="receivedDamageModifier" val="0.95" />
+			<mul stat="pAtk" val="1.05" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -738,8 +766,12 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="pDef" val="25" order="0" />
+			<add stat="weightLimit" val="12800" />
 			<add stat="inventoryLimit" val="18" />
-			<add order="0" stat="pDef" val="25" />
+			<mul stat="mAtk" val="1.05" />
+			<mul stat="receivedDamageModifier" val="0.95" />
+			<mul stat="pAtk" val="1.05" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -754,8 +786,12 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="pDef" val="25" order="0" />
+			<add stat="weightLimit" val="12800" />
 			<add stat="inventoryLimit" val="18" />
-			<add order="0" stat="pDef" val="25" />
+			<mul stat="mAtk" val="1.05" />
+			<mul stat="receivedDamageModifier" val="0.95" />
+			<mul stat="pAtk" val="1.05" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -837,6 +873,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36177" name="2012 World Olympiad Hero's Accessory" additionalName="Yul Archer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -850,6 +894,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36178" name="2012 World Olympiad Hero's Accessory" additionalName="Tyrr Warrior" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -863,6 +915,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36179" name="2012 World Olympiad Hero's Accessory" additionalName="Othell Rogue" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -876,6 +936,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36180" name="2012 World Olympiad Hero's Accessory" additionalName="Iss Enchanter" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -889,6 +957,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36181" name="2012 World Olympiad Hero's Accessory" additionalName="Wynn Summoner" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -902,6 +978,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36182" name="2012 World Olympiad Hero's Accessory" additionalName="Aeore Healer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -915,6 +999,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36183" name="2012 World Olympiad Hero's Accessory" additionalName="Feoh Wizard" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/MEN/DEX/WIT/INT/CON + 5. -->
@@ -928,6 +1020,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<for>
+			<add stat="CON" val="5" />
+			<add stat="STR" val="5" />
+			<add stat="MEN" val="5" />
+			<add stat="DEX" val="5" />
+			<add stat="WIT" val="5" />
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="36184" name="Kaliel's Energy" additionalName="Annihilation" type="EtcItem">
 		<!-- Kaliel's Energy protects the Talisman - Annihilation from turning into Talisman - Destruction when enchanting to Talisman - Hellfire fails. -->
@@ -966,7 +1066,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="38" />
+			<add stat="pDef" val="38" order="0" />
 		</for>
 	</item>
 	<item id="36188" name="Blaze Shirt" type="Armor">
@@ -982,7 +1082,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="38" />
+			<add stat="pDef" val="38" order="0" />
 		</for>
 	</item>
 	<item id="36189" name="Rising Belt" type="Armor">
@@ -998,8 +1098,9 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="weightLimit" val="12800" />
 			<add stat="inventoryLimit" val="12" />
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="36190" name="Blaze Belt" type="Armor">
@@ -1015,8 +1116,9 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
+			<add stat="weightLimit" val="12800" />
 			<add stat="inventoryLimit" val="18" />
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="36191" name="Kaliel's Wish" type="EtcItem">
@@ -1061,11 +1163,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="685" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="685" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36194" name="Cutter Sealed with Heroes' Power" type="Weapon">
@@ -1086,9 +1188,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36195" name="Slasher Sealed with Heroes' Power" type="Weapon">
@@ -1109,9 +1211,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36196" name="Avenger Sealed with Heroes' Power" type="Weapon">
@@ -1133,9 +1235,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36197" name="Fighter Sealed with Heroes' Power" type="Weapon">
@@ -1157,9 +1259,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36198" name="Stormer Sealed with Heroes' Power" type="Weapon">
@@ -1179,11 +1281,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="752" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="752" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36199" name="Thrower Sealed with Heroes' Power" type="Weapon">
@@ -1203,11 +1305,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="1481" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1481" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 </list>

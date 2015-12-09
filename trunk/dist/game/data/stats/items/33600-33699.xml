@@ -13,7 +13,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="520" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -30,7 +30,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="1090" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -48,7 +48,7 @@
 		<set name="price" val="914900" />
 		<set name="weight" val="1780" />
 		<for>
-			<add order="0" stat="pDef" val="113" />
+			<add stat="pDef" val="113" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -66,7 +66,7 @@
 		<set name="price" val="571800" />
 		<set name="weight" val="860" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -83,7 +83,7 @@
 		<set name="price" val="457450" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -100,7 +100,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="520" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -117,7 +117,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="1090" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -134,7 +134,7 @@
 		<set name="price" val="320200" />
 		<set name="weight" val="930" />
 		<for>
-			<add order="0" stat="pDef" val="15" />
+			<add stat="pDef" val="15" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -539,9 +539,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="10" />
 			<set stat="pAtk" val="10" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33651" name="Unidentified Crystal Dagger" additionalName="Event" type="EtcItem">

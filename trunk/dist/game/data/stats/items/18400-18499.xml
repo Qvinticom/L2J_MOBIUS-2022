@@ -167,6 +167,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="37" />
+		</for>
 	</item>
 	<item id="18412" name="Talisman (R90-grade) - P. Atk. (Passive)" type="Armor">
 		<!-- P. Atk. + 43 when equipped. Shadow item. -->
@@ -181,6 +184,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="43" />
+		</for>
 	</item>
 	<item id="18413" name="Talisman (R95-grade) - P. Atk. (Passive)" type="Armor">
 		<!-- P. Atk. + 52 when equipped. Shadow item. -->
@@ -195,6 +201,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="52" />
+		</for>
 	</item>
 	<item id="18414" name="Talisman (R99-grade) - P. Atk. (Passive)" type="Armor">
 		<!-- P. Atk. + 60 when equipped. Shadow item. -->
@@ -209,6 +218,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="60" />
+		</for>
 	</item>
 	<item id="18415" name="Talisman (R85-grade) - P. Def. (Passive)" type="Armor">
 		<!-- P. Def. + 38 when equipped. Shadow item. -->
@@ -223,6 +235,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="38" />
+		</for>
 	</item>
 	<item id="18416" name="Talisman (R90-grade) - P. Def. (Passive)" type="Armor">
 		<!-- P. Def. + 43 when equipped. Shadow item. -->
@@ -237,6 +252,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="43" />
+		</for>
 	</item>
 	<item id="18417" name="Talisman (R95-grade) - P. Def. (Passive)" type="Armor">
 		<!-- P. Def. + 49 when equipped. Shadow item. -->
@@ -251,6 +269,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="49" />
+		</for>
 	</item>
 	<item id="18418" name="Talisman (R99-grade) - P. Def. (Passive)" type="Armor">
 		<!-- P. Def. + 54 when equipped. Shadow item. -->
@@ -265,6 +286,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="54" />
+		</for>
 	</item>
 	<item id="18419" name="Talisman (R85-grade) - M. Atk. (Passive)" type="Armor">
 		<!-- M. Atk. + 37 when equipped. Shadow item. -->
@@ -279,6 +303,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="37" />
+		</for>
 	</item>
 	<item id="18420" name="Talisman (R90-grade) - M. Atk. (Passive)" type="Armor">
 		<!-- M. Atk. + 46 when equipped. Shadow item. -->
@@ -293,6 +320,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="46" />
+		</for>
 	</item>
 	<item id="18421" name="Talisman (R95-grade) - M. Atk. (Passive)" type="Armor">
 		<!-- M. Atk. + 56 when equipped. Shadow item. -->
@@ -307,6 +337,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="56" />
+		</for>
 	</item>
 	<item id="18422" name="Talisman (R99-grade) - M. Atk. (Passive)" type="Armor">
 		<!-- M. Atk. + 66 when equipped. Shadow item. -->
@@ -321,6 +354,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="66" />
+		</for>
 	</item>
 	<item id="18423" name="Talisman (R85-grade) - M. Def. (Passive)" type="Armor">
 		<!-- M. Def. + 21 when equipped. Shadow item. -->
@@ -335,6 +371,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="21" />
+		</for>
 	</item>
 	<item id="18424" name="Talisman (R90-grade) - M. Def. (Passive)" type="Armor">
 		<!-- M. Def. + 24 when equipped. Shadow item. -->
@@ -349,6 +388,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="24" />
+		</for>
 	</item>
 	<item id="18425" name="Talisman (R95-grade) - M. Def. (Passive)" type="Armor">
 		<!-- M. Def. + 28 when equipped. Shadow item. -->
@@ -363,6 +405,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="28" />
+		</for>
 	</item>
 	<item id="18426" name="Talisman (R99-grade) - M. Def. (Passive)" type="Armor">
 		<!-- M. Def. + 32 when equipped. Shadow item. -->
@@ -377,6 +422,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="32" />
+		</for>
 	</item>
 	<item id="18427" name="Talisman (R85-grade) - HP (Passive)" type="Armor">
 		<!-- HP + 219 when equipped. Shadow item. -->
@@ -391,6 +439,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="219" />
+		</for>
 	</item>
 	<item id="18428" name="Talisman (R90-grade) - HP (Passive)" type="Armor">
 		<!-- HP + 246 when equipped. Shadow item. -->
@@ -405,6 +456,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="246" />
+		</for>
 	</item>
 	<item id="18429" name="Talisman (R95-grade) - HP (Passive)" type="Armor">
 		<!-- HP + 277 when equipped. Shadow item. -->
@@ -419,6 +473,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="277" />
+		</for>
 	</item>
 	<item id="18430" name="Talisman (R99-grade) - HP (Passive)" type="Armor">
 		<!-- HP + 305 when equipped. Shadow item. -->
@@ -433,6 +490,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="305" />
+		</for>
 	</item>
 	<item id="18431" name="Talisman (R85-grade) - MP (Passive)" type="Armor">
 		<!-- MP + 109 when equipped. Shadow item. -->
@@ -447,6 +507,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="109" />
+		</for>
 	</item>
 	<item id="18432" name="Talisman (R90-grade) - MP (Passive)" type="Armor">
 		<!-- MP + 119 when equipped. Shadow item. -->
@@ -461,6 +524,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="119" />
+		</for>
 	</item>
 	<item id="18433" name="Talisman (R95-grade) - MP (Passive)" type="Armor">
 		<!-- MP + 130 when equipped. Shadow item. -->
@@ -475,6 +541,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="130" />
+		</for>
 	</item>
 	<item id="18434" name="Talisman (R99-grade) - MP (Passive)" type="Armor">
 		<!-- MP + 139 when equipped. Shadow item. -->
@@ -489,6 +558,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="139" />
+		</for>
 	</item>
 	<item id="18435" name="Talisman (R85-grade) - CP (Passive)" type="Armor">
 		<!-- CP + 99 when equipped. Shadow item. -->
@@ -503,6 +575,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="99" />
+		</for>
 	</item>
 	<item id="18436" name="Talisman (R90-grade) - CP (Passive)" type="Armor">
 		<!-- CP + 108 when equipped. Shadow item. -->
@@ -517,6 +592,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="108" />
+		</for>
 	</item>
 	<item id="18437" name="Talisman (R95-grade) - CP (Passive)" type="Armor">
 		<!-- CP + 116 when equipped. Shadow item. -->
@@ -531,6 +609,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="116" />
+		</for>
 	</item>
 	<item id="18438" name="Talisman (R99-grade) - CP (Passive)" type="Armor">
 		<!-- CP + 124 when equipped. Shadow item. -->
@@ -545,6 +626,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="124" />
+		</for>
 	</item>
 	<item id="18439" name="Talisman (R85-grade) - Critical Damage (Passive)" type="Armor">
 		<!-- Critical + 135 when equipped. Shadow item. -->
@@ -671,6 +755,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.02" />
+			<mul stat="mCritRate" val="1.02" />
+		</for>
 	</item>
 	<item id="18448" name="Talisman (R-grade) - P. Accuracy (Passive)" type="Armor">
 		<!-- Accuracy + 2 when equipped. Shadow item. -->
@@ -685,6 +773,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="2" />
+		</for>
 	</item>
 	<item id="18449" name="Talisman (R-grade) - M. Accuracy (Passive)" type="Armor">
 		<!-- M. Accuracy + 2 when equipped. Shadow item. -->
@@ -699,6 +790,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="accMagic" val="2" />
+		</for>
 	</item>
 	<item id="18450" name="Talisman (R-grade) - Evasion (Passive)" type="Armor">
 		<!-- Evasion + 2 when equipped. Shadow item. -->
@@ -713,6 +808,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+		</for>
 	</item>
 	<item id="18451" name="Talisman (R-grade) - M. Evasion (Passive)" type="Armor">
 		<!-- M. Evasion + 2 when equipped. Shadow item. -->
@@ -727,6 +825,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+		</for>
 	</item>
 	<item id="18452" name="Talisman (R-grade) - P. Critical Rate (Passive)" type="Armor">
 		<!-- P. Critical Rate + 2% when equipped. Shadow item. -->
@@ -741,6 +842,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.02" />
+		</for>
 	</item>
 	<item id="18453" name="Talisman (R-grade) - Critical Evasion (Passive)" type="Armor">
 		<!-- The rate of receiving a physical Critical Attacks is - 2% when equipped. Shadow item. -->
@@ -769,6 +873,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="111" />
+		</for>
 	</item>
 	<item id="18455" name="Talisman (R90-grade) - P. Atk. (Active)" type="Armor">
 		<!-- P. Atk. + 129 when used. Shadow item. -->
@@ -783,6 +890,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="129" />
+		</for>
 	</item>
 	<item id="18456" name="Talisman (R95-grade) - P. Atk. (Active)" type="Armor">
 		<!-- P. Atk. + 156 when used. Shadow item. -->
@@ -797,6 +907,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="156" />
+		</for>
 	</item>
 	<item id="18457" name="Talisman (R99-grade) - P. Atk. (Active)" type="Armor">
 		<!-- P. Atk. + 180 when used. Shadow item. -->
@@ -811,6 +924,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="pAtk" val="180" />
+		</for>
 	</item>
 	<item id="18458" name="Talisman (R85-grade) - P. Def. (Active)" type="Armor">
 		<!-- P. Def. + 114 when used. Shadow item. -->
@@ -825,6 +941,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="114" />
+		</for>
 	</item>
 	<item id="18459" name="Talisman (R90-grade) - P. Def. (Active)" type="Armor">
 		<!-- P. Def. + 129 when used. Shadow item. -->
@@ -839,6 +958,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="129" />
+		</for>
 	</item>
 	<item id="18460" name="Talisman (R95-grade) - P. Def. (Active)" type="Armor">
 		<!-- P. Def. + 147 when used. Shadow item. -->
@@ -853,6 +975,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="147" />
+		</for>
 	</item>
 	<item id="18461" name="Talisman (R99-grade) - P. Def. (Active)" type="Armor">
 		<!-- P. Def. + 162 when used. Shadow item. -->
@@ -867,6 +992,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pDef" val="162" />
+		</for>
 	</item>
 	<item id="18462" name="Talisman (R85-grade) - M. Atk. (Active)" type="Armor">
 		<!-- M. Atk. + 111 when used. Shadow item. -->
@@ -881,6 +1009,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="111" />
+		</for>
 	</item>
 	<item id="18463" name="Talisman (R90-grade) - M. Atk. (Active)" type="Armor">
 		<!-- M. Atk. + 138 when used. Shadow item. -->
@@ -895,6 +1026,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="138" />
+		</for>
 	</item>
 	<item id="18464" name="Talisman (R95-grade) - M. Atk. (Active)" type="Armor">
 		<!-- M. Atk. + 168 when used. Shadow item. -->
@@ -909,6 +1043,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="168" />
+		</for>
 	</item>
 	<item id="18465" name="Talisman (R99-grade) - M. Atk. (Active)" type="Armor">
 		<!-- M. Atk. + 198 when used. Shadow item. -->
@@ -923,6 +1060,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<set stat="mAtk" val="198" />
+		</for>
 	</item>
 	<item id="18466" name="Talisman (R85-grade) - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 63 when used. Shadow item. -->
@@ -937,6 +1077,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="63" />
+		</for>
 	</item>
 	<item id="18467" name="Talisman (R90-grade) - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 72 when used. Shadow item. -->
@@ -951,6 +1094,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="72" />
+		</for>
 	</item>
 	<item id="18468" name="Talisman (R95-grade) - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 84 when used. Shadow item. -->
@@ -965,6 +1111,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="84" />
+		</for>
 	</item>
 	<item id="18469" name="Talisman (R99-grade) - M. Def. (Active)" type="Armor">
 		<!-- M. Def. + 96 when used. Shadow item. -->
@@ -979,6 +1128,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="mDef" val="96" />
+		</for>
 	</item>
 	<item id="18470" name="Talisman (R85-grade) - HP (Active)" type="Armor">
 		<!-- HP + 657 when used. Shadow item. -->
@@ -993,6 +1145,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="657" />
+		</for>
 	</item>
 	<item id="18471" name="Talisman (R90-grade) - HP (Active)" type="Armor">
 		<!-- HP + 738 when used. Shadow item. -->
@@ -1007,6 +1162,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="738" />
+		</for>
 	</item>
 	<item id="18472" name="Talisman (R95-grade) - HP (Active)" type="Armor">
 		<!-- HP + 831 when used. Shadow item. -->
@@ -1021,6 +1179,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="831" />
+		</for>
 	</item>
 	<item id="18473" name="Talisman (R99-grade) - HP (Active)" type="Armor">
 		<!-- HP + 915 when used. Shadow item. -->
@@ -1035,6 +1196,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxHp" val="915" />
+		</for>
 	</item>
 	<item id="18474" name="Talisman (R85-grade) - MP (Active)" type="Armor">
 		<!-- MP + 327 when used. Shadow item. -->
@@ -1049,6 +1213,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="327" />
+		</for>
 	</item>
 	<item id="18475" name="Talisman (R90-grade) - MP (Active)" type="Armor">
 		<!-- MP + 357 when used. Shadow item. -->
@@ -1063,6 +1230,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="357" />
+		</for>
 	</item>
 	<item id="18476" name="Talisman (R95-grade) - MP (Active)" type="Armor">
 		<!-- MP + 390 when used. Shadow item. -->
@@ -1077,6 +1247,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="390" />
+		</for>
 	</item>
 	<item id="18477" name="Talisman (R99-grade) - MP (Active)" type="Armor">
 		<!-- MP + 417 when used. Shadow item. -->
@@ -1091,6 +1264,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="417" />
+		</for>
 	</item>
 	<item id="18478" name="Talisman (R85-grade) - CP (Active)" type="Armor">
 		<!-- CP + 297 when used. Shadow item. -->
@@ -1105,6 +1281,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="297" />
+		</for>
 	</item>
 	<item id="18479" name="Talisman (R90-grade) - CP (Active)" type="Armor">
 		<!-- CP + 324 when used. Shadow item. -->
@@ -1119,6 +1298,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="324" />
+		</for>
 	</item>
 	<item id="18480" name="Talisman (R95-grade) - CP (Active)" type="Armor">
 		<!-- CP + 390 when used. Shadow item. -->
@@ -1133,6 +1315,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="390" />
+		</for>
 	</item>
 	<item id="18481" name="Talisman (R99-grade) - CP (Active)" type="Armor">
 		<!-- CP + 417 when used. Shadow item. -->
@@ -1147,6 +1332,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="417" />
+		</for>
 	</item>
 	<item id="18482" name="Talisman (R85-grade) - Critical Damage (Active)" type="Armor">
 		<!-- Critical + 405 when used. Shadow item. -->
@@ -1273,6 +1461,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.04" />
+			<mul stat="mCritRate" val="1.04" />
+		</for>
 	</item>
 	<item id="18491" name="Talisman (R-grade) - P. Accuracy (Active)" type="Armor">
 		<!-- Accuracy + 4 when used. Shadow item. -->
@@ -1287,6 +1479,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="4" />
+		</for>
 	</item>
 	<item id="18492" name="Talisman (R-grade) - M. Accuracy (Active)" type="Armor">
 		<!-- M. Accuracy + 4 when used. Shadow item. -->
@@ -1301,6 +1496,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="4" />
+			<add stat="accMagic" val="4" />
+		</for>
 	</item>
 	<item id="18493" name="Talisman (R-grade) - Evasion (Active)" type="Armor">
 		<!-- Evasion + 4 when used. Shadow item. -->
@@ -1315,6 +1514,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="4" />
+		</for>
 	</item>
 	<item id="18494" name="Talisman (R-grade) - M. Evasion (Active)" type="Armor">
 		<!-- M. Evasion + 4 when used. Shadow item. -->
@@ -1329,6 +1531,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="4" />
+		</for>
 	</item>
 	<item id="18495" name="Talisman (R-grade) - P. Critical Rate (Active)" type="Armor">
 		<!-- P. Critical Rate + 4% when used. Shadow item. -->
@@ -1343,6 +1548,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.04" />
+		</for>
 	</item>
 	<item id="18496" name="Talisman (R-grade) - Critical Evasion (Active)" type="Armor">
 		<!-- The rate of receiving a physical Critical Attacks is - 4% when used. Shadow item. -->

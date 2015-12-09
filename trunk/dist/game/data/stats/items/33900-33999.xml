@@ -14,7 +14,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -33,8 +33,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="167" />
+			<add stat="pDef" val="167" order="0" />
+			<add stat="mDef" val="36" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -54,8 +54,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="104" />
+			<add stat="pDef" val="104" order="0" />
+			<add stat="mDef" val="24" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -74,7 +74,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -92,7 +92,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -109,7 +109,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -128,8 +128,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="123" />
 			<add stat="maxMp" val="53" />
+			<add stat="mDef" val="123" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -147,8 +147,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="92" />
 			<add stat="maxMp" val="40" />
+			<add stat="mDef" val="92" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -166,7 +166,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="62" />
+			<add stat="mDef" val="62" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -189,11 +189,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="369" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="369" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33910" name="Requiem Shaper" additionalName="Haste (Event)" type="Weapon">
@@ -215,11 +215,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="369" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="369" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33911" name="Requiem Shaper" additionalName="Focus (Event)" type="Weapon">
@@ -241,11 +241,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="369" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="369" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33912" name="Requiem Cutter" additionalName="Haste (Event)" type="Weapon">
@@ -268,9 +268,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33913" name="Requiem Cutter" additionalName="Focus (Event)" type="Weapon">
@@ -293,9 +293,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33914" name="Requiem Cutter" additionalName="Health (Event)" type="Weapon">
@@ -318,9 +318,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33915" name="Requiem Slasher" additionalName="Focus (Event)" type="Weapon">
@@ -343,9 +343,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33916" name="Requiem Slasher" additionalName="Damage Up (Event)" type="Weapon">
@@ -368,9 +368,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33917" name="Requiem Slasher" additionalName="Haste (Event)" type="Weapon">
@@ -393,9 +393,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33918" name="Requiem Avenger" additionalName="Haste (Event)" type="Weapon">
@@ -419,9 +419,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33919" name="Requiem Avenger" additionalName="Critical Damage (Event)" type="Weapon">
@@ -445,9 +445,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33920" name="Requiem Avenger" additionalName="Focus (Event)" type="Weapon">
@@ -471,9 +471,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="422" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33921" name="Requiem Fighter" additionalName="Focus (Event)" type="Weapon">
@@ -497,9 +497,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33922" name="Requiem Fighter" additionalName="Damage Up (Event)" type="Weapon">
@@ -523,9 +523,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33923" name="Requiem Fighter" additionalName="Haste (Event)" type="Weapon">
@@ -549,9 +549,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33924" name="Requiem Stormer" additionalName="HP Drain (Event)" type="Weapon">
@@ -573,11 +573,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33925" name="Requiem Stormer" additionalName="Guidance (Event)" type="Weapon">
@@ -599,11 +599,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33926" name="Requiem Stormer" additionalName="Damage Up (Event)" type="Weapon">
@@ -625,11 +625,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33927" name="Requiem Thrower" additionalName="Damage Up (Event)" type="Weapon">
@@ -651,11 +651,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="831" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="831" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33928" name="Requiem Thrower" additionalName="Focus (Event)" type="Weapon">
@@ -677,11 +677,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="831" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="831" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33929" name="Requiem Thrower" additionalName="Long Blow (Event)" type="Weapon">
@@ -703,11 +703,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="831" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="831" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33930" name="Requiem Shooter" additionalName="Focus (Event)" type="Weapon">
@@ -729,11 +729,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="748" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="748" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33931" name="Requiem Shooter" additionalName="Critical Slow (Event)" type="Weapon">
@@ -755,11 +755,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="748" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="748" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33932" name="Requiem Shooter" additionalName="Haste (Event)" type="Weapon">
@@ -781,11 +781,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="748" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="748" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33933" name="Requiem Buster" additionalName="Acumen (Event)" type="Weapon">
@@ -808,9 +808,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33934" name="Requiem Buster" additionalName="Magic Hold (Event)" type="Weapon">
@@ -833,9 +833,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33935" name="Requiem Buster" additionalName="Mana Up (Event)" type="Weapon">
@@ -858,9 +858,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33936" name="Requiem Caster" additionalName="Empower (Event)" type="Weapon">
@@ -884,9 +884,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33937" name="Requiem Caster" additionalName="Acumen (Event)" type="Weapon">
@@ -910,9 +910,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33938" name="Requiem Caster" additionalName="Magic Hold (Event)" type="Weapon">
@@ -936,9 +936,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="245" />
 			<set stat="pAtk" val="338" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33939" name="Requiem Retributer" additionalName="MP Regeneration (Event)" type="Weapon">
@@ -961,11 +961,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="270" />
 			<set stat="pAtk" val="411" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33940" name="Requiem Retributer" additionalName="Acumen (Event)" type="Weapon">
@@ -988,11 +988,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="270" />
 			<set stat="pAtk" val="411" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33941" name="Requiem Retributer" additionalName="Empower (Event)" type="Weapon">
@@ -1015,11 +1015,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="270" />
 			<set stat="pAtk" val="411" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33942" name="Requiem Dualsword" additionalName="Haste (Event)" type="Weapon">
@@ -1042,9 +1042,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33943" name="Requiem Dualsword" additionalName="Damage Up (Event)" type="Weapon">
@@ -1067,9 +1067,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33944" name="Requiem Dualsword" additionalName="Health (Event)" type="Weapon">
@@ -1092,9 +1092,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33945" name="Requiem Dual Dagger" additionalName="Damage Up (Event)" type="Weapon">
@@ -1116,11 +1116,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33946" name="Requiem Dual Dagger" additionalName="Focus (Event)" type="Weapon">
@@ -1142,11 +1142,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33947" name="Requiem Dual Dagger" additionalName="Guidance (Event)" type="Weapon">
@@ -1168,11 +1168,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="186" />
-			<set stat="pAtk" val="422" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="422" />
+			<set stat="mAtk" val="186" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33948" name="Requiem Dual Blunt Weapon" additionalName="Focus (Event)" type="Weapon">
@@ -1196,9 +1196,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33949" name="Requiem Dual Blunt Weapon" additionalName="Guidance (Event)" type="Weapon">
@@ -1222,9 +1222,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33950" name="Requiem Dual Blunt Weapon" additionalName="Damage Up (Event)" type="Weapon">
@@ -1248,9 +1248,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="514" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33951" name="Immortal Helmet" additionalName="Attack Type / Heavy (Event)" type="Armor">
@@ -1266,7 +1266,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1285,7 +1285,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="304" />
+			<add stat="pDef" val="304" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1303,7 +1303,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="190" />
+			<add stat="pDef" val="190" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1320,7 +1320,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1337,7 +1337,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1354,9 +1354,9 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="415" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1373,7 +1373,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1392,9 +1392,9 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<for>
-			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="243" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="243" order="0" />
+			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1412,9 +1412,9 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<for>
-			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="152" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="152" order="0" />
+			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1431,7 +1431,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1448,7 +1448,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1465,7 +1465,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1484,8 +1484,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="167" />
+			<add stat="pDef" val="167" order="0" />
+			<add stat="mDef" val="36" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1504,8 +1504,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="104" />
+			<add stat="pDef" val="104" order="0" />
+			<add stat="mDef" val="24" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1523,7 +1523,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1540,7 +1540,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1557,7 +1557,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1576,7 +1576,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="304" />
+			<add stat="pDef" val="304" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1594,7 +1594,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="190" />
+			<add stat="pDef" val="190" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1611,7 +1611,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1628,7 +1628,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1645,9 +1645,9 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="415" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1664,7 +1664,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1683,9 +1683,9 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<for>
-			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="243" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="243" order="0" />
+			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1703,9 +1703,9 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<for>
-			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="152" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="152" order="0" />
+			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1722,7 +1722,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1739,7 +1739,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1756,7 +1756,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="114" />
+			<add stat="pDef" val="114" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1775,8 +1775,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="167" />
+			<add stat="pDef" val="167" order="0" />
+			<add stat="mDef" val="36" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1795,8 +1795,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="104" />
+			<add stat="pDef" val="104" order="0" />
+			<add stat="mDef" val="24" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1814,7 +1814,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1831,7 +1831,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="76" />
+			<add stat="pDef" val="76" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

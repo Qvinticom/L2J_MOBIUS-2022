@@ -15,8 +15,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -36,8 +36,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -457,7 +457,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="40241" name="Freya's Frozen Lamp" additionalName="Event" type="EtcItem">
@@ -499,12 +499,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -525,12 +525,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -551,12 +551,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -577,12 +577,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -603,12 +603,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -629,12 +629,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -655,12 +655,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -681,12 +681,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -707,12 +707,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -733,12 +733,12 @@
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<for>
-			<add stat="CON" val="1" />
-			<add stat="INT" val="1" />
-			<add stat="MEN" val="1" />
-			<add stat="STR" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<sub stat="CON" val="1" />
+			<sub stat="INT" val="1" />
+			<sub stat="MEN" val="1" />
+			<sub stat="STR" val="1" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="pDef" val="50" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1007,6 +1007,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
@@ -1017,6 +1020,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
@@ -1027,6 +1033,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. MEN + 3.  -->
@@ -1037,6 +1046,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3.  -->
@@ -1047,6 +1059,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. WIT + 3.  -->
@@ -1057,6 +1072,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50.  -->
@@ -1067,6 +1085,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68.  -->
@@ -1077,6 +1098,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%.  -->
@@ -1087,6 +1112,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%.  -->
@@ -1097,6 +1125,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Evasion + 5.  -->
@@ -1107,6 +1138,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%.  -->
@@ -1117,6 +1151,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%.  -->
@@ -1127,6 +1164,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Accuracy + 5.  -->
@@ -1137,6 +1177,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->
@@ -1182,9 +1225,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40292" name="Steel Spirit's Staff - Magic Mental Shield" type="Armor">
@@ -1201,8 +1244,6 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="134" />
-			<set stat="pAtk" val="170" />
 			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
@@ -1227,9 +1268,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="157" />
 			<set stat="pAtk" val="207" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40294" name="Steel Imperial Staff - Empower" type="Weapon">
@@ -1253,9 +1294,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="193" />
 			<set stat="pAtk" val="274" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40295" name="Steel Dynasty Staff - Acumen" type="Weapon">
@@ -1279,9 +1320,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40296" name="Monster Weapon Appearance Stone: Turikki's Blunt Weapon" type="EtcItem">
@@ -1320,9 +1361,9 @@
 		<set name="weight" val="250" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40299" name="Tiger Bow" type="Weapon">
@@ -1344,9 +1385,9 @@
 		<set name="weight" val="181" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

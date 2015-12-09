@@ -148,7 +148,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="22612" name="XP Rune III (Lv. 1-100+) 30% Pack (3-hour)" type="EtcItem">
@@ -707,9 +707,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22651" name="Emerald Weapon: Dagger" type="Weapon">
@@ -729,11 +729,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22652" name="Emerald Weapon: Two-handed Sword" type="Weapon">
@@ -754,9 +754,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22653" name="Emerald Weapon: Fist Weapon" type="Weapon">
@@ -778,9 +778,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22654" name="Emerald Weapon: Spear" type="Weapon">
@@ -800,11 +800,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22655" name="Emerald Weapon: Bow" type="Weapon">
@@ -825,11 +825,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22656" name="Emerald Weapon: Crossbow" type="Weapon">
@@ -849,11 +849,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="22657" name="Emerald Weapon: One-handed Blunt Weapon" type="Weapon">
@@ -875,9 +875,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22658" name="Emerald Weapon: Two-handed Blunt Weapon" type="Weapon">
@@ -899,9 +899,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22659" name="Emerald Weapon: One-handed Magic Blunt Weapon" type="Weapon">
@@ -923,9 +923,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22660" name="Emerald Weapon: Two-handed Magic Blunt Weapon" type="Weapon">
@@ -947,9 +947,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22661" name="Emerald Weapon: Dualsword" type="Weapon">
@@ -970,9 +970,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22662" name="Emerald Weapon: Dual Dagger" type="Weapon">
@@ -992,11 +992,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="51" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="51" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22663" name="Emerald Weapon: Dual Blunt Weapon" type="Weapon">
@@ -1018,9 +1018,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22664" name="Emerald Weapon: Shield" type="Armor">
@@ -1035,10 +1035,10 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
+			<add stat="pDef" val="25" order="0" />
 			<set stat="sDef" val="216" />
+			<set stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1055,9 +1055,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="22666" name="Emerald Weapon Appearance Stone: Sword" type="EtcItem">

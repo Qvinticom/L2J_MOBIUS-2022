@@ -271,7 +271,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34624" name="Sayha's Shirt" type="Armor">
@@ -287,7 +287,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34625" name="Eva's Shirt" type="Armor">
@@ -303,7 +303,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34626" name="Maphr's Shirt" type="Armor">
@@ -319,7 +319,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34627" name="Scroll: Enchant Elemental Shirt" type="EtcItem">

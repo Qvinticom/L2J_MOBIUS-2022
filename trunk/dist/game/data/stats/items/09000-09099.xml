@@ -23,9 +23,9 @@
 		<set name="weight" val="780" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="78" />
 			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9001" name="Shadow Item: Great Sword" type="Weapon">
@@ -51,9 +51,9 @@
 		<set name="weight" val="650" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9002" name="Shadow Item: Heavy War Axe" type="Weapon">
@@ -80,9 +80,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9003" name="Shadow Item: Spirit's Staff" type="Weapon">
@@ -110,9 +110,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="134" />
 			<set stat="pAtk" val="170" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9004" name="Shadow Item: Keshanberk" type="Weapon">
@@ -138,9 +138,9 @@
 		<set name="weight" val="460" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9005" name="Shadow Item: Sword of Valhalla" type="Weapon">
@@ -167,9 +167,9 @@
 		<set name="weight" val="300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9006" name="Shadow Item: Kris" type="Weapon">
@@ -194,11 +194,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="330" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="153" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="153" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9007" name="Shadow Item: Arthro Nail" type="Weapon">
@@ -225,9 +225,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9008" name="Shadow Item: Dark Elven Longbow" type="Weapon">
@@ -254,11 +254,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="100" />
-			<set stat="pAtk" val="397" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="397" />
+			<set stat="mAtk" val="100" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9009" name="Shadow Item: Sword of Delusion*Sword of Delusion" type="Weapon">
@@ -284,9 +284,9 @@
 		<set name="weight" val="720" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9010" name="Shadow Item: Great Axe" type="Weapon">
@@ -312,11 +312,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="650" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9011" name="Shadow Item: Tallum Blade" type="Weapon">
@@ -342,9 +342,9 @@
 		<set name="weight" val="450" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9012" name="Shadow Item: Halberd" type="Weapon">
@@ -370,11 +370,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="640" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9013" name="Shadow Item: Dasparion's Staff" type="Weapon">
@@ -402,9 +402,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="157" />
 			<set stat="pAtk" val="207" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9014" name="Shadow Item: Bloody Orchid" type="Weapon">
@@ -429,11 +429,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="320" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="186" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9015" name="Shadow Item: Blood Tornado" type="Weapon">
@@ -460,9 +460,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9016" name="Shadow Item: Carnage Bow" type="Weapon">
@@ -489,11 +489,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="560" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="440" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="440" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9017" name="Shadow Item: Keshanberk*Keshanberk" type="Weapon">
@@ -519,9 +519,9 @@
 		<set name="weight" val="700" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9018" name="Shadow Item: Meteor Shower" type="Weapon">
@@ -548,9 +548,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9019" name="Shadow Item: Infernal Master" type="Weapon">
@@ -576,9 +576,9 @@
 		<set name="weight" val="640" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9020" name="Shadow Item: Keshanberk*Damascus" type="Weapon">
@@ -605,9 +605,9 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="112" />
 			<set stat="pAtk" val="275" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9021" name="Shadow Item: Dragon Slayer" type="Weapon">
@@ -633,9 +633,9 @@
 		<set name="weight" val="613" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="114" />
 			<set stat="pAtk" val="282" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9022" name="Shadow Item: Sword of Miracles" type="Weapon">
@@ -662,9 +662,9 @@
 		<set name="weight" val="280" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="152" />
 			<set stat="pAtk" val="186" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9023" name="Shadow Item: Elysian" type="Weapon">
@@ -691,9 +691,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="114" />
 			<set stat="pAtk" val="232" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9024" name="Shadow Item: Branch of the Mother Tree" type="Weapon">
@@ -721,9 +721,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="167" />
 			<set stat="pAtk" val="226" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9025" name="Shadow Item: Soul Separator" type="Weapon">
@@ -748,11 +748,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="317" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9026" name="Shadow Item: Dragon Grinder" type="Weapon">
@@ -779,9 +779,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="114" />
 			<set stat="pAtk" val="282" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9027" name="Shadow Item: Soul Bow" type="Weapon">
@@ -808,11 +808,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="553" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="125" />
-			<set stat="pAtk" val="528" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="528" />
+			<set stat="mAtk" val="125" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9028" name="Shadow Item: Tallum Glaive" type="Weapon">
@@ -838,11 +838,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="613" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="232" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="232" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9029" name="Shadow Item: Dark Legion's Edge" type="Weapon">
@@ -868,9 +868,9 @@
 		<set name="weight" val="440" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="114" />
 			<set stat="pAtk" val="232" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9030" name="Shadow Item: Bronze Breastplate" type="Armor">
@@ -889,7 +889,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2973" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="9031" name="Shadow Item: Bronze Gaiters" type="Armor">
@@ -908,7 +908,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 		</for>
 	</item>
 	<item id="9032" name="Shadow Item: Durable Leather Shirt" type="Armor">
@@ -927,7 +927,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1573" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 		</for>
 	</item>
 	<item id="9033" name="Shadow Item: Durable Leather Gaiters" type="Armor">
@@ -946,7 +946,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="537" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="9034" name="Shadow Item: Tunic of Magic" type="Armor">
@@ -965,7 +965,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="693" />
 		<for>
-			<add order="0" stat="pDef" val="34" />
+			<add stat="pDef" val="34" order="0" />
 		</for>
 	</item>
 	<item id="9035" name="Shadow Item: Stockings of Magic" type="Armor">
@@ -984,7 +984,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="343" />
 		<for>
-			<add order="0" stat="pDef" val="21" />
+			<add stat="pDef" val="21" order="0" />
 		</for>
 	</item>
 	<item id="9036" name="Shadow Item: Bone Shield" type="Armor">
@@ -1001,9 +1001,9 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="460" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9037" name="Shadow Item: Durable Leather Helmet" type="Armor">
@@ -1021,7 +1021,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="213" />
 		<for>
-			<add order="0" stat="pDef" val="26" />
+			<add stat="pDef" val="26" order="0" />
 		</for>
 	</item>
 	<item id="9038" name="Shadow Item: Boots" type="Armor">
@@ -1039,7 +1039,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="437" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="9039" name="Shadow Item: Bracer" type="Armor">
@@ -1057,7 +1057,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="217" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="9040" name="Shadow Item: Mithril Breastplate" type="Armor">
@@ -1077,7 +1077,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="2890" />
 		<for>
-			<add order="0" stat="pDef" val="95" />
+			<add stat="pDef" val="95" order="0" />
 		</for>
 	</item>
 	<item id="9041" name="Shadow Item: Mithril Gaiters" type="Armor">
@@ -1097,7 +1097,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1277" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 		</for>
 	</item>
 	<item id="9042" name="Shadow Item: Gauntlets" type="Armor">
@@ -1116,7 +1116,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="213" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9043" name="Shadow Item: Iron Boots" type="Armor">
@@ -1135,7 +1135,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="427" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9044" name="Shadow Item: Hoplon" type="Weapon">
@@ -1155,9 +1155,9 @@
 		<set name="weapon_type" val="FIST" />
 		<set name="weight" val="447" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="128" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9045" name="Shadow Item: Reinforced Leather Shirt" type="Armor">
@@ -1177,7 +1177,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1523" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="9046" name="Shadow Item: Reinforced Leather Gaiters" type="Armor">
@@ -1197,7 +1197,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="523" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9047" name="Shadow Item: Reinforced Leather Gloves" type="Armor">
@@ -1216,7 +1216,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="213" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9048" name="Shadow Item: Reinforced Leather Boots" type="Armor">
@@ -1235,7 +1235,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="427" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9049" name="Shadow Item: Tunic of Knowledge" type="Armor">
@@ -1255,7 +1255,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="673" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9050" name="Shadow Item: Stockings of Knowledge" type="Armor">
@@ -1275,7 +1275,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="333" />
 		<for>
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
 		</for>
 	</item>
 	<item id="9051" name="Shadow Item: Gloves of Knowledge" type="Armor">
@@ -1294,7 +1294,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="213" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9052" name="Shadow Item: Boots of Knowledge" type="Armor">
@@ -1313,7 +1313,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="423" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="9053" name="Shadow Item: Helmet" type="Armor">
@@ -1332,7 +1332,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="213" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 		</for>
 	</item>
 	<item id="9054" name="Shadow Item: Compound Armor" type="Armor">
@@ -1352,7 +1352,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="3660" />
 		<for>
-			<add order="0" stat="pDef" val="224" />
+			<add stat="pDef" val="224" order="0" />
 		</for>
 	</item>
 	<item id="9055" name="Shadow Item: Compound Boots" type="Armor">
@@ -1371,7 +1371,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="407" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="9056" name="Shadow Item: Compound Shield" type="Armor">
@@ -1388,9 +1388,9 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="410" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="190" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9057" name="Shadow Item: Compound Helmet" type="Armor">
@@ -1409,7 +1409,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="203" />
 		<for>
-			<add order="0" stat="pDef" val="54" />
+			<add stat="pDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="9058" name="Shadow Item: Theca Leather Armor" type="Armor">
@@ -1429,7 +1429,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1457" />
 		<for>
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
 		</for>
 	</item>
 	<item id="9059" name="Shadow Item: Theca Leather Gaiters" type="Armor">
@@ -1449,7 +1449,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 		</for>
 	</item>
 	<item id="9060" name="Shadow Item: Theca Leather Boots" type="Armor">
@@ -1468,7 +1468,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="403" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 		</for>
 	</item>
 	<item id="9061" name="Shadow Item: Theca Leather Gloves" type="Armor">
@@ -1487,7 +1487,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 		</for>
 	</item>
 	<item id="9062" name="Shadow Item: Demon's Tunic" type="Armor">
@@ -1507,7 +1507,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="663" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="9063" name="Shadow Item: Demon's Stockings" type="Armor">
@@ -1527,7 +1527,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="327" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 		</for>
 	</item>
 	<item id="9064" name="Shadow Item: Demon's Boots" type="Armor">
@@ -1546,7 +1546,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="407" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="9065" name="Shadow Item: Demon's Gloves" type="Armor">
@@ -1565,7 +1565,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="203" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="9066" name="Shadow Item: Shining Circlet" type="Armor">
@@ -1584,7 +1584,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="54" />
+			<add stat="pDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="9067" name="Shadow Item: Zubei's Breastplate" type="Armor">
@@ -1604,7 +1604,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="2657" />
 		<for>
-			<add order="0" stat="pDef" val="157" />
+			<add stat="pDef" val="157" order="0" />
 		</for>
 	</item>
 	<item id="9068" name="Shadow Item: Zubei's Gaiters" type="Armor">
@@ -1624,7 +1624,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1190" />
 		<for>
-			<add order="0" stat="pDef" val="98" />
+			<add stat="pDef" val="98" order="0" />
 		</for>
 	</item>
 	<item id="9069" name="Shadow Item: Zubei's Helmet" type="Armor">
@@ -1643,7 +1643,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="62" />
+			<add stat="pDef" val="62" order="0" />
 		</for>
 	</item>
 	<item id="9070" name="Shadow Item: Zubei's Shield" type="Armor">
@@ -1660,9 +1660,9 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="403" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9071" name="Shadow Item: Zubei's Gauntlets" type="Armor">
@@ -1681,7 +1681,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9072" name="Shadow Item: Zubei's Boots" type="Armor">
@@ -1700,7 +1700,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="393" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9073" name="Shadow Item: Zubei's Leather Shirt" type="Armor">
@@ -1720,7 +1720,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1443" />
 		<for>
-			<add order="0" stat="pDef" val="117" />
+			<add stat="pDef" val="117" order="0" />
 		</for>
 	</item>
 	<item id="9074" name="Shadow Item: Zubei's Leather Gaiters" type="Armor">
@@ -1740,7 +1740,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="493" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="9075" name="Shadow Item: Zubei's Gauntlets" type="Armor">
@@ -1759,7 +1759,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9076" name="Shadow Item: Zubei's Boots" type="Armor">
@@ -1778,7 +1778,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="393" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9077" name="Shadow Item: Tunic of Zubei" type="Armor">
@@ -1798,7 +1798,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="653" />
 		<for>
-			<add order="0" stat="pDef" val="78" />
+			<add stat="pDef" val="78" order="0" />
 		</for>
 	</item>
 	<item id="9078" name="Shadow Item: Stockings of Zubei" type="Armor">
@@ -1818,7 +1818,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="313" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9079" name="Shadow Item: Zubei's Gauntlets" type="Armor">
@@ -1837,7 +1837,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9080" name="Shadow Item: Zubei's Boots" type="Armor">
@@ -1856,7 +1856,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="393" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="9081" name="Shadow Item: Dark Crystal Breastplate" type="Armor">
@@ -1876,7 +1876,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="2567" />
 		<for>
-			<add order="0" stat="pDef" val="171" />
+			<add stat="pDef" val="171" order="0" />
 		</for>
 	</item>
 	<item id="9082" name="Shadow Item: Dark Crystal Gaiters" type="Armor">
@@ -1896,7 +1896,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1107" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 		</for>
 	</item>
 	<item id="9083" name="Shadow Item: Dark Crystal Helmet" type="Armor">
@@ -1915,7 +1915,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="9084" name="Shadow Item: Dark Crystal Shield" type="Armor">
@@ -1932,9 +1932,9 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="397" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9085" name="Shadow Item: Dark Crystal Gloves" type="Armor">
@@ -1953,7 +1953,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9086" name="Shadow Item: Dark Crystal Boots" type="Armor">
@@ -1972,7 +1972,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9087" name="Shadow Item: Dark Crystal Leather Armor" type="Armor">
@@ -1992,7 +1992,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1433" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="9088" name="Shadow Item: Dark Crystal Leggings" type="Armor">
@@ -2012,7 +2012,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="493" />
 		<for>
-			<add order="0" stat="pDef" val="80" />
+			<add stat="pDef" val="80" order="0" />
 		</for>
 	</item>
 	<item id="9089" name="Shadow Item: Dark Crystal Gloves" type="Armor">
@@ -2031,7 +2031,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9090" name="Shadow Item: Dark Crystal Boots" type="Armor">
@@ -2050,7 +2050,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9091" name="Shadow Item: Dark Crystal Robe" type="Armor">
@@ -2070,7 +2070,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="817" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 		</for>
 	</item>
 	<item id="9092" name="Shadow Item: Dark Crystal Gloves" type="Armor">
@@ -2089,7 +2089,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9093" name="Shadow Item: Dark Crystal Boots" type="Armor">
@@ -2108,7 +2108,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="9094" name="Shadow Item: Majestic Plate Armor" type="Armor">
@@ -2128,7 +2128,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3067" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="9095" name="Shadow Item: Majestic Circlet" type="Armor">
@@ -2147,7 +2147,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="9096" name="Shadow Item: Majestic Gauntlets" type="Armor">
@@ -2166,7 +2166,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9097" name="Shadow Item: Majestic Boots" type="Armor">
@@ -2185,7 +2185,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9098" name="Shadow Item: Majestic Leather Armor" type="Armor">
@@ -2205,7 +2205,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1783" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 		</for>
 	</item>
 	<item id="9099" name="Shadow Item: Majestic Gauntlets" type="Armor">
@@ -2224,7 +2224,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 </list>

@@ -281,11 +281,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -310,11 +310,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -339,9 +339,9 @@
 		<set name="weight" val="300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="200" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -366,11 +366,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -395,11 +395,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -424,11 +424,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -449,9 +449,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="5134" name="Soulshot Compressed Package (No-grade)" type="EtcItem">
@@ -941,8 +941,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="41" />
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
+			<add stat="mDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="5171" name="Brigandine Panzer Coat" type="Armor">
@@ -961,8 +961,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="44" />
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
+			<add stat="mDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="5172" name="Draconic Panzer Coat" type="Armor">
@@ -981,8 +981,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="46" />
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
+			<add stat="mDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="5173" name="Blood Panzer Coat" type="Armor">
@@ -1001,8 +1001,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="5174" name="Ophidian Panzer Coat" type="Armor">
@@ -1021,8 +1021,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="52" />
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
+			<add stat="mDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="5175" name="Inferno Panzer Coat" type="Armor">
@@ -1041,8 +1041,8 @@
 			<player categoryType="STRIDER" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="54" />
-			<add order="0" stat="pDef" val="54" />
+			<add stat="pDef" val="54" order="0" />
+			<add stat="mDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="5176" name="Serpentine Spike" type="Weapon">
@@ -1065,9 +1065,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="17" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5177" name="Drake Horn" type="Weapon">
@@ -1090,9 +1090,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="24" />
 			<set stat="pAtk" val="19" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5178" name="Assault Alicorn" type="Weapon">
@@ -1115,9 +1115,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="27" />
 			<set stat="pAtk" val="21" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5179" name="Draconic Slicer" type="Weapon">
@@ -1140,9 +1140,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="23" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5180" name="Ohpdian Lance" type="Weapon">
@@ -1165,9 +1165,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="34" />
 			<set stat="pAtk" val="25" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5181" name="Diamond Drill" type="Weapon">
@@ -1190,9 +1190,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="37" />
 			<set stat="pAtk" val="27" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5182" name="Hatchling's Gorgon Coat" type="Armor">
@@ -1211,8 +1211,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="44" />
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
+			<add stat="mDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="5183" name="Hatchling's Ophidian Plate" type="Armor">
@@ -1230,8 +1230,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="46" />
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
+			<add stat="mDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="5184" name="Hatchling's Crimson Plate" type="Armor">
@@ -1249,8 +1249,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="5185" name="Hatchling's Draconic Plate" type="Armor">
@@ -1268,8 +1268,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="52" />
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
+			<add stat="mDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="5186" name="Hatchling's Inferno Plate" type="Armor">
@@ -1287,8 +1287,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="54" />
-			<add order="0" stat="pDef" val="54" />
+			<add stat="pDef" val="54" order="0" />
+			<add stat="mDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="5187" name="Serpentine Grinder" type="Weapon">
@@ -1311,9 +1311,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="24" />
 			<set stat="pAtk" val="19" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5188" name="Fang of Dahak" type="Weapon">
@@ -1336,9 +1336,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="27" />
 			<set stat="pAtk" val="21" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5189" name="Crimson Blood Fang" type="Weapon">
@@ -1361,9 +1361,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="30" />
 			<set stat="pAtk" val="23" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5190" name="Draconic Chopper" type="Weapon">
@@ -1386,9 +1386,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="34" />
 			<set stat="pAtk" val="25" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5191" name="Diabolic Grinder" type="Weapon">
@@ -1411,9 +1411,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="37" />
 			<set stat="pAtk" val="27" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="5192" name="Magic Rope (D-grade)" type="EtcItem">

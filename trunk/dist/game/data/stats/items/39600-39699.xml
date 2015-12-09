@@ -39,17 +39,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="2523" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39603" name="Dimensional Antharas Slasher" type="Weapon">
@@ -70,15 +64,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39604" name="Dimensional Antharas Thrower" type="Weapon">
@@ -98,17 +86,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="5678" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39605" name="Dimensional Antharas Buster" type="Weapon">
@@ -129,15 +111,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1676" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1676" />
+			<set stat="pAtk" val="2307" />
 		</for>
 	</item>
 	<item id="39606" name="Dimensional Antharas Cutter" type="Weapon">
@@ -158,15 +134,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="2884" />
 		</for>
 	</item>
 	<item id="39607" name="Dimensional Antharas Stormer" type="Weapon">
@@ -186,17 +156,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="2884" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39608" name="Dimensional Antharas Fighter" type="Weapon">
@@ -218,15 +182,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39609" name="Dimensional Antharas Avenger" type="Weapon">
@@ -248,15 +206,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="2884" />
 		</for>
 	</item>
 	<item id="39610" name="Dimensional Antharas Dual Blunt" type="Weapon">
@@ -278,15 +230,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39611" name="Dimensional Antharas Dualsword" type="Weapon">
@@ -307,15 +253,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39612" name="Dimensional Valakas Shaper" type="Weapon">
@@ -335,17 +275,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="2523" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39613" name="Dimensional Valakas Cutter" type="Weapon">
@@ -366,15 +300,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="2884" />
 		</for>
 	</item>
 	<item id="39614" name="Dimensional Valakas Slasher" type="Weapon">
@@ -395,15 +323,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39615" name="Dimensional Valakas Thrower" type="Weapon">
@@ -423,17 +345,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="5678" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39616" name="Dimensional Valakas Buster" type="Weapon">
@@ -454,15 +370,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1676" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1676" />
+			<set stat="pAtk" val="2307" />
 		</for>
 	</item>
 	<item id="39617" name="Dimensional Valakas Caster" type="Weapon">
@@ -484,15 +394,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="1676" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1676" />
+			<set stat="pAtk" val="2307" />
 		</for>
 	</item>
 	<item id="39621" name="Dimensional Valakas Retributer" type="Weapon">
@@ -513,17 +417,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="1843" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2809" />
+			<add stat="accMagic" val="8.0" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1843" />
+			<set stat="pAtk" val="2809" />
 		</for>
 	</item>
 	<item id="39622" name="Dimensional Lindvior Shaper" type="Weapon">
@@ -543,17 +441,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="2523" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39623" name="Dimensional Lindvior Thrower" type="Weapon">
@@ -573,17 +465,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="5678" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39624" name="Dimensional Lindvior Slasher" type="Weapon">
@@ -604,15 +490,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="3509" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="3509" />
 		</for>
 	</item>
 	<item id="39625" name="Dimensional Lindvior Caster" type="Weapon">
@@ -633,15 +513,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1676" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2307" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1676" />
+			<set stat="pAtk" val="2307" />
 		</for>
 	</item>
 	<item id="39626" name="Dimensional Lindvior Cutter" type="Weapon">
@@ -662,15 +536,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="379" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="mAtk" val="1257" />
+			<set stat="pAtk" val="2884" />
 		</for>
 	</item>
 	<item id="39627" name="Dimensional Lindvior Shooter" type="Weapon">
@@ -690,17 +558,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="5113" />
 			<set stat="pAtkSpd" val="325" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="5113" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39628" name="Dimensional Lindvior Dual Dagger" type="Weapon">
@@ -720,17 +582,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<mul stat="maxCp" val="3.00" />
-			<mul stat="maxHp" val="2.00" />
-			<mul stat="maxMp" val="2.00" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="433" />
-			<mul stat="pvpMagicalDmg" val="1.30" />
-			<mul stat="pvpPhysDmg" val="1.30" />
-			<mul stat="pvpPhysSkillsDmg" val="1.30" />
+			<set stat="pAtk" val="2884" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39629" name="Fortune Pocket - Stage 1" type="EtcItem">
@@ -1192,6 +1048,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39661" name="Rabbit Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1201,6 +1060,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39662" name="Raccoon Ears" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1210,6 +1072,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39663" name="Raccoon Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1219,6 +1084,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39664" name="Cat Ears" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1228,6 +1096,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39665" name="Cat Ears" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1237,6 +1108,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39666" name="Romantic Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1246,6 +1120,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39667" name="Romantic Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1255,6 +1132,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39668" name="Angel Circlet" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1264,6 +1144,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39669" name="Angel Circlet" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1273,6 +1156,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39670" name="Devil Circlet" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1282,6 +1168,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39671" name="Devil Circlet" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1291,6 +1180,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39672" name="Pirate's Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1300,6 +1192,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39673" name="Pirate's Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1309,6 +1204,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39674" name="Outlaw's Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1318,6 +1216,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39675" name="Outlaw's Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1327,6 +1228,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39676" name="Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1336,6 +1240,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39677" name="Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1345,6 +1252,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39678" name="Party Hat" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1354,6 +1264,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39679" name="Party Hat" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1363,6 +1276,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39680" name="Refined Angel Ring" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1372,6 +1288,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39681" name="Refined Angel Ring" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1381,6 +1300,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39682" name="Refined Devil Horn" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1390,6 +1312,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39683" name="Refined Devil Horn" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1399,6 +1324,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39684" name="Red Horns" additionalName="LUC (Event)" type="Armor">
 		<!-- LUC + 3. -->
@@ -1409,6 +1337,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39685" name="Red Horns" additionalName="CHA (Event)" type="Armor">
 		<!-- CHA + 3. -->
@@ -1419,6 +1350,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39686" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1429,6 +1363,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39687" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1439,24 +1376,35 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39688" name="Lady's Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39689" name="Lady's Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39690" name="Party Mask" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1467,6 +1415,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39691" name="Party Mask" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1477,6 +1428,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39692" name="Monocle" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -1486,6 +1440,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39693" name="Monocle" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -1495,59 +1452,86 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39694" name="Maiden's Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39695" name="Maiden's Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39696" name="Forget-me-not Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39697" name="Forget-me-not Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39698" name="Daisy Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39699" name="Daisy Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="bodypart" val="hair" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 </list>

@@ -1105,9 +1105,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45586" name="Special Fire Resistance Necklace" type="Armor">
@@ -1122,9 +1123,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45587" name="Special Holy Resistance Necklace" type="Armor">
@@ -1139,9 +1141,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45588" name="Special Dark Resistance Necklace" type="Armor">
@@ -1156,9 +1159,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45589" name="Special Wind Resistance Necklace" type="Armor">
@@ -1173,9 +1177,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45590" name="Special Earth Resistance Necklace" type="Armor">
@@ -1190,9 +1195,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45591" name="Special Earth Resistance Ring" type="Armor">
@@ -1207,8 +1213,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45592" name="Special Water Resistance Ring" type="Armor">
@@ -1223,8 +1230,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45593" name="Special Fire Resistance Ring" type="Armor">
@@ -1239,8 +1247,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45594" name="Special Holy Resistance Ring" type="Armor">
@@ -1255,8 +1264,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45595" name="Special Dark Resistance Ring" type="Armor">
@@ -1271,8 +1281,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45596" name="Special Wind Resistance Ring" type="Armor">
@@ -1287,8 +1298,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45597" name="Special Resistance Earring - Stun" type="Armor">
@@ -1303,9 +1315,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45598" name="Special Resistance Earring - Hold" type="Armor">
@@ -1320,9 +1333,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45599" name="Special Resistance Earring - Bleed" type="Armor">
@@ -1337,9 +1351,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 </list>

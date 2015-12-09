@@ -1080,8 +1080,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="16" />
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
+			<add stat="mDef" val="16" order="0" />
 		</for>
 	</item>
 	<item id="3892" name="Wolf's Durable Leather Armor" type="Armor">
@@ -1100,8 +1100,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="18" />
-			<add order="0" stat="pDef" val="16" />
+			<add stat="pDef" val="16" order="0" />
+			<add stat="mDef" val="18" order="0" />
 		</for>
 	</item>
 	<item id="3893" name="Wolf's Wooden Armor" type="Armor">
@@ -1120,8 +1120,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="20" />
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
+			<add stat="mDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="3894" name="Wolf's Ring Mail" type="Armor">
@@ -1139,8 +1139,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="23" />
-			<add order="0" stat="pDef" val="22" />
+			<add stat="pDef" val="22" order="0" />
+			<add stat="mDef" val="23" order="0" />
 		</for>
 	</item>
 	<item id="3895" name="Wolf's Bone Armor" type="Armor">
@@ -1159,8 +1159,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="26" />
-			<add order="0" stat="pDef" val="26" />
+			<add stat="pDef" val="26" order="0" />
+			<add stat="mDef" val="26" order="0" />
 		</for>
 	</item>
 	<item id="3896" name="Wolf's Scale Mail" type="Armor">
@@ -1178,8 +1178,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="29" />
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
+			<add stat="mDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="3897" name="Wolf's Bronze Armor" type="Armor">
@@ -1198,8 +1198,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="31" />
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
+			<add stat="mDef" val="31" order="0" />
 		</for>
 	</item>
 	<item id="3898" name="Wolf's Plate Mail" type="Armor">
@@ -1217,8 +1217,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="33" />
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
+			<add stat="mDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="3899" name="Wolf's Steel Armor" type="Armor">
@@ -1237,8 +1237,8 @@
 			<player categoryType="ALL_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="40" />
+			<add stat="pDef" val="40" order="0" />
+			<add stat="mDef" val="36" order="0" />
 		</for>
 	</item>
 </list>

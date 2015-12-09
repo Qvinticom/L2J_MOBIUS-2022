@@ -14,7 +14,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="58" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -33,7 +33,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="550" />
 		<for>
-			<add order="0" stat="pDef" val="202" />
+			<add stat="pDef" val="202" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -51,7 +51,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="59" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -69,7 +69,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="113" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -87,7 +87,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="58" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -106,7 +106,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="192" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -125,7 +125,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="92" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -143,7 +143,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="59" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -161,7 +161,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="113" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -184,11 +184,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33210" name="Sirra's Blade of Destiny (Fire) - Haste" type="Weapon">
@@ -211,9 +211,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33211" name="Themis' Tongue of Destiny (Fire) - Mana Up" type="Weapon">
@@ -236,9 +236,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33212" name="Éclair Bijou of Destiny (Fire) - Haste" type="Weapon">
@@ -260,11 +260,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33213" name="Sword of Ipos of Destiny (Fire) - Focus" type="Weapon">
@@ -287,9 +287,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33214" name="Durendal of Destiny (Fire) - Focus" type="Weapon">
@@ -313,9 +313,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33215" name="Shyeed's Bow of Destiny (Fire) - Focus" type="Weapon">
@@ -338,11 +338,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33216" name="Screaming Vengeance of Destiny (Fire) - Focus" type="Weapon">
@@ -364,11 +364,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33217" name="Barakiel's Axe of Destiny (Fire) - Focus" type="Weapon">
@@ -392,9 +392,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33218" name="Cabrio's Hand of Destiny (Fire) - Mana Up" type="Weapon">
@@ -418,9 +418,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33219" name="Behemoth' Tuning Fork of Destiny (Fire) - Health" type="Weapon">
@@ -444,9 +444,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33220" name="Daimon Crystal of Destiny (Fire) - Acumen" type="Weapon">
@@ -470,9 +470,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33221" name="Tiphon's Spear of Destiny (Fire) - Critical Stun" type="Weapon">
@@ -494,11 +494,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33222" name="Sobekk's Hurricane of Destiny (Fire) - Haste" type="Weapon">
@@ -522,9 +522,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33223" name="Tallum Blade*Damascus of Destiny (Fire)" type="Weapon">
@@ -546,9 +546,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33224" name="Naga Storm of Destiny (Water) - Critical Damage" type="Weapon">
@@ -570,11 +570,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33225" name="Sirra's Blade of Destiny (Water) - Haste" type="Weapon">
@@ -597,9 +597,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33226" name="Themis' Tongue of Destiny (Water) - Mana Up" type="Weapon">
@@ -622,9 +622,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33227" name="Éclair Bijou of Destiny (Water) - Haste" type="Weapon">
@@ -646,11 +646,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33228" name="Sword of Ipos of Destiny (Water) - Focus" type="Weapon">
@@ -673,9 +673,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33229" name="Durendal of Destiny (Water) - Focus" type="Weapon">
@@ -699,9 +699,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33230" name="Shyeed's Bow of Destiny (Water) - Focus" type="Weapon">
@@ -724,11 +724,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33231" name="Screaming Vengeance of Destiny (Water) - Focus" type="Weapon">
@@ -750,11 +750,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33232" name="Barakiel's Axe of Destiny (Water) - Focus" type="Weapon">
@@ -778,9 +778,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33233" name="Cabrio's Hand of Destiny (Water) - Mana Up" type="Weapon">
@@ -804,9 +804,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33234" name="Behemoth' Tuning Fork of Destiny (Water) - Health" type="Weapon">
@@ -830,9 +830,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33235" name="Daimon Crystal of Destiny (Water) - Acumen" type="Weapon">
@@ -856,9 +856,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33236" name="Tiphon's Spear of Destiny (Water) - Critical Stun" type="Weapon">
@@ -880,11 +880,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33237" name="Sobekk's Hurricane of Destiny (Water) - Haste" type="Weapon">
@@ -908,9 +908,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33238" name="Tallum Blade*Damascus of Destiny (Water)" type="Weapon">
@@ -932,9 +932,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33239" name="Naga Storm of Destiny (Wind) - Critical Damage" type="Weapon">
@@ -956,11 +956,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33240" name="Sirra's Blade of Destiny (Wind) - Haste" type="Weapon">
@@ -983,9 +983,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33241" name="Themis' Tongue of Destiny (Wind) - Mana Up" type="Weapon">
@@ -1008,9 +1008,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33242" name="Éclair Bijou of Destiny (Wind) - Haste" type="Weapon">
@@ -1032,11 +1032,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33243" name="Sword of Ipos of Destiny (Wind) - Focus" type="Weapon">
@@ -1059,9 +1059,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33244" name="Durendal of Destiny (Wind) - Focus" type="Weapon">
@@ -1085,9 +1085,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33245" name="Shyeed's Bow of Destiny (Wind) - Focus" type="Weapon">
@@ -1110,11 +1110,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33246" name="Screaming Vengeance of Destiny (Wind) - Focus" type="Weapon">
@@ -1136,11 +1136,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33247" name="Barakiel's Axe of Destiny (Wind) - Focus" type="Weapon">
@@ -1164,9 +1164,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33248" name="Cabrio's Hand of Destiny (Wind) - Mana Up" type="Weapon">
@@ -1190,9 +1190,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33249" name="Behemoth' Tuning Fork of Destiny (Wind) - Health" type="Weapon">
@@ -1216,9 +1216,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33250" name="Daimon Crystal of Destiny (Wind) - Acumen" type="Weapon">
@@ -1242,9 +1242,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33251" name="Tiphon's Spear of Destiny (Wind) - Critical Stun" type="Weapon">
@@ -1266,11 +1266,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33252" name="Sobekk's Hurricane of Destiny (Wind) - Haste" type="Weapon">
@@ -1294,9 +1294,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33253" name="Tallum Blade*Damascus of Destiny (Wind)" type="Weapon">
@@ -1318,9 +1318,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33254" name="Naga Storm of Destiny (Earth) - Critical Damage" type="Weapon">
@@ -1342,11 +1342,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33255" name="Sirra's Blade of Destiny (Earth) - Haste" type="Weapon">
@@ -1369,9 +1369,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33256" name="Themis' Tongue of Destiny (Earth) - Mana Up" type="Weapon">
@@ -1394,9 +1394,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33257" name="Éclair Bijou of Destiny (Earth) - Haste" type="Weapon">
@@ -1418,11 +1418,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33258" name="Sword of Ipos of Destiny (Earth) - Focus" type="Weapon">
@@ -1445,9 +1445,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33259" name="Durendal of Destiny (Earth) - Focus" type="Weapon">
@@ -1471,9 +1471,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33260" name="Shyeed's Bow of Destiny (Earth) - Focus" type="Weapon">
@@ -1496,11 +1496,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33261" name="Screaming Vengeance of Destiny (Earth) - Focus" type="Weapon">
@@ -1522,11 +1522,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33262" name="Barakiel's Axe of Destiny (Earth) - Focus" type="Weapon">
@@ -1550,9 +1550,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33263" name="Cabrio's Hand of Destiny (Earth) - Mana Up" type="Weapon">
@@ -1576,9 +1576,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33264" name="Behemoth' Tuning Fork of Destiny (Earth) - Health" type="Weapon">
@@ -1602,9 +1602,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33265" name="Daimon Crystal of Destiny (Earth) - Acumen" type="Weapon">
@@ -1628,9 +1628,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33266" name="Tiphon's Spear of Destiny (Earth) - Critical Stun" type="Weapon">
@@ -1652,11 +1652,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33267" name="Sobekk's Hurricane of Destiny (Earth) - Haste" type="Weapon">
@@ -1680,9 +1680,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33268" name="Tallum Blade*Damascus of Destiny (Earth)" type="Weapon">
@@ -1704,9 +1704,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33269" name="Naga Storm of Destiny (Holy) - Critical Damage" type="Weapon">
@@ -1728,11 +1728,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33270" name="Sirra's Blade of Destiny (Holy) - Haste" type="Weapon">
@@ -1755,9 +1755,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33271" name="Themis' Tongue of Destiny (Holy) - Mana Up" type="Weapon">
@@ -1780,9 +1780,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33272" name="Éclair Bijou of Destiny (Holy) - Haste" type="Weapon">
@@ -1804,11 +1804,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33273" name="Sword of Ipos of Destiny (Holy) - Focus" type="Weapon">
@@ -1831,9 +1831,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33274" name="Durendal of Destiny (Holy) - Focus" type="Weapon">
@@ -1857,9 +1857,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33275" name="Shyeed's Bow of Destiny (Holy) - Focus" type="Weapon">
@@ -1882,11 +1882,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33276" name="Screaming Vengeance of Destiny (Holy) - Focus" type="Weapon">
@@ -1908,11 +1908,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33277" name="Barakiel's Axe of Destiny (Holy) - Focus" type="Weapon">
@@ -1936,9 +1936,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33278" name="Cabrio's Hand of Destiny (Holy) - Mana Up" type="Weapon">
@@ -1962,9 +1962,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33279" name="Behemoth' Tuning Fork of Destiny (Holy) - Health" type="Weapon">
@@ -1988,9 +1988,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33280" name="Daimon Crystal of Destiny (Holy) - Acumen" type="Weapon">
@@ -2014,9 +2014,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33281" name="Tiphon's Spear of Destiny (Holy) - Critical Stun" type="Weapon">
@@ -2038,11 +2038,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33282" name="Sobekk's Hurricane of Destiny (Holy) - Haste" type="Weapon">
@@ -2066,9 +2066,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33283" name="Tallum Blade*Damascus of Destiny (Holy)" type="Weapon">
@@ -2090,9 +2090,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33284" name="Naga Storm of Destiny (Dark) - Critical Damage" type="Weapon">
@@ -2114,11 +2114,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="93" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33285" name="Sirra's Blade of Destiny (Dark) - Haste" type="Weapon">
@@ -2141,9 +2141,9 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33286" name="Themis' Tongue of Destiny (Dark) - Mana Up" type="Weapon">
@@ -2166,9 +2166,9 @@
 		<set name="weight" val="82" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33287" name="Éclair Bijou of Destiny (Dark) - Haste" type="Weapon">
@@ -2190,11 +2190,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="130" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33288" name="Sword of Ipos of Destiny (Dark) - Focus" type="Weapon">
@@ -2217,9 +2217,9 @@
 		<set name="weight" val="182" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33289" name="Durendal of Destiny (Dark) - Focus" type="Weapon">
@@ -2243,9 +2243,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33290" name="Shyeed's Bow of Destiny (Dark) - Focus" type="Weapon">
@@ -2268,11 +2268,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33291" name="Screaming Vengeance of Destiny (Dark) - Focus" type="Weapon">
@@ -2294,11 +2294,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="164" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33292" name="Barakiel's Axe of Destiny (Dark) - Focus" type="Weapon">
@@ -2322,9 +2322,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33293" name="Cabrio's Hand of Destiny (Dark) - Mana Up" type="Weapon">
@@ -2348,9 +2348,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="161" />
 			<set stat="pAtk" val="202" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33294" name="Behemoth' Tuning Fork of Destiny (Dark) - Health" type="Weapon">
@@ -2374,9 +2374,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33295" name="Daimon Crystal of Destiny (Dark) - Acumen" type="Weapon">
@@ -2400,9 +2400,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="177" />
 			<set stat="pAtk" val="245" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33296" name="Tiphon's Spear of Destiny (Dark) - Critical Stun" type="Weapon">
@@ -2424,11 +2424,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="182" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33297" name="Sobekk's Hurricane of Destiny (Dark) - Haste" type="Weapon">
@@ -2452,9 +2452,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33298" name="Tallum Blade*Damascus of Destiny (Dark)" type="Weapon">
@@ -2476,9 +2476,9 @@
 		<set name="weight" val="189" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33299" name="Majestic Circlet of Destiny (Fire, Wind, Dark)" type="Armor">
@@ -2495,7 +2495,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

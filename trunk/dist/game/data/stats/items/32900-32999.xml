@@ -20,9 +20,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32901" name="Bastard Sword of Destiny*Crimson Sword (Fire)" type="Weapon">
@@ -44,9 +44,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32902" name="Mithril Dagger of Destiny (Water)" type="Weapon">
@@ -67,11 +67,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32903" name="Elven Long Sword of Destiny (Water)" type="Weapon">
@@ -93,9 +93,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32904" name="Grand Épée of Destiny (Water)" type="Weapon">
@@ -116,11 +116,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="144" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32905" name="Claymore of Destiny (Water)" type="Weapon">
@@ -142,9 +142,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32906" name="General's Katzbalger of Destiny (Water)" type="Weapon">
@@ -167,9 +167,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32907" name="Light Crossbow of Destiny (Water)" type="Weapon">
@@ -192,11 +192,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32908" name="Cranequin of Destiny (Water)" type="Weapon">
@@ -217,11 +217,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32909" name="Bonebreaker of Destiny (Water)" type="Weapon">
@@ -244,9 +244,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32910" name="Staff of Life of Destiny (Water)" type="Weapon">
@@ -269,9 +269,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32911" name="Atuba Hammer of Destiny (Water)" type="Weapon">
@@ -294,9 +294,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32912" name="Glaive of Destiny (Water)" type="Weapon">
@@ -317,11 +317,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32913" name="Scallop Jamadhr of Destiny (Water)" type="Weapon">
@@ -344,9 +344,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32914" name="Bastard Sword of Destiny*Crimson Sword (Water)" type="Weapon">
@@ -368,9 +368,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32915" name="Mithril Dagger of Destiny (Wind)" type="Weapon">
@@ -391,11 +391,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32916" name="Elven Long Sword of Destiny (Wind)" type="Weapon">
@@ -417,9 +417,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32917" name="Grand Épée of Destiny (Wind)" type="Weapon">
@@ -440,11 +440,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="144" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32918" name="Claymore of Destiny (Wind)" type="Weapon">
@@ -466,9 +466,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32919" name="General's Katzbalger of Destiny (Wind)" type="Weapon">
@@ -491,9 +491,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32920" name="Light Crossbow of Destiny (Wind)" type="Weapon">
@@ -516,11 +516,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32921" name="Cranequin of Destiny (Wind)" type="Weapon">
@@ -541,11 +541,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32922" name="Bonebreaker of Destiny (Wind)" type="Weapon">
@@ -568,9 +568,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32923" name="Staff of Life of Destiny (Wind)" type="Weapon">
@@ -593,9 +593,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32924" name="Atuba Hammer of Destiny (Wind)" type="Weapon">
@@ -618,9 +618,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32925" name="Glaive of Destiny (Wind)" type="Weapon">
@@ -641,11 +641,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32926" name="Scallop Jamadhr of Destiny (Wind)" type="Weapon">
@@ -668,9 +668,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32927" name="Bastard Sword of Destiny*Crimson Sword (Wind)" type="Weapon">
@@ -692,9 +692,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32928" name="Mithril Dagger of Destiny (Earth)" type="Weapon">
@@ -715,11 +715,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32929" name="Elven Long Sword of Destiny (Earth)" type="Weapon">
@@ -741,9 +741,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32930" name="Grand Épée of Destiny (Earth)" type="Weapon">
@@ -764,11 +764,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="144" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32931" name="Claymore of Destiny (Earth)" type="Weapon">
@@ -790,9 +790,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32932" name="General's Katzbalger of Destiny (Earth)" type="Weapon">
@@ -815,9 +815,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32933" name="Light Crossbow of Destiny (Earth)" type="Weapon">
@@ -840,11 +840,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32934" name="Cranequin of Destiny (Earth)" type="Weapon">
@@ -865,11 +865,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32935" name="Bonebreaker of Destiny (Earth)" type="Weapon">
@@ -892,9 +892,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32936" name="Staff of Life of Destiny (Earth)" type="Weapon">
@@ -917,9 +917,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32937" name="Atuba Hammer of Destiny (Earth)" type="Weapon">
@@ -942,9 +942,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32938" name="Glaive of Destiny (Earth)" type="Weapon">
@@ -965,11 +965,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32939" name="Scallop Jamadhr of Destiny (Earth)" type="Weapon">
@@ -992,9 +992,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32940" name="Bastard Sword of Destiny*Crimson Sword (Earth)" type="Weapon">
@@ -1016,9 +1016,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32941" name="Mithril Dagger of Destiny (Holy)" type="Weapon">
@@ -1039,11 +1039,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32942" name="Elven Long Sword of Destiny (Holy)" type="Weapon">
@@ -1065,9 +1065,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32943" name="Grand Épée of Destiny (Holy)" type="Weapon">
@@ -1088,11 +1088,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="144" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32944" name="Claymore of Destiny (Holy)" type="Weapon">
@@ -1114,9 +1114,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32945" name="General's Katzbalger of Destiny (Holy)" type="Weapon">
@@ -1139,9 +1139,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32946" name="Light Crossbow of Destiny (Holy)" type="Weapon">
@@ -1164,11 +1164,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32947" name="Cranequin of Destiny (Holy)" type="Weapon">
@@ -1189,11 +1189,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32948" name="Bonebreaker of Destiny (Holy)" type="Weapon">
@@ -1216,9 +1216,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32949" name="Staff of Life of Destiny (Holy)" type="Weapon">
@@ -1241,9 +1241,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32950" name="Atuba Hammer of Destiny (Holy)" type="Weapon">
@@ -1266,9 +1266,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32951" name="Glaive of Destiny (Holy)" type="Weapon">
@@ -1289,11 +1289,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32952" name="Scallop Jamadhr of Destiny (Holy)" type="Weapon">
@@ -1316,9 +1316,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32953" name="Bastard Sword of Destiny*Crimson Sword (Holy)" type="Weapon">
@@ -1340,9 +1340,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32954" name="Mithril Dagger of Destiny (Dark)" type="Weapon">
@@ -1363,11 +1363,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32955" name="Elven Long Sword of Destiny (Dark)" type="Weapon">
@@ -1389,9 +1389,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32956" name="Grand Épée of Destiny (Dark)" type="Weapon">
@@ -1412,11 +1412,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="144" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32957" name="Claymore of Destiny (Dark)" type="Weapon">
@@ -1438,9 +1438,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32958" name="General's Katzbalger of Destiny (Dark)" type="Weapon">
@@ -1463,9 +1463,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="32959" name="Light Crossbow of Destiny (Dark)" type="Weapon">
@@ -1488,11 +1488,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32960" name="Cranequin of Destiny (Dark)" type="Weapon">
@@ -1513,11 +1513,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32961" name="Bonebreaker of Destiny (Dark)" type="Weapon">
@@ -1540,9 +1540,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32962" name="Staff of Life of Destiny (Dark)" type="Weapon">
@@ -1565,9 +1565,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32963" name="Atuba Hammer of Destiny (Dark)" type="Weapon">
@@ -1590,9 +1590,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32964" name="Glaive of Destiny (Dark)" type="Weapon">
@@ -1613,11 +1613,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32965" name="Scallop Jamadhr of Destiny (Dark)" type="Weapon">
@@ -1640,9 +1640,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32966" name="Bastard Sword of Destiny*Crimson Sword (Dark)" type="Weapon">
@@ -1664,9 +1664,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32967" name="Brigandine Helmet of Destiny (Fire, Wind, Dark)" type="Armor">
@@ -1683,7 +1683,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1701,7 +1701,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="832" />
 		<for>
-			<add order="0" stat="pDef" val="103" />
+			<add stat="pDef" val="103" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1720,7 +1720,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="382" />
 		<for>
-			<add order="0" stat="pDef" val="64" />
+			<add stat="pDef" val="64" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1737,9 +1737,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="132" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1757,7 +1757,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="125" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1775,7 +1775,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1794,7 +1794,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="452" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1813,7 +1813,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="155" />
 		<for>
-			<add order="0" stat="pDef" val="48" />
+			<add stat="pDef" val="48" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1831,7 +1831,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="126" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1849,7 +1849,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1868,7 +1868,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="201" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1887,7 +1887,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="98" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1905,7 +1905,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="64" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1923,7 +1923,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="125" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1941,7 +1941,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1959,7 +1959,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="832" />
 		<for>
-			<add order="0" stat="pDef" val="103" />
+			<add stat="pDef" val="103" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1978,7 +1978,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="382" />
 		<for>
-			<add order="0" stat="pDef" val="64" />
+			<add stat="pDef" val="64" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1995,9 +1995,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="132" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -2015,7 +2015,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="125" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2033,7 +2033,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2052,7 +2052,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="452" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2071,7 +2071,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="155" />
 		<for>
-			<add order="0" stat="pDef" val="48" />
+			<add stat="pDef" val="48" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2089,7 +2089,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="126" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2107,7 +2107,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="63" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2126,7 +2126,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="201" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2145,7 +2145,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="98" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2163,7 +2163,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="64" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2181,7 +2181,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="125" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -2204,11 +2204,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="136" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="136" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="32996" name="Samurai Long Sword of Destiny (Fire) - Focus" type="Weapon">
@@ -2231,9 +2231,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="32997" name="Admiral's Estoc of Destiny (Fire) - Focus" type="Weapon">
@@ -2255,11 +2255,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="138" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="32998" name="Berserker Blade of Destiny (Fire) - Focus" type="Weapon">
@@ -2282,9 +2282,9 @@
 		<set name="weight" val="138" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="32999" name="Saber Tooth of Destiny (Fire) - Focus" type="Weapon">
@@ -2308,9 +2308,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 </list>

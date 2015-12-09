@@ -16,7 +16,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9101" name="Shadow Item: Majestic Robe" type="Armor">
@@ -36,7 +36,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="777" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 		</for>
 	</item>
 	<item id="9102" name="Shadow Item: Majestic Gauntlets" type="Armor">
@@ -55,7 +55,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9103" name="Shadow Item: Majestic Boots" type="Armor">
@@ -74,7 +74,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="9104" name="Compound Bow and Wooden Arrow" type="EtcItem">
@@ -477,7 +477,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="9129" name="Shadow Item: Shield of Nightmare" type="Armor">
@@ -494,9 +494,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="400" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="9130" name="Item Set Pack (No-grade) (Wizard)" type="EtcItem">
@@ -614,9 +614,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9137" name="Sword of Valakas (2-handed)" type="Weapon">
@@ -638,9 +638,9 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="78" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="9138" name="Santa Hat" type="Armor">
@@ -681,11 +681,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="900" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9141" name="Redemption Bow" type="Weapon">
@@ -714,11 +714,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="9142" name="Apiga" type="EtcItem">

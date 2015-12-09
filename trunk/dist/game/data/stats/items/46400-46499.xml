@@ -9,7 +9,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46401" name="NPC Iss Enchanter Transformation Cloak" type="Armor">
@@ -21,7 +21,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46402" name="NPC Wynn Summoner Transformation Cloak" type="Armor">
@@ -33,7 +33,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46403" name="NPC Aeore Healer Transformation Cloak" type="Armor">
@@ -45,7 +45,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46404" name="Emergency Whistle - Aden Vanguard" type="EtcItem">
@@ -203,6 +203,10 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+			<mul stat="pAtk" val="1.03" />
+		</for>
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
 		<!-- INT + 3, M. Atk. + 5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -218,6 +222,10 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+			<mul stat="mAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
 		<!-- CON + 3, P./M. Def + 3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -233,6 +241,11 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+			<mul stat="pDef" val="1.03" />
+			<mul stat="mDef" val="1.03" />
+		</for>
 	</item>
 	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" type="EtcItem">
 		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
@@ -365,9 +378,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46427" name="For NPC_Right Hand Cup" type="Weapon">
@@ -386,9 +399,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46428" name="For NPC_Right Hand Meat" type="Weapon">
@@ -407,9 +420,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46429" name="For NPC_Left Hand Glass" type="Weapon">
@@ -427,9 +440,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46430" name="For NPC_Left Hand Meat" type="Weapon">
@@ -447,9 +460,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46431" name="Harp's Reward Box" type="EtcItem">

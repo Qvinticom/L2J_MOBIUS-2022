@@ -19,6 +19,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="40302" name="Buff Helmet" additionalName="CHA" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
@@ -29,6 +32,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="40303" name="Entrance Pass: Spezion (Normal)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (normal) dungeon. Usable once a day outside instances while on a cooldown. -->
@@ -159,7 +165,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="40313" name="Santa's Mark" type="EtcItem">
@@ -178,6 +184,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="40315" name="Santa Hat" additionalName="DEX" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
@@ -188,6 +197,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="40316" name="Santa Hat" additionalName="CON" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
@@ -198,6 +210,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="40317" name="Santa Hat" additionalName="MEN" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. MEN + 3.  -->
@@ -208,6 +223,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3.  -->
@@ -218,6 +236,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="40319" name="Santa Hat" additionalName="WIT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. WIT + 3.  -->
@@ -228,6 +249,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="40320" name="Santa Hat" additionalName="Critical Rate" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50.  -->
@@ -238,6 +262,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="40321" name="Santa Hat" additionalName="Critical Damage" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68.  -->
@@ -248,6 +275,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="40322" name="Santa Hat" additionalName="P. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%.  -->
@@ -258,6 +289,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="40323" name="Santa Hat" additionalName="M. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%.  -->
@@ -268,6 +302,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="40324" name="Santa Hat" additionalName="Evasion" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Evasion + 5.  -->
@@ -278,6 +315,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="40325" name="Santa Hat" additionalName="P. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%.  -->
@@ -288,6 +328,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="40326" name="Santa Hat" additionalName="M. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%.  -->
@@ -298,6 +341,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="40327" name="Santa Hat" additionalName="Accuracy" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Accuracy + 5.  -->
@@ -308,6 +354,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="40328" name="Santa Hat" additionalName="LUC" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. LUC + 3. -->
@@ -318,6 +367,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="40329" name="Santa Hat" additionalName="CHA" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
@@ -328,6 +380,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="40330" name="Appearance Stone: Santa Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
@@ -372,9 +427,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="167" />
 			<set stat="pAtk" val="226" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40333" name="Foundation Staff of Evil Spirits of Fortune" additionalName="90-day" type="Weapon">
@@ -398,9 +454,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="145" />
 			<set stat="pAtk" val="189" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -424,9 +480,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="135" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40335" name="Atuba Mace of Fortune" additionalName="90-day" type="Weapon">
@@ -449,9 +506,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -475,9 +532,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="193" />
 			<set stat="pAtk" val="274" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -501,9 +558,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40338" name="Ertheia Fighter Equipment Set" additionalName="90-day" type="EtcItem">
@@ -587,9 +645,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="167" />
 			<set stat="pAtk" val="226" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40344" name="Foundation Staff of Evil Spirits of Fortune" additionalName="30-day" type="Weapon">
@@ -613,9 +672,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="145" />
 			<set stat="pAtk" val="189" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -639,9 +698,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="135" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40346" name="Atuba Mace of Fortune" additionalName="30-day" type="Weapon">
@@ -664,9 +724,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -690,9 +750,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="193" />
 			<set stat="pAtk" val="274" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -716,9 +776,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40349" name="Ertheia Fighter Equipment Set" additionalName="30-day" type="EtcItem">
@@ -790,9 +851,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="167" />
 			<set stat="pAtk" val="226" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40354" name="Foundation Staff of Evil Spirits of Fortune" additionalName="10-day" type="Weapon">
@@ -816,9 +878,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="145" />
 			<set stat="pAtk" val="189" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -842,9 +904,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="135" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40356" name="Atuba Mace of Fortune" additionalName="10-day" type="Weapon">
@@ -867,9 +930,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -893,9 +956,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="193" />
 			<set stat="pAtk" val="274" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -919,9 +982,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="40359" name="Ertheia Fighter Equipment Set" additionalName="10-day" type="EtcItem">

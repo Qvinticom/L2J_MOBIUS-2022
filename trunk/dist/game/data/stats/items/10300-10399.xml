@@ -221,7 +221,7 @@
 		<set name="price" val="2400000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

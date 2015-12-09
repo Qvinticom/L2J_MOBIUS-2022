@@ -987,6 +987,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="40197" name="Ertheia's Soul Bottle Pack" type="EtcItem">
 		<!-- Double-click to obtain either a bottle of Orfen's Soul, Frintezza's Soul, Queen Ant's Soul, Baium's Soul, Antharas' Soul, or Valakas' Soul. -->

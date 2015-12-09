@@ -259,9 +259,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34922" name="Revolutionary's Bow" type="Weapon">
@@ -281,11 +281,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34923" name="Revolutionary's Staff" type="Weapon">
@@ -307,9 +307,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34924" name="Revolutionary's Wand" type="Weapon">
@@ -331,9 +331,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34925" name="Cloak of Light" type="Armor">
@@ -358,14 +358,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="10" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<add stat="waterRes" val="10" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="holyRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="34926" name="Cloak of Darkness" type="Armor">
@@ -390,14 +390,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="10" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<add stat="waterRes" val="10" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="holyRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="34927" name="Dimension Keeper's Blue Box" type="EtcItem">
@@ -518,6 +518,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="mDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="34936" name="Star Agathion - Hyuk Jang" additionalName="7-day" type="Armor">
 		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Atk. by 5%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape.  -->
@@ -533,6 +545,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pAtk" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="34937" name="Star Agathion - Sooro Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, P. Def. by 5%, Max HP by 5%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape.  -->
@@ -548,6 +572,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="pDef" val="1.05" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="34938" name="Star Agathion - Jaebum Park" additionalName="7-day" type="Armor">
 		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, M. Atk. By 6%, and Attribute Resistance by 10. . Usable Skill: Blessed Escape.  -->
@@ -563,6 +599,18 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<mul stat="mAtk" val="1.06" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="34939" name="Star Agathion - Shin-young Kim" additionalName="7-day" type="Armor">
 		<!-- 7-day. Increases CON + 3, MEN + 3, Weight Gauge by 10000, Max HP/MP/CP by 300, and Attribute Resistance by 10. Decreases skill cooldown and MP consumed during skill use by 3%. . Usable Skill: Blessed Escape.  -->
@@ -578,6 +626,17 @@
 		<set name="material" val="SILVER" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+			<add stat="MEN" val="3" />
+			<add stat="weightLimit" val="10000" />
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="34940" name="Scroll: Enchant Hair Accessory" additionalName="Event" type="EtcItem">
 		<!-- Increases M. Def. of hair accessories by 2. It is greatly increased starting at + 4. Can be safely enchanted to + 3. -->
@@ -1254,14 +1313,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="15" />
-			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
-			<add stat="holyRes" val="15" />
-			<add order="0" stat="mDef" val="80" />
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 			<add stat="waterRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="mDef" val="80" order="0" />
+			<add stat="holyRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="darkRes" val="15" />
 		</for>
 	</item>
 	<item id="34997" name="Cloak of Cold Darkness" type="Armor">
@@ -1286,14 +1345,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="15" />
-			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
-			<add stat="holyRes" val="15" />
-			<add order="0" stat="mDef" val="80" />
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 			<add stat="waterRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="mDef" val="80" order="0" />
+			<add stat="holyRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="darkRes" val="15" />
 		</for>
 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" type="Weapon">
@@ -1316,11 +1375,11 @@
 		<set name="weight" val="1000" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="450" />
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="303" />
 			<set stat="pAtk" val="698" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="34999" name="Tauti's Axe" type="Weapon">
@@ -1343,11 +1402,11 @@
 		<set name="weight" val="1000" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="450" />
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="303" />
 			<set stat="pAtk" val="849" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

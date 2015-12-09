@@ -126,8 +126,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="400" />
 		<for>
-			<add order="0" stat="mDef" val="50" />
-			<add order="0" stat="pDef" val="75" />
+			<add stat="pDef" val="75" order="0" />
+			<add stat="mDef" val="50" order="0" />
 		</for>
 	</item>
 	<item id="710" name="Durable Leather Shirt" type="Armor">
@@ -144,8 +144,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="400" />
 		<for>
-			<add order="0" stat="mDef" val="52" />
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
+			<add stat="mDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="711" name="Piece Bone Breastplate" type="Armor">
@@ -162,8 +162,8 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="800" />
 		<for>
-			<add order="0" stat="mDef" val="54" />
-			<add order="0" stat="pDef" val="79" />
+			<add stat="pDef" val="79" order="0" />
+			<add stat="mDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="712" name="Half Plate Armor" type="Armor">
@@ -180,8 +180,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1200" />
 		<for>
-			<add order="0" stat="mDef" val="56" />
-			<add order="0" stat="pDef" val="81" />
+			<add stat="pDef" val="81" order="0" />
+			<add stat="mDef" val="56" order="0" />
 		</for>
 	</item>
 	<item id="713" name="Leather Pants" type="Armor">
@@ -198,8 +198,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="250" />
 		<for>
-			<add order="0" stat="mDef" val="30" />
-			<add order="0" stat="pDef" val="45" />
+			<add stat="pDef" val="45" order="0" />
+			<add stat="mDef" val="30" order="0" />
 		</for>
 	</item>
 	<item id="714" name="Durable Leather Pants" type="Armor">
@@ -216,8 +216,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="300" />
 		<for>
-			<add order="0" stat="mDef" val="32" />
-			<add order="0" stat="pDef" val="47" />
+			<add stat="pDef" val="47" order="0" />
+			<add stat="mDef" val="32" order="0" />
 		</for>
 	</item>
 	<item id="715" name="Piece Bone Gaiters" type="Armor">
@@ -234,8 +234,8 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="500" />
 		<for>
-			<add order="0" stat="mDef" val="34" />
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
+			<add stat="mDef" val="34" order="0" />
 		</for>
 	</item>
 	<item id="716" name="Plate Gaiters" type="Armor">
@@ -252,8 +252,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="800" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="51" />
+			<add stat="pDef" val="51" order="0" />
+			<add stat="mDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="717" name="Leather Gloves" type="Armor">
@@ -269,8 +269,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="mDef" val="20" />
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
+			<add stat="mDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="718" name="Durable Leather Gloves" type="Armor">
@@ -286,8 +286,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="22" />
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
+			<add stat="mDef" val="22" order="0" />
 		</for>
 	</item>
 	<item id="719" name="Quality Leather Gloves" type="Armor">
@@ -303,8 +303,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="34" />
+			<add stat="pDef" val="34" order="0" />
+			<add stat="mDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="720" name="Reinforced Gloves" type="Armor">
@@ -320,8 +320,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="mDef" val="26" />
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
+			<add stat="mDef" val="26" order="0" />
 		</for>
 	</item>
 	<item id="721" name="Leather Boots" type="Armor">
@@ -337,8 +337,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="20" />
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
+			<add stat="mDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="722" name="Durable Leather Boots" type="Armor">
@@ -354,8 +354,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="22" />
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
+			<add stat="mDef" val="22" order="0" />
 		</for>
 	</item>
 	<item id="723" name="Quality Leather Boots" type="Armor">
@@ -371,8 +371,8 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="34" />
+			<add stat="pDef" val="34" order="0" />
+			<add stat="mDef" val="24" order="0" />
 		</for>
 	</item>
 	<item id="724" name="Reinforced Boots" type="Armor">
@@ -388,8 +388,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="250" />
 		<for>
-			<add order="0" stat="mDef" val="26" />
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
+			<add stat="mDef" val="26" order="0" />
 		</for>
 	</item>
 	<item id="725" name="Healing Drug" type="EtcItem">
@@ -616,9 +616,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="9" />
 			<set stat="pAtk" val="12" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="739" name="Broken Sword Handle" type="EtcItem">
@@ -691,9 +691,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="11" />
 			<set stat="pAtk" val="14" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="744" name="Staff of Sentinel" type="Weapon">
@@ -716,9 +716,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="15" />
 			<set stat="pAtk" val="13" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="745" name="Cobendell's Medicine" type="EtcItem">
@@ -765,9 +765,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="13" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="748" name="Gallint's Oak Wand" type="Weapon">
@@ -793,9 +793,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="11" />
 			<set stat="pAtk" val="10" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="749" name="0" type="Weapon">
@@ -818,9 +818,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="21" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -891,9 +891,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="14" />
 			<set stat="pAtk" val="13" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="755" name="Colleen's Letter" type="EtcItem">

@@ -400,6 +400,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="36346" name="Female Swimsuit No. 2" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Female only. -->
@@ -409,6 +412,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="36347" name="Scroll: Energy of Glory" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 30 min. -->
@@ -438,6 +444,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="36350" name="Bracelet of Glory: Victory" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, Wit + 1. -->
@@ -448,6 +459,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="1" />
+			<add stat="WIT" val="1" />
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="36351" name="Bracelet of Glory: Friendship" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Con + 1, Men +1. -->
@@ -458,6 +474,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="1" />
+			<add stat="MEN" val="1" />
+			<add stat="maxMp" val="216" />
+		</for>
 	</item>
 	<item id="36352" name="Red Horns" additionalName="STR (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. STR + 3 when equipped. -->
@@ -468,6 +489,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="36353" name="Red Horns" additionalName="DEX (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. DEX + 3 when equipped. -->
@@ -478,6 +502,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="36354" name="Red Horns" additionalName="CON (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. CON + 3 when equipped. -->
@@ -488,6 +515,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="36355" name="Red Horns" additionalName="MEN (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. MEN + 3 when equipped. -->
@@ -498,6 +528,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="36356" name="Red Horns" additionalName="INT (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. INT + 3 when equipped. -->
@@ -508,6 +541,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="36357" name="Red Horns" additionalName="WIT (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. WIT + 3 when equipped. -->
@@ -518,6 +554,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="36358" name="Red Horns" additionalName="Critical Rate (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Critical Rate + 50 when equipped. -->
@@ -528,6 +567,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="36359" name="Red Horns" additionalName="Critical Damage (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -538,6 +580,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="36360" name="Red Horns" additionalName="P. Def. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Def. + 5% when equipped. -->
@@ -548,6 +594,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="36361" name="Red Horns" additionalName="M. Def. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. M. Def. + 5% when equipped. -->
@@ -558,6 +607,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="36362" name="Red Horns" additionalName="Evasion (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Evasion + 5% when equipped. -->
@@ -568,6 +620,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pSkillEvas" val="1.05" />
+		</for>
 	</item>
 	<item id="36363" name="Red Horns" additionalName="P. Atk. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. P. Atk. + 5 when equipped. -->
@@ -578,6 +633,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<set stat="pAtk" val="5" />
+		</for>
 	</item>
 	<item id="36364" name="Red Horns" additionalName="M. Atk. (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. M. Atk. + 10 when equipped. -->
@@ -588,6 +646,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<set stat="mAtk" val="10" />
+		</for>
 	</item>
 	<item id="36365" name="Red Horns" additionalName="Accuracy (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. Accuracy + 5 when equipped. -->
@@ -598,6 +659,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="36366" name="Golden Chest" additionalName="Event" type="EtcItem">
 		<!-- You can get a Golden Chest (Reward) prepared by Amadeo Cadmus, the king of Aden. -->

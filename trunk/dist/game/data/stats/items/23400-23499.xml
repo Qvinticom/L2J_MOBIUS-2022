@@ -623,6 +623,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23443" name="Russian Navy Cap" type="Armor">
 		<!-- Hair accessory commemorating Lineage II's 4th anniversary. Looks like a Russian navy cap. Uses 2 hair accessory slots. Male only. -->
@@ -649,7 +652,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="23445" name="Kokoshnik" type="Armor">
@@ -660,6 +663,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23446" name="Russian Navy Cap" type="Armor">
 		<!-- Hair accessory commemorating Lineage II's 4th anniversary. Looks like a Russian navy cap. Uses 2 hair accessory slots. Male only. -->
@@ -680,7 +686,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="23448" name="Metal Suit Top" type="Armor">
@@ -814,6 +820,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23459" name="Maid Hair Accessory" type="Armor">
 		<!-- Maid hair accessory. Part of a costume. Female only. -->
@@ -823,6 +832,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23460" name="Ink Herb" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_ink_02" />
@@ -1076,6 +1088,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23484" name="Wizard Hat" type="Armor">
 		<!-- Wizard's hat with a wide rim and slumped, pointy top. Uses 2 hair accessory slots.  -->

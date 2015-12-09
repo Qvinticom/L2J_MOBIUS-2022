@@ -614,9 +614,9 @@
 		<set name="weight" val="250" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="38560" name="Monster Only: Etin Blunt Weapon" type="Weapon">
@@ -637,9 +637,9 @@
 		<set name="weight" val="106" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="38561" name="Legendary Sangmin Bracelet" type="Armor">
@@ -702,9 +702,9 @@
 		<set name="weight" val="106" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="38565" name="Aria's Bracelet: CON" type="Armor">
@@ -1010,7 +1010,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1027,7 +1027,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1074,9 +1074,9 @@
 		<set name="weight" val="1370" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="38596" name="Steel Bow of Peril" type="Weapon">
@@ -1098,11 +1098,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1700" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="400" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="400" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="38597" name="Steel Tallum Blade" type="Weapon">
@@ -1124,9 +1124,9 @@
 		<set name="weight" val="1330" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="38598" name="Steel Draconic Bow" type="Weapon">
@@ -1148,11 +1148,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="581" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="38599" name="Steel Dynasty Sword" type="Weapon">
@@ -1174,9 +1174,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

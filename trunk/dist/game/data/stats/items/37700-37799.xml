@@ -17,11 +17,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="752" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="752" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37701" name="Valentine Dual Blunt Weapon" type="Weapon">
@@ -43,9 +43,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37702" name="Valentine Shield" type="Armor">
@@ -59,9 +59,9 @@
 		<set name="price" val="88681000" />
 		<set name="weight" val="1130" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="546" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -77,7 +77,7 @@
 		<set name="price" val="88681000" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -251,7 +251,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="37719" name="Pa'agrio's Special Pack" type="EtcItem">
@@ -409,8 +409,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
+			<add stat="mDef" val="170" order="0" />
 		</for>
 	</item>
 	<item id="37733" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
@@ -429,11 +429,11 @@
 		<for>
 			<add stat="INT" val="3" />
 			<add stat="STR" val="3" />
-			<add stat="darkRes" val="20" />
 			<add stat="fireRes" val="30" />
-			<add order="0" stat="mDef" val="226" />
+			<add stat="darkRes" val="20" />
 			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
+			<add stat="mDef" val="226" order="0" />
 		</for>
 	</item>
 	<item id="37734" name="Tauti's Ring" additionalName="7-day" type="Armor">
@@ -451,7 +451,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="25" />
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 		</for>
 	</item>
 	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
@@ -468,7 +468,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 		</for>
 	</item>
 	<item id="37736" name="Blessed Zaken's Earring" additionalName="7-day" type="Armor">
@@ -486,8 +486,8 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="15" />
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="37737" name="Ruler's Authority" additionalName="7-day" type="Armor">
@@ -503,7 +503,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<mul stat="receivedDamageModifier" val="0.91" />
 		</for>
 	</item>
 	<item id="37738" name="Test Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
@@ -783,8 +784,8 @@
 			<add stat="MEN" val="1" />
 			<add stat="STR" val="1" />
 			<add stat="WIT" val="1" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

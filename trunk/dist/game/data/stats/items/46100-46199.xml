@@ -220,6 +220,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="time" val="43200" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
@@ -241,6 +244,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. Can be used only on hair accessories that take up 2 slots. Male only. -->
@@ -341,11 +347,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46132" name="Blackbird Seal" type="EtcItem">

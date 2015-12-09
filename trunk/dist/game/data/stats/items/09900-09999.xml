@@ -18,7 +18,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="7" />
+			<add stat="mDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="9901" name="Enhanced Falchion" type="Weapon">
@@ -39,9 +39,9 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -64,11 +64,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2120" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="21" />
-			<set stat="pAtk" val="31" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="31" />
+			<set stat="mAtk" val="21" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -92,9 +92,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -116,11 +116,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1110" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="21" />
-			<set stat="pAtk" val="27" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="27" />
+			<set stat="mAtk" val="21" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -144,9 +144,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="38" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -170,11 +170,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1880" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="21" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="21" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -198,9 +198,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -225,9 +225,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="31" />
 			<set stat="pAtk" val="30" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1635,11 +1635,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1669,11 +1669,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>

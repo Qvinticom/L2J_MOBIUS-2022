@@ -17,7 +17,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="5500" />
 		<for>
-			<add order="0" stat="pDef" val="202" />
+			<add stat="pDef" val="202" order="0" />
 		</for>
 	</item>
 	<item id="15001" name="Doom Helmet of Fortune" additionalName="30-day" type="Armor">
@@ -35,7 +35,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 		</for>
 	</item>
 	<item id="15002" name="Doom Gloves of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
@@ -55,7 +55,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="15003" name="Doom Gloves of Fortune - Light Armor" additionalName="30-day" type="Armor">
@@ -75,7 +75,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="15004" name="Doom Boots of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
@@ -95,7 +95,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="15005" name="Doom Boots of Fortune - Light Armor" additionalName="30-day" type="Armor">
@@ -115,7 +115,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1130" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="15006" name="Doom Plate Armor of Fortune" additionalName="30-day" type="Armor">
@@ -135,7 +135,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="9980" />
 		<for>
-			<add order="0" stat="pDef" val="270" />
+			<add stat="pDef" val="270" order="0" />
 		</for>
 	</item>
 	<item id="15007" name="Doom Shield of Fortune" additionalName="30-day" type="Armor">
@@ -152,9 +152,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1200" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="15008" name="Plated Leather Armor of Fortune" additionalName="30-day" type="Armor">
@@ -173,7 +173,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4450" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="15009" name="Plated Leather Gaiters of Fortune" additionalName="30-day" type="Armor">
@@ -192,7 +192,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1560" />
 		<for>
-			<add order="0" stat="pDef" val="59" />
+			<add stat="pDef" val="59" order="0" />
 		</for>
 	</item>
 	<item id="15010" name="Plated Leather Boots of Fortune" additionalName="30-day" type="Armor">
@@ -210,7 +210,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1220" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 		</for>
 	</item>
 	<item id="15011" name="Plated Leather Gloves of Fortune" additionalName="30-day" type="Armor">
@@ -228,7 +228,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="610" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="15012" name="Full Plate Helmet of Fortune" additionalName="30-day" type="Armor">
@@ -246,7 +246,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="600" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 		</for>
 	</item>
 	<item id="15013" name="Full Plate Armor of Fortune" additionalName="30-day" type="Armor">
@@ -266,7 +266,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="10480" />
 		<for>
-			<add order="0" stat="pDef" val="239" />
+			<add stat="pDef" val="239" order="0" />
 		</for>
 	</item>
 	<item id="15014" name="Full Plate Boots of Fortune" additionalName="30-day" type="Armor">
@@ -284,7 +284,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1200" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 		</for>
 	</item>
 	<item id="15015" name="Full Plate Gauntlets of Fortune" additionalName="30-day" type="Armor">
@@ -302,7 +302,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="600" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 		</for>
 	</item>
 	<item id="15016" name="Full Plate Shield of Fortune" additionalName="30-day" type="Armor">
@@ -319,9 +319,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1220" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="203" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="15017" name="Manticore Skin Shirt of Fortune" additionalName="30-day" type="Armor">
@@ -340,7 +340,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="4520" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 		</for>
 	</item>
 	<item id="15018" name="Manticore Skin Gaiters of Fortune" additionalName="30-day" type="Armor">
@@ -359,7 +359,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1550" />
 		<for>
-			<add order="0" stat="pDef" val="48" />
+			<add stat="pDef" val="48" order="0" />
 		</for>
 	</item>
 	<item id="15019" name="Manticore Skin Boots of Fortune" additionalName="30-day" type="Armor">
@@ -377,7 +377,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1260" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="15020" name="Manticore Skin Gloves of Fortune" additionalName="30-day" type="Armor">
@@ -395,7 +395,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="630" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="15021" name="Brigandine of Fortune" additionalName="30-day" type="Armor">
@@ -413,7 +413,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="8320" />
 		<for>
-			<add order="0" stat="pDef" val="103" />
+			<add stat="pDef" val="103" order="0" />
 		</for>
 	</item>
 	<item id="15022" name="Brigandine Gaiters of Fortune" additionalName="30-day" type="Armor">
@@ -432,7 +432,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="3820" />
 		<for>
-			<add order="0" stat="pDef" val="64" />
+			<add stat="pDef" val="64" order="0" />
 		</for>
 	</item>
 	<item id="15023" name="Brigandine Helmet of Fortune" additionalName="30-day" type="Armor">
@@ -450,7 +450,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="630" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 	<item id="15024" name="Brigandine Boots of Fortune" additionalName="30-day" type="Armor">
@@ -468,7 +468,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1250" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="15025" name="Brigandine Gauntlets of Fortune" additionalName="30-day" type="Armor">
@@ -486,7 +486,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="630" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 		</for>
 	</item>
 	<item id="15026" name="Brigandine Shield of Fortune" additionalName="30-day" type="Armor">
@@ -503,9 +503,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1320" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="142" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="15027" name="Armor of Nightmare of Fortune" additionalName="30-day" type="Armor">
@@ -525,7 +525,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="9580" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="15028" name="Helm of Nightmare of Fortune" additionalName="30-day" type="Armor">
@@ -543,7 +543,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="560" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="15029" name="Gauntlets of Nightmare of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
@@ -563,7 +563,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="550" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="15030" name="Boots of Nightmare of Fortune - Heavy Armor" additionalName="30-day" type="Armor">
@@ -583,7 +583,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1110" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="15031" name="Shield of Nightmare of Fortune" additionalName="30-day" type="Armor">
@@ -600,9 +600,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1180" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="15032" name="Sword of Miracles of Fortune" additionalName="30-day" type="Weapon">
@@ -631,9 +631,9 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="152" />
 			<set stat="pAtk" val="186" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15033" name="Wizard's Tear of Fortune" additionalName="30-day" type="Weapon">
@@ -662,9 +662,9 @@
 		<set name="weight" val="1350" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="155" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15034" name="Homunkulus' Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -693,9 +693,9 @@
 		<set name="weight" val="950" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="101" />
 			<set stat="pAtk" val="111" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15035" name="Staff of Life of Fortune" additionalName="30-day" type="Weapon">
@@ -723,9 +723,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="72" />
 			<set stat="pAtk" val="74" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15036" name="Naga Storm of Fortune" additionalName="30-day" type="Weapon">
@@ -752,11 +752,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15037" name="Kris of Fortune" additionalName="30-day" type="Weapon">
@@ -783,11 +783,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="980" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="153" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="153" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15038" name="Dark Screamer of Fortune" additionalName="30-day" type="Weapon">
@@ -814,11 +814,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="76" />
-			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15039" name="Mithril Dagger of Fortune" additionalName="30-day" type="Weapon">
@@ -843,11 +843,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1060" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15040" name="Shyeed's Bow of Fortune" additionalName="30-day" type="Weapon">
@@ -876,11 +876,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="133" />
-			<set stat="pAtk" val="570" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="570" />
+			<set stat="mAtk" val="133" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15041" name="Bow of Peril of Fortune" additionalName="30-day" type="Weapon">
@@ -909,11 +909,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1700" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="400" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="400" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15042" name="Eminence Bow of Fortune" additionalName="30-day" type="Weapon">
@@ -942,11 +942,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1720" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="323" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="323" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15043" name="Light Crossbow of Fortune" additionalName="30-day" type="Weapon">
@@ -974,11 +974,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1810" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15044" name="Barakiel's Axe of Fortune" additionalName="30-day" type="Weapon">
@@ -1007,9 +1007,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15045" name="Art of Battle Axe of Fortune" additionalName="30-day" type="Weapon">
@@ -1038,9 +1038,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15046" name="Yaksa Mace of Fortune" additionalName="30-day" type="Weapon">
@@ -1069,9 +1069,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15047" name="Bonebreaker of Fortune" additionalName="30-day" type="Weapon">
@@ -1098,9 +1098,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15048" name="Sirra's Blade of Fortune" additionalName="30-day" type="Weapon">
@@ -1128,9 +1128,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="251" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15049" name="Damascus Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1158,9 +1158,9 @@
 		<set name="weight" val="1350" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="194" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15050" name="Samurai Long Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1188,9 +1188,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15051" name="Elven Long Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1216,9 +1216,9 @@
 		<set name="weight" val="1440" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15052" name="Sword of Ipos of Fortune" additionalName="30-day" type="Weapon">
@@ -1246,9 +1246,9 @@
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15053" name="Guardian's Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1276,9 +1276,9 @@
 		<set name="weight" val="1930" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15054" name="Berserker Blade of Fortune" additionalName="30-day" type="Weapon">
@@ -1306,9 +1306,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15055" name="Claymore of Fortune" additionalName="30-day" type="Weapon">
@@ -1334,9 +1334,9 @@
 		<set name="weight" val="2090" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15056" name="Sobekk's Hurricane of Fortune" additionalName="30-day" type="Weapon">
@@ -1365,9 +1365,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15057" name="Bellion Cestus of Fortune" additionalName="30-day" type="Weapon">
@@ -1396,9 +1396,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15058" name="Great Pata of Fortune" additionalName="30-day" type="Weapon">
@@ -1427,9 +1427,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15059" name="Scallop Jamadhr of Fortune" additionalName="30-day" type="Weapon">
@@ -1456,9 +1456,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15060" name="Tallum Blade*Damascus of Fortune" additionalName="30-day" type="Weapon">
@@ -1486,9 +1486,9 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15061" name="Samurai Long Sword*Samurai Long Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1516,9 +1516,9 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15062" name="Spirit Sword*Raid Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1546,9 +1546,9 @@
 		<set name="weight" val="2260" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15063" name="Bastard Sword*Elven Sword of Fortune" additionalName="30-day" type="Weapon">
@@ -1574,9 +1574,9 @@
 		<set name="weight" val="2460" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15064" name="Tiphon's Spear of Fortune" additionalName="30-day" type="Weapon">
@@ -1603,11 +1603,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15065" name="Lance of Fortune" additionalName="30-day" type="Weapon">
@@ -1634,11 +1634,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1920" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="194" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="194" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15066" name="Orcish Poleaxe of Fortune" additionalName="30-day" type="Weapon">
@@ -1665,11 +1665,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15067" name="Glaive of Fortune" additionalName="30-day" type="Weapon">
@@ -1695,11 +1695,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15068" name="Durendal of Fortune" additionalName="30-day" type="Weapon">
@@ -1731,9 +1731,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="272" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15069" name="Dismantler of Fortune" additionalName="30-day" type="Weapon">
@@ -1765,9 +1765,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="210" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15070" name="Saber Tooth of Fortune" additionalName="30-day" type="Weapon">
@@ -1799,9 +1799,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15071" name="General's Katzbalger of Fortune" additionalName="30-day" type="Weapon">
@@ -1832,9 +1832,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="100" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15072" name="Éclair Bijou of Fortune" additionalName="30-day" type="Weapon">
@@ -1865,11 +1865,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="228" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="228" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15073" name="Colichemarde of Fortune" additionalName="30-day" type="Weapon">
@@ -1900,11 +1900,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="176" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="176" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15074" name="Admiral's Estoc of Fortune" additionalName="30-day" type="Weapon">
@@ -1935,11 +1935,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="141" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15075" name="Grand Épée of Fortune" additionalName="30-day" type="Weapon">
@@ -1969,11 +1969,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="83" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="83" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15076" name="Screaming Vengeance of Fortune" additionalName="30-day" type="Weapon">
@@ -2004,11 +2004,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="121" />
-			<set stat="pAtk" val="318" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="318" />
+			<set stat="mAtk" val="121" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15077" name="Hell Hound of Fortune" additionalName="30-day" type="Weapon">
@@ -2039,11 +2039,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="245" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15078" name="Sharpshooter of Fortune" additionalName="30-day" type="Weapon">
@@ -2074,11 +2074,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="198" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15079" name="Cranequin of Fortune" additionalName="30-day" type="Weapon">
@@ -2108,11 +2108,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15080" name="Majestic Earring of Fortune" additionalName="10-day" type="Armor">
@@ -2131,8 +2131,8 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="maxMp" val="25" />
+			<add stat="mDef" val="63" order="0" />
 		</for>
 	</item>
 	<item id="15081" name="Majestic Necklace of Fortune" additionalName="10-day" type="Armor">
@@ -2151,8 +2151,8 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="maxMp" val="33" />
+			<add stat="mDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="15082" name="Majestic Ring of Fortune" additionalName="10-day" type="Armor">
@@ -2171,7 +2171,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
+			<add stat="mDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="15083" name="Black Ore Earring of Fortune" additionalName="10-day" type="Armor">
@@ -2189,7 +2189,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="54" />
+			<add stat="mDef" val="54" order="0" />
 		</for>
 	</item>
 	<item id="15084" name="Black Ore Necklace of Fortune" additionalName="10-day" type="Armor">
@@ -2207,7 +2207,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="72" />
+			<add stat="mDef" val="72" order="0" />
 		</for>
 	</item>
 	<item id="15085" name="Black Ore Ring of Fortune" additionalName="10-day" type="Armor">
@@ -2225,7 +2225,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
+			<add stat="mDef" val="36" order="0" />
 		</for>
 	</item>
 	<item id="15086" name="Sealed Earring of Fortune" additionalName="10-day" type="Armor">
@@ -2243,7 +2243,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="45" />
+			<add stat="mDef" val="45" order="0" />
 		</for>
 	</item>
 	<item id="15087" name="Sealed Necklace of Fortune" additionalName="10-day" type="Armor">
@@ -2261,7 +2261,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="64" />
+			<add stat="mDef" val="64" order="0" />
 		</for>
 	</item>
 	<item id="15088" name="Sealed Ring of Fortune" additionalName="10-day" type="Armor">
@@ -2279,7 +2279,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="32" />
+			<add stat="mDef" val="32" order="0" />
 		</for>
 	</item>
 	<item id="15089" name="Elven Earring of Fortune" additionalName="10-day" type="Armor">
@@ -2297,7 +2297,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="34" />
+			<add stat="mDef" val="34" order="0" />
 		</for>
 	</item>
 	<item id="15090" name="Elven Necklace of Fortune" additionalName="10-day" type="Armor">
@@ -2315,7 +2315,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="45" />
+			<add stat="mDef" val="45" order="0" />
 		</for>
 	</item>
 	<item id="15091" name="Elven Ring of Fortune" additionalName="10-day" type="Armor">
@@ -2333,7 +2333,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="22" />
+			<add stat="mDef" val="22" order="0" />
 		</for>
 	</item>
 	<item id="15092" name="Dark Crystal Robe of Fortune" additionalName="10-day" type="Armor">
@@ -2353,7 +2353,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="2450" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 		</for>
 	</item>
 	<item id="15093" name="Dark Crystal Helmet of Fortune" additionalName="10-day" type="Armor">
@@ -2371,7 +2371,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="570" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="15094" name="Dark Crystal Gloves of Fortune - Robe" additionalName="10-day" type="Armor">
@@ -2391,7 +2391,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="580" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="15095" name="Dark Crystal Boots of Fortune - Robe" additionalName="10-day" type="Armor">
@@ -2411,7 +2411,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1110" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="15096" name="Dark Crystal Shield of Fortune" additionalName="10-day" type="Armor">
@@ -2428,9 +2428,9 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="15097" name="Avadon Robe of Fortune" additionalName="10-day" type="Armor">
@@ -2450,7 +2450,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="2540" />
 		<for>
-			<add order="0" stat="pDef" val="127" />
+			<add stat="pDef" val="127" order="0" />
 		</for>
 	</item>
 	<item id="15098" name="Avadon Circlet of Fortune" additionalName="10-day" type="Armor">
@@ -2468,7 +2468,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="62" />
+			<add stat="pDef" val="62" order="0" />
 		</for>
 	</item>
 	<item id="15099" name="Avadon Gloves of Fortune - Robe" additionalName="10-day" type="Armor">
@@ -2488,7 +2488,7 @@
 		<set name="time" val="14400" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 		</for>
 	</item>
 </list>

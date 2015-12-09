@@ -210,9 +210,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="38926" name="Master Yogi's Scroll: Enchant Weapon" type="EtcItem">
@@ -537,8 +537,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="38952" name="Festival's Cloack - Pearl White" type="Armor">
@@ -554,8 +554,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="38953" name="Festival's Cloack - Blood Red" type="Armor">
@@ -571,8 +571,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="38954" name="10th Anniversary Cake" type="EtcItem">

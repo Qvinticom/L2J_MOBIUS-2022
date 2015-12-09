@@ -20,9 +20,9 @@
 		<set name="weight" val="2520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31001" name="Bound Spinebone Sword*Knight's Sword" type="Weapon">
@@ -45,9 +45,9 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31002" name="Bound Spinebone Sword" type="Weapon">
@@ -70,9 +70,9 @@
 		<set name="weight" val="1510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31003" name="Bound Spiked Club" type="Weapon">
@@ -96,9 +96,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31004" name="Bound Stiletto" type="Weapon">
@@ -120,11 +120,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31005" name="Bound Stiletto - Critical Bleed" type="Weapon">
@@ -147,11 +147,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31006" name="Bound Stiletto - Critical Poison" type="Weapon">
@@ -174,11 +174,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31007" name="Bound Stiletto - Mortal Strike" type="Weapon">
@@ -200,11 +200,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1030" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31008" name="Bound StormBringer*Katana" type="Weapon">
@@ -227,9 +227,9 @@
 		<set name="weight" val="2320" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="81" />
 			<set stat="pAtk" val="183" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31009" name="Bound StormBringer*Spirit Sword" type="Weapon">
@@ -252,9 +252,9 @@
 		<set name="weight" val="2310" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="81" />
 			<set stat="pAtk" val="183" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31010" name="Bound StormBringer*StormBringer" type="Weapon">
@@ -277,9 +277,9 @@
 		<set name="weight" val="2330" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="78" />
 			<set stat="pAtk" val="175" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31011" name="Bound StormBringer*Shamshir" type="Weapon">
@@ -302,9 +302,9 @@
 		<set name="weight" val="2300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="81" />
 			<set stat="pAtk" val="183" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31012" name="Bound StormBringer*Raid Sword" type="Weapon">
@@ -327,9 +327,9 @@
 		<set name="weight" val="2340" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="81" />
 			<set stat="pAtk" val="183" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31013" name="Bound StormBringer" type="Weapon">
@@ -352,9 +352,9 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31014" name="Bound StormBringer - Critical Anger" type="Weapon">
@@ -378,9 +378,9 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31015" name="Bound StormBringer - Focus" type="Weapon">
@@ -404,9 +404,9 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31016" name="Bound StormBringer - Light Armor" type="Weapon">
@@ -430,9 +430,9 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31017" name="Bound Star Buster" type="Weapon">
@@ -456,9 +456,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31018" name="Bound Star Buster - Health" type="Weapon">
@@ -483,9 +483,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31019" name="Bound Star Buster - Haste" type="Weapon">
@@ -510,9 +510,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31020" name="Bound Star Buster - Rsk. Focus" type="Weapon">
@@ -537,9 +537,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31021" name="Bound Scorpion" type="Weapon">
@@ -561,11 +561,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1990" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="78" />
-			<set stat="pAtk" val="144" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31022" name="Bound Scorpion - Anger" type="Weapon">
@@ -588,11 +588,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1990" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="78" />
-			<set stat="pAtk" val="144" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31023" name="Bound Scorpion - Critical Stun" type="Weapon">
@@ -615,11 +615,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1990" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="78" />
-			<set stat="pAtk" val="144" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31024" name="Bound Scorpion - Long Blow" type="Weapon">
@@ -642,11 +642,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1990" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="78" />
-			<set stat="pAtk" val="144" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31025" name="Bound Scale Mail" type="Armor">
@@ -664,7 +664,7 @@
 		<set name="price" val="5125" />
 		<set name="weight" val="8720" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -684,7 +684,7 @@
 		<set name="price" val="3205" />
 		<set name="weight" val="3860" />
 		<for>
-			<add order="0" stat="pDef" val="54" />
+			<add stat="pDef" val="54" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -709,9 +709,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31028" name="Bound Skull Graver" type="Weapon">
@@ -735,9 +735,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31029" name="Bound Skull Graver - Anger" type="Weapon">
@@ -762,9 +762,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31030" name="Bound Skull Graver - Health" type="Weapon">
@@ -789,9 +789,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31031" name="Bound Skull Graver - Rsk. Focus" type="Weapon">
@@ -816,9 +816,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31032" name="Bound Scalpel" type="Weapon">
@@ -842,9 +842,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31033" name="Bound Scallop Jamadhr" type="Weapon">
@@ -868,9 +868,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31034" name="Bound Chevalier Rapier" type="Weapon">
@@ -892,11 +892,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31035" name="Bound Chevalier Rapier" type="Weapon">
@@ -918,11 +918,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31036" name="Bound Chevalier Rapier" type="Weapon">
@@ -944,11 +944,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31037" name="Bound Chevalier Rapier" type="Weapon">
@@ -970,11 +970,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31038" name="Bound Chevalier Rapier - Guidance" type="Weapon">
@@ -997,11 +997,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31039" name="Bound Chevalier Rapier - Back Blow" type="Weapon">
@@ -1024,11 +1024,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31040" name="Bound Chevalier Rapier - Rsk. Evasion" type="Weapon">
@@ -1051,11 +1051,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31041" name="Bound Chevalier Rapier - Focus" type="Weapon">
@@ -1078,11 +1078,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31042" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
@@ -1105,11 +1105,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31043" name="Bound Chevalier Rapier - Haste" type="Weapon">
@@ -1132,11 +1132,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31044" name="Bound Chevalier Rapier - Critical Damage" type="Weapon">
@@ -1159,11 +1159,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31045" name="Bound Chevalier Rapier - Critical Poison" type="Weapon">
@@ -1186,11 +1186,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31046" name="Bound Chevalier Rapier - Haste" type="Weapon">
@@ -1213,11 +1213,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31047" name="Bound Chevalier Rapier - Focus" type="Weapon">
@@ -1240,11 +1240,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31048" name="Bound Chevalier Rapier - Critical Drain" type="Weapon">
@@ -1267,11 +1267,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31049" name="Bound Chevalier Rapier - Critical Poison" type="Weapon">
@@ -1294,11 +1294,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1420" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="68" />
-			<set stat="pAtk" val="111" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="111" />
+			<set stat="mAtk" val="68" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31050" name="Bound Schlager" type="Weapon">
@@ -1322,9 +1322,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="31051" name="Bound Schlager - Critical Damage" type="Weapon">
@@ -1349,9 +1349,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="31052" name="Bound Schlager - Focus" type="Weapon">
@@ -1376,9 +1376,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="31053" name="Bound Schlager - Light Armor" type="Weapon">
@@ -1403,9 +1403,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="31054" name="Bound Zubei's Breastplate" type="Armor">
@@ -1423,7 +1423,7 @@
 		<set name="price" val="79800" />
 		<set name="weight" val="7970" />
 		<for>
-			<add order="0" stat="pDef" val="157" />
+			<add stat="pDef" val="157" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1441,7 +1441,7 @@
 		<set name="price" val="29930" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="62" />
+			<add stat="pDef" val="62" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1458,9 +1458,9 @@
 		<set name="price" val="20950" />
 		<set name="weight" val="1210" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1479,7 +1479,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="1180" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1498,7 +1498,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="1180" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1517,7 +1517,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="1180" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1536,7 +1536,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1555,7 +1555,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1574,7 +1574,7 @@
 		<set name="price" val="19955" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1593,7 +1593,7 @@
 		<set name="price" val="49885" />
 		<set name="weight" val="3570" />
 		<for>
-			<add order="0" stat="pDef" val="98" />
+			<add stat="pDef" val="98" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1612,7 +1612,7 @@
 		<set name="price" val="59850" />
 		<set name="weight" val="4330" />
 		<for>
-			<add order="0" stat="pDef" val="117" />
+			<add stat="pDef" val="117" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1631,7 +1631,7 @@
 		<set name="price" val="37415" />
 		<set name="weight" val="1480" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1651,7 +1651,7 @@
 		<set name="price" val="3845" />
 		<set name="weight" val="2040" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1670,7 +1670,7 @@
 		<set name="price" val="5015" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="28" />
+			<add stat="mDef" val="28" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1688,7 +1688,7 @@
 		<set name="price" val="5015" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="28" />
+			<add stat="mDef" val="28" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1707,7 +1707,7 @@
 		<set name="price" val="10030" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="56" />
+			<add stat="mDef" val="56" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1725,7 +1725,7 @@
 		<set name="price" val="10030" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="56" />
+			<add stat="mDef" val="56" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1744,7 +1744,7 @@
 		<set name="price" val="7525" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
+			<add stat="mDef" val="42" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1762,7 +1762,7 @@
 		<set name="price" val="7525" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
+			<add stat="mDef" val="42" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1781,7 +1781,7 @@
 		<set name="price" val="7285" />
 		<set name="weight" val="620" />
 		<for>
-			<add order="0" stat="pDef" val="47" />
+			<add stat="pDef" val="47" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1804,11 +1804,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="97" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="97" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31075" name="Bound Soldat Estoc - Critical Anger" type="Weapon">
@@ -1831,11 +1831,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="97" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="97" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31076" name="Bound Soldat Estoc - Focus" type="Weapon">
@@ -1858,11 +1858,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="97" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="97" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31077" name="Bound Soldat Estoc - Light Armor" type="Weapon">
@@ -1885,11 +1885,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1430" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="97" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="97" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31078" name="Bound Soul Separator" type="Weapon">
@@ -1911,11 +1911,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31079" name="Bound Soul Separator - Guidance" type="Weapon">
@@ -1938,11 +1938,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31080" name="Bound Soul Separator - Critical Damage" type="Weapon">
@@ -1965,11 +1965,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31081" name="Bound Soul Separator - Rsk. Haste" type="Weapon">
@@ -1992,11 +1992,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="203" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="203" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="31082" name="Bound Reaper" type="Weapon">
@@ -2018,11 +2018,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="294" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="294" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31083" name="Bound Reaper - Cheap Shot" type="Weapon">
@@ -2045,11 +2045,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="294" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="294" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31084" name="Bound Reaper - Quick Recovery" type="Weapon">
@@ -2071,11 +2071,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="294" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="294" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31085" name="Bound Reaper - Critical Poison" type="Weapon">
@@ -2098,11 +2098,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1660" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="114" />
-			<set stat="pAtk" val="294" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="294" />
+			<set stat="mAtk" val="114" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="31086" name="Bound Pa'agrian Sword" type="Weapon">
@@ -2125,9 +2125,9 @@
 		<set name="weight" val="1980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31087" name="Bound Pa'agrian Sword - Focus" type="Weapon">
@@ -2151,9 +2151,9 @@
 		<set name="weight" val="1980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31088" name="Bound Pa'agrian Sword - Health" type="Weapon">
@@ -2177,9 +2177,9 @@
 		<set name="weight" val="1980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31089" name="Bound Pa'agrian Sword - Critical Drain" type="Weapon">
@@ -2203,9 +2203,9 @@
 		<set name="weight" val="1980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="76" />
 			<set stat="pAtk" val="169" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="31090" name="Bound Ecliptic Sword" type="Weapon">
@@ -2228,9 +2228,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31091" name="Bound Ecliptic Sword - Empower" type="Weapon">
@@ -2254,9 +2254,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31092" name="Bound Ecliptic Sword - M. Atk." type="Weapon">
@@ -2280,9 +2280,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31093" name="Bound Ecliptic Sword - Magic Silence" type="Weapon">
@@ -2306,9 +2306,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="111" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31094" name="Bound Sword of Occult" type="Weapon">
@@ -2331,9 +2331,9 @@
 		<set name="weight" val="970" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="45" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31095" name="Bound Sword of Valhalla" type="Weapon">
@@ -2356,9 +2356,9 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31096" name="Bound Sword of Valhalla - Acumen" type="Weapon">
@@ -2382,9 +2382,9 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31097" name="Bound Sword of Valhalla - Magic Weakness" type="Weapon">
@@ -2407,9 +2407,9 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31098" name="Bound Sword of Valhalla - Magic Regeneration" type="Weapon">
@@ -2432,9 +2432,9 @@
 		<set name="weight" val="900" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="31099" name="Bound Sword of Mystic" type="Weapon">
@@ -2457,9 +2457,9 @@
 		<set name="weight" val="980" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="45" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

@@ -15,7 +15,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -34,7 +34,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="310" />
 		<for>
-			<add order="0" stat="pDef" val="15" />
+			<add stat="pDef" val="15" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -55,7 +55,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="1390" />
 		<for>
-			<add order="0" stat="pDef" val="170" />
+			<add stat="pDef" val="170" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -75,7 +75,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="460" />
 		<for>
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -94,7 +94,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -113,7 +113,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -132,7 +132,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -152,7 +152,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="2510" />
 		<for>
-			<add order="0" stat="pDef" val="309" />
+			<add stat="pDef" val="309" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -172,7 +172,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1060" />
 		<for>
-			<add order="0" stat="pDef" val="193" />
+			<add stat="pDef" val="193" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -191,7 +191,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="116" />
+			<add stat="pDef" val="116" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -210,7 +210,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -229,7 +229,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -247,9 +247,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="380" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="422" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -269,9 +269,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="1380" />
 		<for>
-			<add stat="mEvas" val="5.0" />
-			<add order="0" stat="pDef" val="247" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="247" order="0" />
+			<add stat="mEvas" val="5.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -291,9 +291,9 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="440" />
 		<for>
-			<add stat="mEvas" val="3.0" />
-			<add order="0" stat="pDef" val="154" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="154" order="0" />
+			<add stat="mEvas" val="3.0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -312,7 +312,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="116" />
+			<add stat="pDef" val="116" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -331,7 +331,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -350,7 +350,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -370,8 +370,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
-			<add order="0" stat="pDef" val="169" />
+			<add stat="pDef" val="169" order="0" />
+			<add stat="mDef" val="36" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -392,8 +392,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="280" />
 		<for>
-			<add order="0" stat="mDef" val="24" />
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
+			<add stat="mDef" val="24" order="0" />
 			<enchant stat="mDef" val="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -413,7 +413,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="116" />
+			<add stat="pDef" val="116" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -432,7 +432,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -451,7 +451,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="77" />
+			<add stat="pDef" val="77" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -470,7 +470,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="310" />
 		<for>
-			<add order="0" stat="pDef" val="38" />
+			<add stat="pDef" val="38" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -490,7 +490,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="39" />
+			<add stat="mDef" val="39" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -509,7 +509,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="52" />
+			<add stat="mDef" val="52" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -528,7 +528,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="26" />
+			<add stat="mDef" val="26" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -547,7 +547,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="51" />
+			<add stat="mDef" val="51" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -566,7 +566,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="68" />
+			<add stat="mDef" val="68" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -585,7 +585,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="34" />
+			<add stat="mDef" val="34" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -604,7 +604,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="60" />
+			<add stat="mDef" val="60" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -623,7 +623,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="80" />
+			<add stat="mDef" val="80" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -642,7 +642,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
+			<add stat="mDef" val="40" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -661,7 +661,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -680,7 +680,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
+			<add stat="mDef" val="95" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -699,7 +699,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -718,7 +718,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -737,7 +737,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="106" />
+			<add stat="mDef" val="106" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -756,7 +756,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="60" />
+			<add stat="mDef" val="60" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -775,7 +775,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
+			<add stat="mDef" val="94" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -794,7 +794,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="126" />
+			<add stat="mDef" val="126" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -813,7 +813,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -837,9 +837,9 @@
 		<set name="weight" val="477" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37243" name="Steel Yaksa Mace (60-day)" type="Weapon">
@@ -863,9 +863,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="156" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37244" name="Steel Saber*Sword of Revolution (60-day)" type="Weapon">
@@ -888,9 +888,9 @@
 		<set name="weight" val="807" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="56" />
 			<set stat="pAtk" val="118" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37245" name="Steel Mysterious Sword (60-day)" type="Weapon">
@@ -913,9 +913,9 @@
 		<set name="weight" val="477" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="81" />
 			<set stat="pAtk" val="85" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37246" name="Steel Body Slasher (60-day)" type="Weapon">
@@ -937,11 +937,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="677" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37247" name="Steel Soulfire Dirk (60-day)" type="Weapon">
@@ -963,11 +963,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="86" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37248" name="Steel Crystallized Ice Bow (60-day)" type="Weapon">
@@ -990,11 +990,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="597" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37249" name="Steel Schlager (60-day)" type="Weapon">
@@ -1018,9 +1018,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37250" name="Steel Soldat Estoc (60-day)" type="Weapon">
@@ -1042,11 +1042,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="477" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="97" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="97" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37251" name="Steel Arbalest (60-day)" type="Weapon">
@@ -1068,11 +1068,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="597" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="135" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="135" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37252" name="Steel Flamberge (60-day)" type="Weapon">
@@ -1095,9 +1095,9 @@
 		<set name="weight" val="670" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="130" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37253" name="Steel Chakram (60-day)" type="Weapon">
@@ -1121,9 +1121,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="130" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37254" name="Steel Sword of Valhalla (60-day)" type="Weapon">
@@ -1146,9 +1146,9 @@
 		<set name="weight" val="300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37255" name="Steel Spell Breaker (60-day)" type="Weapon">
@@ -1172,9 +1172,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37256" name="Steel StormBringer*Ultimate Sword (60-day)" type="Weapon">
@@ -1197,9 +1197,9 @@
 		<set name="weight" val="747" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="86" />
 			<set stat="pAtk" val="197" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37257" name="Steel Wizard's Tear (60-day)" type="Weapon">
@@ -1222,9 +1222,9 @@
 		<set name="weight" val="450" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="155" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37258" name="Steel Great Axe (60-day)" type="Weapon">
@@ -1246,11 +1246,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="647" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="175" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37259" name="Steel Twilight Knife (60-day)" type="Weapon">
@@ -1272,11 +1272,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="247" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="122" />
-			<set stat="pAtk" val="122" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="122" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37260" name="Steel Dark Elven Longbow (60-day)" type="Weapon">
@@ -1299,11 +1299,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="573" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="100" />
-			<set stat="pAtk" val="397" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="397" />
+			<set stat="mAtk" val="100" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37261" name="Steel Innominate Victory (60-day)" type="Weapon">
@@ -1327,9 +1327,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37262" name="Steel Military Fleuret (60-day)" type="Weapon">
@@ -1351,11 +1351,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="457" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="91" />
-			<set stat="pAtk" val="159" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="159" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37263" name="Steel Hell Hound (60-day)" type="Weapon">
@@ -1377,11 +1377,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="567" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="99" />
-			<set stat="pAtk" val="245" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="245" />
+			<set stat="mAtk" val="99" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37264" name="Steel Great Sword (60-day)" type="Weapon">
@@ -1404,9 +1404,9 @@
 		<set name="weight" val="643" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37265" name="Steel Arthro Nail (60-day)" type="Weapon">
@@ -1430,9 +1430,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="91" />
 			<set stat="pAtk" val="213" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37266" name="Steel Elemental Sword (60-day)" type="Weapon">
@@ -1455,9 +1455,9 @@
 		<set name="weight" val="277" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="143" />
 			<set stat="pAtk" val="170" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37267" name="Steel Spiritual Eye (60-day)" type="Weapon">
@@ -1481,9 +1481,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="143" />
 			<set stat="pAtk" val="170" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37268" name="Steel Keshanberk*Keshanberk (60-day)" type="Weapon">
@@ -1506,9 +1506,9 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37269" name="Steel Sword of Miracles (60-day)" type="Weapon">
@@ -1531,9 +1531,9 @@
 		<set name="weight" val="280" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="152" />
 			<set stat="pAtk" val="186" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37270" name="Steel Halberd (60-day)" type="Weapon">
@@ -1555,11 +1555,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="633" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="213" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="213" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37271" name="Steel Bloody Orchid (60-day)" type="Weapon">
@@ -1581,11 +1581,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="320" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="186" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="186" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37272" name="Steel Carnage Bow (60-day)" type="Weapon">
@@ -1608,11 +1608,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="557" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="440" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="440" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37273" name="Steel White Lightning (60-day)" type="Weapon">
@@ -1634,11 +1634,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="443" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="193" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="193" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37274" name="Steel Doomchanter (60-day)" type="Weapon">
@@ -1660,11 +1660,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="557" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="107" />
-			<set stat="pAtk" val="270" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="270" />
+			<set stat="mAtk" val="107" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37275" name="Steel Divine Pain (60-day)" type="Weapon">
@@ -1688,9 +1688,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="231" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37276" name="Steel Infernal Master (60-day)" type="Weapon">
@@ -1713,9 +1713,9 @@
 		<set name="weight" val="633" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37277" name="Steel Blood Tornado (60-day)" type="Weapon">
@@ -1739,9 +1739,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="107" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37278" name="Steel Forgotten Blade (60-day)" type="Weapon">
@@ -1764,9 +1764,9 @@
 		<set name="weight" val="433" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37279" name="Steel Basalt Battlehammer (60-day)" type="Weapon">
@@ -1790,9 +1790,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37280" name="Steel Tallum Blade*Dark Legion's Edge (60-day)" type="Weapon">
@@ -1815,9 +1815,9 @@
 		<set name="weight" val="693" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37281" name="Steel Arcana Mace (60-day)" type="Weapon">
@@ -1841,9 +1841,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="175" />
 			<set stat="pAtk" val="225" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37282" name="Steel Saint Spear (60-day)" type="Weapon">
@@ -1865,11 +1865,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="600" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37283" name="Steel Angel Slayer (60-day)" type="Weapon">
@@ -1891,11 +1891,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="317" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="246" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37284" name="Steel Gram (60-day)" type="Weapon">
@@ -1919,9 +1919,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="304" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37285" name="Steel Laevateinn (60-day)" type="Weapon">
@@ -1943,11 +1943,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="433" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="255" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37286" name="Steel Sarunga (60-day)" type="Weapon">
@@ -1969,11 +1969,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="533" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="356" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37287" name="Steel Heaven's Divider (60-day)" type="Weapon">
@@ -1996,9 +1996,9 @@
 		<set name="weight" val="460" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37288" name="Steel Demon Splinter (60-day)" type="Weapon">
@@ -2022,9 +2022,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37289" name="Steel Dynasty Phantom (60-day)" type="Weapon">
@@ -2047,9 +2047,9 @@
 		<set name="weight" val="510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37290" name="Steel Dynasty Cudgel (60-day)" type="Weapon">
@@ -2073,9 +2073,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37291" name="Steel Dynasty Dualsword (60-day)" type="Weapon">
@@ -2098,9 +2098,9 @@
 		<set name="weight" val="510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37292" name="Steel Dynasty Halberd (60-day)" type="Weapon">
@@ -2122,11 +2122,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="670" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37293" name="Steel Dynasty Knife (60-day)" type="Weapon">
@@ -2148,11 +2148,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="510" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37294" name="Steel Dynasty Crossbow (60-day)" type="Weapon">
@@ -2174,11 +2174,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="530" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="401" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37295" name="Steel Dynasty Ancient Sword (60-day)" type="Weapon">
@@ -2202,9 +2202,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="361" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37296" name="Steel Dynasty Rapier (60-day)" type="Weapon">
@@ -2226,11 +2226,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="430" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="302" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37297" name="Steel Dynasty Blade (60-day)" type="Weapon">
@@ -2253,9 +2253,9 @@
 		<set name="weight" val="580" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37298" name="Steel Dynasty Bagh-Nakh (60-day)" type="Weapon">
@@ -2279,9 +2279,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37299" name="Steel Requiem Cutter (30-day)" type="Weapon">
@@ -2304,9 +2304,9 @@
 		<set name="weight" val="510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

@@ -50,7 +50,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="70" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="13803" name="Native's Tunic" type="Armor">
@@ -71,7 +71,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="4720" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 		</for>
 	</item>
 	<item id="13804" name="Native's Pants" type="Armor">
@@ -92,7 +92,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="1700" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="13805" name="Guards of the Dawn Helmet" type="Armor">
@@ -113,7 +113,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="70" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="13806" name="Guards of the Dawn Tunic" type="Armor">
@@ -134,7 +134,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="4720" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 		</for>
 	</item>
 	<item id="13807" name="Guards of the Dawn Pants" type="Armor">
@@ -155,7 +155,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="1700" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="13808" name="Elmoreden's Holy Water" type="EtcItem">
@@ -604,9 +604,9 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="78" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -634,11 +634,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -683,9 +683,9 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="120" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1177,9 +1177,9 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="120" />
 			<set stat="pAtk" val="140" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1213,11 +1213,11 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="157" />
-			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1251,11 +1251,11 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="169" />
-			<set stat="pAtk" val="332" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="332" />
+			<set stat="mAtk" val="169" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1289,11 +1289,11 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1312,7 +1312,7 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="940" />
 		<for>
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1331,7 +1331,7 @@
 		<set name="price" val="6404000" />
 		<set name="weight" val="930" />
 		<for>
-			<add order="0" stat="pDef" val="15" />
+			<add stat="pDef" val="15" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1350,7 +1350,7 @@
 		<set name="price" val="12250000" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1366,7 +1366,7 @@
 		<set name="price" val="28671000" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="2" />
+			<add stat="pDef" val="2" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1388,8 +1388,8 @@
 			</and>
 		</cond>
 		<for>
+			<add stat="pDef" val="20" order="0" />
 			<add stat="darkRes" val="30" />
-			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="13890" name="Holy Spirit's Cloak" type="Armor">
@@ -1407,8 +1407,8 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
+			<add stat="pDef" val="20" order="0" />
 			<add stat="darkRes" val="30" />
-			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="13891" name="Holy Spirit's Cloak (Light Armor)" type="Armor">
@@ -1430,8 +1430,8 @@
 			</and>
 		</cond>
 		<for>
+			<add stat="pDef" val="20" order="0" />
 			<add stat="darkRes" val="30" />
-			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="13892" name="Holy Spirit's Cloak (Robe)" type="Armor">
@@ -1453,8 +1453,8 @@
 			</and>
 		</cond>
 		<for>
+			<add stat="pDef" val="20" order="0" />
 			<add stat="darkRes" val="30" />
-			<add order="0" stat="pDef" val="20" />
 		</for>
 	</item>
 	<item id="13893" name="Sealed Holy Spirit's Cloak" type="EtcItem">
@@ -1481,7 +1481,7 @@
 		<set name="price" val="45100" />
 		<set name="weight" val="500" />
 		<for>
-			<add order="0" stat="pDef" val="10" />
+			<add stat="pDef" val="10" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1499,7 +1499,7 @@
 		<set name="price" val="165000" />
 		<set name="weight" val="480" />
 		<for>
-			<add order="0" stat="pDef" val="11" />
+			<add stat="pDef" val="11" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1517,7 +1517,7 @@
 		<set name="price" val="371300" />
 		<set name="weight" val="460" />
 		<for>
-			<add order="0" stat="pDef" val="12" />
+			<add stat="pDef" val="12" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1535,7 +1535,7 @@
 		<set name="price" val="1917000" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="14" />
+			<add stat="pDef" val="14" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

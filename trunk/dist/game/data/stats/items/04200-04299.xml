@@ -35,9 +35,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="4203" name="Spellbook: Life Leech" type="EtcItem">
@@ -207,9 +207,9 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="4220" name="Dream Knife" type="Weapon">
@@ -232,11 +232,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1110" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="21" />
-			<set stat="pAtk" val="27" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="27" />
+			<set stat="mAtk" val="21" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="4221" name="Ubiquitous Axe" type="Weapon">
@@ -261,9 +261,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="4222" name="Dream Shield" type="Armor">
@@ -280,9 +280,9 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1380" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -300,9 +300,9 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="1380" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="90" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -321,7 +321,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="8920" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="4225" name="Dream Stockings" type="Armor">
@@ -339,7 +339,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="3960" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 		</for>
 	</item>
 	<item id="4226" name="Dream Gloves" type="Armor">
@@ -356,7 +356,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="650" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="4227" name="Dream Boots" type="Armor">
@@ -373,7 +373,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1310" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="4228" name="Ubiquitous Armor" type="Armor">
@@ -391,7 +391,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="8920" />
 		<for>
-			<add order="0" stat="pDef" val="68" />
+			<add stat="pDef" val="68" order="0" />
 		</for>
 	</item>
 	<item id="4229" name="Ubiquitous Stockings" type="Armor">
@@ -409,7 +409,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="3960" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 		</for>
 	</item>
 	<item id="4230" name="Ubiquitous Gloves" type="Armor">
@@ -426,7 +426,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="650" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="4231" name="Ubiquitous Boots" type="Armor">
@@ -443,7 +443,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1310" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="4232" name="Dice" type="EtcItem">
@@ -477,9 +477,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="148" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -500,8 +500,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="50" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="50" order="0" />
 		</for>
 	</item>
 	<item id="4235" name="Hatchling's Lv. 75 Armor" type="Armor">
@@ -520,8 +520,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="58" />
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
+			<add stat="mDef" val="58" order="0" />
 		</for>
 	</item>
 	<item id="4236" name="Gara Item" type="Armor">
@@ -538,8 +538,8 @@
 			<player categoryType="HATCHLING_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="58" />
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
+			<add stat="mDef" val="58" order="0" />
 		</for>
 	</item>
 	<item id="4237" name="Hatchling's Lv. 65 Weapon" type="Weapon">
@@ -562,9 +562,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="4238" name="Hatchling's Lv. 75 Weapon" type="Weapon">
@@ -587,9 +587,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="4239" name="Blade Mold" type="EtcItem">

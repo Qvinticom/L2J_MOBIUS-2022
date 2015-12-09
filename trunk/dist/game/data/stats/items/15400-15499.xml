@@ -75,9 +75,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15404" name="6th Anniversary Party Gift Box (2003)" additionalName="Event" type="EtcItem">
@@ -500,8 +500,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="63" order="0" />
 		</for>
 	</item>
 	<item id="15429" name="6th Anniversary Party Belt (Event)" additionalName="7-day" type="Armor">
@@ -631,9 +631,9 @@
 		<set name="weight" val="10" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15437" name="Transformation Scroll Pack" type="EtcItem">

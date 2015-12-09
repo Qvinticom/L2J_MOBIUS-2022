@@ -559,11 +559,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -587,11 +587,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -615,11 +615,11 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -643,11 +643,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -671,11 +671,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -699,11 +699,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -725,9 +725,9 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9645" name="For NPC (Sword)" type="Weapon">
@@ -747,9 +747,9 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9646" name="For NPC (Rapier)" type="Weapon">
@@ -769,9 +769,9 @@
 		<set name="weight" val="1530" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="9647" name="Scroll of Escape: Kamael Village" type="EtcItem">
@@ -890,9 +890,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="233" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9657" name="Reinforced Coyote Fang" type="Weapon">
@@ -915,9 +915,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="289" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9658" name="Reinforced Saltydog Fang" type="Weapon">
@@ -940,9 +940,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="350" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9659" name="Reinforced Cerberus Fang" type="Weapon">
@@ -965,9 +965,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="413" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9660" name="Orichalcum Fang" type="Weapon">
@@ -990,9 +990,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="477" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9661" name="Reinforced Fenril Fang" type="Weapon">
@@ -1015,9 +1015,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="537" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="9662" name="Great Wolf Scale Armor" type="Armor">
@@ -1036,8 +1036,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="112" />
+			<add stat="pDef" val="112" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9663" name="Great Wolf Bronze Armor" type="Armor">
@@ -1056,8 +1056,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="124" />
+			<add stat="pDef" val="124" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9664" name="Great Wolf Plate Armor" type="Armor">
@@ -1076,8 +1076,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="136" />
+			<add stat="pDef" val="136" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9665" name="Great Wolf Mithril Armor" type="Armor">
@@ -1096,8 +1096,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="148" />
+			<add stat="pDef" val="148" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9666" name="Great Wolf Oriharukon Armor" type="Armor">
@@ -1116,8 +1116,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="160" />
+			<add stat="pDef" val="160" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9667" name="Great Wolf Orichalcum Armor" type="Armor">
@@ -1136,8 +1136,8 @@
 			<player categoryType="GROWN_UP_WOLF_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="14" />
-			<add order="0" stat="pDef" val="171" />
+			<add stat="pDef" val="171" order="0" />
+			<add stat="mDef" val="14" order="0" />
 		</for>
 	</item>
 	<item id="9668" name="Great Wolf Food" type="EtcItem">
@@ -1172,7 +1172,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="70" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1192,7 +1192,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="4720" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1212,7 +1212,7 @@
 		<set name="unequip_skill" val="619-1" /> <!-- Dispel Transform -->
 		<set name="weight" val="1700" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1297,7 +1297,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="36" />
+			<add stat="mDef" val="36" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

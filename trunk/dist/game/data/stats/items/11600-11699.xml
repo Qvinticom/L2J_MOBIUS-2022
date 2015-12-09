@@ -15,7 +15,7 @@
 		<set name="price" val="3971000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="60" />
+			<add stat="mDef" val="60" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -34,8 +34,8 @@
 		<set name="price" val="5956000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
 			<add stat="maxMp" val="35" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -53,8 +53,8 @@
 		<set name="price" val="5376000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxMp" val="46" />
+			<add stat="mDef" val="95" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -73,7 +73,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="1" />
-			<add order="0" stat="mDef" val="53" />
+			<add stat="mDef" val="53" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -91,8 +91,8 @@
 		<set name="price" val="4032000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="35" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -117,9 +117,9 @@
 		<set name="weight" val="700" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="49" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11606" name="Common Item - Reinforced Bow" type="Weapon">
@@ -144,11 +144,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="623" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="82" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="82" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11607" name="Common Item - Rapier" type="Weapon">
@@ -175,11 +175,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="36" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="36" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11608" name="Common Item - Bagh-Nakh" type="Weapon">
@@ -203,9 +203,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="49" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11609" name="Common Item - Proof of Revenge" type="Weapon">
@@ -229,9 +229,9 @@
 		<set name="weight" val="200" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="32" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11610" name="Common Item - Bone Staff" type="Weapon">
@@ -256,9 +256,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="39" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11611" name="Common Item - Priest Sword" type="Weapon">
@@ -282,9 +282,9 @@
 		<set name="weight" val="507" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="32" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11612" name="Common Item - Branch of Life" type="Weapon">
@@ -308,9 +308,9 @@
 		<set name="weight" val="207" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="32" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11613" name="Common Item - Crafted Dagger" type="Weapon">
@@ -332,11 +332,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="367" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="35" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="35" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11614" name="Common Item - Saber" type="Weapon">
@@ -360,9 +360,9 @@
 		<set name="weight" val="507" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11615" name="Common Item - Scalpel" type="Weapon">
@@ -386,9 +386,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11616" name="Common Item - Temptation of Abyss" type="Weapon">
@@ -412,9 +412,9 @@
 		<set name="weight" val="203" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="32" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11617" name="Common Item - Assassin Knife" type="Weapon">
@@ -436,11 +436,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="367" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="35" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="35" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11618" name="Common Item - Work Hammer" type="Weapon">
@@ -464,9 +464,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11619" name="Common Item - Scroll of Wisdom" type="Weapon">
@@ -490,9 +490,9 @@
 		<set name="weight" val="203" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="32" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11620" name="Common Item - Talwar" type="Weapon">
@@ -520,9 +520,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11621" name="Common Item - Talwar" type="Weapon">
@@ -550,9 +550,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11622" name="Common Item - Trident" type="Weapon">
@@ -575,11 +575,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="700" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="40" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="40" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11623" name="Common Item - Hand Axe" type="Weapon">
@@ -603,9 +603,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11624" name="Common Item - Field Gun" type="Weapon">
@@ -632,11 +632,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="51" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11625" name="Common Item - Heavy Sword" type="Weapon">
@@ -660,9 +660,9 @@
 		<set name="weight" val="507" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="49" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11626" name="Common Item - Heavy Mace" type="Weapon">
@@ -686,9 +686,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="26" />
 			<set stat="pAtk" val="40" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11627" name="Common Item - Mace of Prayer" type="Weapon">
@@ -713,9 +713,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11628" name="Common Item - Knight's Sword" type="Weapon">
@@ -739,9 +739,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11629" name="Common Item - Dark Elven Bow" type="Weapon">
@@ -766,11 +766,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="610" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="105" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11630" name="Common Item - Doom Hammer" type="Weapon">
@@ -795,9 +795,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11631" name="Common Item - Dwarven Trident" type="Weapon">
@@ -820,11 +820,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="697" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="51" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11632" name="Common Item - Longbow" type="Weapon">
@@ -849,11 +849,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="610" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="35" />
-			<set stat="pAtk" val="114" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11633" name="Common Item - Staff of Mana" type="Weapon">
@@ -878,9 +878,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="50" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11634" name="Common Item - Mystic Staff" type="Weapon">
@@ -905,9 +905,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="50" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11635" name="Common Item - Bastard Sword" type="Weapon">
@@ -931,9 +931,9 @@
 		<set name="weight" val="503" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11636" name="Common Item - Spinebone Sword" type="Weapon">
@@ -957,9 +957,9 @@
 		<set name="weight" val="503" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11637" name="Common Item - Divine Tome" type="Weapon">
@@ -983,9 +983,9 @@
 		<set name="weight" val="190" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11638" name="Common Item - Mace of Judgment" type="Weapon">
@@ -1010,9 +1010,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11639" name="Common Item - Military Talwar" type="Weapon">
@@ -1039,9 +1039,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="55" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11640" name="Common Item - Elven Bow" type="Weapon">
@@ -1066,11 +1066,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="617" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="105" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11641" name="Common Item - Mace of Miracle" type="Weapon">
@@ -1095,9 +1095,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11642" name="Common Item - Single-Edged Jamadhr" type="Weapon">
@@ -1121,9 +1121,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11643" name="Common Item - Artisan's Sword" type="Weapon">
@@ -1147,9 +1147,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11644" name="Common Item - Conjuror's Staff" type="Weapon">
@@ -1174,9 +1174,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="50" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11645" name="Common Item - Tomahawk" type="Weapon">
@@ -1200,9 +1200,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11646" name="Common Item - Poniard Dagger" type="Weapon">
@@ -1224,11 +1224,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="363" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11647" name="Common Item - Pike" type="Weapon">
@@ -1251,11 +1251,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="697" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="51" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11648" name="Common Item - Fleuret" type="Weapon">
@@ -1282,11 +1282,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11649" name="Common Item - Fleuret" type="Weapon">
@@ -1313,11 +1313,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11650" name="Common Item - Fleuret" type="Weapon">
@@ -1344,11 +1344,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11651" name="Common Item - Fleuret" type="Weapon">
@@ -1375,11 +1375,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11652" name="Common Item - Hand Crossbow" type="Weapon">
@@ -1406,11 +1406,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11653" name="Common Item - Hand Crossbow" type="Weapon">
@@ -1437,11 +1437,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11654" name="Common Item - Hand Crossbow" type="Weapon">
@@ -1468,11 +1468,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11655" name="Common Item - Sword of Magic" type="Weapon">
@@ -1496,9 +1496,9 @@
 		<set name="weight" val="323" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="45" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11656" name="Common Item - Sword of Mystic" type="Weapon">
@@ -1522,9 +1522,9 @@
 		<set name="weight" val="327" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="45" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11657" name="Common Item - Sword of Occult" type="Weapon">
@@ -1548,9 +1548,9 @@
 		<set name="weight" val="323" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="45" />
 			<set stat="pAtk" val="43" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11658" name="Common Item - Saber*Saber" type="Weapon">
@@ -1573,9 +1573,9 @@
 		<set name="weight" val="843" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="37" />
 			<set stat="pAtk" val="73" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11659" name="Common Item - Gastraphetes" type="Weapon">
@@ -1600,11 +1600,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="613" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="132" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="132" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11660" name="Common Item - Shilen Knife" type="Weapon">
@@ -1627,11 +1627,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="52" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11661" name="Common Item - Dwarven Pike" type="Weapon">
@@ -1654,11 +1654,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="690" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11662" name="Common Item - Dagger of Mana" type="Weapon">
@@ -1681,11 +1681,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="52" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11663" name="Common Item - Staff of Magic" type="Weapon">
@@ -1710,9 +1710,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="57" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11664" name="Common Item - Mystic Knife" type="Weapon">
@@ -1735,11 +1735,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="253" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="52" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11665" name="Common Item - Triple-Edged Jamadhr" type="Weapon">
@@ -1763,9 +1763,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="78" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11666" name="Common Item - Spiked Club" type="Weapon">
@@ -1789,9 +1789,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11667" name="Common Item - Two-handed Sword" type="Weapon">
@@ -1815,9 +1815,9 @@
 		<set name="weight" val="727" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="78" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11668" name="Common Item - Estoc" type="Weapon">
@@ -1844,11 +1844,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="58" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="58" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11669" name="Common Item - Estoc" type="Weapon">
@@ -1875,11 +1875,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="58" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="58" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11670" name="Common Item - Elven Sword" type="Weapon">
@@ -1903,9 +1903,9 @@
 		<set name="weight" val="490" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11671" name="Common Item - War Hammer" type="Weapon">
@@ -1928,11 +1928,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="693" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11672" name="Common Item - Conjuror's Knife" type="Weapon">
@@ -1955,11 +1955,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="52" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="52" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11673" name="Common Item - Kukuri" type="Weapon">
@@ -1981,11 +1981,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="360" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="56" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="56" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11674" name="Common Item - Crossbow" type="Weapon">
@@ -2012,11 +2012,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="39" />
-			<set stat="pAtk" val="81" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="81" />
+			<set stat="mAtk" val="39" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="11675" name="Common Item - Crimson Sword" type="Weapon">
@@ -2040,9 +2040,9 @@
 		<set name="weight" val="497" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11676" name="Common Item - Tome of Blood" type="Weapon">
@@ -2066,9 +2066,9 @@
 		<set name="weight" val="190" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="52" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11677" name="Common Item - Field Sword" type="Weapon">
@@ -2096,9 +2096,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="69" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="11678" name="Common Item - Sage's Blood" type="Weapon">
@@ -2122,9 +2122,9 @@
 		<set name="weight" val="193" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="52" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11679" name="Common Item - Saber*Knight's Sword" type="Weapon">
@@ -2147,9 +2147,9 @@
 		<set name="weight" val="837" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="41" />
 			<set stat="pAtk" val="83" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11680" name="Common Item - Saber*Bastard Sword" type="Weapon">
@@ -2172,9 +2172,9 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="41" />
 			<set stat="pAtk" val="83" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11681" name="Common Item - Saber*Spinebone Sword" type="Weapon">
@@ -2197,9 +2197,9 @@
 		<set name="weight" val="843" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="41" />
 			<set stat="pAtk" val="83" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11682" name="Common Item - Saber*Artisan's Sword" type="Weapon">
@@ -2222,9 +2222,9 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="41" />
 			<set stat="pAtk" val="83" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11683" name="Common Item - Reinforced Longbow" type="Weapon">
@@ -2249,11 +2249,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="607" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="51" />
-			<set stat="pAtk" val="179" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="179" />
+			<set stat="mAtk" val="51" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11684" name="Common Item - Knight's Sword*Knight's Sword" type="Weapon">
@@ -2276,9 +2276,9 @@
 		<set name="weight" val="820" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11685" name="Common Item - Maingauche" type="Weapon">
@@ -2300,11 +2300,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="357" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="47" />
-			<set stat="pAtk" val="69" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="47" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="11686" name="Common Item - Morning Star" type="Weapon">
@@ -2328,9 +2328,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11687" name="Common Item - Bastard Sword*Knight's Sword" type="Weapon">
@@ -2353,9 +2353,9 @@
 		<set name="weight" val="833" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11688" name="Common Item - Bastard Sword*Bastard Sword" type="Weapon">
@@ -2378,9 +2378,9 @@
 		<set name="weight" val="823" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11689" name="Common Item - Bastard Sword*Spinebone Sword" type="Weapon">
@@ -2403,9 +2403,9 @@
 		<set name="weight" val="823" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11690" name="Common Item - Bastard Sword*Artisan's Sword" type="Weapon">
@@ -2428,9 +2428,9 @@
 		<set name="weight" val="827" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11691" name="Common Item - Bich'Hwa" type="Weapon">
@@ -2454,9 +2454,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11692" name="Common Item - Priest Mace" type="Weapon">
@@ -2481,9 +2481,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="63" />
 			<set stat="pAtk" val="63" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11693" name="Common Item - Goat Head Staff" type="Weapon">
@@ -2508,9 +2508,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="69" />
 			<set stat="pAtk" val="77" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11694" name="Common Item - Saber*Elven Sword" type="Weapon">
@@ -2533,9 +2533,9 @@
 		<set name="weight" val="837" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11695" name="Common Item - Saber*Crimson Sword" type="Weapon">
@@ -2558,9 +2558,9 @@
 		<set name="weight" val="843" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11696" name="Common Item - Sword of Magic Fog" type="Weapon">
@@ -2584,9 +2584,9 @@
 		<set name="weight" val="483" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="63" />
 			<set stat="pAtk" val="63" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11697" name="Common Item - Skull Breaker" type="Weapon">
@@ -2610,9 +2610,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="11698" name="Common Item - Spinebone Sword*Knight's Sword" type="Weapon">
@@ -2635,9 +2635,9 @@
 		<set name="weight" val="823" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="11699" name="Common Item - Spinebone Sword*Spinebone Sword" type="Weapon">
@@ -2660,9 +2660,9 @@
 		<set name="weight" val="840" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

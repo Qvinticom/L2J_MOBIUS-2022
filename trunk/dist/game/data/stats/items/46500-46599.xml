@@ -323,9 +323,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46529" name="Manor Scholar's Hat" type="Armor">
@@ -383,9 +383,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46533" name="Hansel's Weapon Crafting Potion" additionalName="Event" type="EtcItem">
@@ -461,7 +461,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46539" name="Tauti Gaiters - No Ertheia" additionalName="Heavy Armor" type="Armor">
@@ -474,7 +474,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="250" />
+			<add stat="pDef" val="250" order="0" />
 		</for>
 	</item>
 	<item id="46540" name="Tauti Gauntlets - No Ertheia" additionalName="Heavy Armor" type="Armor">
@@ -486,7 +486,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46541" name="Tauti Boots - No Ertheia" additionalName="Heavy Armor" type="Armor">
@@ -498,7 +498,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46542" name="Kelbim Leather Helmet" additionalName="Not In Use" type="Armor">
@@ -510,7 +510,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="46543" name="Kelbim Leather Armor" additionalName="Light Armor" type="Armor">
@@ -523,8 +523,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="320" />
 			<add stat="rEvas" val="5" />
+			<add stat="pDef" val="320" order="0" />
 		</for>
 	</item>
 	<item id="46544" name="Kelbim Leather Leggings" additionalName="Light Armor" type="Armor">
@@ -537,8 +537,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="200" />
 			<add stat="rEvas" val="3" />
+			<add stat="pDef" val="200" order="0" />
 		</for>
 	</item>
 	<item id="46545" name="Kelbim Leather Gloves" additionalName="Light Armor" type="Armor">
@@ -550,7 +550,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46546" name="Kelbim Leather Boots" additionalName="Light Armor" type="Armor">
@@ -562,7 +562,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46547" name="Freya Circlet" additionalName="Not In Use" type="Armor">
@@ -574,7 +574,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 		</for>
 	</item>
 	<item id="46548" name="Freya Tunic" additionalName="Robe" type="Armor">
@@ -587,8 +587,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="46549" name="Freya Stockings" additionalName="Robe" type="Armor">
@@ -601,8 +601,8 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="mDef" val="33" />
-			<add order="0" stat="pDef" val="137" />
+			<add stat="pDef" val="137" order="0" />
+			<add stat="mDef" val="33" order="0" />
 		</for>
 	</item>
 	<item id="46550" name="Freya Gloves" additionalName="Robe" type="Armor">
@@ -614,7 +614,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46551" name="Freya Shoes" additionalName="Robe" type="Armor">
@@ -626,7 +626,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="100" />
+			<add stat="pDef" val="100" order="0" />
 		</for>
 	</item>
 	<item id="46552" name="Practice Soul Crystal" additionalName="Stage 2" type="EtcItem">
@@ -857,9 +857,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="21" />
 			<set stat="pAtk" val="31" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46572" name="Tauti's Helmet Appearance Stone" additionalName="Not In Use" type="EtcItem">
@@ -1109,7 +1109,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46596" name="Blue Dynasty" type="Armor">
@@ -1119,7 +1119,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46597" name="Blue Dynasty" type="Armor">
@@ -1129,7 +1129,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46598" name="Red Zubei" type="Armor">
@@ -1139,7 +1139,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46599" name="Red Zubei" type="Armor">
@@ -1149,7 +1149,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 </list>

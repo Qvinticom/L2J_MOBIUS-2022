@@ -665,6 +665,19 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="pSkillEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="24352" name="Talisman - Slaughterer" additionalName="Abundance / 3-day" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7.. Note: Equipping 2 will give the effect of 1. -->
@@ -680,6 +693,20 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="maxCp" val="490" />
+			<add stat="maxHp" val="490" />
+			<add stat="maxMp" val="490" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="24353" name="Talisman - Conquerer" additionalName="Abundance / 3-day" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%.. Note: Equipping 2 will give the effect of 1. -->
@@ -695,6 +722,16 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="pSkillEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="maxCp" val="490" />
+			<add stat="maxHp" val="490" />
+			<add stat="maxMp" val="490" />
+		</for>
 	</item>
 	<item id="24354" name="Talisman - Outlaw" additionalName="Abundance / 3-day" type="Armor">
 		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%.. Note: Equipping 2 will give the effect of 1. -->
@@ -710,6 +747,19 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="maxCp" val="490" />
+			<add stat="maxHp" val="490" />
+			<add stat="maxMp" val="490" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="24355" name="Premium Account: Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, P./Atk. + 10%, M. Atk. + 20%. Effect disappears if active while receiving Art of Seduction. Cannot be exchanged, dropped, or used in the Olympiad. Can be used in the Ceremony of Chaos. Can be stored in th -->
@@ -739,6 +789,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="2" />
+		</for>
 	</item>
 	<item id="24357" name="Draco's Hat: Warrior" additionalName="7-day" type="Armor">
 		<!-- Cute Draco Hat. 7-day. INT/WIT/MEN + 2. Can use Blessed Resurrection. Cooldown is 1 hr. Cannot be used in the Olympiad. Can be destroyed and sold in a private warehouse. -->
@@ -754,6 +807,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="2" />
+		</for>
 	</item>
 	<item id="24358" name="Premium Account: Quick Healing Potion" type="EtcItem">
 		<!-- Rerstores 1250 HP, and remaining power restores CP. No duration. Cannot be exchanged, dropped, sold, used in the Olympiad, or used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
@@ -784,8 +840,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -805,9 +861,9 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
 			<add stat="maxHp" val="445" />
 			<add stat="maxMp" val="50" />
+			<add stat="mDef" val="95" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -827,8 +883,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -848,7 +904,7 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -867,7 +923,7 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -884,7 +940,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="24365" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">

@@ -474,8 +474,10 @@
 		<set name="price" val="192622000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="170" />
+			<add stat="mDef" val="170" order="0" />
 			<add stat="maxMp" val="59" />
+			<mul stat="mCritPowerAdd" val="1.10" />
+			<mul stat="critDmgAdd" val="1.10" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -497,7 +499,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="170" />
+			<add stat="mDef" val="170" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -543,9 +545,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36952" name="Air Bike" type="EtcItem">
@@ -941,6 +943,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="36982" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - DEX" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. DEX + 3 when equipped. -->
@@ -951,6 +956,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="36983" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - CON" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. CON + 3 when equipped. -->
@@ -961,6 +969,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="36984" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - MEN" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. MEN + 3 when equipped. -->
@@ -971,6 +982,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="36985" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - INT" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. INT + 3 when equipped. -->
@@ -981,6 +995,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="36986" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - WIT" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. WIT + 3 when equipped. -->
@@ -991,6 +1008,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="36987" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Rate" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Rate + 50 when equipped. -->
@@ -1001,6 +1021,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="36988" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Damage" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -1011,6 +1034,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="36989" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Def." type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Def. + 5% when equipped. -->
@@ -1021,6 +1048,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="36990" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Def." type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Def. + 5% when equipped. -->
@@ -1031,6 +1061,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="36991" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Evasion" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Evasion + 5 when equipped. -->
@@ -1041,6 +1074,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="36992" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Atk." type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. P. Atk. + 5% when equipped. -->
@@ -1051,6 +1087,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="36993" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Atk." type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. M. Atk. + 10% when equipped. -->
@@ -1061,6 +1100,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="36994" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Accuracy" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. Accuracy + 5 when equipped. -->
@@ -1071,6 +1113,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="36995" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (30-day) (Event). -->

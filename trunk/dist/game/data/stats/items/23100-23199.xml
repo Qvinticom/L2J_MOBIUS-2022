@@ -21,10 +21,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
-			<set stat="mAtk" val="176" />
 			<mul stat="maxHp" val="1.25" />
-			<set stat="pAtk" val="482" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="176" />
+			<set stat="pAtk" val="482" />
 		</for>
 	</item>
 	<item id="23101" name="Vesper Caster of Fortune" additionalName="90-day" type="Weapon">
@@ -48,9 +48,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<mul stat="mAtkSpd" val="1.15" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="23102" name="Vesper Singer of Fortune" additionalName="90-day" type="Weapon">
@@ -74,9 +75,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="257" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="23103" name="Vesper Thrower of Fortune" additionalName="90-day" type="Weapon">
@@ -99,11 +100,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
@@ -125,11 +126,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
@@ -151,11 +152,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
@@ -179,9 +180,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="23107" name="Vorpal Helmet of Fortune" additionalName="90-day" type="Armor">
@@ -198,7 +199,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -216,7 +217,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -234,7 +235,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -253,7 +254,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="7520" />
 		<for>
-			<add order="0" stat="pDef" val="263" />
+			<add stat="pDef" val="263" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -272,7 +273,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="4140" />
 		<for>
-			<add order="0" stat="pDef" val="197" />
+			<add stat="pDef" val="197" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -291,7 +292,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1750" />
 		<for>
-			<add order="0" stat="pDef" val="132" />
+			<add stat="pDef" val="132" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -310,7 +311,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="3170" />
 		<for>
-			<add order="0" stat="pDef" val="164" />
+			<add stat="pDef" val="164" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -329,7 +330,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1320" />
 		<for>
-			<add order="0" stat="pDef" val="123" />
+			<add stat="pDef" val="123" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -348,7 +349,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="850" />
 		<for>
-			<add order="0" stat="pDef" val="82" />
+			<add stat="pDef" val="82" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -366,7 +367,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -384,7 +385,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -402,7 +403,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="510" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -420,7 +421,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -438,7 +439,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -456,7 +457,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -473,9 +474,9 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1190" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="399" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="23123" name="Vorpal Sigil of Fortune" additionalName="90-day" type="Armor">
@@ -492,7 +493,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="19" />
+			<add stat="pDef" val="19" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -587,7 +588,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="65" />
+			<add stat="mDef" val="65" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -606,8 +607,8 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="98" />
 			<add stat="maxMp" val="38" />
+			<add stat="mDef" val="98" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -626,8 +627,8 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="131" />
 			<add stat="maxMp" val="51" />
+			<add stat="mDef" val="131" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -714,9 +715,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="23139" name="Vesper Dual Dagger of Fortune" additionalName="90-day" type="Weapon">
@@ -738,11 +739,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="23140" name="Military Underwear" type="Armor">
@@ -757,7 +758,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="23141" name="Premium Underwear" type="Armor">
@@ -772,7 +773,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="23142" name="Temptation Underwear" type="Armor">
@@ -787,7 +788,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="23143" name="Cyber Underwear" type="Armor">
@@ -802,7 +803,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="23144" name="Maid Underwear" type="Armor">
@@ -816,8 +817,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 		<for>
-			<add order="0" stat="pDef" val="42" />
+			<add stat="pDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="23145" name="Consecrated Demon Eliminator" additionalName="Event" type="Armor">

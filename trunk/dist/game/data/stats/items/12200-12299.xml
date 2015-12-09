@@ -13,7 +13,7 @@
 		<set name="price" val="7520" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="12201" name="Common Item - Blue Wolf Tunic" type="Armor">
@@ -30,7 +30,7 @@
 		<set name="price" val="22540" />
 		<set name="weight" val="640" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="12202" name="Common Item - Blue Wolf Helmet" type="Armor">
@@ -46,7 +46,7 @@
 		<set name="price" val="11260" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 		</for>
 	</item>
 	<item id="12203" name="Common Item - Blue Wolf Stockings" type="Armor">
@@ -63,7 +63,7 @@
 		<set name="price" val="14080" />
 		<set name="weight" val="307" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="12204" name="Common Item - Blue Wolf Breastplate" type="Armor">
@@ -80,7 +80,7 @@
 		<set name="price" val="30040" />
 		<set name="weight" val="2607" />
 		<for>
-			<add order="0" stat="pDef" val="166" />
+			<add stat="pDef" val="166" order="0" />
 		</for>
 	</item>
 	<item id="12205" name="Common Item - Stockings of Doom" type="Armor">
@@ -97,7 +97,7 @@
 		<set name="price" val="14080" />
 		<set name="weight" val="303" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="12206" name="Common Item - Dark Crystal Gaiters" type="Armor">
@@ -114,7 +114,7 @@
 		<set name="price" val="115000" />
 		<set name="weight" val="1107" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 		</for>
 	</item>
 	<item id="12207" name="Common Item - Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
@@ -130,7 +130,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12208" name="Common Item - Dark Crystal Gloves" additionalName="Light Armor" type="Armor">
@@ -146,7 +146,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12209" name="Common Item - Dark Crystal Gloves" additionalName="Robe" type="Armor">
@@ -162,7 +162,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12210" name="Common Item - Dark Crystal Leather Armor" type="Armor">
@@ -179,7 +179,7 @@
 		<set name="price" val="137700" />
 		<set name="weight" val="1433" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="12211" name="Common Item - Dark Crystal Robe" type="Armor">
@@ -196,7 +196,7 @@
 		<set name="price" val="224000" />
 		<set name="weight" val="817" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 		</for>
 	</item>
 	<item id="12212" name="Common Item - Dark Crystal Boots" additionalName="Heavy Armor" type="Armor">
@@ -212,7 +212,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12213" name="Common Item - Dark Crystal Boots" additionalName="Light Armor" type="Armor">
@@ -228,7 +228,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12214" name="Common Item - Dark Crystal Boots" additionalName="Robe" type="Armor">
@@ -244,7 +244,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12215" name="Common Item - Dark Crystal Shield" type="Armor">
@@ -259,9 +259,9 @@
 		<set name="price" val="48200" />
 		<set name="weight" val="397" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="12216" name="Common Item - Dark Crystal Helmet" type="Armor">
@@ -277,7 +277,7 @@
 		<set name="price" val="68800" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="12217" name="Common Item - Dark Crystal Breastplate" type="Armor">
@@ -294,7 +294,7 @@
 		<set name="price" val="183500" />
 		<set name="weight" val="2567" />
 		<for>
-			<add order="0" stat="pDef" val="171" />
+			<add stat="pDef" val="171" order="0" />
 		</for>
 	</item>
 	<item id="12218" name="Common Item - Dark Crystal Leggings" type="Armor">
@@ -311,7 +311,7 @@
 		<set name="price" val="86000" />
 		<set name="weight" val="493" />
 		<for>
-			<add order="0" stat="pDef" val="80" />
+			<add stat="pDef" val="80" order="0" />
 		</for>
 	</item>
 	<item id="12219" name="Common Item - Scale Shirt" type="Armor">
@@ -327,7 +327,7 @@
 		<set name="price" val="115000" />
 		<set name="weight" val="43" />
 		<for>
-			<add order="0" stat="pDef" val="23" />
+			<add stat="pDef" val="23" order="0" />
 		</for>
 	</item>
 	<item id="12220" name="Common Item - Sealed Dark Crystal Gaiters" type="Armor">
@@ -344,7 +344,7 @@
 		<set name="price" val="115000" />
 		<set name="weight" val="1107" />
 		<for>
-			<add order="0" stat="pDef" val="107" />
+			<add stat="pDef" val="107" order="0" />
 		</for>
 	</item>
 	<item id="12221" name="Common Item - Sealed Dark Crystal Gloves" type="Armor">
@@ -360,7 +360,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12222" name="Common Item - Sealed Dark Crystal Leather Armor" type="Armor">
@@ -377,7 +377,7 @@
 		<set name="price" val="137700" />
 		<set name="weight" val="1433" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="12223" name="Common Item - Sealed Dark Crystal Robe" type="Armor">
@@ -394,7 +394,7 @@
 		<set name="price" val="224000" />
 		<set name="weight" val="817" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 		</for>
 	</item>
 	<item id="12224" name="Common Item - Sealed Dark Crystal Boots" type="Armor">
@@ -410,7 +410,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12225" name="Common Item - Sealed Dark Crystal Shield" type="Armor">
@@ -425,9 +425,9 @@
 		<set name="price" val="48200" />
 		<set name="weight" val="397" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="12226" name="Common Item - Sealed Dark Crystal Helmet" type="Armor">
@@ -443,7 +443,7 @@
 		<set name="price" val="68800" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="12227" name="Common Item - Sealed Dark Crystal Breastplate" type="Armor">
@@ -460,7 +460,7 @@
 		<set name="price" val="183500" />
 		<set name="weight" val="2567" />
 		<for>
-			<add order="0" stat="pDef" val="171" />
+			<add stat="pDef" val="171" order="0" />
 		</for>
 	</item>
 	<item id="12228" name="Common Item - Sealed Dark Crystal Leggings" type="Armor">
@@ -477,7 +477,7 @@
 		<set name="price" val="86000" />
 		<set name="weight" val="493" />
 		<for>
-			<add order="0" stat="pDef" val="80" />
+			<add stat="pDef" val="80" order="0" />
 		</for>
 	</item>
 	<item id="12229" name="Common Item - Sealed Tallum Gloves" type="Armor">
@@ -493,7 +493,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12230" name="Common Item - Sealed Tallum Leather Armor" type="Armor">
@@ -510,7 +510,7 @@
 		<set name="price" val="224000" />
 		<set name="weight" val="1800" />
 		<for>
-			<add order="0" stat="pDef" val="209" />
+			<add stat="pDef" val="209" order="0" />
 		</for>
 	</item>
 	<item id="12231" name="Common Item - Sealed Tallum Boots" type="Armor">
@@ -526,7 +526,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12232" name="Common Item - Sealed Tallum Tunic" type="Armor">
@@ -543,7 +543,7 @@
 		<set name="price" val="137700" />
 		<set name="weight" val="620" />
 		<for>
-			<add order="0" stat="pDef" val="86" />
+			<add stat="pDef" val="86" order="0" />
 		</for>
 	</item>
 	<item id="12233" name="Common Item - Sealed Tallum Plate Armor" type="Armor">
@@ -560,7 +560,7 @@
 		<set name="price" val="298000" />
 		<set name="weight" val="3260" />
 		<for>
-			<add order="0" stat="pDef" val="278" />
+			<add stat="pDef" val="278" order="0" />
 		</for>
 	</item>
 	<item id="12234" name="Common Item - Sealed Tallum Helmet" type="Armor">
@@ -576,7 +576,7 @@
 		<set name="price" val="68800" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="12235" name="Common Item - Sealed Tallum Stockings" type="Armor">
@@ -593,7 +593,7 @@
 		<set name="price" val="86000" />
 		<set name="weight" val="307" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 		</for>
 	</item>
 	<item id="12236" name="Common Item - Tallum Gloves" additionalName="Heavy Armor" type="Armor">
@@ -609,7 +609,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12237" name="Common Item - Tallum Gloves" additionalName="Light Armor" type="Armor">
@@ -625,7 +625,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12238" name="Common Item - Tallum Gloves" additionalName="Robe" type="Armor">
@@ -641,7 +641,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12239" name="Common Item - Tallum Leather Armor" type="Armor">
@@ -658,7 +658,7 @@
 		<set name="price" val="224000" />
 		<set name="weight" val="1800" />
 		<for>
-			<add order="0" stat="pDef" val="209" />
+			<add stat="pDef" val="209" order="0" />
 		</for>
 	</item>
 	<item id="12240" name="Common Item - Tallum Boots" additionalName="Heavy Armor" type="Armor">
@@ -674,7 +674,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12241" name="Common Item - Tallum Boots" additionalName="Light Armor" type="Armor">
@@ -690,7 +690,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12242" name="Common Item - Tallum Boots" additionalName="Robe" type="Armor">
@@ -706,7 +706,7 @@
 		<set name="price" val="45900" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 		</for>
 	</item>
 	<item id="12243" name="Common Item - Tallum Tunic" type="Armor">
@@ -723,7 +723,7 @@
 		<set name="price" val="137700" />
 		<set name="weight" val="620" />
 		<for>
-			<add order="0" stat="pDef" val="86" />
+			<add stat="pDef" val="86" order="0" />
 		</for>
 	</item>
 	<item id="12244" name="Common Item - Tallum Plate Armor" type="Armor">
@@ -740,7 +740,7 @@
 		<set name="price" val="298000" />
 		<set name="weight" val="3260" />
 		<for>
-			<add order="0" stat="pDef" val="278" />
+			<add stat="pDef" val="278" order="0" />
 		</for>
 	</item>
 	<item id="12245" name="Common Item - Tallum Helmet" type="Armor">
@@ -756,7 +756,7 @@
 		<set name="price" val="68800" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 		</for>
 	</item>
 	<item id="12246" name="Common Item - Tallum Stockings" type="Armor">
@@ -773,7 +773,7 @@
 		<set name="price" val="86000" />
 		<set name="weight" val="307" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 		</for>
 	</item>
 	<item id="12247" name="Common Item - Majestic Gauntlets" additionalName="Heavy Armor" type="Armor">
@@ -789,7 +789,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12248" name="Common Item - Majestic Gauntlets" additionalName="Light Armor" type="Armor">
@@ -805,7 +805,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12249" name="Common Item - Majestic Gauntlets" additionalName="Robe" type="Armor">
@@ -821,7 +821,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12250" name="Common Item - Majestic Leather Armor" type="Armor">
@@ -838,7 +838,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="1783" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 		</for>
 	</item>
 	<item id="12251" name="Common Item - Majestic Robe" type="Armor">
@@ -855,7 +855,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="777" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 		</for>
 	</item>
 	<item id="12252" name="Common Item - Majestic Boots" additionalName="Heavy Armor" type="Armor">
@@ -871,7 +871,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12253" name="Common Item - Majestic Boots" additionalName="Light Armor" type="Armor">
@@ -887,7 +887,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12254" name="Common Item - Majestic Boots" additionalName="Robe" type="Armor">
@@ -903,7 +903,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12255" name="Common Item - Majestic Circlet" type="Armor">
@@ -919,7 +919,7 @@
 		<set name="price" val="110200" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="12256" name="Common Item - Majestic Plate Armor" type="Armor">
@@ -936,7 +936,7 @@
 		<set name="price" val="477000" />
 		<set name="weight" val="3067" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="12257" name="Common Item - Sealed Majestic Gauntlets" type="Armor">
@@ -952,7 +952,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12258" name="Common Item - Sealed Majestic Leather Armor" type="Armor">
@@ -969,7 +969,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="1783" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 		</for>
 	</item>
 	<item id="12259" name="Common Item - Sealed Majestic Robe" type="Armor">
@@ -986,7 +986,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="777" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 		</for>
 	</item>
 	<item id="12260" name="Common Item - Sealed Majestic Boots" type="Armor">
@@ -1002,7 +1002,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12261" name="Common Item - Sealed Majestic Circlet" type="Armor">
@@ -1018,7 +1018,7 @@
 		<set name="price" val="110200" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="12262" name="Common Item - Sealed Majestic Plate Armor" type="Armor">
@@ -1035,7 +1035,7 @@
 		<set name="price" val="477000" />
 		<set name="weight" val="3067" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="12263" name="Common Item - Sealed Armor of Nightmare" type="Armor">
@@ -1052,7 +1052,7 @@
 		<set name="price" val="477000" />
 		<set name="weight" val="3193" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="12264" name="Common Item - Sealed Gauntlets of Nightmare" type="Armor">
@@ -1068,7 +1068,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12265" name="Common Item - Sealed Leather Armor of Nightmare" type="Armor">
@@ -1085,7 +1085,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="1767" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 		</for>
 	</item>
 	<item id="12266" name="Common Item - Sealed Robe of Nightmare" type="Armor">
@@ -1102,7 +1102,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="767" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 		</for>
 	</item>
 	<item id="12267" name="Common Item - Sealed Boots of Nightmare" type="Armor">
@@ -1118,7 +1118,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12268" name="Common Item - Sealed Shield of Nightmare" type="Armor">
@@ -1133,9 +1133,9 @@
 		<set name="price" val="77100" />
 		<set name="weight" val="393" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="12269" name="Common Item - Sealed Helm of Nightmare" type="Armor">
@@ -1151,7 +1151,7 @@
 		<set name="price" val="110200" />
 		<set name="weight" val="187" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="12270" name="Common Item - Armor of Nightmare" type="Armor">
@@ -1168,7 +1168,7 @@
 		<set name="price" val="477000" />
 		<set name="weight" val="3193" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 		</for>
 	</item>
 	<item id="12271" name="Common Item - Gauntlets of Nightmare" additionalName="Heavy Armor" type="Armor">
@@ -1184,7 +1184,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12272" name="Common Item - Gauntlets of Nightmare" additionalName="Light Armor" type="Armor">
@@ -1200,7 +1200,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12273" name="Common Item - Gauntlets of Nightmare" additionalName="Robe" type="Armor">
@@ -1216,7 +1216,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12274" name="Common Item - Leather Armor of Nightmare" type="Armor">
@@ -1233,7 +1233,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="1767" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 		</for>
 	</item>
 	<item id="12275" name="Common Item - Robe of Nightmare" type="Armor">
@@ -1250,7 +1250,7 @@
 		<set name="price" val="358000" />
 		<set name="weight" val="767" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 		</for>
 	</item>
 	<item id="12276" name="Common Item - Boots of Nightmare" additionalName="Heavy Armor" type="Armor">
@@ -1266,7 +1266,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12277" name="Common Item - Boots of Nightmare" additionalName="Light Armor" type="Armor">
@@ -1282,7 +1282,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12278" name="Common Item - Boots of Nightmare" additionalName="Robe" type="Armor">
@@ -1298,7 +1298,7 @@
 		<set name="price" val="73500" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="12279" name="Common Item - Shield of Nightmare" type="Armor">
@@ -1313,9 +1313,9 @@
 		<set name="price" val="77100" />
 		<set name="weight" val="393" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="12280" name="Common Item - Helm of Nightmare" type="Armor">
@@ -1331,7 +1331,7 @@
 		<set name="price" val="110200" />
 		<set name="weight" val="187" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 		</for>
 	</item>
 	<item id="12281" name="Common Item - Striped Scale Shirt" type="Armor">
@@ -1347,7 +1347,7 @@
 		<set name="price" val="184000" />
 		<set name="weight" val="43" />
 		<for>
-			<add order="0" stat="pDef" val="26" />
+			<add stat="pDef" val="26" order="0" />
 		</for>
 	</item>
 	<item id="12282" name="Common Item - Draconic Leather Gloves" type="Armor">
@@ -1363,7 +1363,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12283" name="Common Item - Draconic Leather Boots" type="Armor">
@@ -1379,7 +1379,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12284" name="Common Item - Draconic Leather Armor" type="Armor">
@@ -1396,7 +1396,7 @@
 		<set name="price" val="1267000" />
 		<set name="weight" val="1650" />
 		<for>
-			<add order="0" stat="pDef" val="249" />
+			<add stat="pDef" val="249" order="0" />
 		</for>
 	</item>
 	<item id="12285" name="Common Item - Draconic Leather Helmet" type="Armor">
@@ -1412,7 +1412,7 @@
 		<set name="price" val="389700" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="12286" name="Common Item - Major Arcana Gloves" type="Armor">
@@ -1428,7 +1428,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12287" name="Common Item - Major Arcana Robe" type="Armor">
@@ -1445,7 +1445,7 @@
 		<set name="price" val="1267000" />
 		<set name="weight" val="767" />
 		<for>
-			<add order="0" stat="pDef" val="166" />
+			<add stat="pDef" val="166" order="0" />
 		</for>
 	</item>
 	<item id="12288" name="Common Item - Major Arcana Boots" type="Armor">
@@ -1461,7 +1461,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12289" name="Common Item - Major Arcana Circlet" type="Armor">
@@ -1477,7 +1477,7 @@
 		<set name="price" val="389700" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="12290" name="Common Item - Mithril Shirt" type="Armor">
@@ -1493,7 +1493,7 @@
 		<set name="price" val="650000" />
 		<set name="weight" val="43" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="12291" name="Common Item - Sealed Draconic Leather Gloves" type="Armor">
@@ -1509,7 +1509,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12292" name="Common Item - Sealed Draconic Leather Boots" type="Armor">
@@ -1525,7 +1525,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12293" name="Common Item - Sealed Draconic Leather Armor" type="Armor">
@@ -1542,7 +1542,7 @@
 		<set name="price" val="1267000" />
 		<set name="weight" val="1650" />
 		<for>
-			<add order="0" stat="pDef" val="236" />
+			<add stat="pDef" val="236" order="0" />
 		</for>
 	</item>
 	<item id="12294" name="Common Item - Sealed Draconic Leather Helmet" type="Armor">
@@ -1558,7 +1558,7 @@
 		<set name="price" val="389700" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="12295" name="Common Item - Sealed Major Arcana Gloves" type="Armor">
@@ -1574,7 +1574,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12296" name="Common Item - Sealed Major Arcana Robe" type="Armor">
@@ -1591,7 +1591,7 @@
 		<set name="price" val="1267000" />
 		<set name="weight" val="767" />
 		<for>
-			<add order="0" stat="pDef" val="157" />
+			<add stat="pDef" val="157" order="0" />
 		</for>
 	</item>
 	<item id="12297" name="Common Item - Sealed Major Arcana Boots" type="Armor">
@@ -1607,7 +1607,7 @@
 		<set name="price" val="259800" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="12298" name="Common Item - Sealed Major Arcana Circlet" type="Armor">
@@ -1623,7 +1623,7 @@
 		<set name="price" val="389700" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="12299" name="Common Item - Sealed Imperial Crusader Gaiters" type="Armor">
@@ -1640,7 +1640,7 @@
 		<set name="price" val="650000" />
 		<set name="weight" val="1087" />
 		<for>
-			<add order="0" stat="pDef" val="121" />
+			<add stat="pDef" val="121" order="0" />
 		</for>
 	</item>
 </list>

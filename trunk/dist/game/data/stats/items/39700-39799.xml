@@ -8,6 +8,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39701" name="Little Angel Wings" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -17,6 +20,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39702" name="Fairy Antennae" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -26,6 +32,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39703" name="Fairy Antennae" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -35,6 +44,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="50000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39704" name="Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -44,6 +56,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39705" name="Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -53,6 +68,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39706" name="Artisan's Goggles" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -62,6 +80,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39707" name="Artisan's Goggles" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -71,6 +92,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39708" name="Arrow-pierced Apple" additionalName="LUC" type="Armor">
 		<!-- LUC + 3. -->
@@ -80,6 +104,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39709" name="Arrow-pierced Apple" additionalName="CHA" type="Armor">
 		<!-- CHA + 3. -->
@@ -89,6 +116,9 @@
 		<set name="material" val="WOOD" />
 		<set name="price" val="200000" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39710" name="Irene's Brooch" type="Armor">
 		<!-- Made by Shadai, who was inspired by Moon Voice Irene. Activates 5 Jewel Slots. -->
@@ -100,7 +130,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 		</for>
 	</item>
 	<item id="39711" name="Shining Mysterious Fragment" type="EtcItem">
@@ -202,9 +232,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="39718" name="Boxing Glove" type="Weapon">
@@ -228,9 +258,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="39719" name="Monster Only: Crook's Staff" type="Weapon">
@@ -252,11 +282,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="39720" name="Maphr's Luck Potion" type="EtcItem">
@@ -714,6 +744,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="1" />
+		</for>
 	</item>
 	<item id="39757" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 2. -->
@@ -729,6 +762,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="2" />
+		</for>
 	</item>
 	<item id="39758" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 3. -->
@@ -744,6 +780,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="39759" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 4. -->
@@ -759,6 +798,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="4" />
+		</for>
 	</item>
 	<item id="39760" name="Dimensional Bracelet" additionalName="Stage 1 - STR" type="Armor">
 		<!-- Activates 1 Talisman Slot. STR + 5. -->
@@ -774,6 +816,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="5" />
+		</for>
 	</item>
 	<item id="39761" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 1. -->
@@ -789,6 +834,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="1" />
+		</for>
 	</item>
 	<item id="39762" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 2. -->
@@ -804,6 +852,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="2" />
+		</for>
 	</item>
 	<item id="39763" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 3. -->
@@ -819,6 +870,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="39764" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 4. -->
@@ -834,6 +888,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="4" />
+		</for>
 	</item>
 	<item id="39765" name="Dimensional Bracelet" additionalName="Stage 1 - DEX" type="Armor">
 		<!-- Activates 1 Talisman Slot. DEX + 5. -->
@@ -849,6 +906,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="5" />
+		</for>
 	</item>
 	<item id="39766" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 1. -->
@@ -864,6 +924,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="1" />
+		</for>
 	</item>
 	<item id="39767" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 2. -->
@@ -879,6 +942,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="2" />
+		</for>
 	</item>
 	<item id="39768" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 3. -->
@@ -894,6 +960,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="39769" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 4. -->
@@ -909,6 +978,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="4" />
+		</for>
 	</item>
 	<item id="39770" name="Dimensional Bracelet" additionalName="Stage 1 - CON" type="Armor">
 		<!-- Activates 1 Talisman Slot. CON + 5. -->
@@ -924,6 +996,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="5" />
+		</for>
 	</item>
 	<item id="39771" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 1. -->
@@ -939,6 +1014,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="1" />
+		</for>
 	</item>
 	<item id="39772" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 2. -->
@@ -954,6 +1032,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="2" />
+		</for>
 	</item>
 	<item id="39773" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 3. -->
@@ -969,6 +1050,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="39774" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 4. -->
@@ -984,6 +1068,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="4" />
+		</for>
 	</item>
 	<item id="39775" name="Dimensional Bracelet" additionalName="Stage 1 - INT" type="Armor">
 		<!-- Activates 1 Talisman Slot. INT + 5. -->
@@ -999,6 +1086,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="39776" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 1. -->
@@ -1014,6 +1104,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="1" />
+		</for>
 	</item>
 	<item id="39777" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 2. -->
@@ -1029,6 +1122,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="2" />
+		</for>
 	</item>
 	<item id="39778" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 3. -->
@@ -1044,6 +1140,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="39779" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 4. -->
@@ -1059,6 +1158,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="4" />
+		</for>
 	</item>
 	<item id="39780" name="Dimensional Bracelet" additionalName="Stage 1 - MEN" type="Armor">
 		<!-- Activates 1 Talisman Slot. MEN + 5. -->
@@ -1074,6 +1176,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="5" />
+		</for>
 	</item>
 	<item id="39781" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 1. -->
@@ -1089,6 +1194,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="1" />
+		</for>
 	</item>
 	<item id="39782" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 2. -->
@@ -1104,6 +1212,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="2" />
+		</for>
 	</item>
 	<item id="39783" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 3. -->
@@ -1119,6 +1230,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="39784" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 4. -->
@@ -1134,6 +1248,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="4" />
+		</for>
 	</item>
 	<item id="39785" name="Dimensional Bracelet" additionalName="Stage 1 - WIT" type="Armor">
 		<!-- Activates 1 Talisman Slot. WIT + 5. -->
@@ -1149,6 +1266,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="5" />
+		</for>
 	</item>
 	<item id="39786" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 1. -->
@@ -1164,6 +1284,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="LUC" val="1" />
+		</for>
 	</item>
 	<item id="39787" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 2. -->
@@ -1179,6 +1302,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="LUC" val="2" />
+		</for>
 	</item>
 	<item id="39788" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 3. -->
@@ -1194,6 +1320,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="39789" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 4. -->
@@ -1209,6 +1338,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="LUC" val="4" />
+		</for>
 	</item>
 	<item id="39790" name="Dimensional Bracelet" additionalName="Stage 1 - LUC" type="Armor">
 		<!-- Activates 1 Talisman Slot. LUC + 5. -->
@@ -1224,6 +1356,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="LUC" val="5" />
+		</for>
 	</item>
 	<item id="39791" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 1. -->
@@ -1239,6 +1374,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CHA" val="1" />
+		</for>
 	</item>
 	<item id="39792" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 2. -->
@@ -1254,6 +1392,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CHA" val="2" />
+		</for>
 	</item>
 	<item id="39793" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 3. -->
@@ -1269,6 +1410,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="39794" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 4. -->
@@ -1284,6 +1428,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CHA" val="4" />
+		</for>
 	</item>
 	<item id="39795" name="Dimensional Bracelet" additionalName="Stage 1 - CHA" type="Armor">
 		<!-- Activates 1 Talisman Slot. CHA + 5. -->
@@ -1299,6 +1446,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CHA" val="5" />
+		</for>
 	</item>
 	<item id="39796" name="Dimensional Bracelet" additionalName="Stage 2 - Basic" type="Armor">
 		<!-- Activates 2 Talisman Slots. -->

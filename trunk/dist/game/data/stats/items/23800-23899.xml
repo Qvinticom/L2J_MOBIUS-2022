@@ -375,6 +375,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="rEvas" val="4" />
+			<add stat="mEvas" val="4" />
+			<set stat="pAtk" val="154" />
+			<set stat="mAtk" val="181" />
+		</for>
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!--  Attribute Resistance + 10 and Debuff Resistance + 10%.. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -384,6 +390,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="fireRes" val="10" />
+			<add stat="waterRes" val="10" />
+			<add stat="windRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="holyRes" val="10" />
+			<add stat="darkRes" val="10" />
+		</for>
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
 		<!--  P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%.. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -393,6 +407,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.08" />
+			<mul stat="mCritRate" val="1.08" />
+		</for>
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
 		<!--  Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5.. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -402,6 +420,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="maxCp" val="325" />
+			<add stat="maxHp" val="325" />
+			<add stat="maxMp" val="325" />
+		</for>
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
 		<!--  P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage - 15%, and skill damage during PvP - 15%. Additionally, skill damage received during PvP is dec -->
@@ -411,6 +434,20 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="rEvas" val="7" />
+			<add stat="mEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
 		<!--  P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7.. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equi -->
@@ -420,6 +457,19 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="rEvas" val="7" />
+			<add stat="mEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="maxCp" val="490" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
 		<!--  P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.. Note: Effect for the Talisman of Abundance does -->
@@ -429,6 +479,15 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="rEvas" val="7" />
+			<add stat="mEvas" val="7" />
+			<set stat="pAtk" val="231" />
+			<set stat="mAtk" val="271" />
+			<add stat="maxCp" val="490" />
+		</for>
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
 		<!--  Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%.. Note: Effect for the Talisman of Abundance does not  -->
@@ -438,6 +497,17 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.13" />
+			<mul stat="mCritRate" val="1.13" />
+			<add stat="maxCp" val="490" />
+			<add stat="fireRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="windRes" val="15" />
+			<add stat="earthRes" val="15" />
+			<add stat="holyRes" val="15" />
+			<add stat="darkRes" val="15" />
+		</for>
 	</item>
 	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">
 		<!-- Has a chance of obtaining either Talisman - Abundance: War, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Br -->

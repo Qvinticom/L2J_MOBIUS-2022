@@ -171,9 +171,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22712" name="Japanese Dagger" type="Weapon">
@@ -193,11 +193,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22713" name="Japanese Long Sword" type="Weapon">
@@ -218,9 +218,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22714" name="Japanese Fist Weapon" type="Weapon">
@@ -242,9 +242,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22715" name="Japanese Great Spear" type="Weapon">
@@ -264,11 +264,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22716" name="Japanese Bow" type="Weapon">
@@ -289,11 +289,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22717" name="Japanese Crossbow" type="Weapon">
@@ -313,11 +313,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="22718" name="Japanese Blunt Weapon" type="Weapon">
@@ -339,9 +339,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22719" name="Japanese Giant Blunt Weapon" type="Weapon">
@@ -363,9 +363,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22720" name="Japanese Magic Blunt Weapon" type="Weapon">
@@ -387,9 +387,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="22721" name="Japanese Giant Magic Blunt Weapon" type="Weapon">
@@ -411,9 +411,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22722" name="Japanese Dualsword" type="Weapon">
@@ -434,9 +434,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22723" name="Japanese Double Dagger" type="Weapon">
@@ -456,11 +456,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="51" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="51" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="22724" name="Japanese Double Blunt Weapon" type="Weapon">
@@ -482,9 +482,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="4" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22725" name="Japanese Shield" type="Armor">
@@ -499,10 +499,10 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
-			<sub stat="rEvas" val="8" />
-			<set stat="rShld" val="20" />
+			<add stat="pDef" val="25" order="0" />
 			<set stat="sDef" val="216" />
+			<set stat="rShld" val="20" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -519,9 +519,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="47" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="22727" name="Japanese Sword Appearance Stone" type="EtcItem">
@@ -1157,9 +1157,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22776" name="Drake Maul" additionalName="HP Drain" type="Weapon">
@@ -1181,9 +1181,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22777" name="Drake Maul" additionalName="HP Regeneration" type="Weapon">
@@ -1204,9 +1204,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22778" name="Drake Maul" additionalName="Health" type="Weapon">
@@ -1228,9 +1228,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22779" name="Drake Maul (PvP)" type="Weapon">
@@ -1254,9 +1254,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22780" name="Drake Maul (PvP) - HP Drain" type="Weapon">
@@ -1281,9 +1281,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22781" name="Drake Maul (PvP) - HP Regeneration" type="Weapon">
@@ -1308,9 +1308,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22782" name="Drake Maul (PvP) - Health" type="Weapon">
@@ -1335,9 +1335,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22783" name="Drake Maul - Evil Spirit" type="Weapon">
@@ -1358,9 +1358,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22784" name="Drake Maul - Evil Spirit" additionalName="HP Drain" type="Weapon">
@@ -1382,9 +1382,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22785" name="Drake Maul - Evil Spirit" additionalName="HP Regeneration" type="Weapon">
@@ -1405,9 +1405,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22786" name="Drake Maul - Evil Spirit" additionalName="Health" type="Weapon">
@@ -1429,9 +1429,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22787" name="Drake Maul - Evil Spirit (PvP)" type="Weapon">
@@ -1455,9 +1455,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22788" name="Drake Maul - Evil Spirit (PvP) - HP Drain" type="Weapon">
@@ -1482,9 +1482,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22789" name="Drake Maul - Evil Spirit (PvP) - HP Regeneration" type="Weapon">
@@ -1509,9 +1509,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22790" name="Drake Maul - Evil Spirit (PvP) - Health" type="Weapon">
@@ -1536,9 +1536,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22791" name="Freya's Staff" type="Weapon">
@@ -1559,9 +1559,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22792" name="Freya's Staff" additionalName="Magic Hold" type="Weapon">
@@ -1583,9 +1583,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22793" name="Freya's Staff" additionalName="Empower" type="Weapon">
@@ -1607,9 +1607,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22794" name="Freya's Staff" additionalName="MP Regeneration" type="Weapon">
@@ -1631,9 +1631,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22795" name="Freya's Staff (PvP)" type="Weapon">
@@ -1657,9 +1657,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22796" name="Freya's Staff (PvP) - Magic Hold" type="Weapon">
@@ -1684,9 +1684,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22797" name="Freya's Staff (PvP) - Empower" type="Weapon">
@@ -1711,9 +1711,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22798" name="Freya's Staff (PvP) - MP Regeneration" type="Weapon">
@@ -1738,9 +1738,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="22799" name="Freya's Staff - Cleverness" type="Weapon">
@@ -1761,9 +1761,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="281" />
 			<set stat="pAtk" val="426" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

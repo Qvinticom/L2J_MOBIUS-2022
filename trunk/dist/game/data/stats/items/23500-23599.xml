@@ -83,6 +83,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23514" name="Maid Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Maid Costume. Can be used only on hair accessories that take up 2 slots. Female only. -->
@@ -97,6 +100,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="23529" name="Fantasy Isle Instant Camera" additionalName="Event" type="Armor">
 		<!-- Instant Camera given once a day during the Fantasy Isle Festival for quests. 3-hour. Cannot be exchanged or dropped. Can be destroyed and stored in a private warehouse. -->

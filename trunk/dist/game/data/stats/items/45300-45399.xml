@@ -30,9 +30,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="303" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="45375" name="Alien Nano Supplement" additionalName="Event" type="EtcItem">
@@ -96,9 +96,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="303" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="45381" name="Charged Plasma Gun" additionalName="1-hour" type="Weapon">
@@ -118,9 +118,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="303" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="303" />
 		</for>
 	</item>
 	<item id="45382" name="Top Hat" additionalName="15-day" type="Armor">
@@ -150,6 +150,9 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="21600" />
 		<set name="weight" val="10" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
 		<!-- Hat worn by Lei Feng. Uses 1 hair accessory slot. -->

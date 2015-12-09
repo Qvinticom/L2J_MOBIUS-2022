@@ -159,11 +159,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37015" name="Elemental Reaper" type="Weapon">
@@ -179,11 +179,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37016" name="Spectral Reaper" type="Weapon">
@@ -199,11 +199,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37017" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
@@ -731,9 +731,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37048" name="Sword of Corruption" type="Weapon">
@@ -754,9 +754,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37049" name="Octavis' Sword" type="Weapon">
@@ -777,9 +777,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37050" name="Tegaffe's Dualsword" type="Weapon">
@@ -800,9 +800,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37051" name="Seknus' One-handed Magic Sword" type="Weapon">
@@ -823,9 +823,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37052" name="Tebot's Axe" type="Weapon">
@@ -846,9 +846,9 @@
 		<set name="weight" val="172" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37053" name="Glakias' Hammer" type="Weapon">
@@ -869,9 +869,9 @@
 		<set name="weight" val="172" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37054" name="Tebot's Dual Blunt Weapon" type="Weapon">
@@ -892,9 +892,9 @@
 		<set name="weight" val="250" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37055" name="Drakos' Dagger" type="Weapon">
@@ -915,9 +915,9 @@
 		<set name="weight" val="106" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37056" name="Drakos' Dual Dagger" type="Weapon">
@@ -938,9 +938,9 @@
 		<set name="weight" val="205" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37057" name="Guillotine's Greatsword" type="Weapon">
@@ -961,9 +961,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37058" name="Thesakar's Spear" type="Weapon">
@@ -984,9 +984,9 @@
 		<set name="weight" val="205" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37059" name="Mimilead's Staff" type="Weapon">
@@ -1007,9 +1007,9 @@
 		<set name="weight" val="101" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37060" name="Satyr's Staff" type="Weapon">
@@ -1030,9 +1030,9 @@
 		<set name="weight" val="101" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37061" name="Kanadis' Hand" type="Weapon">
@@ -1053,9 +1053,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37062" name="Kanadis' Bow" type="Weapon">
@@ -1077,9 +1077,9 @@
 		<set name="weight" val="181" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37063" name="Centaur's Bow" type="Weapon">
@@ -1100,9 +1100,9 @@
 		<set name="weight" val="181" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37064" name="Spicula's Crossbow" type="Weapon">
@@ -1123,9 +1123,9 @@
 		<set name="weight" val="181" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37065" name="Theor's Shield" type="Armor">
@@ -1140,7 +1140,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1156,7 +1156,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1458,14 +1458,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="10" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<add stat="waterRes" val="10" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="holyRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="37093" name="Dimensional Cloak of Darkness" type="Armor">
@@ -1490,14 +1490,14 @@
 			</and>
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="10" />
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
 			<add stat="waterRes" val="10" />
 			<add stat="windRes" val="10" />
+			<add stat="mDef" val="40" order="0" />
+			<add stat="holyRes" val="10" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="37094" name="Dimensional Treasure Chest (Low-grade)" type="EtcItem">

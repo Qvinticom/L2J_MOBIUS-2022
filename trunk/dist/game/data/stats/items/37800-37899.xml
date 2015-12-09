@@ -57,9 +57,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37806" name="Master Yogi's Staff" type="Weapon">
@@ -75,9 +75,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37807" name="Master Yogi's Staff" type="Weapon">
@@ -93,9 +93,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37808" name="Master Yogi's Staff" type="Weapon">
@@ -111,9 +111,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="12" />
 			<set stat="pAtk" val="11" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37809" name="Mysterious Crystal" type="EtcItem">
@@ -793,11 +793,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="881" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="881" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37869" name="Hero's Weapon: One-handed Sword" additionalName="15-day" type="Weapon">
@@ -820,9 +820,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37870" name="Hero's Weapon: Two-handed Sword" additionalName="15-day" type="Weapon">
@@ -845,9 +845,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37871" name="Hero's Weapon: One-handed Blunt Weapon" additionalName="15-day" type="Weapon">
@@ -871,9 +871,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37872" name="Hero's Weapon: Fist Weapon" additionalName="15-day" type="Weapon">
@@ -897,9 +897,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37873" name="Hero's Weapon: Spear" additionalName="15-day" type="Weapon">
@@ -921,11 +921,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37874" name="Hero's Weapon: Bow" additionalName="15-day" type="Weapon">
@@ -947,11 +947,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1983" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1983" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37875" name="Hero's Weapon: Crossbow" additionalName="15-day" type="Weapon">
@@ -973,11 +973,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1786" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1786" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37876" name="Hero's Weapon: One-handed Magic Sword" additionalName="15-day" type="Weapon">
@@ -1000,9 +1000,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37877" name="Hero's Weapon: One-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
@@ -1026,9 +1026,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37878" name="Hero's Weapon: Two-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
@@ -1052,9 +1052,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="765" />
 			<set stat="pAtk" val="981" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37879" name="Hero's Weapon: Dualsword" additionalName="15-day" type="Weapon">
@@ -1077,9 +1077,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37880" name="Hero's Weapon: Dual Dagger" additionalName="15-day" type="Weapon">
@@ -1101,11 +1101,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37881" name="Hero's Weapon: Dual Blunt Weapon" additionalName="15-day" type="Weapon">
@@ -1129,9 +1129,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37882" name="Hero's Weapon Coupon" additionalName="15-day" type="EtcItem">

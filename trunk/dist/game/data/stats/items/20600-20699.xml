@@ -22,9 +22,9 @@
 		<set name="weapon_type" val="BLUNT" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20601" name="Anniversary Hat" additionalName="Soul of Phoenix (7-day)" type="Armor">
@@ -677,9 +677,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20640" name="Common Item - Light Crossbow" type="Weapon">
@@ -706,11 +706,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="20641" name="Common Item - Knight's Sword*Elven Sword" type="Weapon">
@@ -735,9 +735,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20642" name="Common Item - Mithril Gloves" type="Armor">
@@ -755,7 +755,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="20643" name="Common Item - Plate Boots" type="Armor">
@@ -773,7 +773,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="20644" name="Common Item - Plate Shield" type="Armor">
@@ -790,9 +790,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="154" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="20645" name="Common Item - Plate Helmet" type="Armor">
@@ -810,7 +810,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 		</for>
 	</item>
 	<item id="20646" name="Common Item - Plate Gaiters" type="Armor">
@@ -829,7 +829,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="70" />
+			<add stat="pDef" val="70" order="0" />
 		</for>
 	</item>
 	<item id="20647" name="Common Item - Half Plate Armor" type="Armor">
@@ -848,7 +848,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="111" />
+			<add stat="pDef" val="111" order="0" />
 		</for>
 	</item>
 	<item id="20648" name="Common Item - Salamander Skin Mail" type="Armor">
@@ -866,7 +866,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="136" />
+			<add stat="pDef" val="136" order="0" />
 		</for>
 	</item>
 	<item id="20649" name="Common Item - Ghost Staff" type="Weapon">
@@ -893,9 +893,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20650" name="Common Item - Mithril Tunic" type="Armor">
@@ -914,7 +914,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="20651" name="Common Item - Mithril Stockings" type="Armor">
@@ -933,7 +933,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 		</for>
 	</item>
 	<item id="20652" name="Common Item - Salamander Skin Boots" type="Armor">
@@ -951,7 +951,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="20653" name="Common Item - Ogre Power Gauntlets" type="Armor">
@@ -969,7 +969,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="100" />
 		<for>
-			<add order="0" stat="pDef" val="29" />
+			<add stat="pDef" val="29" order="0" />
 		</for>
 	</item>
 	<item id="20654" name="Agathion - Lucky Girl" type="Armor">

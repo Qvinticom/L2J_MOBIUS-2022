@@ -415,7 +415,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="112" />
+			<add stat="pDef" val="112" order="0" />
 		</for>
 	</item>
 	<item id="12741" name="Baby Pet Bronze Armor" type="Armor">
@@ -433,7 +433,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="124" />
+			<add stat="pDef" val="124" order="0" />
 		</for>
 	</item>
 	<item id="12742" name="Baby Pet Plate Armor" type="Armor">
@@ -451,7 +451,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="136" />
+			<add stat="pDef" val="136" order="0" />
 		</for>
 	</item>
 	<item id="12743" name="Baby Pet Mithril Armor" type="Armor">
@@ -469,7 +469,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="148" />
+			<add stat="pDef" val="148" order="0" />
 		</for>
 	</item>
 	<item id="12744" name="Baby Pet Oriharukon Armor" type="Armor">
@@ -487,7 +487,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="160" />
+			<add stat="pDef" val="160" order="0" />
 		</for>
 	</item>
 	<item id="12745" name="Baby Pet Orichalcum Armor" type="Armor">
@@ -505,7 +505,7 @@
 			<player categoryType="BABY_PET_GROUP,UPGRADE_BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="171" />
+			<add stat="pDef" val="171" order="0" />
 		</for>
 	</item>
 	<item id="12746" name="Crystal Pendant" type="Armor">
@@ -522,7 +522,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="22" />
+			<add stat="mDef" val="22" order="0" />
 		</for>
 	</item>
 	<item id="12747" name="Ruby Pendant" type="Armor">
@@ -539,7 +539,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="30" />
+			<add stat="mDef" val="30" order="0" />
 		</for>
 	</item>
 	<item id="12748" name="Sapphire Pendant" type="Armor">
@@ -556,7 +556,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="40" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="12749" name="Diamond Pendant" type="Armor">
@@ -573,7 +573,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="52" />
+			<add stat="mDef" val="52" order="0" />
 		</for>
 	</item>
 	<item id="12750" name="Enria Pendant" type="Armor">
@@ -590,7 +590,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="66" />
+			<add stat="mDef" val="66" order="0" />
 		</for>
 	</item>
 	<item id="12751" name="Thons Pendant" type="Armor">
@@ -607,7 +607,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="80" />
+			<add stat="mDef" val="80" order="0" />
 		</for>
 	</item>
 	<item id="12752" name="Asofe Pendant" type="Armor">
@@ -624,7 +624,7 @@
 			<player categoryType="ITEM_EQUIP_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="94" />
+			<add stat="mDef" val="94" order="0" />
 		</for>
 	</item>
 	<item id="12753" name="Scroll of Escape: Kamael Village" type="EtcItem">
@@ -1178,9 +1178,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12794" name="X Stick" additionalName="30-day" type="Weapon">
@@ -1203,9 +1203,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12795" name="Scissors Stick" additionalName="30-day" type="Weapon">
@@ -1228,9 +1228,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12796" name="Rock Stick" additionalName="30-day" type="Weapon">
@@ -1253,9 +1253,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12797" name="Paper Stick" additionalName="30-day" type="Weapon">
@@ -1278,9 +1278,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12798" name="Snowman Transformation Stick" type="Weapon">
@@ -1303,9 +1303,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="12799" name="Scarecrow Transformation Stick" type="Weapon">
@@ -1328,9 +1328,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

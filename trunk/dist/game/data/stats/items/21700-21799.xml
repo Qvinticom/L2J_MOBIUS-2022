@@ -92,7 +92,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="21707" name="Blessed Scroll: Enchant Power Shirt" additionalName="Event" type="EtcItem">
@@ -170,8 +170,8 @@
 		<set name="price" val="11394000" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
 			<add stat="maxMp" val="37" />
+			<add stat="mDef" val="94" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -215,13 +215,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="15" />
-			<add stat="earthRes" val="5" />
-			<add stat="fireRes" val="5" />
-			<add stat="holyRes" val="5" />
-			<add order="0" stat="pDef" val="20" />
 			<add stat="waterRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="pDef" val="20" order="0" />
+			<add stat="holyRes" val="5" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="darkRes" val="15" />
 		</for>
 	</item>
 	<item id="21717" name="Cloak of Freya" type="Armor">
@@ -240,13 +240,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="20" />
-			<add order="0" stat="pDef" val="30" />
 			<add stat="waterRes" val="20" />
 			<add stat="windRes" val="20" />
+			<add stat="pDef" val="30" order="0" />
+			<add stat="holyRes" val="20" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="21718" name="Frintezza's Cloak" type="Armor">
@@ -265,13 +265,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="15" />
-			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
-			<add stat="holyRes" val="5" />
-			<add order="0" stat="pDef" val="20" />
 			<add stat="waterRes" val="5" />
 			<add stat="windRes" val="5" />
+			<add stat="pDef" val="20" order="0" />
+			<add stat="holyRes" val="5" />
+			<add stat="earthRes" val="15" />
+			<add stat="fireRes" val="15" />
+			<add stat="darkRes" val="15" />
 		</for>
 	</item>
 	<item id="21719" name="Zaken's Soul Cloak" type="Armor">
@@ -293,13 +293,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="5" />
-			<add stat="fireRes" val="5" />
-			<add stat="holyRes" val="5" />
-			<add order="0" stat="pDef" val="40" />
 			<add stat="waterRes" val="10" />
 			<add stat="windRes" val="10" />
+			<add stat="pDef" val="40" order="0" />
+			<add stat="holyRes" val="5" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="21720" name="Freya's Soul Cloak" type="Armor">
@@ -321,13 +321,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="5" />
-			<add stat="earthRes" val="5" />
-			<add stat="fireRes" val="5" />
-			<add stat="holyRes" val="15" />
-			<add order="0" stat="pDef" val="60" />
 			<add stat="waterRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="pDef" val="60" order="0" />
+			<add stat="holyRes" val="15" />
+			<add stat="earthRes" val="5" />
+			<add stat="fireRes" val="5" />
+			<add stat="darkRes" val="5" />
 		</for>
 	</item>
 	<item id="21721" name="Frintezza's Soul Cloak" type="Armor">
@@ -349,13 +349,13 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add stat="darkRes" val="10" />
-			<add stat="earthRes" val="10" />
-			<add stat="fireRes" val="10" />
-			<add stat="holyRes" val="5" />
-			<add order="0" stat="pDef" val="40" />
 			<add stat="waterRes" val="5" />
 			<add stat="windRes" val="5" />
+			<add stat="pDef" val="40" order="0" />
+			<add stat="holyRes" val="5" />
+			<add stat="earthRes" val="10" />
+			<add stat="fireRes" val="10" />
+			<add stat="darkRes" val="10" />
 		</for>
 	</item>
 	<item id="21722" name="Zaken's Soul Fragment" type="EtcItem">
@@ -495,11 +495,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1070" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="47" />
-			<set stat="pAtk" val="69" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="69" />
+			<set stat="mAtk" val="47" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -520,9 +520,9 @@
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -543,9 +543,9 @@
 		<set name="weight" val="2020" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -567,9 +567,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="63" />
 			<set stat="pAtk" val="63" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -591,9 +591,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="79" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -615,9 +615,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="69" />
 			<set stat="pAtk" val="77" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -639,9 +639,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -661,11 +661,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2060" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="47" />
-			<set stat="pAtk" val="79" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="79" />
+			<set stat="mAtk" val="47" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -686,11 +686,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1820" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="51" />
-			<set stat="pAtk" val="179" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="179" />
+			<set stat="mAtk" val="51" />
+			<sub stat="accCombat" val="3.75" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -710,11 +710,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1450" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="47" />
-			<set stat="pAtk" val="72" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="72" />
+			<set stat="mAtk" val="47" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -735,9 +735,9 @@
 		<set name="weight" val="1450" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="63" />
 			<set stat="pAtk" val="63" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -758,9 +758,9 @@
 		<set name="weight" val="2470" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -782,9 +782,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="96" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -809,9 +809,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="86" />
-			<set stat="pAtkSpd" val="350" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -831,11 +831,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1820" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="47" />
-			<set stat="pAtk" val="100" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="100" />
+			<set stat="mAtk" val="47" />
+			<sub stat="accCombat" val="1.5" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -943,9 +943,9 @@
 		<set name="weight" val="100" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21755" name="Manor Scholar's Hat" type="Armor">
@@ -1139,7 +1139,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="7620" />
 		<for>
-			<add order="0" stat="pDef" val="205" />
+			<add stat="pDef" val="205" order="0" />
 		</for>
 	</item>
 	<item id="21776" name="Imperial Crusader Gaiters of Fortune" additionalName="90-day" type="Armor">
@@ -1159,7 +1159,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="3260" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 		</for>
 	</item>
 	<item id="21777" name="Imperial Crusader Gauntlets of Fortune" additionalName="90-day" type="Armor">
@@ -1178,7 +1178,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="540" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21778" name="Imperial Crusader Boots of Fortune" additionalName="90-day" type="Armor">
@@ -1197,7 +1197,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1110" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21779" name="Imperial Crusader Helmet of Fortune" additionalName="90-day" type="Armor">
@@ -1216,7 +1216,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="550" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="21780" name="Imperial Crusader Shield of Fortune" additionalName="90-day" type="Armor">
@@ -1232,9 +1232,9 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1170" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
@@ -1265,7 +1265,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="4950" />
 		<for>
-			<add order="0" stat="pDef" val="249" />
+			<add stat="pDef" val="249" order="0" />
 		</for>
 	</item>
 	<item id="21783" name="Draconic Leather Gloves of Fortune" additionalName="90-day" type="Armor">
@@ -1284,7 +1284,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="540" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21784" name="Draconic Leather Boots of Fortune" additionalName="90-day" type="Armor">
@@ -1303,7 +1303,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1110" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21785" name="Draconic Leather Helmet of Fortune" additionalName="90-day" type="Armor">
@@ -1322,7 +1322,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="550" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">
@@ -1353,7 +1353,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="2300" />
 		<for>
-			<add order="0" stat="pDef" val="166" />
+			<add stat="pDef" val="166" order="0" />
 		</for>
 	</item>
 	<item id="21788" name="Major Arcana Gloves of Fortune" additionalName="90-day" type="Armor">
@@ -1372,7 +1372,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="540" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21789" name="Major Arcana Boots of Fortune" additionalName="90-day" type="Armor">
@@ -1391,7 +1391,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1110" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 		</for>
 	</item>
 	<item id="21790" name="Major Arcana Circlet of Fortune" additionalName="90-day" type="Armor">
@@ -1410,7 +1410,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="550" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 		</for>
 	</item>
 	<item id="21791" name="Arcana Sigil of Fortune" additionalName="90-day" type="Armor">
@@ -1427,7 +1427,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="940" />
 		<for>
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
 			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
@@ -1459,7 +1459,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="7570" />
 		<for>
-			<add order="0" stat="pDef" val="226" />
+			<add stat="pDef" val="226" order="0" />
 		</for>
 	</item>
 	<item id="21794" name="Dynasty Gaiters of Fortune" additionalName="90-day" type="Armor">
@@ -1479,7 +1479,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="3210" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 		</for>
 	</item>
 	<item id="21795" name="Dynasty Gauntlets of Fortune" additionalName="90-day" type="Armor">
@@ -1498,7 +1498,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="520" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 		</for>
 	</item>
 	<item id="21796" name="Dynasty Boots of Fortune" additionalName="90-day" type="Armor">
@@ -1517,7 +1517,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1090" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 		</for>
 	</item>
 	<item id="21797" name="Dynasty Helmet of Fortune" additionalName="90-day" type="Armor">
@@ -1536,7 +1536,7 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 		</for>
 	</item>
 	<item id="21798" name="Dynasty Shield of Fortune" additionalName="90-day" type="Armor">
@@ -1552,9 +1552,9 @@
 		<set name="time" val="129600" />
 		<set name="weight" val="1150" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" additionalName="90-day" type="EtcItem">

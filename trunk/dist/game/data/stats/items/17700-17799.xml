@@ -145,7 +145,7 @@
 		<set name="price" val="28671000" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -165,9 +165,9 @@
 		<set name="weight" val="1" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="433" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="433" />
 		</for>
 	</item>
 	<item id="17717" name="Agninoa Dualsword {PvP}" type="Weapon">
@@ -189,9 +189,9 @@
 		<set name="weight" val="1" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="192" />
 			<set stat="pAtk" val="532" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="17718" name="Petrified Giant's Hand" type="EtcItem">

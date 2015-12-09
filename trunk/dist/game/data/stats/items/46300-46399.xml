@@ -14,6 +14,9 @@
 		<set name="material" val="GOLD" />
 		<set name="time" val="60" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mDef" val="1.07" />
+		</for>
 	</item>
 	<item id="46301" name="Christmas Talisman: Attribute Defense" additionalName="1-hour" type="Armor">
 		<!-- Event item. All Attributes Defense + 30 when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -218,11 +221,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="443" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="443" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46318" name="Shadow Cutter" type="Weapon">
@@ -243,9 +246,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="526" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46319" name="Shadow Slasher" type="Weapon">
@@ -266,9 +269,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="646" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46320" name="Shadow Fighter" type="Weapon">
@@ -290,9 +293,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="646" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46321" name="Shadow Stormer" type="Weapon">
@@ -312,11 +315,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="526" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="526" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46322" name="Shadow Thrower" type="Weapon">
@@ -336,11 +339,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="1031" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1031" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46323" name="Shadow Shooter" type="Weapon">
@@ -360,11 +363,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="1012" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1012" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46324" name="Shadow Buster" type="Weapon">
@@ -385,9 +388,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="272" />
 			<set stat="pAtk" val="394" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46325" name="Shadow Retributer" type="Weapon">
@@ -409,9 +412,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="310" />
 			<set stat="pAtk" val="486" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46326" name="Shadow Dualsword" type="Weapon">
@@ -432,9 +435,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="646" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46327" name="Shadow Shaper" type="Weapon">
@@ -453,11 +456,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="312" />
-			<set stat="pAtk" val="629" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="629" />
+			<set stat="mAtk" val="312" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46328" name="Shadow Cutter" type="Weapon">
@@ -477,9 +480,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="312" />
 			<set stat="pAtk" val="719" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46329" name="Shadow Slasher" type="Weapon">
@@ -499,9 +502,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="312" />
 			<set stat="pAtk" val="875" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46330" name="Shadow Fighter" type="Weapon">
@@ -522,9 +525,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="312" />
 			<set stat="pAtk" val="875" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46331" name="Shadow Stormer" type="Weapon">
@@ -543,11 +546,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="312" />
-			<set stat="pAtk" val="719" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="719" />
+			<set stat="mAtk" val="312" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46332" name="Shadow Thrower" type="Weapon">
@@ -567,11 +570,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="312" />
-			<set stat="pAtk" val="1415" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1415" />
+			<set stat="mAtk" val="312" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46333" name="Shadow Shooter" type="Weapon">
@@ -594,11 +597,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="312" />
-			<set stat="pAtk" val="1274" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1274" />
+			<set stat="mAtk" val="312" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46334" name="Shadow Buster" type="Weapon">
@@ -618,9 +621,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="417" />
 			<set stat="pAtk" val="575" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46335" name="Shadow Retributer" type="Weapon">
@@ -640,11 +643,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="458" />
 			<set stat="pAtk" val="700" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46336" name="Shadow Dualsword" type="Weapon">
@@ -664,9 +667,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="312" />
 			<set stat="pAtk" val="875" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46337" name="Scroll: Enchant Shadow Weapon" type="EtcItem">
@@ -692,7 +695,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46339" name="Tyrr Warrior Transformation Appearance" type="Armor">
@@ -708,7 +711,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46340" name="Othell Rogue Transformation Appearance" type="Armor">
@@ -724,7 +727,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46341" name="Yul Archer Transformation Appearance" type="Armor">
@@ -740,7 +743,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46342" name="Feoh Wizard Transformation Appearance" type="Armor">
@@ -756,7 +759,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46343" name="Iss Enchanter Transformation Appearance" type="Armor">
@@ -772,7 +775,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46344" name="Wynn Summoner Transformation Appearance" type="Armor">
@@ -788,7 +791,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46345" name="Aeore Healer Transformation Appearance" type="Armor">
@@ -804,7 +807,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46346" name="Agathion - Blessed Virgo" additionalName="30-day" type="Armor">
@@ -1256,9 +1259,9 @@
 		<set name="weight" val="144" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46378" name="Frozen Dagger" type="Weapon">
@@ -1278,11 +1281,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="106" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="80" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="80" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46379" name="Frozen Two-handed Sword" type="Weapon">
@@ -1303,9 +1306,9 @@
 		<set name="weight" val="209" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46380" name="Frozen Fist Weapon" type="Weapon">
@@ -1327,9 +1330,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="112" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46381" name="Frozen Spear" type="Weapon">
@@ -1349,11 +1352,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="92" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="92" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46382" name="Frozen Bow" type="Weapon">
@@ -1374,11 +1377,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="191" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="191" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46383" name="Frozen Crossbow" type="Weapon">
@@ -1398,11 +1401,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="181" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="54" />
-			<set stat="pAtk" val="117" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="117" />
+			<set stat="mAtk" val="54" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="46384" name="Frozen One-handed Blunt Weapon" type="Weapon">
@@ -1423,9 +1426,9 @@
 		<set name="weight" val="172" />
 		<for>
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46385" name="Frozen Two-handed Blunt Weapon" type="Weapon">
@@ -1446,9 +1449,9 @@
 		<set name="weight" val="101" />
 		<for>
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="79" />
 			<set stat="pAtk" val="90" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46386" name="Frozen One-handed Magic Blunt Weapon" type="Weapon">
@@ -1469,9 +1472,9 @@
 		<set name="weight" val="172" />
 		<for>
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="54" />
 			<set stat="pAtk" val="92" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46387" name="Frozen Two-handed Magic Blunt Weapon" type="Weapon">
@@ -1492,9 +1495,9 @@
 		<set name="weight" val="101" />
 		<for>
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="122" />
 			<set stat="pAtk" val="152" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46388" name="Frozen Dualsword" type="Weapon">
@@ -1515,9 +1518,9 @@
 		<set name="weight" val="247" />
 		<for>
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46389" name="Frozen Dual Dagger" type="Weapon">
@@ -1537,11 +1540,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46390" name="Frozen Dual Blunt" type="Weapon">
@@ -1562,9 +1565,9 @@
 		<set name="weight" val="250" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="186" />
 			<set stat="pAtk" val="125" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46391" name="Frozen Shield" type="Armor">
@@ -1579,7 +1582,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="46392" name="Frozen Sigil" type="Armor">
@@ -1594,6 +1597,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
+		<for>
+			<sub stat="rEvas" val="8" />
+			<add stat="rShld" val="20" />
+			<add stat="sDef" val="47" />
+		</for>
 	</item>
 	<item id="46393" name="NPC Ashen Shadow Revolutionary Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
@@ -1603,7 +1611,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46394" name="NPC Ashen Shadow Revolutionary Mask" type="Armor">
@@ -1631,7 +1639,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46397" name="NPC Tyrr Warrior Transformation Cloak" type="Armor">
@@ -1643,7 +1651,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46398" name="NPC Othell Rogue Transformation Cloak" type="Armor">
@@ -1655,7 +1663,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 	<item id="46399" name="NPC Yul Archer Transformation Cloak" type="Armor">
@@ -1667,7 +1675,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="7" />
+			<add stat="pDef" val="7" order="0" />
 		</for>
 	</item>
 </list>

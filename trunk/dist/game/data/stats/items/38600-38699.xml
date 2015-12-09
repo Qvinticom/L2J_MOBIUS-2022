@@ -40,7 +40,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -59,7 +59,7 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="3493" />
 		<for>
-			<add order="0" stat="pDef" val="239" />
+			<add stat="pDef" val="239" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -77,7 +77,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="400" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -95,7 +95,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="200" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -112,9 +112,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="407" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="203" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -133,7 +133,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="660" />
 		<for>
-			<add order="0" stat="pDef" val="60" />
+			<add stat="pDef" val="60" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -152,7 +152,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="323" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -170,7 +170,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="207" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -188,7 +188,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="410" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -207,7 +207,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1483" />
 		<for>
-			<add order="0" stat="pDef" val="94" />
+			<add stat="pDef" val="94" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -226,7 +226,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<for>
-			<add order="0" stat="pDef" val="59" />
+			<add stat="pDef" val="59" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -244,7 +244,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="407" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -262,7 +262,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="203" />
 		<for>
-			<add order="0" stat="pDef" val="33" />
+			<add stat="pDef" val="33" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -280,7 +280,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -299,7 +299,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -318,7 +318,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -337,7 +337,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3327" />
 		<for>
-			<add order="0" stat="pDef" val="270" />
+			<add stat="pDef" val="270" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -354,9 +354,9 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="400" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="230" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -375,7 +375,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="847" />
 		<for>
-			<add order="0" stat="pDef" val="127" />
+			<add stat="pDef" val="127" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -393,7 +393,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="62" />
+			<add stat="pDef" val="62" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -412,7 +412,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="197" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -431,7 +431,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="393" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -448,9 +448,9 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="403" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="216" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -469,7 +469,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1833" />
 		<for>
-			<add order="0" stat="pDef" val="202" />
+			<add stat="pDef" val="202" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -488,7 +488,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -507,7 +507,7 @@
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="377" />
 		<for>
-			<add order="0" stat="pDef" val="44" />
+			<add stat="pDef" val="44" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -526,7 +526,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="3193" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -544,7 +544,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="187" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -563,7 +563,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -582,7 +582,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -599,9 +599,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="393" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -620,7 +620,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="817" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -638,7 +638,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="190" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -657,7 +657,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -676,7 +676,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -693,9 +693,9 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="397" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="243" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -714,7 +714,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1433" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -733,7 +733,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="493" />
 		<for>
-			<add order="0" stat="pDef" val="80" />
+			<add stat="pDef" val="80" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -752,7 +752,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="193" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -771,7 +771,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -790,7 +790,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="2540" />
 		<for>
-			<add order="0" stat="pDef" val="205" />
+			<add stat="pDef" val="205" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -809,7 +809,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1087" />
 		<for>
-			<add order="0" stat="pDef" val="128" />
+			<add stat="pDef" val="128" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -827,7 +827,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -845,7 +845,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -863,7 +863,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -880,9 +880,9 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="390" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="290" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -901,7 +901,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="767" />
 		<for>
-			<add order="0" stat="pDef" val="166" />
+			<add stat="pDef" val="166" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -919,7 +919,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -937,7 +937,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -955,7 +955,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -973,7 +973,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="940" />
 		<for>
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -993,7 +993,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1650" />
 		<for>
-			<add order="0" stat="pDef" val="249" />
+			<add stat="pDef" val="249" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1011,7 +1011,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1029,7 +1029,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="370" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1047,7 +1047,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="183" />
 		<for>
-			<add order="0" stat="pDef" val="83" />
+			<add stat="pDef" val="83" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1066,7 +1066,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="2520" />
 		<for>
-			<add order="0" stat="pDef" val="226" />
+			<add stat="pDef" val="226" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1085,7 +1085,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1103,7 +1103,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1121,7 +1121,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1139,7 +1139,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1156,9 +1156,9 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="380" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1177,7 +1177,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="590" />
 		<for>
-			<add order="0" stat="pDef" val="113" />
+			<add stat="pDef" val="113" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1196,7 +1196,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="290" />
 		<for>
-			<add order="0" stat="pDef" val="71" />
+			<add stat="pDef" val="71" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1214,7 +1214,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1232,7 +1232,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1250,7 +1250,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1268,7 +1268,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="310" />
 		<for>
-			<add order="0" stat="pDef" val="15" />
+			<add stat="pDef" val="15" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>
@@ -1288,7 +1288,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1390" />
 		<for>
-			<add order="0" stat="pDef" val="170" />
+			<add stat="pDef" val="170" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1307,7 +1307,7 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="460" />
 		<for>
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1325,7 +1325,7 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="180" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1343,7 +1343,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="170" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1361,7 +1361,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="360" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1379,7 +1379,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="39" />
+			<add stat="mDef" val="39" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1397,7 +1397,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="52" />
+			<add stat="mDef" val="52" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1415,7 +1415,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="26" />
+			<add stat="mDef" val="26" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1433,7 +1433,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="51" />
+			<add stat="mDef" val="51" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1451,7 +1451,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="68" />
+			<add stat="mDef" val="68" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1469,7 +1469,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="34" />
+			<add stat="mDef" val="34" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1487,7 +1487,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="60" />
+			<add stat="mDef" val="60" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1505,7 +1505,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="80" />
+			<add stat="mDef" val="80" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1523,7 +1523,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
+			<add stat="mDef" val="40" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1541,7 +1541,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1559,7 +1559,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="95" />
+			<add stat="mDef" val="95" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1577,7 +1577,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1595,7 +1595,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="79" />
+			<add stat="mDef" val="79" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1613,7 +1613,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="106" />
+			<add stat="mDef" val="106" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1631,7 +1631,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="60" />
+			<add stat="mDef" val="60" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1650,7 +1650,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="94" />
+			<add stat="mDef" val="94" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1669,7 +1669,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="126" />
+			<add stat="mDef" val="126" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1688,7 +1688,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1711,9 +1711,9 @@
 		<set name="weight" val="477" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="38693" name="Steel Yaksa Mace" type="Weapon">
@@ -1736,10 +1736,10 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
-			<set stat="mAtk" val="83" />
 			<mul stat="maxHp" val="1.25" />
-			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="156" />
 		</for>
 	</item>
 	<item id="38694" name="Steel Saber*Sword of Revolution" type="Weapon">
@@ -1761,9 +1761,9 @@
 		<set name="weight" val="807" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="56" />
 			<set stat="pAtk" val="118" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="38695" name="Steel Mysterious Sword" type="Weapon">
@@ -1785,9 +1785,10 @@
 		<set name="weight" val="477" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="81" />
-			<set stat="pAtk" val="85" />
+			<mul stat="mAtkSpd" val="1.15" />
 			<set stat="pAtkSpd" val="379" />
+			<set stat="pAtk" val="85" />
+			<set stat="mAtk" val="81" />
 		</for>
 	</item>
 	<item id="38696" name="Steel Body Slasher" type="Weapon">
@@ -1808,11 +1809,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="677" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="107" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="107" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="38697" name="Steel Soulfire Dirk" type="Weapon">
@@ -1833,12 +1834,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="250" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="91" />
 			<mul stat="maxMp" val="1.30" />
-			<set stat="pAtk" val="86" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="86" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="38698" name="Steel Crystallized Ice Bow" type="Weapon">
@@ -1860,11 +1861,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="597" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="61" />
-			<set stat="pAtk" val="220" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="220" />
+			<set stat="mAtk" val="61" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="38699" name="Steel Schlager" type="Weapon">
@@ -1887,9 +1888,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="116" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 </list>

@@ -14,7 +14,7 @@
 		<set name="price" val="2032000" />
 		<set name="weight" val="560" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -32,7 +32,7 @@
 		<set name="price" val="2032000" />
 		<set name="weight" val="560" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -546,9 +546,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="148" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13035" name="Reinforced Spirit's Sword" type="Weapon">
@@ -577,9 +577,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="83" />
 			<set stat="pAtk" val="190" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13036" name="Sword of Ice and Fire" type="Weapon">
@@ -608,9 +608,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13037" name="Pailaka Soulshot (D-grade)" type="EtcItem">
@@ -735,9 +735,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="143" />
 			<set stat="pAtk" val="259" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13043" name="Reinforced Ancient Legacy Sword" type="Weapon">
@@ -766,9 +766,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="153" />
 			<set stat="pAtk" val="279" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13044" name="Complete Ancient Legacy Sword" type="Weapon">
@@ -797,9 +797,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="163" />
 			<set stat="pAtk" val="299" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13045" name="Pailaka Soulshot (C-grade)" type="EtcItem">
@@ -919,8 +919,8 @@
 			<player instanceId="43,44,45" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="49" />
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
+			<add stat="mDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="13051" name="Hair Accessory" type="EtcItem">
@@ -958,11 +958,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="161" />
-			<set stat="pAtk" val="251" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="251" />
+			<set stat="mAtk" val="161" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="13053" name="Reinforced Spear of Silenos" type="Weapon">
@@ -991,11 +991,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="171" />
-			<set stat="pAtk" val="271" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="271" />
+			<set stat="mAtk" val="171" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="13054" name="Complete Spear of Silenos" type="Weapon">
@@ -1024,11 +1024,11 @@
 			<player instanceId="45" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="13055" name="Pailaka Soulshot (A-grade)" type="EtcItem">
@@ -1156,9 +1156,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13062" name="Monster Only (Employee's Friend)" type="Weapon">
@@ -1184,9 +1184,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="163" />
 			<set stat="pAtk" val="442" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="13063" name="Unfair Joystick" type="EtcItem">
@@ -1371,7 +1371,7 @@
 		<set name="price" val="3355000" />
 		<set name="weight" val="940" />
 		<for>
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
 			<sub stat="rEvas" val="8" />
 			<enchant stat="pDef" val="0" />
 		</for>

@@ -329,11 +329,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="900" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37629" name="Pig Lollipop" type="Weapon">
@@ -351,9 +351,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37630" name="Mysterious Shaper" additionalName="7-day" type="Weapon">
@@ -375,11 +375,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="881" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="881" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37631" name="Mysterious Cutter" additionalName="7-day" type="Weapon">
@@ -402,9 +402,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37632" name="Mysterious Slasher" additionalName="7-day" type="Weapon">
@@ -427,9 +427,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37633" name="Mysterious Avenger" additionalName="7-day" type="Weapon">
@@ -453,9 +453,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37634" name="Mysterious Fighter" additionalName="7-day" type="Weapon">
@@ -479,9 +479,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37635" name="Mysterious Stormer" additionalName="7-day" type="Weapon">
@@ -503,11 +503,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37636" name="Mysterious Thrower" additionalName="7-day" type="Weapon">
@@ -529,11 +529,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1983" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1983" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37637" name="Mysterious Shooter" additionalName="7-day" type="Weapon">
@@ -555,11 +555,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1786" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1786" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37638" name="Mysterious Buster" additionalName="7-day" type="Weapon">
@@ -582,9 +582,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37639" name="Mysterious Caster" additionalName="7-day" type="Weapon">
@@ -608,9 +608,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37640" name="Mysterious Retributer" additionalName="7-day" type="Weapon">
@@ -633,11 +633,11 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="765" />
 			<set stat="pAtk" val="981" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37641" name="Mysterious Dualsword" additionalName="7-day" type="Weapon">
@@ -660,9 +660,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37642" name="Mysterious Dual Dagger" additionalName="7-day" type="Weapon">
@@ -684,11 +684,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37643" name="Mysterious Dual Blunt" additionalName="7-day" type="Weapon">
@@ -712,9 +712,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37644" name="Mysterious Shaper" additionalName="30-day" type="Weapon">
@@ -736,11 +736,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="881" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="881" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37645" name="Mysterious Cutter" additionalName="30-day" type="Weapon">
@@ -763,9 +763,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37646" name="Mysterious Slasher" additionalName="30-day" type="Weapon">
@@ -788,9 +788,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37647" name="Mysterious Avenger" additionalName="30-day" type="Weapon">
@@ -814,9 +814,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1007" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37648" name="Mysterious Fighter" additionalName="30-day" type="Weapon">
@@ -840,9 +840,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37649" name="Mysterious Stormer" additionalName="30-day" type="Weapon">
@@ -864,11 +864,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37650" name="Mysterious Thrower" additionalName="30-day" type="Weapon">
@@ -890,11 +890,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1983" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1983" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37651" name="Mysterious Shooter" additionalName="30-day" type="Weapon">
@@ -916,11 +916,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1786" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1786" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37652" name="Mysterious Buster" additionalName="30-day" type="Weapon">
@@ -943,9 +943,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37653" name="Mysterious Caster" additionalName="30-day" type="Weapon">
@@ -969,9 +969,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="696" />
 			<set stat="pAtk" val="805" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37654" name="Mysterious Retributer" additionalName="30-day" type="Weapon">
@@ -994,11 +994,11 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="765" />
 			<set stat="pAtk" val="981" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37655" name="Mysterious Dualsword" additionalName="30-day" type="Weapon">
@@ -1021,9 +1021,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37656" name="Mysterious Dual Dagger" additionalName="30-day" type="Weapon">
@@ -1045,11 +1045,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="521" />
-			<set stat="pAtk" val="1007" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1007" />
+			<set stat="mAtk" val="521" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37657" name="Mysterious Dual Blunt" additionalName="30-day" type="Weapon">
@@ -1073,9 +1073,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="521" />
 			<set stat="pAtk" val="1225" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" type="EtcItem">
@@ -1120,9 +1120,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37661" name="Refined Romantic Chapeau: Blue" type="Armor">
@@ -1217,8 +1217,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
+			<add stat="mDef" val="170" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1239,11 +1239,11 @@
 		<for>
 			<add stat="INT" val="3" />
 			<add stat="STR" val="3" />
-			<add stat="darkRes" val="20" />
 			<add stat="fireRes" val="30" />
-			<add order="0" stat="mDef" val="226" />
+			<add stat="darkRes" val="20" />
 			<add stat="maxHp" val="625" />
 			<add stat="maxMp" val="79" />
+			<add stat="mDef" val="226" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1263,7 +1263,7 @@
 		<set name="weight" val="150" />
 		<for>
 			<add stat="darkRes" val="25" />
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1282,7 +1282,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="108" />
+			<add stat="mDef" val="108" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1449,9 +1449,9 @@
 		<set name="weight" val="10" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="10" />
 			<set stat="pAtk" val="10" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37684" name="Blood Sword Akamanah" additionalName="Appearance Modification" type="Weapon">
@@ -1473,9 +1473,9 @@
 		<set name="weight" val="10" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="10" />
 			<set stat="pAtk" val="10" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37685" name="Transformation Scroll: Lady Tow" type="EtcItem">
@@ -1525,11 +1525,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="685" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="685" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
@@ -1550,9 +1550,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37690" name="Valentine Two-handed Sword" type="Weapon">
@@ -1573,9 +1573,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
@@ -1597,9 +1597,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="752" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
@@ -1621,9 +1621,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37693" name="Valentine Spear" type="Weapon">
@@ -1643,11 +1643,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="752" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="752" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37694" name="Valentine Bow" type="Weapon">
@@ -1667,11 +1667,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="1481" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1481" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37695" name="Valentine Crossbow" type="Weapon">
@@ -1691,11 +1691,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="414" />
-			<set stat="pAtk" val="1333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1333" />
+			<set stat="mAtk" val="414" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
@@ -1716,9 +1716,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="486" />
 			<set stat="pAtk" val="602" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" type="Weapon">
@@ -1740,9 +1740,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="486" />
 			<set stat="pAtk" val="602" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" type="Weapon">
@@ -1764,9 +1764,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="535" />
 			<set stat="pAtk" val="733" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37699" name="Valentine Dualsword" type="Weapon">
@@ -1787,9 +1787,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="414" />
 			<set stat="pAtk" val="916" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

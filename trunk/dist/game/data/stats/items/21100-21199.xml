@@ -109,9 +109,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21111" name="Warm Bear Paws" additionalName="7-day" type="Weapon">
@@ -134,9 +134,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="5" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="21112" name="Stag Beetle Hat" type="Armor">
@@ -735,7 +735,7 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="1" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="21160" name="Wedding Ring - Female" type="Armor">
@@ -746,8 +746,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 		<for>
-			<add order="0" stat="mDef" val="1" />
+			<add stat="mDef" val="1" order="0" />
 		</for>
 	</item>
 	<item id="21161" name="Wedding Cake Pack" type="EtcItem">
@@ -771,6 +774,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 	</item>
 	<item id="21163" name="Wedding Bouquet" type="Weapon">
 		<!-- Beautiful wedding bouquet. Female only. -->
@@ -788,11 +794,14 @@
 		<set name="spiritshots" val="1" />
 		<set name="weapon_type" val="ETC" />
 		<set name="weight" val="1600" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 		<for>
 			<add stat="critRate" val="1" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="21164" name="Honeymoon Ticket" additionalName="7-day" type="EtcItem">

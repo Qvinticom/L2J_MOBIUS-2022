@@ -23,9 +23,9 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="114" />
 			<set stat="pAtk" val="282" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15301" name="Transparent Pole (NPC)" type="Weapon">
@@ -50,11 +50,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="83" />
-			<set stat="pAtk" val="156" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15302" name="Transparent Bow (NPC)" type="Weapon">
@@ -81,11 +81,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="35" />
-			<set stat="pAtk" val="114" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15303" name="Transparent Claw (NPC)" type="Weapon">
@@ -113,9 +113,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="119" />
 			<set stat="pAtk" val="376" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15304" name="Transparent Crossbow (NPC)" type="Weapon">
@@ -144,11 +144,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="64" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="64" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15305" name="Transparent Rapier (NPC)" type="Weapon">
@@ -176,11 +176,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="36" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="36" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15306" name="Transparent Dual Dagger (NPC)" type="Weapon">
@@ -212,11 +212,11 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="157" />
-			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15307" name="Holy Pomander - Cardinal" type="EtcItem">
@@ -278,9 +278,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="7" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15311" name="Delusion Chamber Invitation" type="EtcItem">
@@ -337,9 +337,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15314" name="Player Commendation - Basalt Battlehammer" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -369,9 +369,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="281" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15315" name="Player Commendation - Imperial Staff" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -402,9 +402,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="193" />
 			<set stat="pAtk" val="274" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15316" name="Player Commendation - Angel Slayer" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -432,11 +432,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="950" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="246" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="246" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15317" name="Player Commendation - Dragon Hunter Axe" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -466,9 +466,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15318" name="Player Commendation - Saint Spear" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -496,11 +496,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1800" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="281" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="281" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15319" name="Player Commendation - Demon Splinter" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -530,9 +530,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15320" name="Player Commendation - Heaven's Divider" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -561,9 +561,9 @@
 		<set name="weight" val="1380" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15321" name="Player Commendation - Arcana Mace" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -594,9 +594,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="175" />
 			<set stat="pAtk" val="225" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15322" name="Player Commendation - Draconic Bow" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -626,11 +626,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1650" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="581" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="581" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="15323" name="Player Commendation - Laevateinn" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -662,11 +662,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="255" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="255" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15324" name="Player Commendation - Gram" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -699,9 +699,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="304" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="15325" name="Player Commendation - Sarunga" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -733,11 +733,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="132" />
-			<set stat="pAtk" val="356" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="356" />
+			<set stat="mAtk" val="132" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" additionalName="PC-exclusive Weapon" type="Weapon">
@@ -766,9 +766,9 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="132" />
 			<set stat="pAtk" val="342" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="15327" name="Seed: Sea Coba" type="EtcItem">
@@ -982,9 +982,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15343" name="Aqua Elf Transformation Harp Pack (60-day)" type="EtcItem">
@@ -1025,9 +1025,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="15345" name="Aqua Elf Transformation Harp Pack (60-day) (Event)" type="EtcItem">

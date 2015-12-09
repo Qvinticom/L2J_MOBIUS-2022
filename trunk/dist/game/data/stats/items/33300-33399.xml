@@ -15,7 +15,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -33,7 +33,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -51,7 +51,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -68,9 +68,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="118" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -88,7 +88,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -107,7 +107,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="535" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -125,7 +125,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -143,7 +143,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -161,7 +161,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -180,7 +180,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="233" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -198,7 +198,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -216,7 +216,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -234,7 +234,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -253,7 +253,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="920" />
 		<for>
-			<add order="0" stat="pDef" val="293" />
+			<add stat="pDef" val="293" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -271,7 +271,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -289,7 +289,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -306,9 +306,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="118" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="256" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -326,7 +326,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -345,7 +345,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="535" />
 		<for>
-			<add order="0" stat="pDef" val="220" />
+			<add stat="pDef" val="220" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -363,7 +363,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -381,7 +381,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -399,7 +399,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="55" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -418,7 +418,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="233" />
 		<for>
-			<add order="0" stat="pDef" val="147" />
+			<add stat="pDef" val="147" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -436,7 +436,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="54" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -454,7 +454,7 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="111" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -477,11 +477,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33326" name="Vesper Dual Daggers of Destiny (Fire)" type="Weapon">
@@ -502,11 +502,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33327" name="Vesper Cutter of Destiny (Fire) - Focus" type="Weapon">
@@ -529,9 +529,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33328" name="Vesper Buster of Destiny (Fire) - Acumen" type="Weapon">
@@ -554,9 +554,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33329" name="Vesper Pincer of Destiny (Fire) - Focus" type="Weapon">
@@ -578,11 +578,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33330" name="Vesper Slasher of Destiny (Fire) - Focus" type="Weapon">
@@ -605,9 +605,9 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33331" name="Vesper Nagan of Destiny (Fire) - Focus" type="Weapon">
@@ -631,9 +631,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33332" name="Vesper Thrower of Destiny (Fire) - Focus" type="Weapon">
@@ -656,11 +656,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33333" name="Vesper Shooter of Destiny (Fire) - Focus" type="Weapon">
@@ -682,11 +682,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33334" name="Vesper Avenger of Destiny (Fire) - Health" type="Weapon">
@@ -710,9 +710,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33335" name="Vesper Caster of Destiny (Fire) - Acumen" type="Weapon">
@@ -736,9 +736,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33336" name="Vesper Retributer of Destiny (Fire) - Health" type="Weapon">
@@ -762,9 +762,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33337" name="Vesper Singer of Destiny (Fire) - Empower" type="Weapon">
@@ -788,9 +788,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="257" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33338" name="Vesper Stormer of Destiny (Fire) - Haste" type="Weapon">
@@ -812,11 +812,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33339" name="Vesper Fighter of Destiny (Fire) - Focus" type="Weapon">
@@ -840,9 +840,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33340" name="Vesper Dualsword of Destiny (Fire)" type="Weapon">
@@ -864,9 +864,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33341" name="Vesper Shaper of Destiny (Water) - Critical Damage" type="Weapon">
@@ -888,11 +888,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33342" name="Vesper Dual Daggers of Destiny (Water)" type="Weapon">
@@ -913,11 +913,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33343" name="Vesper Cutter of Destiny (Water) - Focus" type="Weapon">
@@ -940,9 +940,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33344" name="Vesper Buster of Destiny (Water) - Acumen" type="Weapon">
@@ -965,9 +965,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33345" name="Vesper Pincer of Destiny (Water) - Focus" type="Weapon">
@@ -989,11 +989,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33346" name="Vesper Slasher of Destiny (Water) - Focus" type="Weapon">
@@ -1016,9 +1016,9 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33347" name="Vesper Nagan of Destiny (Water) - Focus" type="Weapon">
@@ -1042,9 +1042,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33348" name="Vesper Thrower of Destiny (Water) - Focus" type="Weapon">
@@ -1067,11 +1067,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33349" name="Vesper Shooter of Destiny (Water) - Focus" type="Weapon">
@@ -1093,11 +1093,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33350" name="Vesper Avenger of Destiny (Water) - Health" type="Weapon">
@@ -1121,9 +1121,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33351" name="Vesper Caster of Destiny (Water) - Acumen" type="Weapon">
@@ -1147,9 +1147,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33352" name="Vesper Retributer of Destiny (Water) - Health" type="Weapon">
@@ -1173,9 +1173,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33353" name="Vesper Singer of Destiny (Water) - Empower" type="Weapon">
@@ -1199,9 +1199,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="257" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33354" name="Vesper Stormer of Destiny (Water) - Haste" type="Weapon">
@@ -1223,11 +1223,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33355" name="Vesper Fighter of Destiny (Water) - Focus" type="Weapon">
@@ -1251,9 +1251,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33356" name="Vesper Dualsword of Destiny (Water)" type="Weapon">
@@ -1275,9 +1275,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33357" name="Vesper Shaper of Destiny (Wind) - Critical Damage" type="Weapon">
@@ -1299,11 +1299,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33358" name="Vesper Dual Daggers of Destiny (Wind)" type="Weapon">
@@ -1324,11 +1324,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33359" name="Vesper Cutter of Destiny (Wind) - Focus" type="Weapon">
@@ -1351,9 +1351,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33360" name="Vesper Buster of Destiny (Wind) - Acumen" type="Weapon">
@@ -1376,9 +1376,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33361" name="Vesper Pincer of Destiny (Wind) - Focus" type="Weapon">
@@ -1400,11 +1400,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33362" name="Vesper Slasher of Destiny (Wind) - Focus" type="Weapon">
@@ -1427,9 +1427,9 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33363" name="Vesper Nagan of Destiny (Wind) - Focus" type="Weapon">
@@ -1453,9 +1453,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33364" name="Vesper Thrower of Destiny (Wind) - Focus" type="Weapon">
@@ -1478,11 +1478,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33365" name="Vesper Shooter of Destiny (Wind) - Focus" type="Weapon">
@@ -1504,11 +1504,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33366" name="Vesper Avenger of Destiny (Wind) - Health" type="Weapon">
@@ -1532,9 +1532,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33367" name="Vesper Caster of Destiny (Wind) - Acumen" type="Weapon">
@@ -1558,9 +1558,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33368" name="Vesper Retributer of Destiny (Wind) - Health" type="Weapon">
@@ -1584,9 +1584,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33369" name="Vesper Singer of Destiny (Wind) - Empower" type="Weapon">
@@ -1610,9 +1610,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="257" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33370" name="Vesper Stormer of Destiny (Wind) - Haste" type="Weapon">
@@ -1634,11 +1634,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33371" name="Vesper Fighter of Destiny (Wind) - Focus" type="Weapon">
@@ -1662,9 +1662,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33372" name="Vesper Dualsword of Destiny (Wind)" type="Weapon">
@@ -1686,9 +1686,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33373" name="Vesper Shaper of Destiny (Earth) - Critical Damage" type="Weapon">
@@ -1710,11 +1710,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33374" name="Vesper Dual Daggers of Destiny (Earth)" type="Weapon">
@@ -1735,11 +1735,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33375" name="Vesper Cutter of Destiny (Earth) - Focus" type="Weapon">
@@ -1762,9 +1762,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33376" name="Vesper Buster of Destiny (Earth) - Acumen" type="Weapon">
@@ -1787,9 +1787,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33377" name="Vesper Pincer of Destiny (Earth) - Focus" type="Weapon">
@@ -1811,11 +1811,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33378" name="Vesper Slasher of Destiny (Earth) - Focus" type="Weapon">
@@ -1838,9 +1838,9 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33379" name="Vesper Nagan of Destiny (Earth) - Focus" type="Weapon">
@@ -1864,9 +1864,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33380" name="Vesper Thrower of Destiny (Earth) - Focus" type="Weapon">
@@ -1889,11 +1889,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33381" name="Vesper Shooter of Destiny (Earth) - Focus" type="Weapon">
@@ -1915,11 +1915,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33382" name="Vesper Avenger of Destiny (Earth) - Health" type="Weapon">
@@ -1943,9 +1943,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33383" name="Vesper Caster of Destiny (Earth) - Acumen" type="Weapon">
@@ -1969,9 +1969,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33384" name="Vesper Retributer of Destiny (Earth) - Health" type="Weapon">
@@ -1995,9 +1995,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33385" name="Vesper Singer of Destiny (Earth) - Empower" type="Weapon">
@@ -2021,9 +2021,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="257" />
 			<set stat="pAtk" val="386" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33386" name="Vesper Stormer of Destiny (Earth) - Haste" type="Weapon">
@@ -2045,11 +2045,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="201" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="396" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="396" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33387" name="Vesper Fighter of Destiny (Earth) - Focus" type="Weapon">
@@ -2073,9 +2073,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33388" name="Vesper Dualsword of Destiny (Earth)" type="Weapon">
@@ -2097,9 +2097,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33389" name="Vesper Shaper of Destiny (Holy) - Critical Damage" type="Weapon">
@@ -2121,11 +2121,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="346" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="346" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33390" name="Vesper Dual Daggers of Destiny (Holy)" type="Weapon">
@@ -2146,11 +2146,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="181" />
-			<set stat="pAtk" val="360" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="360" />
+			<set stat="mAtk" val="181" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33391" name="Vesper Cutter of Destiny (Holy) - Focus" type="Weapon">
@@ -2173,9 +2173,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33392" name="Vesper Buster of Destiny (Holy) - Acumen" type="Weapon">
@@ -2198,9 +2198,9 @@
 		<set name="weight" val="152" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33393" name="Vesper Pincer of Destiny (Holy) - Focus" type="Weapon">
@@ -2222,11 +2222,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="128" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="359" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="359" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33394" name="Vesper Slasher of Destiny (Holy) - Focus" type="Weapon">
@@ -2249,9 +2249,9 @@
 		<set name="weight" val="174" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="482" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33395" name="Vesper Nagan of Destiny (Holy) - Focus" type="Weapon">
@@ -2275,9 +2275,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="429" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33396" name="Vesper Thrower of Destiny (Holy) - Focus" type="Weapon">
@@ -2300,11 +2300,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="152" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="724" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="724" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33397" name="Vesper Shooter of Destiny (Holy) - Focus" type="Weapon">
@@ -2326,11 +2326,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="158" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="176" />
-			<set stat="pAtk" val="444" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="444" />
+			<set stat="mAtk" val="176" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33398" name="Vesper Avenger of Destiny (Holy) - Health" type="Weapon">
@@ -2354,9 +2354,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="176" />
 			<set stat="pAtk" val="396" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33399" name="Vesper Caster of Destiny (Holy) - Acumen" type="Weapon">
@@ -2380,9 +2380,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="234" />
 			<set stat="pAtk" val="317" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 </list>

@@ -55,6 +55,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="34706" name="Pirate's Eyepatch" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
@@ -64,6 +67,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="34707" name="Outlaw's Eyepatch" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
@@ -73,6 +79,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="34708" name="Outlaw's Eyepatch" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -82,6 +91,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="34709" name="Eyepatch" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -91,6 +103,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="34710" name="Eyepatch" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
@@ -100,6 +115,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="34711" name="Party Hat" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
@@ -109,6 +127,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="34712" name="Party Hat" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -118,6 +139,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="34713" name="Refined Angel Ring" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -127,6 +152,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="34714" name="Refined Angel Ring" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -136,6 +164,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="34715" name="Refined Angel Ring" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -145,6 +176,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="34716" name="Refined Devil Horn" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -154,6 +188,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="34717" name="Refined Devil Horn" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
@@ -178,6 +215,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="34719" name="Player Commendation - Apocalypse Dualsword (Earth) - Damage Up" additionalName="PC-exclusive" type="Weapon">
 		<!-- Apocalypse Dualsword (Earth) with limited ability enhancement. <Special Option>. P. Atk. + 332. Increases damage inflicted during PvP. Increases P. Critical Rate and additionally increases P. Atk. when enchanted to + 4. Expiratory. Cannot be crystallized  -->
@@ -201,9 +241,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="earthPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34720" name="Player Commendation - Apocalypse Dualsword (Water) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -227,10 +267,10 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 			<add stat="waterPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="595" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34721" name="Player Commendation - Apocalypse Dualsword (Wind) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -254,10 +294,10 @@
 		<set name="weight" val="155" />
 		<for>
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 			<add stat="windPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="595" />
+			<set stat="mAtk" val="226" />
 		</for>
 	</item>
 	<item id="34722" name="Player Commendation - Apocalypse Dualsword (Fire) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -282,9 +322,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="firePower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34723" name="Player Commendation - Apocalypse Dualsword (Holy) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -309,9 +349,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="holyPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34724" name="Player Commendation - Apocalypse Dualsword (Dark) - Damage Up" additionalName="PC-exclusive" type="Weapon">
@@ -336,9 +376,9 @@
 		<for>
 			<add stat="critRate" val="8" />
 			<add stat="darkPower" val="250" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="595" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="34725" name="Player Commendation - Apocalypse Dual Dagger (Earth) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -361,12 +401,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="earthPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34726" name="Player Commendation - Apocalypse Dual Dagger (Water) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -389,12 +429,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="waterPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="433" />
-			<add stat="waterPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34727" name="Player Commendation - Apocalypse Dual Dagger (Wind) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -417,12 +457,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
+			<add stat="windPower" val="250" />
 			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
 			<set stat="mAtk" val="226" />
 			<set stat="pAtk" val="489" />
-			<set stat="pAtkSpd" val="433" />
-			<add stat="windPower" val="250" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34728" name="Player Commendation - Apocalypse Dual Dagger (Fire) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -445,12 +485,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="firePower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34729" name="Player Commendation - Apocalypse Dual Dagger (Holy) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -473,12 +513,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="holyPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34730" name="Player Commendation - Apocalypse Dual Dagger (Dark) - Focus" additionalName="PC-exclusive" type="Weapon">
@@ -501,12 +541,12 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="205" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
 			<add stat="darkPower" val="250" />
-			<set stat="mAtk" val="226" />
-			<set stat="pAtk" val="489" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="489" />
+			<set stat="mAtk" val="226" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="34731" name="Sealed Power Shirt" type="Armor">
@@ -535,7 +575,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34733" name="Pa'agrio's Box" type="EtcItem">
@@ -1039,7 +1079,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34771" name="Sayha's Shirt" additionalName="Event" type="Armor">
@@ -1055,7 +1095,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34772" name="Eva's Shirt" additionalName="Event" type="Armor">
@@ -1071,7 +1111,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34773" name="Maphr's Shirt" additionalName="Event" type="Armor">
@@ -1088,7 +1128,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="34774" name="Scroll of Blessing (R1-grade)" additionalName="Event" type="EtcItem">
@@ -1142,7 +1182,7 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="62" />
+			<add stat="mDef" val="62" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1161,7 +1201,7 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="92" />
+			<add stat="mDef" val="92" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1180,7 +1220,7 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="123" />
+			<add stat="mDef" val="123" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>

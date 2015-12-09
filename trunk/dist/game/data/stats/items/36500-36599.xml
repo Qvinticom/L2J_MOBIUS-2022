@@ -17,9 +17,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1257" />
 			<set stat="pAtk" val="2884" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36501" name="Valakas Slasher" additionalName="Top-grade" type="Weapon">
@@ -39,9 +39,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1257" />
 			<set stat="pAtk" val="3509" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36502" name="Valakas Thrower" additionalName="Top-grade" type="Weapon">
@@ -60,11 +60,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="5678" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36503" name="Valakas Buster" additionalName="Top-grade" type="Weapon">
@@ -84,9 +84,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1676" />
 			<set stat="pAtk" val="2307" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36504" name="Valakas Caster" additionalName="Top-grade" type="Weapon">
@@ -107,9 +107,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1676" />
 			<set stat="pAtk" val="2307" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36505" name="Valakas Retributer" additionalName="Top-grade" type="Weapon">
@@ -129,11 +129,11 @@
 		<set name="weight" val="1080" />
 		<for>
 			<add stat="accCombat" val="8" />
-			<add stat="accMagic" val="8.0" />
 			<add stat="critRate" val="6" />
+			<add stat="accMagic" val="8.0" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1843" />
 			<set stat="pAtk" val="2809" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36506" name="Lindvior Shaper" additionalName="Top-grade" type="Weapon">
@@ -152,11 +152,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<set stat="pAtk" val="2523" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="2523" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36507" name="Lindvior Thrower" additionalName="Top-grade" type="Weapon">
@@ -175,11 +175,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<set stat="pAtk" val="5678" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="5678" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36508" name="Lindvior Slasher" additionalName="Top-grade" type="Weapon">
@@ -199,9 +199,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1257" />
 			<set stat="pAtk" val="3509" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="36509" name="Lindvior Caster" additionalName="Top-grade" type="Weapon">
@@ -221,9 +221,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1676" />
 			<set stat="pAtk" val="2307" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36510" name="Lindvior Cutter" additionalName="Top-grade" type="Weapon">
@@ -243,9 +243,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1257" />
 			<set stat="pAtk" val="2884" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36511" name="Lindvior Shooter" additionalName="Top-grade" type="Weapon">
@@ -264,11 +264,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<set stat="pAtk" val="5113" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="5113" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36512" name="Lindvior Dual Dagger" additionalName="Top-grade" type="Weapon">
@@ -287,11 +287,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2050" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="1257" />
-			<set stat="pAtk" val="2884" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="2884" />
+			<set stat="mAtk" val="1257" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="36513" name="Elcyum Powder" type="EtcItem">

@@ -14,7 +14,7 @@
 		<set name="price" val="127000" />
 		<set name="weight" val="4370" />
 		<for>
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -33,7 +33,7 @@
 		<set name="price" val="268200" />
 		<set name="weight" val="5800" />
 		<for>
-			<add order="0" stat="pDef" val="179" />
+			<add stat="pDef" val="179" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -50,7 +50,7 @@
 		<set name="price" val="603400" />
 		<set name="weight" val="3200" />
 		<for>
-			<add order="0" stat="pDef" val="213" />
+			<add stat="pDef" val="213" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -67,7 +67,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="2720" />
 		<for>
-			<add order="0" stat="pDef" val="225" />
+			<add stat="pDef" val="225" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -85,7 +85,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="8000" />
 		<for>
-			<add order="0" stat="pDef" val="131" />
+			<add stat="pDef" val="131" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -103,7 +103,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="8000" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -121,7 +121,7 @@
 		<set name="price" val="603400" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="213" />
+			<add stat="pDef" val="213" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -139,7 +139,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="225" />
+			<add stat="pDef" val="225" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -157,7 +157,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="8000" />
 		<for>
-			<add order="0" stat="pDef" val="131" />
+			<add stat="pDef" val="131" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -175,7 +175,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="4300" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -193,7 +193,7 @@
 		<set name="price" val="6603000" />
 		<set name="weight" val="1280" />
 		<for>
-			<add order="0" stat="pDef" val="238" />
+			<add stat="pDef" val="238" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -215,7 +215,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4950" />
 		<for>
-			<add order="0" stat="pDef" val="237" />
+			<add stat="pDef" val="237" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -230,7 +230,7 @@
 		<set name="price" val="1954" />
 		<set name="weight" val="1630" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 		</for>
 	</item>
 	<item id="413" name="Puma Skin Gaiters" type="Armor">
@@ -247,7 +247,7 @@
 		<set name="price" val="6020" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="36" />
+			<add stat="pDef" val="36" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -265,7 +265,7 @@
 		<set name="price" val="9600" />
 		<set name="weight" val="1570" />
 		<for>
-			<add order="0" stat="pDef" val="41" />
+			<add stat="pDef" val="41" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -283,7 +283,7 @@
 		<set name="price" val="14640" />
 		<set name="weight" val="1580" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -301,7 +301,7 @@
 		<set name="price" val="14640" />
 		<set name="weight" val="1570" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -319,7 +319,7 @@
 		<set name="price" val="21540" />
 		<set name="weight" val="1550" />
 		<for>
-			<add order="0" stat="pDef" val="48" />
+			<add stat="pDef" val="48" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -337,7 +337,7 @@
 		<set name="price" val="42900" />
 		<set name="weight" val="1560" />
 		<for>
-			<add order="0" stat="pDef" val="59" />
+			<add stat="pDef" val="59" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -355,7 +355,7 @@
 		<set name="price" val="46460" />
 		<set name="weight" val="1550" />
 		<for>
-			<add order="0" stat="pDef" val="60" />
+			<add stat="pDef" val="60" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -373,7 +373,7 @@
 		<set name="price" val="79340" />
 		<set name="weight" val="1530" />
 		<for>
-			<add order="0" stat="pDef" val="66" />
+			<add stat="pDef" val="66" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -391,7 +391,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="4800" />
 		<for>
-			<add order="0" stat="pDef" val="82" />
+			<add stat="pDef" val="82" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -409,7 +409,7 @@
 		<set name="price" val="334000" />
 		<set name="weight" val="4800" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -427,7 +427,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="4800" />
 		<for>
-			<add order="0" stat="pDef" val="82" />
+			<add stat="pDef" val="82" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -445,7 +445,7 @@
 		<set name="price" val="334000" />
 		<set name="weight" val="1490" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -463,7 +463,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2150" />
 		<for>
-			<add order="0" stat="pDef" val="17" />
+			<add stat="pDef" val="17" order="0" />
 		</for>
 	</item>
 	<item id="426" name="Tunic" type="Armor">
@@ -477,7 +477,7 @@
 		<set name="price" val="23" />
 		<set name="weight" val="2150" />
 		<for>
-			<add order="0" stat="pDef" val="18" />
+			<add stat="pDef" val="18" order="0" />
 		</for>
 	</item>
 	<item id="427" name="Cotton Robe" type="Armor">
@@ -492,7 +492,7 @@
 		<set name="price" val="608" />
 		<set name="weight" val="2750" />
 		<for>
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
 		</for>
 	</item>
 	<item id="428" name="Feriotic Tunic" type="Armor">
@@ -506,7 +506,7 @@
 		<set name="price" val="374" />
 		<set name="weight" val="2140" />
 		<for>
-			<add order="0" stat="pDef" val="21" />
+			<add stat="pDef" val="21" order="0" />
 		</for>
 	</item>
 	<item id="429" name="Leather Tunic" type="Armor">
@@ -520,7 +520,7 @@
 		<set name="price" val="1224" />
 		<set name="weight" val="2110" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="430" name="Robe of Devotion" type="Armor">
@@ -535,7 +535,7 @@
 		<set name="price" val="5080" />
 		<set name="weight" val="2650" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 		</for>
 	</item>
 	<item id="431" name="Robe of Magic" type="Armor">
@@ -550,7 +550,7 @@
 		<set name="price" val="9218" />
 		<set name="weight" val="2600" />
 		<for>
-			<add order="0" stat="pDef" val="56" />
+			<add stat="pDef" val="56" order="0" />
 		</for>
 	</item>
 	<item id="432" name="Cursed Tunic" type="Armor">
@@ -567,7 +567,7 @@
 		<set name="price" val="9640" />
 		<set name="weight" val="2090" />
 		<for>
-			<add order="0" stat="pDef" val="39" />
+			<add stat="pDef" val="39" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -585,7 +585,7 @@
 		<set name="price" val="15380" />
 		<set name="weight" val="2080" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -603,7 +603,7 @@
 		<set name="price" val="15380" />
 		<set name="weight" val="2040" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -621,7 +621,7 @@
 		<set name="price" val="15380" />
 		<set name="weight" val="2030" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -639,7 +639,7 @@
 		<set name="price" val="23400" />
 		<set name="weight" val="2020" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -657,7 +657,7 @@
 		<set name="price" val="34400" />
 		<set name="weight" val="2010" />
 		<for>
-			<add order="0" stat="pDef" val="52" />
+			<add stat="pDef" val="52" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -675,7 +675,7 @@
 		<set name="price" val="73320" />
 		<set name="weight" val="2580" />
 		<for>
-			<add order="0" stat="pDef" val="90" />
+			<add stat="pDef" val="90" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -693,7 +693,7 @@
 		<set name="price" val="58200" />
 		<set name="weight" val="1980" />
 		<for>
-			<add order="0" stat="pDef" val="60" />
+			<add stat="pDef" val="60" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -712,7 +712,7 @@
 		<set name="price" val="120780" />
 		<set name="weight" val="2500" />
 		<for>
-			<add order="0" stat="pDef" val="105" />
+			<add stat="pDef" val="105" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -730,7 +730,7 @@
 		<set name="price" val="113200" />
 		<set name="weight" val="1990" />
 		<for>
-			<add order="0" stat="pDef" val="69" />
+			<add stat="pDef" val="69" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -748,7 +748,7 @@
 		<set name="price" val="165000" />
 		<set name="weight" val="1980" />
 		<for>
-			<add order="0" stat="pDef" val="74" />
+			<add stat="pDef" val="74" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -766,7 +766,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="2000" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -785,7 +785,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -803,7 +803,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1990" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -821,7 +821,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="1880" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -839,7 +839,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1960" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -858,7 +858,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -876,7 +876,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1950" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -895,7 +895,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -913,7 +913,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1970" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -931,7 +931,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="1890" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -949,7 +949,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1930" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -968,7 +968,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -986,7 +986,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1950" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1004,7 +1004,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="1870" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1022,7 +1022,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="1910" />
 		<for>
-			<add order="0" stat="pDef" val="87" />
+			<add stat="pDef" val="87" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1041,7 +1041,7 @@
 		<set name="price" val="868200" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="150" />
+			<add stat="pDef" val="150" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1060,7 +1060,7 @@
 		<set name="price" val="6603000" />
 		<set name="weight" val="1200" />
 		<for>
-			<add order="0" stat="pDef" val="158" />
+			<add stat="pDef" val="158" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1082,7 +1082,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="2300" />
 		<for>
-			<add order="0" stat="pDef" val="158" />
+			<add stat="pDef" val="158" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1100,7 +1100,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1100" />
 		<for>
-			<add order="0" stat="pDef" val="10" />
+			<add stat="pDef" val="10" order="0" />
 		</for>
 	</item>
 	<item id="462" name="Stockings" type="Armor">
@@ -1114,7 +1114,7 @@
 		<set name="price" val="15" />
 		<set name="weight" val="1080" />
 		<for>
-			<add order="0" stat="pDef" val="11" />
+			<add stat="pDef" val="11" order="0" />
 		</for>
 	</item>
 	<item id="463" name="Feriotic Stockings" type="Armor">
@@ -1128,7 +1128,7 @@
 		<set name="price" val="234" />
 		<set name="weight" val="1070" />
 		<for>
-			<add order="0" stat="pDef" val="13" />
+			<add stat="pDef" val="13" order="0" />
 		</for>
 	</item>
 	<item id="464" name="Leather Stockings" type="Armor">
@@ -1142,7 +1142,7 @@
 		<set name="price" val="764" />
 		<set name="weight" val="1020" />
 		<for>
-			<add order="0" stat="pDef" val="16" />
+			<add stat="pDef" val="16" order="0" />
 		</for>
 	</item>
 	<item id="465" name="Cursed Stockings" type="Armor">
@@ -1159,7 +1159,7 @@
 		<set name="price" val="6020" />
 		<set name="weight" val="1020" />
 		<for>
-			<add order="0" stat="pDef" val="24" />
+			<add stat="pDef" val="24" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1177,7 +1177,7 @@
 		<set name="price" val="9600" />
 		<set name="weight" val="1010" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1195,7 +1195,7 @@
 		<set name="price" val="9600" />
 		<set name="weight" val="1000" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1213,7 +1213,7 @@
 		<set name="price" val="9600" />
 		<set name="weight" val="990" />
 		<for>
-			<add order="0" stat="pDef" val="27" />
+			<add stat="pDef" val="27" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1231,7 +1231,7 @@
 		<set name="price" val="14640" />
 		<set name="weight" val="1000" />
 		<for>
-			<add order="0" stat="pDef" val="30" />
+			<add stat="pDef" val="30" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1249,7 +1249,7 @@
 		<set name="price" val="21540" />
 		<set name="weight" val="980" />
 		<for>
-			<add order="0" stat="pDef" val="32" />
+			<add stat="pDef" val="32" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1267,7 +1267,7 @@
 		<set name="price" val="36420" />
 		<set name="weight" val="970" />
 		<for>
-			<add order="0" stat="pDef" val="37" />
+			<add stat="pDef" val="37" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1285,7 +1285,7 @@
 		<set name="price" val="70800" />
 		<set name="weight" val="980" />
 		<for>
-			<add order="0" stat="pDef" val="43" />
+			<add stat="pDef" val="43" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1303,7 +1303,7 @@
 		<set name="price" val="103160" />
 		<set name="weight" val="960" />
 		<for>
-			<add order="0" stat="pDef" val="46" />
+			<add stat="pDef" val="46" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1321,7 +1321,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1339,7 +1339,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1357,7 +1357,7 @@
 		<set name="price" val="334000" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1375,7 +1375,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1393,7 +1393,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1411,7 +1411,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1429,7 +1429,7 @@
 		<set name="price" val="334000" />
 		<set name="weight" val="1600" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1447,7 +1447,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1465,7 +1465,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1483,7 +1483,7 @@
 		<set name="price" val="334000" />
 		<set name="weight" val="6400" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1501,7 +1501,7 @@
 		<set name="price" val="232060" />
 		<set name="weight" val="2400" />
 		<for>
-			<add order="0" stat="pDef" val="55" />
+			<add stat="pDef" val="55" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1515,7 +1515,7 @@
 		<set name="price" val="5680" />
 		<set name="weight" val="4200" />
 		<for>
-			<add order="0" stat="pDef" val="53" />
+			<add stat="pDef" val="53" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1532,7 +1532,7 @@
 		<set name="price" val="23400" />
 		<set name="weight" val="4050" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1549,7 +1549,7 @@
 		<set name="price" val="23400" />
 		<set name="weight" val="4000" />
 		<for>
-			<add order="0" stat="pDef" val="73" />
+			<add stat="pDef" val="73" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1566,7 +1566,7 @@
 		<set name="price" val="534200" />
 		<set name="weight" val="800" />
 		<for>
-			<add order="0" stat="pDef" val="139" />
+			<add stat="pDef" val="139" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1583,7 +1583,7 @@
 		<set name="price" val="165000" />
 		<set name="weight" val="4100" />
 		<for>
-			<add order="0" stat="pDef" val="110" />
+			<add stat="pDef" val="110" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1600,7 +1600,7 @@
 		<set name="price" val="2671000" />
 		<set name="weight" val="3800" />
 		<for>
-			<add order="0" stat="pDef" val="132" />
+			<add stat="pDef" val="132" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1617,7 +1617,7 @@
 		<set name="price" val="4064000" />
 		<set name="weight" val="800" />
 		<for>
-			<add order="0" stat="pDef" val="146" />
+			<add stat="pDef" val="146" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1634,7 +1634,7 @@
 		<set name="price" val="15380" />
 		<set name="weight" val="4150" />
 		<for>
-			<add order="0" stat="pDef" val="65" />
+			<add stat="pDef" val="65" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1651,7 +1651,7 @@
 		<set name="price" val="239400" />
 		<set name="weight" val="4000" />
 		<for>
-			<add order="0" stat="pDef" val="117" />
+			<add stat="pDef" val="117" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1668,7 +1668,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="4100" />
 		<for>
-			<add order="0" stat="pDef" val="125" />
+			<add stat="pDef" val="125" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1685,7 +1685,7 @@
 		<set name="price" val="239400" />
 		<set name="weight" val="4000" />
 		<for>
-			<add order="0" stat="pDef" val="124" />
+			<add stat="pDef" val="124" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1702,7 +1702,7 @@
 		<set name="price" val="371400" />
 		<set name="weight" val="4100" />
 		<for>
-			<add order="0" stat="pDef" val="131" />
+			<add stat="pDef" val="131" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1719,7 +1719,7 @@
 		<set name="price" val="22560" />
 		<set name="weight" val="620" />
 		<for>
-			<add order="0" stat="pDef" val="45" />
+			<add stat="pDef" val="45" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1736,7 +1736,7 @@
 		<set name="price" val="31640" />
 		<set name="weight" val="610" />
 		<for>
-			<add order="0" stat="pDef" val="49" />
+			<add stat="pDef" val="49" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1753,7 +1753,7 @@
 		<set name="price" val="82520" />
 		<set name="weight" val="240" />
 		<for>
-			<add order="0" stat="pDef" val="58" />
+			<add stat="pDef" val="58" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

@@ -288,14 +288,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="darkRes" val="15" />
 			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
 			<add stat="holyRes" val="15" />
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
-			<add stat="waterRes" val="15" />
+			<add stat="darkRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="fireRes" val="15" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
@@ -309,14 +309,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="darkRes" val="15" />
 			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
 			<add stat="holyRes" val="15" />
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
-			<add stat="waterRes" val="15" />
+			<add stat="darkRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="fireRes" val="15" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
@@ -330,14 +330,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<for>
-			<add stat="darkRes" val="15" />
 			<add stat="earthRes" val="15" />
-			<add stat="fireRes" val="15" />
 			<add stat="holyRes" val="15" />
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
-			<add stat="waterRes" val="15" />
+			<add stat="darkRes" val="15" />
 			<add stat="windRes" val="15" />
+			<add stat="waterRes" val="15" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="fireRes" val="15" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23727" name="Life Stone: Tattoo" type="EtcItem">

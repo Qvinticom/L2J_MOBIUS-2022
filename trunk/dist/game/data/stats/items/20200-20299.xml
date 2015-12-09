@@ -90,7 +90,7 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -112,7 +112,7 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -134,7 +134,7 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="48" />
+			<add stat="mDef" val="48" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -156,8 +156,8 @@
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -179,8 +179,8 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -202,8 +202,8 @@
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1049,9 +1049,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20256" name="Baguette Dagger" additionalName="7-day" type="Weapon">
@@ -1078,11 +1078,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="2" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="20257" name="Baguette Dualsword" additionalName="7-day" type="Weapon">
@@ -1110,9 +1110,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20258" name="Baguette Mace" additionalName="7-day" type="Weapon">
@@ -1141,9 +1141,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20259" name="Baguette Heavy Hammer" additionalName="7-day" type="Weapon">
@@ -1172,9 +1172,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20260" name="Baguette Spear" additionalName="7-day" type="Weapon">
@@ -1201,11 +1201,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="2" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="2" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="20261" name="Baguette Bow" additionalName="7-day" type="Weapon">
@@ -1234,11 +1234,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="3" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="20262" name="Baguette Fist" additionalName="7-day" type="Weapon">
@@ -1266,9 +1266,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20263" name="Baguette Magic Sword" additionalName="7-day" type="Weapon">
@@ -1296,9 +1296,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20264" name="Baguette Staff" additionalName="7-day" type="Weapon">
@@ -1327,9 +1327,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="20265" name="Baguette Great Staff" additionalName="7-day" type="Weapon">
@@ -1358,9 +1358,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20266" name="Baguette Shield" additionalName="7-day" type="Armor">
@@ -1381,9 +1381,9 @@
 		<set name="time" val="10080" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="5" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="20267" name="Baguette Rapier" additionalName="7-day" type="Weapon">
@@ -1414,11 +1414,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="3" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="20268" name="Baguette Ancient Sword" additionalName="7-day" type="Weapon">
@@ -1450,9 +1450,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="3" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="20269" name="Baguette Crossbow" additionalName="7-day" type="Weapon">
@@ -1483,11 +1483,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="3" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="3" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="20270" name="Baguette's Dualsword" additionalName="7-day" type="Weapon">
@@ -1514,9 +1514,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="2" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="20271" name="Baguette Legacy" type="EtcItem">

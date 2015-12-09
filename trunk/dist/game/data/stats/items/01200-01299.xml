@@ -191,11 +191,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1800" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="17" />
-			<set stat="pAtk" val="49" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="17" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="1214" name="Moretti's Letter" type="EtcItem">
@@ -1264,9 +1264,9 @@
 		<set name="weight" val="200" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1296" name="Gladius" type="Weapon">
@@ -1289,9 +1289,9 @@
 		<set name="weight" val="300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1297" name="Bastard Sword" type="Weapon">
@@ -1314,9 +1314,9 @@
 		<set name="weight" val="400" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1298" name="Caliburs" type="Weapon">
@@ -1339,9 +1339,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="22" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="1299" name="Great Sword" type="Weapon">
@@ -1364,9 +1364,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="6" />
 			<set stat="pAtk" val="200" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 </list>

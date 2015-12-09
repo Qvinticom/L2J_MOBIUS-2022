@@ -7,7 +7,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46601" name="White Assassin Suit" type="Armor">
@@ -18,7 +18,7 @@
 		<set name="is_auctionable" val="false" />
 		<set name="material" val="BRONZE" />
 		<for>
-			<add order="0" stat="pDef" val="400" />
+			<add stat="pDef" val="400" order="0" />
 		</for>
 	</item>
 	<item id="46602" name="Blue Dynasty Cloak" type="Armor">
@@ -32,8 +32,8 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="mDef" val="40" />
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<add stat="mDef" val="40" order="0" />
 		</for>
 	</item>
 	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
@@ -88,6 +88,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="46608" name="Blue Dynasty Circlet" additionalName="DEX" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. DEX + 3 when equipped. -->
@@ -98,6 +101,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="46609" name="Blue Dynasty Circlet" additionalName="CON" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CON + 3 when equipped. -->
@@ -108,6 +114,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="46610" name="Blue Dynasty Circlet" additionalName="MEN" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. MEN + 3 when equipped. -->
@@ -118,6 +127,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="46611" name="Blue Dynasty Circlet" additionalName="INT" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
@@ -128,6 +140,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="46612" name="Blue Dynasty Circlet" additionalName="WIT" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. WIT + 3 when equipped. -->
@@ -138,6 +153,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="46613" name="Blue Dynasty Circlet" additionalName="Critical Rate" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Critical Rate + 50 when equipped. -->
@@ -148,6 +166,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="46614" name="Blue Dynasty Circlet" additionalName="Critical Damage" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -158,6 +179,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="46615" name="Blue Dynasty Circlet" additionalName="P. Def." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Def. + 5% when equipped. -->
@@ -168,6 +193,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="46616" name="Blue Dynasty Circlet" additionalName="M. Def." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Def. + 5% when equipped. -->
@@ -178,6 +206,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="46617" name="Blue Dynasty Circlet" additionalName="Evasion" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Evasion + 5 when equipped. -->
@@ -188,6 +219,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="46618" name="Blue Dynasty Circlet" additionalName="P. Atk." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Atk. + 5% when equipped. -->
@@ -198,6 +232,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="46619" name="Blue Dynasty Circlet" additionalName="M. Atk." type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Atk. + 10% when equipped. -->
@@ -208,6 +245,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="46620" name="Blue Dynasty Circlet" additionalName="Accuracy" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Accuracy + 5 when equipped. -->
@@ -218,6 +258,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="46621" name="Shadow Blue Seal Bracelet" type="Armor">
 		<!-- L2 Assist App item. Can summon Shadow Blue. -->
@@ -304,6 +347,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+		</for>
 	</item>
 	<item id="46628" name="Blue Dynasty Circlet" additionalName="CHA" type="Armor">
 		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
@@ -314,6 +360,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+		</for>
 	</item>
 	<item id="46629" name="Practice StormBringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
@@ -336,9 +385,9 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46630" name="Twilight Necklace" additionalName="30-day" type="Armor">
@@ -357,8 +406,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="142" />
 			<add stat="maxMp" val="58" />
+			<add stat="mDef" val="142" order="0" />
 		</for>
 	</item>
 	<item id="46631" name="Twilight Earring" additionalName="30-day" type="Armor">
@@ -377,8 +426,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="107" />
 			<add stat="maxMp" val="43" />
+			<add stat="mDef" val="107" order="0" />
 		</for>
 	</item>
 	<item id="46632" name="Twilight Ring" additionalName="30-day" type="Armor">
@@ -397,7 +446,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="71" />
+			<add stat="mDef" val="71" order="0" />
 		</for>
 	</item>
 	<item id="46633" name="Seraph Necklace" additionalName="30-day" type="Armor">
@@ -416,8 +465,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="161" />
 			<add stat="maxMp" val="62" />
+			<add stat="mDef" val="161" order="0" />
 		</for>
 	</item>
 	<item id="46634" name="Seraph Earring" additionalName="30-day" type="Armor">
@@ -436,8 +485,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="121" />
 			<add stat="maxMp" val="46" />
+			<add stat="mDef" val="121" order="0" />
 		</for>
 	</item>
 	<item id="46635" name="Seraph Ring" additionalName="30-day" type="Armor">
@@ -456,7 +505,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="80" />
+			<add stat="mDef" val="80" order="0" />
 		</for>
 	</item>
 	<item id="46636" name="Eternal Necklace" additionalName="30-day" type="Armor">
@@ -475,8 +524,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
 			<add stat="maxMp" val="65" />
+			<add stat="mDef" val="174" order="0" />
 		</for>
 	</item>
 	<item id="46637" name="Eternal Earring" additionalName="30-day" type="Armor">
@@ -495,8 +544,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
 			<add stat="maxMp" val="49" />
+			<add stat="mDef" val="130" order="0" />
 		</for>
 	</item>
 	<item id="46638" name="Eternal Ring" additionalName="30-day" type="Armor">
@@ -515,7 +564,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 		</for>
 	</item>
 	<item id="46639" name="Roa's Lost Item" additionalName="Event" type="EtcItem">
@@ -712,11 +761,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="388" />
-			<set stat="pAtk" val="690" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="690" />
+			<set stat="mAtk" val="388" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46654" name="Elysium Cutter" additionalName="Event" type="Weapon">
@@ -740,9 +789,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="770" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46655" name="Elysium Slasher" additionalName="Event" type="Weapon">
@@ -766,9 +815,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="931" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46656" name="Elysium Avenger" additionalName="Event" type="Weapon">
@@ -793,9 +842,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="770" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46657" name="Elysium Fighter" additionalName="Event" type="Weapon">
@@ -820,9 +869,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="931" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46658" name="Elysium Stormer" additionalName="Event" type="Weapon">
@@ -845,11 +894,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="388" />
-			<set stat="pAtk" val="770" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="770" />
+			<set stat="mAtk" val="388" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46659" name="Elysium Thrower" additionalName="Event" type="Weapon">
@@ -872,11 +921,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="388" />
-			<set stat="pAtk" val="1521" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1521" />
+			<set stat="mAtk" val="388" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
@@ -899,11 +948,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="388" />
-			<set stat="pAtk" val="1286" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1286" />
+			<set stat="mAtk" val="388" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46661" name="Elysium Buster" additionalName="Event" type="Weapon">
@@ -927,9 +976,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="481" />
 			<set stat="pAtk" val="643" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46662" name="Elysium Caster" additionalName="Event" type="Weapon">
@@ -954,9 +1003,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="481" />
 			<set stat="pAtk" val="643" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="46663" name="Elysium Retributer" additionalName="Event" type="Weapon">
@@ -981,9 +1030,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="518" />
 			<set stat="pAtk" val="776" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46664" name="Elysium Dualsword" additionalName="Event" type="Weapon">
@@ -1007,9 +1056,9 @@
 		<set name="weight" val="500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="931" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
@@ -1032,11 +1081,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="500" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="388" />
-			<set stat="pAtk" val="792" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="792" />
+			<set stat="mAtk" val="388" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46666" name="Elysium Dual Blunt Weapon" additionalName="Event" type="Weapon">
@@ -1061,9 +1110,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="388" />
 			<set stat="pAtk" val="931" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">
@@ -1090,9 +1139,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<for>
-			<set stat="broochJewels" val="5" />
+			<add stat="mDef" val="101" order="0" />
 			<add stat="inventoryLimit" val="12" />
-			<add order="0" stat="mDef" val="101" />
+			<set stat="broochJewels" val="5" />
 		</for>
 	</item>
 	<item id="46669" name="Radiant Brooch Fragment" type="EtcItem">

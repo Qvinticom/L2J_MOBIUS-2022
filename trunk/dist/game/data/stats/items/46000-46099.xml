@@ -511,6 +511,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="STR" val="5" />
+		</for>
 	</item>
 	<item id="46040" name="Player Commendation Talisman - INT" additionalName="PC-exclusive" type="Armor">
 		<!-- INT + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -526,6 +529,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="INT" val="5" />
+		</for>
 	</item>
 	<item id="46041" name="Player Commendation Talisman - DEX" additionalName="PC-exclusive" type="Armor">
 		<!-- DEX + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -541,6 +547,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="DEX" val="5" />
+		</for>
 	</item>
 	<item id="46042" name="Player Commendation Talisman - WIT" additionalName="PC-exclusive" type="Armor">
 		<!-- WIT + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -556,6 +565,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="WIT" val="5" />
+		</for>
 	</item>
 	<item id="46043" name="Player Commendation Talisman - CON" additionalName="PC-exclusive" type="Armor">
 		<!-- CON + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -571,6 +583,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="CON" val="5" />
+		</for>
 	</item>
 	<item id="46044" name="Player Commendation Talisman - MEN" additionalName="PC-exclusive" type="Armor">
 		<!-- MEN + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -586,6 +601,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="MEN" val="5" />
+		</for>
 	</item>
 	<item id="46045" name="Player Commendation Talisman - Atk. Attribute Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Atk. Attribute + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -616,6 +634,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="fireRes" val="50" />
+		</for>
 	</item>
 	<item id="46047" name="Player Commendation Talisman - Water Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Water Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -631,6 +652,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="waterRes" val="50" />
+		</for>
 	</item>
 	<item id="46048" name="Player Commendation Talisman - Wind Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Wind Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -646,6 +670,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="windRes" val="50" />
+		</for>
 	</item>
 	<item id="46049" name="Player Commendation Talisman - Earth Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Earth Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -661,6 +688,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="earthRes" val="50" />
+		</for>
 	</item>
 	<item id="46050" name="Player Commendation Talisman - Holy Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Holy Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -676,6 +706,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="holyRes" val="50" />
+		</for>
 	</item>
 	<item id="46051" name="Player Commendation Talisman - Dark Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Dark Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -691,6 +724,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="darkRes" val="50" />
+		</for>
 	</item>
 	<item id="46052" name="Veridan's Soul Stone" type="EtcItem">
 		<!-- Soul Stone obtained from defeating Armed Veridan. When combined with Kechi's Soul Stone and Michaela's Soul Stone, it will be turned into a Dark Soul Stone. Take it to Head Priest of the Earth Daichir to be recognized for defeating  Earth Wyrm Trasken.  -->
@@ -819,11 +855,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="352" />
-			<set stat="pAtk" val="707" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="707" />
+			<set stat="mAtk" val="352" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46061" name="Kelbim Dual Dagger" type="Weapon">
@@ -851,11 +887,11 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="352" />
-			<set stat="pAtk" val="809" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="809" />
+			<set stat="mAtk" val="352" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46062" name="Kelbim Bow" type="Weapon">
@@ -878,11 +914,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="352" />
-			<set stat="pAtk" val="1592" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="1592" />
+			<set stat="mAtk" val="352" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46063" name="Kelbim Crossbow" type="Weapon">
@@ -905,11 +941,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="352" />
-			<set stat="pAtk" val="1434" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1434" />
+			<set stat="mAtk" val="352" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="46064" name="Dimensional Gludio Badge" type="EtcItem">

@@ -613,8 +613,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="waterRes" val="26" />
+			<add stat="mDef" val="85" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -634,8 +634,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="85" order="0" />
 			<add stat="holyRes" val="26" />
-			<add order="0" stat="mDef" val="85" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -655,8 +655,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="windRes" val="26" />
+			<add stat="mDef" val="85" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -676,8 +676,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="85" order="0" />
 			<add stat="darkRes" val="26" />
-			<add order="0" stat="mDef" val="85" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -697,8 +697,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="85" order="0" />
 			<add stat="earthRes" val="26" />
-			<add order="0" stat="mDef" val="85" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -718,8 +718,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="waterRes" val="26" />
+			<add stat="mDef" val="85" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -739,8 +739,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="85" order="0" />
 			<add stat="fireRes" val="26" />
-			<add order="0" stat="mDef" val="85" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -760,8 +760,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="85" order="0" />
 			<add stat="fireRes" val="26" />
-			<add order="0" stat="mDef" val="85" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -781,8 +781,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="windRes" val="26" />
+			<add stat="mDef" val="85" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -840,7 +840,7 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="maxCp" val="672" />
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -861,7 +861,7 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="42" />
+			<add stat="mDef" val="42" order="0" />
 		</for>
 	</item>
 	<item id="13753" name="Olympiad Warrior's Necklace" type="Armor">
@@ -881,8 +881,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="85" />
 			<add stat="maxMp" val="42" />
+			<add stat="mDef" val="85" order="0" />
 		</for>
 	</item>
 	<item id="13754" name="Olympiad Warrior's Earring" type="Armor">
@@ -902,8 +902,8 @@
 		<set name="time" val="86400" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="63" order="0" />
 		</for>
 	</item>
 	<item id="13755" name="Olympiad Warrior's Weapon (undetermined)" type="Weapon">
@@ -927,9 +927,9 @@
 		<set name="weight" val="1500" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="13756" name="Agathion - Knight" type="Armor">
@@ -1139,9 +1139,9 @@
 			</and>
 		</cond>
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="101" />
+			<sub stat="rEvas" val="8" />
 		</for>
 	</item>
 	<item id="13771" name="Strong Alkaline Ointment" type="EtcItem">
@@ -1459,9 +1459,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1488,9 +1488,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1516,9 +1516,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -1544,9 +1544,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="61" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>

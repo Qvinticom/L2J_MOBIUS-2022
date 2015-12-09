@@ -382,11 +382,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1870" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="26" />
-			<set stat="pAtk" val="82" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="82" />
+			<set stat="mAtk" val="26" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8528" name="Monster Only (Doom Hammer)" type="Weapon">
@@ -411,9 +411,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8529" name="Monster Only (Knife)" type="Weapon">
@@ -432,11 +432,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1140" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="9" />
-			<set stat="pAtk" val="10" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="10" />
+			<set stat="mAtk" val="9" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8530" name="Monster Only (Squire's Sword)" type="Weapon">
@@ -460,9 +460,9 @@
 		<set name="weight" val="1600" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="5" />
 			<set stat="pAtk" val="6" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8531" name="Monster Only (Bone Staff)" type="Weapon">
@@ -487,9 +487,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="35" />
 			<set stat="pAtk" val="39" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8532" name="Monster Only (Spinebone Sword)" type="Weapon">
@@ -512,9 +512,9 @@
 		<set name="weight" val="1510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8533" name="Monster Only (Crimson Sword)" type="Weapon">
@@ -537,9 +537,9 @@
 		<set name="weight" val="1490" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="64" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8534" name="Adventurer's Box: C-grade Accessory (Low-grade)" type="EtcItem">
@@ -641,8 +641,8 @@
 			<player categoryType="BABY_PET_GROUP" />
 		</cond>
 		<for>
-			<add order="0" stat="mDef" val="25" />
-			<add order="0" stat="pDef" val="10" />
+			<add stat="pDef" val="10" order="0" />
+			<add stat="mDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="8542" name="Newbie Travel Token" type="EtcItem">
@@ -865,6 +865,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<cond msgId="1518">
+			<player sex="1" />
 			<player sex="1" />
 		</cond>
 	</item>
@@ -1100,9 +1101,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="24" />
 			<set stat="pAtk" val="23" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8577" name="Bone Club (Event)" type="Weapon">
@@ -1127,9 +1128,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8578" name="Shining Knife (Event)" type="Weapon">
@@ -1152,11 +1153,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1120" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="17" />
-			<set stat="pAtk" val="21" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="21" />
+			<set stat="mAtk" val="17" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8579" name="Cestus (Event)" type="Weapon">
@@ -1181,9 +1182,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="29" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8580" name="Forest Bow (Event)" type="Weapon">
@@ -1208,11 +1209,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1900" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="17" />
-			<set stat="pAtk" val="49" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="49" />
+			<set stat="mAtk" val="17" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8581" name="Long Sword (Event)" type="Weapon">
@@ -1236,9 +1237,9 @@
 		<set name="weight" val="1560" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="17" />
 			<set stat="pAtk" val="24" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8582" name="Mace of Prayer (Event)" type="Weapon">
@@ -1265,9 +1266,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8583" name="Dark Elven Bow (Event)" type="Weapon">
@@ -1293,11 +1294,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="105" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="105" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8584" name="Longbow (Event)" type="Weapon">
@@ -1323,11 +1324,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1830" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="35" />
-			<set stat="pAtk" val="114" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="114" />
+			<set stat="mAtk" val="35" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8585" name="Staff of Mana (Event)" type="Weapon">
@@ -1354,9 +1355,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="47" />
 			<set stat="pAtk" val="50" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8586" name="Bastard Sword (Event)" type="Weapon">
@@ -1381,9 +1382,9 @@
 		<set name="weight" val="1510" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8587" name="Divine Tome (Event)" type="Weapon">
@@ -1409,9 +1410,9 @@
 		<set name="weight" val="570" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="43" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8588" name="Single-Edged Jamadhr (Event)" type="Weapon">
@@ -1437,9 +1438,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="8589" name="Tomahawk (Event)" type="Weapon">
@@ -1465,9 +1466,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="32" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="8590" name="Poniard Dagger (Event)" type="Weapon">
@@ -1491,11 +1492,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1090" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8591" name="Pike (Event)" type="Weapon">
@@ -1520,11 +1521,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2090" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="32" />
-			<set stat="pAtk" val="51" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="32" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="8592" name="Weapon Coupon (No-grade)" type="EtcItem">

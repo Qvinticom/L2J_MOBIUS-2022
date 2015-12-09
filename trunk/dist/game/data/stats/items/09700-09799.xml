@@ -276,11 +276,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="10" />
-			<set stat="pAtk" val="12" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="12" />
+			<set stat="mAtk" val="10" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="9721" name="Freezer" type="EtcItem">

@@ -171,9 +171,9 @@
 		<set name="weapon_type" val="DAGGER" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37917" name="Pumpkin Dual Dagger" type="Weapon">
@@ -191,9 +191,9 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37918" name="Scarecrow Sword" type="Weapon">
@@ -207,9 +207,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37919" name="Pig Lollipop Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
@@ -346,9 +346,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37930" name="Awakened Warrior's Cleaver (7-day)" additionalName="Haste" type="Weapon">
@@ -372,9 +372,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37931" name="Awakened Warrior's Axe (7-day)" additionalName="Haste" type="Weapon">
@@ -399,9 +399,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="435" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37932" name="Awakened Warrior's Rod (7-day)" additionalName="Acumen" type="Weapon">
@@ -426,9 +426,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="252" />
 			<set stat="pAtk" val="348" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37933" name="Awakened Warrior's Crusher (7-day)" additionalName="Haste" type="Weapon">
@@ -453,9 +453,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="230" />
 			<set stat="pAtk" val="643" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37934" name="Awakened Warrior's Scepter (7-day)" additionalName="Acumen" type="Weapon">
@@ -480,9 +480,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="278" />
 			<set stat="pAtk" val="423" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37935" name="Awakened Warrior's Stinger (7-day)" additionalName="Haste" type="Weapon">
@@ -505,11 +505,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="380" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="380" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37936" name="Awakened Warrior's Fang (7-day)" additionalName="Haste" type="Weapon">
@@ -534,9 +534,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37937" name="Awakened Warrior's Bow (7-day)" additionalName="Haste" type="Weapon">
@@ -560,11 +560,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="856" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="856" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37938" name="Awakened Warrior's Wing (7-day)" additionalName="Haste" type="Weapon">
@@ -588,9 +588,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="189" />
 			<set stat="pAtk" val="529" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37939" name="Awakened Warrior's Spear (7-day)" additionalName="Haste" type="Weapon">
@@ -613,11 +613,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="435" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="435" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37940" name="Awakened Warrior's Rapier (7-day)" additionalName="Haste" type="Weapon">
@@ -640,11 +640,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="230" />
-			<set stat="pAtk" val="479" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="479" />
+			<set stat="mAtk" val="230" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="37941" name="Awakened Warrior's Sword (7-day)" additionalName="Haste" type="Weapon">
@@ -669,9 +669,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="230" />
 			<set stat="pAtk" val="572" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="37942" name="Awakened Warrior's Shooter (7-day)" additionalName="Haste" type="Weapon">
@@ -694,11 +694,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="189" />
-			<set stat="pAtk" val="771" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="771" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37943" name="Awakened Warrior's Weapon Coupon (7-day)" type="EtcItem">
@@ -736,9 +736,9 @@
 		<set name="weapon_type" val="SWORD" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="37946" name="Chrono Unitus" type="Weapon">
@@ -755,9 +755,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37947" name="Chrono Campana" type="Weapon">
@@ -772,11 +772,11 @@
 		<set name="time" val="21600" />
 		<set name="weapon_type" val="POLE" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="1" />
-			<set stat="pAtk" val="1" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="1" />
+			<set stat="mAtk" val="1" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="37948" name="Chrono Darbuka" type="Weapon">
@@ -793,9 +793,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37949" name="Chrono Maracas" type="Weapon">
@@ -811,9 +811,9 @@
 		<set name="weapon_type" val="DUAL" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="1" />
 			<set stat="pAtk" val="1" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">

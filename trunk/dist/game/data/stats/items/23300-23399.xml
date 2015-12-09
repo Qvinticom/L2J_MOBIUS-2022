@@ -25,7 +25,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="23302" name="Blessed Scroll: Enchant Elemental Shirt Pack" type="EtcItem">
@@ -65,7 +65,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="23305" name="Blessed Scroll: Enchant Elemental Shirt Pack" type="EtcItem">
@@ -106,7 +106,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="23308" name="Recipe: Elven Radler" additionalName="Event" type="EtcItem">
@@ -862,8 +862,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23381" name="Adenian Premium Underwear" type="Armor">
@@ -878,8 +878,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23382" name="Adenian Temptation Underwear" type="Armor">
@@ -894,8 +894,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23383" name="Adenian Cyber Underwear" type="Armor">
@@ -910,8 +910,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23384" name="Adenian Cute Underwear" type="Armor">
@@ -925,9 +925,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
+		<cond msgId="1518">
+			<player sex="1" />
+		</cond>
 		<for>
-			<add order="0" stat="mDef" val="15" />
-			<add order="0" stat="pDef" val="35" />
+			<add stat="pDef" val="35" order="0" />
+			<add stat="mDef" val="15" order="0" />
 		</for>
 	</item>
 	<item id="23385" name="Life Stone: Adenian Underwear" type="EtcItem">

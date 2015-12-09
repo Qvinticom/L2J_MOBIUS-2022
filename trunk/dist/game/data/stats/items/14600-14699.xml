@@ -17,8 +17,8 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="42" order="0" />
 			<add stat="darkRes" val="12" />
-			<add order="0" stat="mDef" val="42" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -43,7 +43,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="14602" name="Ancient Cloak" type="Armor">
@@ -66,7 +66,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="14603" name="Sealed Ancient Cloak" type="EtcItem">
@@ -137,9 +137,9 @@
 		<set name="weight" val="2180" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="39" />
 			<set stat="pAtk" val="78" />
-			<set stat="pAtkSpd" val="325" />
 			<enchant stat="mAtk" val="0" />
 			<enchant stat="pAtk" val="0" />
 		</for>
@@ -178,7 +178,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="14609" name="Ancient Cloak" type="Armor">
@@ -199,7 +199,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="14610" name="Ancient Cloak (Robe)" type="Armor">
@@ -224,7 +224,7 @@
 			</and>
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="20" />
+			<add stat="pDef" val="20" order="0" />
 		</for>
 	</item>
 	<item id="14611" name="Rudolph's Nose" type="Armor">
@@ -392,9 +392,9 @@
 		<set name="weight" val="1300" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14622" name="Santa's Sword of Ipos" type="Weapon">
@@ -417,9 +417,9 @@
 		<set name="weight" val="1820" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14623" name="Santa's Barakiel Axe" type="Weapon">
@@ -443,9 +443,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="51" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14624" name="Santa's Behemoth' Tuning Fork" type="Weapon">
@@ -469,9 +469,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14625" name="Santa's Naga Storm" type="Weapon">
@@ -493,11 +493,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="930" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="38" />
-			<set stat="pAtk" val="45" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="45" />
+			<set stat="mAtk" val="38" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="14626" name="Santa's Tiphon Spear" type="Weapon">
@@ -519,11 +519,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="1820" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="38" />
-			<set stat="pAtk" val="51" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="51" />
+			<set stat="mAtk" val="38" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="14627" name="Santa's Shyeed Bow" type="Weapon">
@@ -547,11 +547,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1640" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="42" />
-			<set stat="pAtk" val="116" />
 			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="116" />
+			<set stat="mAtk" val="42" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="14628" name="Santa's Sobekk Hurricane" type="Weapon">
@@ -575,9 +575,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14629" name="Santa's Themis Tongue" type="Weapon">
@@ -601,9 +601,9 @@
 		<set name="weight" val="820" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="41" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14630" name="Santa's Cabrio's Hand" type="Weapon">
@@ -628,9 +628,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="50" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="14631" name="Santa's Daimon Crystal" type="Weapon">
@@ -655,9 +655,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="56" />
 			<set stat="pAtk" val="62" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14632" name="Santa's Éclair Bijou" type="Weapon">
@@ -683,11 +683,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="38" />
-			<set stat="pAtk" val="46" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="46" />
+			<set stat="mAtk" val="38" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="14633" name="Santa's Screaming Vengeance" type="Weapon">
@@ -713,11 +713,11 @@
 			<player races="KAMAEL" />
 		</cond>
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="38" />
-			<set stat="pAtk" val="56" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="56" />
+			<set stat="mAtk" val="38" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="14634" name="Santa's Durendal" type="Weapon">
@@ -744,9 +744,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="38" />
 			<set stat="pAtk" val="65" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="14635" name="Battle Reward Box (Low-grade)" type="EtcItem">
@@ -1230,8 +1230,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="waterRes" val="8" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1252,8 +1252,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="63" order="0" />
 			<add stat="holyRes" val="8" />
-			<add order="0" stat="mDef" val="63" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1274,8 +1274,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="windRes" val="8" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1296,8 +1296,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="63" order="0" />
 			<add stat="darkRes" val="8" />
-			<add order="0" stat="mDef" val="63" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1318,8 +1318,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="63" order="0" />
 			<add stat="earthRes" val="8" />
-			<add order="0" stat="mDef" val="63" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1340,8 +1340,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="waterRes" val="8" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1362,8 +1362,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="63" order="0" />
 			<add stat="fireRes" val="8" />
-			<add order="0" stat="mDef" val="63" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1384,8 +1384,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
+			<add stat="mDef" val="63" order="0" />
 			<add stat="fireRes" val="8" />
-			<add order="0" stat="mDef" val="63" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1406,8 +1406,8 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="63" />
 			<add stat="windRes" val="8" />
+			<add stat="mDef" val="63" order="0" />
 			<enchant stat="mDef" val="0" />
 		</for>
 	</item>
@@ -1441,9 +1441,9 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="51" />
 			<set stat="pAtk" val="61" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="14675" name="Agathion - Neolithica" type="Armor">

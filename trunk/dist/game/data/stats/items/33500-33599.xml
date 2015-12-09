@@ -128,7 +128,7 @@
 		<for>
 			<add stat="INT" val="1" />
 			<add stat="STR" val="1" />
-			<add order="0" stat="pDef" val="3" />
+			<add stat="pDef" val="3" order="0" />
 		</for>
 	</item>
 	<item id="33510" name="Returning Hero's Belt" type="Armor">
@@ -143,6 +143,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<for>
+			<add stat="weightLimit" val="5000" />
+		</for>
 	</item>
 	<item id="33511" name="Returning Hero's Mark" type="EtcItem">
 		<!-- Mark for a returning hero. If you bring it to the Dimensional Merchant, you can exchange for a returning hero's equipment. -->
@@ -307,6 +310,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.02" />
+			<mul stat="mCritRate" val="1.02" />
+		</for>
 	</item>
 	<item id="33524" name="Talisman - P. Accuracy (Passive)" additionalName="Campaign" type="Armor">
 		<!-- Accuracy + 2 when equipped. Shadow weapon. -->
@@ -321,6 +328,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="2" />
+		</for>
 	</item>
 	<item id="33525" name="Talisman - M. Accuracy (Passive)" additionalName="Campaign" type="Armor">
 		<!-- M. Accuracy + 2 when equipped. Shadow weapon. -->
@@ -335,6 +345,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="accMagic" val="2" />
+		</for>
 	</item>
 	<item id="33526" name="Talisman - Evasion (Passive)" additionalName="Campaign" type="Armor">
 		<!-- Evasion + 2 when equipped. Shadow weapon. -->
@@ -349,6 +363,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+		</for>
 	</item>
 	<item id="33527" name="Talisman - M. Evasion (Passive)" additionalName="Campaign" type="Armor">
 		<!-- M. Evasion + 2 when equipped. Shadow weapon. -->
@@ -363,6 +380,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="2" />
+		</for>
 	</item>
 	<item id="33528" name="Talisman - P. Critical Rate (Passive)" additionalName="Campaign" type="Armor">
 		<!-- P. Critical Rate + 2% when equipped. Shadow weapon. -->
@@ -377,6 +397,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.02" />
+		</for>
 	</item>
 	<item id="33529" name="Talisman - Critical Evasion (Passive)" additionalName="Campaign" type="Armor">
 		<!-- The rate of receiving a physical Critical Attacks - 2% when equipped. Shadow weapon. -->
@@ -405,6 +428,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.04" />
+			<mul stat="mCritRate" val="1.04" />
+		</for>
 	</item>
 	<item id="33531" name="Talisman - P. Accuracy (Active)" additionalName="Campaign" type="Armor">
 		<!-- Accuracy + 4 when used. Shadow weapon. -->
@@ -419,6 +446,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="4" />
+		</for>
 	</item>
 	<item id="33532" name="Talisman - M. Accuracy (Active)" additionalName="Campaign" type="Armor">
 		<!-- M. Accuracy + 4 when used. Shadow weapon. -->
@@ -433,6 +463,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="accCombat" val="4" />
+			<add stat="accMagic" val="4" />
+		</for>
 	</item>
 	<item id="33533" name="Talisman - Evasion (Active)" additionalName="Campaign" type="Armor">
 		<!-- Evasion + 4 when used. Shadow weapon. -->
@@ -447,6 +481,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="4" />
+		</for>
 	</item>
 	<item id="33534" name="Talisman - M. Evasion (Active)" additionalName="Campaign" type="Armor">
 		<!-- M. Evasion + 4 when used. Shadow weapon. -->
@@ -461,6 +498,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<add stat="pSkillEvas" val="4" />
+		</for>
 	</item>
 	<item id="33535" name="Talisman - P. Critical Rate (Active)" additionalName="Campaign" type="Armor">
 		<!-- P. Critical Rate + 4% when used. Shadow weapon. -->
@@ -475,6 +515,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="critRate" val="1.04" />
+		</for>
 	</item>
 	<item id="33536" name="Talisman - Critical Evasion (Active)" additionalName="Campaign" type="Armor">
 		<!-- The rate of receiving a physical Critical Attacks - 4% when used. Shadow weapon. -->
@@ -517,6 +560,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="pAtk" val="1.02" />
+		</for>
 	</item>
 	<item id="33539" name="Basic Talisman - P. Def." additionalName="Campaign" type="Armor">
 		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
@@ -531,6 +577,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="pDef" val="1.03" />
+		</for>
 	</item>
 	<item id="33540" name="Basic Talisman - Casting Spd." additionalName="Campaign" type="Armor">
 		<!-- Casting Spd. + 2% when equipped. Shadow weapon. -->
@@ -545,6 +594,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mAtkSpd" val="1.02" />
+		</for>
 	</item>
 	<item id="33541" name="Basic Talisman - M. Def." additionalName="Campaign" type="Armor">
 		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
@@ -559,6 +611,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="pDef" val="1.03" />
+		</for>
 	</item>
 	<item id="33542" name="Basic Talisman - M. Atk." additionalName="Campaign" type="Armor">
 		<!-- M. Atk. + 2% when equipped. Shadow weapon. -->
@@ -573,6 +628,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<for>
+			<mul stat="mAtk" val="1.02" />
+		</for>
 	</item>
 	<item id="33543" name="Bound Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%.. No Soul Crystal option. -->
@@ -593,9 +651,9 @@
 		<set name="weight" val="2080" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="99" />
 			<set stat="pAtk" val="236" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33544" name="Unidentified Samurai Long Sword*Samurai Long Sword" type="EtcItem">
@@ -625,9 +683,9 @@
 		<set name="weight" val="1890" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="121" />
 			<set stat="pAtk" val="305" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33546" name="Unidentified Tallum Blade*Damascus" type="EtcItem">
@@ -658,9 +716,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33548" name="Bound Dynasty Sword - Health" additionalName="Event" type="Weapon">
@@ -683,9 +741,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33549" name="Bound Dynasty Sword - Light Armor" additionalName="Event" type="Weapon">
@@ -708,9 +766,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33550" name="Bound Dynasty Blade - Focus" additionalName="Event" type="Weapon">
@@ -733,9 +791,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33551" name="Bound Dynasty Blade - Health" additionalName="Event" type="Weapon">
@@ -758,9 +816,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33552" name="Bound Dynasty Blade - Light Armor" additionalName="Event" type="Weapon">
@@ -783,9 +841,9 @@
 		<set name="weight" val="1740" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33553" name="Bound Dynasty Phantom - Acumen" additionalName="Event" type="Weapon">
@@ -808,9 +866,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33554" name="Bound Dynasty Phantom - Mana Up" additionalName="Event" type="Weapon">
@@ -833,9 +891,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33555" name="Bound Dynasty Phantom - Conversion" additionalName="Event" type="Weapon">
@@ -858,9 +916,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33556" name="Bound Dynasty Bow - Cheap Shot" additionalName="Event" type="Weapon">
@@ -883,11 +941,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33557" name="Bound Dynasty Bow - Guidance" additionalName="Event" type="Weapon">
@@ -910,11 +968,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33558" name="Bound Dynasty Bow - Focus" additionalName="Event" type="Weapon">
@@ -937,11 +995,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="654" />
 			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="654" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33559" name="Bound Dynasty Knife - Focus" additionalName="Event" type="Weapon">
@@ -963,11 +1021,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33560" name="Bound Dynasty Knife - Evasion" additionalName="Event" type="Weapon">
@@ -989,11 +1047,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33561" name="Bound Dynasty Knife - Critical Damage" additionalName="Event" type="Weapon">
@@ -1015,11 +1073,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="1520" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="291" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="291" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33562" name="Bound Dynasty Halberd - Anger" additionalName="Event" type="Weapon">
@@ -1041,11 +1099,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33563" name="Bound Dynasty Halberd - Critical Stun" additionalName="Event" type="Weapon">
@@ -1067,11 +1125,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33564" name="Bound Dynasty Halberd - Light Armor" additionalName="Event" type="Weapon">
@@ -1093,11 +1151,11 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="2010" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="8" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="333" />
 			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="333" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33565" name="Bound Dynasty Cudgel - Anger" additionalName="Event" type="Weapon">
@@ -1121,9 +1179,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33566" name="Bound Dynasty Cudgel - Health" additionalName="Event" type="Weapon">
@@ -1147,9 +1205,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33567" name="Bound Dynasty Cudgel - Rsk. Focus" additionalName="Event" type="Weapon">
@@ -1173,9 +1231,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="333" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33568" name="Bound Dynasty Mace - Mana Up" additionalName="Event" type="Weapon">
@@ -1199,9 +1257,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33569" name="Bound Dynasty Mace - Conversion" additionalName="Event" type="Weapon">
@@ -1225,9 +1283,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33570" name="Bound Dynasty Mace - Acumen" additionalName="Event" type="Weapon">
@@ -1251,9 +1309,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="202" />
 			<set stat="pAtk" val="267" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="33571" name="Bound Dynasty Bagh-Nakh - Rsk. Evasion" additionalName="Event" type="Weapon">
@@ -1277,9 +1335,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33572" name="Bound Dynasty Bagh-Nakh - Focus" additionalName="Event" type="Weapon">
@@ -1303,9 +1361,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33573" name="Bound Dynasty Bagh-Nakh - Haste" additionalName="Event" type="Weapon">
@@ -1329,9 +1387,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33574" name="Bound Dynasty Staff - Mana Up" additionalName="Event" type="Weapon">
@@ -1355,9 +1413,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33575" name="Bound Dynasty Staff - Conversion" additionalName="Event" type="Weapon">
@@ -1381,9 +1439,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33576" name="Bound Dynasty Staff - Acumen" additionalName="Event" type="Weapon">
@@ -1407,9 +1465,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="222" />
 			<set stat="pAtk" val="325" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33577" name="Bound Dynasty Crusher - Anger" additionalName="Event" type="Weapon">
@@ -1433,9 +1491,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33578" name="Bound Dynasty Crusher - Health" additionalName="Event" type="Weapon">
@@ -1459,9 +1517,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33579" name="Bound Dynasty Crusher - Rsk. Focus" additionalName="Event" type="Weapon">
@@ -1485,9 +1543,9 @@
 		<for>
 			<add stat="accCombat" val="8" />
 			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33580" name="Bound Dynasty Dual Dagger" additionalName="Event" type="Weapon">
@@ -1508,11 +1566,11 @@
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="weight" val="2150" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="157" />
-			<set stat="pAtk" val="304" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="304" />
+			<set stat="mAtk" val="157" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="33581" name="Bound Dynasty Dualsword" additionalName="Event" type="Weapon">
@@ -1534,9 +1592,9 @@
 		<set name="weight" val="1520" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="405" />
-			<set stat="pAtkSpd" val="325" />
 		</for>
 	</item>
 	<item id="33582" name="Bound Dynasty Rapier - Focus" additionalName="Event" type="Weapon">
@@ -1558,11 +1616,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="302" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33583" name="Bound Dynasty Rapier - Health" additionalName="Event" type="Weapon">
@@ -1584,11 +1642,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="302" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33584" name="Bound Dynasty Rapier - Light Armor" additionalName="Event" type="Weapon">
@@ -1610,11 +1668,11 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="weight" val="1280" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="302" />
 			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="302" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33585" name="Bound Dynasty Ancient Sword - Focus" additionalName="Event" type="Weapon">
@@ -1638,9 +1696,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="361" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33586" name="Bound Dynasty Ancient Sword - Health" additionalName="Event" type="Weapon">
@@ -1664,9 +1722,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="361" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33587" name="Bound Dynasty Ancient Sword - Light Armor" additionalName="Event" type="Weapon">
@@ -1690,9 +1748,9 @@
 		<for>
 			<add stat="accCombat" val="2" />
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
 			<set stat="mAtk" val="151" />
 			<set stat="pAtk" val="361" />
-			<set stat="pAtkSpd" val="350" />
 		</for>
 	</item>
 	<item id="33588" name="Bound Dynasty Crossbow - Cheap Shot" additionalName="Event" type="Weapon">
@@ -1714,11 +1772,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="401" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33589" name="Bound Dynasty Crossbow - Guidance" additionalName="Event" type="Weapon">
@@ -1740,11 +1798,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="401" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33590" name="Bound Dynasty Crossbow - Focus" additionalName="Event" type="Weapon">
@@ -1766,11 +1824,11 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="weight" val="1580" />
 		<for>
-			<sub stat="accCombat" val="1.5" />
 			<add stat="critRate" val="10" />
-			<set stat="mAtk" val="151" />
-			<set stat="pAtk" val="401" />
 			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="401" />
+			<set stat="mAtk" val="151" />
+			<sub stat="accCombat" val="1.5" />
 		</for>
 	</item>
 	<item id="33591" name="Bound Dynasty Breastplate" additionalName="Event" type="Armor">
@@ -1787,7 +1845,7 @@
 		<set name="price" val="1219900" />
 		<set name="weight" val="7570" />
 		<for>
-			<add order="0" stat="pDef" val="226" />
+			<add stat="pDef" val="226" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1805,7 +1863,7 @@
 		<set name="price" val="762400" />
 		<set name="weight" val="3210" />
 		<for>
-			<add order="0" stat="pDef" val="141" />
+			<add stat="pDef" val="141" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1822,7 +1880,7 @@
 		<set name="price" val="457450" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1839,7 +1897,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="520" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1856,7 +1914,7 @@
 		<set name="price" val="304950" />
 		<set name="weight" val="1090" />
 		<for>
-			<add order="0" stat="pDef" val="61" />
+			<add stat="pDef" val="61" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1872,9 +1930,9 @@
 		<set name="price" val="320200" />
 		<set name="weight" val="1150" />
 		<for>
-			<sub stat="rEvas" val="8" />
 			<set stat="rShld" val="20" />
 			<set stat="sDef" val="321" />
+			<sub stat="rEvas" val="8" />
 			<enchant stat="sDef" val="0" />
 		</for>
 	</item>
@@ -1892,7 +1950,7 @@
 		<set name="price" val="914900" />
 		<set name="weight" val="4180" />
 		<for>
-			<add order="0" stat="pDef" val="170" />
+			<add stat="pDef" val="170" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1910,7 +1968,7 @@
 		<set name="price" val="571800" />
 		<set name="weight" val="1370" />
 		<for>
-			<add order="0" stat="pDef" val="106" />
+			<add stat="pDef" val="106" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -1927,7 +1985,7 @@
 		<set name="price" val="457450" />
 		<set name="weight" val="530" />
 		<for>
-			<add order="0" stat="pDef" val="92" />
+			<add stat="pDef" val="92" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

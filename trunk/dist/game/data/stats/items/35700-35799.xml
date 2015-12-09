@@ -99,11 +99,11 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="weight" val="300" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="5" />
-			<set stat="pAtk" val="5" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="5" />
+			<set stat="mAtk" val="5" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="35709" name="Zofan's Supply Box" type="EtcItem">
@@ -153,6 +153,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Wizards Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. M. Atk. + 10% when equipped. -->
@@ -165,6 +168,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" additionalName="Healers Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. WIT + 3 when equipped. -->
@@ -177,6 +183,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warriors Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. + 5% and Critical Rate + 50 when equipped. -->
@@ -189,6 +198,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Wizards Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. M. Atk. + 10% and INT + 3 when equipped. -->
@@ -201,6 +214,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Healers Only" type="Armor">
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. WIT + 3 and MEN + 3 when equipped. -->
@@ -213,6 +230,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="35718" name="Santa Hat" additionalName="1-day (Event)" type="Armor">
 		<!-- The hat brings Christmas cheer. -->
@@ -585,6 +606,11 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="2" />
+			<add stat="DEX" val="2" />
+			<add stat="CON" val="2" />
+		</for>
 	</item>
 	<item id="35747" name="Draco's Hat: Wizard (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. INT + 2, WIT + 2, MEN + 2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
@@ -599,6 +625,11 @@
 		<set name="material" val="WOOD" />
 		<set name="time" val="10080" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="2" />
+			<add stat="WIT" val="2" />
+			<add stat="MEN" val="2" />
+		</for>
 	</item>
 	<item id="35748" name="Draco's Hat" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. -->
@@ -735,6 +766,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="35762" name="Rabbit Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -744,6 +778,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="35763" name="Rabbit Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -753,6 +790,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="35764" name="Rabbit Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
@@ -762,6 +802,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="35765" name="Rabbit Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
@@ -771,6 +814,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="35766" name="Rabbit Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -780,6 +826,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="35767" name="Rabbit Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -789,6 +839,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35768" name="Rabbit Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -798,6 +851,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35769" name="Rabbit Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -807,6 +863,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="35770" name="Rabbit Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -816,6 +875,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35771" name="Rabbit Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
@@ -825,6 +887,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35772" name="Rabbit Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
@@ -834,6 +899,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="35773" name="Raccoon Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
@@ -843,6 +911,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="35774" name="Raccoon Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
@@ -852,6 +923,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="35775" name="Raccoon Ears" additionalName="INT" type="Armor">
 		<!-- INT + 3 when equipped. -->
@@ -861,6 +935,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="INT" val="3" />
+		</for>
 	</item>
 	<item id="35776" name="Raccoon Ears" additionalName="WIT" type="Armor">
 		<!-- WIT + 3 when equipped. -->
@@ -870,6 +947,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="WIT" val="3" />
+		</for>
 	</item>
 	<item id="35777" name="Raccoon Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
@@ -879,6 +959,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="35778" name="Raccoon Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -888,6 +971,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="35779" name="Raccoon Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -897,6 +984,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35780" name="Raccoon Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -906,6 +996,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35781" name="Raccoon Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -915,6 +1008,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="35782" name="Raccoon Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -924,6 +1020,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35783" name="Raccoon Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
@@ -933,6 +1032,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35784" name="Raccoon Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
@@ -942,6 +1044,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="35785" name="Cat Ears" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
@@ -951,6 +1056,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="35786" name="Cat Ears" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
@@ -960,6 +1068,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="35787" name="Cat Ears" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
@@ -969,6 +1080,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 	<item id="35788" name="Cat Ears" additionalName="MEN" type="Armor">
 		<!-- MEN + 3 when equipped. -->
@@ -978,6 +1092,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="MEN" val="3" />
+		</for>
 	</item>
 	<item id="35789" name="Cat Ears" additionalName="Critical Rate" type="Armor">
 		<!-- P. Critical Rate + 50 when equipped. -->
@@ -987,6 +1104,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="35790" name="Cat Ears" additionalName="Critical Damage" type="Armor">
 		<!-- P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
@@ -996,6 +1116,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="35791" name="Cat Ears" additionalName="P. Def." type="Armor">
 		<!-- P. Def. + 5% when equipped. -->
@@ -1005,6 +1129,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35792" name="Cat Ears" additionalName="M. Def." type="Armor">
 		<!-- M. Def. + 5% when equipped. -->
@@ -1014,6 +1141,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="35793" name="Cat Ears" additionalName="Evasion" type="Armor">
 		<!-- Evasion + 5 when equipped. -->
@@ -1023,6 +1153,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="35794" name="Cat Ears" additionalName="P. Atk." type="Armor">
 		<!-- P. Atk. + 5% when equipped. -->
@@ -1032,6 +1165,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="35795" name="Cat Ears" additionalName="M. Atk." type="Armor">
 		<!-- M. Atk. + 10% when equipped. -->
@@ -1041,6 +1177,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="35796" name="Cat Ears" additionalName="Accuracy" type="Armor">
 		<!-- Accuracy + 5 when equipped. -->
@@ -1050,6 +1189,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="35797" name="Romantic Chapeau" additionalName="STR" type="Armor">
 		<!-- STR + 3 when equipped. -->
@@ -1059,6 +1201,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="STR" val="3" />
+		</for>
 	</item>
 	<item id="35798" name="Romantic Chapeau" additionalName="DEX" type="Armor">
 		<!-- DEX + 3 when equipped. -->
@@ -1068,6 +1213,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="DEX" val="3" />
+		</for>
 	</item>
 	<item id="35799" name="Romantic Chapeau" additionalName="CON" type="Armor">
 		<!-- CON + 3 when equipped. -->
@@ -1077,5 +1225,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CON" val="3" />
+		</for>
 	</item>
 </list>

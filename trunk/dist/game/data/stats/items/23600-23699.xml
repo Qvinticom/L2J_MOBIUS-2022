@@ -426,7 +426,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="23637" name="Blessed Antharas' Earring" additionalName="3-day" type="Armor">
@@ -445,8 +445,8 @@
 		<for>
 			<add stat="CON" val="3" />
 			<add stat="MEN" val="3" />
-			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
+			<add stat="mDef" val="170" order="0" />
 		</for>
 	</item>
 	<item id="23638" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
@@ -465,8 +465,8 @@
 		<for>
 			<add stat="CON" val="3" />
 			<add stat="MEN" val="3" />
-			<add order="0" stat="mDef" val="170" />
 			<add stat="maxMp" val="59" />
+			<add stat="mDef" val="170" order="0" />
 		</for>
 	</item>
 	<item id="23639" name="Blessed Valakas' Necklace" additionalName="3-day" type="Armor">
@@ -486,10 +486,12 @@
 			<add stat="INT" val="3" />
 			<add stat="STR" val="3" />
 			<add stat="darkRes" val="20" />
-			<add stat="fireRes" val="30" />
-			<add order="0" stat="mDef" val="226" />
 			<add stat="maxHp" val="625" />
+			<add stat="mDef" val="226" order="0" />
 			<add stat="maxMp" val="79" />
+			<add stat="fireRes" val="30" />
+			<mul stat="pAtk" val="1.10" />
+			<mul stat="mAtk" val="1.20" />
 		</for>
 	</item>
 	<item id="23640" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
@@ -509,10 +511,12 @@
 			<add stat="INT" val="3" />
 			<add stat="STR" val="3" />
 			<add stat="darkRes" val="20" />
-			<add stat="fireRes" val="30" />
-			<add order="0" stat="mDef" val="226" />
 			<add stat="maxHp" val="625" />
+			<add stat="mDef" val="226" order="0" />
 			<add stat="maxMp" val="79" />
+			<add stat="fireRes" val="30" />
+			<mul stat="pAtk" val="1.10" />
+			<mul stat="mAtk" val="1.20" />
 		</for>
 	</item>
 	<item id="23641" name="Star Agathion Pack" type="EtcItem">

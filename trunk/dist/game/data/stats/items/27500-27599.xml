@@ -135,8 +135,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="mDef" val="11" />
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
+			<add stat="mDef" val="11" order="0" />
 		</for>
 	</item>
 	<item id="27512" name="Novice Adventurer's Circlet" type="Armor">
@@ -152,6 +152,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="10" />
+		</for>
 	</item>
 	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
 		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
@@ -165,6 +168,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<for>
+			<add stat="maxMp" val="60" />
+		</for>
 	</item>
 	<item id="27514" name="Novice Adventurer's Support Box" type="EtcItem">
 		<!-- Support box containing a Novice Adventurer's Shirt, Circlet, and Bracelet. -->
@@ -196,8 +202,8 @@
 		<set name="weight" val="130" />
 		<for>
 			<add stat="CON" val="2" />
-			<add order="0" stat="mDef" val="12" />
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
+			<add stat="mDef" val="12" order="0" />
 		</for>
 	</item>
 	<item id="27516" name="Experienced Adventurer's Circlet" type="Armor">
@@ -213,6 +219,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="critRate" val="20" />
+		</for>
 	</item>
 	<item id="27517" name="Experienced Adventurer's Bracelet" type="Armor">
 		<!-- Experienced Adventurer's bracelet. MP + 90 and uses 3 talisman slots when equipped. -->
@@ -226,6 +235,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="material" val="GOLD" />
+		<for>
+			<add stat="maxMp" val="90" />
+		</for>
 	</item>
 	<item id="27518" name="Experienced Adventurer's Support Box" type="EtcItem">
 		<!-- Support box containing an Experienced Adventurer's Shirt, Circlet, and Bracelet. -->
@@ -258,8 +270,8 @@
 		<for>
 			<add stat="INT" val="2" />
 			<add stat="STR" val="2" />
-			<add order="0" stat="mDef" val="13" />
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
+			<add stat="mDef" val="13" order="0" />
 		</for>
 	</item>
 	<item id="27520" name="Adventurer's Circlet" type="Armor">
@@ -272,6 +284,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<mul stat="pAtk" val="1.03" />
+			<mul stat="mAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27521" name="Adventurer's Bracelet" type="Armor">
 		<!-- Adventurer's Bracelet. STR/DEX/CON/INT/WIT/MEN + 1 and uses 3 talisman slots when equipped. -->
@@ -282,6 +298,14 @@
 		<set name="is_auctionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="GOLD" />
+		<for>
+			<add stat="MEN" val="1" />
+			<add stat="STR" val="1" />
+			<add stat="DEX" val="1" />
+			<add stat="CON" val="1" />
+			<add stat="INT" val="1" />
+			<add stat="WIT" val="1" />
+		</for>
 	</item>
 	<item id="27522" name="Support Cube" additionalName="30-day" type="EtcItem">
 		<!-- Cube that can be used for 30 days. Double-click to get one of the following: Specter weapon / Seraph armor / (Blessed) Scroll: Enchant Weapon (R-grade) / (Blessed) Scroll: Enchant Armor (R-grade) / Spirit Stone / Attribute Crystal. (Can only be used once  -->
@@ -625,7 +649,8 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="440" />
 		<for>
-			<add order="0" stat="pDef" val="50" />
+			<add stat="pDef" val="50" order="0" />
+			<mul stat="receivedDamageModifier" val="0.91" />
 		</for>
 	</item>
 	<item id="27553" name="Agathion - Griffin" additionalName="Premium" type="Armor">
@@ -1425,9 +1450,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45586" name="Special Fire Resistance Necklace" type="Armor">
@@ -1442,9 +1468,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45587" name="Special Holy Resistance Necklace" type="Armor">
@@ -1459,9 +1486,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45588" name="Special Dark Resistance Necklace" type="Armor">
@@ -1476,9 +1504,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45589" name="Special Wind Resistance Necklace" type="Armor">
@@ -1493,9 +1522,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45590" name="Special Earth Resistance Necklace" type="Armor">
@@ -1510,9 +1540,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="174" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="174" order="0" />
 			<add stat="maxMp" val="65" />
+			<mul stat="mReuse" val="0.95" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45591" name="Special Earth Resistance Ring" type="Armor">
@@ -1527,8 +1558,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45592" name="Special Water Resistance Ring" type="Armor">
@@ -1543,8 +1575,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45593" name="Special Fire Resistance Ring" type="Armor">
@@ -1559,8 +1592,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45594" name="Special Holy Resistance Ring" type="Armor">
@@ -1575,8 +1609,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45595" name="Special Dark Resistance Ring" type="Armor">
@@ -1591,8 +1626,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45596" name="Special Wind Resistance Ring" type="Armor">
@@ -1607,8 +1643,9 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="87" />
+			<add stat="mDef" val="87" order="0" />
 			<mul stat="maxCp" val="1.10" />
+			<mul stat="mCritPowerAdd" val="1.05" />
 		</for>
 	</item>
 	<item id="45597" name="Special Resistance Earring - Stun" type="Armor">
@@ -1623,9 +1660,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45598" name="Special Resistance Earring - Hold" type="Armor">
@@ -1640,9 +1678,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 	<item id="45599" name="Special Resistance Earring - Bleed" type="Armor">
@@ -1657,9 +1696,10 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<for>
-			<add order="0" stat="mDef" val="130" />
-			<mul stat="maxCp" val="1.10" />
+			<add stat="mDef" val="130" order="0" />
 			<add stat="maxMp" val="49" />
+			<mul stat="absorbDam" val="1.03" />
+			<mul stat="maxCp" val="1.10" />
 		</for>
 	</item>
 </list>

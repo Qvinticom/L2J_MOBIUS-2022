@@ -1143,7 +1143,7 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<for>
-			<add order="0" stat="pDef" val="28" />
+			<add stat="pDef" val="28" order="0" />
 		</for>
 	</item>
 	<item id="21581" name="Scroll: Enchant Power Shirt" type="EtcItem">
@@ -1190,7 +1190,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="21584" name="Festival's Cloak - Pitch Black Pack" type="EtcItem">
@@ -1223,7 +1223,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="21586" name="Festival's Cloak - Pitch Black Pack" additionalName="Event" type="EtcItem">
@@ -1257,7 +1257,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="21588" name="Festival's Cloak - Pearl White" type="Armor">
@@ -1276,7 +1276,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="21589" name="Festival's Cloak - Pearl White Pack" type="EtcItem">
@@ -1309,7 +1309,7 @@
 			<player cloakStatus="true" />
 		</cond>
 		<for>
-			<add order="0" stat="pDef" val="25" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="21591" name="Festival's Cloak - Pearl White Pack" additionalName="Event" type="EtcItem">

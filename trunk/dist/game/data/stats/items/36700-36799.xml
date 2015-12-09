@@ -213,9 +213,9 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36718" name="Augmentation Practice Spirit Stone (46)" type="EtcItem">
@@ -266,9 +266,9 @@
 		<set name="weight" val="1420" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36721" name="Practice Green Soul Crystal - Stage 5" type="EtcItem">
@@ -319,9 +319,9 @@
 		<set name="weight" val="1430" />
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
 			<set stat="mAtk" val="68" />
 			<set stat="pAtk" val="107" />
-			<set stat="pAtkSpd" val="379" />
 		</for>
 	</item>
 	<item id="36724" name="Practice Leather Belt" type="Armor">
@@ -339,7 +339,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<for>
-			<add order="0" stat="pDef" val="10" />
+			<add stat="pDef" val="10" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
@@ -370,7 +370,7 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="500" />
 		<for>
-			<add order="0" stat="pDef" val="10" />
+			<add stat="pDef" val="10" order="0" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>

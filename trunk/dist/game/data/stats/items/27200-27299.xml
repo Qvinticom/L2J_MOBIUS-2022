@@ -9,6 +9,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27201" name="Pirate's Eyepatch" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -19,6 +23,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27202" name="Pirate's Eyepatch" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -29,6 +37,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27203" name="Pirate's Eyepatch" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -39,6 +51,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27204" name="Pirate's Eyepatch" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -49,6 +65,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27205" name="Pirate's Eyepatch" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -59,6 +79,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27206" name="Pirate's Eyepatch" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -69,6 +93,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27207" name="Pirate's Eyepatch" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -79,6 +107,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27208" name="Pirate's Eyepatch" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -89,6 +121,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27209" name="Pirate's Eyepatch" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -99,6 +135,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27210" name="Outlaw's Eyepatch" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
@@ -109,6 +149,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27211" name="Outlaw's Eyepatch" additionalName="CHA + Critical Rate" type="Armor">
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
@@ -119,6 +163,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27212" name="Outlaw's Eyepatch" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -129,6 +177,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27213" name="Outlaw's Eyepatch" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -139,6 +192,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27214" name="Outlaw's Eyepatch" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
@@ -149,6 +207,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27215" name="Outlaw's Eyepatch" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
@@ -159,6 +221,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27216" name="Outlaw's Eyepatch" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -169,6 +235,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27217" name="Outlaw's Eyepatch" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -179,6 +249,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27218" name="Outlaw's Eyepatch" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -189,6 +263,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27219" name="Outlaw's Eyepatch" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -199,6 +277,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27220" name="Outlaw's Eyepatch" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -209,6 +291,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27221" name="Outlaw's Eyepatch" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -219,6 +305,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27222" name="Outlaw's Eyepatch" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -229,6 +319,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27223" name="Outlaw's Eyepatch" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -239,6 +333,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27224" name="Outlaw's Eyepatch" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -249,6 +347,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27225" name="Outlaw's Eyepatch" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -259,6 +361,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27226" name="Eyepatch" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
@@ -269,6 +375,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27227" name="Eyepatch" additionalName="CHA + Critical Rate" type="Armor">
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
@@ -279,6 +389,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27228" name="Eyepatch" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -289,6 +403,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27229" name="Eyepatch" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -299,6 +418,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27230" name="Eyepatch" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
@@ -309,6 +433,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27231" name="Eyepatch" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
@@ -319,6 +447,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27232" name="Eyepatch" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -329,6 +461,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27233" name="Eyepatch" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -339,6 +475,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27234" name="Eyepatch" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -349,6 +489,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27235" name="Eyepatch" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -359,6 +503,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27236" name="Eyepatch" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -369,6 +517,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27237" name="Eyepatch" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -379,6 +531,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27238" name="Eyepatch" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -389,6 +545,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27239" name="Eyepatch" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -399,6 +559,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27240" name="Eyepatch" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -409,6 +573,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27241" name="Eyepatch" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -419,6 +587,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27242" name="Party Hat" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
@@ -429,6 +601,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27243" name="Party Hat" additionalName="CHA + Critical Rate" type="Armor">
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
@@ -439,6 +615,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27244" name="Party Hat" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -449,6 +629,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27245" name="Party Hat" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -459,6 +644,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27246" name="Party Hat" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
@@ -469,6 +659,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27247" name="Party Hat" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
@@ -479,6 +673,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27248" name="Party Hat" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -489,6 +687,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27249" name="Party Hat" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -499,6 +701,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27250" name="Party Hat" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -509,6 +715,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27251" name="Party Hat" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -519,6 +729,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27252" name="Party Hat" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -529,6 +743,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27253" name="Party Hat" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -539,6 +757,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27254" name="Party Hat" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -549,6 +771,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27255" name="Party Hat" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -559,6 +785,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27256" name="Party Hat" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -569,6 +799,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27257" name="Party Hat" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -579,6 +813,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27258" name="Refined Angel Ring" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
@@ -589,6 +827,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27259" name="Refined Angel Ring" additionalName="CHA + Critical Rate" type="Armor">
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
@@ -599,6 +841,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27260" name="Refined Angel Ring" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -609,6 +855,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27261" name="Refined Angel Ring" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -619,6 +870,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27262" name="Refined Angel Ring" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
@@ -629,6 +885,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27263" name="Refined Angel Ring" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
@@ -639,6 +899,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27264" name="Refined Angel Ring" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -649,6 +913,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27265" name="Refined Angel Ring" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -659,6 +927,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27266" name="Refined Angel Ring" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -669,6 +941,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27267" name="Refined Angel Ring" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -679,6 +955,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27268" name="Refined Angel Ring" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -689,6 +969,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27269" name="Refined Angel Ring" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -699,6 +983,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27270" name="Refined Angel Ring" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -709,6 +997,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27271" name="Refined Angel Ring" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -719,6 +1011,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27272" name="Refined Angel Ring" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -729,6 +1025,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27273" name="Refined Angel Ring" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -739,6 +1039,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27274" name="Refined Devil Horn" additionalName="LUC + Critical Rate" type="Armor">
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
@@ -749,6 +1053,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27275" name="Refined Devil Horn" additionalName="CHA + Critical Rate" type="Armor">
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
@@ -759,6 +1067,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critRate" val="50" />
+		</for>
 	</item>
 	<item id="27276" name="Refined Devil Horn" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -769,6 +1081,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27277" name="Refined Devil Horn" additionalName="CHA + Critical Damage" type="Armor">
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
@@ -779,6 +1096,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="critDmgAdd" val="90" />
+			<add stat="mCritPowerAdd" val="68" />
+		</for>
 	</item>
 	<item id="27278" name="Refined Devil Horn" additionalName="LUC + P. Def." type="Armor">
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
@@ -789,6 +1111,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27279" name="Refined Devil Horn" additionalName="CHA + P. Def." type="Armor">
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
@@ -799,6 +1125,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27280" name="Refined Devil Horn" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -809,6 +1139,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27281" name="Refined Devil Horn" additionalName="CHA + M. Def." type="Armor">
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
@@ -819,6 +1153,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mDef" val="1.05" />
+		</for>
 	</item>
 	<item id="27282" name="Refined Devil Horn" additionalName="LUC + Evasion" type="Armor">
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
@@ -829,6 +1167,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27283" name="Refined Devil Horn" additionalName="CHA + Evasion" type="Armor">
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
@@ -839,6 +1181,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="pSkillEvas" val="5" />
+		</for>
 	</item>
 	<item id="27284" name="Refined Devil Horn" additionalName="LUC + P. Atk." type="Armor">
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
@@ -849,6 +1195,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27285" name="Refined Devil Horn" additionalName="CHA + P. Atk." type="Armor">
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
@@ -859,6 +1209,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="pAtk" val="1.05" />
+		</for>
 	</item>
 	<item id="27286" name="Refined Devil Horn" additionalName="LUC + M. Atk." type="Armor">
 		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
@@ -869,6 +1223,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27287" name="Refined Devil Horn" additionalName="CHA + M. Atk." type="Armor">
 		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
@@ -879,6 +1237,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<mul stat="mAtk" val="1.10" />
+		</for>
 	</item>
 	<item id="27288" name="Refined Devil Horn" additionalName="LUC + Accuracy" type="Armor">
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
@@ -889,6 +1251,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="LUC" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27289" name="Refined Devil Horn" additionalName="CHA + Accuracy" type="Armor">
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
@@ -899,6 +1265,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<for>
+			<add stat="CHA" val="3" />
+			<add stat="accCombat" val="5" />
+		</for>
 	</item>
 	<item id="27290" name="Pirate Captain Outfit" additionalName="Low-grade / Debuff Reflect" type="Armor">
 		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Debuff Reflect + 3%. -->

@@ -497,9 +497,9 @@
 		</cond>
 		<for>
 			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="277" />
 			<set stat="mAtk" val="8" />
 			<set stat="pAtk" val="7" />
-			<set stat="pAtkSpd" val="277" />
 		</for>
 	</item>
 	<item id="3440" name="Cargo Box" type="EtcItem">
@@ -858,11 +858,11 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="weight" val="400" />
 		<for>
-			<sub stat="accCombat" val="3.75" />
 			<add stat="critRate" val="12" />
-			<set stat="mAtk" val="9" />
-			<set stat="pAtk" val="10" />
 			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="10" />
+			<set stat="mAtk" val="9" />
+			<sub stat="accCombat" val="3.75" />
 		</for>
 	</item>
 	<item id="3472" name="Blood Medusa" type="EtcItem">

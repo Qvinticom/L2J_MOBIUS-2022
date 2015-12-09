@@ -69,7 +69,7 @@
 		<for>
 			<add stat="INT" val="1" />
 			<add stat="STR" val="1" />
-			<add order="0" stat="pDef" val="38" />
+			<add stat="pDef" val="38" order="0" />
 		</for>
 	</item>
 	<item id="45905" name="Kokko's Shirt" type="Armor">
@@ -90,7 +90,7 @@
 			<add stat="INT" val="1" />
 			<add stat="MEN" val="1" />
 			<add stat="STR" val="1" />
-			<add order="0" stat="pDef" val="38" />
+			<add stat="pDef" val="38" order="0" />
 		</for>
 	</item>
 	<item id="45906" name="Pippi's Belt" type="Armor">
@@ -108,7 +108,8 @@
 		<set name="weight" val="440" />
 		<for>
 			<add stat="inventoryLimit" val="12" />
-			<add order="0" stat="pDef" val="25" />
+			<add stat="weightLimit" val="12800" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="45907" name="Kokko's Belt" type="Armor">
@@ -126,7 +127,8 @@
 		<set name="weight" val="440" />
 		<for>
 			<add stat="inventoryLimit" val="18" />
-			<add order="0" stat="pDef" val="25" />
+			<add stat="weightLimit" val="12800" />
+			<add stat="pDef" val="25" order="0" />
 		</for>
 	</item>
 	<item id="45908" name="Apocalypse Shaper Pack" type="EtcItem">
