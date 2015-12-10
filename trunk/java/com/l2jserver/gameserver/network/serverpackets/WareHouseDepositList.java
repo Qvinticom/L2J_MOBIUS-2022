@@ -21,6 +21,7 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
@@ -31,7 +32,7 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	public static final int CASTLE = 3;
 	public static final int FREIGHT = 1;
 	private final long _playerAdena;
-	private final int _invSize;
+	private int _itemsInWarehouse;
 	private final List<L2ItemInstance> _items = new ArrayList<>();
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
@@ -48,18 +49,26 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	{
 		_whType = type;
 		_playerAdena = player.getAdena();
-		_invSize = player.getInventory().getSize();
+		_itemsInWarehouse = 0;
 		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (L2ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false))
 		{
-			if ((temp != null) && temp.isDepositable(isPrivate))
+			if (temp == null)
+			{
+				continue;
+			}
+			if (temp.isDepositable(isPrivate))
 			{
 				_items.add(temp);
 			}
-			if ((temp != null) && temp.isDepositable(isPrivate) && temp.isStackable())
+			if (temp.isDepositable(isPrivate) && temp.isStackable())
 			{
 				_itemsStackable.add(temp.getDisplayId());
+			}
+			if (temp.getItemLocation() == (isPrivate ? ItemLocation.WAREHOUSE : ItemLocation.CLANWH))
+			{
+				_itemsInWarehouse++;
 			}
 		}
 	}
@@ -70,7 +79,7 @@ public final class WareHouseDepositList extends AbstractItemPacket
 		writeC(0x41);
 		writeH(_whType);
 		writeQ(_playerAdena);
-		writeD(_invSize);
+		writeD(_itemsInWarehouse);
 		writeH(_itemsStackable.size());
 		
 		for (int itemId : _itemsStackable)
