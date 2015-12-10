@@ -45,7 +45,7 @@ public final class RewardItemOnExit extends AbstractEffect
 	{
 		if (!info.isRemoved() && info.getEffected().isPlayer() && !info.getEffected().getActingPlayer().isDead())
 		{
-			info.getEffected().getActingPlayer().addItem("RewardItemOnExitEffect", _itemId, _itemCount, info.getEffected(), true);
+			info.getEffected().getActingPlayer().addItem("RewardItemOnExitEffect", _itemId, _itemCount, info.getEffected().getActingPlayer(), true);
 		}
 	}
 }
