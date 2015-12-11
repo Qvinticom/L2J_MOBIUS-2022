@@ -43,6 +43,9 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 	private long _playerAdena;
 	private List<L2WarehouseItem> _objects = new ArrayList<>();
 	private int _whType;
+	private L2ItemInstance[] _items;
+	private L2ItemInstance[] _invItems;
+	private final List<Integer> _itemsStackable = new ArrayList<>();
 	
 	public static enum WarehouseListType
 	{
@@ -182,6 +185,20 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		}
 		catch (Exception e)
 		{
+		}
+		
+		_items = player.getActiveWarehouse().getItems();
+		_invItems = player.getInventory().getItems();
+		
+		for (L2ItemInstance item : _items)
+		{
+			for (L2ItemInstance invitem : _invItems)
+			{
+				if (item.isStackable() && (item.getDisplayId() == invitem.getDisplayId()))
+				{
+					_itemsStackable.add(item.getDisplayId());
+				}
+			}
 		}
 	}
 	
@@ -743,7 +760,12 @@ public class SortedWareHouseWithdrawalList extends AbstractItemPacket
 		writeH(_whType);
 		writeQ(_playerAdena);
 		writeH(_objects.size());
-		
+		writeH(_itemsStackable.size());
+		for (int itemId : _itemsStackable)
+		{
+			writeD(itemId);
+		}
+		writeD(_invItems.length);
 		for (L2WarehouseItem item : _objects)
 		{
 			writeItem(item);
