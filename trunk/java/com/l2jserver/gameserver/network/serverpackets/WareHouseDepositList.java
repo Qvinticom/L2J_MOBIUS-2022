@@ -21,7 +21,6 @@ package com.l2jserver.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 
@@ -32,7 +31,7 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	public static final int CASTLE = 3;
 	public static final int FREIGHT = 4;
 	private final long _playerAdena;
-	private L2ItemInstance[] _itemsInWarehouse;
+	private final L2ItemInstance[] _itemsInWarehouse;
 	private final List<L2ItemInstance> _items = new ArrayList<>();
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
