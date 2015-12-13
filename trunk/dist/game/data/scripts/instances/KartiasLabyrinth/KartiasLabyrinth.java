@@ -119,6 +119,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private static final int MAX_LVL_90 = 94;
 	private static final int MAX_LVL_95 = 99;
 	private static final String KARTIA_ENTRY_VAR = "Last_Kartia_entry";
+	private static final String KARTIA_PARTY_ENTRY_VAR = "Last_Kartia_party_entry";
 	
 	protected class KartiaWorld extends InstanceWorld
 	{
@@ -610,15 +611,30 @@ public final class KartiasLabyrinth extends AbstractInstance
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		player.getVariables().set(KARTIA_ENTRY_VAR, System.currentTimeMillis());
+		if ((world.getTemplateId() == SOLO_85_TEMPLATE_ID) || (world.getTemplateId() == SOLO_90_TEMPLATE_ID) || (world.getTemplateId() == SOLO_95_TEMPLATE_ID))
+		{
+			player.getVariables().set(KARTIA_ENTRY_VAR, System.currentTimeMillis());
+		}
+		else
+		{
+			player.getVariables().set(KARTIA_PARTY_ENTRY_VAR, System.currentTimeMillis());
+		}
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}
 	
 	@Override
-	protected boolean checkConditions(L2PcInstance player)
+	protected boolean checkConditions(L2PcInstance player, int templateId)
 	{
-		final long lastEntry = player.getVariables().getLong(KARTIA_ENTRY_VAR, 0);
+		long lastEntry = 0;
+		if ((templateId == SOLO_85_TEMPLATE_ID) || (templateId == SOLO_90_TEMPLATE_ID) || (templateId == SOLO_95_TEMPLATE_ID))
+		{
+			lastEntry = player.getVariables().getLong(KARTIA_ENTRY_VAR, 0);
+		}
+		else
+		{
+			lastEntry = player.getVariables().getLong(KARTIA_PARTY_ENTRY_VAR, 0);
+		}
 		Calendar entryResetTime = Calendar.getInstance();
 		entryResetTime.set(Calendar.HOUR, 6);
 		entryResetTime.set(Calendar.MINUTE, 30);
