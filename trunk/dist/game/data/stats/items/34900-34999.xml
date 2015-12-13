@@ -403,7 +403,9 @@
 	<item id="34927" name="Dimension Keeper's Blue Box" type="EtcItem">
 		<!-- Blue-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="19448,1,1,0.9666;19447,1,1,0.3666;18552,1,1,5.16666;18551,1,1,5.16666;9555,1,1,7.16666;9553,1,1,7.16666;9554,1,1,7.16666;9552,1,1,7.16666;9557,1,1,7.16666;9556,1,1,7.16666;9549,1,1,21.33333;9547,1,1,21.33333;9548,1,1,21.33333;9546,1,1,21.33333;9551,1,1,21.33333;9550,1,1,21.33333;18553,1,1,5.16666;19509,1,1,13.3443;19508,1,1,13.3443;19510,1,1,13.3443" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -416,7 +418,9 @@
 	<item id="34928" name="Dimension Keeper's Red Box" type="EtcItem">
 		<!-- Red-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="19448,1,1,0.9666;19447,1,1,0.3666;18552,1,1,5.16666;18551,1,1,5.16666;9555,1,1,8.16666;9553,1,1,8.16666;9554,1,1,8.16666;9552,1,1,8.16666;9557,1,1,8.16666;9556,1,1,8.16666;9549,1,1,21.33333;9547,1,1,21.33333;9548,1,1,21.33333;9546,1,1,21.33333;9551,1,1,21.33333;9550,1,1,21.33333;17527,1,1,6.16666;17526,1,1,1.16666;18553,1,1,5.16666;19509,1,1,13.3443;19508,1,1,13.3443;19510,1,1,13.3443" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -429,7 +433,9 @@
 	<item id="34929" name="Dimension Keeper's Golden Box" type="EtcItem">
 		<!-- Gold-colored box bestowed by the kingdom of Aden as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="19448,1,1,0.9666;19447,1,1,0.3666;18555,1,1,3.16666;18554,1,1,3.16666;9555,1,1,8.16666;9553,1,1,8.16666;9554,1,1,8.16666;9552,1,1,8.16666;9557,1,1,8.16666;9556,1,1,8.16666;9549,1,1,21.33333;9547,1,1,21.33333;9548,1,1,21.33333;9546,1,1,21.33333;9551,1,1,21.33333;9550,1,1,21.33333;17527,1,1,6.16666;17526,1,1,1.16666;18556,1,1,2.06666;19512,1,1,3.0443;19511,1,1,3.3443;19513,1,1,3.3443" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -442,7 +448,9 @@
 	<item id="34930" name="Dimension Traveler's Blue Box" type="EtcItem">
 		<!-- Blue-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="18552,1,1,5.6666;18551,1,1,5.6666;9555,1,1,3.16666;9553,1,1,3.16666;9554,1,1,3.16666;9552,1,1,3.16666;9557,1,1,3.16666;9556,1,1,3.16666;34651,1,1,21.33333;34650,1,1,21.33333;34652,1,1,21.33333;34649,1,1,21.33333;34653,1,1,21.33333;34654,1,1,21.33333;9549,1,1,13.3443;9547,1,1,13.3443;9548,1,1,13.3443;9546,1,1,13.3443;9551,1,1,13.3443;9550,1,1,13.3443;17527,1,1,5.33333;17526,1,1,1.33333;18553,1,1,5.33333" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -455,7 +463,9 @@
 	<item id="34931" name="Dimension Traveler's Red Box" type="EtcItem">
 		<!-- Red-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="18552,1,1,5.6666;18551,1,1,5.6666;9555,1,1,3.16666;9553,1,1,3.16666;9554,1,1,3.16666;9552,1,1,3.16666;9557,1,1,3.16666;9556,1,1,3.16666;34651,1,1,21.33333;34650,1,1,21.33333;34652,1,1,21.33333;34649,1,1,21.33333;34653,1,1,21.33333;34654,1,1,21.33333;9549,1,1,13.3443;9547,1,1,13.3443;9548,1,1,13.3443;9546,1,1,13.3443;9551,1,1,13.3443;9550,1,1,13.3443;17527,1,1,5.33333;17526,1,1,1.33333;18553,1,1,5.33333" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -468,7 +478,9 @@
 	<item id="34932" name="Dimension Traveler's Golden Box" type="EtcItem">
 		<!-- Gold-colored box given by the Kartia Researcher as a reward for defeating the dimension demons in Kartia's Labyrinth. Double-click on it to see its contents. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="capsuled_items" val="18555,1,1,0.6666;18554,1,1,0.5666;9555,1,1,3.16666;9553,1,1,3.16666;9554,1,1,3.16666;9552,1,1,3.16666;9557,1,1,3.16666;9556,1,1,3.16666;34651,1,1,21.33333;34650,1,1,21.33333;34652,1,1,21.33333;34649,1,1,21.33333;34653,1,1,21.33333;34654,1,1,21.33333;9549,1,1,13.3443;9547,1,1,13.3443;9548,1,1,13.3443;9546,1,1,13.3443;9551,1,1,13.3443;9550,1,1,13.3443;17527,1,1,5.33333;17526,1,1,1.33333;18556,1,1,0.63333" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
