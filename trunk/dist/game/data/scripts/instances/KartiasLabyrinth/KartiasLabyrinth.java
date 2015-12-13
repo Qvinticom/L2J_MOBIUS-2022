@@ -26,6 +26,13 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
+import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
+import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
+import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
+import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
+import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
+
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
@@ -35,6 +42,8 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
+import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -123,12 +132,13 @@ public final class KartiasLabyrinth extends AbstractInstance
 	
 	protected class KartiaWorld extends InstanceWorld
 	{
-		L2QuestGuardInstance adolph = null;
-		L2QuestGuardInstance barton = null;
-		L2QuestGuardInstance hayuk = null;
-		L2QuestGuardInstance eliyah = null;
-		L2QuestGuardInstance elise = null;
-		List<L2Npc> savedSpawns = new CopyOnWriteArrayList<>();
+		protected L2QuestGuardInstance adolph = null;
+		protected L2QuestGuardInstance barton = null;
+		protected L2QuestGuardInstance hayuk = null;
+		protected L2QuestGuardInstance eliyah = null;
+		protected L2QuestGuardInstance elise = null;
+		protected List<L2PcInstance> playersInside = new ArrayList<>();
+		protected List<L2Npc> savedSpawns = new CopyOnWriteArrayList<>();
 	}
 	
 	public KartiasLabyrinth()
@@ -575,6 +585,85 @@ public final class KartiasLabyrinth extends AbstractInstance
 					{
 						if (((KartiaWorld) world).savedSpawns.isEmpty())
 						{
+							// Check Instance Quests.
+							for (L2PcInstance plr : ((KartiaWorld) world).playersInside)
+							{
+								switch (world.getTemplateId())
+								{
+									case SOLO_85_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+									case SOLO_90_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+									case SOLO_95_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+									case PARTY_85_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+									case PARTY_90_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+									case PARTY_95_TEMPLATE_ID:
+									{
+										if ((plr != null) && (plr.getInstanceId() == world.getInstanceId()))
+										{
+											final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
+											if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+											{
+												qs.setCond(2, true);
+											}
+										}
+										break;
+									}
+								}
+							}
 							// 5 minute exit timer.
 							InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(Config.INSTANCE_FINISH_TIME);
 							InstanceManager.getInstance().getInstance(world.getInstanceId()).setEmptyDestroyTime(0);
@@ -620,6 +709,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			player.getVariables().set(KARTIA_PARTY_ENTRY_VAR, System.currentTimeMillis());
 		}
 		world.addAllowed(player.getObjectId());
+		((KartiaWorld) world).playersInside.add(player);
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}
 	

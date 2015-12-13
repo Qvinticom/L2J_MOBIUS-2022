@@ -126,6 +126,12 @@ import quests.Q00457_LostAndFound.Q00457_LostAndFound;
 import quests.Q00458_PerfectForm.Q00458_PerfectForm;
 import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
 import quests.Q00464_Oath.Q00464_Oath;
+import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
+import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
+import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
+import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
+import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
+import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
 import quests.Q00503_PursuitOfClanAmbition.Q00503_PursuitOfClanAmbition;
 import quests.Q00504_CompetitionForTheBanditStronghold.Q00504_CompetitionForTheBanditStronghold;
@@ -364,6 +370,12 @@ public class QuestMasterHandler
 		Q00458_PerfectForm.class,
 		Q00463_IMustBeaGenius.class,
 		Q00464_Oath.class,
+		Q00494_IncarnationOfGreedZellakaGroup.class,
+		Q00495_IncarnationOfJealousyPellineGroup.class,
+		Q00496_IncarnationOfGluttonyKaliosGroup.class,
+		Q00497_IncarnationOfGreedZellakaSolo.class,
+		Q00498_IncarnationOfJealousyPellineSolo.class,
+		Q00499_IncarnationOfGluttonyKaliosSolo.class,
 		Q00501_ProofOfClanAlliance.class,
 		Q00503_PursuitOfClanAmbition.class,
 		Q00504_CompetitionForTheBanditStronghold.class,
