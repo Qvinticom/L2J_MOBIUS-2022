@@ -62,18 +62,22 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		_npc = npc;
 		_abnormalVisualEffects = npc.getCurrentAbnormalVisualEffects();
 		
-		if (npc.getTemplate().isUsingServerSideName())
+		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+		
+		if (npc.getHeading() > 0)
 		{
-			addComponentType(NpcInfoType.NAME);
+			addComponentType(NpcInfoType.HEADING);
 		}
 		
-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+		if ((npc.getStat().getPAtkSpd() > 0) || (npc.getStat().getMAtkSpd() > 0))
+		{
+			addComponentType(NpcInfoType.ATK_CAST_SPEED);
+		}
 		
-		addComponentType(NpcInfoType.HEADING);
-		
-		addComponentType(NpcInfoType.ATK_CAST_SPEED);
-		
-		addComponentType(NpcInfoType.SPEED_MULTIPLIER);
+		if (npc.getRunSpeed() > 0)
+		{
+			addComponentType(NpcInfoType.SPEED_MULTIPLIER);
+		}
 		
 		if ((npc.getLeftHandItem() > 0) || (npc.getRightHandItem() > 0))
 		{
@@ -85,17 +89,55 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.TEAM);
 		}
 		
-		addComponentType(NpcInfoType.DISPLAY_EFFECT);
+		if (npc.getDisplayEffect() > 0)
+		{
+			addComponentType(NpcInfoType.DISPLAY_EFFECT);
+		}
 		
-		addComponentType(NpcInfoType.SWIM_OR_FLY);
+		if (npc.isInsideZone(ZoneId.WATER) || npc.isFlying())
+		{
+			addComponentType(NpcInfoType.SWIM_OR_FLY);
+		}
 		
-		addComponentType(NpcInfoType.FLYING);
+		if (npc.isFlying())
+		{
+			addComponentType(NpcInfoType.FLYING);
+		}
 		
-		addComponentType(NpcInfoType.MAX_HP);
+		if (npc.getMaxHp() > 0)
+		{
+			addComponentType(NpcInfoType.MAX_HP);
+		}
 		
-		addComponentType(NpcInfoType.CURRENT_HP);
+		if (npc.getMaxMp() > 0)
+		{
+			addComponentType(NpcInfoType.MAX_MP);
+		}
 		
-		addComponentType(NpcInfoType.ABNORMALS);
+		if (npc.getCurrentHp() <= npc.getMaxHp())
+		{
+			addComponentType(NpcInfoType.CURRENT_HP);
+		}
+		
+		if (npc.getCurrentMp() <= npc.getMaxMp())
+		{
+			addComponentType(NpcInfoType.CURRENT_MP);
+		}
+		
+		if (npc.getTemplate().isUsingServerSideName())
+		{
+			addComponentType(NpcInfoType.NAME);
+		}
+		
+		if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && npc.isMonster()) || npc.isChampion())
+		{
+			addComponentType(NpcInfoType.TITLE);
+		}
+		
+		if (!_abnormalVisualEffects.isEmpty())
+		{
+			addComponentType(NpcInfoType.ABNORMALS);
+		}
 		
 		if (npc.getEnchantEffect() > 0)
 		{
@@ -122,6 +164,8 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 				addComponentType(NpcInfoType.CLAN);
 			}
 		}
+		
+		addComponentType(NpcInfoType.UNKNOWN8);
 		
 		// TODO: Confirm me
 		if (npc.isInCombat())
@@ -171,14 +215,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			}
 			case TITLE:
 			{
-				if (npc.getTemplate().isUsingServerSideTitle())
-				{
-					_initSize += type.getBlockLength() + (npc.getTemplate().getTitle().length() * 2);
-				}
-				else
-				{
-					_initSize += type.getBlockLength();
-				}
+				_initSize += type.getBlockLength() + (npc.getTitle().length() * 2);
 				break;
 			}
 			case NAME:
@@ -216,14 +253,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.TITLE))
 		{
-			if (_npc.getTemplate().isUsingServerSideTitle())
-			{
-				writeS(_npc.getTemplate().getTitle());
-			}
-			else
-			{
-				writeS("");
-			}
+			writeS(_npc.getTitle());
 		}
 		
 		// Block 2
