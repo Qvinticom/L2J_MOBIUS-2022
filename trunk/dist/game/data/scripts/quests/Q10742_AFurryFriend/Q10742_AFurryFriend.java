@@ -117,6 +117,7 @@ public class Q10742_AFurryFriend extends Quest
 						player.sendPacket(new ExSendUIEvent(player, false, false, 0, 0, NpcStringId.REMAINING_TIME));
 						startQuestTimer("unspawn_ricky", 2000, npc, player);
 						cancelQuestTimer("check_ricky_distance", npc, player);
+						cancelQuestTimer("unspawn_ricky_failed", npc, player);
 						break;
 					}
 					

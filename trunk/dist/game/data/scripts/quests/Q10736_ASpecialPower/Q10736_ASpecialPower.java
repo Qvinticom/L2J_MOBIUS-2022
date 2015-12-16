@@ -221,8 +221,10 @@ public class Q10736_ASpecialPower extends Quest
 						break;
 					}
 				}
+				break;
 			}
 		}
+		
 		return htmltext;
 	}
 	

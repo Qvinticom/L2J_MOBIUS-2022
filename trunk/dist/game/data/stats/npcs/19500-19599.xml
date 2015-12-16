@@ -510,14 +510,17 @@
 		</collision>
 	</npc>
 	<npc id="19546" level="4" type="L2Monster" name="Dummy" title="Training">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
 			<vitals hp="108" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<defence physical="55.51894" magical="36.965135694682" />
+			<attribute>
+				<defence fire="20" water="20" wind="31" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="0" />
+				<run ground="0" />
 			</speed>
 		</stats>
 		<status attackable="false" />

@@ -36,16 +36,22 @@ public class KaraphonHabitat extends AbstractInstance
 	// Npcs
 	private static final int DOLKIN = 33954;
 	private static final int DOLKIN_INSTANCE = 34002;
-	
 	// Locations
 	private static final Location START_LOC = new Location(-82250, 246406, -14152);
 	private static final Location EXIT_LOC = new Location(-88240, 237450, -2880);
-	
 	// Instance
 	private static final int TEMPLATE_ID = 253;
 	
 	protected class KHWorld extends InstanceWorld
 	{
+	}
+	
+	public KaraphonHabitat()
+	{
+		super(KaraphonHabitat.class.getSimpleName());
+		addFirstTalkId(DOLKIN_INSTANCE);
+		addStartNpc(DOLKIN, DOLKIN_INSTANCE);
+		addTalkId(DOLKIN, DOLKIN_INSTANCE);
 	}
 	
 	@Override
@@ -64,6 +70,10 @@ public class KaraphonHabitat extends AbstractInstance
 		else if (event.equals("exit_instance"))
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+			if (!(world instanceof KHWorld))
+			{
+				return null;
+			}
 			world.removeAllowed(player.getObjectId());
 			teleportPlayer(player, EXIT_LOC, 0);
 		}
@@ -71,11 +81,10 @@ public class KaraphonHabitat extends AbstractInstance
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public KaraphonHabitat()
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(KaraphonHabitat.class.getSimpleName());
-		addStartNpc(DOLKIN);
-		addTalkId(DOLKIN, DOLKIN_INSTANCE);
+		return "34002.html";
 	}
 	
 	@Override
