@@ -164,7 +164,7 @@ INSERT IGNORE INTO `raidboss_spawnlist` (`boss_id`,`loc_x`,`loc_y`,`loc_z`,`head
 (25372,48000,243376,-6611,0,86400,43200,175392,426), -- Discarded Guardian (20)
 (25373,9649,77467,-3808,0,86400,43200,90169,455), -- Malex Herald Of Dagoniel (21)
 (25375,22500,80300,-2772,0,86400,43200,87696,426), -- Zombie Lord Farakelsus (20)
-(25378,-54096,84288,-3512,0,86400,43200,87696,426), -- Madness Beast (20)
+-- (25378,-54096,84288,-3512,0,86400,43200,87696,426), -- Madness Beast (20) (The whole area was replaced on Infinite Odyssey)
 (25380,-47367,51548,-5904,0,86400,43200,90169,455), -- Kaysha Herald Of Icarus (21)
 (25383,51632,153920,-3552,0,86400,43200,156584,860), -- Revenant Of Sir Calibus (34)
 -- (25385,53600,143472,-3872,0,86400,43200,174646,927), -- Evil Spirit Tempest (36) (Not spawned anymore in Ertheia)
