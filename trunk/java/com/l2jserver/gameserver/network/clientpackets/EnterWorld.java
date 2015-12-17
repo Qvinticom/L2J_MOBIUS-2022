@@ -286,19 +286,8 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
 		}
 		
-		activeChar.broadcastUserInfo();
-		
 		// Send SubClass Info
 		activeChar.sendPacket(new ExSubjobInfo(activeChar, SubclassInfoType.NO_CHANGES));
-		
-		// Send Inventory Info
-		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
-		
-		// Send Adena / Inventory Count Info
-		activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
-		
-		// Send Equipped Items
-		activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 		
 		// Send Unread Mail Count
 		if (MailManager.getInstance().hasUnreadPost(activeChar))
@@ -503,8 +492,13 @@ public class EnterWorld extends L2GameClientPacket
 			}
 		}
 		
-		// Temp Fix
 		activeChar.broadcastUserInfo();
+		// Send Inventory Info
+		activeChar.sendPacket(new ExUserInfoInvenWeight(activeChar));
+		// Send Adena / Inventory Count Info
+		activeChar.sendPacket(new ExAdenaInvenCount(activeChar));
+		// Send Equipped Items
+		activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 		
 		activeChar.sendPacket(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
 		
