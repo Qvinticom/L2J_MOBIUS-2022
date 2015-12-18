@@ -50,8 +50,8 @@ public class ExtractableItems implements IItemHandler
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
-		final List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
-		if (exitem == null)
+		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
+		if (exitems == null)
 		{
 			_log.info("No extractable data defined for " + etcitem);
 			return false;
@@ -69,7 +69,7 @@ public class ExtractableItems implements IItemHandler
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
 			{
-				for (L2ExtractableProduct expi : exitem)
+				for (L2ExtractableProduct expi : exitems)
 				{
 					if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 					{
@@ -97,7 +97,7 @@ public class ExtractableItems implements IItemHandler
 								break;
 							}
 						}
-						if (alreadyExtracted)
+						if (alreadyExtracted && (exitems.size() <= etcitem.getExtractableCountMax()))
 						{
 							continue;
 						}
@@ -134,7 +134,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		else
 		{
-			for (L2ExtractableProduct expi : exitem)
+			for (L2ExtractableProduct expi : exitems)
 			{
 				if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 				{
