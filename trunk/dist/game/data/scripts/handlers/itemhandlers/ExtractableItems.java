@@ -97,7 +97,7 @@ public class ExtractableItems implements IItemHandler
 								break;
 							}
 						}
-						if (alreadyExtracted && (exitems.size() <= etcitem.getExtractableCountMax()))
+						if (alreadyExtracted && (exitems.size() >= etcitem.getExtractableCountMax()))
 						{
 							continue;
 						}
