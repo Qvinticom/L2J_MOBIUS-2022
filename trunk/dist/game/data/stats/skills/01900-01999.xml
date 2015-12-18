@@ -606,14 +606,46 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1954" levels="1" name="Flying Body Reinforcement">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into final flying combat form. -->
 		<set name="icon" val="icon.skill0840" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="-1" />
+		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-2" />
+		<set name="mpConsume" val="72" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="reuseDelay" val="10000" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<cond msgId="2721">
+			<player landingZone="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="260" />
+				<set stat="STR" val="41"/>
+				<set stat="DEX" val="33"/>
+				<set stat="CON" val="31"/>
+				<set stat="INT" val="29"/>
+				<set stat="WIT" val="11"/>
+				<set stat="MEN" val="25"/>
+				<mul stat="maxHp" val="1.1"/>
+				<mul stat="maxCp" val="1.1"/>
+				<mul stat="maxMp" val="1.1"/>
+				<mul stat="pAtk" val="2"/>
+				<mul stat="pDef" val="2"/>
+				<mul stat="mAtk" val="2"/>
+				<mul stat="mDef" val="2"/>
+				<add stat="runSpd" val="4"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="1955" levels="3" name="Party Solidarity">
 		<set name="icon" val="icon.skill1955" />
