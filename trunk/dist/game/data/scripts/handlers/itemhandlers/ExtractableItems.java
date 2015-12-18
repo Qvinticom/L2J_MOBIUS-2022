@@ -88,12 +88,18 @@ public class ExtractableItems implements IItemHandler
 						}
 						
 						// Do not extract the same item.
+						boolean alreadyExtracted = false;
 						for (L2ItemInstance i : extractedItems)
 						{
 							if (i.getItem().getId() == expi.getId())
 							{
-								continue;
+								alreadyExtracted = true;
+								break;
 							}
+						}
+						if (alreadyExtracted)
+						{
+							continue;
 						}
 						
 						if (item.isStackable() || (createItemAmount == 1))
