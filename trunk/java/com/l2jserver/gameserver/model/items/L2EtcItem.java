@@ -36,6 +36,8 @@ public final class L2EtcItem extends L2Item
 	private EtcItemType _type;
 	private final boolean _isBlessed;
 	private final List<L2ExtractableProduct> _extractableItems;
+	private final int _extractableCountMin;
+	private final int _extractableCountMax;
 	private final boolean _isInfinite;
 	
 	/**
@@ -130,6 +132,13 @@ public final class L2EtcItem extends L2Item
 			_extractableItems = null;
 		}
 		
+		_extractableCountMin = set.getInt("extractableCountMin", 0);
+		_extractableCountMax = set.getInt("extractableCountMax", 0);
+		if (_extractableCountMin > _extractableCountMax)
+		{
+			_log.warning("Item " + this + " extractableCountMin is bigger than extractableCountMax!");
+		}
+		
 		_isInfinite = set.getBoolean("is_infinite", false);
 	}
 	
@@ -173,6 +182,22 @@ public final class L2EtcItem extends L2Item
 	public List<L2ExtractableProduct> getExtractableItems()
 	{
 		return _extractableItems;
+	}
+	
+	/**
+	 * @return the minimum count of extractable items
+	 */
+	public int getExtractableCountMin()
+	{
+		return _extractableCountMin;
+	}
+	
+	/**
+	 * @return the maximum count of extractable items
+	 */
+	public int getExtractableCountMax()
+	{
+		return _extractableCountMax;
 	}
 	
 	/**
