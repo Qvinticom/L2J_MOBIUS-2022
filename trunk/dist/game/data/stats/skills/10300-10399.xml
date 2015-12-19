@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10300" levels="3" name="Last Attack" enchantGroup1="10" enchantGroup2="10">
-		<table name="#power"> 52746 59601 65085 </table>
+	<skill id="10300" levels="6" name="Last Attack" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Last_Attack_-_Tyrr_Duelist -->
+		<table name="#power"> 52746 59601 65085 69414 73352 77290 </table>
 		<table name="#enchPower"> 66456 67827 69198 70569 71940 73311 74682 76053 77424 78795 </table>
-		<table name="#magicLvl"> 90 95 99 </table>
-		<table name="#mpConsume"> 276 297 315 </table>
+		<table name="#magicLvl"> 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 276 297 315 333 351 369 </table>
 		<table name="#ench1MpConsume"> 310 306 301 297 292 288 283 279 275 270 </table>
 		<table name="#ench2Hp"> 11 12 13 14 15 16 17 18 19 20 </table>
 		<set name="icon" val="icon.skill10300" />
@@ -399,11 +400,12 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="10318" levels="4" name="Sonic Flash">
-		<table name="#power"> 17348 20033 22717 25700 </table>
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 98 105 112 119 </table>
-		<table name="#effectPoints"> -100 -200 -300 -400 </table> <!-- Need verify -->
+	<skill id="10318" levels="7" name="Sonic Flash">
+	<!-- Source: https://l2wiki.com/Sonic_Flash_-_Tyrr_Duelist -->
+		<table name="#power"> 17348 20033 22717 25700 27419 28665 29911 </table>
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 98 105 112 119 126 133 140 </table>
+		<table name="#effectPoints"> -100 -200 -300 -400 -500 -600 -700 </table> <!-- Need verify -->
 		<set name="icon" val="icon.skill10318new" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -442,10 +444,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10320" levels="1" name="Faceoff">
+	<skill id="10320" levels="3" name="Faceoff">
+	<!-- Source: https://l2wiki.com/Faceoff_-_Tyrr_Duelist -->
+		<table name="#magicLvl"> 90 95 99 </table>
 		<set name="icon" val="icon.skll10319" />
 		<set name="abnormalTime" val="30" />
-		<set name="magicLvl" val="90" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="43" />
 		<set name="castRange" val="600" />
@@ -459,11 +463,12 @@
 			<effect name="Duel" />
 		</for>
 	</skill>
-	<skill id="10321" levels="4" name="Thunder Spear">
-		<table name="#power"> 22536 26428 29542 32656 </table>
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 122 124 129 133 </table>
-		<table name="#effectPoints"> -100 -200 -300 -400 </table>
+	<skill id="10321" levels="7" name="Thunder Spear">
+	<!-- Source: https://l2wiki.com/Thunder_Spear_-_Tyrr_Dreadnought -->
+		<table name="#power"> 22536 26428 29542 32656 35788 37424 39060 </table>
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 122 124 129 133 137 141 145 </table>
+		<table name="#effectPoints"> -100 -200 -300 -400 -500 -600 -700 </table>
 		<set name="icon" val="icon.skll10321" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -545,9 +550,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10325" levels="3" name="Dreadful Roar">
-		<table name="#magicLvl"> 97 98 99 </table>
-		<table name="#mpConsume"> 149 151 154 </table>
+	<skill id="10325" levels="6" name="Dreadful Roar">
+	<!-- Source: https://l2wiki.com/Dreadful_Roar_-_Tyrr_Dreadnought -->
+		<table name="#magicLvl"> 97 98 99 101 103 105 </table>
+		<table name="#mpConsume"> 149 151 154 157 160 163 </table>
 		<set name="icon" val="icon.skill10325" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="affectLimit" val="6-12" />
@@ -564,7 +570,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="DispelByCategory">
-				<param slot="buff" rate="25" max="1" />
+				<param slot="buff" rate="100" max="1" />
 			</effect>
 		</for>
 	</skill>
@@ -585,11 +591,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10327" levels="4" name="Momentum Flash">
-		<table name="#power"> 17348 20033 22717 25700 </table>
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 98 105 112 119 </table>
-		<table name="#effectPoints"> -100 -200 -300 -400 </table> <!-- Need verify -->
+	<skill id="10327" levels="7" name="Momentum Flash">
+	<!-- Source: https://l2wiki.com/Momentum_Flash_-_Tyrr_Grand_Khavatari -->
+		<table name="#power"> 17348 20033 22717 25700 27419 28665 29911 </table>
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 98 105 112 119 126 133 140 </table>
+		<table name="#effectPoints"> -100 -200 -300 -400 -500 -600 -700 </table> <!-- Need verify -->
 		<set name="icon" val="icon.skill10327" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -655,15 +662,12 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Attacks target with 18005 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
-	<!-- Level 2 : Attacks target with 22505 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
-	<!-- Level 3 : Attacks target with 27005 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
-	<!-- Level 4 : Attacks target with 30605 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
-	<skill id="10330" levels="4" name="Power Hammer Crush">
-		<table name="#power"> 18005 22505 27005 30605 </table>
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 92 96 101 105 </table>
-		<table name="#effectPoints"> -100 -200 -300 -400 </table> <!-- Need verify -->
+	<skill id="10330" levels="7" name="Power Hammer Crush">
+	<!-- Source: https://l2wiki.com/Power_Hammer_Crush_-_Tyrr_Maestro -->
+		<table name="#power"> 18005 22505 27005 30605 32405 34205 36005 </table>
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 92 96 101 105 109 113 117 </table>
+		<table name="#effectPoints"> -100 -200 -300 -400 -500 -600 -700 </table> <!-- Need verify -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -761,7 +765,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Attacks enemies in front with $s1 Power added to P. Atk. If the target is stunned, attacks with $s2 power. Can be used while a sword or blunt weapon is equipped. Consumes $s3 Soulstone. --> 
-	<skill id="10340" levels="1" name="Blade Slasher">
+	<skill id="10340" levels="3" name="Blade Slasher">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />

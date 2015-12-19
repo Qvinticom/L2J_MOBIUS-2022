@@ -86,11 +86,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10102" levels="3" name="Shadow Slash">
-		<table name="#magicLvl"> 97 98 99 </table>
-		<table name="#power"> 33505 34353 35201 </table>
-		<table name="#mpConsume"> 185 191 197 </table>
-		<table name="#abnormalLvls"> 1 2 3 </table>
+	<skill id="10102" levels="6" name="Shadow Slash">
+	<!-- Source: https://l2wiki.com/Shadow_Slash_-_Sigel_Hell_Knight -->
+		<table name="#magicLvl"> 97 98 99 101 103 105 </table>
+		<table name="#power"> 33505 34353 35201 36897 38593 40289 </table>
+		<table name="#mpConsume"> 185 191 197 203 209 215 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6</table>
 		<set name="icon" val="icon.skill10102" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3" />
@@ -127,11 +128,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10103" levels="4" name="Mass Freezing Strike">
-		<table name="#magicLvl"> 97 98 99 99 </table>
-		<table name="#mpConsume"> 185 191 197 197 </table>
-		<table name="#power"> 18151 18641 19131 19131 </table>
-		<table name="#abnormalLvls"> 1 2 3 4 </table>
+	<skill id="10103" levels="7" name="Mass Freezing Strike">
+	<!-- Source: https://l2wiki.com/Mass_Freezing_Strike_-_Sigel_Evas_Templar -->
+		<table name="#magicLvl"> 97 98 99 99 101 103 105 </table>
+		<table name="#mpConsume"> 185 191 197 197 199 201 203 </table>
+		<table name="#power"> 18151 18641 19131 19131 20111 21091 22071 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />

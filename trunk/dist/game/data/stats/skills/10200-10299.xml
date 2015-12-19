@@ -76,12 +76,14 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="10251" levels="1" name="Superior Weapon Mastery" enchantGroup1="10">
+	<skill id="10251" levels="7" name="Superior Weapon Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Weapon_Mastery_-_Feoh_Archmage -->
 		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10251" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -135,17 +137,23 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery" enchantGroup1="10">
+	<skill id="10252" levels="7" name="Superior Dual Weapon Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Dual_Weapon_Mastery_-_Tyrr_Titan -->
 		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pAtkAdd"> 1689 1958 2270 2555 2895 3071 3258 </table>
 		<set name="icon" val="icon.skill10252" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<add stat="pAtk" val="1252">
+				<mul stat="pAtk" val="1.3">
+					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
+				</mul>
+				<add stat="pAtk" val="#pAtkAdd">
 					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
 				</add>
 				<add stat="accCombat" val="8">
@@ -166,11 +174,14 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<skill id="10253" levels="7" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Tyrr_Titan -->
+		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#ench1pDef"> 1366 1405 1444 1483 1522 1561 1600 1639 1678 1717 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10253" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -179,7 +190,7 @@
 				<add stat="STR" val="2">
 					<using kind="HEAVY" />
 				</add>
-				<add stat="pDef" val="1327">
+				<add stat="pDef" val="#pDef">
 					<using kind="HEAVY" />
 				</add>
 				<add stat="maxHp" val="5368">
@@ -201,11 +212,14 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10254" levels="1" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<skill id="10254" levels="7" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Tyrr_Duelist -->
+		<table name="#pDef"> 1506 1654 1817 1959 2196 2279 2365 </table>
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#ench1pDef"> 1308 1345 1382 1419 1456 1493 1530 1567 1604 1643 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10254" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -214,7 +228,7 @@
 				<add stat="STR" val="2">
 					<using kind="LIGHT" />
 				</add>
-				<add stat="pDef" val="1271">
+				<add stat="pDef" val="#pDef">
 					<using kind="LIGHT" />
 				</add>
 				<add stat="maxHp" val="5368">
@@ -266,11 +280,13 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10255" levels="1" name="Superior Momentum Mastery" enchantGroup1="10">
+	<skill id="10255" levels="7" name="Superior Momentum Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Momentum_Mastery_-_Tyrr_Titan -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#ench1Rate"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<table name="#enchMagicLvl"> 86 87 88 89 90 91 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10255" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -309,7 +325,12 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="10256" levels="1" name="Superior HP Mastery" enchantGroup1="10">
+	<skill id="10256" levels="7" name="Superior HP Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_HP_Mastery_-_Tyrr_Grand_Khavatari -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#maxHp"> 606 724 843 1002 1092 1222 1352 </table>
+		<table name="#maxCp"> 296 353 411 489 533 596 660 </table>
+		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
 		<table name="#ench1maxHp"> 645 685 724 764 804 843 883 922 962 1002 </table>
 		<table name="#ench1maxCp"> 315 334 353 373 392 411 431 450 469 489 </table>
 		<table name="#ench1regHp"> 7.8 8.2 8.7 9.2 9.7 10.1 10.6 11.1 11.5 12 </table>
@@ -318,23 +339,22 @@
 		<table name="#ench1pAtk"> 754 809 864 919 974 1029 1084 1139 1194 1249 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10256" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<add stat="maxHp" val="606" />
-				<add stat="maxCp" val="296" />
-				<add stat="regHp" val="7.3" />
-				<add stat="regHp" val="7">
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxCp" val="#maxCp" />
+				<add stat="regHp" val="12">
 					<player resting="true" />
 				</add>
-				<add stat="regMp" val="3.7">
+				<add stat="regMp" val="6">
 					<player resting="true" />
 				</add>
-				<add stat="pAtk" val="629">
+				<add stat="pAtk" val="#pAtk">
 					<player hp="60" />
 				</add>
 			</effect>
@@ -389,12 +409,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10258" levels="8" name="Armor Destruction" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
-		<table name="#magicLvl"> 85 87 89 90 92 93 94 95 </table>
-		<table name="#mpConsumes"> 50 52 53 54 57 59 60 62 </table>
-		<table name="#power"> 11159 11932 12547 13206 14101 14995 15873 16601 </table>
-		<table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 </table>
+	<skill id="10258" levels="11" name="Armor Destruction" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Armor_Destruction_-_Tyrr_Maestro -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
+		<table name="#magicLvl"> 85 87 89 90 92 93 94 95 101 103 105 </table>
+		<table name="#mpConsumes"> 50 52 53 54 57 59 60 62 64 66 68 </table>
+		<table name="#power"> 11159 11932 12547 13206 14101 14995 15873 16601 20595 21599 22603 </table>
+		<table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 </table>
 		<table name="#ench2MpConsume"> 59 57 54 52 49 47 44 42 39 37 </table>
 		<table name="#enchDuel"> 16990 17379 17767 18156 18545 18934 19322 19711 20100 20489 </table>
 		<table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
@@ -468,10 +489,11 @@
 				</effect>
 			</selfEffects>
 	</skill>
-	<skill id="10260" levels="8" name="Mega Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsumes"> 65 66 69 71 73 76 78 80 </table>
-		<table name="#power"> 19893 20581 21956 23332 24707 26082 27458 28833 </table>
+	<skill id="10260" levels="11" name="Mega Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Mega_Strike_-_Tyrr_Duelist -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsumes"> 65 66 69 71 73 76 78 80 82 84 86 </table>
+		<table name="#power"> 19893 20581 21956 23332 24707 26082 27458 28833 31628 33090 34552 </table>
 		<table name="#ench2MpConsume"> 76 73 70 67 64 60 57 54 51 48 </table>
 		<table name="#enchDuel"> 30209 30896 31584 32272 32959 33647 34334 35022 35710 36397 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
@@ -595,11 +617,12 @@
 			</effect>
 		</enchant9for>
 	</skill>
-	<skill id="10262" levels="6" name="Power Bomber" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#magicLvl"> 85 88 91 94 97 99 </table>
-		<table name="#mpConsumes"> 84 89 93 98 102 105 </table>
-		<table name="#power"> 20483 22595 24708 26821 28934 30343 </table>
+	<skill id="10262" levels="9" name="Power Bomber" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Power_Bomber_-_Tyrr_Duelist -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
+		<table name="#magicLvl"> 85 88 91 94 97 99 101 103 105 </table>
+		<table name="#mpConsumes"> 84 89 93 98 102 105 108 111 114 </table>
+		<table name="#power"> 20483 22595 24708 26821 28934 30343 32981 34497 36013 </table>
 		<table name="#ench2MpConsume"> 100 96 92 88 84 79 75 71 67 63 </table>
 		<table name="#enchDuel"> 31047 31751 32455 33160 33864 34568 35273 35977 36681 37386 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
@@ -753,12 +776,13 @@
 			</effect>
 		</enchant9for>
 	</skill>
-	<skill id="10263" levels="8" name="Hurricane Blaster" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsumes"> 58 59 61 63 65 67 69 71 </table>
-		<table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 </table>
-		<table name="#power"> 551 566 598 630 662 693 725 757 </table>
+	<skill id="10263" levels="11" name="Hurricane Blaster" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Hurricane_Blaster_-_Tyrr_Doombringer -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsumes"> 58 59 61 63 65 67 69 71 73 75 77 </table>
+		<table name="#pDef"> 0.98 0.96 0.94 0.92 0.90 0.88 0.86 0.84 0.82 0.80 0.78 </table>
+		<table name="#power"> 551 566 598 630 662 693 725 757 812 844 876 </table>
 		<table name="#ench2MpConsume"> 68 65 62 59 56 53 51 48 45 42 </table>
 		<table name="#enchDuel"> 789 805 820 836 852 868 884 900 916 932 </table>
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
@@ -829,17 +853,18 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10265" levels="8" name="Eruption" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#enchelementPower">30 33 36 40 43 46 50 53 56 60</table>
-		<table name="#enchPower">17545 17945 18344 18743 19142 19542 19941 20340 20739 21139</table>
-		<table name="#ench1MpConsume">144 138 132 126 120 114 108 102 96 90</table>
-		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
+	<skill id="10265" levels="11" name="Eruption" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Eruption_-_Tyrr_Doombringer -->
+		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
+		<table name="#enchPower"> 17545 17945 18344 18743 19142 19542 19941 20340 20739 21139 </table>
+		<table name="#ench1MpConsume"> 144 138 132 126 120 114 108 102 96 90 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
-		<table name="#power">11557 11956 12754 13533 14351 15155 15948 16747</table>
-		<table name="#powerDebuff">30 32 34 36 38 40 42 44</table>
-		<table name="#mpConsume">122 124 129 133 137 142 146 151</table>
+		<table name="#power"> 11557 11956 12754 13533 14351 15155 15948 16747 17896 18622 19348 </table>
+		<table name="#powerDebuff"> 30 32 34 36 38 40 42 44 46 48 50 </table>
+		<table name="#mpConsume"> 122 124 129 133 137 142 146 151 156 161 166 </table>
 		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table> <!-- Need verify -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -911,13 +936,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10266" levels="8" name="Giant Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
-		<table name="#ench1MpConsume">91 87 83 79 76 72 68 64 60 57</table>
-		<table name="#ench2Chance">61 62 63 64 65 66 67 68 69 70</table>
-		<table name="#magicLvl">85 87 88 91 93 95 97 99</table>
-		<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
-		<table name="#ench3Attack">3800 3900 4000 4100 4200 4300 4400 4500 4600 4700</table> <!-- Need verify -->
-		<table name="#mpConsume">76 79 81 84 87 90 92 95</table>
+	<skill id="10266" levels="11" name="Giant Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Giant_Punch_-_Tyrr_Titan -->
+		<table name="#ench1MpConsume"> 91 87 83 79 76 72 68 64 60 57 </table>
+		<table name="#ench2Chance"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#magicLvl"> 85 87 88 91 93 95 97 99 101 103 105 </table>
+		<table name="#ench4Hex"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
+		<table name="#ench3Attack"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table> <!-- Need verify -->
+		<table name="#mpConsume"> 76 79 81 84 87 90 92 95 98 101 104 </table>
 		<table name="#ench9Reuse"> 119000 118000 117000 116000 115000 114000 113000 112000 111000 110000 </table> <!-- Need verify -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="element" val="3" />
@@ -964,16 +990,17 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="10267" levels="6" name="Hurricane Rush" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
-		<table name="#magicLvl">85 87 90 93 96 99</table>
-		<table name="#ench2effectPower">71 72 75 76 78 79 80 82 83 85</table>
-		<table name="#ench3Attack">3800 3900 4000 4100 4200 4300 4400 4500 4600 4700</table>
-		<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
-		<table name="#ench1MpConsume">45 43 41 39 37 35 33 31 30 28</table>
-		<table name="#activateRate">61 62 63 64 65 66 67 68 69 70</table>
-		<table name="#mpConsume">38 39 41 43 44 47</table>
+	<skill id="10267" levels="9" name="Hurricane Rush" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Hurricane_Rush_-_Tyrr_Duelist -->
+		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
+		<table name="#ench2effectPower"> 71 72 75 76 78 79 80 82 83 85 </table>
+		<table name="#ench3Attack"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table>
+		<table name="#ench4Hex"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
+		<table name="#ench1MpConsume"> 45 43 41 39 37 35 33 31 30 28 </table>
+		<table name="#activateRate"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#mpConsume"> 38 39 41 43 44 47 50 53 56 </table>
 		<table name="#ench9Reuse"> 14900 14800 14700 14600 14500 14400 14300 14200 14100 14000 </table> <!-- Need verify -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1040,14 +1067,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10269" levels="7" name="Jump Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
-		<table name="#power">10508 11190 11872 12554 13236 13918 14600</table>
-		<table name="#magicLvl">87 89 91 93 95 97 99</table>
-		<table name="#ench1MpConsume">128 123 117 112 107 101 96 91 85 80</table>
-		<table name="#ench2activateRate">81 82 83 84 85 86 87 88 89 90</table>
-		<table name="#enchElementalPower">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#enchPower">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
-		<table name="#mpConsume">111 114 118 122 126 130 134</table>
+	<skill id="10269" levels="10" name="Jump Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Jump_Attack_-_Tyrr_Duelist -->
+		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15539 16297 17055 </table>
+		<table name="#magicLvl"> 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#ench1MpConsume"> 128 123 117 112 107 101 96 91 85 80 </table>
+		<table name="#ench2activateRate"> 81 82 83 84 85 86 87 88 89 90 </table>
+		<table name="#enchElementalPower"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#enchPower"> 14941 15282 15623 15964 16305 16646 16987 17328 17669 18011 </table>
+		<table name="#mpConsume"> 111 114 118 122 126 130 134 138 142 146 </table>
 		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table> <!-- Need verify -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="flyType" val="CHARGE" />
@@ -1445,20 +1473,24 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="10275" levels="1" name="Infinity Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<skill id="10275" levels="4" name="Infinity Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Infinity_Strike_-_Tyrr_Doombringer -->
+		<table name="#magicLvl"> 99 101 103 105 </table>
+		<table name="#power"> 65085 69414 73352 77290 </table>
+		<table name="#mpConsume"> 1178 1195 1213 1231 </table>
 		<table name="#ench1MpConsume"> 1131 1083 1037 989 942 896 848 801 753 707 </table>
 		<table name="#enchPower"> 66456 67827 69198 70569 71940 73311 74682 76053 77424 78795 </table>
 		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table> <!-- Need verify -->
 		<set name="magicLvl" val="99" />
 		<set name="nextActionAttack" val="true" />
-		<set name="power" val="65085" />
+		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="coolTime" val="500" />
 		<set name="castRange" val="40" />
 		<set name="reuseDelay" val="30000" />
-		<set name="mpConsume" val="1178" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="baseCritRate" val="7" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="effectRange" val="400" />
@@ -1645,12 +1677,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10281" levels="2" name="Sonic Star" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
-		<table name="#ench1MpConsume">1131 1083 1037 989 942 896 848 801 753 707</table>
-		<table name="#enchPower">48735 49741 50747 51723 52759 53765 54771 55777 56783 57789</table>
-		<table name="#power">44711 46723</table>
-		<table name="#magicLvl">95 98</table>
-		<table name="#mpConsume">1103 1158</table>
+	<skill id="10281" levels="5" name="Sonic Star" enchantGroup1="10" enchantGroup2="10" enchantGroup9="10">
+	<!-- Source: https://l2wiki.com/Sonic_Star_-_Tyrr_Duelist -->
+		<table name="#ench1MpConsume"> 1131 1083 1037 989 942 896 848 801 753 707 </table>
+		<table name="#enchPower"> 48735 49741 50747 51723 52759 53765 54771 55777 56783 57789 </table>
+		<table name="#power"> 44711 46723 50165 52369 54573 </table>
+		<table name="#magicLvl"> 95 98 101 103 105 </table>
+		<table name="#mpConsume"> 1103 1158 1213 1268 1323 </table>
 		<table name="#ench9Reuse"> 29000 28000 27000 26000 25000 24000 23000 22000 21000 20000 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
@@ -1749,20 +1782,24 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10286" levels="1" name="Superior Resistance" enchantGroup1="10">
-		<table name="#enchDef">206 213 220 227 234 241 248 255 262 270</table>
-		<table name="#enchRes">21 22 23 24 25 26 27 28 29 30</table>
+	<skill id="10286" levels="7" name="Superior Resistance" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Resistance_-_Othell_Fortune_Seeker -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
+		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
+		<table name="#enchDef"> 206 213 220 227 234 241 248 255 262 270 </table>
+		<table name="#enchRes"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="targetType" val="SELF" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<add stat="mDef" val="199" />
-				<add stat="waterRes" val="20" />
-				<add stat="fireRes" val="20" />
-				<add stat="windRes" val="20" />
-				<add stat="earthRes" val="20" />
+				<add stat="mDef" val="#mDef" />
+				<add stat="waterRes" val="#resistance" />
+				<add stat="fireRes" val="#resistance" />
+				<add stat="windRes" val="#resistance" />
+				<add stat="earthRes" val="#resistance" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -1808,13 +1845,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10288" levels="8" name="Hurricane Storm" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#ench1MpConsume">190 182 174 166 158 150 142 134 126 118</table>
-		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
-		<table name="#magicLvl">85 86 88 90 92 94 96 98</table>
-		<table name="#enchPower">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
-		<table name="#enchelementPower">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#mpConsume">161 163 169 175 180 186 192 198</table>
+	<skill id="10288" levels="11" name="Hurricane Storm" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Hurricane_Storm_-_Tyrr_Titan -->
+		<table name="#ench1MpConsume"> 190 182 174 166 158 150 142 134 126 118 </table>
+		<table name="#power"> 11557 11956 12754 13553 14351 15150 15948 16747 20787 21925 23063 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#enchPower"> 17546 17945 18344 18744 19143 19542 19941 20341 20740 21139 </table>
+		<table name="#enchelementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#mpConsume"> 161 163 169 175 180 186 192 198 204 210 216 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
