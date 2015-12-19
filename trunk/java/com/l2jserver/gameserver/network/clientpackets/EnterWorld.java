@@ -286,6 +286,9 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(ExPledgeWaitingListAlarm.STATIC_PACKET);
 		}
 		
+		// Used as a tempfix for Clan crests.
+		activeChar.broadcastUserInfo();
+		
 		// Send SubClass Info
 		activeChar.sendPacket(new ExSubjobInfo(activeChar, SubclassInfoType.NO_CHANGES));
 		
