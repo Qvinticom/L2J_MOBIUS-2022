@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30500" levels="25" name="Lateral Hit">
-		<!-- Attacks target with 22 Power added to P. Atk., and decreases their P. Def. by 10% for 10 sec. 20% more damage if target is Stunned. Requires a fist weapon. -->
-		<table name="#power">22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478</table>
-		<table name="#mpConsumes"> 8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 </table>
+	<skill id="30500" levels="28" name="Lateral Hit">
+	<!-- Source: https://l2wiki.com/Lateral_Hit_-_Eviscerator -->
+		<table name="#magicLevel"> 1 20 28 36 42 46 50 54 60 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478 47996 49514 51032 </table>
+		<table name="#mpConsumes"> 8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
@@ -11,6 +12,7 @@
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE" />
@@ -26,11 +28,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="30501" levels="24" name="Backspin Blow">
-		<!-- Attacks target with 129 Power added to P. Atk. Requires a fist weapon. -->
-		<table name="#magicLevel">20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
-		<table name="#power">129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865</table>
-		<table name="#mpConsumes">17 23 29 35 39 44 47 54 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77</table>
+	<skill id="30501" levels="27" name="Backspin Blow">
+	<!-- Source: https://l2wiki.com/Backspin_Blow_-_Eviscerator -->
+		<table name="#magicLevel"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865 71115 73365 75615 </table>
+		<table name="#mpConsumes"> 17 23 29 35 39 44 47 54 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
 		<set name="icon" val="icon.skill30501" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
@@ -48,12 +50,14 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="30502" levels="21" name="Chin Strike">
-		<!-- Knocks down target for 3 sec. Requires a fist weapon. -->
-		<table name="#mpConsumes"> 34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77 </table>
+	<skill id="30502" levels="24" name="Chin Strike">
+	<!-- Source: https://l2wiki.com/Chin_Strike -->
+		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsumes"> 34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77 78 79 80 </table>
 		<set name="icon" val="icon.skill30502" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLevel" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -64,11 +68,11 @@
 			<using kind="FIST,DUALFIST" />
 		</cond>
 	</skill>
-	<skill id="30503" levels="8" name="Spinning Kick">
-		<!-- Attacks target with 35167 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon. -->
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#power">35167 36755 40540 45273 51165 58506 67683 79217</table>
-		<table name="#mpConsumes"> 81 81 82 83 83 83 84 84 </table>
+	<skill id="30503" levels="11" name="Spinning Kick">
+	<!-- Source: https://l2wiki.com/Spinning_Kick_-_Eviscerator -->
+		<table name="#magicLevel"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#power"> 35167 36755 40540 45273 51165 58506 67683 79217 88893 91705 94517 </table>
+		<table name="#mpConsumes"> 81 81 82 83 83 83 84 84 84 84 84 </table>
 		<set name="icon" val="icon.skill30503" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
@@ -92,11 +96,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="30504" levels="13" name="Gravity Hit">
-		<!-- Attacks target with 10417 Power added to P. Atk. Ignores 50% of target's P. Def. Requires a fist weapon. -->
-		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
-		<table name="#power">10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 73116 86081</table>
-		<table name="#mpConsumes"> 75 77 78 79 80 81 82 82 83 83 84 84 85 </table>
+	<skill id="30504" levels="16" name="Gravity Hit">
+	<!-- Source: https://l2wiki.com/Gravity_Hit_-_Eviscerator -->
+		<table name="#magicLevel"> 76 78 80 82 84 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 73116 86081 88893 91705 94517 </table>
+		<table name="#mpConsumes"> 75 77 78 79 80 81 82 82 83 83 84 84 85 86 87 88 </table>
 		<set name="icon" val="icon.skill30504" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="ONE" />
@@ -114,11 +118,11 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="30505" levels="7" name="Pressure Punch">
-		<!-- Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
-		<table name="#magicLevel">87 89 91 93 95 97 99</table>
-		<table name="#power">17266 19164 21530 24475 28150 32755 38563</table>
-		<table name="#mpConsumes"> 149 150 151 151 152 153 155 </table>
+	<skill id="30505" levels="10" name="Pressure Punch">
+	<!-- Source: https://l2wiki.com/Pressure_Punch_-_Eviscerator -->
+		<table name="#magicLevel"> 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 17266 19164 21530 24475 28150 32755 38563 39823 41083 42343 </table>
+		<table name="#mpConsumes"> 149 150 151 151 152 153 155 157 159 161 </table>
 		<set name="icon" val="icon.skill30505" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalTime" val="1" />
@@ -144,12 +148,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="30506" levels="11" name="Distant Kick">
-		<!-- Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
-		<table name="#magicLevel">79 81 83 85 87 89 91 93 95 97 99</table>
-		<table name="#power">5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185</table>
-		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155 </table>
-		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 </table>
+	<skill id="30506" levels="14" name="Distant Kick">
+	<!-- Source: https://l2wiki.com/Distant_Kick_-_Eviscerator -->
+		<table name="#magicLevel"> 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185 49769 51343 52917 </table>
+		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155 157 159 161 </table>
+		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 -535 -535 -535 </table>
 		<set name="icon" val="icon.skill30506" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />
@@ -182,10 +186,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="30507" levels="21" name="Left Sidestep">
-		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon. -->
-		<table name="#mpConsumes"> 13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30 </table>
-		<table name="#magicLevel">79 81 83 85 87 89 91 93 95 97 99 101 103 105 105 105 105 105 105 105 105</table>
+	<skill id="30507" levels="24" name="Left Sidestep">
+	<!-- Source: https://l2wiki.com/Left_Sidestep_-_Eviscerator -->
+		<table name="#mpConsumes"> 13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30 30 30 30 </table>
+		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
 		<set name="icon" val="icon.skill30507" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="abnormalTime" val="5" />
@@ -285,16 +289,18 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="ONE" />
 	</skill>
-	<skill id="30511" levels="3" name="Air Light">
-		<!-- For 10 min., you're less bound by gravity and P. Atk. + 10%. -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#mpConsumes"> 20 44 45 </table>
-		<table name="#pAtk"> 1.1 1.15 1.2 </table>
+	<skill id="30511" levels="5" name="Air Light">
+	<!-- Source: https://l2wiki.com/Air_Light_-_Eviscerator -->
+		<table name="#magicLvl"> 40 85 95 99 101 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<table name="#mpConsumes"> 20 44 45 45 45 </table>
+		<table name="#pAtk"> 1.1 1.15 1.2 1.25 1.25 </table>
 		<set name="icon" val="icon.skill30511" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -302,19 +308,16 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="#pAtk" />
-				<!-- <add stat="BackResist" val="20" />-->
-				<!-- <add stat="DownResist" val="20" />-->
-				<!-- <add stat="PullResist" val="20" />-->
-				<!-- <add stat="AirResist" val="20" />-->
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
-	<skill id="30512" levels="1" name="Distortion">
+	<skill id="30512" levels="3" name="Distortion">
+	<!-- Source: https://l2wiki.com/Distortion_-_Eviscerator -->
+		<table name="#magicLvl"> 76 85 101 </table>
 		<set name="icon" val="icon.skill30512" />
-		<set name="magicLvl" val="76" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalTime" val="60" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="41" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -324,17 +327,19 @@
 			<using kind="FIST,DUALFIST" />
 		</cond>
 	</skill>
-	<skill id="30514" levels="2" name="Fluid Weave">
-		<!-- For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon. -->
-		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#mpConsumes"> 13 29 </table>
-		<table name="#rEvas"> 50 70 </table>
-		<table name="#mEvas"> 50 70 </table>
-		<table name="#pSkillEvas"> 50 70 </table>
+	<skill id="30514" levels="3" name="Fluid Weave">
+	<!-- Source: https://l2wiki.com/Fluid_Weave -->
+		<table name="#magicLvl"> 40 85 101 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#mpConsumes"> 13 29 45 </table>
+		<table name="#rEvas"> 50 70 70 </table>
+		<table name="#mEvas"> 50 70 70 </table>
+		<table name="#pSkillEvas"> 50 70 70 </table>
 		<set name="icon" val="icon.skill30514" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalTime" val="3" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="abnormalTime" val="3" />
 		<set name="hitTime" val="200" />
@@ -374,17 +379,10 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 2 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 3 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 4 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 5 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 6 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 7 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<!-- Level 8 : Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
-	<skill id="30517" levels="8" name="Heavy Hand">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 </table>
+	<skill id="30517" levels="11" name="Heavy Hand">
+	<!-- Source: https://l2wiki.com/Heavy_Hand_-_Eviscerator -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 78 79 80 </table>
 		<set name="icon" val="icon.skill30517" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -398,12 +396,12 @@
 			<using kind="FIST,DUALFIST" />
 		</cond>
 	</skill>
-	<skill id="30518" levels="8" name="Reverse Weight">
-		<!-- Level 1 : Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
-		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 1479 1487 1500 1510 1516 1523 1532 1544 </table>
-		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 </table>
+	<skill id="30518" levels="11" name="Reverse Weight">
+	<!-- Source: https://l2wiki.com/Reverse_Weight_-_Eviscerator -->
+		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 49769 51343 52917 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 1479 1487 1500 1510 1516 1523 1532 1544 1556 1568 1580 </table>
+		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 -535 -535 -535 </table>
 		<set name="icon" val="icon.skill30518" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -446,16 +444,18 @@
 			<using kind="FIST,DUALFIST" />
 		</cond>
 	</skill>
-	<skill id="30520" levels="2" name="Steel Mind">
-		<!-- For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% of HP is restored. Requires a fist weapon. -->
-		<table name="#spd">50 70</table>
-		<table name="#pAtks">1.15 1.30</table>
-		<table name="#cAtk">1.15 1.30</table>
-		<table name="#mpConsumes"> 221 232 </table>
+	<skill id="30520" levels="3" name="Steel Mind">
+	<!-- Source: https://l2wiki.com/Steel_Mind_-_Eviscerator -->
+		<table name="#spd"> 50 70 70 </table>
+		<table name="#pAtks"> 1.15 1.30 1.30 </table>
+		<table name="#cAtk"> 1.15 1.30 1.30 </table>
+		<table name="#magicLvl"> 85 99 101 </table>
+		<table name="#mpConsumes"> 221 232 243 </table>
 		<set name="icon" val="icon.skill30520" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="abnormalTime" val="30" />
 		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="abnormalTime" val="30" />
 		<set name="hitTime" val="1500" />
@@ -527,22 +527,11 @@
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<!-- Level 1 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 2 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 3 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 4 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 5 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 6 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 7 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 8 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 9 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 10 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 11 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<!-- Level 12 : Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
-	<skill id="30530" levels="12" name="Crushing Air">
-		<table name="#Power">11159 11936 12714 13941 14269 15046 15824 16601 16638 16679 17000 17059</table>
-		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 34 35 35 36 36 37 37 37 37 38 38 38 </table>
+	<skill id="30530" levels="15" name="Crushing Air">
+	<!-- Source: https://l2wiki.com/Crushing_Air_-_Eviscerator -->
+		<table name="#power"> 11159 11936 12714 13941 14269 15046 15824 16601 16638 16679 17000 17059 17118 17177 17236 </table>
+		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 34 35 35 36 36 37 37 37 37 38 38 38 38 38 38 </table>
 		<set name="icon" val="icon.skill30530" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -550,7 +539,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
-		<set name="power" val="#Power" />
+		<set name="power" val="#power" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
@@ -567,14 +556,14 @@
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
-	<skill id="30540" levels="11" name="Eminent Fist Weapon Mastery">
-		<!-- When equipped with a fist weapon, P. Atk. + 10% and + 4. -->
-		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 </table>
-		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 </table>
-		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 </table>
-		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 2156 2803 3342 4060 </table>
-		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 </table>
-		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 </table>
+	<skill id="30540" levels="14" name="Eminent Fist Weapon Mastery">
+	<!-- Source: https://l2wiki.com/Eminent_Fist_Weapon_Mastery_-_Eviscerator -->
+		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 8 8 8 </table>
+		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
+		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 3378 3916 4540 5110 5790 6143 6517 </table>
+		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 60 60 60 </table>
 		<set name="icon" val="icon.skill30524" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -602,20 +591,10 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : When equipped with light armor, P. Def. + 14. -->
-	<!-- Level 2 : When equipped with light armor, P. Def. + 17, P. Evasion + 2, and Received P./M. Critical Rate - 15%. -->
-	<!-- Level 3 : When equipped with light armor, P. Def. + 34, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
-	<!-- Level 4 : When equipped with light armor, P. Def. + 51, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
-	<!-- Level 5 : When equipped with light armor, P. Def. + 69, P. Evasion + 3, and Received P./M. Critical Rate - 20%. -->
-	<!-- Level 6 : When equipped with light armor, P. Def. + 91, P. Evasion + 4, and Received P./M. Critical Rate - 25%. -->
-	<!-- Level 7 : When equipped with light armor, P. Def. + 99, P. Evasion + 4, M. Def. + 3%, M. Def. + 276, and Received P./M. Critical Rate - 25%. -->
-	<!-- Level 8 : When equipped with light armor, P. Def. + 1398, P. Evasion + 8, M. Def. + 5%, M. Def. + 552, and Received P./M. Critical Rate - 35%. -->
-	<!-- Level 9 : When equipped with light armor, P. Def. + 1520, P. Evasion + 8, M. Def. + 5%, M. Def. + 575, and Received P./M. Critical Rate - 35%. -->
-	<!-- Level 10 : When equipped with light armor, P. Def. + 1642, P. Evasion + 8, M. Def. + 5%, M. Def. + 598, and Received P./M. Critical Rate - 35%. -->
-	<!-- Level 11 : When equipped with light armor, P. Def. + 1807, P. Evasion + 8, M. Def. + 5%, M. Def. + 630, and Received P./M. Critical Rate - 35%. -->
-	<skill id="30541" levels="11" name="Eminent Light Armor Mastery">
-		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 </table>
-		<table name="#pDef"> 14 17 34 51 69 91 99 1398 1520 1642 1807 </table>
+	<skill id="30541" levels="14" name="Eminent Light Armor Mastery">
+	<!-- Source: https://l2wiki.com/Eminent_Light_Armor_Mastery_-_Eviscerator -->
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 14 17 34 51 69 91 99 1657 1819 1999 2155 2415 2506 2601 </table>
 		<set name="icon" val="icon.skill10254" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -686,8 +665,8 @@
 	</skill>
 	<skill id="30546" levels="11" name="Flying Knee Kick">
 		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
-		<table name="#magicLevel">79 81 83 85 87 89 91 93 95 97 99</table>
-		<table name="#power">5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185</table>
+		<table name="#magicLevel"> 79 81 83 85 87 89 91 93 95 97 99 </table>
+		<table name="#power"> 5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185 </table>
 		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155 </table>
 		<set name="icon" val="icon.skill30506" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -721,10 +700,10 @@
 	</skill>
 	<skill id="30547" levels="4" name="Stamp Punch" enchantGroup1="5">
 		<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. -->
-		<table name="#rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
-		<table name="#mpConsumes"> 85 85 85 85</table>
-		<table name="#magicLevel">99 101 103 105</table>
-		<table name="#power">91570 95080 98736 102392</table>
+		<table name="#rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
+		<table name="#mpConsumes"> 85 85 85 85 </table>
+		<table name="#magicLevel"> 99 101 103 105 </table>
+		<table name="#power"> 91570 95080 98736 102392 </table>
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="targetType" val="ONE" />

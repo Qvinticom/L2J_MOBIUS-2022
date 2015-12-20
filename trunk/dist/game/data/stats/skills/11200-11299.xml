@@ -42,13 +42,10 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<!-- Level 1 : For 20 sec., P. Def. + 5000. -->
-	<!-- Level 2 : increases P. Def. + 5300 for 20 seconds. -->
-	<!-- Level 3 : increases P. Def. + 5600 for 20 seconds. -->
-	<!-- Level 4 : increases P. Def. + 6000 for 20 seconds. -->
-	<skill id="11225" levels="4" name="Physical Soul Barrier">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#pDef"> 0 5300 5600 6000 </table>
+	<skill id="11225" levels="7" name="Physical Soul Barrier">
+	<!-- Source: https://l2wiki.com/Physical_Soul_Barrier_-_Feoh_Soulhound -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#pDef"> 5000 5300 5600 6000 6400 6800 7300 </table>
 		<set name="icon" val="icon.skill11869" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -157,75 +154,56 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<!-- Level 1 : Increases INT by 2, P. Atk. by 82.9, M. Atk. by 103.7, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. -->
-	<!-- Level 101 : Increases INT by 2, P. Atk. by 88.3, M. Atk. by 110.5, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : Increases INT by 2, P. Atk. by 93.7, M. Atk. by 117.2, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : Increases INT by 2, P. Atk. by 99.2, M. Atk. by 124, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : Increases INT by 2, P. Atk. by 104.6, M. Atk. by 130.8, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : Increases INT by 2, P. Atk. by 110, M. Atk. by 137.6, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : Increases INT by 2, P. Atk. by 115.4, M. Atk. by 144.3, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : Increases INT by 2, P. Atk. by 120.8, M. Atk. by 151.1, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : Increases INT by 2, P. Atk. by 126.3, M. Atk. by 157.9, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : Increases INT by 2, P. Atk. by 131.7, M. Atk. by 164.6, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : Increases INT by 2, P. Atk. by 137.1, M. Atk. by 171.4, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11251" levels="1" name="Superior Weapon Mastery">
+	<skill id="11251" levels="7" name="Superior Weapon Mastery">
+	<!-- Source: https://l2wiki.com/Superior_Weapon_Mastery_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pAtk"> 822 953 1105 1244 1409 1495 1586 </table>
+		<table name="#mAtk"> 1079 1252 1451 1633 1850 1963 2083 </table>
 		<set name="icon" val="icon.skill11251" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pAtk" val="82.9" />
-				<mul stat="pAtk" val="2.05" />
-				<add stat="mAtk" val="103.7" />
+				<add stat="INT" val="2" />
+				<add stat="pAtk" val="#pAtk" />
+				<mul stat="pAtk" val="1.05" />
+				<add stat="mAtk" val="#mAtk" />
+				<mul stat="mAtk" val="1.24" />
 				<mul stat="mCritRate" val="1.06" />
 				<mul stat="mAtkSpd" val="1.23" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2.  Max HP + 4151, P. Def. + 845, and Casting Spd. + 5% when equipped with a Robe. -->
-	<!-- Level 101 : INT + 2.  Max HP + 4151, P. Def. + 869, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2.  Max HP + 4151, P. Def. + 893, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2.  Max HP + 4151, P. Def. + 917, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2.  Max HP + 4151, P. Def. + 941, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2.  Max HP + 4151, P. Def. + 965, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2.  Max HP + 4151, P. Def. + 989, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2.  Max HP + 4151, P. Def. + 1013, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2.  Max HP + 4151, P. Def. + 1037, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2.  Max HP + 4151, P. Def. + 1061, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2.  Max HP + 4151, P. Def. + 1092, and Casting Spd. + 5% when equipped with a Robe. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11252" levels="1" name="Superior Robe Mastery">
+	<skill id="11252" levels="7" name="Superior Robe Mastery">
+	<!-- Source: https://l2wiki.com/Superior_Robe_Mastery_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 1212 1330 1462 1576 1767 1833 1903 </table>
 		<set name="icon" val="icon.skill11252" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pDef" val="845" />
+				<add stat="INT" val="2" />
+				<add stat="pDef" val="#pDef" />
 				<add stat="maxHp" val="4151" />
-				<mul stat="mAtkSpd" val="1.05" />
+				<mul stat="mDef" val="1.1" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2, M. Def. + 139, Magic Attack Resistance + 35%, and Max MP + 313. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. -->
-	<!-- Level 101 : INT + 2, M. Def. + 147, Magic Attack Resistance + 35%, and Max MP + 333. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2, M. Def. + 156, Magic Attack Resistance + 35%, and Max MP + 353. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2, M. Def. + 165, Magic Attack Resistance + 35%, and Max MP + 374. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2, M. Def. + 174, Magic Attack Resistance + 35%, and Max MP + 394. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2, M. Def. + 183, Magic Attack Resistance + 35%, and Max MP + 415. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2, M. Def. + 192, Magic Attack Resistance + 35%, and Max MP + 435. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2, M. Def. + 201, Magic Attack Resistance + 35%, and Max MP + 455. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2, M. Def. + 210, Magic Attack Resistance + 35%, and Max MP + 476. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2, M. Def. + 219, Magic Attack Resistance + 35%, and Max MP + 496. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2, M. Def. + 228, Magic Attack Resistance + 35%, and Max MP + 517. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
 	<skill id="11253" levels="1" name="Superior Magic Mastery">
+	<!-- Source: https://l2wiki.com/Superior_Magic_Mastery_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#mDef"> 862 976 1104 1219 1374 1444 1517 </table>
 		<set name="icon" val="icon.skill11253" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="mDef" val="139" />
+				<add stat="INT" val="2" />
+				<add stat="mDef" val="#mDef" />
 				<add stat="maxMp" val="313" />
 			</effect>
 		</for>
@@ -372,57 +350,10 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<!-- Level 1 : Weakens target for 10 seconds. Decreases 326 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 2 : Weakens target for 10 seconds. Decreases 333 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 3 : Weakens target for 10 seconds. Decreases 339 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 4 : Weakens target for 10 seconds. Decreases 346 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 5 : Weakens target for 10 seconds. Decreases 353 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 6 : Weakens target for 10 seconds. Decreases 360 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 7 : Weakens target for 10 seconds. Decreases 368 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 8 : Weakens target for 10 seconds. Decreases 375 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. -->
-	<!-- Level 101 : Weakens target for 10 seconds. Decreases 379 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Weakens target for 10 seconds. Decreases 382 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Weakens target for 10 seconds. Decreases 386 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Weakens target for 10 seconds. Decreases 391 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Weakens target for 10 seconds. Decreases 395 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Weakens target for 10 seconds. Decreases 339 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Weakens target for 10 seconds. Decreases 403 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Weakens target for 10 seconds. Decreases 407 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Weakens target for 10 seconds. Decreases 410 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Weakens target for 10 seconds. Decreases 414 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Weakens target for 10 seconds. Decreases 379 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Weakens target for 10 seconds. Decreases 382 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Weakens target for 10 seconds. Decreases 386 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Weakens target for 10 seconds. Decreases 391 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Weakens target for 10 seconds. Decreases 395 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Weakens target for 10 seconds. Decreases 339 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Weakens target for 10 seconds. Decreases 403 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Weakens target for 10 seconds. Decreases 407 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Weakens target for 10 seconds. Decreases 410 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Weakens target for 10 seconds. Decreases 414 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Weakens target for 10 seconds. Decreases 379 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Weakens target for 10 seconds. Decreases 382 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Weakens target for 10 seconds. Decreases 386 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Weakens target for 10 seconds. Decreases 391 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Weakens target for 10 seconds. Decreases 395 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Weakens target for 10 seconds. Decreases 339 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Weakens target for 10 seconds. Decreases 403 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Weakens target for 10 seconds. Decreases 407 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Weakens target for 10 seconds. Decreases 410 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Weakens target for 10 seconds. Decreases 414 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<!-- Level 301 : Weakens target for 10 seconds. Decreases 379 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 1. (+ 1 Chance Exile | Increases the success rate of Exile attack by 1.) -->
-	<!-- Level 302 : Weakens target for 10 seconds. Decreases 382 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 2. (+ 2 Chance Exile | Increases the success rate of Exile attack by 2.) -->
-	<!-- Level 303 : Weakens target for 10 seconds. Decreases 386 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 3. (+ 3 Chance Exile | Increases the success rate of Exile attack by 3.) -->
-	<!-- Level 304 : Weakens target for 10 seconds. Decreases 391 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 4. (+ 4 Chance Exile | Increases the success rate of Exile attack by 4.) -->
-	<!-- Level 305 : Weakens target for 10 seconds. Decreases 395 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 5. (+ 5 Chance Exile | Increases the success rate of Exile attack by 5.) -->
-	<!-- Level 306 : Weakens target for 10 seconds. Decreases 399 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 6. (+ 6 Chance Exile | Increases the success rate of Exile attack by 6.) -->
-	<!-- Level 307 : Weakens target for 10 seconds. Decreases 403 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 7. (+ 7 Chance Exile | Increases the success rate of Exile attack by 7.) -->
-	<!-- Level 308 : Weakens target for 10 seconds. Decreases 407 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 8. (+ 8 Chance Exile | Increases the success rate of Exile attack by 8.) -->
-	<!-- Level 309 : Weakens target for 10 seconds. Decreases 410 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 9. (+ 9 Chance Exile | Increases the success rate of Exile attack by 9.) -->
-	<!-- Level 310 : Weakens target for 10 seconds. Decreases 414 HP per second, P. Def. by 30%, M. Def. by 30%, and Debuff Resistance by 30%. Enchant Chance Exile: Increases Exile Rate by 10. (+ 10 Chance Exile | Increases the success rate of Exile attack by 10.) -->
-	<skill id="11259" levels="8" name="Mark of Weakness">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 54 58 62 66 70 74 78 82 </table>
+	<skill id="11259" levels="11" name="Mark of Weakness">
+	<!-- Source: https://l2wiki.com/Mark_of_Weakness_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 54 58 62 66 70 74 78 82 86 90 94 </table>
 		<set name="icon" val="icon.skill11259" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -442,54 +373,10 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 326 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
-	<!-- Level 2 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 336 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
-	<!-- Level 3 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 346 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
-	<!-- Level 4 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 357 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
-	<!-- Level 5 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 368 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. -->
-	<!-- Level 101 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 379 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 382 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 386 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 391 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 395 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 339 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 403 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 407 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 410 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 414 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 379 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 382 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 386 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 391 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 395 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 339 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 403 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 407 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 410 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 414 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 379 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 382 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 386 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 391 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 395 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 339 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 403 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 407 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 410 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases HP by 414 every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<!-- Level 301 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 379 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 1. (+ 1 Chance Exile | Increases the success rate of Exile attack by 1.) -->
-	<!-- Level 302 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 382 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 2. (+ 2 Chance Exile | Increases the success rate of Exile attack by 2.) -->
-	<!-- Level 303 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 386 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 3. (+ 3 Chance Exile | Increases the success rate of Exile attack by 3.) -->
-	<!-- Level 304 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 391 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 4. (+ 4 Chance Exile | Increases the success rate of Exile attack by 4.) -->
-	<!-- Level 305 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 395 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 5. (+ 5 Chance Exile | Increases the success rate of Exile attack by 5.) -->
-	<!-- Level 306 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 399 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 6. (+ 6 Chance Exile | Increases the success rate of Exile attack by 6.) -->
-	<!-- Level 307 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 403 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 7. (+ 7 Chance Exile | Increases the success rate of Exile attack by 7.) -->
-	<!-- Level 308 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 407 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 8. (+ 8 Chance Exile | Increases the success rate of Exile attack by 8.) -->
-	<!-- Level 309 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 410 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 9. (+ 9 Chance Exile | Increases the success rate of Exile attack by 9.) -->
-	<!-- Level 310 : Carves a mark linked to the Void Dimension onto target and steals their life force. For 10 seconds, decreases 414 HP every second and absorbs 50% of the damage inflicted as HP/MP for yourself and your servitor(s). Absorbs 25% of the inflicted damage during PvP. Enchant Chance Exile: Increases Exile Rate by 10. (+ 10 Chance Exile | Increases the success rate of Exile attack by 10.) -->
-	<skill id="11260" levels="5" name="Mark of Void">
-		<table name="#magicLvl"> 85 88 91 94 97 </table>
-		<table name="#mpConsume"> 54 60 66 72 78 </table>
+	<skill id="11260" levels="8" name="Mark of Void">
+	<!-- Source: https://l2wiki.com/Mark_of_Void_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 88 91 94 97 101 103 105 </table>
+		<table name="#mpConsume"> 54 60 66 72 78 84 90 96 </table>
 		<set name="icon" val="icon.skill11260" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -502,55 +389,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 326 every second and decreases the power of incoming Heals. -->
-	<!-- Level 2 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 333 every second and decreases the power of incoming Heals. -->
-	<!-- Level 3 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 343 every second and decreases the power of incoming Heals. -->
-	<!-- Level 4 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 353 every second and decreases the power of incoming Heals. -->
-	<!-- Level 5 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 364 every second and decreases the power of incoming Heals. -->
-	<!-- Level 6 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 375 every second and decreases the power of incoming Heals. -->
-	<!-- Level 101 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 379 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 382 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 386 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 391 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 395 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 339 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 403 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 407 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 410 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 414 every second and decreases the power of incoming Heals. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 379 every second and decreases the power of incoming Heals. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 382 every second and decreases the power of incoming Heals. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 386 every second and decreases the power of incoming Heals. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 391 every second and decreases the power of incoming Heals. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 395 every second and decreases the power of incoming Heals. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 339 every second and decreases the power of incoming Heals. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 403 every second and decreases the power of incoming Heals. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 407 every second and decreases the power of incoming Heals. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 410 every second and decreases the power of incoming Heals. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 414 every second and decreases the power of incoming Heals. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 379 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 382 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 386 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 391 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 395 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 339 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 403 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 407 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 410 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 414 every second and decreases the power of incoming Heals. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<!-- Level 301 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 379 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 1. (+ 1 Chance Exile | Increases the success rate of Exile attack by 1.) -->
-	<!-- Level 302 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 382 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 2. (+ 2 Chance Exile | Increases the success rate of Exile attack by 2.) -->
-	<!-- Level 303 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 386 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 3. (+ 3 Chance Exile | Increases the success rate of Exile attack by 3.) -->
-	<!-- Level 304 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 391 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 4. (+ 4 Chance Exile | Increases the success rate of Exile attack by 4.) -->
-	<!-- Level 305 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 395 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 5. (+ 5 Chance Exile | Increases the success rate of Exile attack by 5.) -->
-	<!-- Level 306 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 399 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 6. (+ 6 Chance Exile | Increases the success rate of Exile attack by 6.) -->
-	<!-- Level 307 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 403 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 7. (+ 7 Chance Exile | Increases the success rate of Exile attack by 7.) -->
-	<!-- Level 308 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 407 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 8. (+ 8 Chance Exile | Increases the success rate of Exile attack by 8.) -->
-	<!-- Level 309 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 410 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 9. (+ 9 Chance Exile | Increases the success rate of Exile attack by 9.) -->
-	<!-- Level 310 : Carves a mark linked to the cursed dimension on target. For 10 seconds, decreases HP by 414 every second and decreases the power of incoming Heals. Enchant Chance Exile: Increases Exile Rate by 10. (+ 10 Chance Exile | Increases the success rate of Exile attack by 10.) -->
-	<skill id="11261" levels="6" name="Mark of Plague">
-		<table name="#magicLvl"> 85 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 54 58 64 70 76 82 </table>
+	<skill id="11261" levels="9" name="Mark of Plague">
+	<!-- Source: https://l2wiki.com/Mark_of_Plague_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
+		<table name="#mpConsume"> 54 58 64 70 76 82 88 94 100 </table>
 		<set name="icon" val="icon.skill11261" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -563,55 +405,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 326 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 2 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 329 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 3 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 339 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 4 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 350 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 5 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 360 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 6 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 371 every second. Has a 25% of causing target to fail to use a skill. -->
-	<!-- Level 101 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 379 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 382 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 386 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 391 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 395 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 339 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 403 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 407 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 410 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 414 every second. Has a 25% of causing target to fail to use a skill. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 379 every second. Has a 25% of causing target to fail to use a skill. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 382 every second. Has a 25% of causing target to fail to use a skill. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 386 every second. Has a 25% of causing target to fail to use a skill. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 391 every second. Has a 25% of causing target to fail to use a skill. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 395 every second. Has a 25% of causing target to fail to use a skill. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 339 every second. Has a 25% of causing target to fail to use a skill. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 403 every second. Has a 25% of causing target to fail to use a skill. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 407 every second. Has a 25% of causing target to fail to use a skill. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 410 every second. Has a 25% of causing target to fail to use a skill. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 414 every second. Has a 25% of causing target to fail to use a skill. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 379 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 382 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 386 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 391 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 395 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 339 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 403 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 407 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 410 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 414 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<!-- Level 301 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 379 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 1. (+ 1 Chance Exile | Increases the success rate of Exile attack by 1.) -->
-	<!-- Level 302 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 382 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 2. (+ 2 Chance Exile | Increases the success rate of Exile attack by 2.) -->
-	<!-- Level 303 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 386 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 3. (+ 3 Chance Exile | Increases the success rate of Exile attack by 3.) -->
-	<!-- Level 304 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 391 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 4. (+ 4 Chance Exile | Increases the success rate of Exile attack by 4.) -->
-	<!-- Level 305 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 395 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 5. (+ 5 Chance Exile | Increases the success rate of Exile attack by 5.) -->
-	<!-- Level 306 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 399 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 6. (+ 6 Chance Exile | Increases the success rate of Exile attack by 6.) -->
-	<!-- Level 307 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 403 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 7. (+ 7 Chance Exile | Increases the success rate of Exile attack by 7.) -->
-	<!-- Level 308 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 407 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 8. (+ 8 Chance Exile | Increases the success rate of Exile attack by 8.) -->
-	<!-- Level 309 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 410 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 9. (+ 9 Chance Exile | Increases the success rate of Exile attack by 9.) -->
-	<!-- Level 310 : Carves a mark linked to the dupery dimension on target. For 10 seconds, decreases HP by 414 every second. Has a 25% of causing target to fail to use a skill. Enchant Chance Exile: Increases Exile Rate by 10. (+ 10 Chance Exile | Increases the success rate of Exile attack by 10.) -->
-	<skill id="11262" levels="6" name="Mark of Trick">
-		<table name="#magicLvl"> 85 86 89 92 95 98 </table>
-		<table name="#mpConsume"> 54 56 62 68 74 80 </table>
+	<skill id="11262" levels="9" name="Mark of Trick">
+	<!-- Source: https://l2wiki.com/Mark_of_Trick_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 86 89 92 95 98 101 103 105 </table>
+		<table name="#mpConsume"> 54 56 62 68 74 80 86 92 98 </table>
 		<set name="icon" val="icon.skill11262" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -624,106 +421,10 @@
 		<set name="isDebuff" val="true" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 147 power. -->
-	<!-- Level 2 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 151 power. -->
-	<!-- Level 3 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 156 power. -->
-	<!-- Level 4 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 160 power. -->
-	<!-- Level 5 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 164 power. -->
-	<!-- Level 6 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 168 power. -->
-	<!-- Level 7 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 172 power. -->
-	<!-- Level 101 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Duel: Increases PvP Power. (+ 1 Duel | Increases Power during PvP.) -->
-	<!-- Level 202 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Duel: Increases PvP Power. (+ 2 Duel | Increases Power during PvP.) -->
-	<!-- Level 203 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Duel: Increases PvP Power. (+ 3 Duel | Increases Power during PvP.) -->
-	<!-- Level 204 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Duel: Increases PvP Power. (+ 4 Duel | Increases Power during PvP.) -->
-	<!-- Level 205 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Duel: Increases PvP Power. (+ 5 Duel | Increases Power during PvP.) -->
-	<!-- Level 206 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Duel: Increases PvP Power. (+ 6 Duel | Increases Power during PvP.) -->
-	<!-- Level 207 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Duel: Increases PvP Power. (+ 7 Duel | Increases Power during PvP.) -->
-	<!-- Level 208 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Duel: Increases PvP Power. (+ 8 Duel | Increases Power during PvP.) -->
-	<!-- Level 209 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Duel: Increases PvP Power. (+ 9 Duel | Increases Power during PvP.) -->
-	<!-- Level 210 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Duel: Increases PvP Power. (+ 10 Duel | Increases Power during PvP.) -->
-	<!-- Level 301 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Fire Attack: Endowed with Fire. (+ 1 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 302 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Fire Attack: Endowed with Fire. (+ 2 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 303 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Fire Attack: Endowed with Fire. (+ 3 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 304 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Fire Attack: Endowed with Fire. (+ 4 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 305 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Fire Attack: Endowed with Fire. (+ 5 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 306 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Fire Attack: Endowed with Fire. (+ 6 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 307 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Fire Attack: Endowed with Fire. (+ 7 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 308 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Fire Attack: Endowed with Fire. (+ 8 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 309 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Fire Attack: Endowed with Fire. (+ 9 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 310 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Fire Attack: Endowed with Fire. (+ 10 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 401 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Water Attack: Endowed with Water. (+ 1 Water Attack | Increases Water damage.) -->
-	<!-- Level 402 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Water Attack: Endowed with Water. (+ 2 Water Attack | Increases Water damage.) -->
-	<!-- Level 403 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Water Attack: Endowed with Water. (+ 3 Water Attack | Increases Water damage.) -->
-	<!-- Level 404 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Water Attack: Endowed with Water. (+ 4 Water Attack | Increases Water damage.) -->
-	<!-- Level 405 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Water Attack: Endowed with Water. (+ 5 Water Attack | Increases Water damage.) -->
-	<!-- Level 406 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Water Attack: Endowed with Water. (+ 6 Water Attack | Increases Water damage.) -->
-	<!-- Level 407 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Water Attack: Endowed with Water. (+ 7 Water Attack | Increases Water damage.) -->
-	<!-- Level 408 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Water Attack: Endowed with Water. (+ 8 Water Attack | Increases Water damage.) -->
-	<!-- Level 409 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Water Attack: Endowed with Water. (+ 9 Water Attack | Increases Water damage.) -->
-	<!-- Level 410 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Water Attack: Endowed with Water. (+ 10 Water Attack | Increases Water damage.) -->
-	<!-- Level 501 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Wind Attack: Endowed with Wind. (+ 1 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 502 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Wind Attack: Endowed with Wind. (+ 2 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 503 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Wind Attack: Endowed with Wind. (+ 3 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 504 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Wind Attack: Endowed with Wind. (+ 4 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 505 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Wind Attack: Endowed with Wind. (+ 5 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 506 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Wind Attack: Endowed with Wind. (+ 6 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 507 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Wind Attack: Endowed with Wind. (+ 7 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 508 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Wind Attack: Endowed with Wind. (+ 8 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 509 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Wind Attack: Endowed with Wind. (+ 9 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 510 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Wind Attack: Endowed with Wind. (+ 10 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 601 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Earth Attack: Endowed with Earth. (+ 1 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 602 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Earth Attack: Endowed with Earth. (+ 2 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 603 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Earth Attack: Endowed with Earth. (+ 3 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 604 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Earth Attack: Endowed with Earth. (+ 4 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 605 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Earth Attack: Endowed with Earth. (+ 5 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 606 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Earth Attack: Endowed with Earth. (+ 6 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 607 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Earth Attack: Endowed with Earth. (+ 7 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 608 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Earth Attack: Endowed with Earth. (+ 8 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 609 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Earth Attack: Endowed with Earth. (+ 9 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 610 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Earth Attack: Endowed with Earth. (+ 10 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 701 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Holy Attack: Endowed with Holy. (+ 1 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 702 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Holy Attack: Endowed with Holy. (+ 2 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 703 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Holy Attack: Endowed with Holy. (+ 3 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 704 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Holy Attack: Endowed with Holy. (+ 4 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 705 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Holy Attack: Endowed with Holy. (+ 5 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 706 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Holy Attack: Endowed with Holy. (+ 6 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 707 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Holy Attack: Endowed with Holy. (+ 7 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 708 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Holy Attack: Endowed with Holy. (+ 8 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 709 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Holy Attack: Endowed with Holy. (+ 9 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 710 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Holy Attack: Endowed with Holy. (+ 10 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 801 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 380 power. Enchant Dark Attack: Endowed with Dark. (+ 1 Dark Attack | Increases dark damage.) -->
-	<!-- Level 802 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 386 power. Enchant Dark Attack: Endowed with Dark. (+ 2 Dark Attack | Increases dark damage.) -->
-	<!-- Level 803 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 391 power. Enchant Dark Attack: Endowed with Dark. (+ 3 Dark Attack | Increases dark damage.) -->
-	<!-- Level 804 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 397 power. Enchant Dark Attack: Endowed with Dark. (+ 4 Dark Attack | Increases dark damage.) -->
-	<!-- Level 805 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 402 power. Enchant Dark Attack: Endowed with Dark. (+ 5 Dark Attack | Increases dark damage.) -->
-	<!-- Level 806 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 408 power. Enchant Dark Attack: Endowed with Dark. (+ 6 Dark Attack | Increases dark damage.) -->
-	<!-- Level 807 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 413 power. Enchant Dark Attack: Endowed with Dark. (+ 7 Dark Attack | Increases dark damage.) -->
-	<!-- Level 808 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 419 power. Enchant Dark Attack: Endowed with Dark. (+ 8 Dark Attack | Increases dark damage.) -->
-	<!-- Level 809 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 424 power. Enchant Dark Attack: Endowed with Dark. (+ 9 Dark Attack | Increases dark damage.) -->
-	<!-- Level 810 : Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 430 power. Enchant Dark Attack: Endowed with Dark. (+ 10 Dark Attack | Increases dark damage.) -->
-	<skill id="11263" levels="7" name="Invoke">
-		<table name="#magicLvl"> 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 227 236 245 255 265 276 286 </table>
+	<skill id="11263" levels="10" name="Invoke">
+	<!-- Source: https://l2wiki.com/Invoke_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 227 236 245 255 265 276 286 296 306 316 </table>
 		<set name="icon" val="icon.skill11263" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -815,12 +516,14 @@
 			<effect name="CallPc" />
 		</for>
 	</skill>
-	<!-- Level 1 : Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies. -->
-	<skill id="11266" levels="1" name="Summon Death Gate">
+	<skill id="11266" levels="4" name="Summon Death Gate">
+	<!-- Source: https://l2wiki.com/Summon_Death_Gate_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 99 101 103 105 </table>
+		<table name="#mpConsume"> 94 97 100 103 </table>
 		<set name="icon" val="icon.skill11266" />
-		<set name="magicLvl" val="99" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="mpConsume" val="94" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -902,10 +605,11 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<skill id="11268" levels="8" name="Summon Avenging Cubic">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 70 72 75 78 81 84 87 91 </table>
-		<table name="#cubicPower"> 2106 2306 2506 2706 2906 3106 3306 3506 </table>
+	<skill id="11268" levels="11" name="Summon Avenging Cubic">
+	<!-- Source: https://l2wiki.com/Summon_Avenging_Cubic_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 70 72 75 78 81 84 87 91 84 87 91 </table>
+		<table name="#cubicPower"> 2106 2306 2506 2706 2906 3106 3306 3506 3506 3506 3506 </table>
 		<set name="icon" val="icon.skill11268" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -921,37 +625,14 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Consumes your MP to restore servitors' HP by 1308. -->
-	<!-- Level 2 : Consumes your MP to restore servitors' HP by 1336. -->
-	<!-- Level 3 : Consumes your MP to restore servitors' HP by 1358. -->
-	<!-- Level 4 : Consumes your MP to restore servitors' HP by 1381. -->
-	<!-- Level 101 : Consumes your MP to restore servitors' HP by 1385. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Consumes your MP to restore servitors' HP by 1389. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Consumes your MP to restore servitors' HP by 1393. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Consumes your MP to restore servitors' HP by 1397. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Consumes your MP to restore servitors' HP by 1401. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Consumes your MP to restore servitors' HP by 1405. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Consumes your MP to restore servitors' HP by 1409. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Consumes your MP to restore servitors' HP by 1413. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Consumes your MP to restore servitors' HP by 1417. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Consumes your MP to restore servitors' HP by 1421. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 201 : Consumes your MP to restore servitors' HP by 1389. Enchant Power: Increases Effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 202 : Consumes your MP to restore servitors' HP by 1397. Enchant Power: Increases Effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 203 : Consumes your MP to restore servitors' HP by 1405. Enchant Power: Increases Effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 204 : Consumes your MP to restore servitors' HP by 1413. Enchant Power: Increases Effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 205 : Consumes your MP to restore servitors' HP by 1421. Enchant Power: Increases Effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 206 : Consumes your MP to restore servitors' HP by 1429. Enchant Power: Increases Effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 207 : Consumes your MP to restore servitors' HP by 1437. Enchant Power: Increases Effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 208 : Consumes your MP to restore servitors' HP by 1445. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 209 : Consumes your MP to restore servitors' HP by 1453. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 210 : Consumes your MP to restore servitors' HP by 1461. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11269" levels="4" name="Mass Servitor Heal" enchantGroup1="10" enchantGroup2="10">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 101 112 124 138 </table>
+	<skill id="11269" levels="7" name="Mass Servitor Heal" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Mass_Servitor_Heal_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 101 112 124 138 152 166 180 </table>
 		<table name="#ench1MpConsume"> 134 130 126 122 118 114 110 106 102 98 </table>
 		<table name="#ench1amount"> 1389 1397 1405 1413 1421 1429 1437 1445 1453 1461 </table>
-		<table name="#amount"> 1308 1336 1358 1381 </table>
-		<table name="#aggro"> 655 665 685 696 </table>
+		<table name="#amount"> 1308 1336 1358 1381 1733 1747 1761 </table>
+		<table name="#aggro"> 655 665 685 696 707 718 729 </table>
 		<set name="icon" val="icon.skill11269" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -994,107 +675,10 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 2 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 3 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 4 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 5 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 6 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 7 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 8 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-	<!-- Level 101 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 1 Duel | Increases Power during PvP.) -->
-	<!-- Level 202 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 2 Duel | Increases Power during PvP.) -->
-	<!-- Level 203 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 3 Duel | Increases Power during PvP.) -->
-	<!-- Level 204 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 4 Duel | Increases Power during PvP.) -->
-	<!-- Level 205 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 5 Duel | Increases Power during PvP.) -->
-	<!-- Level 206 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 6 Duel | Increases Power during PvP.) -->
-	<!-- Level 207 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 7 Duel | Increases Power during PvP.) -->
-	<!-- Level 208 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 8 Duel | Increases Power during PvP.) -->
-	<!-- Level 209 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 9 Duel | Increases Power during PvP.) -->
-	<!-- Level 210 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Duel: Increases PvP Power. (+ 10 Duel | Increases Power during PvP.) -->
-	<!-- Level 301 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 1 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 302 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 2 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 303 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 3 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 304 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 4 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 305 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 5 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 306 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 6 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 307 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 7 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 308 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 8 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 309 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 9 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 310 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Fire Attack: Endowed with Fire. (+ 10 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 401 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 1 Water Attack | Increases Water damage.) -->
-	<!-- Level 402 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 2 Water Attack | Increases Water damage.) -->
-	<!-- Level 403 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 3 Water Attack | Increases Water damage.) -->
-	<!-- Level 404 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 4 Water Attack | Increases Water damage.) -->
-	<!-- Level 405 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 5 Water Attack | Increases Water damage.) -->
-	<!-- Level 406 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 6 Water Attack | Increases Water damage.) -->
-	<!-- Level 407 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 7 Water Attack | Increases Water damage.) -->
-	<!-- Level 408 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 8 Water Attack | Increases Water damage.) -->
-	<!-- Level 409 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 9 Water Attack | Increases Water damage.) -->
-	<!-- Level 410 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Water Attack: Endowed with Water. (+ 10 Water Attack | Increases Water damage.) -->
-	<!-- Level 501 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 1 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 502 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 2 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 503 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 3 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 504 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 4 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 505 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 5 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 506 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 6 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 507 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 7 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 508 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 8 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 509 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 9 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 510 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Wind Attack: Endowed with Wind. (+ 10 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 601 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 1 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 602 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 2 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 603 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 3 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 604 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 4 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 605 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 5 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 606 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 6 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 607 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 7 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 608 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 8 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 609 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 9 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 610 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Earth Attack: Endowed with Earth. (+ 10 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 701 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 1 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 702 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 2 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 703 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 3 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 704 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 4 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 705 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 5 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 706 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 6 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 707 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 7 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 708 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 8 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 709 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 9 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 710 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Holy Attack: Endowed with Holy. (+ 10 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 801 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 1 Dark Attack | Increases dark damage.) -->
-	<!-- Level 802 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 2 Dark Attack | Increases dark damage.) -->
-	<!-- Level 803 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 3 Dark Attack | Increases dark damage.) -->
-	<!-- Level 804 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 4 Dark Attack | Increases dark damage.) -->
-	<!-- Level 805 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 5 Dark Attack | Increases dark damage.) -->
-	<!-- Level 806 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 6 Dark Attack | Increases dark damage.) -->
-	<!-- Level 807 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 7 Dark Attack | Increases dark damage.) -->
-	<!-- Level 808 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 8 Dark Attack | Increases dark damage.) -->
-	<!-- Level 809 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 9 Dark Attack | Increases dark damage.) -->
-	<!-- Level 810 : Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. Enchant Dark Attack: Endowed with Dark. (+ 10 Dark Attack | Increases dark damage.) -->
-	<skill id="11271" levels="8" name="Mark Retriever">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 82 84 88 92 96 100 104 108 </table>
+	<skill id="11271" levels="11" name="Mark Retriever">
+	<!-- Source: https://l2wiki.com/Mark_Retriever_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 82 84 88 92 96 100 104 108 112 116 120 </table>
 		<set name="icon" val="icon.skill11271" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1139,44 +723,10 @@
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 353 per second. -->
-	<!-- Level 2 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 364 per second. -->
-	<!-- Level 3 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 374 per second. -->
-	<!-- Level 4 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 385 per second. -->
-	<!-- Level 5 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 395 per second. -->
-	<!-- Level 101 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 406 per second. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 410 per second. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 413 per second. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 417 per second. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 420 per second. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 424 per second. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 427 per second. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 431 per second. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 434 per second. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 438 per second. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 406 per second. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 410 per second. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 413 per second. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 417 per second. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 420 per second. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 424 per second. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 427 per second. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 431 per second. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 434 per second. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 438 per second. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 406 per second. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 410 per second. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 413 per second. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 417 per second. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 420 per second. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 424 per second. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 427 per second. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 431 per second. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 434 per second. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Banishes target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 438 per second. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<skill id="11273" levels="5" name="Exile">
-		<table name="#magicLvl"> 85 88 91 94 97 </table>
-		<table name="#mpConsume"> 78 83 87 92 97 </table>
+	<skill id="11273" levels="8" name="Exile">
+	<!-- Source: https://l2wiki.com/Exile_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 88 91 94 97 101 103 105 </table>
+		<table name="#mpConsume"> 78 83 87 92 97 101 103 105 </table>
 		<set name="icon" val="icon.skill11273" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1280,51 +830,9 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<!-- Level 1 : Binds target midair in another dimension. -->
-	<!-- Level 2 : Binds target midair in another dimension. -->
-	<!-- Level 3 : Binds target midair in another dimension. -->
-	<!-- Level 101 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Binds target midair in another dimension. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Binds target midair in another dimension. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Binds target midair in another dimension. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Binds target midair in another dimension. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Binds target midair in another dimension. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Binds target midair in another dimension. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Binds target midair in another dimension. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Binds target midair in another dimension. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Binds target midair in another dimension. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Binds target midair in another dimension. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Binds target midair in another dimension. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 1%. (+ 1 Hex | Decreases the target's P. Def. by 1%.) -->
-	<!-- Level 202 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 2%. (+ 2 Hex | Decreases the target's P. Def. by 2%.) -->
-	<!-- Level 203 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 3%. (+ 3 Hex | Decreases the target's P. Def. by 3%.) -->
-	<!-- Level 204 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 4%. (+ 4 Hex | Decreases the target's P. Def. by 4%.) -->
-	<!-- Level 205 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 5%. (+ 5 Hex | Decreases the target's P. Def. by 5%.) -->
-	<!-- Level 206 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 6%. (+ 6 Hex | Decreases the target's P. Def. by 6%.) -->
-	<!-- Level 207 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 7%. (+ 7 Hex | Decreases the target's P. Def. by 7%.) -->
-	<!-- Level 208 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 8%. (+ 8 Hex | Decreases the target's P. Def. by 8%.) -->
-	<!-- Level 209 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 9%. (+ 9 Hex | Decreases the target's P. Def. by 9%.) -->
-	<!-- Level 210 : Binds target midair in another dimension. Enchant Hex: Decreases target's P. Def. by 10%. (+ 10 Hex | Decreases the target's P. Def. by 10%.) -->
-	<!-- Level 301 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 1%. (+ 1 M. Def. | Decreases the target's M. Def. by 1%.) -->
-	<!-- Level 302 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 2%. (+ 2 M. Def. | Decreases the target's M. Def. by 2%.) -->
-	<!-- Level 303 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 3%. (+ 3 M. Def. | Decreases the target's M. Def. by 3%.) -->
-	<!-- Level 304 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 4%. (+ 4 M. Def. | Decreases the target's M. Def. by 4%.) -->
-	<!-- Level 305 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 5%. (+ 5 M. Def. | Decreases the target's M. Def. by 5%.) -->
-	<!-- Level 306 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 6%. (+ 6 M. Def. | Decreases the target's M. Def. by 6%.) -->
-	<!-- Level 307 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 7%. (+ 7 M. Def. | Decreases the target's M. Def. by 7%.) -->
-	<!-- Level 308 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 8%. (+ 8 M. Def. | Decreases the target's M. Def. by 8%.) -->
-	<!-- Level 309 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 9%. (+ 9 M. Def. | Decreases the target's M. Def. by 9%.) -->
-	<!-- Level 310 : Binds target midair in another dimension. Enchant Mind: Decreases target's M. Def. by 10%. (+ 10 M. Def. | Decreases the target's M. Def. by 10%.) -->
-	<skill id="11276" levels="3" name="Dimensional Binding">
-		<table name="#magicLvl"> 93 96 99 </table>
+	<skill id="11276" levels="6" name="Dimensional Binding">
+	<!-- Source: https://l2wiki.com/Dimensional_Binding_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 93 96 99 101 103 105 </table>
 		<set name="icon" val="icon.skill11276" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1461,34 +969,28 @@
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
-	<!-- Level 1 : INT + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
-	<!-- Level 101 : INT + 2, M. Def. + 206, and Fire/Water/Wind/Earth Resistance + 21. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2, M. Def. + 213, and Fire/Water/Wind/Earth Resistance + 22. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2, M. Def. + 220, and Fire/Water/Wind/Earth Resistance + 23. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2, M. Def. + 227, and Fire/Water/Wind/Earth Resistance + 24. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2, M. Def. + 234, and Fire/Water/Wind/Earth Resistance + 25. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2, M. Def. + 241, and Fire/Water/Wind/Earth Resistance + 26. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2, M. Def. + 248, and Fire/Water/Wind/Earth Resistance + 27. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2, M. Def. + 255, and Fire/Water/Wind/Earth Resistance + 28. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2, M. Def. + 262, and Fire/Water/Wind/Earth Resistance + 29. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2, M. Def. + 270, and Fire/Water/Wind/Earth Resistance + 30. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11287" levels="1" name="Superior Resistance">
+	<skill id="11287" levels="7" name="Superior Resistance">
+	<!-- Source: https://l2wiki.com/Superior_Resistance_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 100 102 104 </table>
+		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
 		<set name="icon" val="icon.skill10005" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="mDef" val="199" />
+				<add stat="INT" val="2" />
+				<add stat="waterRes" val="#resistance" />
+				<add stat="fireRes" val="#resistance" />
+				<add stat="windRes" val="#resistance" />
+				<add stat="earthRes" val="#resistance" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Shares the following with your servitor(s): 60% of P. Atk. and P. Def., 30% of M. Atk. and M. Def., 15% of Max HP and MP, 30% of Critical Rate, 10% of Atk. Spd. and 3% of Casting Spd. for 30 minutes. -->
-	<!-- Level 2 : Shares the following with your servitor(s): 65% of P. Atk. and P. Def., 35% of M. Atk. and M. Def., 15% of Max HP and MP, 30% of Critical Rate, 10% of Atk. Spd. and 3% of Casting Spd. for 30 minutes. -->
-	<!-- Level 3 : Shares the following with your servitor(s): 70% of P. Atk. and P. Def., 40% of M. Atk. and M. Def., 15% of Max HP and MP, 30% of Critical Rate, 10% of Atk. Spd. and 3% of Casting Spd. for 30 minutes. -->
-	<skill id="11288" levels="3" name="Ultimate Servitor Share">
-		<table name="#magicLvl"> 85 90 95 </table>
-		<table name="#coolTime"> 200 0 0 </table>
+	<skill id="11288" levels="4" name="Ultimate Servitor Share">
+	<!-- Source: https://l2wiki.com/Ultimate_Servitor_Share_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 90 95 101 </table>
+		<table name="#coolTime"> 200 0 0 0 </table>
 		<set name="icon" val="icon.skill11288" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1605,68 +1107,25 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2. Max HP + 4151 and P. Def. + 1155 when equipped with Light Armor. -->
-	<!-- Level 101 : INT + 2. Max HP + 4151 and P. Def. + 1188 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2. Max HP + 4151 and P. Def. + 1221 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2. Max HP + 4151 and P. Def. + 1254 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2. Max HP + 4151 and P. Def. + 1287 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2. Max HP + 4151 and P. Def. + 1320 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2. Max HP + 4151 and P. Def. + 1353 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2. Max HP + 4151 and P. Def. + 1386 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2. Max HP + 4151 and P. Def. + 1419 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2. Max HP + 4151 and P. Def. + 1452 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2. Max HP + 4151 and P. Def. + 1494 when equipped with a Light Armor. Enchant Power: Increases Effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11295" levels="1" name="Superior Light Armor Mastery">
+	<skill id="11295" levels="7" name="Superior Light Armor Mastery">
+	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 1205 1323 1453 1567 1756 1823 1892 </table>
 		<set name="icon" val="icon.skill10254" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pDef" val="1155" />
+				<add stat="pDef" val="#pDef" />
 				<add stat="maxHp" val="4151" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
-	<!-- Level 2 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 288 per second. -->
-	<!-- Level 3 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 296 per second. -->
-	<!-- Level 4 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 305 per second. -->
-	<!-- Level 5 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 313 per second. -->
-	<!-- Level 6 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 322 per second. -->
-	<!-- Level 101 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 325 per second. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 328 per second. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 330 per second. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 333 per second. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 336 per second. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 339 per second. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 342 per second. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 345 per second. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 347 per second. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 350 per second. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 901 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 325 per second. Decreases and makes moving impossible. (+ 1 Recovery | Decreases Cooldown.) -->
-	<!-- Level 902 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 328 per second. Decreases and makes moving impossible. (+ 2 Recovery | Decreases Cooldown.) -->
-	<!-- Level 903 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 330 per second. Decreases and makes moving impossible. (+ 3 Recovery | Decreases Cooldown.) -->
-	<!-- Level 904 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 333 per second. Decreases and makes moving impossible. (+ 4 Recovery | Decreases Cooldown.) -->
-	<!-- Level 905 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 336 per second. Decreases and makes moving impossible. (+ 5 Recovery | Decreases Cooldown.) -->
-	<!-- Level 906 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 339 per second. Decreases and makes moving impossible. (+ 6 Recovery | Decreases Cooldown.) -->
-	<!-- Level 907 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 342 per second. Decreases and makes moving impossible. (+ 7 Recovery | Decreases Cooldown.) -->
-	<!-- Level 908 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 345 per second. Decreases and makes moving impossible. (+ 8 Recovery | Decreases Cooldown.) -->
-	<!-- Level 909 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 347 per second. Decreases and makes moving impossible. (+ 9 Recovery | Decreases Cooldown.) -->
-	<!-- Level 910 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 350 per second. Decreases and makes moving impossible. (+ 10 Recovery | Decreases Cooldown.) -->
-	<!-- Level 201 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 325 per second. Enchant Chance: Increases success rate. (+ 1 Chance | Increases the success rate.) -->
-	<!-- Level 202 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 328 per second. Enchant Chance: Increases success rate. (+ 2 Chance | Increases the success rate.) -->
-	<!-- Level 203 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 330 per second. Enchant Chance: Increases success rate. (+ 3 Chance | Increases the success rate.) -->
-	<!-- Level 204 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 333 per second. Enchant Chance: Increases success rate. (+ 4 Chance | Increases the success rate.) -->
-	<!-- Level 205 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 336 per second. Enchant Chance: Increases success rate. (+ 5 Chance | Increases the success rate.) -->
-	<!-- Level 206 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 339 per second. Enchant Chance: Increases success rate. (+ 6 Chance | Increases the success rate.) -->
-	<!-- Level 207 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 342 per second. Enchant Chance: Increases success rate. (+ 7 Chance | Increases the success rate.) -->
-	<!-- Level 208 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 345 per second. Enchant Chance: Increases success rate. (+ 8 Chance | Increases the success rate.) -->
-	<!-- Level 209 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 347 per second. Enchant Chance: Increases success rate. (+ 9 Chance | Increases the success rate.) -->
-	<!-- Level 210 : Banishes target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 350 per second. Enchant Chance: Increases success rate. (+ 10 Chance | Increases the success rate.) -->
-	<skill id="11296" levels="6" name="Mass Exile">
-		<table name="#magicLvl"> 85 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 102 106 112 118 125 132 </table>
+	<skill id="11296" levels="9" name="Mass Exile">
+	<!-- Source: https://l2wiki.com/Mass_Exile_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
+		<table name="#mpConsume"> 102 106 112 118 125 132 139 146 153 </table>
 		<set name="icon" val="icon.skill11296" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1741,99 +1200,12 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Carves a burning mark on target to inflict damage with 168 Power added to M. Atk. -->
-	<!-- Level 2 : Carves a burning mark on target to inflict damage with 170 Power added to M. Atk. -->
-	<!-- Level 3 : Carves a burning mark on target to inflict damage with 175 Power added to M. Atk. -->
-	<!-- Level 4 : Carves a burning mark on target to inflict damage with 180 Power added to M. Atk. -->
-	<!-- Level 5 : Carves a burning mark on target to inflict damage with 185 Power added to M. Atk. -->
-	<!-- Level 6 : Carves a burning mark on target to inflict damage with 189 Power added to M. Atk. -->
-	<!-- Level 7 : Carves a burning mark on target to inflict damage with 194 Power added to M. Atk. -->
-	<!-- Level 8 : Carves a burning mark on target to inflict damage with 199 Power added to M. Atk. -->
-	<!-- Level 101 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 1 Cost | Decreases MP Consumption.) -->
-	<!-- Level 102 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 2 Cost | Decreases MP Consumption.) -->
-	<!-- Level 103 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 3 Cost | Decreases MP Consumption.) -->
-	<!-- Level 104 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 4 Cost | Decreases MP Consumption.) -->
-	<!-- Level 105 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 5 Cost | Decreases MP Consumption.) -->
-	<!-- Level 106 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 6 Cost | Decreases MP Consumption.) -->
-	<!-- Level 107 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 7 Cost | Decreases MP Consumption.) -->
-	<!-- Level 108 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 8 Cost | Decreases MP Consumption.) -->
-	<!-- Level 109 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 9 Cost | Decreases MP Consumption.) -->
-	<!-- Level 110 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Cost: Decreases MP Consumption. (+ 10 Cost | Decreases MP Consumption.) -->
-	<!-- Level 201 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 1 Duel | Increases Power during PvP.) -->
-	<!-- Level 202 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 2 Duel | Increases Power during PvP.) -->
-	<!-- Level 203 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 3 Duel | Increases Power during PvP.) -->
-	<!-- Level 204 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 4 Duel | Increases Power during PvP.) -->
-	<!-- Level 205 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 5 Duel | Increases Power during PvP.) -->
-	<!-- Level 206 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 6 Duel | Increases Power during PvP.) -->
-	<!-- Level 207 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 7 Duel | Increases Power during PvP.) -->
-	<!-- Level 208 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 8 Duel | Increases Power during PvP.) -->
-	<!-- Level 209 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 9 Duel | Increases Power during PvP.) -->
-	<!-- Level 210 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Duel: Increases damage inflicted during PvP. (+ 10 Duel | Increases Power during PvP.) -->
-	<!-- Level 301 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 1 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 302 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 2 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 303 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 3 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 304 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 4 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 305 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 5 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 306 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 6 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 307 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 7 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 308 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 8 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 309 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 9 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 310 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Fire Attack: Increases Fire Attribute. (+ 10 Fire Attack | Increases Fire attribute.) -->
-	<!-- Level 401 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 1 Water Attack | Increases Water damage.) -->
-	<!-- Level 402 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 2 Water Attack | Increases Water damage.) -->
-	<!-- Level 403 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 3 Water Attack | Increases Water damage.) -->
-	<!-- Level 404 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 4 Water Attack | Increases Water damage.) -->
-	<!-- Level 405 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 5 Water Attack | Increases Water damage.) -->
-	<!-- Level 406 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 6 Water Attack | Increases Water damage.) -->
-	<!-- Level 407 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 7 Water Attack | Increases Water damage.) -->
-	<!-- Level 408 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 8 Water Attack | Increases Water damage.) -->
-	<!-- Level 409 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 9 Water Attack | Increases Water damage.) -->
-	<!-- Level 410 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Water Attack: Increases Water Attribute. (+ 10 Water Attack | Increases Water damage.) -->
-	<!-- Level 501 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 1 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 502 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 2 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 503 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 3 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 504 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 4 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 505 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 5 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 506 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 6 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 507 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 7 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 508 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 8 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 509 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 9 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 510 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Wind Attack: Increases Wind Attribute. (+ 10 Wind Attack | Increases Wind damage.) -->
-	<!-- Level 601 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 1 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 602 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 2 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 603 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 3 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 604 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 4 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 605 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 5 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 606 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 6 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 607 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 7 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 608 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 8 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 609 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 9 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 610 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Earth Attack: Increases Earth Attribute. (+ 10 Earth Attack | Increases Earth damage.) -->
-	<!-- Level 701 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 1 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 702 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 2 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 703 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 3 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 704 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 4 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 705 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 5 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 706 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 6 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 707 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 7 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 708 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 8 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 709 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 9 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 710 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Holy Attack: Increases Holy Attribute. (+ 10 Holy Attack | Increases Holy damage.) -->
-	<!-- Level 801 : Carves a burning mark on target to inflict damage with 204 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 1 Dark Attack | Increases dark damage.) -->
-	<!-- Level 802 : Carves a burning mark on target to inflict damage with 207 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 2 Dark Attack | Increases dark damage.) -->
-	<!-- Level 803 : Carves a burning mark on target to inflict damage with 209 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 3 Dark Attack | Increases dark damage.) -->
-	<!-- Level 804 : Carves a burning mark on target to inflict damage with 212 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 4 Dark Attack | Increases dark damage.) -->
-	<!-- Level 805 : Carves a burning mark on target to inflict damage with 214 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 5 Dark Attack | Increases dark damage.) -->
-	<!-- Level 806 : Carves a burning mark on target to inflict damage with 216 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 6 Dark Attack | Increases dark damage.) -->
-	<!-- Level 807 : Carves a burning mark on target to inflict damage with 219 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 7 Dark Attack | Increases dark damage.) -->
-	<!-- Level 808 : Carves a burning mark on target to inflict damage with 221 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 8 Dark Attack | Increases dark damage.) -->
-	<!-- Level 809 : Carves a burning mark on target to inflict damage with 224 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 9 Dark Attack | Increases dark damage.) -->
-	<!-- Level 810 : Carves a burning mark on target to inflict damage with 226 Power added to M. Atk. Enchant Dark Attack: Increases Dark Attribute. (+ 10 Dark Attack | Increases dark damage.) -->
-	<skill id="11298" levels="10" name="Mark of Fire" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 98 98 </table>
-		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 82 82 </table>
+	<skill id="11298" levels="11" name="Mark of Fire" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Mark_of_Fire_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 63 65 68 70 73 76 79 82 85 88 91 </table>
 		<table name="#ench1MpConsume"> 78 75 72 68 65 62 59 55 52 49 </table>
-		<table name="#power"> 168 170 175 180 185 189 194 199 199 199 </table>
+		<table name="#power"> 168 170 175 180 185 189 194 199 222 228 234 </table>
 		<table name="#enchPower"> 204 207 209 212 214 216 219 221 224 226 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="icon" val="icon.skill11298" />
@@ -1872,7 +1244,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="5">
-				<param power="#enchPower" />
+				<param power="#power" />
 			</effect>
 		</for>
 	</skill>

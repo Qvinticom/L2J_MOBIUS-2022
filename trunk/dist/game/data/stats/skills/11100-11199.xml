@@ -52,14 +52,11 @@
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<!-- Level 1 : Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
-	<!-- Level 2 : Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M. Def. - 20%. -->
-	<!-- Level 3 : Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M. Def. - 20%. -->
-	<!-- Level 4 : Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M. Def. - 20%. -->
-	<skill id="11106" levels="4" name="Elemental Mass Burst">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 137 154 166 179 </table>
-		<table name="#power"> 569 618 649 683 </table>
+	<skill id="11106" levels="7" name="Elemental Mass Burst">
+	<!-- Source: https://l2wiki.com/Elemental_Mass_Burst_-_Feoh_Archmage -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 137 154 166 179 192 205 218 </table>
+		<table name="#power"> 569 618 649 683 705 723 741 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -153,14 +150,11 @@
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
 	</skill>
-	<!-- Level 1 : Detonates an Elemental Destruction to inflict damage with 517 Power on a single target. -->
-	<!-- Level 2 : Detonates an Elemental Destruction to inflict damage with 562 Power on a single target. -->
-	<!-- Level 3 : Detonates an Elemental Destruction to inflict damage with 591 Power on a single target. -->
-	<!-- Level 4 : Detonates an Elemental Destruction to inflict damage with 622 Power on a single target. -->
-	<skill id="11112" levels="4" name="Elemental Speed Burst">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 137 154 166 179 </table>
-		<table name="#power"> 517 562 591 622 </table>
+	<skill id="11112" levels="7" name="Elemental Speed Burst">
+	<!-- Source: https://l2wiki.com/Elemental_Burst_-_Feoh_Mystic_Muse -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 137 154 166 179 192 205 218 </table>
+		<table name="#power"> 517 562 591 622 637 655 673 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -243,14 +237,11 @@
 		<set name="reuseDelay" val="6700" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<!-- Level 1 : Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target. -->
-	<!-- Level 2 : Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target. -->
-	<!-- Level 3 : Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target. -->
-	<!-- Level 4 : Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target. -->
-	<skill id="11118" levels="4" name="Elemental Power Burst">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 137 154 166 179 </table>
-		<table name="#power"> 569 618 649 683 </table>
+	<skill id="11118" levels="7" name="Elemental Power Burst">
+	<!-- Source: https://l2wiki.com/Elemental_Burst_-_Feoh_Archmage -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 137 154 166 179 192 205 218 </table>
+		<table name="#power"> 569 618 649 683 705 723 741 </table>
 		<set name="icon" val="icon.skill11865" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -658,15 +649,14 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
-	<!-- Level 2 : Inflicts damage with 195 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
-	<!-- Level 3 : Inflicts damage with 197Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
-	<!-- Level 4 : Inflicts damage with 1939Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 seconds. Over-hit. -->
-	<skill id="11177" levels="4" name="Aqua Crash">
-		<table name="#magicLvl"> 85 90 95 99 </table>
+	<skill id="11177" levels="7" name="Aqua Crash">
+	<!-- Source: https://l2wiki.com/Aqua_Crash_-_Feoh_Mystic_Muse -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#power"> 193 195 197 199 202 206 210 </table>
 		<set name="icon" val="icon.skill10879" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="power" val="#power" />
 		<set name="mpConsume" val="37" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2279" />
@@ -751,70 +741,48 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2 and increases Max MP by 313. -->
-	<!-- Level 101 : INT + 2 and increases Max MP by 333. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2 and increases Max MP by 354. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2 and increases Max MP by 374. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2 and increases Max MP by 395. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2 and increases Max MP by 415. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2 and increases Max MP by 435. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2 and increases Max MP by 456. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2 and increases Max MP by 476. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2 and increases Max MP by 497. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2 and increases Max MP by 517. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11185" levels="1" name="Superior MP Boost">
-		<table name="#maxMp"> 85 90 95 99 </table>
+	<skill id="11185" levels="7" name="Superior MP Boost">
+	<!-- Source: https://l2wiki.com/Superior_MP_Boost_-_Feoh_Soultaker -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#maxMp"> 313 374 435 517 566 635 704 </table>
 		<set name="icon" val="icon.skill0213" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="maxMp" val="313" />
+				<add stat="INT" val="2" />
+				<add stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2 and increases MP Recovery Bonus by 3.6. -->
-	<!-- Level 101 : INT + 2 and increases MP Recovery Bonus by 3.8. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2 and increases MP Recovery Bonus by 4. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2 and increases MP Recovery Bonus by 4.2. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2 and increases MP Recovery Bonus by 4.4. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2 and increases MP Recovery Bonus by 4.7. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2 and increases MP Recovery Bonus by 4.9. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2 and increases MP Recovery Bonus by 5.1. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2 and increases MP Recovery Bonus by 5.3. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2 and increases MP Recovery Bonus by 5.5. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2 and increases MP Recovery Bonus by 5.7. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11186" levels="1" name="Superior Fast MP Recovery">
+	<skill id="11186" levels="7" name="Superior Fast MP Recovery">
+	<!-- Source: https://l2wiki.com/Superior_Fast_MP_Recovery_-_Feoh_Soulhound -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#regMp"> 3.6 4.2 4.8 5.4 6.2 7.0 7.8 </table>
 		<set name="icon" val="icon.skill0229" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="regMp" val="3.6" />
+				<add stat="INT" val="2" />
+				<add stat="regMp" val="#regMp" />
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : INT + 2, increases MP Recovery Bonus by 5.1 while standing and by 6.5 while walking. -->
-	<!-- Level 101 : INT + 2, increases MP Recovery Bonus by 5.4 while standing and by 6.9 while walking. Enchant Power: Increases the effect. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : INT + 2, increases MP Recovery Bonus by 5.7 while standing and by 7.3 while walking. Enchant Power: Increases the effect. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : INT + 2, increases MP Recovery Bonus by 6 while standing and by 7.7 while walking. Enchant Power: Increases the effect. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : INT + 2, increases MP Recovery Bonus by 6.3 while standing and by 8.1 while walking. Enchant Power: Increases the effect. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : INT + 2, increases MP Recovery Bonus by 6.7 while standing and by 8.5 while walking. Enchant Power: Increases the effect. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : INT + 2, increases MP Recovery Bonus by 7 while standing and by 8.9 while walking. Enchant Power: Increases the effect. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : INT + 2, increases MP Recovery Bonus by 7.3 while standing and by 9.3 while walking. Enchant Power: Increases the effect. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : INT + 2, increases MP Recovery Bonus by 7.6 while standing and by 9.7 while walking. Enchant Power: Increases the effect. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : INT + 2, increases MP Recovery Bonus by 7.9 while standing and by 10.1 while walking. Enchant Power: Increases the effect. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : INT + 2, increases MP Recovery Bonus by 8.2 while standing and by 10.5 while walking. Enchant Power: Increases the effect. (+ 10 Power | Increases the effect.) -->
-	<skill id="11187" levels="1" name="Superior Clear Mind">
+	<skill id="11187" levels="7" name="Superior Clear Mind">
+	<!-- Source: https://l2wiki.com/Superior_Clear_Mind_-_Feoh_Archmage -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#regMp"> 5.1 5.7 6.3 6.9 7.7 8.5 9.3 </table>
 		<set name="icon" val="icon.skill11187" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="regMp" val="5.1" />
+				<add stat="INT" val="2" />
+				<add stat="regMp" val="#regMp" />
 			</effect>
 		</for>
 	</skill>

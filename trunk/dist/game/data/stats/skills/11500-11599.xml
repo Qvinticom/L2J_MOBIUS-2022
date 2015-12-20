@@ -13,18 +13,23 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11501" levels="1" name="Superior Dual Weapon Mastery" enchantGroup1="10">
-		<!-- When a dualsword/blunt is equipped, P. Atk. + 20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, Speed + 13, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
+	<skill id="11501" levels="7" name="Superior Dual Weapon Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Dual_Weapon_Mastery_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
 		<table name="#ench1pAtk"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10252" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="1.20">
+				<add stat="pAtk" val="#pAtk">
+					<using kind="DUAL, DUALBLUNT" />
+				</add>
+				<mul stat="pAtk" val="1.30">
 					<using kind="DUAL, DUALBLUNT" />
 				</mul>
 				<mul stat="pAtkSpd" val="1.20">
@@ -99,15 +104,17 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="11503" levels="1" name="Superior Light Armor Mastery" enchantGroup1="10">
-		<!-- Max HP + 4636, P. Def. + 1040 and MP Recovery Bonus + 25% when equipped with Light Armor. -->
+	<skill id="11503" levels="7" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 1506 1654 1817 1959 2196 2279 2365 </table>
 		<table name="#ench1pDef"> 1070 1100 1130 1160 1190 1220 1250 1280 1310 1344 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10254" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -115,7 +122,7 @@
 				<add stat="maxHp" val="4636">
 					<using kind="LIGHT" />
 				</add>
-				<add stat="pDef" val="1040">
+				<add stat="pDef" val="#pDef">
 					<using kind="LIGHT" />
 				</add>
 				<mul stat="regMp" val="1.25" />
@@ -133,13 +140,15 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="11504" levels="1" name="Superior Heavy Armor Mastery" enchantGroup1="10">
-		<!-- Max HP + 4636 and P. Def. + 1194 when equipped with Heavy Armor. -->
+	<skill id="11504" levels="7" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
 		<table name="#ench1pDef"> 1229 1264 1299 1334 1369 1404 1439 1474 1509 1545 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10002" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -147,7 +156,7 @@
 				<add stat="maxHp" val="4636">
 					<using kind="HEAVY" />
 				</add>
-				<add stat="pDef" val="1194">
+				<add stat="pDef" val="#pDef">
 					<using kind="HEAVY" />
 				</add>
 			</effect>
@@ -163,18 +172,20 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="11505" levels="1" name="Superior Anti Magic" enchantGroup1="10">
-		<!-- M. Def. + 139 and Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. -->
+	<skill id="11505" levels="7" name="Superior Anti Magic" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_Anti_Magic_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
 		<table name="#ench1mDef"> 146 154 162 170 178 186 194 202 210 218 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10004" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
-				<add stat="mDef" val="139" />
+				<add stat="mDef" val="#mDef" />
 				<mul stat="magicSuccRes" val="1.35" />
 			</effect>
 			<effect name="TriggerSkillByDamage">
@@ -200,18 +211,20 @@
 		</enchant1for>
 	</skill>
 	<skill id="11506" levels="1" name="Superior HP Boost" enchantGroup1="10">
-		<!-- STR + 2 and Max HP + 366. -->
+	<!-- Source: https://l2wiki.com/Superior_HP_Boost_-_Iss_Spectral_Dancer -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#maxHp"> 513 574 635 717 766 835 904 </table>
 		<table name="#ench1maxHp"> 390 414 438 462 486 509 533 557 581 605 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<add stat="maxHp" val="366" />
+				<add stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -221,19 +234,21 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="11507" levels="1" name="Superior MP Boost" enchantGroup1="10">
-		<!-- STR + 2 and Max MP + 313. -->
+	<skill id="11507" levels="7" name="Superior MP Boost" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_MP_Boost_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#maxMp"> 313 374 435 517 566 635 704 </table>
 		<table name="#ench1maxMp"> 333 354 374 395 415 435 456 476 497 517 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="operateType" val="PASSIVE" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<add stat="maxMp" val="313" />
+				<add stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -243,10 +258,11 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="11508" levels="6" name="Assault Rush" enchantGroup1="10">
-		<table name="#magicLvl"> 85 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 38 39 41 43 45 47 </table>
-		<table name="#activateRate"> 82 83 84 85 86 87 </table>
+	<skill id="11508" levels="9" name="Assault Rush" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Assault_Rush_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 87 90 93 96 99 101 103 105 </table>
+		<table name="#mpConsume"> 38 39 41 43 45 47 49 51 53 </table>
+		<table name="#activateRate"> 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#ench1Attack"> 4040 4140 4240 4340 4440 4540 4640 4740 4840 4940 5040 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -285,10 +301,11 @@
 			<effect name="Stun" />
 		</enchant1for>
 	</skill>
-	<skill id="11509" levels="8" name="Crippling Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 46 47 48 50 52 53 55 57 </table>
-		<table name="#power"> 14608 15192 16360 17528 18696 19864 21032 22200 </table>
+	<skill id="11509" levels="11" name="Crippling Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Crippling_Attack_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 46 47 48 50 52 53 55 57 59 61 63 </table>
+		<table name="#power"> 14608 15192 16360 17528 18696 19864 21032 22200 26008 27138 28268 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
 		<table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#enchPower"> 23368 23952 24536 25120 25704 26288 26872 27456 28040 28624 </table>
@@ -358,10 +375,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11510" levels="8" name="Shadow Blade" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 50 51 53 55 57 59 60 62 </table>
-		<table name="#power"> 14608 15776 16944 18112 19280 20448 21616 22784 </table>
+	<skill id="11510" levels="11" name="Shadow Blade" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Shadow_Blade_-_Iss_Doomcryer -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 50 51 53 55 57 59 60 62 64 66 68 </table>
+		<table name="#power"> 14608 15776 16944 18112 19280 20448 21616 22784 28162 29386 30610 </table>
 		<table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#enchPower"> 23368 23952 24536 25120 25704 26288 26872 27456 28040 28624 </table>
 		<table name="#ench1MpConsume"> 59 57 54 52 49 47 44 42 39 37 </table>
@@ -421,11 +439,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11511" levels="8" name="Death Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<!-- Attacks target with 21642 Power added to P. Atk. Requires a sword, blunt, dualsword, or dual blunt weapon. Over-hit. Critical. -->
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsumes"> 73 74 76 79 82 84 87 90 </table>
-		<table name="#power"> 21642 22507 24237 25967 27697 29427 31157 32887 </table>
+	<skill id="11511" levels="11" name="Death Strike" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Death_Strike_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsumes"> 73 74 76 79 82 84 87 90 93 96 99 </table>
+		<table name="#power"> 21642 22507 24237 25967 27697 29427 31157 32887 40673 42657 44641 </table>
 		<table name="#ench1MpConsume"> 86 82 79 75 72 68 64 61 57 54 </table>
 		<table name="#enchDuel"> 34617 35482 36347 37212 38077 38942 39807 40672 41537 42402 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
@@ -479,10 +497,11 @@
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
-	<skill id="11513" levels="8" name="Mass Crippling Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
-		<table name="#mpConsume"> 130 132 136 142 146 150 156 160 </table>
-		<table name="#power"> 10263 10616 11322 12027 12733 13438 14144 14849 </table>
+	<skill id="11513" levels="11" name="Mass Crippling Attack" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Mass_Crippling_Attack_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 130 132 136 142 146 150 156 160 164 168 172 </table>
+		<table name="#power"> 10263 10616 11322 12027 12733 13438 14144 14849 19113 20045 20977 </table>
 		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<table name="#enchPower"> 15555 15907 16260 16613 16966 17318 17671 18024 18377 18730 </table>
@@ -550,10 +569,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11514" levels="8" name="Mass Shadow Blade" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 146 150 156 160 166 172 176 182 </table>
-		<table name="#power"> 11722 12525 13327 14130 14933 15736 16539 17342 </table>
+	<skill id="11514" levels="11" name="Mass Shadow Blade" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Mass_Shadow_Blade_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 146 150 156 160 166 172 176 182 188 194 200 </table>
+		<table name="#power"> 11722 12525 13327 14130 14933 15736 16539 17342 21340 22380 23420 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<table name="#enchPower"> 17743 18145 18546 18948 19349 19751 20152 20554 20955 21356 </table>
 		<table name="#ench1MpConsume"> 174 167 160 152 145 138 131 123 116 109 </table>
@@ -1198,25 +1218,28 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<!-- Level 1 : When a sword or blunt weapon is equipped, P. Atk. +20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. -->
-	<!-- Level 101 : When a sword or blunt weapon is equipped, P. Atk. +21%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 1 Power | Increases the effect.) -->
-	<!-- Level 102 : When a sword or blunt weapon is equipped, P. Atk. +22%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 2 Power | Increases the effect.) -->
-	<!-- Level 103 : When a sword or blunt weapon is equipped, P. Atk. +23%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 3 Power | Increases the effect.) -->
-	<!-- Level 104 : When a sword or blunt weapon is equipped, P. Atk. +24%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 4 Power | Increases the effect.) -->
-	<!-- Level 105 : When a sword or blunt weapon is equipped, P. Atk. +25%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 5 Power | Increases the effect.) -->
-	<!-- Level 106 : When a sword or blunt weapon is equipped, P. Atk. +26%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 6 Power | Increases the effect.) -->
-	<!-- Level 107 : When a sword or blunt weapon is equipped, P. Atk. +27%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 7 Power | Increases the effect.) -->
-	<!-- Level 108 : When a sword or blunt weapon is equipped, P. Atk. +28%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 8 Power | Increases the effect.) -->
-	<!-- Level 109 : When a sword or blunt weapon is equipped, P. Atk. +29%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 9 Power | Increases the effect.) -->
-	<!-- Level 110 : When a sword or blunt weapon is equipped, P. Atk. +30%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, your STR can reset cooldown or double skill effect duration. (+ 10 Power | Increases the effect.) -->
-	<skill id="11526" levels="1" name="Superior Sword/Blunt Weapon Mastery">
+	<skill id="11526" levels="7" name="Superior Sword/Blunt Weapon Mastery">
+	<!-- Source: https://l2wiki.com/Superior_Sword/Blunt_Weapon_Mastery_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
 		<set name="icon" val="icon.skill10001" />
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtkSpd" val="1.2" />
+				<add stat="pAtk" val="#pAtk">
+					<using kind="DUAL, DUALBLUNT" />
+				</add>
+				<mul stat="pAtk" val="1.30">
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.30">
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
+				<mul stat="critDmg" val="1.15">
+					<using kind="DUAL, DUALBLUNT" />
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -1380,11 +1403,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11534" levels="5" name="Angel's Touch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-		<table name="#abnormalTime"> 7 9 11 13 15 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
-		<table name="#magicLvl"> 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 70 75 80 85 90 </table>
+	<skill id="11534" levels="6" name="Angel's Touch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Angel's_Touch_-_Iss_Dominator -->
+		<table name="#abnormalTime"> 7 9 11 13 15 17 </table>
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
+		<table name="#magicLvl"> 87 90 93 96 99 101 </table>
+		<table name="#mpConsume"> 70 75 80 85 90 95 </table>
 		<table name="#ench1MpConsume"> 87 84 81 78 75 72 69 66 64 61 </table>
 		<table name="#ench23pmDef"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 </table>
 		<set name="abnormalTime" val="#abnormalTime" />
@@ -1418,13 +1442,14 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="11536" levels="6" name="Divine Cancel">
-		<table name="#ench1MpConsume">69 66 63 60 57 54 51 48 46 43</table>
-		<table name="#ench1MpInitialConsume">17 16 15 15 14 13 12 12 11 10</table>
-		<table name="#ench2power">52 53 54 55 56 57 58 59 60 61</table>
-		<table name="#magicLvl">70 70 75 80 85 90</table>
-		<table name="#mpInitialConsume">14 14 15 16 17 18</table>
-		<table name="#mpConsume">56 56 60 64 68 72</table>
+	<skill id="11536" levels="9" name="Divine Cancel">
+	<!-- Source: https://l2wiki.com/Divine_Cancel_-_Iss_Dominator -->
+		<table name="#ench1MpConsume"> 69 66 63 60 57 54 51 48 46 43 </table>
+		<table name="#ench1MpInitialConsume"> 17 16 15 15 14 13 12 12 11 10 </table>
+		<table name="#ench2power"> 52 53 54 55 56 57 58 59 60 61 </table>
+		<table name="#magicLvl"> 85 86 89 92 95 98 101 103 105 </table>
+		<table name="#mpInitialConsume"> 14 14 15 16 17 18 19 20 21 </table>
+		<table name="#mpConsume"> 56 56 60 64 68 72 76 80 84 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1439,11 +1464,12 @@
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="power" val="#ench2power" />
 	</skill>
-	<skill id="11537" levels="7" name="Transform" enchantGroup1="10" enchantGroup2="10">
-		<table name="#magicLvl"> 85 86 88 91 94 97 99 </table>
-		<table name="#mpConsume"> 126 126 135 139 148 157 166 </table>
-		<table name="#runSpd"> 0.8 0.7 0.6 0.5 0.4 0.3 0.2 </table>
-		<table name="#activateRate"> 64 65 66 67 68 69 70 </table>
+	<skill id="11537" levels="10" name="Transform" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Transform_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 86 88 91 94 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 126 126 135 139 148 157 166 175 184 193 </table>
+		<table name="#runSpd"> 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.2 0.2 0.2 </table>
+		<table name="#activateRate"> 64 65 66 67 68 69 70 71 72 73 </table>
 		<table name="#ench1MpConsume"> 159 152 145 139 132 125 118 112 105 98 </table>
 		<table name="#ench2ActivateRates"> 71 71 72 72 73 74 74 75 76 77 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1477,9 +1503,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11538" levels="4" name="Mass Giant Root" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 252 558 612 666 </table>
+	<skill id="11538" levels="7" name="Mass Giant Root" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
+	<!-- Source: https://l2wiki.com/Mass_Giant_Root_-_Iss_Spectral_Dancer -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 252 558 612 666 720 774 828 </table>
 		<table name="#ench1MpConsume"> 639 612 585 559 532 505 479 452 425 399 </table>
 		<table name="#ench2ActivateRates"> 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#ench34pmDef"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 </table>
@@ -1523,10 +1550,11 @@
 			</effect>
 		</enchant4for>
 	</skill>
-	<skill id="11539" levels="8" name="Petrify" enchantGroup1="10" enchantGroup2="10">
-		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 </table>
-		<table name="#mpConsume"> 70 72 76 78 82 85 88 92 </table>
-		<table name="#activateRate"> 55 56 57 58 59 60 61 62 </table>
+	<skill id="11539" levels="11" name="Petrify" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Petrify_-_Iss_Spectral_Dancer -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 70 72 76 78 82 85 88 92 96 100 104 </table>
+		<table name="#activateRate"> 55 56 57 58 59 60 61 62 63 64 65 </table>
 		<table name="#ench1MpConsume"> 88 84 80 77 73 69 65 62 58 54 </table>
 		<table name="#ench2ActivateRates"> 63 64 65 66 67 68 69 70 71 72 </table>
 		<set name="magicLvl" val="#magicLvl" />
@@ -1567,16 +1595,17 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11540" levels="4" name="Quick Escape">
-		<table name="#ench1MpConsume">71 68 65 62 59 56 53 50 47 44</table>
-		<table name="#ench1MpInitialConsume">17 16 15 15 14 13 12 12 11 10</table>
-		<table name="#ench2abnormalTime">16 17 18 19 20 21 22 23 24 25</table>
-		<table name="#enchHealPercent">1 2 3 4 5 6 7 8 9 10</table>
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#def">3000 3500 4000 4500</table>
-		<table name="#runSpd">1.30 1.40 1.50 1.60</table>
-		<table name="#mpConsume">56 62 68 74</table>
-		<table name="#mpInitialConsume">14 15 17 18</table>
+	<skill id="11540" levels="7" name="Quick Escape">
+	<!-- Source: https://l2wiki.com/Quick_Escape_-_Iss_Dominator -->
+		<table name="#ench1MpConsume"> 71 68 65 62 59 56 53 50 47 44 </table>
+		<table name="#ench1MpInitialConsume"> 17 16 15 15 14 13 12 12 11 10 </table>
+		<table name="#ench2abnormalTime"> 16 17 18 19 20 21 22 23 24 25 </table>
+		<table name="#enchHealPercent"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#def"> 3000 3500 4000 4500 5000 5500 6000 </table>
+		<table name="#runSpd"> 1.30 1.40 1.50 1.60 1.60 1.60 1.60 </table>
+		<table name="#mpConsume"> 56 62 68 74 80 86 93 </table>
+		<table name="#mpInitialConsume"> 14 15 17 18 19 20 21 </table>
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="abnormalTime" val="15" />
@@ -1686,12 +1715,13 @@
 			</effect>
 		</enchant3for>
 	</skill>
-	<skill id="11543" levels="3" name="Disperse" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10">
+	<skill id="11543" levels="6" name="Disperse" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10">
+	<!-- Source: https://l2wiki.com/Disperse_-_Iss_Hierophant -->
 		<!-- New transforms NOT DONE -->
-		<table name="#Def"> 2000 3000 4000 </table>
-		<table name="#transformationId"> 104 105 111 </table>
-		<table name="#magicLvl"> 93 96 99 </table>
-		<table name="#mpConsume"> 330 350 370 </table>
+		<table name="#Def"> 2000 3000 4000 4500 5000 5500 </table>
+		<table name="#transformationId"> 104 105 111 111 111 111 </table>
+		<table name="#magicLvl"> 93 96 99 101 103 105 </table>
+		<table name="#mpConsume"> 330 350 370 390 410 430 </table>
 		<table name="#ench1MpConsume"> 355 340 325 310 295 280 266 251 236 221 </table>
 		<table name="#ench2AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 </table>
 		<table name="#ench345reg"> 1 2 3 4 5 6 7 8 9 10 </table>
@@ -1810,12 +1840,16 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11546" levels="1" name="Chaos Symphony" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<skill id="11546" levels="4" name="Chaos Symphony" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+	<!-- Source: https://l2wiki.com/Chaos_Symphony_-_Iss_Dominator -->
+		<table name="#magicLvl"> 99 101 103 105 </table>
+		<table name="#mpConsume"> 1767 1775 1783 1791 </table>
+		<table name="#power"> 38826 44708 46888 49068 </table>
 		<table name="#ench1MpConsume"> 1695 1627 1555 1484 1413 1343 1272 1202 1132 1060 </table>
 		<table name="#ench2ActivateRates"> 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#enchElementPower"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="magicLvl" val="99" />
-		<set name="mpConsume" val="1767" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
@@ -1825,7 +1859,7 @@
 		<set name="basicProperty" val="MEN" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill11546" />
-		<set name="power" val="38826" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
@@ -1858,8 +1892,10 @@
 		<enchant8 name="elementPower" val="#enchElementPower" />
 		<enchant8 name="element" val="5" />
 	</skill>
-	<skill id="11547" levels="1" name="Superior HP Recovery" enchantGroup1="10">
-		<!-- STR + 2 and HP Recovery Bonus + 2.8. -->
+	<skill id="11547" levels="7" name="Superior HP Recovery" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Superior_HP_Recovery_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
+		<table name="#regHp"> 2.8 3.4 4 4.6 5.4 6.2 7 </table>
 		<table name="#ench1regHp"> 3 3.2 3.4 3.6 3.8 3.9 4.1 4.3 4.5 4.7 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
@@ -1870,7 +1906,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<add stat="regHp" val="2.8" />
+				<add stat="regHp" val="#regHp" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -2226,10 +2262,11 @@
 			</effect>
 		</enchant5for>
 	</skill>
-	<skill id="11561" levels="4" name="Giant Root" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 126 139 153 166 </table>
-		<table name="#activateRate"> 70 75 80 85 </table>
+	<skill id="11561" levels="7" name="Giant Root" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
+	<!-- Source: https://l2wiki.com/Giant_Root_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 126 139 153 166 139 153 166 </table>
+		<table name="#activateRate"> 70 75 80 85 90 95 100 </table>
 		<table name="#ench1MpConsume"> 159 152 145 139 132 125 118 112 105 98 </table>
 		<table name="#ench2ActivateRates"> 86 87 88 89 90 91 92 93 94 95 </table>
 		<table name="#ench34pmDef"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 </table>
@@ -2314,10 +2351,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11564" levels="3" name="Angel's Resurrection">
-		<table name="#ench1MpConsume">57 55 52 50 48 45 43 40 38 36</table>
-		<table name="#ench2power">61 62 63 64 65 66 67 68 69 70</table>
-		<table name="#power">40 50 60</table>
+	<skill id="11564" levels="4" name="Angel's Resurrection">
+	<!-- Source: https://l2wiki.com/Angel's_Resurrection_-_Iss_Doomcryer -->
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<table name="#ench1MpConsume"> 57 55 52 50 48 45 43 40 38 36 </table>
+		<table name="#ench2power"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#power"> 40 50 60 70 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -2562,13 +2602,10 @@
 			</effect>
 		</enchant2for>
 	</skill>
-	<!-- Level 1 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
-	<!-- Level 2 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
-	<!-- Level 3 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
-	<!-- Level 4 : For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage. -->
-	<skill id="11580" levels="4" name="Mass Transform">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#mpConsume"> 126 139 153 166 </table>
+	<skill id="11580" levels="7" name="Mass Transform">
+	<!-- Source: https://l2wiki.com/Mass_Transform_-_Iss_Hierophant -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 126 139 153 166 179 192 205 </table>
 		<set name="icon" val="icon.skill11580" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />

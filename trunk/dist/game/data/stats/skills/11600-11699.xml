@@ -159,9 +159,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11604" levels="4" name="Shocking Blow">
-		<table name="#magicLvl">85 90 95 99</table>
-		<table name="#mpConsume">252 278 306 332</table>
+	<skill id="11604" levels="7" name="Shocking Blow">
+	<!-- Source: https://l2wiki.com/Shocking_Blow_-_Iss_Dominator -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#mpConsume"> 252 278 306 332 358 385 412 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="castRange" val="900" />

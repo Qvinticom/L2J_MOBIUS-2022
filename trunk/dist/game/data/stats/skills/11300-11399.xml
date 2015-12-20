@@ -216,10 +216,14 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11310" levels="1" name="Mass Servitor Ultimate Defense" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
-		<table name="#ench1mpConsume">67 64 61 58 56 53 50 47 44 42</table>
-		<table name="#ench2AbnormalTimes">61 62 63 64 65 66 67 68 69 70</table>
-		<table name="#ench3Spd">2 3 4 5 6 7 8 9 10 11</table>
+	<skill id="11310" levels="2" name="Mass Servitor Ultimate Defense" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Mass_Servitor_Ultimate_Defense_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 101 </table>
+		<table name="#mDef"> 4212 8424 </table>
+		<table name="#pDef"> 4680 9360 </table>
+		<table name="#ench1mpConsume"> 67 64 61 58 56 53 50 47 44 42 </table>
+		<table name="#ench2AbnormalTimes"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#ench3Spd"> 2 3 4 5 6 7 8 9 10 11 </table>
 		<set name="icon" val="icon.skill1299" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
 		<set name="mpConsume" val="70" />
@@ -230,15 +234,15 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="900000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="85" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SERVITOR" />
 		<enchant1 name="ench1mpConsume" val="#ench1mpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
 		<for>
 			<effect name="ImmobilePetBuff">
-				<add stat="mDef" val="4212" />
-				<add stat="pDef" val="4680" />
+				<add stat="mDef" val="#mDef" />
+				<add stat="pDef" val="#pDef" />
 				<sub stat="cancelVuln" val="80" />
 			</effect>
 		</for>
@@ -1008,14 +1012,11 @@
 			</effect>
 		</for>
 	</skill>
-	<!-- Level 1 : Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-	<!-- Level 2 : Use Arcana Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
-	<!-- Level 3 : Use Arcana Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
-	<!-- Level 4 : Use Arcana Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
-	<skill id="11350" levels="4" name="Arcane Rage">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#power"> 188 202 215 227 </table>
-		<table name="#mpConsume"> 53 60 67 70 </table>
+	<skill id="11350" levels="7" name="Arcane Rage">
+	<!-- Source: https://l2wiki.com/Arcane_Rage_-_Wynn_Arcana_Lord -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#power"> 188 202 215 227 242 248 254 </table>
+		<table name="#mpConsume"> 53 60 67 70 73 76 79 </table>
 		<set name="icon" val="icon.skill11350" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1045,14 +1046,11 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-	<!-- Level 2 : Use Elemental Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
-	<!-- Level 3 : Use Elemental Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
-	<!-- Level 4 : Use Elemental Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
-	<skill id="11353" levels="4" name="Elemental Rage">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#power"> 188 202 215 227 </table>
-		<table name="#mpConsume"> 53 60 67 70 </table>
+	<skill id="11353" levels="7" name="Elemental Rage">
+	<!-- Source: https://l2wiki.com/Elemental_Rage_-_Wynn_Elemental_Master -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#power"> 188 202 215 227 242 248 254 </table>
+		<table name="#mpConsume"> 53 60 67 70 73 76 79 </table>
 		<set name="icon" val="icon.skill11353" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1082,14 +1080,11 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 	</skill>
-	<!-- Level 1 : Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-	<!-- Level 2 : Use Spectral Wrath to inflict severe damage on a target with 202 Power added to M. Atk. -->
-	<!-- Level 3 : Use Spectral Wrath to inflict severe damage on a target with 215 Power added to M. Atk. -->
-	<!-- Level 4 : Use Spectral Wrath to inflict severe damage on a target with 227 Power added to M. Atk. -->
-	<skill id="11356" levels="4" name="Spectral Rage">
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#power"> 188 202 215 227 </table>
-		<table name="#mpConsume"> 53 60 67 70 </table>
+	<skill id="11356" levels="7" name="Spectral Rage">
+	<!-- Source: https://l2wiki.com/Spectral_Rage_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 85 90 95 99 101 103 105 </table>
+		<table name="#power"> 188 202 215 227 242 248 254 </table>
+		<table name="#mpConsume"> 53 60 67 70 73 76 79 </table>
 		<set name="icon" val="icon.skill11356" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
@@ -1193,13 +1188,11 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
-	<!-- Level 1 : Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
-	<!-- Level 2 : Attacks target with 506 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. -->
-	<!-- Level 3 : Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. -->
-	<skill id="11365" levels="3" name="Summon Demonic Crucifix">
-		<table name="#magicLvl"> 99 99 99 </table>
-		<table name="#power"> 518 506 518 </table>
-		<table name="#mpConsume"> 394 382 394 </table>
+	<skill id="11365" levels="4" name="Summon Demonic Crucifix">
+	<!-- Source: https://l2wiki.com/Summon_Demonic_Crucifix_-_Wynn_Spectral_Master -->
+		<table name="#magicLvl"> 99 101 103 105 </table>
+		<table name="#power"> 518 526 542 558 </table>
+		<table name="#mpConsume"> 394 382 394 394 </table>
 		<set name="icon" val="icon.skill11365" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
@@ -1253,42 +1246,42 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<!-- Summons Commando Cat. Consumes $s1 summon points. --> 
-	<skill id="11369" levels="1" name="Summon Commando Cat">
+	<skill id="11369" levels="6" name="Summon Commando Cat">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons Witch Cat. Consumes $s1 summon points. --> 
-	<skill id="11370" levels="1" name="Summon Witch Cat">
+	<skill id="11370" levels="6" name="Summon Witch Cat">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons Unicorn Lancer. Consumes $s1 summon points. --> 
-	<skill id="11371" levels="1" name="Summon Unicorn Lancer">
+	<skill id="11371" levels="6" name="Summon Unicorn Lancer">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons Unicorn Cherub. Consumes $s1 summon points. --> 
-	<skill id="11372" levels="1" name="Summon Unicorn Cherub">
+	<skill id="11372" levels="6" name="Summon Unicorn Cherub">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons Dark Crusader. Consumes $s1 summon points. --> 
-	<skill id="11373" levels="1" name="Summon Dark Crusader">
+	<skill id="11373" levels="6" name="Summon Dark Crusader">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons Banshee Queen. Consumes $s1 summon points. --> 
-	<skill id="11374" levels="1" name="Summon Banshee Queen">
+	<skill id="11374" levels="6" name="Summon Banshee Queen">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
