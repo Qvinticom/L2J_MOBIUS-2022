@@ -52,7 +52,7 @@ public class ExOneDayReceiveRewardList extends L2GameServerPacket
 		for (DailyMissionHolder mission : _availableMissions)
 		{
 			writeH(mission.getClientId()); // Reward
-			writeC(DailyMissionData.getInstance().isRewardAvailable(mission.getId(), _activeChar) ? 1 : 2); // 1 Available, 2 Not Available
+			writeC(DailyMissionData.getInstance().RewardStatus(mission.getId(), _activeChar)); // 1 Available, 2 Not Available, 3 Complete
 			writeC(0x00); // Requires multiple completion - YesOrNo
 			writeD(0x00); // Current progress
 			writeD(0x00); // Required total

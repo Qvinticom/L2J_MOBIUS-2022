@@ -164,19 +164,19 @@ public class DailyMissionData implements IXmlReader
 	/**
 	 * @param id int
 	 * @param player L2PcInstance
-	 * @return boolean
+	 * @return int
 	 */
-	public boolean isRewardAvailable(int id, L2PcInstance player)
+	public int RewardStatus(int id, L2PcInstance player)
 	{
 		if (player.getLevel() < _dailyMissions.get(id - 1).getLevel())
 		{
-			return false;
+			return 2; // Not Available
 		}
 		if (player.getVariables().getString("DailyMission" + id, null) != null)
 		{
-			return false;
+			return 3; // Complete
 		}
-		return true;
+		return 1; // Available
 	}
 	
 	/**
@@ -187,21 +187,27 @@ public class DailyMissionData implements IXmlReader
 	{
 		for (DailyMissionHolder mission : _dailyMissions)
 		{
-			if ((mission.getClientId() == rewardId1) && isRewardAvailable(mission.getId(), player))
+			if ((mission.getClientId() == rewardId1) && (RewardStatus(mission.getId(), player) == 1))
 			{
-				for (int itemId : mission.getRewards().keySet())
+				for (int classId : mission.getAvailableClasses())
 				{
-					player.addItem("DailyMission", itemId, mission.getRewards().get(itemId), player, true);
-				}
-				for (DailyMissionHolder m : _dailyMissions)
-				{
-					if (mission.getClientId() == m.getClientId())
+					if (player.getClassId().getId() == classId)
 					{
-						player.getVariables().set("DailyMission" + m.getId(), System.currentTimeMillis());
+						for (int itemId : mission.getRewards().keySet())
+						{
+							player.addItem("DailyMission", itemId, mission.getRewards().get(itemId), player, true);
+						}
+						for (DailyMissionHolder m : _dailyMissions)
+						{
+							if (mission.getClientId() == m.getClientId())
+							{
+								player.getVariables().set("DailyMission" + m.getId(), System.currentTimeMillis());
+							}
+						}
+						player.sendPacket(new ExOneDayReceiveRewardList(player));
+						break;
 					}
 				}
-				player.sendPacket(new ExOneDayReceiveRewardList(player));
-				break;
 			}
 		}
 	}
