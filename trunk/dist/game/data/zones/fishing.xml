@@ -189,41 +189,16 @@
 		<node X="-11992" Y="120576" />
 		<node X="0" Y="131072" />
 	</zone>
-	<zone name="Fellmere Lake 1" type="FishingZone" shape="Cuboid" minZ="-4780" maxZ="-3100">
-		<node X="-98304" Y="121072" />
-		<node X="-88304" Y="131072" />
-	</zone>
-	<zone name="Fellmere Lake 2" type="FishingZone" shape="Cuboid" minZ="-4780" maxZ="-3100">
-		<node X="-98304" Y="98304" />
-		<node X="-96804" Y="99804" />
-	</zone>
-	<zone name="Fellmere Lake 3" type="FishingZone" shape="Cuboid" minZ="-4179" maxZ="-3100">
-		<node X="-68536" Y="128072" />
-		<node X="-65536" Y="131072" />
-	</zone>
-	<zone name="Fellmere Lake 4" type="FishingZone" shape="Cuboid" minZ="-5568" maxZ="-3100">
-		<node X="-84032" Y="111040" />
-		<node X="-83392" Y="111680" />
-	</zone>
-	<zone name="Fellmere Lake 5" type="FishingZone" shape="Cuboid" minZ="-5568" maxZ="-3100">
-		<node X="-83392" Y="111040" />
-		<node X="-81920" Y="111680" />
-	</zone>
-	<zone name="Fellmere Lake 6" type="FishingZone" shape="Cuboid" minZ="-4780" maxZ="-3100">
-		<node X="-98304" Y="131072" />
-		<node X="-78304" Y="163840" />
-	</zone>
-	<zone name="Fellmere Lake 7" type="FishingZone" shape="Cuboid" minZ="-4179" maxZ="-3100">
-		<node X="-69836" Y="131072" />
-		<node X="-65536" Y="140072" />
-	</zone>
-	<zone name="Fellmere Lake 8" type="FishingZone" shape="Cuboid" minZ="-4179" maxZ="-3100">
-		<node X="-65536" Y="122368" />
-		<node X="-52480" Y="131072" />
-	</zone>
-	<zone name="Fellmere Lake 9" type="FishingZone" shape="Cuboid" minZ="-4659" maxZ="-3100">
-		<node X="-65536" Y="113088" />
-		<node X="-57664" Y="121856" />
+	<zone name="Fellmere Lake" type="FishingZone" shape="NPoly" minZ="-5000" maxZ="-1000">
+		<node X="-62133" Y="113087" />
+		<node X="-52523" Y="122374" />
+		<node X="-52174" Y="126389" />
+		<node X="-56228" Y="132039" />
+		<node X="-64016" Y="140938" />
+		<node X="-70870" Y="134122" />
+		<node X="-64809" Y="121933" />
+		<node X="-64313" Y="121921" />
+		<node X="-65908" Y="114003" />
 	</zone>
 	<zone name="Gludin West 1" type="FishingZone" shape="Cuboid" minZ="-4780" maxZ="-3627">
 		<node X="-131071" Y="131072" />
