@@ -53,6 +53,7 @@ public class L2CharTemplate extends ListenersContainer
 	private int _baseMAtk;
 	private int _basePDef;
 	private int _baseMDef;
+	private double _basePAcc;
 	private int _basePAtkSpd;
 	private int _baseMAtkSpd;
 	private int _baseAttackRange;
@@ -117,6 +118,7 @@ public class L2CharTemplate extends ListenersContainer
 		_basePAtkSpd = set.getInt("basePAtkSpd", 300);
 		_baseMAtkSpd = set.getInt("baseMAtkSpd", 333);
 		_baseShldDef = set.getInt("baseShldDef", 0);
+		_basePAcc = set.getDouble("accuracy", 0);
 		_baseAttackRange = set.getInt("baseAtkRange", 40);
 		_randomDamage = set.getInt("baseRndDam", 0);
 		_baseAttackType = set.getEnum("baseAtkType", WeaponType.class, WeaponType.FIST);
@@ -154,6 +156,14 @@ public class L2CharTemplate extends ListenersContainer
 		setBaseMoveSpeed(MoveType.SLOW_SWIM, set.getDouble("baseSwimWalkSpd", getBaseMoveSpeed(MoveType.WALK)));
 		setBaseMoveSpeed(MoveType.FAST_FLY, set.getDouble("baseFlyRunSpd", getBaseMoveSpeed(MoveType.RUN)));
 		setBaseMoveSpeed(MoveType.SLOW_FLY, set.getDouble("baseFlyWalkSpd", getBaseMoveSpeed(MoveType.WALK)));
+	}
+	
+	/**
+	 * @return proper accuracy
+	 */
+	public double getBaseAccuracy()
+	{
+		return _basePAcc;
 	}
 	
 	/**
