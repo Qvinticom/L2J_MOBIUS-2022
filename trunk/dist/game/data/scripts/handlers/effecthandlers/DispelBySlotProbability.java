@@ -55,7 +55,7 @@ public final class DispelBySlotProbability extends AbstractEffect
 			for (String ngtStack : _dispel.split(";"))
 			{
 				String[] ngt = ngtStack.split(",");
-				_dispelAbnormals.put(AbnormalType.getAbnormalType(ngt[0]), Short.MAX_VALUE);
+				_dispelAbnormals.put(AbnormalType.getAbnormalType(ngt[0]), (ngt.length > 1) ? Short.parseShort(ngt[1]) : Short.MAX_VALUE);
 			}
 		}
 		else

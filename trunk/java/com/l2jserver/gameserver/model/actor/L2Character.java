@@ -53,6 +53,7 @@ import com.l2jserver.gameserver.data.xml.impl.CategoryData;
 import com.l2jserver.gameserver.data.xml.impl.DoorData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.enums.CategoryType;
+import com.l2jserver.gameserver.enums.ChatType;
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.ShotType;
@@ -134,6 +135,7 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.Attack;
@@ -149,6 +151,7 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.MoveToLocation;
 import com.l2jserver.gameserver.network.serverpackets.NpcInfo;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.Revive;
 import com.l2jserver.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
@@ -1404,12 +1407,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		for (L2Object obj : objs)
 		{
-			if (obj == target)
+			if ((obj == target) || (obj == null))
 			{
 				continue; // do not hit twice
 			}
 			// Check if the L2Object is a L2Character
-			if (obj instanceof L2Character)
+			if (obj.isCharacter())
 			{
 				if (obj.isPet() && isPlayer() && (((L2PetInstance) obj).getOwner() == getActingPlayer()))
 				{
@@ -5386,7 +5389,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (cancelEffect || oldSkill.isToggle() || oldSkill.isPassive())
 			{
 				removeStatsOwner(oldSkill);
-				stopSkillEffects(true, oldSkill.getId());
+				stopSkillEffects(false, oldSkill.getId());
 			}
 		}
 		
@@ -7057,6 +7060,42 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public int getSiegeSide()
 	{
 		return 0;
+	}
+	
+	/**
+	 * Send a normal message to all L2PcInstance in the known list.<br>
+	 * @param msg String with message
+	 */
+	public void say(String msg)
+	{
+		broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_GENERAL, getId(), msg));
+	}
+	
+	/**
+	 * Send a client message to all L2PcInstance in the known list.<br>
+	 * @param msg NpcString from client
+	 */
+	public void say(NpcStringId msg)
+	{
+		broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_GENERAL, getId(), msg));
+	}
+	
+	/**
+	 * Send a shout message (orange chat) to all L2PcInstance in the known list.<br>
+	 * @param msg String with message
+	 */
+	public void shout(String msg)
+	{
+		broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_SHOUT, getId(), msg));
+	}
+	
+	/**
+	 * Send a shout message (orange chat) to all L2PcInstance in the known list.<br>
+	 * @param msg NpcString from client
+	 */
+	public void shout(NpcStringId msg)
+	{
+		broadcastPacket(new NpcSay(getObjectId(), ChatType.NPC_SHOUT, getId(), msg));
 	}
 	
 	public int getMinShopDistance()

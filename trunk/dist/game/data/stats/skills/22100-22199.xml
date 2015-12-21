@@ -1688,85 +1688,220 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22191" levels="1" name="Transformation Scroll: Onyx Beast">
+	<skill id="22191" levels="1" name="Transformation Scroll - Onyx Beast Event">
 		<!-- Transformed into an Onyx Beast. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21172" /> <!-- Transformation Scroll: Onyx Beast Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="1" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22192" levels="1" name="Transformation Scroll: Doom Wraith">
+	<skill id="22192" levels="1" name="Transformation Scroll - Death Blader Event">
 		<!-- Transformed into a Death Blader. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21173" /> <!-- Transformation Scroll: Death Blader Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="2" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22193" levels="1" name="Transformation Scroll: Grail Apostle">
+	<skill id="22193" levels="1" name="Transformation Scroll - Grail Apostle Event">
 		<!-- Transformed into a Grail Apostle. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21174" /> <!-- Transformation Scroll: Grail Apostle Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="202" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22194" levels="1" name="Transformation Scroll: Unicorn">
+	<skill id="22194" levels="1" name="Transformation Scroll - Unicorn Event">
 		<!-- Transformed into a Unicorn. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21175" /> <!-- Transformation Scroll: Unicorn Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="205" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22195" levels="1" name="Transformation Scroll: Lilim Knight">
+	<skill id="22195" levels="1" name="Transformation Scroll - Lilim Knight Event">
 		<!-- Transformed into a Lilim Knight. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21176" /> <!-- Transformation Scroll: Lilim Knight Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="208" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22196" levels="1" name="Transformation Scroll: Golem Guardian">
+	<skill id="22196" levels="1" name="Transformation Scroll - Golem Guardian Event">
 		<!-- Transformed into a Golem Guardian. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21177" /> <!-- Transformation Scroll: Golem Guardian Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="211" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22197" levels="1" name="Transformation Scroll: Inferno Drake">
+	<skill id="22197" levels="1" name="Transformation Scroll - Inferno Drake Event">
 		<!-- Transformed into an Inferno Drake. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21178" /> <!-- Transformation Scroll: Inferno Drake Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="214" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22198" levels="1" name="Transformation Scroll: Dragon Bomber">
+	<skill id="22198" levels="1" name="Transformation Scroll - Dragon Bomber Event">
 		<!-- Transformed into a Dragon Bomber. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21179" /> <!-- Transformation Scroll: Dragon Bomber Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="217" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22199" levels="1" name="Transformation Scroll: Heretic">
+	<skill id="22199" levels="1" name="Transformation Scroll - Heretic Event">
 		<!-- Transformed into a Heretic. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21180" /> <!-- Transformation Scroll: Heretic Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="3" />
+			</effect>
+		</for>
 	</skill>
 </list>

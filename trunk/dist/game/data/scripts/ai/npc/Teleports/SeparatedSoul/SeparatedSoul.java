@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Separated Soul teleport AI.
- * @author UnAfraid, improved by Adry_85
+ * @author UnAfraid, improved by Adry_85, Zealar
  */
 public final class SeparatedSoul extends AbstractNpcAI
 {
@@ -45,7 +45,6 @@ public final class SeparatedSoul extends AbstractNpcAI
 		32870,
 		32891
 	};
-	
 	// Items
 	private static final int WILL_OF_ANTHARAS = 17266;
 	private static final int SEALED_BLOOD_CRYSTAL = 17267;
@@ -53,17 +52,17 @@ public final class SeparatedSoul extends AbstractNpcAI
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	// Locations
-	private static final Map<String, Location> LOCATIONS = new HashMap<>();
+	private static final Map<Integer, Location> LOCATIONS = new HashMap<>();
 	static
 	{
-		LOCATIONS.put("HuntersVillage", new Location(117031, 76769, -2696));
-		LOCATIONS.put("AntharasLair", new Location(131116, 114333, -3704));
-		LOCATIONS.put("AntharasLairDeep", new Location(148447, 110582, -3944));
-		LOCATIONS.put("AntharasLairMagicForceFieldBridge", new Location(146129, 111232, -3568));
-		LOCATIONS.put("DragonValley", new Location(73122, 118351, -3714));
-		LOCATIONS.put("DragonValleyCenter", new Location(99218, 110283, -3696));
-		LOCATIONS.put("DragonValleyNorth", new Location(116992, 113716, -3056));
-		LOCATIONS.put("DragonValleySouth", new Location(113203, 121063, -3712));
+		LOCATIONS.put(1, new Location(117046, 76798, -2696)); // Hunter's Village
+		LOCATIONS.put(2, new Location(99218, 110283, -3696)); // The Center of Dragon Valley
+		LOCATIONS.put(3, new Location(116992, 113716, -3056)); // Deep inside Dragon Valley(North)
+		LOCATIONS.put(4, new Location(113203, 121063, -3712)); // Deep inside Dragon Valley (South)
+		LOCATIONS.put(5, new Location(146129, 111232, -3568)); // Antharas' Lair - Magic Force Field Bridge
+		LOCATIONS.put(6, new Location(148447, 110582, -3944)); // Deep inside Antharas' Lair
+		LOCATIONS.put(7, new Location(73122, 118351, -3714)); // Entrance to Dragon Valley
+		LOCATIONS.put(8, new Location(131116, 114333, -3704)); // Entrance of Antharas' Lair
 	}
 	
 	private SeparatedSoul()
@@ -71,33 +70,56 @@ public final class SeparatedSoul extends AbstractNpcAI
 		super(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
+		addFirstTalkId(SEPARATED_SOULS);
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		return npc.getId() + ".htm";
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (LOCATIONS.containsKey(event))
+		final int ask = Integer.parseInt(event);
+		switch (ask)
 		{
-			if (player.getLevel() >= MIN_LEVEL)
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
 			{
-				player.teleToLocation(LOCATIONS.get(event), true);
+				if (player.getLevel() >= MIN_LEVEL)
+				{
+					player.teleToLocation(LOCATIONS.get(ask), false);
+				}
+				else
+				{
+					return "no-level.htm";
+				}
+				break;
 			}
-			else
+			case 23241:
 			{
-				return "no-level.htm";
+				if (hasQuestItems(player, WILL_OF_ANTHARAS, SEALED_BLOOD_CRYSTAL))
+				{
+					takeItems(player, WILL_OF_ANTHARAS, 1);
+					takeItems(player, SEALED_BLOOD_CRYSTAL, 1);
+					giveItems(player, ANTHARAS_BLOOD_CRYSTAL, 1);
+				}
+				else
+				{
+					return "no-items.htm";
+				}
 			}
-		}
-		else if ("Synthesis".equals(event)) // Request Item Synthesis
-		{
-			if (hasQuestItems(player, WILL_OF_ANTHARAS, SEALED_BLOOD_CRYSTAL))
+			case 23242:
 			{
-				takeItems(player, WILL_OF_ANTHARAS, 1);
-				takeItems(player, SEALED_BLOOD_CRYSTAL, 1);
-				giveItems(player, ANTHARAS_BLOOD_CRYSTAL, 1);
-			}
-			else
-			{
-				return "no-items.htm";
+				return "separatedsoul.htm";
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

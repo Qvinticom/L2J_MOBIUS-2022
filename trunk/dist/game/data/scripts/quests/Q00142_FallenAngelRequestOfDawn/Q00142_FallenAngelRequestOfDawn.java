@@ -138,7 +138,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 		final QuestState st;
 		if ((npc.getId() == FALLEN_ANGEL))
 		{
-			st = player.getQuestState(getName());
+			st = getQuestState(player, false);
 			if (st.isCond(5))
 			{
 				st.giveItems(FALLEN_ANGEL_BLOOD, 1);

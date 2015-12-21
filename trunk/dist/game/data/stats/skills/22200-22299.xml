@@ -1,103 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="22200" levels="1" name="Transformation Scroll: Veil Master">
+	<skill id="22200" levels="1" name="Transformation Scroll - Veil Master Event">
 		<!-- Transformed into a Veil Master. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21181" /> <!-- Transformation Scroll: Veil Master Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="4" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22201" levels="1" name="Transformation Scroll: Saber Tooth Tiger">
+	<skill id="22201" levels="1" name="Transformation Scroll - Saber Tooth Tiger Event">
 		<!-- Transformed into a Saber Tooth Tiger. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21182" /> <!-- Transformation Scroll: Saber Tooth Tiger Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="5" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22202" levels="1" name="Transformation Scroll: Oel Mahum">
+	<skill id="22202" levels="1" name="Transformation Scroll - Ol Mahum Event">
 		<!-- Transformed into an Ol Mahum. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21183" /> <!-- Transformation Scroll: Ol Mahum Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="6" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22203" levels="1" name="Transformation Scroll: Doll Blader">
+	<skill id="22203" levels="1" name="Transformation Scroll - Doll Blader Event">
 		<!-- Transformed into a Doll Blader. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21184" /> <!-- Transformation Scroll: Doll Blader Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="7" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22204" levels="1" name="Transformation Scroll: Zaken">
+	<skill id="22204" levels="1" name="Transformation Scroll - Zaken Event">
 		<!-- Transformed into Zaken. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21185" /> <!-- Transformation Scroll: Zaken Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="305" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22205" levels="1" name="Transformation Scroll: Anakim">
+	<skill id="22205" levels="1" name="Transformation Scroll - Anakim Event">
 		<!-- Transformed into Anakim. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21186" /> <!-- Transformation Scroll: Anakim Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="306" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22206" levels="1" name="Transformation Scroll: Venom">
+	<skill id="22206" levels="1" name="Transformation Scroll - Venom Event">
 		<!-- Transformed into Venom. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21187" /> <!-- Transformation Scroll: Venom Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="307" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22207" levels="1" name="Transformation Scroll: Gordon">
+	<skill id="22207" levels="1" name="Transformation Scroll - Gordon Event">
 		<!-- Transformed into Gordon. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21188" /> <!-- Transformation Scroll: Gordon Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="308" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22208" levels="1" name="Transformation Scroll: Ranku">
+	<skill id="22208" levels="1" name="Transformation Scroll - Ranku Event">
 		<!-- Transformed into Ranku. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21189" /> <!-- Transformation Scroll: Ranku Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="309" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22209" levels="1" name="Transformation Scroll: Kechi">
-		<!-- Transformed into Kietch. -->
+	<skill id="22209" levels="1" name="Transformation Scroll - Kechi Event">
+		<!-- Transformed into Kechi. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21190" /> <!-- Transformation Scroll: Kechi Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="310" />
+			</effect>
+		</for>
 	</skill>
-	<skill id="22210" levels="1" name="Transformation Scroll: Demon Prince">
-		<!-- Transformed into Duke Devil. -->
+	<skill id="22210" levels="1" name="Transformation Scroll - Demon Prince Event">
+		<!-- Transformed into Demon Prince. -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="PASSIVE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21191" /> <!-- Transformation Scroll: Demon Prince Event -->
+		<set name="magicLvl" val="-1" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="reuseDelay" val="14400000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
+		<for>
+			<effect name="Transformation">
+				<param id="311" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22211" levels="1" name="Blessed Scroll of Escape">
 		<!-- none -->

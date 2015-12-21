@@ -1076,7 +1076,31 @@ public class L2CharacterAI extends AbstractAI
 			offset += ((L2Character) target).getTemplate().getCollisionRadius();
 		}
 		
-		if (!_actor.isInsideRadius(target, offset, false, false))
+		final boolean needToMove;
+		
+		if (target.isDoor())
+		{
+			L2DoorInstance dor = (L2DoorInstance) target;
+			int xPoint = 0;
+			int yPoint = 0;
+			for (int i : dor.getTemplate().getNodeX())
+			{
+				xPoint += i;
+			}
+			for (int i : dor.getTemplate().getNodeY())
+			{
+				yPoint += i;
+			}
+			xPoint /= 4;
+			yPoint /= 4;
+			needToMove = !_actor.isInsideRadius(xPoint, yPoint, dor.getTemplate().getNodeZ(), offset, false, false);
+		}
+		else
+		{
+			needToMove = !_actor.isInsideRadius(target, offset, false, false);
+		}
+		
+		if (needToMove)
 		{
 			// Caller should be L2Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
 			if (getFollowTarget() != null)

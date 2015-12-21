@@ -38,6 +38,7 @@ import com.l2jserver.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
 {
+	private static final int MAX_QUEST_COUNT = 40;
 	private static final String[] COMMANDS =
 	{
 		"Quest"
@@ -225,7 +226,7 @@ public class QuestLink implements IBypassHandler
 				if ((q.getId() >= 1) && (q.getId() < 20000))
 				{
 					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() > 40)
+					if (player.getAllActiveQuests().size() >= MAX_QUEST_COUNT)
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/fullquest.html");

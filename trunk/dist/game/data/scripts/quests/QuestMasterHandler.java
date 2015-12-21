@@ -112,6 +112,7 @@ import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGian
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
+import quests.Q00386_StolenDignity.Q00386_StolenDignity;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
@@ -356,6 +357,7 @@ public class QuestMasterHandler
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
+		Q00386_StolenDignity.class,
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00431_WeddingMarch.class,

@@ -324,13 +324,13 @@ public class AdminShowQuests implements IAdminCommandHandler
 		QuestState qs = target.getQuestState(val[0]);
 		String[] outval = new String[3];
 		
-		if (val[1].equals("state"))
+		if ("state".equals(val[1]))
 		{
 			switch (val[2])
 			{
 				case "COMPLETED":
 				{
-					qs.exitQuest((val[3].equals("1")) ? true : false);
+					qs.exitQuest("1".equals(val[3]));
 					break;
 				}
 				case "DELETE":

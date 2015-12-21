@@ -591,26 +591,46 @@ public final class Instance
 							{
 								int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
 								Boolean allowRandomWalk = null;
+								String areaName = null;
+								int globalMapId = 0;
+								
 								if ("spawn".equalsIgnoreCase(d.getNodeName()))
 								{
-									
 									npcId = Integer.parseInt(d.getAttributes().getNamedItem("npcId").getNodeValue());
 									x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
 									y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
 									z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
 									heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
 									respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
-									if (d.getAttributes().getNamedItem("onKillDelay") != null)
+									
+									Node node = d.getAttributes().getNamedItem("onKillDelay");
+									if (node != null)
 									{
-										delay = Integer.parseInt(d.getAttributes().getNamedItem("onKillDelay").getNodeValue());
+										delay = Integer.parseInt(node.getNodeValue());
 									}
-									if (d.getAttributes().getNamedItem("respawnRandom") != null)
+									
+									node = d.getAttributes().getNamedItem("respawnRandom");
+									if (node != null)
 									{
-										respawnRandom = Integer.parseInt(d.getAttributes().getNamedItem("respawnRandom").getNodeValue());
+										respawnRandom = Integer.parseInt(node.getNodeValue());
 									}
+									
+									node = d.getAttributes().getNamedItem("allowRandomWalk");
 									if (d.getAttributes().getNamedItem("allowRandomWalk") != null)
 									{
-										allowRandomWalk = Boolean.valueOf(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
+										allowRandomWalk = Boolean.valueOf(node.getNodeValue());
+									}
+									
+									node = d.getAttributes().getNamedItem("areaName");
+									if (d.getAttributes().getNamedItem("areaName") != null)
+									{
+										areaName = node.getNodeValue();
+									}
+									
+									node = d.getAttributes().getNamedItem("globalMapId");
+									if (node != null)
+									{
+										globalMapId = Integer.parseInt(node.getNodeValue());
 									}
 									
 									final L2Spawn spawnDat = new L2Spawn(npcId);
@@ -637,9 +657,13 @@ public final class Instance
 									{
 										spawnDat.setIsNoRndWalk(!allowRandomWalk);
 									}
+									
+									spawnDat.setAreaName(areaName);
+									spawnDat.setGlobalMapId(globalMapId);
+									
 									if (spawnGroup.equals("general"))
 									{
-										L2Npc spawned = spawnDat.doSpawn();
+										final L2Npc spawned = spawnDat.doSpawn();
 										if ((delay >= 0) && (spawned instanceof L2Attackable))
 										{
 											((L2Attackable) spawned).setOnKillDelay(delay);
@@ -651,6 +675,7 @@ public final class Instance
 									}
 								}
 							}
+							
 							if (!manualSpawn.isEmpty())
 							{
 								_manualSpawn.put(spawnGroup, manualSpawn);

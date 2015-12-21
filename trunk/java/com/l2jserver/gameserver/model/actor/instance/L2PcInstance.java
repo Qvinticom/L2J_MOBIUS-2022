@@ -1471,17 +1471,21 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * @return a table containing all Quest in progress from the table _quests.
+	 * Gets all the active quests.
+	 * @return a list of active quests
 	 */
+	
 	public List<Quest> getAllActiveQuests()
 	{
-		List<Quest> quests = new ArrayList<>();
+		final List<Quest> quests = new LinkedList<>();
 		for (QuestState qs : _quests.values())
 		{
 			if ((qs == null) || (qs.getQuest() == null) || (!qs.isStarted() && !Config.DEVELOPER))
 			{
 				continue;
 			}
+			
+			// Ignore other scripts.
 			final int questId = qs.getQuest().getId();
 			if ((questId > 19999) || (questId < 1))
 			{
@@ -1494,13 +1498,15 @@ public final class L2PcInstance extends L2Playable
 	
 	public List<Quest> getAllCompletedQuests()
 	{
-		List<Quest> quests = new ArrayList<>();
+		final List<Quest> quests = new LinkedList<>();
 		for (QuestState qs : _quests.values())
 		{
 			if ((qs == null) || (qs.getQuest() == null) || (!qs.isCompleted()))
 			{
 				continue;
 			}
+			
+			// Ignore other scripts.
 			final int questId = qs.getQuest().getId();
 			if ((questId > 19999) || (questId < 1))
 			{

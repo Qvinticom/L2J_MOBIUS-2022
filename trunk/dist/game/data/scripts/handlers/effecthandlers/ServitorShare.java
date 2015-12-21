@@ -57,6 +57,7 @@ public final class ServitorShare extends AbstractEffect
 			for (L2Summon summon : info.getEffected().getActingPlayer().getServitors().values())
 			{
 				summon.broadcastInfo();
+				summon.getStatus().startHpMpRegeneration();
 			}
 		}
 	}
@@ -81,6 +82,14 @@ public final class ServitorShare extends AbstractEffect
 		{
 			for (L2Summon summon : info.getEffected().getActingPlayer().getServitors().values())
 			{
+				if (summon.getCurrentHp() > summon.getMaxHp())
+				{
+					summon.setCurrentHp(summon.getMaxHp());
+				}
+				if (summon.getCurrentMp() > summon.getMaxMp())
+				{
+					summon.setCurrentMp(summon.getMaxMp());
+				}
 				summon.broadcastInfo();
 			}
 		}

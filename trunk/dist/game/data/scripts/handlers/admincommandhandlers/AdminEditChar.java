@@ -34,6 +34,7 @@ import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
 import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
 import com.l2jserver.gameserver.data.xml.impl.ClassListData;
 import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jserver.gameserver.data.xml.impl.TransformData;
 import com.l2jserver.gameserver.enums.Race;
 import com.l2jserver.gameserver.enums.SubclassInfoType;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
@@ -357,8 +358,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
 					final boolean wasAwaken = player.isAwaken();
+					TransformData.getInstance().transformPlayer(255, player);
 					player.setClassId(classidval);
-					
 					if (player.isSubClassActive())
 					{
 						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClassId());
@@ -368,16 +369,17 @@ public class AdminEditChar implements IAdminCommandHandler
 						player.setBaseClassId(player.getActiveClassId());
 						player.setInitialClassId(ClassId.getInitialClassId(player));
 					}
-					
 					if (player.getBaseClass().getRace().equals(Race.ERTHEIA))
 					{
 						player.getAppearance().setSex(true);
 					}
-					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
+					player.untransform();
 					player.broadcastUserInfo();
+					activeChar.setTarget(null);
+					activeChar.setTarget(player);
 					if (!wasAwaken && player.isAwaken())
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);

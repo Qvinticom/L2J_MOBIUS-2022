@@ -374,6 +374,7 @@ public abstract class Inventory extends ItemContainer
 				item.getAugmentation().removeBonus(player);
 			}
 			
+			item.unChargeAllShots();
 			item.removeElementAttrBonus(player);
 			
 			// Remove skills bestowed from +4 armor
@@ -502,7 +503,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				item.getAugmentation().applyBonus(player);
 			}
-			
+			item.rechargeShots(true, true);
 			item.updateElementAttrBonus(player);
 			
 			// Add skills bestowed from +4 armor

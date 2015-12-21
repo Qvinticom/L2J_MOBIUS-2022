@@ -158,6 +158,8 @@
 												<xs:attribute name="x" type="xs:integer" use="required" />
 												<xs:attribute name="y" type="xs:integer" use="required" />
 												<xs:attribute name="z" type="xs:integer" use="required" />
+												<xs:attribute name="areaName" type="xs:normalizedString" />
+												<xs:attribute name="globalMapId" type="xs:positiveInteger" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

@@ -288,10 +288,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			{
 				for (L2PcInstance partyMember : party.getMembers())
 				{
-					if (partyMember.getQuestState(getName()) == null)
-					{
-						newQuestState(partyMember);
-					}
+					getQuestState(partyMember, true);
 					world.addAllowed(partyMember.getObjectId());
 					teleportPlayer(partyMember, new Location(146534, 180464, -6117), world.getInstanceId());
 				}
