@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
+import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jserver.gameserver.network.serverpackets.TutorialShowQuestionMark;
@@ -432,6 +433,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 		}
 		player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+		player.sendPacket(new ExUserInfoInvenWeight(player));
 		
 		if (Config.CLASS_MASTER_SETTINGS.isAllowed(player.getClassId().level() + 1) && Config.ALTERNATE_CLASS_MASTER && (((player.getClassId().level() == 1) && (player.getLevel() >= 40)) || ((player.getClassId().level() == 2) && (player.getLevel() >= 76)) || ((player.getClassId().level() == 3) && (player.getLevel() >= 85))))
 		{
