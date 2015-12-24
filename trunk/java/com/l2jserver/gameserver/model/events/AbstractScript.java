@@ -2872,7 +2872,10 @@ public abstract class AbstractScript implements INamable
 				{
 					toDelete = amount - currentCount;
 				}
-				takeItem(player, i, toDelete);
+				if (toDelete > 0)
+				{
+					takeItem(player, i, toDelete);
+				}
 				currentCount += toDelete;
 			}
 		}
