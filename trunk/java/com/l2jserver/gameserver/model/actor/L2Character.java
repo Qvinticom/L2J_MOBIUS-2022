@@ -3784,12 +3784,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					{
 						case MOVE_SPEED:
 						{
-							info.addComponentType(UserInfoType.MULTIPLIER);
+							info.addComponentType(UserInfoType.MULTIPLIER, UserInfoType.BASE_STATS);
 							break;
 						}
 						case POWER_ATTACK_SPEED:
 						{
-							info.addComponentType(UserInfoType.MULTIPLIER, UserInfoType.STATS);
+							info.addComponentType(UserInfoType.MULTIPLIER, UserInfoType.STATS, UserInfoType.BASE_STATS);
 							break;
 						}
 						case POWER_ATTACK:
@@ -3804,7 +3804,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						case MAGIC_ATTACK_SPEED:
 						case MAGIC_DEFENCE:
 						{
-							info.addComponentType(UserInfoType.STATS);
+							info.addComponentType(UserInfoType.STATS, UserInfoType.BASE_STATS);
 							break;
 						}
 						case MAX_CP:
@@ -3829,7 +3829,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						case STAT_WIT:
 						case STAT_MEN:
 						{
-							info.addComponentType(UserInfoType.BASE_STATS);
+							info.addComponentType(UserInfoType.STATS, UserInfoType.BASE_STATS);
 							break;
 						}
 						case FIRE_RES:
