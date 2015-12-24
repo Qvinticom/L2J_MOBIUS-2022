@@ -1474,252 +1474,333 @@
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2039-1" /> <!-- Soulshot (No-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33775" name="Soulshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2150-1" /> <!-- Soulshot (D-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33776" name="Soulshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
+		<set name="crystal_type" val="C" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2151-1" /> <!-- Soulshot (C-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33777" name="Soulshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
+		<set name="crystal_type" val="B" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2152-1" /> <!-- Soulshot (B-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33778" name="Soulshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
+		<set name="crystal_type" val="A" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2153-1" /> <!-- Soulshot (A-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33779" name="Soulshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2154-1" /> <!-- Soulshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33780" name="Soulshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily inflict a powerful attack on the enemy. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9193-1" /> <!-- Soulshot (R-grade) -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33781" name="Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2047-1" /> <!-- Spiritshot (No-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33782" name="Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
+		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2155-1" /> <!-- Spiritshot (D-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33783" name="Spiritshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
+		<set name="crystal_type" val="C" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2156-1" /> <!-- Spiritshot (C-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33784" name="Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
+		<set name="crystal_type" val="B" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2157-1" /> <!-- Spiritshot (B-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33785" name="Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
+		<set name="crystal_type" val="A" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2158-1" /> <!-- Spiritshot (A-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33786" name="Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2159-1" /> <!-- Spiritshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33787" name="Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Spirit light is bestowed on the weapon to temporarily strengthen M. Atk. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.spiritshot_r_i00" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9194-1" /> <!-- Spiritshot (R-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33788" name="Blessed Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on no-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2061-1" /> <!-- Blessed Spiritshot (No-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33789" name="Blessed Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
+		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2160-1" /> <!-- Blessed Spiritshot (D-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33790" name="Blessed Spiritshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
+		<set name="crystal_type" val="C" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2161-1" /> <!-- Blessed Spiritshot (C-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33791" name="Blessed Spiritshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
+		<set name="crystal_type" val="B" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2162-1" /> <!-- Blessed Spiritshot (B-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33792" name="Blessed Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
+		<set name="crystal_type" val="A" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2163-1" /> <!-- Blessed Spiritshot (A-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33793" name="Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2164-1" /> <!-- Blessed Spiritshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33794" name="Blessed Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Higher level spirit light is bestowed on the weapon to temporarily strengthen M. Atk. greatly. Can be used on R-grade weapons. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9195-1" /> <!-- Blessed Spiritshot (R-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="33795" name="Returning Hero's Vitality Replenishing Juice 3-unit Pack" additionalName="Event" type="EtcItem">

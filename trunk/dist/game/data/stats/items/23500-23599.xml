@@ -404,24 +404,32 @@
 		<!-- The power of a spirit is bestowed upon a weapon (R-grade), temporarily inflicting a powerful attack on the enemy. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9194-1" /> <!-- Spiritshot (R-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="23553" name="Mysterious Spiritshot (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon (R-grade), temporarily increasing its magic significantly. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="SpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9195-1" /> <!-- Blessed Spiritshot (R-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="23554" name="Ninja Top" additionalName="Modified Set Test" type="Armor">

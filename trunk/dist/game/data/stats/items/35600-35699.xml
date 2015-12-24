@@ -1069,23 +1069,31 @@
 		<!-- The light of Spirits fill the pet/servitor to instantly inflict a powerful attack on the enemy. You can check the number of consumed soulshots at the pet/servitor info screen. (They are used from the master's inventory.) -->
 		<set name="icon" val="BranchSys.icon.br_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="BeastSoulShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="22036-1" /> <!-- Beast Soulshot -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="35671" name="Blessed Beast Spiritshot" additionalName="Wynn Summoners Only" type="EtcItem">
 		<!-- High-level light of Spirits fill the pet/servitor to instantly strengthen the pet/servitor's M. Atk. It is very light. You can check the number of consumed spiritshots at the pet/servitor info screen. (They are used from the master's inventory.) -->
 		<set name="icon" val="BranchSys.icon.br_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
+		<set name="for_npc" val="true" />
+		<set name="handler" val="BeastSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="22038-1" /> <!-- Blessed Beast Spiritshot -->
 		<set name="material" val="PAPER" />
 		<set name="price" val="65" />
 	</item>

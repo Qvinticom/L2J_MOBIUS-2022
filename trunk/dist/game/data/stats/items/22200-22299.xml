@@ -398,13 +398,17 @@
 	<item id="22231" name="Mysterious Blessed Spiritshot (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- High-level spirit light is infused into a weapon, instantly and greatly increasing its M. Atk. Can be used on S-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_auctionable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2164-1" /> <!-- Blessed Spiritshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22232" name="Mysterious Soulshot Pack (S-grade)" additionalName="Event" type="EtcItem">
@@ -541,52 +545,68 @@
 		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a C-grade weapon. -->
 		<set name="icon" val="icon.bm_spirit_bullet_green" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="C" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2151-1" /> <!-- Soulshot (C-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22245" name="Mysterious Soulshot (B-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with a B-grade weapon. -->
 		<set name="icon" val="icon.bm_spirit_bullet_red" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="B" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2152-1" /> <!-- Soulshot (B-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22246" name="Mysterious Soulshot (A-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with an A-grade weapon. -->
 		<set name="icon" val="icon.bm_spirit_bullet_silver" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="A" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2153-1" /> <!-- Soulshot (A-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22247" name="Mysterious Soulshot (S-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon, momentarily increasing its P. Atk. significantly. Can be used with an S-grade weapon. -->
 		<set name="icon" val="icon.bm_spirit_bullet_gold" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2154-1" /> <!-- Soulshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22248" name="Mysterious Soulshot Pack" type="EtcItem">
@@ -605,52 +625,68 @@
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a C-grade weapon. -->
 		<set name="icon" val="icon.bm_spell_shot_green" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="C" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2161-1" /> <!-- Blessed Spiritshot (C-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22250" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with a B-grade weapon. -->
 		<set name="icon" val="icon.bm_spell_shot_red" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="B" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2162-1" /> <!-- Blessed Spiritshot (B-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22251" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with an A-grade weapon. -->
 		<set name="icon" val="icon.bm_spell_shot_silver" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="A" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2163-1" /> <!-- Blessed Spiritshot (A-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22252" name="Mysterious Blessed Spiritshot (S-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, momentarily increasing its M. Atk. significantly. Can be used with an S-grade weapon. -->
 		<set name="icon" val="icon.bm_spell_shot_gold" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="S" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2164-1" /> <!-- Blessed Spiritshot (S-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="22253" name="Mysterious Blessed Spiritshot Pack" type="EtcItem">

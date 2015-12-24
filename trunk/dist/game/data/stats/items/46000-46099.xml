@@ -1165,20 +1165,26 @@
 		<!-- The power of a spirit is bestowed upon a weapon (R-grade), temporarily inflicting a powerful attack on the enemy. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SOULSHOT" />
+		<set name="handler" val="SoulShots" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="9193-1" /> <!-- Soulshot (R-grade) -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="46083" name="Mysterious Blessed Spiritshot (R-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon (R-grade), temporarily increasing its magic significantly. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="9195-1" /> <!-- Blessed Spiritshot (R-grade)  -->
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="46084" name="Player Commendation Special Bait" additionalName="PC-exclusive" type="EtcItem">
