@@ -78,8 +78,8 @@ public class L2PetManagerInstance extends L2MerchantInstance
 	{
 		if (command.startsWith("exchange"))
 		{
-			String[] params = command.split(" ");
-			int val = Integer.parseInt(params[1]);
+			final String[] params = command.split(" ");
+			final int val = Integer.parseInt(params[1]);
 			switch (val)
 			{
 				case 1:
@@ -96,8 +96,8 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		}
 		else if (command.startsWith("evolve"))
 		{
-			String[] params = command.split(" ");
-			int val = Integer.parseInt(params[1]);
+			final String[] params = command.split(" ");
+			final int val = Integer.parseInt(params[1]);
 			boolean ok = false;
 			switch (val)
 			{
@@ -129,8 +129,8 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		}
 		else if (command.startsWith("restore"))
 		{
-			String[] params = command.split(" ");
-			int val = Integer.parseInt(params[1]);
+			final String[] params = command.split(" ");
+			final int val = Integer.parseInt(params[1]);
 			boolean ok = false;
 			switch (val)
 			{

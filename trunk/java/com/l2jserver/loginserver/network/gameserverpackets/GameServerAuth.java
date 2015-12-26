@@ -86,7 +86,7 @@ public class GameServerAuth extends BaseRecievePacket
 		
 		if (handleRegProcess())
 		{
-			AuthResponse ar = new AuthResponse(server.getGameServerInfo().getId());
+			final AuthResponse ar = new AuthResponse(server.getGameServerInfo().getId());
 			server.sendPacket(ar);
 			if (Config.DEBUG)
 			{
@@ -99,10 +99,10 @@ public class GameServerAuth extends BaseRecievePacket
 	
 	private boolean handleRegProcess()
 	{
-		GameServerTable gameServerTable = GameServerTable.getInstance();
+		final GameServerTable gameServerTable = GameServerTable.getInstance();
 		
-		int id = _desiredId;
-		byte[] hexId = _hexId;
+		final int id = _desiredId;
+		final byte[] hexId = _hexId;
 		
 		GameServerInfo gsi = gameServerTable.getRegisteredGameServerById(id);
 		// is there a gameserver registered with this id?

@@ -59,7 +59,7 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
-		int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
+		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
 		if (activeChar.isInOlympiadMode())
 		{
@@ -74,8 +74,8 @@ public class Unstuck implements IUserCommandHandler
 		
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
-		Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
-		Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
+		final Skill escape = SkillData.getInstance().getSkill(2099, 1); // 5 minutes escape
+		final Skill GM_escape = SkillData.getInstance().getSkill(2100, 1); // 1 second escape
 		if (activeChar.getAccessLevel().isGm())
 		{
 			if (GM_escape != null)
@@ -106,9 +106,9 @@ public class Unstuck implements IUserCommandHandler
 		activeChar.setTarget(activeChar);
 		activeChar.disableAllSkills();
 		
-		MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
+		final MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
 		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 900);
-		SetupGauge sg = new SetupGauge(0, unstuckTimer);
+		final SetupGauge sg = new SetupGauge(0, unstuckTimer);
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		

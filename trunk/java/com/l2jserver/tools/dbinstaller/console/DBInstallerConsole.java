@@ -37,7 +37,7 @@ public class DBInstallerConsole implements DBOutputInterface
 	public DBInstallerConsole(String db, String dir)
 	{
 		System.out.println("Welcome to L2J DataBase installer");
-		Preferences prop = Preferences.userRoot();
+		final Preferences prop = Preferences.userRoot();
 		RunTasks rt = null;
 		try (Scanner scn = new Scanner(new CloseShieldedInputStream(System.in)))
 		{
@@ -50,7 +50,7 @@ public class DBInstallerConsole implements DBOutputInterface
 				System.out.printf("%s (%s): ", "Username", prop.get("dbUser_" + db, "root"));
 				String dbUser = scn.nextLine();
 				System.out.printf("%s (%s): ", "Password", "");
-				String dbPass = scn.nextLine();
+				final String dbPass = scn.nextLine();
 				System.out.printf("%s (%s): ", "Database", prop.get("dbDbse_" + db, db));
 				String dbDbse = scn.nextLine();
 				
@@ -59,13 +59,13 @@ public class DBInstallerConsole implements DBOutputInterface
 				dbUser = dbUser.isEmpty() ? prop.get("dbUser_" + db, "root") : dbUser;
 				dbDbse = dbDbse.isEmpty() ? prop.get("dbDbse_" + db, db) : dbDbse;
 				
-				MySqlConnect connector = new MySqlConnect(dbHost, dbPort, dbUser, dbPass, dbDbse, true);
+				final MySqlConnect connector = new MySqlConnect(dbHost, dbPort, dbUser, dbPass, dbDbse, true);
 				
 				_con = connector.getConnection();
 			}
 			
 			System.out.print("(C)lean install, (U)pdate or (E)xit? ");
-			String resp = scn.next();
+			final String resp = scn.next();
 			if (resp.equalsIgnoreCase("c"))
 			{
 				System.out.print("Do you really want to destroy your db (Y/N)?");

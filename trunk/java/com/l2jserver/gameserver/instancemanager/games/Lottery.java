@@ -180,7 +180,7 @@ public class Lottery
 			_isStarted = true;
 			
 			Broadcast.toAllOnlinePlayers("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
-			Calendar finishtime = Calendar.getInstance();
+			final Calendar finishtime = Calendar.getInstance();
 			finishtime.setTimeInMillis(_enddate);
 			finishtime.set(Calendar.MINUTE, 0);
 			finishtime.set(Calendar.SECOND, 0);
@@ -253,7 +253,7 @@ public class Lottery
 				_log.info("Lottery: Ending lottery #" + getId() + ".");
 			}
 			
-			int[] luckynums = new int[5];
+			final int[] luckynums = new int[5];
 			int luckynum = 0;
 			
 			for (int i = 0; i < 5; i++)
@@ -327,14 +327,14 @@ public class Lottery
 						
 						for (int i = 1; i <= 16; i++)
 						{
-							int val = curenchant / 2;
+							final int val = curenchant / 2;
 							
 							if (val != Math.round((double) curenchant / 2))
 							{
 								count++;
 							}
 							
-							int val2 = curtype2 / 2;
+							final int val2 = curtype2 / 2;
 							
 							if (val2 != ((double) curtype2 / 2))
 							{
@@ -369,7 +369,7 @@ public class Lottery
 				_log.log(Level.WARNING, "Lottery: Could restore lottery data: " + e.getMessage(), e);
 			}
 			
-			long prize4 = count4 * Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
+			final long prize4 = count4 * Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
 			long prize1 = 0;
 			long prize2 = 0;
 			long prize3 = 0;
@@ -397,7 +397,7 @@ public class Lottery
 				_log.info("Lottery: " + count4 + " players with ONE or TWO numbers each win " + prize4 + ".");
 			}
 			
-			long newprize = getPrize() - (prize1 + prize2 + prize3 + prize4);
+			final long newprize = getPrize() - (prize1 + prize2 + prize3 + prize4);
 			if (Config.DEBUG)
 			{
 				_log.info("Lottery: Jackpot for next lottery is " + newprize + ".");
@@ -449,13 +449,13 @@ public class Lottery
 	
 	public int[] decodeNumbers(int enchant, int type2)
 	{
-		int res[] = new int[5];
+		final int res[] = new int[5];
 		int id = 0;
 		int nr = 1;
 		
 		while (enchant > 0)
 		{
-			int val = enchant / 2;
+			final int val = enchant / 2;
 			if (val != Math.round((double) enchant / 2))
 			{
 				res[id++] = nr;
@@ -468,7 +468,7 @@ public class Lottery
 		
 		while (type2 > 0)
 		{
-			int val = type2 / 2;
+			final int val = type2 / 2;
 			if (val != ((double) type2 / 2))
 			{
 				res[id++] = nr;
@@ -487,7 +487,7 @@ public class Lottery
 	
 	public long[] checkTicket(int id, int enchant, int type2)
 	{
-		long res[] =
+		final long res[] =
 		{
 			0,
 			0
@@ -512,12 +512,12 @@ public class Lottery
 					
 					for (int i = 1; i <= 16; i++)
 					{
-						int val = curenchant / 2;
+						final int val = curenchant / 2;
 						if (val != Math.round((double) curenchant / 2))
 						{
 							count++;
 						}
-						int val2 = curtype2 / 2;
+						final int val2 = curtype2 / 2;
 						if (val2 != ((double) curtype2 / 2))
 						{
 							count++;

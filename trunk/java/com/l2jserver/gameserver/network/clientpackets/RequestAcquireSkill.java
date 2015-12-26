@@ -196,7 +196,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				}
 				
 				final L2Clan clan = activeChar.getClan();
-				int repCost = s.getLevelUpSp();
+				final int repCost = s.getLevelUpSp();
 				if (clan.getReputationScore() >= repCost)
 				{
 					if (Config.LIFE_CRYSTAL_NEEDED)
@@ -645,7 +645,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				if (levelUpSp > 0)
 				{
 					player.setSp(player.getSp() - levelUpSp);
-					UserInfo ui = new UserInfo(player);
+					final UserInfo ui = new UserInfo(player);
 					ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 					player.sendPacket(ui);
 				}

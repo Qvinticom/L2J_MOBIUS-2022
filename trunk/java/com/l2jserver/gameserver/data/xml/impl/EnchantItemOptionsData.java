@@ -61,7 +61,7 @@ public class EnchantItemOptionsData implements IXmlReader
 				{
 					if ("item".equalsIgnoreCase(d.getNodeName()))
 					{
-						int itemId = parseInteger(d.getAttributes(), "id");
+						final int itemId = parseInteger(d.getAttributes(), "id");
 						if (!_data.containsKey(itemId))
 						{
 							_data.put(itemId, new HashMap<Integer, EnchantOptions>());

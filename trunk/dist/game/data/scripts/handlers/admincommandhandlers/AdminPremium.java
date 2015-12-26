@@ -53,7 +53,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				addPremiumStatus(activeChar, 1, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -65,7 +65,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				addPremiumStatus(activeChar, 2, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -77,7 +77,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				addPremiumStatus(activeChar, 3, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -89,7 +89,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				viewPremiumInfo(activeChar, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -101,7 +101,7 @@ public class AdminPremium implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(21);
+				final String val = command.substring(21);
 				removePremium(activeChar, val);
 			}
 			catch (StringIndexOutOfBoundsException e)

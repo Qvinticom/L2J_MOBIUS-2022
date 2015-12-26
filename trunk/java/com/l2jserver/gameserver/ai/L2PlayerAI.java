@@ -134,7 +134,7 @@ public class L2PlayerAI extends L2PlayableAI
 		{
 			// run interrupted or next intention
 			
-			IntentionCommand nextIntention = _nextIntention;
+			final IntentionCommand nextIntention = _nextIntention;
 			if (nextIntention != null)
 			{
 				if (nextIntention._crtlIntention != AI_INTENTION_CAST) // previous state shouldn't be casting
@@ -230,7 +230,7 @@ public class L2PlayerAI extends L2PlayableAI
 	
 	private void thinkAttack()
 	{
-		L2Character target = getAttackTarget();
+		final L2Character target = getAttackTarget();
 		if (target == null)
 		{
 			return;
@@ -251,7 +251,7 @@ public class L2PlayerAI extends L2PlayableAI
 	
 	private void thinkCast()
 	{
-		L2Character target = getCastTarget();
+		final L2Character target = getCastTarget();
 		if ((_skill.getTargetType() == L2TargetType.GROUND) && (_actor instanceof L2PcInstance))
 		{
 			if (maybeMoveToPosition(((L2PcInstance) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill)))
@@ -293,7 +293,7 @@ public class L2PlayerAI extends L2PlayableAI
 		{
 			return;
 		}
-		L2Object target = getTarget();
+		final L2Object target = getTarget();
 		if (checkTargetLost(target))
 		{
 			return;
@@ -312,7 +312,7 @@ public class L2PlayerAI extends L2PlayableAI
 		{
 			return;
 		}
-		L2Object target = getTarget();
+		final L2Object target = getTarget();
 		if (checkTargetLost(target))
 		{
 			return;

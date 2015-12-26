@@ -45,7 +45,7 @@ public class TaskClanLeaderApply extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		Calendar cal = Calendar.getInstance();
+		final Calendar cal = Calendar.getInstance();
 		if (cal.get(Calendar.DAY_OF_WEEK) == Config.ALT_CLAN_LEADER_DATE_CHANGE)
 		{
 			for (L2Clan clan : ClanTable.getInstance().getClans())

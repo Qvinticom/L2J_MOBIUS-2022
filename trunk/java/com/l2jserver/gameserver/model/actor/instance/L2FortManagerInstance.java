@@ -79,8 +79,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		{
 			return;
 		}
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-		int condition = validateCondition(player);
+		final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		final int condition = validateCondition(player);
 		if (condition <= COND_ALL_FALSE)
 		{
 			return;
@@ -91,8 +91,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		}
 		else if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken(); // Get actual command
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken(); // Get actual command
 			
 			String val = "";
 			if (st.countTokens() >= 1)
@@ -145,15 +145,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 					html.replace("%objectId%", String.valueOf(getObjectId()));
 					if (Config.FS_MAX_OWN_TIME > 0)
 					{
-						int hour = (int) Math.floor(getFort().getTimeTillRebelArmy() / 3600);
-						int minutes = (int) (Math.floor(getFort().getTimeTillRebelArmy() - (hour * 3600)) / 60);
+						final int hour = (int) Math.floor(getFort().getTimeTillRebelArmy() / 3600);
+						final int minutes = (int) (Math.floor(getFort().getTimeTillRebelArmy() - (hour * 3600)) / 60);
 						html.replace("%hr%", String.valueOf(hour));
 						html.replace("%min%", String.valueOf(minutes));
 					}
 					else
 					{
-						int hour = (int) Math.floor(getFort().getOwnedTime() / 3600);
-						int minutes = (int) (Math.floor(getFort().getOwnedTime() - (hour * 3600)) / 60);
+						final int hour = (int) Math.floor(getFort().getOwnedTime() / 3600);
+						final int minutes = (int) (Math.floor(getFort().getOwnedTime() - (hour * 3600)) / 60);
 						html.replace("%hr%", String.valueOf(hour));
 						html.replace("%min%", String.valueOf(minutes));
 					}
@@ -195,7 +195,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 				{
 					if (!val.isEmpty())
 					{
-						boolean open = (Integer.parseInt(val) == 1);
+						final boolean open = (Integer.parseInt(val) == 1);
 						while (st.hasMoreTokens())
 						{
 							getFort().openCloseDoor(player, Integer.parseInt(st.nextToken()), open);
@@ -246,8 +246,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 					{
 						if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_CLAN)
 						{
-							String htmFile = "html/mods/WhSortedC.htm";
-							String htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmFile);
+							final String htmFile = "html/mods/WhSortedC.htm";
+							final String htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmFile);
 							if (htmContent != null)
 							{
 								final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(getObjectId());
@@ -280,7 +280,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 			}
 			else if (actualCommand.startsWith("WithdrawSortedC"))
 			{
-				String param[] = command.split("_");
+				final String param[] = command.split("_");
 				if (param.length > 2)
 				{
 					showVaultWindowWithdraw(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
@@ -404,7 +404,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/fortress/functions-apply.htm");
 								html.replace("%name%", "(HP Recovery Device)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -428,7 +428,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/fortress/functions-apply.htm");
 								html.replace("%name%", "(MP Recovery)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -451,7 +451,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/fortress/functions-apply.htm");
 								html.replace("%name%", "(EXP Recovery Device)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -490,7 +490,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -535,7 +535,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -580,7 +580,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -606,9 +606,9 @@ public class L2FortManagerInstance extends L2MerchantInstance
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/fortress/edit_recovery.htm");
-						String hp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 300\">300%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 400\">400%</a>]";
-						String exp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 45\">45%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 50\">50%</a>]";
-						String mp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 50\">50%</a>]";
+						final String hp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 300\">300%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 400\">400%</a>]";
+						final String exp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 45\">45%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 50\">50%</a>]";
+						final String mp = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 50\">50%</a>]";
 						if (getFort().getFunction(Fort.FUNC_RESTORE_HP) != null)
 						{
 							html.replace("%hp_recovery%", String.valueOf(getFort().getFunction(Fort.FUNC_RESTORE_HP).getLvl()) + "%</font> (<font color=\"FFAABB\">" + String.valueOf(getFort().getFunction(Fort.FUNC_RESTORE_HP).getLease()) + "</font>Adena /" + String.valueOf(Config.FS_HPREG_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
@@ -679,7 +679,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/fortress/functions-apply.htm");
 								html.replace("%name%", "Insignia (Supplementary Magic)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -702,7 +702,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/fortress/functions-apply.htm");
 								html.replace("%name%", "Mirror (Teleportation Device)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -741,7 +741,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -786,7 +786,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -815,8 +815,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/fortress/edit_other.htm");
-						String tele = "[<a action=\"bypass -h npc_%objectId%_manage other edit_tele 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_tele 2\">Level 2</a>]";
-						String support = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>]";
+						final String tele = "[<a action=\"bypass -h npc_%objectId%_manage other edit_tele 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_tele 2\">Level 2</a>]";
+						final String support = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>]";
 						if (getFort().getFunction(Fort.FUNC_TELEPORT) != null)
 						{
 							html.replace("%tele%", "Stage " + String.valueOf(getFort().getFunction(Fort.FUNC_TELEPORT).getLvl()) + "</font> (<font color=\"FFAABB\">" + String.valueOf(getFort().getFunction(Fort.FUNC_TELEPORT).getLease()) + "</font>Adena /" + String.valueOf(Config.FS_TELE_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
@@ -873,7 +873,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 				
 				try
 				{
-					int skill_id = Integer.parseInt(val);
+					final int skill_id = Integer.parseInt(val);
 					try
 					{
 						if (getFort().getFunction(Fort.FUNC_SUPPORT) == null)
@@ -938,7 +938,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("goto"))
 			{
-				int whereTo = Integer.parseInt(val);
+				final int whereTo = Integer.parseInt(val);
 				doTeleport(player, whereTo);
 				return;
 			}
@@ -952,7 +952,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "html/fortress/foreman-no.htm";
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		if (condition > COND_ALL_FALSE)
 		{
 			if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
@@ -978,7 +978,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		{
 			_log.warning("doTeleport(L2PcInstance player, int val) is called");
 		}
-		L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			if (player.destroyItemByItemId("Teleport", list.getItemId(), list.getPrice(), this, true))

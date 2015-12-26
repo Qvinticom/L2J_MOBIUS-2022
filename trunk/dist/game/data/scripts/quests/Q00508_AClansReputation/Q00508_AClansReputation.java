@@ -78,7 +78,7 @@ public class Q00508_AClansReputation extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -135,7 +135,7 @@ public class Q00508_AClansReputation extends Quest
 		}
 		else
 		{
-			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
+			final L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = pleader.getQuestState(getName());
@@ -144,7 +144,7 @@ public class Q00508_AClansReputation extends Quest
 		
 		if ((st != null) && st.isStarted())
 		{
-			int raid = st.getInt("raid");
+			final int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
 				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
@@ -167,7 +167,7 @@ public class Q00508_AClansReputation extends Quest
 			return htmltext;
 		}
 		
-		L2Clan clan = player.getClan();
+		final L2Clan clan = player.getClan();
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -180,7 +180,7 @@ public class Q00508_AClansReputation extends Quest
 					return "30868-8.html";
 				}
 				
-				int raid = st.getInt("raid");
+				final int raid = st.getInt("raid");
 				
 				if (REWARD_POINTS.containsKey(raid))
 				{

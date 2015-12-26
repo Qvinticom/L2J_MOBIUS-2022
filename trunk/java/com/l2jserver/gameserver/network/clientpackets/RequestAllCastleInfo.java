@@ -37,7 +37,7 @@ public class RequestAllCastleInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2GameClient client = getClient();
+		final L2GameClient client = getClient();
 		if (client != null)
 		{
 			client.sendPacket(new ExShowCastleInfo());

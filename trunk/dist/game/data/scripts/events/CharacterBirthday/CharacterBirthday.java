@@ -106,7 +106,7 @@ public final class CharacterBirthday extends Quest
 		
 		if (!Util.checkIfInRange(10, npc, player, true))
 		{
-			L2Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
+			final L2Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			startQuestTimer("despawn_npc", 180000, spawned, player);
 			SPAWNS++;
 		}

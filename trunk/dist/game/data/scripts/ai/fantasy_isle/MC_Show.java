@@ -290,9 +290,9 @@ public class MC_Show extends AbstractNpcAI
 	
 	private void scheduleTimer()
 	{
-		int gameTime = GameTimeController.getInstance().getGameTime();
-		int hours = (gameTime / 60) % 24;
-		int minutes = gameTime % 60;
+		final int gameTime = GameTimeController.getInstance().getGameTime();
+		final int hours = (gameTime / 60) % 24;
+		final int minutes = gameTime % 60;
 		int hourDiff, minDiff;
 		hourDiff = (20 - hours);
 		if (hourDiff < 0)
@@ -310,7 +310,7 @@ public class MC_Show extends AbstractNpcAI
 		diff = hourDiff + minDiff;
 		if (Config.DEBUG)
 		{
-			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+			final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		}
 		// TODO startRepeatingQuestTimer("Start", diff, 14400000, null, null);

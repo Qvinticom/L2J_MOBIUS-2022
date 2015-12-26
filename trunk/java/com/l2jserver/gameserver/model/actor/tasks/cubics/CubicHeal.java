@@ -71,7 +71,7 @@ public class CubicHeal implements Runnable
 		{
 			Skill skill = null;
 			// Base chance 10% to use great skill
-			double chance = Rnd.get();
+			final double chance = Rnd.get();
 			for (Skill sk : _cubic.getSkills())
 			{
 				switch (sk.getId())

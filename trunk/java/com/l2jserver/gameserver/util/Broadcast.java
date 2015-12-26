@@ -52,7 +52,7 @@ public final class Broadcast
 	 */
 	public static void toPlayersTargettingMyself(L2Character character, L2GameServerPacket mov)
 	{
-		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
 			if (player.getTarget() != character)
@@ -88,8 +88,8 @@ public final class Broadcast
 				player.sendPacket(mov);
 				if ((mov instanceof CharInfo) && (character.isPlayer()))
 				{
-					int relation = ((L2PcInstance) character).getRelation(player);
-					Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());
+					final int relation = ((L2PcInstance) character).getRelation(player);
+					final Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());
 					if ((oldrelation != null) && (oldrelation != relation))
 					{
 						final RelationChanged rc = new RelationChanged();
@@ -136,7 +136,7 @@ public final class Broadcast
 			radius = 1500;
 		}
 		
-		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
 			if (character.isInsideRadius(player, radius, false, false))
@@ -177,7 +177,7 @@ public final class Broadcast
 			character.sendPacket(mov);
 		}
 		
-		Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
 			if ((player != null) && Util.checkIfInRange(radius, character, player, false))

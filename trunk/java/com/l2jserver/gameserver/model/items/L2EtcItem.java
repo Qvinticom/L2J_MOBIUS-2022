@@ -78,10 +78,10 @@ public final class L2EtcItem extends L2Item
 		_isBlessed = set.getBoolean("blessed", false);
 		
 		// Extractable
-		String capsuled_items = set.getString("capsuled_items", null);
+		final String capsuled_items = set.getString("capsuled_items", null);
 		if (capsuled_items != null)
 		{
-			String[] split = capsuled_items.split(";");
+			final String[] split = capsuled_items.split(";");
 			_extractableItems = new ArrayList<>(split.length);
 			for (String part : split)
 			{
@@ -89,21 +89,21 @@ public final class L2EtcItem extends L2Item
 				{
 					continue;
 				}
-				String[] data = part.split(",");
+				final String[] data = part.split(",");
 				if ((data.length != 4) && (data.length != 6))
 				{
 					_log.info(StringUtil.concat("> Couldnt parse ", part, " in capsuled_items! item ", toString()));
 					continue;
 				}
-				int itemId = Integer.parseInt(data[0]);
-				int min = Integer.parseInt(data[1]);
-				int max = Integer.parseInt(data[2]);
+				final int itemId = Integer.parseInt(data[0]);
+				final int min = Integer.parseInt(data[1]);
+				final int max = Integer.parseInt(data[2]);
 				if (max < min)
 				{
 					_log.info(StringUtil.concat("> Max amount < Min amount in ", part, ", item ", toString()));
 					continue;
 				}
-				double chance = Double.parseDouble(data[3]);
+				final double chance = Double.parseDouble(data[3]);
 				int minEnchant = 0;
 				int maxEnchant = 0;
 				if (data.length == 6)

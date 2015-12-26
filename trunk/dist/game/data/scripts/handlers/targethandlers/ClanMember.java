@@ -38,7 +38,7 @@ public class ClanMember implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		if (activeChar.isNpc())
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself

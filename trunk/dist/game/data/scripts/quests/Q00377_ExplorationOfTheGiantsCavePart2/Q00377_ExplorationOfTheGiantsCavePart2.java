@@ -109,7 +109,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 		if (qs != null)
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			if (MOBS1.containsKey(npcId))
 			{
 				final int itemCount = ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2);

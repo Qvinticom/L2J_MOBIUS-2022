@@ -91,7 +91,7 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 	
 	public final boolean setFile(String prefix, String path)
 	{
-		String content = HtmCache.getInstance().getHtm(prefix, path);
+		final String content = HtmCache.getInstance().getHtm(prefix, path);
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
@@ -131,7 +131,7 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 	@Override
 	public final void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;

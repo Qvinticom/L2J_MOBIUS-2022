@@ -225,7 +225,7 @@ public class L2Fishing implements Runnable
 		finally
 		{
 			_thinking = false;
-			ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, 0, _anim, 0, _deceptiveMode);
+			final ExFishingHpRegen efhr = new ExFishingHpRegen(_fisher, _time, _fishCurHp, _mode, 0, _anim, 0, _deceptiveMode);
 			if (_anim != 0)
 			{
 				_fisher.broadcastPacket(efhr);
@@ -271,7 +271,7 @@ public class L2Fishing implements Runnable
 			else
 			{
 				// Reeling failed, Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -283,7 +283,7 @@ public class L2Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Reeling failed, Damage: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -341,7 +341,7 @@ public class L2Fishing implements Runnable
 			else
 			{
 				// Pumping failed, Regained: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;
@@ -353,7 +353,7 @@ public class L2Fishing implements Runnable
 			if (_deceptiveMode == 0)
 			{
 				// Pumping failed, Regained: $s1
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP);
 				sm.addInt(dmg);
 				_fisher.sendPacket(sm);
 				_goodUse = 2;

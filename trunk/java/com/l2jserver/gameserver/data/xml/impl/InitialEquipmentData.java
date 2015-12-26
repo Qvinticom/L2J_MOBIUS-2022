@@ -95,7 +95,7 @@ public final class InitialEquipmentData implements IXmlReader
 				attrs = c.getAttributes();
 				for (int i = 0; i < attrs.getLength(); i++)
 				{
-					Node attr = attrs.item(i);
+					final Node attr = attrs.item(i);
 					set.set(attr.getNodeName(), attr.getNodeValue());
 				}
 				equipList.add(new PcItemTemplate(set));

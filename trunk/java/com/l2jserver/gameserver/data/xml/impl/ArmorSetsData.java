@@ -114,8 +114,8 @@ public final class ArmorSetsData implements IXmlReader
 								}
 								case "shield_skill":
 								{
-									int skillId = parseInteger(attrs, "id");
-									int skillLevel = parseInteger(attrs, "level");
+									final int skillId = parseInteger(attrs, "id");
+									final int skillLevel = parseInteger(attrs, "level");
 									set.addShieldSkill(new SkillHolder(skillId, skillLevel));
 									break;
 								}

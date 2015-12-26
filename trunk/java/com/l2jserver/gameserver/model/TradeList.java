@@ -125,7 +125,7 @@ public class TradeList
 		final List<TradeItem> list = new LinkedList<>();
 		for (TradeItem item : _items)
 		{
-			int el[] = new int[6];
+			final int el[] = new int[6];
 			for (int i = 0; i < 6; i++)
 			{
 				el[i] = item.getElementDefAttr((byte) i);
@@ -215,14 +215,14 @@ public class TradeList
 			return null;
 		}
 		
-		L2Object o = L2World.getInstance().findObject(objectId);
+		final L2Object o = L2World.getInstance().findObject(objectId);
 		if (!(o instanceof L2ItemInstance))
 		{
 			_log.warning(_owner.getName() + ": Trying to add something other than an item!");
 			return null;
 		}
 		
-		L2ItemInstance item = (L2ItemInstance) o;
+		final L2ItemInstance item = (L2ItemInstance) o;
 		if (!(item.isTradeable() || (getOwner().isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
 		{
 			_log.warning(_owner.getName() + ": Attempt to add a restricted item!");
@@ -262,7 +262,7 @@ public class TradeList
 			}
 		}
 		
-		TradeItem titem = new TradeItem(item, count, price);
+		final TradeItem titem = new TradeItem(item, count, price);
 		_items.add(titem);
 		
 		// If Player has already confirmed this trade, invalidate the confirmation
@@ -290,7 +290,7 @@ public class TradeList
 			return null;
 		}
 		
-		L2Item item = ItemTable.getInstance().getTemplate(itemId);
+		final L2Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
 			_log.warning(_owner.getName() + ": Attempt to add invalid item to TradeList!");
@@ -314,7 +314,7 @@ public class TradeList
 			return null;
 		}
 		
-		TradeItem titem = new TradeItem(item, count, price, enchantLevel, attackAttribute, attackAttributeValue, defenseAttributes, appearanceId);
+		final TradeItem titem = new TradeItem(item, count, price, enchantLevel, attackAttribute, attackAttributeValue, defenseAttributes, appearanceId);
 		_items.add(titem);
 		
 		// If Player has already confirmed this trade, invalidate the confirmation
@@ -344,7 +344,7 @@ public class TradeList
 				// If Partner has already confirmed this trade, invalidate the confirmation
 				if (_partner != null)
 				{
-					TradeList partnerList = _partner.getActiveTradeList();
+					final TradeList partnerList = _partner.getActiveTradeList();
 					if (partnerList == null)
 					{
 						_log.warning(_partner.getName() + ": Trading partner (" + _partner.getName() + ") is invalid in this trade!");
@@ -376,7 +376,7 @@ public class TradeList
 	{
 		for (TradeItem titem : _items)
 		{
-			L2ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			if ((item == null) || (titem.getCount() < 1))
 			{
 				removeItem(titem.getObjectId(), -1, -1);
@@ -419,7 +419,7 @@ public class TradeList
 		// If Partner has already confirmed this trade, proceed exchange
 		if (_partner != null)
 		{
-			TradeList partnerList = _partner.getActiveTradeList();
+			final TradeList partnerList = _partner.getActiveTradeList();
 			if (partnerList == null)
 			{
 				_log.warning(_partner.getName() + ": Trading partner (" + _partner.getName() + ") is invalid in this trade!");
@@ -498,7 +498,7 @@ public class TradeList
 		// Check for Item validity
 		for (TradeItem titem : _items)
 		{
-			L2ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
+			final L2ItemInstance item = _owner.checkItemManipulation(titem.getObjectId(), titem.getCount(), "transfer");
 			if ((item == null) || (item.getCount() < 1))
 			{
 				_log.warning(_owner.getName() + ": Invalid Item in TradeList");
@@ -520,12 +520,12 @@ public class TradeList
 	{
 		for (TradeItem titem : _items)
 		{
-			L2ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
+			final L2ItemInstance oldItem = _owner.getInventory().getItemByObjectId(titem.getObjectId());
 			if (oldItem == null)
 			{
 				return false;
 			}
-			L2ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
+			final L2ItemInstance newItem = _owner.getInventory().transferItem("Trade", titem.getObjectId(), titem.getCount(), partner.getInventory(), _owner, _partner);
 			if (newItem == null)
 			{
 				return false;
@@ -573,7 +573,7 @@ public class TradeList
 			{
 				continue;
 			}
-			L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+			final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
 			if (template == null)
 			{
 				continue;
@@ -604,7 +604,7 @@ public class TradeList
 			{
 				continue;
 			}
-			L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+			final L2Item template = ItemTable.getInstance().getTemplate(item.getItem().getId());
 			if (template == null)
 			{
 				continue;
@@ -637,8 +637,8 @@ public class TradeList
 		else
 		{
 			// Prepare inventory update packet
-			InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
-			InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate ownerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+			final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 			
 			// Transfer items
 			partnerList.TransferItems(getOwner(), partnerIU, ownerIU);
@@ -757,7 +757,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if ((oldItem == null) || !oldItem.isTradeable())
 			{
 				// private store sell invalid item - disable it
@@ -765,7 +765,7 @@ public class TradeList
 				return 2;
 			}
 			
-			L2Item template = ItemTable.getInstance().getTemplate(item.getItemId());
+			final L2Item template = ItemTable.getInstance().getTemplate(item.getItemId());
 			if (template == null)
 			{
 				continue;
@@ -824,7 +824,7 @@ public class TradeList
 			}
 			
 			// Check if requested item is available for manipulation
-			L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
+			final L2ItemInstance oldItem = _owner.checkItemManipulation(item.getObjectId(), item.getCount(), "sell");
 			if (oldItem == null)
 			{
 				// should not happens - validation already done
@@ -834,7 +834,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			L2ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
+			final L2ItemInstance newItem = ownerInventory.transferItem("PrivateStore", item.getObjectId(), item.getCount(), playerInventory, _owner, player);
 			if (newItem == null)
 			{
 				ok = false;
@@ -964,7 +964,7 @@ public class TradeList
 				break;
 			}
 			
-			long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
+			final long _totalPrice = totalPrice + (item.getCount() * item.getPrice());
 			// check for overflow of the total price
 			if ((MAX_ADENA < _totalPrice) || (_totalPrice < 0))
 			{
@@ -1008,7 +1008,7 @@ public class TradeList
 			}
 			
 			// Proceed with item transfer
-			L2ItemInstance newItem = playerInventory.transferItem("PrivateStore", objectId, item.getCount(), ownerInventory, player, _owner);
+			final L2ItemInstance newItem = playerInventory.transferItem("PrivateStore", objectId, item.getCount(), ownerInventory, player, _owner);
 			if (newItem == null)
 			{
 				continue;

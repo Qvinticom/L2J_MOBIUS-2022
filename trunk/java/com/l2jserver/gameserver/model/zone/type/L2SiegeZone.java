@@ -139,7 +139,7 @@ public class L2SiegeZone extends L2ZoneType
 				throw new IllegalArgumentException("Siege object already defined!");
 			}
 			getSettings().setSiegeableId(Integer.parseInt(value));
-			SiegableHall hall = CHSiegeManager.getInstance().getConquerableHalls().get(getSettings().getSiegeableId());
+			final SiegableHall hall = CHSiegeManager.getInstance().getConquerableHalls().get(getSettings().getSiegeableId());
 			if (hall == null)
 			{
 				_log.warning("L2SiegeZone: Siegable clan hall with id " + value + " does not exist!");
@@ -166,7 +166,7 @@ public class L2SiegeZone extends L2ZoneType
 			
 			if (character.isPlayer())
 			{
-				L2PcInstance plyer = character.getActingPlayer();
+				final L2PcInstance plyer = character.getActingPlayer();
 				if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId()))
 				{
 					plyer.setIsInSiege(true); // in siege
@@ -206,7 +206,7 @@ public class L2SiegeZone extends L2ZoneType
 		{
 			if (character.isPlayer())
 			{
-				L2PcInstance player = character.getActingPlayer();
+				final L2PcInstance player = character.getActingPlayer();
 				character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
 				if (player.getMountType() == MountType.WYVERN)
 				{
@@ -221,21 +221,21 @@ public class L2SiegeZone extends L2ZoneType
 		}
 		if (character.isPlayer())
 		{
-			L2PcInstance activeChar = character.getActingPlayer();
+			final L2PcInstance activeChar = character.getActingPlayer();
 			activeChar.stopFameTask();
 			activeChar.setIsInSiege(false);
 			
 			if ((getSettings().getSiege() instanceof FortSiege) && (activeChar.getInventory().getItemByItemId(9819) != null))
 			{
 				// drop combat flag
-				Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
+				final Fort fort = FortManager.getInstance().getFortById(getSettings().getSiegeableId());
 				if (fort != null)
 				{
 					FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
 				}
 				else
 				{
-					int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
+					final int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
 					activeChar.getInventory().unEquipItemInBodySlot(slot);
 					activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
 				}
@@ -348,7 +348,7 @@ public class L2SiegeZone extends L2ZoneType
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		TeleportWhereType type = TeleportWhereType.TOWN;
+		final TeleportWhereType type = TeleportWhereType.TOWN;
 		for (L2PcInstance temp : getPlayersInside())
 		{
 			if (temp.getClanId() == owningClanId)

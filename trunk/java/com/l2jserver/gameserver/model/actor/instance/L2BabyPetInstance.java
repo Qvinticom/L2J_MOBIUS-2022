@@ -87,8 +87,8 @@ public final class L2BabyPetInstance extends L2PetInstance
 		double healPower = 0;
 		for (L2PetSkillLearn psl : PetDataTable.getInstance().getPetData(getId()).getAvailableSkills())
 		{
-			int id = psl.getSkillId();
-			int lvl = PetDataTable.getInstance().getPetData(getId()).getAvailableLevel(id, getLevel());
+			final int id = psl.getSkillId();
+			final int lvl = PetDataTable.getInstance().getPetData(getId()).getAvailableLevel(id, getLevel());
 			if (lvl == 0)
 			{
 				continue;
@@ -232,7 +232,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 		setTarget(getOwner());
 		useMagic(skill, false, false);
 		
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
 		msg.addSkillName(skill);
 		sendPacket(msg);
 		

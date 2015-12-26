@@ -78,14 +78,14 @@ public class AdminFightCalculator implements IAdminCommandHandler
 	
 	private void handleStart(String params, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(params);
+		final StringTokenizer st = new StringTokenizer(params);
 		int lvl1 = 0;
 		int lvl2 = 0;
 		int mid1 = 0;
 		int mid2 = 0;
 		while (st.hasMoreTokens())
 		{
-			String s = st.nextToken();
+			final String s = st.nextToken();
 			if (s.equals("lvl1"))
 			{
 				lvl1 = Integer.parseInt(st.nextToken());
@@ -182,7 +182,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		{
 			int mid1 = 0;
 			int mid2 = 0;
-			StringTokenizer st = new StringTokenizer(params);
+			final StringTokenizer st = new StringTokenizer(params);
 			mid1 = Integer.parseInt(st.nextToken());
 			mid2 = Integer.parseInt(st.nextToken());
 			
@@ -212,17 +212,17 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			boolean _miss1 = Formulas.calcHitMiss(npc1, npc2);
+			final boolean _miss1 = Formulas.calcHitMiss(npc1, npc2);
 			if (_miss1)
 			{
 				miss1++;
 			}
-			byte _shld1 = Formulas.calcShldUse(npc1, npc2, null, false);
+			final byte _shld1 = Formulas.calcShldUse(npc1, npc2, null, false);
 			if (_shld1 > 0)
 			{
 				shld1++;
 			}
-			boolean _crit1 = Formulas.calcCrit(npc1, npc2);
+			final boolean _crit1 = Formulas.calcCrit(npc1, npc2);
 			if (_crit1)
 			{
 				crit1++;
@@ -232,12 +232,12 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			_patk1 += npc1.getRandomDamageMultiplier();
 			patk1 += _patk1;
 			
-			double _pdef1 = npc1.getPDef(npc2);
+			final double _pdef1 = npc1.getPDef(npc2);
 			pdef1 += _pdef1;
 			
 			if (!_miss1)
 			{
-				double _dmg1 = Formulas.calcPhysDam(npc1, npc2, null, _shld1, _crit1, false);
+				final double _dmg1 = Formulas.calcPhysDam(npc1, npc2, null, _shld1, _crit1, false);
 				dmg1 += _dmg1;
 				npc1.abortAttack();
 			}
@@ -245,17 +245,17 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		for (int i = 0; i < 10000; i++)
 		{
-			boolean _miss2 = Formulas.calcHitMiss(npc2, npc1);
+			final boolean _miss2 = Formulas.calcHitMiss(npc2, npc1);
 			if (_miss2)
 			{
 				miss2++;
 			}
-			byte _shld2 = Formulas.calcShldUse(npc2, npc1, null, false);
+			final byte _shld2 = Formulas.calcShldUse(npc2, npc1, null, false);
 			if (_shld2 > 0)
 			{
 				shld2++;
 			}
-			boolean _crit2 = Formulas.calcCrit(npc2, npc1);
+			final boolean _crit2 = Formulas.calcCrit(npc2, npc1);
 			if (_crit2)
 			{
 				crit2++;
@@ -265,12 +265,12 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			_patk2 *= npc2.getRandomDamageMultiplier();
 			patk2 += _patk2;
 			
-			double _pdef2 = npc2.getPDef(npc1);
+			final double _pdef2 = npc2.getPDef(npc1);
 			pdef2 += _pdef2;
 			
 			if (!_miss2)
 			{
-				double _dmg2 = Formulas.calcPhysDam(npc2, npc1, null, _shld2, _crit2, false);
+				final double _dmg2 = Formulas.calcPhysDam(npc2, npc1, null, _shld2, _crit2, false);
 				dmg2 += _dmg2;
 				npc2.abortAttack();
 			}
@@ -290,14 +290,14 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		dmg2 /= 10000;
 		
 		// total damage per 100 seconds
-		int tdmg1 = (int) (sAtk1 * dmg1);
-		int tdmg2 = (int) (sAtk2 * dmg2);
+		final int tdmg1 = (int) (sAtk1 * dmg1);
+		final int tdmg2 = (int) (sAtk2 * dmg2);
 		// HP restored per 100 seconds
-		double maxHp1 = npc1.getMaxHp();
-		int hp1 = (int) ((Formulas.calcHpRegen(npc1) * 100000) / Formulas.getRegeneratePeriod(npc1));
+		final double maxHp1 = npc1.getMaxHp();
+		final int hp1 = (int) ((Formulas.calcHpRegen(npc1) * 100000) / Formulas.getRegeneratePeriod(npc1));
 		
-		double maxHp2 = npc2.getMaxHp();
-		int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
+		final double maxHp2 = npc2.getMaxHp();
+		final int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		

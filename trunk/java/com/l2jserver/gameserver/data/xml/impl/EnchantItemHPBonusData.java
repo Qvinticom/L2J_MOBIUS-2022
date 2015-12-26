@@ -94,7 +94,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 			final Collection<Integer> armorIds = it.getAllArmorsId();
 			for (Integer itemId : armorIds)
 			{
-				L2Item item = it.getTemplate(itemId);
+				final L2Item item = it.getTemplate(itemId);
 				if ((item != null) && (item.getCrystalType() != CrystalType.NONE))
 				{
 					switch (item.getBodyPart())

@@ -70,7 +70,7 @@ public class L2MotherTreeZone extends L2ZoneType
 	{
 		if (character.isPlayer())
 		{
-			L2PcInstance player = character.getActingPlayer();
+			final L2PcInstance player = character.getActingPlayer();
 			character.setInsideZone(ZoneId.MOTHER_TREE, true);
 			if (_enterMsg != 0)
 			{
@@ -84,7 +84,7 @@ public class L2MotherTreeZone extends L2ZoneType
 	{
 		if (character.isPlayer())
 		{
-			L2PcInstance player = character.getActingPlayer();
+			final L2PcInstance player = character.getActingPlayer();
 			player.setInsideZone(ZoneId.MOTHER_TREE, false);
 			if (_leaveMsg != 0)
 			{

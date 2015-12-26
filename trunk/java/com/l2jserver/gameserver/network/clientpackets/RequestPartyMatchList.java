@@ -54,7 +54,7 @@ public class RequestPartyMatchList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
 		if (_activeChar == null)
 		{
@@ -63,7 +63,7 @@ public class RequestPartyMatchList extends L2GameClientPacket
 		
 		if (_roomid > 0)
 		{
-			PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 			if (_room != null)
 			{
 				_log.info("PartyMatchRoom #" + _room.getId() + " changed by " + _activeChar.getName());
@@ -87,9 +87,9 @@ public class RequestPartyMatchList extends L2GameClientPacket
 		}
 		else
 		{
-			int _maxid = PartyMatchRoomList.getInstance().getMaxId();
+			final int _maxid = PartyMatchRoomList.getInstance().getMaxId();
 			
-			PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _activeChar);
+			final PartyMatchRoom _room = new PartyMatchRoom(_maxid, _roomtitle, _loot, _lvlmin, _lvlmax, _membersmax, _activeChar);
 			
 			_log.info("PartyMatchRoom #" + _maxid + " created by " + _activeChar.getName());
 			// Remove from waiting list

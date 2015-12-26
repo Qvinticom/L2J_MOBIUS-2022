@@ -121,7 +121,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		int progress = st.getInt("progress");
 		if ("32792-05.html".equals(event))
 		{
@@ -333,12 +333,12 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			return htmltext;
 		}
 		
-		int cond = st.getCond();
-		int npcId = npc.getId();
+		final int cond = st.getCond();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.CREATED:
-				QuestState ToTheMonastery = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+				final QuestState ToTheMonastery = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
 				if ((player.getLevel() >= 81) && ToTheMonastery.isCompleted())
 				{
 					htmltext = "32792-01.htm";
@@ -469,11 +469,11 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
-		int cond = st.getInt("cond");
+		final QuestState st = player.getQuestState(getName());
+		final int cond = st.getInt("cond");
 		int tomb = st.getInt("tomb");
 		int solina = st.getInt("solina");
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (cond == 1)
 		{
 			if (npcId == SOLINAS[0])

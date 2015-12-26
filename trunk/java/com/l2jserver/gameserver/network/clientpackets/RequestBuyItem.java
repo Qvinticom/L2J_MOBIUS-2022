@@ -54,7 +54,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_listId = readD();
-		int size = readD();
+		final int size = readD();
 		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -63,8 +63,8 @@ public final class RequestBuyItem extends L2GameClientPacket
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			int itemId = readD();
-			long count = readQ();
+			final int itemId = readD();
+			final long count = readQ();
 			if ((itemId < 1) || (count < 1))
 			{
 				_items = null;
@@ -77,7 +77,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -102,7 +102,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2Object target = player.getTarget();
+		final L2Object target = player.getTarget();
 		L2Character merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
@@ -248,7 +248,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 		// Proceed the purchase
 		for (ItemHolder i : _items)
 		{
-			Product product = buyList.getProductByItemId(i.getId());
+			final Product product = buyList.getProductByItemId(i.getId());
 			if (product == null)
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId + " and item_id " + i.getId(), Config.DEFAULT_PUNISH);

@@ -125,12 +125,12 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis())
 		{
 			long remainingTime = (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - System.currentTimeMillis()) / 1000;
-			int days = (int) (remainingTime / 86400);
+			final int days = (int) (remainingTime / 86400);
 			remainingTime = remainingTime % 86400;
-			int hours = (int) (remainingTime / 3600);
+			final int hours = (int) (remainingTime / 3600);
 			remainingTime = remainingTime % 3600;
-			int minutes = (int) (remainingTime / 60);
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAY_S_S2_HOUR_S_S3_MINUTE_S);
+			final int minutes = (int) (remainingTime / 60);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAY_S_S2_HOUR_S_S3_MINUTE_S);
 			msg.addInt(days);
 			msg.addInt(hours);
 			msg.addInt(minutes);

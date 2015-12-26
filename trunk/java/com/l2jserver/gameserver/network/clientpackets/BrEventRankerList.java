@@ -44,9 +44,9 @@ public class BrEventRankerList extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// TODO count, bestScore, myScore
-		int count = 0;
-		int bestScore = 0;
-		int myScore = 0;
+		final int count = 0;
+		final int bestScore = 0;
+		final int myScore = 0;
 		getClient().sendPacket(new ExBrLoadEventTopRankers(_eventId, _day, count, bestScore, myScore));
 	}
 	

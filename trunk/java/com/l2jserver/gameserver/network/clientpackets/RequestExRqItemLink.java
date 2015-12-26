@@ -42,13 +42,13 @@ public class RequestExRqItemLink extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2GameClient client = getClient();
+		final L2GameClient client = getClient();
 		if (client != null)
 		{
-			L2Object object = L2World.getInstance().findObject(_objectId);
+			final L2Object object = L2World.getInstance().findObject(_objectId);
 			if (object instanceof L2ItemInstance)
 			{
-				L2ItemInstance item = (L2ItemInstance) object;
+				final L2ItemInstance item = (L2ItemInstance) object;
 				if (item.isPublished())
 				{
 					client.sendPacket(new ExRpItemLink(item));

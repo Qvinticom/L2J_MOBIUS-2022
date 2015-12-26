@@ -250,7 +250,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{

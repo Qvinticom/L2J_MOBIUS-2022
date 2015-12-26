@@ -52,7 +52,7 @@ public class EnchantFormatter extends Formatter
 				
 				if (p instanceof L2PcInstance)
 				{
-					L2PcInstance player = (L2PcInstance) p;
+					final L2PcInstance player = (L2PcInstance) p;
 					StringUtil.append(output, "Character:", player.getName(), " [" + String.valueOf(player.getObjectId()) + "] Account:", player.getAccountName());
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
@@ -61,7 +61,7 @@ public class EnchantFormatter extends Formatter
 				}
 				else if (p instanceof L2ItemInstance)
 				{
-					L2ItemInstance item = (L2ItemInstance) p;
+					final L2ItemInstance item = (L2ItemInstance) p;
 					if (item.getEnchantLevel() > 0)
 					{
 						StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
@@ -71,7 +71,7 @@ public class EnchantFormatter extends Formatter
 				}
 				else if (p instanceof Skill)
 				{
-					Skill skill = (Skill) p;
+					final Skill skill = (Skill) p;
 					if (skill.getLevel() > 100)
 					{
 						StringUtil.append(output, "+", String.valueOf(skill.getLevel() % 100), " ");

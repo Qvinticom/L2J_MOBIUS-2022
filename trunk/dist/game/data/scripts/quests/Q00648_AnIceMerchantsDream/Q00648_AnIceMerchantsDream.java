@@ -212,7 +212,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				if ((st.getCond() >= 1) && hasQuestItems(player, SILVER_ICE_CRYSTAL) && (st.getInt("ex") > 0))
 				{
 					takeItems(player, SILVER_ICE_CRYSTAL, 1);
-					int val = (st.getInt("ex") + 1);
+					final int val = (st.getInt("ex") + 1);
 					st.set("ex", val);
 					playSound(player, QuestSound.ITEMSOUND_BROKEN_KEY);
 					htmltext = event;
@@ -224,7 +224,7 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 				if ((st.getCond() >= 1) && hasQuestItems(player, SILVER_ICE_CRYSTAL) && (st.getInt("ex") > 0))
 				{
 					takeItems(player, SILVER_ICE_CRYSTAL, 1);
-					int val = (st.getInt("ex") + 2);
+					final int val = (st.getInt("ex") + 2);
 					st.set("ex", val);
 					playSound(player, QuestSound.ITEMSOUND_BROKEN_KEY);
 					htmltext = event;
@@ -235,9 +235,9 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 			{
 				if ((st.getCond() >= 1) && (st.getInt("ex") > 0))
 				{
-					int ex = st.getInt("ex");
-					int val1 = ex / 10;
-					int val2 = ex - (val1 * 10);
+					final int ex = st.getInt("ex");
+					final int val1 = ex / 10;
+					final int val2 = ex - (val1 * 10);
 					if (val1 == val2)
 					{
 						htmltext = "32023-07.html";
@@ -257,9 +257,9 @@ public final class Q00648_AnIceMerchantsDream extends Quest
 			{
 				if ((st.getCond() >= 1) && (st.getInt("ex") > 0))
 				{
-					int ex = st.getInt("ex");
-					int val1 = ex / 10;
-					int val2 = ((ex - (val1 * 10)) + 2);
+					final int ex = st.getInt("ex");
+					final int val1 = ex / 10;
+					final int val2 = ((ex - (val1 * 10)) + 2);
 					if (val1 == val2)
 					{
 						htmltext = "32023-07.html";

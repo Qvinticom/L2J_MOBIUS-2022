@@ -78,7 +78,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				continue;
 			}
 			
-			Skill itemSkill = skillInfo.getSkill();
+			final Skill itemSkill = skillInfo.getSkill();
 			
 			if (itemSkill != null)
 			{
@@ -111,7 +111,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				// Send message to the master.
 				if (playable.isPet())
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
 					sm.addSkillName(itemSkill);
 					playable.sendPacket(sm);
 				}

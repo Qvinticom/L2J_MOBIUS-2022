@@ -71,7 +71,7 @@ public final class HitConditionBonusData implements IXmlReader
 	{
 		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
-			NamedNodeMap attrs = d.getAttributes();
+			final NamedNodeMap attrs = d.getAttributes();
 			switch (d.getNodeName())
 			{
 				case "front":

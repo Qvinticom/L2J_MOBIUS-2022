@@ -68,7 +68,7 @@ public final class DeleteHateOfMe extends AbstractEffect
 			return;
 		}
 		
-		L2Attackable target = (L2Attackable) info.getEffected();
+		final L2Attackable target = (L2Attackable) info.getEffected();
 		target.stopHating(info.getEffector());
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

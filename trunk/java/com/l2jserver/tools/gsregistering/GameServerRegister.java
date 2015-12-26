@@ -42,7 +42,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		super();
 		load();
 		
-		int size = GameServerTable.getInstance().getServerNames().size();
+		final int size = GameServerTable.getInstance().getServerNames().size();
 		if (size == 0)
 		{
 			System.out.println("No available names for GameServer, verify servername.xml file exists in the LoginServer folder.");
@@ -73,7 +73,7 @@ public class GameServerRegister extends BaseGameServerRegister
 				choice = _in.readLine();
 				try
 				{
-					int choiceNumber = Integer.parseInt(choice);
+					final int choiceNumber = Integer.parseInt(choice);
 					choiceOk = true;
 					
 					switch (choiceNumber)
@@ -139,9 +139,9 @@ public class GameServerRegister extends BaseGameServerRegister
 		
 		String id;
 		boolean inUse;
-		String gsInUse = "In Use";
-		String gsFree = "Free";
-		int gsStatusMaxLen = Math.max(gsInUse.length(), gsFree.length()) + 2;
+		final String gsInUse = "In Use";
+		final String gsFree = "Free";
+		final int gsStatusMaxLen = Math.max(gsInUse.length(), gsFree.length()) + 2;
 		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet())
 		{
 			id = e.getKey().toString();
@@ -162,7 +162,7 @@ public class GameServerRegister extends BaseGameServerRegister
 			System.out.print("| ");
 			
 			inUse = GameServerTable.getInstance().hasRegisteredGameServerOnId(e.getKey());
-			String inUseStr = (inUse ? gsInUse : gsFree);
+			final String inUseStr = (inUse ? gsInUse : gsFree);
 			System.out.print(inUseStr);
 			
 			for (int i = inUseStr.length(); i < gsStatusMaxLen; i++)
@@ -246,7 +246,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		}
 		while (id == Integer.MIN_VALUE);
 		
-		String name = GameServerTable.getInstance().getServerNameById(id);
+		final String name = GameServerTable.getInstance().getServerNameById(id);
 		if (name == null)
 		{
 			System.out.printf("No name for ID: %d" + Config.EOL, id);
@@ -295,7 +295,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		}
 		while (id == Integer.MIN_VALUE);
 		
-		String name = GameServerTable.getInstance().getServerNameById(id);
+		final String name = GameServerTable.getInstance().getServerNameById(id);
 		if (name == null)
 		{
 			System.out.printf("No name for ID: %d" + Config.EOL, id);

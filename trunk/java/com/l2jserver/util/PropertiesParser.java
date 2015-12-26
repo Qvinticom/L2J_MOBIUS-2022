@@ -65,13 +65,13 @@ public final class PropertiesParser
 	
 	private String getValue(String key)
 	{
-		String value = _properties.getProperty(key);
+		final String value = _properties.getProperty(key);
 		return value != null ? value.trim() : null;
 	}
 	
 	public boolean getBoolean(String key, boolean defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -95,7 +95,7 @@ public final class PropertiesParser
 	
 	public byte getByte(String key, byte defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -115,7 +115,7 @@ public final class PropertiesParser
 	
 	public short getShort(String key, short defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -135,7 +135,7 @@ public final class PropertiesParser
 	
 	public int getInt(String key, int defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -155,7 +155,7 @@ public final class PropertiesParser
 	
 	public long getLong(String key, long defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -175,7 +175,7 @@ public final class PropertiesParser
 	
 	public float getFloat(String key, float defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -195,7 +195,7 @@ public final class PropertiesParser
 	
 	public double getDouble(String key, double defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -215,7 +215,7 @@ public final class PropertiesParser
 	
 	public String getString(String key, String defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);
@@ -226,7 +226,7 @@ public final class PropertiesParser
 	
 	public <T extends Enum<T>> T getEnum(String key, Class<T> clazz, T defaultValue)
 	{
-		String value = getValue(key);
+		final String value = getValue(key);
 		if (value == null)
 		{
 			_log.warning("[" + _file.getName() + "] missing property for key: " + key + " using default value: " + defaultValue);

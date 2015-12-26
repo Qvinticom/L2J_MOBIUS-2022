@@ -141,7 +141,7 @@ public class PcInventory extends Inventory
 	
 	public L2ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -186,7 +186,7 @@ public class PcInventory extends Inventory
 	
 	public L2ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -237,7 +237,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -272,7 +272,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if (item == null)
@@ -296,7 +296,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item == null) || !item.isAvailable(getOwner(), allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
@@ -324,7 +324,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getAugmentedItems()
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAugmented())
@@ -341,7 +341,7 @@ public class PcInventory extends Inventory
 	 */
 	public L2ItemInstance[] getElementItems()
 	{
-		List<L2ItemInstance> list = new LinkedList<>();
+		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getElementals() != null))
@@ -359,12 +359,12 @@ public class PcInventory extends Inventory
 	 */
 	public TradeItem[] getAvailableItems(TradeList tradeList)
 	{
-		List<TradeItem> list = new LinkedList<>();
+		final List<TradeItem> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAvailable(getOwner(), false, false))
 			{
-				TradeItem adjItem = tradeList.adjustAvailableItem(item);
+				final TradeItem adjItem = tradeList.adjustAvailableItem(item);
 				if (adjItem != null)
 				{
 					list.add(adjItem);
@@ -398,7 +398,7 @@ public class PcInventory extends Inventory
 		}
 		if (notAllEquipped)
 		{
-			L2ItemInstance adjItem = getItemByItemId(item.getItem().getId());
+			final L2ItemInstance adjItem = getItemByItemId(item.getItem().getId());
 			item.setObjectId(adjItem.getObjectId());
 			item.setEnchant(adjItem.getEnchantLevel());
 			
@@ -542,7 +542,7 @@ public class PcInventory extends Inventory
 				// Send inventory update packet
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
-					InventoryUpdate playerIU = new InventoryUpdate();
+					final InventoryUpdate playerIU = new InventoryUpdate();
 					playerIU.addItem(item);
 					actor.sendPacket(playerIU);
 				}
@@ -575,7 +575,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
-		L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
+		final L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
 		if (item != null)
 		{
 			if ((item.getId() == ADENA_ID) && !item.equals(_adena))
@@ -597,7 +597,7 @@ public class PcInventory extends Inventory
 			// Send inventory update packet
 			if (!Config.FORCE_INVENTORY_UPDATE)
 			{
-				InventoryUpdate playerIU = new InventoryUpdate();
+				final InventoryUpdate playerIU = new InventoryUpdate();
 				playerIU.addItem(item);
 				actor.sendPacket(playerIU);
 			}
@@ -630,7 +630,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance transferItem(String process, int objectId, long count, ItemContainer target, L2PcInstance actor, Object reference)
 	{
-		L2ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
+		final L2ItemInstance item = super.transferItem(process, objectId, count, target, actor, reference);
 		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
@@ -720,7 +720,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance destroyItem(String process, int objectId, long count, L2PcInstance actor, Object reference)
 	{
-		L2ItemInstance item = getItemByObjectId(objectId);
+		final L2ItemInstance item = getItemByObjectId(objectId);
 		if (item == null)
 		{
 			return null;
@@ -740,7 +740,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance destroyItemByItemId(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
-		L2ItemInstance item = getItemByItemId(itemId);
+		final L2ItemInstance item = getItemByItemId(itemId);
 		if (item == null)
 		{
 			return null;
@@ -791,7 +791,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance dropItem(String process, int objectId, long count, L2PcInstance actor, Object reference)
 	{
-		L2ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
+		final L2ItemInstance item = super.dropItem(process, objectId, count, actor, reference);
 		
 		if ((_adena != null) && ((_adena.getCount() <= 0) || (_adena.getOwnerId() != getOwnerId())))
 		{
@@ -879,7 +879,7 @@ public class PcInventory extends Inventory
 	
 	public static int[][] restoreVisibleInventory(int objectId)
 	{
-		int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
+		final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
 		{
@@ -888,7 +888,7 @@ public class PcInventory extends Inventory
 			{
 				while (invdata.next())
 				{
-					int slot = invdata.getInt("loc_data");
+					final int slot = invdata.getInt("loc_data");
 					final ItemVariables vars = new ItemVariables(invdata.getInt("object_id"));
 					paperdoll[slot][0] = invdata.getInt("object_id");
 					paperdoll[slot][1] = invdata.getInt("item_id");
@@ -927,7 +927,7 @@ public class PcInventory extends Inventory
 			}
 		}
 		
-		boolean inventoryStatusOK = validateCapacity(requiredSlots) && validateWeight(lootWeight);
+		final boolean inventoryStatusOK = validateCapacity(requiredSlots) && validateWeight(lootWeight);
 		if (!inventoryStatusOK && sendMessage)
 		{
 			_owner.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);

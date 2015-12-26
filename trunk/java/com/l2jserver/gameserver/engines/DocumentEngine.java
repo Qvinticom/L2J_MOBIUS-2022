@@ -63,7 +63,7 @@ public class DocumentEngine
 	
 	private void hashFiles(String dirname, List<File> hash)
 	{
-		File dir = new File(Config.DATAPACK_ROOT, dirname);
+		final File dir = new File(Config.DATAPACK_ROOT, dirname);
 		if (!dir.exists())
 		{
 			_log.warning("Dir " + dir.getAbsolutePath() + " not exists");
@@ -87,7 +87,7 @@ public class DocumentEngine
 			_log.warning("Skill file not found.");
 			return null;
 		}
-		DocumentSkill doc = new DocumentSkill(file);
+		final DocumentSkill doc = new DocumentSkill(file);
 		doc.parse();
 		return doc.getSkills();
 	}
@@ -97,7 +97,7 @@ public class DocumentEngine
 		int count = 0;
 		for (File file : _skillFiles)
 		{
-			List<Skill> s = loadSkills(file);
+			final List<Skill> s = loadSkills(file);
 			if (s == null)
 			{
 				continue;
@@ -117,10 +117,10 @@ public class DocumentEngine
 	 */
 	public List<L2Item> loadItems()
 	{
-		List<L2Item> list = new ArrayList<>();
+		final List<L2Item> list = new ArrayList<>();
 		for (File f : _itemFiles)
 		{
-			DocumentItem document = new DocumentItem(f);
+			final DocumentItem document = new DocumentItem(f);
 			document.parse();
 			list.addAll(document.getItemList());
 		}

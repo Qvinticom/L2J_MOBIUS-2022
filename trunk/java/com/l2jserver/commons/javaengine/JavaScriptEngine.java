@@ -87,9 +87,9 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		{
 			if (_class == null)
 			{
-				Map<String, byte[]> classBytesCopy = new HashMap<>();
+				final Map<String, byte[]> classBytesCopy = new HashMap<>();
 				classBytesCopy.putAll(_classBytes);
-				MemoryClassLoader loader = new MemoryClassLoader(classBytesCopy, _classPath, JavaScriptEngine.getParentLoader(ctx));
+				final MemoryClassLoader loader = new MemoryClassLoader(classBytesCopy, _classPath, JavaScriptEngine.getParentLoader(ctx));
 				_class = JavaScriptEngine.parseMain(loader, ctx);
 			}
 			return JavaScriptEngine.evalClass(_class, ctx);
@@ -111,7 +111,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	@Override
 	public Object eval(String str, ScriptContext ctx) throws ScriptException
 	{
-		Class<?> clazz = parse(str, ctx);
+		final Class<?> clazz = parse(str, ctx);
 		return evalClass(clazz, ctx);
 	}
 	
@@ -149,9 +149,9 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private Class<?> parse(String str, ScriptContext ctx) throws ScriptException
 	{
-		String fileName = getFileName(ctx);
-		String sourcePath = getSourcePath(ctx);
-		String classPath = getClassPath(ctx);
+		final String fileName = getFileName(ctx);
+		final String sourcePath = getSourcePath(ctx);
+		final String classPath = getClassPath(ctx);
 		
 		Writer err = ctx.getErrorWriter();
 		if (err == null)
@@ -159,7 +159,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 			err = new StringWriter();
 		}
 		
-		Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
+		final Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
 		
 		if (classBytes == null)
 		{
@@ -171,19 +171,19 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		}
 		
 		// create a ClassLoader to load classes from MemoryJavaFileManager
-		MemoryClassLoader loader = new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx));
+		final MemoryClassLoader loader = new MemoryClassLoader(classBytes, classPath, getParentLoader(ctx));
 		return parseMain(loader, ctx);
 	}
 	
 	protected static Class<?> parseMain(MemoryClassLoader loader, ScriptContext ctx) throws ScriptException
 	{
-		String mainClassName = getMainClassName(ctx);
+		final String mainClassName = getMainClassName(ctx);
 		if (mainClassName != null)
 		{
 			try
 			{
-				Class<?> clazz = loader.load(mainClassName);
-				Method mainMethod = findMainMethod(clazz);
+				final Class<?> clazz = loader.load(mainClassName);
+				final Method mainMethod = findMainMethod(clazz);
 				if (mainMethod == null)
 				{
 					throw new ScriptException("no main method in " + mainClassName);
@@ -209,7 +209,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		}
 		
 		// search for class with main method
-		Class<?> c = findMainClass(classes);
+		final Class<?> c = findMainClass(classes);
 		if (c != null)
 		{
 			return c;
@@ -217,7 +217,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		
 		// if class with "main" method, then
 		// return first class
-		Iterator<Class<?>> itr = classes.iterator();
+		final Iterator<Class<?>> itr = classes.iterator();
 		if (itr.hasNext())
 		{
 			return itr.next();
@@ -227,9 +227,9 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private JavaCompiledScript compile(String str, ScriptContext ctx) throws ScriptException
 	{
-		String fileName = getFileName(ctx);
-		String sourcePath = getSourcePath(ctx);
-		String classPath = getClassPath(ctx);
+		final String fileName = getFileName(ctx);
+		final String sourcePath = getSourcePath(ctx);
+		final String classPath = getClassPath(ctx);
 		
 		Writer err = ctx.getErrorWriter();
 		if (err == null)
@@ -237,7 +237,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 			err = new StringWriter();
 		}
 		
-		Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
+		final Map<String, byte[]> classBytes = compiler.compile(fileName, str, err, sourcePath, classPath);
 		if (classBytes == null)
 		{
 			if (err instanceof StringWriter)
@@ -255,10 +255,10 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		// find a public class with public static main method
 		for (Class<?> clazz : classes)
 		{
-			int modifiers = clazz.getModifiers();
+			final int modifiers = clazz.getModifiers();
 			if (Modifier.isPublic(modifiers))
 			{
-				Method mainMethod = findMainMethod(clazz);
+				final Method mainMethod = findMainMethod(clazz);
 				if (mainMethod != null)
 				{
 					return clazz;
@@ -270,7 +270,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		// has public static main method
 		for (Class<?> clazz : classes)
 		{
-			Method mainMethod = findMainMethod(clazz);
+			final Method mainMethod = findMainMethod(clazz);
 			if (mainMethod != null)
 			{
 				return clazz;
@@ -286,11 +286,11 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	{
 		try
 		{
-			Method mainMethod = clazz.getMethod("main", new Class[]
+			final Method mainMethod = clazz.getMethod("main", new Class[]
 			{
 				String[].class
 			});
-			int modifiers = mainMethod.getModifiers();
+			final int modifiers = mainMethod.getModifiers();
 			if (Modifier.isPublic(modifiers) && Modifier.isStatic(modifiers))
 			{
 				return mainMethod;
@@ -307,11 +307,11 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	{
 		try
 		{
-			Method setCtxMethod = clazz.getMethod("setScriptContext", new Class[]
+			final Method setCtxMethod = clazz.getMethod("setScriptContext", new Class[]
 			{
 				ScriptContext.class
 			});
-			int modifiers = setCtxMethod.getModifiers();
+			final int modifiers = setCtxMethod.getModifiers();
 			if (Modifier.isPublic(modifiers) && Modifier.isStatic(modifiers))
 			{
 				return setCtxMethod;
@@ -325,7 +325,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getFileName(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope("javax.script.filename");
+		final int scope = ctx.getAttributesScope("javax.script.filename");
 		if (scope != -1)
 		{
 			return ctx.getAttribute("javax.script.filename", scope).toString();
@@ -342,10 +342,10 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String[] getArguments(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope(ARGUMENTS);
+		final int scope = ctx.getAttributesScope(ARGUMENTS);
 		if (scope != -1)
 		{
-			Object obj = ctx.getAttribute(ARGUMENTS, scope);
+			final Object obj = ctx.getAttribute(ARGUMENTS, scope);
 			if (obj instanceof String[])
 			{
 				return (String[]) obj;
@@ -359,7 +359,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getSourcePath(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope(SOURCEPATH);
+		final int scope = ctx.getAttributesScope(SOURCEPATH);
 		if (scope != -1)
 		{
 			return ctx.getAttribute(SOURCEPATH).toString();
@@ -373,7 +373,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getClassPath(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope(CLASSPATH);
+		final int scope = ctx.getAttributesScope(CLASSPATH);
 		if (scope != -1)
 		{
 			return ctx.getAttribute(CLASSPATH).toString();
@@ -392,7 +392,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	private static String getMainClassName(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope(MAINCLASS);
+		final int scope = ctx.getAttributesScope(MAINCLASS);
 		if (scope != -1)
 		{
 			return ctx.getAttribute(MAINCLASS).toString();
@@ -406,10 +406,10 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	
 	protected static ClassLoader getParentLoader(ScriptContext ctx)
 	{
-		int scope = ctx.getAttributesScope(PARENTLOADER);
+		final int scope = ctx.getAttributesScope(PARENTLOADER);
 		if (scope != -1)
 		{
-			Object loader = ctx.getAttribute(PARENTLOADER);
+			final Object loader = ctx.getAttribute(PARENTLOADER);
 			if (loader instanceof ClassLoader)
 			{
 				return (ClassLoader) loader;
@@ -428,10 +428,10 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 		}
 		try
 		{
-			boolean isPublicClazz = Modifier.isPublic(clazz.getModifiers());
+			final boolean isPublicClazz = Modifier.isPublic(clazz.getModifiers());
 			
 			// find the setScriptContext method
-			Method setCtxMethod = findSetScriptContextMethod(clazz);
+			final Method setCtxMethod = findSetScriptContextMethod(clazz);
 			// call setScriptContext and pass current ctx variable
 			if (setCtxMethod != null)
 			{
@@ -447,7 +447,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 			}
 			
 			// find the main method
-			Method mainMethod = findMainMethod(clazz);
+			final Method mainMethod = findMainMethod(clazz);
 			if (mainMethod != null)
 			{
 				if (!isPublicClazz)
@@ -457,7 +457,7 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 				}
 				
 				// get "command line" args for the main method
-				String args[] = getArguments(ctx);
+				final String args[] = getArguments(ctx);
 				
 				// call main method
 				mainMethod.invoke(null, new Object[]
@@ -479,8 +479,8 @@ public class JavaScriptEngine extends AbstractScriptEngine implements Compilable
 	// read a Reader fully and return the content as string
 	private String readFully(Reader reader) throws ScriptException
 	{
-		char[] arr = new char[8 * 1024]; // 8K at a time
-		StringBuilder buf = new StringBuilder();
+		final char[] arr = new char[8 * 1024]; // 8K at a time
+		final StringBuilder buf = new StringBuilder();
 		int numChars;
 		try
 		{

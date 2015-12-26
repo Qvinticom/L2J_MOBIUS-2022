@@ -176,7 +176,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 			_skill = getRndSkills(npc);
 			_target = getRandomTarget(npc, _skill);
 		}
-		L2Character target = _target;
+		final L2Character target = _target;
 		Skill skill = _skill;
 		if (skill == null)
 		{
@@ -213,7 +213,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 	private L2Character getRandomTarget(L2Npc npc, Skill skill)
 	{
 		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-		ArrayList<L2Character> result = new ArrayList<>();
+		final ArrayList<L2Character> result = new ArrayList<>();
 		{
 			for (L2Object obj : objs)
 			{
@@ -269,7 +269,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 		}
 		if (!result.isEmpty() && (result.size() != 0))
 		{
-			Object[] characters = result.toArray();
+			final Object[] characters = result.toArray();
 			return (L2Character) characters[Rnd.get(characters.length)];
 		}
 		return null;

@@ -70,7 +70,7 @@ public class JailHandler implements IPunishmentHandler
 		{
 			case CHARACTER:
 			{
-				int objectId = Integer.parseInt(String.valueOf(task.getKey()));
+				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
@@ -80,7 +80,7 @@ public class JailHandler implements IPunishmentHandler
 			}
 			case ACCOUNT:
 			{
-				String account = String.valueOf(task.getKey());
+				final String account = String.valueOf(task.getKey());
 				final L2GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
@@ -94,7 +94,7 @@ public class JailHandler implements IPunishmentHandler
 			}
 			case IP:
 			{
-				String ip = String.valueOf(task.getKey());
+				final String ip = String.valueOf(task.getKey());
 				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
@@ -114,7 +114,7 @@ public class JailHandler implements IPunishmentHandler
 		{
 			case CHARACTER:
 			{
-				int objectId = Integer.parseInt(String.valueOf(task.getKey()));
+				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
@@ -124,7 +124,7 @@ public class JailHandler implements IPunishmentHandler
 			}
 			case ACCOUNT:
 			{
-				String account = String.valueOf(task.getKey());
+				final String account = String.valueOf(task.getKey());
 				final L2GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
@@ -138,7 +138,7 @@ public class JailHandler implements IPunishmentHandler
 			}
 			case IP:
 			{
-				String ip = String.valueOf(task.getKey());
+				final String ip = String.valueOf(task.getKey());
 				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
@@ -188,7 +188,7 @@ public class JailHandler implements IPunishmentHandler
 		player.sendPacket(msg);
 		if (task != null)
 		{
-			long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
+			final long delay = ((task.getExpirationTime() - System.currentTimeMillis()) / 1000);
 			if (delay > 0)
 			{
 				player.sendMessage("You've been jailed for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));
@@ -210,7 +210,7 @@ public class JailHandler implements IPunishmentHandler
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_out.htm");
+		final String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_out.htm");
 		if (content != null)
 		{
 			msg.setHtml(content);

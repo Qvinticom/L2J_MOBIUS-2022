@@ -40,7 +40,7 @@ public final class RequestUpdateBlockMemo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		player.getBlockList().setBlockMemo(CharNameTable.getInstance().getIdByName(cName), memo);
 		player.sendPacket(new BlockListPacket(player));
 	}

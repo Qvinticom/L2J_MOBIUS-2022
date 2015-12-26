@@ -61,8 +61,8 @@ public class SummonSkillsTable
 					_skillTrees.put(npcId, skillTree);
 				}
 				
-				int id = rs.getInt("skillId");
-				int lvl = rs.getInt("skillLvl");
+				final int id = rs.getInt("skillId");
+				final int lvl = rs.getInt("skillLvl");
 				skillTree.put(SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl, rs.getInt("minLvl")));
 				count++;
 			}
@@ -82,7 +82,7 @@ public class SummonSkillsTable
 			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + cha.getId() + " does not have any skills assigned.");
 			return lvl;
 		}
-		Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
+		final Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
 		for (L2PetSkillLearn temp : skills)
 		{
 			if (temp.getId() != skillId)
@@ -105,7 +105,7 @@ public class SummonSkillsTable
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
-				int maxLvl = SkillData.getInstance().getMaxLevel(temp.getId());
+				final int maxLvl = SkillData.getInstance().getMaxLevel(temp.getId());
 				if (lvl > maxLvl)
 				{
 					lvl = maxLvl;
@@ -125,13 +125,13 @@ public class SummonSkillsTable
 	
 	public List<Integer> getAvailableSkills(L2Summon cha)
 	{
-		List<Integer> skillIds = new ArrayList<>();
+		final List<Integer> skillIds = new ArrayList<>();
 		if (!_skillTrees.containsKey(cha.getId()))
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + cha.getId() + " does not have any skills assigned.");
 			return skillIds;
 		}
-		Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
+		final Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
 		for (L2PetSkillLearn temp : skills)
 		{
 			if (skillIds.contains(temp.getId()))

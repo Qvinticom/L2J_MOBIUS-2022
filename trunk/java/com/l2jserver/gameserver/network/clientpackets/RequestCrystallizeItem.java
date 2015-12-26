@@ -61,7 +61,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -87,7 +87,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 			return;
 		}
 		
-		int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
+		final int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
 		if (skillLevel <= 0)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
@@ -99,10 +99,10 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 			return;
 		}
 		
-		PcInventory inventory = activeChar.getInventory();
+		final PcInventory inventory = activeChar.getInventory();
 		if (inventory != null)
 		{
-			L2ItemInstance item = inventory.getItemByObjectId(_objectId);
+			final L2ItemInstance item = inventory.getItemByObjectId(_objectId);
 			if (item == null)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -206,8 +206,8 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 		SystemMessage sm;
 		if (itemToRemove.isEquipped())
 		{
-			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
-			InventoryUpdate iu = new InventoryUpdate();
+			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance item : unequiped)
 			{
 				iu.addModifiedItem(item);

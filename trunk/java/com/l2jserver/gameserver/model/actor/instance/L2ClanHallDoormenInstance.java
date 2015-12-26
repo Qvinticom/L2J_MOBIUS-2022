@@ -72,7 +72,7 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 		{
 			if (isOwnerClan(player))
 			{
-				StringTokenizer st = new StringTokenizer(command, " ");
+				final StringTokenizer st = new StringTokenizer(command, " ");
 				if (st.countTokens() < 2)
 				{
 					return;
@@ -123,7 +123,7 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 		
 		if (getClanHall() != null)
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(getClanHall().getOwnerId());
+			final L2Clan owner = ClanTable.getInstance().getClan(getClanHall().getOwnerId());
 			if (isOwnerClan(player))
 			{
 				if (_hasEvolve)

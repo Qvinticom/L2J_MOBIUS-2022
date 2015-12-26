@@ -39,12 +39,12 @@ public final class SnoopQuit extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = L2World.getInstance().getPlayer(_snoopID);
+		final L2PcInstance player = L2World.getInstance().getPlayer(_snoopID);
 		if (player == null)
 		{
 			return;
 		}
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;

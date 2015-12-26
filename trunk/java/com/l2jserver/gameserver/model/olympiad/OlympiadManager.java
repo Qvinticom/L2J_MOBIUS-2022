@@ -122,7 +122,7 @@ public class OlympiadManager
 			{
 				if (showMessage)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_3_VS_3_CLASS_IRRELEVANT_TEAM_MATCH);
 					sm.addPcName(noble);
 					player.sendPacket(sm);
 				}
@@ -297,7 +297,7 @@ public class OlympiadManager
 				}
 				
 				int teamPoints = 0;
-				List<Integer> team = new ArrayList<>(party.getMemberCount());
+				final List<Integer> team = new ArrayList<>(party.getMemberCount());
 				for (L2PcInstance noble : party.getMembers())
 				{
 					if (!checkNoble(noble, player))
@@ -376,7 +376,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		Integer objId = Integer.valueOf(noble.getObjectId());
+		final Integer objId = Integer.valueOf(noble.getObjectId());
 		if (_nonClassBasedRegisters.remove(objId))
 		{
 			if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
@@ -560,7 +560,7 @@ public class OlympiadManager
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST);
 			for (int objectId : _team)
 			{
-				L2PcInstance teamMember = L2World.getInstance().getPlayer(objectId);
+				final L2PcInstance teamMember = L2World.getInstance().getPlayer(objectId);
 				if (teamMember != null)
 				{
 					teamMember.sendPacket(sm);

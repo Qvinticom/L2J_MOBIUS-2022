@@ -36,13 +36,13 @@ public class PetStatusUpdate extends L2GameServerPacket
 		_summon = summon;
 		if (_summon instanceof L2PetInstance)
 		{
-			L2PetInstance pet = (L2PetInstance) _summon;
+			final L2PetInstance pet = (L2PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
 		else if (_summon instanceof L2ServitorInstance)
 		{
-			L2ServitorInstance sum = (L2ServitorInstance) _summon;
+			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
 			_maxFed = sum.getLifeTime();
 		}

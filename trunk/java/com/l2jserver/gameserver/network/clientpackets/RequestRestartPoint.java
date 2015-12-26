@@ -69,7 +69,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -92,7 +92,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		final Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 		if ((castle != null) && castle.getSiege().isInProgress())
 		{
 			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
@@ -116,7 +116,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 		Castle castle = null;
 		Fort fort = null;
 		SiegableHall hall = null;
-		boolean isInDefense = false;
+		final boolean isInDefense = false;
 		int instanceId = 0;
 		
 		// force jail

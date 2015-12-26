@@ -55,7 +55,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
+		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
 		
 		// Get fort
@@ -74,7 +74,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Object target = activeChar.getTarget();
+			final L2Object target = activeChar.getTarget();
 			L2PcInstance player = null;
 			if (target instanceof L2PcInstance)
 			{
@@ -126,7 +126,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_removefort"))
 			{
-				L2Clan clan = fort.getOwnerClan();
+				final L2Clan clan = fort.getOwnerClan();
 				if (clan != null)
 				{
 					fort.removeOwner(true);

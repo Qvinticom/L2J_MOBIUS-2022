@@ -42,7 +42,7 @@ public interface IAmountMultiplierStrategy
 			{
 				multiplier *= item.getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS_AMOUNT : Config.L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT;
 			}
-			Float dropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
+			final Float dropAmountMultiplier = Config.RATE_DROP_AMOUNT_MULTIPLIER.get(item.getItemId());
 			if (dropAmountMultiplier != null)
 			{
 				multiplier *= dropAmountMultiplier;

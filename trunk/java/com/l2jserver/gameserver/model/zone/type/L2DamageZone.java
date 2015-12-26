@@ -110,7 +110,7 @@ public class L2DamageZone extends L2ZoneType
 	{
 		if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0)))
 		{
-			L2PcInstance player = character.getActingPlayer();
+			final L2PcInstance player = character.getActingPlayer();
 			if (getCastle() != null) // Castle zone
 			{
 				if (!(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
@@ -204,7 +204,7 @@ public class L2DamageZone extends L2ZoneType
 						}
 					}
 					
-					double multiplier = 1 + (temp.calcStat(Stats.DAMAGE_ZONE_VULN, 0, null, null) / 100);
+					final double multiplier = 1 + (temp.calcStat(Stats.DAMAGE_ZONE_VULN, 0, null, null) / 100);
 					
 					if (getHPDamagePerSecond() != 0)
 					{

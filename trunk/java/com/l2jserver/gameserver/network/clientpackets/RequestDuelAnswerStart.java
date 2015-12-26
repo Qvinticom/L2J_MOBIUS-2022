@@ -46,13 +46,13 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2PcInstance requestor = player.getActiveRequester();
+		final L2PcInstance requestor = player.getActiveRequester();
 		if (requestor == null)
 		{
 			return;
@@ -98,7 +98,7 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 		}
 		else if (_response == -1)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_DUEL_REQUESTS_AND_CANNOT_RECEIVE_A_DUEL_REQUEST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_DUEL_REQUESTS_AND_CANNOT_RECEIVE_A_DUEL_REQUEST);
 			sm.addPcName(player);
 			requestor.sendPacket(sm);
 		}

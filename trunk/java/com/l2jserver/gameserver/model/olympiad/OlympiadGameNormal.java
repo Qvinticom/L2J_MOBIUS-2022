@@ -91,7 +91,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				continue;
 			}
 			
-			Participant[] result = new Participant[2];
+			final Participant[] result = new Participant[2];
 			result[0] = new Participant(playerOne, 1);
 			result[1] = new Participant(playerTwo, 2);
 			
@@ -323,8 +323,8 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		boolean tie = false;
 		int winside = 0;
 		
-		List<OlympiadInfo> list1 = new ArrayList<>(1);
-		List<OlympiadInfo> list2 = new ArrayList<>(1);
+		final List<OlympiadInfo> list1 = new ArrayList<>(1);
+		final List<OlympiadInfo> list2 = new ArrayList<>(1);
 		
 		final boolean _pOneCrash = ((_playerOne.getPlayer() == null) || _playerOne.isDisconnected());
 		final boolean _pTwoCrash = ((_playerTwo.getPlayer() == null) || _playerTwo.isDisconnected());
@@ -361,7 +361,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " default");
+							final LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " default");
 							record.setParameters(new Object[]
 							{
 								_playerOne.getName(),
@@ -400,7 +400,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " default");
+							final LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " default");
 							record.setParameters(new Object[]
 							{
 								_playerOne.getName(),
@@ -463,7 +463,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " crash");
+						final LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " crash");
 						record.setParameters(new Object[]
 						{
 							_playerOne.getName(),
@@ -501,7 +501,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " crash");
+						final LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " crash");
 						record.setParameters(new Object[]
 						{
 							_playerOne.getName(),
@@ -534,7 +534,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, "both crash");
+						final LogRecord record = new LogRecord(Level.INFO, "both crash");
 						record.setParameters(new Object[]
 						{
 							_playerOne.getName(),
@@ -584,7 +584,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			String winner = "draw";
 			
 			// Calculate Fight time
-			long _fightTime = (System.currentTimeMillis() - _startTime);
+			final long _fightTime = (System.currentTimeMillis() - _startTime);
 			
 			double playerOneHp = 0;
 			if ((_playerOne.getPlayer() != null) && !_playerOne.getPlayer().isDead())
@@ -706,7 +706,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			
 			if (Config.ALT_OLY_LOG_FIGHTS)
 			{
-				LogRecord record = new LogRecord(Level.INFO, winner);
+				final LogRecord record = new LogRecord(Level.INFO, winner);
 				record.setParameters(new Object[]
 				{
 					_playerOne.getName(),

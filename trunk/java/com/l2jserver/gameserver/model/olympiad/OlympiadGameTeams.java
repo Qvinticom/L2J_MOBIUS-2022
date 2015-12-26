@@ -106,8 +106,8 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		List<Integer> teamOne = null;
 		List<Integer> teamTwo = null;
 		L2PcInstance player;
-		List<L2PcInstance> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
-		List<L2PcInstance> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		final List<L2PcInstance> teamOnePlayers = new ArrayList<>(MAX_TEAM_SIZE);
+		final List<L2PcInstance> teamTwoPlayers = new ArrayList<>(MAX_TEAM_SIZE);
 		
 		while (list.size() > 1)
 		{
@@ -158,9 +158,9 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				continue;
 			}
 			
-			Participant[] t1 = new Participant[teamOnePlayers.size()];
-			Participant[] t2 = new Participant[teamTwoPlayers.size()];
-			Participant[][] result = new Participant[2][];
+			final Participant[] t1 = new Participant[teamOnePlayers.size()];
+			final Participant[] t2 = new Participant[teamTwoPlayers.size()];
+			final Participant[][] result = new Participant[2][];
 			
 			for (int i = 0; i < t1.length; i++)
 			{
@@ -565,8 +565,8 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		boolean tie = false;
 		int winside = 0;
 		
-		List<OlympiadInfo> list1 = new ArrayList<>(3);
-		List<OlympiadInfo> list2 = new ArrayList<>(3);
+		final List<OlympiadInfo> list1 = new ArrayList<>(3);
+		final List<OlympiadInfo> list2 = new ArrayList<>(3);
 		
 		final boolean tOneCrash = teamOneAllDisconnected();
 		final boolean tTwoCrash = teamTwoAllDisconnected();
@@ -586,7 +586,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 					{
 						par = _teamOne[i];
 						points = par.getStats().getInt(POINTS) / getDivider();
-						int val = Math.min(par.getStats().getInt(POINTS) / 3, Config.ALT_OLY_MAX_POINTS);
+						final int val = Math.min(par.getStats().getInt(POINTS) / 3, Config.ALT_OLY_MAX_POINTS);
 						removePointsFromParticipant(par, val);
 						list1.add(new OlympiadInfo(par.getName(), par.getClanName(), par.getClanId(), par.getBaseClass(), _damageT1, points - val, -val));
 					}
@@ -598,7 +598,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 					{
 						par = _teamTwo[i];
 						points = par.getStats().getInt(POINTS) / getDivider();
-						int val = Math.min(par.getStats().getInt(POINTS) / 3, Config.ALT_OLY_MAX_POINTS);
+						final int val = Math.min(par.getStats().getInt(POINTS) / 3, Config.ALT_OLY_MAX_POINTS);
 						removePointsFromParticipant(par, val);
 						list2.add(new OlympiadInfo(par.getName(), par.getClanName(), par.getClanId(), par.getBaseClass(), _damageT2, points - val, -val));
 					}

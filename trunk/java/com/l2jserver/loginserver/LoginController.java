@@ -89,7 +89,7 @@ public class LoginController
 		KeyPairGenerator keygen = null;
 		
 		keygen = KeyPairGenerator.getInstance("RSA");
-		RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
+		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
 		keygen.initialize(spec);
 		
 		// generate the initial set of keys
@@ -104,7 +104,7 @@ public class LoginController
 		// Store keys for blowfish communication
 		generateBlowFishKeys();
 		
-		Thread purge = new PurgeThread();
+		final Thread purge = new PurgeThread();
 		purge.setDaemon(true);
 		purge.start();
 	}
@@ -118,7 +118,7 @@ public class LoginController
 	private void testCipher(RSAPrivateKey key) throws GeneralSecurityException
 	{
 		// avoid worst-case execution, KenM
-		Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+		final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 		rsaCipher.init(Cipher.DECRYPT_MODE, key);
 	}
 	
@@ -214,9 +214,9 @@ public class LoginController
 	{
 		try
 		{
-			MessageDigest md = MessageDigest.getInstance("SHA");
-			byte[] raw = password.getBytes(StandardCharsets.UTF_8);
-			String hashBase64 = Base64.getEncoder().encodeToString(md.digest(raw));
+			final MessageDigest md = MessageDigest.getInstance("SHA");
+			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
+			final String hashBase64 = Base64.getEncoder().encodeToString(md.digest(raw));
 			
 			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(USER_INFO_SELECT))
@@ -232,7 +232,7 @@ public class LoginController
 							_log.fine("Account '" + login + "' exists.");
 						}
 						
-						AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"));
+						final AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"));
 						if (!info.checkPassHash(hashBase64))
 						{
 							// wrong password
@@ -329,7 +329,7 @@ public class LoginController
 	
 	public boolean isBannedAddress(InetAddress address) throws UnknownHostException
 	{
-		String[] parts = address.getHostAddress().split("\\.");
+		final String[] parts = address.getHostAddress().split("\\.");
 		Long bi = _bannedIps.get(address);
 		if (bi == null)
 		{
@@ -390,7 +390,7 @@ public class LoginController
 	
 	public SessionKey getKeyForAccount(String account)
 	{
-		L2LoginClient client = _loginServerClients.get(account);
+		final L2LoginClient client = _loginServerClients.get(account);
 		if (client != null)
 		{
 			return client.getSessionKey();
@@ -400,10 +400,10 @@ public class LoginController
 	
 	public boolean isAccountInAnyGameServer(String account)
 	{
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		for (GameServerInfo gsi : serverList)
 		{
-			GameServerThread gst = gsi.getGameServerThread();
+			final GameServerThread gst = gsi.getGameServerThread();
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
 				return true;
@@ -414,10 +414,10 @@ public class LoginController
 	
 	public GameServerInfo getAccountOnGameServer(String account)
 	{
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		for (GameServerInfo gsi : serverList)
 		{
-			GameServerThread gst = gsi.getGameServerThread();
+			final GameServerThread gst = gsi.getGameServerThread();
 			if ((gst != null) && gst.hasAccountOnGameServer(account))
 			{
 				return gsi;
@@ -428,7 +428,7 @@ public class LoginController
 	
 	public void getCharactersOnAccount(String account)
 	{
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		for (GameServerInfo gsi : serverList)
 		{
 			if (gsi.isAuthed())
@@ -445,11 +445,11 @@ public class LoginController
 	 */
 	public boolean isLoginPossible(L2LoginClient client, int serverId)
 	{
-		GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
-		int access = client.getAccessLevel();
+		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
+		final int access = client.getAccessLevel();
 		if ((gsi != null) && gsi.isAuthed())
 		{
-			boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
+			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
 			
 			if (loginOk && (client.getLastServer() != serverId))
 			{
@@ -506,7 +506,7 @@ public class LoginController
 	
 	public void setCharactersOnServer(String account, int charsNum, long[] timeToDel, int serverId)
 	{
-		L2LoginClient client = _loginServerClients.get(account);
+		final L2LoginClient client = _loginServerClients.get(account);
 		
 		if (client == null)
 		{
@@ -545,8 +545,8 @@ public class LoginController
 	{
 		try
 		{
-			List<InetAddress> ipWhiteList = new ArrayList<>();
-			List<InetAddress> ipBlackList = new ArrayList<>();
+			final List<InetAddress> ipWhiteList = new ArrayList<>();
+			final List<InetAddress> ipBlackList = new ArrayList<>();
 			try (Connection con = ConnectionFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(ACCOUNT_IPAUTH_SELECT))
 			{
@@ -613,7 +613,7 @@ public class LoginController
 	
 	public boolean isValidIPAddress(String ipAddress)
 	{
-		String[] parts = ipAddress.split("\\.");
+		final String[] parts = ipAddress.split("\\.");
 		if (parts.length != 4)
 		{
 			return false;
@@ -621,7 +621,7 @@ public class LoginController
 		
 		for (String s : parts)
 		{
-			int i = Integer.parseInt(s);
+			final int i = Integer.parseInt(s);
 			if ((i < 0) || (i > 255))
 			{
 				return false;

@@ -48,7 +48,7 @@ public class ConditionTargetWeight extends Condition
 			final L2PcInstance target = effected.getActingPlayer();
 			if (!target.getDietMode() && (target.getMaxLoad() > 0))
 			{
-				int weightproc = (((target.getCurrentLoad() - target.getBonusWeightPenalty()) * 100) / target.getMaxLoad());
+				final int weightproc = (((target.getCurrentLoad() - target.getBonusWeightPenalty()) * 100) / target.getMaxLoad());
 				return (weightproc < _weight);
 			}
 		}

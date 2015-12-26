@@ -49,7 +49,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 		{
 			if (command.startsWith("admin_open "))
 			{
-				int doorId = Integer.parseInt(command.substring(11));
+				final int doorId = Integer.parseInt(command.substring(11));
 				if (_doorTable.getDoor(doorId) != null)
 				{
 					_doorTable.getDoor(doorId).openMe();
@@ -67,7 +67,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else if (command.startsWith("admin_close "))
 			{
-				int doorId = Integer.parseInt(command.substring(12));
+				final int doorId = Integer.parseInt(command.substring(12));
 				if (_doorTable.getDoor(doorId) != null)
 				{
 					_doorTable.getDoor(doorId).closeMe();
@@ -113,7 +113,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			if (command.equals("admin_open"))
 			{
-				L2Object target = activeChar.getTarget();
+				final L2Object target = activeChar.getTarget();
 				if (target instanceof L2DoorInstance)
 				{
 					((L2DoorInstance) target).openMe();
@@ -126,7 +126,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			
 			if (command.equals("admin_close"))
 			{
-				L2Object target = activeChar.getTarget();
+				final L2Object target = activeChar.getTarget();
 				if (target instanceof L2DoorInstance)
 				{
 					((L2DoorInstance) target).closeMe();

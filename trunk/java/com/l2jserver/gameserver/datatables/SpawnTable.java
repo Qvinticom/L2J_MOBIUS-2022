@@ -90,7 +90,7 @@ public final class SpawnTable implements IXmlReader
 	 */
 	private boolean checkTemplate(int npcId)
 	{
-		L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 		if (npcTemplate == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Data missing in NPC table for ID: " + npcId + ".");
@@ -198,7 +198,7 @@ public final class SpawnTable implements IXmlReader
 									continue;
 								}
 								
-								StatsSet spawnInfo = new StatsSet();
+								final StatsSet spawnInfo = new StatsSet();
 								spawnInfo.set("npcTemplateid", templateId);
 								spawnInfo.set("x", x);
 								spawnInfo.set("y", y);
@@ -229,7 +229,7 @@ public final class SpawnTable implements IXmlReader
 								
 								if (attrs.getNamedItem("periodOfDay") != null)
 								{
-									String period = attrs.getNamedItem("periodOfDay").getNodeValue();
+									final String period = attrs.getNamedItem("periodOfDay").getNodeValue();
 									if (period.equalsIgnoreCase("day") || period.equalsIgnoreCase("night"))
 									{
 										spawnInfo.set("periodOfDay", period.equalsIgnoreCase("day") ? 1 : 2);
@@ -259,8 +259,8 @@ public final class SpawnTable implements IXmlReader
 		{
 			while (rs.next())
 			{
-				StatsSet spawnInfo = new StatsSet();
-				int npcId = rs.getInt("npc_templateid");
+				final StatsSet spawnInfo = new StatsSet();
+				final int npcId = rs.getInt("npc_templateid");
 				
 				// Check basic requirements first
 				if (!checkTemplate(npcId))
@@ -310,8 +310,8 @@ public final class SpawnTable implements IXmlReader
 			spawnDat.setHeading(spawnInfo.getInt("heading", -1));
 			spawnDat.setRespawnDelay(spawnInfo.getInt("respawnDelay", 0), spawnInfo.getInt("respawnRandom", 0));
 			spawnDat.setLocationId(spawnInfo.getInt("locId", 0));
-			String territoryName = spawnInfo.getString("territoryName", "");
-			String spawnName = spawnInfo.getString("spawnName", "");
+			final String territoryName = spawnInfo.getString("territoryName", "");
+			final String spawnName = spawnInfo.getString("spawnName", "");
 			spawnDat.setCustom(spawnInfo.getBoolean("isCustomSpawn", false));
 			if (!spawnName.isEmpty())
 			{
@@ -479,7 +479,7 @@ public final class SpawnTable implements IXmlReader
 		final Set<L2Spawn> set = _spawnTable.get(spawn.getId());
 		if (set != null)
 		{
-			boolean removed = set.remove(spawn);
+			final boolean removed = set.remove(spawn);
 			if (set.isEmpty())
 			{
 				_spawnTable.remove(spawn.getId());

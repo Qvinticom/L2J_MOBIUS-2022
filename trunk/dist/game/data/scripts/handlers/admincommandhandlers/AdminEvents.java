@@ -56,7 +56,7 @@ public class AdminEvents implements IAdminCommandHandler
 		
 		String event_name = "";
 		String _event_bypass = "";
-		StringTokenizer st = new StringTokenizer(command, " ");
+		final StringTokenizer st = new StringTokenizer(command, " ");
 		st.nextToken();
 		if (st.hasMoreTokens())
 		{
@@ -78,7 +78,7 @@ public class AdminEvents implements IAdminCommandHandler
 			{
 				if (event_name != null)
 				{
-					Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
 					if (event != null)
 					{
 						if (event.eventStart(activeChar))
@@ -105,7 +105,7 @@ public class AdminEvents implements IAdminCommandHandler
 			{
 				if (event_name != null)
 				{
-					Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
 					if (event != null)
 					{
 						if (event.eventStop())
@@ -132,7 +132,7 @@ public class AdminEvents implements IAdminCommandHandler
 			{
 				if (event_name != null)
 				{
-					Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
 					if (event != null)
 					{
 						event.eventBypass(activeChar, _event_bypass);

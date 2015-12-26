@@ -55,16 +55,16 @@ public final class DeathLink extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
 		{
@@ -73,7 +73,7 @@ public final class DeathLink extends AbstractEffect
 		
 		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		if (damage > 0)
 		{

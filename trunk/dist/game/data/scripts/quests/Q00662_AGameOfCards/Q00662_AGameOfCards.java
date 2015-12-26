@@ -255,12 +255,12 @@ public final class Q00662_AGameOfCards extends Quest
 			{
 				final int cond = st.getInt("v1");
 				int i1 = st.getInt("ExMemoState");
-				int i5 = i1 % 100;
+				final int i5 = i1 % 100;
 				int i9 = i1 / 100;
 				i1 = cond % 100;
-				int i2 = (cond % 10000) / 100;
-				int i3 = (cond % 1000000) / 10000;
-				int i4 = (cond % 100000000) / 1000000;
+				final int i2 = (cond % 10000) / 100;
+				final int i3 = (cond % 1000000) / 10000;
+				final int i4 = (cond % 100000000) / 1000000;
 				switch (event)
 				{
 					case "turncard1":
@@ -633,14 +633,14 @@ public final class Q00662_AGameOfCards extends Quest
 				}
 				else if (st.getInt("ExMemoState") != 0)
 				{
-					int i0 = st.getInt("v1");
+					final int i0 = st.getInt("v1");
 					int i1 = st.getInt("ExMemoState");
-					int i5 = i1 % 100;
-					int i9 = i1 / 100;
+					final int i5 = i1 % 100;
+					final int i9 = i1 / 100;
 					i1 = i0 % 100;
-					int i2 = (i0 % 10000) / 100;
-					int i3 = (i0 % 1000000) / 10000;
-					int i4 = (i0 % 100000000) / 1000000;
+					final int i2 = (i0 % 10000) / 100;
+					final int i3 = (i0 % 1000000) / 10000;
+					final int i4 = (i0 % 100000000) / 1000000;
 					htmltext = getHtm(player.getHtmlPrefix(), "30845-11a.html");
 					
 					if ((i9 % 2) < 1)

@@ -100,7 +100,7 @@ public final class RequestRestart extends L2GameClientPacket
 		
 		final L2GameClient client = getClient();
 		
-		LogRecord record = new LogRecord(Level.INFO, "Logged out");
+		final LogRecord record = new LogRecord(Level.INFO, "Logged out");
 		record.setParameters(new Object[]
 		{
 			client

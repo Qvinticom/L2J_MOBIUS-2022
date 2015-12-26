@@ -43,8 +43,8 @@ public final class ResistSkill extends AbstractEffect
 		
 		for (int i = 1;; i++)
 		{
-			int skillId = params.getInt("skillId" + i, 0);
-			int skillLvl = params.getInt("skillLvl" + i, 0);
+			final int skillId = params.getInt("skillId" + i, 0);
+			final int skillLvl = params.getInt("skillLvl" + i, 0);
 			if (skillId == 0)
 			{
 				break;

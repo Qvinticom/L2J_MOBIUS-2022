@@ -236,10 +236,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void exitInstance(L2PcInstance player)
 	{
-		InstanceWorld inst = InstanceManager.getInstance().getWorld(player.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(player.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = ((NornilsWorld) inst);
 			world.removeAllowed(player.getObjectId());
 			teleportPlayer(player, EXIT_PPL, 0);
 		}
@@ -258,7 +258,7 @@ public final class NornilsGarden extends AbstractInstance
 			// check for level difference again on reenter
 			if ((player.getLevel() > INSTANCE_LVL_MAX) || (player.getLevel() < INSTANCE_LVL_MIN))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return null;
@@ -272,7 +272,7 @@ public final class NornilsGarden extends AbstractInstance
 			return null;
 		}
 		// Creating new instance
-		String result = checkConditions(npc, player);
+		final String result = checkConditions(npc, player);
 		if (!(result.equalsIgnoreCase("ok")))
 		{
 			return result;
@@ -321,10 +321,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn1(L2Npc npc)
 	{
-		InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = ((NornilsWorld) inst);
 			if (npc.equals(world.first_npc) && !world.spawned_1)
 			{
 				world.spawned_1 = true;
@@ -339,10 +339,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn2(L2Npc npc)
 	{
-		InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = ((NornilsWorld) inst);
 			if (!world.spawned_2)
 			{
 				world.spawned_2 = true;
@@ -357,10 +357,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn3(L2Character cha)
 	{
-		InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = ((NornilsWorld) inst);
 			if (!world.spawned_3)
 			{
 				world.spawned_3 = true;
@@ -375,10 +375,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn4(L2Character cha)
 	{
-		InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
 		if (inst instanceof NornilsWorld)
 		{
-			NornilsWorld world = ((NornilsWorld) inst);
+			final NornilsWorld world = ((NornilsWorld) inst);
 			if (!world.spawned_4)
 			{
 				world.spawned_4 = true;
@@ -394,7 +394,7 @@ public final class NornilsGarden extends AbstractInstance
 	public void openDoor(QuestState st, L2PcInstance player, int doorId)
 	{
 		st.unset("correct");
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 		if (tmpworld instanceof NornilsWorld)
 		{
 			openDoor(doorId, tmpworld.getInstanceId());
@@ -423,21 +423,21 @@ public final class NornilsGarden extends AbstractInstance
 			// player level must be in range
 			if (partyMember.getLevel() > INSTANCE_LVL_MAX)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
 			}
 			if (partyMember.getLevel() < INSTANCE_LVL_MIN)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-07.html";
 			}
 			if (partyMember.getClassId().level() != 0)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-06.html";
@@ -445,7 +445,7 @@ public final class NornilsGarden extends AbstractInstance
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 500, true, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return "32330-08.html";
@@ -467,7 +467,7 @@ public final class NornilsGarden extends AbstractInstance
 	{
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if (tmpworld instanceof NornilsWorld)
 			{
 				for (int _auto[] : _auto_gates)
@@ -495,7 +495,7 @@ public final class NornilsGarden extends AbstractInstance
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -536,7 +536,7 @@ public final class NornilsGarden extends AbstractInstance
 			}
 			else if (event.equalsIgnoreCase("check"))
 			{
-				int correct = st.getInt("correct");
+				final int correct = st.getInt("correct");
 				if ((npc.getId() == 32260) && (correct == 3))
 				{
 					openDoor(st, player, 16200014);
@@ -611,7 +611,7 @@ public final class NornilsGarden extends AbstractInstance
 				// Check if gatekeeper should open bridge, and open it
 				if (_gk[2] > 0)
 				{
-					InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 					if (tmpworld instanceof NornilsWorld)
 					{
 						openDoor(_gk[2], tmpworld.getInstanceId());

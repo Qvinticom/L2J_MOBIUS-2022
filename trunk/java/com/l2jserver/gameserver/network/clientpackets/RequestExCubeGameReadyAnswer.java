@@ -44,7 +44,7 @@ public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		
 		if (player == null)
 		{

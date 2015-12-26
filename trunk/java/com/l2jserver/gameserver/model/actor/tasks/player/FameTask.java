@@ -51,7 +51,7 @@ public class FameTask implements Runnable
 			return;
 		}
 		_player.setFame(_player.getFame() + _value);
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_FAME);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_FAME);
 		sm.addInt(_value);
 		_player.sendPacket(sm);
 		_player.sendPacket(new UserInfo(_player));

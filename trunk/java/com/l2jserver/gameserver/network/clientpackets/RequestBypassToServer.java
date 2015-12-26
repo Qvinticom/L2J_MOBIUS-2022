@@ -133,9 +133,9 @@ public final class RequestBypassToServer extends L2GameClientPacket
 		{
 			if (_command.startsWith("admin_"))
 			{
-				String command = _command.split(" ")[0];
+				final String command = _command.split(" ")[0];
 				
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
+				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
 				
 				if (ach == null)
 				{
@@ -157,7 +157,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				if (AdminData.getInstance().requireConfirm(command))
 				{
 					activeChar.setAdminConfirmCmd(_command);
-					ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S13);
+					final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S13);
 					dlg.addString("Are you sure you want execute command " + _command.substring(6) + " ?");
 					activeChar.addAction(PlayerAction.ADMIN_COMMAND);
 					activeChar.sendPacket(dlg);
@@ -182,7 +182,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.startsWith("npc_"))
 			{
-				int endOfId = _command.indexOf('_', 5);
+				final int endOfId = _command.indexOf('_', 5);
 				String id;
 				if (endOfId > 0)
 				{
@@ -194,7 +194,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				}
 				if (Util.isDigit(id))
 				{
-					L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
+					final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 					
 					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
 					{
@@ -206,7 +206,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.startsWith("item_"))
 			{
-				int endOfId = _command.indexOf('_', 5);
+				final int endOfId = _command.indexOf('_', 5);
 				String id;
 				if (endOfId > 0)
 				{
@@ -233,11 +233,11 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.startsWith("_match"))
 			{
-				String params = _command.substring(_command.indexOf("?") + 1);
-				StringTokenizer st = new StringTokenizer(params, "&");
-				int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-				int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-				int heroid = Hero.getInstance().getHeroByClass(heroclass);
+				final String params = _command.substring(_command.indexOf("?") + 1);
+				final StringTokenizer st = new StringTokenizer(params, "&");
+				final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
+				final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
+				final int heroid = Hero.getInstance().getHeroByClass(heroclass);
 				if (heroid > 0)
 				{
 					Hero.getInstance().showHeroFights(activeChar, heroclass, heroid, heropage);
@@ -245,11 +245,11 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.startsWith("_diary"))
 			{
-				String params = _command.substring(_command.indexOf("?") + 1);
-				StringTokenizer st = new StringTokenizer(params, "&");
-				int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
-				int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
-				int heroid = Hero.getInstance().getHeroByClass(heroclass);
+				final String params = _command.substring(_command.indexOf("?") + 1);
+				final StringTokenizer st = new StringTokenizer(params, "&");
+				final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
+				final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
+				final int heroid = Hero.getInstance().getHeroByClass(heroclass);
 				if (heroid > 0)
 				{
 					Hero.getInstance().showHeroDiary(activeChar, heroclass, heroid, heropage);
@@ -257,7 +257,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (_command.startsWith("_olympiad?command"))
 			{
-				int arenaId = Integer.parseInt(_command.split("=")[2]);
+				final int arenaId = Integer.parseInt(_command.split("=")[2]);
 				final IBypassHandler handler = BypassHandler.getInstance().getHandler("arenachange");
 				if (handler != null)
 				{
@@ -304,7 +304,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				{
 					if (bypassOriginId > 0)
 					{
-						L2Object bypassOrigin = activeChar.getKnownList().getKnownObjects().get(bypassOriginId);
+						final L2Object bypassOrigin = activeChar.getKnownList().getKnownObjects().get(bypassOriginId);
 						if ((bypassOrigin != null) && bypassOrigin.isInstanceTypes(InstanceType.L2Character))
 						{
 							handler.useBypass(_command, activeChar, (L2Character) bypassOrigin);
@@ -331,7 +331,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			
 			if (activeChar.isGM())
 			{
-				StringBuilder sb = new StringBuilder(200);
+				final StringBuilder sb = new StringBuilder(200);
 				sb.append("<html><body>");
 				sb.append("Bypass error: " + e + "<br1>");
 				sb.append("Bypass command: " + _command + "<br1>");
@@ -356,14 +356,14 @@ public final class RequestBypassToServer extends L2GameClientPacket
 	 */
 	private static void comeHere(L2PcInstance activeChar)
 	{
-		L2Object obj = activeChar.getTarget();
+		final L2Object obj = activeChar.getTarget();
 		if (obj == null)
 		{
 			return;
 		}
 		if (obj instanceof L2Npc)
 		{
-			L2Npc temp = (L2Npc) obj;
+			final L2Npc temp = (L2Npc) obj;
 			temp.setTarget(activeChar);
 			temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, activeChar.getLocation());
 		}

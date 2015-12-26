@@ -51,7 +51,7 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -74,14 +74,14 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 			{
 				if (PetitionManager.getInstance().cancelActivePetition(activeChar))
 				{
-					int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
+					final int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
 					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY);
 					sm.addString(String.valueOf(numRemaining));
 					activeChar.sendPacket(sm);
 					
 					// Notify all GMs that the player's pending petition has been cancelled.
-					String msgContent = activeChar.getName() + " has canceled a pending petition.";
+					final String msgContent = activeChar.getName() + " has canceled a pending petition.";
 					AdminData.getInstance().broadcastToGMs(new CreatureSay(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
 				}
 				else

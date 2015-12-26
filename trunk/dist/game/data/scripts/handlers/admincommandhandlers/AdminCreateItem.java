@@ -53,20 +53,20 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(17);
-				StringTokenizer st = new StringTokenizer(val);
+				final String val = command.substring(17);
+				final StringTokenizer st = new StringTokenizer(val);
 				if (st.countTokens() == 2)
 				{
-					String id = st.nextToken();
-					int idval = Integer.parseInt(id);
-					String num = st.nextToken();
-					long numval = Long.parseLong(num);
+					final String id = st.nextToken();
+					final int idval = Integer.parseInt(id);
+					final String num = st.nextToken();
+					final long numval = Long.parseLong(num);
 					createItem(activeChar, activeChar, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
-					String id = st.nextToken();
-					int idval = Integer.parseInt(id);
+					final String id = st.nextToken();
+					final int idval = Integer.parseInt(id);
 					createItem(activeChar, activeChar, idval, 1);
 				}
 			}
@@ -84,23 +84,23 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(17);
-				StringTokenizer st = new StringTokenizer(val);
+				final String val = command.substring(17);
+				final StringTokenizer st = new StringTokenizer(val);
 				if (st.countTokens() == 2)
 				{
-					String name = st.nextToken();
-					int idval = getCoinId(name);
+					final String name = st.nextToken();
+					final int idval = getCoinId(name);
 					if (idval > 0)
 					{
-						String num = st.nextToken();
-						long numval = Long.parseLong(num);
+						final String num = st.nextToken();
+						final long numval = Long.parseLong(num);
 						createItem(activeChar, activeChar, idval, numval);
 					}
 				}
 				else if (st.countTokens() == 1)
 				{
-					String name = st.nextToken();
-					int idval = getCoinId(name);
+					final String name = st.nextToken();
+					final int idval = getCoinId(name);
 					createItem(activeChar, activeChar, idval, 1);
 				}
 			}
@@ -129,20 +129,20 @@ public class AdminCreateItem implements IAdminCommandHandler
 					return false;
 				}
 				
-				String val = command.substring(22);
-				StringTokenizer st = new StringTokenizer(val);
+				final String val = command.substring(22);
+				final StringTokenizer st = new StringTokenizer(val);
 				if (st.countTokens() == 2)
 				{
-					String id = st.nextToken();
-					int idval = Integer.parseInt(id);
-					String num = st.nextToken();
-					long numval = Long.parseLong(num);
+					final String id = st.nextToken();
+					final int idval = Integer.parseInt(id);
+					final String num = st.nextToken();
+					final long numval = Long.parseLong(num);
 					createItem(activeChar, target, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
-					String id = st.nextToken();
-					int idval = Integer.parseInt(id);
+					final String id = st.nextToken();
+					final int idval = Integer.parseInt(id);
 					createItem(activeChar, target, idval, 1);
 				}
 			}
@@ -158,25 +158,25 @@ public class AdminCreateItem implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_give_item_to_all"))
 		{
-			String val = command.substring(22);
-			StringTokenizer st = new StringTokenizer(val);
+			final String val = command.substring(22);
+			final StringTokenizer st = new StringTokenizer(val);
 			int idval = 0;
 			long numval = 0;
 			if (st.countTokens() == 2)
 			{
-				String id = st.nextToken();
+				final String id = st.nextToken();
 				idval = Integer.parseInt(id);
-				String num = st.nextToken();
+				final String num = st.nextToken();
 				numval = Long.parseLong(num);
 			}
 			else if (st.countTokens() == 1)
 			{
-				String id = st.nextToken();
+				final String id = st.nextToken();
 				idval = Integer.parseInt(id);
 				numval = 1;
 			}
 			int counter = 0;
-			L2Item template = ItemTable.getInstance().getTemplate(idval);
+			final L2Item template = ItemTable.getInstance().getTemplate(idval);
 			if (template == null)
 			{
 				activeChar.sendMessage("This item doesn't exist.");
@@ -209,7 +209,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	
 	private void createItem(L2PcInstance activeChar, L2PcInstance target, int id, long num)
 	{
-		L2Item template = ItemTable.getInstance().getTemplate(id);
+		final L2Item template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
 		{
 			activeChar.sendMessage("This item doesn't exist.");

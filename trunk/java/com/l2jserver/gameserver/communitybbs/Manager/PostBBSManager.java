@@ -66,11 +66,11 @@ public class PostBBSManager extends BaseBBSManager
 	{
 		if (command.startsWith("_bbsposts;read;"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
-			int idf = Integer.parseInt(st.nextToken());
-			int idp = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idp = Integer.parseInt(st.nextToken());
 			String index = null;
 			if (st.hasMoreTokens())
 			{
@@ -90,12 +90,12 @@ public class PostBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbsposts;edit;"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
-			int idf = Integer.parseInt(st.nextToken());
-			int idt = Integer.parseInt(st.nextToken());
-			int idp = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idt = Integer.parseInt(st.nextToken());
+			final int idp = Integer.parseInt(st.nextToken());
 			showEditPost((TopicBBSManager.getInstance().getTopicByID(idt)), ForumsBBSManager.getInstance().getForumByID(idf), activeChar, idp);
 		}
 		else
@@ -149,9 +149,9 @@ public class PostBBSManager extends BaseBBSManager
 	
 	private void showMemoPost(Topic topic, L2PcInstance activeChar, Forum forum)
 	{
-		Post p = getGPosttByTopic(topic);
-		Locale locale = Locale.getDefault();
-		DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
+		final Post p = getGPosttByTopic(topic);
+		final Locale locale = Locale.getDefault();
+		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
 		
 		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
 		mes = mes.replace("<", "&lt;");
@@ -163,19 +163,19 @@ public class PostBBSManager extends BaseBBSManager
 	@Override
 	public void parsewrite(String ar1, String ar2, String ar3, String ar4, String ar5, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(ar1, ";");
-		int idf = Integer.parseInt(st.nextToken());
-		int idt = Integer.parseInt(st.nextToken());
-		int idp = Integer.parseInt(st.nextToken());
+		final StringTokenizer st = new StringTokenizer(ar1, ";");
+		final int idf = Integer.parseInt(st.nextToken());
+		final int idt = Integer.parseInt(st.nextToken());
+		final int idp = Integer.parseInt(st.nextToken());
 		
-		Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
+		final Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
 		if (f == null)
 		{
 			CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the forum: " + idf + " does not exist !</center><br><br></body></html>", activeChar);
 		}
 		else
 		{
-			Topic t = f.getTopic(idt);
+			final Topic t = f.getTopic(idt);
 			if (t == null)
 			{
 				CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the topic: " + idt + " does not exist !</center><br><br></body></html>", activeChar);

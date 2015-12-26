@@ -43,7 +43,7 @@ public class FriendList extends L2GameServerPacket
 		writeD(_friends.size());
 		for (Friend friend : _friends)
 		{
-			L2PcInstance player = friend.getFriend();
+			final L2PcInstance player = friend.getFriend();
 			if (player != null)
 			{
 				writeD(player.getObjectId());

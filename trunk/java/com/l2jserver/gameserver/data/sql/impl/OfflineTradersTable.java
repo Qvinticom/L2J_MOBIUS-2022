@@ -154,10 +154,10 @@ public class OfflineTradersTable
 		{
 			while (rs.next())
 			{
-				long time = rs.getLong("time");
+				final long time = rs.getLong("time");
 				if (Config.OFFLINE_MAX_DAYS > 0)
 				{
-					Calendar cal = Calendar.getInstance();
+					final Calendar cal = Calendar.getInstance();
 					cal.setTimeInMillis(time);
 					cal.add(Calendar.DAY_OF_YEAR, Config.OFFLINE_MAX_DAYS);
 					if (cal.getTimeInMillis() <= System.currentTimeMillis())
@@ -166,7 +166,7 @@ public class OfflineTradersTable
 					}
 				}
 				
-				PrivateStoreType type = PrivateStoreType.findById(rs.getInt("type"));
+				final PrivateStoreType type = PrivateStoreType.findById(rs.getInt("type"));
 				if (type == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": PrivateStoreType with id " + rs.getInt("type") + " could not be found.");
@@ -182,7 +182,7 @@ public class OfflineTradersTable
 				
 				try
 				{
-					L2GameClient client = new L2GameClient(null);
+					final L2GameClient client = new L2GameClient(null);
 					client.setDetached(true);
 					player = L2PcInstance.load(rs.getInt("charId"));
 					client.setActiveChar(player);

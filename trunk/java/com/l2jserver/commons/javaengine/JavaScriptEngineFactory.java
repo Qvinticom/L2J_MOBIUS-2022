@@ -69,7 +69,7 @@ public class JavaScriptEngineFactory implements ScriptEngineFactory
 	@Override
 	public String getMethodCallSyntax(String obj, String m, String... args)
 	{
-		StringBuilder buf = new StringBuilder();
+		final StringBuilder buf = new StringBuilder();
 		buf.append(obj);
 		buf.append('.');
 		buf.append(m);
@@ -102,12 +102,12 @@ public class JavaScriptEngineFactory implements ScriptEngineFactory
 	@Override
 	public String getOutputStatement(String toDisplay)
 	{
-		StringBuilder buf = new StringBuilder();
+		final StringBuilder buf = new StringBuilder();
 		buf.append("System.out.print(\"");
-		int len = toDisplay.length();
+		final int len = toDisplay.length();
 		for (int i = 0; i < len; i++)
 		{
-			char ch = toDisplay.charAt(i);
+			final char ch = toDisplay.charAt(i);
 			switch (ch)
 			{
 				case 34: // '"'
@@ -161,7 +161,7 @@ public class JavaScriptEngineFactory implements ScriptEngineFactory
 		// we generate a Main class with main method
 		// that contains all the given statements
 		
-		StringBuilder buf = new StringBuilder();
+		final StringBuilder buf = new StringBuilder();
 		buf.append("class ");
 		buf.append(getClassName());
 		buf.append(" {\n");
@@ -183,7 +183,7 @@ public class JavaScriptEngineFactory implements ScriptEngineFactory
 	@Override
 	public ScriptEngine getScriptEngine()
 	{
-		JavaScriptEngine engine = new JavaScriptEngine();
+		final JavaScriptEngine engine = new JavaScriptEngine();
 		engine.setFactory(this);
 		return engine;
 	}

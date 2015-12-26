@@ -68,7 +68,7 @@ public class ScriptPackage
 	{
 		for (Enumeration<? extends ZipEntry> e = pack.entries(); e.hasMoreElements();)
 		{
-			ZipEntry entry = e.nextElement();
+			final ZipEntry entry = e.nextElement();
 			if (entry.getName().endsWith(".xml"))
 			{
 				try
@@ -103,7 +103,7 @@ public class ScriptPackage
 			return "Empty Package.";
 		}
 		
-		StringBuilder out = new StringBuilder();
+		final StringBuilder out = new StringBuilder();
 		out.append("Package Name: ");
 		out.append(getName());
 		out.append(Config.EOL);

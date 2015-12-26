@@ -52,7 +52,7 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			try
 			{
-				String healTarget = command.substring(11);
+				final String healTarget = command.substring(11);
 				handleHeal(activeChar, healTarget);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -84,7 +84,7 @@ public class AdminHeal implements IAdminCommandHandler
 		L2Object obj = activeChar.getTarget();
 		if (player != null)
 		{
-			L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+			final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
 			
 			if (plyr != null)
 			{
@@ -94,13 +94,13 @@ public class AdminHeal implements IAdminCommandHandler
 			{
 				try
 				{
-					int radius = Integer.parseInt(player);
-					Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
+					final int radius = Integer.parseInt(player);
+					final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
 					for (L2Object object : objs)
 					{
 						if (object instanceof L2Character)
 						{
-							L2Character character = (L2Character) object;
+							final L2Character character = (L2Character) object;
 							character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
 							if (object instanceof L2PcInstance)
 							{
@@ -123,7 +123,7 @@ public class AdminHeal implements IAdminCommandHandler
 		}
 		if (obj instanceof L2Character)
 		{
-			L2Character target = (L2Character) obj;
+			final L2Character target = (L2Character) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
 			if (target instanceof L2PcInstance)
 			{

@@ -88,7 +88,7 @@ public class ClanTable
 		{
 			while (rs.next())
 			{
-				int clanId = rs.getInt("clan_id");
+				final int clanId = rs.getInt("clan_id");
 				_clans.put(clanId, new L2Clan(clanId));
 				clan = getClan(clanId);
 				if (clan.getDissolvingExpiryTime() != 0)
@@ -186,14 +186,14 @@ public class ClanTable
 		if (null != getClanByName(clanName))
 		{
 			// clan name is already taken
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 			sm.addString(clanName);
 			player.sendPacket(sm);
 			return null;
 		}
 		
-		L2Clan clan = new L2Clan(IdFactory.getInstance().getNextId(), clanName);
-		L2ClanMember leader = new L2ClanMember(clan, player);
+		final L2Clan clan = new L2Clan(IdFactory.getInstance().getNextId(), clanName);
+		final L2ClanMember leader = new L2ClanMember(clan, player);
 		clan.setLeader(leader);
 		leader.setPlayerInstance(player);
 		clan.store();
@@ -217,14 +217,14 @@ public class ClanTable
 	
 	public synchronized void destroyClan(int clanId)
 	{
-		L2Clan clan = getClan(clanId);
+		final L2Clan clan = getClan(clanId);
 		if (clan == null)
 		{
 			return;
 		}
 		
 		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
-		int castleId = clan.getCastleId();
+		final int castleId = clan.getCastleId();
 		if (castleId == 0)
 		{
 			for (Siege siege : SiegeManager.getInstance().getSieges())
@@ -233,7 +233,7 @@ public class ClanTable
 			}
 		}
 		
-		int fortId = clan.getFortId();
+		final int fortId = clan.getFortId();
 		if (fortId == 0)
 		{
 			for (FortSiege siege : FortSiegeManager.getInstance().getSieges())
@@ -242,7 +242,7 @@ public class ClanTable
 			}
 		}
 		
-		int hallId = clan.getHideoutId();
+		final int hallId = clan.getHideoutId();
 		if (hallId == 0)
 		{
 			for (SiegableHall hall : CHSiegeManager.getInstance().getConquerableHalls().values())
@@ -251,13 +251,13 @@ public class ClanTable
 			}
 		}
 		
-		Auction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
+		final Auction auction = ClanHallAuctionManager.getInstance().getAuction(clan.getAuctionBiddedAt());
 		if (auction != null)
 		{
 			auction.cancelBid(clan.getId());
 		}
 		
-		L2ClanMember leaderMember = clan.getLeader();
+		final L2ClanMember leaderMember = clan.getLeader();
 		if (leaderMember == null)
 		{
 			clan.getWarehouse().destroyAllItems("ClanRemove", null, null);
@@ -325,10 +325,10 @@ public class ClanTable
 			
 			if (fortId != 0)
 			{
-				Fort fort = FortManager.getInstance().getFortById(fortId);
+				final Fort fort = FortManager.getInstance().getFortById(fortId);
 				if (fort != null)
 				{
-					L2Clan owner = fort.getOwnerClan();
+					final L2Clan owner = fort.getOwnerClan();
 					if (clan == owner)
 					{
 						fort.removeOwner(true);
@@ -338,7 +338,7 @@ public class ClanTable
 			
 			if (hallId != 0)
 			{
-				SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
+				final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
 				if ((hall != null) && (hall.getOwnerId() == clanId))
 				{
 					hall.free();
@@ -424,8 +424,8 @@ public class ClanTable
 	
 	public void deleteclanswars(int clanId1, int clanId2)
 	{
-		L2Clan clan1 = getClan(clanId1);
-		L2Clan clan2 = getClan(clanId2);
+		final L2Clan clan1 = getClan(clanId1);
+		final L2Clan clan2 = getClan(clanId2);
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
 		
@@ -508,7 +508,7 @@ public class ClanTable
 	{
 		for (L2Clan clan : _clans.values())
 		{
-			int allyId = clan.getAllyId();
+			final int allyId = clan.getAllyId();
 			if ((allyId != 0) && (clan.getId() != allyId))
 			{
 				if (!_clans.containsKey(allyId))

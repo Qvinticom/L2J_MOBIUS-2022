@@ -169,7 +169,7 @@ public class PlayableStat extends CharStat
 			}
 		}
 		
-		boolean levelIncreased = ((getLevel() + value) > getLevel());
+		final boolean levelIncreased = ((getLevel() + value) > getLevel());
 		value += getLevel();
 		setLevel(value);
 		
@@ -202,7 +202,7 @@ public class PlayableStat extends CharStat
 			_log.warning("wrong usage");
 			return false;
 		}
-		long currentSp = getSp();
+		final long currentSp = getSp();
 		if (currentSp == Long.MAX_VALUE)
 		{
 			return false;
@@ -219,7 +219,7 @@ public class PlayableStat extends CharStat
 	
 	public boolean removeSp(long value)
 	{
-		long currentSp = getSp();
+		final long currentSp = getSp();
 		if (currentSp < value)
 		{
 			value = currentSp;

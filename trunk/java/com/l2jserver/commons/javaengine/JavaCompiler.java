@@ -52,7 +52,7 @@ public class JavaCompiler
 	
 	public Map<String, byte[]> compile(String source, String fileName)
 	{
-		PrintWriter err = new PrintWriter(System.err);
+		final PrintWriter err = new PrintWriter(System.err);
 		return compile(source, fileName, err, null, null);
 	}
 	
@@ -78,17 +78,17 @@ public class JavaCompiler
 	public Map<String, byte[]> compile(String fileName, String source, Writer err, String sourcePath, String classPath)
 	{
 		// to collect errors, warnings etc.
-		DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
+		final DiagnosticCollector<JavaFileObject> diagnostics = new DiagnosticCollector<>();
 		
 		// create a new memory JavaFileManager
-		MemoryJavaFileManager manager = new MemoryJavaFileManager();
+		final MemoryJavaFileManager manager = new MemoryJavaFileManager();
 		
 		// prepare the compilation unit
-		List<JavaFileObject> compUnits = new ArrayList<>(1);
+		final List<JavaFileObject> compUnits = new ArrayList<>(1);
 		compUnits.add(MemoryJavaFileManager.makeStringSource(fileName, source));
 		
 		// javac options
-		List<String> options = new ArrayList<>();
+		final List<String> options = new ArrayList<>();
 		options.add("-warn:-enumSwitch");
 		options.add("-g");
 		options.add("-deprecation");
@@ -105,11 +105,11 @@ public class JavaCompiler
 		}
 		
 		// create a compilation task
-		CompilationTask task = tool.getTask(err, manager, diagnostics, options, null, compUnits);
+		final CompilationTask task = tool.getTask(err, manager, diagnostics, options, null, compUnits);
 		
 		if (!task.call())
 		{
-			PrintWriter perr = new PrintWriter(err);
+			final PrintWriter perr = new PrintWriter(err);
 			for (Diagnostic<?> diagnostic : diagnostics.getDiagnostics())
 			{
 				perr.println(diagnostic.getMessage(Locale.getDefault()));
@@ -118,7 +118,7 @@ public class JavaCompiler
 			return null;
 		}
 		
-		Map<String, byte[]> classBytes = manager.getClassBytes();
+		final Map<String, byte[]> classBytes = manager.getClassBytes();
 		manager.close();
 		return classBytes;
 	}

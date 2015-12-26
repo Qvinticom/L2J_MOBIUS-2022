@@ -53,8 +53,8 @@ public final class Lethal extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		if (activeChar.isPlayer() && !activeChar.getAccessLevel().canGiveDamage())
 		{
 			return;
@@ -70,7 +70,7 @@ public final class Lethal extends AbstractEffect
 			return;
 		}
 		
-		double chanceMultiplier = Formulas.calcAttributeBonus(activeChar, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(activeChar, target, info.getSkill().getTraitType(), false);
+		final double chanceMultiplier = Formulas.calcAttributeBonus(activeChar, target, info.getSkill()) * Formulas.calcGeneralTraitBonus(activeChar, target, info.getSkill().getTraitType(), false);
 		// Lethal Strike
 		if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
 		{

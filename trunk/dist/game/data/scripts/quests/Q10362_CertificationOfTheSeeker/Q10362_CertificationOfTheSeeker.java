@@ -188,7 +188,7 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 				}
 			}
 			
-			ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			log.addNpc(CRAWLER, qs.getInt(Integer.toString(CRAWLER)));
 			log.addNpc(STALKER, qs.getInt(Integer.toString(STALKER)));
 			killer.sendPacket(log);

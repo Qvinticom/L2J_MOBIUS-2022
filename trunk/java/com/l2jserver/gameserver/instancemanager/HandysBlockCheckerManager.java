@@ -74,8 +74,8 @@ public final class HandysBlockCheckerManager
 	 */
 	public synchronized void increaseArenaVotes(int arena)
 	{
-		int newVotes = _arenaVotes.get(arena) + 1;
-		ArenaParticipantsHolder holder = _arenaPlayers[arena];
+		final int newVotes = _arenaVotes.get(arena) + 1;
+		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 		
 		if ((newVotes > (holder.getAllPlayers().size() / 2)) && !holder.getEvent().isStarted())
 		{
@@ -149,7 +149,7 @@ public final class HandysBlockCheckerManager
 	 */
 	public boolean addPlayerToArena(L2PcInstance player, int arenaId)
 	{
-		ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
+		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		
 		synchronized (holder)
 		{
@@ -159,7 +159,7 @@ public final class HandysBlockCheckerManager
 			{
 				if (_arenaPlayers[i].getAllPlayers().contains(player))
 				{
-					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST);
+					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST);
 					msg.addCharName(player);
 					player.sendPacket(msg);
 					return false;
@@ -224,16 +224,16 @@ public final class HandysBlockCheckerManager
 	 */
 	public void removePlayer(L2PcInstance player, int arenaId, int team)
 	{
-		ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
+		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
 		synchronized (holder)
 		{
-			boolean isRed = team == 0 ? true : false;
+			final boolean isRed = team == 0 ? true : false;
 			
 			holder.removePlayer(player, team);
 			holder.broadCastPacketToTeam(new ExCubeGameRemovePlayer(player, isRed));
 			
 			// End event if theres an empty team
-			int teamSize = isRed ? holder.getRedTeamSize() : holder.getBlueTeamSize();
+			final int teamSize = isRed ? holder.getRedTeamSize() : holder.getBlueTeamSize();
 			if (teamSize == 0)
 			{
 				holder.getEvent().endEventAbnormally();
@@ -252,11 +252,11 @@ public final class HandysBlockCheckerManager
 	 */
 	public void changePlayerToTeam(L2PcInstance player, int arena, int team)
 	{
-		ArenaParticipantsHolder holder = _arenaPlayers[arena];
+		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
 		
 		synchronized (holder)
 		{
-			boolean isFromRed = holder.getRedPlayers().contains(player);
+			final boolean isFromRed = holder.getRedPlayers().contains(player);
 			
 			if (isFromRed && (holder.getBlueTeamSize() == 6))
 			{
@@ -269,7 +269,7 @@ public final class HandysBlockCheckerManager
 				return;
 			}
 			
-			int futureTeam = isFromRed ? 1 : 0;
+			final int futureTeam = isFromRed ? 1 : 0;
 			holder.addPlayer(player, futureTeam);
 			
 			if (isFromRed)
@@ -331,8 +331,8 @@ public final class HandysBlockCheckerManager
 	 */
 	public void onDisconnect(L2PcInstance player)
 	{
-		int arena = player.getBlockCheckerArena();
-		int team = getHolder(arena).getPlayerTeam(player);
+		final int arena = player.getBlockCheckerArena();
+		final int team = getHolder(arena).getPlayerTeam(player);
 		HandysBlockCheckerManager.getInstance().removePlayer(player, arena, team);
 		if (player.getTeam() != Team.NONE)
 		{
@@ -341,16 +341,16 @@ public final class HandysBlockCheckerManager
 			player.setTeam(Team.NONE);
 			
 			// Remove the event items
-			PcInventory inv = player.getInventory();
+			final PcInventory inv = player.getInventory();
 			
 			if (inv.getItemByItemId(13787) != null)
 			{
-				long count = inv.getInventoryItemCount(13787, 0);
+				final long count = inv.getInventoryItemCount(13787, 0);
 				inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
 			}
 			if (inv.getItemByItemId(13788) != null)
 			{
-				long count = inv.getInventoryItemCount(13788, 0);
+				final long count = inv.getInventoryItemCount(13788, 0);
 				inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
 			}
 			player.setInsideZone(ZoneId.PVP, false);

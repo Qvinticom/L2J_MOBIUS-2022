@@ -202,7 +202,7 @@ public class L2Event
 	{
 		SpawnTable.getInstance().forEachSpawn(spawn ->
 		{
-			L2Npc npc = spawn.getLastSpawn();
+			final L2Npc npc = spawn.getLastSpawn();
 			if ((npc != null) && npc.isEventMob())
 			{
 				npc.deleteMe();
@@ -289,9 +289,9 @@ public class L2Event
 				player.getPoly().setPolyInfo(null, "1");
 				player.decayMe();
 				player.spawnMe(player.getX(), player.getY(), player.getZ());
-				CharInfo info1 = new CharInfo(player);
+				final CharInfo info1 = new CharInfo(player);
 				player.broadcastPacket(info1);
-				UserInfo info2 = new UserInfo(player);
+				final UserInfo info2 = new UserInfo(player);
 				player.sendPacket(info2);
 				
 				player.stopTransformation(true);
@@ -305,7 +305,7 @@ public class L2Event
 			player.setEventStatus(null);
 			
 			_registeredPlayers.remove(player);
-			int teamId = getPlayerTeamId(player);
+			final int teamId = getPlayerTeamId(player);
 			if (_teams.containsKey(teamId))
 			{
 				_teams.get(teamId).remove(player);
@@ -379,7 +379,7 @@ public class L2Event
 				_eventInfo = br.readLine();
 			}
 			
-			List<L2PcInstance> temp = new LinkedList<>();
+			final List<L2PcInstance> temp = new LinkedList<>();
 			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (!player.isOnline())

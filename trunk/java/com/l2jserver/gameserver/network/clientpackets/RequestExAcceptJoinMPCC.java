@@ -41,10 +41,10 @@ public final class RequestExAcceptJoinMPCC extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player != null)
 		{
-			L2PcInstance requestor = player.getActiveRequester();
+			final L2PcInstance requestor = player.getActiveRequester();
 			SystemMessage sm;
 			if (requestor == null)
 			{

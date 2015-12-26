@@ -40,13 +40,13 @@ public final class RequestVoteNew extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		L2Object object = activeChar.getTarget();
+		final L2Object object = activeChar.getTarget();
 		
 		if (!(object instanceof L2PcInstance))
 		{
@@ -61,7 +61,7 @@ public final class RequestVoteNew extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance target = (L2PcInstance) object;
+		final L2PcInstance target = (L2PcInstance) object;
 		
 		if (target.getObjectId() != _targetId)
 		{

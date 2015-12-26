@@ -54,7 +54,7 @@ public class MonsterRace
 		
 		for (int i = 0; i < 8; i++)
 		{
-			int id = 31003;
+			final int id = 31003;
 			random = Rnd.get(24);
 			while (true)
 			{
@@ -70,8 +70,8 @@ public class MonsterRace
 			}
 			try
 			{
-				L2NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
-				Constructor<?> constructor = Class.forName("com.l2jserver.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
+				final L2NpcTemplate template = NpcData.getInstance().getTemplate(id + random);
+				final Constructor<?> constructor = Class.forName("com.l2jserver.gameserver.model.actor.instance." + template.getType() + "Instance").getConstructors()[0];
 				_monsters[i] = (L2Npc) constructor.newInstance(template);
 			}
 			catch (Exception e)

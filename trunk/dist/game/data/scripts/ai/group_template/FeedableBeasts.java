@@ -165,7 +165,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		{
 			int[][] temp;
 			temp = _spiceToMob.get(spice);
-			int rand = getRandom(temp[0].length);
+			final int rand = getRandom(temp[0].length);
 			return temp[0][rand];
 		}
 		
@@ -359,7 +359,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 	
 	private void spawnNext(L2Npc npc, int growthLevel, L2PcInstance player, int food)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		int nextNpcId = 0;
 		
 		// find the next mob to spawn, based on the current npcId, growthlevel, and food.
@@ -442,8 +442,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			// also, perform a rare random chat
 			if (getRandom(20) == 0)
 			{
-				NpcStringId message = NpcStringId.getNpcStringId(getRandom(2024, 2029));
-				NpcSay packet = new NpcSay(nextNpc, ChatType.NPC_GENERAL, message);
+				final NpcStringId message = NpcStringId.getNpcStringId(getRandom(2024, 2029));
+				final NpcSay packet = new NpcSay(nextNpc, ChatType.NPC_GENERAL, message);
 				if (message.getParamCount() > 0) // player name, $s1
 				{
 					packet.addStringParameter(player.getName());
@@ -469,7 +469,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		{
 			// if not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
-			L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
+			final L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
 			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
@@ -499,7 +499,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 				// despawn the mad cow
 				npc.deleteMe();
 				// spawn the new mob
-				L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
+				final L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
 				
 				// register the player in the feedinfo for the mob that just spawned
 				FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
@@ -521,8 +521,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
-		int npcId = npc.getId();
-		int skillId = skill.getId();
+		final int npcId = npc.getId();
+		final int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
 		if ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE))
 		{
@@ -530,7 +530,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		}
 		
 		// first gather some values on local variables
-		int objectId = npc.getObjectId();
+		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
 		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
@@ -571,8 +571,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			// rare random talk...
 			if (getRandom(20) == 0)
 			{
-				NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
-				NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
+				final NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
+				final NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
 				if (message.getParamCount() > 0) // player name, $s1
 				{
 					packet.addStringParameter(caster.getName());
@@ -595,12 +595,12 @@ public final class FeedableBeasts extends AbstractNpcAI
 		}
 		else if (Util.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance))
 		{
-			L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);
+			final L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
-				NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
-				NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
+				final NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
+				final NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
 				if (message.getParamCount() > 0)
 				{
 					packet.addStringParameter(caster.getName());

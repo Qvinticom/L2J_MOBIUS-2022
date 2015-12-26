@@ -62,7 +62,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 			return false;
 		}
 		
-		boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan()));
+		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress() && !getFort().getSiege().checkIsDefender(((L2PcInstance) attacker).getClan()));
 		
 		// Attackable during siege by all except defenders
 		return (isFort);
@@ -124,10 +124,10 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public final void addDamage(L2Character attacker, int damage, Skill skill)
 	{
-		L2Spawn spawn = getSpawn();
+		final L2Spawn spawn = getSpawn();
 		if ((spawn != null) && canTalk())
 		{
-			List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+			final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
 			for (FortSiegeSpawn spawn2 : commanders)
 			{
 				if (spawn2.getId() == spawn.getId())
@@ -151,7 +151,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 					}
 					if (npcString != null)
 					{
-						NpcSay ns = new NpcSay(getObjectId(), ChatType.NPC_SHOUT, getId(), npcString);
+						final NpcSay ns = new NpcSay(getObjectId(), ChatType.NPC_SHOUT, getId(), npcString);
 						if (npcString.getParamCount() == 1)
 						{
 							ns.addStringParameter(attacker.getName());

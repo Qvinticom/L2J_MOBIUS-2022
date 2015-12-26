@@ -70,7 +70,7 @@ public final class RequestRejectPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		Message msg = MailManager.getInstance().getMessage(_msgId);
+		final Message msg = MailManager.getInstance().getMessage(_msgId);
 		if (msg == null)
 		{
 			return;
@@ -95,7 +95,7 @@ public final class RequestRejectPostAttachment extends L2GameClientPacket
 		final L2PcInstance sender = L2World.getInstance().getPlayer(msg.getSenderId());
 		if (sender != null)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
 			sm.addCharName(activeChar);
 			sender.sendPacket(sm);
 		}

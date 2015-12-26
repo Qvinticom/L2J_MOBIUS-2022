@@ -40,16 +40,16 @@ public final class RequestPledgeMemberList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		L2Clan clan = activeChar.getClan();
+		final L2Clan clan = activeChar.getClan();
 		if (clan != null)
 		{
-			PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan);
+			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan);
 			activeChar.sendPacket(pm);
 			activeChar.sendPacket(new PledgeSkillList(clan));
 			activeChar.broadcastUserInfo();

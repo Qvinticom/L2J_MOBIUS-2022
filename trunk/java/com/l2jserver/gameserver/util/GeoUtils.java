@@ -32,21 +32,21 @@ public final class GeoUtils
 {
 	public static void debug2DLine(L2PcInstance player, int x, int y, int tx, int ty, int z)
 	{
-		int gx = GeoData.getInstance().getGeoX(x);
-		int gy = GeoData.getInstance().getGeoY(y);
+		final int gx = GeoData.getInstance().getGeoX(x);
+		final int gy = GeoData.getInstance().getGeoY(y);
 		
-		int tgx = GeoData.getInstance().getGeoX(tx);
-		int tgy = GeoData.getInstance().getGeoY(ty);
+		final int tgx = GeoData.getInstance().getGeoX(tx);
+		final int tgy = GeoData.getInstance().getGeoY(ty);
 		
-		ExServerPrimitive prim = new ExServerPrimitive("Debug2DLine", x, y, z);
+		final ExServerPrimitive prim = new ExServerPrimitive("Debug2DLine", x, y, z);
 		prim.addLine(Color.BLUE, GeoData.getInstance().getWorldX(gx), GeoData.getInstance().getWorldY(gy), z, GeoData.getInstance().getWorldX(tgx), GeoData.getInstance().getWorldY(tgy), z);
 		
-		LinePointIterator iter = new LinePointIterator(gx, gy, tgx, tgy);
+		final LinePointIterator iter = new LinePointIterator(gx, gy, tgx, tgy);
 		
 		while (iter.next())
 		{
-			int wx = GeoData.getInstance().getWorldX(iter.x());
-			int wy = GeoData.getInstance().getWorldY(iter.y());
+			final int wx = GeoData.getInstance().getWorldX(iter.x());
+			final int wy = GeoData.getInstance().getWorldY(iter.y());
 			
 			prim.addPoint(Color.RED, wx, wy, z);
 		}
@@ -55,16 +55,16 @@ public final class GeoUtils
 	
 	public static void debug3DLine(L2PcInstance player, int x, int y, int z, int tx, int ty, int tz)
 	{
-		int gx = GeoData.getInstance().getGeoX(x);
-		int gy = GeoData.getInstance().getGeoY(y);
+		final int gx = GeoData.getInstance().getGeoX(x);
+		final int gy = GeoData.getInstance().getGeoY(y);
 		
-		int tgx = GeoData.getInstance().getGeoX(tx);
-		int tgy = GeoData.getInstance().getGeoY(ty);
+		final int tgx = GeoData.getInstance().getGeoX(tx);
+		final int tgy = GeoData.getInstance().getGeoY(ty);
 		
-		ExServerPrimitive prim = new ExServerPrimitive("Debug3DLine", x, y, z);
+		final ExServerPrimitive prim = new ExServerPrimitive("Debug3DLine", x, y, z);
 		prim.addLine(Color.BLUE, GeoData.getInstance().getWorldX(gx), GeoData.getInstance().getWorldY(gy), z, GeoData.getInstance().getWorldX(tgx), GeoData.getInstance().getWorldY(tgy), tz);
 		
-		LinePointIterator3D iter = new LinePointIterator3D(gx, gy, z, tgx, tgy, tz);
+		final LinePointIterator3D iter = new LinePointIterator3D(gx, gy, z, tgx, tgy, tz);
 		iter.next();
 		int prevX = iter.x();
 		int prevY = iter.y();
@@ -75,8 +75,8 @@ public final class GeoUtils
 		
 		while (iter.next())
 		{
-			int curX = iter.x();
-			int curY = iter.y();
+			final int curX = iter.x();
+			final int curY = iter.y();
 			
 			if ((curX != prevX) || (curY != prevY))
 			{
@@ -104,20 +104,15 @@ public final class GeoUtils
 	
 	public static void debugGrid(L2PcInstance player)
 	{
-		int geoRadius = 10;
-		int blocksPerPacket = 49;
-		if (geoRadius < 0)
-		{
-			throw new IllegalArgumentException("geoRadius < 0");
-		}
-		
+		final int geoRadius = 10;
+		final int blocksPerPacket = 49;
 		int iBlock = blocksPerPacket;
 		int iPacket = 0;
 		
 		ExServerPrimitive exsp = null;
-		GeoData gd = GeoData.getInstance();
-		int playerGx = gd.getGeoX(player.getX());
-		int playerGy = gd.getGeoY(player.getY());
+		final GeoData gd = GeoData.getInstance();
+		final int playerGx = gd.getGeoX(player.getX());
+		final int playerGy = gd.getGeoY(player.getY());
 		for (int dx = -geoRadius; dx <= geoRadius; ++dx)
 		{
 			for (int dy = -geoRadius; dy <= geoRadius; ++dy)
@@ -138,12 +133,12 @@ public final class GeoUtils
 					throw new IllegalStateException();
 				}
 				
-				int gx = playerGx + dx;
-				int gy = playerGy + dy;
+				final int gx = playerGx + dx;
+				final int gy = playerGy + dy;
 				
-				int x = gd.getWorldX(gx);
-				int y = gd.getWorldY(gy);
-				int z = gd.getNearestZ(gx, gy, player.getZ());
+				final int x = gd.getWorldX(gx);
+				final int y = gd.getWorldY(gy);
+				final int z = gd.getNearestZ(gx, gy, player.getZ());
 				
 				// north arrow
 				Color col = getDirectionColor(gx, gy, z, Cell.NSWE_NORTH);

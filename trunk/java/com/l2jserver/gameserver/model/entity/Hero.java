@@ -119,8 +119,8 @@ public class Hero
 		{
 			while (rset.next())
 			{
-				StatsSet hero = new StatsSet();
-				int charId = rset.getInt(Olympiad.CHAR_ID);
+				final StatsSet hero = new StatsSet();
+				final int charId = rset.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset.getInt(COUNT));
@@ -138,8 +138,8 @@ public class Hero
 			
 			while (rset2.next())
 			{
-				StatsSet hero = new StatsSet();
-				int charId = rset2.getInt(Olympiad.CHAR_ID);
+				final StatsSet hero = new StatsSet();
+				final int charId = rset2.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset2.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset2.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset2.getInt(COUNT));
@@ -167,8 +167,8 @@ public class Hero
 		{
 			if (rs.next())
 			{
-				int clanId = rs.getInt("clanid");
-				int allyId = rs.getInt("allyId");
+				final int clanId = rs.getInt("clanid");
+				final int allyId = rs.getInt("allyId");
 				String clanName = "";
 				String allyName = "";
 				int clanCrest = 0;
@@ -194,11 +194,11 @@ public class Hero
 	
 	private String calcFightTime(long FightTime)
 	{
-		String format = String.format("%%0%dd", 2);
+		final String format = String.format("%%0%dd", 2);
 		FightTime = FightTime / 1000;
-		String seconds = String.format(format, FightTime % 60);
-		String minutes = String.format(format, (FightTime % 3600) / 60);
-		String time = minutes + ":" + seconds;
+		final String seconds = String.format(format, FightTime % 60);
+		final String minutes = String.format(format, (FightTime % 3600) / 60);
+		final String time = minutes + ":" + seconds;
 		return time;
 	}
 	
@@ -238,18 +238,18 @@ public class Hero
 			{
 				while (rset.next())
 				{
-					StatsSet _diaryentry = new StatsSet();
+					final StatsSet _diaryentry = new StatsSet();
 					
-					long time = rset.getLong("time");
-					int action = rset.getInt("action");
-					int param = rset.getInt("param");
+					final long time = rset.getLong("time");
+					final int action = rset.getInt("action");
+					final int param = rset.getInt("param");
 					
-					String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
+					final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
 					_diaryentry.set("date", date);
 					
 					if (action == ACTION_RAID_KILLED)
 					{
-						L2NpcTemplate template = NpcData.getInstance().getTemplate(param);
+						final L2NpcTemplate template = NpcData.getInstance().getTemplate(param);
 						if (template != null)
 						{
 							_diaryentry.set("action", template.getName() + " was defeated");
@@ -261,7 +261,7 @@ public class Hero
 					}
 					else if (action == ACTION_CASTLE_TAKEN)
 					{
-						Castle castle = CastleManager.getInstance().getCastleById(param);
+						final Castle castle = CastleManager.getInstance().getCastleById(param);
 						if (castle != null)
 						{
 							_diaryentry.set("action", castle.getName() + " Castle was successfuly taken");
@@ -284,14 +284,14 @@ public class Hero
 	public void loadFights(int charId)
 	{
 		final List<StatsSet> fights = new ArrayList<>();
-		StatsSet heroCountData = new StatsSet();
-		Calendar data = Calendar.getInstance();
+		final StatsSet heroCountData = new StatsSet();
+		final Calendar data = Calendar.getInstance();
 		data.set(Calendar.DAY_OF_MONTH, 1);
 		data.set(Calendar.HOUR_OF_DAY, 0);
 		data.set(Calendar.MINUTE, 0);
 		data.set(Calendar.MILLISECOND, 0);
 		
-		long from = data.getTimeInMillis();
+		final long from = data.getTimeInMillis();
 		int numberoffights = 0;
 		int _victorys = 0;
 		int _losses = 0;
@@ -326,16 +326,16 @@ public class Hero
 					
 					if (charId == charOneId)
 					{
-						String name = CharNameTable.getInstance().getNameById(charTwoId);
-						String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
+						final String name = CharNameTable.getInstance().getNameById(charTwoId);
+						final String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							StatsSet fight = new StatsSet();
+							final StatsSet fight = new StatsSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
 							fight.set("time", calcFightTime(time));
-							String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
+							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
 							
 							fight.set("classed", classed);
@@ -362,16 +362,16 @@ public class Hero
 					}
 					else if (charId == charTwoId)
 					{
-						String name = CharNameTable.getInstance().getNameById(charOneId);
-						String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
+						final String name = CharNameTable.getInstance().getNameById(charOneId);
+						final String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							StatsSet fight = new StatsSet();
+							final StatsSet fight = new StatsSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
 							fight.set("time", calcFightTime(time));
-							String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
+							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
 							
 							fight.set("classed", classed);
@@ -468,7 +468,7 @@ public class Hero
 					for (int i = ((page - 1) * perpage); i < list.size(); i++)
 					{
 						breakat = i;
-						StatsSet diaryEntry = list.get(i);
+						final StatsSet diaryEntry = list.get(i);
 						StringUtil.append(fList, "<tr><td>");
 						if (color)
 						{
@@ -556,7 +556,7 @@ public class Hero
 					for (int i = ((page - 1) * perpage); i < heroFights.size(); i++)
 					{
 						breakat = i;
-						StatsSet fight = heroFights.get(i);
+						final StatsSet fight = heroFights.get(i);
 						StringUtil.append(fList, "<tr><td>");
 						if (color)
 						{
@@ -630,7 +630,7 @@ public class Hero
 			
 			for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 			{
-				L2ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
+				final L2ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
 				if ((equippedItem != null) && equippedItem.isHeroItem())
 				{
 					player.getInventory().unEquipItemInSlot(i);
@@ -666,12 +666,12 @@ public class Hero
 		
 		for (StatsSet hero : newHeroes)
 		{
-			int charId = hero.getInt(Olympiad.CHAR_ID);
+			final int charId = hero.getInt(Olympiad.CHAR_ID);
 			
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
-				StatsSet oldHero = COMPLETE_HEROS.get(charId);
-				int count = oldHero.getInt(COUNT);
+				final StatsSet oldHero = COMPLETE_HEROS.get(charId);
+				final int count = oldHero.getInt(COUNT);
 				oldHero.set(COUNT, count + 1);
 				oldHero.set(PLAYED, 1);
 				oldHero.set(CLAIMED, false);
@@ -679,7 +679,7 @@ public class Hero
 			}
 			else
 			{
-				StatsSet newHero = new StatsSet();
+				final StatsSet newHero = new StatsSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
 				newHero.set(COUNT, 1);
@@ -731,8 +731,8 @@ public class Hero
 							{
 								if (rset.next())
 								{
-									int clanId = rset.getInt("clanid");
-									int allyId = rset.getInt("allyId");
+									final int clanId = rset.getInt("clanid");
+									final int allyId = rset.getInt("allyId");
 									
 									String clanName = "";
 									String allyName = "";

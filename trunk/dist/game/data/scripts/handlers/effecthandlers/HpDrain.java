@@ -57,8 +57,8 @@ public final class HpDrain extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
 		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4050))
@@ -66,15 +66,15 @@ public final class HpDrain extends AbstractEffect
 			return;
 		}
 		
-		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
-		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
+		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		final int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		int drain = 0;
-		int cp = (int) target.getCurrentCp();
-		int hp = (int) target.getCurrentHp();
+		final int cp = (int) target.getCurrentCp();
+		final int hp = (int) target.getCurrentHp();
 		
 		if (cp > 0)
 		{

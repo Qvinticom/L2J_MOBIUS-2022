@@ -78,7 +78,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 			return;
 		}
 		
-		int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
+		final int skillLevel = activeChar.getSkillLevel(CommonSkill.CRYSTALLIZE.getId());
 		if (skillLevel <= 0)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
@@ -182,8 +182,8 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		activeChar.setInCrystallize(true);
 		
 		// add crystals
-		int crystalId = item.getItem().getCrystalItemId();
-		int crystalAmount = item.getCrystalCount();
+		final int crystalId = item.getItem().getCrystalItemId();
+		final int crystalAmount = item.getCrystalCount();
 		final List<ItemChanceHolder> items = new ArrayList<>();
 		items.add(new ItemChanceHolder(crystalId, 100, crystalAmount));
 		

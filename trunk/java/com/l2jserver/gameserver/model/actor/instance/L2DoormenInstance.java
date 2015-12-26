@@ -111,7 +111,7 @@ public class L2DoormenInstance extends L2NpcInstance
 	
 	protected void openDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())
@@ -122,7 +122,7 @@ public class L2DoormenInstance extends L2NpcInstance
 	
 	protected void closeDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())
@@ -143,7 +143,7 @@ public class L2DoormenInstance extends L2NpcInstance
 	protected void doTeleport(L2PcInstance player, String command)
 	{
 		final int whereTo = Integer.parseInt(command.substring(5).trim());
-		L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(whereTo);
+		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(whereTo);
 		if (list != null)
 		{
 			if (!player.isAlikeDead())

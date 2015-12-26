@@ -65,7 +65,7 @@ public final class RequestExAskJoinMPCC extends L2GameClientPacket
 		// activeChar is in a Party?
 		if (activeChar.isInParty())
 		{
-			L2Party activeParty = activeChar.getParty();
+			final L2Party activeParty = activeChar.getParty();
 			// activeChar is PartyLeader? && activeChars Party is already in a CommandChannel?
 			if (activeParty.getLeader().equals(activeChar))
 			{

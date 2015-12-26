@@ -242,7 +242,7 @@ public final class QuestState
 			val = "";
 		}
 		
-		String old = _vars.put(var, val);
+		final String old = _vars.put(var, val);
 		if (old != null)
 		{
 			Quest.updateQuestVarInDb(this, var, val);
@@ -385,7 +385,7 @@ public final class QuestState
 			return null;
 		}
 		
-		String old = _vars.remove(var);
+		final String old = _vars.remove(var);
 		if (old != null)
 		{
 			Quest.deleteQuestVarInDb(this, var);

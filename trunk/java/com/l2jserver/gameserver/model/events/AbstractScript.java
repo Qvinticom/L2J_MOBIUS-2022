@@ -1832,7 +1832,7 @@ public abstract class AbstractScript implements INamable
 	public L2TrapInstance addTrap(int trapId, int x, int y, int z, int heading, Skill skill, int instanceId)
 	{
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
-		L2TrapInstance trap = new L2TrapInstance(npcTemplate, instanceId, -1);
+		final L2TrapInstance trap = new L2TrapInstance(npcTemplate, instanceId, -1);
 		trap.setCurrentHp(trap.getMaxHp());
 		trap.setCurrentMp(trap.getMaxMp());
 		trap.setIsInvul(true);
@@ -2127,7 +2127,7 @@ public abstract class AbstractScript implements INamable
 		// If item for reward is gold, send message of gold reward to client
 		if (item.getId() == Inventory.ADENA_ID)
 		{
-			SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA);
 			smsg.addLong(count);
 			player.sendPacket(smsg);
 		}
@@ -2136,14 +2136,14 @@ public abstract class AbstractScript implements INamable
 		{
 			if (count > 1)
 			{
-				SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
 				smsg.addItemName(item);
 				smsg.addLong(count);
 				player.sendPacket(smsg);
 			}
 			else
 			{
-				SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 				smsg.addItemName(item);
 				player.sendPacket(smsg);
 			}
@@ -2233,7 +2233,7 @@ public abstract class AbstractScript implements INamable
 				item.updateElementAttrBonus(player);
 			}
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(item);
 			player.sendPacket(iu);
 		}
@@ -2326,7 +2326,7 @@ public abstract class AbstractScript implements INamable
 			}
 			
 			// Give the item to player
-			L2ItemInstance item = player.addItem("Quest", itemId, amountToGive, npc, true);
+			final L2ItemInstance item = player.addItem("Quest", itemId, amountToGive, npc, true);
 			if (item != null)
 			{
 				// limit reached (if there is no limit, this block doesn't execute)
@@ -2362,7 +2362,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static boolean giveItems(L2PcInstance player, IDropItem item, L2Character victim)
 	{
-		List<ItemHolder> items = item.calculateDrops(victim, player);
+		final List<ItemHolder> items = item.calculateDrops(victim, player);
 		if ((items == null) || items.isEmpty())
 		{
 			return false;
@@ -2394,7 +2394,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static boolean giveItems(L2PcInstance player, ItemHolder item, long limit)
 	{
-		long maxToGive = limit - player.getInventory().getInventoryItemCount(item.getId(), -1);
+		final long maxToGive = limit - player.getInventory().getInventoryItemCount(item.getId(), -1);
 		if (maxToGive <= 0)
 		{
 			return false;
@@ -2405,7 +2405,7 @@ public abstract class AbstractScript implements INamable
 	
 	protected static boolean giveItems(L2PcInstance player, ItemHolder item, long limit, boolean playSound)
 	{
-		boolean drop = giveItems(player, item, limit);
+		final boolean drop = giveItems(player, item, limit);
 		if (drop && playSound)
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -2431,7 +2431,7 @@ public abstract class AbstractScript implements INamable
 	
 	protected static boolean giveItems(L2PcInstance player, List<ItemHolder> items, long limit, boolean playSound)
 	{
-		boolean drop = giveItems(player, items, limit);
+		final boolean drop = giveItems(player, items, limit);
 		if (drop && playSound)
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -2463,7 +2463,7 @@ public abstract class AbstractScript implements INamable
 		{
 			if (limit != null)
 			{
-				Long longLimit = limit.apply(item.getId());
+				final Long longLimit = limit.apply(item.getId());
 				// null -> no limit specified for that item id. This trick is to avoid limit.apply() be called twice (once for the null check)
 				if (longLimit != null)
 				{
@@ -2482,7 +2482,7 @@ public abstract class AbstractScript implements INamable
 	
 	protected static boolean giveItems(L2PcInstance player, List<ItemHolder> items, Function<Integer, Long> limit, boolean playSound)
 	{
-		boolean drop = giveItems(player, items, limit);
+		final boolean drop = giveItems(player, items, limit);
 		if (drop && playSound)
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -2509,7 +2509,7 @@ public abstract class AbstractScript implements INamable
 	
 	protected static boolean giveItems(L2PcInstance player, IDropItem item, L2Character victim, int limit, boolean playSound)
 	{
-		boolean drop = giveItems(player, item, victim, limit);
+		final boolean drop = giveItems(player, item, victim, limit);
 		if (drop && playSound)
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -2548,7 +2548,7 @@ public abstract class AbstractScript implements INamable
 	
 	protected static boolean giveItems(L2PcInstance player, IDropItem item, L2Character victim, Function<Integer, Long> limit, boolean playSound)
 	{
-		boolean drop = giveItems(player, item, victim, limit);
+		final boolean drop = giveItems(player, item, victim, limit);
 		if (drop && playSound)
 		{
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -2566,7 +2566,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static Map<L2PcInstance, Map<Integer, Long>> distributeItems(Collection<L2PcInstance> players, Collection<ItemHolder> items, Function<Integer, Long> limit, boolean playSound)
 	{
-		Map<L2PcInstance, Map<Integer, Long>> rewardedCounts = calculateDistribution(players, items, limit);
+		final Map<L2PcInstance, Map<Integer, Long>> rewardedCounts = calculateDistribution(players, items, limit);
 		// now give the calculated items to the players
 		giveItems(rewardedCounts, playSound);
 		return rewardedCounts;
@@ -2608,8 +2608,8 @@ public abstract class AbstractScript implements INamable
 	 */
 	protected static Map<L2PcInstance, Long> distributeItems(Collection<L2PcInstance> players, ItemHolder item, long limit, boolean playSound)
 	{
-		Map<L2PcInstance, Map<Integer, Long>> distribution = distributeItems(players, Collections.singletonList(item), limit, playSound);
-		Map<L2PcInstance, Long> returnMap = new HashMap<>();
+		final Map<L2PcInstance, Map<Integer, Long>> distribution = distributeItems(players, Collections.singletonList(item), limit, playSound);
+		final Map<L2PcInstance, Long> returnMap = new HashMap<>();
 		for (Entry<L2PcInstance, Map<Integer, Long>> entry : distribution.entrySet())
 		{
 			for (Entry<Integer, Long> entry2 : entry.getValue().entrySet())
@@ -2682,13 +2682,13 @@ public abstract class AbstractScript implements INamable
 		if (smartDrop)
 		{
 			toDrop = new GroupedGeneralDropItem(items.getChance(), items.getDropCalculationStrategy(), items.getKillerChanceModifierStrategy(), items.getPreciseStrategy());
-			List<GeneralDropItem> dropItems = new LinkedList<>(items.getItems());
+			final List<GeneralDropItem> dropItems = new LinkedList<>(items.getItems());
 			ITEM_LOOP: for (Iterator<GeneralDropItem> it = dropItems.iterator(); it.hasNext();)
 			{
-				GeneralDropItem item = it.next();
+				final GeneralDropItem item = it.next();
 				for (L2PcInstance player : players)
 				{
-					int itemId = item.getItemId();
+					final int itemId = item.getItemId();
 					if (player.getInventory().getInventoryItemCount(itemId, -1, true) < avoidNull(limit, itemId))
 					{
 						// we can give this item to this player
@@ -2748,7 +2748,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	private static Map<L2PcInstance, Map<Integer, Long>> calculateDistribution(Collection<L2PcInstance> players, Collection<ItemHolder> items, Function<Integer, Long> limit)
 	{
-		Map<L2PcInstance, Map<Integer, Long>> rewardedCounts = new HashMap<>();
+		final Map<L2PcInstance, Map<Integer, Long>> rewardedCounts = new HashMap<>();
 		for (L2PcInstance player : players)
 		{
 			rewardedCounts.put(player, new HashMap<Integer, Long>());
@@ -2757,17 +2757,17 @@ public abstract class AbstractScript implements INamable
 		{
 			long equaldist = item.getCount() / players.size();
 			long randomdist = item.getCount() % players.size();
-			List<L2PcInstance> toDist = new ArrayList<>(players);
+			final List<L2PcInstance> toDist = new ArrayList<>(players);
 			do // this must happen at least once in order to get away already full players (and then equaldist can become nonzero)
 			{
 				for (Iterator<L2PcInstance> it = toDist.iterator(); it.hasNext();)
 				{
-					L2PcInstance player = it.next();
+					final L2PcInstance player = it.next();
 					if (!rewardedCounts.get(player).containsKey(item.getId()))
 					{
 						rewardedCounts.get(player).put(item.getId(), 0L);
 					}
-					long maxGive = avoidNull(limit, item.getId()) - player.getInventory().getInventoryItemCount(item.getId(), -1, true) - rewardedCounts.get(player).get(item.getId());
+					final long maxGive = avoidNull(limit, item.getId()) - player.getInventory().getInventoryItemCount(item.getId(), -1, true) - rewardedCounts.get(player).get(item.getId());
 					long toGive = equaldist;
 					if (equaldist >= maxGive)
 					{
@@ -2793,9 +2793,9 @@ public abstract class AbstractScript implements INamable
 					// we don't have any player left
 					continue NEXT_ITEM;
 				}
-				L2PcInstance player = toDist.get(getRandom(toDist.size()));
+				final L2PcInstance player = toDist.get(getRandom(toDist.size()));
 				// avoid null return
-				long maxGive = avoidNull(limit, item.getId()) - limit.apply(item.getId()) - player.getInventory().getInventoryItemCount(item.getId(), -1, true) - rewardedCounts.get(player).get(item.getId());
+				final long maxGive = avoidNull(limit, item.getId()) - limit.apply(item.getId()) - player.getInventory().getInventoryItemCount(item.getId(), -1, true) - rewardedCounts.get(player).get(item.getId());
 				if (maxGive > 0)
 				{
 					// we can add an item to player
@@ -2818,7 +2818,7 @@ public abstract class AbstractScript implements INamable
 	 */
 	private static <T> long avoidNull(Function<T, Long> function, T arg)
 	{
-		Long longLimit = function.apply(arg);
+		final Long longLimit = function.apply(arg);
 		return longLimit == null ? Long.MAX_VALUE : longLimit;
 	}
 	
@@ -2831,7 +2831,7 @@ public abstract class AbstractScript implements INamable
 	{
 		for (Entry<L2PcInstance, Map<Integer, Long>> entry : rewardedCounts.entrySet())
 		{
-			L2PcInstance player = entry.getKey();
+			final L2PcInstance player = entry.getKey();
 			boolean playPlayerSound = false;
 			for (Entry<Integer, Long> item : entry.getValue().entrySet())
 			{

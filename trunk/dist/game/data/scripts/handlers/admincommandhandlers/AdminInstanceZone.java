@@ -40,14 +40,14 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
+		final String target = (activeChar.getTarget() != null) ? activeChar.getTarget().getName() : "no-target";
 		GMAudit.auditGMAction(activeChar.getName(), command, target, "");
 		
 		if (command.startsWith("admin_instancezone_clear"))
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command, " ");
+				final StringTokenizer st = new StringTokenizer(command, " ");
 				
 				st.nextToken();
 				final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
@@ -68,13 +68,13 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_instancezone"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
 			
 			if (st.hasMoreTokens())
 			{
 				L2PcInstance player = null;
-				String playername = st.nextToken();
+				final String playername = st.nextToken();
 				
 				try
 				{
@@ -118,7 +118,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	
 	private void display(L2PcInstance player, L2PcInstance activeChar)
 	{
-		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
+		final Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
 		
 		final StringBuilder html = StringUtil.startAppend(500 + (instanceTimes.size() * 200), "<html><center><table width=260><tr>" + "<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td width=180><center>Character Instances</center></td>" + "<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "</tr></table><br><font color=\"LEVEL\">Instances for ", player.getName(), "</font><center><br>" + "<table>" + "<tr><td width=150>Name</td><td width=50>Time</td><td width=70>Action</td></tr>");
 		
@@ -126,7 +126,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		{
 			int hours = 0;
 			int minutes = 0;
-			long remainingTime = (instanceTimes.get(id) - System.currentTimeMillis()) / 1000;
+			final long remainingTime = (instanceTimes.get(id) - System.currentTimeMillis()) / 1000;
 			if (remainingTime > 0)
 			{
 				hours = (int) (remainingTime / 3600);

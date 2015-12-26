@@ -44,7 +44,7 @@ public class NotifyExitBeautyShop extends L2GameClientPacket
 			return;
 		}
 		
-		UserInfo userInfo = new UserInfo(activeChar, false);
+		final UserInfo userInfo = new UserInfo(activeChar, false);
 		userInfo.addComponentType(UserInfoType.APPAREANCE);
 		sendPacket(userInfo);
 	}

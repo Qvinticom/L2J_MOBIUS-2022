@@ -136,7 +136,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
+						final QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 						htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "32020-01.htm" : "32020-00.htm";
 						break;
 					case State.STARTED:

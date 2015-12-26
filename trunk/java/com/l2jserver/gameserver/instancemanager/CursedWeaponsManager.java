@@ -92,18 +92,18 @@ public final class CursedWeaponsManager
 	{
 		try
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/cursedWeapons.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/cursedWeapons.xml");
 			if (!file.exists())
 			{
 				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find " + file.getName());
 				return;
 			}
 			
-			Document doc = factory.newDocumentBuilder().parse(file);
+			final Document doc = factory.newDocumentBuilder().parse(file);
 			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
@@ -114,11 +114,11 @@ public final class CursedWeaponsManager
 						if ("item".equalsIgnoreCase(d.getNodeName()))
 						{
 							NamedNodeMap attrs = d.getAttributes();
-							int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-							int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
-							String name = attrs.getNamedItem("name").getNodeValue();
+							final int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+							final int skillId = Integer.parseInt(attrs.getNamedItem("skillId").getNodeValue());
+							final String name = attrs.getNamedItem("name").getNodeValue();
 							
-							CursedWeapon cw = new CursedWeapon(id, skillId, name);
+							final CursedWeapon cw = new CursedWeapon(id, skillId, name);
 							
 							int val;
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -284,10 +284,10 @@ public final class CursedWeaponsManager
 	
 	public void activate(L2PcInstance player, L2ItemInstance item)
 	{
-		CursedWeapon cw = _cursedWeapons.get(item.getId());
+		final CursedWeapon cw = _cursedWeapons.get(item.getId());
 		if (player.isCursedWeaponEquipped()) // cannot own 2 cursed swords
 		{
-			CursedWeapon cw2 = _cursedWeapons.get(player.getCursedWeaponEquippedId());
+			final CursedWeapon cw2 = _cursedWeapons.get(player.getCursedWeaponEquippedId());
 			// TODO: give the bonus level in a more appropriate manner.
 			// The following code adds "_stageKills" levels. This will also show in the char status.
 			// I do not have enough info to know if the bonus should be shown in the pk count, or if it
@@ -308,21 +308,21 @@ public final class CursedWeaponsManager
 	
 	public void drop(int itemId, L2Character killer)
 	{
-		CursedWeapon cw = _cursedWeapons.get(itemId);
+		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
 		cw.dropIt(killer);
 	}
 	
 	public void increaseKills(int itemId)
 	{
-		CursedWeapon cw = _cursedWeapons.get(itemId);
+		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
 		cw.increaseKills();
 	}
 	
 	public int getLevel(int itemId)
 	{
-		CursedWeapon cw = _cursedWeapons.get(itemId);
+		final CursedWeapon cw = _cursedWeapons.get(itemId);
 		
 		return cw.getLevel();
 	}
@@ -348,7 +348,7 @@ public final class CursedWeaponsManager
 				cw.giveSkill();
 				player.setCursedWeaponEquippedId(cw.getItemId());
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
 				sm.addString(cw.getName());
 				// sm.addItemName(cw.getItemId());
 				sm.addInt((int) ((cw.getEndTime() - System.currentTimeMillis()) / 60000));

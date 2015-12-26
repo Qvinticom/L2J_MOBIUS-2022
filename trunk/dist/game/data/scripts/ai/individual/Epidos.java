@@ -75,9 +75,9 @@ public final class Epidos extends AbstractNpcAI
 		{
 			if ((getRandom(1000) > 250) && _lastHp.containsKey(npc.getObjectId()))
 			{
-				int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
+				final int hpDecreasePercent = (int) (((_lastHp.get(npc.getObjectId()) - npc.getCurrentHp()) * 100) / npc.getMaxHp());
 				int minionsCount = 0;
-				int spawnedMinions = ((L2MonsterInstance) npc).getMinionList().countSpawnedMinions();
+				final int spawnedMinions = ((L2MonsterInstance) npc).getMinionList().countSpawnedMinions();
 				
 				if ((hpDecreasePercent > 5) && (hpDecreasePercent <= 15) && (spawnedMinions <= 9))
 				{

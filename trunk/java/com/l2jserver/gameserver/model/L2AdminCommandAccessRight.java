@@ -57,7 +57,7 @@ public class L2AdminCommandAccessRight
 	 */
 	public boolean hasAccess(L2AccessLevel characterAccessLevel)
 	{
-		L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(_accessLevel);
+		final L2AccessLevel accessLevel = AdminData.getInstance().getAccessLevel(_accessLevel);
 		return ((accessLevel.getLevel() == characterAccessLevel.getLevel()) || characterAccessLevel.hasChildAccess(accessLevel));
 	}
 	

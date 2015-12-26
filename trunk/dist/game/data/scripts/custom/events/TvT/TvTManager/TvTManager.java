@@ -70,7 +70,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 		{
 			case "join":
 			{
-				int playerLevel = player.getLevel();
+				final int playerLevel = player.getLevel();
 				final int team1Count = TvTEvent.getTeamsPlayerCounts()[0];
 				final int team2Count = TvTEvent.getTeamsPlayerCounts()[1];
 				if (player.isCursedWeaponEquipped())
@@ -139,7 +139,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 		if (TvTEvent.isParticipating())
 		{
 			final boolean isParticipant = TvTEvent.isPlayerParticipant(player.getObjectId());
-			int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
+			final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 			htmltext = getHtm(player.getHtmlPrefix(), (!isParticipant ? "Participation.html" : "RemoveParticipation.html"));
 			htmltext = htmltext.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
@@ -199,8 +199,8 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 	
 	private String getTvTStatus(L2PcInstance player)
 	{
-		int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
-		int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
+		final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
+		final int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
 		String htmltext = getHtm(player.getHtmlPrefix(), "Status.html");
 		htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
 		htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));

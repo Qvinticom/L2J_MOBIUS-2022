@@ -56,7 +56,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		Collection<String> opCodes = null;
 		while (st.hasMoreTokens())
 		{
-			String token = st.nextToken();
+			final String token = st.nextToken();
 			if (";".equals(token))
 			{
 				break;
@@ -239,16 +239,16 @@ public final class AdminPForge implements IAdminCommandHandler
 			valuesHtml = valuesHtml.replace("%format%", format);
 			sendBypass += " " + format;
 			
-			String editorTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/pforge/inc/editor.htm");
+			final String editorTemplate = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/pforge/inc/editor.htm");
 			
 			if (editorTemplate != null)
 			{
-				StringBuilder singleCharSequence = new StringBuilder(1);
+				final StringBuilder singleCharSequence = new StringBuilder(1);
 				singleCharSequence.append(' ');
 				
 				for (int chIdx = 0; chIdx < format.length(); ++chIdx)
 				{
-					char ch = format.charAt(chIdx);
+					final char ch = format.charAt(chIdx);
 					singleCharSequence.setCharAt(0, ch);
 					editorsHtml += editorTemplate.replace("%format%", singleCharSequence).replace("%editor_index%", String.valueOf(chIdx));
 					sendBypass += " $v" + chIdx;
@@ -276,7 +276,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken(); // skip command token
 				
 				if (!st.hasMoreTokens())
@@ -285,7 +285,7 @@ public final class AdminPForge implements IAdminCommandHandler
 					return false;
 				}
 				
-				String[] opCodes = getOpCodes(st);
+				final String[] opCodes = getOpCodes(st);
 				if (!validateOpCodes(opCodes))
 				{
 					activeChar.sendMessage("Invalid op codes!");
@@ -318,7 +318,7 @@ public final class AdminPForge implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken(); // skip command token
 				
 				if (!st.hasMoreTokens())
@@ -327,7 +327,7 @@ public final class AdminPForge implements IAdminCommandHandler
 					return false;
 				}
 				
-				String method = st.nextToken();
+				final String method = st.nextToken();
 				if (!validateMethod(method))
 				{
 					activeChar.sendMessage("Invalid method!");
@@ -335,7 +335,7 @@ public final class AdminPForge implements IAdminCommandHandler
 					return false;
 				}
 				
-				String[] opCodes = st.nextToken().split(";");
+				final String[] opCodes = st.nextToken().split(";");
 				if (!validateOpCodes(opCodes))
 				{
 					activeChar.sendMessage("Invalid op codes!");
@@ -549,7 +549,7 @@ public final class AdminPForge implements IAdminCommandHandler
 				else if (bb != null)
 				{
 					bb.flip();
-					L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
+					final L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
 					if (p != null)
 					{
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));

@@ -56,7 +56,7 @@ public class RentPet implements IBypassHandler
 		
 		try
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
 			if (st.countTokens() < 1)
@@ -93,14 +93,14 @@ public class RentPet implements IBypassHandler
 		
 		int petId;
 		double price = 1;
-		int cost[] =
+		final int cost[] =
 		{
 			1800,
 			7200,
 			720000,
 			6480000
 		};
-		int ridetime[] =
+		final int ridetime[] =
 		{
 			30,
 			60,
@@ -125,7 +125,7 @@ public class RentPet implements IBypassHandler
 		}
 		
 		price *= cost[val - 1];
-		int time = ridetime[val - 1];
+		final int time = ridetime[val - 1];
 		
 		if (!player.reduceAdena("Rent", (long) price, player.getLastFolkNPC(), true))
 		{
@@ -133,7 +133,7 @@ public class RentPet implements IBypassHandler
 		}
 		
 		player.mount(petId, 0, false);
-		SetupGauge sg = new SetupGauge(3, time * 1000);
+		final SetupGauge sg = new SetupGauge(3, time * 1000);
 		player.sendPacket(sg);
 		player.startRentPet(time);
 	}

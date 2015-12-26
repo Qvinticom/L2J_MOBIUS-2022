@@ -126,7 +126,7 @@ public class CellNodeBuffer
 		{
 			for (int j = 0; j < _mapSize; j++)
 			{
-				CellNode n = _buffer[i][j];
+				final CellNode n = _buffer[i][j];
 				if ((n == null) || !n.isInUse() || (n.getCost() <= 0))
 				{
 					continue;
@@ -257,7 +257,7 @@ public class CellNodeBuffer
 	
 	private final CellNode addNode(int x, int y, int z, boolean diagonal)
 	{
-		CellNode newNode = getNode(x, y, z);
+		final CellNode newNode = getNode(x, y, z);
 		if (newNode == null)
 		{
 			return null;

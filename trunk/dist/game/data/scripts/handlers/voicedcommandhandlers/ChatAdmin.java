@@ -54,24 +54,24 @@ public class ChatAdmin implements IVoicedCommandHandler
 				activeChar.sendMessage("Usage: .banchat name [minutes]");
 				return true;
 			}
-			StringTokenizer st = new StringTokenizer(params);
+			final StringTokenizer st = new StringTokenizer(params);
 			if (st.hasMoreTokens())
 			{
-				String name = st.nextToken();
+				final String name = st.nextToken();
 				long expirationTime = 0;
 				if (st.hasMoreTokens())
 				{
-					String token = st.nextToken();
+					final String token = st.nextToken();
 					if (Util.isDigit(token))
 					{
 						expirationTime = System.currentTimeMillis() + (Integer.parseInt(st.nextToken()) * 60 * 1000);
 					}
 				}
 				
-				int objId = CharNameTable.getInstance().getIdByName(name);
+				final int objId = CharNameTable.getInstance().getIdByName(name);
 				if (objId > 0)
 				{
-					L2PcInstance player = L2World.getInstance().getPlayer(objId);
+					final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 					if ((player == null) || !player.isOnline())
 					{
 						activeChar.sendMessage("Player not online !");
@@ -124,15 +124,15 @@ public class ChatAdmin implements IVoicedCommandHandler
 				activeChar.sendMessage("Usage: .unbanchat name");
 				return true;
 			}
-			StringTokenizer st = new StringTokenizer(params);
+			final StringTokenizer st = new StringTokenizer(params);
 			if (st.hasMoreTokens())
 			{
-				String name = st.nextToken();
+				final String name = st.nextToken();
 				
-				int objId = CharNameTable.getInstance().getIdByName(name);
+				final int objId = CharNameTable.getInstance().getIdByName(name);
 				if (objId > 0)
 				{
-					L2PcInstance player = L2World.getInstance().getPlayer(objId);
+					final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 					if ((player == null) || !player.isOnline())
 					{
 						activeChar.sendMessage("Player not online !");

@@ -89,8 +89,8 @@ public class L2VillageMasterInstance extends L2NpcInstance
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
-		String[] commandStr = command.split(" ");
-		String actualCommand = commandStr[0]; // Get actual command
+		final String[] commandStr = command.split(" ");
+		final String actualCommand = commandStr[0]; // Get actual command
 		
 		String cmdParams = "";
 		String cmdParams2 = "";
@@ -210,7 +210,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			final L2ClanMember member = clan.getClanMember(cmdParams);
 			if (member == null)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_EXIST);
 				sm.addString(cmdParams);
 				player.sendPacket(sm);
 				return;
@@ -435,7 +435,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			{
 				if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
 					sm.addString(clanName);
 					player.sendPacket(sm);
 				}
@@ -591,7 +591,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 		
 		clan.broadcastClanStatus();
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
 		sm.addString(leaderName);
 		sm.addString(clanName);
 		clan.broadcastToOnlineMembers(sm);
@@ -618,7 +618,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		{
 			if (player.getClan().getLevel() < 8)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				if (player.getClan().getLevel() < 5)
 				{
 					sm.addInt(5);

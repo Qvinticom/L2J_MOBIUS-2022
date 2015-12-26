@@ -55,7 +55,7 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		_skilllvl = skilllvl;
 		_maxlvl = SkillData.getInstance().getMaxLevel(_skillid);
 		
-		L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
+		final L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(skillid);
 		EnchantSkillHolder esd = null;
 		// do we have this skill?
 		if (enchantLearn != null)

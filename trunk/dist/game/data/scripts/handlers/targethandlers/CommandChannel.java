@@ -70,7 +70,7 @@ public class CommandChannel implements ITargetTypeHandler
 		}
 		
 		// Get all visible objects in a spherical area near the L2Character
-		int maxTargets = skill.getAffectLimit();
+		final int maxTargets = skill.getAffectLimit();
 		final List<L2PcInstance> members = hasChannel ? party.getCommandChannel().getMembers() : party.getMembers();
 		
 		for (L2PcInstance member : members)

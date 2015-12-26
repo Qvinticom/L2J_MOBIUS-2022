@@ -48,18 +48,18 @@ public final class SummonDebuff extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.hasSummon())
 		{
 			if (player.getEffectList().isAffectedBySkill(PRICE_OF_SUMMONING_LION))
 			{
-				Skill skill = SkillData.getInstance().getSkill(PRICE_OF_SUMMONING_LION, 1);
+				final Skill skill = SkillData.getInstance().getSkill(PRICE_OF_SUMMONING_LION, 1);
 				skill.applyEffects(player, player);
 				return true;
 			}
 			else if (player.getEffectList().isAffectedBySkill(PRICE_OF_SUMMONING_LUMI))
 			{
-				Skill skill = SkillData.getInstance().getSkill(PRICE_OF_SUMMONING_LUMI, 1);
+				final Skill skill = SkillData.getInstance().getSkill(PRICE_OF_SUMMONING_LUMI, 1);
 				skill.applyEffects(player, player);
 				return true;
 			}

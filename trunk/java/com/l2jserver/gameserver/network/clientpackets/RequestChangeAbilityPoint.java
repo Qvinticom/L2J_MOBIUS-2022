@@ -59,10 +59,10 @@ public class RequestChangeAbilityPoint extends L2GameClientPacket
 			return;
 		}
 		
-		long spRequired = AbilityPointsData.getInstance().getPrice(activeChar.getAbilityPoints());
+		final long spRequired = AbilityPointsData.getInstance().getPrice(activeChar.getAbilityPoints());
 		if (spRequired > activeChar.getSp())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S1_SP_TO_CONVERT_TO1_ABILITY_POINT);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S1_SP_TO_CONVERT_TO1_ABILITY_POINT);
 			sm.addLong(spRequired);
 			activeChar.sendPacket(sm);
 			return;

@@ -127,12 +127,12 @@ public final class RequestRefundItem extends L2GameClientPacket
 		long adena = 0;
 		long slots = 0;
 		
-		L2ItemInstance[] refund = player.getRefund().getItems();
-		int[] objectIds = new int[_items.length];
+		final L2ItemInstance[] refund = player.getRefund().getItems();
+		final int[] objectIds = new int[_items.length];
 		
 		for (int i = 0; i < _items.length; i++)
 		{
-			int idx = _items[i];
+			final int idx = _items[i];
 			if ((idx < 0) || (idx >= refund.length))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent invalid refund index", Config.DEFAULT_PUNISH);
@@ -163,7 +163,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 				}
 			}
 			
-			long count = item.getCount();
+			final long count = item.getCount();
 			weight += count * template.getWeight();
 			adena += (count * template.getReferencePrice()) / 2;
 			if (!template.isStackable())
@@ -199,7 +199,7 @@ public final class RequestRefundItem extends L2GameClientPacket
 		
 		for (int i = 0; i < _items.length; i++)
 		{
-			L2ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
+			final L2ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
 			if (item == null)
 			{
 				_log.warning("Error refunding object for char " + player.getName() + " (newitem == null)");

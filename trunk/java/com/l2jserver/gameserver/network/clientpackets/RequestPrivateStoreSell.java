@@ -46,7 +46,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_storePlayerId = readD();
-		int count = readD();
+		final int count = readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -55,12 +55,12 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 		
 		for (int i = 0; i < count; i++)
 		{
-			int objectId = readD();
-			int itemId = readD();
+			final int objectId = readD();
+			final int itemId = readD();
 			readH(); // TODO analyse this
 			readH(); // TODO analyse this
-			long cnt = readQ();
-			long price = readQ();
+			final long cnt = readQ();
+			final long price = readQ();
 			readD(); // TODO analyse this
 			readH(); // TODO analyse this
 			
@@ -76,7 +76,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -94,13 +94,13 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance object = L2World.getInstance().getPlayer(_storePlayerId);
+		final L2PcInstance object = L2World.getInstance().getPlayer(_storePlayerId);
 		if (object == null)
 		{
 			return;
 		}
 		
-		L2PcInstance storePlayer = object;
+		final L2PcInstance storePlayer = object;
 		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
 		{
 			return;
@@ -121,7 +121,7 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			return;
 		}
 		
-		TradeList storeList = storePlayer.getBuyList();
+		final TradeList storeList = storePlayer.getBuyList();
 		if (storeList == null)
 		{
 			return;

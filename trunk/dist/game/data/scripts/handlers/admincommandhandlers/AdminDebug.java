@@ -35,7 +35,7 @@ public class AdminDebug implements IAdminCommandHandler
 	@Override
 	public final boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		String[] commandSplit = command.split(" ");
+		final String[] commandSplit = command.split(" ");
 		if (ADMIN_COMMANDS[0].equalsIgnoreCase(commandSplit[0]))
 		{
 			L2Object target;

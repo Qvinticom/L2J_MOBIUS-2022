@@ -195,7 +195,7 @@ public abstract class IdFactory
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement stmt = con.createStatement())
 		{
-			long cleanupStart = System.currentTimeMillis();
+			final long cleanupStart = System.currentTimeMillis();
 			int cleanCount = 0;
 			// Misc/Account Related
 			// Please read the descriptions above each before uncommenting them. If you are still

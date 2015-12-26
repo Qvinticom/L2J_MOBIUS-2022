@@ -68,7 +68,7 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 		{
 			case -1: // Party disable by player client config
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
 				sm.addPcName(player);
 				requestor.sendPacket(sm);
 				break;
@@ -84,7 +84,7 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 				{
 					if (requestor.getParty().getMemberCount() >= 7)
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
 						player.sendPacket(sm);
 						requestor.sendPacket(sm);
 						return;
@@ -125,7 +125,7 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 						if (room != null)
 						{
 							room.addMember(player);
-							ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
+							final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
 							for (L2PcInstance member : room.getPartyMembers())
 							{
 								if (member != null)

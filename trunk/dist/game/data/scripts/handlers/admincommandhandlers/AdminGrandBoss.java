@@ -75,7 +75,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 				}
 				else
 				{
-					NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+					final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 					html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/grandboss.htm"));
 					activeChar.sendPacket(html);
 				}
@@ -303,7 +303,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(grandBossId);
 			final String bossRespawn = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(info.getLong("respawn_time"));
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), htmlPatch));
 			html.replace("%bossStatus%", text);
 			html.replace("%bossColor%", textColor);

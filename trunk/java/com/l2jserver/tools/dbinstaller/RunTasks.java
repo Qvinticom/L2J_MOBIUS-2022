@@ -46,7 +46,7 @@ public class RunTasks extends Thread
 	public void run()
 	{
 		new DBDumper(_frame, _db);
-		ScriptExecutor exec = new ScriptExecutor(_frame);
+		final ScriptExecutor exec = new ScriptExecutor(_frame);
 		
 		_frame.appendToProgressArea("Installing Database Content...");
 		exec.execSqlBatch(new File(_sqlDir));

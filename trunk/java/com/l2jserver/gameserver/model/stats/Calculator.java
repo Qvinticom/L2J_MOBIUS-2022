@@ -77,8 +77,8 @@ public final class Calculator
 			return false;
 		}
 		
-		AbstractFunction[] funcs1 = c1._functions;
-		AbstractFunction[] funcs2 = c2._functions;
+		final AbstractFunction[] funcs1 = c1._functions;
+		final AbstractFunction[] funcs2 = c2._functions;
 		
 		if (funcs1 == funcs2)
 		{
@@ -121,8 +121,8 @@ public final class Calculator
 	 */
 	public synchronized void addFunc(AbstractFunction function)
 	{
-		AbstractFunction[] funcs = _functions;
-		AbstractFunction[] tmp = new AbstractFunction[funcs.length + 1];
+		final AbstractFunction[] funcs = _functions;
+		final AbstractFunction[] tmp = new AbstractFunction[funcs.length + 1];
 		
 		final int order = function.getOrder();
 		int i;
@@ -148,8 +148,8 @@ public final class Calculator
 	 */
 	public synchronized void removeFunc(AbstractFunction function)
 	{
-		AbstractFunction[] funcs = _functions;
-		AbstractFunction[] tmp = new AbstractFunction[funcs.length - 1];
+		final AbstractFunction[] funcs = _functions;
+		final AbstractFunction[] tmp = new AbstractFunction[funcs.length - 1];
 		
 		int i;
 		
@@ -185,7 +185,7 @@ public final class Calculator
 	 */
 	public synchronized List<Stats> removeOwner(Object owner)
 	{
-		List<Stats> modifiedStats = new ArrayList<>();
+		final List<Stats> modifiedStats = new ArrayList<>();
 		for (AbstractFunction func : _functions)
 		{
 			if (func.getFuncOwner() == owner)

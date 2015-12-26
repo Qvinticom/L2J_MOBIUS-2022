@@ -74,7 +74,7 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 				castle.getSiegeDate().setTimeInMillis(_time);
 				castle.setIsTimeRegistrationOver(true);
 				castle.getSiege().saveSiegeDate();
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME);
 				msg.addCastleId(_castleId);
 				Broadcast.toAllOnlinePlayers(msg);
 				activeChar.sendPacket(new SiegeInfo(castle));
@@ -92,12 +92,12 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 	
 	private static boolean isSiegeTimeValid(long siegeDate, long choosenDate)
 	{
-		Calendar cal1 = Calendar.getInstance();
+		final Calendar cal1 = Calendar.getInstance();
 		cal1.setTimeInMillis(siegeDate);
 		cal1.set(Calendar.MINUTE, 0);
 		cal1.set(Calendar.SECOND, 0);
 		
-		Calendar cal2 = Calendar.getInstance();
+		final Calendar cal2 = Calendar.getInstance();
 		cal2.setTimeInMillis(choosenDate);
 		
 		for (int hour : Config.SIEGE_HOUR_LIST)

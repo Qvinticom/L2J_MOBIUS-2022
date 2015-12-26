@@ -81,9 +81,9 @@ public final class FreyaCelebration extends LongTimeEvent
 		{
 			if (getQuestItemsCount(player, Inventory.ADENA_ID) > 1)
 			{
-				long _curr_time = System.currentTimeMillis();
-				String value = loadGlobalQuestVar(player.getAccountName());
-				long _reuse_time = value == "" ? 0 : Long.parseLong(value);
+				final long _curr_time = System.currentTimeMillis();
+				final String value = loadGlobalQuestVar(player.getAccountName());
+				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (_curr_time > _reuse_time)
 				{
@@ -93,10 +93,10 @@ public final class FreyaCelebration extends LongTimeEvent
 				}
 				else
 				{
-					long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
-					int hours = (int) (remainingTime / 3600);
-					int minutes = (int) ((remainingTime % 3600) / 60);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+					final long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
+					final int hours = (int) (remainingTime / 3600);
+					final int minutes = (int) ((remainingTime % 3600) / 60);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
 					sm.addItemName(FREYA_POTION);
 					sm.addInt(hours);
 					sm.addInt(minutes);
@@ -105,7 +105,7 @@ public final class FreyaCelebration extends LongTimeEvent
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
 				sm.addItemName(Inventory.ADENA_ID);
 				sm.addInt(1);
 				player.sendPacket(sm);
@@ -126,7 +126,7 @@ public final class FreyaCelebration extends LongTimeEvent
 		{
 			if (getRandom(100) < 5)
 			{
-				CreatureSay cs = new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERE_S_NOTHING_STRANGE_ABOUT_IT_IT_S_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
+				final CreatureSay cs = new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERE_S_NOTHING_STRANGE_ABOUT_IT_IT_S_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
 				
 				npc.broadcastPacket(cs);

@@ -52,7 +52,7 @@ public class RequestCommissionRegistrableItemList extends L2GameClientPacket
 			return;
 		}
 		
-		ArrayList<L2ItemInstance> auctionableItemList = new ArrayList<>();
+		final ArrayList<L2ItemInstance> auctionableItemList = new ArrayList<>();
 		for (L2ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
 		{
 			if (item.getItem().isAuctionable())

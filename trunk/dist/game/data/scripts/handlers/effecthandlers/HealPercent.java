@@ -57,15 +57,15 @@ public final class HealPercent extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
+		final L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
 			return;
 		}
 		
 		double amount = 0;
-		double power = _power;
-		boolean full = (power == 100.0);
+		final double power = _power;
+		final boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
 		// Prevents overheal and negative amount

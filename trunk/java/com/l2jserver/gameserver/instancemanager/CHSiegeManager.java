@@ -64,7 +64,7 @@ public final class CHSiegeManager
 			{
 				final int id = rs.getInt("clanHallId");
 				
-				StatsSet set = new StatsSet();
+				final StatsSet set = new StatsSet();
 				
 				set.set("id", id);
 				set.set("name", rs.getString("name"));
@@ -74,7 +74,7 @@ public final class CHSiegeManager
 				set.set("nextSiege", rs.getLong("nextSiege"));
 				set.set("siegeLenght", rs.getLong("siegeLenght"));
 				set.set("scheduleConfig", rs.getString("schedule_config"));
-				SiegableHall hall = new SiegableHall(set);
+				final SiegableHall hall = new SiegableHall(set);
 				_siegableHalls.put(id, hall);
 				ClanHallManager.addClanHall(hall);
 			}
@@ -118,7 +118,7 @@ public final class CHSiegeManager
 	
 	public final ClanHallSiegeEngine getSiege(L2Character character)
 	{
-		SiegableHall hall = getNearbyClanHall(character);
+		final SiegableHall hall = getNearbyClanHall(character);
 		if (hall == null)
 		{
 			return null;
@@ -134,7 +134,7 @@ public final class CHSiegeManager
 		}
 		else if (hall.isWaitingBattle())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
 			sm.addString(hall.getName());
 			player.sendPacket(sm);
 		}

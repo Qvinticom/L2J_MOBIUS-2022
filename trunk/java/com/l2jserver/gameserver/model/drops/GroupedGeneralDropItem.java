@@ -121,8 +121,8 @@ public final class GroupedGeneralDropItem implements IDropItem
 	 */
 	public final List<GeneralDropItem> extractMe()
 	{
-		List<GeneralDropItem> items = new ArrayList<>();
-		for (final GeneralDropItem item : getItems())
+		final List<GeneralDropItem> items = new ArrayList<>();
+		for (GeneralDropItem item : getItems())
 		{
 			// precise and killer strategies of the group
 			items.add(new GeneralDropItem(item.getItemId(), item.getMin(), item.getMax(), (item.getChance() * getChance()) / 100, item.getAmountStrategy(), item.getChanceStrategy(), getPreciseStrategy(), getKillerChanceModifierStrategy(), item.getDropCalculationStrategy()));
@@ -142,9 +142,9 @@ public final class GroupedGeneralDropItem implements IDropItem
 			sumchance += (item.getChance() * getChance()) / 100;
 		}
 		final double sumchance1 = sumchance;
-		GroupedGeneralDropItem group = new GroupedGeneralDropItem(sumchance1, getDropCalculationStrategy(), IKillerChanceModifierStrategy.NO_RULES, getPreciseStrategy());
-		List<GeneralDropItem> items = new ArrayList<>();
-		for (final GeneralDropItem item : getItems())
+		final GroupedGeneralDropItem group = new GroupedGeneralDropItem(sumchance1, getDropCalculationStrategy(), IKillerChanceModifierStrategy.NO_RULES, getPreciseStrategy());
+		final List<GeneralDropItem> items = new ArrayList<>();
+		for (GeneralDropItem item : getItems())
 		{
 			// modify only the chance, leave all other rules intact
 			items.add(new GeneralDropItem(item.getItemId(), item.getMin(), item.getMax(), (item.getChance() * getChance()) / sumchance1, item.getAmountStrategy(), item.getChanceStrategy(), item.getPreciseStrategy(), item.getKillerChanceModifierStrategy(), item.getDropCalculationStrategy()));
@@ -216,8 +216,8 @@ public final class GroupedGeneralDropItem implements IDropItem
 		{
 			sumchance += (item.getChance(victim, killer) * getChance() * chanceModifier) / 100;
 		}
-		GroupedGeneralDropItem group = new GroupedGeneralDropItem(sumchance, getDropCalculationStrategy(), IKillerChanceModifierStrategy.NO_RULES, getPreciseStrategy()); // to discard further deep blue calculations
-		List<GeneralDropItem> items = new ArrayList<>();
+		final GroupedGeneralDropItem group = new GroupedGeneralDropItem(sumchance, getDropCalculationStrategy(), IKillerChanceModifierStrategy.NO_RULES, getPreciseStrategy()); // to discard further deep blue calculations
+		final List<GeneralDropItem> items = new ArrayList<>();
 		for (GeneralDropItem item : getItems())
 		{
 			// the item is made almost "static"

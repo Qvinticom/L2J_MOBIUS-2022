@@ -33,7 +33,7 @@ public interface IDropCalculationStrategy
 {
 	public static final IDropCalculationStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
 	{
-		double chance = item.getChance(victim, killer);
+		final double chance = item.getChance(victim, killer);
 		if (chance > (Rnd.nextDouble() * 100))
 		{
 			int amountMultiply = 1;

@@ -75,7 +75,7 @@ public class RequestRegistBeauty extends L2GameClientPacket
 			
 			if (_colorId > 0)
 			{
-				BeautyItem color = hair.getColors().get(_colorId);
+				final BeautyItem color = hair.getColors().get(_colorId);
 				if (color == null)
 				{
 					player.sendPacket(new ExResponseBeautyRegistReset(player, ExResponseBeautyRegistReset.CHANGE, ExResponseBeautyRegistReset.FAILURE));

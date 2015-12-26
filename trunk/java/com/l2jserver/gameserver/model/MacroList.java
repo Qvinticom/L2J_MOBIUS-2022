@@ -188,23 +188,23 @@ public class MacroList implements IRestorable
 			{
 				while (rset.next())
 				{
-					int id = rset.getInt("id");
-					int icon = rset.getInt("icon");
-					String name = rset.getString("name");
-					String descr = rset.getString("descr");
-					String acronym = rset.getString("acronym");
-					List<MacroCmd> commands = new ArrayList<>();
-					StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
+					final int id = rset.getInt("id");
+					final int icon = rset.getInt("icon");
+					final String name = rset.getString("name");
+					final String descr = rset.getString("descr");
+					final String acronym = rset.getString("acronym");
+					final List<MacroCmd> commands = new ArrayList<>();
+					final StringTokenizer st1 = new StringTokenizer(rset.getString("commands"), ";");
 					while (st1.hasMoreTokens())
 					{
-						StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
+						final StringTokenizer st = new StringTokenizer(st1.nextToken(), ",");
 						if (st.countTokens() < 3)
 						{
 							continue;
 						}
-						MacroType type = MacroType.values()[Integer.parseInt(st.nextToken())];
-						int d1 = Integer.parseInt(st.nextToken());
-						int d2 = Integer.parseInt(st.nextToken());
+						final MacroType type = MacroType.values()[Integer.parseInt(st.nextToken())];
+						final int d1 = Integer.parseInt(st.nextToken());
+						final int d2 = Integer.parseInt(st.nextToken());
 						String cmd = "";
 						if (st.hasMoreTokens())
 						{

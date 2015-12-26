@@ -53,8 +53,8 @@ public class RequestMentorCancel extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance player = getClient().getActiveChar();
-		int objectId = CharNameTable.getInstance().getIdByName(_name);
+		final L2PcInstance player = getClient().getActiveChar();
+		final int objectId = CharNameTable.getInstance().getIdByName(_name);
 		if (player != null)
 		{
 			if (player.isMentor())

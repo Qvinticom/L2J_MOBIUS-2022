@@ -315,16 +315,16 @@ public final class L2TeleporterInstance extends L2Npc
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		if (player.isAffectedBySkill(6201) || player.isAffectedBySkill(6202) || player.isAffectedBySkill(6203))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			
-			String filename = "html/teleporter/epictransformed.htm";
+			final String filename = "html/teleporter/epictransformed.htm";
 			
 			html.setFile(player.getHtmlPrefix(), filename);
 			html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -334,7 +334,7 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		else if (actualCommand.equalsIgnoreCase("goto"))
 		{
-			int npcId = getId();
+			final int npcId = getId();
 			
 			switch (npcId)
 			{
@@ -353,7 +353,7 @@ public final class L2TeleporterInstance extends L2Npc
 				return;
 			}
 			
-			int whereTo = Integer.parseInt(st.nextToken());
+			final int whereTo = Integer.parseInt(st.nextToken());
 			if (condition == COND_REGULAR)
 			{
 				doTeleport(player, whereTo);
@@ -382,7 +382,7 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		else if (command.startsWith("Chat"))
 		{
-			Calendar cal = Calendar.getInstance();
+			final Calendar cal = Calendar.getInstance();
 			int val = 0;
 			try
 			{
@@ -473,7 +473,7 @@ public final class L2TeleporterInstance extends L2Npc
 	{
 		String filename = "html/teleporter/castleteleporter-no.htm";
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		if (condition == COND_REGULAR)
 		{
 			super.showChatWindow(player);
@@ -500,7 +500,7 @@ public final class L2TeleporterInstance extends L2Npc
 	
 	private void doTeleport(L2PcInstance player, int val)
 	{
-		L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			// you cannot teleport to village that is in siege
@@ -526,7 +526,7 @@ public final class L2TeleporterInstance extends L2Npc
 			}
 			else if (list.getIsForNoble() && !player.isNoble())
 			{
-				String filename = "html/teleporter/nobleteleporter-no.htm";
+				final String filename = "html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				html.setFile(player.getHtmlPrefix(), filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));

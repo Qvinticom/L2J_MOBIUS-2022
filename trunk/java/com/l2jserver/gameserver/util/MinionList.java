@@ -334,7 +334,7 @@ public class MinionList
 	public static final L2MonsterInstance spawnMinion(L2MonsterInstance master, int minionId)
 	{
 		// Get the template of the Minion to spawn
-		L2NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
+		final L2NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
 		if (minionTemplate == null)
 		{
 			return null;

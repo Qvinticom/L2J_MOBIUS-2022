@@ -57,8 +57,8 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		_items = new ItemHolder[count];
 		for (int i = 0; i < count; i++)
 		{
-			int objId = readD();
-			long cnt = readQ();
+			final int objId = readD();
+			final long cnt = readQ();
 			if ((objId < 1) || (cnt < 0))
 			{
 				_items = null;
@@ -134,7 +134,7 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		for (ItemHolder i : _items)
 		{
 			// Calculate needed slots
-			L2ItemInstance item = warehouse.getItemByObjectId(i.getId());
+			final L2ItemInstance item = warehouse.getItemByObjectId(i.getId());
 			if ((item == null) || (item.getCount() < i.getCount()))
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to withdraw non-existent item from warehouse.", Config.DEFAULT_PUNISH);
@@ -167,10 +167,10 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		}
 		
 		// Proceed to the transfer
-		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
-			L2ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
+			final L2ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
 			if ((oldItem == null) || (oldItem.getCount() < i.getCount()))
 			{
 				_log.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");

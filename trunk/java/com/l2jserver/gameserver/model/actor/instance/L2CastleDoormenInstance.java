@@ -36,7 +36,7 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final void openDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())
@@ -55,7 +55,7 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final void closeDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())
@@ -76,7 +76,7 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 	{
 		if ((player.getClan() != null) && player.hasClanPrivilege(ClanPrivilege.CS_OPEN_DOOR))
 		{
-			SiegableHall hall = getConquerableHall();
+			final SiegableHall hall = getConquerableHall();
 			// save in variable because it's a costly call
 			if (hall != null)
 			{
@@ -99,7 +99,7 @@ public class L2CastleDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final boolean isUnderSiege()
 	{
-		SiegableHall hall = getConquerableHall();
+		final SiegableHall hall = getConquerableHall();
 		if (hall != null)
 		{
 			return hall.isInSiege();

@@ -59,8 +59,8 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			int objId = readD();
-			long count = readQ();
+			final int objId = readD();
+			final long count = readQ();
 			if ((objId < 1) || (count < 0))
 			{
 				_items = null;
@@ -128,7 +128,7 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		
 		for (ItemHolder i : _items)
 		{
-			L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final L2ItemInstance item = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (item == null)
 			{
 				_log.warning("Error depositing a warehouse object for char " + player.getName() + " (validity check)");
@@ -171,11 +171,11 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		}
 		
 		// Proceed to the transfer
-		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (ItemHolder i : _items)
 		{
 			// Check validity of requested item
-			L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
+			final L2ItemInstance oldItem = player.checkItemManipulation(i.getId(), i.getCount(), "deposit");
 			if (oldItem == null)
 			{
 				_log.warning("Error depositing a warehouse object for char " + player.getName() + " (olditem == null)");

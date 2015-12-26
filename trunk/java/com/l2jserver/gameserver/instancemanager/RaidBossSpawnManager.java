@@ -356,7 +356,7 @@ public class RaidBossSpawnManager
 					continue;
 				}
 				
-				L2RaidBossInstance boss = _bosses.get(bossId);
+				final L2RaidBossInstance boss = _bosses.get(bossId);
 				
 				if (boss == null)
 				{
@@ -368,7 +368,7 @@ public class RaidBossSpawnManager
 					updateStatus(boss, false);
 				}
 				
-				StatsSet info = _storedInfo.get(bossId);
+				final StatsSet info = _storedInfo.get(bossId);
 				
 				if (info == null)
 				{
@@ -415,7 +415,7 @@ public class RaidBossSpawnManager
 		
 		for (int i : _bosses.keySet())
 		{
-			L2RaidBossInstance boss = _bosses.get(i);
+			final L2RaidBossInstance boss = _bosses.get(i);
 			
 			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
 		}
@@ -539,7 +539,7 @@ public class RaidBossSpawnManager
 		{
 			for (Integer bossId : _schedules.keySet())
 			{
-				ScheduledFuture<?> f = _schedules.get(bossId);
+				final ScheduledFuture<?> f = _schedules.get(bossId);
 				f.cancel(true);
 			}
 			_schedules.clear();

@@ -65,21 +65,21 @@ public final class CallPc extends AbstractEffect
 			return;
 		}
 		
-		L2PcInstance target = info.getEffected().getActingPlayer();
-		L2PcInstance activeChar = info.getEffector().getActingPlayer();
+		final L2PcInstance target = info.getEffected().getActingPlayer();
+		final L2PcInstance activeChar = info.getEffector().getActingPlayer();
 		if (checkSummonTargetStatus(target, activeChar))
 		{
 			if ((_itemId != 0) && (_itemCount != 0))
 			{
 				if (target.getInventory().getInventoryItemCount(_itemId, 0) < _itemCount)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_REQUIRED_FOR_SUMMONING);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_REQUIRED_FOR_SUMMONING);
 					sm.addItemName(_itemId);
 					target.sendPacket(sm);
 					return;
 				}
 				target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, activeChar, target);
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(_itemId);
 				target.sendPacket(sm);
 			}
@@ -103,7 +103,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.isAlikeDead())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 			sm.addPcName(target);
 			activeChar.sendPacket(sm);
 			return false;
@@ -111,7 +111,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.isInStoreMode())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 			sm.addPcName(target);
 			activeChar.sendPacket(sm);
 			return false;
@@ -119,7 +119,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.isRooted() || target.isInCombat())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 			sm.addPcName(target);
 			activeChar.sendPacket(sm);
 			return false;
@@ -139,7 +139,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.inObserverMode())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 			sm.addCharName(target);
 			activeChar.sendPacket(sm);
 			return false;
@@ -147,7 +147,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneId.JAIL))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
@@ -155,7 +155,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (activeChar.getInstanceId() > 0)
 		{
-			Instance summonerInstance = InstanceManager.getInstance().getInstance(activeChar.getInstanceId());
+			final Instance summonerInstance = InstanceManager.getInstance().getInstance(activeChar.getInstanceId());
 			if (!Config.ALLOW_SUMMON_IN_INSTANCE || !summonerInstance.isSummonAllowed())
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);

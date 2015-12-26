@@ -76,7 +76,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2PremiumItem _item = activeChar.getPremiumItemList().get(_itemNum);
+		final L2PremiumItem _item = activeChar.getPremiumItemList().get(_itemNum);
 		if (_item == null)
 		{
 			return;
@@ -86,7 +86,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 			return;
 		}
 		
-		long itemsLeft = (_item.getCount() - _itemCount);
+		final long itemsLeft = (_item.getCount() - _itemCount);
 		
 		activeChar.addItem("PremiumItem", _item.getItemId(), _itemCount, activeChar.getTarget(), true);
 		

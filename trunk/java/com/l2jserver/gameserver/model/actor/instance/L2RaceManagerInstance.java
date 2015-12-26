@@ -105,7 +105,7 @@ public class L2RaceManagerInstance extends L2Npc
 			
 			_managers = new ArrayList<>();
 			
-			ThreadPoolManager s = ThreadPoolManager.getInstance();
+			final ThreadPoolManager s = ThreadPoolManager.getInstance();
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), 30 * SECOND, 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), MINUTE, 10 * MINUTE);
@@ -160,7 +160,7 @@ public class L2RaceManagerInstance extends L2Npc
 	
 	public void makeAnnouncement(SystemMessageId type)
 	{
-		SystemMessage sm = SystemMessage.getSystemMessage(type);
+		final SystemMessage sm = SystemMessage.getSystemMessage(type);
 		switch (type.getId())
 		{
 			case 816: // SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1
@@ -233,13 +233,13 @@ public class L2RaceManagerInstance extends L2Npc
 	
 	private void startRace()
 	{
-		MonsterRace race = MonsterRace.getInstance();
+		final MonsterRace race = MonsterRace.getInstance();
 		if (_state == STARTING_RACE)
 		{
 			// state++;
-			PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
+			final PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
 			broadcast(SRace);
-			PlaySound SRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
+			final PlaySound SRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
 			broadcast(SRace2);
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
@@ -314,14 +314,14 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			return;
 		}
-		int npcId = getTemplate().getId();
+		final int npcId = getTemplate().getId();
 		String filename, search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		filename = getHtmlPath(npcId, 5);
 		html.setFile(player.getHtmlPrefix(), filename);
 		for (int i = 0; i < 8; i++)
 		{
-			int n = i + 1;
+			final int n = i + 1;
 			search = "Mob" + n;
 			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 		}
@@ -333,14 +333,14 @@ public class L2RaceManagerInstance extends L2Npc
 	
 	public void showMonsterInfo(L2PcInstance player)
 	{
-		int npcId = getTemplate().getId();
+		final int npcId = getTemplate().getId();
 		String filename, search;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		filename = getHtmlPath(npcId, 6);
 		html.setFile(player.getHtmlPrefix(), filename);
 		for (int i = 0; i < 8; i++)
 		{
-			int n = i + 1;
+			final int n = i + 1;
 			search = "Mob" + n;
 			html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 		}
@@ -355,7 +355,7 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			return;
 		}
-		int npcId = getTemplate().getId();
+		final int npcId = getTemplate().getId();
 		SystemMessage sm;
 		String filename, search, replace;
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
@@ -365,7 +365,7 @@ public class L2RaceManagerInstance extends L2Npc
 			html.setFile(player.getHtmlPrefix(), filename);
 			for (int i = 0; i < 8; i++)
 			{
-				int n = i + 1;
+				final int n = i + 1;
 				search = "Mob" + n;
 				html.replace(search, MonsterRace.getInstance().getMonsters()[i].getTemplate().getName());
 			}
@@ -416,13 +416,13 @@ public class L2RaceManagerInstance extends L2Npc
 			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
 			search = "0adena";
-			int price = _cost[player.getRace(1) - 1];
+			final int price = _cost[player.getRace(1) - 1];
 			html.replace(search, "" + price);
 			search = "0tax";
-			int tax = 0;
+			final int tax = 0;
 			html.replace(search, "" + tax);
 			search = "0total";
-			int total = price + tax;
+			final int total = price + tax;
 			html.replace(search, "" + total);
 		}
 		else
@@ -431,8 +431,8 @@ public class L2RaceManagerInstance extends L2Npc
 			{
 				return;
 			}
-			int ticket = player.getRace(0);
-			int priceId = player.getRace(1);
+			final int ticket = player.getRace(0);
+			final int priceId = player.getRace(1);
 			if (!player.reduceAdena("Race", _cost[priceId - 1], this, true))
 			{
 				return;
@@ -443,15 +443,15 @@ public class L2RaceManagerInstance extends L2Npc
 			sm.addInt(_raceNumber);
 			sm.addItemName(4443);
 			player.sendPacket(sm);
-			L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), 4443);
+			final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), 4443);
 			item.setCount(1);
 			item.setEnchantLevel(_raceNumber);
 			item.setCustomType1(ticket);
 			item.setCustomType2(_cost[priceId - 1] / 100);
 			player.getInventory().addItem("Race", item, player, this);
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
-			L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(Inventory.ADENA_ID);
+			final L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(Inventory.ADENA_ID);
 			iu.addModifiedItem(adenaupdate);
 			player.sendPacket(iu);
 			return;

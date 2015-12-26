@@ -157,7 +157,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		try
 		{
-			int val = Integer.parseInt(request.substring(21));
+			final int val = Integer.parseInt(request.substring(21));
 			checkAndChangeClass(player, val);
 		}
 		catch (NumberFormatException e)

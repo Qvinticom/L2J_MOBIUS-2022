@@ -1213,7 +1213,7 @@ public final class Config
 			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
 			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
 			
-			String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
+			final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);
 			for (String protocol : protocols)
 			{
@@ -1241,7 +1241,7 @@ public final class Config
 			}
 			
 			// Hosts and Subnets
-			IPConfigData ipcd = new IPConfigData();
+			final IPConfigData ipcd = new IPConfigData();
 			GAME_SERVER_SUBNETS = ipcd.getSubnets();
 			GAME_SERVER_HOSTS = ipcd.getHosts();
 			
@@ -1414,11 +1414,11 @@ public final class Config
 			// Create Map only if enabled
 			if (ENABLE_MODIFY_SKILL_DURATION)
 			{
-				String[] propertySplit = character.getString("SkillDurationList", "").split(";");
+				final String[] propertySplit = character.getString("SkillDurationList", "").split(";");
 				SKILL_DURATION_LIST = new HashMap<>(propertySplit.length);
 				for (String skill : propertySplit)
 				{
-					String[] skillSplit = skill.split(",");
+					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillDurationList \"", skill, "\""));
@@ -1443,11 +1443,11 @@ public final class Config
 			// Create Map only if enabled
 			if (ENABLE_MODIFY_SKILL_REUSE)
 			{
-				String[] propertySplit = character.getString("SkillReuseList", "").split(";");
+				final String[] propertySplit = character.getString("SkillReuseList", "").split(";");
 				SKILL_REUSE_LIST = new HashMap<>(propertySplit.length);
 				for (String skill : propertySplit)
 				{
-					String[] skillSplit = skill.split(",");
+					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
@@ -1553,7 +1553,7 @@ public final class Config
 			ENCHANT_CHANCE_ELEMENT_JEWEL = character.getDouble("EnchantChanceElementJewel", 20);
 			ENCHANT_CHANCE_ELEMENT_ENERGY = character.getDouble("EnchantChanceElementEnergy", 10);
 			CHANGE_CHANCE_ELEMENT = character.getInt("ChangeChanceElement", 60);
-			String[] notenchantable = character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
+			final String[] notenchantable = character.getString("EnchantBlackList", "7816,7817,7818,7819,7820,7821,7822,7823,7824,7825,7826,7827,7828,7829,7830,7831,13293,13294,13296").split(",");
 			ENCHANT_BLACKLIST = new int[notenchantable.length];
 			for (int i = 0; i < notenchantable.length; i++)
 			{
@@ -1676,7 +1676,7 @@ public final class Config
 			UNSTUCK_INTERVAL = character.getInt("UnstuckInterval", 300);
 			TELEPORT_WATCHDOG_TIMEOUT = character.getInt("TeleportWatchdogTimeout", 0);
 			PLAYER_SPAWN_PROTECTION = character.getInt("PlayerSpawnProtection", 0);
-			String[] items = character.getString("PlayerSpawnProtectionAllowedItems", "0").split(",");
+			final String[] items = character.getString("PlayerSpawnProtectionAllowedItems", "0").split(",");
 			SPAWN_PROTECTION_ALLOWED_ITEMS = new ArrayList<>(items.length);
 			for (String item : items)
 			{
@@ -1829,7 +1829,7 @@ public final class Config
 			ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
 			AUTODESTROY_ITEM_AFTER = General.getInt("AutoDestroyDroppedItemAfter", 600);
 			HERB_AUTO_DESTROY_TIME = General.getInt("AutoDestroyHerbTime", 60) * 1000;
-			String[] split = General.getString("ListOfProtectedItems", "0").split(",");
+			final String[] split = General.getString("ListOfProtectedItems", "0").split(",");
 			LIST_PROTECTED_ITEMS = new ArrayList<>(split.length);
 			for (String id : split)
 			{
@@ -2040,7 +2040,7 @@ public final class Config
 			GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
 			ENABLE_GUARD_RETURN = NPC.getBoolean("EnableGuardReturn", false);
 			ALLOW_WYVERN_UPGRADER = NPC.getBoolean("AllowWyvernUpgrader", false);
-			String[] listPetRentNpc = NPC.getString("ListPetRentNpc", "30827").split(",");
+			final String[] listPetRentNpc = NPC.getString("ListPetRentNpc", "30827").split(",");
 			LIST_PET_RENT_NPC = new ArrayList<>(listPetRentNpc.length);
 			for (String id : listPetRentNpc)
 			{
@@ -2059,7 +2059,7 @@ public final class Config
 			MINIONS_RESPAWN_TIME = new HashMap<>(propertySplit.length);
 			for (String prop : propertySplit)
 			{
-				String[] propSplit = prop.split(",");
+				final String[] propSplit = prop.split(",");
 				if (propSplit.length != 2)
 				{
 					_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
@@ -2148,13 +2148,13 @@ public final class Config
 			RATE_CORPSE_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("CorpseDropChanceMultiplier", 1);
 			RATE_HERB_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("HerbDropChanceMultiplier", 1);
 			RATE_RAID_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("RaidDropChanceMultiplier", 1);
-			String[] dropAmountMultiplier = RatesSettings.getString("DropAmountMultiplierByItemId", "").split(";");
+			final String[] dropAmountMultiplier = RatesSettings.getString("DropAmountMultiplierByItemId", "").split(";");
 			RATE_DROP_AMOUNT_MULTIPLIER = new HashMap<>(dropAmountMultiplier.length);
 			if (!dropAmountMultiplier[0].isEmpty())
 			{
 				for (String item : dropAmountMultiplier)
 				{
-					String[] itemSplit = item.split(",");
+					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
@@ -2176,13 +2176,13 @@ public final class Config
 				}
 			}
 			
-			String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
+			final String[] dropChanceMultiplier = RatesSettings.getString("DropChanceMultiplierByItemId", "").split(";");
 			RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(dropChanceMultiplier.length);
 			if (!dropChanceMultiplier[0].isEmpty())
 			{
 				for (String item : dropChanceMultiplier)
 				{
-					String[] itemSplit = item.split(",");
+					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
@@ -2328,7 +2328,7 @@ public final class Config
 							tvtNpcCoords = CustomSettings.getString("TvTEventReward", "57,100000").split(";");
 							for (String reward : tvtNpcCoords)
 							{
-								String[] rewardSplit = reward.split(",");
+								final String[] rewardSplit = reward.split(",");
 								if (rewardSplit.length != 2)
 								{
 									_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"", reward, "\""));
@@ -2396,7 +2396,7 @@ public final class Config
 								TVT_EVENT_FIGHTER_BUFFS = new HashMap<>(tvtNpcCoords.length);
 								for (String skill : tvtNpcCoords)
 								{
-									String[] skillSplit = skill.split(",");
+									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
 										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"", skill, "\""));
@@ -2424,7 +2424,7 @@ public final class Config
 								TVT_EVENT_MAGE_BUFFS = new HashMap<>(tvtNpcCoords.length);
 								for (String skill : tvtNpcCoords)
 								{
-									String[] skillSplit = skill.split(",");
+									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
 										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"", skill, "\""));
@@ -2523,11 +2523,11 @@ public final class Config
 			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = CustomSettings.getInt("DualboxCheckMaxPlayersPerIP", 0);
 			L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = CustomSettings.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
 			L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = CustomSettings.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
-			String[] dualboxCheckWhiteList = CustomSettings.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
+			final String[] dualboxCheckWhiteList = CustomSettings.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
 			L2JMOD_DUALBOX_CHECK_WHITELIST = new HashMap<>(dualboxCheckWhiteList.length);
 			for (String entry : dualboxCheckWhiteList)
 			{
-				String[] entrySplit = entry.split(",");
+				final String[] entrySplit = entry.split(",");
 				if (entrySplit.length != 2)
 				{
 					_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"", entry, "\""));
@@ -2570,7 +2570,7 @@ public final class Config
 			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
 			if (ENABLE_RANDOM_MONSTER_SPAWNS)
 			{
-				String[] mobsIds = CustomSettings.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+				final String[] mobsIds = CustomSettings.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
 				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
 				for (String id : mobsIds)
 				{
@@ -2620,13 +2620,13 @@ public final class Config
 			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
 			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 1);
 			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 2);
-			String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumDropChanceMultiplierByItemId", "").split(";");
+			final String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumDropChanceMultiplierByItemId", "").split(";");
 			PREMIUM_RATE_DROP_CHANCE_MULTIPLIER = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropChanceMultiplier)
 				{
-					String[] itemSplit = item.split(",");
+					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropChanceMultiplierByItemId \"", item, "\""));
@@ -2647,13 +2647,13 @@ public final class Config
 					}
 				}
 			}
-			String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumDropAmountMultiplierByItemId", "").split(";");
+			final String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumDropAmountMultiplierByItemId", "").split(";");
 			PREMIUM_RATE_DROP_AMOUNT_MULTIPLIER = new HashMap<>(premiumDropAmountMultiplier.length);
 			if (!premiumDropAmountMultiplier[0].isEmpty())
 			{
 				for (String item : premiumDropAmountMultiplier)
 				{
-					String[] itemSplit = item.split(",");
+					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
 						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumDropAmountMultiplierByItemId \"", item, "\""));
@@ -2779,7 +2779,7 @@ public final class Config
 			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
 			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
 			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
-			String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
+			final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
 			LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
 			for (String id : olyRestrictedItems)
 			{
@@ -2894,7 +2894,7 @@ public final class Config
 			{
 				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
 				{
-					String key = regionX + "_" + regionY;
+					final String key = regionX + "_" + regionY;
 					if (geoData.containskey(regionX + "_" + regionY))
 					{
 						GEODATA_REGIONS.put(key, geoData.getBoolean(key, false));
@@ -3725,8 +3725,8 @@ public final class Config
 					{
 						pName = pName.toUpperCase();
 					}
-					Field clazField = Config.class.getField(pName);
-					int modifiers = clazField.getModifiers();
+					final Field clazField = Config.class.getField(pName);
+					final int modifiers = clazField.getModifiers();
 					// just in case :)
 					if (!Modifier.isStatic(modifiers) || !Modifier.isPublic(modifiers) || Modifier.isFinal(modifiers))
 					{
@@ -3804,8 +3804,8 @@ public final class Config
 	{
 		try
 		{
-			Properties hexSetting = new Properties();
-			File file = new File(fileName);
+			final Properties hexSetting = new Properties();
+			final File file = new File(fileName);
 			// Create a new empty file only if it doesn't exist
 			file.createNewFile();
 			try (OutputStream out = new FileOutputStream(file))
@@ -3993,8 +3993,8 @@ public final class Config
 	 */
 	private static Map<Integer, Float> parseConfigLine(String line)
 	{
-		String[] propertySplit = line.split(",");
-		Map<Integer, Float> ret = new HashMap<>(propertySplit.length);
+		final String[] propertySplit = line.split(",");
+		final Map<Integer, Float> ret = new HashMap<>(propertySplit.length);
 		int i = 0;
 		for (String value : propertySplit)
 		{
@@ -4106,7 +4106,7 @@ public final class Config
 						}
 					}
 					
-					Node att = n.getAttributes().getNamedItem("address");
+					final Node att = n.getAttributes().getNamedItem("address");
 					if (att == null)
 					{
 						LOGGER.log(Level.WARNING, "Failed to load " + IP_CONFIG_FILE + " file - default server address is missing.");
@@ -4126,7 +4126,7 @@ public final class Config
 			String externalIp = "127.0.0.1";
 			try
 			{
-				URL autoIp = new URL("http://ip1.dynupdate.no-ip.com:8245/");
+				final URL autoIp = new URL("http://ip1.dynupdate.no-ip.com:8245/");
 				try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream())))
 				{
 					externalIp = in.readLine();
@@ -4140,11 +4140,11 @@ public final class Config
 			
 			try
 			{
-				Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
+				final Enumeration<NetworkInterface> niList = NetworkInterface.getNetworkInterfaces();
 				
 				while (niList.hasMoreElements())
 				{
-					NetworkInterface ni = niList.nextElement();
+					final NetworkInterface ni = niList.nextElement();
 					
 					if (!ni.isUp() || ni.isVirtual())
 					{

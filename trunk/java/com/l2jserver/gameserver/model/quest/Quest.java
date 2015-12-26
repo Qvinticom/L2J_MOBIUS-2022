@@ -876,7 +876,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void notifyEnterZone(L2Character character, L2ZoneType zone)
 	{
-		L2PcInstance player = character.getActingPlayer();
+		final L2PcInstance player = character.getActingPlayer();
 		String res = null;
 		try
 		{
@@ -902,7 +902,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void notifyExitZone(L2Character character, L2ZoneType zone)
 	{
-		L2PcInstance player = character.getActingPlayer();
+		final L2PcInstance player = character.getActingPlayer();
 		String res = null;
 		try
 		{
@@ -1462,7 +1462,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		if ((player != null) && player.getAccessLevel().isGm())
 		{
-			String res = "<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>";
+			final String res = "<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>";
 			return showResult(player, res);
 		}
 		return false;
@@ -1538,11 +1538,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 				while (rs.next())
 				{
 					// Get the ID of the quest and its state
-					String questId = rs.getString("name");
-					String statename = rs.getString("value");
+					final String questId = rs.getString("name");
+					final String statename = rs.getString("value");
 					
 					// Search quest associated with the ID
-					Quest q = QuestManager.getInstance().getQuest(questId);
+					final Quest q = QuestManager.getInstance().getQuest(questId);
 					if (q == null)
 					{
 						_log.finer("Unknown quest " + questId + " for player " + player.getName());
@@ -1569,11 +1569,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 				{
 					while (rs.next())
 					{
-						String questId = rs.getString("name");
-						String var = rs.getString("var");
-						String value = rs.getString("value");
+						final String questId = rs.getString("name");
+						final String var = rs.getString("var");
+						final String value = rs.getString("value");
 						// Get the QuestState saved in the loop before
-						QuestState qs = player.getQuestState(questId);
+						final QuestState qs = player.getQuestState(questId);
 						if (qs == null)
 						{
 							_log.finer("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
@@ -2407,7 +2407,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 		// normal cases...if the player is not in a party, check the player's state
 		QuestState temp = null;
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getMembers().isEmpty()))
 		{
@@ -2420,7 +2420,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		// if the player is in a party, gather a list of all matching party members (possibly including this player)
-		List<L2PcInstance> candidates = new ArrayList<>();
+		final List<L2PcInstance> candidates = new ArrayList<>();
 		// get the target for enforcing distance limitations.
 		L2Object target = player.getTarget();
 		if (target == null)
@@ -2467,7 +2467,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 		// normal cases...if the player is not in a party check the player's state
 		QuestState temp = null;
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		// if this player is not in a party, just check if this player instance matches the conditions itself
 		if ((party == null) || (party.getMembers().isEmpty()))
 		{
@@ -2482,7 +2482,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 		// if the player is in a party, gather a list of all matching party members (possibly
 		// including this player)
-		List<L2PcInstance> candidates = new ArrayList<>();
+		final List<L2PcInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
 		L2Object target = player.getTarget();
@@ -2684,8 +2684,8 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String showHtmlFile(L2PcInstance player, String filename, L2Npc npc)
 	{
-		boolean questwindow = !filename.endsWith(".html");
-		int questId = getId();
+		final boolean questwindow = !filename.endsWith(".html");
+		final int questId = getId();
 		
 		// Create handler to file linked to the quest
 		String content = getHtm(player.getHtmlPrefix(), filename);
@@ -2700,7 +2700,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			
 			if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999))
 			{
-				NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
+				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
 				npcReply.setHtml(content);
 				npcReply.replace("%playername%", player.getName());
 				player.sendPacket(npcReply);

@@ -113,10 +113,10 @@ public class CursedWeapon implements INamable
 				_player.storeMe();
 				
 				// Destroy
-				L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					if (removedItem.getCount() == 0)
 					{
 						iu.addRemovedItem(removedItem);
@@ -174,10 +174,10 @@ public class CursedWeapon implements INamable
 			if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
 			{
 				// Destroy
-				L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
+				final L2ItemInstance removedItem = _player.getInventory().destroyItemByItemId("", _itemId, 1, _player, null);
 				if (!Config.FORCE_INVENTORY_UPDATE)
 				{
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					if (removedItem.getCount() == 0)
 					{
 						iu.addRemovedItem(removedItem);
@@ -208,7 +208,7 @@ public class CursedWeapon implements INamable
 		// Delete infos from table if any
 		CursedWeaponsManager.removeFromDb(_itemId);
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED);
 		sm.addItemName(_itemId);
 		CursedWeaponsManager.announce(sm);
 		
@@ -265,8 +265,8 @@ public class CursedWeapon implements INamable
 			_item.setDropTime(0); // Prevent item from being removed by ItemsAutoDestroy
 			
 			// RedSky and Earthquake
-			ExRedSky packet = new ExRedSky(10);
-			Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
+			final ExRedSky packet = new ExRedSky(10);
+			final Earthquake eq = new Earthquake(player.getX(), player.getY(), player.getZ(), 14, 3);
 			Broadcast.toAllOnlinePlayers(packet);
 			Broadcast.toAllOnlinePlayers(eq);
 		}
@@ -284,7 +284,7 @@ public class CursedWeapon implements INamable
 			// _player.getInventory().getItemByItemId(_itemId).dropMe(_player, _player.getX(), _player.getY(), _player.getZ());
 		}
 		_isDropped = true;
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_THE_S1_REGION);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_THE_S1_REGION);
 		if (player != null)
 		{
 			sm.addZoneName(player.getX(), player.getY(), player.getZ()); // Region Name
@@ -306,14 +306,14 @@ public class CursedWeapon implements INamable
 		doTransform();
 		giveSkill();
 		
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S_OWNER_HAS_LOGGED_INTO_THE_S1_REGION);
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S_OWNER_HAS_LOGGED_INTO_THE_S1_REGION);
 		msg.addZoneName(_player.getX(), _player.getY(), _player.getZ());
 		msg.addItemName(_player.getCursedWeaponEquippedId());
 		CursedWeaponsManager.announce(msg);
 		
-		CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_player.getCursedWeaponEquippedId());
-		SystemMessage msg2 = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
-		int timeLeft = (int) (cw.getTimeLeft() / 60000);
+		final CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_player.getCursedWeaponEquippedId());
+		final SystemMessage msg2 = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
+		final int timeLeft = (int) (cw.getTimeLeft() / 60000);
 		msg2.addItemName(_player.getCursedWeaponEquippedId());
 		msg2.addInt(timeLeft);
 		_player.sendPacket(msg2);
@@ -456,7 +456,7 @@ public class CursedWeapon implements INamable
 		// Refresh inventory
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(_item);
 			// iu.addItems(Arrays.asList(items));
 			_player.sendPacket(iu);
@@ -469,7 +469,7 @@ public class CursedWeapon implements INamable
 		// Refresh player stats
 		_player.broadcastUserInfo();
 		
-		SocialAction atk = new SocialAction(_player.getObjectId(), 17);
+		final SocialAction atk = new SocialAction(_player.getObjectId(), 17);
 		
 		_player.broadcastPacket(atk);
 		

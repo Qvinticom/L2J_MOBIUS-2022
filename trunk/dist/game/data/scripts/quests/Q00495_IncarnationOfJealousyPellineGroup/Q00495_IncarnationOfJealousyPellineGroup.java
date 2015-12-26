@@ -55,7 +55,7 @@ public class Q00495_IncarnationOfJealousyPellineGroup extends Quest
 			return null;
 		}
 		
-		String htmltext = event;
+		final String htmltext = event;
 		if (event.equals("33647-03.htm"))
 		{
 			qs.startQuest();

@@ -260,7 +260,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		
 		initNewChar(getClient(), newChar);
 		
-		LogRecord record = new LogRecord(Level.INFO, "Created new character");
+		final LogRecord record = new LogRecord(Level.INFO, "Created new character");
 		record.setParameters(new Object[]
 		{
 			newChar,
@@ -292,7 +292,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		
 		if (Config.CUSTOM_STARTING_LOC)
 		{
-			Location createLoc = new Location(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);
+			final Location createLoc = new Location(Config.CUSTOM_STARTING_LOC_X, Config.CUSTOM_STARTING_LOC_Y, Config.CUSTOM_STARTING_LOC_Z);
 			newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
 		}
 		else if (Config.FACTION_SYSTEM_ENABLED)
@@ -301,7 +301,7 @@ public final class CharacterCreate extends L2GameClientPacket
 		}
 		else
 		{
-			Location createLoc = template.getCreationPoint();
+			final Location createLoc = template.getCreationPoint();
 			newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
 		}
 		newChar.setTitle("");

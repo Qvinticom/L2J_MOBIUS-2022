@@ -42,27 +42,27 @@ public class ExUISetting extends L2GameServerPacket
 	{
 		int size = 16; // initial header and footer
 		int category = 0;
-		int numKeyCt = _uiSettings.getKeys().size();
+		final int numKeyCt = _uiSettings.getKeys().size();
 		for (int i = 0; i < numKeyCt; i++)
 		{
 			size++;
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				List<Integer> catElList1 = _uiSettings.getCategories().get(category);
+				final List<Integer> catElList1 = _uiSettings.getCategories().get(category);
 				size = size + catElList1.size();
 			}
 			category++;
 			size++;
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				List<Integer> catElList2 = _uiSettings.getCategories().get(category);
+				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
 				size = size + catElList2.size();
 			}
 			category++;
 			size = size + 4;
 			if (_uiSettings.getKeys().containsKey(i))
 			{
-				List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
+				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
 				size = size + (keyElList.size() * 20);
 			}
 		}
@@ -81,13 +81,13 @@ public class ExUISetting extends L2GameServerPacket
 		
 		int category = 0;
 		
-		int numKeyCt = _uiSettings.getKeys().size();
+		final int numKeyCt = _uiSettings.getKeys().size();
 		writeD(numKeyCt);
 		for (int i = 0; i < numKeyCt; i++)
 		{
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				List<Integer> catElList1 = _uiSettings.getCategories().get(category);
+				final List<Integer> catElList1 = _uiSettings.getCategories().get(category);
 				writeC(catElList1.size());
 				for (int cmd : catElList1)
 				{
@@ -102,7 +102,7 @@ public class ExUISetting extends L2GameServerPacket
 			
 			if (_uiSettings.getCategories().containsKey(category))
 			{
-				List<Integer> catElList2 = _uiSettings.getCategories().get(category);
+				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
 				writeC(catElList2.size());
 				for (int cmd : catElList2)
 				{
@@ -117,7 +117,7 @@ public class ExUISetting extends L2GameServerPacket
 			
 			if (_uiSettings.getKeys().containsKey(i))
 			{
-				List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
+				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
 				writeD(keyElList.size());
 				for (ActionKey akey : keyElList)
 				{

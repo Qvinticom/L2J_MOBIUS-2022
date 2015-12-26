@@ -191,11 +191,11 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		}
 		
 		final QuestState st = getQuestState(partyMember, false);
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		if (Util.contains(MOBS1, npcId))
 		{
-			float chance = (CHANCE_MOBS1 * Config.RATE_QUEST_DROP);
+			final float chance = (CHANCE_MOBS1 * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 2);
@@ -209,7 +209,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		
 		if (Util.contains(MOBS2, npcId))
 		{
-			float chance = (CHANCE_MOBS2 * Config.RATE_QUEST_DROP);
+			final float chance = (CHANCE_MOBS2 * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 1);
@@ -219,7 +219,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		
 		if (npcId == DEINONYCHUS)
 		{
-			float chance = (CHANCE_DEINO * Config.RATE_QUEST_DROP);
+			final float chance = (CHANCE_DEINO * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.rewardItems(BONES_OF_A_PLAINS_DINOSAUR, 1);

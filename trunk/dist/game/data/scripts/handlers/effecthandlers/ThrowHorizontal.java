@@ -61,9 +61,9 @@ public final class ThrowHorizontal extends AbstractEffect
 		final int curY = info.getEffected().getY();
 		
 		// Calculate distance between effector and effected current position
-		double dx = info.getEffector().getX() - curX;
-		double dy = info.getEffector().getY() - curY;
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final double dx = info.getEffector().getX() - curX;
+		final double dy = info.getEffector().getY() - curY;
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
 			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());
@@ -76,14 +76,14 @@ public final class ThrowHorizontal extends AbstractEffect
 			return;
 		}
 		
-		int x = info.getEffector().getX();
-		int y = info.getEffector().getY();
-		int z = info.getEffected().getZ();
+		final int x = info.getEffector().getX();
+		final int y = info.getEffector().getY();
+		final int z = info.getEffected().getZ();
 		
 		// Prevent using skill with this effect on NPC that not monster
 		if (!(info.getEffected().isMonster() || info.getEffected().isRaidMinion() || info.getEffected().isMinion() || info.getEffected().isSummon() || info.getEffected().isPlayer()))
 		{
-			L2PcInstance effector = (L2PcInstance) info.getEffector();
+			final L2PcInstance effector = (L2PcInstance) info.getEffector();
 			effector.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}

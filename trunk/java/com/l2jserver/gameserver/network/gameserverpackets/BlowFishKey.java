@@ -44,7 +44,7 @@ public class BlowFishKey extends BaseSendablePacket
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.ENCRYPT_MODE, publicKey);
-			byte[] encrypted = rsaCipher.doFinal(blowfishKey);
+			final byte[] encrypted = rsaCipher.doFinal(blowfishKey);
 			writeD(encrypted.length);
 			writeB(encrypted);
 		}

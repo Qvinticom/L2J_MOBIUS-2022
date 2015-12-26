@@ -63,7 +63,7 @@ public class ListPartyWating extends L2GameServerPacket
 			}
 			_rooms.add(room);
 		}
-		int size = _rooms.size();
+		final int size = _rooms.size();
 		
 		writeC(0x9c);
 		if (size > 0)

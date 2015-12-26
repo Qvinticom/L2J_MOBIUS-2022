@@ -130,7 +130,7 @@ public class EnergySeeds extends AbstractNpcAI
 		
 		if (_spawnedNpcs.containsKey(npc) && SPAWNS.containsKey(_spawnedNpcs.get(npc)))
 		{
-			ESSpawn spawn = SPAWNS.get(_spawnedNpcs.get(npc));
+			final ESSpawn spawn = SPAWNS.get(_spawnedNpcs.get(npc));
 			spawn.scheduleRespawn(RESPAWN + getRandom(RANDOM_RESPAWN_OFFSET));
 			_spawnedNpcs.remove(npc);
 			if (isSeedActive(spawn._seedId))
@@ -184,7 +184,7 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
+				final L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.openMe();
@@ -196,7 +196,7 @@ public class EnergySeeds extends AbstractNpcAI
 		{
 			for (int doorId : SEED_OF_DESTRUCTION_DOORS)
 			{
-				L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
+				final L2DoorInstance doorInstance = DoorData.getInstance().getDoor(doorId);
 				if (doorInstance != null)
 				{
 					doorInstance.closeMe();
@@ -316,7 +316,7 @@ public class EnergySeeds extends AbstractNpcAI
 			case ANNIHILATION_BISTAKON:
 				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
+					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -325,7 +325,7 @@ public class EnergySeeds extends AbstractNpcAI
 			case ANNIHILATION_REPTILIKON:
 				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
+					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -334,7 +334,7 @@ public class EnergySeeds extends AbstractNpcAI
 			case ANNIHILATION_COKRAKON:
 				if (getRandom(100) < 50)
 				{
-					L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
+					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
 					mob.setRunning();
 					mob.addDamageHate(player, 0, 999);
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
@@ -345,8 +345,8 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	private L2MonsterInstance spawnSupriseMob(L2Npc energy, int npcId)
 	{
-		L2NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
-		L2MonsterInstance monster = new L2MonsterInstance(surpriseMobTemplate);
+		final L2NpcTemplate surpriseMobTemplate = NpcData.getInstance().getTemplate(npcId);
+		final L2MonsterInstance monster = new L2MonsterInstance(surpriseMobTemplate);
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
 		monster.setHeading(energy.getHeading());
 		monster.setInstanceId(energy.getInstanceId());
@@ -717,7 +717,7 @@ public class EnergySeeds extends AbstractNpcAI
 				if (isSeedActive(_seedId))
 				{
 					// get a random NPC that should spawn at this location
-					Integer spawnId = _spawnId; // the map uses "Integer", not "int"
+					final Integer spawnId = _spawnId; // the map uses "Integer", not "int"
 					_spawnedNpcs.put(addSpawn(_npcIds[getRandom(_npcIds.length)], _loc, false, 0), spawnId);
 				}
 			}, waitTime);

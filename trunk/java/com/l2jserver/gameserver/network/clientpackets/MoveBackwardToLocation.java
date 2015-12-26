@@ -68,7 +68,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		{
 			if (Config.L2WALKER_PROTECTION)
 			{
-				L2PcInstance activeChar = getClient().getActiveChar();
+				final L2PcInstance activeChar = getClient().getActiveChar();
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
 			}
 		}
@@ -77,7 +77,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -119,7 +119,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 				activeChar.abortCast();
 				activeChar.setTarget(null);
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				JumpWay jw = JumpManager.getInstance().new JumpWay();
+				final JumpWay jw = JumpManager.getInstance().new JumpWay();
 				jw.add(JumpManager.getInstance().new JumpNode(_targetX, _targetY, _targetZ, -1));
 				activeChar.sendPacket(new ExFlyMove(activeChar.getObjectId(), -1, jw));
 				activeChar.setXYZ(_targetX, _targetY, _targetZ);
@@ -135,8 +135,8 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			return;
 		}
 		
-		double dx = _targetX - activeChar.getX();
-		double dy = _targetY - activeChar.getY();
+		final double dx = _targetX - activeChar.getX();
+		final double dy = _targetY - activeChar.getY();
 		// Can't move if character is confused, or trying to move a huge distance
 		if (activeChar.isOutOfControl() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
 		{

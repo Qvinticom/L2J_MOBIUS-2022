@@ -50,7 +50,7 @@ public class L2DecoyInstance extends L2Decoy
 		setInstanceType(InstanceType.L2DecoyInstance);
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
-		int skilllevel = getTemplate().getDisplayId() - 13070;
+		final int skilllevel = getTemplate().getDisplayId() - 13070;
 		_DecoyLifeTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
 		_HateSpam = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
 	}
@@ -102,7 +102,7 @@ public class L2DecoyInstance extends L2Decoy
 			try
 			{
 				_Decoy.decTimeRemaining(1000);
-				double newTimeRemaining = _Decoy.getTimeRemaining();
+				final double newTimeRemaining = _Decoy.getTimeRemaining();
 				if (newTimeRemaining < 0)
 				{
 					_Decoy.unSummon(_activeChar);

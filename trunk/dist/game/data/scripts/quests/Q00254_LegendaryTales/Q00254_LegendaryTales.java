@@ -117,7 +117,7 @@ public class Q00254_LegendaryTales extends Quest
 				htmltext = (player.getLevel() < MIN_LEVEL) ? "30754-00.htm" : "30754-01.htm";
 				break;
 			case State.STARTED:
-				long count = getQuestItemsCount(player, LARGE_DRAGON_SKULL);
+				final long count = getQuestItemsCount(player, LARGE_DRAGON_SKULL);
 				if (st.isCond(1))
 				{
 					htmltext = ((count > 0) ? "30754-14.htm" : "30754-06.html");
@@ -225,8 +225,8 @@ public class Q00254_LegendaryTales extends Quest
 		
 		if ((st != null) && st.isCond(1))
 		{
-			int raids = st.getInt("raids");
-			Bosses boss = Bosses.valueOf(npc.getId());
+			final int raids = st.getInt("raids");
+			final Bosses boss = Bosses.valueOf(npc.getId());
 			
 			if (!checkMask(st, boss))
 			{
@@ -247,7 +247,7 @@ public class Q00254_LegendaryTales extends Quest
 	
 	private static boolean checkMask(QuestState qs, Bosses boss)
 	{
-		int pos = boss.getMask();
+		final int pos = boss.getMask();
 		return ((qs.getInt("raids") & pos) == pos);
 	}
 }

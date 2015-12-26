@@ -51,13 +51,13 @@ public final class L2Augmentation
 		public AugmentationStatBoni(int augmentationId)
 		{
 			_active = false;
-			int[] stats = new int[2];
+			final int[] stats = new int[2];
 			stats[0] = 0x0000FFFF & augmentationId;
 			stats[1] = (augmentationId >> 16);
 			
 			for (int stat : stats)
 			{
-				Options op = OptionData.getInstance().getOptions(stat);
+				final Options op = OptionData.getInstance().getOptions(stat);
 				if (op != null)
 				{
 					_options.add(op);

@@ -53,8 +53,8 @@ public class AdminTarget implements IAdminCommandHandler
 	{
 		try
 		{
-			String targetName = command.substring(13);
-			L2PcInstance player = L2World.getInstance().getPlayer(targetName);
+			final String targetName = command.substring(13);
+			final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 			if (player != null)
 			{
 				player.onAction(activeChar);

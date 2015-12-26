@@ -93,12 +93,12 @@ public final class L2EnchantSkillLearn
 	
 	public boolean isMaxEnchant(int level)
 	{
-		int enchantType = getEnchantRoute(level);
+		final int enchantType = getEnchantRoute(level);
 		if ((enchantType < 1) || !_enchantRoutes.containsKey(enchantType))
 		{
 			return false;
 		}
-		int index = getEnchantIndex(level);
+		final int index = getEnchantIndex(level);
 		
 		if ((index + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size())
 		{
@@ -109,13 +109,13 @@ public final class L2EnchantSkillLearn
 	
 	public EnchantSkillHolder getEnchantSkillHolder(int level)
 	{
-		int enchantType = getEnchantRoute(level);
+		final int enchantType = getEnchantRoute(level);
 		if ((enchantType < 1) || !_enchantRoutes.containsKey(enchantType))
 		{
 			return null;
 		}
-		int index = getEnchantIndex(level);
-		L2EnchantSkillGroup group = EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType));
+		final int index = getEnchantIndex(level);
+		final L2EnchantSkillGroup group = EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType));
 		
 		if (index < 0)
 		{

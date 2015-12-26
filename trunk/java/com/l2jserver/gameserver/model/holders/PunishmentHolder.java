@@ -50,7 +50,7 @@ public final class PunishmentHolder
 	 */
 	public void stopPunishment(PunishmentTask task)
 	{
-		String key = String.valueOf(task.getKey());
+		final String key = String.valueOf(task.getKey());
 		if (_holder.containsKey(key))
 		{
 			task.stopPunishment();

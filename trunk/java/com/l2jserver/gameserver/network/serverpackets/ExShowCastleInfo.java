@@ -39,7 +39,7 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x14);
-		List<Castle> castles = CastleManager.getInstance().getCastles();
+		final List<Castle> castles = CastleManager.getInstance().getCastles();
 		writeD(castles.size());
 		for (Castle castle : castles)
 		{

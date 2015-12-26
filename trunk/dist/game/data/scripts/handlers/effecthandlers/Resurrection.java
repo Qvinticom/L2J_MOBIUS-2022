@@ -57,8 +57,8 @@ public final class Resurrection extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isPlayer())
 		{

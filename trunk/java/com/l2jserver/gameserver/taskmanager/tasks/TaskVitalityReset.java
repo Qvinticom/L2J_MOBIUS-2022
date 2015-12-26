@@ -49,7 +49,7 @@ public class TaskVitalityReset extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		Calendar cal = Calendar.getInstance();
+		final Calendar cal = Calendar.getInstance();
 		if (cal.get(Calendar.DAY_OF_WEEK) == Config.ALT_VITALITY_DATE_RESET)
 		{
 			for (L2PcInstance player : L2World.getInstance().getPlayers())

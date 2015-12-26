@@ -160,7 +160,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		// Get the owner if the target is a summon
 		if (target instanceof L2Summon)
 		{
-			L2PcInstance owner = ((L2Summon) target).getOwner();
+			final L2PcInstance owner = ((L2Summon) target).getOwner();
 			if (_actor.isInsideRadius(owner, 1000, true, false))
 			{
 				target = owner;
@@ -201,7 +201,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			// Check if actor is not dead
 			if (!_actor.isAlikeDead())
 			{
-				L2Attackable npc = (L2Attackable) _actor;
+				final L2Attackable npc = (L2Attackable) _actor;
 				
 				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
 				if (!npc.getKnownList().getKnownPlayers().isEmpty())
@@ -269,7 +269,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 	 */
 	private void thinkActive()
 	{
-		L2Attackable npc = (L2Attackable) _actor;
+		final L2Attackable npc = (L2Attackable) _actor;
 		
 		// Update every 1s the _globalAggro counter to come close to 0
 		if (_globalAggro != 0)
@@ -297,7 +297,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				if (autoAttackCondition(target)) // check aggression
 				{
 					// Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
-					int hating = npc.getHating(target);
+					final int hating = npc.getHating(target);
 					
 					// Add the attacker to the L2Attackable _aggroList with 0 damage and 1 hate
 					if (hating == 0)
@@ -323,7 +323,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			if (hated != null)
 			{
 				// Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
-				int aggro = npc.getHating(hated);
+				final int aggro = npc.getHating(hated);
 				
 				if ((aggro + _globalAggro) > 0)
 				{
@@ -386,14 +386,14 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 		}
 		
-		L2Character attackTarget = getAttackTarget();
+		final L2Character attackTarget = getAttackTarget();
 		// Check if target is dead or if timeout is expired to stop this attack
 		if ((attackTarget == null) || attackTarget.isAlikeDead() || (_attackTimeout < GameTimeController.getInstance().getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			if (attackTarget != null)
 			{
-				L2Attackable npc = (L2Attackable) _actor;
+				final L2Attackable npc = (L2Attackable) _actor;
 				npc.stopHating(attackTarget);
 			}
 			
@@ -414,7 +414,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 	
 	private final void factionNotifyAndSupport()
 	{
-		L2Character target = getAttackTarget();
+		final L2Character target = getAttackTarget();
 		// Call all L2Object of its Faction inside the Faction Range
 		if ((((L2Npc) _actor).getTemplate().getClans() == null) || (target == null))
 		{
@@ -457,7 +457,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 								continue;
 							}
 							
-							int chance = 5;
+							final int chance = 5;
 							if (chance >= Rnd.get(100))
 							{
 								continue;
@@ -467,7 +467,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 								break;
 							}
 							
-							L2Object OldTarget = _actor.getTarget();
+							final L2Object OldTarget = _actor.getTarget();
 							_actor.setTarget(cha);
 							clientStopMoving(null);
 							_actor.doCast(sk);
@@ -479,7 +479,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				continue;
 			}
 			
-			L2Npc npc = (L2Npc) cha;
+			final L2Npc npc = (L2Npc) cha;
 			
 			if (!npc.isInMyClan((L2Npc) _actor))
 			{
@@ -516,7 +516,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 							continue;
 						}
 						
-						int chance = 4;
+						final int chance = 4;
 						if (chance >= Rnd.get(100))
 						{
 							continue;
@@ -526,7 +526,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 							break;
 						}
 						
-						L2Object OldTarget = _actor.getTarget();
+						final L2Object OldTarget = _actor.getTarget();
 						_actor.setTarget(npc);
 						clientStopMoving(null);
 						_actor.doCast(sk);
@@ -600,12 +600,12 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			// check for long ranged skills and heal/buff skills
 			for (Skill sk : skills)
 			{
-				int castRange = sk.getCastRange();
+				final int castRange = sk.getCastRange();
 				
 				if ((dist_2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 				{
 					
-					L2Object OldTarget = _actor.getTarget();
+					final L2Object OldTarget = _actor.getTarget();
 					if ((sk.isContinuous() && !sk.isDebuff()) || (sk.hasEffectType(L2EffectType.HEAL)))
 					{
 						boolean useSkillSelf = true;
@@ -643,11 +643,11 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 			else
 			{
-				double dx = _actor.getX() - attackTarget.getX();
-				double dy = _actor.getY() - attackTarget.getY();
-				double dz = _actor.getZ() - attackTarget.getZ();
-				double homeX = attackTarget.getX() - sGuard.getSpawn().getX();
-				double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
+				final double dx = _actor.getX() - attackTarget.getX();
+				final double dy = _actor.getY() - attackTarget.getY();
+				final double dz = _actor.getZ() - attackTarget.getZ();
+				final double homeX = attackTarget.getX() - sGuard.getSpawn().getX();
+				final double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
 				
 				// Check if the L2SiegeGuardInstance isn't too far from it's home location
 				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) // 1800 * 1800
@@ -693,7 +693,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		{
 			// Temporary hack for preventing guards jumping off towers,
 			// before replacing this with effective geodata checks and AI modification
-			double dz = _actor.getZ() - attackTarget.getZ();
+			final double dz = _actor.getZ() - attackTarget.getZ();
 			if ((dz * dz) < (170 * 170)) // normally 130 if guard z coordinates correct
 			{
 				if (_selfAnalysis.isMage)
@@ -746,11 +746,11 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			{
 				for (Skill sk : skills)
 				{
-					int castRange = sk.getCastRange();
+					final int castRange = sk.getCastRange();
 					
 					if (((castRange * castRange) >= dist_2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 					{
-						L2Object OldTarget = _actor.getTarget();
+						final L2Object OldTarget = _actor.getTarget();
 						if ((sk.isContinuous() && !sk.isDebuff()) || (sk.hasEffectType(L2EffectType.HEAL)))
 						{
 							boolean useSkillSelf = true;
@@ -876,7 +876,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		{
 			return;
 		}
-		L2Attackable me = (L2Attackable) _actor;
+		final L2Attackable me = (L2Attackable) _actor;
 		
 		if (target != null)
 		{
@@ -915,8 +915,8 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				{
 					sGuard = (L2DefenderInstance) _actor;
 				}
-				double homeX = target.getX() - sGuard.getSpawn().getX();
-				double homeY = target.getY() - sGuard.getSpawn().getY();
+				final double homeX = target.getX() - sGuard.getSpawn().getX();
+				final double homeY = target.getY() - sGuard.getSpawn().getY();
 				
 				// Check if the L2SiegeGuardInstance is not too far from its home location
 				if (((homeX * homeX) + (homeY * homeY)) < 3240000)
@@ -933,7 +933,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				return;
 			}
 			
-			L2Character mostHated = me.getMostHated();
+			final L2Character mostHated = me.getMostHated();
 			if (mostHated == null)
 			{
 				_globalAggro = -25;

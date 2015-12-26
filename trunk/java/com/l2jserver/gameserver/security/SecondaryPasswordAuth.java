@@ -252,9 +252,9 @@ public class SecondaryPasswordAuth
 	{
 		try
 		{
-			MessageDigest md = MessageDigest.getInstance("SHA");
-			byte[] raw = password.getBytes("UTF-8");
-			byte[] hash = md.digest(raw);
+			final MessageDigest md = MessageDigest.getInstance("SHA");
+			final byte[] raw = password.getBytes("UTF-8");
+			final byte[] hash = md.digest(raw);
 			return Base64.getEncoder().encodeToString(hash);
 		}
 		catch (NoSuchAlgorithmException e)

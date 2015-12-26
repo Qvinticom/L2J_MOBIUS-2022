@@ -52,7 +52,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(16);
+				final String val = command.substring(16);
 				if (!adminAddExpSp(activeChar, val))
 				{
 					activeChar.sendMessage("Usage: //add_exp_sp exp sp");
@@ -67,7 +67,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(19);
+				final String val = command.substring(19);
 				if (!adminRemoveExpSP(activeChar, val))
 				{
 					activeChar.sendMessage("Usage: //remove_exp_sp exp sp");
@@ -90,7 +90,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private void addExpSp(L2PcInstance activeChar)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{
@@ -113,7 +113,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private boolean adminAddExpSp(L2PcInstance activeChar, String ExpSp)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{
@@ -124,14 +124,14 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		StringTokenizer st = new StringTokenizer(ExpSp);
+		final StringTokenizer st = new StringTokenizer(ExpSp);
 		if (st.countTokens() != 2)
 		{
 			return false;
 		}
 		
-		String exp = st.nextToken();
-		String sp = st.nextToken();
+		final String exp = st.nextToken();
+		final String sp = st.nextToken();
 		long expval = 0;
 		long spval = 0;
 		try
@@ -160,7 +160,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	
 	private boolean adminRemoveExpSP(L2PcInstance activeChar, String ExpSp)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{
@@ -171,14 +171,14 @@ public class AdminExpSp implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		StringTokenizer st = new StringTokenizer(ExpSp);
+		final StringTokenizer st = new StringTokenizer(ExpSp);
 		if (st.countTokens() != 2)
 		{
 			return false;
 		}
 		
-		String exp = st.nextToken();
-		String sp = st.nextToken();
+		final String exp = st.nextToken();
+		final String sp = st.nextToken();
 		long expval = 0;
 		int spval = 0;
 		try

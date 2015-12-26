@@ -34,7 +34,7 @@ public class IntList
 			return getIntegerList(range.split(","));
 		}
 		
-		int[] list =
+		final int[] list =
 		{
 			getInt(range)
 		};
@@ -48,7 +48,7 @@ public class IntList
 	
 	private static int[] getIntegerList(String[] numbers)
 	{
-		int[] list = new int[numbers.length];
+		final int[] list = new int[numbers.length];
 		for (int i = 0; i < list.length; i++)
 		{
 			list[i] = getInt(numbers[i]);
@@ -58,9 +58,9 @@ public class IntList
 	
 	private static int[] getIntegerRange(String[] numbers)
 	{
-		int min = getInt(numbers[0]);
-		int max = getInt(numbers[1]);
-		int[] list = new int[(max - min) + 1];
+		final int min = getInt(numbers[0]);
+		final int max = getInt(numbers[1]);
+		final int[] list = new int[(max - min) + 1];
 		for (int i = 0; i < list.length; i++)
 		{
 			list[i] = min + i;

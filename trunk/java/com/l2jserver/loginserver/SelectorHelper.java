@@ -58,7 +58,7 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	@Override
 	public L2LoginClient create(MMOConnection<L2LoginClient> con)
 	{
-		L2LoginClient client = new L2LoginClient(con);
+		final L2LoginClient client = new L2LoginClient(con);
 		client.sendPacket(new Init(client));
 		return client;
 	}

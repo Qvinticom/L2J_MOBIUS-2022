@@ -38,8 +38,8 @@ public class ChangeAccessLevel extends BaseRecievePacket
 	public ChangeAccessLevel(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		int level = readD();
-		String account = readS();
+		final int level = readD();
+		final String account = readS();
 		
 		LoginController.getInstance().setAccountAccessLevel(account, level);
 		_log.info("Changed " + account + " access level to " + level);

@@ -136,7 +136,7 @@ public abstract class FloodProtectedListener extends Thread
 		{
 			return;
 		}
-		ForeignConnection fConnection = _floodProtection.get(ip);
+		final ForeignConnection fConnection = _floodProtection.get(ip);
 		if (fConnection != null)
 		{
 			fConnection.connectionNumber -= 1;

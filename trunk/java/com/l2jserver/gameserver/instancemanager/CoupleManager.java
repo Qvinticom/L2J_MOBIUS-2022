@@ -71,7 +71,7 @@ public final class CoupleManager
 	
 	public final Couple getCouple(int coupleId)
 	{
-		int index = getCoupleIndex(coupleId);
+		final int index = getCoupleIndex(coupleId);
 		if (index >= 0)
 		{
 			return getCouples().get(index);
@@ -85,10 +85,10 @@ public final class CoupleManager
 		{
 			if ((player1.getPartnerId() == 0) && (player2.getPartnerId() == 0))
 			{
-				int player1id = player1.getObjectId();
-				int player2id = player2.getObjectId();
+				final int player1id = player1.getObjectId();
+				final int player2id = player2.getObjectId();
 				
-				Couple couple = new Couple(player1, player2);
+				final Couple couple = new Couple(player1, player2);
 				getCouples().add(couple);
 				player1.setPartnerId(player2id);
 				player2.setPartnerId(player1id);
@@ -100,12 +100,12 @@ public final class CoupleManager
 	
 	public void deleteCouple(int coupleId)
 	{
-		int index = getCoupleIndex(coupleId);
-		Couple couple = getCouples().get(index);
+		final int index = getCoupleIndex(coupleId);
+		final Couple couple = getCouples().get(index);
 		if (couple != null)
 		{
-			L2PcInstance player1 = L2World.getInstance().getPlayer(couple.getPlayer1Id());
-			L2PcInstance player2 = L2World.getInstance().getPlayer(couple.getPlayer2Id());
+			final L2PcInstance player1 = L2World.getInstance().getPlayer(couple.getPlayer1Id());
+			final L2PcInstance player2 = L2World.getInstance().getPlayer(couple.getPlayer2Id());
 			if (player1 != null)
 			{
 				player1.setPartnerId(0);

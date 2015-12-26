@@ -95,7 +95,7 @@ public final class GraciaSeedsManager
 				break;
 			case 2:
 				// Conquest Complete state, if too much time is passed than change to defense state
-				long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
+				final long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
 				if (timePast >= Config.SOD_STAGE_2_LENGTH)
 				{
 					// change to Attack state because Defend statet is not implemented
@@ -138,7 +138,7 @@ public final class GraciaSeedsManager
 				setSoDState(2, false);
 			}
 			saveData(SODTYPE);
-			Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
+			final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
 			if (esQuest == null)
 			{
 				_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");

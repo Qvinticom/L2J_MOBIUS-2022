@@ -274,9 +274,9 @@ public final class L2ArmorSet
 	
 	public boolean containShield(L2PcInstance player)
 	{
-		Inventory inv = player.getInventory();
+		final Inventory inv = player.getInventory();
 		
-		L2ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final L2ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		return ((shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getId())));
 	}
 	

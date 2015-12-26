@@ -54,7 +54,7 @@ public final class FourSepulchersChangeCoolDownTimeTask implements Runnable
 			manager.setIsFirstTimeRun(false);
 		}
 		
-		long interval = time.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
+		final long interval = time.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 		
 		manager.setChangeEntryTimeTask(ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeEntryTimeTask(), interval));
 		final ScheduledFuture<?> changeCoolDownTimeTask = manager.getChangeCoolDownTimeTask();

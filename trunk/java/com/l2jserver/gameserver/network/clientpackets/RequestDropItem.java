@@ -61,7 +61,7 @@ public final class RequestDropItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if ((activeChar == null) || activeChar.isDead())
 		{
 			return;
@@ -72,7 +72,7 @@ public final class RequestDropItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
+		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
 		
 		if ((item == null) || (_count == 0) || !activeChar.validateItemManipulation(_objectId, "drop") || (!Config.ALLOW_DISCARDITEM && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) || (!item.isDropable() && !(activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS) && Config.GM_TRADE_RESTRICTED_ITEMS)) || ((item.getItemType() == EtcItemType.PET_COLLAR) && activeChar.havePetInvItems()) || activeChar.isInsideZone(ZoneId.NO_ITEM_DROP))
 		{
@@ -190,8 +190,8 @@ public final class RequestDropItem extends L2GameClientPacket
 		
 		if (item.isEquipped())
 		{
-			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-			InventoryUpdate iu = new InventoryUpdate();
+			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
 			{
 				itm.unChargeAllShots();
@@ -200,11 +200,11 @@ public final class RequestDropItem extends L2GameClientPacket
 			activeChar.sendPacket(iu);
 			activeChar.broadcastUserInfo();
 			
-			ItemList il = new ItemList(activeChar, true);
+			final ItemList il = new ItemList(activeChar, true);
 			activeChar.sendPacket(il);
 		}
 		
-		L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
+		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
 		
 		if (Config.DEBUG)
 		{
@@ -215,13 +215,13 @@ public final class RequestDropItem extends L2GameClientPacket
 		
 		if (activeChar.isGM())
 		{
-			String target = (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target");
+			final String target = (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target");
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "Drop", target, "(id: " + dropedItem.getId() + " name: " + dropedItem.getItemName() + " objId: " + dropedItem.getObjectId() + " x: " + activeChar.getX() + " y: " + activeChar.getY() + " z: " + activeChar.getZ() + ")");
 		}
 		
 		if ((dropedItem != null) && (dropedItem.getId() == Inventory.ADENA_ID) && (dropedItem.getCount() >= 1000000))
 		{
-			String msg = "Character (" + activeChar.getName() + ") has dropped (" + dropedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";
+			final String msg = "Character (" + activeChar.getName() + ") has dropped (" + dropedItem.getCount() + ")adena at (" + _x + "," + _y + "," + _z + ")";
 			_log.warning(msg);
 			AdminData.getInstance().broadcastMessageToGMs(msg);
 		}

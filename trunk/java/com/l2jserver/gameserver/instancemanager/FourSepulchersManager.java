@@ -201,7 +201,7 @@ public final class FourSepulchersManager
 	protected void timeSelector()
 	{
 		timeCalculator();
-		long currentTime = Calendar.getInstance().getTimeInMillis();
+		final long currentTime = Calendar.getInstance().getTimeInMillis();
 		// if current time >= time of entry beginning and if current time < time of entry beginning + time of entry end
 		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd)) // entry time check
 		{
@@ -232,7 +232,7 @@ public final class FourSepulchersManager
 	// phase end times calculator
 	protected void timeCalculator()
 	{
-		Calendar tmp = Calendar.getInstance();
+		final Calendar tmp = Calendar.getInstance();
 		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
 		{
 			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
@@ -253,7 +253,7 @@ public final class FourSepulchersManager
 				LOG.warning("[" + i + "] is not inside " + _startHallSpawns);
 				continue;
 			}
-			int[] Location = _startHallSpawns.get(i);
+			final int[] Location = _startHallSpawns.get(i);
 			GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).oustAllPlayers();
 		}
 		
@@ -427,7 +427,7 @@ public final class FourSepulchersManager
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(rs.getInt("respawn_delay"));
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-					int keyNpcId = rs.getInt("key_npc_id");
+					final int keyNpcId = rs.getInt("key_npc_id");
 					_mysteriousBoxSpawns.put(keyNpcId, spawnDat);
 				}
 			}
@@ -477,7 +477,7 @@ public final class FourSepulchersManager
 			{
 				while (rs1.next())
 				{
-					int keyNpcId = rs1.getInt("key_npc_id");
+					final int keyNpcId = rs1.getInt("key_npc_id");
 					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 1);
@@ -524,7 +524,7 @@ public final class FourSepulchersManager
 			{
 				while (rs1.next())
 				{
-					int keyNpcId = rs1.getInt("key_npc_id");
+					final int keyNpcId = rs1.getInt("key_npc_id");
 					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 2);
@@ -573,7 +573,7 @@ public final class FourSepulchersManager
 			{
 				while (rs1.next())
 				{
-					int keyNpcId = rs1.getInt("key_npc_id");
+					final int keyNpcId = rs1.getInt("key_npc_id");
 					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 5);
@@ -624,7 +624,7 @@ public final class FourSepulchersManager
 			{
 				while (rs1.next())
 				{
-					int keyNpcId = rs1.getInt("key_npc_id");
+					final int keyNpcId = rs1.getInt("key_npc_id");
 					
 					ps2.setInt(1, keyNpcId);
 					ps2.setInt(2, 6);
@@ -660,7 +660,7 @@ public final class FourSepulchersManager
 	
 	protected void initLocationShadowSpawns()
 	{
-		int locNo = Rnd.get(4);
+		final int locNo = Rnd.get(4);
 		final int[] gateKeeper =
 		{
 			31929,
@@ -841,13 +841,13 @@ public final class FourSepulchersManager
 	
 	public synchronized void tryEntry(L2Npc npc, L2PcInstance player)
 	{
-		Quest hostQuest = QuestManager.getInstance().getQuest(QUEST_ID);
+		final Quest hostQuest = QuestManager.getInstance().getQuest(QUEST_ID);
 		if (hostQuest == null)
 		{
 			LOG.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find quest: " + QUEST_ID);
 			return;
 		}
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		switch (npcId)
 		{
 		// ID ok
@@ -888,7 +888,7 @@ public final class FourSepulchersManager
 			
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
-				QuestState qs = mem.getQuestState(hostQuest.getName());
+				final QuestState qs = mem.getQuestState(hostQuest.getName());
 				if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
 				{
 					showHtmlFile(player, npcId + "-NS.htm", npc, mem);
@@ -916,7 +916,7 @@ public final class FourSepulchersManager
 			}
 			for (L2PcInstance mem : player.getParty().getMembers())
 			{
-				QuestState qs = mem.getQuestState(hostQuest.getName());
+				final QuestState qs = mem.getQuestState(hostQuest.getName());
 				if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
 				{
 					showHtmlFile(player, npcId + "-NS.htm", npc, mem);
@@ -937,7 +937,7 @@ public final class FourSepulchersManager
 		}
 		else
 		{
-			QuestState qs = player.getQuestState(hostQuest.getName());
+			final QuestState qs = player.getQuestState(hostQuest.getName());
 			if ((qs == null) || (!qs.isStarted() && !qs.isCompleted()))
 			{
 				showHtmlFile(player, npcId + "-NS.htm", npc, player);
@@ -969,7 +969,7 @@ public final class FourSepulchersManager
 	
 	private void entry(int npcId, L2PcInstance player)
 	{
-		int[] Location = _startHallSpawns.get(npcId);
+		final int[] Location = _startHallSpawns.get(npcId);
 		int driftx;
 		int drifty;
 		
@@ -996,7 +996,7 @@ public final class FourSepulchersManager
 					mem.addItem("Quest", USED_PASS, 1, mem, true);
 				}
 				
-				L2ItemInstance hallsKey = mem.getInventory().getItemByItemId(CHAPEL_KEY);
+				final L2ItemInstance hallsKey = mem.getInventory().getItemByItemId(CHAPEL_KEY);
 				if (hallsKey != null)
 				{
 					mem.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), mem, true);
@@ -1030,7 +1030,7 @@ public final class FourSepulchersManager
 					mem.addItem("Quest", USED_PASS, 1, mem, true);
 				}
 				
-				L2ItemInstance hallsKey = mem.getInventory().getItemByItemId(CHAPEL_KEY);
+				final L2ItemInstance hallsKey = mem.getInventory().getItemByItemId(CHAPEL_KEY);
 				if (hallsKey != null)
 				{
 					mem.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), mem, true);
@@ -1053,7 +1053,7 @@ public final class FourSepulchersManager
 				player.addItem("Quest", USED_PASS, 1, player, true);
 			}
 			
-			L2ItemInstance hallsKey = player.getInventory().getItemByItemId(CHAPEL_KEY);
+			final L2ItemInstance hallsKey = player.getInventory().getItemByItemId(CHAPEL_KEY);
 			if (hallsKey != null)
 			{
 				player.destroyItemByItemId("Quest", CHAPEL_KEY, hallsKey.getCount(), player, true);
@@ -1072,7 +1072,7 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		L2Spawn spawnDat = _mysteriousBoxSpawns.get(npcId);
+		final L2Spawn spawnDat = _mysteriousBoxSpawns.get(npcId);
 		if (spawnDat != null)
 		{
 			_allMobs.add(spawnDat.doSpawn());
@@ -1194,7 +1194,7 @@ public final class FourSepulchersManager
 	
 	public synchronized boolean isViscountMobsAnnihilated(int npcId)
 	{
-		List<L2SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
+		final List<L2SepulcherMonsterInstance> mobs = _viscountMobs.get(npcId);
 		if (mobs == null)
 		{
 			return true;
@@ -1213,7 +1213,7 @@ public final class FourSepulchersManager
 	
 	public synchronized boolean isDukeMobsAnnihilated(int npcId)
 	{
-		List<L2SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
+		final List<L2SepulcherMonsterInstance> mobs = _dukeMobs.get(npcId);
 		if (mobs == null)
 		{
 			return true;
@@ -1237,7 +1237,7 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		L2Spawn spawnDat = _keyBoxSpawns.get(activeChar.getId());
+		final L2Spawn spawnDat = _keyBoxSpawns.get(activeChar.getId());
 		if (spawnDat != null)
 		{
 			spawnDat.setAmount(1);
@@ -1258,7 +1258,7 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		L2Spawn spawnDat = _executionerSpawns.get(activeChar.getId());
+		final L2Spawn spawnDat = _executionerSpawns.get(activeChar.getId());
 		if (spawnDat != null)
 		{
 			spawnDat.setAmount(1);
@@ -1284,12 +1284,12 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		List<L2Spawn> monsterList = _dukeFinalMobs.get(npcId);
+		final List<L2Spawn> monsterList = _dukeFinalMobs.get(npcId);
 		if (monsterList != null)
 		{
 			for (L2Spawn spawnDat : monsterList)
 			{
-				L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
+				final L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
 				spawnDat.stopRespawn();
 				
 				if (mob != null)
@@ -1309,7 +1309,7 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		List<L2Spawn> monsterList = _emperorsGraveNpcs.get(npcId);
+		final List<L2Spawn> monsterList = _emperorsGraveNpcs.get(npcId);
 		if (monsterList != null)
 		{
 			for (L2Spawn spawnDat : monsterList)
@@ -1322,7 +1322,7 @@ public final class FourSepulchersManager
 	
 	public void locationShadowSpawns()
 	{
-		int locNo = Rnd.get(4);
+		final int locNo = Rnd.get(4);
 		final int[] gateKeeper =
 		{
 			31929,
@@ -1333,8 +1333,8 @@ public final class FourSepulchersManager
 		
 		for (int i = 0; i <= 3; i++)
 		{
-			int keyNpcId = gateKeeper[i];
-			L2Spawn spawnDat = _shadowSpawns.get(keyNpcId);
+			final int keyNpcId = gateKeeper[i];
+			final L2Spawn spawnDat = _shadowSpawns.get(keyNpcId);
 			spawnDat.setX(_shadowSpawnLoc[locNo][i][1]);
 			spawnDat.setY(_shadowSpawnLoc[locNo][i][2]);
 			spawnDat.setZ(_shadowSpawnLoc[locNo][i][3]);
@@ -1350,10 +1350,10 @@ public final class FourSepulchersManager
 			return;
 		}
 		
-		L2Spawn spawnDat = _shadowSpawns.get(npcId);
+		final L2Spawn spawnDat = _shadowSpawns.get(npcId);
 		if (spawnDat != null)
 		{
-			L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
+			final L2SepulcherMonsterInstance mob = (L2SepulcherMonsterInstance) spawnDat.doSpawn();
 			spawnDat.stopRespawn();
 			
 			if (mob != null)
@@ -1390,7 +1390,7 @@ public final class FourSepulchersManager
 		{
 			try
 			{
-				L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
+				final L2DoorInstance door = DoorData.getInstance().getDoor(doorId);
 				if (door != null)
 				{
 					door.closeMe();
@@ -1528,8 +1528,8 @@ public final class FourSepulchersManager
 		
 		else if (_inEntryTime)
 		{
-			NpcStringId msg1 = NpcStringId.YOU_MAY_NOW_ENTER_THE_SEPULCHER;
-			NpcStringId msg2 = NpcStringId.IF_YOU_PLACE_YOUR_HAND_ON_THE_STONE_STATUE_IN_FRONT_OF_EACH_SEPULCHER_YOU_WILL_BE_ABLE_TO_ENTER;
+			final NpcStringId msg1 = NpcStringId.YOU_MAY_NOW_ENTER_THE_SEPULCHER;
+			final NpcStringId msg2 = NpcStringId.IF_YOU_PLACE_YOUR_HAND_ON_THE_STONE_STATUE_IN_FRONT_OF_EACH_SEPULCHER_YOU_WILL_BE_ABLE_TO_ENTER;
 			for (L2Spawn temp : _managers)
 			{
 				if (temp == null)

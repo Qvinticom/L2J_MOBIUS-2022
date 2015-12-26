@@ -158,7 +158,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	private L2PcInstance getCheckedRandomMember(int itemId, L2Character target)
 	{
-		List<L2PcInstance> availableMembers = new ArrayList<>();
+		final List<L2PcInstance> availableMembers = new ArrayList<>();
 		for (L2PcInstance member : getMembers())
 		{
 			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
@@ -617,8 +617,8 @@ public class L2Party extends AbstractPlayerGroup
 				else
 				{
 					// Swap party members
-					L2PcInstance temp = getLeader();
-					int p1 = getMembers().indexOf(player);
+					final L2PcInstance temp = getLeader();
+					final int p1 = getMembers().indexOf(player);
 					getMembers().set(0, player);
 					getMembers().set(p1, temp);
 					
@@ -635,7 +635,7 @@ public class L2Party extends AbstractPlayerGroup
 					}
 					if (player.isInPartyMatchRoom())
 					{
-						PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
+						final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
 						room.changeLeader(player);
 					}
 				}
@@ -678,7 +678,7 @@ public class L2Party extends AbstractPlayerGroup
 			return;
 		}
 		
-		L2PcInstance target = getActualLooter(player, item.getId(), false, player);
+		final L2PcInstance target = getActualLooter(player, item.getId(), false, player);
 		target.addItem("Party", item, player, true);
 		
 		// Send messages to other party members about reward
@@ -686,7 +686,7 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			if (item.getCount() > 1)
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 				msg.addString(target.getName());
 				msg.addItemName(item);
 				msg.addLong(item.getCount());
@@ -694,7 +694,7 @@ public class L2Party extends AbstractPlayerGroup
 			}
 			else
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
 				msg.addString(target.getName());
 				msg.addItemName(item);
 				broadcastToPartyMembers(target, msg);
@@ -718,7 +718,7 @@ public class L2Party extends AbstractPlayerGroup
 			return;
 		}
 		
-		L2PcInstance looter = getActualLooter(player, itemId, spoil, target);
+		final L2PcInstance looter = getActualLooter(player, itemId, spoil, target);
 		
 		looter.addItem(spoil ? "Sweeper Party" : "Party", itemId, itemCount, target, true);
 		
@@ -727,7 +727,7 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			if (itemCount > 1)
 			{
-				SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
+				final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2);
 				msg.addString(looter.getName());
 				msg.addItemName(itemId);
 				msg.addLong(itemCount);
@@ -735,7 +735,7 @@ public class L2Party extends AbstractPlayerGroup
 			}
 			else
 			{
-				SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
+				final SystemMessage msg = spoil ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
 				msg.addString(looter.getName());
 				msg.addItemName(itemId);
 				broadcastToPartyMembers(looter, msg);
@@ -778,7 +778,7 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			// Now we can actually distribute the adena reward
 			// (Total adena splitted by the number of party members that are in range and must be rewarded)
-			long count = adena / toReward.size();
+			final long count = adena / toReward.size();
 			for (L2PcInstance member : toReward)
 			{
 				member.addAdena("Party", count, player, true);
@@ -837,7 +837,7 @@ public class L2Party extends AbstractPlayerGroup
 				
 				// Add the XP/SP points to the requested party member
 				long addexp = Math.round(member.calcStat(Stats.EXPSP_RATE, xpReward * preCalculation, null, null));
-				int addsp = (int) member.calcStat(Stats.EXPSP_RATE, spReward * preCalculation, null, null);
+				final int addsp = (int) member.calcStat(Stats.EXPSP_RATE, spReward * preCalculation, null, null);
 				
 				addexp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, addexp, addsp, useVitalityRate);
 				if (addexp > 0)
@@ -928,7 +928,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			for (L2PcInstance member : members)
 			{
-				int sqLevel = member.getLevel() * member.getLevel();
+				final int sqLevel = member.getLevel() * member.getLevel();
 				if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
 				{
 					validMembers.add(member);
@@ -956,7 +956,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			for (L2PcInstance member : members)
 			{
-				int sqLevel = member.getLevel() * member.getLevel();
+				final int sqLevel = member.getLevel() * member.getLevel();
 				if (sqLevel >= (sqLevelSum / (members.size() * members.size())))
 				{
 					validMembers.add(member);
@@ -1092,7 +1092,7 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			broadcastPacket(new ExSetPartyLooting(1, _changeRequestDistributionType));
 			_distributionType = _changeRequestDistributionType;
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
 			sm.addSystemString(_changeRequestDistributionType.getSysStringId());
 			broadcastPacket(sm);
 		}

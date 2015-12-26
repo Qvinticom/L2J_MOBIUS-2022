@@ -72,7 +72,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	@Override
 	protected void onIntentionActive()
 	{
-		L2Summon summon = (L2Summon) _actor;
+		final L2Summon summon = (L2Summon) _actor;
 		if (_startFollow)
 		{
 			setIntention(AI_INTENTION_FOLLOW, summon.getOwner());
@@ -116,13 +116,13 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	
 	private void thinkCast()
 	{
-		L2Summon summon = (L2Summon) _actor;
+		final L2Summon summon = (L2Summon) _actor;
 		if (checkTargetLost(getCastTarget()))
 		{
 			setCastTarget(null);
 			return;
 		}
-		boolean val = _startFollow;
+		final boolean val = _startFollow;
 		if (maybeMoveToPawn(getCastTarget(), _actor.getMagicalAttackRange(_skill)))
 		{
 			return;

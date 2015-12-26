@@ -52,7 +52,7 @@ public class Q10289_FadeToBlack extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
 		if (qs == null)
 		{
@@ -188,7 +188,7 @@ public class Q10289_FadeToBlack extends Quest
 							break;
 					}
 					
-					long marksOfDarkness = getQuestItemsCount(player, MARK_OF_DARKNESS);
+					final long marksOfDarkness = getQuestItemsCount(player, MARK_OF_DARKNESS);
 					if (marksOfDarkness > 0)
 					{
 						addExpAndSp(player, 55983 * marksOfDarkness, 136500 * (int) marksOfDarkness);

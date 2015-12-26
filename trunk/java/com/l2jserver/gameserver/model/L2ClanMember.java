@@ -405,7 +405,7 @@ public class L2ClanMember
 		
 		if (_apprentice != 0)
 		{
-			L2ClanMember apprentice = _clan.getClanMember(_apprentice);
+			final L2ClanMember apprentice = _clan.getClanMember(_apprentice);
 			if (apprentice != null)
 			{
 				return apprentice.getName();
@@ -414,7 +414,7 @@ public class L2ClanMember
 		}
 		if (_sponsor != 0)
 		{
-			L2ClanMember sponsor = _clan.getClanMember(_sponsor);
+			final L2ClanMember sponsor = _clan.getClanMember(_sponsor);
 			if (sponsor != null)
 			{
 				return sponsor.getName();
@@ -446,7 +446,7 @@ public class L2ClanMember
 			return pledgeClass;
 		}
 		
-		L2Clan clan = player.getClan();
+		final L2Clan clan = player.getClan();
 		if (clan != null)
 		{
 			switch (clan.getLevel())

@@ -97,8 +97,8 @@ public class L2RecipeList
 	 */
 	public void addRecipe(L2RecipeInstance recipe)
 	{
-		int len = _recipes.length;
-		L2RecipeInstance[] tmp = new L2RecipeInstance[len + 1];
+		final int len = _recipes.length;
+		final L2RecipeInstance[] tmp = new L2RecipeInstance[len + 1];
 		System.arraycopy(_recipes, 0, tmp, 0, len);
 		tmp[len] = recipe;
 		_recipes = tmp;
@@ -110,8 +110,8 @@ public class L2RecipeList
 	 */
 	public void addStatUse(L2RecipeStatInstance statUse)
 	{
-		int len = _statUse.length;
-		L2RecipeStatInstance[] tmp = new L2RecipeStatInstance[len + 1];
+		final int len = _statUse.length;
+		final L2RecipeStatInstance[] tmp = new L2RecipeStatInstance[len + 1];
 		System.arraycopy(_statUse, 0, tmp, 0, len);
 		tmp[len] = statUse;
 		_statUse = tmp;
@@ -123,8 +123,8 @@ public class L2RecipeList
 	 */
 	public void addAltStatChange(L2RecipeStatInstance statChange)
 	{
-		int len = _altStatChange.length;
-		L2RecipeStatInstance[] tmp = new L2RecipeStatInstance[len + 1];
+		final int len = _altStatChange.length;
+		final L2RecipeStatInstance[] tmp = new L2RecipeStatInstance[len + 1];
 		System.arraycopy(_altStatChange, 0, tmp, 0, len);
 		tmp[len] = statChange;
 		_altStatChange = tmp;

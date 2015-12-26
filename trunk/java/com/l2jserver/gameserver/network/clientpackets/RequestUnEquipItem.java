@@ -125,7 +125,7 @@ public class RequestUnEquipItem extends L2GameClientPacket
 			sm.addItemName(unequipped[0]);
 			activeChar.sendPacket(sm);
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItems(Arrays.asList(unequipped));
 			activeChar.sendPacket(iu);
 		}

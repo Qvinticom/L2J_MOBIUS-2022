@@ -100,7 +100,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 			}
 			default:
 			{
-				int weaponId = Integer.parseInt(event);
+				final int weaponId = Integer.parseInt(event);
 				if (Util.contains(WEAPONS, weaponId))
 				{
 					giveItems(player, weaponId, 1);

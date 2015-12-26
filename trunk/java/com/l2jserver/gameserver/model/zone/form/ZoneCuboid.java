@@ -36,10 +36,10 @@ public class ZoneCuboid extends L2ZoneForm
 	
 	public ZoneCuboid(int x1, int x2, int y1, int y2, int z1, int z2)
 	{
-		int _x1 = Math.min(x1, x2);
-		int _x2 = Math.max(x1, x2);
-		int _y1 = Math.min(y1, y2);
-		int _y2 = Math.max(y1, y2);
+		final int _x1 = Math.min(x1, x2);
+		final int _x2 = Math.max(x1, x2);
+		final int _y1 = Math.min(y1, y2);
+		final int _y2 = Math.max(y1, y2);
 		
 		_r = new Rectangle(_x1, _y1, _x2 - _x1, _y2 - _y1);
 		
@@ -62,10 +62,10 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		int _x1 = _r.x;
-		int _x2 = _r.x + _r.width;
-		int _y1 = _r.y;
-		int _y2 = _r.y + _r.height;
+		final int _x1 = _r.x;
+		final int _x2 = _r.x + _r.width;
+		final int _y1 = _r.y;
+		final int _y2 = _r.y + _r.height;
 		double test, shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
 		
 		test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
@@ -107,10 +107,10 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public void visualizeZone(int z)
 	{
-		int _x1 = _r.x;
-		int _x2 = _r.x + _r.width;
-		int _y1 = _r.y;
-		int _y2 = _r.y + _r.height;
+		final int _x1 = _r.x;
+		final int _x2 = _r.x + _r.width;
+		final int _y1 = _r.y;
+		final int _y2 = _r.y + _r.height;
 		
 		// x1->x2
 		for (int x = _x1; x < _x2; x = x + STEP)
@@ -129,8 +129,8 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public int[] getRandomPoint()
 	{
-		int x = Rnd.get(_r.x, _r.x + _r.width);
-		int y = Rnd.get(_r.y, _r.y + _r.height);
+		final int x = Rnd.get(_r.x, _r.x + _r.width);
+		final int y = Rnd.get(_r.y, _r.y + _r.height);
 		
 		return new int[]
 		{

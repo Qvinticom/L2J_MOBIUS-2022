@@ -43,7 +43,7 @@ public class GameCrypt
 		int temp = 0;
 		for (int i = 0; i < size; i++)
 		{
-			int temp2 = raw[offset + i] & 0xFF;
+			final int temp2 = raw[offset + i] & 0xFF;
 			raw[offset + i] = (byte) (temp2 ^ _inKey[i & 15] ^ temp);
 			temp = temp2;
 		}
@@ -72,7 +72,7 @@ public class GameCrypt
 		int temp = 0;
 		for (int i = 0; i < size; i++)
 		{
-			int temp2 = raw[offset + i] & 0xFF;
+			final int temp2 = raw[offset + i] & 0xFF;
 			temp = temp2 ^ _outKey[i & 15] ^ temp;
 			raw[offset + i] = (byte) temp;
 		}

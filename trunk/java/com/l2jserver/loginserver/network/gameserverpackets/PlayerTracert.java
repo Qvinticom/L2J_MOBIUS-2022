@@ -37,12 +37,12 @@ public class PlayerTracert extends BaseRecievePacket
 	public PlayerTracert(byte[] decrypt)
 	{
 		super(decrypt);
-		String account = readS();
-		String pcIp = readS();
-		String hop1 = readS();
-		String hop2 = readS();
-		String hop3 = readS();
-		String hop4 = readS();
+		final String account = readS();
+		final String pcIp = readS();
+		final String hop1 = readS();
+		final String hop2 = readS();
+		final String hop3 = readS();
+		final String hop4 = readS();
 		
 		LoginController.getInstance().setAccountLastTracert(account, pcIp, hop1, hop2, hop3, hop4);
 		if (Config.DEBUG)

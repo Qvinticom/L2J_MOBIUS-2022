@@ -43,7 +43,7 @@ public class CorpseClan implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Object> targetList = new ArrayList<>();
+		final List<L2Object> targetList = new ArrayList<>();
 		if (activeChar.isPlayable())
 		{
 			final L2PcInstance player = activeChar.getActingPlayer();
@@ -139,7 +139,7 @@ public class CorpseClan implements ITargetTypeHandler
 			targetList.add(activeChar);
 			
 			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-			int maxTargets = skill.getAffectLimit();
+			final int maxTargets = skill.getAffectLimit();
 			for (L2Object newTarget : objs)
 			{
 				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))

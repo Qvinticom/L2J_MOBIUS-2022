@@ -50,7 +50,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_packageSale = (readD() == 1);
-		int count = readD();
+		final int count = readD();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -59,9 +59,9 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 		_items = new Item[count];
 		for (int i = 0; i < count; i++)
 		{
-			int itemId = readD();
-			long cnt = readQ();
-			long price = readQ();
+			final int itemId = readD();
+			final long cnt = readQ();
+			final long price = readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -75,7 +75,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -126,7 +126,7 @@ public class SetPrivateStoreListSell extends L2GameClientPacket
 			return;
 		}
 		
-		TradeList tradeList = player.getSellList();
+		final TradeList tradeList = player.getSellList();
 		tradeList.clear();
 		tradeList.setPackaged(_packageSale);
 		

@@ -123,7 +123,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void onAction(L2PcInstance player, boolean interact)
 	{
-		IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
+		final IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
 		if (handler != null)
 		{
 			handler.action(player, this, interact);
@@ -134,7 +134,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void onActionShift(L2PcInstance player)
 	{
-		IActionShiftHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
+		final IActionShiftHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
 		if (handler != null)
 		{
 			handler.action(player, this, true);
@@ -157,7 +157,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	{
 		assert getWorldRegion() != null;
 		
-		L2WorldRegion reg = getWorldRegion();
+		final L2WorldRegion reg = getWorldRegion();
 		
 		synchronized (this)
 		{
@@ -620,7 +620,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			return;
 		}
 		
-		L2WorldRegion newRegion = L2World.getInstance().getRegion(getLocation());
+		final L2WorldRegion newRegion = L2World.getInstance().getRegion(getLocation());
 		if (newRegion != getWorldRegion())
 		{
 			getWorldRegion().removeVisibleObject(this);
@@ -806,8 +806,8 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			return;
 		}
 		
-		Instance oldI = InstanceManager.getInstance().getInstance(getInstanceId());
-		Instance newI = InstanceManager.getInstance().getInstance(instanceId);
+		final Instance oldI = InstanceManager.getInstance().getInstance(getInstanceId());
+		final Instance newI = InstanceManager.getInstance().getInstance(instanceId);
 		if (newI == null)
 		{
 			return;

@@ -74,8 +74,8 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		if (actualCommand.equalsIgnoreCase("rewards"))
@@ -150,8 +150,8 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 					if (level > 0)
 					{
 						// spawn box
-						L2NpcTemplate boxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
-						L2MonsterInstance box = new L2MonsterInstance(boxTemplate);
+						final L2NpcTemplate boxTemplate = NpcData.getInstance().getTemplate(SUPPLY_BOX_IDS[level - 1]);
+						final L2MonsterInstance box = new L2MonsterInstance(boxTemplate);
 						box.setCurrentHp(box.getMaxHp());
 						box.setCurrentMp(box.getMaxMp());
 						box.setHeading(0);

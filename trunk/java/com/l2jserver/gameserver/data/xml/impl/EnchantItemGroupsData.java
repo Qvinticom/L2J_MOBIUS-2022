@@ -75,13 +75,13 @@ public final class EnchantItemGroupsData implements IXmlReader
 						{
 							if ("current".equalsIgnoreCase(cd.getNodeName()))
 							{
-								String range = parseString(cd.getAttributes(), "enchant");
-								double chance = parseDouble(cd.getAttributes(), "chance");
+								final String range = parseString(cd.getAttributes(), "enchant");
+								final double chance = parseDouble(cd.getAttributes(), "chance");
 								int min = -1;
 								int max = 0;
 								if (range.contains("-"))
 								{
-									String[] split = range.split("-");
+									final String[] split = range.split("-");
 									if ((split.length == 2) && Util.isDigit(split[0]) && Util.isDigit(split[1]))
 									{
 										min = Integer.parseInt(split[0]);
@@ -103,7 +103,7 @@ public final class EnchantItemGroupsData implements IXmlReader
 					}
 					else if ("enchantScrollGroup".equals(d.getNodeName()))
 					{
-						int id = parseInteger(d.getAttributes(), "id");
+						final int id = parseInteger(d.getAttributes(), "id");
 						final EnchantScrollGroup group = new EnchantScrollGroup(id);
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{

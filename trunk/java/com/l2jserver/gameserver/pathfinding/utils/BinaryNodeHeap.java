@@ -41,10 +41,10 @@ public class BinaryNodeHeap
 		_list[pos] = n;
 		while (pos != 1)
 		{
-			int p2 = pos / 2;
+			final int p2 = pos / 2;
 			if (_list[pos].getCost() <= _list[p2].getCost())
 			{
-				GeoNode temp = _list[p2];
+				final GeoNode temp = _list[p2];
 				_list[p2] = _list[pos];
 				_list[pos] = temp;
 				pos = p2;
@@ -58,7 +58,7 @@ public class BinaryNodeHeap
 	
 	public GeoNode removeFirst()
 	{
-		GeoNode first = _list[1];
+		final GeoNode first = _list[1];
 		_list[1] = _list[_size];
 		_list[_size] = null;
 		_size--;

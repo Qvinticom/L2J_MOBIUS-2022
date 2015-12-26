@@ -92,7 +92,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 				if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 				{
 					st.takeItems(BRACELET_OF_LIZARDMAN, -1);
-					int rand = getRandom(1000);
+					final int rand = getRandom(1000);
 					if (rand < 500)
 					{
 						giveItems(player, REWARD_ADENA);

@@ -86,13 +86,13 @@ public final class BotReportTable
 			
 			try
 			{
-				File punishments = new File("./config/botreport_punishments.xml");
+				final File punishments = new File("./config/botreport_punishments.xml");
 				if (!punishments.exists())
 				{
 					throw new FileNotFoundException(punishments.getName());
 				}
 				
-				SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
+				final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
 				parser.parse(punishments, new PunishmentsLoader());
 			}
 			catch (Exception e)
@@ -118,8 +118,8 @@ public final class BotReportTable
 			long lastResetTime = 0;
 			try
 			{
-				String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
-				Calendar c = Calendar.getInstance();
+				final String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
+				final Calendar c = Calendar.getInstance();
 				c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 				c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
 				
@@ -137,16 +137,16 @@ public final class BotReportTable
 			
 			while (rset.next())
 			{
-				int botId = rset.getInt(COLUMN_BOT_ID);
-				int reporter = rset.getInt(COLUMN_REPORTER_ID);
-				long date = rset.getLong(COLUMN_REPORT_TIME);
+				final int botId = rset.getInt(COLUMN_BOT_ID);
+				final int reporter = rset.getInt(COLUMN_REPORTER_ID);
+				final long date = rset.getLong(COLUMN_REPORT_TIME);
 				if (_reports.containsKey(botId))
 				{
 					_reports.get(botId).addReporter(reporter, date);
 				}
 				else
 				{
-					ReportedCharData rcd = new ReportedCharData();
+					final ReportedCharData rcd = new ReportedCharData();
 					rcd.addReporter(reporter, date);
 					_reports.put(rset.getInt(COLUMN_BOT_ID), rcd);
 				}
@@ -189,7 +189,7 @@ public final class BotReportTable
 			
 			for (Map.Entry<Integer, ReportedCharData> entrySet : _reports.entrySet())
 			{
-				Map<Integer, Long> reportTable = entrySet.getValue()._reporters;
+				final Map<Integer, Long> reportTable = entrySet.getValue()._reporters;
 				for (int reporterId : reportTable.keySet())
 				{
 					ps.setInt(1, entrySet.getKey());
@@ -212,14 +212,14 @@ public final class BotReportTable
 	 */
 	public boolean reportBot(L2PcInstance reporter)
 	{
-		L2Object target = reporter.getTarget();
+		final L2Object target = reporter.getTarget();
 		
 		if (target == null)
 		{
 			return false;
 		}
 		
-		L2PcInstance bot = target.getActingPlayer();
+		final L2PcInstance bot = target.getActingPlayer();
 		
 		if ((bot == null) || (target.getObjectId() == reporter.getObjectId()))
 		{
@@ -292,10 +292,10 @@ public final class BotReportTable
 					return false;
 				}
 				
-				long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
+				final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_MAKE_ANOTHER_REPORT_IN_S1_MINUTE_S_YOU_HAVE_S2_POINT_S_REMAINING_ON_THIS_ACCOUNT);
 					sm.addInt((int) (reuse / 60000));
 					sm.addInt(rcdRep.getPointsLeft());
 					reporter.sendPacket(sm);
@@ -368,7 +368,7 @@ public final class BotReportTable
 			ph._punish.applyEffects(bot, bot);
 			if (ph._systemMessageId > -1)
 			{
-				SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
+				final SystemMessageId id = SystemMessageId.getSystemMessageId(ph._systemMessageId);
 				if (id != null)
 				{
 					bot.sendPacket(id);
@@ -386,7 +386,7 @@ public final class BotReportTable
 	 */
 	void addPunishment(int neededReports, int skillId, int skillLevel, int sysMsg)
 	{
-		Skill sk = SkillData.getInstance().getSkill(skillId, skillLevel);
+		final Skill sk = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (sk != null)
 		{
 			_punishments.put(neededReports, new PunishHolder(sk, sysMsg));
@@ -414,8 +414,8 @@ public final class BotReportTable
 	{
 		try
 		{
-			String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
-			Calendar c = Calendar.getInstance();
+			final String[] hour = Config.BOTREPORT_RESETPOINT_HOUR;
+			final Calendar c = Calendar.getInstance();
 			c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 			c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
 			
@@ -445,9 +445,9 @@ public final class BotReportTable
 	 */
 	private static int hashIp(L2PcInstance player)
 	{
-		String con = player.getClient().getConnection().getInetAddress().getHostAddress();
-		String[] rawByte = con.split("\\.");
-		int[] rawIp = new int[4];
+		final String con = player.getClient().getConnection().getInetAddress().getHostAddress();
+		final String[] rawByte = con.split("\\.");
+		final int[] rawIp = new int[4];
 		for (int i = 0; i < 4; i++)
 		{
 			rawIp[i] = Integer.parseInt(rawByte[i]);
@@ -572,8 +572,8 @@ public final class BotReportTable
 				{
 					reportCount = Integer.parseInt(attr.getValue("neededReportCount"));
 					skillId = Integer.parseInt(attr.getValue("skillId"));
-					String level = attr.getValue("skillLevel");
-					String systemMessageId = attr.getValue("sysMessageId");
+					final String level = attr.getValue("skillLevel");
+					final String systemMessageId = attr.getValue("sysMessageId");
 					if (level != null)
 					{
 						skillLevel = Integer.parseInt(level);

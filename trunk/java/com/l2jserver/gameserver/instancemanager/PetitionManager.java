@@ -420,7 +420,7 @@ public final class PetitionManager
 	{
 		// Create a new petition instance and add it to the list of pending petitions.
 		final Petition newPetition = new Petition(petitioner, petitionText, petitionType);
-		int newPetitionId = newPetition.getId();
+		final int newPetitionId = newPetition.getId();
 		getPendingPetitions().put(newPetitionId, newPetition);
 		
 		// Notify all GMs that a new petition has been submitted.

@@ -127,10 +127,10 @@ public class Q00700_CursedLife extends Quest
 				}
 				case State.STARTED:
 				{
-					long bones = st.getQuestItemsCount(SWALLOWED_BONES);
-					long ribs = st.getQuestItemsCount(SWALLOWED_STERNUM);
-					long skulls = st.getQuestItemsCount(SWALLOWED_SKULL);
-					long sum = bones + ribs + skulls;
+					final long bones = st.getQuestItemsCount(SWALLOWED_BONES);
+					final long ribs = st.getQuestItemsCount(SWALLOWED_STERNUM);
+					final long skulls = st.getQuestItemsCount(SWALLOWED_SKULL);
+					final long sum = bones + ribs + skulls;
 					if (sum > 0)
 					{
 						st.giveAdena(((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
@@ -246,8 +246,8 @@ public class Q00700_CursedLife extends Quest
 			}
 			else
 			{
-				Integer[] chances = MONSTERS.get(npc.getId());
-				int chance = getRandom(1000);
+				final Integer[] chances = MONSTERS.get(npc.getId());
+				final int chance = getRandom(1000);
 				if (chance < chances[0])
 				{
 					st.giveItems(SWALLOWED_BONES, 1);

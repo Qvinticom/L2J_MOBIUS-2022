@@ -68,7 +68,7 @@ public class AdminQuest implements IAdminCommandHandler
 		// Example: //quest_reload 12
 		if (command.startsWith("admin_quest_reload"))
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			if (parts.length < 2)
 			{
 				activeChar.sendMessage("Usage: //quest_reload <questFolder>.<questSubFolders...>.questName> or //quest_reload <id>");
@@ -78,7 +78,7 @@ public class AdminQuest implements IAdminCommandHandler
 				// try the first param as id
 				try
 				{
-					int questId = Integer.parseInt(parts[1]);
+					final int questId = Integer.parseInt(parts[1]);
 					if (QuestManager.getInstance().reload(questId))
 					{
 						activeChar.sendMessage("Quest Reloaded Successfully.");
@@ -109,7 +109,7 @@ public class AdminQuest implements IAdminCommandHandler
 		// This provides a way to load new scripts without having to reboot the server.
 		else if (command.startsWith("admin_script_load"))
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			if (parts.length < 2)
 			{
 				// activeChar.sendMessage("Example: //script_load <questFolder>/<questSubFolders...>/<filename>.<ext> ");
@@ -121,7 +121,7 @@ public class AdminQuest implements IAdminCommandHandler
 				// Trying to reload by script name.
 				if (!file.exists())
 				{
-					Quest quest = QuestManager.getInstance().getQuest(parts[1]);
+					final Quest quest = QuestManager.getInstance().getQuest(parts[1]);
 					if (quest != null)
 					{
 						file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, quest.getClass().getName().replaceAll("\\.", "/") + ".java");
@@ -157,14 +157,14 @@ public class AdminQuest implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_script_unload"))
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			if (parts.length < 2)
 			{
 				activeChar.sendMessage("Example: //script_unload questName/questId");
 			}
 			else
 			{
-				Quest q = Util.isDigit(parts[1]) ? QuestManager.getInstance().getQuest(Integer.parseInt(parts[1])) : QuestManager.getInstance().getQuest(parts[1]);
+				final Quest q = Util.isDigit(parts[1]) ? QuestManager.getInstance().getQuest(Integer.parseInt(parts[1])) : QuestManager.getInstance().getQuest(parts[1]);
 				
 				if (q != null)
 				{

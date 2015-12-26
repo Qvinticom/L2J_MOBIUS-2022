@@ -242,14 +242,14 @@ public final class BlockCheckerEngine
 		
 		if (team == 0)
 		{
-			int points = _redTeamPoints.get(player) + 1;
+			final int points = _redTeamPoints.get(player) + 1;
 			_redTeamPoints.put(player, points);
 			_redPoints++;
 			_bluePoints--;
 		}
 		else
 		{
-			int points = _blueTeamPoints.get(player) + 1;
+			final int points = _blueTeamPoints.get(player) + 1;
 			_blueTeamPoints.put(player, points);
 			_bluePoints++;
 			_redPoints--;
@@ -361,7 +361,7 @@ public final class BlockCheckerEngine
 				}
 				
 				// Send the secret client packet set up
-				boolean isRed = _holder.getRedPlayers().contains(player);
+				final boolean isRed = _holder.getRedPlayers().contains(player);
 				
 				clientSetUp = new ExCubeGameExtendedChangePoints(300, _bluePoints, _redPoints, isRed, player, 0);
 				player.sendPacket(clientSetUp);
@@ -371,10 +371,10 @@ public final class BlockCheckerEngine
 				// Teleport Player - Array access
 				// Team 0 * 2 = 0; 0 = 0, 0 + 1 = 1.
 				// Team 1 * 2 = 2; 2 = 2, 2 + 1 = 3
-				int tc = _holder.getPlayerTeam(player) * 2;
+				final int tc = _holder.getPlayerTeam(player) * 2;
 				// Get x and y coordinates
-				int x = _arenaCoordinates[_arena][tc];
-				int y = _arenaCoordinates[_arena][tc + 1];
+				final int x = _arenaCoordinates[_arena][tc];
+				final int y = _arenaCoordinates[_arena][tc + 1];
 				player.teleToLocation(x, y, _zCoord);
 				// Set the player team
 				if (isRed)
@@ -493,7 +493,7 @@ public final class BlockCheckerEngine
 					spawn.setRespawnDelay(1);
 					SpawnTable.getInstance().addNewSpawn(spawn, false);
 					spawn.init();
-					L2BlockInstance block = (L2BlockInstance) spawn.getLastSpawn();
+					final L2BlockInstance block = (L2BlockInstance) spawn.getLastSpawn();
 					// switch color
 					if ((random % 2) == 0)
 					{
@@ -541,8 +541,8 @@ public final class BlockCheckerEngine
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
-			ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
+			final int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
+			final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
 			getHolder().broadCastPacketToTeam(changePoints);
 		}
 	}
@@ -627,7 +627,7 @@ public final class BlockCheckerEngine
 			{
 				rewardAsWinner(true);
 				rewardAsLooser(false);
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON);
 				msg.addString("Red Team");
 				_holder.broadCastPacketToTeam(msg);
 			}
@@ -635,7 +635,7 @@ public final class BlockCheckerEngine
 			{
 				rewardAsWinner(false);
 				rewardAsLooser(true);
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON);
 				msg.addString("Blue Team");
 				_holder.broadCastPacketToTeam(msg);
 			}
@@ -652,7 +652,7 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsWinner(boolean isRed)
 		{
-			Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 			
 			// Main give
 			for (Entry<L2PcInstance, Integer> points : tempPoints.entrySet())
@@ -676,8 +676,8 @@ public final class BlockCheckerEngine
 			L2PcInstance winner1 = null, winner2 = null;
 			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
 			{
-				L2PcInstance pc = entry.getKey();
-				int pcPoints = entry.getValue();
+				final L2PcInstance pc = entry.getKey();
+				final int pcPoints = entry.getValue();
 				if (pcPoints > first)
 				{
 					// Move old data
@@ -709,11 +709,11 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
+			final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
 			
 			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
 			{
-				L2PcInstance player = entry.getKey();
+				final L2PcInstance player = entry.getKey();
 				if ((player != null) && (entry.getValue() >= 10))
 				{
 					player.addItem("Block Checker", 13067, 2, player, true);
@@ -741,15 +741,15 @@ public final class BlockCheckerEngine
 				// Set default arena
 				player.setBlockCheckerArena(DEFAULT_ARENA);
 				// Remove the event items
-				PcInventory inv = player.getInventory();
+				final PcInventory inv = player.getInventory();
 				if (inv.getItemByItemId(13787) != null)
 				{
-					long count = inv.getInventoryItemCount(13787, 0);
+					final long count = inv.getInventoryItemCount(13787, 0);
 					inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
 				}
 				if (inv.getItemByItemId(13788) != null)
 				{
-					long count = inv.getInventoryItemCount(13788, 0);
+					final long count = inv.getInventoryItemCount(13788, 0);
 					inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
 				}
 				broadcastRelationChanged(player);

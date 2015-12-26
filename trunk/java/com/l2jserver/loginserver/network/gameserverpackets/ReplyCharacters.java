@@ -35,10 +35,10 @@ public class ReplyCharacters extends BaseRecievePacket
 	public ReplyCharacters(byte[] decrypt, GameServerThread server)
 	{
 		super(decrypt);
-		String account = readS();
-		int chars = readC();
-		int charsToDel = readC();
-		long[] charsList = new long[charsToDel];
+		final String account = readS();
+		final int chars = readC();
+		final int charsToDel = readC();
+		final long[] charsList = new long[charsToDel];
 		for (int i = 0; i < charsToDel; i++)
 		{
 			charsList[i] = readQ();

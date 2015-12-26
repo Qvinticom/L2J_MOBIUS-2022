@@ -256,7 +256,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		
 		if ((holder != null) && (instanceId > 0))
 		{
-			L2Npc support = addSpawn(Elcadia_Support, player.getX(), player.getY(), player.getZ(), 0, false, 0L, false, player.getInstanceId());
+			final L2Npc support = addSpawn(Elcadia_Support, player.getX(), player.getY(), player.getZ(), 0, false, 0L, false, player.getInstanceId());
 			holder.mobs.add(support);
 			startQuestTimer("check_follow", 3000, support, player);
 		}
@@ -272,7 +272,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 				return;
 			}
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			if (inst != null)
 			{
 				teleportPlayer(npc, player, TELEPORTS[ENTER], world.getInstanceId());
@@ -296,10 +296,10 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(MonasteryOfSilence2.class.getSimpleName());
-		QuestState qs = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
-		QuestState qs1 = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
+		final QuestState qs = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+		final QuestState qs1 = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
 		if (st == null)
 		{
 			st = newQuestState(player);
@@ -393,7 +393,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 				player.showQuestMovie(29);
 				startQuestTimer("teleport", 60000, npc, player);
 				cancelQuestTimer("check_follow", npc, player);
-				InstanceHolder holder = instanceWorlds.get(player.getInstanceId());
+				final InstanceHolder holder = instanceWorlds.get(player.getInstanceId());
 				if (holder != null)
 				{
 					for (L2Npc h : holder.mobs)
@@ -433,7 +433,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		else if ("Exit".equals(event))
 		{
 			cancelQuestTimer("check_follow", npc, player);
-			InstanceHolder holder = instanceWorlds.get(player.getInstanceId());
+			final InstanceHolder holder = instanceWorlds.get(player.getInstanceId());
 			if (holder != null)
 			{
 				for (L2Npc h : holder.mobs)
@@ -497,7 +497,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 		{
 			st = newQuestState(player);
 		}
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (npcId == OddGlobe)
 		{
 			if ((player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName()) != null) && (player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName()).getState() == State.STARTED))

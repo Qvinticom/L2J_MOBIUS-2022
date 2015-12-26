@@ -75,7 +75,7 @@ public class L2BlockInstance extends L2MonsterInstance
 				increaseTeamPointsAndSend(attacker, team, event);
 			}
 			// 30% chance to drop the event items
-			int random = Rnd.get(100);
+			final int random = Rnd.get(100);
 			// Bond
 			if ((random > 69) && (random <= 84))
 			{
@@ -147,11 +147,11 @@ public class L2BlockInstance extends L2MonsterInstance
 	{
 		eng.increasePlayerPoints(player, team);
 		
-		int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
-		boolean isRed = eng.getHolder().getRedPlayers().contains(player);
+		final int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
+		final boolean isRed = eng.getHolder().getRedPlayers().contains(player);
 		
-		ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
-		ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));
+		final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
+		final ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));
 		
 		eng.getHolder().broadCastPacketToTeam(changePoints);
 		eng.getHolder().broadCastPacketToTeam(secretPoints);
@@ -159,10 +159,10 @@ public class L2BlockInstance extends L2MonsterInstance
 	
 	private void dropItem(int id, BlockCheckerEngine eng, L2PcInstance player)
 	{
-		L2ItemInstance drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
-		int x = getX() + Rnd.get(50);
-		int y = getY() + Rnd.get(50);
-		int z = getZ();
+		final L2ItemInstance drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
+		final int x = getX() + Rnd.get(50);
+		final int y = getY() + Rnd.get(50);
+		final int z = getZ();
 		
 		drop.dropMe(this, x, y, z);
 		

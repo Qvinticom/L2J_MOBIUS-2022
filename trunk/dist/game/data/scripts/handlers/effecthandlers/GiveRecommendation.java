@@ -56,7 +56,7 @@ public final class GiveRecommendation extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2PcInstance target = info.getEffected() instanceof L2PcInstance ? (L2PcInstance) info.getEffected() : null;
+		final L2PcInstance target = info.getEffected() instanceof L2PcInstance ? (L2PcInstance) info.getEffected() : null;
 		if (target != null)
 		{
 			int recommendationsGiven = _amount;
@@ -70,7 +70,7 @@ public final class GiveRecommendation extends AbstractEffect
 			{
 				target.setRecomHave(target.getRecomHave() + recommendationsGiven);
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S);
 				sm.addInt(recommendationsGiven);
 				target.sendPacket(sm);
 				target.sendPacket(new UserInfo(target));
@@ -78,7 +78,7 @@ public final class GiveRecommendation extends AbstractEffect
 			}
 			else
 			{
-				L2PcInstance player = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
+				final L2PcInstance player = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
 				if (player != null)
 				{
 					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);

@@ -80,7 +80,7 @@ public class TerritoryTable
 		{
 			while (rset.next())
 			{
-				int terrId = rset.getInt("loc_id");
+				final int terrId = rset.getInt("loc_id");
 				L2Territory terr = _territory.get(terrId);
 				if (terr == null)
 				{

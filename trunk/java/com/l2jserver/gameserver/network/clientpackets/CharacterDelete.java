@@ -62,7 +62,7 @@ public final class CharacterDelete extends L2GameClientPacket
 		
 		try
 		{
-			byte answer = getClient().markToDeleteChar(_charSlot);
+			final byte answer = getClient().markToDeleteChar(_charSlot);
 			
 			switch (answer)
 			{
@@ -87,7 +87,7 @@ public final class CharacterDelete extends L2GameClientPacket
 			_log.log(Level.SEVERE, "Error:", e);
 		}
 		
-		CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
+		final CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1);
 		sendPacket(cl);
 		getClient().setCharSelection(cl.getCharInfo());
 	}

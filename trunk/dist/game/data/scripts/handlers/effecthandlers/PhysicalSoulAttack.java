@@ -63,9 +63,9 @@ public final class PhysicalSoulAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		Skill skill = info.getSkill();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
@@ -86,7 +86,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		}
 		
 		int damage = 0;
-		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
 		boolean crit = false;
@@ -100,7 +100,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		if ((skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
+			final int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		if (crit)
@@ -111,7 +111,7 @@ public final class PhysicalSoulAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

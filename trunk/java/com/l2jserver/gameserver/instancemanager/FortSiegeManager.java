@@ -143,8 +143,8 @@ public final class FortSiegeManager
 		
 		for (Fort fort : FortManager.getInstance().getForts())
 		{
-			List<FortSiegeSpawn> commanderSpawns = new ArrayList<>();
-			List<CombatFlag> flagSpawns = new ArrayList<>();
+			final List<FortSiegeSpawn> commanderSpawns = new ArrayList<>();
+			final List<CombatFlag> flagSpawns = new ArrayList<>();
 			for (int i = 1; i < 5; i++)
 			{
 				final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Commander" + i, "");
@@ -156,11 +156,11 @@ public final class FortSiegeManager
 				
 				try
 				{
-					int x = Integer.parseInt(st.nextToken());
-					int y = Integer.parseInt(st.nextToken());
-					int z = Integer.parseInt(st.nextToken());
-					int heading = Integer.parseInt(st.nextToken());
-					int npc_id = Integer.parseInt(st.nextToken());
+					final int x = Integer.parseInt(st.nextToken());
+					final int y = Integer.parseInt(st.nextToken());
+					final int z = Integer.parseInt(st.nextToken());
+					final int heading = Integer.parseInt(st.nextToken());
+					final int npc_id = Integer.parseInt(st.nextToken());
 					
 					commanderSpawns.add(new FortSiegeSpawn(fort.getResidenceId(), x, y, z, heading, npc_id, i));
 				}
@@ -183,10 +183,10 @@ public final class FortSiegeManager
 				
 				try
 				{
-					int x = Integer.parseInt(st.nextToken());
-					int y = Integer.parseInt(st.nextToken());
-					int z = Integer.parseInt(st.nextToken());
-					int flag_id = Integer.parseInt(st.nextToken());
+					final int x = Integer.parseInt(st.nextToken());
+					final int y = Integer.parseInt(st.nextToken());
+					final int z = Integer.parseInt(st.nextToken());
+					final int flag_id = Integer.parseInt(st.nextToken());
 					
 					flagSpawns.add(new CombatFlag(fort.getResidenceId(), x, y, z, 0, flag_id));
 				}

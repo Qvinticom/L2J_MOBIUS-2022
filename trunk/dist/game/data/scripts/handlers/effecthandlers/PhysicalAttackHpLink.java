@@ -63,9 +63,9 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		Skill skill = info.getSkill();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
@@ -74,7 +74,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		
 		if (activeChar.isMovementDisabled())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);
 			activeChar.sendPacket(sm);
 			return;
@@ -89,13 +89,13 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		}
 		
 		int damage = 0;
-		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		damage = (int) Formulas.calcPhysDam(activeChar, target, skill, shld, false, ss);
 		
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

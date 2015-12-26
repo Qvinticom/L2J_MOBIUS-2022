@@ -48,8 +48,8 @@ public class Time implements IUserCommandHandler
 			return false;
 		}
 		
-		int t = GameTimeController.getInstance().getGameTime();
-		String h = "" + ((t / 60) % 24);
+		final int t = GameTimeController.getInstance().getGameTime();
+		final String h = "" + ((t / 60) % 24);
 		String m;
 		if ((t % 60) < 10)
 		{

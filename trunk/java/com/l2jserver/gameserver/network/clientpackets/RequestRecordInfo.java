@@ -47,7 +47,7 @@ public class RequestRecordInfo extends L2GameClientPacket
 		
 		activeChar.sendPacket(new UserInfo(activeChar));
 		
-		Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
+		final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
 		for (L2Object object : objs)
 		{
 			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))

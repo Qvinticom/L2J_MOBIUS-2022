@@ -180,7 +180,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		long adena = msg.getReqAdena();
+		final long adena = msg.getReqAdena();
 		if ((adena > 0) && !activeChar.reduceAdena("PayMail", adena, null, true))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
@@ -188,7 +188,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 		}
 		
 		// Proceed to the transfer
-		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (L2ItemInstance item : attachments.getItems())
 		{
 			if (item == null)
@@ -202,7 +202,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 				return;
 			}
 			
-			long count = item.getCount();
+			final long count = item.getCount();
 			final L2ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), item.getCount(), activeChar.getInventory(), activeChar, null);
 			if (newItem == null)
 			{
@@ -220,7 +220,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
 			activeChar.sendPacket(sm);
@@ -255,7 +255,7 @@ public final class RequestPostAttachment extends L2GameClientPacket
 			}
 			else
 			{
-				L2ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", ADENA_ID, adena, activeChar, null);
+				final L2ItemInstance paidAdena = ItemTable.getInstance().createItem("PayMail", ADENA_ID, adena, activeChar, null);
 				paidAdena.setOwnerId(msg.getSenderId());
 				paidAdena.setItemLocation(ItemLocation.INVENTORY);
 				paidAdena.updateDatabase(true);

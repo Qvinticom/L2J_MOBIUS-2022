@@ -279,7 +279,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	@Override
 	public String toString()
 	{
-		InetAddress address = getConnection().getInetAddress();
+		final InetAddress address = getConnection().getInetAddress();
 		if (getState() == LoginClientState.AUTHED_LOGIN)
 		{
 			return "[" + getAccount() + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";

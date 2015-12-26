@@ -44,7 +44,7 @@ public final class L2Armor extends L2Item
 		super(set);
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
-		int _bodyPart = getBodyPart();
+		final int _bodyPart = getBodyPart();
 		if ((_bodyPart == L2Item.SLOT_NECK) || ((_bodyPart & L2Item.SLOT_L_EAR) != 0) || ((_bodyPart & L2Item.SLOT_L_FINGER) != 0) || ((_bodyPart & L2Item.SLOT_R_BRACELET) != 0) || ((_bodyPart & L2Item.SLOT_L_BRACELET) != 0))
 		{
 			_type1 = L2Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
@@ -60,10 +60,10 @@ public final class L2Armor extends L2Item
 			_type2 = L2Item.TYPE2_SHIELD_ARMOR;
 		}
 		
-		String skill = set.getString("enchant4_skill", null);
+		final String skill = set.getString("enchant4_skill", null);
 		if (skill != null)
 		{
-			String[] info = skill.split("-");
+			final String[] info = skill.split("-");
 			
 			if ((info != null) && (info.length == 2))
 			{

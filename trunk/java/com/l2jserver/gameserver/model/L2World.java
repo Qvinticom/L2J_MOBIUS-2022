@@ -279,7 +279,7 @@ public final class L2World
 		}
 		// Get all visible objects contained in the _visibleObjects of L2WorldRegions
 		// in a circular area of 2000 units
-		List<L2Object> visibles = getVisibleObjects(object, 2000);
+		final List<L2Object> visibles = getVisibleObjects(object, 2000);
 		if (Config.DEBUG)
 		{
 			_log.finest("objects in range:" + visibles.size());
@@ -404,7 +404,7 @@ public final class L2World
 	 */
 	public List<L2Object> getVisibleObjects(L2Object object)
 	{
-		L2WorldRegion reg = object.getWorldRegion();
+		final L2WorldRegion reg = object.getWorldRegion();
 		
 		if (reg == null)
 		{
@@ -517,7 +517,7 @@ public final class L2World
 	 */
 	public List<L2Playable> getVisiblePlayable(L2Object object)
 	{
-		L2WorldRegion reg = object.getWorldRegion();
+		final L2WorldRegion reg = object.getWorldRegion();
 		if (reg == null)
 		{
 			return null;
@@ -528,8 +528,8 @@ public final class L2World
 		for (L2WorldRegion regi : reg.getSurroundingRegions())
 		{
 			// Create an Iterator to go through the visible L2Object of the L2WorldRegion
-			Map<Integer, L2Playable> _allpls = regi.getVisiblePlayable();
-			Collection<L2Playable> _playables = _allpls.values();
+			final Map<Integer, L2Playable> _allpls = regi.getVisiblePlayable();
+			final Collection<L2Playable> _playables = _allpls.values();
 			// Go through visible object of the selected region
 			for (L2Playable _object : _playables)
 			{

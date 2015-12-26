@@ -71,15 +71,15 @@ public class HandysBlockCheckerEvent extends Quest
 		
 		if (HandysBlockCheckerManager.getInstance().addPlayerToArena(player, arena))
 		{
-			ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
+			final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
 			
 			final ExCubeGameTeamList tl = new ExCubeGameTeamList(holder.getRedPlayers(), holder.getBluePlayers(), arena);
 			
 			player.sendPacket(tl);
 			
-			int countBlue = holder.getBlueTeamSize();
-			int countRed = holder.getRedTeamSize();
-			int minMembers = Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS;
+			final int countBlue = holder.getBlueTeamSize();
+			final int countRed = holder.getRedTeamSize();
+			final int minMembers = Config.MIN_BLOCK_CHECKER_TEAM_MEMBERS;
 			
 			if ((countBlue >= minMembers) && (countRed >= minMembers))
 			{

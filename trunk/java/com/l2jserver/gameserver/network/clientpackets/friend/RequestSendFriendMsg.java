@@ -71,7 +71,7 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			LogRecord record = new LogRecord(Level.INFO, _message);
+			final LogRecord record = new LogRecord(Level.INFO, _message);
 			record.setLoggerName("chat");
 			record.setParameters(new Object[]
 			{

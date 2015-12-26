@@ -248,7 +248,7 @@ public class HexUtils
 			else if (dataLen < _HEX_ED_BPL)
 			{
 				// last line which shows less than _HEX_ED_BPL bytes
-				int lineHexDataEnd = lineHexDataStart + (dataLen * _HEX_ED_CPB);
+				final int lineHexDataEnd = lineHexDataStart + (dataLen * _HEX_ED_CPB);
 				Arrays.fill(textData, lineHexDataEnd, lineHexDataEnd + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' '); // spaces, for the last line if there are not _HEX_ED_BPL bytes
 			}
 			else

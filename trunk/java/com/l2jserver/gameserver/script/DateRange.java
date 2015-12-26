@@ -40,13 +40,13 @@ public class DateRange
 	
 	public static DateRange parse(String dateRange, DateFormat format)
 	{
-		String[] date = dateRange.split("-");
+		final String[] date = dateRange.split("-");
 		if (date.length == 2)
 		{
 			try
 			{
-				Date start = format.parse(date[0]);
-				Date end = format.parse(date[1]);
+				final Date start = format.parse(date[0]);
+				final Date end = format.parse(date[1]);
 				
 				return new DateRange(start, end);
 			}

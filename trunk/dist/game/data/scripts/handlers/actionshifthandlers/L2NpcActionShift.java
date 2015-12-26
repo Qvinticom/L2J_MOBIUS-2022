@@ -102,7 +102,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%collision_height%", String.valueOf(((L2Character) target).getTemplate().getfCollisionHeight()));
 			html.replace("%dist%", String.valueOf((int) activeChar.calculateDistance(target, true, false)));
 			
-			byte attackAttribute = ((L2Character) target).getAttackElement();
+			final byte attackAttribute = ((L2Character) target).getAttackElement();
 			html.replace("%ele_atk%", Elementals.getElementName(attackAttribute));
 			html.replace("%ele_atk_value%", String.valueOf(((L2Character) target).getAttackElementValue(attackAttribute)));
 			html.replace("%ele_dfire%", String.valueOf(((L2Character) target).getDefenseElementValue(Elementals.FIRE)));
@@ -153,10 +153,10 @@ public class L2NpcActionShift implements IActionShiftHandler
 			
 			if (((L2Npc) target).hasAI())
 			{
-				Set<Integer> clans = ((L2Npc) target).getTemplate().getClans();
-				Set<Integer> ignoreClanNpcIds = ((L2Npc) target).getTemplate().getIgnoreClanNpcIds();
-				String clansString = clans != null ? Util.implode(clans.toArray(), ", ") : "";
-				String ignoreClanNpcIdsString = ignoreClanNpcIds != null ? Util.implode(ignoreClanNpcIds.toArray(), ", ") : "";
+				final Set<Integer> clans = ((L2Npc) target).getTemplate().getClans();
+				final Set<Integer> ignoreClanNpcIds = ((L2Npc) target).getTemplate().getIgnoreClanNpcIds();
+				final String clansString = clans != null ? Util.implode(clans.toArray(), ", ") : "";
+				final String ignoreClanNpcIdsString = ignoreClanNpcIds != null ? Util.implode(ignoreClanNpcIds.toArray(), ", ") : "";
 				
 				html.replace("%ai_intention%", "<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color=FFAA00>Intention:</font></td><td align=right width=170>" + String.valueOf(((L2Npc) target).getAI().getIntention().name()) + "</td></tr></table></td></tr>");
 				html.replace("%ai%", "<tr><td><table width=270 border=0><tr><td width=100><font color=FFAA00>AI</font></td><td align=right width=170>" + ((L2Npc) target).getAI().getClass().getSimpleName() + "</td></tr></table></td></tr>");

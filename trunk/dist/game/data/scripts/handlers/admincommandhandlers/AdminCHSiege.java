@@ -90,7 +90,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			}
 			else
 			{
-				L2Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
+				final L2Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
 				if (owner != null)
 				{
 					hall.free();
@@ -123,26 +123,26 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			}
 			else
 			{
-				String[] rawDate = split[2].split(";");
+				final String[] rawDate = split[2].split(";");
 				if (rawDate.length < 2)
 				{
 					activeChar.sendMessage("You have to specify this format DD-MM-YYYY;HH:MM");
 				}
 				else
 				{
-					String[] day = rawDate[0].split("-");
-					String[] hour = rawDate[1].split(":");
+					final String[] day = rawDate[0].split("-");
+					final String[] hour = rawDate[1].split(":");
 					if ((day.length < 3) || (hour.length < 2))
 					{
 						activeChar.sendMessage("Incomplete day, hour or both!");
 					}
 					else
 					{
-						int d = parseInt(day[0]);
-						int month = parseInt(day[1]) - 1;
-						int year = parseInt(day[2]);
-						int h = parseInt(hour[0]);
-						int min = parseInt(hour[1]);
+						final int d = parseInt(day[0]);
+						final int month = parseInt(day[1]) - 1;
+						final int year = parseInt(day[2]);
+						final int h = parseInt(hour[0]);
+						final int min = parseInt(hour[1]);
 						if (((month == 2) && (d > 28)) || (d > 31) || (d <= 0) || (month <= 0) || (month > 12) || (year < Calendar.getInstance().get(Calendar.YEAR)))
 						{
 							activeChar.sendMessage("Wrong day/month/year gave!");
@@ -153,7 +153,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 						}
 						else
 						{
-							Calendar c = Calendar.getInstance();
+							final Calendar c = Calendar.getInstance();
 							c.set(Calendar.YEAR, year);
 							c.set(Calendar.MONTH, month);
 							c.set(Calendar.DAY_OF_MONTH, d);
@@ -189,7 +189,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			L2Clan attacker = null;
 			if (split.length < 3)
 			{
-				L2Object rawTarget = activeChar.getTarget();
+				final L2Object rawTarget = activeChar.getTarget();
 				L2PcInstance target = null;
 				if (rawTarget == null)
 				{
@@ -214,7 +214,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			}
 			else
 			{
-				L2Clan rawClan = ClanTable.getInstance().getClanByName(split[2]);
+				final L2Clan rawClan = ClanTable.getInstance().getClanByName(split[2]);
 				if (rawClan == null)
 				{
 					activeChar.sendMessage("The given clan does not exist!");
@@ -244,7 +244,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			
 			if (split.length < 3)
 			{
-				L2Object rawTarget = activeChar.getTarget();
+				final L2Object rawTarget = activeChar.getTarget();
 				L2PcInstance target = null;
 				if (rawTarget == null)
 				{
@@ -269,7 +269,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			}
 			else
 			{
-				L2Clan rawClan = ClanTable.getInstance().getClanByName(split[2]);
+				final L2Clan rawClan = ClanTable.getInstance().getClanByName(split[2]);
 				if (rawClan == null)
 				{
 					activeChar.sendMessage("The given clan does not exist!");
@@ -301,7 +301,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		}
 		else if (split[0].equals(COMMANDS[8]))
 		{
-			ClanHallSiegeEngine siegable = hall.getSiege();
+			final ClanHallSiegeEngine siegable = hall.getSiege();
 			siegable.cancelSiegeTask();
 			switch (hall.getSiegeStatus())
 			{
@@ -323,14 +323,14 @@ public final class AdminCHSiege implements IAdminCommandHandler
 	
 	private SiegableHall getHall(String id, L2PcInstance gm)
 	{
-		int ch = parseInt(id);
+		final int ch = parseInt(id);
 		if (ch == 0)
 		{
 			gm.sendMessage("Wrong clan hall id, unparseable id!");
 			return null;
 		}
 		
-		SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(ch);
+		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(ch);
 		
 		if (hall == null)
 		{
@@ -362,7 +362,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		msg.replace("%clanhallName%", hall.getName());
 		if (hall.getOwnerId() > 0)
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
+			final L2Clan owner = ClanTable.getInstance().getClan(hall.getOwnerId());
 			if (owner != null)
 			{
 				msg.replace("%clanhallOwner%", owner.getName());

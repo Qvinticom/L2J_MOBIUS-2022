@@ -55,7 +55,7 @@ public class Q00016_TheComingDarkness extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
+		final String htmltext = event;
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{

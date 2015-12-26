@@ -36245,7 +36245,7 @@ public final class NpcStringId
 	{
 		final Field[] fields = NpcStringId.class.getDeclaredFields();
 		
-		for (final Field field : fields)
+		for (Field field : fields)
 		{
 			final int mod = field.getModifiers();
 			if (Modifier.isStatic(mod) && Modifier.isPublic(mod) && field.getType().equals(NpcStringId.class) && field.isAnnotationPresent(ClientString.class))
@@ -36259,7 +36259,7 @@ public final class NpcStringId
 					field.set(null, nsId);
 					VALUES.put(nsId.getId(), nsId);
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					_log.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
 				}
@@ -36309,7 +36309,7 @@ public final class NpcStringId
 		{
 			return (NpcStringId) NpcStringId.class.getField(name).get(null);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return null;
 		}
@@ -36317,7 +36317,7 @@ public final class NpcStringId
 	
 	public static final void reloadLocalisations()
 	{
-		for (final NpcStringId nsId : VALUES.values())
+		for (NpcStringId nsId : VALUES.values())
 		{
 			if (nsId != null)
 			{
@@ -36342,7 +36342,7 @@ public final class NpcStringId
 		NamedNodeMap nnmb;
 		NpcStringId nsId;
 		String text;
-		for (final String lang : languages)
+		for (String lang : languages)
 		{
 			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/ns/NpcStringLocalisation.xml");
 			if (!file.isFile())
@@ -36405,7 +36405,7 @@ public final class NpcStringId
 					}
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				_log.log(Level.SEVERE, "NpcStringId: Failed loading '" + file + "'", e);
 			}

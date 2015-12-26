@@ -70,11 +70,11 @@ public class GameGuardReply extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2GameClient client = getClient();
+		final L2GameClient client = getClient();
 		try
 		{
-			MessageDigest md = MessageDigest.getInstance("SHA");
-			byte[] result = md.digest(_reply);
+			final MessageDigest md = MessageDigest.getInstance("SHA");
+			final byte[] result = md.digest(_reply);
 			if (Arrays.equals(result, VALID))
 			{
 				client.setGameGuardOk(true);

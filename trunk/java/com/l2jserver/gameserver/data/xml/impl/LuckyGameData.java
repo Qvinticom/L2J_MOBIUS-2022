@@ -64,8 +64,8 @@ public class LuckyGameData implements IXmlReader
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				NamedNodeMap at = n.getAttributes();
-				Node attribute = at.getNamedItem("enabled");
+				final NamedNodeMap at = n.getAttributes();
+				final Node attribute = at.getNamedItem("enabled");
 				if ((attribute != null) && Boolean.parseBoolean(attribute.getNodeValue())) // <list enabled="true"
 				{
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
@@ -76,7 +76,7 @@ public class LuckyGameData implements IXmlReader
 							{
 								if ("item".equalsIgnoreCase(b.getNodeName()))
 								{
-									NamedNodeMap attrs = b.getAttributes();
+									final NamedNodeMap attrs = b.getAttributes();
 									
 									final int itemId = parseInteger(attrs, "id");
 									final int count = parseInteger(attrs, "count");
@@ -97,7 +97,7 @@ public class LuckyGameData implements IXmlReader
 							{
 								if ("item".equalsIgnoreCase(b.getNodeName()))
 								{
-									NamedNodeMap attrs = b.getAttributes();
+									final NamedNodeMap attrs = b.getAttributes();
 									
 									final int itemId = parseInteger(attrs, "id");
 									final int count = parseInteger(attrs, "count");
@@ -118,7 +118,7 @@ public class LuckyGameData implements IXmlReader
 							{
 								if ("item".equalsIgnoreCase(b.getNodeName()))
 								{
-									NamedNodeMap attrs = b.getAttributes();
+									final NamedNodeMap attrs = b.getAttributes();
 									
 									final int itemId = parseInteger(attrs, "id");
 									final int count = parseInteger(attrs, "count");

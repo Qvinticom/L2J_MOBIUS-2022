@@ -64,7 +64,7 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		}
 		request.setProcessing(true);
 		
-		L2ItemInstance item = player.getInventory().getItemByObjectId(_itemOID);
+		final L2ItemInstance item = player.getInventory().getItemByObjectId(_itemOID);
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
@@ -93,12 +93,12 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 			player.sendPacket(new ExChangeAttributeItemList(player, _attributeOID));
 			return;
 		}
-		L2ItemInstance attribute = player.getInventory().getItemByObjectId(_attributeOID);
+		final L2ItemInstance attribute = player.getInventory().getItemByObjectId(_attributeOID);
 		player.getInventory().destroyItem("ChangingAttribute", _attributeOID, 1, player, null);
 		
 		if (Rnd.get(100) < Config.CHANGE_CHANCE_ELEMENT)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
 			sm.addItemName(item);
 			sm.addElemental(item.getAttackElementType());
 			sm.addElemental(_newAttributeID);
@@ -121,7 +121,7 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		
 		// send packets
 		player.sendPacket(new ExStorageMaxCount(player));
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
 		if (player.getInventory().getItemByObjectId(_attributeOID) == null)
 		{

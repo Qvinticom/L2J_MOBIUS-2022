@@ -76,11 +76,11 @@ public class RecipeData implements IXmlReader
 						recipePartList.clear();
 						recipeStatUseList.clear();
 						recipeAltStatChangeList.clear();
-						NamedNodeMap attrs = d.getAttributes();
+						final NamedNodeMap attrs = d.getAttributes();
 						Node att;
 						int id = -1;
 						boolean haveRare = false;
-						StatsSet set = new StatsSet();
+						final StatsSet set = new StatsSet();
 						
 						att = attrs.getNamedItem("id");
 						if (att == null)
@@ -135,8 +135,8 @@ public class RecipeData implements IXmlReader
 						{
 							if ("statUse".equalsIgnoreCase(c.getNodeName()))
 							{
-								String statName = c.getAttributes().getNamedItem("name").getNodeValue();
-								int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
+								final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
+								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
 								try
 								{
 									recipeStatUseList.add(new L2RecipeStatInstance(statName, value));
@@ -149,8 +149,8 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("altStatChange".equalsIgnoreCase(c.getNodeName()))
 							{
-								String statName = c.getAttributes().getNamedItem("name").getNodeValue();
-								int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
+								final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
+								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
 								try
 								{
 									recipeAltStatChangeList.add(new L2RecipeStatInstance(statName, value));
@@ -163,8 +163,8 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("ingredient".equalsIgnoreCase(c.getNodeName()))
 							{
-								int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
-								int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
+								final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
+								final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
 								recipePartList.add(new L2RecipeInstance(ingId, ingCount));
 							}
 							else if ("production".equalsIgnoreCase(c.getNodeName()))
@@ -181,7 +181,7 @@ public class RecipeData implements IXmlReader
 							}
 						}
 						
-						L2RecipeList recipeList = new L2RecipeList(set, haveRare);
+						final L2RecipeList recipeList = new L2RecipeList(set, haveRare);
 						for (L2RecipeInstance recipePart : recipePartList)
 						{
 							recipeList.addRecipe(recipePart);
@@ -235,7 +235,7 @@ public class RecipeData implements IXmlReader
 	 */
 	public int[] getAllItemIds()
 	{
-		int[] idList = new int[_recipes.size()];
+		final int[] idList = new int[_recipes.size()];
 		int i = 0;
 		for (L2RecipeList rec : _recipes.values())
 		{
@@ -252,7 +252,7 @@ public class RecipeData implements IXmlReader
 	 */
 	public L2RecipeList getValidRecipeList(L2PcInstance player, int id)
 	{
-		L2RecipeList recipeList = _recipes.get(id);
+		final L2RecipeList recipeList = _recipes.get(id);
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
 			player.sendMessage(getClass().getSimpleName() + ": No recipe for: " + id);

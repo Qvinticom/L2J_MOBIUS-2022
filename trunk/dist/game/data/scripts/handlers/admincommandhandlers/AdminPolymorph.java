@@ -53,7 +53,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_untransform"))
 		{
-			L2Object obj = activeChar.getTarget();
+			final L2Object obj = activeChar.getTarget();
 			if (obj instanceof L2Character)
 			{
 				((L2Character) obj).stopTransformation(true);
@@ -163,10 +163,10 @@ public class AdminPolymorph implements IAdminCommandHandler
 			// animation
 			if (obj instanceof L2Character)
 			{
-				L2Character Char = (L2Character) obj;
-				MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
+				final L2Character Char = (L2Character) obj;
+				final MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
 				Char.broadcastPacket(msk);
-				SetupGauge sg = new SetupGauge(0, 4000);
+				final SetupGauge sg = new SetupGauge(0, 4000);
 				Char.sendPacket(sg);
 			}
 			// end of animation

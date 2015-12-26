@@ -39,7 +39,7 @@ public final class RequestItemList extends L2GameClientPacket
 	{
 		if ((getClient() != null) && (getClient().getActiveChar() != null) && !getClient().getActiveChar().isInventoryDisabled())
 		{
-			ItemList il = new ItemList(getClient().getActiveChar(), true);
+			final ItemList il = new ItemList(getClient().getActiveChar(), true);
 			sendPacket(il);
 		}
 	}

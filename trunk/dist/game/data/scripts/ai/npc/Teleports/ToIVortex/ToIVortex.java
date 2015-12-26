@@ -91,7 +91,7 @@ public final class ToIVortex extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		switch (event)
 		{

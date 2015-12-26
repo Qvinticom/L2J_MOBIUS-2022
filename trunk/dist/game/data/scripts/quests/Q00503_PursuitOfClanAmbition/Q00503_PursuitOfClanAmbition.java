@@ -445,7 +445,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					if (player.isClanLeader())
 					{
-						L2Clan clan = player.getClan();
+						final L2Clan clan = player.getClan();
 						if (clan != null)
 						{
 							if (clan.getLevel() < 4)

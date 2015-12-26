@@ -91,7 +91,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Boolean value required, but not specified");
@@ -119,7 +119,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public boolean getBoolean(String key, boolean defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -141,7 +141,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Byte value required, but not specified");
@@ -163,7 +163,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public byte getByte(String key, byte defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -184,22 +184,22 @@ public class StatsSet implements IParserAdvUtils
 	
 	public byte[] getByteArray(String key, String splitOn)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Byte value required, but not specified");
 		}
 		if (val instanceof Number)
 		{
-			byte[] result =
+			final byte[] result =
 			{
 				((Number) val).byteValue()
 			};
 			return result;
 		}
 		int c = 0;
-		String[] vals = ((String) val).split(splitOn);
-		byte[] result = new byte[vals.length];
+		final String[] vals = ((String) val).split(splitOn);
+		final byte[] result = new byte[vals.length];
 		for (String v : vals)
 		{
 			try
@@ -216,7 +216,7 @@ public class StatsSet implements IParserAdvUtils
 	
 	public List<Byte> getByteList(String key, String splitOn)
 	{
-		List<Byte> result = new ArrayList<>();
+		final List<Byte> result = new ArrayList<>();
 		for (Byte i : getByteArray(key, splitOn))
 		{
 			result.add(i);
@@ -227,7 +227,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Short value required, but not specified");
@@ -249,7 +249,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public short getShort(String key, short defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -295,7 +295,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public int getInt(String key, int defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -316,22 +316,22 @@ public class StatsSet implements IParserAdvUtils
 	
 	public int[] getIntArray(String key, String splitOn)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Integer value required, but not specified");
 		}
 		if (val instanceof Number)
 		{
-			int[] result =
+			final int[] result =
 			{
 				((Number) val).intValue()
 			};
 			return result;
 		}
 		int c = 0;
-		String[] vals = ((String) val).split(splitOn);
-		int[] result = new int[vals.length];
+		final String[] vals = ((String) val).split(splitOn);
+		final int[] result = new int[vals.length];
 		for (String v : vals)
 		{
 			try
@@ -348,7 +348,7 @@ public class StatsSet implements IParserAdvUtils
 	
 	public List<Integer> getIntegerList(String key, String splitOn)
 	{
-		List<Integer> result = new ArrayList<>();
+		final List<Integer> result = new ArrayList<>();
 		for (int i : getIntArray(key, splitOn))
 		{
 			result.add(i);
@@ -359,7 +359,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Long value required, but not specified");
@@ -381,7 +381,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public long getLong(String key, long defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -403,7 +403,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public float getFloat(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Float value required, but not specified");
@@ -425,7 +425,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public float getFloat(String key, float defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -447,7 +447,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public double getDouble(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Double value required, but not specified");
@@ -469,7 +469,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public double getDouble(String key, double defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -491,7 +491,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public String getString(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("String value required, but not specified");
@@ -502,7 +502,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public String getString(String key, String defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -513,7 +513,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public Duration getDuration(String key)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("String value required, but not specified");
@@ -524,7 +524,7 @@ public class StatsSet implements IParserAdvUtils
 	@Override
 	public Duration getDuration(String key, Duration defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -536,7 +536,7 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			throw new IllegalArgumentException("Enum value of type " + enumClass.getName() + " required, but not specified");
@@ -559,7 +559,7 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue)
 	{
-		Object val = _set.get(key);
+		final Object val = _set.get(key);
 		if (val == null)
 		{
 			return defaultValue;
@@ -581,7 +581,7 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public final <A> A getObject(String name, Class<A> type)
 	{
-		Object obj = _set.get(name);
+		final Object obj = _set.get(name);
 		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
 		{
 			return null;
@@ -592,7 +592,7 @@ public class StatsSet implements IParserAdvUtils
 	
 	public SkillHolder getSkillHolder(String key)
 	{
-		Object obj = _set.get(key);
+		final Object obj = _set.get(key);
 		if ((obj == null) || !(obj instanceof SkillHolder))
 		{
 			return null;
@@ -604,7 +604,7 @@ public class StatsSet implements IParserAdvUtils
 	@SuppressWarnings("unchecked")
 	public List<MinionHolder> getMinionList(String key)
 	{
-		Object obj = _set.get(key);
+		final Object obj = _set.get(key);
 		if ((obj == null) || !(obj instanceof List<?>))
 		{
 			return Collections.emptyList();

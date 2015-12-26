@@ -44,10 +44,10 @@ public class ScriptDocument
 	{
 		_name = name;
 		
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		try
 		{
-			DocumentBuilder builder = factory.newDocumentBuilder();
+			final DocumentBuilder builder = factory.newDocumentBuilder();
 			_document = builder.parse(input);
 			
 		}

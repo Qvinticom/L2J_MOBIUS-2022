@@ -93,7 +93,7 @@ public abstract class AbstractAI implements Ctrl
 					return;
 				}
 				
-				L2Character followTarget = _followTarget; // copy to prevent NPE
+				final L2Character followTarget = _followTarget; // copy to prevent NPE
 				if (followTarget == null)
 				{
 					if (_actor instanceof L2Summon)
@@ -660,7 +660,7 @@ public abstract class AbstractAI implements Ctrl
 	{
 		if (_actor instanceof L2Summon)
 		{
-			L2Summon summon = (L2Summon) _actor;
+			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)
 			{
 				summon.getOwner().getAI().setAutoAttacking(isAutoAttacking);
@@ -678,7 +678,7 @@ public abstract class AbstractAI implements Ctrl
 	{
 		if (_actor instanceof L2Summon)
 		{
-			L2Summon summon = (L2Summon) _actor;
+			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)
 			{
 				summon.getOwner().getAI().clientStartAutoAttack();
@@ -711,7 +711,7 @@ public abstract class AbstractAI implements Ctrl
 	{
 		if (_actor instanceof L2Summon)
 		{
-			L2Summon summon = (L2Summon) _actor;
+			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)
 			{
 				summon.getOwner().getAI().clientStopAutoAttack();
@@ -739,7 +739,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void clientNotifyDead()
 	{
 		// Send a Server->Client packet Die to the actor and all L2PcInstance in its _knownPlayers
-		Die msg = new Die(_actor);
+		final Die msg = new Die(_actor);
 		_actor.broadcastPacket(msg);
 		
 		// Init AI

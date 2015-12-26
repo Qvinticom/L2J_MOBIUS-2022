@@ -40,11 +40,11 @@ public final class RequestMakeMacro extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int _id = readD();
-		String _name = readS();
-		String _desc = readS();
-		String _acronym = readS();
-		int _icon = readC();
+		final int _id = readD();
+		final String _name = readS();
+		final String _desc = readS();
+		final String _acronym = readS();
+		final int _icon = readC();
 		int _count = readC();
 		if (_count > MAX_MACRO_LENGTH)
 		{
@@ -59,11 +59,11 @@ public final class RequestMakeMacro extends L2GameClientPacket
 		final List<MacroCmd> commands = new ArrayList<>(_count);
 		for (int i = 0; i < _count; i++)
 		{
-			int entry = readC();
-			int type = readC(); // 1 = skill, 3 = action, 4 = shortcut
-			int d1 = readD(); // skill or page number for shortcuts
-			int d2 = readC();
-			String command = readS();
+			final int entry = readC();
+			final int type = readC(); // 1 = skill, 3 = action, 4 = shortcut
+			final int d1 = readD(); // skill or page number for shortcuts
+			final int d2 = readC();
+			final String command = readS();
 			_commandsLenght += command.length();
 			commands.add(new MacroCmd(entry, MacroType.values()[(type < 1) || (type > 6) ? 0 : type], d1, d2, command));
 		}
@@ -73,7 +73,7 @@ public final class RequestMakeMacro extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;

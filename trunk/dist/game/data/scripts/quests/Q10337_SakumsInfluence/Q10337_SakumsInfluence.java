@@ -235,7 +235,7 @@ public class Q10337_SakumsInfluence extends Quest
 				}
 			}
 			
-			ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			log.addNpc(SKELETON_WARRIOR, qs.getInt(Integer.toString(SKELETON_WARRIOR)));
 			log.addNpc(RUIN_IMP, qs.getInt(Integer.toString(RUIN_IMP)));
 			log.addNpc(BAT, qs.getInt(Integer.toString(BAT)));

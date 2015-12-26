@@ -87,7 +87,7 @@ public class Q00458_PerfectForm extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String noQuest = getNoQuestMsg(player);
+		final String noQuest = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
@@ -178,20 +178,20 @@ public class Q00458_PerfectForm extends Quest
 			case "32768-17.html":
 				if (st.isCond(2))
 				{
-					int overhitsConsecutive = st.getInt("overhitsConsecutive");
+					final int overhitsConsecutive = st.getInt("overhitsConsecutive");
 					if (overhitsConsecutive >= 20)
 					{
-						int rnd = getRandom(ICARUS_WEAPON_RECIPES.length);
+						final int rnd = getRandom(ICARUS_WEAPON_RECIPES.length);
 						st.rewardItems(ICARUS_WEAPON_RECIPES[rnd], 1);
 					}
 					else if (overhitsConsecutive >= 7)
 					{
-						int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
+						final int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
 						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 5);
 					}
 					else
 					{
-						int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
+						final int rnd = getRandom(ICARUS_WEAPON_PIECES.length);
 						st.rewardItems(ICARUS_WEAPON_PIECES[rnd], 2);
 						// not sure if this should use rewardItems
 						st.giveItems(15482, 10); // Golden Spice Crate
@@ -226,24 +226,24 @@ public class Q00458_PerfectForm extends Quest
 				npcId++;
 			}
 			
-			String variable = String.valueOf(npcId); // i3
-			int currentValue = st.getInt(variable);
+			final String variable = String.valueOf(npcId); // i3
+			final int currentValue = st.getInt(variable);
 			if (currentValue < 10)
 			{
 				st.set(variable, String.valueOf(currentValue + 1)); // IncreaseNPCLogByID
 				
-				L2Attackable mob = (L2Attackable) npc;
+				final L2Attackable mob = (L2Attackable) npc;
 				if (mob.isOverhit())
 				{
 					st.set("overhitsTotal", String.valueOf(st.getInt("overhitsTotal") + 1)); // memoStateEx 1
-					int maxHp = mob.getMaxHp();
+					final int maxHp = mob.getMaxHp();
 					// L2Attackable#calculateOverhitExp() way of calculating overhit % seems illogical
-					double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
+					final double overhitPercentage = (maxHp + mob.getOverhitDamage()) / maxHp;
 					if (overhitPercentage >= 1.2)
 					{
 						st.set("overhitsCritical", String.valueOf(st.getInt("overhitsCritical") + 1)); // memoStateEx 2
 					}
-					int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
+					final int overhitsConsecutive = st.getInt("overhitsConsecutive") + 1;
 					st.set("overhitsConsecutive", String.valueOf(overhitsConsecutive)); // memoStateEx 3
 					/*
 					 * Retail logic (makes for a long/messy string in database): int i0 = overhitsConsecutive % 100; int i1 = overhitsConsecutive - (i0 * 100); if (i0 < i1) { st.set("overhitsConsecutive", String.valueOf((i1 * 100) + i1)); }

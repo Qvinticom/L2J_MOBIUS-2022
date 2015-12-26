@@ -255,7 +255,7 @@ public class ClanBoard implements IWriteBoardHandler
 	
 	private void clanHome(L2PcInstance activeChar, int clanId)
 	{
-		L2Clan cl = ClanTable.getInstance().getClan(clanId);
+		final L2Clan cl = ClanTable.getInstance().getClan(clanId);
 		if (cl != null)
 		{
 			if (cl.getLevel() < 2)

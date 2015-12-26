@@ -81,14 +81,14 @@ public final class WalkingManager implements IXmlReader
 	@Override
 	public void parseDocument(Document doc)
 	{
-		Node n = doc.getFirstChild();
+		final Node n = doc.getFirstChild();
 		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("route"))
 			{
 				final String routeName = parseString(d.getAttributes(), "name");
-				boolean repeat = parseBoolean(d.getAttributes(), "repeat");
-				String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue();
+				final boolean repeat = parseBoolean(d.getAttributes(), "repeat");
+				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue();
 				byte repeatType;
 				if (repeatStyle.equalsIgnoreCase("back"))
 				{
@@ -116,12 +116,12 @@ public final class WalkingManager implements IXmlReader
 				{
 					if (r.getNodeName().equals("point"))
 					{
-						NamedNodeMap attrs = r.getAttributes();
-						int x = parseInteger(attrs, "X");
-						int y = parseInteger(attrs, "Y");
-						int z = parseInteger(attrs, "Z");
-						int delay = parseInteger(attrs, "delay");
-						boolean run = parseBoolean(attrs, "run");
+						final NamedNodeMap attrs = r.getAttributes();
+						final int x = parseInteger(attrs, "X");
+						final int y = parseInteger(attrs, "Y");
+						final int z = parseInteger(attrs, "Z");
+						final int delay = parseInteger(attrs, "delay");
+						final boolean run = parseBoolean(attrs, "run");
 						NpcStringId npcString = null;
 						String chatString = null;
 						
@@ -161,15 +161,15 @@ public final class WalkingManager implements IXmlReader
 					
 					else if (r.getNodeName().equals("target"))
 					{
-						NamedNodeMap attrs = r.getAttributes();
+						final NamedNodeMap attrs = r.getAttributes();
 						try
 						{
-							int npcId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-							int x = Integer.parseInt(attrs.getNamedItem("spawnX").getNodeValue());
-							int y = Integer.parseInt(attrs.getNamedItem("spawnY").getNodeValue());
-							int z = Integer.parseInt(attrs.getNamedItem("spawnZ").getNodeValue());
+							final int npcId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+							final int x = Integer.parseInt(attrs.getNamedItem("spawnX").getNodeValue());
+							final int y = Integer.parseInt(attrs.getNamedItem("spawnY").getNodeValue());
+							final int z = Integer.parseInt(attrs.getNamedItem("spawnZ").getNodeValue());
 							
-							NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
+							final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
 							holder.addRoute(routeName, new Location(x, y, z));
 							_routesToAttach.put(npcId, holder);
 						}

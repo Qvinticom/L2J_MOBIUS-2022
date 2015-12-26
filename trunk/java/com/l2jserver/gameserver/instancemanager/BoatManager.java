@@ -59,7 +59,7 @@ public class BoatManager
 			return null;
 		}
 		
-		StatsSet npcDat = new StatsSet();
+		final StatsSet npcDat = new StatsSet();
 		npcDat.set("npcId", boatId);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");

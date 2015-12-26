@@ -83,20 +83,20 @@ public final class GrandBossManager implements IStorable
 			{
 				// Read all info from DB, and store it for AI to read and decide what to do
 				// faster than accessing DB in real time
-				StatsSet info = new StatsSet();
-				int bossId = rs.getInt("boss_id");
+				final StatsSet info = new StatsSet();
+				final int bossId = rs.getInt("boss_id");
 				info.set("loc_x", rs.getInt("loc_x"));
 				info.set("loc_y", rs.getInt("loc_y"));
 				info.set("loc_z", rs.getInt("loc_z"));
 				info.set("heading", rs.getInt("heading"));
 				info.set("respawn_time", rs.getLong("respawn_time"));
-				double HP = rs.getDouble("currentHP"); // jython doesn't recognize doubles
-				int true_HP = (int) HP; // so use java's ability to type cast
+				final double HP = rs.getDouble("currentHP"); // jython doesn't recognize doubles
+				final int true_HP = (int) HP; // so use java's ability to type cast
 				info.set("currentHP", true_HP); // to convert double to int
-				double MP = rs.getDouble("currentMP");
-				int true_MP = (int) MP;
+				final double MP = rs.getDouble("currentMP");
+				final int true_MP = (int) MP;
 				info.set("currentMP", true_MP);
-				int status = rs.getInt("status");
+				final int status = rs.getInt("status");
 				_bossStatus.put(bossId, status);
 				_storedInfo.put(bossId, info);
 				_log.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status + ".");
@@ -135,8 +135,8 @@ public final class GrandBossManager implements IStorable
 		{
 			while (rs.next())
 			{
-				int id = rs.getInt("player_id");
-				int zoneId = rs.getInt("zone");
+				final int id = rs.getInt("player_id");
+				final int zoneId = rs.getInt("zone");
 				zones.get(zoneId).add(id);
 			}
 			_log.info(getClass().getSimpleName() + ": Initialized " + _zones.size() + " Grand Boss Zones");
@@ -246,7 +246,7 @@ public final class GrandBossManager implements IStorable
 			{
 				for (Entry<Integer, L2BossZone> e : _zones.entrySet())
 				{
-					List<Integer> list = e.getValue().getAllowedPlayers();
+					final List<Integer> list = e.getValue().getAllowedPlayers();
 					if ((list == null) || list.isEmpty())
 					{
 						continue;
@@ -263,7 +263,7 @@ public final class GrandBossManager implements IStorable
 			for (Entry<Integer, StatsSet> e : _storedInfo.entrySet())
 			{
 				final L2GrandBossInstance boss = BOSSES.get(e.getKey());
-				StatsSet info = e.getValue();
+				final StatsSet info = e.getValue();
 				if ((boss == null) || (info == null))
 				{
 					try (PreparedStatement update = con.prepareStatement(UPDATE_GRAND_BOSS_DATA2))
@@ -312,8 +312,8 @@ public final class GrandBossManager implements IStorable
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			L2GrandBossInstance boss = BOSSES.get(bossId);
-			StatsSet info = _storedInfo.get(bossId);
+			final L2GrandBossInstance boss = BOSSES.get(bossId);
+			final StatsSet info = _storedInfo.get(bossId);
 			
 			if (statusOnly || (boss == null) || (info == null))
 			{

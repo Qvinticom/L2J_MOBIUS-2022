@@ -54,11 +54,11 @@ public final class StakatoNestTeleporter extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		int index = Integer.parseInt(event) - 1;
+		final int index = Integer.parseInt(event) - 1;
 		
 		if (LOCS.length > index)
 		{
-			Location loc = LOCS[index];
+			final Location loc = LOCS[index];
 			
 			if (player.getParty() != null)
 			{
@@ -78,7 +78,7 @@ public final class StakatoNestTeleporter extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
+		final QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
 		return (((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm");
 	}
 	

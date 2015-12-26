@@ -166,7 +166,7 @@ public final class Q00184_ArtOfPersuasion extends Quest
 				{
 					npc.getVariables().set("SPAWNED", true);
 					npc.getVariables().set("PLAYER_ID", player.getObjectId());
-					L2Npc alarm = addSpawn(ALARM_OF_GIANT, player.getX() + 80, player.getY() + 60, player.getZ(), 16384, false, 0);
+					final L2Npc alarm = addSpawn(ALARM_OF_GIANT, player.getX() + 80, player.getY() + 60, player.getZ(), 16384, false, 0);
 					alarm.getVariables().set("player0", player);
 					alarm.getVariables().set("npc0", npc);
 				}

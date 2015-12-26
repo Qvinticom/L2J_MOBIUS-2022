@@ -91,7 +91,7 @@ public class MultiSellChoose extends L2GameClientPacket
 			return;
 		}
 		
-		PreparedListContainer list = player.getMultiSell();
+		final PreparedListContainer list = player.getMultiSell();
 		if ((list == null) || (list.getListId() != _listId))
 		{
 			player.setMultiSell(null);
@@ -159,7 +159,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					return;
 				}
 				
-				ArrayList<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
+				final ArrayList<Ingredient> ingredientsList = new ArrayList<>(entry.getIngredients().size());
 				// Generate a list of distinct ingredients and counts in order to check if the correct item-counts
 				// are possessed by the player
 				boolean newIng;
@@ -170,7 +170,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					// whenever they need to be applied. Uniqueness of items is thus judged by item id AND enchantment level
 					for (int i = ingredientsList.size(); --i >= 0;)
 					{
-						Ingredient ex = ingredientsList.get(i);
+						final Ingredient ex = ingredientsList.get(i);
 						// if the item was already added in the list, merely increment the count
 						// this happens if 1 list entry has the same ingredient twice (example 2 swords = 1 dual)
 						if ((ex.getItemId() == e.getItemId()) && (ex.getEnchantLevel() == e.getEnchantLevel()))
@@ -217,7 +217,7 @@ public class MultiSellChoose extends L2GameClientPacket
 						final long required = ((Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount());
 						if (inv.getInventoryItemCount(e.getItemId(), (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)) ? e.getEnchantLevel() : -1, false) < required)
 						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S);
 							sm.addItemName(e.getTemplate());
 							sm.addLong(required);
 							player.sendPacket(sm);
@@ -226,7 +226,7 @@ public class MultiSellChoose extends L2GameClientPacket
 					}
 				}
 				
-				List<L2Augmentation> augmentation = new ArrayList<>();
+				final List<L2Augmentation> augmentation = new ArrayList<>();
 				Elementals[] elemental = null;
 				/** All ok, remove items and add final product */
 				
@@ -278,7 +278,7 @@ public class MultiSellChoose extends L2GameClientPacket
 								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
-									L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
+									final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
 									for (int i = 0; i < (e.getItemCount() * _amount); i++)
 									{
 										if (inventoryContents[i].isAugmented())
@@ -336,7 +336,7 @@ public class MultiSellChoose extends L2GameClientPacket
 									// choice 1. Small number of items exchanged. No sorting.
 									for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 									{
-										L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
+										final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
 										
 										itemToTake = inventoryContents[0];
 										// get item with the LOWEST enchantment level from the inventory...

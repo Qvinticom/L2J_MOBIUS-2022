@@ -198,7 +198,7 @@ public final class StringUtil
 	public static String concat(final String... strings)
 	{
 		final StringBuilder sbString = new StringBuilder();
-		for (final String string : strings)
+		for (String string : strings)
 		{
 			sbString.append(string);
 		}
@@ -215,7 +215,7 @@ public final class StringUtil
 	{
 		final int length = getLength(strings);
 		final StringBuilder sbString = new StringBuilder(sizeHint > length ? sizeHint : length);
-		for (final String string : strings)
+		for (String string : strings)
 		{
 			sbString.append(string);
 		}
@@ -231,7 +231,7 @@ public final class StringUtil
 	{
 		sbString.ensureCapacity(sbString.length() + getLength(strings));
 		
-		for (final String string : strings)
+		for (String string : strings)
 		{
 			sbString.append(string);
 		}
@@ -240,7 +240,7 @@ public final class StringUtil
 	public static int getLength(final Iterable<String> strings)
 	{
 		int length = 0;
-		for (final String string : strings)
+		for (String string : strings)
 		{
 			length += (string == null) ? 4 : string.length();
 		}
@@ -255,7 +255,7 @@ public final class StringUtil
 	public static int getLength(final String[] strings)
 	{
 		int length = 0;
-		for (final String string : strings)
+		for (String string : strings)
 		{
 			length += (string == null) ? 4 : string.length();
 		}
@@ -265,7 +265,7 @@ public final class StringUtil
 	public static String getTraceString(StackTraceElement[] trace)
 	{
 		final StringBuilder sbString = new StringBuilder();
-		for (final StackTraceElement element : trace)
+		for (StackTraceElement element : trace)
 		{
 			sbString.append(element.toString()).append(Config.EOL);
 		}

@@ -46,7 +46,7 @@ public class ExBeautyItemList extends L2GameServerPacket
 		
 		for (BeautyItem hair : _beautyData.getHairList().values())
 		{
-			List<BeautyItem> colors = new ArrayList<>();
+			final List<BeautyItem> colors = new ArrayList<>();
 			for (BeautyItem color : hair.getColors().values())
 			{
 				colors.add(color);

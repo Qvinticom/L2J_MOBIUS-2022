@@ -43,12 +43,12 @@ public class BlessedSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
-		L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-		L2Weapon weaponItem = activeChar.getActiveWeaponItem();
+		final L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
-		int itemId = item.getId();
+		final int itemId = item.getId();
 		
 		if (skills == null)
 		{
@@ -73,7 +73,7 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Check for correct grade
-		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
 		
 		if (!gradeCheck)
 		{

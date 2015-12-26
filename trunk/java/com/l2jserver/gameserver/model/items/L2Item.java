@@ -219,7 +219,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		String skills = set.getString("item_skill", null);
 		if (skills != null)
 		{
-			String[] skillsSplit = skills.split(";");
+			final String[] skillsSplit = skills.split(";");
 			_skillHolder = new SkillHolder[skillsSplit.length];
 			int used = 0;
 			
@@ -227,9 +227,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			{
 				try
 				{
-					String[] skillSplit = element.split("-");
-					int id = Integer.parseInt(skillSplit[0]);
-					int level = Integer.parseInt(skillSplit[1]);
+					final String[] skillSplit = element.split("-");
+					final int id = Integer.parseInt(skillSplit[0]);
+					final int level = Integer.parseInt(skillSplit[1]);
 					
 					if (id == 0)
 					{
@@ -255,7 +255,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			// this is only loading? just don't leave a null or use a collection?
 			if (used != _skillHolder.length)
 			{
-				SkillHolder[] skillHolder = new SkillHolder[used];
+				final SkillHolder[] skillHolder = new SkillHolder[used];
 				System.arraycopy(_skillHolder, 0, skillHolder, 0, used);
 				_skillHolder = skillHolder;
 			}
@@ -264,7 +264,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		skills = set.getString("unequip_skill", null);
 		if (skills != null)
 		{
-			String[] info = skills.split("-");
+			final String[] info = skills.split("-");
 			if ((info != null) && (info.length == 2))
 			{
 				int id = 0;
@@ -289,7 +289,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		skills = set.getString("equip_skill", null);
 		if (skills != null)
 		{
-			String[] info = skills.split("-");
+			final String[] info = skills.split("-");
 			if ((info != null) && (info.length == 2))
 			{
 				int id = 0;
@@ -562,7 +562,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			else
 			{
 				elm = element;
-				Elementals[] array = new Elementals[_elementals.length + 1];
+				final Elementals[] array = new Elementals[_elementals.length + 1];
 				System.arraycopy(_elementals, 0, array, 0, _elementals.length);
 				array[_elementals.length] = elm;
 				_elementals = array;
@@ -733,7 +733,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		final List<AbstractFunction> funcs = new ArrayList<>(_funcTemplates.size());
 		for (FuncTemplate t : _funcTemplates)
 		{
-			AbstractFunction f = t.getFunc(player, player, item, item);
+			final AbstractFunction f = t.getFunc(player, player, item, item);
 			if (f != null)
 			{
 				funcs.add(f);
@@ -869,15 +869,15 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				
 				if (sendMessage)
 				{
-					String msg = preCondition.getMessage();
-					int msgId = preCondition.getMessageId();
+					final String msg = preCondition.getMessage();
+					final int msgId = preCondition.getMessageId();
 					if (msg != null)
 					{
 						activeChar.sendMessage(msg);
 					}
 					else if (msgId != 0)
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(msgId);
+						final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
 						if (preCondition.isAddName())
 						{
 							sm.addItemName(_itemId);

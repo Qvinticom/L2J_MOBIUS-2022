@@ -598,7 +598,7 @@ public class MasterHandler
 	{
 		_log.log(Level.INFO, "Loading Handlers...");
 		
-		Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
+		final Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
 			registerHandlerMethods.put(loadInstance, null);
@@ -627,7 +627,7 @@ public class MasterHandler
 				
 				try
 				{
-					Object handler = c.newInstance();
+					final Object handler = c.newInstance();
 					for (Entry<IHandler<?, ?>, Method> entry : registerHandlerMethods.entrySet())
 					{
 						if ((entry.getValue() != null) && entry.getValue().getParameterTypes()[0].isInstance(handler))

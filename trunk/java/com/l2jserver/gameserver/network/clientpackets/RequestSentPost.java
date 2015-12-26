@@ -51,7 +51,7 @@ public final class RequestSentPost extends L2GameClientPacket
 			return;
 		}
 		
-		Message msg = MailManager.getInstance().getMessage(_msgId);
+		final Message msg = MailManager.getInstance().getMessage(_msgId);
 		if (msg == null)
 		{
 			return;

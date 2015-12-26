@@ -55,8 +55,8 @@ public final class MagicalAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
 		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4049))
@@ -69,8 +69,8 @@ public final class MagicalAttack extends AbstractEffect
 			target.stopFakeDeath(true);
 		}
 		
-		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
@@ -78,7 +78,7 @@ public final class MagicalAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

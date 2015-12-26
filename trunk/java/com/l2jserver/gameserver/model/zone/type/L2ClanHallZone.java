@@ -43,7 +43,7 @@ public class L2ClanHallZone extends L2ResidenceZone
 		{
 			setResidenceId(Integer.parseInt(value));
 			// Register self to the correct clan hall
-			ClanHall hall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
+			final ClanHall hall = ClanHallManager.getInstance().getClanHallById(getResidenceId());
 			if (hall == null)
 			{
 				_log.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
@@ -67,14 +67,14 @@ public class L2ClanHallZone extends L2ResidenceZone
 			// Set as in clan hall
 			character.setInsideZone(ZoneId.CLAN_HALL, true);
 			
-			AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
+			final AuctionableHall clanHall = ClanHallManager.getInstance().getAuctionableHallById(getResidenceId());
 			if (clanHall == null)
 			{
 				return;
 			}
 			
 			// Send decoration packet
-			AgitDecoInfo deco = new AgitDecoInfo(clanHall);
+			final AgitDecoInfo deco = new AgitDecoInfo(clanHall);
 			character.sendPacket(deco);
 			
 		}

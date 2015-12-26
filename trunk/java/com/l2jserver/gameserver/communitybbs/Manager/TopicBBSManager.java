@@ -62,7 +62,7 @@ public class TopicBBSManager extends BaseBBSManager
 	
 	public int getMaxID(Forum f)
 	{
-		Integer i = _maxId.get(f);
+		final Integer i = _maxId.get(f);
 		if (i == null)
 		{
 			return 0;
@@ -87,7 +87,7 @@ public class TopicBBSManager extends BaseBBSManager
 	{
 		if (ar1.equals("crea"))
 		{
-			Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
 			if (f == null)
 			{
 				CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the forum: " + ar2 + " is not implemented yet</center><br><br></body></html>", activeChar);
@@ -95,10 +95,10 @@ public class TopicBBSManager extends BaseBBSManager
 			else
 			{
 				f.vload();
-				Topic t = new Topic(Topic.ConstructorType.CREATE, TopicBBSManager.getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), activeChar.getName(), activeChar.getObjectId(), Topic.MEMO, 0);
+				final Topic t = new Topic(Topic.ConstructorType.CREATE, TopicBBSManager.getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), activeChar.getName(), activeChar.getObjectId(), Topic.MEMO, 0);
 				f.addTopic(t);
 				TopicBBSManager.getInstance().setMaxID(t.getID(), f);
-				Post p = new Post(activeChar.getName(), activeChar.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
+				final Post p = new Post(activeChar.getName(), activeChar.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
 				PostBBSManager.getInstance().addPostByTopic(p, t);
 				parsecmd("_bbsmemo", activeChar);
 			}
@@ -106,14 +106,14 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		else if (ar1.equals("del"))
 		{
-			Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(Integer.parseInt(ar2));
 			if (f == null)
 			{
 				CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the forum: " + ar2 + " does not exist !</center><br><br></body></html>", activeChar);
 			}
 			else
 			{
-				Topic t = f.getTopic(Integer.parseInt(ar3));
+				final Topic t = f.getTopic(Integer.parseInt(ar3));
 				if (t == null)
 				{
 					CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the topic: " + ar3 + " does not exist !</center><br><br></body></html>", activeChar);
@@ -121,7 +121,7 @@ public class TopicBBSManager extends BaseBBSManager
 				else
 				{
 					// CPost cp = null;
-					Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
+					final Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
 					if (p != null)
 					{
 						p.deleteme(t);
@@ -146,10 +146,10 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbstopics;read"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
-			int idf = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
 			String index = null;
 			if (st.hasMoreTokens())
 			{
@@ -168,27 +168,27 @@ public class TopicBBSManager extends BaseBBSManager
 		}
 		else if (command.startsWith("_bbstopics;crea"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
-			int idf = Integer.parseInt(st.nextToken());
+			final int idf = Integer.parseInt(st.nextToken());
 			showNewTopic(ForumsBBSManager.getInstance().getForumByID(idf), activeChar, idf);
 		}
 		else if (command.startsWith("_bbstopics;del"))
 		{
-			StringTokenizer st = new StringTokenizer(command, ";");
+			final StringTokenizer st = new StringTokenizer(command, ";");
 			st.nextToken();
 			st.nextToken();
-			int idf = Integer.parseInt(st.nextToken());
-			int idt = Integer.parseInt(st.nextToken());
-			Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
+			final int idf = Integer.parseInt(st.nextToken());
+			final int idt = Integer.parseInt(st.nextToken());
+			final Forum f = ForumsBBSManager.getInstance().getForumByID(idf);
 			if (f == null)
 			{
 				CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the forum: " + idf + " does not exist !</center><br><br></body></html>", activeChar);
 			}
 			else
 			{
-				Topic t = f.getTopic(idt);
+				final Topic t = f.getTopic(idt);
 				if (t == null)
 				{
 					CommunityBoardHandler.separateAndSend("<html><body><br><br><center>the topic: " + idt + " does not exist !</center><br><br></body></html>", activeChar);
@@ -196,7 +196,7 @@ public class TopicBBSManager extends BaseBBSManager
 				else
 				{
 					// CPost cp = null;
-					Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
+					final Post p = PostBBSManager.getInstance().getGPosttByTopic(t);
 					if (p != null)
 					{
 						p.deleteme(t);
@@ -263,7 +263,7 @@ public class TopicBBSManager extends BaseBBSManager
 			{
 				break;
 			}
-			Topic t = forum.getTopic(j);
+			final Topic t = forum.getTopic(j);
 			if (t != null)
 			{
 				if (i++ >= (12 * (index - 1)))

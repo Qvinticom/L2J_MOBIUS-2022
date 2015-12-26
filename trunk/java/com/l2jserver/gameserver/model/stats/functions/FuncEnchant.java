@@ -43,7 +43,7 @@ public class FuncEnchant extends AbstractFunction
 			return value;
 		}
 		
-		L2ItemInstance item = (L2ItemInstance) getFuncOwner();
+		final L2ItemInstance item = (L2ItemInstance) getFuncOwner();
 		int enchant = item.getEnchantLevel();
 		if (enchant <= 0)
 		{

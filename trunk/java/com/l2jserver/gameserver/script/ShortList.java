@@ -34,7 +34,7 @@ public class ShortList
 			return getShortList(range.split(","));
 		}
 		
-		short[] list =
+		final short[] list =
 		{
 			getShort(range)
 		};
@@ -48,7 +48,7 @@ public class ShortList
 	
 	private static short[] getShortList(String[] numbers)
 	{
-		short[] list = new short[numbers.length];
+		final short[] list = new short[numbers.length];
 		for (int i = 0; i < list.length; i++)
 		{
 			list[i] = getShort(numbers[i]);

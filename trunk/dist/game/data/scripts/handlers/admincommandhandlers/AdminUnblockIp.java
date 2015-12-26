@@ -47,7 +47,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 		{
 			try
 			{
-				String ipAddress = command.substring(16);
+				final String ipAddress = command.substring(16);
 				if (unblockIp(ipAddress, activeChar))
 				{
 					activeChar.sendMessage("Removed IP " + ipAddress + " from blocklist!");

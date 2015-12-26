@@ -43,8 +43,8 @@ public class AreaFriendly implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		L2PcInstance player = activeChar.getActingPlayer();
+		final List<L2Character> targetList = new ArrayList<>();
+		final L2PcInstance player = activeChar.getActingPlayer();
 		
 		if ((target == null) || (!checkTarget(player, target) && (skill.getCastRange() >= 0)))
 		{
@@ -69,7 +69,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		}
 		targetList.add(target); // Add target to target list
 		
-		int maxTargets = skill.getAffectLimit();
+		final int maxTargets = skill.getAffectLimit();
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		
 		// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
@@ -111,7 +111,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (target.isPlayable())
 		{
-			L2PcInstance targetPlayer = target.getActingPlayer();
+			final L2PcInstance targetPlayer = target.getActingPlayer();
 			
 			if (activeChar == targetPlayer)
 			{

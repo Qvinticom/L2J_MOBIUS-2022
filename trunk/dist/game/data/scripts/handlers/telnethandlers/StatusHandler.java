@@ -66,27 +66,27 @@ public class StatusHandler implements ITelnetHandler
 		else if (command.equals("forcegc"))
 		{
 			System.gc();
-			StringBuilder sb = new StringBuilder();
+			final StringBuilder sb = new StringBuilder();
 			sb.append("RAM Used: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576)); // 1024 * 1024 = 1048576
 			_print.println(sb.toString());
 		}
 		else if (command.startsWith("memusage"))
 		{
-			double max = Runtime.getRuntime().maxMemory() / 1024; // maxMemory is the upper
+			final double max = Runtime.getRuntime().maxMemory() / 1024; // maxMemory is the upper
 			// limit the jvm can use
-			double allocated = Runtime.getRuntime().totalMemory() / 1024; // totalMemory the
+			final double allocated = Runtime.getRuntime().totalMemory() / 1024; // totalMemory the
 			// size of the
 			// current
 			// allocation pool
-			double nonAllocated = max - allocated; // non allocated memory till jvm limit
-			double cached = Runtime.getRuntime().freeMemory() / 1024; // freeMemory the
+			final double nonAllocated = max - allocated; // non allocated memory till jvm limit
+			final double cached = Runtime.getRuntime().freeMemory() / 1024; // freeMemory the
 			// unused memory in
 			// the allocation pool
-			double used = allocated - cached; // really used memory
-			double useable = max - used; // allocated, but non-used and non-allocated memory
+			final double used = allocated - cached; // really used memory
+			final double useable = max - used; // allocated, but non-used and non-allocated memory
 			
-			DecimalFormat df = new DecimalFormat(" (0.0000'%')");
-			DecimalFormat df2 = new DecimalFormat(" # 'KB'");
+			final DecimalFormat df = new DecimalFormat(" (0.0000'%')");
+			final DecimalFormat df2 = new DecimalFormat(" # 'KB'");
 			
 			_print.println("+----");// ...
 			_print.println("| Allowed Memory:" + df2.format(max));
@@ -120,7 +120,7 @@ public class StatusHandler implements ITelnetHandler
 	public String getServerStatus()
 	{
 		int playerCount = 0, objectCount = 0;
-		int max = LoginServerThread.getInstance().getMaxPlayer();
+		final int max = LoginServerThread.getInstance().getMaxPlayer();
 		
 		playerCount = L2World.getInstance().getAllPlayersCount();
 		objectCount = L2World.getInstance().getVisibleObjectsCount();
@@ -196,7 +196,7 @@ public class StatusHandler implements ITelnetHandler
 				charCount++;
 			}
 		}
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");
 		sb.append("\r\n  --->  Player Count: " + playerCount + "/" + max);
 		sb.append("\r\n  ---> Offline Count: " + detachedCount + "/" + playerCount);
@@ -231,19 +231,19 @@ public class StatusHandler implements ITelnetHandler
 	{
 		int uptime = (int) System.currentTimeMillis() - time;
 		uptime = uptime / 1000;
-		int h = uptime / 3600;
-		int m = (uptime - (h * 3600)) / 60;
-		int s = ((uptime - (h * 3600)) - (m * 60));
+		final int h = uptime / 3600;
+		final int m = (uptime - (h * 3600)) / 60;
+		final int s = ((uptime - (h * 3600)) - (m * 60));
 		return h + "hrs " + m + "mins " + s + "secs";
 	}
 	
 	private String gameTime()
 	{
-		int t = GameTimeController.getInstance().getGameTime();
-		int h = t / 60;
-		int m = t % 60;
-		SimpleDateFormat format = new SimpleDateFormat("H:mm");
-		Calendar cal = Calendar.getInstance();
+		final int t = GameTimeController.getInstance().getGameTime();
+		final int h = t / 60;
+		final int m = t % 60;
+		final SimpleDateFormat format = new SimpleDateFormat("H:mm");
+		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		return format.format(cal.getTime());

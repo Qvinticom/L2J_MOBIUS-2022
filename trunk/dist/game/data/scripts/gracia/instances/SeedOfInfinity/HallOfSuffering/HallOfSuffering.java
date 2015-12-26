@@ -266,7 +266,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 		{
 			return;
 		}
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new HSWorld();
 		world.setInstanceId(instanceId);
@@ -394,7 +394,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	
 	private void calcRewardItemId(HSWorld world)
 	{
-		Long finishDiff = System.currentTimeMillis() - world.startTime;
+		final Long finishDiff = System.currentTimeMillis() - world.startTime;
 		if (finishDiff < 1260000)
 		{
 			world.rewardHtm = "32530-00.htm";
@@ -472,10 +472,10 @@ public final class HallOfSuffering extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof HSWorld)
 		{
-			HSWorld world = (HSWorld) tmpworld;
+			final HSWorld world = (HSWorld) tmpworld;
 			if (event.equalsIgnoreCase("spawnBossGuards"))
 			{
 				if (!world.klanikus.isInCombat() && !world.klodekus.isInCombat())
@@ -508,14 +508,14 @@ public final class HallOfSuffering extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("ressurectTwin"))
 			{
-				Skill skill = SkillData.getInstance().getSkill(5824, 1);
-				L2Npc aliveTwin = (world.klanikus == npc ? world.klodekus : world.klanikus);
+				final Skill skill = SkillData.getInstance().getSkill(5824, 1);
+				final L2Npc aliveTwin = (world.klanikus == npc ? world.klodekus : world.klanikus);
 				npc.doRevive();
 				npc.doCast(skill);
 				npc.setCurrentHp(aliveTwin.getCurrentHp());
 				
 				// get most hated of other boss
-				L2Character hated = ((L2MonsterInstance) aliveTwin).getMostHated();
+				final L2Character hated = ((L2MonsterInstance) aliveTwin).getMostHated();
 				if (hated != null)
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, hated, 1000);
@@ -542,16 +542,16 @@ public final class HallOfSuffering extends AbstractNpcAI
 			if (!world.isBossesAttacked)
 			{
 				world.isBossesAttacked = true;
-				Calendar reenter = Calendar.getInstance();
+				final Calendar reenter = Calendar.getInstance();
 				reenter.add(Calendar.HOUR, INSTANCE_PENALTY);
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(tmpworld.getTemplateId());
 				
 				// set instance reenter time for all allowed players
 				for (int objectId : tmpworld.getAllowed())
 				{
-					L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
 						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.getTemplateId(), reenter.getTimeInMillis());
@@ -588,10 +588,10 @@ public final class HallOfSuffering extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof HSWorld)
 		{
-			HSWorld world = (HSWorld) tmpworld;
+			final HSWorld world = (HSWorld) tmpworld;
 			
 			if (npc.getId() == TUMOR_ALIVE)
 			{
@@ -635,7 +635,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 	{
 		if (npc.getId() == TEPIOS)
 		{
-			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 			if (((HSWorld) world).rewardItemId == -1)
 			{
 				_log.warning("Hall of Suffering: " + player.getName() + "(" + player.getObjectId() + ") is try to cheat!");
@@ -665,7 +665,7 @@ public final class HallOfSuffering extends AbstractNpcAI
 		}
 		else if (npc.getId() == TEPIOS)
 		{
-			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
+			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
 			if (((HSWorld) world).rewardItemId == -1)
 			{
 				_log.warning("Hall of Suffering: " + talker.getName() + "(" + talker.getObjectId() + ") is try to cheat!");

@@ -112,11 +112,11 @@ public class EnchantSkillGroupsData implements IXmlReader
 							if ("enchant".equalsIgnoreCase(b.getNodeName()))
 							{
 								attrs = b.getAttributes();
-								StatsSet set = new StatsSet();
+								final StatsSet set = new StatsSet();
 								
 								for (int i = 0; i < attrs.getLength(); i++)
 								{
-									Node att = attrs.item(i);
+									final Node att = attrs.item(i);
 									set.set(att.getNodeName(), att.getNodeValue());
 								}
 								group.addEnchantDetail(new EnchantSkillHolder(set));

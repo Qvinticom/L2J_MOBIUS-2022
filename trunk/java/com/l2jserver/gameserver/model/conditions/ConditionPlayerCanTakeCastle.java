@@ -49,7 +49,7 @@ public class ConditionPlayerCanTakeCastle extends Condition
 			return false;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(player);
+		final Castle castle = CastleManager.getInstance().getCastle(player);
 		SystemMessage sm;
 		if ((castle == null) || (castle.getResidenceId() <= 0) || !castle.getSiege().isInProgress() || (castle.getSiege().getAttackerClan(player.getClan()) == null))
 		{

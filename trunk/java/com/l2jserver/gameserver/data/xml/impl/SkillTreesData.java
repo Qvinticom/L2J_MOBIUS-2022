@@ -773,13 +773,13 @@ public final class SkillTreesData implements IXmlReader
 	public Collection<Skill> getAllAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
 	{
 		// Get available skills
-		PlayerSkillHolder holder = new PlayerSkillHolder(player);
+		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		List<L2SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
 		while (learnable.size() > 0)
 		{
 			for (L2SkillLearn s : learnable)
 			{
-				Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
+				final Skill sk = SkillData.getInstance().getSkill(s.getSkillId(), s.getSkillLevel());
 				holder.addSkill(sk);
 			}
 			
@@ -894,7 +894,7 @@ public final class SkillTreesData implements IXmlReader
 	public List<L2SkillLearn> getAvailableRevelationSkills(L2PcInstance player, SubclassType type)
 	{
 		final List<L2SkillLearn> result = new ArrayList<>();
-		Map<Integer, L2SkillLearn> revelationSkills = _revelationSkillTree.get(type);
+		final Map<Integer, L2SkillLearn> revelationSkills = _revelationSkillTree.get(type);
 		
 		for (L2SkillLearn skill : revelationSkills.values())
 		{

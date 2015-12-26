@@ -43,7 +43,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	{
 		if (command.equals("admin_tvt_add"))
 		{
-			L2Object target = activeChar.getTarget();
+			final L2Object target = activeChar.getTarget();
 			
 			if (!(target instanceof L2PcInstance))
 			{
@@ -55,7 +55,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_tvt_remove"))
 		{
-			L2Object target = activeChar.getTarget();
+			final L2Object target = activeChar.getTarget();
 			
 			if (!(target instanceof L2PcInstance))
 			{

@@ -219,7 +219,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			writeH(56);
 			if (_activeChar.getActiveWeaponItem() != null)
 			{
-				L2Weapon weaponItem = _activeChar.getActiveWeaponItem();
+				final L2Weapon weaponItem = _activeChar.getActiveWeaponItem();
 				if (weaponItem.getItemType() == WeaponType.POLE)
 				{
 					writeH(80);
@@ -306,7 +306,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.ATK_ELEMENTAL))
 		{
 			writeH(5);
-			byte attackAttribute = _activeChar.getAttackElement();
+			final byte attackAttribute = _activeChar.getAttackElement();
 			writeC(attackAttribute);
 			writeH(_activeChar.getAttackElementValue(attackAttribute));
 		}

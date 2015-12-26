@@ -68,7 +68,7 @@ public final class DeleteHate extends AbstractEffect
 			return;
 		}
 		
-		L2Attackable target = (L2Attackable) info.getEffected();
+		final L2Attackable target = (L2Attackable) info.getEffected();
 		target.clearAggroList();
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

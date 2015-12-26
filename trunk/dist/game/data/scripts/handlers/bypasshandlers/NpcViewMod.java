@@ -302,7 +302,7 @@ public class NpcViewMod implements IBypassHandler
 				}
 				else
 				{
-					GroupedGeneralDropItem normalized = generalGroupedDropItem.normalizeMe(npc, activeChar);
+					final GroupedGeneralDropItem normalized = generalGroupedDropItem.normalizeMe(npc, activeChar);
 					sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 					sb.append("<tr><td width=32 valign=top><img src=\"L2UI_CT1.ICON_DF_premiumItem\" width=32 height=32></td>");
 					sb.append("<td fixwidth=300 align=center><font name=\"ScreenMessageSmall\" color=\"CD9000\">One from group</font>");
@@ -327,7 +327,7 @@ public class NpcViewMod implements IBypassHandler
 						sb.append(item.getName());
 						sb.append("</font></td></tr><tr><td width=32></td><td width=259><table width=253 cellpadding=0 cellspacing=0>");
 						sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td><td width=205 align=center>");
-						MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar), generalDropItem.isPreciseCalculated());
+						final MinMax minMax = getPreciseMinMax(normalized.getChance(), generalDropItem.getMin(npc, activeChar), generalDropItem.getMax(npc, activeChar), generalDropItem.isPreciseCalculated());
 						final long min = minMax.min;
 						final long max = minMax.max;
 						if (min == max)
@@ -406,7 +406,7 @@ public class NpcViewMod implements IBypassHandler
 		sb.append("</font></td></tr><tr><td width=32></td><td width=300><table width=295 cellpadding=0 cellspacing=0>");
 		sb.append("<tr><td width=48 align=right valign=top><font color=\"LEVEL\">Amount:</font></td>");
 		sb.append("<td width=247 align=center>");
-		MinMax minMax = getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc, activeChar), dropItem.getMax(npc, activeChar), dropItem.isPreciseCalculated());
+		final MinMax minMax = getPreciseMinMax(dropItem.getChance(npc, activeChar), dropItem.getMin(npc, activeChar), dropItem.getMax(npc, activeChar), dropItem.isPreciseCalculated());
 		
 		final long min = minMax.min;
 		final long max = minMax.max;
@@ -447,7 +447,7 @@ public class NpcViewMod implements IBypassHandler
 			return new MinMax(min, max);
 		}
 		
-		int mult = (int) (chance) / 100;
+		final int mult = (int) (chance) / 100;
 		return new MinMax(mult * min, (chance % 100) > 0 ? (mult + 1) * max : mult * max);
 	}
 }

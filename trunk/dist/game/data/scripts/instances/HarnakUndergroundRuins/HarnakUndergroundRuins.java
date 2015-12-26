@@ -114,7 +114,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			case "enter_instance":
@@ -434,7 +434,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 				if (tmpworld instanceof HuRWorld)
 				{
-					HuRWorld world = (HuRWorld) tmpworld;
+					final HuRWorld world = (HuRWorld) tmpworld;
 					switch (world.timerCount)
 					{
 						case 0:
@@ -695,7 +695,7 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof HuRWorld)
 		{
-			HuRWorld world = (HuRWorld) tmpworld;
+			final HuRWorld world = (HuRWorld) tmpworld;
 			
 			if (world.isStatus(1))
 			{

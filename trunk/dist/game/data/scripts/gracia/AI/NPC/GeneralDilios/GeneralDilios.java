@@ -82,7 +82,7 @@ public final class GeneralDilios extends AbstractNpcAI
 		}
 		else if (event.startsWith("guard_animation_"))
 		{
-			int value = Integer.parseInt(event.substring(16));
+			final int value = Integer.parseInt(event.substring(16));
 			for (L2Spawn guard : _guards)
 			{
 				guard.getLastSpawn().broadcastSocialAction(4);

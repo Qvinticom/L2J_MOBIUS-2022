@@ -65,7 +65,7 @@ public class FactionManager extends AbstractNpcAI
 			{
 				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllGoodPlayersCount() >= ((L2World.getInstance().getAllEvilPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
 				{
-					String htmltext = null;
+					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(player.getHtmlPrefix(), "onlinelimit.html"));
 					packet.replace("%name%", player.getName());
@@ -92,7 +92,7 @@ public class FactionManager extends AbstractNpcAI
 			{
 				if (Config.FACTION_BALANCE_ONLINE_PLAYERS && (L2World.getInstance().getAllEvilPlayersCount() >= ((L2World.getInstance().getAllGoodPlayersCount() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT))))
 				{
-					String htmltext = null;
+					final String htmltext = null;
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(player.getHtmlPrefix(), "onlinelimit.html"));
 					packet.replace("%name%", player.getName());
@@ -130,7 +130,7 @@ public class FactionManager extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
+		final String htmltext = null;
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player.getHtmlPrefix(), "manager.html"));
 		packet.replace("%name%", player.getName());

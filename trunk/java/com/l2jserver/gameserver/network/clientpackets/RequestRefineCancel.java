@@ -44,13 +44,13 @@ public final class RequestRefineCancel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			activeChar.sendPacket(new ExVariationCancelResult(0));
@@ -154,7 +154,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		activeChar.sendPacket(new ExVariationCancelResult(1));
 		
 		// send inventory update
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		activeChar.sendPacket(iu);
 	}

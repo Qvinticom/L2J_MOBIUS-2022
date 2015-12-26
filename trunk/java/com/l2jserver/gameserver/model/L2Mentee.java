@@ -48,7 +48,7 @@ public class L2Mentee
 	
 	public void load()
 	{
-		L2PcInstance player = getPlayerInstance();
+		final L2PcInstance player = getPlayerInstance();
 		if (player == null) // Only if player is offline
 		{
 			try (Connection con = ConnectionFactory.getInstance().getConnection();

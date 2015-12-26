@@ -88,7 +88,7 @@ public final class L2Weapon extends L2Item
 		_rndDam = set.getInt("random_damage", 0);
 		_mpConsume = set.getInt("mp_consume", 0);
 		_baseAttackRange = set.getInt("attack_range", 40);
-		String[] damgeRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
+		final String[] damgeRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
 		if ((damgeRange.length > 1) && Util.isDigit(damgeRange[3]))
 		{
 			_baseAttackAngle = Integer.parseInt(damgeRange[3]);
@@ -98,18 +98,18 @@ public final class L2Weapon extends L2Item
 			_baseAttackAngle = 120;
 		}
 		
-		String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
+		final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
 		_reducedSoulshotChance = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[0]) : 0;
 		_reducedSoulshot = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[1]) : 0;
 		
-		String[] reduced_mpconsume = set.getString("reduced_mp_consume", "").split(",");
+		final String[] reduced_mpconsume = set.getString("reduced_mp_consume", "").split(",");
 		_reducedMpConsumeChance = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[0]) : 0;
 		_reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
 		
 		String skill = set.getString("enchant4_skill", null);
 		if (skill != null)
 		{
-			String[] info = skill.split("-");
+			final String[] info = skill.split("-");
 			
 			if ((info != null) && (info.length == 2))
 			{
@@ -135,7 +135,7 @@ public final class L2Weapon extends L2Item
 		skill = set.getString("onmagic_skill", null);
 		if (skill != null)
 		{
-			String[] info = skill.split("-");
+			final String[] info = skill.split("-");
 			final int chance = set.getInt("onmagic_chance", 100);
 			if ((info != null) && (info.length == 2))
 			{
@@ -162,7 +162,7 @@ public final class L2Weapon extends L2Item
 		skill = set.getString("oncrit_skill", null);
 		if (skill != null)
 		{
-			String[] info = skill.split("-");
+			final String[] info = skill.split("-");
 			final int chance = set.getInt("oncrit_chance", 100);
 			if ((info != null) && (info.length == 2))
 			{
@@ -431,7 +431,7 @@ public final class L2Weapon extends L2Item
 		// notify quests of a skill use
 		if (caster instanceof L2PcInstance)
 		{
-			L2Character[] targets =
+			final L2Character[] targets =
 			{
 				target
 			};
@@ -449,7 +449,7 @@ public final class L2Weapon extends L2Item
 		}
 		if (caster.isPlayer())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ACTIVATED);
 			sm.addSkillName(onMagicSkill);
 			caster.sendPacket(sm);
 		}

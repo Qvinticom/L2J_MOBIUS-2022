@@ -79,9 +79,9 @@ public final class PlayerTemplateData implements IXmlReader
 					}
 					else if ("staticData".equalsIgnoreCase(d.getNodeName()))
 					{
-						StatsSet set = new StatsSet();
+						final StatsSet set = new StatsSet();
 						set.set("classId", classId);
-						List<Location> creationPoints = new ArrayList<>();
+						final List<Location> creationPoints = new ArrayList<>();
 						
 						for (Node nd = d.getFirstChild(); nd != null; nd = nd.getNextSibling())
 						{
@@ -152,10 +152,10 @@ public final class PlayerTemplateData implements IXmlReader
 							if ("level".equalsIgnoreCase(lvlNode.getNodeName()))
 							{
 								attrs = lvlNode.getAttributes();
-								int level = parseInteger(attrs, "val");
+								final int level = parseInteger(attrs, "val");
 								for (Node valNode = lvlNode.getFirstChild(); valNode != null; valNode = valNode.getNextSibling())
 								{
-									String nodeName = valNode.getNodeName();
+									final String nodeName = valNode.getNodeName();
 									
 									if ((level < Config.PLAYER_MAXIMUM_LEVEL) && (nodeName.startsWith("hp") || nodeName.startsWith("mp") || nodeName.startsWith("cp")) && _playerTemplates.containsKey(ClassId.getClassId(classId)))
 									{

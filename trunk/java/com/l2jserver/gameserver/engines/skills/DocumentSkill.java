@@ -139,7 +139,7 @@ public class DocumentSkill extends DocumentBase
 	
 	protected void parseSkill(Node n)
 	{
-		NamedNodeMap attrs = n.getAttributes();
+		final NamedNodeMap attrs = n.getAttributes();
 		int enchantLevels1 = 0;
 		int enchantLevels2 = 0;
 		int enchantLevels3 = 0;
@@ -149,10 +149,10 @@ public class DocumentSkill extends DocumentBase
 		int enchantLevels7 = 0;
 		int enchantLevels8 = 0;
 		int enchantLevels9 = 0;
-		int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
-		String skillName = attrs.getNamedItem("name").getNodeValue();
-		String levels = attrs.getNamedItem("levels").getNodeValue();
-		int lastLvl = Integer.parseInt(levels);
+		final int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+		final String skillName = attrs.getNamedItem("name").getNodeValue();
+		final String levels = attrs.getNamedItem("levels").getNodeValue();
+		final int lastLvl = Integer.parseInt(levels);
 		if (attrs.getNamedItem("enchantGroup1") != null)
 		{
 			enchantLevels1 = EnchantSkillGroupsData.getInstance().addNewRouteForSkill(skillId, lastLvl, 1, Integer.parseInt(attrs.getNamedItem("enchantGroup1").getNodeValue()));
@@ -216,7 +216,7 @@ public class DocumentSkill extends DocumentBase
 			throw new RuntimeException("Skill id=" + skillId + " number of levels missmatch, " + lastLvl + " levels expected");
 		}
 		
-		Node first = n.getFirstChild();
+		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("table".equalsIgnoreCase(n.getNodeName()))
@@ -545,9 +545,9 @@ public class DocumentSkill extends DocumentBase
 			{
 				if ("cond".equalsIgnoreCase(n.getNodeName()))
 				{
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -555,7 +555,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -603,9 +603,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant1cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -613,7 +613,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -665,9 +665,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -675,7 +675,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -723,9 +723,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant2cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -733,7 +733,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -785,9 +785,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -795,7 +795,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -839,9 +839,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant3cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -849,7 +849,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -901,9 +901,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -911,7 +911,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -959,9 +959,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant4cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -969,7 +969,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1021,9 +1021,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1031,7 +1031,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -1079,9 +1079,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant5cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -1089,7 +1089,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1141,9 +1141,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1151,7 +1151,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -1199,9 +1199,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant6cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -1209,7 +1209,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1261,9 +1261,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1271,7 +1271,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -1319,9 +1319,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant7cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -1329,7 +1329,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1381,9 +1381,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1391,7 +1391,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -1439,9 +1439,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant8cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -1449,7 +1449,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1501,9 +1501,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1511,7 +1511,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();
@@ -1559,9 +1559,9 @@ public class DocumentSkill extends DocumentBase
 				if ("enchant9cond".equalsIgnoreCase(n.getNodeName()))
 				{
 					foundCond = true;
-					Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-					Node msg = n.getAttributes().getNamedItem("msg");
-					Node msgId = n.getAttributes().getNamedItem("msgId");
+					final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+					final Node msg = n.getAttributes().getNamedItem("msg");
+					final Node msgId = n.getAttributes().getNamedItem("msgId");
 					if ((condition != null) && (msg != null))
 					{
 						condition.setMessage(msg.getNodeValue());
@@ -1569,7 +1569,7 @@ public class DocumentSkill extends DocumentBase
 					else if ((condition != null) && (msgId != null))
 					{
 						condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-						Node addName = n.getAttributes().getNamedItem("addName");
+						final Node addName = n.getAttributes().getNamedItem("addName");
 						if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 						{
 							condition.addName();
@@ -1621,9 +1621,9 @@ public class DocumentSkill extends DocumentBase
 				{
 					if (!foundCond && "cond".equalsIgnoreCase(n.getNodeName()))
 					{
-						Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
-						Node msg = n.getAttributes().getNamedItem("msg");
-						Node msgId = n.getAttributes().getNamedItem("msgId");
+						final Condition condition = parseCondition(n.getFirstChild(), _currentSkill.currentSkills.get(i));
+						final Node msg = n.getAttributes().getNamedItem("msg");
+						final Node msgId = n.getAttributes().getNamedItem("msgId");
 						if ((condition != null) && (msg != null))
 						{
 							condition.setMessage(msg.getNodeValue());
@@ -1631,7 +1631,7 @@ public class DocumentSkill extends DocumentBase
 						else if ((condition != null) && (msgId != null))
 						{
 							condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-							Node addName = n.getAttributes().getNamedItem("addName");
+							final Node addName = n.getAttributes().getNamedItem("addName");
 							if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 							{
 								condition.addName();

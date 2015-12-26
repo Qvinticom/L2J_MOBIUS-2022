@@ -60,21 +60,21 @@ public final class PetDataTable implements IXmlReader
 	public void parseDocument(Document doc)
 	{
 		NamedNodeMap attrs;
-		Node n = doc.getFirstChild();
+		final Node n = doc.getFirstChild();
 		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("pet"))
 			{
-				int npcId = parseInteger(d.getAttributes(), "id");
-				int itemId = parseInteger(d.getAttributes(), "itemId");
+				final int npcId = parseInteger(d.getAttributes(), "id");
+				final int itemId = parseInteger(d.getAttributes(), "itemId");
 				// index ignored for now
-				L2PetData data = new L2PetData(npcId, itemId);
+				final L2PetData data = new L2PetData(npcId, itemId);
 				for (Node p = d.getFirstChild(); p != null; p = p.getNextSibling())
 				{
 					if (p.getNodeName().equals("set"))
 					{
 						attrs = p.getAttributes();
-						String type = attrs.getNamedItem("name").getNodeValue();
+						final String type = attrs.getNamedItem("name").getNodeValue();
 						if ("food".equals(type))
 						{
 							for (String foodId : attrs.getNamedItem("val").getNodeValue().split(";"))

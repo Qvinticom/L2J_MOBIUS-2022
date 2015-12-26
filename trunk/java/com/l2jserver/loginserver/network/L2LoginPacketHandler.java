@@ -40,10 +40,10 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 	@Override
 	public ReceivablePacket<L2LoginClient> handlePacket(ByteBuffer buf, L2LoginClient client)
 	{
-		int opcode = buf.get() & 0xFF;
+		final int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<L2LoginClient> packet = null;
-		LoginClientState state = client.getState();
+		final LoginClientState state = client.getState();
 		
 		switch (state)
 		{

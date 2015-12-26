@@ -151,10 +151,10 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		if (npc.isInsideZone(ZoneId.TOWN) && (npc.getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || npc.getCastle().getShowNpcCrest()) && (npc.getCastle().getOwnerId() != 0))
 		{
-			int townId = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ()).getTownId();
+			final int townId = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ()).getTownId();
 			if ((townId != 33) && (townId != 22))
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
+				final L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
 				_clanId = clan.getId();
 				_clanCrest = clan.getCrestId();
 				_clanLargeCrest = clan.getCrestLargeId();

@@ -97,7 +97,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 				{
 					if (hasItem(player, SPECIAL_YETI_MEAT))
 					{
-						int random = getRandom(1000);
+						final int random = getRandom(1000);
 						if (random < 167)
 						{
 							rewardItems(player, GREATER_DYE_OF_STR_1);
@@ -143,7 +143,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 						{
 							qs.setCond(2, true);
 							takeItem(player, FOOD_FOR_BUMBALUMP);
-							L2Npc umpaloopa = addSpawn(ICICLE_EMPEROR_BUMBALUMP, ICICLE_EMPEROR_BUMBALUMP_LOC);
+							final L2Npc umpaloopa = addSpawn(ICICLE_EMPEROR_BUMBALUMP, ICICLE_EMPEROR_BUMBALUMP_LOC);
 							umpaloopa.setSummoner(player);
 							htmltext = event;
 						}
@@ -234,7 +234,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 					{
 						if (!isBumbalumpSpawned())
 						{
-							L2Npc umpaloopa = addSpawn(ICICLE_EMPEROR_BUMBALUMP, ICICLE_EMPEROR_BUMBALUMP_LOC);
+							final L2Npc umpaloopa = addSpawn(ICICLE_EMPEROR_BUMBALUMP, ICICLE_EMPEROR_BUMBALUMP_LOC);
 							umpaloopa.setSummoner(talker);
 							htmltext = "31542-02.html";
 						}

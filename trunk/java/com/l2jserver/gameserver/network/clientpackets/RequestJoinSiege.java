@@ -51,7 +51,7 @@ public final class RequestJoinSiege extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -63,13 +63,13 @@ public final class RequestJoinSiege extends L2GameClientPacket
 			return;
 		}
 		
-		L2Clan clan = activeChar.getClan();
+		final L2Clan clan = activeChar.getClan();
 		if (clan == null)
 		{
 			return;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastleById(_castleId);
+		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle != null)
 		{
 			if (_isJoining == 1)
@@ -95,7 +95,7 @@ public final class RequestJoinSiege extends L2GameClientPacket
 			castle.getSiege().listRegisterClan(activeChar);
 		}
 		
-		SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
+		final SiegableHall hall = CHSiegeManager.getInstance().getSiegableHall(_castleId);
 		if (hall != null)
 		{
 			if (_isJoining == 1)

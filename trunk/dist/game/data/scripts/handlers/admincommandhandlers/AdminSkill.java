@@ -96,7 +96,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(20);
+				final String val = command.substring(20);
 				removeSkillsPage(activeChar, Integer.parseInt(val));
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -111,7 +111,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(18);
+				final String val = command.substring(18);
 				AdminHtml.showAdminHtml(activeChar, "skills/" + val + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -122,7 +122,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(15);
+				final String val = command.substring(15);
 				adminAddSkill(activeChar, val);
 			}
 			catch (Exception e)
@@ -134,8 +134,8 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String id = command.substring(19);
-				int idval = Integer.parseInt(id);
+				final String id = command.substring(19);
+				final int idval = Integer.parseInt(id);
 				adminRemoveSkill(activeChar, idval);
 			}
 			catch (Exception e)
@@ -190,7 +190,7 @@ public class AdminSkill implements IAdminCommandHandler
 		{
 			try
 			{
-				String[] val = command.split(" ");
+				final String[] val = command.split(" ");
 				adminAddClanSkill(activeChar, Integer.parseInt(val[1]), Integer.parseInt(val[2]));
 			}
 			catch (Exception e)
@@ -200,10 +200,10 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_setskill"))
 		{
-			String[] split = command.split(" ");
-			int id = Integer.parseInt(split[1]);
-			int lvl = Integer.parseInt(split[2]);
-			Skill skill = SkillData.getInstance().getSkill(id, lvl);
+			final String[] split = command.split(" ");
+			final int id = Integer.parseInt(split[1]);
+			final int lvl = Integer.parseInt(split[2]);
+			final Skill skill = SkillData.getInstance().getSkill(id, lvl);
 			activeChar.addSkill(skill);
 			activeChar.sendSkillList();
 			activeChar.sendMessage("You added yourself skill " + skill.getName() + "(" + id + ") level " + lvl);
@@ -297,7 +297,7 @@ public class AdminSkill implements IAdminCommandHandler
 		final L2PcInstance player = target.getActingPlayer();
 		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
 		
-		int maxSkillsPerPage = 10;
+		final int maxSkillsPerPage = 10;
 		int maxPages = skills.length / maxSkillsPerPage;
 		if (skills.length > (maxSkillsPerPage * maxPages))
 		{
@@ -309,7 +309,7 @@ public class AdminSkill implements IAdminCommandHandler
 			page = maxPages;
 		}
 		
-		int skillsStart = maxSkillsPerPage * page;
+		final int skillsStart = maxSkillsPerPage * page;
 		int skillsEnd = skills.length;
 		if ((skillsEnd - skillsStart) > maxSkillsPerPage)
 		{
@@ -321,7 +321,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		for (int x = 0; x < maxPages; x++)
 		{
-			int pagenr = x + 1;
+			final int pagenr = x + 1;
 			StringUtil.append(replyMSG, "<td><a action=\"bypass -h admin_remove_skills ", String.valueOf(x), "\">Page ", String.valueOf(pagenr), "</a></td>");
 		}
 		
@@ -375,7 +375,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
 			adminSkills = activeChar.getAllSkills().toArray(new Skill[activeChar.getAllSkills().size()]);
 			for (Skill skill : adminSkills)
 			{
@@ -409,7 +409,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
+			final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
 			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);
@@ -459,10 +459,10 @@ public class AdminSkill implements IAdminCommandHandler
 			Skill skill = null;
 			try
 			{
-				String id = st.nextToken();
-				String level = st.nextToken();
-				int idval = Integer.parseInt(id);
-				int levelval = Integer.parseInt(level);
+				final String id = st.nextToken();
+				final String level = st.nextToken();
+				final int idval = Integer.parseInt(id);
+				final int levelval = Integer.parseInt(level);
 				skill = SkillData.getInstance().getSkill(idval, levelval);
 			}
 			catch (Exception e)
@@ -471,7 +471,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 			if (skill != null)
 			{
-				String name = skill.getName();
+				final String name = skill.getName();
 				// Player's info.
 				player.sendMessage("Admin gave you the skill " + name + ".");
 				player.addSkill(skill, true);
@@ -505,10 +505,10 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		final L2PcInstance player = target.getActingPlayer();
-		Skill skill = SkillData.getInstance().getSkill(idval, player.getSkillLevel(idval));
+		final Skill skill = SkillData.getInstance().getSkill(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
-			String skillname = skill.getName();
+			final String skillname = skill.getName();
 			player.sendMessage("Admin removed the skill " + skillname + " from your skills list.");
 			player.removeSkill(skill);
 			// Admin information
@@ -563,8 +563,8 @@ public class AdminSkill implements IAdminCommandHandler
 			return;
 		}
 		
-		String skillname = skill.getName();
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
+		final String skillname = skill.getName();
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		final L2Clan clan = player.getClan();

@@ -91,14 +91,14 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_spawn_debug_print"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			L2Object target = activeChar.getTarget();
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final L2Object target = activeChar.getTarget();
 			if (target instanceof L2Npc)
 			{
 				try
 				{
 					st.nextToken();
-					int type = Integer.parseInt(st.nextToken());
+					final int type = Integer.parseInt(st.nextToken());
 					printSpawn((L2Npc) target, type);
 					if (command.contains("_menu"))
 					{
@@ -116,11 +116,11 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_spawn_index"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
 				st.nextToken();
-				int level = Integer.parseInt(st.nextToken());
+				final int level = Integer.parseInt(st.nextToken());
 				int from = 0;
 				try
 				{
@@ -142,11 +142,11 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_npc_index"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
 				st.nextToken();
-				String letter = st.nextToken();
+				final String letter = st.nextToken();
 				int from = 0;
 				try
 				{
@@ -164,17 +164,17 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_instance_spawns"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
 				st.nextToken();
-				int instance = Integer.parseInt(st.nextToken());
+				final int instance = Integer.parseInt(st.nextToken());
 				if (instance >= 300000)
 				{
 					final StringBuilder html = StringUtil.startAppend(500 + 1000, "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>", "<font color=\"LEVEL\">Spawns for " + String.valueOf(instance) + "</font>", "</td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>", "<table width=\"100%\"><tr><td width=200>NpcName</td><td width=70>Action</td></tr>");
 					int counter = 0;
 					int skiped = 0;
-					Instance inst = InstanceManager.getInstance().getInstance(instance);
+					final Instance inst = InstanceManager.getInstance().getInstance(instance);
 					if (inst != null)
 					{
 						for (L2Npc npc : inst.getNpcs())
@@ -245,11 +245,11 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			try
 			{
-				String cmd = st.nextToken();
-				String id = st.nextToken();
+				final String cmd = st.nextToken();
+				final String id = st.nextToken();
 				int respawnTime = 60; // default is set to 60 seconds
 				int mobCount = 1;
 				if (st.hasMoreTokens())
@@ -280,9 +280,9 @@ public class AdminSpawn implements IAdminCommandHandler
 			int teleportIndex = -1;
 			try
 			{ // admin_list_spawns x[xxxx] x[xx]
-				String[] params = command.split(" ");
-				Pattern pattern = Pattern.compile("[0-9]*");
-				Matcher regexp = pattern.matcher(params[1]);
+				final String[] params = command.split(" ");
+				final Pattern pattern = Pattern.compile("[0-9]*");
+				final Matcher regexp = pattern.matcher(params[1]);
 				if (regexp.matches())
 				{
 					npcId = Integer.parseInt(params[1]);
@@ -332,7 +332,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
 			index++;
-			L2Npc npc = spawn.getLastSpawn();
+			final L2Npc npc = spawn.getLastSpawn();
 			if (teleportIndex > -1)
 			{
 				if (teleportIndex == index)
@@ -368,11 +368,11 @@ public class AdminSpawn implements IAdminCommandHandler
 	
 	private void printSpawn(L2Npc target, int type)
 	{
-		int i = target.getId();
-		int x = target.getSpawn().getX();
-		int y = target.getSpawn().getY();
-		int z = target.getSpawn().getZ();
-		int h = target.getSpawn().getHeading();
+		final int i = target.getId();
+		final int x = target.getSpawn().getX();
+		final int y = target.getSpawn().getY();
+		final int z = target.getSpawn().getZ();
+		final int h = target.getSpawn().getHeading();
 		switch (type)
 		{
 			default:

@@ -109,7 +109,7 @@ public class PcStat extends PlayableStat
 	
 	public boolean addExpAndSp(long addToExp, long addToSp, boolean useBonuses)
 	{
-		L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = getActiveChar();
 		
 		// Allowed to gain exp/sp?
 		if (!activeChar.getAccessLevel().canGainExp())
@@ -117,8 +117,8 @@ public class PcStat extends PlayableStat
 			return false;
 		}
 		
-		long baseExp = addToExp;
-		long baseSp = addToSp;
+		final long baseExp = addToExp;
+		final long baseSp = addToSp;
 		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
@@ -144,7 +144,7 @@ public class PcStat extends PlayableStat
 		final L2Summon sPet = activeChar.getPet();
 		if ((sPet != null) && Util.checkIfInShortRadius(Config.ALT_PARTY_RANGE, activeChar, sPet, false))
 		{
-			L2PetInstance pet = (L2PetInstance) sPet;
+			final L2PetInstance pet = (L2PetInstance) sPet;
 			ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
 			
 			// only give exp/sp to the pet by taking from the owner if the pet has a non-zero, positive ratio
@@ -253,7 +253,7 @@ public class PcStat extends PlayableStat
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(getActiveChar(), getLevel(), getLevel() + value), getActiveChar());
 		
-		boolean levelIncreased = super.addLevel(value);
+		final boolean levelIncreased = super.addLevel(value);
 		if (levelIncreased)
 		{
 			getActiveChar().setCurrentCp(getMaxCp());
@@ -298,7 +298,7 @@ public class PcStat extends PlayableStat
 			}
 		}
 		
-		StatusUpdate su = new StatusUpdate(getActiveChar());
+		final StatusUpdate su = new StatusUpdate(getActiveChar());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		su.addAttribute(StatusUpdate.MAX_CP, getMaxCp());
 		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
@@ -335,7 +335,7 @@ public class PcStat extends PlayableStat
 		{
 			return false;
 		}
-		UserInfo ui = new UserInfo(getActiveChar(), false);
+		final UserInfo ui = new UserInfo(getActiveChar(), false);
 		ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 		getActiveChar().sendPacket(ui);
 		
@@ -476,7 +476,7 @@ public class PcStat extends PlayableStat
 	public final int getMaxCp()
 	{
 		// Get the Max CP (base+modifier) of the L2PcInstance
-		int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_CP, getActiveChar().getTemplate().getBaseCpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_CP, getActiveChar().getTemplate().getBaseCpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxCp)
 		{
 			_oldMaxCp = val;
@@ -494,7 +494,7 @@ public class PcStat extends PlayableStat
 	public final int getMaxHp()
 	{
 		// Get the Max HP (base+modifier) of the L2PcInstance
-		int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_HP, getActiveChar().getTemplate().getBaseHpMax(getActiveChar().getLevel()));
 		if (val != _oldMaxHp)
 		{
 			_oldMaxHp = val;
@@ -513,7 +513,7 @@ public class PcStat extends PlayableStat
 	public final int getMaxMp()
 	{
 		// Get the Max MP (base+modifier) of the L2PcInstance
-		int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
+		final int val = (getActiveChar() == null) ? 1 : (int) calcStat(Stats.MAX_MP, getActiveChar().getTemplate().getBaseMpMax(getActiveChar().getLevel()));
 		
 		if (val != _oldMaxMp)
 		{
@@ -645,7 +645,7 @@ public class PcStat extends PlayableStat
 	@Override
 	public double getPAtkSpd()
 	{
-		double val = super.getPAtkSpd();
+		final double val = super.getPAtkSpd();
 		
 		if ((val > Config.MAX_PATK_SPEED) && !getActiveChar().canOverrideCond(PcCondOverride.MAX_STATS_VALUE))
 		{
@@ -712,7 +712,7 @@ public class PcStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				int stat = (int) calcStat(Stats.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
+				final int stat = (int) calcStat(Stats.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
 				
 				if (stat == 0)
 				{

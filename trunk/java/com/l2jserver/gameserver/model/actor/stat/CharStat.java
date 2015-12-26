@@ -95,7 +95,7 @@ public class CharStat
 		// Apply transformation stats.
 		if (getActiveChar().isPlayer() && getActiveChar().isTransformed())
 		{
-			double val = getActiveChar().getTransformation().getStat(getActiveChar().getActingPlayer(), stat);
+			final double val = getActiveChar().getTransformation().getStat(getActiveChar().getActingPlayer(), stat);
 			if (val > 0)
 			{
 				value = val;
@@ -193,7 +193,7 @@ public class CharStat
 	{
 		double val = (int) calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
 		
-		int maxCrit = (int) _activeChar.getStat().calcStat(Stats.MAX_PHYS_CRIT_RATE, 0, null, null);
+		final int maxCrit = (int) _activeChar.getStat().calcStat(Stats.MAX_PHYS_CRIT_RATE, 0, null, null);
 		
 		if (!_activeChar.canOverrideCond(PcCondOverride.MAX_STATS_VALUE))
 		{
@@ -663,7 +663,7 @@ public class CharStat
 			return 1;
 		}
 		double mpConsume = skill.getMpConsume();
-		double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
+		final double nextDanceMpCost = Math.ceil(skill.getMpConsume() / 2.);
 		if (skill.isDance())
 		{
 			if (Config.DANCE_CONSUME_ADDITIONAL_MP && (_activeChar != null) && (_activeChar.getDanceCount() > 0))
@@ -704,7 +704,7 @@ public class CharStat
 	
 	public byte getAttackElement()
 	{
-		L2ItemInstance weaponInstance = _activeChar.getActiveWeaponInstance();
+		final L2ItemInstance weaponInstance = _activeChar.getActiveWeaponInstance();
 		// 1st order - weapon element
 		if ((weaponInstance != null) && (weaponInstance.getAttackElementType() >= 0))
 		{
@@ -712,7 +712,8 @@ public class CharStat
 		}
 		
 		// temp fix starts
-		int tempVal = 0, stats[] =
+		int tempVal = 0;
+		final int stats[] =
 		{
 			0,
 			0,
@@ -749,7 +750,7 @@ public class CharStat
 	
 	public int getAttackElementValue(byte attackAttribute)
 	{
-		double additionalPower = _activeChar.getStat().calcStat(Stats.WEAPON_ELEMENT_POWER, 0, null, null);
+		final double additionalPower = _activeChar.getStat().calcStat(Stats.WEAPON_ELEMENT_POWER, 0, null, null);
 		switch (attackAttribute)
 		{
 			case Elementals.FIRE:

@@ -118,7 +118,7 @@ public abstract class Condition implements ConditionListener
 	
 	public final boolean test(L2Character caster, L2Character target, Skill skill, L2Item item)
 	{
-		boolean res = testImpl(caster, target, skill, item);
+		final boolean res = testImpl(caster, target, skill, item);
 		if ((_listener != null) && (res != _result))
 		{
 			_result = res;

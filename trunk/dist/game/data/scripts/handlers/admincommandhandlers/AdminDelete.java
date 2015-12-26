@@ -56,13 +56,13 @@ public class AdminDelete implements IAdminCommandHandler
 	// TODO: add possibility to delete any L2Object (except L2PcInstance)
 	private void handleDelete(L2PcInstance activeChar)
 	{
-		L2Object obj = activeChar.getTarget();
+		final L2Object obj = activeChar.getTarget();
 		if (obj instanceof L2Npc)
 		{
-			L2Npc target = (L2Npc) obj;
+			final L2Npc target = (L2Npc) obj;
 			target.deleteMe();
 			
-			L2Spawn spawn = target.getSpawn();
+			final L2Spawn spawn = target.getSpawn();
 			if (spawn != null)
 			{
 				spawn.stopRespawn();

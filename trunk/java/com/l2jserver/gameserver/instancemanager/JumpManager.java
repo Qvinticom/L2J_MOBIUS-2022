@@ -105,10 +105,10 @@ public class JumpManager
 	public void load()
 	{
 		_tracks.clear();
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, "JumpTrack.xml");
+		final File file = new File(Config.DATAPACK_ROOT, "JumpTrack.xml");
 		Document doc = null;
 		
 		if (file.exists())
@@ -122,13 +122,13 @@ public class JumpManager
 				_log.log(Level.WARNING, "Could not parse JumpTrack.xml file: " + e.getMessage(), e);
 				return;
 			}
-			Node root = doc.getFirstChild();
+			final Node root = doc.getFirstChild();
 			for (Node t = root.getFirstChild(); t != null; t = t.getNextSibling())
 			{
 				if (t.getNodeName().equals("track"))
 				{
-					Track track = new Track();
-					int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
+					final Track track = new Track();
+					final int trackId = Integer.parseInt(t.getAttributes().getNamedItem("trackId").getNodeValue());
 					try
 					{
 						track.x = Integer.parseInt(t.getAttributes().getNamedItem("ToX").getNodeValue());
@@ -143,17 +143,17 @@ public class JumpManager
 					{
 						if (w.getNodeName().equals("way"))
 						{
-							JumpWay jw = new JumpWay();
-							int wayId = Integer.parseInt(w.getAttributes().getNamedItem("id").getNodeValue());
+							final JumpWay jw = new JumpWay();
+							final int wayId = Integer.parseInt(w.getAttributes().getNamedItem("id").getNodeValue());
 							for (Node j = w.getFirstChild(); j != null; j = j.getNextSibling())
 							{
 								if (j.getNodeName().equals("jumpLoc"))
 								{
-									NamedNodeMap attrs = j.getAttributes();
-									int next = Integer.parseInt(attrs.getNamedItem("next").getNodeValue());
-									int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
-									int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
-									int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
+									final NamedNodeMap attrs = j.getAttributes();
+									final int next = Integer.parseInt(attrs.getNamedItem("next").getNodeValue());
+									final int x = Integer.parseInt(attrs.getNamedItem("x").getNodeValue());
+									final int y = Integer.parseInt(attrs.getNamedItem("y").getNodeValue());
+									final int z = Integer.parseInt(attrs.getNamedItem("z").getNodeValue());
 									jw.add(new JumpNode(x, y, z, next));
 								}
 							}
@@ -186,7 +186,7 @@ public class JumpManager
 	
 	public JumpWay getJumpWay(int trackId, int wayId)
 	{
-		Track t = _tracks.get(trackId);
+		final Track t = _tracks.get(trackId);
 		if (t != null)
 		{
 			return t.get(wayId);
@@ -205,12 +205,12 @@ public class JumpManager
 		{
 			return;
 		}
-		JumpWay jw = getJumpWay(player.getJumpTrackId(), 0);
+		final JumpWay jw = getJumpWay(player.getJumpTrackId(), 0);
 		if (jw == null)
 		{
 			return;
 		}
-		Track t = getTrack(player.getJumpTrackId());
+		final Track t = getTrack(player.getJumpTrackId());
 		if (!((t.x == 0) && (t.y == 0) && (t.z == 0)))
 		{
 			player.broadcastPacket(new FlyToLocation(player, t.x, t.y, t.z, FlyType.DUMMY));
@@ -226,14 +226,14 @@ public class JumpManager
 			return;
 		}
 		
-		JumpWay jw = getJumpWay(player.getJumpTrackId(), nextId);
+		final JumpWay jw = getJumpWay(player.getJumpTrackId(), nextId);
 		if (jw == null)
 		{
 			player.enableAllSkills(); // unlock player skills
 			return;
 		}
 		player.sendPacket(new ExFlyMove(player.getObjectId(), player.getJumpTrackId(), jw));
-		JumpNode n = jw.get(0);
+		final JumpNode n = jw.get(0);
 		player.setXYZ(n.getX(), n.getY(), n.getZ());
 	}
 	

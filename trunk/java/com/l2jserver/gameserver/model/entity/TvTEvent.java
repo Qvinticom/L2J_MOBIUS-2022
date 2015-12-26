@@ -175,7 +175,7 @@ public class TvTEvent
 		setState(EventState.STARTING);
 		
 		// Randomize and balance team distribution
-		Map<Integer, L2PcInstance> allParticipants = new HashMap<>();
+		final Map<Integer, L2PcInstance> allParticipants = new HashMap<>();
 		allParticipants.putAll(_teams[0].getParticipatedPlayers());
 		allParticipants.putAll(_teams[1].getParticipatedPlayers());
 		_teams[0].cleanMe();
@@ -196,11 +196,12 @@ public class TvTEvent
 			}
 		}
 		
-		int balance[] =
+		final int balance[] =
 		{
 			0,
 			0
-		}, priority = 0, highestLevelPlayerId;
+		};
+		int priority = 0, highestLevelPlayerId;
 		L2PcInstance highestLevelPlayer;
 		// TODO: allParticipants should be sorted by level instead of using highestLevelPcInstanceOf for every fetch
 		while (!allParticipants.isEmpty())
@@ -346,7 +347,7 @@ public class TvTEvent
 		setState(EventState.REWARDING);
 		
 		// Get team which has more points
-		TvTEventTeam team = _teams[_teams[0].getPoints() > _teams[1].getPoints() ? 0 : 1];
+		final TvTEventTeam team = _teams[_teams[0].getPoints() > _teams[1].getPoints() ? 0 : 1];
 		rewardTeam(team);
 		
 		// Notify to scripts.
@@ -370,7 +371,7 @@ public class TvTEvent
 			// Iterate over all tvt event rewards
 			for (int[] reward : Config.TVT_EVENT_REWARDS)
 			{
-				PcInventory inv = playerInstance.getInventory();
+				final PcInventory inv = playerInstance.getInventory();
 				
 				// Check for stackable item, non stackabe items need to be added one by one
 				if (ItemTable.getInstance().getTemplate(reward[0]).isStackable())
@@ -496,7 +497,7 @@ public class TvTEvent
 	public static boolean removeParticipant(int playerObjectId)
 	{
 		// Get the teamId of the player
-		byte teamId = getParticipantTeamId(playerObjectId);
+		final byte teamId = getParticipantTeamId(playerObjectId);
 		
 		// Check if the player is participant
 		if (teamId != -1)
@@ -532,8 +533,8 @@ public class TvTEvent
 	
 	public static String getParticipationFee()
 	{
-		int itemId = Config.TVT_EVENT_PARTICIPATION_FEE[0];
-		int itemNum = Config.TVT_EVENT_PARTICIPATION_FEE[1];
+		final int itemId = Config.TVT_EVENT_PARTICIPATION_FEE[0];
+		final int itemNum = Config.TVT_EVENT_PARTICIPATION_FEE[1];
 		
 		if ((itemId == 0) || (itemNum == 0))
 		{
@@ -645,7 +646,7 @@ public class TvTEvent
 			return;
 		}
 		
-		byte teamId = getParticipantTeamId(playerInstance.getObjectId());
+		final byte teamId = getParticipantTeamId(playerInstance.getObjectId());
 		
 		if (teamId == -1)
 		{
@@ -691,8 +692,8 @@ public class TvTEvent
 			return true;
 		}
 		
-		byte playerTeamId = getParticipantTeamId(playerInstance.getObjectId());
-		byte targetedPlayerTeamId = getParticipantTeamId(targetedPlayerObjectId);
+		final byte playerTeamId = getParticipantTeamId(playerInstance.getObjectId());
+		final byte targetedPlayerTeamId = getParticipantTeamId(targetedPlayerObjectId);
 		
 		if (((playerTeamId != -1) && (targetedPlayerTeamId == -1)) || ((playerTeamId == -1) && (targetedPlayerTeamId != -1)))
 		{
@@ -801,7 +802,7 @@ public class TvTEvent
 			return;
 		}
 		
-		byte killedTeamId = getParticipantTeamId(killedPlayerInstance.getObjectId());
+		final byte killedTeamId = getParticipantTeamId(killedPlayerInstance.getObjectId());
 		
 		if (killedTeamId == -1)
 		{
@@ -835,15 +836,15 @@ public class TvTEvent
 			return;
 		}
 		
-		byte killerTeamId = getParticipantTeamId(killerPlayerInstance.getObjectId());
+		final byte killerTeamId = getParticipantTeamId(killerPlayerInstance.getObjectId());
 		
 		if ((killerTeamId != -1) && (killedTeamId != -1) && (killerTeamId != killedTeamId))
 		{
-			TvTEventTeam killerTeam = _teams[killerTeamId];
+			final TvTEventTeam killerTeam = _teams[killerTeamId];
 			
 			killerTeam.increasePoints();
 			
-			CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
+			final CreatureSay cs = new CreatureSay(killerPlayerInstance.getObjectId(), ChatType.WHISPER, killerPlayerInstance.getName(), "I have killed " + killedPlayerInstance.getName() + "!");
 			
 			for (L2PcInstance playerInstance : _teams[killerTeamId].getParticipatedPlayers().values())
 			{
@@ -875,7 +876,7 @@ public class TvTEvent
 			{
 				for (Entry<Integer, Integer> e : Config.TVT_EVENT_MAGE_BUFFS.entrySet())
 				{
-					Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
+					final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
 					if (skill != null)
 					{
 						skill.applyEffects(playerInstance, playerInstance);
@@ -889,7 +890,7 @@ public class TvTEvent
 			{
 				for (Entry<Integer, Integer> e : Config.TVT_EVENT_FIGHTER_BUFFS.entrySet())
 				{
-					Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
+					final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
 					if (skill != null)
 					{
 						skill.applyEffects(playerInstance, playerInstance);

@@ -46,7 +46,7 @@ public final class CpHealOverTime extends AbstractEffect
 		}
 		
 		double cp = info.getEffected().getCurrentCp();
-		double maxcp = info.getEffected().getMaxRecoverableCp();
+		final double maxcp = info.getEffected().getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
 		if (cp >= maxcp)

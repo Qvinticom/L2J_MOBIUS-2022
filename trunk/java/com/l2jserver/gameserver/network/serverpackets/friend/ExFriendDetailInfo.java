@@ -48,7 +48,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 		writeD(_player.getObjectId());
 		final Friend friend = _player.getFriend(CharNameTable.getInstance().getIdByName(_name));
 		
-		L2PcInstance player = friend.getFriend();
+		final L2PcInstance player = friend.getFriend();
 		if (player == null)
 		{
 			writeS(_name);
@@ -62,7 +62,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 			writeD(friend.getAllyId());
 			writeD(friend.getAllyCrestId());
 			writeS(friend.getAllyName());
-			Calendar createDate = Calendar.getInstance();
+			final Calendar createDate = Calendar.getInstance();
 			createDate.setTimeInMillis(friend.getCreateDate());
 			writeC(createDate.get(Calendar.MONTH) + 1);
 			writeC(createDate.get(Calendar.DAY_OF_MONTH));
@@ -82,7 +82,7 @@ public class ExFriendDetailInfo extends L2GameServerPacket
 			writeD(player.getAllyId());
 			writeD(player.getAllyCrestId());
 			writeS(player.getClan() != null ? player.getClan().getAllyName() : "");
-			Calendar createDate = player.getCreateDate();
+			final Calendar createDate = player.getCreateDate();
 			writeC(createDate.get(Calendar.MONTH) + 1);
 			writeC(createDate.get(Calendar.DAY_OF_MONTH));
 			writeD(player.isOnline() ? -1 : (int) ((System.currentTimeMillis() - player.getLastAccess()) / 1000));

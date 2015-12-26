@@ -80,7 +80,7 @@ public class AdminScan implements IAdminCommandHandler
 				
 				try
 				{
-					int objectId = Integer.parseInt(st.nextToken());
+					final int objectId = Integer.parseInt(st.nextToken());
 					
 					final L2Object target = L2World.getInstance().findObject(objectId);
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;

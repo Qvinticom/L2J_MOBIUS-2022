@@ -71,7 +71,7 @@ public final class NewCrypt
 		}
 		
 		long chksum = 0;
-		int count = size - 4;
+		final int count = size - 4;
 		long check = -1;
 		int i;
 		
@@ -111,7 +111,7 @@ public final class NewCrypt
 	public static void appendChecksum(final byte[] raw, final int offset, final int size)
 	{
 		long chksum = 0;
-		int count = size - 4;
+		final int count = size - 4;
 		long ecx;
 		int i;
 		
@@ -157,7 +157,7 @@ public final class NewCrypt
 	 */
 	static void encXORPass(byte[] raw, final int offset, final int size, int key)
 	{
-		int stop = size - 8;
+		final int stop = size - 8;
 		int pos = 4 + offset;
 		int edx;
 		int ecx = key; // Initial xor key

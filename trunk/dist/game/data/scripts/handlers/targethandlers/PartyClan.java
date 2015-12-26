@@ -38,7 +38,7 @@ public class PartyClan implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
 			return new L2Character[]
@@ -81,7 +81,7 @@ public class PartyClan implements ITargetTypeHandler
 		
 		// Get all visible objects in a spherical area near the L2Character
 		final Collection<L2PcInstance> objs = activeChar.getKnownList().getKnownPlayersInRadius(radius);
-		int maxTargets = skill.getAffectLimit();
+		final int maxTargets = skill.getAffectLimit();
 		for (L2PcInstance obj : objs)
 		{
 			if (obj == null)

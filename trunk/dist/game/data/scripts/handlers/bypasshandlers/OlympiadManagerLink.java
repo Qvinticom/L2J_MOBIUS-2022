@@ -89,8 +89,8 @@ public class OlympiadManagerLink implements IBypassHandler
 		{
 			if (command.toLowerCase().startsWith("olympiaddesc"))
 			{
-				int val = Integer.parseInt(command.substring(13, 14));
-				String suffix = command.substring(14);
+				final int val = Integer.parseInt(command.substring(13, 14));
+				final String suffix = command.substring(14);
 				((L2OlympiadManagerInstance) target).showChatWindow(activeChar, val, suffix);
 			}
 			else if (command.toLowerCase().startsWith("olympiadnoble"))
@@ -118,7 +118,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				}
 				
 				int passes;
-				int val = Integer.parseInt(command.substring(14));
+				final int val = Integer.parseInt(command.substring(14));
 				switch (val)
 				{
 					case 0: // H5 match selection
@@ -173,7 +173,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						activeChar.sendPacket(html);
 						break;
 					case 3: // There are %points% Grand Olympiad points granted for this event. | TODO: cleanup (not used anymore)
-						int points = Olympiad.getInstance().getNoblePoints(activeChar.getObjectId());
+						final int points = Olympiad.getInstance().getNoblePoints(activeChar.getObjectId());
 						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points1.htm");
 						html.replace("%points%", String.valueOf(points));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
@@ -207,7 +207,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						MultisellData.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
 						break;
 					case 9: // Your Grand Olympiad Score from the previous period is %points% point(s) | TODO: cleanup (not used anymore)
-						int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());
+						final int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());
 						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points2.htm");
 						html.replace("%points%", String.valueOf(point));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
@@ -217,9 +217,9 @@ public class OlympiadManagerLink implements IBypassHandler
 						passes = Olympiad.getInstance().getNoblessePasses(activeChar, true);
 						if (passes > 0)
 						{
-							L2ItemInstance item = activeChar.getInventory().addItem("Olympiad", GATE_PASS, passes, activeChar, target);
+							final L2ItemInstance item = activeChar.getInventory().addItem("Olympiad", GATE_PASS, passes, activeChar, target);
 							
-							InventoryUpdate iu = new InventoryUpdate();
+							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(item);
 							activeChar.sendPacket(iu);
 							
@@ -246,7 +246,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				}
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
-				String[] params = command.split(" ");
+				final String[] params = command.split(" ");
 				
 				if (!Util.isDigit(params[1]))
 				{
@@ -309,7 +309,7 @@ public class OlympiadManagerLink implements IBypassHandler
 			}
 			else if (command.toLowerCase().startsWith("olympiad"))
 			{
-				int val = Integer.parseInt(command.substring(9, 10));
+				final int val = Integer.parseInt(command.substring(9, 10));
 				
 				final NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
 				
@@ -317,10 +317,10 @@ public class OlympiadManagerLink implements IBypassHandler
 				{
 					case 2: // show rank for a specific class
 						// for example >> Olympiad 1_88
-						int classId = Integer.parseInt(command.substring(11));
+						final int classId = Integer.parseInt(command.substring(11));
 						if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
 						{
-							List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
+							final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
 							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
 							
 							int index = 1;

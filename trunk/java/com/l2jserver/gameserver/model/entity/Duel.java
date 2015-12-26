@@ -496,12 +496,12 @@ public class Duel
 		
 		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance("PartyDuel.xml");
 		
-		Instance instance = InstanceManager.getInstance().getInstance(_duelInstanceId);
+		final Instance instance = InstanceManager.getInstance().getInstance(_duelInstanceId);
 		
 		int i = 0;
 		for (L2PcInstance player : _teamA)
 		{
-			Location loc = instance.getEnterLocs().get(i++);
+			final Location loc = instance.getEnterLocs().get(i++);
 			
 			player.teleToLocation(loc.getX(), loc.getY(), loc.getZ(), 0, _duelInstanceId, 0);
 		}
@@ -509,7 +509,7 @@ public class Duel
 		i = 9;
 		for (L2PcInstance player : _teamB)
 		{
-			Location loc = instance.getEnterLocs().get(i++);
+			final Location loc = instance.getEnterLocs().get(i++);
 			player.teleToLocation(loc.getX(), loc.getY(), loc.getZ(), 0, _duelInstanceId, 0);
 		}
 	}
@@ -553,7 +553,7 @@ public class Duel
 	 */
 	private void playKneelAnimation()
 	{
-		List<L2PcInstance> looser = getLooser();
+		final List<L2PcInstance> looser = getLooser();
 		
 		if (looser == null)
 		{
@@ -791,7 +791,7 @@ public class Duel
 			}
 			if (teamdefeated)
 			{
-				List<L2PcInstance> winners = (isInTeamA ? _teamB : _teamA);
+				final List<L2PcInstance> winners = (isInTeamA ? _teamB : _teamA);
 				for (L2PcInstance temp : winners)
 				{
 					temp.setDuelState(DuelState.WINNER);

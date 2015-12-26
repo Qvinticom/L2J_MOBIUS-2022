@@ -114,7 +114,7 @@ public final class Q00386_StolenDignity extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		if ((qs != null) && (npc.getId() == WAREHOUSE_KEEPER_ROMP))
 		{
 			if (qs.isCreated())
@@ -153,7 +153,7 @@ public final class Q00386_StolenDignity extends Quest
 			{
 				return event;
 			}
-			int ask = Integer.parseInt(event);
+			final int ask = Integer.parseInt(event);
 			switch (ask)
 			{
 				case 3:
@@ -318,7 +318,7 @@ public final class Q00386_StolenDignity extends Quest
 	{
 		for (int i0 = 0; i0 < 9; i0 = i0 + 1)
 		{
-			int i1 = getNumberFromBingoBoard(qs, i0);
+			final int i1 = getNumberFromBingoBoard(qs, i0);
 			if (isSelectedBingoNumber(qs, i1))
 			{
 				html = html.replace("<?Cell" + (i0 + 1) + "?>", i1 + "");
@@ -335,7 +335,7 @@ public final class Q00386_StolenDignity extends Quest
 	{
 		for (int i0 = 0; i0 < 9; i0 = i0 + 1)
 		{
-			int i1 = getNumberFromBingoBoard(qs, i0);
+			final int i1 = getNumberFromBingoBoard(qs, i0);
 			html = html.replace("<?FontColor" + (i0 + 1) + "?>", (isSelectedBingoNumber(qs, i1)) ? "ff0000" : "ffffff");
 			html = html.replace("<?Cell" + (i0 + 1) + "?>", i1 + "");
 		}
@@ -347,7 +347,7 @@ public final class Q00386_StolenDignity extends Quest
 		if (!isSelectedBingoNumber(qs, num))
 		{
 			selectBingoNumber(qs, num);
-			int i3 = getMatchedBingoLineCount(qs);
+			final int i3 = getMatchedBingoLineCount(qs);
 			String html;
 			if ((i3 == 3) && ((getBingoSelectCount(qs)) == 6))
 			{
@@ -546,7 +546,7 @@ public final class Q00386_StolenDignity extends Quest
 	private void createBingoBoard(QuestState qs)
 	{
 		//@formatter:off
-		Integer[] arr = {1,2,3,4,5,6,7,8,9};
+		final Integer[] arr = {1,2,3,4,5,6,7,8,9};
 		//@formatter:on
 		Collections.shuffle(Arrays.asList(arr));
 		qs.set("numbers", Arrays.asList(arr).toString().replaceAll("[^\\d ]", ""));
@@ -559,7 +559,7 @@ public final class Q00386_StolenDignity extends Quest
 	 */
 	private int getMatchedBingoLineCount(QuestState qs)
 	{
-		String[] q = qs.get("selected").split(" ");
+		final String[] q = qs.get("selected").split(" ");
 		int found = 0;
 		// Horizontal
 		if ((q[0] + q[1] + q[2]).matches("\\d+"))
@@ -605,7 +605,7 @@ public final class Q00386_StolenDignity extends Quest
 	 */
 	private void selectBingoNumber(QuestState qs, int num)
 	{
-		String[] numbers = qs.get("numbers").split(" ");
+		final String[] numbers = qs.get("numbers").split(" ");
 		int pos = 0;
 		for (int i = 0; i < numbers.length; i++)
 		{
@@ -615,7 +615,7 @@ public final class Q00386_StolenDignity extends Quest
 				break;
 			}
 		}
-		String[] selected = qs.get("selected").split(" ");
+		final String[] selected = qs.get("selected").split(" ");
 		for (int i = 0; i < selected.length; i++)
 		{
 			if (i == pos)
@@ -658,7 +658,7 @@ public final class Q00386_StolenDignity extends Quest
 	 */
 	private int getBingoSelectCount(QuestState qs)
 	{
-		String current = qs.get("selected");
+		final String current = qs.get("selected");
 		return current.replaceAll("\\D", "").length();
 	}
 	
@@ -872,7 +872,7 @@ public final class Q00386_StolenDignity extends Quest
 	
 	private QuestState getRandomPlayerFromParty(L2PcInstance player, L2Npc npc)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
 		
 		if ((qs != null) && qs.isStarted())
@@ -886,7 +886,7 @@ public final class Q00386_StolenDignity extends Quest
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
 				
-				QuestState qss = getQuestState(pm, false);
+				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(1500, npc, pm, true))
 				{
 					candidates.add(qss);

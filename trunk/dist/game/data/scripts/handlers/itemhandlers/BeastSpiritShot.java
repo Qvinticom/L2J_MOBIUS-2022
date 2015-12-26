@@ -98,7 +98,7 @@ public class BeastSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		long shotCount = item.getCount();
+		final long shotCount = item.getCount();
 		if (shotCount < shotConsumption)
 		{
 			// Not enough SpiritShots to use.

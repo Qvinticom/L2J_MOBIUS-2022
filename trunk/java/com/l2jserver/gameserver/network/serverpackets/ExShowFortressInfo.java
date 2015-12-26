@@ -41,11 +41,11 @@ public class ExShowFortressInfo extends L2GameServerPacket
 	{
 		writeC(0xFE);
 		writeH(0x15);
-		List<Fort> forts = FortManager.getInstance().getForts();
+		final List<Fort> forts = FortManager.getInstance().getForts();
 		writeD(forts.size());
 		for (Fort fort : forts)
 		{
-			L2Clan clan = fort.getOwnerClan();
+			final L2Clan clan = fort.getOwnerClan();
 			writeD(fort.getResidenceId());
 			writeS(clan != null ? clan.getName() : "");
 			writeD(fort.getSiege().isInProgress() ? 0x01 : 0x00);

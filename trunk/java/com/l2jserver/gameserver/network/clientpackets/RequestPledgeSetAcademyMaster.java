@@ -48,8 +48,8 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
-		L2Clan clan = activeChar.getClan();
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2Clan clan = activeChar.getClan();
 		if (clan == null)
 		{
 			return;
@@ -61,8 +61,8 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 			return;
 		}
 		
-		L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
-		L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
+		final L2ClanMember currentMember = clan.getClanMember(_currPlayerName);
+		final L2ClanMember targetMember = clan.getClanMember(_targetPlayerName);
 		if ((currentMember == null) || (targetMember == null))
 		{
 			return;
@@ -80,8 +80,8 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 			sponsorMember = currentMember;
 		}
 		
-		L2PcInstance apprentice = apprenticeMember.getPlayerInstance();
-		L2PcInstance sponsor = sponsorMember.getPlayerInstance();
+		final L2PcInstance apprentice = apprenticeMember.getPlayerInstance();
+		final L2PcInstance sponsor = sponsorMember.getPlayerInstance();
 		
 		SystemMessage sm = null;
 		if (_set == 0)

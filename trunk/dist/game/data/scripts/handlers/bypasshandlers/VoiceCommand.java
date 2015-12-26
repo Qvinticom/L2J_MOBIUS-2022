@@ -41,7 +41,7 @@ public class VoiceCommand implements IBypassHandler
 		if ((command.length() > 7) && (command.charAt(6) == '.'))
 		{
 			final String vc, vparams;
-			int endOfCommand = command.indexOf(" ", 7);
+			final int endOfCommand = command.indexOf(" ", 7);
 			if (endOfCommand > 0)
 			{
 				vc = command.substring(7, endOfCommand).trim();
@@ -55,7 +55,7 @@ public class VoiceCommand implements IBypassHandler
 			
 			if (vc.length() > 0)
 			{
-				IVoicedCommandHandler vch = VoicedCommandHandler.getInstance().getHandler(vc);
+				final IVoicedCommandHandler vch = VoicedCommandHandler.getInstance().getHandler(vc);
 				if (vch != null)
 				{
 					return vch.useVoicedCommand(vc, activeChar, vparams);

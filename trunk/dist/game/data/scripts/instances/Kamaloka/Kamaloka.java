@@ -1261,7 +1261,7 @@ public final class Kamaloka extends AbstractInstance
 			// player level must be in range
 			if (Math.abs(partyMember.getLevel() - level) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -1269,7 +1269,7 @@ public final class Kamaloka extends AbstractInstance
 			// player must be near party leader
 			if (!partyMember.isInsideRadius(player, 1000, true, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -1289,7 +1289,7 @@ public final class Kamaloka extends AbstractInstance
 					// if found instance still can't be reentered - exit
 					if (System.currentTimeMillis() < instanceTimes.get(id))
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 						sm.addPcName(partyMember);
 						player.sendPacket(sm);
 						return false;
@@ -1360,13 +1360,13 @@ public final class Kamaloka extends AbstractInstance
 			// check for level difference again on reenter
 			if (Math.abs(player.getLevel() - LEVEL[((KamaWorld) world).index]) > MAX_LEVEL_DIFFERENCE)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(player);
 				player.sendPacket(sm);
 				return;
 			}
 			// check what instance still exist
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			if (inst != null)
 			{
 				removeBuffs(player);
@@ -1424,7 +1424,7 @@ public final class Kamaloka extends AbstractInstance
 	{
 		if (world instanceof KamaWorld)
 		{
-			Calendar reenter = Calendar.getInstance();
+			final Calendar reenter = Calendar.getInstance();
 			reenter.set(Calendar.MINUTE, RESET_MIN);
 			// if time is >= RESET_HOUR - roll to the next day
 			if (reenter.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR)
@@ -1433,13 +1433,13 @@ public final class Kamaloka extends AbstractInstance
 			}
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addInstanceName(world.getTemplateId());
 			
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
 			{
-				L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
+				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
 				if ((obj != null) && obj.isOnline())
 				{
 					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
@@ -1448,7 +1448,7 @@ public final class Kamaloka extends AbstractInstance
 			}
 			
 			// destroy instance after EXIT_TIME
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			inst.setDuration(EXIT_TIME * 60000);
 			inst.setEmptyDestroyTime(0);
 		}
@@ -1472,7 +1472,7 @@ public final class Kamaloka extends AbstractInstance
 		if (npcs != null)
 		{
 			world.firstRoom = new ArrayList<L2Spawn>(spawns.length - 1);
-			int shaman = getRandom(spawns.length); // random position for shaman
+			final int shaman = getRandom(spawns.length); // random position for shaman
 			
 			for (int i = 0; i < spawns.length; i++)
 			{
@@ -1485,7 +1485,7 @@ public final class Kamaloka extends AbstractInstance
 				else
 				{
 					npc = addSpawn(npcs[1], spawns[i][0], spawns[i][1], spawns[i][2], 0, false, 0, false, world.getInstanceId());
-					L2Spawn spawn = npc.getSpawn();
+					final L2Spawn spawn = npc.getSpawn();
 					spawn.setRespawnDelay(FIRST_ROOM_RESPAWN_DELAY);
 					spawn.setAmount(1);
 					spawn.startRespawn();
@@ -1570,7 +1570,7 @@ public final class Kamaloka extends AbstractInstance
 					// party members must be in the instance
 					if (world.isAllowed(player.getObjectId()))
 					{
-						Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						
 						// teleports entire party away
 						for (L2PcInstance partyMember : party.getMembers())

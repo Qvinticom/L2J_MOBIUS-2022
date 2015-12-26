@@ -68,9 +68,9 @@ public final class Blink extends AbstractEffect
 		final int x1 = (int) (Math.cos(Math.PI + radian + course) * radius);
 		final int y1 = (int) (Math.sin(Math.PI + radian + course) * radius);
 		
-		int x = effected.getX() + x1;
-		int y = effected.getY() + y1;
-		int z = effected.getZ();
+		final int x = effected.getX() + x1;
+		final int y = effected.getY() + y1;
+		final int z = effected.getZ();
 		
 		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
 		

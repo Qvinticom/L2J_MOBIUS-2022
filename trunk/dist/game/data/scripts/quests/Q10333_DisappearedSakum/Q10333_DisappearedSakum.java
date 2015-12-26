@@ -65,7 +65,7 @@ public class Q10333_DisappearedSakum extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return null;
@@ -253,7 +253,7 @@ public class Q10333_DisappearedSakum extends Quest
 				}
 			}
 			
-			ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			log.addNpc(LANGK_LIZARDMAN, qs.getInt(Integer.toString(LANGK_LIZARDMAN)));
 			log.addNpc(VUKU_ORC_FIGHTER, qs.getInt(Integer.toString(VUKU_ORC_FIGHTER)));
 			killer.sendPacket(log);

@@ -96,7 +96,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public int getRaceCount()
 	{
-		List<Race> partyRaces = new ArrayList<>();
+		final List<Race> partyRaces = new ArrayList<>();
 		for (L2PcInstance member : getMembers())
 		{
 			if (!partyRaces.contains(member.getRace()))

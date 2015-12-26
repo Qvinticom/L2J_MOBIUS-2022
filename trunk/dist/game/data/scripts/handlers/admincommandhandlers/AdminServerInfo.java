@@ -151,7 +151,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			}
 			case "ALL_REAL":
 			{
-				Set<String> realPlayers = new HashSet<>();
+				final Set<String> realPlayers = new HashSet<>();
 				
 				for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 				{

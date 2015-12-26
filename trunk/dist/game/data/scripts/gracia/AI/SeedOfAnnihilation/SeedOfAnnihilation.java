@@ -228,7 +228,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		});
 		
 		int buffsNow = 0;
-		String var = loadGlobalQuestVar("SeedNextStatusChange");
+		final String var = loadGlobalQuestVar("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || (Long.parseLong(var) < System.currentTimeMillis()))
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
@@ -249,7 +249,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	
 	private Long getNextSeedsStatusChangeTime()
 	{
-		Calendar reenter = Calendar.getInstance();
+		final Calendar reenter = Calendar.getInstance();
 		reenter.set(Calendar.SECOND, 0);
 		reenter.set(Calendar.MINUTE, 0);
 		reenter.set(Calendar.HOUR_OF_DAY, 13);
@@ -301,7 +301,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
-			int buffsNow = getRandom(ZONE_BUFFS_LIST.length);
+			final int buffsNow = getRandom(ZONE_BUFFS_LIST.length);
 			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
 			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
@@ -314,7 +314,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 					af.setDisplayEffect(_regionsData[i].activeBuff);
 				}
 				
-				L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);
+				final L2EffectZone zone = ZoneManager.getInstance().getZoneById(_regionsData[i].buff_zone, L2EffectZone.class);
 				zone.clearSkills();
 				zone.addSkill(ZONE_BUFFS[_regionsData[i].activeBuff], 1);
 			}
@@ -342,7 +342,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	{
 		if (TELEPORT_ZONES.containsKey(zone.getId()))
 		{
-			Location teleLoc = TELEPORT_ZONES.get(zone.getId());
+			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
 			character.teleToLocation(teleLoc, false);
 		}
 		return super.onEnterZone(character, zone);

@@ -45,13 +45,13 @@ public class ChangePassword extends BaseRecievePacket
 	{
 		super(decrypt);
 		
-		String accountName = readS();
-		String characterName = readS();
-		String curpass = readS();
-		String newpass = readS();
+		final String accountName = readS();
+		final String characterName = readS();
+		final String curpass = readS();
+		final String newpass = readS();
 		
 		// get the GameServerThread
-		Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
+		final Collection<GameServerInfo> serverList = GameServerTable.getInstance().getRegisteredGameServers().values();
 		for (GameServerInfo gsi : serverList)
 		{
 			if ((gsi.getGameServerThread() != null) && gsi.getGameServerThread().hasAccountOnGameServer(accountName))
@@ -73,11 +73,11 @@ public class ChangePassword extends BaseRecievePacket
 		{
 			try
 			{
-				MessageDigest md = MessageDigest.getInstance("SHA");
+				final MessageDigest md = MessageDigest.getInstance("SHA");
 				
 				byte[] raw = curpass.getBytes("UTF-8");
 				raw = md.digest(raw);
-				String curpassEnc = Base64.getEncoder().encodeToString(raw);
+				final String curpassEnc = Base64.getEncoder().encodeToString(raw);
 				String pass = null;
 				int passUpdated = 0;
 				

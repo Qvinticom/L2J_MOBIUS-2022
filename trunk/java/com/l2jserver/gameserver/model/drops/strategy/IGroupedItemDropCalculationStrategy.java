@@ -58,7 +58,7 @@ public interface IGroupedItemDropCalculationStrategy
 				return getSingleItem(dropItem).calculateDrops(victim, killer);
 			}
 			
-			GroupedGeneralDropItem normalized = dropItem.normalizeMe(victim, killer);
+			final GroupedGeneralDropItem normalized = dropItem.normalizeMe(victim, killer);
 			if (normalized.getChance() > (Rnd.nextDouble() * 100))
 			{
 				final double random = (Rnd.nextDouble() * 100);
@@ -92,7 +92,7 @@ public interface IGroupedItemDropCalculationStrategy
 	 */
 	public static final IGroupedItemDropCalculationStrategy DISBAND_GROUP = (item, victim, killer) ->
 	{
-		List<ItemHolder> dropped = new ArrayList<>();
+		final List<ItemHolder> dropped = new ArrayList<>();
 		for (IDropItem dropItem : item.extractMe())
 		{
 			dropped.addAll(dropItem.calculateDrops(victim, killer));
@@ -110,16 +110,16 @@ public interface IGroupedItemDropCalculationStrategy
 			// if item hasn't precise calculation there's no change from DEFAULT_STRATEGY
 			return DEFAULT_STRATEGY.calculateDrops(item, victim, victim);
 		}
-		GroupedGeneralDropItem newItem = new GroupedGeneralDropItem(item.getChance(), DEFAULT_STRATEGY, item.getKillerChanceModifierStrategy(), IPreciseDeterminationStrategy.NEVER);
+		final GroupedGeneralDropItem newItem = new GroupedGeneralDropItem(item.getChance(), DEFAULT_STRATEGY, item.getKillerChanceModifierStrategy(), IPreciseDeterminationStrategy.NEVER);
 		newItem.setItems(item.getItems());
-		GroupedGeneralDropItem normalized = newItem.normalizeMe(victim, killer);
+		final GroupedGeneralDropItem normalized = newItem.normalizeMe(victim, killer);
 		// Let's determine the number of rolls.
 		int rolls = (int) (normalized.getChance() / 100);
 		if ((Rnd.nextDouble() * 100) < (normalized.getChance() % 100))
 		{
 			rolls++;
 		}
-		List<ItemHolder> dropped = new ArrayList<>(rolls);
+		final List<ItemHolder> dropped = new ArrayList<>(rolls);
 		for (int i = 0; i < rolls; i++)
 		{
 			// As further normalizing on already normalized drop group does nothing, we can just pass the calculation to DEFAULT_STRATEGY with precise calculation disabled as we handle it.

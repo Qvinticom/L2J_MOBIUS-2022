@@ -51,7 +51,7 @@ public final class ManaHeal extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
+		final L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return;

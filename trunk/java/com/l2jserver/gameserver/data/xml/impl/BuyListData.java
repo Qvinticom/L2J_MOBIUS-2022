@@ -72,10 +72,10 @@ public final class BuyListData implements IXmlReader
 		{
 			while (rs.next())
 			{
-				int buyListId = rs.getInt("buylist_id");
-				int itemId = rs.getInt("item_id");
-				long count = rs.getLong("count");
-				long nextRestockTime = rs.getLong("next_restock_time");
+				final int buyListId = rs.getInt("buylist_id");
+				final int itemId = rs.getInt("item_id");
+				final long count = rs.getLong("count");
+				final long nextRestockTime = rs.getLong("next_restock_time");
 				final L2BuyList buyList = getBuyList(buyListId);
 				if (buyList == null)
 				{
@@ -121,7 +121,7 @@ public final class BuyListData implements IXmlReader
 							long price = -1;
 							long restockDelay = -1;
 							long count = -1;
-							NamedNodeMap attrs = list_node.getAttributes();
+							final NamedNodeMap attrs = list_node.getAttributes();
 							Node attr = attrs.getNamedItem("id");
 							itemId = Integer.parseInt(attr.getNodeValue());
 							attr = attrs.getNamedItem("price");
@@ -155,7 +155,7 @@ public final class BuyListData implements IXmlReader
 							{
 								if ("npc".equalsIgnoreCase(npcs_node.getNodeName()))
 								{
-									int npcId = Integer.parseInt(npcs_node.getTextContent());
+									final int npcId = Integer.parseInt(npcs_node.getTextContent());
 									buyList.addAllowedNpc(npcId);
 								}
 							}

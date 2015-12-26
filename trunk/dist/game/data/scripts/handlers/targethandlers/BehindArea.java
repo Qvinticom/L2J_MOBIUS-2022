@@ -39,7 +39,7 @@ public class BehindArea implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isAttackable() || target.isPlayable())))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
@@ -73,7 +73,7 @@ public class BehindArea implements ITargetTypeHandler
 		}
 		
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
-		int maxTargets = skill.getAffectLimit();
+		final int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : objs)
 		{
 			if (!(obj.isAttackable() || obj.isPlayable()))

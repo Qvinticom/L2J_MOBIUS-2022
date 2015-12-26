@@ -64,7 +64,7 @@ public final class WildBeastReserve extends FlagWar
 		INNER_DOORS_TO_OPEN[0] = 21150001;
 		INNER_DOORS_TO_OPEN[1] = 21150002;
 		
-		Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		final Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		
 		for (L2ResidenceHallTeleportZone teleZone : zoneList)
 		{
@@ -73,7 +73,7 @@ public final class WildBeastReserve extends FlagWar
 				continue;
 			}
 			
-			int id = teleZone.getResidenceZoneId();
+			final int id = teleZone.getResidenceZoneId();
 			
 			if ((id < 0) || (id >= 6))
 			{

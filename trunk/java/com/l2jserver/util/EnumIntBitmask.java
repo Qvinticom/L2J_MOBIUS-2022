@@ -27,7 +27,7 @@ public final class EnumIntBitmask<E extends Enum<E>> implements Cloneable
 	public static <E extends Enum<E>> int getAllBitmask(Class<E> enumClass)
 	{
 		int allBitmask = 0;
-		E[] values = enumClass.getEnumConstants();
+		final E[] values = enumClass.getEnumConstants();
 		if (values.length > 32)
 		{
 			throw new IllegalArgumentException("Enum too big for an integer bitmask.");
@@ -46,7 +46,7 @@ public final class EnumIntBitmask<E extends Enum<E>> implements Cloneable
 	{
 		_enumClass = enumClass;
 		
-		E[] values = _enumClass.getEnumConstants();
+		final E[] values = _enumClass.getEnumConstants();
 		if (values.length > 32)
 		{
 			throw new IllegalArgumentException("Enum too big for an integer bitmask.");

@@ -49,20 +49,20 @@ public class AdminKill implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_kill"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // skip command
 			
 			if (st.hasMoreTokens())
 			{
-				String firstParam = st.nextToken();
-				L2PcInstance plyr = L2World.getInstance().getPlayer(firstParam);
+				final String firstParam = st.nextToken();
+				final L2PcInstance plyr = L2World.getInstance().getPlayer(firstParam);
 				if (plyr != null)
 				{
 					if (st.hasMoreTokens())
 					{
 						try
 						{
-							int radius = Integer.parseInt(st.nextToken());
+							final int radius = Integer.parseInt(st.nextToken());
 							for (L2Character knownChar : plyr.getKnownList().getKnownCharactersInRadius(radius))
 							{
 								if ((knownChar instanceof L2ControllableMobInstance) || (knownChar == activeChar))
@@ -88,7 +88,7 @@ public class AdminKill implements IAdminCommandHandler
 				{
 					try
 					{
-						int radius = Integer.parseInt(firstParam);
+						final int radius = Integer.parseInt(firstParam);
 						
 						for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 						{
@@ -111,7 +111,7 @@ public class AdminKill implements IAdminCommandHandler
 			}
 			else
 			{
-				L2Object obj = activeChar.getTarget();
+				final L2Object obj = activeChar.getTarget();
 				if ((obj instanceof L2ControllableMobInstance) || !(obj instanceof L2Character))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);

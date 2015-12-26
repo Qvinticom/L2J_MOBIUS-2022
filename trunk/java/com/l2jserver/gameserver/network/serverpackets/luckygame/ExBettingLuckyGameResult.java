@@ -52,7 +52,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
 		// Calculate rewards
-		List<ItemHolder> rewards = new ArrayList<>();
+		final List<ItemHolder> rewards = new ArrayList<>();
 		int totalWeight = 0;
 		for (int rewardCounter = 0; rewardCounter < _count; rewardCounter++)
 		{
@@ -115,7 +115,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 				if (_type == 2)
 				{
 					_activeChar.addItem("LuxuryFortuneTelling", reward, _activeChar, false);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_IN_THE_LUXURY_FORTUNE_READING);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_IN_THE_LUXURY_FORTUNE_READING);
 					sm.addPcName(_activeChar);
 					sm.addLong(reward.getCount());
 					sm.addItemName(new L2ItemInstance(reward.getId()));
@@ -124,7 +124,7 @@ public class ExBettingLuckyGameResult extends L2GameServerPacket
 				else
 				{
 					_activeChar.addItem("FortuneTelling", reward, _activeChar, false);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
 					sm.addPcName(_activeChar);
 					sm.addLong(reward.getCount());
 					sm.addItemName(new L2ItemInstance(reward.getId()));

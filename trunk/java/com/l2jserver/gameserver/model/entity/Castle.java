@@ -164,7 +164,7 @@ public final class Castle extends AbstractResidence
 			{
 				return;
 			}
-			long currentTime = System.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
@@ -466,7 +466,7 @@ public final class Castle extends AbstractResidence
 			return;
 		}
 		
-		L2DoorInstance door = getDoor(doorId);
+		final L2DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -498,7 +498,7 @@ public final class Castle extends AbstractResidence
 		// Remove old owner
 		if ((getOwnerId() > 0) && ((clan == null) || (clan.getId() != getOwnerId())))
 		{
-			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
+			final L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 			if (oldOwner != null)
 			{
 				if (_formerOwner == null)
@@ -511,7 +511,7 @@ public final class Castle extends AbstractResidence
 				}
 				try
 				{
-					L2PcInstance oldleader = oldOwner.getLeader().getPlayerInstance();
+					final L2PcInstance oldleader = oldOwner.getLeader().getPlayerInstance();
 					if (oldleader != null)
 					{
 						if (oldleader.getMountType() == MountType.WYVERN)
@@ -734,7 +734,7 @@ public final class Castle extends AbstractResidence
 			}
 			else
 			{
-				int diffLease = lease - _function.get(type).getLease();
+				final int diffLease = lease - _function.get(type).getLease();
 				if (diffLease > 0)
 				{
 					_function.remove(type);
@@ -997,9 +997,9 @@ public final class Castle extends AbstractResidence
 		{
 			if (_formerOwner != ClanTable.getInstance().getClan(getOwnerId()))
 			{
-				int maxreward = Math.max(0, _formerOwner.getReputationScore());
+				final int maxreward = Math.max(0, _formerOwner.getReputationScore());
 				_formerOwner.takeReputationScore(Config.LOOSE_CASTLE_POINTS, true);
-				L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+				final L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 				if (owner != null)
 				{
 					owner.addReputationScore(Math.min(Config.TAKE_CASTLE_POINTS, maxreward), true);
@@ -1012,7 +1012,7 @@ public final class Castle extends AbstractResidence
 		}
 		else
 		{
-			L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
+			final L2Clan owner = ClanTable.getInstance().getClan(getOwnerId());
 			if (owner != null)
 			{
 				owner.addReputationScore(Config.TAKE_CASTLE_POINTS, true);

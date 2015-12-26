@@ -55,7 +55,7 @@ public final class CrestTable
 	public synchronized void load()
 	{
 		_crests.clear();
-		Set<Integer> crestsInUse = new HashSet<>();
+		final Set<Integer> crestsInUse = new HashSet<>();
 		for (L2Clan clan : ClanTable.getInstance().getClans())
 		{
 			if (clan.getCrestId() != 0)
@@ -80,7 +80,7 @@ public final class CrestTable
 		{
 			while (rs.next())
 			{
-				int id = rs.getInt("crest_id");
+				final int id = rs.getInt("crest_id");
 				
 				if (_nextId.get() <= id)
 				{
@@ -95,8 +95,8 @@ public final class CrestTable
 					continue;
 				}
 				
-				byte[] data = rs.getBytes("data");
-				CrestType crestType = CrestType.getById(rs.getInt("type"));
+				final byte[] data = rs.getBytes("data");
+				final CrestType crestType = CrestType.getById(rs.getInt("type"));
 				if (crestType != null)
 				{
 					_crests.put(id, new L2Crest(id, data, crestType));

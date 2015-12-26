@@ -88,7 +88,7 @@ public class ThreadPoolManager
 			{
 				_r.run();
 			}
-			catch (final Throwable e)
+			catch (Throwable e)
 			{
 				final Thread t = Thread.currentThread();
 				final UncaughtExceptionHandler h = t.getUncaughtExceptionHandler();
@@ -633,7 +633,7 @@ public class ThreadPoolManager
 		@Override
 		public Thread newThread(Runnable r)
 		{
-			Thread t = new Thread(_group, r, _name + "-" + _threadNumber.getAndIncrement());
+			final Thread t = new Thread(_group, r, _name + "-" + _threadNumber.getAndIncrement());
 			t.setPriority(_prio);
 			return t;
 		}
@@ -690,12 +690,12 @@ public class ThreadPoolManager
 	public String getPacketStats()
 	{
 		final StringBuilder sb = new StringBuilder(1000);
-		ThreadFactory tf = _generalPacketsThreadPool.getThreadFactory();
+		final ThreadFactory tf = _generalPacketsThreadPool.getThreadFactory();
 		if (tf instanceof PriorityThreadFactory)
 		{
-			PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
-			int count = ptf.getGroup().activeCount();
-			Thread[] threads = new Thread[count + 2];
+			final PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
+			final int count = ptf.getGroup().activeCount();
+			final Thread[] threads = new Thread[count + 2];
 			ptf.getGroup().enumerate(threads);
 			StringUtil.append(sb, "General Packet Thread Pool:" + Config.EOL + "Tasks in the queue: ", String.valueOf(_generalPacketsThreadPool.getQueue().size()), Config.EOL + "Showing threads stack trace:" + Config.EOL + "There should be ", String.valueOf(count), " Threads" + Config.EOL);
 			for (Thread t : threads)
@@ -721,13 +721,13 @@ public class ThreadPoolManager
 	public String getIOPacketStats()
 	{
 		final StringBuilder sb = new StringBuilder(1000);
-		ThreadFactory tf = _ioPacketsThreadPool.getThreadFactory();
+		final ThreadFactory tf = _ioPacketsThreadPool.getThreadFactory();
 		
 		if (tf instanceof PriorityThreadFactory)
 		{
-			PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
-			int count = ptf.getGroup().activeCount();
-			Thread[] threads = new Thread[count + 2];
+			final PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
+			final int count = ptf.getGroup().activeCount();
+			final Thread[] threads = new Thread[count + 2];
 			ptf.getGroup().enumerate(threads);
 			StringUtil.append(sb, "I/O Packet Thread Pool:" + Config.EOL + "Tasks in the queue: ", String.valueOf(_ioPacketsThreadPool.getQueue().size()), Config.EOL + "Showing threads stack trace:" + Config.EOL + "There should be ", String.valueOf(count), " Threads" + Config.EOL);
 			
@@ -755,13 +755,13 @@ public class ThreadPoolManager
 	public String getGeneralStats()
 	{
 		final StringBuilder sb = new StringBuilder(1000);
-		ThreadFactory tf = _generalThreadPool.getThreadFactory();
+		final ThreadFactory tf = _generalThreadPool.getThreadFactory();
 		
 		if (tf instanceof PriorityThreadFactory)
 		{
-			PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
-			int count = ptf.getGroup().activeCount();
-			Thread[] threads = new Thread[count + 2];
+			final PriorityThreadFactory ptf = (PriorityThreadFactory) tf;
+			final int count = ptf.getGroup().activeCount();
+			final Thread[] threads = new Thread[count + 2];
 			ptf.getGroup().enumerate(threads);
 			StringUtil.append(sb, "General Thread Pool:" + Config.EOL + "Tasks in the queue: ", String.valueOf(_generalThreadPool.getQueue().size()), Config.EOL + "Showing threads stack trace:" + Config.EOL + "There should be ", String.valueOf(count), " Threads" + Config.EOL);
 			

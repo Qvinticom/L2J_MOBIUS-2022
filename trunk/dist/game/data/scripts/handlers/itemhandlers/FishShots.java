@@ -71,7 +71,7 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalTypePlus() == item.getItem().getCrystalTypePlus());
 		
 		if (!gradeCheck)
 		{
@@ -86,7 +86,7 @@ public class FishShots implements IItemHandler
 		
 		activeChar.setChargedShot(ShotType.FISH_SOULSHOTS, true);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
-		L2Object oldTarget = activeChar.getTarget();
+		final L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
 		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0));

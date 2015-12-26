@@ -110,7 +110,7 @@ public final class AuctionableHall extends ClanHall
 	 */
 	private final void initialyzeTask(boolean forced)
 	{
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		if (_paidUntil > currentTime)
 		{
 			ThreadPoolManager.getInstance().scheduleGeneral(new FeeTask(), _paidUntil - currentTime);
@@ -142,7 +142,7 @@ public final class AuctionableHall extends ClanHall
 		{
 			try
 			{
-				long _time = System.currentTimeMillis();
+				final long _time = System.currentTimeMillis();
 				
 				if (isFree())
 				{
@@ -155,7 +155,7 @@ public final class AuctionableHall extends ClanHall
 					return;
 				}
 				
-				L2Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
+				final L2Clan Clan = ClanTable.getInstance().getClan(getOwnerId());
 				if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= getLease())
 				{
 					if (_paidUntil != 0)
@@ -193,7 +193,7 @@ public final class AuctionableHall extends ClanHall
 					else
 					{
 						updateDb();
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
 						sm.addInt(getLease());
 						Clan.broadcastToOnlineMembers(sm);
 						if ((_time + (3600000 * 24)) <= (_paidUntil + _chRate))

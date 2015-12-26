@@ -45,7 +45,7 @@ public class GameGuardCheckTask implements Runnable
 	{
 		if ((_player != null))
 		{
-			L2GameClient client = _player.getClient();
+			final L2GameClient client = _player.getClient();
 			if ((client != null) && !client.isAuthedGG() && _player.isOnline())
 			{
 				AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");

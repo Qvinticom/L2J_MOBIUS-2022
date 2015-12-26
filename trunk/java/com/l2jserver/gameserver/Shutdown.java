@@ -77,7 +77,7 @@ public class Shutdown extends Thread
 	 */
 	private void SendServerQuit(int seconds)
 	{
-		SystemMessage sysm = SystemMessage.getSystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
+		final SystemMessage sysm = SystemMessage.getSystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT);
 		sysm.addInt(seconds);
 		Broadcast.toAllOnlinePlayers(sysm);
 	}
@@ -185,8 +185,8 @@ public class Shutdown extends Thread
 	{
 		if (this == getInstance())
 		{
-			TimeCounter tc = new TimeCounter();
-			TimeCounter tc1 = new TimeCounter();
+			final TimeCounter tc = new TimeCounter();
+			final TimeCounter tc1 = new TimeCounter();
 			
 			try
 			{
@@ -456,7 +456,7 @@ public class Shutdown extends Thread
 				
 				_secondsShut--;
 				
-				int delay = 1000; // milliseconds
+				final int delay = 1000; // milliseconds
 				Thread.sleep(delay);
 				
 				if (_shutdownMode == ABORT)
@@ -490,7 +490,7 @@ public class Shutdown extends Thread
 		
 		}
 		
-		TimeCounter tc = new TimeCounter();
+		final TimeCounter tc = new TimeCounter();
 		
 		// Save all raidboss and GrandBoss status ^_^
 		RaidBossSpawnManager.getInstance().cleanUp();
@@ -571,7 +571,7 @@ public class Shutdown extends Thread
 			// Logout Character
 			try
 			{
-				L2GameClient client = player.getClient();
+				final L2GameClient client = player.getClient();
 				if ((client != null) && !client.isDetached())
 				{
 					client.close(ServerClose.STATIC_PACKET);

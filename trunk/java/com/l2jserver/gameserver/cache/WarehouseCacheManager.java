@@ -53,7 +53,7 @@ public class WarehouseCacheManager
 		@Override
 		public void run()
 		{
-			long cTime = System.currentTimeMillis();
+			final long cTime = System.currentTimeMillis();
 			for (L2PcInstance pc : _cachedWh.keySet())
 			{
 				if ((cTime - _cachedWh.get(pc)) > _cacheTime)

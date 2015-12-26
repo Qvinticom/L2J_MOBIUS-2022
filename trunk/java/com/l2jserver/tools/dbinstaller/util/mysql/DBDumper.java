@@ -52,18 +52,18 @@ public class DBDumper
 	{
 		try (Formatter form = new Formatter())
 		{
-			Connection con = _frame.getConnection();
+			final Connection con = _frame.getConnection();
 			try (Statement s = con.createStatement();
 				ResultSet rset = s.executeQuery("SHOW TABLES"))
 			{
-				File dump = new File("dumps", form.format("%1$s_dump_%2$tY%2$tm%2$td-%2$tH%2$tM%2$tS.sql", _db, new GregorianCalendar().getTime()).toString());
+				final File dump = new File("dumps", form.format("%1$s_dump_%2$tY%2$tm%2$td-%2$tH%2$tM%2$tS.sql", _db, new GregorianCalendar().getTime()).toString());
 				new File("dumps").mkdir();
 				dump.createNewFile();
 				
 				_frame.appendToProgressArea("Writing dump " + dump.getName());
 				if (rset.last())
 				{
-					int rows = rset.getRow();
+					final int rows = rset.getRow();
 					rset.beforeFirst();
 					if (rows > 0)
 					{
@@ -84,7 +84,7 @@ public class DBDumper
 						try (Statement desc = con.createStatement();
 							ResultSet dset = desc.executeQuery("DESC " + rset.getString(1)))
 						{
-							Map<String, List<String>> keys = new HashMap<>();
+							final Map<String, List<String>> keys = new HashMap<>();
 							boolean isFirst = true;
 							while (dset.next())
 							{

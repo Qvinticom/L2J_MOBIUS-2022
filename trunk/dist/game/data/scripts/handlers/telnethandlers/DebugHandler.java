@@ -70,13 +70,13 @@ public class DebugHandler implements ITelnetHandler
 	{
 		if (command.startsWith("debug") && (command.length() > 6))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(6));
+			final StringTokenizer st = new StringTokenizer(command.substring(6));
 			// TODO: Rewrite to use ARM.
 			FileOutputStream fos = null;
 			OutputStreamWriter out = null;
 			try
 			{
-				String dbg = st.nextToken();
+				final String dbg = st.nextToken();
 				
 				if (dbg.equals("decay"))
 				{
@@ -89,8 +89,8 @@ public class DebugHandler implements ITelnetHandler
 						_print.println("Usage: debug packetsend <charName> <packetData>");
 						return false;
 					}
-					String charName = st.nextToken();
-					L2PcInstance targetPlayer = L2World.getInstance().getPlayer(charName);
+					final String charName = st.nextToken();
+					final L2PcInstance targetPlayer = L2World.getInstance().getPlayer(charName);
 					
 					if (targetPlayer == null)
 					{
@@ -98,10 +98,10 @@ public class DebugHandler implements ITelnetHandler
 						return false;
 					}
 					
-					AdminForgePacket sp = new AdminForgePacket();
+					final AdminForgePacket sp = new AdminForgePacket();
 					while (st.hasMoreTokens())
 					{
-						String b = st.nextToken();
+						final String b = st.nextToken();
 						if (!b.isEmpty())
 						{
 							sp.addPart("C".getBytes()[0], "0x" + b);
@@ -113,7 +113,7 @@ public class DebugHandler implements ITelnetHandler
 				}
 				else if (dbg.equals("PacketTP"))
 				{
-					String str = ThreadPoolManager.getInstance().getPacketStats();
+					final String str = ThreadPoolManager.getInstance().getPacketStats();
 					_print.println(str);
 					int i = 0;
 					File f = new File("./log/StackTrace-PacketTP-" + i + ".txt");
@@ -129,7 +129,7 @@ public class DebugHandler implements ITelnetHandler
 				}
 				else if (dbg.equals("IOPacketTP"))
 				{
-					String str = ThreadPoolManager.getInstance().getIOPacketStats();
+					final String str = ThreadPoolManager.getInstance().getIOPacketStats();
 					_print.println(str);
 					int i = 0;
 					File f = new File("./log/StackTrace-IOPacketTP-" + i + ".txt");
@@ -145,7 +145,7 @@ public class DebugHandler implements ITelnetHandler
 				}
 				else if (dbg.equals("GeneralTP"))
 				{
-					String str = ThreadPoolManager.getInstance().getGeneralStats();
+					final String str = ThreadPoolManager.getInstance().getGeneralStats();
 					_print.println(str);
 					int i = 0;
 					File f = new File("./log/StackTrace-GeneralTP-" + i + ".txt");
@@ -161,10 +161,10 @@ public class DebugHandler implements ITelnetHandler
 				}
 				else if (dbg.equals("full"))
 				{
-					Calendar cal = Calendar.getInstance();
-					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
+					final Calendar cal = Calendar.getInstance();
+					final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
 					
-					StringBuilder sb = new StringBuilder();
+					final StringBuilder sb = new StringBuilder();
 					sb.append(sdf.format(cal.getTime()));
 					sb.append("\n\n");
 					uptime = _uptime;
@@ -194,8 +194,8 @@ public class DebugHandler implements ITelnetHandler
 					
 					sb.append('\n');
 					sb.append("\n## Class Path Information ##\n");
-					String cp = System.getProperty("java.class.path");
-					String[] libs = cp.split(File.pathSeparator);
+					final String cp = System.getProperty("java.class.path");
+					final String[] libs = cp.split(File.pathSeparator);
 					for (String lib : libs)
 					{
 						sb.append(lib);
@@ -204,15 +204,15 @@ public class DebugHandler implements ITelnetHandler
 					
 					sb.append('\n');
 					sb.append("## Threads Information ##\n");
-					Map<Thread, StackTraceElement[]> allThread = Thread.getAllStackTraces();
+					final Map<Thread, StackTraceElement[]> allThread = Thread.getAllStackTraces();
 					
 					final List<Entry<Thread, StackTraceElement[]>> entries = new ArrayList<>(allThread.entrySet());
 					Collections.sort(entries, (e1, e2) -> e1.getKey().getName().compareTo(e2.getKey().getName()));
 					
 					for (Entry<Thread, StackTraceElement[]> entry : entries)
 					{
-						StackTraceElement[] stes = entry.getValue();
-						Thread t = entry.getKey();
+						final StackTraceElement[] stes = entry.getValue();
+						final Thread t = entry.getKey();
 						sb.append("--------------\n");
 						sb.append(t.toString() + " (" + t.getId() + ")\n");
 						sb.append("State: " + t.getState() + '\n');
@@ -227,11 +227,11 @@ public class DebugHandler implements ITelnetHandler
 					}
 					
 					sb.append('\n');
-					ThreadMXBean mbean = ManagementFactory.getThreadMXBean();
-					long[] ids = findDeadlockedThreads(mbean);
+					final ThreadMXBean mbean = ManagementFactory.getThreadMXBean();
+					final long[] ids = findDeadlockedThreads(mbean);
 					if ((ids != null) && (ids.length > 0))
 					{
-						Thread[] threads = new Thread[ids.length];
+						final Thread[] threads = new Thread[ids.length];
 						for (int i = 0; i < threads.length; i++)
 						{
 							threads[i] = findMatchingThread(mbean.getThreadInfo(ids[i]));
@@ -333,7 +333,7 @@ public class DebugHandler implements ITelnetHandler
 	public String getServerStatus()
 	{
 		int playerCount = 0, objectCount = 0;
-		int max = LoginServerThread.getInstance().getMaxPlayer();
+		final int max = LoginServerThread.getInstance().getMaxPlayer();
 		
 		playerCount = L2World.getInstance().getAllPlayersCount();
 		objectCount = L2World.getInstance().getVisibleObjectsCount();
@@ -409,7 +409,7 @@ public class DebugHandler implements ITelnetHandler
 				charCount++;
 			}
 		}
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");
 		sb.append("\r\n  --->  Player Count: " + playerCount + "/" + max);
 		sb.append("\r\n  ---> Offline Count: " + detachedCount + "/" + playerCount);
@@ -444,19 +444,19 @@ public class DebugHandler implements ITelnetHandler
 	{
 		int uptime = (int) System.currentTimeMillis() - time;
 		uptime = uptime / 1000;
-		int h = uptime / 3600;
-		int m = (uptime - (h * 3600)) / 60;
-		int s = ((uptime - (h * 3600)) - (m * 60));
+		final int h = uptime / 3600;
+		final int m = (uptime - (h * 3600)) / 60;
+		final int s = ((uptime - (h * 3600)) - (m * 60));
 		return h + "hrs " + m + "mins " + s + "secs";
 	}
 	
 	private String gameTime()
 	{
-		int t = GameTimeController.getInstance().getGameTime();
-		int h = t / 60;
-		int m = t % 60;
-		SimpleDateFormat format = new SimpleDateFormat("H:mm");
-		Calendar cal = Calendar.getInstance();
+		final int t = GameTimeController.getInstance().getGameTime();
+		final int h = t / 60;
+		final int m = t % 60;
+		final SimpleDateFormat format = new SimpleDateFormat("H:mm");
+		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		return format.format(cal.getTime());

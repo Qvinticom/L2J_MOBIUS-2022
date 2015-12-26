@@ -192,11 +192,11 @@ public class CharSummonTable
 				Skill skill;
 				while (rs.next())
 				{
-					int summonObjId = rs.getInt("summonId");
-					int skillId = rs.getInt("summonSkillId");
-					int curHp = rs.getInt("curHp");
-					int curMp = rs.getInt("curMp");
-					int time = rs.getInt("time");
+					final int summonObjId = rs.getInt("summonId");
+					final int skillId = rs.getInt("summonSkillId");
+					final int curHp = rs.getInt("curHp");
+					final int curMp = rs.getInt("curMp");
+					final int time = rs.getInt("time");
 					
 					skill = SkillData.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
 					if ((skill == null) || !activeChar.hasServitor(summonObjId))

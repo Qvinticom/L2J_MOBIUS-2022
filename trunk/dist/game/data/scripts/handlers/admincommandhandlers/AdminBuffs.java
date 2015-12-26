@@ -68,7 +68,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (st.hasMoreTokens())
 			{
 				final String playername = st.nextToken();
-				L2PcInstance player = L2World.getInstance().getPlayer(playername);
+				final L2PcInstance player = L2World.getInstance().getPlayer(playername);
 				if (player != null)
 				{
 					int page = 1;
@@ -97,11 +97,11 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command, " ");
+				final StringTokenizer st = new StringTokenizer(command, " ");
 				
 				st.nextToken();
-				int objectId = Integer.parseInt(st.nextToken());
-				int skillId = Integer.parseInt(st.nextToken());
+				final int objectId = Integer.parseInt(st.nextToken());
+				final int skillId = Integer.parseInt(st.nextToken());
 				
 				removeBuff(activeChar, objectId, skillId);
 				return true;
@@ -117,9 +117,9 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command, " ");
+				final StringTokenizer st = new StringTokenizer(command, " ");
 				st.nextToken();
-				int objectId = Integer.parseInt(st.nextToken());
+				final int objectId = Integer.parseInt(st.nextToken());
 				removeAllBuffs(activeChar, objectId);
 				return true;
 			}
@@ -132,12 +132,12 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_areacancel"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
-			String val = st.nextToken();
+			final String val = st.nextToken();
 			try
 			{
-				int radius = Integer.parseInt(val);
+				final int radius = Integer.parseInt(val);
 				
 				for (L2Character knownChar : activeChar.getKnownList().getKnownCharactersInRadius(radius))
 				{
@@ -158,7 +158,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_removereuse"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			command = st.nextToken();
 			
 			L2Character creature = null;
@@ -255,8 +255,8 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		
 		final StringBuilder html = StringUtil.startAppend(500 + (effects.size() * 200), "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", target.getName(), "</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
-		int start = ((page - 1) * PAGE_LIMIT);
-		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
+		final int start = ((page - 1) * PAGE_LIMIT);
+		final int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
 		int count = 0;
 		for (BuffInfo info : effects)
 		{
@@ -274,7 +274,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("</table><table width=300 bgcolor=444444><tr>");
 		for (int x = 0; x < max; x++)
 		{
-			int pagenr = x + 1;
+			final int pagenr = x + 1;
 			if (page == pagenr)
 			{
 				html.append("<td>Page ");

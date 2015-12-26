@@ -131,7 +131,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 		
 		final QuestState st = getQuestState(partyMember, false);
 		
-		float chance = (DROP_RATE * Config.RATE_QUEST_DROP);
+		final float chance = (DROP_RATE * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(DINOSAUR_FANG_NECKLACE, 1);

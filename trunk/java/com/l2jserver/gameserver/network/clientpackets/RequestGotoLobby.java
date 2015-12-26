@@ -39,7 +39,7 @@ public class RequestGotoLobby extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2GameClient client = getClient();
+		final L2GameClient client = getClient();
 		client.sendPacket(new ExLoginVitalityEffectInfo(client));
 		client.sendPacket(new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1));
 	}

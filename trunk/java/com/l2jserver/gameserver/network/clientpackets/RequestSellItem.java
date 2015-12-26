@@ -55,7 +55,7 @@ public final class RequestSellItem extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_listId = readD();
-		int size = readD();
+		final int size = readD();
 		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -64,9 +64,9 @@ public final class RequestSellItem extends L2GameClientPacket
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			int objectId = readD();
-			int itemId = readD();
-			long count = readQ();
+			final int objectId = readD();
+			final int itemId = readD();
+			final long count = readQ();
 			if ((objectId < 1) || (itemId < 1) || (count < 1))
 			{
 				_items = null;
@@ -84,7 +84,7 @@ public final class RequestSellItem extends L2GameClientPacket
 	
 	protected void processSell()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		
 		if (player == null)
 		{
@@ -110,7 +110,7 @@ public final class RequestSellItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2Object target = player.getTarget();
+		final L2Object target = player.getTarget();
 		L2Character merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
@@ -162,7 +162,7 @@ public final class RequestSellItem extends L2GameClientPacket
 				continue;
 			}
 			
-			long price = item.getReferencePrice() / 2;
+			final long price = item.getReferencePrice() / 2;
 			totalPrice += price * i.getCount();
 			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
 			{

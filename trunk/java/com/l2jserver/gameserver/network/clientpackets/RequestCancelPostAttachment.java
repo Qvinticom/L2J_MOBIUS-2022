@@ -65,7 +65,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 			return;
 		}
 		
-		Message msg = MailManager.getInstance().getMessage(_msgId);
+		final Message msg = MailManager.getInstance().getMessage(_msgId);
 		if (msg == null)
 		{
 			return;
@@ -165,7 +165,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		}
 		
 		// Proceed to the transfer
-		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (L2ItemInstance item : attachments.getItems())
 		{
 			if (item == null)
@@ -173,7 +173,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 				continue;
 			}
 			
-			long count = item.getCount();
+			final long count = item.getCount();
 			final L2ItemInstance newItem = attachments.transferItem(attachments.getName(), item.getObjectId(), count, activeChar.getInventory(), activeChar, null);
 			if (newItem == null)
 			{
@@ -191,7 +191,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 					playerIU.addNewItem(newItem);
 				}
 			}
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1);
 			sm.addItemName(item.getId());
 			sm.addLong(count);
 			activeChar.sendPacket(sm);
@@ -215,7 +215,7 @@ public final class RequestCancelPostAttachment extends L2GameClientPacket
 		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());
 		if (receiver != null)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
 			sm.addCharName(activeChar);
 			receiver.sendPacket(sm);
 			receiver.sendPacket(new ExChangePostState(true, _msgId, Message.DELETED));

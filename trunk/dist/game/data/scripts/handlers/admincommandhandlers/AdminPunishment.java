@@ -99,8 +99,8 @@ public class AdminPunishment implements IAdminCommandHandler
 						case "info":
 						{
 							String key = st.hasMoreTokens() ? st.nextToken() : null;
-							String af = st.hasMoreTokens() ? st.nextToken() : null;
-							String name = key;
+							final String af = st.hasMoreTokens() ? st.nextToken() : null;
+							final String name = key;
 							
 							if ((key == null) || (af == null))
 							{
@@ -123,12 +123,12 @@ public class AdminPunishment implements IAdminCommandHandler
 							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/punishment-info.htm");
 							if (content != null)
 							{
-								StringBuilder sb = new StringBuilder();
+								final StringBuilder sb = new StringBuilder();
 								for (PunishmentType type : PunishmentType.values())
 								{
 									if (PunishmentManager.getInstance().hasPunishment(key, affect, type))
 									{
-										long expiration = PunishmentManager.getInstance().getPunishmentExpiration(key, affect, type);
+										final long expiration = PunishmentManager.getInstance().getPunishmentExpiration(key, affect, type);
 										String expire = "never";
 										
 										if (expiration > 0)
@@ -200,9 +200,9 @@ public class AdminPunishment implements IAdminCommandHandler
 			{
 				// Add new punishment
 				String key = st.hasMoreTokens() ? st.nextToken() : null;
-				String af = st.hasMoreTokens() ? st.nextToken() : null;
-				String t = st.hasMoreTokens() ? st.nextToken() : null;
-				String exp = st.hasMoreTokens() ? st.nextToken() : null;
+				final String af = st.hasMoreTokens() ? st.nextToken() : null;
+				final String t = st.hasMoreTokens() ? st.nextToken() : null;
+				final String exp = st.hasMoreTokens() ? st.nextToken() : null;
 				String reason = st.hasMoreTokens() ? st.nextToken() : null;
 				
 				// Let's grab the other part of the reason if there is..
@@ -221,7 +221,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					}
 				}
 				
-				String name = key;
+				final String name = key;
 				
 				if ((key == null) || (af == null) || (t == null) || (exp == null) || (reason == null))
 				{
@@ -257,7 +257,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				{
 					try
 					{
-						InetAddress addr = InetAddress.getByName(key);
+						final InetAddress addr = InetAddress.getByName(key);
 						if (addr.isLoopbackAddress())
 						{
 							throw new UnknownHostException("You cannot ban any local address!");
@@ -292,9 +292,9 @@ public class AdminPunishment implements IAdminCommandHandler
 			{
 				// Remove punishment.
 				String key = st.hasMoreTokens() ? st.nextToken() : null;
-				String af = st.hasMoreTokens() ? st.nextToken() : null;
-				String t = st.hasMoreTokens() ? st.nextToken() : null;
-				String name = key;
+				final String af = st.hasMoreTokens() ? st.nextToken() : null;
+				final String t = st.hasMoreTokens() ? st.nextToken() : null;
+				final String name = key;
 				
 				if ((key == null) || (af == null) || (t == null))
 				{
@@ -389,7 +389,7 @@ public class AdminPunishment implements IAdminCommandHandler
 	
 	private static final String findCharId(String key)
 	{
-		int charId = CharNameTable.getInstance().getIdByName(key);
+		final int charId = CharNameTable.getInstance().getIdByName(key);
 		if (charId > 0) // Yeah its a char name!
 		{
 			return Integer.toString(charId);

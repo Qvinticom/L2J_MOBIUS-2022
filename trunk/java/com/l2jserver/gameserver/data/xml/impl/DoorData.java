@@ -119,8 +119,8 @@ public class DoorData implements IXmlReader
 	private void makeDoor(StatsSet set)
 	{
 		insertCollisionData(set);
-		L2DoorTemplate template = new L2DoorTemplate(set);
-		L2DoorInstance door = new L2DoorInstance(template);
+		final L2DoorTemplate template = new L2DoorTemplate(set);
+		final L2DoorInstance door = new L2DoorInstance(template);
 		door.setCurrentHp(door.getMaxHp());
 		door.spawnMe(template.getX(), template.getY(), template.getZ());
 		putDoor(door, MapRegionManager.getInstance().getMapRegionLocId(door));
@@ -218,20 +218,20 @@ public class DoorData implements IXmlReader
 			boolean intersectFace = false;
 			for (int i = 0; i < 4; i++)
 			{
-				int j = (i + 1) < 4 ? i + 1 : 0;
+				final int j = (i + 1) < 4 ? i + 1 : 0;
 				// lower part of the multiplier fraction, if it is 0 we avoid an error and also know that the lines are parallel
-				int denominator = ((ty - y) * (doorInst.getX(i) - doorInst.getX(j))) - ((tx - x) * (doorInst.getY(i) - doorInst.getY(j)));
+				final int denominator = ((ty - y) * (doorInst.getX(i) - doorInst.getX(j))) - ((tx - x) * (doorInst.getY(i) - doorInst.getY(j)));
 				if (denominator == 0)
 				{
 					continue;
 				}
 				
 				// multipliers to the equations of the lines. If they are lower than 0 or bigger than 1, we know that segments don't intersect
-				float multiplier1 = (float) (((doorInst.getX(j) - doorInst.getX(i)) * (y - doorInst.getY(i))) - ((doorInst.getY(j) - doorInst.getY(i)) * (x - doorInst.getX(i)))) / denominator;
-				float multiplier2 = (float) (((tx - x) * (y - doorInst.getY(i))) - ((ty - y) * (x - doorInst.getX(i)))) / denominator;
+				final float multiplier1 = (float) (((doorInst.getX(j) - doorInst.getX(i)) * (y - doorInst.getY(i))) - ((doorInst.getY(j) - doorInst.getY(i)) * (x - doorInst.getX(i)))) / denominator;
+				final float multiplier2 = (float) (((tx - x) * (y - doorInst.getY(i))) - ((ty - y) * (x - doorInst.getX(i)))) / denominator;
 				if ((multiplier1 >= 0) && (multiplier1 <= 1) && (multiplier2 >= 0) && (multiplier2 <= 1))
 				{
-					int intersectZ = Math.round(z + (multiplier1 * (tz - z)));
+					final int intersectZ = Math.round(z + (multiplier1 * (tz - z)));
 					// now checking if the resulting point is between door's min and max z
 					if ((intersectZ > doorInst.getZMin()) && (intersectZ < doorInst.getZMax()))
 					{

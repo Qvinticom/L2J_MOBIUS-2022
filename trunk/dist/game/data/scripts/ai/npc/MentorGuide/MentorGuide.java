@@ -508,7 +508,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 			return;
 		}
 		
-		int amount = MENTEE_COINS.get(player.getLevel());
+		final int amount = MENTEE_COINS.get(player.getLevel());
 		if (amount > 0)
 		{
 			sendMail(mentor.getObjectId(), player, LEVEL_UP_TITLE, String.format(LEVEL_UP_BODY, player.getName(), player.getLevel()), MENTEE_MARK, amount);

@@ -64,8 +64,8 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		int[] _x = _p.xpoints;
-		int[] _y = _p.ypoints;
+		final int[] _x = _p.xpoints;
+		final int[] _y = _p.ypoints;
 		double test, shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
 		
 		for (int i = 1; i < _p.npoints; i++)
@@ -96,8 +96,8 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public void visualizeZone(int z)
 	{
-		int[] _x = _p.xpoints;
-		int[] _y = _p.ypoints;
+		final int[] _x = _p.xpoints;
+		final int[] _y = _p.ypoints;
 		
 		for (int i = 0; i < _p.npoints; i++)
 		{
@@ -107,13 +107,13 @@ public class ZoneNPoly extends L2ZoneForm
 			{
 				nextIndex = 0;
 			}
-			int vx = _x[nextIndex] - _x[i];
-			int vy = _y[nextIndex] - _y[i];
+			final int vx = _x[nextIndex] - _x[i];
+			final int vy = _y[nextIndex] - _y[i];
 			float lenght = (float) Math.sqrt((vx * vx) + (vy * vy));
 			lenght /= STEP;
 			for (int o = 1; o <= lenght; o++)
 			{
-				float k = o / lenght;
+				final float k = o / lenght;
 				dropDebugItem(Inventory.ADENA_ID, 1, (int) (_x[i] + (k * vx)), (int) (_y[i] + (k * vy)), z);
 			}
 		}
@@ -124,10 +124,10 @@ public class ZoneNPoly extends L2ZoneForm
 	{
 		int x, y;
 		
-		int _minX = _p.getBounds().x;
-		int _maxX = _p.getBounds().x + _p.getBounds().width;
-		int _minY = _p.getBounds().y;
-		int _maxY = _p.getBounds().y + _p.getBounds().height;
+		final int _minX = _p.getBounds().x;
+		final int _maxX = _p.getBounds().x + _p.getBounds().width;
+		final int _minY = _p.getBounds().y;
+		final int _maxY = _p.getBounds().y + _p.getBounds().height;
 		
 		x = Rnd.get(_minX, _maxX);
 		y = Rnd.get(_minY, _maxY);

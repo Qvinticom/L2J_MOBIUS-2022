@@ -64,7 +64,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final void openDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())
@@ -76,7 +76,7 @@ public class L2FortDoormenInstance extends L2DoormenInstance
 	@Override
 	protected final void closeDoors(L2PcInstance player, String command)
 	{
-		StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
+		final StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
 		st.nextToken();
 		
 		while (st.hasMoreTokens())

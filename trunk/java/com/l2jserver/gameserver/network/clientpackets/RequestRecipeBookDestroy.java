@@ -59,7 +59,7 @@ public final class RequestRecipeBookDestroy extends L2GameClientPacket
 		}
 		activeChar.unregisterRecipeList(_recipeID);
 		
-		RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), activeChar.getMaxMp());
+		final RecipeBookItemList response = new RecipeBookItemList(rp.isDwarvenRecipe(), activeChar.getMaxMp());
 		if (rp.isDwarvenRecipe())
 		{
 			response.addRecipes(activeChar.getDwarvenRecipeBook());

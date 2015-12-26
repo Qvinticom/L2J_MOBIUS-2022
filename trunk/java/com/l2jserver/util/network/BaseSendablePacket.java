@@ -58,7 +58,7 @@ public abstract class BaseSendablePacket
 	
 	protected void writeF(double org)
 	{
-		long value = Double.doubleToRawLongBits(org);
+		final long value = Double.doubleToRawLongBits(org);
 		_bao.write((int) (value & 0xff));
 		_bao.write((int) ((value >> 8) & 0xff));
 		_bao.write((int) ((value >> 16) & 0xff));
@@ -123,7 +123,7 @@ public abstract class BaseSendablePacket
 		
 		writeD(0x00); // reserve for checksum
 		
-		int padding = _bao.size() % 8;
+		final int padding = _bao.size() % 8;
 		if (padding != 0)
 		{
 			for (int i = padding; i < 8; i++)

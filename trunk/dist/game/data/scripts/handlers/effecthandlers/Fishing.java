@@ -101,7 +101,7 @@ public final class Fishing extends AbstractEffect
 		}
 		
 		// check for equiped fishing rod
-		L2Weapon equipedWeapon = player.getActiveWeaponItem();
+		final L2Weapon equipedWeapon = player.getActiveWeaponItem();
 		if (((equipedWeapon == null) || (equipedWeapon.getItemType() != WeaponType.FISHINGROD)))
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
@@ -109,7 +109,7 @@ public final class Fishing extends AbstractEffect
 		}
 		
 		// check for equiped lure
-		L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
+		final L2ItemInstance equipedLeftHand = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		if ((equipedLeftHand == null) || (equipedLeftHand.getItemType() != EtcItemType.LURE))
 		{
 			player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
@@ -152,7 +152,7 @@ public final class Fishing extends AbstractEffect
 		// search for fishing and water zone
 		L2FishingZone fishingZone = null;
 		L2WaterZone waterZone = null;
-		for (final L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 		{
 			if (zone instanceof L2FishingZone)
 			{
@@ -180,7 +180,7 @@ public final class Fishing extends AbstractEffect
 				// search for fishing and water zone again
 				fishingZone = null;
 				waterZone = null;
-				for (final L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+				for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
 				{
 					if (zone instanceof L2FishingZone)
 					{
@@ -243,7 +243,7 @@ public final class Fishing extends AbstractEffect
 		}
 		
 		// always use water zone, fishing zone high z is high in the air...
-		int baitZ = waterZone.getWaterZ();
+		final int baitZ = waterZone.getWaterZ();
 		
 		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
 		{

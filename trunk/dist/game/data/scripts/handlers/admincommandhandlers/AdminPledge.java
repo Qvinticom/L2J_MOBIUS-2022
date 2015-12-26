@@ -111,7 +111,7 @@ public class AdminPledge implements IAdminCommandHandler
 						
 						if (!targetPlayer.isClanLeader())
 						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 							sm.addCharName(targetPlayer);
 							activeChar.sendPacket(sm);
 							showMainPage(activeChar);
@@ -154,7 +154,7 @@ public class AdminPledge implements IAdminCommandHandler
 							break;
 						}
 						
-						int level = Integer.parseInt(param);
+						final int level = Integer.parseInt(param);
 						if ((level >= 0) && (level < 12))
 						{
 							clan.changeLevel(level);

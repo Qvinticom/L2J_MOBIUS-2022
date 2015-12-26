@@ -57,13 +57,13 @@ public final class RequestPartyMatchDetail extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = getClient().getActiveChar();
 		if (_activeChar == null)
 		{
 			return;
 		}
 		
-		PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 		if (_room == null)
 		{
 			return;
@@ -88,7 +88,7 @@ public final class RequestPartyMatchDetail extends L2GameClientPacket
 				
 				_member.sendPacket(new ExManagePartyRoomMember(_activeChar, _room, 0));
 				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 				sm.addCharName(_activeChar);
 				_member.sendPacket(sm);
 			}

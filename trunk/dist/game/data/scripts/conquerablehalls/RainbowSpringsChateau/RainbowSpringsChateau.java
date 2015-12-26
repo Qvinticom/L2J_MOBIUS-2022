@@ -79,7 +79,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			int spotLeft = 4;
 			if (_rainbow.getOwnerId() > 0)
 			{
-				L2Clan owner = ClanTable.getInstance().getClan(_rainbow.getOwnerId());
+				final L2Clan owner = ClanTable.getInstance().getClan(_rainbow.getOwnerId());
 				if (owner != null)
 				{
 					_rainbow.free();
@@ -94,7 +94,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 					L2Clan clan = null;
 					for (int clanId : _warDecreesCount.keySet())
 					{
-						L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
+						final L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
 						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
 						{
 							_warDecreesCount.remove(clanId);
@@ -111,7 +111,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 					if ((clan != null) && (_acceptedClans.size() < 4))
 					{
 						_acceptedClans.add(clan);
-						L2PcInstance leader = clan.getLeader().getPlayerInstance();
+						final L2PcInstance leader = clan.getLeader().getPlayerInstance();
 						if (leader != null)
 						{
 							leader.sendMessage("Your clan has been accepted to join the RainBow Srpings Chateau siege!");
@@ -287,7 +287,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		_rainbow = CHSiegeManager.getInstance().getSiegableHall(RAINBOW_SPRINGS);
 		if (_rainbow != null)
 		{
-			long delay = _rainbow.getNextSiegeTime();
+			final long delay = _rainbow.getNextSiegeTime();
 			if (delay > -1)
 			{
 				setRegistrationEndString(delay - 3600000);
@@ -337,10 +337,10 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				}
 				else
 				{
-					L2Clan clan = player.getClan();
+					final L2Clan clan = player.getClan();
 					if (_acceptedClans.contains(clan))
 					{
-						int index = _acceptedClans.indexOf(clan);
+						final int index = _acceptedClans.indexOf(clan);
 						if (npcId == YETIS[index])
 						{
 							html = "yeti_main.htm";
@@ -393,7 +393,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							}
 							else
 							{
-								long count = warDecrees.getCount();
+								final long count = warDecrees.getCount();
 								_warDecreesCount.put(clan.getId(), count);
 								player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
 								addAttacker(clan.getId(), count);
@@ -524,7 +524,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				return null;
 			}
 			
-			String[] split = event.split("_ ");
+			final String[] split = event.split("_ ");
 			if (split.length < 2)
 			{
 				return null;
@@ -539,7 +539,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			
 			if (_usedTextPassages.containsKey(passage))
 			{
-				ArrayList<L2Clan> list = _usedTextPassages.get(passage);
+				final ArrayList<L2Clan> list = _usedTextPassages.get(passage);
 				
 				if (list.contains(clan))
 				{
@@ -635,14 +635,14 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			return null;
 		}
 		
-		L2Object target = player.getTarget();
+		final L2Object target = player.getTarget();
 		
 		if ((target == null) || !(target instanceof L2Npc))
 		{
 			return null;
 		}
 		
-		int yeti = target.getId();
+		final int yeti = target.getId();
 		if (!isYetiTarget(yeti))
 		{
 			return null;
@@ -744,12 +744,12 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void moveGourds()
 	{
-		L2Spawn[] tempArray = _gourds;
-		int iterator = _acceptedClans.size();
+		final L2Spawn[] tempArray = _gourds;
+		final int iterator = _acceptedClans.size();
 		for (int i = 0; i < iterator; i++)
 		{
-			L2Spawn oldSpawn = _gourds[(iterator - 1) - i];
-			L2Spawn curSpawn = tempArray[i];
+			final L2Spawn oldSpawn = _gourds[(iterator - 1) - i];
+			final L2Spawn curSpawn = tempArray[i];
 			
 			_gourds[(iterator - 1) - i] = curSpawn;
 			
@@ -759,14 +759,14 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void reduceGourdHp(int index, L2PcInstance player)
 	{
-		L2Spawn gourd = _gourds[index];
+		final L2Spawn gourd = _gourds[index];
 		gourd.getLastSpawn().reduceCurrentHp(1000, player, null);
 	}
 	
 	private static void increaseGourdHp(int index)
 	{
-		L2Spawn gourd = _gourds[index];
-		L2Npc gourdNpc = gourd.getLastSpawn();
+		final L2Spawn gourd = _gourds[index];
+		final L2Npc gourdNpc = gourd.getLastSpawn();
 		gourdNpc.setCurrentHp(gourdNpc.getCurrentHp() + 1000);
 	}
 	
@@ -795,15 +795,15 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void shoutRandomText(L2Npc npc)
 	{
-		int length = _textPassages.length;
+		final int length = _textPassages.length;
 		
 		if (_usedTextPassages.size() >= length)
 		{
 			return;
 		}
 		
-		int randomPos = getRandom(length);
-		String message = _textPassages[randomPos];
+		final int randomPos = getRandom(length);
+		final String message = _textPassages[randomPos];
 		
 		if (_usedTextPassages.containsKey(message))
 		{
@@ -883,13 +883,13 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	protected static void setRegistrationEndString(long time)
 	{
-		Calendar c = Calendar.getInstance();
+		final Calendar c = Calendar.getInstance();
 		c.setTime(new Date(time));
-		int year = c.get(Calendar.YEAR);
-		int month = c.get(Calendar.MONTH) + 1;
-		int day = c.get(Calendar.DAY_OF_MONTH);
-		int hour = c.get(Calendar.HOUR);
-		int mins = c.get(Calendar.MINUTE);
+		final int year = c.get(Calendar.YEAR);
+		final int month = c.get(Calendar.MONTH) + 1;
+		final int day = c.get(Calendar.DAY_OF_MONTH);
+		final int hour = c.get(Calendar.HOUR);
+		final int mins = c.get(Calendar.MINUTE);
 		
 		_registrationEnds = year + "-" + month + "-" + day + " " + hour + (mins < 10 ? ":0" : ":") + mins;
 	}

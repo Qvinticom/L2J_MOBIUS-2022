@@ -35,7 +35,7 @@ public final class AllyLeave extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -50,7 +50,7 @@ public final class AllyLeave extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_APPLY_FOR_WITHDRAWAL_FROM_THE_ALLIANCE);
 			return;
 		}
-		L2Clan clan = player.getClan();
+		final L2Clan clan = player.getClan();
 		if (clan.getAllyId() == 0)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
@@ -62,7 +62,7 @@ public final class AllyLeave extends L2GameClientPacket
 			return;
 		}
 		
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		clan.setAllyId(0);
 		clan.setAllyName(null);
 		clan.changeAllyCrest(0, true);

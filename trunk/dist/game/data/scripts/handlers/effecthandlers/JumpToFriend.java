@@ -60,9 +60,9 @@ public final class JumpToFriend extends AbstractEffect
 		final int curY = info.getEffected().getY();
 		
 		// Calculate distance between effector and effected current position
-		double dx = info.getEffector().getX() - curX;
-		double dy = info.getEffector().getY() - curY;
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final double dx = info.getEffector().getX() - curX;
+		final double dy = info.getEffector().getY() - curY;
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
 			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());

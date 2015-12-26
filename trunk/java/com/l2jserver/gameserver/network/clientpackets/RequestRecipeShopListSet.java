@@ -51,7 +51,7 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int count = readD();
+		final int count = readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -60,8 +60,8 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		_items = new L2ManufactureItem[count];
 		for (int i = 0; i < count; i++)
 		{
-			int id = readD();
-			long cost = readQ();
+			final int id = readD();
+			final long cost = readQ();
 			if (cost < 0)
 			{
 				_items = null;
@@ -74,7 +74,7 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -101,8 +101,8 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 			return;
 		}
 		
-		List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		player.getManufactureItems().clear();
 		

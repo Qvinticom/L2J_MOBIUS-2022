@@ -114,7 +114,7 @@ public final class MemoryJavaFileManager extends EclipseFileManager
 				public void close() throws IOException
 				{
 					out.close();
-					ByteArrayOutputStream bos = (ByteArrayOutputStream) out;
+					final ByteArrayOutputStream bos = (ByteArrayOutputStream) out;
 					classBytes.put(name, bos.toByteArray());
 				}
 			};
@@ -138,7 +138,7 @@ public final class MemoryJavaFileManager extends EclipseFileManager
 	
 	static URI toURI(String name)
 	{
-		File file = new File(name);
+		final File file = new File(name);
 		if (file.exists())
 		{
 			return file.toURI();

@@ -86,7 +86,7 @@ public final class StaticObjectData implements IXmlReader
 	 */
 	private void addObject(StatsSet set)
 	{
-		L2StaticObjectInstance obj = new L2StaticObjectInstance(new L2CharTemplate(new StatsSet()), set.getInt("id"));
+		final L2StaticObjectInstance obj = new L2StaticObjectInstance(new L2CharTemplate(new StatsSet()), set.getInt("id"));
 		obj.setType(set.getInt("type", 0));
 		obj.setName(set.getString("name"));
 		obj.setMap(set.getString("texture", "none"), set.getInt("map_x", 0), set.getInt("map_y", 0));

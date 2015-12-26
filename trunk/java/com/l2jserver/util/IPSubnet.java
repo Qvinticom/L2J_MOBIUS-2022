@@ -29,7 +29,7 @@ public class IPSubnet
 	
 	public IPSubnet(String input) throws UnknownHostException, NumberFormatException, ArrayIndexOutOfBoundsException
 	{
-		int idx = input.indexOf("/");
+		final int idx = input.indexOf("/");
 		if (idx > 0)
 		{
 			_addr = InetAddress.getByName(input.substring(0, idx)).getAddress();

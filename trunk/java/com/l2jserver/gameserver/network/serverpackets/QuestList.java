@@ -88,14 +88,14 @@ public class QuestList extends L2GameServerPacket
 		for (Quest q : _activeQuests)
 		{
 			writeD(q.getId());
-			QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = _activeChar.getQuestState(q.getName());
 			if (qs == null)
 			{
 				writeD(0);
 				continue;
 			}
 			
-			int states = qs.getInt("__compltdStateFlags");
+			final int states = qs.getInt("__compltdStateFlags");
 			if (states != 0)
 			{
 				writeD(states);
@@ -114,7 +114,7 @@ public class QuestList extends L2GameServerPacket
 			{
 				questId -= 10000;
 			}
-			int pos = questId / 8;
+			final int pos = questId / 8;
 			int add = questId - (pos * 8);
 			switch (add)
 			{

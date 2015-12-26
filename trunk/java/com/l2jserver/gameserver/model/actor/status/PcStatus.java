@@ -177,7 +177,7 @@ public class PcStatus extends PlayableStatus
 				else
 				{
 					getActiveChar().reduceCurrentMp(mpDam);
-					SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
+					final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
 					smsg.addInt(mpDam);
 					getActiveChar().sendPacket(smsg);
 					return;
@@ -346,8 +346,8 @@ public class PcStatus extends PlayableStatus
 	public final void setCurrentCp(double newCp, boolean broadcastPacket)
 	{
 		// Get the Max CP of the L2Character
-		int currentCp = (int) getCurrentCp();
-		int maxCp = getActiveChar().getStat().getMaxCp();
+		final int currentCp = (int) getCurrentCp();
+		final int maxCp = getActiveChar().getStat().getMaxCp();
 		
 		synchronized (this)
 		{

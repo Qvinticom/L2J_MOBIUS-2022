@@ -158,12 +158,12 @@ public final class UseItem extends L2GameClientPacket
 		
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getReputation() < 0))
 		{
-			SkillHolder[] skills = item.getItem().getSkills();
+			final SkillHolder[] skills = item.getItem().getSkills();
 			if (skills != null)
 			{
 				for (SkillHolder sHolder : skills)
 				{
-					Skill skill = sHolder.getSkill();
+					final Skill skill = sHolder.getSkill();
 					if ((skill != null) && skill.hasEffectType(L2EffectType.TELEPORT))
 					{
 						return;

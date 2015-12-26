@@ -94,7 +94,7 @@ public final class Util
 	
 	public static final double convertHeadingToDegree(int clientHeading)
 	{
-		double degree = clientHeading / 182.044444444;
+		final double degree = clientHeading / 182.044444444;
 		return degree;
 	}
 	
@@ -197,8 +197,8 @@ public final class Util
 			return str;
 		}
 		
-		char[] charArray = str.toCharArray();
-		StringBuilder result = new StringBuilder();
+		final char[] charArray = str.toCharArray();
+		final StringBuilder result = new StringBuilder();
 		
 		// Capitalize the first letter in the given string!
 		charArray[0] = Character.toUpperCase(charArray[0]);
@@ -248,13 +248,13 @@ public final class Util
 			rad += ((L2Character) obj2).getTemplate().getCollisionRadius();
 		}
 		
-		double dx = obj1.getX() - obj2.getX();
-		double dy = obj1.getY() - obj2.getY();
+		final double dx = obj1.getX() - obj2.getX();
+		final double dy = obj1.getY() - obj2.getY();
 		double d = (dx * dx) + (dy * dy);
 		
 		if (includeZAxis)
 		{
-			double dz = obj1.getZ() - obj2.getZ();
+			final double dz = obj1.getZ() - obj2.getZ();
 			d += (dz * dz);
 		}
 		return d <= ((range * range) + (2 * range * rad) + (rad * rad));
@@ -279,12 +279,12 @@ public final class Util
 			return true; // not limited
 		}
 		
-		int dx = obj1.getX() - obj2.getX();
-		int dy = obj1.getY() - obj2.getY();
+		final int dx = obj1.getX() - obj2.getX();
+		final int dy = obj1.getY() - obj2.getY();
 		
 		if (includeZAxis)
 		{
-			int dz = obj1.getZ() - obj2.getZ();
+			final int dz = obj1.getZ() - obj2.getZ();
 			return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
 		}
 		return ((dx * dx) + (dy * dy)) <= (radius * radius);
@@ -346,7 +346,7 @@ public final class Util
 			return Math.round(number);
 		}
 		
-		float exponent = (float) Math.pow(10, numPlaces);
+		final float exponent = (float) Math.pow(10, numPlaces);
 		return Math.round(number * exponent) / exponent;
 	}
 	
@@ -468,7 +468,7 @@ public final class Util
 	
 	public static File[] getDatapackFiles(String dirname, String extention)
 	{
-		File dir = new File(Config.DATAPACK_ROOT, "/" + dirname);
+		final File dir = new File(Config.DATAPACK_ROOT, "/" + dirname);
 		if (!dir.exists())
 		{
 			return null;
@@ -478,13 +478,13 @@ public final class Util
 	
 	public static String getDateString(Date date)
 	{
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		return dateFormat.format(date.getTime());
 	}
 	
 	private static final void buildHtmlBypassCache(L2PcInstance player, HtmlActionScope scope, String html)
 	{
-		String htmlLower = html.toLowerCase(Locale.ENGLISH);
+		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int bypassEnd = 0;
 		int bypassStart = htmlLower.indexOf("=\"bypass ", bypassEnd);
 		int bypassStartEnd;
@@ -497,7 +497,7 @@ public final class Util
 				break;
 			}
 			
-			int hParamPos = htmlLower.indexOf("-h ", bypassStartEnd);
+			final int hParamPos = htmlLower.indexOf("-h ", bypassStartEnd);
 			String bypass;
 			if ((hParamPos != -1) && (hParamPos < bypassEnd))
 			{
@@ -508,7 +508,7 @@ public final class Util
 				bypass = html.substring(bypassStartEnd, bypassEnd).trim();
 			}
 			
-			int firstParameterStart = bypass.indexOf(AbstractHtmlPacket.VAR_PARAM_START_CHAR);
+			final int firstParameterStart = bypass.indexOf(AbstractHtmlPacket.VAR_PARAM_START_CHAR);
 			if (firstParameterStart != -1)
 			{
 				bypass = bypass.substring(0, firstParameterStart + 1);
@@ -525,7 +525,7 @@ public final class Util
 	
 	private static final void buildHtmlLinkCache(L2PcInstance player, HtmlActionScope scope, String html)
 	{
-		String htmlLower = html.toLowerCase(Locale.ENGLISH);
+		final String htmlLower = html.toLowerCase(Locale.ENGLISH);
 		int linkEnd = 0;
 		int linkStart = htmlLower.indexOf("=\"link ", linkEnd);
 		int linkStartEnd;
@@ -538,7 +538,7 @@ public final class Util
 				break;
 			}
 			
-			String htmlLink = html.substring(linkStartEnd, linkEnd).trim();
+			final String htmlLink = html.substring(linkStartEnd, linkEnd).trim();
 			if (htmlLink.isEmpty())
 			{
 				LOGGER.warning("Html link path is empty!");
@@ -745,7 +745,7 @@ public final class Util
 	
 	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
 	{
-		L2Object target = obj.getKnownList().getKnownObjects().get(targetObjId);
+		final L2Object target = obj.getKnownList().getKnownObjects().get(targetObjId);
 		if (target == null)
 		{
 			return false;
@@ -1009,7 +1009,7 @@ public final class Util
 	{
 		try
 		{
-			String value = st.nextToken().trim();
+			final String value = st.nextToken().trim();
 			return Integer.parseInt(value);
 		}
 		catch (Exception e)

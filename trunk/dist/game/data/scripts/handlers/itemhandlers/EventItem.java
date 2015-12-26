@@ -64,7 +64,7 @@ public class EventItem implements IItemHandler
 		final int blockCheckerArena = castor.getBlockCheckerArena();
 		if (blockCheckerArena == -1)
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			msg.addItemName(item);
 			castor.sendPacket(msg);
 			return false;
@@ -87,7 +87,7 @@ public class EventItem implements IItemHandler
 		if (holder != null)
 		{
 			final int team = holder.getPlayerTeam(castor);
-			for (final L2PcInstance pc : block.getKnownList().getKnownPlayersInRadius(sk.getEffectRange()))
+			for (L2PcInstance pc : block.getKnownList().getKnownPlayersInRadius(sk.getEffectRange()))
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))

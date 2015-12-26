@@ -237,7 +237,7 @@ public final class L2WorldRegion
 				if (o instanceof L2Attackable)
 				{
 					c++;
-					L2Attackable mob = (L2Attackable) o;
+					final L2Attackable mob = (L2Attackable) o;
 					
 					// Set target to null and cancel Attack or Cast
 					mob.setTarget(null);
@@ -482,9 +482,9 @@ public final class L2WorldRegion
 		{
 			if (obj instanceof L2Npc)
 			{
-				L2Npc target = (L2Npc) obj;
+				final L2Npc target = (L2Npc) obj;
 				target.deleteMe();
-				L2Spawn spawn = target.getSpawn();
+				final L2Spawn spawn = target.getSpawn();
 				if (spawn != null)
 				{
 					spawn.stopRespawn();

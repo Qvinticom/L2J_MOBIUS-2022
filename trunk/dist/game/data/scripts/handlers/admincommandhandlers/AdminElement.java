@@ -82,10 +82,10 @@ public class AdminElement implements IAdminCommandHandler
 		{
 			try
 			{
-				String[] args = command.split(" ");
+				final String[] args = command.split(" ");
 				
-				byte element = Elementals.getElementId(args[1]);
-				int value = Integer.parseInt(args[2]);
+				final byte element = Elementals.getElementId(args[1]);
+				final int value = Integer.parseInt(args[2]);
 				if ((element < -1) || (element > 5) || (value < 0) || (value > 450))
 				{
 					activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
@@ -132,7 +132,7 @@ public class AdminElement implements IAdminCommandHandler
 		L2ItemInstance itemInstance = null;
 		
 		// only attempt to enchant if there is a weapon equipped
-		L2ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		final L2ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
 		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
@@ -141,7 +141,7 @@ public class AdminElement implements IAdminCommandHandler
 		if (itemInstance != null)
 		{
 			String old, current;
-			Elementals element = itemInstance.getElemental(type);
+			final Elementals element = itemInstance.getElemental(type);
 			if (element == null)
 			{
 				old = "None";
@@ -173,7 +173,7 @@ public class AdminElement implements IAdminCommandHandler
 			}
 			
 			// send packets
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			player.sendPacket(iu);
 			

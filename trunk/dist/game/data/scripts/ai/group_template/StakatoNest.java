@@ -99,7 +99,7 @@ public final class StakatoNest extends AbstractNpcAI
 			
 			if (_follower != null)
 			{
-				double _hp = _follower.getCurrentHp();
+				final double _hp = _follower.getCurrentHp();
 				
 				if (_hp > (_follower.getMaxHp() * 0.3))
 				{
@@ -129,7 +129,7 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						L2Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
+						final L2Npc spawned = addSpawn(STAKATO_CAPTAIN, monster, true);
 						addAttackPlayerDesire(spawned, killer);
 					}
 				}
@@ -148,7 +148,7 @@ public final class StakatoNest extends AbstractNpcAI
 					Broadcast.toSelfAndKnownPlayers(npc, new MagicSkillUse(npc, 2046, 1, 1000, 0));
 					for (int i = 0; i < 3; i++)
 					{
-						L2Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
+						final L2Npc spawned = addSpawn(STAKATO_GUARD, monster, true);
 						addAttackPlayerDesire(spawned, killer);
 					}
 				}
@@ -163,7 +163,7 @@ public final class StakatoNest extends AbstractNpcAI
 			case STAKATO_CHIEF:
 				if (killer.isInParty())
 				{
-					List<L2PcInstance> party = killer.getParty().getMembers();
+					final List<L2PcInstance> party = killer.getParty().getMembers();
 					for (L2PcInstance member : party)
 					{
 						giveCocoon(member, npc);

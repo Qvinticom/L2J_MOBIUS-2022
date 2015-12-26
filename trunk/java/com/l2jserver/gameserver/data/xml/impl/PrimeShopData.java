@@ -71,8 +71,8 @@ public class PrimeShopData implements IXmlReader
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				NamedNodeMap at = n.getAttributes();
-				Node attribute = at.getNamedItem("enabled");
+				final NamedNodeMap at = n.getAttributes();
+				final Node attribute = at.getNamedItem("enabled");
 				if ((attribute != null) && Boolean.parseBoolean(attribute.getNodeValue()))
 				{
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
@@ -81,14 +81,14 @@ public class PrimeShopData implements IXmlReader
 						{
 							NamedNodeMap attrs = d.getAttributes();
 							Node att;
-							StatsSet set = new StatsSet();
+							final StatsSet set = new StatsSet();
 							for (int i = 0; i < attrs.getLength(); i++)
 							{
 								att = attrs.item(i);
 								set.set(att.getNodeName(), att.getNodeValue());
 							}
 							
-							List<PrimeShopItem> items = new ArrayList<>();
+							final List<PrimeShopItem> items = new ArrayList<>();
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 							{
 								if ("item".equalsIgnoreCase(b.getNodeName()))

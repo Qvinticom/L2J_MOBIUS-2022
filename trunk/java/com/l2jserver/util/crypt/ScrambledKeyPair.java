@@ -44,14 +44,14 @@ public class ScrambledKeyPair
 		
 		if ((scrambledMod.length == 0x81) && (scrambledMod[0] == 0x00))
 		{
-			byte[] temp = new byte[0x80];
+			final byte[] temp = new byte[0x80];
 			System.arraycopy(scrambledMod, 1, temp, 0, 0x80);
 			scrambledMod = temp;
 		}
 		// step 1 : 0x4d-0x50 <-> 0x00-0x04
 		for (int i = 0; i < 4; i++)
 		{
-			byte temp = scrambledMod[0x00 + i];
+			final byte temp = scrambledMod[0x00 + i];
 			scrambledMod[0x00 + i] = scrambledMod[0x4d + i];
 			scrambledMod[0x4d + i] = temp;
 		}

@@ -51,7 +51,7 @@ public abstract class L2ZoneForm
 	
 	protected final void dropDebugItem(int itemId, int num, int x, int y, int z)
 	{
-		L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 		item.setCount(num);
 		item.spawnMe(x, y, z + 5);
 		ZoneManager.getInstance().getDebugItems().add(item);

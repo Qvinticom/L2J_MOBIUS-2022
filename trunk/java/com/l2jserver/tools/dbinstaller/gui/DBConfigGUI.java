@@ -63,9 +63,9 @@ public class DBConfigGUI extends JFrame
 		_db = db;
 		_dir = dir;
 		
-		int width = 260;
-		int height = 220;
-		Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
+		final int width = 260;
+		final int height = 220;
+		final Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds((resolution.width - width) / 2, (resolution.height - height) / 2, width, height);
@@ -74,7 +74,7 @@ public class DBConfigGUI extends JFrame
 		_prop = Preferences.userRoot();
 		
 		// Host
-		JLabel labelDbHost = new JLabel("Host: ", SwingConstants.LEFT);
+		final JLabel labelDbHost = new JLabel("Host: ", SwingConstants.LEFT);
 		add(labelDbHost);
 		_dbHost = new JTextField(15);
 		_dbHost.setText(_prop.get("dbHost_" + db, "localhost"));
@@ -82,7 +82,7 @@ public class DBConfigGUI extends JFrame
 		add(_dbHost);
 		
 		// Port
-		JLabel labelDbPort = new JLabel("Port: ", SwingConstants.LEFT);
+		final JLabel labelDbPort = new JLabel("Port: ", SwingConstants.LEFT);
 		add(labelDbPort);
 		_dbPort = new JTextField(15);
 		_dbPort.setText(_prop.get("dbPort_" + db, "3306"));
@@ -90,7 +90,7 @@ public class DBConfigGUI extends JFrame
 		add(_dbPort);
 		
 		// Username
-		JLabel labelDbUser = new JLabel("Username: ", SwingConstants.LEFT);
+		final JLabel labelDbUser = new JLabel("Username: ", SwingConstants.LEFT);
 		add(labelDbUser);
 		_dbUser = new JTextField(15);
 		_dbUser.setText(_prop.get("dbUser_" + db, "root"));
@@ -98,7 +98,7 @@ public class DBConfigGUI extends JFrame
 		add(_dbUser);
 		
 		// Password
-		JLabel labelDbPass = new JLabel("Password: ", SwingConstants.LEFT);
+		final JLabel labelDbPass = new JLabel("Password: ", SwingConstants.LEFT);
 		add(labelDbPass);
 		_dbPass = new JPasswordField(15);
 		_dbPass.setText(_prop.get("dbPass_" + db, ""));
@@ -106,23 +106,23 @@ public class DBConfigGUI extends JFrame
 		add(_dbPass);
 		
 		// Database
-		JLabel labelDbDbse = new JLabel("Database: ", SwingConstants.LEFT);
+		final JLabel labelDbDbse = new JLabel("Database: ", SwingConstants.LEFT);
 		add(labelDbDbse);
 		_dbDbse = new JTextField(15);
 		_dbDbse.setText(_prop.get("dbDbse_" + db, db));
 		labelDbDbse.setLabelFor(_dbDbse);
 		add(_dbDbse);
 		
-		ActionListener cancelListener = e -> System.exit(0);
+		final ActionListener cancelListener = e -> System.exit(0);
 		
 		// Cancel
-		JButton btnCancel = new JButton("Cancel");
+		final JButton btnCancel = new JButton("Cancel");
 		btnCancel.addActionListener(cancelListener);
 		add(btnCancel);
 		
-		ActionListener connectListener = e ->
+		final ActionListener connectListener = e ->
 		{
-			MySqlConnect connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
+			final MySqlConnect connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
 			
 			if (connector.getConnection() != null)
 			{
@@ -131,17 +131,17 @@ public class DBConfigGUI extends JFrame
 				_prop.put("dbUser_" + _db, _dbUser.getText());
 				_prop.put("dbDbse_" + _db, _dbDbse.getText());
 				
-				DBInstallerGUI dbi = new DBInstallerGUI(connector.getConnection());
+				final DBInstallerGUI dbi = new DBInstallerGUI(connector.getConnection());
 				setVisible(false);
 				
 				if (_dir.equals("sql/login/"))
 				{
-					Object[] options =
+					final Object[] options =
 					{
 						"Install Login",
 						"Exit"
 					};
-					int n = JOptionPane.showOptionDialog(null, "Install login server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+					final int n = JOptionPane.showOptionDialog(null, "Install login server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
 					
 					if ((n == 1) || (n == -1))
 					{
@@ -150,12 +150,12 @@ public class DBConfigGUI extends JFrame
 				}
 				else
 				{
-					Object[] options =
+					final Object[] options =
 					{
 						"Install Server",
 						"Exit"
 					};
-					int n = JOptionPane.showOptionDialog(null, "Install game server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+					final int n = JOptionPane.showOptionDialog(null, "Install game server database?", "Select an option", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
 					
 					if ((n == 1) || (n == -1))
 					{
@@ -164,14 +164,14 @@ public class DBConfigGUI extends JFrame
 				}
 				dbi.setVisible(true);
 				
-				RunTasks task = new RunTasks(dbi, _db, _dir);
+				final RunTasks task = new RunTasks(dbi, _db, _dir);
 				task.setPriority(Thread.MAX_PRIORITY);
 				task.start();
 			}
 		};
 		
 		// Connect
-		JButton btnConnect = new JButton("Connect");
+		final JButton btnConnect = new JButton("Connect");
 		btnConnect.addActionListener(connectListener);
 		add(btnConnect);
 		

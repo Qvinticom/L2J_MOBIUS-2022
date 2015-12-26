@@ -160,7 +160,7 @@ public class Parade extends AbstractNpcAI
 	
 	private long timeLeftMilli(int hh, int mm, int ss)
 	{
-		int now = (GameTimeController.getInstance().getGameTicks() * 60) / 100;
+		final int now = (GameTimeController.getInstance().getGameTicks() * 60) / 100;
 		int dd = ((hh * 3600) + (mm * 60) + ss) - (now % 86400);
 		if (dd < 0)
 		{
@@ -194,16 +194,16 @@ public class Parade extends AbstractNpcAI
 					spawnTask.cancel(false);
 					break;
 				}
-				int npcId = ACTORS[npcIndex++];
+				final int npcId = ACTORS[npcIndex++];
 				if (npcId == 0)
 				{
 					continue;
 				}
 				for (int route = 0; route < 5; ++route)
 				{
-					int[] start = START[route][i];
-					int[] goal = GOAL[route][i];
-					L2Npc actor = addSpawn(npcId, start[0], start[1], start[2], start[3], false, 0);
+					final int[] start = START[route][i];
+					final int[] goal = GOAL[route][i];
+					final L2Npc actor = addSpawn(npcId, start[0], start[1], start[2], start[3], false, 0);
 					actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(goal[0], goal[1], goal[2], goal[3]));
 					spawns.add(actor);
 				}

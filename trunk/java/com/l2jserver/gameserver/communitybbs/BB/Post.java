@@ -155,7 +155,7 @@ public class Post
 	 */
 	public void updatetxt(int i)
 	{
-		CPost cp = getCPost(i);
+		final CPost cp = getCPost(i);
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?"))
 		{

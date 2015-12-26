@@ -52,7 +52,7 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 			return;
 		}
 		
-		SecondaryPasswordAuth secondAuth = getClient().getSecondaryAuth();
+		final SecondaryPasswordAuth secondAuth = getClient().getSecondaryAuth();
 		boolean success = false;
 		
 		if ((_changePass == 0) && !secondAuth.passwordExist())

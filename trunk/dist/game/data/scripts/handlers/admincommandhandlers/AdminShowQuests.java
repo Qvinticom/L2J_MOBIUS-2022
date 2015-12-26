@@ -61,10 +61,10 @@ public class AdminShowQuests implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		String[] cmdParams = command.split(" ");
+		final String[] cmdParams = command.split(" ");
 		L2PcInstance target = null;
 		L2Object targetObject = null;
-		String[] val = new String[4];
+		final String[] val = new String[4];
 		val[0] = null;
 		
 		if (cmdParams.length > 1)
@@ -156,9 +156,9 @@ public class AdminShowQuests implements IAdminCommandHandler
 	
 	private static void showFirstQuestMenu(L2PcInstance target, L2PcInstance actor)
 	{
-		StringBuilder replyMSG = new StringBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
+		final StringBuilder replyMSG = new StringBuilder("<html><body><table width=270><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center>Player: " + target.getName() + "</center></td><td width=45><button value=\"Back\" action=\"bypass -h admin_admin6\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		int ID = target.getObjectId();
+		final int ID = target.getObjectId();
 		
 		replyMSG.append("Quest Menu for <font color=\"LEVEL\">" + target.getName() + "</font> (ID:" + ID + ")<br><center>");
 		replyMSG.append("<table width=250><tr><td><button value=\"CREATED\" action=\"bypass -h admin_charquestmenu " + target.getName() + " 0\" width=85 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
@@ -179,9 +179,9 @@ public class AdminShowQuests implements IAdminCommandHandler
 		{
 			ResultSet rs;
 			PreparedStatement req;
-			int ID = target.getObjectId();
+			final int ID = target.getObjectId();
 			
-			StringBuilder replyMSG = new StringBuilder("<html><body>");
+			final StringBuilder replyMSG = new StringBuilder("<html><body>");
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 			
 			switch (val[0])
@@ -201,8 +201,8 @@ public class AdminShowQuests implements IAdminCommandHandler
 				}
 				case "name":
 				{
-					QuestState qs = target.getQuestState(val[1]);
-					String state = (qs != null) ? _states[qs.getState()] : "CREATED";
+					final QuestState qs = target.getQuestState(val[1]);
+					final String state = (qs != null) ? _states[qs.getState()] : "CREATED";
 					replyMSG.append("Character: <font color=\"LEVEL\">" + target.getName() + "</font><br>Quest: <font color=\"LEVEL\">" + val[1] + "</font><br>State: <font color=\"LEVEL\">" + state + "</font><br><br>");
 					replyMSG.append("<center><table width=250><tr><td>Var</td><td>Value</td><td>New Value</td><td>&nbsp;</td></tr>");
 					req = con.prepareStatement("SELECT var,value FROM character_quests WHERE charId='" + ID + "' and name='" + val[1] + "'");
@@ -210,7 +210,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 					rs = req.getResultSet();
 					while (rs.next())
 					{
-						String var_name = rs.getString(1);
+						final String var_name = rs.getString(1);
 						if (var_name.equals("<state>"))
 						{
 							continue;
@@ -242,12 +242,12 @@ public class AdminShowQuests implements IAdminCommandHandler
 				{
 					boolean exqdb = true;
 					boolean exqch = true;
-					int qnumber = Integer.parseInt(val[1]);
+					final int qnumber = Integer.parseInt(val[1]);
 					String state = null;
 					String qname = null;
 					QuestState qs = null;
 					
-					Quest quest = QuestManager.getInstance().getQuest(qnumber);
+					final Quest quest = QuestManager.getInstance().getQuest(qnumber);
 					if (quest != null)
 					{
 						qname = quest.getName();
@@ -279,7 +279,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 							rs = req.getResultSet();
 							while (rs.next())
 							{
-								String var_name = rs.getString(1);
+								final String var_name = rs.getString(1);
 								if (var_name.equals("<state>"))
 								{
 									continue;
@@ -322,7 +322,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 	private static void setQuestVar(L2PcInstance target, L2PcInstance actor, String[] val)
 	{
 		QuestState qs = target.getQuestState(val[0]);
-		String[] outval = new String[3];
+		final String[] outval = new String[3];
 		
 		if ("state".equals(val[1]))
 		{

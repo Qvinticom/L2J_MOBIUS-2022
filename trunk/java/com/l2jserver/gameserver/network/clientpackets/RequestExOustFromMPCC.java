@@ -41,8 +41,8 @@ public final class RequestExOustFromMPCC extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance target = L2World.getInstance().getPlayer(_name);
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if ((target != null) && target.isInParty() && activeChar.isInParty() && activeChar.getParty().isInCommandChannel() && target.getParty().isInCommandChannel() && activeChar.getParty().getCommandChannel().getLeader().equals(activeChar) && activeChar.getParty().getCommandChannel().equals(target.getParty().getCommandChannel()))
 		{

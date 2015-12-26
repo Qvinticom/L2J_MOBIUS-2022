@@ -55,8 +55,8 @@ public final class ShadowWeapons extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext;
-		boolean has_d = hasQuestItems(player, 8869); // Shadow Item Exchange Coupon (D-Grade)
-		boolean has_c = hasQuestItems(player, 8870); // Shadow Item Exchange Coupon (C-Grade)
+		final boolean has_d = hasQuestItems(player, 8869); // Shadow Item Exchange Coupon (D-Grade)
+		final boolean has_c = hasQuestItems(player, 8870); // Shadow Item Exchange Coupon (C-Grade)
 		
 		if (has_d || has_c)
 		{

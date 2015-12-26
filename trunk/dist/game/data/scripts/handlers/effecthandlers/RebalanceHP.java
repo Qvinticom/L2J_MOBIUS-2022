@@ -88,7 +88,7 @@ public final class RebalanceHP extends AbstractEffect
 			}
 		}
 		
-		double percentHP = currentHPs / fullHP;
+		final double percentHP = currentHPs / fullHP;
 		for (L2PcInstance member : party.getMembers())
 		{
 			if (!member.isDead() && Util.checkIfInRange(skill.getAffectRange(), effector, member, true))

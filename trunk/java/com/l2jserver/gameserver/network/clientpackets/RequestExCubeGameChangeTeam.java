@@ -48,7 +48,7 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 		{
 			return;
 		}
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		
 		switch (_team)
 		{
@@ -60,7 +60,7 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 			case -1:
 			// Remove Player (me)
 			{
-				int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
+				final int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
 				// client sends two times this packet if click on exit
 				// client did not send this packet on restart
 				if (team > -1)

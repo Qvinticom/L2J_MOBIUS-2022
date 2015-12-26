@@ -90,19 +90,19 @@ public final class MapRegionManager implements IXmlReader
 						castle = parseInteger(attrs, "castle");
 						bbs = parseInteger(attrs, "bbs");
 						
-						L2MapRegion region = new L2MapRegion(name, town, locId, castle, bbs);
+						final L2MapRegion region = new L2MapRegion(name, town, locId, castle, bbs);
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							attrs = c.getAttributes();
 							if ("respawnPoint".equalsIgnoreCase(c.getNodeName()))
 							{
-								int spawnX = parseInteger(attrs, "X");
-								int spawnY = parseInteger(attrs, "Y");
-								int spawnZ = parseInteger(attrs, "Z");
+								final int spawnX = parseInteger(attrs, "X");
+								final int spawnY = parseInteger(attrs, "Y");
+								final int spawnZ = parseInteger(attrs, "Z");
 								
-								boolean other = parseBoolean(attrs, "isOther", false);
-								boolean chaotic = parseBoolean(attrs, "isChaotic", false);
-								boolean banish = parseBoolean(attrs, "isBanish", false);
+								final boolean other = parseBoolean(attrs, "isOther", false);
+								final boolean chaotic = parseBoolean(attrs, "isChaotic", false);
+								final boolean banish = parseBoolean(attrs, "isBanish", false);
 								
 								if (other)
 								{
@@ -161,7 +161,7 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public final int getMapRegionLocId(int locX, int locY)
 	{
-		L2MapRegion region = getMapRegion(locX, locY);
+		final L2MapRegion region = getMapRegion(locX, locY);
 		if (region != null)
 		{
 			return region.getLocId();
@@ -212,7 +212,7 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public String getClosestTownName(L2Character activeChar)
 	{
-		L2MapRegion region = getMapRegion(activeChar);
+		final L2MapRegion region = getMapRegion(activeChar);
 		
 		if (region == null)
 		{
@@ -228,7 +228,7 @@ public final class MapRegionManager implements IXmlReader
 	 */
 	public int getAreaCastle(L2Character activeChar)
 	{
-		L2MapRegion region = getMapRegion(activeChar);
+		final L2MapRegion region = getMapRegion(activeChar);
 		
 		if (region == null)
 		{
@@ -263,7 +263,7 @@ public final class MapRegionManager implements IXmlReader
 					clanhall = ClanHallManager.getInstance().getAbstractHallByOwner(player.getClan());
 					if (clanhall != null)
 					{
-						L2ClanHallZone zone = clanhall.getZone();
+						final L2ClanHallZone zone = clanhall.getZone();
 						if ((zone != null) && !player.isFlyingMounted())
 						{
 							if (player.getReputation() < 0)
@@ -336,7 +336,7 @@ public final class MapRegionManager implements IXmlReader
 						if (castle.getSiege().isInProgress())
 						{
 							// Check if player's clan is attacker
-							List<L2Npc> flags = castle.getSiege().getFlag(player.getClan());
+							final List<L2Npc> flags = castle.getSiege().getFlag(player.getClan());
 							if ((flags != null) && !flags.isEmpty())
 							{
 								// Spawn to flag - Need more work to get player to the nearest flag
@@ -350,7 +350,7 @@ public final class MapRegionManager implements IXmlReader
 						if (fort.getSiege().isInProgress())
 						{
 							// Check if player's clan is attacker
-							List<L2Npc> flags = fort.getSiege().getFlag(player.getClan());
+							final List<L2Npc> flags = fort.getSiege().getFlag(player.getClan());
 							if ((flags != null) && !flags.isEmpty())
 							{
 								// Spawn to flag - Need more work to get player to the nearest flag
@@ -360,8 +360,8 @@ public final class MapRegionManager implements IXmlReader
 					}
 					else if ((clanhall != null) && clanhall.isSiegableHall())
 					{
-						SiegableHall sHall = (SiegableHall) clanhall;
-						List<L2Npc> flags = sHall.getSiege().getFlag(player.getClan());
+						final SiegableHall sHall = (SiegableHall) clanhall;
+						final List<L2Npc> flags = sHall.getSiege().getFlag(player.getClan());
 						if ((flags != null) && !flags.isEmpty())
 						{
 							return flags.get(0).getLocation();
@@ -375,7 +375,7 @@ public final class MapRegionManager implements IXmlReader
 			{
 				try
 				{
-					L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
+					final L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
 					if (zone != null)
 					{
 						return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc();
@@ -409,7 +409,7 @@ public final class MapRegionManager implements IXmlReader
 			// Checking if in an instance
 			if (player.getInstanceId() > 0)
 			{
-				Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
+				final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 				if (inst != null)
 				{
 					loc = inst.getExitLoc();
@@ -436,7 +436,7 @@ public final class MapRegionManager implements IXmlReader
 		// Get the nearest town
 		try
 		{
-			L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
+			final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
 			if (zone != null)
 			{
 				return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
@@ -459,8 +459,8 @@ public final class MapRegionManager implements IXmlReader
 	{
 		try
 		{
-			L2PcInstance player = ((L2PcInstance) activeChar);
-			L2MapRegion region = _regions.get(point);
+			final L2PcInstance player = ((L2PcInstance) activeChar);
+			final L2MapRegion region = _regions.get(point);
 			
 			if (region.getBannedRace().containsKey(player.getRace()))
 			{

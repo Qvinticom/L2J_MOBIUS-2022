@@ -34,7 +34,7 @@ public class L2DoorInstanceActionShift implements IActionShiftHandler
 		if (activeChar.getAccessLevel().isGm())
 		{
 			activeChar.setTarget(target);
-			L2DoorInstance door = (L2DoorInstance) target;
+			final L2DoorInstance door = (L2DoorInstance) target;
 			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage();

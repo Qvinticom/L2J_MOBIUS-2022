@@ -61,7 +61,7 @@ public class TimeUtil
 		}
 		try
 		{
-			int val = Integer.parseInt(datePattern.substring(0, index));
+			final int val = Integer.parseInt(datePattern.substring(0, index));
 			final String type = datePattern.substring(index);
 			final ChronoUnit unit;
 			switch (type.toLowerCase())

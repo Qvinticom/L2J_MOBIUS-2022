@@ -111,7 +111,7 @@ public final class ForgeOfTheGods extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int rand = getRandom(100);
+		final int rand = getRandom(100);
 		L2Npc mob = null;
 		_npcCount++;
 		

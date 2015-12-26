@@ -63,8 +63,8 @@ public final class Heal extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return;
@@ -73,8 +73,8 @@ public final class Heal extends AbstractEffect
 		double amount = _power;
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
-		boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
@@ -134,14 +134,14 @@ public final class Heal extends AbstractEffect
 			{
 				if (activeChar.isPlayer() && (activeChar != target))
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
 					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 					sm.addInt((int) amount);
 					target.sendPacket(sm);
 				}

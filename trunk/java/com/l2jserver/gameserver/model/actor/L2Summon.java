@@ -123,7 +123,7 @@ public abstract class L2Summon extends L2Playable
 		{
 			player.sendPacket(new RelationChanged(this, getOwner().getRelation(player), isAutoAttackable(player)));
 		}
-		L2Party party = getOwner().getParty();
+		final L2Party party = getOwner().getParty();
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(getOwner(), new ExPartyPetWindowAdd(this));
@@ -330,7 +330,7 @@ public abstract class L2Summon extends L2Playable
 						continue;
 					}
 					
-					AggroInfo info = ((L2Attackable) TgMob).getAggroList().get(this);
+					final AggroInfo info = ((L2Attackable) TgMob).getAggroList().get(this);
 					if (info != null)
 					{
 						((L2Attackable) TgMob).addDamageHate(owner, info.getDamage(), info.getHate());
@@ -448,7 +448,7 @@ public abstract class L2Summon extends L2Playable
 			}
 			
 			stopAllEffects();
-			L2WorldRegion oldRegion = getWorldRegion();
+			final L2WorldRegion oldRegion = getWorldRegion();
 			decayMe();
 			if (oldRegion != null)
 			{
@@ -810,7 +810,7 @@ public abstract class L2Summon extends L2Playable
 		super.reduceCurrentHp(damage, attacker, skill);
 		if ((getOwner() != null) && (attacker != null))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 			sm.addNpcName(this);
 			sm.addCharName(attacker);
 			sm.addInt((int) damage);
@@ -880,7 +880,7 @@ public abstract class L2Summon extends L2Playable
 		{
 			broadcastNpcInfo(val);
 		}
-		L2Party party = getOwner().getParty();
+		final L2Party party = getOwner().getParty();
 		if (party != null)
 		{
 			party.broadcastToPartyMembers(getOwner(), new ExPartyPetWindowUpdate(this));

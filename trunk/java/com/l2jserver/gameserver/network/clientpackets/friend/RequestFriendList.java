@@ -42,7 +42,7 @@ public final class RequestFriendList extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -58,7 +58,7 @@ public final class RequestFriendList extends L2GameClientPacket
 		for (int id : activeChar.getFriendList().keySet())
 		{
 			// int friendId = rset.getInt("friendId");
-			String friendName = CharNameTable.getInstance().getNameById(id);
+			final String friendName = CharNameTable.getInstance().getNameById(id);
 			
 			if (friendName == null)
 			{

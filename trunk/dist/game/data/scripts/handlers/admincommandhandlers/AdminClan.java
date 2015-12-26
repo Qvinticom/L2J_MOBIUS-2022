@@ -119,7 +119,7 @@ public class AdminClan implements IAdminCommandHandler
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/clanchanges.htm"));
-				StringBuilder sb = new StringBuilder();
+				final StringBuilder sb = new StringBuilder();
 				for (L2Clan clan : ClanTable.getInstance().getClans())
 				{
 					if (clan.getNewLeaderId() != 0)
@@ -139,12 +139,12 @@ public class AdminClan implements IAdminCommandHandler
 			{
 				if (st.hasMoreElements())
 				{
-					String token = st.nextToken();
+					final String token = st.nextToken();
 					if (!Util.isDigit(token))
 					{
 						break;
 					}
-					int clanId = Integer.parseInt(token);
+					final int clanId = Integer.parseInt(token);
 					
 					final L2Clan clan = ClanTable.getInstance().getClan(clanId);
 					if (clan == null)
@@ -201,7 +201,7 @@ public class AdminClan implements IAdminCommandHandler
 		}
 		else
 		{
-			L2Object targetObj = activeChar.getTarget();
+			final L2Object targetObj = activeChar.getTarget();
 			if (targetObj instanceof L2PcInstance)
 			{
 				player = targetObj.getActingPlayer();

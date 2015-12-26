@@ -425,18 +425,18 @@ public abstract class Chamber extends AbstractInstance
 			return;
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
-		Location ret = inst.getExitLoc();
+		final Location ret = inst.getExitLoc();
 		final String return_point = player.getVariables().getString(RETURN, null);
 		if (return_point != null)
 		{
-			String[] coords = return_point.split(";");
+			final String[] coords = return_point.split(";");
 			if (coords.length == 3)
 			{
 				try
 				{
-					int x = Integer.parseInt(coords[0]);
-					int y = Integer.parseInt(coords[1]);
-					int z = Integer.parseInt(coords[2]);
+					final int x = Integer.parseInt(coords[0]);
+					final int y = Integer.parseInt(coords[1]);
+					final int z = Integer.parseInt(coords[2]);
 					ret.setLocation(new Location(x, y, z));
 				}
 				catch (Exception e)
@@ -622,7 +622,7 @@ public abstract class Chamber extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		QuestState st = getQuestState(player, false);
 		
 		if (st == null)

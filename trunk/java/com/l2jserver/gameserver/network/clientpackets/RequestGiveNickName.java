@@ -40,7 +40,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,10 +68,10 @@ public class RequestGiveNickName extends L2GameClientPacket
 				return;
 			}
 			
-			L2ClanMember member1 = activeChar.getClan().getClanMember(_target);
+			final L2ClanMember member1 = activeChar.getClan().getClanMember(_target);
 			if (member1 != null)
 			{
-				L2PcInstance member = member1.getPlayerInstance();
+				final L2PcInstance member = member1.getPlayerInstance();
 				if (member != null)
 				{
 					// is target from the same clan?

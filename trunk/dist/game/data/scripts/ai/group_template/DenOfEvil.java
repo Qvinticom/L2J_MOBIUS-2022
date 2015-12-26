@@ -121,7 +121,7 @@ public final class DenOfEvil extends AbstractNpcAI
 	{
 		npc.disableCoreAI(true);
 		npc.setIsImmobilized(true);
-		L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
+		final L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 		if (zone == null)
 		{
 			if (DEBUG)
@@ -130,8 +130,8 @@ public final class DenOfEvil extends AbstractNpcAI
 			}
 			return null;
 		}
-		int skillId = getSkillIdByNpcId(npc.getId());
-		int skillLevel = zone.getSkillLevel(skillId);
+		final int skillId = getSkillIdByNpcId(npc.getId());
+		final int skillLevel = zone.getSkillLevel(skillId);
 		zone.addSkill(skillId, skillLevel + 1);
 		if (skillLevel == 3) // 3+1=4
 		{
@@ -149,7 +149,7 @@ public final class DenOfEvil extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
-		L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
+		final L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 		if (zone == null)
 		{
 			if (DEBUG)
@@ -158,8 +158,8 @@ public final class DenOfEvil extends AbstractNpcAI
 			}
 			return null;
 		}
-		int skillId = getSkillIdByNpcId(npc.getId());
-		int skillLevel = zone.getSkillLevel(skillId);
+		final int skillId = getSkillIdByNpcId(npc.getId());
+		final int skillLevel = zone.getSkillLevel(skillId);
 		zone.addSkill(skillId, skillLevel - 1);
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -213,7 +213,7 @@ public final class DenOfEvil extends AbstractNpcAI
 				}
 				if (character.isPlayable())
 				{
-					Skill skill = SkillData.getInstance().getSkill(6149, 1);
+					final Skill skill = SkillData.getInstance().getSkill(6149, 1);
 					skill.applyEffects(character, character);
 				}
 				else
@@ -223,7 +223,7 @@ public final class DenOfEvil extends AbstractNpcAI
 						if (character.isNpc())
 						{
 							// respawn eye
-							L2Npc npc = (L2Npc) character;
+							final L2Npc npc = (L2Npc) character;
 							if (Util.contains(EYE_IDS, npc.getId()))
 							{
 								ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);

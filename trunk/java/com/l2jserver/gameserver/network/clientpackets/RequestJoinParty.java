@@ -50,8 +50,8 @@ public final class RequestJoinParty extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance requestor = getClient().getActiveChar();
-		L2PcInstance target = L2World.getInstance().getPlayer(_name);
+		final L2PcInstance requestor = getClient().getActiveChar();
+		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		
 		if (requestor == null)
 		{
@@ -79,7 +79,7 @@ public final class RequestJoinParty extends L2GameClientPacket
 		
 		if (target.isPartyBanned())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY);
 			sm.addCharName(target);
 			requestor.sendPacket(sm);
 			return;

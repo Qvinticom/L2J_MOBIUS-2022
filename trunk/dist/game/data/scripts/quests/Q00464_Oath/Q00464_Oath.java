@@ -107,7 +107,7 @@ public class Q00464_Oath extends Quest
 					return getNoQuestMsg(player);
 				}
 				
-				int cond = getRandom(2, 9);
+				final int cond = getRandom(2, 9);
 				st.set("npc", String.valueOf(NPC[cond - 1][0]));
 				st.setCond(cond, true);
 				st.takeItems(BOOK, 1);
@@ -146,7 +146,7 @@ public class Q00464_Oath extends Quest
 					return getNoQuestMsg(player);
 				}
 				
-				int i = st.getCond() - 1;
+				final int i = st.getCond() - 1;
 				st.addExpAndSp(NPC[i][1], NPC[i][2]);
 				st.giveAdena(NPC[i][3], true);
 				st.exitQuest(QuestType.DAILY, true);
@@ -226,7 +226,7 @@ public class Q00464_Oath extends Quest
 		
 		if ((st != null) && st.isStarted())
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			
 			if (npcId == NPC[0][0])
 			{

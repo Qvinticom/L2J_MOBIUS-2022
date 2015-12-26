@@ -54,7 +54,7 @@ public final class DuelManager
 		}
 		
 		// return if a player has PvPFlag
-		String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
+		final String engagedInPvP = "The duel was canceled because a duelist engaged in PvP combat.";
 		if (partyDuel)
 		{
 			boolean playerInPvP = false;
@@ -234,7 +234,7 @@ public final class DuelManager
 		
 		if (reason != null)
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(reason);
+			final SystemMessage msg = SystemMessage.getSystemMessage(reason);
 			msg.addString(target.getName());
 			player.sendPacket(msg);
 			return false;

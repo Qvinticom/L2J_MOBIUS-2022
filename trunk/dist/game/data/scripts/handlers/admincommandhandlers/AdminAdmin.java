@@ -164,7 +164,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				if (st.nextToken().equalsIgnoreCase("on"))
 				{
@@ -200,7 +200,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			try
 			{
-				String mode = command.substring(15);
+				final String mode = command.substring(15);
 				if (mode.equalsIgnoreCase("on"))
 				{
 					activeChar.setTradeRefusal(true);
@@ -229,12 +229,12 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_setconfig"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken();
 			try
 			{
-				String pName = st.nextToken();
-				String pValue = st.nextToken();
+				final String pName = st.nextToken();
+				final String pValue = st.nextToken();
 				if (Config.setParameterValue(pName, pValue))
 				{
 					activeChar.sendMessage("Config parameter " + pName + " set to " + pValue);
@@ -255,13 +255,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_set"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
-			String[] cmd = st.nextToken().split("_");
+			final StringTokenizer st = new StringTokenizer(command);
+			final String[] cmd = st.nextToken().split("_");
 			try
 			{
-				String[] parameter = st.nextToken().split("=");
-				String pName = parameter[0].trim();
-				String pValue = parameter[1].trim();
+				final String[] parameter = st.nextToken().split("=");
+				final String pName = parameter[0].trim();
+				final String pValue = parameter[1].trim();
 				if (Config.setParameterValue(pName, pValue))
 				{
 					activeChar.sendMessage("parameter " + pName + " succesfully set to " + pValue);
@@ -427,7 +427,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	public void showConfigPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>L2J :: Config</title><body>");
 		replyMSG.append("<center><table width=270><tr><td width=60><button value=\"Main\" action=\"bypass -h admin_admin\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=150>Config Server Panel</td><td width=60><button value=\"Back\" action=\"bypass -h admin_admin4\" width=60 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></center><br>");
 		replyMSG.append("<center><table width=260><tr><td width=140></td><td width=40></td><td width=40></td></tr>");
 		replyMSG.append("<tr><td><font color=\"00AA00\">Drop:</font></td><td></td><td></td></tr>");

@@ -261,7 +261,7 @@ public enum PlayerClass
 	
 	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
 	{
-		EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
+		final EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
 		
 		for (PlayerClass playerClass : EnumSet.allOf(PlayerClass.class))
 		{

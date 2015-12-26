@@ -48,7 +48,7 @@ public class StackIDFactory extends IdFactory
 		{
 			// con.createStatement().execute("drop table if exists tmp_obj_id");
 			
-			Integer[] tmp_obj_ids = extractUsedObjectIDTable();
+			final Integer[] tmp_obj_ids = extractUsedObjectIDTable();
 			if (tmp_obj_ids.length > 0)
 			{
 				_curOID = tmp_obj_ids[tmp_obj_ids.length - 1];
@@ -73,7 +73,7 @@ public class StackIDFactory extends IdFactory
 	
 	private int insertUntil(Integer[] tmp_obj_ids, int idx, int N, Connection con) throws SQLException
 	{
-		int id = tmp_obj_ids[idx];
+		final int id = tmp_obj_ids[idx];
 		if (id == _tempOID)
 		{
 			_tempOID++;
@@ -93,7 +93,7 @@ public class StackIDFactory extends IdFactory
 					{
 						while (rs.next())
 						{
-							int badId = rs.getInt(1);
+							final int badId = rs.getInt(1);
 							_log.severe("Bad ID " + badId + " in DB found by: " + check);
 							throw new RuntimeException();
 						}

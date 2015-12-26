@@ -35,11 +35,11 @@ public class MultilayerBlock implements IBlock
 	 */
 	public MultilayerBlock(ByteBuffer bb)
 	{
-		int start = bb.position();
+		final int start = bb.position();
 		
 		for (int blockCellOffset = 0; blockCellOffset < IBlock.BLOCK_CELLS; blockCellOffset++)
 		{
-			byte nLayers = bb.get();
+			final byte nLayers = bb.get();
 			if ((nLayers <= 0) || (nLayers > 125))
 			{
 				throw new RuntimeException("L2JGeoDriver: Geo file corrupted! Invalid layers count!");
@@ -55,24 +55,24 @@ public class MultilayerBlock implements IBlock
 	
 	private short _getNearestLayer(int geoX, int geoY, int worldZ)
 	{
-		int startOffset = _getCellDataOffset(geoX, geoY);
-		byte nLayers = _data[startOffset];
-		int endOffset = startOffset + 1 + (nLayers * 2);
+		final int startOffset = _getCellDataOffset(geoX, geoY);
+		final byte nLayers = _data[startOffset];
+		final int endOffset = startOffset + 1 + (nLayers * 2);
 		
 		// 1 layer at least was required on loading so this is set at least once on the loop below
 		int nearestDZ = 0;
 		short nearestData = 0;
 		for (int offset = startOffset + 1; offset < endOffset; offset += 2)
 		{
-			short layerData = _extractLayerData(offset);
-			int layerZ = _extractLayerHeight(layerData);
+			final short layerData = _extractLayerData(offset);
+			final int layerZ = _extractLayerHeight(layerData);
 			if (layerZ == worldZ)
 			{
 				// exact z
 				return layerData;
 			}
 			
-			int layerDZ = Math.abs(layerZ - worldZ);
+			final int layerDZ = Math.abs(layerZ - worldZ);
 			if ((offset == (startOffset + 1)) || (layerDZ < nearestDZ))
 			{
 				nearestDZ = layerDZ;
@@ -85,7 +85,7 @@ public class MultilayerBlock implements IBlock
 	
 	private int _getCellDataOffset(int geoX, int geoY)
 	{
-		int cellLocalOffset = ((geoX % IBlock.BLOCK_CELLS_X) * IBlock.BLOCK_CELLS_Y) + (geoY % IBlock.BLOCK_CELLS_Y);
+		final int cellLocalOffset = ((geoX % IBlock.BLOCK_CELLS_X) * IBlock.BLOCK_CELLS_Y) + (geoY % IBlock.BLOCK_CELLS_Y);
 		int cellDataOffset = 0;
 		// move index to cell, we need to parse on each request, OR we parse on creation and save indexes
 		for (int i = 0; i < cellLocalOffset; i++)
@@ -133,16 +133,16 @@ public class MultilayerBlock implements IBlock
 	@Override
 	public int getNextLowerZ(int geoX, int geoY, int worldZ)
 	{
-		int startOffset = _getCellDataOffset(geoX, geoY);
-		byte nLayers = _data[startOffset];
-		int endOffset = startOffset + 1 + (nLayers * 2);
+		final int startOffset = _getCellDataOffset(geoX, geoY);
+		final byte nLayers = _data[startOffset];
+		final int endOffset = startOffset + 1 + (nLayers * 2);
 		
 		int lowerZ = Integer.MIN_VALUE;
 		for (int offset = startOffset + 1; offset < endOffset; offset += 2)
 		{
-			short layerData = _extractLayerData(offset);
+			final short layerData = _extractLayerData(offset);
 			
-			int layerZ = _extractLayerHeight(layerData);
+			final int layerZ = _extractLayerHeight(layerData);
 			if (layerZ == worldZ)
 			{
 				// exact z
@@ -161,16 +161,16 @@ public class MultilayerBlock implements IBlock
 	@Override
 	public int getNextHigherZ(int geoX, int geoY, int worldZ)
 	{
-		int startOffset = _getCellDataOffset(geoX, geoY);
-		byte nLayers = _data[startOffset];
-		int endOffset = startOffset + 1 + (nLayers * 2);
+		final int startOffset = _getCellDataOffset(geoX, geoY);
+		final byte nLayers = _data[startOffset];
+		final int endOffset = startOffset + 1 + (nLayers * 2);
 		
 		int higherZ = Integer.MAX_VALUE;
 		for (int offset = startOffset + 1; offset < endOffset; offset += 2)
 		{
-			short layerData = _extractLayerData(offset);
+			final short layerData = _extractLayerData(offset);
 			
-			int layerZ = _extractLayerHeight(layerData);
+			final int layerZ = _extractLayerHeight(layerData);
 			if (layerZ == worldZ)
 			{
 				// exact z

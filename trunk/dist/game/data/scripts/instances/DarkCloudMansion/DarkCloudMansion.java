@@ -260,14 +260,14 @@ public final class DarkCloudMansion extends AbstractInstance
 		{
 			if (partyMember.getLevel() < 78)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
 			}
 			if (!partyMember.isInsideRadius(player, 1000, true, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				player.sendPacket(sm);
 				return false;
@@ -303,7 +303,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	protected void runStartRoom(DMCWorld world)
 	{
 		world.setStatus(0);
-		DMCRoom StartRoom = new DMCRoom();
+		final DMCRoom StartRoom = new DMCRoom();
 		DMCNpc thisnpc;
 		
 		thisnpc = new DMCNpc();
@@ -326,7 +326,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void spawnHall(DMCWorld world)
 	{
-		DMCRoom Hall = new DMCRoom();
+		final DMCRoom Hall = new DMCRoom();
 		DMCNpc thisnpc;
 		world.rooms.remove("Hall"); // remove room instance to avoid adding mob every time
 		
@@ -406,7 +406,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void runFirstRoom(DMCWorld world)
 	{
-		DMCRoom FirstRoom = new DMCRoom();
+		final DMCRoom FirstRoom = new DMCRoom();
 		DMCNpc thisnpc;
 		
 		thisnpc = new DMCNpc();
@@ -455,7 +455,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void runSecondRoom(DMCWorld world)
 	{
-		DMCRoom SecondRoom = new DMCRoom();
+		final DMCRoom SecondRoom = new DMCRoom();
 		DMCNpc thisnpc;
 		
 		// TODO: find a better way to initialize to [1,0,0,0,0,0,0]
@@ -466,7 +466,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			SecondRoom.Order[i] = 0;
 		}
 		
-		int i = getRandom(MonolithOrder.length);
+		final int i = getRandom(MonolithOrder.length);
 		
 		thisnpc = new DMCNpc();
 		thisnpc.npc = addSpawn(BSM, 147800, 181150, -6117, 0, false, 0, false, world.getInstanceId());
@@ -512,8 +512,8 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void runThirdRoom(DMCWorld world)
 	{
-		DMCRoom ThirdRoom = new DMCRoom();
-		DMCNpc thisnpc = new DMCNpc();
+		final DMCRoom ThirdRoom = new DMCRoom();
+		final DMCNpc thisnpc = new DMCNpc();
 		thisnpc.isDead = false;
 		thisnpc.npc = addSpawn(BM[1], 148765, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
@@ -559,8 +559,8 @@ public final class DarkCloudMansion extends AbstractInstance
 	protected void runThirdRoom2(DMCWorld world)
 	{
 		addSpawn(SOAdventure, 148910, 178397, -6117, 16383, false, 0, false, world.getInstanceId());
-		DMCRoom ThirdRoom = new DMCRoom();
-		DMCNpc thisnpc = new DMCNpc();
+		final DMCRoom ThirdRoom = new DMCRoom();
+		final DMCNpc thisnpc = new DMCNpc();
 		thisnpc.isDead = false;
 		thisnpc.npc = addSpawn(BM[1], 148765, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
@@ -604,11 +604,11 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void runForthRoom(DMCWorld world)
 	{
-		DMCRoom ForthRoom = new DMCRoom();
+		final DMCRoom ForthRoom = new DMCRoom();
 		ForthRoom.counter = 0;
 		DMCNpc thisnpc;
-		int temp[] = new int[7];
-		int templist[][] = new int[7][5];
+		final int temp[] = new int[7];
+		final int templist[][] = new int[7][5];
 		int xx = 0;
 		
 		for (int i = 0; i < 7; i++)
@@ -660,7 +660,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	{
 		int idx = 0;
 		int temp[] = new int[6];
-		DMCRoom FifthRoom = new DMCRoom();
+		final DMCRoom FifthRoom = new DMCRoom();
 		DMCNpc thisnpc;
 		
 		temp = Beleths[getRandom(Beleths.length)];
@@ -716,10 +716,10 @@ public final class DarkCloudMansion extends AbstractInstance
 			return;
 		}
 		
-		int i = getRandom(GolemSpawn.length);
-		int mobId = GolemSpawn[i][0];
-		int x = GolemSpawn[i][1];
-		int y = GolemSpawn[i][2];
+		final int i = getRandom(GolemSpawn.length);
+		final int mobId = GolemSpawn[i][0];
+		final int x = GolemSpawn[i][1];
+		final int y = GolemSpawn[i][2];
 		
 		npc.golem = addSpawn(mobId, x, y, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
@@ -758,7 +758,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void checkBelethSample(DMCWorld world, L2Npc npc, L2PcInstance player)
 	{
-		DMCRoom FifthRoom = world.rooms.get("FifthRoom");
+		final DMCRoom FifthRoom = world.rooms.get("FifthRoom");
 		
 		for (DMCNpc mob : FifthRoom.npcList)
 		{
@@ -792,7 +792,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	protected void killedBelethSample(DMCWorld world, L2Npc npc)
 	{
 		int decayedSamples = 0;
-		DMCRoom FifthRoom = world.rooms.get("FifthRoom");
+		final DMCRoom FifthRoom = world.rooms.get("FifthRoom");
 		
 		for (DMCNpc mob : FifthRoom.npcList)
 		{
@@ -841,7 +841,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected boolean allStonesDone(DMCWorld world)
 	{
-		DMCRoom SecondRoom = world.rooms.get("SecondRoom");
+		final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
 		
 		for (DMCNpc mob : SecondRoom.npcList)
 		{
@@ -857,7 +857,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void removeMonoliths(DMCWorld world)
 	{
-		DMCRoom SecondRoom = world.rooms.get("SecondRoom");
+		final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
 		
 		for (DMCNpc mob : SecondRoom.npcList)
 		{
@@ -867,7 +867,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	protected void chkShadowColumn(DMCWorld world, L2Npc npc)
 	{
-		DMCRoom ForthRoom = world.rooms.get("ForthRoom");
+		final DMCRoom ForthRoom = world.rooms.get("ForthRoom");
 		
 		for (DMCNpc mob : ForthRoom.npcList)
 		{
@@ -910,7 +910,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		
 		if (world.rooms.containsKey("FifthRoom"))
 		{
-			DMCRoom FifthRoom = world.rooms.get("FifthRoom");
+			final DMCRoom FifthRoom = world.rooms.get("FifthRoom");
 			if (event.equalsIgnoreCase("decayMe"))
 			{
 				for (DMCNpc mob : FifthRoom.npcList)
@@ -994,7 +994,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			}
 			if (world.getStatus() == 4)
 			{
-				DMCRoom SecondRoom = world.rooms.get("SecondRoom");
+				final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
 				for (DMCNpc mob : SecondRoom.npcList)
 				{
 					if (mob.golem == npc)
@@ -1046,7 +1046,7 @@ public final class DarkCloudMansion extends AbstractInstance
 			world = (DMCWorld) tmpworld;
 			if (world.getStatus() == 7)
 			{
-				DMCRoom ForthRoom = world.rooms.get("ForthRoom");
+				final DMCRoom ForthRoom = world.rooms.get("ForthRoom");
 				for (DMCNpc mob : ForthRoom.npcList)
 				{
 					if (mob.npc == npc)
@@ -1070,14 +1070,14 @@ public final class DarkCloudMansion extends AbstractInstance
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		DMCWorld world;
 		if (tmpworld instanceof DMCWorld)
 		{
 			world = (DMCWorld) tmpworld;
 			if (world.getStatus() == 4)
 			{
-				DMCRoom SecondRoom = world.rooms.get("SecondRoom");
+				final DMCRoom SecondRoom = world.rooms.get("SecondRoom");
 				for (DMCNpc mob : SecondRoom.npcList)
 				{
 					if (mob.npc == npc)
@@ -1117,7 +1117,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		}
 		else
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			DMCWorld world;
 			if (tmpworld instanceof DMCWorld)
 			{
@@ -1135,8 +1135,8 @@ public final class DarkCloudMansion extends AbstractInstance
 					world.removeAllowed(player.getObjectId());
 				}
 				teleportPlayer(player, new Location(139968, 150367, -3111), 0);
-				int instanceId = npc.getInstanceId();
-				Instance instance = InstanceManager.getInstance().getInstance(instanceId);
+				final int instanceId = npc.getInstanceId();
+				final Instance instance = InstanceManager.getInstance().getInstance(instanceId);
 				if (instance.getPlayers().isEmpty())
 				{
 					InstanceManager.getInstance().destroyInstance(instanceId);

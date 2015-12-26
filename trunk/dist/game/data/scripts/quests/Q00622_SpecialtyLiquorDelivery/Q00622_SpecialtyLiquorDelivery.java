@@ -144,7 +144,7 @@ public final class Q00622_SpecialtyLiquorDelivery extends Quest
 			{
 				if (qs.isCond(7))
 				{
-					int rnd = getRandom(1000);
+					final int rnd = getRandom(1000);
 					if (rnd < 800)
 					{
 						rewardItems(player, QUICK_STEP_POTION, 1);

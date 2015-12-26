@@ -49,7 +49,7 @@ public class AdminSummon implements IAdminCommandHandler
 	{
 		int id;
 		int count = 1;
-		String[] data = command.split(" ");
+		final String[] data = command.split(" ");
 		try
 		{
 			id = Integer.parseInt(data[1]);
@@ -74,7 +74,7 @@ public class AdminSummon implements IAdminCommandHandler
 				_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 				return false;
 			}
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
+			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
 		else
@@ -86,7 +86,7 @@ public class AdminSummon implements IAdminCommandHandler
 				_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 				return false;
 			}
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
+			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 			
 			activeChar.sendMessage("This is only a temporary spawn.  The mob(s) will NOT respawn.");
 			id -= 1000000;

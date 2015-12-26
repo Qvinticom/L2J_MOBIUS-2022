@@ -139,7 +139,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		{
 			elementToAdd = Elementals.getOppositeElement(elementToAdd);
 		}
-		byte opositeElement = Elementals.getOppositeElement(elementToAdd);
+		final byte opositeElement = Elementals.getOppositeElement(elementToAdd);
 		
 		final Elementals oldElement = item.getElemental(elementToAdd);
 		final int elementValue = oldElement == null ? 0 : oldElement.getValue();
@@ -305,7 +305,7 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 		}
 		
 		boolean success = false;
-		ElementalItemType stoneType = Elementals.getItemElemental(stone.getId())._type;
+		final ElementalItemType stoneType = Elementals.getItemElemental(stone.getId())._type;
 		switch (item.getItem().getCrystalType())
 		{
 			case R:

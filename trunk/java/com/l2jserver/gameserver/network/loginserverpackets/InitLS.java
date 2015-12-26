@@ -42,7 +42,7 @@ public class InitLS extends BaseRecievePacket
 	{
 		super(decrypt);
 		_rev = readD();
-		int size = readD();
+		final int size = readD();
 		_key = readB(size);
 	}
 	

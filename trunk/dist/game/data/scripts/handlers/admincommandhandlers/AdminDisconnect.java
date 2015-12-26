@@ -51,7 +51,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	
 	private void disconnectCharacter(L2PcInstance activeChar)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{

@@ -128,7 +128,7 @@ public class CharKnownList extends ObjectKnownList
 			final Iterator<L2PcInstance> pIter = getKnownPlayers().values().iterator();
 			while (pIter.hasNext())
 			{
-				L2PcInstance player = pIter.next();
+				final L2PcInstance player = pIter.next();
 				if (player == null)
 				{
 					pIter.remove();
@@ -145,7 +145,7 @@ public class CharKnownList extends ObjectKnownList
 			final Iterator<L2Summon> sIter = getKnownSummons().values().iterator();
 			while (sIter.hasNext())
 			{
-				L2Summon summon = sIter.next();
+				final L2Summon summon = sIter.next();
 				if (summon == null)
 				{
 					sIter.remove();
@@ -168,7 +168,7 @@ public class CharKnownList extends ObjectKnownList
 		final Iterator<L2Object> oIter = getKnownObjects().values().iterator();
 		while (oIter.hasNext())
 		{
-			L2Object object = oIter.next();
+			final L2Object object = oIter.next();
 			if (object == null)
 			{
 				oIter.remove();
@@ -198,7 +198,7 @@ public class CharKnownList extends ObjectKnownList
 	
 	public List<L2Character> getKnownCharacters()
 	{
-		List<L2Character> result = new LinkedList<>();
+		final List<L2Character> result = new LinkedList<>();
 		for (L2Object obj : getKnownObjects().values())
 		{
 			if (obj instanceof L2Character)
@@ -211,7 +211,7 @@ public class CharKnownList extends ObjectKnownList
 	
 	public List<L2Character> getKnownCharactersInRadius(long radius)
 	{
-		List<L2Character> result = new LinkedList<>();
+		final List<L2Character> result = new LinkedList<>();
 		for (L2Object obj : getKnownObjects().values())
 		{
 			if (obj instanceof L2Character)
@@ -227,7 +227,7 @@ public class CharKnownList extends ObjectKnownList
 	
 	public final List<L2PcInstance> getKnownPlayersInRadius(long radius)
 	{
-		List<L2PcInstance> result = new LinkedList<>();
+		final List<L2PcInstance> result = new LinkedList<>();
 		for (L2PcInstance player : getKnownPlayers().values())
 		{
 			if (Util.checkIfInRange((int) radius, getActiveChar(), player, true))

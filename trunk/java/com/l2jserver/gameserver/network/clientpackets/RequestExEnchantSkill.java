@@ -249,7 +249,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		}
 		else if (_type == 1) // safe enchant
 		{
-			int costMultiplier = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
+			final int costMultiplier = EnchantSkillGroupsData.SAFE_ENCHANT_COST_MULTIPLIER;
 			final int reqItemId;
 			if (player.getClassId().level() == 3)
 			{
@@ -277,13 +277,13 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				return;
 			}
 			
-			int requiredSp = esd.getSpCost() * costMultiplier;
-			int requireditems = esd.getAdenaCost() * costMultiplier;
-			int rate = esd.getRate(player);
+			final int requiredSp = esd.getSpCost() * costMultiplier;
+			final int requireditems = esd.getAdenaCost() * costMultiplier;
+			final int rate = esd.getRate(player);
 			
 			if (player.getSp() >= requiredSp)
 			{
-				L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 				if (spb == null)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -311,7 +311,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Config.LOG_SKILL_ENCHANTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, "Safe Success");
+						final LogRecord record = new LogRecord(Level.INFO, "Safe Success");
 						record.setParameters(new Object[]
 						{
 							player,
@@ -332,7 +332,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					
 					player.sendPacket(ExEnchantSkillResult.valueOf(true));
 					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 					sm.addSkillName(_skillId);
 					player.sendPacket(sm);
 				}
@@ -340,7 +340,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Config.LOG_SKILL_ENCHANTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
+						final LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
 						record.setParameters(new Object[]
 						{
 							player,
@@ -352,7 +352,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 						_logEnchant.log(record);
 					}
 					
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
 					player.sendPacket(sm);
 					player.sendPacket(ExEnchantSkillResult.valueOf(false));
 				}
@@ -366,7 +366,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 				player.sendPacket(sm);
 			}
 		}
@@ -403,19 +403,19 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				return;
 			}
 			
-			int currentEnchantLevel = beforeEnchantSkillLevel % 1000;
+			final int currentEnchantLevel = beforeEnchantSkillLevel % 1000;
 			if (currentEnchantLevel != (_skillLvl % 1000))
 			{
 				return;
 			}
-			EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
+			final EnchantSkillHolder esd = s.getEnchantSkillHolder(_skillLvl);
 			
-			int requiredSp = esd.getSpCost();
-			int requireditems = esd.getAdenaCost();
+			final int requiredSp = esd.getSpCost();
+			final int requireditems = esd.getAdenaCost();
 			
 			if (player.getSp() >= requiredSp)
 			{
-				L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+				final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 				if (Config.ES_SP_BOOK_NEEDED)
 				{
 					if (spb == null)
@@ -446,7 +446,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 					return;
 				}
 				
-				int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
+				final int levelPenalty = Rnd.get(Math.min(4, currentEnchantLevel));
 				_skillLvl -= levelPenalty;
 				if ((_skillLvl % 1000) == 0)
 				{
@@ -455,7 +455,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
-					LogRecord record = new LogRecord(Level.INFO, "Route Change");
+					final LogRecord record = new LogRecord(Level.INFO, "Route Change");
 					record.setParameters(new Object[]
 					{
 						player,
@@ -478,13 +478,13 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (levelPenalty == 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
 					sm.addSkillName(_skillId);
 					player.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
 					sm.addSkillName(_skillId);
 					
 					if (_skillLvl > 1000)
@@ -505,7 +505,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 				player.sendPacket(sm);
 			}
 		}
@@ -537,7 +537,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				return;
 			}
 			
-			L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
+			final L2ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
 			if (spb == null)
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
@@ -548,7 +548,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			
 			if (Config.LOG_SKILL_ENCHANTS)
 			{
-				LogRecord record = new LogRecord(Level.INFO, "100% Success");
+				final LogRecord record = new LogRecord(Level.INFO, "100% Success");
 				record.setParameters(new Object[]
 				{
 					player,
@@ -568,7 +568,7 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 			}
 			
 			player.sendPacket(ExEnchantSkillResult.valueOf(true));
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 			sm.addSkillName(_skillId);
 			player.sendPacket(sm);
 			player.sendPacket(new UserInfo(player));

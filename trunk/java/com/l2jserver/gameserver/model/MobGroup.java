@@ -78,7 +78,7 @@ public final class MobGroup
 	{
 		try
 		{
-			L2ControllableMobAI mobGroupAI = (L2ControllableMobAI) getMobs().get(0).getAI();
+			final L2ControllableMobAI mobGroupAI = (L2ControllableMobAI) getMobs().get(0).getAI();
 			
 			switch (mobGroupAI.getAlternateAI())
 			{
@@ -136,12 +136,12 @@ public final class MobGroup
 		{
 			for (int i = 0; i < getMaxMobCount(); i++)
 			{
-				L2GroupSpawn spawn = new L2GroupSpawn(getTemplate());
+				final L2GroupSpawn spawn = new L2GroupSpawn(getTemplate());
 				
-				int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-				int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+				final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
+				final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
+				final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+				final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
 				
 				spawn.setX(x + (signX * randX));
 				spawn.setY(y + (signY * randY));
@@ -178,11 +178,11 @@ public final class MobGroup
 			
 			if (!mobInst.isDead())
 			{
-				int x = player.getX() + Rnd.nextInt(50);
-				int y = player.getY() + Rnd.nextInt(50);
+				final int x = player.getX() + Rnd.nextInt(50);
+				final int y = player.getY() + Rnd.nextInt(50);
 				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
-				L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+				final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 				ai.follow(player);
 			}
 		}
@@ -197,7 +197,7 @@ public final class MobGroup
 			return null;
 		}
 		
-		int choice = Rnd.nextInt(getActiveMobCount());
+		final int choice = Rnd.nextInt(getActiveMobCount());
 		return getMobs().get(choice);
 	}
 	
@@ -261,7 +261,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.setAlternateAI(L2ControllableMobAI.AI_NORMAL);
 			ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
@@ -278,7 +278,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.forceAttack(target);
 		}
 	}
@@ -294,7 +294,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.stop();
 		}
 	}
@@ -310,12 +310,12 @@ public final class MobGroup
 				continue;
 			}
 			
-			int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-			int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+			final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
+			final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
+			final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+			final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.move(activeChar.getX() + (signX * randX), activeChar.getY() + (signY * randY), activeChar.getZ());
 		}
 	}
@@ -331,7 +331,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.follow(character);
 		}
 	}
@@ -347,7 +347,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.setAlternateAI(L2ControllableMobAI.AI_CAST);
 		}
 	}
@@ -363,14 +363,14 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.setNotMoving(enabled);
 		}
 	}
 	
 	protected void removeDead()
 	{
-		List<L2ControllableMobInstance> deadMobs = new LinkedList<>();
+		final List<L2ControllableMobInstance> deadMobs = new LinkedList<>();
 		for (L2ControllableMobInstance mobInst : getMobs())
 		{
 			if ((mobInst != null) && mobInst.isDead())
@@ -406,7 +406,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
+			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.forceAttackGroup(otherGrp);
 			ai.setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}

@@ -268,7 +268,7 @@ public final class Say2 extends L2GameClientPacket
 			{
 				return false;
 			}
-			StringBuilder result = new StringBuilder(9);
+			final StringBuilder result = new StringBuilder(9);
 			pos += 3;
 			while (Character.isDigit(_text.charAt(pos)))
 			{

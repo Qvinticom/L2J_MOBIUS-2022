@@ -107,10 +107,10 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 			return null;
 		}
 		
-		int opcode = buf.get() & 0xFF;
+		final int opcode = buf.get() & 0xFF;
 		
 		ReceivablePacket<L2GameClient> msg = null;
-		GameClientState state = client.getState();
+		final GameClientState state = client.getState();
 		
 		switch (state)
 		{
@@ -815,7 +815,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestExPledgeCrestLarge();
 								break;
 							case 0x11:
-								int id9 = buf.getInt();
+								final int id9 = buf.getInt();
 								switch (id9)
 								{
 								// @TODO: : RequestExSetPledgeCrestLarge is now chunked, each case is a different chunk
@@ -1026,7 +1026,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new RequestResetNickname();
 								break;
 							case 0x4e:
-								int id4 = buf.getInt();
+								final int id4 = buf.getInt();
 								switch (id4)
 								{
 									case 0x00:
@@ -1194,7 +1194,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								msg = new CannotMoveAnymoreInShuttle();
 								break;
 							case 0x80:
-								int id5 = buf.getInt();
+								final int id5 = buf.getInt();
 								switch (id5)
 								{
 									case 0x01:
@@ -1348,7 +1348,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 								break;
 							case 0x93:
 							{
-								int id6 = buf.getInt();
+								final int id6 = buf.getInt();
 								switch (id6)
 								{
 									case 0x02:
@@ -1748,9 +1748,9 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 			return;
 		}
 		
-		int size = buf.remaining();
+		final int size = buf.remaining();
 		_log.warning("Unknown Packet: 0x" + Integer.toHexString(opcode) + " on State: " + state.name() + " Client: " + client.toString());
-		byte[] array = new byte[size];
+		final byte[] array = new byte[size];
 		buf.get(array);
 		_log.warning(Util.printData(array, size));
 	}
@@ -1763,9 +1763,9 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 			return;
 		}
 		
-		int size = buf.remaining();
+		final int size = buf.remaining();
 		_log.warning("Unknown Packet: 0x" + Integer.toHexString(opcode) + ":0x" + Integer.toHexString(id2) + " on State: " + state.name() + " Client: " + client.toString());
-		byte[] array = new byte[size];
+		final byte[] array = new byte[size];
 		buf.get(array);
 		_log.warning(Util.printData(array, size));
 	}

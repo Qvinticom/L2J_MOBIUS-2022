@@ -74,7 +74,7 @@ public final class SiegeAttackerList extends L2GameServerPacket
 			writeD(0x00); // 0
 			writeD(0x01); // 1
 			writeD(0x00); // 0
-			int size = _castle.getSiege().getAttackerClans().size();
+			final int size = _castle.getSiege().getAttackerClans().size();
 			if (size > 0)
 			{
 				L2Clan clan;

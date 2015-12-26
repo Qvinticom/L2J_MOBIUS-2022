@@ -57,7 +57,7 @@ public class LookingForFishTask implements Runnable
 			{
 				return;
 			}
-			int check = Rnd.get(100);
+			final int check = Rnd.get(100);
 			if (_fishGutsCheck > check)
 			{
 				_player.stopLookingForFishTask();

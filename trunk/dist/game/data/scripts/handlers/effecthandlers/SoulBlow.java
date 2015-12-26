@@ -63,21 +63,21 @@ public final class SoulBlow extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		final boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		double damage = Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
 		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
+			final int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
@@ -93,7 +93,7 @@ public final class SoulBlow extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			L2PcInstance activePlayer = activeChar.getActingPlayer();
+			final L2PcInstance activePlayer = activeChar.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		// Check if damage should be reflected

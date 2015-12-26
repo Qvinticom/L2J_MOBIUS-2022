@@ -106,8 +106,8 @@ public final class Beleth extends AbstractNpcAI
 		addStartNpc(STONE_COFFIN);
 		addTalkId(STONE_COFFIN);
 		addFirstTalkId(ELF);
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
-		int status = GrandBossManager.getInstance().getBossStatus(REAL_BELETH);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
+		final int status = GrandBossManager.getInstance().getBossStatus(REAL_BELETH);
 		if (status == DEAD)
 		{
 			final long time = (info.getLong("respawn_time") - System.currentTimeMillis());
@@ -247,9 +247,9 @@ public final class Beleth extends AbstractNpcAI
 				
 				for (int i = 0; i < 6; i++)
 				{
-					int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
-					int y = (int) ((150 * Math.sin(i * 1.046666667)) + 213059);
-					L2Npc minion = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
+					final int x = (int) ((150 * Math.cos(i * 1.046666667)) + 16323);
+					final int y = (int) ((150 * Math.sin(i * 1.046666667)) + 213059);
+					final L2Npc minion = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
 					minion.setShowSummonAnimation(true);
 					minion.decayMe();
 					
@@ -391,8 +391,8 @@ public final class Beleth extends AbstractNpcAI
 				{
 					a++;
 					
-					int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
-					int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
+					final int x = (int) ((650 * Math.cos(i * 0.39)) + 16323);
+					final int y = (int) ((650 * Math.sin(i * 0.39)) + 213170);
 					
 					npc = addSpawn(FAKE_BELETH, new Location(x, y, -9357, 49152));
 					_minions.add(npc);
@@ -404,8 +404,8 @@ public final class Beleth extends AbstractNpcAI
 					}
 				}
 				
-				int[] xm = new int[16];
-				int[] ym = new int[16];
+				final int[] xm = new int[16];
+				final int[] ym = new int[16];
 				for (int i = 0; i < 4; i++)
 				{
 					xm[i] = (int) ((1700 * Math.cos((i * 1.57) + 0.78)) + 16323);
@@ -523,7 +523,7 @@ public final class Beleth extends AbstractNpcAI
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 				ZONE.broadcastPacket(new SpecialCamera(_camera2, 800, 180, 0, 0, 4000, 0, 10, 1, 0, 0));
 				
-				L2DoorInstance door2 = DoorData.getInstance().getDoor(DOOR2);
+				final L2DoorInstance door2 = DoorData.getInstance().getDoor(DOOR2);
 				door2.openMe();
 				
 				ZONE.broadcastPacket(new StaticObject(door2, false));
@@ -639,8 +639,8 @@ public final class Beleth extends AbstractNpcAI
 				{
 					npc.setTarget(player);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
-					int time = (int) (((distance2 - 890) / speed) * 1000);
+					final double speed = npc.isRunning() ? npc.getRunSpeed() : npc.getWalkSpeed();
+					final int time = (int) (((distance2 - 890) / speed) * 1000);
 					startQuestTimer("CAST", time, npc, null);
 				}
 				else if (distance2 < 890)
@@ -759,7 +759,7 @@ public final class Beleth extends AbstractNpcAI
 			setBelethKiller(killer);
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, DEAD);
 			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
+			final StatsSet info = GrandBossManager.getInstance().getStatsSet(REAL_BELETH);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(REAL_BELETH, info);
 			startQuestTimer("BELETH_UNLOCK", respawnTime, null, null);

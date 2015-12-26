@@ -213,7 +213,7 @@ public class Q10360_CertificationOfFate extends Quest
 		}
 		if (event.startsWith("CC") && (qs.getCond() > 7)) // Change Class
 		{
-			ClassId desired = ClassId.valueOf(event.replace("CC_", ""));
+			final ClassId desired = ClassId.valueOf(event.replace("CC_", ""));
 			switch (desired)
 			{
 				case PALADIN:

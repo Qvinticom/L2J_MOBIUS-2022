@@ -123,11 +123,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(11);
-				StringTokenizer st = new StringTokenizer(val);
-				int x = Integer.parseInt(st.nextToken());
-				int y = Integer.parseInt(st.nextToken());
-				int z = Integer.parseInt(st.nextToken());
+				final String val = command.substring(11);
+				final StringTokenizer st = new StringTokenizer(val);
+				final int x = Integer.parseInt(st.nextToken());
+				final int y = Integer.parseInt(st.nextToken());
+				final int z = Integer.parseInt(st.nextToken());
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 			}
 			catch (Exception e)
@@ -142,7 +142,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(14);
+				final String val = command.substring(14);
 				teleportTo(activeChar, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -160,7 +160,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				String val = command.substring(25);
+				final String val = command.substring(25);
 				
 				teleportCharacter(activeChar, val);
 			}
@@ -175,8 +175,8 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				String targetName = command.substring(17);
-				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
+				final String targetName = command.substring(17);
+				final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				teleportToCharacter(activeChar, player);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -204,14 +204,14 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				String[] param = command.split(" ");
+				final String[] param = command.split(" ");
 				if (param.length != 2)
 				{
 					activeChar.sendMessage("Usage: //recall <playername>");
 					return false;
 				}
-				String targetName = param[1];
-				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
+				final String targetName = param[1];
+				final L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				if (player != null)
 				{
 					teleportCharacter(player, activeChar.getLocation(), activeChar);
@@ -235,9 +235,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			int x = activeChar.getX(), y = activeChar.getY(), z = activeChar.getZ();
 			try
 			{
-				String val = command.substring(8);
-				StringTokenizer st = new StringTokenizer(val);
-				String dir = st.nextToken();
+				final String val = command.substring(8);
+				final StringTokenizer st = new StringTokenizer(val);
+				final String dir = st.nextToken();
 				if (st.hasMoreTokens())
 				{
 					intVal = Integer.parseInt(st.nextToken());
@@ -276,7 +276,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_sendhome"))
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken(); // Skip command.
 			if (st.countTokens() > 1)
 			{
@@ -352,13 +352,13 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		try
 		{
-			StringTokenizer st = new StringTokenizer(Coords);
-			String x1 = st.nextToken();
-			int x = Integer.parseInt(x1);
-			String y1 = st.nextToken();
-			int y = Integer.parseInt(y1);
-			String z1 = st.nextToken();
-			int z = Integer.parseInt(z1);
+			final StringTokenizer st = new StringTokenizer(Coords);
+			final String x1 = st.nextToken();
+			final int x = Integer.parseInt(x1);
+			final String y1 = st.nextToken();
+			final int y = Integer.parseInt(y1);
+			final String z1 = st.nextToken();
+			final int z = Integer.parseInt(z1);
 			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z);
@@ -378,7 +378,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void showTeleportCharWindow(L2PcInstance activeChar)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{
@@ -398,7 +398,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void teleportCharacter(L2PcInstance activeChar, String Cords)
 	{
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
 		{
@@ -418,13 +418,13 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(Cords);
-				String x1 = st.nextToken();
-				int x = Integer.parseInt(x1);
-				String y1 = st.nextToken();
-				int y = Integer.parseInt(y1);
-				String z1 = st.nextToken();
-				int z = Integer.parseInt(z1);
+				final StringTokenizer st = new StringTokenizer(Cords);
+				final String x1 = st.nextToken();
+				final int x = Integer.parseInt(x1);
+				final String y1 = st.nextToken();
+				final int y = Integer.parseInt(y1);
+				final String z1 = st.nextToken();
+				final int z = Integer.parseInt(z1);
 				teleportCharacter(player, new Location(x, y, z), null);
 			}
 			catch (NoSuchElementException nsee)
@@ -494,9 +494,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			// move to targets instance
 			activeChar.setInstanceId(target.getInstanceId());
 			
-			int x = player.getX();
-			int y = player.getY();
-			int z = player.getZ();
+			final int x = player.getX();
+			final int y = player.getY();
+			final int z = player.getZ();
 			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(new Location(x, y, z), true);
@@ -518,7 +518,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			ps.setInt(3, z);
 			ps.setString(4, name);
 			ps.execute();
-			int count = ps.getUpdateCount();
+			final int count = ps.getUpdateCount();
 			
 			if (count == 0)
 			{
@@ -537,10 +537,10 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void recallNPC(L2PcInstance activeChar)
 	{
-		L2Object obj = activeChar.getTarget();
+		final L2Object obj = activeChar.getTarget();
 		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
 		{
-			L2Npc target = (L2Npc) obj;
+			final L2Npc target = (L2Npc) obj;
 			L2Spawn spawn = target.getSpawn();
 			if (spawn == null)
 			{
@@ -548,7 +548,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				_log.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
 				return;
 			}
-			int respawnTime = spawn.getRespawnDelay() / 1000;
+			final int respawnTime = spawn.getRespawnDelay() / 1000;
 			
 			target.deleteMe();
 			spawn.stopRespawn();
@@ -594,10 +594,10 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else if (obj instanceof L2RaidBossInstance)
 		{
-			L2RaidBossInstance target = (L2RaidBossInstance) obj;
-			L2Spawn spawn = target.getSpawn();
-			double curHP = target.getCurrentHp();
-			double curMP = target.getCurrentMp();
+			final L2RaidBossInstance target = (L2RaidBossInstance) obj;
+			final L2Spawn spawn = target.getSpawn();
+			final double curHP = target.getCurrentHp();
+			final double curMP = target.getCurrentMp();
 			if (spawn == null)
 			{
 				activeChar.sendMessage("Incorrect raid spawn.");

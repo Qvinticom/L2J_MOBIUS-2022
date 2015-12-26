@@ -353,7 +353,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			return;
 		}
 		
-		float HPRatio = ((float) _owner.getCurrentHp()) / _owner.getMaxHp();
+		final float HPRatio = ((float) _owner.getCurrentHp()) / _owner.getMaxHp();
 		
 		// if the owner has a lot of HP, then debuff the enemy with a random debuff among the available skills
 		// use of more than one debuff at this moment is acceptable
@@ -421,8 +421,8 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		@Override
 		public void run()
 		{
-			int foodTypeSkillId = _tamedBeast.getFoodType();
-			L2PcInstance owner = _tamedBeast.getOwner();
+			final int foodTypeSkillId = _tamedBeast.getFoodType();
+			final L2PcInstance owner = _tamedBeast.getOwner();
 			
 			L2ItemInstance item = null;
 			if (_tamedBeast._isFreyaBeast)
@@ -456,9 +456,9 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				// if the owner has enough food, call the item handler (use the food and triffer all necessary actions)
 				if ((item != null) && (item.getCount() >= 1))
 				{
-					L2Object oldTarget = owner.getTarget();
+					final L2Object oldTarget = owner.getTarget();
 					owner.setTarget(_tamedBeast);
-					L2Object[] targets =
+					final L2Object[] targets =
 					{
 						_tamedBeast
 					};
@@ -503,7 +503,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		@Override
 		public void run()
 		{
-			L2PcInstance owner = _tamedBeast.getOwner();
+			final L2PcInstance owner = _tamedBeast.getOwner();
 			
 			// check if the owner is no longer around...if so, despawn
 			if ((owner == null) || !owner.isOnline())
@@ -530,7 +530,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			
 			int totalBuffsOnOwner = 0;
 			int i = 0;
-			int rand = Rnd.get(_numBuffs);
+			final int rand = Rnd.get(_numBuffs);
 			Skill buffToGive = null;
 			
 			// get this npc's skills: getSkills()

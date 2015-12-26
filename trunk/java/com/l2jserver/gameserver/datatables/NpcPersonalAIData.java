@@ -92,7 +92,7 @@ public class NpcPersonalAIData
 	{
 		if (_AIData.containsKey(spawnName))
 		{
-			Map<String, Integer> map = _AIData.get(spawnName);
+			final Map<String, Integer> map = _AIData.get(spawnName);
 			
 			try
 			{

@@ -369,7 +369,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			qs.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			qs.exitQuest(false);
 			
-			Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 			inst.setDuration(EXIT_TIME * 60000);
 			inst.setEmptyDestroyTime(0);
 			
@@ -419,7 +419,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		if (qs == null)
 		{
@@ -489,7 +489,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState qs = player.getQuestState(getName());
+		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || (qs.getState() != State.STARTED))
 		{
 			return null;
@@ -661,7 +661,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	{
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
-			InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
 			{
 				// If a player wants to go by a mob wall without kill it, he will be returned back to a spawn point.
@@ -933,7 +933,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
 			}
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			if (inst != null)
 			{
 				// Check max summon levels.

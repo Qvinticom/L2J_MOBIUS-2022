@@ -69,7 +69,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
+		final String htmltext = event;
 		final QuestState st = getQuestState(player, false);
 		if ((st == null) || (player.getLevel() < 82))
 		{
@@ -93,7 +93,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
+		final L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
 		final int idx = Arrays.binarySearch(MONSTERS, npc.getId());
 		if ((pl == null) || (idx < 0))
 		{

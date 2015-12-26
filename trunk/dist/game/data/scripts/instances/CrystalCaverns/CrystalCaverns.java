@@ -538,30 +538,30 @@ public final class CrystalCaverns extends AbstractInstance
 		{
 			if (partyMember.getLevel() < 78)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
-			L2ItemInstance item = partyMember.getInventory().getItemByItemId(CONT_CRYSTAL);
+			final L2ItemInstance item = partyMember.getInventory().getItemByItemId(CONT_CRYSTAL);
 			if (item == null)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
+			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -576,7 +576,7 @@ public final class CrystalCaverns extends AbstractInstance
 		{
 			return true;
 		}
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -589,17 +589,17 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			L2ItemInstance item = partyMember.getInventory().getItemByItemId(RED_CORAL);
+			final L2ItemInstance item = partyMember.getInventory().getItemByItemId(RED_CORAL);
 			if (item == null)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -610,7 +610,7 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	private boolean checkBaylorConditions(L2PcInstance player)
 	{
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
@@ -623,19 +623,19 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			L2ItemInstance item1 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_1);
-			L2ItemInstance item2 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_2);
-			L2ItemInstance item3 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_3);
+			final L2ItemInstance item1 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_1);
+			final L2ItemInstance item2 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_2);
+			final L2ItemInstance item3 = partyMember.getInventory().getItemByItemId(BOSS_CRYSTAL_3);
 			if ((item1 == null) || (item2 == null) || (item3 == null))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -653,10 +653,10 @@ public final class CrystalCaverns extends AbstractInstance
 		final int curZ = effected.getZ();
 		
 		// Calculate distance between effector and effected current position
-		double dx = effector.getX() - curX;
-		double dy = effector.getY() - curY;
-		double dz = effector.getZ() - curZ;
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final double dx = effector.getX() - curX;
+		final double dy = effector.getY() - curY;
+		final double dz = effector.getZ() - curZ;
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		int offset = Math.min((int) distance + 300, 1400);
 		
 		double cos;
@@ -679,11 +679,11 @@ public final class CrystalCaverns extends AbstractInstance
 		cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		int _x = effector.getX() - (int) (offset * cos);
-		int _y = effector.getY() - (int) (offset * sin);
-		int _z = effected.getZ();
+		final int _x = effector.getX() - (int) (offset * cos);
+		final int _y = effector.getY() - (int) (offset * sin);
+		final int _z = effected.getZ();
 		
-		Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
+		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		
@@ -729,7 +729,7 @@ public final class CrystalCaverns extends AbstractInstance
 		player.breakAttack();
 		player.breakCast();
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		L2Summon pet = player.getPet();
+		final L2Summon pet = player.getPet();
 		if (pet != null)
 		{
 			pet.setTarget(null);
@@ -778,7 +778,7 @@ public final class CrystalCaverns extends AbstractInstance
 		
 		for (int[] spawn : HALL_SPAWNS)
 		{
-			L2Npc mob = addSpawn(CGMOBS[getRandom(CGMOBS.length)], spawn[0], spawn[1], spawn[2], spawn[3], false, 0, false, world.getInstanceId());
+			final L2Npc mob = addSpawn(CGMOBS[getRandom(CGMOBS.length)], spawn[0], spawn[1], spawn[2], spawn[3], false, 0, false, world.getInstanceId());
 			world.npcList1.put(mob, false);
 		}
 	}
@@ -800,10 +800,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		world.setStatus(3);
 		
-		Map<L2Npc, Boolean> spawnList = new HashMap<>();
+		final Map<L2Npc, Boolean> spawnList = new HashMap<>();
 		for (int[] spawn : EMERALD_SPAWNS)
 		{
-			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+			final L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 			spawnList.put(mob, false);
 		}
 		world.npcList2.put(0, spawnList);
@@ -811,10 +811,10 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	protected void runEmeraldRooms(CCWorld world, int[][] spawnList, int room)
 	{
-		Map<L2Npc, Boolean> spawned = new HashMap<>();
+		final Map<L2Npc, Boolean> spawned = new HashMap<>();
 		for (int[] spawn : spawnList)
 		{
-			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+			final L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 			spawned.put(mob, false);
 		}
 		if (room == 1)
@@ -839,10 +839,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		world.setStatus(status);
 		
-		Map<L2Npc, Boolean> spawned = new HashMap<>();
+		final Map<L2Npc, Boolean> spawned = new HashMap<>();
 		for (int[] spawn : spawnList)
 		{
-			L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
+			final L2Npc mob = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 			spawned.put(mob, false);
 		}
 		world.npcList2.put(0, spawned);
@@ -885,10 +885,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (npc.getId() == ORACLE_GUIDE_1)
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if ((world.getStatus() == 0) && world.oracle.contains(npc))
 				{
 					return "32281.htm";// TODO: Missing HTML.
@@ -899,10 +899,10 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if ((npc.getId() >= 32275) && (npc.getId() <= 32277))
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if (!world.OracleTriggered[npc.getId() - 32275])
 				{
 					return "no.htm"; // TODO: Missing HTML.
@@ -913,7 +913,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if (npc.getId() == 32274)
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
 				return "no.htm"; // TODO: Missing HTML.
@@ -969,7 +969,7 @@ public final class CrystalCaverns extends AbstractInstance
 		
 		if ((npc.getId() >= 32275) && (npc.getId() <= 32277) && (skill.getId() != 2360) && (skill.getId() != 2369))
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if ((tmpworld instanceof CCWorld) && (getRandom(100) < 15))
 			{
 				for (L2Npc oracle : ((CCWorld) tmpworld).oracles.keySet())
@@ -988,10 +988,10 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				
 				if (((world._dragonClawStart + DRAGONCLAWTIME) <= System.currentTimeMillis()) || (world._dragonClawNeed <= 0))
 				{
@@ -1015,10 +1015,10 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if (npc.isInvul() && (npc.getId() == TEARS) && (skill.getId() == 2369) && (caster != null))
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if (caster.getParty() == null)
 				{
 					return super.onSkillSee(npc, caster, skill, targets, isSummon);
@@ -1046,10 +1046,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (npc.getId() == TEARS)
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if ((world.getStatus() != 4) && (attacker != null))
 				{
 					// Lucky cheater, the code only kicks his/her ass out of the dungeon
@@ -1078,13 +1078,13 @@ public final class CrystalCaverns extends AbstractInstance
 					return "";
 				}
 				
-				int maxHp = npc.getMaxHp();
-				double nowHp = npc.getStatus().getCurrentHp();
-				int rand = getRandom(1000);
+				final int maxHp = npc.getMaxHp();
+				final double nowHp = npc.getStatus().getCurrentHp();
+				final int rand = getRandom(1000);
 				
 				if ((nowHp < (maxHp * 0.4)) && (rand < 5))
 				{
-					L2Party party = attacker.getParty();
+					final L2Party party = attacker.getParty();
 					if (party != null)
 					{
 						for (L2PcInstance partyMember : party.getMembers())
@@ -1096,10 +1096,10 @@ public final class CrystalCaverns extends AbstractInstance
 					{
 						stopAttack(attacker);
 					}
-					L2Character target = npc.getAI().getAttackTarget();
+					final L2Character target = npc.getAI().getAttackTarget();
 					for (int i = 0; i < 10; i++)
 					{
-						L2Npc copy = addSpawn(TEARS_COPY, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, attacker.getInstanceId());
+						final L2Npc copy = addSpawn(TEARS_COPY, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, attacker.getInstanceId());
 						copy.setRunning();
 						((L2Attackable) copy).addDamageHate(target, 0, 99999);
 						copy.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
@@ -1125,7 +1125,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if ((npc.getId() == BAYLOR) && (skill.getId() == 5225))
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
 				((CCWorld) tmpworld)._raidStatus++;
@@ -1137,10 +1137,10 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof CCWorld)
 		{
-			CCWorld world = (CCWorld) tmpworld;
+			final CCWorld world = (CCWorld) tmpworld;
 			if (event.equalsIgnoreCase("TeleportOut"))
 			{
 				teleportPlayer(player, new Location(149413, 173078, -5014), 0);
@@ -1253,10 +1253,10 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				for (int i = 0; i < 10; i++)
 				{
-					int radius = 300;
-					int x = (int) (radius * Math.cos(i * 0.618));
-					int y = (int) (radius * Math.sin(i * 0.618));
-					L2Npc mob = addSpawn(29104, 153571 + x, 142075 + y, -12737, 0, false, 0, false, world.getInstanceId());
+					final int radius = 300;
+					final int x = (int) (radius * Math.cos(i * 0.618));
+					final int y = (int) (radius * Math.sin(i * 0.618));
+					final L2Npc mob = addSpawn(29104, 153571 + x, 142075 + y, -12737, 0, false, 0, false, world.getInstanceId());
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					world._animationMobs.add(mob);
 				}
@@ -1307,7 +1307,7 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				if (world._alarm == null)
 				{
-					int[] spawnLoc = ALARMSPAWN[getRandom(ALARMSPAWN.length)];
+					final int[] spawnLoc = ALARMSPAWN[getRandom(ALARMSPAWN.length)];
 					npc.addSkill(SkillData.getInstance().getSkill(5244, 1));
 					npc.addSkill(SkillData.getInstance().getSkill(5245, 1));
 					world._alarm = addSpawn(ALARMID, spawnLoc[0], spawnLoc[1], spawnLoc[2], 10800, false, 0, false, world.getInstanceId());
@@ -1324,9 +1324,9 @@ public final class CrystalCaverns extends AbstractInstance
 				}
 				else
 				{
-					int maxHp = npc.getMaxHp();
-					double nowHp = npc.getStatus().getCurrentHp();
-					int rand = getRandom(100);
+					final int maxHp = npc.getMaxHp();
+					final double nowHp = npc.getStatus().getCurrentHp();
+					final int rand = getRandom(100);
 					
 					if ((nowHp < (maxHp * 0.2)) && (world._raidStatus < 3) && !npc.isAffectedBySkill(5224) && !npc.isAffectedBySkill(5225))
 					{
@@ -1380,15 +1380,15 @@ public final class CrystalCaverns extends AbstractInstance
 					return "";
 				}
 				
-				CrystalGolem cryGolem = world.crystalGolems.get(npc);
+				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
 				int minDist = 300000;
 				for (L2Object object : L2World.getInstance().getVisibleObjects(npc, 300))
 				{
 					if (object.isItem() && (object.getId() == CRYSTALFOOD))
 					{
-						int dx = npc.getX() - object.getX();
-						int dy = npc.getY() - object.getY();
-						int d = (dx * dx) + (dy * dy);
+						final int dx = npc.getX() - object.getX();
+						final int dy = npc.getY() - object.getY();
+						final int d = (dx * dx) + (dy * dy);
 						if (d < minDist)
 						{
 							minDist = d;
@@ -1427,7 +1427,7 @@ public final class CrystalCaverns extends AbstractInstance
 			}
 			else if (event.equalsIgnoreCase("reachFood"))
 			{
-				CrystalGolem cryGolem = world.crystalGolems.get(npc);
+				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
 				int dx;
 				int dy;
 				if ((cryGolem.foodItem == null) || !cryGolem.foodItem.isVisible())
@@ -1445,10 +1445,10 @@ public final class CrystalCaverns extends AbstractInstance
 					cryGolem.foodItem = null;
 					dx = npc.getX() - 142999;
 					dy = npc.getY() - 151671;
-					int d1 = (dx * dx) + (dy * dy);
+					final int d1 = (dx * dx) + (dy * dy);
 					dx = npc.getX() - 139494;
 					dy = npc.getY() - 151668;
-					int d2 = (dx * dx) + (dy * dy);
+					final int d2 = (dx * dx) + (dy * dy);
 					if ((d1 < 10000) || (d2 < 10000))
 					{
 						npc.broadcastPacket(new MagicSkillUse(npc, npc, 5441, 1, 1, 0));
@@ -1470,8 +1470,8 @@ public final class CrystalCaverns extends AbstractInstance
 			}
 			else if (event.equalsIgnoreCase("getFood"))
 			{
-				CrystalGolem cryGolem = world.crystalGolems.get(npc);
-				Location newLoc = new Location(cryGolem.foodItem.getX(), cryGolem.foodItem.getY(), cryGolem.foodItem.getZ(), 0);
+				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
+				final Location newLoc = new Location(cryGolem.foodItem.getX(), cryGolem.foodItem.getY(), cryGolem.foodItem.getZ(), 0);
 				cryGolem.oldLoc = new Location(npc.getX(), npc.getY(), npc.getZ(), npc.getHeading());
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, newLoc);
 				startQuestTimer("reachFood", 2000, npc, null, true);
@@ -1485,7 +1485,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		final int num = Math.max((int) Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER, 1);
 		
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party != null)
 		{
 			for (L2PcInstance partyMember : party.getMembers())
@@ -1530,10 +1530,10 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof CCWorld)
 		{
-			CCWorld world = (CCWorld) tmpworld;
+			final CCWorld world = (CCWorld) tmpworld;
 			if ((world.getStatus() == 2) && world.npcList1.containsKey(npc))
 			{
 				world.npcList1.put(npc, true);
@@ -1546,8 +1546,8 @@ public final class CrystalCaverns extends AbstractInstance
 				}
 				world.setStatus(3);
 				world.tears = addSpawn(TEARS, 144298, 154420, -11854, 32767, false, 0, false, world.getInstanceId()); // Tears
-				CrystalGolem crygolem1 = new CrystalGolem();
-				CrystalGolem crygolem2 = new CrystalGolem();
+				final CrystalGolem crygolem1 = new CrystalGolem();
+				final CrystalGolem crygolem2 = new CrystalGolem();
 				world.crystalGolems.put(addSpawn(CRYSTAL_GOLEM, 140547, 151670, -11813, 32767, false, 0, false, world.getInstanceId()), crygolem1);
 				world.crystalGolems.put(addSpawn(CRYSTAL_GOLEM, 141941, 151684, -11813, 63371, false, 0, false, world.getInstanceId()), crygolem2);
 				for (L2Npc crygolem : world.crystalGolems.keySet())
@@ -1572,7 +1572,7 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					npc.dropItem(player, 9699, 1);
 					runSteamRooms(world, STEAM1_SPAWNS, 22);
-					L2Party party = player.getParty();
+					final L2Party party = player.getParty();
 					if (party != null)
 					{
 						for (L2PcInstance partyMember : party.getMembers())
@@ -1692,7 +1692,7 @@ public final class CrystalCaverns extends AbstractInstance
 							break;
 						case 25:
 							world.setStatus(26);
-							L2Party party = player.getParty();
+							final L2Party party = player.getParty();
 							if (party != null)
 							{
 								for (L2PcInstance partyMember : party.getMembers())
@@ -1704,7 +1704,7 @@ public final class CrystalCaverns extends AbstractInstance
 							cancelQuestTimers("Timer51");
 							openDoor(DOOR3, npc.getInstanceId());
 							openDoor(DOOR4, npc.getInstanceId());
-							L2Npc kechi = addSpawn(KECHI, 154069, 149525, -12158, 51165, false, 0, false, world.getInstanceId());
+							final L2Npc kechi = addSpawn(KECHI, 154069, 149525, -12158, 51165, false, 0, false, world.getInstanceId());
 							startQuestTimer("checkKechiAttack", 1000, kechi, null);
 							return "";
 						default:
@@ -1751,7 +1751,7 @@ public final class CrystalCaverns extends AbstractInstance
 				world.setStatus(31);
 				world._baylor = null;
 				npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-				Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
+				final Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				baylorInstance.setDuration(300000);
 				this.startQuestTimer("spawn_oracle", 1000, npc, null);
 				giveRewards(player, npc.getInstanceId(), -1, true);
@@ -1763,7 +1763,7 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
@@ -1775,10 +1775,10 @@ public final class CrystalCaverns extends AbstractInstance
 			return "";
 		}
 		
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof CCWorld)
 		{
-			CCWorld world = (CCWorld) tmpworld;
+			final CCWorld world = (CCWorld) tmpworld;
 			if (npcId == CRYSTAL_GOLEM)
 			{
 			}
@@ -1786,7 +1786,7 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				boolean doTeleport = false;
 				Location loc = null;
-				L2Party party = player.getParty();
+				final L2Party party = player.getParty();
 				doTeleport = true;
 				switch (npc.getId())
 				{
@@ -1903,7 +1903,7 @@ public final class CrystalCaverns extends AbstractInstance
 				if ((world.getStatus() < 30) && checkBaylorConditions(player))
 				{
 					world._raiders.clear();
-					L2Party party = player.getParty();
+					final L2Party party = player.getParty();
 					if (party == null)
 					{
 						world._raiders.add(player);
@@ -1923,19 +1923,19 @@ public final class CrystalCaverns extends AbstractInstance
 					return "";
 				}
 				world.setStatus(30);
-				long time = world.endTime - System.currentTimeMillis();
-				Instance baylorInstance = InstanceManager.getInstance().getInstance(world.getInstanceId());
+				final long time = world.endTime - System.currentTimeMillis();
+				final Instance baylorInstance = InstanceManager.getInstance().getInstance(world.getInstanceId());
 				baylorInstance.setDuration((int) time);
 				
-				int radius = 150;
+				final int radius = 150;
 				int i = 0;
-				int members = world._raiders.size();
+				final int members = world._raiders.size();
 				for (L2PcInstance p : world._raiders)
 				{
-					int x = (int) (radius * Math.cos((i * 2 * Math.PI) / members));
-					int y = (int) (radius * Math.sin((i++ * 2 * Math.PI) / members));
+					final int x = (int) (radius * Math.cos((i * 2 * Math.PI) / members));
+					final int y = (int) (radius * Math.sin((i++ * 2 * Math.PI) / members));
 					p.teleToLocation(new Location(153571 + x, 142075 + y, -12737));
-					L2Summon pet = p.getPet();
+					final L2Summon pet = p.getPet();
 					if (pet != null)
 					{
 						pet.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
@@ -1962,10 +1962,10 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
 		if (tmpworld instanceof CCWorld)
 		{
-			CCWorld world = (CCWorld) tmpworld;
+			final CCWorld world = (CCWorld) tmpworld;
 			switch (action)
 			{
 				case TRAP_DISARMED:
@@ -1985,10 +1985,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (character instanceof L2PcInstance)
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if (world.getStatus() == 8)
 				{
 					int room;
@@ -2044,10 +2044,10 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (character instanceof L2PcInstance)
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
 			if (tmpworld instanceof CCWorld)
 			{
-				CCWorld world = (CCWorld) tmpworld;
+				final CCWorld world = (CCWorld) tmpworld;
 				if (world.getStatus() == 8)
 				{
 					int doorId;

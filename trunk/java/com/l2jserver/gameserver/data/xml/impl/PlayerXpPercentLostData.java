@@ -58,8 +58,8 @@ public final class PlayerXpPercentLostData implements IXmlReader
 				{
 					if ("xpLost".equalsIgnoreCase(d.getNodeName()))
 					{
-						NamedNodeMap attrs = d.getAttributes();
-						Integer level = parseInteger(attrs, "level");
+						final NamedNodeMap attrs = d.getAttributes();
+						final Integer level = parseInteger(attrs, "level");
 						if (level > _maxlevel)
 						{
 							break;

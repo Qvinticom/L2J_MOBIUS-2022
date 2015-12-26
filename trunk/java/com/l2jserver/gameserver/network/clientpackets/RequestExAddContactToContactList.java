@@ -56,7 +56,7 @@ public class RequestExAddContactToContactList extends L2GameClientPacket
 			return;
 		}
 		
-		boolean charAdded = activeChar.getContactList().add(_name);
+		final boolean charAdded = activeChar.getContactList().add(_name);
 		activeChar.sendPacket(new ExConfirmAddingContact(_name, charAdded));
 	}
 	

@@ -54,14 +54,14 @@ public class AdminMessages implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_msgx "))
 		{
-			String[] tokens = command.split(" ");
+			final String[] tokens = command.split(" ");
 			if ((tokens.length <= 2) || !Util.isDigit(tokens[1]))
 			{
 				activeChar.sendMessage("Command format: //msgx <SYSTEM_MSG_ID> [item:Id] [skill:Id] [npc:Id] [zone:x,y,x] [castle:Id] [str:'text']");
 				return false;
 			}
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(Integer.parseInt(tokens[1]));
+			final SystemMessage sm = SystemMessage.getSystemMessage(Integer.parseInt(tokens[1]));
 			String val;
 			int lastPos = 0;
 			for (int i = 2; i < tokens.length; i++)
@@ -83,9 +83,9 @@ public class AdminMessages implements IAdminCommandHandler
 					}
 					else if (val.startsWith("zone:"))
 					{
-						int x = Integer.parseInt(val.substring(5, val.indexOf(",")));
-						int y = Integer.parseInt(val.substring(val.indexOf(",") + 1, val.lastIndexOf(",")));
-						int z = Integer.parseInt(val.substring(val.lastIndexOf(",") + 1, val.length()));
+						final int x = Integer.parseInt(val.substring(5, val.indexOf(",")));
+						final int y = Integer.parseInt(val.substring(val.indexOf(",") + 1, val.lastIndexOf(",")));
+						final int z = Integer.parseInt(val.substring(val.lastIndexOf(",") + 1, val.length()));
 						sm.addZoneName(x, y, z);
 					}
 					else if (val.startsWith("castle:"))

@@ -38,11 +38,11 @@ public class Book implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getId();
 		
-		String filename = "html/help/" + itemId + ".htm";
-		String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
+		final String filename = "html/help/" + itemId + ".htm";
+		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 		
 		if (content == null)
 		{

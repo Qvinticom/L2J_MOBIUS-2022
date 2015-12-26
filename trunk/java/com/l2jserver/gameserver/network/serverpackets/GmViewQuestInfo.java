@@ -58,7 +58,7 @@ public class GmViewQuestInfo extends L2GameServerPacket
 		{
 			writeD(q.getId());
 			
-			QuestState qs = _activeChar.getQuestState(q.getName());
+			final QuestState qs = _activeChar.getQuestState(q.getName());
 			
 			if (qs == null)
 			{

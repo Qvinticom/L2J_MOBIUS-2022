@@ -88,7 +88,7 @@ public class L2GuardInstance extends L2Attackable
 		super.onSpawn();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		L2WorldRegion region = L2World.getInstance().getRegion(getX(), getY());
+		final L2WorldRegion region = L2World.getInstance().getRegion(getX(), getY());
 		if ((region != null) && (!region.isActive()))
 		{
 			getAI().stopAITask();

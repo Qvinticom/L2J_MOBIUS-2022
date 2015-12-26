@@ -57,9 +57,9 @@ public class AdminTest implements IAdminCommandHandler
 		{
 			try
 			{
-				StringTokenizer st = new StringTokenizer(command);
+				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
-				int id = Integer.parseInt(st.nextToken());
+				final int id = Integer.parseInt(st.nextToken());
 				if (command.startsWith("admin_skill_test"))
 				{
 					adminTestSkill(activeChar, id, true);
@@ -97,7 +97,7 @@ public class AdminTest implements IAdminCommandHandler
 	private void adminTestSkill(L2PcInstance activeChar, int id, boolean msu)
 	{
 		L2Character caster;
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		if (!(target instanceof L2Character))
 		{
 			caster = activeChar;
@@ -107,7 +107,7 @@ public class AdminTest implements IAdminCommandHandler
 			caster = (L2Character) target;
 		}
 		
-		Skill _skill = SkillData.getInstance().getSkill(id, 1);
+		final Skill _skill = SkillData.getInstance().getSkill(id, 1);
 		if (_skill != null)
 		{
 			caster.setTarget(activeChar);

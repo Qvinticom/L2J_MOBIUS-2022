@@ -188,7 +188,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 				case SUCCESS:
 				{
 					Skill enchant4Skill = null;
-					L2Item it = item.getItem();
+					final L2Item it = item.getItem();
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(activeChar, item) > 0)
 					{
@@ -210,7 +210,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 					
 					if (Config.LOG_ITEM_ENCHANTS)
 					{
-						LogRecord record = new LogRecord(Level.INFO, "Success");
+						final LogRecord record = new LogRecord(Level.INFO, "Success");
 						record.setParameters(new Object[]
 						{
 							activeChar,
@@ -223,17 +223,17 @@ public final class RequestEnchantItem extends L2GameClientPacket
 					}
 					
 					// announce the success
-					int minEnchantAnnounce = item.isArmor() ? 6 : 7;
-					int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
+					final int minEnchantAnnounce = item.isArmor() ? 6 : 7;
+					final int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
 					if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
 						sm.addCharName(activeChar);
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						activeChar.broadcastPacket(sm);
 						
-						Skill skill = CommonSkill.FIREWORK.getSkill();
+						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)
 						{
 							activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
@@ -262,7 +262,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 						
 						if (Config.LOG_ITEM_ENCHANTS)
 						{
-							LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
+							final LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
 							record.setParameters(new Object[]
 							{
 								activeChar,
@@ -281,19 +281,19 @@ public final class RequestEnchantItem extends L2GameClientPacket
 						{
 							if (item.getEnchantLevel() > 0)
 							{
-								SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 								sm.addInt(item.getEnchantLevel());
 								sm.addItemName(item);
 								activeChar.sendPacket(sm);
 							}
 							else
 							{
-								SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 								sm.addItemName(item);
 								activeChar.sendPacket(sm);
 							}
 							
-							L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
+							final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
 							for (L2ItemInstance itm : unequiped)
 							{
 								iu.addModifiedItem(itm);
@@ -314,7 +314,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 							
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
-								LogRecord record = new LogRecord(Level.INFO, "Blessed Fail");
+								final LogRecord record = new LogRecord(Level.INFO, "Blessed Fail");
 								record.setParameters(new Object[]
 								{
 									activeChar,
@@ -337,7 +337,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 							
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
-								LogRecord record = new LogRecord(Level.INFO, "Blessed Fail");
+								final LogRecord record = new LogRecord(Level.INFO, "Blessed Fail");
 								record.setParameters(new Object[]
 								{
 									activeChar,
@@ -361,7 +361,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 								
 								if (Config.LOG_ITEM_ENCHANTS)
 								{
-									LogRecord record = new LogRecord(Level.INFO, "Unable to destroy");
+									final LogRecord record = new LogRecord(Level.INFO, "Unable to destroy");
 									record.setParameters(new Object[]
 									{
 										activeChar,
@@ -397,7 +397,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 							
 							if (Config.LOG_ITEM_ENCHANTS)
 							{
-								LogRecord record = new LogRecord(Level.INFO, "Fail");
+								final LogRecord record = new LogRecord(Level.INFO, "Fail");
 								record.setParameters(new Object[]
 								{
 									activeChar,

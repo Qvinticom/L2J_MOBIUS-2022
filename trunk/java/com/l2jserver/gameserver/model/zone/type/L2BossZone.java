@@ -168,7 +168,7 @@ public class L2BossZone extends L2ZoneType
 					// with legal entries, do nothing.
 					if (expirationTime == null) // legal null expirationTime entries
 					{
-						long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
+						final long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
 						if ((serverStartTime > (System.currentTimeMillis() - _timeInvade)))
 						{
 							return;
@@ -278,7 +278,7 @@ public class L2BossZone extends L2ZoneType
 					{
 						for (int i = 0; i < getSettings().getRaidList().size(); i++)
 						{
-							L2Attackable raid = (L2Attackable) getSettings().getRaidList().get(i);
+							final L2Attackable raid = (L2Attackable) getSettings().getRaidList().get(i);
 							if ((raid == null) || (raid.getSpawn() == null) || raid.isDead())
 							{
 								continue;
@@ -366,7 +366,7 @@ public class L2BossZone extends L2ZoneType
 		{
 			if ((character != null) && character.isPlayer())
 			{
-				L2PcInstance player = character.getActingPlayer();
+				final L2PcInstance player = character.getActingPlayer();
 				if (player.isOnline())
 				{
 					player.teleToLocation(loc);
@@ -390,7 +390,7 @@ public class L2BossZone extends L2ZoneType
 		{
 			if ((character != null) && character.isPlayer())
 			{
-				L2PcInstance player = character.getActingPlayer();
+				final L2PcInstance player = character.getActingPlayer();
 				if (player.isOnline())
 				{
 					if ((_oustLoc[0] != 0) && (_oustLoc[1] != 0) && (_oustLoc[2] != 0))
@@ -441,12 +441,12 @@ public class L2BossZone extends L2ZoneType
 			return;
 		}
 		
-		Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
+		final Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
 		for (L2Character character : getCharactersInside())
 		{
 			if ((character != null) && character.isPlayer())
 			{
-				L2PcInstance player = character.getActingPlayer();
+				final L2PcInstance player = character.getActingPlayer();
 				if (player.isOnline())
 				{
 					npcKnownPlayers.put(player.getObjectId(), player);

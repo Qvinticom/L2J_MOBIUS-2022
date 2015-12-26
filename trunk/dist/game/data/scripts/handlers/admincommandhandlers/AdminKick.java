@@ -37,12 +37,12 @@ public class AdminKick implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_kick"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
-				String player = st.nextToken();
-				L2PcInstance plyr = L2World.getInstance().getPlayer(player);
+				final String player = st.nextToken();
+				final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
 				if (plyr != null)
 				{
 					plyr.logout();

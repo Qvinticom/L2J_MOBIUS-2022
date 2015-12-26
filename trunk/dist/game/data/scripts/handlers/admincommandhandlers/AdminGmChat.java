@@ -85,7 +85,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
-		L2PcInstance player = (L2PcInstance) target;
+		final L2PcInstance player = (L2PcInstance) target;
 		player.addSnooper(activeChar);
 		activeChar.addSnooped(player);
 	}
@@ -115,7 +115,7 @@ public class AdminGmChat implements IAdminCommandHandler
 				offset = 13;
 			}
 			text = command.substring(offset);
-			CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text);
+			final CreatureSay cs = new CreatureSay(0, ChatType.ALLIANCE, activeChar.getName(), text);
 			AdminData.getInstance().broadcastToGMs(cs);
 		}
 		catch (StringIndexOutOfBoundsException e)

@@ -78,9 +78,9 @@ public final class PhysicalAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		Skill skill = info.getSkill();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
@@ -101,7 +101,7 @@ public final class PhysicalAttack extends AbstractEffect
 		}
 		
 		int damage = 0;
-		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		// Physical damage critical rate is only affected by STR.
 		boolean crit = false;
@@ -122,7 +122,7 @@ public final class PhysicalAttack extends AbstractEffect
 			StringTokenizer st = new StringTokenizer(_type1, ",");
 			while (st.hasMoreTokens())
 			{
-				String item = st.nextToken().trim();
+				final String item = st.nextToken().trim();
 				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
 				{
 					damage *= _valueReduce;
@@ -132,7 +132,7 @@ public final class PhysicalAttack extends AbstractEffect
 			st = new StringTokenizer(_type2, ",");
 			while (st.hasMoreTokens())
 			{
-				String item = st.nextToken().trim();
+				final String item = st.nextToken().trim();
 				if (activeChar.getActiveWeaponItem().getItemType() == WeaponType.valueOf(item))
 				{
 					damage *= _valueIncrease;
@@ -144,7 +144,7 @@ public final class PhysicalAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

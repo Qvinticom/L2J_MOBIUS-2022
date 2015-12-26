@@ -85,8 +85,8 @@ public final class L2ScriptEngineManager
 	
 	protected L2ScriptEngineManager()
 	{
-		ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
-		ScriptEngineFactory factory = new JavaScriptEngineFactory();
+		final ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
+		final ScriptEngineFactory factory = new JavaScriptEngineFactory();
 		scriptEngineManager.registerEngineExtension("java", factory);
 		_extEngines.put("java", factory.getScriptEngine());
 		_log.info("Script Engine: " + factory.getEngineName() + " " + factory.getEngineVersion() + " - Language: " + factory.getLanguageName() + " - Language Version: " + factory.getLanguageVersion());
@@ -130,7 +130,7 @@ public final class L2ScriptEngineManager
 						continue;
 					}
 					
-					String[] parts = line.trim().split("#");
+					final String[] parts = line.trim().split("#");
 					
 					if ((parts.length > 0) && !parts[0].isEmpty() && (parts[0].charAt(0) != '#'))
 					{
@@ -145,7 +145,7 @@ public final class L2ScriptEngineManager
 							line = line.substring(0, line.length() - 2);
 						}
 						
-						File file = new File(SCRIPT_FOLDER, line);
+						final File file = new File(SCRIPT_FOLDER, line);
 						
 						if (file.isDirectory() && parts[0].endsWith("/**"))
 						{
@@ -214,13 +214,13 @@ public final class L2ScriptEngineManager
 				{
 					try
 					{
-						String name = file.getName();
-						int lastIndex = name.lastIndexOf('.');
+						final String name = file.getName();
+						final int lastIndex = name.lastIndexOf('.');
 						String extension;
 						if (lastIndex != -1)
 						{
 							extension = name.substring(lastIndex + 1);
-							ScriptEngine engine = getEngineByExtension(extension);
+							final ScriptEngine engine = getEngineByExtension(extension);
 							if (engine != null)
 							{
 								executeScript(engine, file);
@@ -242,8 +242,8 @@ public final class L2ScriptEngineManager
 	
 	public void executeScript(File file) throws ScriptException
 	{
-		String name = file.getName();
-		int lastIndex = name.lastIndexOf('.');
+		final String name = file.getName();
+		final int lastIndex = name.lastIndexOf('.');
 		String extension;
 		if (lastIndex != -1)
 		{
@@ -254,7 +254,7 @@ public final class L2ScriptEngineManager
 			throw new ScriptException("Script file (" + name + ") doesnt has an extension that identifies the ScriptEngine to be used.");
 		}
 		
-		ScriptEngine engine = getEngineByExtension(extension);
+		final ScriptEngine engine = getEngineByExtension(extension);
 		if (engine == null)
 		{
 			throw new ScriptException("No engine registered for extension (" + extension + ")");
@@ -271,8 +271,8 @@ public final class L2ScriptEngineManager
 		
 		if (PURGE_ERROR_LOG)
 		{
-			String name = file.getAbsolutePath() + ".error.log";
-			File errorLog = new File(name);
+			final String name = file.getAbsolutePath() + ".error.log";
+			final File errorLog = new File(name);
 			if (errorLog.isFile())
 			{
 				errorLog.delete();
@@ -284,7 +284,7 @@ public final class L2ScriptEngineManager
 			InputStreamReader isr = new InputStreamReader(fis);
 			BufferedReader reader = new BufferedReader(isr))
 		{
-			ScriptContext context = new SimpleScriptContext();
+			final ScriptContext context = new SimpleScriptContext();
 			context.setAttribute("mainClass", getClassForFile(file).replace('/', '.').replace('\\', '.'), ScriptContext.ENGINE_SCOPE);
 			context.setAttribute(ScriptEngine.FILENAME, relativeName, ScriptContext.ENGINE_SCOPE);
 			context.setAttribute("classpath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
@@ -309,11 +309,11 @@ public final class L2ScriptEngineManager
 	
 	public static String getClassForFile(File script)
 	{
-		String path = script.getAbsolutePath();
-		String scpPath = SCRIPT_FOLDER.getAbsolutePath();
+		final String path = script.getAbsolutePath();
+		final String scpPath = SCRIPT_FOLDER.getAbsolutePath();
 		if (path.startsWith(scpPath))
 		{
-			int idx = path.lastIndexOf('.');
+			final int idx = path.lastIndexOf('.');
 			return path.substring(scpPath.length() + 1, idx);
 		}
 		return null;
@@ -328,8 +328,8 @@ public final class L2ScriptEngineManager
 	{
 		if ((engine instanceof Compilable) && ATTEMPT_COMPILATION)
 		{
-			Compilable eng = (Compilable) engine;
-			CompiledScript cs = eng.compile(script);
+			final Compilable eng = (Compilable) engine;
+			final CompiledScript cs = eng.compile(script);
 			return context != null ? cs.eval(context) : cs.eval();
 		}
 		return context != null ? engine.eval(script, context) : engine.eval(script);
@@ -342,14 +342,14 @@ public final class L2ScriptEngineManager
 	
 	public void reportScriptFileError(File script, ScriptException e)
 	{
-		String dir = script.getParent();
-		String name = script.getName() + ".error.log";
+		final String dir = script.getParent();
+		final String name = script.getName() + ".error.log";
 		if (dir != null)
 		{
 			final File file = new File(dir + "/" + name);
 			try (FileOutputStream fos = new FileOutputStream(file))
 			{
-				String errorHeader = "Error on: " + file.getCanonicalPath() + Config.EOL + "Line: " + e.getLineNumber() + " - Column: " + e.getColumnNumber() + Config.EOL + Config.EOL;
+				final String errorHeader = "Error on: " + file.getCanonicalPath() + Config.EOL + "Line: " + e.getLineNumber() + " - Column: " + e.getColumnNumber() + Config.EOL + Config.EOL;
 				fos.write(errorHeader.getBytes());
 				fos.write(e.getMessage().getBytes());
 				_log.warning("Failed executing script: " + script.getAbsolutePath() + ". See " + file.getName() + " for details.");

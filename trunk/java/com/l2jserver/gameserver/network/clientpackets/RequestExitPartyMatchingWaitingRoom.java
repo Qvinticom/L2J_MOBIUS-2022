@@ -36,7 +36,7 @@ public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacke
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
 		if (_activeChar == null)
 		{

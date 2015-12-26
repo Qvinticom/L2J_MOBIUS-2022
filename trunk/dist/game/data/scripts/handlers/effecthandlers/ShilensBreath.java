@@ -45,7 +45,7 @@ public final class ShilensBreath extends AbstractEffect
 		if (info.getEffected().isPlayer() && !info.getEffected().isDead())
 		{
 			final L2PcInstance player = (L2PcInstance) info.getEffected();
-			int nextLv = info.getSkill().getLevel() - 1;
+			final int nextLv = info.getSkill().getLevel() - 1;
 			
 			if (nextLv > 0)
 			{

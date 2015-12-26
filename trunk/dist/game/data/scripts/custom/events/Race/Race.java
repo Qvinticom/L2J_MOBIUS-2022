@@ -159,7 +159,7 @@ public final class Race extends Event
 		// Announce
 		Broadcast.toAllOnlinePlayers("Race started!");
 		// Get random Finish
-		int location = getRandom(0, _locations.length - 1);
+		final int location = getRandom(0, _locations.length - 1);
 		_randspawn = _coords[location];
 		// And spawn NPC
 		recordSpawn(_stop_npc, _randspawn[0], _randspawn[1], _randspawn[2], _randspawn[3], false, 0);
@@ -238,8 +238,8 @@ public final class Race extends Event
 			}
 			else
 			{
-				int _number = Integer.valueOf(bypass.substring(5));
-				Skill _sk = SkillData.getInstance().getSkill(_number, 1);
+				final int _number = Integer.valueOf(bypass.substring(5));
+				final Skill _sk = SkillData.getInstance().getSkill(_number, 1);
 				if (_sk != null)
 				{
 					_skill = _number;
@@ -271,8 +271,8 @@ public final class Race extends Event
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = getQuestState(player, false);
+		final String htmltext = event;
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return null;
@@ -380,7 +380,7 @@ public final class Race extends Event
 	private void showMenu(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		String content = getHtm(activeChar.getHtmlPrefix(), "admin_menu.htm");
+		final String content = getHtm(activeChar.getHtmlPrefix(), "admin_menu.htm");
 		html.setHtml(content);
 		activeChar.sendPacket(html);
 	}
@@ -393,7 +393,7 @@ public final class Race extends Event
 	
 	private void winRace(L2PcInstance player)
 	{
-		int[] _reward = _rewards[getRandom(_rewards.length - 1)];
+		final int[] _reward = _rewards[getRandom(_rewards.length - 1)];
 		player.addItem("eventModRace", _reward[0], _reward[1], _npc, true);
 		Broadcast.toAllOnlinePlayers(player.getName() + " is a winner!");
 		eventStop();

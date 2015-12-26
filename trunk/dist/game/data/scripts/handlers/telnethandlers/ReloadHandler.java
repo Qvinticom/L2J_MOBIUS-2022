@@ -55,10 +55,10 @@ public class ReloadHandler implements ITelnetHandler
 	{
 		if (command.startsWith("reload"))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(7));
+			final StringTokenizer st = new StringTokenizer(command.substring(7));
 			try
 			{
-				String type = st.nextToken();
+				final String type = st.nextToken();
 				
 				if (type.equals("multisell"))
 				{
@@ -118,9 +118,9 @@ public class ReloadHandler implements ITelnetHandler
 				{
 					try
 					{
-						String questPath = st.hasMoreTokens() ? st.nextToken() : "";
+						final String questPath = st.hasMoreTokens() ? st.nextToken() : "";
 						
-						File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, questPath);
+						final File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, questPath);
 						if (file.isFile())
 						{
 							try

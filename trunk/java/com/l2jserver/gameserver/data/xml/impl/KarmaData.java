@@ -62,7 +62,7 @@ public class KarmaData implements IXmlReader
 					if ("increase".equalsIgnoreCase(d.getNodeName()))
 					{
 						final NamedNodeMap attrs = d.getAttributes();
-						int level = parseInteger(attrs, "lvl");
+						final int level = parseInteger(attrs, "lvl");
 						if (level >= Config.PLAYER_MAXIMUM_LEVEL)
 						{
 							break;

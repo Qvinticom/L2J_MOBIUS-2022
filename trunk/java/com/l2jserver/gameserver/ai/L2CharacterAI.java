@@ -746,7 +746,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		if (_actor instanceof L2Npc)
 		{
-			L2Npc npc = (L2Npc) _actor;
+			final L2Npc npc = (L2Npc) _actor;
 			WalkingManager.getInstance().onArrived(npc); // Walking Manager support
 			
 			// Notify to scripts
@@ -962,11 +962,11 @@ public class L2CharacterAI extends AbstractAI
 	@Override
 	protected void onEvtAfraid(L2Character effector, boolean start)
 	{
-		double radians = Math.toRadians(start ? Util.calculateAngleFrom(effector, _actor) : Util.convertHeadingToDegree(_actor.getHeading()));
+		final double radians = Math.toRadians(start ? Util.calculateAngleFrom(effector, _actor) : Util.convertHeadingToDegree(_actor.getHeading()));
 		
-		int posX = (int) (_actor.getX() + (FEAR_RANGE * Math.cos(radians)));
-		int posY = (int) (_actor.getY() + (FEAR_RANGE * Math.sin(radians)));
-		int posZ = _actor.getZ();
+		final int posX = (int) (_actor.getX() + (FEAR_RANGE * Math.cos(radians)));
+		final int posY = (int) (_actor.getY() + (FEAR_RANGE * Math.sin(radians)));
+		final int posZ = _actor.getZ();
 		
 		if (!_actor.isPet())
 		{
@@ -1016,13 +1016,13 @@ public class L2CharacterAI extends AbstractAI
 			int x = _actor.getX();
 			int y = _actor.getY();
 			
-			double dx = worldPosition.getX() - x;
-			double dy = worldPosition.getY() - y;
+			final double dx = worldPosition.getX() - x;
+			final double dy = worldPosition.getY() - y;
 			
 			double dist = Math.sqrt((dx * dx) + (dy * dy));
 			
-			double sin = dy / dist;
-			double cos = dx / dist;
+			final double sin = dy / dist;
+			final double cos = dx / dist;
 			
 			dist -= offset - 5;
 			
@@ -1080,7 +1080,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		if (target.isDoor())
 		{
-			L2DoorInstance dor = (L2DoorInstance) target;
+			final L2DoorInstance dor = (L2DoorInstance) target;
 			int xPoint = 0;
 			int yPoint = 0;
 			for (int i : dor.getTemplate().getNodeX())
@@ -1229,7 +1229,7 @@ public class L2CharacterAI extends AbstractAI
 		// check if player is fakedeath
 		if (target instanceof L2PcInstance)
 		{
-			L2PcInstance target2 = (L2PcInstance) target; // convert object to chara
+			final L2PcInstance target2 = (L2PcInstance) target; // convert object to chara
 			
 			if (target2.isFakeDeath())
 			{
@@ -1326,7 +1326,7 @@ public class L2CharacterAI extends AbstractAI
 				{
 					continue;
 				}
-				int castRange = sk.getCastRange();
+				final int castRange = sk.getCastRange();
 				boolean hasLongRangeDamageSkill = false;
 				
 				if (sk.isContinuous())
@@ -1475,7 +1475,7 @@ public class L2CharacterAI extends AbstractAI
 			}
 			else
 			{
-				L2Weapon weapon = target.getActiveWeaponItem();
+				final L2Weapon weapon = target.getActiveWeaponItem();
 				if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
 				{
 					isArcher = true;
@@ -1538,7 +1538,7 @@ public class L2CharacterAI extends AbstractAI
 					}
 					if (target instanceof L2Attackable)
 					{
-						L2Npc actors = ((L2Npc) _actor);
+						final L2Npc actors = ((L2Npc) _actor);
 						
 						if (!actors.isChaos())
 						{
@@ -1567,7 +1567,7 @@ public class L2CharacterAI extends AbstractAI
 					}
 					if (target instanceof L2Attackable)
 					{
-						L2Npc actors = ((L2Npc) _actor);
+						final L2Npc actors = ((L2Npc) _actor);
 						
 						if (!actors.isChaos())
 						{
@@ -1599,7 +1599,7 @@ public class L2CharacterAI extends AbstractAI
 					}
 					if (target instanceof L2Attackable)
 					{
-						L2Npc actors = ((L2Npc) _actor);
+						final L2Npc actors = ((L2Npc) _actor);
 						
 						if (!actors.isChaos())
 						{
@@ -1629,7 +1629,7 @@ public class L2CharacterAI extends AbstractAI
 					
 					if (target instanceof L2Attackable)
 					{
-						L2Npc actors = ((L2Npc) _actor);
+						final L2Npc actors = ((L2Npc) _actor);
 						if (!actors.isChaos())
 						{
 							continue;
@@ -1662,8 +1662,8 @@ public class L2CharacterAI extends AbstractAI
 				{
 					continue;
 				}
-				L2Npc targets = ((L2Npc) target);
-				L2Npc actors = ((L2Npc) _actor);
+				final L2Npc targets = ((L2Npc) target);
+				final L2Npc actors = ((L2Npc) _actor);
 				if (targets.isInMyClan(actors))
 				{
 					count++;

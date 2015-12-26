@@ -95,7 +95,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 			{
 				if (valakasAI() != null)
 				{
-					int status = GrandBossManager.getInstance().getBossStatus(29028);
+					final int status = GrandBossManager.getInstance().getBossStatus(29028);
 					
 					if ((status == 0) || (status == 1))
 					{
@@ -106,7 +106,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 						else if (st.getInt("allowEnter") == 1)
 						{
 							st.unset("allowEnter");
-							L2BossZone zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
+							final L2BossZone zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 							
 							if (zone != null)
 							{
@@ -119,7 +119,7 @@ public final class GrandBossTeleporters extends AbstractNpcAI
 							
 							if (status == 0)
 							{
-								L2GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
+								final L2GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
 								valakasAI().startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME * 60000, valakas, null);
 								GrandBossManager.getInstance().setBossStatus(29028, 1);
 							}

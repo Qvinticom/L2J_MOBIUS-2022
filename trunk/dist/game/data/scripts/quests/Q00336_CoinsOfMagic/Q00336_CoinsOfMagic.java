@@ -164,7 +164,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{
 			return htmltext;
@@ -281,7 +281,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		final String htmltext = null;
 		
 		if (event.equals("QUEST_ACCEPTED"))
 		{
@@ -300,8 +300,8 @@ public final class Q00336_CoinsOfMagic extends Quest
 		{
 			return event;
 		}
-		int npcId = npc.getId();
-		int eventID = Integer.parseInt(event);
+		final int npcId = npc.getId();
+		final int eventID = Integer.parseInt(event);
 		
 		switch (npcId)
 		{
@@ -1102,7 +1102,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			case HARIT_LIZARDMAN_SHAMAN:
 			case HARIT_LIZARDM_MATRIARCH:
 			{
-				QuestState qs = getRandomPlayerFromPartyCoin(killer, npc, 2);
+				final QuestState qs = getRandomPlayerFromPartyCoin(killer, npc, 2);
 				if (qs != null)
 				{
 					if (getRandom(1000) < 63)
@@ -1748,14 +1748,14 @@ public final class Q00336_CoinsOfMagic extends Quest
 		}
 		else
 		{
-			int i0 = qs.getInt(PARAM_1) % 4;
+			final int i0 = qs.getInt(PARAM_1) % 4;
 			int i1 = qs.getInt(PARAM_1) / 4;
-			int i2 = i1 / 4;
+			final int i2 = i1 / 4;
 			i1 = i1 % 4;
 			
-			int i3 = qs.getInt(FLAG) % 4;
+			final int i3 = qs.getInt(FLAG) % 4;
 			int i4 = qs.getInt(FLAG) / 4;
-			int i5 = i4 / 4;
+			final int i5 = i4 / 4;
 			i4 = i4 % 4;
 			
 			if (i0 == i3)
@@ -1793,7 +1793,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 	
 	private QuestState getRandomPlayerFromParty(L2PcInstance player, L2Npc npc, int memoState)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
 		
 		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState))
@@ -1807,7 +1807,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
 				
-				QuestState qss = getQuestState(pm, false);
+				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && Util.checkIfInRange(1500, npc, pm, true))
 				{
 					candidates.add(qss);
@@ -1819,7 +1819,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 	
 	private QuestState getRandomPlayerFromPartyCoin(L2PcInstance player, L2Npc npc, int memoState)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
 		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && !qs.hasQuestItems(Q_KALDIS_GOLD_DRAGON))
 		{
@@ -1832,7 +1832,7 @@ public final class Q00336_CoinsOfMagic extends Quest
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
 				
-				QuestState qss = getQuestState(pm, false);
+				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && !qss.hasQuestItems(Q_KALDIS_GOLD_DRAGON) && Util.checkIfInRange(1500, npc, pm, true))
 				{
 					candidates.add(qss);

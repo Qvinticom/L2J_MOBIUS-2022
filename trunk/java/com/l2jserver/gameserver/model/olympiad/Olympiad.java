@@ -201,7 +201,7 @@ public class Olympiad extends ListenersContainer
 		{
 			_log.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
 			
-			Properties OlympiadProperties = new Properties();
+			final Properties OlympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(Config.OLYMPIAD_CONFIG_FILE))
 			{
 				
@@ -319,7 +319,7 @@ public class Olympiad extends ListenersContainer
 	public void loadNoblesRank()
 	{
 		NOBLES_RANK.clear();
-		Map<Integer, Integer> tmpPlace = new HashMap<>();
+		final Map<Integer, Integer> tmpPlace = new HashMap<>();
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery(GET_ALL_CLASSIFIED_NOBLESS))
@@ -405,7 +405,7 @@ public class Olympiad extends ListenersContainer
 		@Override
 		public void run()
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_NOW_ENDED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_NOW_ENDED);
 			sm.addInt(_currentCycle);
 			
 			Broadcast.toAllOnlinePlayers(sm);
@@ -426,7 +426,7 @@ public class Olympiad extends ListenersContainer
 			saveOlympiadStatus();
 			updateMonthlyData();
 			
-			Calendar validationEnd = Calendar.getInstance();
+			final Calendar validationEnd = Calendar.getInstance();
 			_validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
 			
 			loadNoblesRank();
@@ -464,14 +464,14 @@ public class Olympiad extends ListenersContainer
 		
 		synchronized (this)
 		{
-			long milliToStart = getMillisToCompBegin();
+			final long milliToStart = getMillisToCompBegin();
 			
-			double numSecs = (milliToStart / 1000) % 60;
+			final double numSecs = (milliToStart / 1000) % 60;
 			double countDown = ((milliToStart / 1000.) - numSecs) / 60;
-			int numMins = (int) Math.floor(countDown % 60);
+			final int numMins = (int) Math.floor(countDown % 60);
 			countDown = (countDown - numMins) / 60;
-			int numHours = (int) Math.floor(countDown % 24);
-			int numDays = (int) Math.floor((countDown - numHours) / 24);
+			final int numHours = (int) Math.floor(countDown % 24);
+			final int numDays = (int) Math.floor((countDown - numHours) / 24);
 			
 			_log.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
 			
@@ -497,7 +497,7 @@ public class Olympiad extends ListenersContainer
 				_gameAnnouncer = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
 			}
 			
-			long regEnd = getMillisToCompEnd() - 600000;
+			final long regEnd = getMillisToCompEnd() - 600000;
 			if (regEnd > 0)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
@@ -577,12 +577,12 @@ public class Olympiad extends ListenersContainer
 	
 	protected void setNewOlympiadEnd()
 	{
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_STARTED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_STARTED);
 		sm.addInt(_currentCycle);
 		
 		Broadcast.toAllOnlinePlayers(sm);
 		
-		Calendar currentTime = Calendar.getInstance();
+		final Calendar currentTime = Calendar.getInstance();
 		currentTime.add(Calendar.MONTH, 1);
 		currentTime.set(Calendar.DAY_OF_MONTH, 1);
 		currentTime.set(Calendar.AM_PM, Calendar.AM);
@@ -591,7 +591,7 @@ public class Olympiad extends ListenersContainer
 		currentTime.set(Calendar.SECOND, 0);
 		_olympiadEnd = currentTime.getTimeInMillis();
 		
-		Calendar nextChange = Calendar.getInstance();
+		final Calendar nextChange = Calendar.getInstance();
 		_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
 		scheduleWeeklyChange();
 	}
@@ -654,7 +654,7 @@ public class Olympiad extends ListenersContainer
 			resetWeeklyMatches();
 			_log.info("Olympiad System: Reset weekly matches to nobles");
 			
-			Calendar nextChange = Calendar.getInstance();
+			final Calendar nextChange = Calendar.getInstance();
 			_nextWeeklyChange = nextChange.getTimeInMillis() + WEEKLY_PERIOD;
 		}, getMillisToWeekChange(), WEEKLY_PERIOD);
 	}
@@ -723,25 +723,25 @@ public class Olympiad extends ListenersContainer
 		{
 			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 			{
-				StatsSet nobleInfo = entry.getValue();
+				final StatsSet nobleInfo = entry.getValue();
 				
 				if (nobleInfo == null)
 				{
 					continue;
 				}
 				
-				int charId = entry.getKey();
-				int classId = nobleInfo.getInt(CLASS_ID);
-				int points = nobleInfo.getInt(POINTS);
-				int compDone = nobleInfo.getInt(COMP_DONE);
-				int compWon = nobleInfo.getInt(COMP_WON);
-				int compLost = nobleInfo.getInt(COMP_LOST);
-				int compDrawn = nobleInfo.getInt(COMP_DRAWN);
-				int compDoneWeek = nobleInfo.getInt(COMP_DONE_WEEK);
-				int compDoneWeekClassed = nobleInfo.getInt(COMP_DONE_WEEK_CLASSED);
-				int compDoneWeekNonClassed = nobleInfo.getInt(COMP_DONE_WEEK_NON_CLASSED);
-				int compDoneWeekTeam = nobleInfo.getInt(COMP_DONE_WEEK_TEAM);
-				boolean toSave = nobleInfo.getBoolean("to_save");
+				final int charId = entry.getKey();
+				final int classId = nobleInfo.getInt(CLASS_ID);
+				final int points = nobleInfo.getInt(POINTS);
+				final int compDone = nobleInfo.getInt(COMP_DONE);
+				final int compWon = nobleInfo.getInt(COMP_WON);
+				final int compLost = nobleInfo.getInt(COMP_LOST);
+				final int compDrawn = nobleInfo.getInt(COMP_DRAWN);
+				final int compDoneWeek = nobleInfo.getInt(COMP_DONE_WEEK);
+				final int compDoneWeekClassed = nobleInfo.getInt(COMP_DONE_WEEK_CLASSED);
+				final int compDoneWeekNonClassed = nobleInfo.getInt(COMP_DONE_WEEK_NON_CLASSED);
+				final int compDoneWeekTeam = nobleInfo.getInt(COMP_DONE_WEEK_TEAM);
+				final boolean toSave = nobleInfo.getBoolean("to_save");
 				
 				try (PreparedStatement ps = con.prepareStatement(toSave ? OLYMPIAD_SAVE_NOBLES : OLYMPIAD_UPDATE_NOBLES))
 				{
@@ -856,17 +856,17 @@ public class Olympiad extends ListenersContainer
 		_logResults.info("Noble,charid,classid,compDone,points");
 		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 		{
-			StatsSet nobleInfo = entry.getValue();
+			final StatsSet nobleInfo = entry.getValue();
 			if (nobleInfo == null)
 			{
 				continue;
 			}
 			
-			int charId = entry.getKey();
-			int classId = nobleInfo.getInt(CLASS_ID);
-			String charName = nobleInfo.getString(CHAR_NAME);
-			int points = nobleInfo.getInt(POINTS);
-			int compDone = nobleInfo.getInt(COMP_DONE);
+			final int charId = entry.getKey();
+			final int classId = nobleInfo.getInt(CLASS_ID);
+			final String charName = nobleInfo.getString(CHAR_NAME);
+			final int points = nobleInfo.getInt(POINTS);
+			final int compDone = nobleInfo.getInt(COMP_DONE);
 			
 			record = new LogRecord(Level.INFO, charName);
 			record.setParameters(new Object[]
@@ -883,7 +883,7 @@ public class Olympiad extends ListenersContainer
 			PreparedStatement ps = con.prepareStatement(OLYMPIAD_GET_HEROS))
 		{
 			StatsSet hero;
-			List<StatsSet> soulHounds = new ArrayList<>();
+			final List<StatsSet> soulHounds = new ArrayList<>();
 			for (int element : HERO_IDS)
 			{
 				ps.setInt(1, element);
@@ -927,7 +927,7 @@ public class Olympiad extends ListenersContainer
 				case 1:
 				{
 					hero = new StatsSet();
-					StatsSet winner = soulHounds.get(0);
+					final StatsSet winner = soulHounds.get(0);
 					hero.set(CLASS_ID, winner.getInt(CLASS_ID));
 					hero.set(CHAR_ID, winner.getInt(CHAR_ID));
 					hero.set(CHAR_NAME, winner.getString(CHAR_NAME));
@@ -946,14 +946,14 @@ public class Olympiad extends ListenersContainer
 				{
 					hero = new StatsSet();
 					StatsSet winner;
-					StatsSet hero1 = soulHounds.get(0);
-					StatsSet hero2 = soulHounds.get(1);
-					int hero1Points = hero1.getInt(POINTS);
-					int hero2Points = hero2.getInt(POINTS);
-					int hero1Comps = hero1.getInt(COMP_DONE);
-					int hero2Comps = hero2.getInt(COMP_DONE);
-					int hero1Wins = hero1.getInt(COMP_WON);
-					int hero2Wins = hero2.getInt(COMP_WON);
+					final StatsSet hero1 = soulHounds.get(0);
+					final StatsSet hero2 = soulHounds.get(1);
+					final int hero1Points = hero1.getInt(POINTS);
+					final int hero2Points = hero2.getInt(POINTS);
+					final int hero1Comps = hero1.getInt(COMP_DONE);
+					final int hero2Comps = hero2.getInt(COMP_DONE);
+					final int hero1Wins = hero1.getInt(COMP_WON);
+					final int hero2Wins = hero2.getInt(COMP_WON);
 					
 					if (hero1Points > hero2Points)
 					{
@@ -1011,7 +1011,7 @@ public class Olympiad extends ListenersContainer
 	public List<String> getClassLeaderBoard(int classId)
 	{
 		final List<String> names = new ArrayList<>();
-		String query = Config.ALT_OLY_SHOW_MONTHLY_WINNERS ? ((classId == 132) ? GET_EACH_CLASS_LEADER_SOULHOUND : GET_EACH_CLASS_LEADER) : ((classId == 132) ? GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND : GET_EACH_CLASS_LEADER_CURRENT);
+		final String query = Config.ALT_OLY_SHOW_MONTHLY_WINNERS ? ((classId == 132) ? GET_EACH_CLASS_LEADER_SOULHOUND : GET_EACH_CLASS_LEADER) : ((classId == 132) ? GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND : GET_EACH_CLASS_LEADER_CURRENT);
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{

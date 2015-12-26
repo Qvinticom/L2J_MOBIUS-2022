@@ -64,7 +64,7 @@ public class ExOlympiadMatchList extends L2GameServerPacket
 		
 		for (OlympiadGameTask curGame : _games)
 		{
-			AbstractOlympiadGame game = curGame.getGame();
+			final AbstractOlympiadGame game = curGame.getGame();
 			if (game != null)
 			{
 				writeD(game.getStadiumId()); // Stadium Id (Arena 1 = 0)

@@ -86,7 +86,7 @@ public class PetInventory extends Inventory
 	public boolean validateWeight(L2ItemInstance item, long count)
 	{
 		int weight = 0;
-		L2Item template = ItemTable.getInstance().getTemplate(item.getId());
+		final L2Item template = ItemTable.getInstance().getTemplate(item.getId());
 		if (template == null)
 		{
 			return false;

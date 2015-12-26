@@ -45,13 +45,13 @@ public class AdminInstance implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command);
+		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
 		
 		// create new instance
 		if (command.startsWith("admin_createinstance"))
 		{
-			String[] parts = command.split(" ");
+			final String[] parts = command.split(" ");
 			if (parts.length != 3)
 			{
 				activeChar.sendMessage("Example: //createinstance <id> <templatefile> - ids => 300000 are reserved for dynamic instances");
@@ -89,14 +89,14 @@ public class AdminInstance implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(st.nextToken());
+				final int val = Integer.parseInt(st.nextToken());
 				if (InstanceManager.getInstance().getInstance(val) == null)
 				{
 					activeChar.sendMessage("Instance " + val + " doesnt exist.");
 					return false;
 				}
 				
-				L2Object target = activeChar.getTarget();
+				final L2Object target = activeChar.getTarget();
 				if ((target == null) || (target instanceof L2Summon)) // Don't separate summons from masters
 				{
 					activeChar.sendMessage("Incorrect target.");
@@ -105,7 +105,7 @@ public class AdminInstance implements IAdminCommandHandler
 				target.setInstanceId(val);
 				if (target instanceof L2PcInstance)
 				{
-					L2PcInstance player = (L2PcInstance) target;
+					final L2PcInstance player = (L2PcInstance) target;
 					player.sendMessage("Admin set your instance to:" + val);
 					player.teleToLocation(player.getLocation());
 				}
@@ -121,7 +121,7 @@ public class AdminInstance implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(st.nextToken());
+				final int val = Integer.parseInt(st.nextToken());
 				InstanceManager.getInstance().destroyInstance(val);
 				activeChar.sendMessage("Instance destroyed");
 			}

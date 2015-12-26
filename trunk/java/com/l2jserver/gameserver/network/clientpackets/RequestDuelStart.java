@@ -47,9 +47,9 @@ public final class RequestDuelStart extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
-		L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
-		boolean isPartyDuel = _partyDuel == 1 ? true : false;
+		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
+		final boolean isPartyDuel = _partyDuel == 1 ? true : false;
 		if ((activeChar == null) || (targetChar == null))
 		{
 			return;
@@ -64,7 +64,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 		}
 		if (!activeChar.isInsideRadius(targetChar, 250, false, false))
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 			msg.addString(targetChar.getName());
 			activeChar.sendPacket(msg);
 			return;
@@ -102,7 +102,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 					return;
 				}
 			}
-			L2PcInstance partyLeader = targetChar.getParty().getLeader(); // snatch party leader of targetChar's party
+			final L2PcInstance partyLeader = targetChar.getParty().getLeader(); // snatch party leader of targetChar's party
 			
 			for (L2PcInstance temp : targetChar.getParty().getMembers())
 			{
@@ -135,7 +135,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 				}
 				else
 				{
-					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 					msg.addString(partyLeader.getName());
 					activeChar.sendPacket(msg);
 				}
@@ -164,7 +164,7 @@ public final class RequestDuelStart extends L2GameClientPacket
 			}
 			else
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 				msg.addString(targetChar.getName());
 				activeChar.sendPacket(msg);
 			}

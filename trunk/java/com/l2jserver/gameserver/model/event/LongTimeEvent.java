@@ -95,7 +95,7 @@ public class LongTimeEvent extends Quest
 			}
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
-				long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
+				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
 				ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStart(), delay);
 				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
 			}
@@ -111,23 +111,23 @@ public class LongTimeEvent extends Quest
 	 */
 	private void loadConfig()
 	{
-		File configFile = new File(Config.DATAPACK_ROOT.getPath() + "/scripts/events/" + getName() + "/config.xml");
+		final File configFile = new File(Config.DATAPACK_ROOT.getPath() + "/scripts/events/" + getName() + "/config.xml");
 		try
 		{
-			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(configFile);
+			final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			final DocumentBuilder db = dbf.newDocumentBuilder();
+			final Document doc = db.parse(configFile);
 			if (!doc.getDocumentElement().getNodeName().equalsIgnoreCase("event"))
 			{
 				throw new NullPointerException("WARNING!!! " + getName() + " event: bad config file!");
 			}
 			_eventName = doc.getDocumentElement().getAttributes().getNamedItem("name").getNodeValue();
-			String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
+			final String period = doc.getDocumentElement().getAttributes().getNamedItem("active").getNodeValue();
 			_eventPeriod = DateRange.parse(period, new SimpleDateFormat("dd MM yyyy", Locale.US));
 			
 			if (doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod") != null)
 			{
-				String dropPeriod = doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod").getNodeValue();
+				final String dropPeriod = doc.getDocumentElement().getAttributes().getNamedItem("dropPeriod").getNodeValue();
 				_dropPeriod = DateRange.parse(dropPeriod, new SimpleDateFormat("dd MM yyyy", Locale.US));
 				// Check if drop period is within range of event period
 				if (!_eventPeriod.isWithinRange(_dropPeriod.getStartDate()) || !_eventPeriod.isWithinRange(_dropPeriod.getEndDate()))
@@ -145,11 +145,11 @@ public class LongTimeEvent extends Quest
 				throw new NullPointerException("WARNING!!! " + getName() + " event: illegal event period");
 			}
 			
-			Date today = new Date();
+			final Date today = new Date();
 			
 			if (_eventPeriod.getStartDate().after(today) || _eventPeriod.isWithinRange(today))
 			{
-				Node first = doc.getDocumentElement().getFirstChild();
+				final Node first = doc.getDocumentElement().getFirstChild();
 				for (Node n = first; n != null; n = n.getNextSibling())
 				{
 					// Loading droplist
@@ -161,10 +161,10 @@ public class LongTimeEvent extends Quest
 							{
 								try
 								{
-									int itemId = Integer.parseInt(d.getAttributes().getNamedItem("item").getNodeValue());
-									int minCount = Integer.parseInt(d.getAttributes().getNamedItem("min").getNodeValue());
-									int maxCount = Integer.parseInt(d.getAttributes().getNamedItem("max").getNodeValue());
-									String chance = d.getAttributes().getNamedItem("chance").getNodeValue();
+									final int itemId = Integer.parseInt(d.getAttributes().getNamedItem("item").getNodeValue());
+									final int minCount = Integer.parseInt(d.getAttributes().getNamedItem("min").getNodeValue());
+									final int maxCount = Integer.parseInt(d.getAttributes().getNamedItem("max").getNodeValue());
+									final String chance = d.getAttributes().getNamedItem("chance").getNodeValue();
 									int finalChance = 0;
 									
 									if (!chance.isEmpty() && chance.endsWith("%"))
@@ -208,11 +208,11 @@ public class LongTimeEvent extends Quest
 							{
 								try
 								{
-									int npcId = Integer.parseInt(d.getAttributes().getNamedItem("npc").getNodeValue());
-									int xPos = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
-									int yPos = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
-									int zPos = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
-									int heading = d.getAttributes().getNamedItem("heading").getNodeValue() != null ? Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue()) : 0;
+									final int npcId = Integer.parseInt(d.getAttributes().getNamedItem("npc").getNodeValue());
+									final int xPos = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
+									final int yPos = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
+									final int zPos = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
+									final int heading = d.getAttributes().getNamedItem("heading").getNodeValue() != null ? Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue()) : 0;
 									
 									if (NpcData.getInstance().getTemplate(npcId) == null)
 									{
@@ -236,8 +236,8 @@ public class LongTimeEvent extends Quest
 						{
 							if (d.getNodeName().equalsIgnoreCase("add"))
 							{
-								String msgType = d.getAttributes().getNamedItem("type").getNodeValue();
-								String msgText = d.getAttributes().getNamedItem("text").getNodeValue();
+								final String msgType = d.getAttributes().getNamedItem("type").getNodeValue();
+								final String msgText = d.getAttributes().getNamedItem("text").getNodeValue();
 								if ((msgType != null) && (msgText != null))
 								{
 									if (msgType.equalsIgnoreCase("onEnd"))
@@ -266,7 +266,7 @@ public class LongTimeEvent extends Quest
 	 */
 	protected void startEvent()
 	{
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		// Add drop
 		if (_dropList != null)
 		{
@@ -280,7 +280,7 @@ public class LongTimeEvent extends Quest
 		}
 		
 		// Add spawns
-		Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - currentTime;
+		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - currentTime;
 		if (_spawnList != null)
 		{
 			for (NpcSpawn spawn : _spawnList)

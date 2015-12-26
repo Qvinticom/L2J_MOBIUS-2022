@@ -38,7 +38,7 @@ public class AreaSummon implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
 			return EMPTY_TARGET_LIST;
@@ -57,7 +57,7 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharacters();
-		int maxTargets = skill.getAffectLimit();
+		final int maxTargets = skill.getAffectLimit();
 		
 		for (L2Character obj : objs)
 		{

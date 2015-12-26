@@ -44,12 +44,12 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		String[] parts = command.split(" ");
+		final String[] parts = command.split(" ");
 		if (parts.length == 2)
 		{
 			try
 			{
-				int lvl = Integer.parseInt(parts[1]);
+				final int lvl = Integer.parseInt(parts[1]);
 				if (activeChar.getTarget() instanceof L2PcInstance)
 				{
 					onlineChange(activeChar, (L2PcInstance) activeChar.getTarget(), lvl);
@@ -66,9 +66,9 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 		}
 		else if (parts.length == 3)
 		{
-			String name = parts[1];
-			int lvl = Integer.parseInt(parts[2]);
-			L2PcInstance player = L2World.getInstance().getPlayer(name);
+			final String name = parts[1];
+			final int lvl = Integer.parseInt(parts[2]);
+			final L2PcInstance player = L2World.getInstance().getPlayer(name);
 			if (player != null)
 			{
 				onlineChange(activeChar, player, lvl);

@@ -116,7 +116,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 			writeS(m.getName());
 			writeD(m.getLevel());
 			writeD(m.getClassId());
-			L2PcInstance player = m.getPlayerInstance();
+			final L2PcInstance player = m.getPlayerInstance();
 			if (player != null)
 			{
 				writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect
@@ -135,7 +135,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	
 	private String getLeaderName()
 	{
-		int LeaderId = _subPledge.getLeaderId();
+		final int LeaderId = _subPledge.getLeaderId();
 		if ((_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY) || (LeaderId == 0))
 		{
 			return "";

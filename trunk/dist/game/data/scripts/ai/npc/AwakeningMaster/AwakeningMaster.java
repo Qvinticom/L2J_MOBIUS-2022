@@ -85,7 +85,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 		{
 			return null;
 		}
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			case "awakening":

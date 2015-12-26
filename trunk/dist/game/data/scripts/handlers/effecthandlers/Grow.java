@@ -46,7 +46,7 @@ public final class Grow extends AbstractEffect
 	{
 		if (info.getEffected().isNpc())
 		{
-			L2Npc npc = (L2Npc) info.getEffected();
+			final L2Npc npc = (L2Npc) info.getEffected();
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
 		}
 	}
@@ -56,7 +56,7 @@ public final class Grow extends AbstractEffect
 	{
 		if (info.getEffected().isNpc())
 		{
-			L2Npc npc = (L2Npc) info.getEffected();
+			final L2Npc npc = (L2Npc) info.getEffected();
 			npc.setCollisionRadius(npc.getTemplate().getCollisionRadiusGrown());
 		}
 	}

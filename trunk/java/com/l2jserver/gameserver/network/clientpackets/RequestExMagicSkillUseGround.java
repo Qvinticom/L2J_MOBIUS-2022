@@ -64,7 +64,7 @@ public final class RequestExMagicSkillUseGround extends L2GameClientPacket
 		}
 		
 		// Get the level of the used skill
-		int level = activeChar.getSkillLevel(_skillId);
+		final int level = activeChar.getSkillLevel(_skillId);
 		if (level <= 0)
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -72,7 +72,7 @@ public final class RequestExMagicSkillUseGround extends L2GameClientPacket
 		}
 		
 		// Get the L2Skill template corresponding to the skillID received from the client
-		Skill skill = SkillData.getInstance().getSkill(_skillId, level);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, level);
 		
 		// Check the validity of the skill
 		if (skill != null)

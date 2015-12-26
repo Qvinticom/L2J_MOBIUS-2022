@@ -43,7 +43,7 @@ public class CompactionIDFactory extends IdFactory
 		
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			Integer[] tmp_obj_ids = extractUsedObjectIDTable();
+			final Integer[] tmp_obj_ids = extractUsedObjectIDTable();
 			
 			int N = tmp_obj_ids.length;
 			for (int idx = 0; idx < N; idx++)
@@ -81,7 +81,7 @@ public class CompactionIDFactory extends IdFactory
 					{
 						while (rs.next())
 						{
-							int badId = rs.getInt(1);
+							final int badId = rs.getInt(1);
 							_log.severe(getClass().getSimpleName() + ": Bad ID " + badId + " in DB found by: " + check);
 							throw new RuntimeException();
 						}

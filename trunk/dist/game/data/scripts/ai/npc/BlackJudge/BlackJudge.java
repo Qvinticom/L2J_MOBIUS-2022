@@ -70,7 +70,7 @@ public class BlackJudge extends AbstractNpcAI
 			{
 				if (player.getShilensBreathDebuffLevel() > 0)
 				{
-					int cost = COSTS[level];
+					final int cost = COSTS[level];
 					
 					if (player.getAdena() >= cost)
 					{

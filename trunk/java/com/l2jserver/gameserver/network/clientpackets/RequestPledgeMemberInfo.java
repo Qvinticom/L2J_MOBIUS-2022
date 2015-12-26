@@ -46,18 +46,18 @@ public final class RequestPledgeMemberInfo extends L2GameClientPacket
 	{
 		// _log.info("C5: RequestPledgeMemberInfo d:"+_unk1);
 		// _log.info("C5: RequestPledgeMemberInfo S:"+_player);
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		// do we need powers to do that??
-		L2Clan clan = activeChar.getClan();
+		final L2Clan clan = activeChar.getClan();
 		if (clan == null)
 		{
 			return;
 		}
-		L2ClanMember member = clan.getClanMember(_player);
+		final L2ClanMember member = clan.getClanMember(_player);
 		if (member == null)
 		{
 			return;

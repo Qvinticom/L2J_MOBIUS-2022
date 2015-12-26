@@ -89,7 +89,7 @@ public final class Logout extends L2GameClientPacket
 		// Remove player from Boss Zone
 		player.removeFromBossZone();
 		
-		LogRecord record = new LogRecord(Level.INFO, "Disconnected");
+		final LogRecord record = new LogRecord(Level.INFO, "Disconnected");
 		record.setParameters(new Object[]
 		{
 			getClient()

@@ -219,7 +219,7 @@ public class AugmentationData
 	private final void load()
 	{
 		// Load stats
-		DocumentBuilderFactory factory2 = DocumentBuilderFactory.newInstance();
+		final DocumentBuilderFactory factory2 = DocumentBuilderFactory.newInstance();
 		factory2.setValidating(false);
 		factory2.setIgnoringComments(true);
 		
@@ -232,18 +232,18 @@ public class AugmentationData
 			try
 			{
 				int badAugmantData = 0;
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+				final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 				factory.setValidating(false);
 				factory.setIgnoringComments(true);
 				
-				File file = new File(Config.DATAPACK_ROOT + "/stats/augmentation/augmentation_skillmap.xml");
+				final File file = new File(Config.DATAPACK_ROOT + "/stats/augmentation/augmentation_skillmap.xml");
 				if (!file.exists())
 				{
 					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The augmentation skillmap file is missing.");
 					return;
 				}
 				
-				Document doc = factory.newDocumentBuilder().parse(file);
+				final Document doc = factory.newDocumentBuilder().parse(file);
 				
 				for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 				{
@@ -254,7 +254,8 @@ public class AugmentationData
 							if ("augmentation".equalsIgnoreCase(d.getNodeName()))
 							{
 								NamedNodeMap attrs = d.getAttributes();
-								int skillId = 0, augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
+								int skillId = 0;
+								final int augmentationId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
 								int skillLvL = 0;
 								String type = "blue";
 								
@@ -286,7 +287,7 @@ public class AugmentationData
 									badAugmantData++;
 									continue;
 								}
-								int k = (augmentationId - BLUE_START) / SKILLS_BLOCKSIZE;
+								final int k = (augmentationId - BLUE_START) / SKILLS_BLOCKSIZE;
 								
 								if (type.equalsIgnoreCase("blue"))
 								{
@@ -319,11 +320,11 @@ public class AugmentationData
 		}
 		else
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File aFile = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances.xml");
+			final File aFile = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances.xml");
 			if (aFile.exists())
 			{
 				Document aDoc = null;
@@ -413,11 +414,11 @@ public class AugmentationData
 		}
 		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
 		{
-			DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance();
 			factory3.setValidating(false);
 			factory3.setIgnoringComments(true);
 			
-			File aFile3 = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances_accessory.xml");
+			final File aFile3 = new File(Config.DATAPACK_ROOT + "/stats/augmentation/retailchances_accessory.xml");
 			if (aFile3.exists())
 			{
 				Document aDoc = null;
@@ -536,8 +537,8 @@ public class AugmentationData
 		{
 			if (item.getItem().isMagicWeapon())
 			{
-				List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				List<AugmentationChance> _selectedChances34 = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("mage") && (ac.getStoneId() == lifeStoneId))
@@ -598,7 +599,7 @@ public class AugmentationData
 				{
 					c = 3;
 				}
-				List<AugmentationChance> _selectedChances34final = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
 				for (AugmentationChance ac : _selectedChances34)
 				{
 					if (ac.getCategoryChance() == c)
@@ -621,8 +622,8 @@ public class AugmentationData
 			}
 			else
 			{
-				List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				List<AugmentationChance> _selectedChances34 = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
@@ -683,7 +684,7 @@ public class AugmentationData
 				{
 					c = 3;
 				}
-				List<AugmentationChance> _selectedChances34final = new ArrayList<>();
+				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
 				for (AugmentationChance ac : _selectedChances34)
 				{
 					if (ac.getCategoryChance() == c)
@@ -838,8 +839,8 @@ public class AugmentationData
 		int offset;
 		if (stat34 == 0)
 		{
-			int temp = Rnd.get(2, 3);
-			int colorOffset = (resultColor * (10 * STAT_SUBBLOCKSIZE)) + (temp * STAT_BLOCKSIZE) + 1;
+			final int temp = Rnd.get(2, 3);
+			final int colorOffset = (resultColor * (10 * STAT_SUBBLOCKSIZE)) + (temp * STAT_BLOCKSIZE) + 1;
 			offset = (lifeStoneLevel * STAT_SUBBLOCKSIZE) + colorOffset;
 			
 			stat34 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
@@ -878,8 +879,8 @@ public class AugmentationData
 		int stat34 = 0;
 		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
 		{
-			List<augmentationChanceAcc> _selectedChances12 = new ArrayList<>();
-			List<augmentationChanceAcc> _selectedChances34 = new ArrayList<>();
+			final List<augmentationChanceAcc> _selectedChances12 = new ArrayList<>();
+			final List<augmentationChanceAcc> _selectedChances34 = new ArrayList<>();
 			for (augmentationChanceAcc ac : _augmentationChancesAcc)
 			{
 				if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
@@ -921,7 +922,7 @@ public class AugmentationData
 			{
 				c = 1;
 			}
-			List<augmentationChanceAcc> _selectedChances34final = new ArrayList<>();
+			final List<augmentationChanceAcc> _selectedChances34final = new ArrayList<>();
 			for (augmentationChanceAcc ac : _selectedChances34)
 			{
 				if (ac.getCategoryChance() == c)
@@ -964,7 +965,7 @@ public class AugmentationData
 				return null;
 		}
 		
-		int resultColor = Rnd.get(0, 3);
+		final int resultColor = Rnd.get(0, 3);
 		
 		// first augmentation (stats only)
 		stat12 = Rnd.get(ACC_STAT_SUBBLOCKSIZE);

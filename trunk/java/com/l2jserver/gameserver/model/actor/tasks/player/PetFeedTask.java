@@ -90,11 +90,11 @@ public class PetFeedTask implements Runnable
 			
 			if ((food != null) && _player.isHungry())
 			{
-				IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
+				final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
 				if (handler != null)
 				{
 					handler.useItem(_player, food, false);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
 					sm.addItemName(food.getId());
 					_player.sendPacket(sm);
 				}

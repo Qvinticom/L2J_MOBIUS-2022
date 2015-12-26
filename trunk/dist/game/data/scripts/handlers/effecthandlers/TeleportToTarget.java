@@ -58,15 +58,15 @@ public final class TeleportToTarget extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character activeChar = info.getEffector();
-		L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
 		if (target == null)
 		{
 			return;
 		}
 		
-		int px = target.getX();
-		int py = target.getY();
+		final int px = target.getX();
+		final int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
 		
 		ph += 180;
@@ -76,9 +76,9 @@ public final class TeleportToTarget extends AbstractEffect
 		}
 		
 		ph = (Math.PI * ph) / 180;
-		int x = (int) (px + (25 * Math.cos(ph)));
-		int y = (int) (py + (25 * Math.sin(ph)));
-		int z = target.getZ();
+		final int x = (int) (px + (25 * Math.cos(ph)));
+		final int y = (int) (py + (25 * Math.sin(ph)));
+		final int z = target.getZ();
 		
 		final Location loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
 		

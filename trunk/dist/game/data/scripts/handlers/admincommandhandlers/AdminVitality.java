@@ -55,8 +55,8 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		int vitality = 0;
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String cmd = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String cmd = st.nextToken();
 		
 		if (activeChar.getTarget() instanceof L2PcInstance)
 		{

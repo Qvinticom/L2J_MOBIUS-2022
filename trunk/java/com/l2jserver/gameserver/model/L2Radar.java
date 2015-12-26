@@ -40,7 +40,7 @@ public final class L2Radar
 	// Add a marker to player's radar
 	public void addMarker(int x, int y, int z)
 	{
-		RadarMarker newMarker = new RadarMarker(x, y, z);
+		final RadarMarker newMarker = new RadarMarker(x, y, z);
 		
 		_markers.add(newMarker);
 		_player.sendPacket(new RadarControl(2, 2, x, y, z));
@@ -50,7 +50,7 @@ public final class L2Radar
 	// Remove a marker from player's radar
 	public void removeMarker(int x, int y, int z)
 	{
-		RadarMarker newMarker = new RadarMarker(x, y, z);
+		final RadarMarker newMarker = new RadarMarker(x, y, z);
 		
 		_markers.remove(newMarker);
 		_player.sendPacket(new RadarControl(1, 1, x, y, z));

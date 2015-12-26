@@ -48,7 +48,7 @@ public class PetNameTable
 			PreparedStatement ps = con.prepareStatement("SELECT name FROM pets p, items i WHERE p.item_obj_id = i.object_id AND name=? AND i.item_id IN (?)"))
 		{
 			ps.setString(1, name);
-			StringBuilder cond = new StringBuilder();
+			final StringBuilder cond = new StringBuilder();
 			if (!cond.toString().isEmpty())
 			{
 				cond.append(", ");
@@ -87,7 +87,7 @@ public class PetNameTable
 			LOGGER.warning(getClass().getSimpleName() + ": Pet name pattern of config is wrong!");
 			pattern = Pattern.compile(".*");
 		}
-		Matcher regexp = pattern.matcher(name);
+		final Matcher regexp = pattern.matcher(name);
 		if (!regexp.matches())
 		{
 			result = false;
@@ -98,7 +98,7 @@ public class PetNameTable
 	private boolean isAlphaNumeric(String text)
 	{
 		boolean result = true;
-		char[] chars = text.toCharArray();
+		final char[] chars = text.toCharArray();
 		for (int i = 0; i < chars.length; i++)
 		{
 			if (!Character.isLetterOrDigit(chars[i]))

@@ -44,13 +44,13 @@ public final class RequestWithDrawalParty extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		
 		if (party != null)
 		{
@@ -58,7 +58,7 @@ public final class RequestWithDrawalParty extends L2GameClientPacket
 			
 			if (player.isInPartyMatchRoom())
 			{
-				PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
+				final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
 				if (_room != null)
 				{
 					player.sendPacket(new PartyMatchDetail(player, _room));

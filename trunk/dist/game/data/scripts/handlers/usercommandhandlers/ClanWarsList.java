@@ -95,8 +95,8 @@ public class ClanWarsList implements IUserCommandHandler
 			{
 				while (rs.next())
 				{
-					String clanName = rs.getString("clan_name");
-					int allyId = rs.getInt("ally_id");
+					final String clanName = rs.getString("clan_name");
+					final int allyId = rs.getInt("ally_id");
 					if (allyId > 0)
 					{
 						// Target With Ally

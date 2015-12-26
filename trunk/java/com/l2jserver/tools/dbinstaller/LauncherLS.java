@@ -33,8 +33,8 @@ public class LauncherLS extends AbstractDBLauncher
 {
 	public static void main(String[] args)
 	{
-		String defDatabase = "lineage2";
-		String dir = "sql/login/";
+		final String defDatabase = "lineage2";
+		final String dir = "sql/login/";
 		
 		if ((args != null) && (args.length > 0))
 		{

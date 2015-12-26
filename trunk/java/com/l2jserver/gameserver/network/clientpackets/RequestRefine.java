@@ -56,17 +56,17 @@ public final class RequestRefine extends AbstractRefinePacket
 		{
 			return;
 		}
-		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
+		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			return;
 		}
-		L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
+		final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
 		if (refinerItem == null)
 		{
 			return;
 		}
-		L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_gemStoneItemObjId);
+		final L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_gemStoneItemObjId);
 		if (gemStoneItem == null)
 		{
 			return;
@@ -97,8 +97,8 @@ public final class RequestRefine extends AbstractRefinePacket
 		// unequip item
 		if (targetItem.isEquipped())
 		{
-			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
-			InventoryUpdate iu = new InventoryUpdate();
+			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
@@ -126,7 +126,7 @@ public final class RequestRefine extends AbstractRefinePacket
 		final int stat34 = aug.getAugmentationId() >> 16;
 		activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
 		
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		activeChar.sendPacket(iu);
 		

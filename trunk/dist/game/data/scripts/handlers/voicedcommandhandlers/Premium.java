@@ -38,12 +38,12 @@ public class Premium implements IVoicedCommandHandler
 	{
 		if (command.startsWith("premium") && Config.PREMIUM_SYSTEM_ENABLED)
 		{
-			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-			long endDate = PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName());
+			final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+			final long endDate = PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName());
 			if (endDate == 0)
 			{
-				NpcHtmlMessage msg = new NpcHtmlMessage(5);
-				StringBuilder html = new StringBuilder("<html><body><title>Account Details</title><center>");
+				final NpcHtmlMessage msg = new NpcHtmlMessage(5);
+				final StringBuilder html = new StringBuilder("<html><body><title>Account Details</title><center>");
 				html.append("<table>");
 				html.append("<tr><td><center>Account Status: <font color=\"LEVEL\">Normal<br></font></td></tr>");
 				html.append("<tr><td>Rate XP: <font color=\"LEVEL\"> x" + Config.RATE_XP + "<br1></font></td></tr>");
@@ -65,8 +65,8 @@ public class Premium implements IVoicedCommandHandler
 			}
 			else
 			{
-				NpcHtmlMessage msg = new NpcHtmlMessage(5);
-				StringBuilder html = new StringBuilder("<html><body><title>Premium Account Details</title><center>");
+				final NpcHtmlMessage msg = new NpcHtmlMessage(5);
+				final StringBuilder html = new StringBuilder("<html><body><title>Premium Account Details</title><center>");
 				html.append("<table>");
 				html.append("<tr><td><center>Account Status: <font color=\"LEVEL\">Premium<br></font></td></tr>");
 				html.append("<tr><td>Rate XP: <font color=\"LEVEL\">x" + (Config.RATE_XP * Config.PREMIUM_RATE_XP) + " <br1></font></td></tr>");

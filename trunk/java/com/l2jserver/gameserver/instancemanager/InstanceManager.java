@@ -177,8 +177,8 @@ public final class InstanceManager implements IXmlReader
 			{
 				while (rs.next())
 				{
-					int id = rs.getInt("instanceId");
-					long time = rs.getLong("time");
+					final int id = rs.getInt("instanceId");
+					final long time = rs.getLong("time");
 					if (time < System.currentTimeMillis())
 					{
 						deleteInstanceTime(playerObjId, id);

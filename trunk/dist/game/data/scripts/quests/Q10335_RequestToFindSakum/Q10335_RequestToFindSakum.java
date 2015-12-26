@@ -71,7 +71,7 @@ public class Q10335_RequestToFindSakum extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return null;
@@ -221,7 +221,7 @@ public class Q10335_RequestToFindSakum extends Quest
 				qs.set(Integer.toString(npc.getId()), kills);
 			}
 			
-			ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			log.addNpc(SKELETON_TRACKER, qs.getInt(Integer.toString(SKELETON_TRACKER)));
 			log.addNpc(SKELETON_BOWMAN, qs.getInt(Integer.toString(SKELETON_BOWMAN)));
 			log.addNpc(RUIN_SPARTOI, qs.getInt(Integer.toString(RUIN_SPARTOI)));

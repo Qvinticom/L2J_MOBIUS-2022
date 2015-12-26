@@ -55,8 +55,8 @@ public class AdminZone implements IAdminCommandHandler
 			return false;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		// String val = "";
 		// if (st.countTokens() >= 1) {val = st.nextToken();}
@@ -84,7 +84,7 @@ public class AdminZone implements IAdminCommandHandler
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual"))
 		{
-			String next = st.nextToken();
+			final String next = st.nextToken();
 			if (next.equalsIgnoreCase("all"))
 			{
 				for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
@@ -99,7 +99,7 @@ public class AdminZone implements IAdminCommandHandler
 			}
 			else
 			{
-				int zoneId = Integer.parseInt(next);
+				final int zoneId = Integer.parseInt(next);
 				ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(activeChar.getZ());
 			}
 		}
@@ -133,8 +133,8 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%DANGER%", (activeChar.isInsideZone(ZoneId.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%NOSTORE%", (activeChar.isInsideZone(ZoneId.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%SCRIPT%", (activeChar.isInsideZone(ZoneId.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
-		StringBuilder zones = new StringBuilder(100);
-		L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
+		final StringBuilder zones = new StringBuilder(100);
+		final L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
 		for (L2ZoneType zone : region.getZones())
 		{
 			if (zone.isCharacterInZone(activeChar))
@@ -164,10 +164,10 @@ public class AdminZone implements IAdminCommandHandler
 	
 	private static void getGeoRegionXY(L2PcInstance activeChar)
 	{
-		int worldX = activeChar.getX();
-		int worldY = activeChar.getY();
-		int geoX = ((((worldX - (-327680)) >> 4) >> 11) + 10);
-		int geoY = ((((worldY - (-262144)) >> 4) >> 11) + 10);
+		final int worldX = activeChar.getX();
+		final int worldY = activeChar.getY();
+		final int geoX = ((((worldX - (-327680)) >> 4) >> 11) + 10);
+		final int geoY = ((((worldY - (-262144)) >> 4) >> 11) + 10);
 		activeChar.sendMessage("GeoRegion: " + geoX + "_" + geoY + "");
 	}
 	

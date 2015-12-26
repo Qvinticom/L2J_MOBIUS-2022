@@ -59,9 +59,9 @@ public final class ConditionSiegeZone extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		L2Character target = _self ? effector : effected;
-		Castle castle = CastleManager.getInstance().getCastle(target);
-		Fort fort = FortManager.getInstance().getFort(target);
+		final L2Character target = _self ? effector : effected;
+		final Castle castle = CastleManager.getInstance().getCastle(target);
+		final Fort fort = FortManager.getInstance().getFort(target);
 		
 		if ((castle == null) && (fort == null))
 		{
@@ -88,7 +88,7 @@ public final class ConditionSiegeZone extends Condition
 			return false;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		final L2PcInstance player = (L2PcInstance) activeChar;
 		
 		if (((castle == null) || (castle.getResidenceId() <= 0)))
 		{
@@ -134,7 +134,7 @@ public final class ConditionSiegeZone extends Condition
 			return false;
 		}
 		
-		L2PcInstance player = (L2PcInstance) activeChar;
+		final L2PcInstance player = (L2PcInstance) activeChar;
 		
 		if (((fort == null) || (fort.getResidenceId() <= 0)))
 		{

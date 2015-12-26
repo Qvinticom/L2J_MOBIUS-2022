@@ -315,7 +315,7 @@ public final class L2CubicInstance implements IIdentifiable
 		try
 		{
 			_target = null;
-			L2Object ownerTarget = _owner.getTarget();
+			final L2Object ownerTarget = _owner.getTarget();
 			if (ownerTarget == null)
 			{
 				return;
@@ -323,11 +323,11 @@ public final class L2CubicInstance implements IIdentifiable
 			// TvT event targeting
 			if (TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(_owner.getObjectId()))
 			{
-				TvTEventTeam enemyTeam = TvTEvent.getParticipantEnemyTeam(_owner.getObjectId());
+				final TvTEventTeam enemyTeam = TvTEvent.getParticipantEnemyTeam(_owner.getObjectId());
 				
 				if (ownerTarget.getActingPlayer() != null)
 				{
-					L2PcInstance target = ownerTarget.getActingPlayer();
+					final L2PcInstance target = ownerTarget.getActingPlayer();
 					if (enemyTeam.containsPlayer(target.getObjectId()) && !(target.isDead()))
 					{
 						_target = (L2Character) ownerTarget;
@@ -338,13 +338,13 @@ public final class L2CubicInstance implements IIdentifiable
 			// Duel targeting
 			if (_owner.isInDuel())
 			{
-				L2PcInstance PlayerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getTeamLeaderA();
-				L2PcInstance PlayerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getTeamLeaderB();
+				final L2PcInstance PlayerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getTeamLeaderA();
+				final L2PcInstance PlayerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getTeamLeaderB();
 				
 				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 				{
-					L2Party partyA = PlayerA.getParty();
-					L2Party partyB = PlayerB.getParty();
+					final L2Party partyA = PlayerA.getParty();
+					final L2Party partyB = PlayerB.getParty();
 					L2Party partyEnemy = null;
 					
 					if (partyA != null)
@@ -544,8 +544,8 @@ public final class L2CubicInstance implements IIdentifiable
 			
 			if (skill.isBad())
 			{
-				byte shld = Formulas.calcShldUse(_owner, target, skill);
-				boolean acted = Formulas.calcCubicSkillSuccess(this, target, skill, shld);
+				final byte shld = Formulas.calcShldUse(_owner, target, skill);
+				final boolean acted = Formulas.calcCubicSkillSuccess(this, target, skill, shld);
 				if (!acted)
 				{
 					_owner.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
@@ -590,8 +590,8 @@ public final class L2CubicInstance implements IIdentifiable
 				}
 			}
 			
-			boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
-			byte shld = Formulas.calcShldUse(_owner, target, skill);
+			final boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
+			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
 			
 			if (Config.DEBUG)
@@ -636,19 +636,19 @@ public final class L2CubicInstance implements IIdentifiable
 				continue;
 			}
 			
-			boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
-			byte shld = Formulas.calcShldUse(_owner, target, skill);
+			final boolean mcrit = Formulas.calcMCrit(_owner.getMCriticalHit(target, skill));
+			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			
-			int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
+			final int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
 			if (Config.DEBUG)
 			{
 				_log.info("L2SkillDrain: useCubicSkill() -> damage = " + damage);
 			}
 			
 			// TODO: Unhardcode fixed value
-			double hpAdd = (0.4 * damage);
-			L2PcInstance owner = _owner;
-			double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
+			final double hpAdd = (0.4 * damage);
+			final L2PcInstance owner = _owner;
+			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));
 			
 			owner.setCurrentHp(hp);
 			
@@ -682,7 +682,7 @@ public final class L2CubicInstance implements IIdentifiable
 				continue;
 			}
 			
-			byte shld = Formulas.calcShldUse(_owner, target, skill);
+			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			
 			if (skill.hasEffectType(L2EffectType.STUN, L2EffectType.PARALYZE, L2EffectType.ROOT))
 			{
@@ -753,7 +753,7 @@ public final class L2CubicInstance implements IIdentifiable
 		
 		int x, y, z;
 		// temporary range check until real behavior of cubics is known/coded
-		int range = MAX_MAGIC_RANGE;
+		final int range = MAX_MAGIC_RANGE;
 		
 		x = (owner.getX() - target.getX());
 		y = (owner.getY() - target.getY());

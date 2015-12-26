@@ -168,7 +168,7 @@ public final class Alarm extends AbstractNpcAI
 			{
 				if (verifyMemoState(player, ART_OF_PERSUASION_ID, 3))
 				{
-					int i0 = getMemoStateEx(player, ART_OF_PERSUASION_ID, 1);
+					final int i0 = getMemoStateEx(player, ART_OF_PERSUASION_ID, 1);
 					if (i0 >= 3)
 					{
 						if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
@@ -187,7 +187,7 @@ public final class Alarm extends AbstractNpcAI
 				}
 				else if (verifyMemoState(player, NIKOLAS_COOPERATION_ID, 3))
 				{
-					int i0 = getMemoStateEx(player, NIKOLAS_COOPERATION_ID, 1);
+					final int i0 = getMemoStateEx(player, NIKOLAS_COOPERATION_ID, 1);
 					if (i0 >= 3)
 					{
 						if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))

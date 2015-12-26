@@ -264,7 +264,7 @@ public final class L2ItemInstance extends L2Object
 	{
 		assert getWorldRegion() != null;
 		
-		L2WorldRegion oldregion = getWorldRegion();
+		final L2WorldRegion oldregion = getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the L2ItemInstance
 		player.broadcastPacket(new GetItem(this, player.getObjectId()));
@@ -276,7 +276,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		// if this item is a mercenary ticket, remove the spawns!
-		int itemId = getId();
+		final int itemId = getId();
 		
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) > 0)
 		{
@@ -310,7 +310,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID))))
 			{
-				LogRecord record = new LogRecord(Level.INFO, "SETOWNER:" + process);
+				final LogRecord record = new LogRecord(Level.INFO, "SETOWNER:" + process);
 				record.setLoggerName("item");
 				record.setParameters(new Object[]
 				{
@@ -335,7 +335,7 @@ public final class L2ItemInstance extends L2Object
 				{
 					referenceName = (String) reference;
 				}
-				String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+				final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
 				if (Config.GMAUDIT)
 				{
 					GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
@@ -454,8 +454,8 @@ public final class L2ItemInstance extends L2Object
 		{
 			return;
 		}
-		long old = getCount();
-		long max = getId() == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
+		final long old = getCount();
+		final long max = getId() == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
 		
 		if ((count > 0) && (getCount() > (max - count)))
 		{
@@ -477,7 +477,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process);
+				final LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process);
 				record.setLoggerName("item");
 				record.setParameters(new Object[]
 				{
@@ -503,7 +503,7 @@ public final class L2ItemInstance extends L2Object
 				{
 					referenceName = (String) reference;
 				}
-				String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+				final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
 				if (Config.GMAUDIT)
 				{
 					GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
@@ -976,7 +976,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				if (rs.next())
 				{
-					int aug_attributes = rs.getInt(1);
+					final int aug_attributes = rs.getInt(1);
 					if (aug_attributes != -1)
 					{
 						_augmentation = new L2Augmentation(rs.getInt("augAttributes"));
@@ -989,8 +989,8 @@ public final class L2ItemInstance extends L2Object
 			{
 				while (rs.next())
 				{
-					byte elem_type = rs.getByte(1);
-					int elem_value = rs.getInt(2);
+					final byte elem_type = rs.getByte(1);
+					final int elem_value = rs.getInt(2);
 					if ((elem_type != -1) && (elem_value != -1))
 					{
 						applyAttribute(elem_type, elem_value);
@@ -1115,7 +1115,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		else if (getItem().getElementals() != null)
 		{
-			Elementals elm = getItem().getElemental(element);
+			final Elementals elm = getItem().getElemental(element);
 			if (elm != null)
 			{
 				return elm.getValue();
@@ -1123,7 +1123,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		else if (_elementals != null)
 		{
-			Elementals elm = getElemental(element);
+			final Elementals elm = getElemental(element);
 			if (elm != null)
 			{
 				return elm.getValue();
@@ -1149,7 +1149,7 @@ public final class L2ItemInstance extends L2Object
 			else
 			{
 				elm = new Elementals(element, value);
-				Elementals[] array = new Elementals[_elementals.length + 1];
+				final Elementals[] array = new Elementals[_elementals.length + 1];
 				System.arraycopy(_elementals, 0, array, 0, _elementals.length);
 				array[_elementals.length] = elm;
 				_elementals = array;
@@ -1166,7 +1166,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		else
 		{
-			Elementals elm = getElemental(element);
+			final Elementals elm = getElemental(element);
 			if (elm != null)
 			{
 				elm.setValue(value);
@@ -1231,7 +1231,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		_elementals = array;
 		
-		String query = (element != -1) ? "DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?" : "DELETE FROM item_elementals WHERE itemId = ?";
+		final String query = (element != -1) ? "DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?" : "DELETE FROM item_elementals WHERE itemId = ?";
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
@@ -1370,8 +1370,8 @@ public final class L2ItemInstance extends L2Object
 				// unequip
 				if (isEquipped())
 				{
-					L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
-					InventoryUpdate iu = new InventoryUpdate();
+					final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+					final InventoryUpdate iu = new InventoryUpdate();
 					for (L2ItemInstance item : unequiped)
 					{
 						item.unChargeAllShots();
@@ -1387,7 +1387,7 @@ public final class L2ItemInstance extends L2Object
 					player.getInventory().destroyItem("L2ItemInstance", this, player, null);
 					
 					// send update
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addRemovedItem(this);
 					player.sendPacket(iu);
 					
@@ -1412,7 +1412,7 @@ public final class L2ItemInstance extends L2Object
 				}
 				if (getItemLocation() != ItemLocation.WAREHOUSE)
 				{
-					InventoryUpdate iu = new InventoryUpdate();
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(this);
 					player.sendPacket(iu);
 				}
@@ -1524,7 +1524,7 @@ public final class L2ItemInstance extends L2Object
 			_log.log(Level.SEVERE, "Could not restore an item owned by " + ownerId + " from DB:", e);
 			return null;
 		}
-		L2Item item = ItemTable.getInstance().getTemplate(item_id);
+		final L2Item item = ItemTable.getInstance().getTemplate(item_id);
 		if (item == null)
 		{
 			_log.severe("Item item_id=" + item_id + " not known, object_id=" + objectId);
@@ -1593,7 +1593,7 @@ public final class L2ItemInstance extends L2Object
 			
 			if (_dropper != null)
 			{
-				Location dropDest = GeoData.getInstance().moveCheck(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
+				final Location dropDest = GeoData.getInstance().moveCheck(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
 				_x = dropDest.getX();
 				_y = dropDest.getY();
 				_z = dropDest.getZ();
@@ -1863,13 +1863,13 @@ public final class L2ItemInstance extends L2Object
 	
 	public void endOfLife()
 	{
-		L2PcInstance player = getActingPlayer();
+		final L2PcInstance player = getActingPlayer();
 		if (player != null)
 		{
 			if (isEquipped())
 			{
-				L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
-				InventoryUpdate iu = new InventoryUpdate();
+				final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
+				final InventoryUpdate iu = new InventoryUpdate();
 				for (L2ItemInstance item : unequiped)
 				{
 					item.unChargeAllShots();
@@ -1885,7 +1885,7 @@ public final class L2ItemInstance extends L2Object
 				player.getInventory().destroyItem("L2ItemInstance", this, player, null);
 				
 				// send update
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addRemovedItem(this);
 				player.sendPacket(iu);
 				
@@ -2048,7 +2048,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public int getOlyEnchantLevel()
 	{
-		L2PcInstance player = getActingPlayer();
+		final L2PcInstance player = getActingPlayer();
 		int enchant = getEnchantLevel();
 		
 		if (player == null)
@@ -2141,9 +2141,9 @@ public final class L2ItemInstance extends L2Object
 	{
 		if (command.startsWith("Quest"))
 		{
-			String questName = command.substring(6);
+			final String questName = command.substring(6);
 			String event = null;
-			int idx = questName.indexOf(' ');
+			final int idx = questName.indexOf(' ');
 			if (idx > 0)
 			{
 				event = questName.substring(idx).trim();
@@ -2190,7 +2190,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public int[] getEnchantOptions()
 	{
-		EnchantOptions op = EnchantItemOptionsData.getInstance().getOptions(this);
+		final EnchantOptions op = EnchantItemOptionsData.getInstance().getOptions(this);
 		if (op != null)
 		{
 			return op.getOptions();

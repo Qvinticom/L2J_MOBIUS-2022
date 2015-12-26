@@ -52,7 +52,7 @@ public final class RequestWithdrawPartyRoom extends L2GameClientPacket
 			return;
 		}
 		
-		PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
 		if (_room == null)
 		{
 			return;

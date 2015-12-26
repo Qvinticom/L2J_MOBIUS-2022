@@ -164,7 +164,7 @@ public final class WeaverOlf extends AbstractNpcAI
 	{
 		if (event.contains("_grade_"))
 		{
-			int grade = Integer.parseInt(event.substring(0, 1));
+			final int grade = Integer.parseInt(event.substring(0, 1));
 			int price;
 			int[] itemIds;
 			if (event.endsWith("_pin"))
@@ -198,7 +198,7 @@ public final class WeaverOlf extends AbstractNpcAI
 				{
 					takeItems(player, Inventory.ADENA_ID, price);
 					takeItems(player, itemIds[0], 1);
-					int rand = getRandom(200);
+					final int rand = getRandom(200);
 					if (rand <= CHANCES[0])
 					{
 						giveItems(player, itemIds[1], 1);

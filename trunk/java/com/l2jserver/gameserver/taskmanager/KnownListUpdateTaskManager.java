@@ -106,7 +106,7 @@ public class KnownListUpdateTaskManager
 	
 	public void updateRegion(L2WorldRegion region, boolean fullUpdate, boolean forgetObjects)
 	{
-		Collection<L2Object> vObj = region.getVisibleObjects().values();
+		final Collection<L2Object> vObj = region.getVisibleObjects().values();
 		for (L2Object object : vObj) // and for all members in region
 		{
 			if ((object == null) || !object.isVisible())
@@ -126,7 +126,7 @@ public class KnownListUpdateTaskManager
 			{
 				if ((object instanceof L2Playable) || (aggro && regi.isActive()) || fullUpdate)
 				{
-					Collection<L2Object> inrObj = regi.getVisibleObjects().values();
+					final Collection<L2Object> inrObj = regi.getVisibleObjects().values();
 					for (L2Object obj : inrObj)
 					{
 						if (obj != object)
@@ -139,7 +139,7 @@ public class KnownListUpdateTaskManager
 				{
 					if (regi.isActive())
 					{
-						Collection<L2Object> inrPls = regi.getVisibleObjects().values();
+						final Collection<L2Object> inrPls = regi.getVisibleObjects().values();
 						
 						for (L2Object obj : inrPls)
 						{

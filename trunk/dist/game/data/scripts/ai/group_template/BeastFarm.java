@@ -254,7 +254,7 @@ public final class BeastFarm extends AbstractNpcAI
 		{
 			final L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
 			
-			TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
+			final TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
 			String name = beast.getName();
 			switch (nextNpcId)
 			{
@@ -275,7 +275,7 @@ public final class BeastFarm extends AbstractNpcAI
 			nextNpc.broadcastPacket(new NpcInfo(nextNpc));
 			nextNpc.setRunning();
 			
-			SkillData st = SkillData.getInstance();
+			final SkillData st = SkillData.getInstance();
 			for (SkillHolder sh : beast.getSkills())
 			{
 				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLvl()));
@@ -287,7 +287,7 @@ public final class BeastFarm extends AbstractNpcAI
 		{
 			// if not trained, the newly spawned mob will automatically be agro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
-			L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
+			final L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
 			
 			// register the player in the feedinfo for the mob that just spawned
 			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
@@ -309,8 +309,8 @@ public final class BeastFarm extends AbstractNpcAI
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
-		int npcId = npc.getId();
-		int skillId = skill.getId();
+		final int npcId = npc.getId();
+		final int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
 		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE) && (skillId != SKILL_BLESSED_GOLDEN_SPICE) && (skillId != SKILL_BLESSED_CRYSTAL_SPICE) && (skillId != SKILL_SGRADE_GOLDEN_SPICE) && (skillId != SKILL_SGRADE_CRYSTAL_SPICE)))
 		{
@@ -318,7 +318,7 @@ public final class BeastFarm extends AbstractNpcAI
 		}
 		
 		// first gather some values on local variables
-		int objectId = npc.getObjectId();
+		final int objectId = npc.getObjectId();
 		int growthLevel = 3; // if a mob is in FEEDABLE_BEASTS but not in _GrowthCapableMobs, then it's at max growth (3)
 		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
@@ -351,7 +351,7 @@ public final class BeastFarm extends AbstractNpcAI
 		if (GROWTH_CAPABLE_MONSTERS.containsKey(npcId))
 		{
 			// do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
-			int newNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getLeveledNpcId(skillId);
+			final int newNpcId = GROWTH_CAPABLE_MONSTERS.get(npcId).getLeveledNpcId(skillId);
 			if (newNpcId == -1)
 			{
 				if (growthLevel == 0)

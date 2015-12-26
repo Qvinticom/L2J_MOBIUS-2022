@@ -29,10 +29,10 @@ public class ChangePasswordResponse extends BaseRecievePacket
 	{
 		super(decrypt);
 		// boolean isSuccessful = readC() > 0;
-		String character = readS();
-		String msgToSend = readS();
+		final String character = readS();
+		final String msgToSend = readS();
 		
-		L2PcInstance player = L2World.getInstance().getPlayer(character);
+		final L2PcInstance player = L2World.getInstance().getPlayer(character);
 		
 		if (player != null)
 		{

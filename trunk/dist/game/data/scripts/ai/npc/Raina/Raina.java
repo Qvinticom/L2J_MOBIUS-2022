@@ -646,7 +646,7 @@ public final class Raina extends AbstractNpcAI
 	{
 		final int currentBaseId = player.getBaseClassId();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
-		int baseClassId = (baseCID.level() > 2) ? baseCID.getParent().ordinal() : currentBaseId;
+		final int baseClassId = (baseCID.level() > 2) ? baseCID.getParent().ordinal() : currentBaseId;
 		
 		final Set<PlayerClass> availSubs = getSubclasses(player, baseClassId);
 		
@@ -803,7 +803,7 @@ public final class Raina extends AbstractNpcAI
 				subclasses.removeAll(PlayerClass.getSet(Race.KAMAEL, THIRD));
 			}
 			
-			Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
+			final Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
 			
 			if (unavailableClasses != null)
 			{

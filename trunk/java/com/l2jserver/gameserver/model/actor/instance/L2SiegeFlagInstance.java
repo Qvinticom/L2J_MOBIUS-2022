@@ -71,7 +71,7 @@ public class L2SiegeFlagInstance extends L2Npc
 			throw new NullPointerException(getClass().getSimpleName() + ": Initialization failed.");
 		}
 		
-		L2SiegeClan sc = _siege.getAttackerClan(_clan);
+		final L2SiegeClan sc = _siege.getAttackerClan(_clan);
 		if (sc == null)
 		{
 			throw new NullPointerException(getClass().getSimpleName() + ": Cannot find siege clan.");
@@ -104,7 +104,7 @@ public class L2SiegeFlagInstance extends L2Npc
 		}
 		if ((_siege != null) && (_clan != null))
 		{
-			L2SiegeClan sc = _siege.getAttackerClan(_clan);
+			final L2SiegeClan sc = _siege.getAttackerClan(_clan);
 			if (sc != null)
 			{
 				sc.removeFlag(this);

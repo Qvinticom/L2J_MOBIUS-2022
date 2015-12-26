@@ -32,7 +32,7 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 {
 	public static final IKillerChanceModifierStrategy DEFAULT_STRATEGY = (item, victim, killer) ->
 	{
-		int levelDifference = victim.getLevel() - killer.getLevel();
+		final int levelDifference = victim.getLevel() - killer.getLevel();
 		if ((victim.isRaid()) && Config.DEEPBLUE_DROP_RULES_RAID)
 		{
 			// FIXME: Config?
@@ -49,7 +49,7 @@ public interface IKillerChanceModifierStrategy extends INonGroupedKillerChanceMo
 	{
 		if (((!(victim.isRaid())) && Config.DEEPBLUE_DROP_RULES) || ((victim.isRaid()) && Config.DEEPBLUE_DROP_RULES_RAID))
 		{
-			int levelDifference = victim.getLevel() - killer.getLevel();
+			final int levelDifference = victim.getLevel() - killer.getLevel();
 			if (item.getItemId() == Inventory.ADENA_ID)
 			{
 				

@@ -97,11 +97,11 @@ public class L2EffectZone extends L2ZoneType
 		}
 		else if (name.equals("skillIdLvl"))
 		{
-			String[] propertySplit = value.split(";");
+			final String[] propertySplit = value.split(";");
 			_skills = new ConcurrentHashMap<>(propertySplit.length);
 			for (String skill : propertySplit)
 			{
-				String[] skillSplit = skill.split("-");
+				final String[] skillSplit = skill.split("-");
 				if (skillSplit.length != 2)
 				{
 					_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skill, "\""));
@@ -259,7 +259,7 @@ public class L2EffectZone extends L2ZoneType
 						{
 							for (Entry<Integer, Integer> e : _skills.entrySet())
 							{
-								Skill skill = getSkill(e.getKey(), e.getValue());
+								final Skill skill = getSkill(e.getKey(), e.getValue());
 								if ((skill != null) && (_bypassConditions || skill.checkCondition(temp, temp, false)))
 								{
 									if (!temp.isAffectedBySkill(e.getKey()))

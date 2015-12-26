@@ -41,7 +41,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command);
+		final StringTokenizer st = new StringTokenizer(command);
 		if (st.hasMoreTokens())
 		{
 			switch (st.nextToken())
@@ -51,7 +51,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 					msg.setFile(activeChar.getHtmlPrefix(), "html/admin/cond_override.htm");
-					StringBuilder sb = new StringBuilder();
+					final StringBuilder sb = new StringBuilder();
 					for (PcCondOverride ex : PcCondOverride.values())
 					{
 						sb.append("<tr><td fixwidth=\"180\">" + ex.getDescription() + ":</td><td><a action=\"bypass -h admin_set_exception " + ex.ordinal() + "\">" + (activeChar.canOverrideCond(ex) ? "Disable" : "Enable") + "</a></td></tr>");
@@ -64,10 +64,10 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 				{
 					if (st.hasMoreTokens())
 					{
-						String token = st.nextToken();
+						final String token = st.nextToken();
 						if (Util.isDigit(token))
 						{
-							PcCondOverride ex = PcCondOverride.getCondOverride(Integer.valueOf(token));
+							final PcCondOverride ex = PcCondOverride.getCondOverride(Integer.valueOf(token));
 							if (ex != null)
 							{
 								if (activeChar.canOverrideCond(ex))

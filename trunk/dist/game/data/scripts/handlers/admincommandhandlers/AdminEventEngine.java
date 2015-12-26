@@ -87,7 +87,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command);
-		String actualCommand = st.nextToken();
+		final String actualCommand = st.nextToken();
 		try
 		{
 			if (actualCommand.equals("admin_event"))
@@ -116,7 +116,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			else if (actualCommand.startsWith("admin_event_see"))
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				String eventName = command.substring(16);
+				final String eventName = command.substring(16);
 				try
 				{
 					final NpcHtmlMessage adminReply = new NpcHtmlMessage();
@@ -145,8 +145,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 			else if (actualCommand.startsWith("admin_event_del"))
 			{
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event name.
-				String eventName = command.substring(16);
-				File file = new File(Config.DATAPACK_ROOT + "events/" + eventName);
+				final String eventName = command.substring(16);
+				final File file = new File(Config.DATAPACK_ROOT + "events/" + eventName);
 				file.delete();
 				showMainPage(activeChar);
 			}
@@ -222,7 +222,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				activeChar.sendMessage(L2Event.startEventParticipation());
 				Broadcast.toAllOnlinePlayers(activeChar.getName() + " has started an event. You will find a participation NPC somewhere around you.");
 				
-				PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
+				final PlaySound _snd = new PlaySound(1, "B03_F", 0, 0, 0, 0, 0);
 				activeChar.sendPacket(_snd);
 				activeChar.broadcastPacket(_snd);
 				
@@ -247,7 +247,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			{
 				while (st.hasMoreElements()) // Every next ST should be a team number
 				{
-					int teamId = Integer.parseInt(st.nextToken());
+					final int teamId = Integer.parseInt(st.nextToken());
 					
 					for (L2PcInstance player : L2Event._teams.get(teamId))
 					{
@@ -314,8 +314,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (actualCommand.startsWith("admin_event_control_poly"))
 			{
-				int teamId = Integer.parseInt(st.nextToken());
-				String[] polyIds = new String[st.countTokens()];
+				final int teamId = Integer.parseInt(st.nextToken());
+				final String[] polyIds = new String[st.countTokens()];
 				int i = 0;
 				while (st.hasMoreElements()) // Every next ST should be a polymorph ID
 				{
@@ -326,9 +326,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					player.getPoly().setPolyInfo("npc", polyIds[Rnd.get(polyIds.length)]);
 					player.teleToLocation(player.getLocation(), true);
-					CharInfo info1 = new CharInfo(player);
+					final CharInfo info1 = new CharInfo(player);
 					player.broadcastPacket(info1);
-					UserInfo info2 = new UserInfo(player);
+					final UserInfo info2 = new UserInfo(player);
 					player.sendPacket(info2);
 				}
 				showEventControl(activeChar);
@@ -342,9 +342,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 						player.getPoly().setPolyInfo(null, "1");
 						player.decayMe();
 						player.spawnMe(player.getX(), player.getY(), player.getZ());
-						CharInfo info1 = new CharInfo(player);
+						final CharInfo info1 = new CharInfo(player);
 						player.broadcastPacket(info1);
-						UserInfo info2 = new UserInfo(player);
+						final UserInfo info2 = new UserInfo(player);
 						player.sendPacket(info2);
 					}
 				}
@@ -352,8 +352,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (actualCommand.startsWith("admin_event_control_transform"))
 			{
-				int teamId = Integer.parseInt(st.nextToken());
-				int[] transIds = new int[st.countTokens()];
+				final int teamId = Integer.parseInt(st.nextToken());
+				final int[] transIds = new int[st.countTokens()];
 				int i = 0;
 				while (st.hasMoreElements()) // Every next ST should be a transform ID
 				{
@@ -362,7 +362,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				
 				for (L2PcInstance player : L2Event._teams.get(teamId))
 				{
-					int transId = transIds[Rnd.get(transIds.length)];
+					final int transId = transIds[Rnd.get(transIds.length)];
 					if (!TransformData.getInstance().transformPlayer(transId, player))
 					{
 						AdminData.getInstance().broadcastMessageToGMs("EventEngine: Unknow transformation id: " + transId);
@@ -387,7 +387,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					while (st.hasMoreElements())
 					{
-						L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+						final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
 						if (player != null)
 						{
 							L2Event.removeAndResetPlayer(player);
@@ -405,15 +405,15 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (actualCommand.startsWith("admin_event_control_prize"))
 			{
-				int[] teamIds = new int[st.countTokens() - 2];
+				final int[] teamIds = new int[st.countTokens() - 2];
 				int i = 0;
 				while ((st.countTokens() - 2) > 0) // The last 2 tokens are used for "n" and "item id"
 				{
 					teamIds[i++] = Integer.parseInt(st.nextToken());
 				}
 				
-				String[] n = st.nextToken().split("\\*");
-				int itemId = Integer.parseInt(st.nextToken());
+				final String[] n = st.nextToken().split("\\*");
+				final int itemId = Integer.parseInt(st.nextToken());
 				
 				for (int teamId : teamIds)
 				{
@@ -525,7 +525,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	public void showEventParameters(L2PcInstance activeChar, int teamnumbers)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		
 		sb.append("<html><body><title>[ L2J EVENT ENGINE ]</title><br><center> Current event: <font color=\"LEVEL\">");
 		sb.append(L2Event._eventName);
@@ -563,7 +563,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		sb.append("<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">");
 		sb.append(L2Event._eventName);
 		sb.append("</font></center><br><table cellspacing=-1 width=280><tr><td align=center>Type the team ID(s) that will be affected by the commands. Commands with '*' work with only 1 team ID in the field, while '!' - none.</td></tr><tr><td align=center><edit var=\"team_number\" width=100 height=15></td></tr>");

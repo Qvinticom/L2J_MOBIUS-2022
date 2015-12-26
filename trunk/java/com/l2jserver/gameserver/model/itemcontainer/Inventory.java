@@ -267,7 +267,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				L2ItemInstance arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+				final L2ItemInstance arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
 				
 				if (arrow != null)
 				{
@@ -276,7 +276,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			else if (item.getItemType() == WeaponType.CROSSBOW)
 			{
-				L2ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+				final L2ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
 				
 				if (bolts != null)
 				{
@@ -285,7 +285,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			else if (item.getItemType() == WeaponType.FISHINGROD)
 			{
-				L2ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
+				final L2ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
 				
 				if (lure != null)
 				{
@@ -304,7 +304,7 @@ public abstract class Inventory extends ItemContainer
 			
 			if (item.getItemType() == WeaponType.BOW)
 			{
-				L2ItemInstance arrow = inventory.findArrowForBow(item.getItem());
+				final L2ItemInstance arrow = inventory.findArrowForBow(item.getItem());
 				
 				if (arrow != null)
 				{
@@ -313,7 +313,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			else if (item.getItemType() == WeaponType.CROSSBOW)
 			{
-				L2ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
+				final L2ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
 				
 				if (bolts != null)
 				{
@@ -364,7 +364,7 @@ public abstract class Inventory extends ItemContainer
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
 			
 			Skill enchant4Skill, itemSkill;
-			L2Item it = item.getItem();
+			final L2Item it = item.getItem();
 			boolean update = false;
 			boolean updateTimeStamp = false;
 			
@@ -442,7 +442,7 @@ public abstract class Inventory extends ItemContainer
 							{
 								if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
 								{
-									int equipDelay = item.getEquipReuseDelay();
+									final int equipDelay = item.getEquipReuseDelay();
 									if (equipDelay > 0)
 									{
 										player.addTimeStamp(itemSkill, equipDelay);
@@ -494,7 +494,7 @@ public abstract class Inventory extends ItemContainer
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
 			
 			Skill enchant4Skill, itemSkill;
-			L2Item it = item.getItem();
+			final L2Item it = item.getItem();
 			boolean update = false;
 			boolean updateTimeStamp = false;
 			
@@ -541,7 +541,7 @@ public abstract class Inventory extends ItemContainer
 						{
 							if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
 							{
-								int equipDelay = item.getEquipReuseDelay();
+								final int equipDelay = item.getEquipReuseDelay();
 								if (equipDelay > 0)
 								{
 									player.addTimeStamp(itemSkill, equipDelay);
@@ -609,7 +609,7 @@ public abstract class Inventory extends ItemContainer
 						{
 							if (!player.hasSkillReuse(itemSkill.getReuseHashCode()))
 							{
-								int equipDelay = item.getEquipReuseDelay();
+								final int equipDelay = item.getEquipReuseDelay();
 								if (equipDelay > 0)
 								{
 									player.addTimeStamp(itemSkill, equipDelay);
@@ -734,7 +734,7 @@ public abstract class Inventory extends ItemContainer
 			final L2ArmorSet visualArmorSet = ArmorSetsData.getInstance().getSet(chestItem.getVisualId());
 			if ((visualArmorSet != null) && visualArmorSet.isVisual())
 			{
-				int pieces = visualArmorSet.getVisualPiecesCount(player);
+				final int pieces = visualArmorSet.getVisualPiecesCount(player);
 				if (pieces >= visualArmorSet.getMinimumPieces())
 				{
 					addSkills(player, item, visualArmorSet.getSkills(), visualArmorSet.getPiecesCount(player));
@@ -753,7 +753,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				for (SkillHolder holder : shieldSkills)
 				{
-					Skill itemSkill = holder.getSkill();
+					final Skill itemSkill = holder.getSkill();
 					if (itemSkill != null)
 					{
 						player.removeSkill(itemSkill, false, itemSkill.isPassive());
@@ -853,7 +853,7 @@ public abstract class Inventory extends ItemContainer
 	
 	protected static boolean removeArmorsetBonus(L2PcInstance player, L2ArmorSet armorSet)
 	{
-		boolean remove = armorSet != null;
+		final boolean remove = armorSet != null;
 		final List<ArmorsetSkillHolder> skills = armorSet != null ? armorSet.getSkills() : null;
 		final List<SkillHolder> shieldSkill = armorSet != null ? armorSet.getShieldSkills() : null; // shield skill
 		final List<ArmorsetSkillHolder> enchantSkills = armorSet != null ? armorSet.getEnchantSkills() : null; // enchant +6 skill
@@ -1192,7 +1192,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance getPaperdollItemByL2ItemId(int slot)
 	{
-		int index = getPaperdollIndex(slot);
+		final int index = getPaperdollIndex(slot);
 		if (index == -1)
 		{
 			return null;
@@ -1207,7 +1207,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public int getPaperdollItemId(int slot)
 	{
-		L2ItemInstance item = _paperdoll[slot];
+		final L2ItemInstance item = _paperdoll[slot];
 		if (item != null)
 		{
 			return item.getId();
@@ -1292,7 +1292,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public synchronized L2ItemInstance setPaperdollItem(int slot, L2ItemInstance item)
 	{
-		L2ItemInstance old = _paperdoll[slot];
+		final L2ItemInstance old = _paperdoll[slot];
 		if (old != item)
 		{
 			if (old != null)
@@ -1305,7 +1305,7 @@ public abstract class Inventory extends ItemContainer
 				int mask = 0;
 				for (int i = 0; i < PAPERDOLL_TOTALSLOTS; i++)
 				{
-					L2ItemInstance pi = _paperdoll[i];
+					final L2ItemInstance pi = _paperdoll[i];
 					if (pi != null)
 					{
 						mask |= pi.getItem().getItemMask();
@@ -1456,7 +1456,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInBodySlotAndRecord(int slot)
 	{
-		Inventory.ChangeRecorder recorder = newRecorder();
+		final Inventory.ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1487,7 +1487,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInSlotAndRecord(int slot)
 	{
-		Inventory.ChangeRecorder recorder = newRecorder();
+		final Inventory.ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1599,7 +1599,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		if (pdollSlot >= 0)
 		{
-			L2ItemInstance old = setPaperdollItem(pdollSlot, null);
+			final L2ItemInstance old = setPaperdollItem(pdollSlot, null);
 			if (old != null)
 			{
 				if (getOwner() instanceof L2PcInstance)
@@ -1620,7 +1620,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] equipItemAndRecord(L2ItemInstance item)
 	{
-		Inventory.ChangeRecorder recorder = newRecorder();
+		final Inventory.ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1646,7 +1646,7 @@ public abstract class Inventory extends ItemContainer
 		
 		if (getOwner() instanceof L2PcInstance)
 		{
-			L2PcInstance player = (L2PcInstance) getOwner();
+			final L2PcInstance player = (L2PcInstance) getOwner();
 			
 			if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 			{
@@ -1654,10 +1654,10 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
-		int targetSlot = item.getItem().getBodyPart();
+		final int targetSlot = item.getItem().getBodyPart();
 		
 		// Check if player is using Formal Wear and item isn't Wedding Bouquet.
-		L2ItemInstance formal = getPaperdollItem(PAPERDOLL_CHEST);
+		final L2ItemInstance formal = getPaperdollItem(PAPERDOLL_CHEST);
 		if ((item.getId() != 21163) && (formal != null) && (formal.getItem().getBodyPart() == L2Item.SLOT_ALLDRESS))
 		{
 			// only chest target can pass this
@@ -1684,7 +1684,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			case L2Item.SLOT_L_HAND:
 			{
-				L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
+				final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
 				if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || ((rh.getItemType() == WeaponType.CROSSBOW) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
 				{
 					setPaperdollItem(PAPERDOLL_RHAND, null);
@@ -1748,7 +1748,7 @@ public abstract class Inventory extends ItemContainer
 			case L2Item.SLOT_LEGS:
 			{
 				// handle full armor
-				L2ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+				final L2ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
 				if ((chest != null) && (chest.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR))
 				{
 					setPaperdollItem(PAPERDOLL_CHEST, null);
@@ -1767,7 +1767,7 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_HEAD, item);
 				break;
 			case L2Item.SLOT_HAIR:
-				L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
+				final L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
 				if ((hair != null) && (hair.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
 				{
 					setPaperdollItem(PAPERDOLL_DHAIR, null);
@@ -1780,7 +1780,7 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_HAIR, item);
 				break;
 			case L2Item.SLOT_HAIR2:
-				L2ItemInstance hair2 = getPaperdollItem(PAPERDOLL_HAIR);
+				final L2ItemInstance hair2 = getPaperdollItem(PAPERDOLL_HAIR);
 				if ((hair2 != null) && (hair2.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
 				{
 					setPaperdollItem(PAPERDOLL_HAIR, null);
@@ -1937,7 +1937,7 @@ public abstract class Inventory extends ItemContainer
 					
 					if (getOwner() instanceof L2PcInstance)
 					{
-						L2PcInstance player = (L2PcInstance) getOwner();
+						final L2PcInstance player = (L2PcInstance) getOwner();
 						
 						if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
 						{

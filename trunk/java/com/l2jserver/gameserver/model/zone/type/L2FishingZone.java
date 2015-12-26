@@ -72,7 +72,7 @@ public class L2FishingZone extends L2ZoneType
 			character.setInsideZone(ZoneId.FISHING, false);
 		}
 		_task.remove(character.getObjectId());
-		Future<?> t = _task.get(character.getObjectId());
+		final Future<?> t = _task.get(character.getObjectId());
 		if (t != null)
 		{
 			t.cancel(false);

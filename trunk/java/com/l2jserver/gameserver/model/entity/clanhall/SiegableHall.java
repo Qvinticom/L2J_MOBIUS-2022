@@ -62,7 +62,7 @@ public final class SiegableHall extends ClanHall
 	{
 		super(set);
 		_siegeLength = set.getLong("siegeLenght");
-		String[] rawSchConfig = set.getString("scheduleConfig").split(";");
+		final String[] rawSchConfig = set.getString("scheduleConfig").split(";");
 		if (rawSchConfig.length == 5)
 		{
 			for (int i = 0; i < 5; i++)
@@ -83,7 +83,7 @@ public final class SiegableHall extends ClanHall
 		}
 		
 		_nextSiege = Calendar.getInstance();
-		long nextSiege = set.getLong("nextSiege");
+		final long nextSiege = set.getLong("nextSiege");
 		if ((nextSiege - System.currentTimeMillis()) < 0)
 		{
 			updateNextSiege();
@@ -184,7 +184,7 @@ public final class SiegableHall extends ClanHall
 	
 	public final void updateNextSiege()
 	{
-		Calendar c = Calendar.getInstance();
+		final Calendar c = Calendar.getInstance();
 		c.add(Calendar.DAY_OF_YEAR, _scheduleConfig[0]);
 		c.add(Calendar.MONTH, _scheduleConfig[1]);
 		c.add(Calendar.YEAR, _scheduleConfig[2]);

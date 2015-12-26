@@ -122,7 +122,7 @@ public final class Forum
 			{
 				while (rs.next())
 				{
-					Topic t = new Topic(Topic.ConstructorType.RESTORE, rs.getInt("topic_id"), rs.getInt("topic_forum_id"), rs.getString("topic_name"), rs.getLong("topic_date"), rs.getString("topic_ownername"), rs.getInt("topic_ownerid"), rs.getInt("topic_type"), rs.getInt("topic_reply"));
+					final Topic t = new Topic(Topic.ConstructorType.RESTORE, rs.getInt("topic_id"), rs.getInt("topic_forum_id"), rs.getString("topic_name"), rs.getLong("topic_date"), rs.getString("topic_ownername"), rs.getInt("topic_ownerid"), rs.getInt("topic_type"), rs.getInt("topic_reply"));
 					_topic.put(t.getID(), t);
 					if (t.getID() > TopicBBSManager.getInstance().getMaxID(this))
 					{

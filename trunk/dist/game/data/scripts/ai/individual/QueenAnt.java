@@ -95,12 +95,12 @@ public final class QueenAnt extends AbstractNpcAI
 		addFactionCallId(NURSE);
 		
 		_zone = GrandBossManager.getInstance().getZone(QUEEN_X, QUEEN_Y, QUEEN_Z);
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
-		int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+		final int status = GrandBossManager.getInstance().getBossStatus(QUEEN);
 		if (status == DEAD)
 		{
 			// load the unlock date and time for queen ant from DB
-			long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
 			// if queen ant is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
@@ -110,21 +110,21 @@ public final class QueenAnt extends AbstractNpcAI
 			else
 			{
 				// the time has already expired while the server was offline. Immediately spawn queen ant.
-				L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+				final L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
 				GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
 				spawnBoss(queen);
 			}
 		}
 		else
 		{
-			int loc_x = QUEEN_X;
-			int loc_y = QUEEN_Y;
-			int loc_z = QUEEN_Z;
-			int heading = info.getInt("heading");
-			int hp = info.getInt("currentHP");
-			int mp = info.getInt("currentMP");
+			final int loc_x = QUEEN_X;
+			final int loc_y = QUEEN_Y;
+			final int loc_z = QUEEN_Z;
+			final int heading = info.getInt("heading");
+			final int hp = info.getInt("currentHP");
+			final int mp = info.getInt("currentMP");
 			
-			L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
+			final L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, loc_x, loc_y, loc_z, heading, false, 0);
 			queen.setCurrentHpMp(hp, mp);
 			spawnBoss(queen);
 		}
@@ -215,7 +215,7 @@ public final class QueenAnt extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("queen_unlock"))
 		{
-			L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
+			final L2GrandBossInstance queen = (L2GrandBossInstance) addSpawn(QUEEN, QUEEN_X, QUEEN_Y, QUEEN_Z, 0, false, 0);
 			GrandBossManager.getInstance().setBossStatus(QUEEN, ALIVE);
 			spawnBoss(queen);
 		}
@@ -329,7 +329,7 @@ public final class QueenAnt extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (npcId == QUEEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -341,7 +341,7 @@ public final class QueenAnt extends AbstractNpcAI
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);
 			// also save the respawn time so that the info is maintained past reboots
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
+			final StatsSet info = GrandBossManager.getInstance().getStatsSet(QUEEN);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(QUEEN, info);
 			_nurses.clear();
@@ -358,7 +358,7 @@ public final class QueenAnt extends AbstractNpcAI
 		{
 			if (npcId == ROYAL)
 			{
-				L2MonsterInstance mob = (L2MonsterInstance) npc;
+				final L2MonsterInstance mob = (L2MonsterInstance) npc;
 				if (mob.getLeader() != null)
 				{
 					mob.getLeader().getMinionList().onMinionDie(mob, (280 + getRandom(40)) * 1000);
@@ -366,7 +366,7 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 			else if (npcId == NURSE)
 			{
-				L2MonsterInstance mob = (L2MonsterInstance) npc;
+				final L2MonsterInstance mob = (L2MonsterInstance) npc;
 				_nurses.remove(mob);
 				if (mob.getLeader() != null)
 				{

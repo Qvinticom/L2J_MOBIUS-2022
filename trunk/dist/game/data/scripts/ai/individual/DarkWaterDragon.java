@@ -49,7 +49,7 @@ public final class DarkWaterDragon extends AbstractNpcAI
 	private DarkWaterDragon()
 	{
 		super(DarkWaterDragon.class.getSimpleName(), "ai/individual");
-		int[] mobs =
+		final int[] mobs =
 		{
 			DRAGON,
 			SHADE1,
@@ -144,15 +144,15 @@ public final class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		int npcId = npc.getId();
-		int npcObjId = npc.getObjectId();
+		final int npcId = npc.getId();
+		final int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
 			if (!MY_TRACKING_SET.contains(npcObjId)) // this allows to handle multiple instances of npc
 			{
 				MY_TRACKING_SET.add(npcObjId);
 				// Spawn first 5 shades on first attack on Dark Water Dragon
-				L2Character originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
+				final L2Character originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() - 100, npc.getY() + 100, npc.getZ());
@@ -163,7 +163,7 @@ public final class DarkWaterDragon extends AbstractNpcAI
 			{
 				SECOND_SPAWN.add(npcObjId);
 				// Spawn second 5 shades on half hp of on Dark Water Dragon
-				L2Character originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
+				final L2Character originalAttacker = isSummon ? attacker.getServitors().values().stream().findFirst().orElse(attacker.getPet()) : attacker;
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 100, npc.getY() + 100, npc.getZ());
@@ -177,13 +177,13 @@ public final class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getId();
-		int npcObjId = npc.getObjectId();
+		final int npcId = npc.getId();
+		final int npcObjId = npc.getObjectId();
 		if (npcId == DRAGON)
 		{
 			MY_TRACKING_SET.remove(npcObjId);
 			SECOND_SPAWN.remove(npcObjId);
-			L2Attackable faf = (L2Attackable) addSpawn(FAFURION, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0); // spawns Fafurion Kindred when Dard Water Dragon is dead
+			final L2Attackable faf = (L2Attackable) addSpawn(FAFURION, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0); // spawns Fafurion Kindred when Dard Water Dragon is dead
 			ID_MAP.put(faf.getObjectId(), killer);
 		}
 		else if (npcId == FAFURION)
@@ -207,16 +207,16 @@ public final class DarkWaterDragon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		int npcId = npc.getId();
-		int npcObjId = npc.getObjectId();
+		final int npcId = npc.getId();
+		final int npcObjId = npc.getObjectId();
 		if (npcId == FAFURION)
 		{
 			if (!MY_TRACKING_SET.contains(npcObjId))
 			{
 				MY_TRACKING_SET.add(npcObjId);
 				// Spawn 4 Detractors on spawn of Fafurion
-				int x = npc.getX();
-				int y = npc.getY();
+				final int x = npc.getX();
+				final int y = npc.getY();
 				addSpawn(DETRACTOR2, x + 100, y + 100, npc.getZ(), 0, false, 40000);
 				addSpawn(DETRACTOR1, x + 100, y - 100, npc.getZ(), 0, false, 40000);
 				addSpawn(DETRACTOR2, x - 100, y + 100, npc.getZ(), 0, false, 40000);

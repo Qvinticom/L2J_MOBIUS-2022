@@ -37,7 +37,7 @@ public final class Region implements IRegion
 	{
 		for (int blockOffset = 0; blockOffset < IRegion.REGION_BLOCKS; blockOffset++)
 		{
-			int blockType = bb.get();
+			final int blockType = bb.get();
 			switch (blockType)
 			{
 				case IBlock.TYPE_FLAT:

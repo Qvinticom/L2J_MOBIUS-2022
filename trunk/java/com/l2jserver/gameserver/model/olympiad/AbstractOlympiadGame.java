@@ -275,7 +275,7 @@ public abstract class AbstractOlympiadGame
 			player.disableAutoShotsAll();
 			
 			// Discharge any active shots
-			L2ItemInstance item = player.getActiveWeaponInstance();
+			final L2ItemInstance item = player.getActiveWeaponInstance();
 			if (item != null)
 			{
 				item.unChargeAllShots();

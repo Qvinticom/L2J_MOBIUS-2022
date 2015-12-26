@@ -67,7 +67,7 @@ public class PlayerHandler implements ITelnetHandler
 			try
 			{
 				command = command.substring(5);
-				L2PcInstance player = L2World.getInstance().getPlayer(command);
+				final L2PcInstance player = L2World.getInstance().getPlayer(command);
 				if (player != null)
 				{
 					player.sendMessage("You are kicked by gm");
@@ -82,21 +82,21 @@ public class PlayerHandler implements ITelnetHandler
 		}
 		else if (command.startsWith("give"))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(5));
+			final StringTokenizer st = new StringTokenizer(command.substring(5));
 			
 			try
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
-				int itemId = Integer.parseInt(st.nextToken());
-				int amount = Integer.parseInt(st.nextToken());
+				final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+				final int itemId = Integer.parseInt(st.nextToken());
+				final int amount = Integer.parseInt(st.nextToken());
 				
 				if (player != null)
 				{
-					L2ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
-					InventoryUpdate iu = new InventoryUpdate();
+					final L2ItemInstance item = player.getInventory().addItem("Status-Give", itemId, amount, null, null);
+					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addItem(item);
 					player.sendPacket(iu);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					sm.addItemName(itemId);
 					sm.addLong(amount);
 					player.sendPacket(sm);
@@ -115,12 +115,12 @@ public class PlayerHandler implements ITelnetHandler
 		}
 		else if (command.startsWith("enchant"))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(8), " ");
+			final StringTokenizer st = new StringTokenizer(command.substring(8), " ");
 			int enchant = 0, itemType = 0;
 			
 			try
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
+				final L2PcInstance player = L2World.getInstance().getPlayer(st.nextToken());
 				itemType = Integer.parseInt(st.nextToken());
 				enchant = Integer.parseInt(st.nextToken());
 				
@@ -206,16 +206,16 @@ public class PlayerHandler implements ITelnetHandler
 		}
 		else if (command.startsWith("jail"))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(5));
+			final StringTokenizer st = new StringTokenizer(command.substring(5));
 			try
 			{
-				String name = st.nextToken();
-				int charId = CharNameTable.getInstance().getIdByName(name);
+				final String name = st.nextToken();
+				final int charId = CharNameTable.getInstance().getIdByName(name);
 				int delay = 0;
 				String reason = "";
 				if (st.hasMoreTokens())
 				{
-					String token = st.nextToken();
+					final String token = st.nextToken();
 					if (Util.isDigit(token))
 					{
 						delay = Integer.parseInt(token);
@@ -232,7 +232,7 @@ public class PlayerHandler implements ITelnetHandler
 				
 				if (charId > 0)
 				{
-					long expirationTime = delay > 0 ? System.currentTimeMillis() + (delay * 60 * 1000) : -1;
+					final long expirationTime = delay > 0 ? System.currentTimeMillis() + (delay * 60 * 1000) : -1;
 					PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, expirationTime, reason, "Telnet Admin: " + _cSocket.getInetAddress().getHostAddress()));
 					_print.println("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 				}
@@ -255,11 +255,11 @@ public class PlayerHandler implements ITelnetHandler
 		}
 		else if (command.startsWith("unjail"))
 		{
-			StringTokenizer st = new StringTokenizer(command.substring(7));
+			final StringTokenizer st = new StringTokenizer(command.substring(7));
 			try
 			{
-				String name = st.nextToken();
-				int charId = CharNameTable.getInstance().getIdByName(name);
+				final String name = st.nextToken();
+				final int charId = CharNameTable.getInstance().getIdByName(name);
 				
 				if (charId > 0)
 				{
@@ -318,7 +318,7 @@ public class PlayerHandler implements ITelnetHandler
 			activeChar.getInventory().equipItem(itemInstance);
 			
 			// send packets
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			activeChar.sendPacket(iu);
 			activeChar.broadcastPacket(new CharInfo(activeChar));

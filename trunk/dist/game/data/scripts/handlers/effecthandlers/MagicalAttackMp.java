@@ -55,7 +55,7 @@ public final class MagicalAttackMp extends AbstractEffect
 			}
 			if (info.getEffected().isPlayer())
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC);
 				sm.addCharName(info.getEffected());
 				sm.addCharName(info.getEffector());
 				info.getEffected().sendPacket(sm);
@@ -80,20 +80,20 @@ public final class MagicalAttackMp extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		final boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
-		double damage = Formulas.calcManaDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
-		double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
+		final double damage = Formulas.calcManaDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
+		final double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
 		
 		if (damage > 0)
 		{
@@ -103,7 +103,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		
 		if (target.isPlayer())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
 			sm.addCharName(activeChar);
 			sm.addInt((int) mp);
 			target.sendPacket(sm);
@@ -111,7 +111,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
+			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 			sm2.addInt((int) mp);
 			activeChar.sendPacket(sm2);
 		}

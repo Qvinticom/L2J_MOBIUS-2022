@@ -146,7 +146,7 @@ public final class Minigame extends AbstractNpcAI
 			{
 				if (room.getCurrentPot() < 9)
 				{
-					L2Npc b = room.getBurners()[room.getOrder()[room.getCurrentPot()]];
+					final L2Npc b = room.getBurners()[room.getOrder()[room.getCurrentPot()]];
 					b.setDisplayEffect(1);
 					b.setIsRunning(false);
 					startQuestTimer("off", 2000, b, null); // Stopping burning each pot 2s after
@@ -220,7 +220,7 @@ public final class Minigame extends AbstractNpcAI
 			}
 			else
 			{
-				int attemptNumber = room.getAttemptNumber();
+				final int attemptNumber = room.getAttemptNumber();
 				
 				if (attemptNumber == 2)
 				{
@@ -270,7 +270,7 @@ public final class Minigame extends AbstractNpcAI
 			{
 				if ((obj != null) && obj.isNpc())
 				{
-					L2Npc npc = (L2Npc) obj;
+					final L2Npc npc = (L2Npc) obj;
 					if (npc.getId() == BURNER)
 					{
 						npc.doCast(TRIGGER_MIRAGE.getSkill());

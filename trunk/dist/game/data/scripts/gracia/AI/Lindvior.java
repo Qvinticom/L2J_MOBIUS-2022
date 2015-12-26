@@ -102,13 +102,13 @@ public class Lindvior extends AbstractNpcAI
 	
 	public void scheduleNextLindviorVisit()
 	{
-		long delay = (ALT_MODE) ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate();
+		final long delay = (ALT_MODE) ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate();
 		startQuestTimer("start", delay, null, null);
 	}
 	
 	protected long scheduleNextLindviorDate()
 	{
-		GregorianCalendar date = new GregorianCalendar();
+		final GregorianCalendar date = new GregorianCalendar();
 		date.set(Calendar.MINUTE, RESET_MIN);
 		date.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 		if (System.currentTimeMillis() >= date.getTimeInMillis())
@@ -116,7 +116,7 @@ public class Lindvior extends AbstractNpcAI
 			date.add(Calendar.DAY_OF_WEEK, 1);
 		}
 		
-		int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
+		final int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
 		if (dayOfWeek <= RESET_DAY_1)
 		{
 			date.add(Calendar.DAY_OF_WEEK, RESET_DAY_1 - dayOfWeek);

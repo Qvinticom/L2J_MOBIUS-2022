@@ -102,7 +102,7 @@ public final class DayNightSpawnManager
 					}
 					
 					spawn.stopRespawn();
-					L2Npc last = spawn.getLastSpawn();
+					final L2Npc last = spawn.getLastSpawn();
 					if (last != null)
 					{
 						last.deleteMe();
@@ -249,7 +249,7 @@ public final class DayNightSpawnManager
 		
 		if (GameTimeController.getInstance().isNight())
 		{
-			L2RaidBossInstance raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
+			final L2RaidBossInstance raidboss = (L2RaidBossInstance) spawnDat.doSpawn();
 			_bosses.put(spawnDat, raidboss);
 			
 			return raidboss;

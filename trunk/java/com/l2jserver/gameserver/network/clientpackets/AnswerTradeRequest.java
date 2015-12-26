@@ -45,7 +45,7 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -58,7 +58,7 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance partner = player.getActiveRequester();
+		final L2PcInstance partner = player.getActiveRequester();
 		if (partner == null)
 		{
 			// Trade partner not found, cancel trade
@@ -90,7 +90,7 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 		}
 		else
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
 			msg.addString(player.getName());
 			partner.sendPacket(msg);
 		}

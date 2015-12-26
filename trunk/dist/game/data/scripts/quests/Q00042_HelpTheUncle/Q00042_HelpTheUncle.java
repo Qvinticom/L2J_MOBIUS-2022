@@ -113,7 +113,7 @@ public class Q00042_HelpTheUncle extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
 		if ((st != null) && st.isCond(2))
 		{

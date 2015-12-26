@@ -70,16 +70,16 @@ public final class TransformData implements IXmlReader
 					if ("transform".equalsIgnoreCase(d.getNodeName()))
 					{
 						NamedNodeMap attrs = d.getAttributes();
-						StatsSet set = new StatsSet();
+						final StatsSet set = new StatsSet();
 						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							Node att = attrs.item(i);
+							final Node att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
 						final Transform transform = new Transform(set);
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{
-							boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
+							final boolean isMale = "Male".equalsIgnoreCase(cd.getNodeName());
 							if ("Male".equalsIgnoreCase(cd.getNodeName()) || "Female".equalsIgnoreCase(cd.getNodeName()))
 							{
 								TransformTemplate templateData = null;
@@ -103,7 +103,7 @@ public final class TransformData implements IXmlReader
 														attrs = s.getAttributes();
 														for (int i = 0; i < attrs.getLength(); i++)
 														{
-															Node att = attrs.item(i);
+															final Node att = attrs.item(i);
 															set.set(att.getNodeName(), att.getNodeValue());
 														}
 														break;
@@ -126,8 +126,8 @@ public final class TransformData implements IXmlReader
 												if ("skill".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													int skillId = parseInteger(attrs, "id");
-													int skillLevel = parseInteger(attrs, "level");
+													final int skillId = parseInteger(attrs, "id");
+													final int skillLevel = parseInteger(attrs, "level");
 													templateData.addSkill(new SkillHolder(skillId, skillLevel));
 												}
 											}
@@ -157,9 +157,9 @@ public final class TransformData implements IXmlReader
 												if ("skill".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													int skillId = parseInteger(attrs, "id");
-													int skillLevel = parseInteger(attrs, "level");
-													int minLevel = parseInteger(attrs, "minLevel");
+													final int skillId = parseInteger(attrs, "id");
+													final int skillLevel = parseInteger(attrs, "level");
+													final int minLevel = parseInteger(attrs, "minLevel");
 													templateData.addAdditionalSkill(new AdditionalSkillHolder(skillId, skillLevel, minLevel));
 												}
 											}
@@ -177,8 +177,8 @@ public final class TransformData implements IXmlReader
 												if ("item".equals(s.getNodeName()))
 												{
 													attrs = s.getAttributes();
-													int itemId = parseInteger(attrs, "id");
-													boolean allowed = parseBoolean(attrs, "allowed");
+													final int itemId = parseInteger(attrs, "id");
+													final boolean allowed = parseBoolean(attrs, "allowed");
 													templateData.addAdditionalItem(new AdditionalItemHolder(itemId, allowed));
 												}
 											}
@@ -200,7 +200,7 @@ public final class TransformData implements IXmlReader
 													attrs = s.getAttributes();
 													for (int i = 0; i < attrs.getLength(); i++)
 													{
-														Node att = attrs.item(i);
+														final Node att = attrs.item(i);
 														levelsSet.set(att.getNodeName(), att.getNodeValue());
 													}
 												}

@@ -225,8 +225,8 @@ public final class CastleManager implements InstanceListManager
 		{
 			return;
 		}
-		L2PcInstance player = member.getPlayerInstance();
-		int circletId = getCircletByCastleId(castleId);
+		final L2PcInstance player = member.getPlayerInstance();
+		final int circletId = getCircletByCastleId(castleId);
 		
 		if (circletId != 0)
 		{
@@ -235,7 +235,7 @@ public final class CastleManager implements InstanceListManager
 			{
 				try
 				{
-					L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
+					final L2ItemInstance circlet = player.getInventory().getItemByItemId(circletId);
 					if (circlet != null)
 					{
 						if (circlet.isEquipped())
@@ -293,7 +293,7 @@ public final class CastleManager implements InstanceListManager
 	@Override
 	public void activateInstances()
 	{
-		for (final Castle castle : _castles)
+		for (Castle castle : _castles)
 		{
 			castle.activateInstance();
 		}

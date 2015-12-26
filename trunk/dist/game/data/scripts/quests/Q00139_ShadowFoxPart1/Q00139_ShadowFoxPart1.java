@@ -133,7 +133,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 		final QuestState st = getQuestState(member, false);
 		if (!st.isSet("talk") && (getRandom(100) < DROP_CHANCE))
 		{
-			int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;
+			final int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;
 			st.giveItems(itemId, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}

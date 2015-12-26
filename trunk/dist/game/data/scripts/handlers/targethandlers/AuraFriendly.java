@@ -39,9 +39,9 @@ public class AuraFriendly implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		L2PcInstance player = activeChar.getActingPlayer();
-		int maxTargets = skill.getAffectLimit();
+		final List<L2Character> targetList = new ArrayList<>();
+		final L2PcInstance player = activeChar.getActingPlayer();
+		final int maxTargets = skill.getAffectLimit();
 		for (L2Character obj : player.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
 		{
 			if ((obj == activeChar) || !checkTarget(player, obj))
@@ -79,7 +79,7 @@ public class AuraFriendly implements ITargetTypeHandler
 		
 		if (target.isPlayable())
 		{
-			L2PcInstance targetPlayer = target.getActingPlayer();
+			final L2PcInstance targetPlayer = target.getActingPlayer();
 			
 			if (activeChar.isInDuelWith(target))
 			{

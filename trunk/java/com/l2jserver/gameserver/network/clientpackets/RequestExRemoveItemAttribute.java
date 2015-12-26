@@ -50,13 +50,13 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
+		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_objectId);
 		
 		if (targetItem == null)
 		{
@@ -77,11 +77,11 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 			targetItem.clearElementAttr(_element);
 			activeChar.sendPacket(new UserInfo(activeChar));
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
 			activeChar.sendPacket(iu);
 			SystemMessage sm;
-			byte realElement = targetItem.isArmor() ? Elementals.getOppositeElement(_element) : _element;
+			final byte realElement = targetItem.isArmor() ? Elementals.getOppositeElement(_element) : _element;
 			if (targetItem.getEnchantLevel() > 0)
 			{
 				if (targetItem.isArmor())

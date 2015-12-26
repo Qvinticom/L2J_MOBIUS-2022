@@ -57,7 +57,7 @@ public class RequestShuttleGetOn extends L2GameClientPacket
 		{
 			if ((obj instanceof L2ShuttleInstance))
 			{
-				L2ShuttleInstance shuttle = (L2ShuttleInstance) obj;
+				final L2ShuttleInstance shuttle = (L2ShuttleInstance) obj;
 				if (shuttle.calculateDistance(activeChar, false, false) < 1000)
 				{
 					shuttle.addPassenger(activeChar);

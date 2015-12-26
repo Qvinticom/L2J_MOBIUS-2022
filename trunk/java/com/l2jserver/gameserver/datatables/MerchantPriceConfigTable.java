@@ -75,17 +75,17 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	
 	public void loadXML() throws SAXException, IOException, ParserConfigurationException
 	{
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT + "/" + MPCS_FILE);
+		final File file = new File(Config.DATAPACK_ROOT + "/" + MPCS_FILE);
 		if (file.exists())
 		{
 			int defaultPriceConfigId;
-			Document doc = factory.newDocumentBuilder().parse(file);
+			final Document doc = factory.newDocumentBuilder().parse(file);
 			
 			Node n = doc.getDocumentElement();
-			Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
+			final Node dpcNode = n.getAttributes().getNamedItem("defaultPriceConfig");
 			if (dpcNode == null)
 			{
 				throw new IllegalStateException("merchantPriceConfig must define an 'defaultPriceConfig'");
@@ -102,7 +102,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 				}
 			}
 			
-			MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
+			final MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
 			if (defaultMpc == null)
 			{
 				throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");
@@ -176,7 +176,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	@Override
 	public void updateReferences()
 	{
-		for (final MerchantPriceConfig mpc : _mpcs.values())
+		for (MerchantPriceConfig mpc : _mpcs.values())
 		{
 			mpc.updateReferences();
 		}

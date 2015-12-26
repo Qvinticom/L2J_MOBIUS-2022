@@ -40,7 +40,7 @@ public class TeleportBookmark implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance player = playable.getActingPlayer();
+		final L2PcInstance player = playable.getActingPlayer();
 		
 		if (player.getBookMarkSlot() >= 9)
 		{
@@ -53,7 +53,7 @@ public class TeleportBookmark implements IItemHandler
 		player.setBookMarkSlot(player.getBookMarkSlot() + 3);
 		player.sendPacket(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(item.getId());
 		player.sendPacket(sm);
 		return true;

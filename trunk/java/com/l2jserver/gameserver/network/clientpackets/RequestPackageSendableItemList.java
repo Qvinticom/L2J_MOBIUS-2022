@@ -40,7 +40,7 @@ public class RequestPackageSendableItemList extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		L2ItemInstance[] items = getClient().getActiveChar().getInventory().getAvailableItems(true, true, true);
+		final L2ItemInstance[] items = getClient().getActiveChar().getInventory().getAvailableItems(true, true, true);
 		sendPacket(new PackageSendableList(items, _objectID));
 	}
 	

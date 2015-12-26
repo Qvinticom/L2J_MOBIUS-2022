@@ -346,7 +346,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if (tmpworld instanceof DNPWorld)
 		{
 			if (npc.isScriptValue(0))
@@ -441,7 +441,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 				if (qs.getCond() >= 3)
 				{
 					takeItems(talker, SACRED_SWORD_OF_EINHASAD, -1);
-					InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
+					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
 					world.removeAllowed(talker.getObjectId());
 					talker.teleToLocation(EXIT, 0);
 					htmltext = "32587-01.html";
@@ -452,10 +452,10 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (qs.getCond() >= 3)
 				{
-					InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 					if (tmpworld instanceof DNPWorld)
 					{
-						DNPWorld world = (DNPWorld) tmpworld;
+						final DNPWorld world = (DNPWorld) tmpworld;
 						openDoor(DISCIPLES_NECROPOLIS_DOOR, world.getInstanceId());
 						talker.showQuestMovie(12);
 						startQuestTimer("FIGHT", 1000, null, talker);

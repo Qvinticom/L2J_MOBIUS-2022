@@ -57,7 +57,7 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_XP);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_XP);
 		sm.addLong(addToExp);
 		getActiveChar().updateAndBroadcastStatus(1);
 		getActiveChar().sendPacket(sm);
@@ -72,12 +72,12 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		boolean levelIncreased = super.addLevel(value);
+		final boolean levelIncreased = super.addLevel(value);
 		
 		// Sync up exp with current level
 		// if (getExp() > getExpForLevel(getLevel() + 1) || getExp() < getExpForLevel(getLevel())) setExp(Experience.LEVEL[getLevel()]);
 		
-		StatusUpdate su = new StatusUpdate(getActiveChar());
+		final StatusUpdate su = new StatusUpdate(getActiveChar());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 		su.addAttribute(StatusUpdate.MAX_MP, getMaxMp());

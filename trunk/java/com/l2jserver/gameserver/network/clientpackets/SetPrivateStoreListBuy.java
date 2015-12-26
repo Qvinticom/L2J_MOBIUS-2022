@@ -48,12 +48,12 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
-		int count = readD();
+		final int count = readD();
 		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -62,11 +62,11 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		_items = new Item[count];
 		for (int i = 0; i < count; i++)
 		{
-			int itemId = readD();
+			final int itemId = readD();
 			int enchantLevel = readD();
 			
-			long cnt = readQ();
-			long price = readQ();
+			final long cnt = readQ();
+			final long price = readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -75,7 +75,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 			}
 			int attackAttribute = readH(); // Attack Attribute Type
 			int attackAttributeValue = readH(); // Attack Attribute Value
-			int defenseAttributes[] = new int[6];
+			final int defenseAttributes[] = new int[6];
 			for (int h = 0; h < 6; h++)
 			{
 				defenseAttributes[i] = readH(); // Defense attributes
@@ -111,7 +111,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -153,7 +153,7 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 			return;
 		}
 		
-		TradeList tradeList = player.getBuyList();
+		final TradeList tradeList = player.getBuyList();
 		tradeList.clear();
 		
 		// Check maximum number of allowed slots for pvt shops

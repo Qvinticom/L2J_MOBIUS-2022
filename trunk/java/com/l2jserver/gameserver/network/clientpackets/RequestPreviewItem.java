@@ -115,7 +115,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		// Get the current player and return if null
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -134,7 +134,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		// Check current target of the player and the INTERACTION_DISTANCE
-		L2Object target = activeChar.getTarget();
+		final L2Object target = activeChar.getTarget();
 		if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
 			) || !((target instanceof L2MerchantInstance)) // Target not a merchant
 		|| !activeChar.isInsideRadius(target, L2Npc.INTERACTION_DISTANCE, false, false) // Distance is too far
@@ -165,11 +165,11 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		long totalPrice = 0;
-		Map<Integer, Integer> itemList = new HashMap<>();
+		final Map<Integer, Integer> itemList = new HashMap<>();
 		
 		for (int i = 0; i < _count; i++)
 		{
-			int itemId = _items[i];
+			final int itemId = _items[i];
 			
 			final Product product = buyList.getProductByItemId(itemId);
 			if (product == null)
@@ -178,13 +178,13 @@ public final class RequestPreviewItem extends L2GameClientPacket
 				return;
 			}
 			
-			L2Item template = product.getItem();
+			final L2Item template = product.getItem();
 			if (template == null)
 			{
 				continue;
 			}
 			
-			int slot = Inventory.getPaperdollIndex(template.getBodyPart());
+			final int slot = Inventory.getPaperdollIndex(template.getBodyPart());
 			if (slot < 0)
 			{
 				continue;

@@ -1129,7 +1129,7 @@ public final class BlowfishEngine
 	 */
 	private void processTable(int xl, int xr, int[] table)
 	{
-		int size = table.length;
+		final int size = table.length;
 		for (int s = 0; s < size; s += 2)
 		{
 			xl ^= P[0];
@@ -1174,7 +1174,7 @@ public final class BlowfishEngine
 		 * (2) Now, XOR P[0] with the first 32 bits of the key, XOR P[1] with the second 32-bits of the key, and so on for all bits of the key (up to P[17]).<br>
 		 * Repeatedly cycle through the key bits until the entire P-array has been XOR-ed with the key bits
 		 */
-		int keyLength = key.length;
+		final int keyLength = key.length;
 		int keyIndex = 0;
 		for (int i = 0; i < P_SZ; i++)
 		{

@@ -102,7 +102,7 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					if (st.hasMoreElements())
 					{
-						String value = st.nextToken();
+						final String value = st.nextToken();
 						if (!Util.isDigit(value))
 						{
 							QuestManager.getInstance().reload(value);

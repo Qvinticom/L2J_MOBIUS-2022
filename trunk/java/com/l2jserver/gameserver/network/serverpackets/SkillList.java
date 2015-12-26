@@ -71,7 +71,7 @@ public final class SkillList extends L2GameServerPacket
 			}
 			else
 			{
-				int maxlevel = SkillData.getInstance().getMaxLevel(temp.id);
+				final int maxlevel = SkillData.getInstance().getMaxLevel(temp.id);
 				writeH(maxlevel);
 				writeH(temp.level);
 			}

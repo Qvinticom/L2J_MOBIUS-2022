@@ -177,7 +177,7 @@ public final class FloodProtectorAction
 	{
 		if (_client.getActiveChar() != null)
 		{
-			int charId = _client.getActiveChar().getObjectId();
+			final int charId = _client.getActiveChar().getObjectId();
 			if (charId > 0)
 			{
 				PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));

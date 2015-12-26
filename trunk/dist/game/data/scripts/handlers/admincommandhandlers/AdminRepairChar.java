@@ -57,14 +57,14 @@ public class AdminRepairChar implements IAdminCommandHandler
 	
 	private void handleRepair(String command)
 	{
-		String[] parts = command.split(" ");
+		final String[] parts = command.split(" ");
 		if (parts.length != 2)
 		{
 			return;
 		}
 		
 		final String playerName = parts[1];
-		String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
+		final String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement(cmd))

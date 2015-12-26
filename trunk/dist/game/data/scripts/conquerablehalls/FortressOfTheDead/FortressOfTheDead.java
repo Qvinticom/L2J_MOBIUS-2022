@@ -155,12 +155,12 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 	public void startSiege()
 	{
 		// Siege must start at night
-		int hoursLeft = (GameTimeController.getInstance().getGameTime() / 60) % 24;
+		final int hoursLeft = (GameTimeController.getInstance().getGameTime() / 60) % 24;
 		
 		if ((hoursLeft < 0) || (hoursLeft > 6))
 		{
 			cancelSiegeTask();
-			long scheduleTime = (24 - hoursLeft) * 10 * 60000;
+			final long scheduleTime = (24 - hoursLeft) * 10 * 60000;
 			_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), scheduleTime);
 		}
 		else

@@ -94,9 +94,9 @@ public final class MasterOfEnchanting extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
-			long curTime = System.currentTimeMillis();
-			String value = loadGlobalQuestVar(player.getAccountName());
-			long reuse = value == "" ? 0 : Long.parseLong(value);
+			final long curTime = System.currentTimeMillis();
+			final String value = loadGlobalQuestVar(player.getAccountName());
+			final long reuse = value == "" ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(EVENT_START))
 			{
 				return "32599-bidth.htm";
@@ -118,12 +118,12 @@ public final class MasterOfEnchanting extends LongTimeEvent
 			}
 			else
 			{
-				long remainingTime = (reuse - curTime) / 1000;
-				int hours = (int) remainingTime / 3600;
-				int minutes = ((int) remainingTime % 3600) / 60;
+				final long remainingTime = (reuse - curTime) / 1000;
+				final int hours = (int) remainingTime / 3600;
+				final int minutes = ((int) remainingTime % 3600) / 60;
 				if (hours > 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 					player.sendPacket(sm);
@@ -131,7 +131,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				}
 				else if (minutes > 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
 					sm.addInt(minutes);
 					player.sendPacket(sm);
 					htmltext = "32599-scroll24.htm";

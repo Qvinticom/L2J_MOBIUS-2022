@@ -365,7 +365,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		int talk = st.getInt("talk");
+		final int talk = st.getInt("talk");
 		
 		switch (npc.getId())
 		{

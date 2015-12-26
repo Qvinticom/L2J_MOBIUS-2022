@@ -90,7 +90,7 @@ public class L2ContactList
 	{
 		SystemMessage sm;
 		
-		int contactId = CharNameTable.getInstance().getIdByName(name);
+		final int contactId = CharNameTable.getInstance().getIdByName(name);
 		if (_contacts.contains(name))
 		{
 			activeChar.sendPacket(SystemMessageId.THE_NAME_ALREADY_EXISTS_ON_THE_ADDED_LIST);
@@ -147,7 +147,7 @@ public class L2ContactList
 	
 	public void remove(String name)
 	{
-		int contactId = CharNameTable.getInstance().getIdByName(name);
+		final int contactId = CharNameTable.getInstance().getIdByName(name);
 		
 		if (!_contacts.contains(name))
 		{
@@ -169,7 +169,7 @@ public class L2ContactList
 			ps.setInt(2, contactId);
 			ps.execute();
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
 			sm.addString(name);
 			activeChar.sendPacket(sm);
 		}

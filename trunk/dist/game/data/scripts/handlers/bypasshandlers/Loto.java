@@ -93,7 +93,7 @@ public class Loto implements IBypassHandler
 	// >24 - check lottery ticket by item object id
 	public static final void showLotoWindow(L2PcInstance player, L2Npc npc, int val)
 	{
-		int npcId = npc.getTemplate().getId();
+		final int npcId = npc.getTemplate().getId();
 		String filename;
 		SystemMessage sm;
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
@@ -163,16 +163,16 @@ public class Loto implements IBypassHandler
 					{
 						button = "0" + button;
 					}
-					String search = "fore=\"L2UI.lottoNum" + button + "\" back=\"L2UI.lottoNum" + button + "a_check\"";
-					String replace = "fore=\"L2UI.lottoNum" + button + "a_check\" back=\"L2UI.lottoNum" + button + "\"";
+					final String search = "fore=\"L2UI.lottoNum" + button + "\" back=\"L2UI.lottoNum" + button + "a_check\"";
+					final String replace = "fore=\"L2UI.lottoNum" + button + "a_check\" back=\"L2UI.lottoNum" + button + "\"";
 					html.replace(search, replace);
 				}
 			}
 			
 			if (count == 5)
 			{
-				String search = "0\">Return";
-				String replace = "22\">Your lucky numbers have been selected above.";
+				final String search = "0\">Return";
+				final String replace = "22\">Your lucky numbers have been selected above.";
 				html.replace(search, replace);
 			}
 		}
@@ -191,8 +191,8 @@ public class Loto implements IBypassHandler
 				return;
 			}
 			
-			long price = Config.ALT_LOTTERY_TICKET_PRICE;
-			int lotonumber = Lottery.getInstance().getId();
+			final long price = Config.ALT_LOTTERY_TICKET_PRICE;
+			final int lotonumber = Lottery.getInstance().getId();
 			int enchant = 0;
 			int type2 = 0;
 			
@@ -228,16 +228,16 @@ public class Loto implements IBypassHandler
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), 4442);
+			final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), 4442);
 			item.setCount(1);
 			item.setCustomType1(lotonumber);
 			item.setEnchantLevel(enchant);
 			item.setCustomType2(type2);
 			player.getInventory().addItem("Loto", item, player, npc);
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(item);
-			L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
+			final L2ItemInstance adenaupdate = player.getInventory().getItemByItemId(57);
 			iu.addModifiedItem(adenaupdate);
 			player.sendPacket(iu);
 			
@@ -254,7 +254,7 @@ public class Loto implements IBypassHandler
 			filename = (npc.getHtmlPath(npcId, 4));
 			html.setFile(player.getHtmlPrefix(), filename);
 			
-			int lotonumber = Lottery.getInstance().getId();
+			final int lotonumber = Lottery.getInstance().getId();
 			String message = "";
 			for (L2ItemInstance item : player.getInventory().getItems())
 			{
@@ -265,12 +265,12 @@ public class Loto implements IBypassHandler
 				if ((item.getId() == 4442) && (item.getCustomType1() < lotonumber))
 				{
 					message = message + "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1() + " Event Number ";
-					int[] numbers = Lottery.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
+					final int[] numbers = Lottery.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
 					for (int i = 0; i < 5; i++)
 					{
 						message += numbers[i] + " ";
 					}
-					long[] check = Lottery.getInstance().checkTicket(item);
+					final long[] check = Lottery.getInstance().checkTicket(item);
 					if (check[0] > 0)
 					{
 						switch ((int) check[0])
@@ -306,19 +306,19 @@ public class Loto implements IBypassHandler
 		}
 		else if (val > 25) // >25 - check lottery ticket by item object id
 		{
-			int lotonumber = Lottery.getInstance().getId();
-			L2ItemInstance item = player.getInventory().getItemByObjectId(val);
+			final int lotonumber = Lottery.getInstance().getId();
+			final L2ItemInstance item = player.getInventory().getItemByObjectId(val);
 			if ((item == null) || (item.getId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
 			}
-			long[] check = Lottery.getInstance().checkTicket(item);
+			final long[] check = Lottery.getInstance().checkTicket(item);
 			
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			
-			long adena = check[1];
+			final long adena = check[1];
 			if (adena > 0)
 			{
 				player.addAdena("Loto", adena, npc, true);

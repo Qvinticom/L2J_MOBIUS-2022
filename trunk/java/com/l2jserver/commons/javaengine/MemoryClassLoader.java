@@ -58,7 +58,7 @@ public final class MemoryClassLoader extends URLClassLoader
 	
 	public Iterable<Class<?>> loadAll() throws ClassNotFoundException
 	{
-		List<Class<?>> classes = new ArrayList<>(classBytes.size());
+		final List<Class<?>> classes = new ArrayList<>(classBytes.size());
 		for (String name : classBytes.keySet())
 		{
 			classes.add(loadClass(name));
@@ -69,7 +69,7 @@ public final class MemoryClassLoader extends URLClassLoader
 	@Override
 	protected Class<?> findClass(String className) throws ClassNotFoundException
 	{
-		byte buf[] = classBytes.get(className);
+		final byte buf[] = classBytes.get(className);
 		if (buf != null)
 		{
 			// clear the bytes in map -- we don't need it anymore
@@ -86,12 +86,12 @@ public final class MemoryClassLoader extends URLClassLoader
 			return new URL[0];
 		}
 		
-		List<URL> list = new ArrayList<>();
-		StringTokenizer st = new StringTokenizer(classPath, File.pathSeparator);
+		final List<URL> list = new ArrayList<>();
+		final StringTokenizer st = new StringTokenizer(classPath, File.pathSeparator);
 		while (st.hasMoreTokens())
 		{
-			String token = st.nextToken();
-			File file = new File(token);
+			final String token = st.nextToken();
+			final File file = new File(token);
 			if (file.exists())
 			{
 				try
@@ -116,7 +116,7 @@ public final class MemoryClassLoader extends URLClassLoader
 			}
 		}
 		
-		URL res[] = new URL[list.size()];
+		final URL res[] = new URL[list.size()];
 		list.toArray(res);
 		return res;
 	}

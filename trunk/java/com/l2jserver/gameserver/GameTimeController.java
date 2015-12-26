@@ -156,7 +156,7 @@ public final class GameTimeController extends Thread
 			{
 				moveObjects();
 			}
-			catch (final Throwable e)
+			catch (Throwable e)
 			{
 				_log.log(Level.WARNING, "", e);
 			}
@@ -168,7 +168,7 @@ public final class GameTimeController extends Thread
 				{
 					Thread.sleep(sleepTime);
 				}
-				catch (final InterruptedException e)
+				catch (InterruptedException e)
 				{
 					
 				}

@@ -68,15 +68,15 @@ public class GeoPathFinding extends PathFinding
 	@Override
 	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean playable)
 	{
-		int gx = (x - L2World.MAP_MIN_X) >> 4;
-		int gy = (y - L2World.MAP_MIN_Y) >> 4;
-		short gz = (short) z;
-		int gtx = (tx - L2World.MAP_MIN_X) >> 4;
-		int gty = (ty - L2World.MAP_MIN_Y) >> 4;
-		short gtz = (short) tz;
+		final int gx = (x - L2World.MAP_MIN_X) >> 4;
+		final int gy = (y - L2World.MAP_MIN_Y) >> 4;
+		final short gz = (short) z;
+		final int gtx = (tx - L2World.MAP_MIN_X) >> 4;
+		final int gty = (ty - L2World.MAP_MIN_Y) >> 4;
+		final short gtz = (short) tz;
 		
-		GeoNode start = readNode(gx, gy, gz);
-		GeoNode end = readNode(gtx, gty, gtz);
+		final GeoNode start = readNode(gx, gy, gz);
+		final GeoNode end = readNode(gtx, gty, gtz);
 		if ((start == null) || (end == null))
 		{
 			return null;
@@ -124,13 +124,13 @@ public class GeoPathFinding extends PathFinding
 		// load) level of intelligence though.
 		
 		// List of Visited Nodes
-		FastNodeList visited = new FastNodeList(550);
+		final FastNodeList visited = new FastNodeList(550);
 		
 		// List of Nodes to Visit
-		LinkedList<GeoNode> to_visit = new LinkedList<>();
+		final LinkedList<GeoNode> to_visit = new LinkedList<>();
 		to_visit.add(start);
-		int targetX = end.getLoc().getNodeX();
-		int targetY = end.getLoc().getNodeY();
+		final int targetX = end.getLoc().getNodeX();
+		final int targetY = end.getLoc().getNodeY();
 		
 		int dx, dy;
 		boolean added;
@@ -155,7 +155,7 @@ public class GeoPathFinding extends PathFinding
 			i++;
 			visited.add(node);
 			node.attachNeighbors(readNeighbors(node));
-			GeoNode[] neighbors = node.getNeighbors();
+			final GeoNode[] neighbors = node.getNeighbors();
 			if (neighbors == null)
 			{
 				continue;
@@ -192,7 +192,7 @@ public class GeoPathFinding extends PathFinding
 	
 	public List<AbstractNodeLoc> constructPath2(AbstractNode<GeoNodeLoc> node)
 	{
-		LinkedList<AbstractNodeLoc> path = new LinkedList<>();
+		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = -1000;
 		int previousDirectionY = -1000;
 		int directionX;
@@ -224,14 +224,14 @@ public class GeoPathFinding extends PathFinding
 		
 		int idx = n.getNeighborsIdx();
 		
-		int node_x = n.getLoc().getNodeX();
-		int node_y = n.getLoc().getNodeY();
+		final int node_x = n.getLoc().getNodeX();
+		final int node_y = n.getLoc().getNodeY();
 		// short node_z = n.getLoc().getZ();
 		
-		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
-		ByteBuffer pn = _pathNodes.get(regoffset);
+		final short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
+		final ByteBuffer pn = _pathNodes.get(regoffset);
 		
-		List<AbstractNode<GeoNodeLoc>> neighbors = new ArrayList<>(8);
+		final List<AbstractNode<GeoNodeLoc>> neighbors = new ArrayList<>(8);
 		GeoNode newNode;
 		short new_node_x, new_node_y;
 		
@@ -332,7 +332,7 @@ public class GeoPathFinding extends PathFinding
 				neighbors.add(newNode);
 			}
 		}
-		GeoNode[] result = new GeoNode[neighbors.size()];
+		final GeoNode[] result = new GeoNode[neighbors.size()];
 		return neighbors.toArray(result);
 	}
 	
@@ -340,47 +340,47 @@ public class GeoPathFinding extends PathFinding
 	
 	private GeoNode readNode(short node_x, short node_y, byte layer)
 	{
-		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
+		final short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		if (!pathNodesExist(regoffset))
 		{
 			return null;
 		}
-		short nbx = getNodeBlock(node_x);
-		short nby = getNodeBlock(node_y);
+		final short nbx = getNodeBlock(node_x);
+		final short nby = getNodeBlock(node_y);
 		int idx = _pathNodesIndex.get(regoffset).get((nby << 8) + nbx);
-		ByteBuffer pn = _pathNodes.get(regoffset);
+		final ByteBuffer pn = _pathNodes.get(regoffset);
 		// reading
-		byte nodes = pn.get(idx);
+		final byte nodes = pn.get(idx);
 		idx += (layer * 10) + 1;// byte + layer*10byte
 		if (nodes < layer)
 		{
 			_log.warning("SmthWrong!");
 		}
-		short node_z = pn.getShort(idx);
+		final short node_z = pn.getShort(idx);
 		idx += 2;
 		return new GeoNode(new GeoNodeLoc(node_x, node_y, node_z), idx);
 	}
 	
 	private GeoNode readNode(int gx, int gy, short z)
 	{
-		short node_x = getNodePos(gx);
-		short node_y = getNodePos(gy);
-		short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
+		final short node_x = getNodePos(gx);
+		final short node_y = getNodePos(gy);
+		final short regoffset = getRegionOffset(getRegionX(node_x), getRegionY(node_y));
 		if (!pathNodesExist(regoffset))
 		{
 			return null;
 		}
-		short nbx = getNodeBlock(node_x);
-		short nby = getNodeBlock(node_y);
+		final short nbx = getNodeBlock(node_x);
+		final short nby = getNodeBlock(node_y);
 		int idx = _pathNodesIndex.get(regoffset).get((nby << 8) + nbx);
-		ByteBuffer pn = _pathNodes.get(regoffset);
+		final ByteBuffer pn = _pathNodes.get(regoffset);
 		// reading
 		byte nodes = pn.get(idx++);
 		int idx2 = 0; // create index to nearlest node by z
 		short last_z = Short.MIN_VALUE;
 		while (nodes > 0)
 		{
-			short node_z = pn.getShort(idx);
+			final short node_z = pn.getShort(idx);
 			if (Math.abs(last_z - z) > Math.abs(node_z - z))
 			{
 				last_z = node_z;
@@ -412,8 +412,8 @@ public class GeoPathFinding extends PathFinding
 						return;
 					}
 					
-					byte rx = Byte.parseByte(parts[0]);
-					byte ry = Byte.parseByte(parts[1]);
+					final byte rx = Byte.parseByte(parts[0]);
+					final byte ry = Byte.parseByte(parts[1]);
 					LoadPathNodeFile(rx, ry);
 				});
 			//@formatter:on
@@ -432,8 +432,8 @@ public class GeoPathFinding extends PathFinding
 			_log.warning("Failed to Load PathNode File: invalid region " + rx + "," + ry + Config.EOL);
 			return;
 		}
-		short regionoffset = getRegionOffset(rx, ry);
-		File file = new File(Config.PATHNODE_PATH.toString(), rx + "_" + ry + ".pn");
+		final short regionoffset = getRegionOffset(rx, ry);
+		final File file = new File(Config.PATHNODE_PATH.toString(), rx + "_" + ry + ".pn");
 		_log.info("Path Engine: - Loading: " + file.getName() + " -> region offset: " + regionoffset + " X: " + rx + " Y: " + ry);
 		int node = 0, size, index = 0;
 		
@@ -454,11 +454,11 @@ public class GeoPathFinding extends PathFinding
 			}
 			
 			// Indexing pathnode files, so we will know where each block starts
-			IntBuffer indexs = IntBuffer.allocate(65536);
+			final IntBuffer indexs = IntBuffer.allocate(65536);
 			
 			while (node < 65536)
 			{
-				byte layer = nodes.get(index);
+				final byte layer = nodes.get(index);
 				indexs.put(node++, index);
 				index += (layer * 10) + 1;
 			}

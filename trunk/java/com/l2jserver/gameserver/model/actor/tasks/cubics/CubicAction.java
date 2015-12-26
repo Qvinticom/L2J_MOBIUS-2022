@@ -115,14 +115,14 @@ public final class CubicAction implements Runnable
 				// Smart Cubic debuff cancel is needed, no other skill is used in this activation period
 				if ((_cubic.getId() >= L2CubicInstance.SMART_CUBIC_EVATEMPLAR) && (_cubic.getId() <= L2CubicInstance.SMART_CUBIC_SPECTRALMASTER))
 				{
-					MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
+					final MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_CUBIC_CURE, 1, 0, 0);
 					_cubic.getOwner().broadcastPacket(msu);
 					// The cubic has done an action, increase the current count
 					_currentCount.incrementAndGet();
 				}
 				else
 				{
-					MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_AVENGING_CUBIC_CLEANCE, 1, 0, 0);
+					final MagicSkillUse msu = new MagicSkillUse(_cubic.getOwner(), _cubic.getOwner(), L2CubicInstance.SKILL_AVENGING_CUBIC_CLEANCE, 1, 0, 0);
 					_cubic.getOwner().broadcastPacket(msu);
 					// The cubic has done an action, increase the current count
 					_currentCount.incrementAndGet();
@@ -150,7 +150,7 @@ public final class CubicAction implements Runnable
 						_cubic.setTarget(null);
 					}
 				}
-				L2Character target = _cubic.getTarget();
+				final L2Character target = _cubic.getTarget();
 				if ((target != null) && !target.isDead())
 				{
 					if (Config.DEBUG)
@@ -161,7 +161,7 @@ public final class CubicAction implements Runnable
 					
 					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
 					
-					L2Character[] targets =
+					final L2Character[] targets =
 					{
 						target
 					};

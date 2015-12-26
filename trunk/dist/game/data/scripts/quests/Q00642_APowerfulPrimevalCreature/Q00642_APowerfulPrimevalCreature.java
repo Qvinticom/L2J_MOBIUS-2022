@@ -131,7 +131,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			return null;
 		}
 		
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
@@ -147,7 +147,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
 		if (qs.isCreated())

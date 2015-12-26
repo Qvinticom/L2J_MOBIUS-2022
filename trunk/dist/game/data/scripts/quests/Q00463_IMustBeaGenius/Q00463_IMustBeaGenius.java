@@ -127,7 +127,7 @@ public class Q00463_IMustBeaGenius extends Quest
 		{
 			case "32069-03.htm":
 				st.startQuest();
-				int number = getRandom(51) + 550;
+				final int number = getRandom(51) + 550;
 				st.set("number", String.valueOf(number));
 				st.set("chance", String.valueOf(getRandom(4)));
 				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%num%", String.valueOf(number));
@@ -138,8 +138,8 @@ public class Q00463_IMustBeaGenius extends Quest
 			case "reward":
 				if (st.isCond(2))
 				{
-					int rnd = getRandom(REWARD.length);
-					String str = (REWARD[rnd][2] < 10) ? "0" + REWARD[rnd][2] : String.valueOf(REWARD[rnd][2]);
+					final int rnd = getRandom(REWARD.length);
+					final String str = (REWARD[rnd][2] < 10) ? "0" + REWARD[rnd][2] : String.valueOf(REWARD[rnd][2]);
 					
 					st.addExpAndSp(REWARD[rnd][0], REWARD[rnd][1]);
 					st.exitQuest(QuestType.DAILY, true);

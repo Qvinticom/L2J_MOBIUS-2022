@@ -165,7 +165,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 					// L2PcInstance on the _knownPlayer of the L2NpcInstance
 					// to display a social action of the L2NpcInstance on their
 					// client
-					SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
+					final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
 					broadcastPacket(sa);
 					
 					doAction(player);
@@ -277,7 +277,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 	@Override
 	public void showChatWindow(L2PcInstance player, int val)
 	{
-		String filename = getHtmlPath(getId(), val);
+		final String filename = getHtmlPath(getId(), val);
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -314,7 +314,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 		}
 		else if (command.startsWith("open_gate"))
 		{
-			L2ItemInstance hallsKey = player.getInventory().getItemByItemId(HALLS_KEY);
+			final L2ItemInstance hallsKey = player.getInventory().getItemByItemId(HALLS_KEY);
 			if (hallsKey == null)
 			{
 				showHtmlFile(player, "Gatekeeper-no.htm");
@@ -357,8 +357,8 @@ public class L2SepulcherNpcInstance extends L2Npc
 	
 	public void openNextDoor(int npcId)
 	{
-		int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId);
-		DoorData _doorTable = DoorData.getInstance();
+		final int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId);
+		final DoorData _doorTable = DoorData.getInstance();
 		_doorTable.getDoor(doorId).openMe();
 		
 		if (_closeTask != null)

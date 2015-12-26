@@ -83,10 +83,10 @@ public final class GameStatusThread extends Thread
 	private boolean isValidIP(Socket client)
 	{
 		boolean result = false;
-		InetAddress ClientIP = client.getInetAddress();
+		final InetAddress ClientIP = client.getInetAddress();
 		
 		// convert IP to String, and compare with list
-		String clientStringIP = ClientIP.getHostAddress();
+		final String clientStringIP = ClientIP.getHostAddress();
 		
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
@@ -99,10 +99,10 @@ public final class GameStatusThread extends Thread
 		final File file = new File(Config.TELNET_FILE);
 		try (InputStream telnetIS = new FileInputStream(file))
 		{
-			Properties telnetSettings = new Properties();
+			final Properties telnetSettings = new Properties();
 			telnetSettings.load(telnetIS);
 			
-			String HostList = telnetSettings.getProperty("ListOfHosts", "127.0.0.1,localhost,::1");
+			final String HostList = telnetSettings.getProperty("ListOfHosts", "127.0.0.1,localhost,::1");
 			
 			if (Config.DEVELOPER)
 			{
@@ -159,7 +159,7 @@ public final class GameStatusThread extends Thread
 			_print.println("Please Insert Your Password!");
 			_print.print("Password: ");
 			_print.flush();
-			String tmpLine = _read.readLine();
+			final String tmpLine = _read.readLine();
 			if (tmpLine == null)
 			{
 				_print.println("Error.");

@@ -39,7 +39,7 @@ public class L2PcInstanceActionShift implements IActionShiftHandler
 				activeChar.setTarget(target);
 			}
 			
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_character_info");
+			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_character_info");
 			if (ach != null)
 			{
 				ach.useAdminCommand("admin_character_info " + target.getName(), activeChar);

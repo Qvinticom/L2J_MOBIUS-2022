@@ -47,7 +47,7 @@ public class TerritoryStatus implements IBypassHandler
 			if (npc.getCastle().getOwnerId() > 0)
 			{
 				html.setFile(activeChar.getHtmlPrefix(), "html/territorystatus.htm");
-				L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
+				final L2Clan clan = ClanTable.getInstance().getClan(npc.getCastle().getOwnerId());
 				html.replace("%clanname%", clan.getName());
 				html.replace("%clanleadername%", clan.getLeaderName());
 			}

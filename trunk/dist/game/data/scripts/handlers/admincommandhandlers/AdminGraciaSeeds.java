@@ -38,8 +38,8 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		String val = "";
 		if (st.countTokens() >= 1)
@@ -68,7 +68,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		html.replace("%sodtiatkill%", String.valueOf(GraciaSeedsManager.getInstance().getSoDTiatKilled()));
 		if (GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange() > 0)
 		{
-			Calendar nextChangeDate = Calendar.getInstance();
+			final Calendar nextChangeDate = Calendar.getInstance();
 			nextChangeDate.setTimeInMillis(System.currentTimeMillis() + GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange());
 			html.replace("%sodtime%", nextChangeDate.getTime().toString());
 		}

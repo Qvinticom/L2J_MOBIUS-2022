@@ -205,7 +205,7 @@ public class CharStatus
 			}
 			
 			// Get the Regeneration period
-			int period = Formulas.getRegeneratePeriod(getActiveChar());
+			final int period = Formulas.getRegeneratePeriod(getActiveChar());
 			
 			// Create the HP/MP/CP Regeneration task
 			_regTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new RegenTask(), period, period);
@@ -268,7 +268,7 @@ public class CharStatus
 	public boolean setCurrentHp(double newHp, boolean broadcastPacket)
 	{
 		// Get the Max HP of the L2Character
-		int currentHp = (int) getCurrentHp();
+		final int currentHp = (int) getCurrentHp();
 		final double maxHp = getActiveChar().getMaxHp();
 		
 		synchronized (this)
@@ -301,7 +301,7 @@ public class CharStatus
 			}
 		}
 		
-		boolean hpWasChanged = currentHp != _currentHp;
+		final boolean hpWasChanged = currentHp != _currentHp;
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		if (hpWasChanged && broadcastPacket)
@@ -341,7 +341,7 @@ public class CharStatus
 	public final boolean setCurrentMp(double newMp, boolean broadcastPacket)
 	{
 		// Get the Max MP of the L2Character
-		int currentMp = (int) getCurrentMp();
+		final int currentMp = (int) getCurrentMp();
 		final int maxMp = getActiveChar().getMaxMp();
 		
 		synchronized (this)
@@ -374,7 +374,7 @@ public class CharStatus
 			}
 		}
 		
-		boolean mpWasChanged = currentMp != _currentMp;
+		final boolean mpWasChanged = currentMp != _currentMp;
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		if (mpWasChanged && broadcastPacket)

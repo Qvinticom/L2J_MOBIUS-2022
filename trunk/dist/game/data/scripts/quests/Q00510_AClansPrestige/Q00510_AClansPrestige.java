@@ -58,7 +58,7 @@ public class Q00510_AClansPrestige extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -91,7 +91,7 @@ public class Q00510_AClansPrestige extends Quest
 		}
 		else
 		{
-			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
+			final L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
 			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
 			{
 				st = getQuestState(pleader, false);
@@ -116,7 +116,7 @@ public class Q00510_AClansPrestige extends Quest
 			return htmltext;
 		}
 		
-		L2Clan clan = player.getClan();
+		final L2Clan clan = player.getClan();
 		switch (st.getState())
 		{
 			case State.CREATED:
@@ -135,8 +135,8 @@ public class Q00510_AClansPrestige extends Quest
 				}
 				else
 				{
-					int count = (int) st.getQuestItemsCount(TYRANNOSAURUS_CLAW);
-					int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
+					final int count = (int) st.getQuestItemsCount(TYRANNOSAURUS_CLAW);
+					final int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 					st.takeItems(TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);

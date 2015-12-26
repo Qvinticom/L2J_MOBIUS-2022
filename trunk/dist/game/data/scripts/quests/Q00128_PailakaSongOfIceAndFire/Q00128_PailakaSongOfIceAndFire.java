@@ -158,7 +158,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 			{
 				st.exitQuest(false, true);
 				
-				Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
+				final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				inst.setDuration(EXIT_TIME * 60000);
 				inst.setEmptyDestroyTime(0);
 				

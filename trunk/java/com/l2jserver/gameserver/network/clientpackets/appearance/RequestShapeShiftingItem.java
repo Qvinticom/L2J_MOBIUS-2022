@@ -309,7 +309,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			return;
 		}
 		
-		long cost = appearanceStone.getCost();
+		final long cost = appearanceStone.getCost();
 		if (cost > player.getAdena())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);

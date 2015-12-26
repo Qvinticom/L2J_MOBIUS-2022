@@ -42,7 +42,7 @@ public final class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = info.getEffected().getActingPlayer();
+			final L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
 			{
 				activeChar.setInvisible(false);
@@ -55,7 +55,7 @@ public final class Hide extends AbstractEffect
 	{
 		if (info.getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = info.getEffected().getActingPlayer();
+			final L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			activeChar.setInvisible(true);
 			
 			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))

@@ -725,7 +725,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		{
 			lastEntry = player.getVariables().getLong(KARTIA_PARTY_ENTRY_VAR, 0);
 		}
-		Calendar entryResetTime = Calendar.getInstance();
+		final Calendar entryResetTime = Calendar.getInstance();
 		entryResetTime.set(Calendar.HOUR, 6);
 		entryResetTime.set(Calendar.MINUTE, 30);
 		entryResetTime.set(Calendar.AM_PM, Calendar.AM);

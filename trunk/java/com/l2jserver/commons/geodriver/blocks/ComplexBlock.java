@@ -50,7 +50,7 @@ public final class ComplexBlock implements IBlock
 	
 	private int _getCellHeight(int geoX, int geoY)
 	{
-		short height = (short) (_getCellData(geoX, geoY) & 0x0FFF0);
+		final short height = (short) (_getCellData(geoX, geoY) & 0x0FFF0);
 		return height >> 1;
 	}
 	
@@ -69,14 +69,14 @@ public final class ComplexBlock implements IBlock
 	@Override
 	public int getNextLowerZ(int geoX, int geoY, int worldZ)
 	{
-		int cellHeight = _getCellHeight(geoX, geoY);
+		final int cellHeight = _getCellHeight(geoX, geoY);
 		return cellHeight <= worldZ ? cellHeight : worldZ;
 	}
 	
 	@Override
 	public int getNextHigherZ(int geoX, int geoY, int worldZ)
 	{
-		int cellHeight = _getCellHeight(geoX, geoY);
+		final int cellHeight = _getCellHeight(geoX, geoY);
 		return cellHeight >= worldZ ? cellHeight : worldZ;
 	}
 }

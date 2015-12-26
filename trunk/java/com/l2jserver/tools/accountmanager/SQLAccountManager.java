@@ -107,7 +107,7 @@ public class SQLAccountManager
 					System.out.print(" it will only delete the account login server data.");
 					System.out.println();
 					System.out.print("Do you really want to delete this account? Y/N: ");
-					String yesno = _scn.next();
+					final String yesno = _scn.next();
 					if ((yesno != null) && yesno.equalsIgnoreCase("Y"))
 					{
 						deleteAccount(_uname.trim());
@@ -192,7 +192,7 @@ public class SQLAccountManager
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE accounts(login, password, accessLevel) VALUES (?, ?, ?)"))
 		{
-			MessageDigest md = MessageDigest.getInstance("SHA");
+			final MessageDigest md = MessageDigest.getInstance("SHA");
 			byte[] newPassword;
 			newPassword = password.getBytes("UTF-8");
 			newPassword = md.digest(newPassword);

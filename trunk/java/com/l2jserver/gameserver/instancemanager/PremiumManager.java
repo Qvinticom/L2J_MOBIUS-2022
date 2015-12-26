@@ -40,9 +40,9 @@ public class PremiumManager
 	{
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
+			final PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
 			statement.setString(1, accountName);
-			ResultSet rset = statement.executeQuery();
+			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
 				if (Config.PREMIUM_SYSTEM_ENABLED)
@@ -74,12 +74,12 @@ public class PremiumManager
 		
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			Calendar endDate = Calendar.getInstance();
+			final Calendar endDate = Calendar.getInstance();
 			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
 			endDate.set(Calendar.SECOND, 0);
 			endDate.add(Calendar.MONTH, months);
 			
-			PreparedStatement statement = con.prepareStatement("UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?");
 			statement.setInt(1, 1);
 			statement.setLong(2, endDate.getTimeInMillis());
 			statement.setString(3, accountName);
@@ -104,7 +104,7 @@ public class PremiumManager
 		// TODO: Add check if account exists. XD
 		try (Connection con = ConnectionFactory.getInstance().getConnection())
 		{
-			PreparedStatement statement = con.prepareStatement("INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service = ?, enddate = ?");
+			final PreparedStatement statement = con.prepareStatement("INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service = ?, enddate = ?");
 			statement.setString(1, accountName);
 			statement.setInt(2, 0);
 			statement.setLong(3, 0);

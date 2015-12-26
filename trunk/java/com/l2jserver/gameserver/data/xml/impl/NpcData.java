@@ -236,7 +236,7 @@ public class NpcData implements IXmlReader
 													{
 														case "attack":
 														{
-															String attackAttributeType = parseString(attrs, "type");
+															final String attackAttributeType = parseString(attrs, "type");
 															switch (attackAttributeType.toUpperCase())
 															{
 																case "FIRE":
@@ -441,7 +441,7 @@ public class NpcData implements IXmlReader
 												dropLists = new EnumMap<>(DropListScope.class);
 											}
 											
-											List<IDropItem> dropList = new ArrayList<>();
+											final List<IDropItem> dropList = new ArrayList<>();
 											parseDropList(f, dropListsNode, dropListScope, dropList);
 											dropLists.put(dropListScope, Collections.unmodifiableList(dropList));
 										}
@@ -629,19 +629,19 @@ public class NpcData implements IXmlReader
 	{
 		for (Node dropNode = dropListNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
 		{
-			NamedNodeMap attrs = dropNode.getAttributes();
+			final NamedNodeMap attrs = dropNode.getAttributes();
 			switch (dropNode.getNodeName().toLowerCase())
 			{
 				case "group":
 				{
-					GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(attrs, "chance"));
-					List<IDropItem> groupedDropList = new ArrayList<>(2);
+					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(attrs, "chance"));
+					final List<IDropItem> groupedDropList = new ArrayList<>(2);
 					for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
 					{
 						parseDropListItem(groupNode, dropListScope, groupedDropList);
 					}
 					
-					List<GeneralDropItem> items = new ArrayList<>(groupedDropList.size());
+					final List<GeneralDropItem> items = new ArrayList<>(groupedDropList.size());
 					for (IDropItem item : groupedDropList)
 					{
 						if (item instanceof GeneralDropItem)
@@ -669,7 +669,7 @@ public class NpcData implements IXmlReader
 	
 	private void parseDropListItem(Node dropListItem, DropListScope dropListScope, List<IDropItem> drops)
 	{
-		NamedNodeMap attrs = dropListItem.getAttributes();
+		final NamedNodeMap attrs = dropListItem.getAttributes();
 		switch (dropListItem.getNodeName().toLowerCase())
 		{
 			case "item":
@@ -707,7 +707,7 @@ public class NpcData implements IXmlReader
 	 */
 	public int getClanId(String clanName)
 	{
-		Integer id = _clans.get(clanName.toUpperCase());
+		final Integer id = _clans.get(clanName.toUpperCase());
 		return id != null ? id : -1;
 	}
 	
@@ -839,7 +839,7 @@ public class NpcData implements IXmlReader
 						{
 							final List<MinionHolder> minions = new ArrayList<>(1);
 							NamedNodeMap attrs = listNode.getAttributes();
-							int id = parseInteger(attrs, "id");
+							final int id = parseInteger(attrs, "id");
 							for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
 							{
 								if ("minion".equals(npcNode.getNodeName()))

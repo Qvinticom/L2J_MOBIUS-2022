@@ -33,7 +33,7 @@ public class Link implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		String htmlPath = command.substring(4).trim();
+		final String htmlPath = command.substring(4).trim();
 		if (htmlPath.isEmpty())
 		{
 			_log.warning("Player " + activeChar.getName() + " sent empty link html!");
@@ -46,7 +46,7 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		String filename = "html/" + htmlPath;
+		final String filename = "html/" + htmlPath;
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
 		html.setFile(activeChar.getHtmlPrefix(), filename);
 		html.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0));

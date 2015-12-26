@@ -74,7 +74,7 @@ public final class L2LoginServer
 		
 		/*** Main ***/
 		// Create log folder
-		File logFolder = new File(".", LOG_FOLDER);
+		final File logFolder = new File(".", LOG_FOLDER);
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory
@@ -208,7 +208,7 @@ public final class L2LoginServer
 						String[] parts = line.split("#", 2); // address[ duration][ # comments]
 						line = parts[0];
 						parts = line.split("\\s+"); // durations might be aligned via multiple spaces
-						String address = parts[0];
+						final String address = parts[0];
 						long duration = 0;
 						
 						if (parts.length > 1)

@@ -211,7 +211,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			}
 			if (qs.isCond(1))
 			{
-				ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 				log.addNpc(ZOMBIE_WARRIOR, qs.getInt(Integer.toString(ZOMBIE_WARRIOR)));
 				log.addNpc(VEELAN_BUGBEAR_WARRIOR, qs.getInt(Integer.toString(VEELAN_BUGBEAR_WARRIOR)));
 				killer.sendPacket(log);
@@ -223,7 +223,7 @@ public class Q10358_DividedSakumPoslof extends Quest
 			}
 			else if (qs.isCond(3))
 			{
-				ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 				log.addNpc(POSLOF, qs.getInt(Integer.toString(POSLOF)));
 				killer.sendPacket(log);
 			}

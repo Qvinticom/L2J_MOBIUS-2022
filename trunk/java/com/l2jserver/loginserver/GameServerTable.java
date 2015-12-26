@@ -614,7 +614,7 @@ public final class GameServerTable implements IXmlReader
 		 */
 		public String[] getServerAddresses()
 		{
-			String[] result = new String[_addrs.size()];
+			final String[] result = new String[_addrs.size()];
 			for (int i = 0; i < result.length; i++)
 			{
 				result[i] = _addrs.get(i).toString();

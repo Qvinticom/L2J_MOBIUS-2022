@@ -59,13 +59,13 @@ public final class Anais extends AbstractNpcAI
 	
 	private void burnerOnAttack(int pot, L2Npc anais)
 	{
-		L2Npc npc = _divineBurners.get(pot);
+		final L2Npc npc = _divineBurners.get(pot);
 		npc.setDisplayEffect(1);
 		npc.setIsRunning(false);
 		if (pot < 4)
 		{
 			_current = npc;
-			QuestTimer checkAround = getQuestTimer("CHECK", anais, null);
+			final QuestTimer checkAround = getQuestTimer("CHECK", anais, null);
 			if (checkAround == null) // || !checkAround.getIsActive()
 			{
 				startQuestTimer("CHECK", 3000, anais, null);
@@ -101,7 +101,7 @@ public final class Anais extends AbstractNpcAI
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);
 					b.setIsRunning(false);
-					L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
+					final L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
 					((L2Attackable) ward).addDamageHate(_nextTarget, 0, 999);
 					ward.setIsRunning(true);
 					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget, null);

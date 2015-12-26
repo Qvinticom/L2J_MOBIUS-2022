@@ -63,8 +63,8 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		List<L2ItemInstance> extractedItems = new ArrayList<>();
-		List<L2ItemInstance> enchantedItems = new ArrayList<>();
+		final List<L2ItemInstance> extractedItems = new ArrayList<>();
+		final List<L2ItemInstance> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
 		{
 			while (extractedItems.size() < etcitem.getExtractableCountMin())
@@ -188,7 +188,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		if (!enchantedItems.isEmpty())
 		{
-			InventoryUpdate playerIU = new InventoryUpdate();
+			final InventoryUpdate playerIU = new InventoryUpdate();
 			for (L2ItemInstance i : enchantedItems)
 			{
 				playerIU.addModifiedItem(i);
@@ -203,21 +203,21 @@ public class ExtractableItems implements IItemHandler
 	{
 		if (item.getCount() > 1)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 			sm.addItemName(item);
 			sm.addLong(item.getCount());
 			player.sendPacket(sm);
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
 			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item);
 			player.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 			sm.addItemName(item);
 			player.sendPacket(sm);
 		}

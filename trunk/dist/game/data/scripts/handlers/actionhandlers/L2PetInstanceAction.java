@@ -44,7 +44,7 @@ public class L2PetInstanceAction implements IActionHandler
 			return false;
 		}
 		
-		boolean isOwner = activeChar.getObjectId() == ((L2PetInstance) target).getOwner().getObjectId();
+		final boolean isOwner = activeChar.getObjectId() == ((L2PetInstance) target).getOwner().getObjectId();
 		
 		if (isOwner && (activeChar != ((L2PetInstance) target).getOwner()))
 		{

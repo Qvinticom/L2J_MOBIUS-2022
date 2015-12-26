@@ -34,7 +34,7 @@ public final class RequestShortCutDel extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int id = readD();
+		final int id = readD();
 		_slot = id % 12;
 		_page = id / 12;
 	}
@@ -42,7 +42,7 @@ public final class RequestShortCutDel extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;

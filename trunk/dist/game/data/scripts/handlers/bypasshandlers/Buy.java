@@ -43,7 +43,7 @@ public class Buy implements IBypassHandler
 		
 		try
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
+			final StringTokenizer st = new StringTokenizer(command, " ");
 			st.nextToken();
 			
 			if (st.countTokens() < 1)

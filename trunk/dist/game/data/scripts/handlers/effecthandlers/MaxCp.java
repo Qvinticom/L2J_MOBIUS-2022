@@ -101,7 +101,7 @@ public final class MaxCp extends AbstractEffect
 		}
 		if (_heal)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
 			sm.addInt((int) amount);
 			effected.sendPacket(sm);
 		}

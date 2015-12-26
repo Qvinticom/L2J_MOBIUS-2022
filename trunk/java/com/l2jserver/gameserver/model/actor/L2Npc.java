@@ -277,7 +277,7 @@ public class L2Npc extends L2Character
 	public void onRandomAnimation(int animationId)
 	{
 		// Send a packet SocialAction to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
-		long now = System.currentTimeMillis();
+		final long now = System.currentTimeMillis();
 		if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL)
 		{
 			_lastSocialBroadcast = now;
@@ -295,11 +295,11 @@ public class L2Npc extends L2Character
 			return;
 		}
 		
-		int minWait = isMob() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION;
-		int maxWait = isMob() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION;
+		final int minWait = isMob() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION;
+		final int maxWait = isMob() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION;
 		
 		// Calculate the delay before the next animation
-		int interval = Rnd.get(minWait, maxWait) * 1000;
+		final int interval = Rnd.get(minWait, maxWait) * 1000;
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
 		_rAniTask = new RandomAnimationTask(this);
@@ -436,7 +436,7 @@ public class L2Npc extends L2Character
 	public void updateAbnormalVisualEffects()
 	{
 		// Send a Server->Client packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
-		Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
 			if ((player == null) || !isVisibleFor(player))
@@ -595,7 +595,7 @@ public class L2Npc extends L2Character
 		// Get castle this NPC belongs to (excluding L2Attackable)
 		if (_castleIndex < 0)
 		{
-			L2TownZone town = TownManager.getTown(getX(), getY(), getZ());
+			final L2TownZone town = TownManager.getTown(getX(), getY(), getZ());
 			
 			if (town != null)
 			{
@@ -648,7 +648,7 @@ public class L2Npc extends L2Character
 	 */
 	public final Castle getCastle(long maxDistance)
 	{
-		int index = CastleManager.getInstance().findNearestCastleIndex(this, maxDistance);
+		final int index = CastleManager.getInstance().findNearestCastleIndex(this, maxDistance);
 		
 		if (index < 0)
 		{
@@ -666,7 +666,7 @@ public class L2Npc extends L2Character
 		// Get Fort this NPC belongs to (excluding L2Attackable)
 		if (_fortIndex < 0)
 		{
-			Fort fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
+			final Fort fort = FortManager.getInstance().getFort(getX(), getY(), getZ());
 			if (fort != null)
 			{
 				_fortIndex = FortManager.getInstance().getFortIndex(fort.getResidenceId());
@@ -693,7 +693,7 @@ public class L2Npc extends L2Character
 	 */
 	public final Fort getFort(long maxDistance)
 	{
-		int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
+		final int index = FortManager.getInstance().findNearestFortIndex(this, maxDistance);
 		
 		if (index < 0)
 		{
@@ -739,7 +739,7 @@ public class L2Npc extends L2Character
 			}
 			else
 			{
-				IBypassHandler handler = BypassHandler.getInstance().getHandler(command);
+				final IBypassHandler handler = BypassHandler.getInstance().getHandler(command);
 				if (handler != null)
 				{
 					handler.useBypass(command, player, this);
@@ -768,7 +768,7 @@ public class L2Npc extends L2Character
 	public L2Weapon getActiveWeaponItem()
 	{
 		// Get the weapon identifier equipped in the right hand of the L2NpcInstance
-		int weaponId = getTemplate().getRHandId();
+		final int weaponId = getTemplate().getRHandId();
 		
 		if (weaponId < 1)
 		{
@@ -776,7 +776,7 @@ public class L2Npc extends L2Character
 		}
 		
 		// Get the weapon item equipped in the right hand of the L2NpcInstance
-		L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getRHandId());
+		final L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getRHandId());
 		
 		if (!(item instanceof L2Weapon))
 		{
@@ -802,14 +802,14 @@ public class L2Npc extends L2Character
 	public L2Weapon getSecondaryWeaponItem()
 	{
 		// Get the weapon identifier equipped in the right hand of the L2NpcInstance
-		int weaponId = getTemplate().getLHandId();
+		final int weaponId = getTemplate().getLHandId();
 		if (weaponId < 1)
 		{
 			return null;
 		}
 		
 		// Get the weapon item equipped in the right hand of the L2NpcInstance
-		L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getLHandId());
+		final L2Item item = ItemTable.getInstance().getTemplate(getTemplate().getLHandId());
 		
 		if (!(item instanceof L2Weapon))
 		{
@@ -855,7 +855,7 @@ public class L2Npc extends L2Character
 			pom = npcId + "-" + val;
 		}
 		
-		String temp = "html/default/" + pom + ".htm";
+		final String temp = "html/default/" + pom + ".htm";
 		
 		if (!Config.LAZY_CACHE)
 		{
@@ -960,7 +960,7 @@ public class L2Npc extends L2Character
 			return;
 		}
 		
-		int npcId = getTemplate().getId();
+		final int npcId = getTemplate().getId();
 		
 		String filename;
 		switch (npcId)
@@ -1350,7 +1350,7 @@ public class L2Npc extends L2Character
 	
 	public void showNoTeachHtml(L2PcInstance player)
 	{
-		int npcId = getId();
+		final int npcId = getId();
 		String html = "";
 		
 		if (this instanceof L2WarehouseInstance)

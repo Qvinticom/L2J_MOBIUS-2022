@@ -191,7 +191,7 @@ public final class FortManager implements InstanceListManager
 	@Override
 	public void activateInstances()
 	{
-		for (final Fort fort : _forts)
+		for (Fort fort : _forts)
 		{
 			fort.activateInstance();
 		}

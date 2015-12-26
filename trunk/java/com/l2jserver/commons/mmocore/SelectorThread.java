@@ -102,10 +102,10 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	
 	public final void openServerSocket(InetAddress address, int tcpPort) throws IOException
 	{
-		ServerSocketChannel selectable = ServerSocketChannel.open();
+		final ServerSocketChannel selectable = ServerSocketChannel.open();
 		selectable.configureBlocking(false);
 		
-		ServerSocket ss = selectable.socket();
+		final ServerSocket ss = selectable.socket();
 		
 		if (address == null)
 		{
@@ -247,7 +247,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	
 	private final void acceptConnection(final SelectionKey key, MMOConnection<T> con)
 	{
-		ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
+		final ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 		SocketChannel sc;
 		
 		try
@@ -257,7 +257,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 				if ((_acceptFilter == null) || _acceptFilter.accept(sc))
 				{
 					sc.configureBlocking(false);
-					SelectionKey clientKey = sc.register(_selector, SelectionKey.OP_READ);
+					final SelectionKey clientKey = sc.register(_selector, SelectionKey.OP_READ);
 					con = new MMOConnection<>(this, sc.socket(), clientKey, TCP_NODELAY);
 					con.setClient(_clientFactory.create(con));
 					clientKey.attach(con);
@@ -678,7 +678,7 @@ public final class SelectorThread<T extends MMOClient<?>> extends Thread
 	
 	protected void closeSelectorThread()
 	{
-		for (final SelectionKey key : _selector.keys())
+		for (SelectionKey key : _selector.keys())
 		{
 			try
 			{

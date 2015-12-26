@@ -75,7 +75,7 @@ public class Q00278_HomeSecurity extends Quest
 			}
 			case "31537-07.html":
 			{
-				int i0 = getRandom(100);
+				final int i0 = getRandom(100);
 				
 				if (i0 < 10)
 				{

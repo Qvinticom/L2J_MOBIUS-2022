@@ -58,7 +58,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -87,7 +87,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			return;
 		}
 		
-		L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
+		final L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
 		
 		// if we can't find the requested item, its actually a cheat
 		if (itemToRemove == null)
@@ -115,7 +115,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			}
 		}
 		
-		int itemId = itemToRemove.getId();
+		final int itemId = itemToRemove.getId();
 		
 		if ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId))
 		{
@@ -175,21 +175,21 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		{
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 				activeChar.sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 				sm.addItemName(itemToRemove);
 				activeChar.sendPacket(sm);
 			}
 			
-			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
+			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getLocationSlot());
 			
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
@@ -197,7 +197,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			activeChar.sendPacket(iu);
 		}
 		
-		L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
+		final L2ItemInstance removedItem = activeChar.getInventory().destroyItem("Destroy", itemToRemove, count, activeChar, null);
 		
 		if (removedItem == null)
 		{
@@ -206,7 +206,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			if (removedItem.getCount() == 0)
 			{
 				iu.addRemovedItem(removedItem);

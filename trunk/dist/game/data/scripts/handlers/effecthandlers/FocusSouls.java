@@ -59,10 +59,10 @@ public final class FocusSouls extends AbstractEffect
 		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
 		if (maxSouls > 0)
 		{
-			int amount = _charge;
+			final int amount = _charge;
 			if ((target.getChargedSouls() < maxSouls))
 			{
-				int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
+				final int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
 				target.increaseSouls(count);
 			}
 			else

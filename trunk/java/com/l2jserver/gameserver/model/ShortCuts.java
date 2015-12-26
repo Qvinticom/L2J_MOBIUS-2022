@@ -123,7 +123,7 @@ public class ShortCuts implements IRestorable
 		deleteShortCutFromDb(old);
 		if (old.getType() == ShortcutType.ITEM)
 		{
-			L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
+			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
 			
 			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
 			{
@@ -161,7 +161,7 @@ public class ShortCuts implements IRestorable
 		
 		for (int shotId : _owner.getAutoSoulShot())
 		{
-			L2ItemInstance item = _owner.getInventory().getItemByObjectId(shotId);
+			final L2ItemInstance item = _owner.getInventory().getItemByObjectId(shotId);
 			if ((item == null) || (item.getEtcItem() == null) || (item.getEtcItem().getDefaultAction() == null))
 			{
 				continue;
@@ -240,11 +240,11 @@ public class ShortCuts implements IRestorable
 			{
 				while (rset.next())
 				{
-					int slot = rset.getInt("slot");
-					int page = rset.getInt("page");
-					int type = rset.getInt("type");
-					int id = rset.getInt("shortcut_id");
-					int level = rset.getInt("level");
+					final int slot = rset.getInt("slot");
+					final int page = rset.getInt("page");
+					final int type = rset.getInt("type");
+					final int id = rset.getInt("shortcut_id");
+					final int level = rset.getInt("level");
 					
 					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, 1));
 				}
@@ -261,7 +261,7 @@ public class ShortCuts implements IRestorable
 		{
 			if (sc.getType() == ShortcutType.ITEM)
 			{
-				L2ItemInstance item = _owner.getInventory().getItemByObjectId(sc.getId());
+				final L2ItemInstance item = _owner.getInventory().getItemByObjectId(sc.getId());
 				if (item == null)
 				{
 					deleteShortCut(sc.getSlot(), sc.getPage());
@@ -288,7 +288,7 @@ public class ShortCuts implements IRestorable
 		{
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
-				Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, 1);
+				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, 1);
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

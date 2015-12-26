@@ -49,7 +49,7 @@ public final class TradeRequest extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getActiveChar();
+		final L2PcInstance player = getActiveChar();
 		if (player == null)
 		{
 			return;

@@ -77,7 +77,7 @@ public final class IllegalPlayerActionTask implements Runnable
 	@Override
 	public void run()
 	{
-		LogRecord record = new LogRecord(Level.INFO, "AUDIT:" + _message);
+		final LogRecord record = new LogRecord(Level.INFO, "AUDIT:" + _message);
 		record.setLoggerName("audit");
 		//@formatter:off
 		record.setParameters(new Object[] { _actor, _punishment	});

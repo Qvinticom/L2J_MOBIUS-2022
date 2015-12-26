@@ -454,7 +454,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 		{
 			for (int i = 0; i < 20; i++)
 			{
-				L2Npc guardian = addSpawn(SOUL_OF_TREE_GUARDIAN, npc);
+				final L2Npc guardian = addSpawn(SOUL_OF_TREE_GUARDIAN, npc);
 				startQuestTimer("DESPAWN_GUARDIAN", 300000, guardian, null);
 				
 				if (i == 0)

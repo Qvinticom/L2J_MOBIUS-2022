@@ -62,7 +62,7 @@ public class DamageFormatter extends Formatter
 					
 					if (p instanceof L2Summon)
 					{
-						L2PcInstance owner = ((L2Summon) p).getOwner();
+						final L2PcInstance owner = ((L2Summon) p).getOwner();
 						if (owner != null)
 						{
 							StringUtil.append(output, " Owner:", owner.getName(), "(", String.valueOf(owner.getObjectId()), ")");

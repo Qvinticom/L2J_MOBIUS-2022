@@ -211,14 +211,14 @@ public class ItemTable
 	public L2ItemInstance createItem(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
 		// Create and Init the L2ItemInstance corresponding to the Item Identifier
-		L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 		
 		if (process.equalsIgnoreCase("loot"))
 		{
 			ScheduledFuture<?> itemLootShedule;
 			if ((reference instanceof L2Attackable) && ((L2Attackable) reference).isRaid()) // loot privilege for raids
 			{
-				L2Attackable raid = (L2Attackable) reference;
+				final L2Attackable raid = (L2Attackable) reference;
 				// if in CommandChannel and was killing a World/RaidBoss
 				if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
 				{
@@ -253,7 +253,7 @@ public class ItemTable
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 			{
-				LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
+				final LogRecord record = new LogRecord(Level.INFO, "CREATE:" + process);
 				record.setLoggerName("item");
 				record.setParameters(new Object[]
 				{
@@ -278,7 +278,7 @@ public class ItemTable
 				{
 					referenceName = (String) reference;
 				}
-				String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
 				if (Config.GMAUDIT)
 				{
 					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
@@ -313,7 +313,7 @@ public class ItemTable
 	{
 		synchronized (item)
 		{
-			long old = item.getCount();
+			final long old = item.getCount();
 			item.setCount(0);
 			item.setOwnerId(0);
 			item.setItemLocation(ItemLocation.VOID);
@@ -326,7 +326,7 @@ public class ItemTable
 			{
 				if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 				{
-					LogRecord record = new LogRecord(Level.INFO, "DELETE:" + process);
+					final LogRecord record = new LogRecord(Level.INFO, "DELETE:" + process);
 					record.setLoggerName("item");
 					record.setParameters(new Object[]
 					{
@@ -352,7 +352,7 @@ public class ItemTable
 					{
 						referenceName = (String) reference;
 					}
-					String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+					final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
 					if (Config.GMAUDIT)
 					{
 						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);

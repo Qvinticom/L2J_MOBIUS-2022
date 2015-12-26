@@ -48,8 +48,8 @@ public class AnswerCoupleAction extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getActiveChar();
-		L2PcInstance target = L2World.getInstance().getPlayer(_charObjId);
+		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance target = L2World.getInstance().getPlayer(_charObjId);
 		if ((activeChar == null) || (target == null))
 		{
 			return;
@@ -82,7 +82,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 		}
 		else if (_answer == -1) // refused
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(activeChar);
 			target.sendPacket(sm);
 		}

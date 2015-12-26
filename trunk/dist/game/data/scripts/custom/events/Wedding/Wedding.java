@@ -130,7 +130,7 @@ public final class Wedding extends AbstractNpcAI
 					
 					// Accept the wedding request
 					player.setMarryAccepted(true);
-					Couple couple = CoupleManager.getInstance().getCouple(player.getCoupleId());
+					final Couple couple = CoupleManager.getInstance().getCouple(player.getCoupleId());
 					couple.marry();
 					
 					// Messages to the couple
@@ -146,7 +146,7 @@ public final class Wedding extends AbstractNpcAI
 					partner.broadcastPacket(new MagicSkillUse(partner, partner, 2230, 1, 1, 0));
 					
 					// Fireworks
-					Skill skill = CommonSkill.LARGE_FIREWORK.getSkill();
+					final Skill skill = CommonSkill.LARGE_FIREWORK.getSkill();
 					if (skill != null)
 					{
 						player.doCast(skill);

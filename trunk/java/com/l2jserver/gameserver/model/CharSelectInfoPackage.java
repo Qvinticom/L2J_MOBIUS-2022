@@ -430,7 +430,7 @@ public class CharSelectInfoPackage
 	
 	public int getTransformationId()
 	{
-		int weaponId = getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+		final int weaponId = getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
 		switch (weaponId)
 		{
 			case 8190:

@@ -71,7 +71,7 @@ public final class ClanHallManager
 			int id, ownerId, lease;
 			while (rs.next())
 			{
-				StatsSet set = new StatsSet();
+				final StatsSet set = new StatsSet();
 				
 				id = rs.getInt("id");
 				ownerId = rs.getInt("ownerId");
@@ -86,7 +86,7 @@ public final class ClanHallManager
 				set.set("paidUntil", rs.getLong("paidUntil"));
 				set.set("grade", rs.getInt("Grade"));
 				set.set("paid", rs.getBoolean("paid"));
-				AuctionableHall ch = new AuctionableHall(set);
+				final AuctionableHall ch = new AuctionableHall(set);
 				_allAuctionableClanHalls.put(id, ch);
 				addClanHall(ch);
 				
@@ -97,7 +97,7 @@ public final class ClanHallManager
 				}
 				_freeClanHall.put(id, ch);
 				
-				Auction auc = ClanHallAuctionManager.getInstance().getAuction(id);
+				final Auction auc = ClanHallAuctionManager.getInstance().getAuction(id);
 				if ((auc == null) && (lease > 0))
 				{
 					ClanHallAuctionManager.getInstance().initNPC(id);

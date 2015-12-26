@@ -84,7 +84,7 @@ public class AdminShop implements IAdminCommandHandler
 			_log.warning("admin buylist failed:" + command);
 		}
 		
-		L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
+		final L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
 		
 		if (buyList != null)
 		{

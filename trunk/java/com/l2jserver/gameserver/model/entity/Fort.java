@@ -165,7 +165,7 @@ public final class Fort extends AbstractResidence
 			{
 				return;
 			}
-			long currentTime = System.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
@@ -347,7 +347,7 @@ public final class Fort extends AbstractResidence
 			return;
 		}
 		
-		L2DoorInstance door = getDoor(doorId);
+		final L2DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			if (open)
@@ -392,7 +392,7 @@ public final class Fort extends AbstractResidence
 			updateClansReputation(oldowner, true);
 			try
 			{
-				L2PcInstance oldleader = oldowner.getLeader().getPlayerInstance();
+				final L2PcInstance oldleader = oldowner.getLeader().getPlayerInstance();
 				if (oldleader != null)
 				{
 					if (oldleader.getMountType() == MountType.WYVERN)
@@ -449,7 +449,7 @@ public final class Fort extends AbstractResidence
 	
 	public void removeOwner(boolean updateDB)
 	{
-		L2Clan clan = getOwnerClan();
+		final L2Clan clan = getOwnerClan();
 		if (clan != null)
 		{
 			for (L2PcInstance member : clan.getOnlineMembers(0))
@@ -513,7 +513,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public void setVisibleFlag(boolean val)
 	{
-		L2StaticObjectInstance flagPole = getFlagPole();
+		final L2StaticObjectInstance flagPole = getFlagPole();
 		if (flagPole != null)
 		{
 			flagPole.setMeshIndex(val ? 1 : 0);
@@ -547,7 +547,7 @@ public final class Fort extends AbstractResidence
 	// This method upgrade door
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
-		L2DoorInstance door = getDoor(doorId);
+		final L2DoorInstance door = getDoor(doorId);
 		if (door != null)
 		{
 			door.setCurrentHp(door.getMaxHp() + hp);
@@ -585,10 +585,10 @@ public final class Fort extends AbstractResidence
 			}
 			if (ownerId > 0)
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
+				final L2Clan clan = ClanTable.getInstance().getClan(ownerId); // Try to find clan instance
 				clan.setFortId(getResidenceId());
 				setOwnerClan(clan);
-				int runCount = getOwnedTime() / (Config.FS_UPDATE_FRQ * 60);
+				final int runCount = getOwnedTime() / (Config.FS_UPDATE_FRQ * 60);
 				long initial = System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis();
 				while (initial > (Config.FS_UPDATE_FRQ * 60000L))
 				{
@@ -697,7 +697,7 @@ public final class Fort extends AbstractResidence
 			}
 			else
 			{
-				int diffLease = lease - _function.get(type).getLease();
+				final int diffLease = lease - _function.get(type).getLease();
 				if (diffLease > 0)
 				{
 					_function.remove(type);
@@ -801,7 +801,7 @@ public final class Fort extends AbstractResidence
 	
 	private void updateOwnerInDB()
 	{
-		L2Clan clan = getOwnerClan();
+		final L2Clan clan = getOwnerClan();
 		int clanId = 0;
 		if (clan != null)
 		{
@@ -1166,7 +1166,7 @@ public final class Fort extends AbstractResidence
 			{
 				while (rs.next())
 				{
-					L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
+					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
 					spawnDat.setX(rs.getInt("x"));
 					spawnDat.setY(rs.getInt("y"));

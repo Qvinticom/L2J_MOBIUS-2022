@@ -36,7 +36,7 @@ public class Party implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
 			return new L2Character[]
@@ -48,7 +48,7 @@ public class Party implements ITargetTypeHandler
 		targetList.add(activeChar);
 		
 		final int radius = skill.getAffectRange();
-		L2PcInstance player = activeChar.getActingPlayer();
+		final L2PcInstance player = activeChar.getActingPlayer();
 		if (activeChar.isSummon())
 		{
 			if (Skill.addCharacter(activeChar, player, radius, false))

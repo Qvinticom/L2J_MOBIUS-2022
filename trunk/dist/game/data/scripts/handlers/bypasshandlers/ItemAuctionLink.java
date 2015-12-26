@@ -64,14 +64,14 @@ public class ItemAuctionLink implements IBypassHandler
 		
 		try
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			st.nextToken(); // bypass "ItemAuction"
 			if (!st.hasMoreTokens())
 			{
 				return false;
 			}
 			
-			String cmd = st.nextToken();
+			final String cmd = st.nextToken();
 			if ("show".equalsIgnoreCase(cmd))
 			{
 				if (!activeChar.getFloodProtectors().getItemAuction().tryPerformAction("RequestInfoItemAuction"))
@@ -104,7 +104,7 @@ public class ItemAuctionLink implements IBypassHandler
 			{
 				final ItemAuction[] auctions = au.getAuctionsByBidder(activeChar.getObjectId());
 				boolean returned = false;
-				for (final ItemAuction auction : auctions)
+				for (ItemAuction auction : auctions)
 				{
 					if (auction.cancelBid(activeChar))
 					{

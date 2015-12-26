@@ -281,7 +281,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		Set<Integer> allowedPlayers = new HashSet<>();
+		final Set<Integer> allowedPlayers = new HashSet<>();
 		
 		for (AggroInfo aggro : ((L2Attackable) npc).getAggroList().values())
 		{
@@ -290,7 +290,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 				continue;
 			}
 			
-			L2PcInstance attacker = aggro.getAttacker().getActingPlayer();
+			final L2PcInstance attacker = aggro.getAttacker().getActingPlayer();
 			
 			if (attacker.isInParty() //
 				&& attacker.getParty().isInCommandChannel() //
@@ -314,7 +314,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	
 	private static void rewardPlayer(L2PcInstance player, L2Npc npc)
 	{
-		int chance = getRandom(10000);
+		final int chance = getRandom(10000);
 		final int reward;
 		int count = 1;
 		
@@ -353,8 +353,8 @@ public final class Q00456_DontKnowDontCare extends Quest
 		}
 		
 		giveItems(player, reward, count);
-		L2Item item = ItemTable.getInstance().getTemplate(reward);
-		NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL);
+		final L2Item item = ItemTable.getInstance().getTemplate(reward);
+		final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_RECEIVED_A_S2_ITEM_AS_A_REWARD_FROM_THE_SEPARATED_SOUL);
 		packet.addStringParameter(player.getName());
 		packet.addStringParameter(item.getName());
 		npc.broadcastPacket(packet);

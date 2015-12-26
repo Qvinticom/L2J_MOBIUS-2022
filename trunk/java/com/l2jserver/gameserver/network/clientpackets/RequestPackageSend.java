@@ -51,7 +51,7 @@ public class RequestPackageSend extends L2GameClientPacket
 	{
 		_objectId = readD();
 		
-		int count = readD();
+		final int count = readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -60,8 +60,8 @@ public class RequestPackageSend extends L2GameClientPacket
 		_items = new ItemHolder[count];
 		for (int i = 0; i < count; i++)
 		{
-			int objId = readD();
-			long cnt = readQ();
+			final int objId = readD();
+			final long cnt = readQ();
 			if ((objId < 1) || (cnt < 0))
 			{
 				_items = null;

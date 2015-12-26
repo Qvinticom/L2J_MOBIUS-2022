@@ -77,7 +77,7 @@ public final class RequestAllyInfo extends L2GameClientPacket
 			activeChar.sendPacket(sm);
 			
 			sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_INFORMATION);
-			for (final ClanInfo aci : ai.getAllies())
+			for (ClanInfo aci : ai.getAllies())
 			{
 				activeChar.sendPacket(sm);
 				

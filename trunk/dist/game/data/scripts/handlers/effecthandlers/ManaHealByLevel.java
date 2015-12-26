@@ -58,7 +58,7 @@ public final class ManaHealByLevel extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
+		final L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return;
@@ -71,7 +71,7 @@ public final class ManaHealByLevel extends AbstractEffect
 		amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
 		if (target.getLevel() > info.getSkill().getMagicLevel())
 		{
-			int lvlDiff = target.getLevel() - info.getSkill().getMagicLevel();
+			final int lvlDiff = target.getLevel() - info.getSkill().getMagicLevel();
 			// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
 			if (lvlDiff == 6)
 			{

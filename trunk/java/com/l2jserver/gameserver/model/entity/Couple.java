@@ -75,8 +75,8 @@ public class Couple
 	
 	public Couple(L2PcInstance player1, L2PcInstance player2)
 	{
-		int _tempPlayer1Id = player1.getObjectId();
-		int _tempPlayer2Id = player2.getObjectId();
+		final int _tempPlayer1Id = player1.getObjectId();
+		final int _tempPlayer2Id = player2.getObjectId();
 		
 		_player1Id = _tempPlayer1Id;
 		_player2Id = _tempPlayer2Id;

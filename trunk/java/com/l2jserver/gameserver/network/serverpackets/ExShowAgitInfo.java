@@ -34,7 +34,7 @@ public class ExShowAgitInfo extends L2GameServerPacket
 	{
 		writeC(0xfe);
 		writeH(0x16);
-		Map<Integer, AuctionableHall> clannhalls = ClanHallManager.getInstance().getAllAuctionableClanHalls();
+		final Map<Integer, AuctionableHall> clannhalls = ClanHallManager.getInstance().getAllAuctionableClanHalls();
 		writeD(clannhalls.size());
 		for (AuctionableHall ch : clannhalls.values())
 		{

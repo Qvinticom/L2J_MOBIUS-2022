@@ -69,7 +69,7 @@ public final class ChameleonRest extends AbstractEffect
 			}
 		}
 		
-		double manaDam = _power * getTicksMultiplier();
+		final double manaDam = _power * getTicksMultiplier();
 		if (manaDam > info.getEffected().getCurrentMp())
 		{
 			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);

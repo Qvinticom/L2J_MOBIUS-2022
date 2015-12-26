@@ -149,7 +149,7 @@ public abstract class L2Playable extends L2Character
 		}
 		if (isPlayer())
 		{
-			L2PcInstance activeChar = getActingPlayer();
+			final L2PcInstance activeChar = getActingPlayer();
 			
 			if (activeChar.hasCharmOfCourage())
 			{
@@ -176,7 +176,7 @@ public abstract class L2Playable extends L2Character
 		}
 		
 		// Notify Quest of L2Playable's death
-		L2PcInstance actingPlayer = getActingPlayer();
+		final L2PcInstance actingPlayer = getActingPlayer();
 		
 		if (!actingPlayer.isNotifyQuestOfDeathEmpty())
 		{
@@ -197,7 +197,7 @@ public abstract class L2Playable extends L2Character
 		
 		if (killer != null)
 		{
-			L2PcInstance player = killer.getActingPlayer();
+			final L2PcInstance player = killer.getActingPlayer();
 			
 			if (player != null)
 			{

@@ -53,10 +53,10 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		
-		CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
+		final CursedWeaponsManager cwm = CursedWeaponsManager.getInstance();
 		int id = 0;
 		
-		StringTokenizer st = new StringTokenizer(command);
+		final StringTokenizer st = new StringTokenizer(command);
 		st.nextToken();
 		
 		if (command.startsWith("admin_cw_info"))
@@ -69,7 +69,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					activeChar.sendMessage("> " + cw.getName() + " (" + cw.getItemId() + ")");
 					if (cw.isActivated())
 					{
-						L2PcInstance pl = cw.getPlayer();
+						final L2PcInstance pl = cw.getPlayer();
 						activeChar.sendMessage("  Player holding: " + (pl == null ? "null" : pl.getName()));
 						activeChar.sendMessage("    Player karma: " + cw.getPlayerKarma());
 						activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
@@ -102,7 +102,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					
 					if (cw.isActivated())
 					{
-						L2PcInstance pl = cw.getPlayer();
+						final L2PcInstance pl = cw.getPlayer();
 						StringUtil.append(replyMSG, "<tr><td>Weilder:</td><td>", (pl == null ? "null" : pl.getName()), "</td></tr>" + "<tr><td>Karma:</td><td>", String.valueOf(cw.getPlayerKarma()), "</td></tr>" + "<tr><td>Kills:</td><td>", String.valueOf(cw.getPlayerPkKills()), "/", String.valueOf(cw.getNbKills()), "</td></tr>" + "<tr><td>Time remaining:</td><td>", String.valueOf(cw.getTimeLeft() / 60000), " min.</td></tr>" + "<tr><td><button value=\"Remove\" action=\"bypass -h admin_cw_remove ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td><button value=\"Go\" action=\"bypass -h admin_cw_goto ", String.valueOf(itemId), "\" width=73 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 					}
 					else if (cw.isDropped())
@@ -175,7 +175,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				}
 				else
 				{
-					L2Object target = activeChar.getTarget();
+					final L2Object target = activeChar.getTarget();
 					if (target instanceof L2PcInstance)
 					{
 						((L2PcInstance) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);

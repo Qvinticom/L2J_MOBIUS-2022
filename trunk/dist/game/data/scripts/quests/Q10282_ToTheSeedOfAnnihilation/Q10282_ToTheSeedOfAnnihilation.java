@@ -48,7 +48,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
+		final String htmltext = event;
 		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{

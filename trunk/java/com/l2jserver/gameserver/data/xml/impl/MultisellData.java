@@ -84,7 +84,7 @@ public final class MultisellData implements IXmlReader
 	{
 		try
 		{
-			int id = Integer.parseInt(f.getName().replaceAll(".xml", ""));
+			final int id = Integer.parseInt(f.getName().replaceAll(".xml", ""));
 			int entryId = 1;
 			Node att;
 			final ListContainer list = new ListContainer(id);
@@ -132,7 +132,7 @@ public final class MultisellData implements IXmlReader
 					{
 						if ("item".equalsIgnoreCase(d.getNodeName()))
 						{
-							Entry e = parseEntry(d, entryId++, list);
+							final Entry e = parseEntry(d, entryId++, list);
 							list.getEntries().add(e);
 						}
 						else if ("npcs".equalsIgnoreCase(d.getNodeName()))
@@ -167,7 +167,7 @@ public final class MultisellData implements IXmlReader
 	
 	private final Entry parseEntry(Node n, int entryId, ListContainer list)
 	{
-		Node first = n.getFirstChild();
+		final Node first = n.getFirstChild();
 		final Entry entry = new Entry(entryId);
 		
 		NamedNodeMap attrs;
@@ -234,7 +234,7 @@ public final class MultisellData implements IXmlReader
 	 */
 	public final void separateAndSend(int listId, L2PcInstance player, L2Npc npc, boolean inventoryOnly, double productMultiplier, double ingredientMultiplier)
 	{
-		ListContainer template = _entries.get(listId);
+		final ListContainer template = _entries.get(listId);
 		if (template == null)
 		{
 			LOGGER.warning(getClass().getSimpleName() + ": Cannot find list ID: " + listId + " requested by player: " + player.getName() + ", NPC ID:" + (npc != null ? npc.getId() : 0));
@@ -330,14 +330,14 @@ public final class MultisellData implements IXmlReader
 			case PC_BANG_POINTS: // PcBang points
 				final int cost = player.getPcBangPoints() - (int) (amount);
 				player.setPcBangPoints(cost);
-				SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
+				final SystemMessage smsgpc = SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT);
 				smsgpc.addLong((int) amount);
 				player.sendPacket(smsgpc);
 				player.sendPacket(new ExPCCafePointInfo(player.getPcBangPoints(), (int) amount, 1));
 				return true;
 			case CLAN_REPUTATION:
 				player.getClan().takeReputationScore((int) amount, true);
-				SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 				smsg.addLong(amount);
 				player.sendPacket(smsg);
 				return true;

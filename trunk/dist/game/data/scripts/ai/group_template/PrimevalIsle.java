@@ -331,7 +331,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				{
 					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
 					{
-						L2Attackable monster = (L2Attackable) characters;
+						final L2Attackable monster = (L2Attackable) characters;
 						addAttackPlayerDesire(monster, playable);
 					}
 				}

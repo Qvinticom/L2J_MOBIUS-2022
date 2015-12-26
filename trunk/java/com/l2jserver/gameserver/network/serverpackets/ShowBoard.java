@@ -43,7 +43,7 @@ public class ShowBoard extends L2GameServerPacket
 	
 	public ShowBoard(List<String> arg)
 	{
-		StringBuilder builder = new StringBuilder(5 + StringUtil.getLength(arg) + arg.size()).append("1002\u0008");
+		final StringBuilder builder = new StringBuilder(5 + StringUtil.getLength(arg) + arg.size()).append("1002\u0008");
 		for (String str : arg)
 		{
 			builder.append(str).append("\u0008");

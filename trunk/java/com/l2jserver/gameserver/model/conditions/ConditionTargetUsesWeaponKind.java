@@ -48,7 +48,7 @@ public class ConditionTargetUsesWeaponKind extends Condition
 			return false;
 		}
 		
-		L2Weapon weapon = effected.getActiveWeaponItem();
+		final L2Weapon weapon = effected.getActiveWeaponItem();
 		if (weapon == null)
 		{
 			return false;

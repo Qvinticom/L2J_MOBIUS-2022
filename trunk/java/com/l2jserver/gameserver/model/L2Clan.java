@@ -1231,12 +1231,12 @@ public class L2Clan implements IIdentifiable, INamable
 				// Go though the recordset of this SQL query
 				while (rset.next())
 				{
-					int id = rset.getInt("skill_id");
-					int level = rset.getInt("skill_level");
+					final int id = rset.getInt("skill_id");
+					final int level = rset.getInt("skill_level");
 					// Create a L2Skill object for each record
-					Skill skill = SkillData.getInstance().getSkill(id, level);
+					final Skill skill = SkillData.getInstance().getSkill(id, level);
 					// Add the L2Skill object to the L2Clan _skills
-					int subType = rset.getInt("sub_pledge_id");
+					final int subType = rset.getInt("sub_pledge_id");
 					
 					if (subType == -2)
 					{
@@ -1248,7 +1248,7 @@ public class L2Clan implements IIdentifiable, INamable
 					}
 					else
 					{
-						SubPledge subunit = _subPledges.get(subType);
+						final SubPledge subunit = _subPledges.get(subType);
 						if (subunit != null)
 						{
 							subunit.addNewSkill(skill);
@@ -1333,7 +1333,7 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 			else
 			{
-				SubPledge subunit = getSubPledge(subType);
+				final SubPledge subunit = getSubPledge(subType);
 				if (subunit != null)
 				{
 					oldSkill = subunit.addNewSkill(newSkill);
@@ -1375,7 +1375,7 @@ public class L2Clan implements IIdentifiable, INamable
 				_log.log(Level.WARNING, "Error could not store clan skills: " + e.getMessage(), e);
 			}
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
 			sm.addSkillName(newSkill.getId());
 			
 			for (L2ClanMember temp : _members.values())
@@ -1457,7 +1457,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		else
 		{
-			SubPledge subunit = getSubPledge(player.getPledgeType());
+			final SubPledge subunit = getSubPledge(player.getPledgeType());
 			if (subunit == null)
 			{
 				return;
@@ -1495,7 +1495,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		else
 		{
-			SubPledge subunit = getSubPledge(player.getPledgeType());
+			final SubPledge subunit = getSubPledge(player.getPledgeType());
 			if (subunit == null)
 			{
 				return;
@@ -1790,11 +1790,11 @@ public class L2Clan implements IIdentifiable, INamable
 			{
 				while (rset.next())
 				{
-					int id = rset.getInt("sub_pledge_id");
-					String name = rset.getString("name");
-					int leaderId = rset.getInt("leader_id");
+					final int id = rset.getInt("sub_pledge_id");
+					final String name = rset.getString("name");
+					final int leaderId = rset.getInt("leader_id");
 					// Create a SubPledge object for each record
-					SubPledge pledge = new SubPledge(id, name, leaderId);
+					final SubPledge pledge = new SubPledge(id, name, leaderId);
 					_subPledges.put(id, pledge);
 				}
 			}
@@ -1987,9 +1987,9 @@ public class L2Clan implements IIdentifiable, INamable
 				// Go though the recordset of this SQL query
 				while (rs.next())
 				{
-					int rank = rs.getInt("rank");
+					final int rank = rs.getInt("rank");
 					// int party = rset.getInt("party");
-					int privileges = rs.getInt("privs");
+					final int privileges = rs.getInt("privs");
 					// Create a SubPledge object for each record
 					if (rank == -1)
 					{
@@ -2256,21 +2256,21 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		if (target.getClanId() != 0)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ALREADY_A_MEMBER_OF_ANOTHER_CLAN);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ALREADY_A_MEMBER_OF_ANOTHER_CLAN);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
 		}
 		if (target.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
 		}
 		if (((target.getLevel() > 40) || (target.getClassId().level() >= 2)) && (pledgeType == -1))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			activeChar.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS);
@@ -2280,7 +2280,7 @@ public class L2Clan implements IIdentifiable, INamable
 		{
 			if (pledgeType == 0)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
 				sm.addString(getName());
 				activeChar.sendPacket(sm);
 			}
@@ -2309,7 +2309,7 @@ public class L2Clan implements IIdentifiable, INamable
 			activeChar.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
 			return false;
 		}
-		L2Clan leaderClan = activeChar.getClan();
+		final L2Clan leaderClan = activeChar.getClan();
 		if (leaderClan.getAllyPenaltyExpiryTime() > System.currentTimeMillis())
 		{
 			if (leaderClan.getAllyPenaltyType() == PENALTY_TYPE_DISMISS_CLAN)
@@ -2340,15 +2340,15 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		if (!target.isClanLeader())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
 		}
-		L2Clan targetClan = target.getClan();
+		final L2Clan targetClan = target.getClan();
 		if (target.getAllyId() != 0)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
 			sm.addString(targetClan.getName());
 			sm.addString(targetClan.getAllyName());
 			activeChar.sendPacket(sm);
@@ -2358,7 +2358,7 @@ public class L2Clan implements IIdentifiable, INamable
 		{
 			if (targetClan.getAllyPenaltyType() == PENALTY_TYPE_CLAN_LEAVED)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_CANNOT_JOIN_THE_ALLIANCE_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_ALLIANCE);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_CANNOT_JOIN_THE_ALLIANCE_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_ALLIANCE);
 				sm.addString(target.getClan().getName());
 				sm.addString(target.getClan().getAllyName());
 				activeChar.sendPacket(sm);
@@ -2513,7 +2513,7 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		broadcastToOnlineAllyMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
 		
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		for (L2Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))
 		{
 			if (clan.getId() != getId())
@@ -2557,7 +2557,7 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.reduceAdena("ClanLvl", 650000, player.getTarget(), true))
 					{
 						player.setSp(player.getSp() - 20000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(20000);
 						player.sendPacket(sp);
 						increaseClanLevel = true;
@@ -2573,7 +2573,7 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.reduceAdena("ClanLvl", 2500000, player.getTarget(), true))
 					{
 						player.setSp(player.getSp() - 100000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(100000);
 						player.sendPacket(sp);
 						increaseClanLevel = true;
@@ -2591,10 +2591,10 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false))
 					{
 						player.setSp(player.getSp() - 350000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(350000);
 						player.sendPacket(sp);
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(1419);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
@@ -2611,10 +2611,10 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
 					{
 						player.setSp(player.getSp() - 1000000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(1000000);
 						player.sendPacket(sp);
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3874);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
@@ -2631,10 +2631,10 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false))
 					{
 						player.setSp(player.getSp() - 2500000);
-						SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
+						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(2500000);
 						player.sendPacket(sp);
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(3870);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
@@ -2647,7 +2647,7 @@ public class L2Clan implements IIdentifiable, INamable
 				if ((getReputationScore() >= Config.CLAN_LEVEL_6_COST) && (getMembersCount() >= Config.CLAN_LEVEL_6_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_6_COST, true);
-					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_6_COST);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2659,7 +2659,7 @@ public class L2Clan implements IIdentifiable, INamable
 				if ((getReputationScore() >= Config.CLAN_LEVEL_7_COST) && (getMembersCount() >= Config.CLAN_LEVEL_7_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_7_COST, true);
-					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_7_COST);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2670,7 +2670,7 @@ public class L2Clan implements IIdentifiable, INamable
 				if ((getReputationScore() >= Config.CLAN_LEVEL_8_COST) && (getMembersCount() >= Config.CLAN_LEVEL_8_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_8_COST, true);
-					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_8_COST);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2684,10 +2684,10 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.destroyItemByItemId("ClanLvl", 9910, 150, player.getTarget(), false))
 					{
 						setReputationScore(getReputationScore() - Config.CLAN_LEVEL_9_COST, true);
-						SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+						final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 						cr.addInt(Config.CLAN_LEVEL_9_COST);
 						player.sendPacket(cr);
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 						sm.addItemName(9910);
 						sm.addLong(150);
 						player.sendPacket(sm);
@@ -2703,10 +2703,10 @@ public class L2Clan implements IIdentifiable, INamable
 					if (player.destroyItemByItemId("ClanLvl", 9911, 5, player.getTarget(), false))
 					{
 						setReputationScore(getReputationScore() - Config.CLAN_LEVEL_10_COST, true);
-						SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+						final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 						cr.addInt(Config.CLAN_LEVEL_10_COST);
 						player.sendPacket(cr);
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 						sm.addItemName(9911);
 						sm.addLong(5);
 						player.sendPacket(sm);
@@ -2719,7 +2719,7 @@ public class L2Clan implements IIdentifiable, INamable
 				if ((getReputationScore() >= Config.CLAN_LEVEL_11_COST) && (getMembersCount() >= Config.CLAN_LEVEL_11_REQUIREMENT))
 				{
 					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_11_COST, true);
-					SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
+					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
 					cr.addInt(Config.CLAN_LEVEL_11_COST);
 					player.sendPacket(cr);
 					increaseClanLevel = true;
@@ -2736,7 +2736,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		
 		// the player should know that he has less sp now :p
-		UserInfo ui = new UserInfo(player, false);
+		final UserInfo ui = new UserInfo(player, false);
 		ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 		player.sendPacket(ui);
 		
@@ -2767,7 +2767,7 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		if (getLeader().isOnline())
 		{
-			L2PcInstance leader = getLeader().getPlayerInstance();
+			final L2PcInstance leader = getLeader().getPlayerInstance();
 			if (level > 4)
 			{
 				SiegeManager.getInstance().addSiegeSkills(leader);
@@ -2948,7 +2948,7 @@ public class L2Clan implements IIdentifiable, INamable
 			return false;
 		}
 		
-		int id = skill.getId();
+		final int id = skill.getId();
 		Skill current;
 		if (subType == 0)
 		{

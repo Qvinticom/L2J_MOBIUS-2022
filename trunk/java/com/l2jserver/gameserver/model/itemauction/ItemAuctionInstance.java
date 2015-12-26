@@ -126,7 +126,7 @@ public final class ItemAuctionInstance
 						throw new IllegalArgumentException("Item with id " + itemId + " not found");
 					}
 					
-					for (final AuctionItem tmp : _items)
+					for (AuctionItem tmp : _items)
 					{
 						if (tmp.getAuctionItemId() == auctionItemId)
 						{
@@ -153,7 +153,7 @@ public final class ItemAuctionInstance
 					}
 				}
 			}
-			catch (final IllegalArgumentException e)
+			catch (IllegalArgumentException e)
 			{
 				_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction item", e);
 			}
@@ -185,14 +185,14 @@ public final class ItemAuctionInstance
 							ItemAuctionManager.deleteAuction(auctionId);
 						}
 					}
-					catch (final SQLException e)
+					catch (SQLException e)
 					{
 						_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading auction: " + auctionId, e);
 					}
 				}
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
 			return;
@@ -294,7 +294,7 @@ public final class ItemAuctionInstance
 				// just to make sure we won't skip any auction because of little different times
 				final long currentTime = System.currentTimeMillis();
 				
-				for (final ItemAuction auction : auctions)
+				for (ItemAuction auction : auctions)
 				{
 					if (auction.getAuctionState() == ItemAuctionState.STARTED)
 					{
@@ -308,7 +308,7 @@ public final class ItemAuctionInstance
 					}
 				}
 				
-				for (final ItemAuction auction : auctions)
+				for (ItemAuction auction : auctions)
 				{
 					if ((auction.getStartingTime() > currentTime) && (currentAuction != auction))
 					{
@@ -358,7 +358,7 @@ public final class ItemAuctionInstance
 	{
 		final Collection<ItemAuction> auctions = getAuctions();
 		final ArrayList<ItemAuction> stack = new ArrayList<>(auctions.size());
-		for (final ItemAuction auction : getAuctions())
+		for (ItemAuction auction : getAuctions())
 		{
 			if (auction.getAuctionState() != ItemAuctionState.CREATED)
 			{
@@ -400,7 +400,7 @@ public final class ItemAuctionInstance
 			{
 				runImpl();
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed scheduling auction " + _auction.getAuctionId(), e);
 			}

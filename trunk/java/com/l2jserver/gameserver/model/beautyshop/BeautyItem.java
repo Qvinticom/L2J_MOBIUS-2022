@@ -64,7 +64,7 @@ public class BeautyItem
 	
 	public void addColor(StatsSet set)
 	{
-		BeautyItem color = new BeautyItem(set);
+		final BeautyItem color = new BeautyItem(set);
 		_colors.put(set.getInt("id"), color);
 	}
 	

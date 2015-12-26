@@ -70,9 +70,9 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 			return;
 		}
 		
-		L2Clan clan = activeChar.getClan();
+		final L2Clan clan = activeChar.getClan();
 		
-		L2ClanMember member = clan.getClanMember(_target);
+		final L2ClanMember member = clan.getClanMember(_target);
 		if (member == null)
 		{
 			_log.warning("Target (" + _target + ") is not member of the clan");
@@ -89,7 +89,7 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
 		clan.updateClanInDB();
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
 		sm.addString(member.getName());
 		clan.broadcastToOnlineMembers(sm);
 		activeChar.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN_MEMBER);
@@ -101,7 +101,7 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		
 		if (member.isOnline())
 		{
-			L2PcInstance player = member.getPlayerInstance();
+			final L2PcInstance player = member.getPlayerInstance();
 			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
 	}

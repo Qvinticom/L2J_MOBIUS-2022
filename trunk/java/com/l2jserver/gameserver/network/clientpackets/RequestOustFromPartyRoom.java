@@ -46,19 +46,19 @@ public final class RequestOustFromPartyRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getActiveChar();
+		final L2PcInstance player = getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2PcInstance member = L2World.getInstance().getPlayer(_charid);
+		final L2PcInstance member = L2World.getInstance().getPlayer(_charid);
 		if (member == null)
 		{
 			return;
 		}
 		
-		PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(member);
 		if ((room == null) || (room.getOwner() != player))
 		{
 			return;
@@ -81,7 +81,7 @@ public final class RequestOustFromPartyRoom extends L2GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(member);
 			
 			// Send Room list
-			int loc = 0; // TODO: Closes town
+			final int loc = 0; // TODO: Closes town
 			member.sendPacket(new ListPartyWating(member, 0, loc, member.getLevel()));
 			
 			// Clean player's LFP title

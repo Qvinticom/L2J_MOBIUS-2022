@@ -89,7 +89,7 @@ public final class EnergyAttack extends AbstractEffect
 		
 		if (!_ignoreShieldDefence)
 		{
-			byte shield = Formulas.calcShldUse(attacker, target, skill, true);
+			final byte shield = Formulas.calcShldUse(attacker, target, skill, true);
 			switch (shield)
 			{
 				case Formulas.SHIELD_DEFENSE_FAILED:
@@ -114,13 +114,13 @@ public final class EnergyAttack extends AbstractEffect
 		
 		if (defence != -1)
 		{
-			double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
+			final double damageMultiplier = Formulas.calcWeaponTraitBonus(attacker, target) * Formulas.calcAttributeBonus(attacker, target, skill) * Formulas.calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
 			
-			boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
-			double ssBoost = ss ? 2 : 1.0;
+			final boolean ss = info.getSkill().useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS);
+			final double ssBoost = ss ? 2 : 1.0;
 			
 			double weaponTypeBoost;
-			L2Weapon weapon = attacker.getActiveWeaponItem();
+			final L2Weapon weapon = attacker.getActiveWeaponItem();
 			if ((weapon != null) && ((weapon.getItemType() == WeaponType.BOW) || (weapon.getItemType() == WeaponType.CROSSBOW)))
 			{
 				weaponTypeBoost = 70;
@@ -147,7 +147,7 @@ public final class EnergyAttack extends AbstractEffect
 				attacker.decreaseCharges(3);
 			}
 			
-			double addPower = (attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null));
+			final double addPower = (attacker.getStat().calcStat(Stats.MOMENTUM_SKILL_POWER, 1, null, null));
 			
 			attack += _power;
 			attack *= addPower;
@@ -174,7 +174,7 @@ public final class EnergyAttack extends AbstractEffect
 		if (damage > 0)
 		{
 			// reduce damage if target has maxdamage buff
-			double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+			final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 			if (maxDamage > 0)
 			{
 				damage = (int) maxDamage;

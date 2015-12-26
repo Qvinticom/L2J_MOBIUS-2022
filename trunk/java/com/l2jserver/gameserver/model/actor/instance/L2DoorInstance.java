@@ -103,10 +103,10 @@ public class L2DoorInstance extends L2Character
 			startTimerOpen();
 		}
 		
-		int clanhallId = template.getClanHallId();
+		final int clanhallId = template.getClanHallId();
 		if (clanhallId > 0)
 		{
-			ClanHall hall = ClanHallManager.getAllClanHalls().get(clanhallId);
+			final ClanHall hall = ClanHallManager.getAllClanHalls().get(clanhallId);
 			if (hall != null)
 			{
 				setClanHall(hall);
@@ -246,7 +246,7 @@ public class L2DoorInstance extends L2Character
 		_open = open;
 		if (getChildId() > 0)
 		{
-			L2DoorInstance sibling = getSiblingDoor(getChildId());
+			final L2DoorInstance sibling = getSiblingDoor(getChildId());
 			if (sibling != null)
 			{
 				sibling.notifyChildEvent(open);
@@ -275,7 +275,7 @@ public class L2DoorInstance extends L2Character
 	
 	public int getDamage()
 	{
-		int dmg = 6 - (int) Math.ceil((getCurrentHp() / getMaxHp()) * 6);
+		final int dmg = 6 - (int) Math.ceil((getCurrentHp() / getMaxHp()) * 6);
 		if (dmg > 6)
 		{
 			return 6;
@@ -360,11 +360,11 @@ public class L2DoorInstance extends L2Character
 			return false;
 		}
 		
-		L2PcInstance actingPlayer = attacker.getActingPlayer();
+		final L2PcInstance actingPlayer = attacker.getActingPlayer();
 		
 		if (getClanHall() != null)
 		{
-			SiegableHall hall = (SiegableHall) getClanHall();
+			final SiegableHall hall = (SiegableHall) getClanHall();
 			if (!hall.isSiegableHall())
 			{
 				return false;
@@ -372,12 +372,12 @@ public class L2DoorInstance extends L2Character
 			return hall.isInSiege() && hall.getSiege().doorIsAutoAttackable() && hall.getSiege().checkIsAttacker(actingPlayer.getClan());
 		}
 		// Attackable only during siege by everyone (not owner)
-		boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
-		boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
+		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getZone().isActive());
+		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getZone().isActive());
 		
 		if (isFort)
 		{
-			L2Clan clan = actingPlayer.getClan();
+			final L2Clan clan = actingPlayer.getClan();
 			if ((clan != null) && (clan == getFort().getOwnerClan()))
 			{
 				return false;
@@ -385,7 +385,7 @@ public class L2DoorInstance extends L2Character
 		}
 		else if (isCastle)
 		{
-			L2Clan clan = actingPlayer.getClan();
+			final L2Clan clan = actingPlayer.getClan();
 			if ((clan != null) && (clan.getId() == getCastle().getOwnerId()))
 			{
 				return false;
@@ -429,15 +429,15 @@ public class L2DoorInstance extends L2Character
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		Collection<L2PcInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+		final Collection<L2PcInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
 		}
 		
-		StaticObject su = new StaticObject(this, false);
-		StaticObject targetableSu = new StaticObject(this, true);
-		DoorStatusUpdate dsu = new DoorStatusUpdate(this);
+		final StaticObject su = new StaticObject(this, false);
+		final StaticObject targetableSu = new StaticObject(this, true);
+		final DoorStatusUpdate dsu = new DoorStatusUpdate(this);
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
@@ -483,7 +483,7 @@ public class L2DoorInstance extends L2Character
 	public final void closeMe()
 	{
 		// remove close task
-		Future<?> oldTask = _autoCloseTask;
+		final Future<?> oldTask = _autoCloseTask;
 		if (oldTask != null)
 		{
 			_autoCloseTask = null;
@@ -500,11 +500,11 @@ public class L2DoorInstance extends L2Character
 	
 	private void manageGroupOpen(boolean open, String groupName)
 	{
-		Set<Integer> set = DoorData.getDoorsByGroup(groupName);
+		final Set<Integer> set = DoorData.getDoorsByGroup(groupName);
 		L2DoorInstance first = null;
 		for (Integer id : set)
 		{
-			L2DoorInstance door = getSiblingDoor(id);
+			final L2DoorInstance door = getSiblingDoor(id);
 			if (first == null)
 			{
 				first = door;
@@ -528,7 +528,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	private void notifyChildEvent(boolean open)
 	{
-		byte openThis = open ? getTemplate().getMasterDoorOpen() : getTemplate().getMasterDoorClose();
+		final byte openThis = open ? getTemplate().getMasterDoorOpen() : getTemplate().getMasterDoorClose();
 		
 		if (openThis == 0)
 		{
@@ -652,9 +652,9 @@ public class L2DoorInstance extends L2Character
 			return false;
 		}
 		
-		boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
-		boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
-		boolean isHall = ((getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).isInSiege());
+		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
+		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
+		final boolean isHall = ((getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).isInSiege());
 		
 		if (isFort || isCastle || isHall)
 		{
@@ -726,7 +726,7 @@ public class L2DoorInstance extends L2Character
 			return DoorData.getInstance().getDoor(doorId);
 		}
 		
-		Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
+		final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
 		if (inst != null)
 		{
 			return inst.getDoor(doorId);
@@ -741,7 +741,7 @@ public class L2DoorInstance extends L2Character
 		{
 			return;
 		}
-		Future<?> oldTask = _autoCloseTask;
+		final Future<?> oldTask = _autoCloseTask;
 		if (oldTask != null)
 		{
 			_autoCloseTask = null;
@@ -767,7 +767,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			boolean open = getOpen();
+			final boolean open = getOpen();
 			if (open)
 			{
 				closeMe();

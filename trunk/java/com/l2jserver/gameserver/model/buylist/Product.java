@@ -98,7 +98,7 @@ public final class Product
 		{
 			return 0;
 		}
-		long count = _count.get();
+		final long count = _count.get();
 		return count > 0 ? count : 0;
 	}
 	
@@ -121,7 +121,7 @@ public final class Product
 		{
 			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(new RestockTask(), getRestockDelay());
 		}
-		boolean result = _count.addAndGet(-val) >= 0;
+		final boolean result = _count.addAndGet(-val) >= 0;
 		save();
 		return result;
 	}
@@ -133,7 +133,7 @@ public final class Product
 	
 	public void restartRestockTask(long nextRestockTime)
 	{
-		long remainTime = nextRestockTime - System.currentTimeMillis();
+		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
 			_restockTask = ThreadPoolManager.getInstance().scheduleGeneral(new RestockTask(), remainTime);
@@ -170,7 +170,7 @@ public final class Product
 			ps.setLong(5, getCount());
 			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
 			{
-				long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
+				final long nextRestockTime = System.currentTimeMillis() + _restockTask.getDelay(TimeUnit.MILLISECONDS);
 				ps.setLong(4, nextRestockTime);
 				ps.setLong(6, nextRestockTime);
 			}

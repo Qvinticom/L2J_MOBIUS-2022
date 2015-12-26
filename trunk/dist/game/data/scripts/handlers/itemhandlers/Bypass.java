@@ -37,11 +37,11 @@ public class Bypass implements IItemHandler
 		{
 			return false;
 		}
-		L2PcInstance activeChar = (L2PcInstance) playable;
+		final L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getId();
 		
-		String filename = "html/item/" + itemId + ".htm";
-		String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
+		final String filename = "html/item/" + itemId + ".htm";
+		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, item.getId());
 		if (content == null)
 		{

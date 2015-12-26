@@ -98,10 +98,10 @@ public final class GiftOfVitality extends LongTimeEvent
 				final long reuse = player.getVariables().getLong(REUSE, 0);
 				if (reuse > System.currentTimeMillis())
 				{
-					long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
-					int hours = (int) (remainingTime / 3600);
-					int minutes = (int) ((remainingTime % 3600) / 60);
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+					final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
+					final int hours = (int) (remainingTime / 3600);
+					final int minutes = (int) ((remainingTime % 3600) / 60);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
 					sm.addSkillName(23179);
 					sm.addInt(hours);
 					sm.addInt(minutes);

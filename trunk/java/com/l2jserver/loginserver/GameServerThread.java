@@ -79,7 +79,7 @@ public class GameServerThread extends Thread
 			return;
 		}
 		
-		InitLS startPacket = new InitLS(_publicKey.getModulus().toByteArray());
+		final InitLS startPacket = new InitLS(_publicKey.getModulus().toByteArray());
 		try
 		{
 			sendPacket(startPacket);
@@ -100,7 +100,7 @@ public class GameServerThread extends Thread
 					break;
 				}
 				
-				byte[] data = new byte[length - 2];
+				final byte[] data = new byte[length - 2];
 				
 				int receivedBytes = 0;
 				int newBytes = 0;
@@ -137,8 +137,8 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
-			String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
+			final String serverName = (getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")");
+			final String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
 			_log.info(msg);
 			broadcastToTelnet(msg);
 		}
@@ -221,7 +221,7 @@ public class GameServerThread extends Thread
 		{
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		KeyPair pair = GameServerTable.getInstance().getKeyPair();
+		final KeyPair pair = GameServerTable.getInstance().getKeyPair();
 		_privateKey = (RSAPrivateKey) pair.getPrivate();
 		_publicKey = (RSAPublicKey) pair.getPublic();
 		_blowfish = new NewCrypt("_;v.]05-31!|+-%xT!^[$\00");
@@ -236,7 +236,7 @@ public class GameServerThread extends Thread
 	{
 		try
 		{
-			byte[] data = sl.getContent();
+			final byte[] data = sl.getContent();
 			NewCrypt.appendChecksum(data);
 			if (Config.DEBUG)
 			{
@@ -244,7 +244,7 @@ public class GameServerThread extends Thread
 			}
 			_blowfish.crypt(data, 0, data.length);
 			
-			int len = data.length + 2;
+			final int len = data.length + 2;
 			synchronized (_out)
 			{
 				_out.write(len & 0xff);

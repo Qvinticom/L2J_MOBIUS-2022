@@ -120,13 +120,13 @@ public class HtmCache
 			BufferedInputStream bis = new BufferedInputStream(fis))
 		{
 			final int bytes = bis.available();
-			byte[] raw = new byte[bytes];
+			final byte[] raw = new byte[bytes];
 			
 			bis.read(raw);
 			content = new String(raw, "UTF-8");
 			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
 			
-			String oldContent = _cache.put(relpath, content);
+			final String oldContent = _cache.put(relpath, content);
 			if (oldContent == null)
 			{
 				_bytesBuffLen += bytes;

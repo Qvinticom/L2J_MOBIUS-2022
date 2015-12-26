@@ -36,7 +36,7 @@ public class UserCommandHandler implements IHandler<IUserCommandHandler, Integer
 	@Override
 	public void registerHandler(IUserCommandHandler handler)
 	{
-		int[] ids = handler.getUserCommandList();
+		final int[] ids = handler.getUserCommandList();
 		for (int id : ids)
 		{
 			_datatable.put(id, handler);
@@ -46,7 +46,7 @@ public class UserCommandHandler implements IHandler<IUserCommandHandler, Integer
 	@Override
 	public synchronized void removeHandler(IUserCommandHandler handler)
 	{
-		int[] ids = handler.getUserCommandList();
+		final int[] ids = handler.getUserCommandList();
 		for (int id : ids)
 		{
 			_datatable.remove(id);

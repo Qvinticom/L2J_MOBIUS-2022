@@ -91,7 +91,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	
 	private final void buildMessengerMessage()
 	{
-		String html = HtmCache.getInstance().getHtm(null, "scripts/conquerablehalls/FortressOfResistance/partisan_ordery_brakel001.htm");
+		final String html = HtmCache.getInstance().getHtm(null, "scripts/conquerablehalls/FortressOfResistance/partisan_ordery_brakel001.htm");
 		if (html != null)
 		{
 			// FIXME: We don't have an object id to put in here :(
@@ -116,10 +116,10 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 			return null;
 		}
 		
-		int clanId = player.getClanId();
+		final int clanId = player.getClanId();
 		if (clanId > 0)
 		{
-			long clanDmg = (_damageToNurka.containsKey(clanId)) ? _damageToNurka.get(clanId) + damage : damage;
+			final long clanDmg = (_damageToNurka.containsKey(clanId)) ? _damageToNurka.get(clanId) + damage : damage;
 			_damageToNurka.put(clanId, clanDmg);
 			
 		}
@@ -153,7 +153,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		long counter = 0;
 		for (Entry<Integer, Long> e : _damageToNurka.entrySet())
 		{
-			long dam = e.getValue();
+			final long dam = e.getValue();
 			if (dam > counter)
 			{
 				winnerId = e.getKey();

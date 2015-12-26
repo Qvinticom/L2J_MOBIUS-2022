@@ -254,7 +254,7 @@ public final class Baium extends AbstractNpcAI
 					}
 					else
 					{
-						L2PcInstance randomPlayer = getRandomPlayer(npc);
+						final L2PcInstance randomPlayer = getRandomPlayer(npc);
 						if (randomPlayer != null)
 						{
 							randomPlayer.teleToLocation(BAIUM_GIFT_LOC);
@@ -305,7 +305,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					L2PcInstance randomPlayer = getRandomPlayer(npc);
+					final L2PcInstance randomPlayer = getRandomPlayer(npc);
 					if (randomPlayer != null)
 					{
 						addAttackPlayerDesire(npc, randomPlayer);
@@ -556,7 +556,7 @@ public final class Baium extends AbstractNpcAI
 			setStatus(DEAD);
 			addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
 			zone.broadcastPacket(new PlaySound("BS01_D"));
-			long respawnTime = (Config.BAIUM_SPAWN_INTERVAL + getRandom(-Config.BAIUM_SPAWN_RANDOM, Config.BAIUM_SPAWN_RANDOM)) * 3600000;
+			final long respawnTime = (Config.BAIUM_SPAWN_INTERVAL + getRandom(-Config.BAIUM_SPAWN_RANDOM, Config.BAIUM_SPAWN_RANDOM)) * 3600000;
 			setRespawn(respawnTime);
 			startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 			startQuestTimer("CLEAR_ZONE", 900000, null, null);

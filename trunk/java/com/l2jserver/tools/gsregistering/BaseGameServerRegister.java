@@ -51,7 +51,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void main(String[] args)
 	{
-		GameServerRegister cmdUi = new GameServerRegister();
+		final GameServerRegister cmdUi = new GameServerRegister();
 		try
 		{
 			cmdUi.consoleUI();
@@ -130,11 +130,11 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void registerGameServer(int id, String outDir) throws IOException
 	{
-		byte[] hexId = Util.generateHex(16);
+		final byte[] hexId = Util.generateHex(16);
 		GameServerTable.getInstance().registerServerOnDB(hexId, id, "");
 		
-		Properties hexSetting = new Properties();
-		File file = new File(outDir, "hexid.txt");
+		final Properties hexSetting = new Properties();
+		final File file = new File(outDir, "hexid.txt");
 		// Create a new empty file only if it doesn't exist
 		file.createNewFile();
 		try (OutputStream out = new FileOutputStream(file))

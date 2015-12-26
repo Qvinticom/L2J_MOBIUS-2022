@@ -82,14 +82,14 @@ public class CombatFlag
 		// Equip with the weapon
 		_item = item;
 		_player.getInventory().equipItem(_item);
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
 		sm.addItemName(_item);
 		_player.sendPacket(sm);
 		
 		// Refresh inventory
 		if (!Config.FORCE_INVENTORY_UPDATE)
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addItem(_item);
 			_player.sendPacket(iu);
 		}
@@ -107,7 +107,7 @@ public class CombatFlag
 	{
 		// Reset player stats
 		_player.setCombatFlagEquipped(false);
-		int slot = _player.getInventory().getSlotFromItem(_item);
+		final int slot = _player.getInventory().getSlotFromItem(_item);
 		_player.getInventory().unEquipItemInBodySlot(slot);
 		_player.destroyItem("CombatFlag", _item, null, true);
 		_item = null;

@@ -48,7 +48,7 @@ public class AllianceInfo extends L2GameServerPacket
 		final Collection<L2Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
 		_allies = new ClanInfo[allies.size()];
 		int idx = 0, total = 0, online = 0;
-		for (final L2Clan clan : allies)
+		for (L2Clan clan : allies)
 		{
 			final ClanInfo ci = new ClanInfo(clan);
 			_allies[idx++] = ci;
@@ -72,7 +72,7 @@ public class AllianceInfo extends L2GameServerPacket
 		writeS(_leaderP);
 		
 		writeD(_allies.length);
-		for (final ClanInfo aci : _allies)
+		for (ClanInfo aci : _allies)
 		{
 			writeS(aci.getClan().getName());
 			writeD(0x00);

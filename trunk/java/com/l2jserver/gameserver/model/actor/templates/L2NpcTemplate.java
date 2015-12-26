@@ -473,7 +473,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			return false;
 		}
 		
-		int clanId = NpcData.getInstance().getClanId("ALL");
+		final int clanId = NpcData.getInstance().getClanId("ALL");
 		if (clanSet.contains(clanId))
 		{
 			return true;
@@ -514,13 +514,13 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public List<IDropItem> getDropList(DropListScope dropListScope)
 	{
-		Map<DropListScope, List<IDropItem>> dropLists = _dropLists;
+		final Map<DropListScope, List<IDropItem>> dropLists = _dropLists;
 		return dropLists != null ? dropLists.get(dropListScope) : null;
 	}
 	
 	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
 	{
-		List<IDropItem> dropList = getDropList(dropListScope);
+		final List<IDropItem> dropList = getDropList(dropListScope);
 		if (dropList == null)
 		{
 			return null;
@@ -562,7 +562,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		if (clazz.isInterface())
 		{
 			// check if obj implements the clazz interface
-			Class<?>[] interfaces = sub.getInterfaces();
+			final Class<?>[] interfaces = sub.getInterfaces();
 			for (Class<?> interface1 : interfaces)
 			{
 				if (clazz.getName().equals(interface1.getName()))

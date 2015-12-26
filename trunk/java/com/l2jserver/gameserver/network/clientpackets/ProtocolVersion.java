@@ -58,14 +58,14 @@ public final class ProtocolVersion extends L2GameClientPacket
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
-			LogRecord record = new LogRecord(Level.WARNING, "Wrong protocol");
+			final LogRecord record = new LogRecord(Level.WARNING, "Wrong protocol");
 			record.setParameters(new Object[]
 			{
 				_version,
 				getClient()
 			});
 			_logAccounting.log(record);
-			KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
+			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
 			getClient().setProtocolOk(false);
 			getClient().close(pk);
 		}
@@ -76,7 +76,7 @@ public final class ProtocolVersion extends L2GameClientPacket
 				_log.fine("Client Protocol Revision is ok: " + _version);
 			}
 			
-			KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 1);
+			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 1);
 			getClient().sendPacket(pk);
 			getClient().setProtocolOk(true);
 		}

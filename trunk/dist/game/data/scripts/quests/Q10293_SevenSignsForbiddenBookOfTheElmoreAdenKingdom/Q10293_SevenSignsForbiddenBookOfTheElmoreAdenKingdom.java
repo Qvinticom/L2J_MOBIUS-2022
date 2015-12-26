@@ -204,7 +204,7 @@ public final class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends 
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		if ((qs.getCond() >= 1) && (qs.getCond() < 8))
 		{

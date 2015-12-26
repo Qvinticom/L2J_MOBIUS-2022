@@ -77,7 +77,7 @@ public class DailyMissionData implements IXmlReader
 				{
 					if ("mission".equalsIgnoreCase(d.getNodeName()))
 					{
-						NamedNodeMap attrs = d.getAttributes();
+						final NamedNodeMap attrs = d.getAttributes();
 						Node att;
 						id = -1;
 						clientId = 0;
@@ -219,7 +219,7 @@ public class DailyMissionData implements IXmlReader
 	 */
 	public List<DailyMissionHolder> getDailyMissions(int classId)
 	{
-		List<DailyMissionHolder> missions = new ArrayList<>();
+		final List<DailyMissionHolder> missions = new ArrayList<>();
 		for (DailyMissionHolder mission : _dailyMissions)
 		{
 			if (mission.getAvailableClasses().contains(classId))
@@ -237,7 +237,7 @@ public class DailyMissionData implements IXmlReader
 	 */
 	public List<DailyMissionHolder> getDailyLevelUpMissions(int classId)
 	{
-		List<DailyMissionHolder> missions = new ArrayList<>();
+		final List<DailyMissionHolder> missions = new ArrayList<>();
 		for (DailyMissionHolder mission : _dailyLevelUpMissions)
 		{
 			if (mission.getAvailableClasses().contains(classId))

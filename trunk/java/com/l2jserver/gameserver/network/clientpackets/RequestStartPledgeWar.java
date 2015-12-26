@@ -42,13 +42,13 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		L2Clan _clan = getClient().getActiveChar().getClan();
+		final L2Clan _clan = getClient().getActiveChar().getClan();
 		if (_clan == null)
 		{
 			return;
@@ -67,7 +67,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 			return;
 		}
 		
-		L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+		final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		if (clan == null)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CANNOT_BE_DECLARED_AGAINST_A_CLAN_THAT_DOES_NOT_EXIST));
@@ -88,7 +88,7 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 		}
 		else if (_clan.isAtWarWith(clan.getId()))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ALREADY_BEEN_AT_WAR_WITH_THE_S1_CLAN_5_DAYS_MUST_PASS_BEFORE_YOU_CAN_DECLARE_WAR_AGAIN);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ALREADY_BEEN_AT_WAR_WITH_THE_S1_CLAN_5_DAYS_MUST_PASS_BEFORE_YOU_CAN_DECLARE_WAR_AGAIN);
 			sm.addString(clan.getName());
 			player.sendPacket(sm);
 			player.sendPacket(ActionFailed.STATIC_PACKET);

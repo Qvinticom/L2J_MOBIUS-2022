@@ -51,7 +51,7 @@ public final class DispelBySlot extends AbstractEffect
 			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
 			for (String ngtStack : _dispel.split(";"))
 			{
-				String[] ngt = ngtStack.split(",");
+				final String[] ngt = ngtStack.split(",");
 				_dispelAbnormals.put(AbnormalType.getAbnormalType(ngt[0]), Short.parseShort(ngt[1]));
 			}
 		}

@@ -154,7 +154,7 @@ public final class MercTicketManager
 			int npcId;
 			int itemId;
 			int x, y, z;
-			int mercPlaced[] = new int[20];
+			final int mercPlaced[] = new int[20];
 			// start index to begin the search for the itemId corresponding to this NPC
 			// this will help with:
 			// a) skip unnecessary iterations in the search loop
@@ -167,7 +167,7 @@ public final class MercTicketManager
 				x = rs.getInt("x");
 				y = rs.getInt("y");
 				z = rs.getInt("z");
-				Castle castle = CastleManager.getInstance().getCastle(x, y, z);
+				final Castle castle = CastleManager.getInstance().getCastle(x, y, z);
 				if (castle != null)
 				{
 					if (mercPlaced[castle.getResidenceId() - 1] >= MERCS_MAX_PER_CASTLE[castle.getResidenceId() - 1])
@@ -188,7 +188,7 @@ public final class MercTicketManager
 						{
 							itemId = ITEM_IDS[i];
 							// create the ticket in the gameworld
-							L2ItemInstance dropticket = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+							final L2ItemInstance dropticket = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 							dropticket.setItemLocation(ItemLocation.VOID);
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from being removed by the auto item destroyer
@@ -255,12 +255,12 @@ public final class MercTicketManager
 	 */
 	public boolean isAtCasleLimit(int itemId)
 	{
-		int castleId = getTicketCastleId(itemId);
+		final int castleId = getTicketCastleId(itemId);
 		if (castleId <= 0)
 		{
 			return true;
 		}
-		int limit = MERCS_MAX_PER_CASTLE[castleId - 1];
+		final int limit = MERCS_MAX_PER_CASTLE[castleId - 1];
 		if (limit <= 0)
 		{
 			return true;
@@ -290,9 +290,9 @@ public final class MercTicketManager
 	{
 		for (L2ItemInstance item : DROPPED_TICKETS)
 		{
-			double dx = x - item.getX();
-			double dy = y - item.getY();
-			double dz = z - item.getZ();
+			final double dx = x - item.getX();
+			final double dy = y - item.getY();
+			final double dz = z - item.getZ();
 			
 			if (((dx * dx) + (dy * dy) + (dz * dz)) < (25 * 25))
 			{
@@ -311,12 +311,12 @@ public final class MercTicketManager
 	 */
 	public int addTicket(int itemId, L2PcInstance activeChar)
 	{
-		int x = activeChar.getX();
-		int y = activeChar.getY();
-		int z = activeChar.getZ();
-		int heading = activeChar.getHeading();
+		final int x = activeChar.getX();
+		final int y = activeChar.getY();
+		final int z = activeChar.getZ();
+		final int heading = activeChar.getHeading();
 		
-		Castle castle = CastleManager.getInstance().getCastle(activeChar);
+		final Castle castle = CastleManager.getInstance().getCastle(activeChar);
 		if (castle == null)
 		{
 			return -1;
@@ -332,7 +332,7 @@ public final class MercTicketManager
 				castle.getSiege().getSiegeGuardManager().hireMerc(x, y, z, heading, NPC_IDS[i]);
 				
 				// create the ticket in the gameworld
-				L2ItemInstance dropticket = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
+				final L2ItemInstance dropticket = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 				dropticket.setItemLocation(ItemLocation.VOID);
 				dropticket.dropMe(null, x, y, z);
 				dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
@@ -348,7 +348,7 @@ public final class MercTicketManager
 	
 	private void spawnMercenary(int npcId, int x, int y, int z, int despawnDelay)
 	{
-		L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
+		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		if (template != null)
 		{
 			final L2DefenderInstance npc = new L2DefenderInstance(template);
@@ -386,7 +386,7 @@ public final class MercTicketManager
 	 */
 	public void removeTicket(L2ItemInstance item)
 	{
-		int itemId = item.getId();
+		final int itemId = item.getId();
 		int npcId = -1;
 		
 		// find the FIRST ticket itemId with spawns the saved NPC in the saved location
@@ -399,7 +399,7 @@ public final class MercTicketManager
 			}
 		}
 		// find the castle where this item is
-		Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
+		final Castle castle = CastleManager.getInstance().getCastleById(getTicketCastleId(itemId));
 		
 		if ((npcId > 0) && (castle != null))
 		{

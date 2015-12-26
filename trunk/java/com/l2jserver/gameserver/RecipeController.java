@@ -69,7 +69,7 @@ public class RecipeController
 		// Check if player is trying to alter recipe book while engaged in manufacturing.
 		if (!_activeMakers.containsKey(player.getObjectId()))
 		{
-			RecipeBookItemList response = new RecipeBookItemList(isDwarvenCraft, player.getMaxMp());
+			final RecipeBookItemList response = new RecipeBookItemList(isDwarvenCraft, player.getMaxMp());
 			response.addRecipes(isDwarvenCraft ? player.getDwarvenRecipeBook() : player.getCommonRecipeBook());
 			player.sendPacket(response);
 			return;
@@ -90,8 +90,8 @@ public class RecipeController
 			return;
 		}
 		
-		List<L2RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
-		List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
+		final List<L2RecipeList> dwarfRecipes = Arrays.asList(manufacturer.getDwarvenRecipeBook());
+		final List<L2RecipeList> commonRecipes = Arrays.asList(manufacturer.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -136,8 +136,8 @@ public class RecipeController
 			return;
 		}
 		
-		List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
-		List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
+		final List<L2RecipeList> dwarfRecipes = Arrays.asList(player.getDwarvenRecipeBook());
+		final List<L2RecipeList> commonRecipes = Arrays.asList(player.getCommonRecipeBook());
 		
 		if (!dwarfRecipes.contains(recipeList) && !commonRecipes.contains(recipeList))
 		{
@@ -148,7 +148,7 @@ public class RecipeController
 		// Check if player is busy (possible if alt game creation is enabled)
 		if (Config.ALT_GAME_CREATION && _activeMakers.containsKey(player.getObjectId()))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1);
 			sm.addItemName(recipeList.getItemId());
 			sm.addString("You are busy creating.");
 			player.sendPacket(sm);
@@ -353,7 +353,7 @@ public class RecipeController
 					_delay = (int) (Config.ALT_GAME_CREATION_SPEED * _player.getMReuseRate(_skill) * GameTimeController.TICKS_PER_SECOND * GameTimeController.MILLIS_IN_TICK);
 					
 					// FIXME: please fix this packet to show crafting animation (somebody)
-					MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
+					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
 					_player.broadcastPacket(msk);
 					
 					_player.sendPacket(new SetupGauge(0, _delay));
@@ -394,7 +394,7 @@ public class RecipeController
 			if ((_target != _player) && (_price > 0)) // customer must pay for services
 			{
 				// attempt to pay for item
-				L2ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
+				final L2ItemInstance adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 				
 				if (adenatransfer == null)
 				{
@@ -464,7 +464,7 @@ public class RecipeController
 		
 		private void updateCurMp()
 		{
-			StatusUpdate su = new StatusUpdate(_target);
+			final StatusUpdate su = new StatusUpdate(_target);
 			su.addAttribute(StatusUpdate.CUR_MP, (int) _target.getCurrentMp());
 			_target.sendPacket(su);
 		}
@@ -474,7 +474,7 @@ public class RecipeController
 			int grabItems = _itemGrab;
 			while ((grabItems > 0) && !_items.isEmpty())
 			{
-				TempItem item = _items.get(0);
+				final TempItem item = _items.get(0);
 				
 				int count = item.getQuantity();
 				if (count >= grabItems)
@@ -496,7 +496,7 @@ public class RecipeController
 				
 				if (_target == _player)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2); // you equipped ...
 					sm.addLong(count);
 					sm.addItemName(item.getItemId());
 					_player.sendPacket(sm);
@@ -542,7 +542,7 @@ public class RecipeController
 			boolean ret = true;
 			for (L2RecipeStatInstance statUse : _recipeList.getStatUse())
 			{
-				double modifiedValue = statUse.getValue() / _creationPasses;
+				final double modifiedValue = statUse.getValue() / _creationPasses;
 				if (statUse.getType() == StatType.HP)
 				{
 					// we do not want to kill the player, so its CurrentHP must be greater than the reduce value
@@ -601,17 +601,17 @@ public class RecipeController
 		
 		private List<TempItem> listItems(boolean remove)
 		{
-			L2RecipeInstance[] recipes = _recipeList.getRecipes();
-			Inventory inv = _target.getInventory();
-			List<TempItem> materials = new ArrayList<>();
+			final L2RecipeInstance[] recipes = _recipeList.getRecipes();
+			final Inventory inv = _target.getInventory();
+			final List<TempItem> materials = new ArrayList<>();
 			SystemMessage sm;
 			
 			for (L2RecipeInstance recipe : recipes)
 			{
 				if (recipe.getQuantity() > 0)
 				{
-					L2ItemInstance item = inv.getItemByItemId(recipe.getItemId());
-					long itemQuantityAmount = item == null ? 0 : item.getCount();
+					final L2ItemInstance item = inv.getItemByItemId(recipe.getItemId());
+					final long itemQuantityAmount = item == null ? 0 : item.getCount();
 					
 					// check materials
 					if (itemQuantityAmount < recipe.getQuantity())
@@ -663,10 +663,10 @@ public class RecipeController
 		
 		private void rewardPlayer()
 		{
-			int rareProdId = _recipeList.getRareItemId();
+			final int rareProdId = _recipeList.getRareItemId();
 			int itemId = _recipeList.getItemId();
 			int itemCount = _recipeList.getCount();
-			L2Item template = ItemTable.getInstance().getTemplate(itemId);
+			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
 			
 			// check that the current recipe has a rare production or not
 			if ((rareProdId != -1) && ((rareProdId == itemId) || Config.CRAFT_MASTERWORK))
@@ -739,7 +739,7 @@ public class RecipeController
 			
 			if (Config.ALT_GAME_CREATION)
 			{
-				int recipeLevel = _recipeList.getLevel();
+				final int recipeLevel = _recipeList.getLevel();
 				if (_exp < 0)
 				{
 					_exp = template.getReferencePrice() * itemCount;

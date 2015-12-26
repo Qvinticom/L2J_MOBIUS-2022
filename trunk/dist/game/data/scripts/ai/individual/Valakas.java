@@ -129,7 +129,7 @@ public final class Valakas extends AbstractNpcAI
 		if (status == DEAD)
 		{
 			// load the unlock date and time for valakas from DB
-			long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
 			if (temp > 0)
 			{
 				// The time has not yet expired. Mark Valakas as currently locked (dead).
@@ -446,7 +446,7 @@ public final class Valakas extends AbstractNpcAI
 		
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
-		StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);
 		info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
 		GrandBossManager.getInstance().setStatsSet(VALAKAS, info);
 		
@@ -477,12 +477,12 @@ public final class Valakas extends AbstractNpcAI
 		{
 			if (getRandom(10) == 0)
 			{
-				int x = npc.getX();
-				int y = npc.getY();
-				int z = npc.getZ();
+				final int x = npc.getX();
+				final int y = npc.getY();
+				final int z = npc.getZ();
 				
-				int posX = x + getRandom(-1400, 1400);
-				int posY = y + getRandom(-1400, 1400);
+				final int posX = x + getRandom(-1400, 1400);
+				final int posY = y + getRandom(-1400, 1400);
 				
 				if (GeoData.getInstance().canMove(x, y, z, posX, posY, z, npc.getInstanceId()))
 				{
@@ -547,7 +547,7 @@ public final class Valakas extends AbstractNpcAI
 	 */
 	private L2Playable getRandomTarget(L2Npc npc)
 	{
-		List<L2Playable> result = new ArrayList<>();
+		final List<L2Playable> result = new ArrayList<>();
 		
 		for (L2Character obj : npc.getKnownList().getKnownCharacters())
 		{

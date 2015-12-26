@@ -43,7 +43,7 @@ public class GMViewSkillInfo extends L2GameServerPacket
 		writeS(_activeChar.getName());
 		writeD(_skills.size());
 		
-		boolean isDisabled = (_activeChar.getClan() != null) ? (_activeChar.getClan().getReputationScore() < 0) : false;
+		final boolean isDisabled = (_activeChar.getClan() != null) ? (_activeChar.getClan().getReputationScore() < 0) : false;
 		
 		for (Skill skill : _skills)
 		{
@@ -54,7 +54,7 @@ public class GMViewSkillInfo extends L2GameServerPacket
 			}
 			else
 			{
-				int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
+				final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
 				writeH(maxLevel);
 				writeH(skill.getDisplayLevel());
 			}

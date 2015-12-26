@@ -51,7 +51,7 @@ public final class Passive extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Attackable target = (L2Attackable) info.getEffected();
+		final L2Attackable target = (L2Attackable) info.getEffected();
 		target.abortAttack();
 		target.abortCast();
 		target.disableAllSkills();

@@ -71,25 +71,25 @@ public final class FatalBlow extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		Skill skill = info.getSkill();
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final Skill skill = info.getSkill();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return;
 		}
 		
-		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, skill);
+		final boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		double damage = Formulas.calcBlowDamage(activeChar, target, skill, shld, ss);
 		
 		if (_targetAbnormalType != "NULL")
 		{
-			StringTokenizer st = new StringTokenizer(_targetAbnormalType, ",");
+			final StringTokenizer st = new StringTokenizer(_targetAbnormalType, ",");
 			while (st.hasMoreTokens())
 			{
-				String abnormal = st.nextToken().trim();
+				final String abnormal = st.nextToken().trim();
 				if (target.getEffectList().getBuffInfoByAbnormalType(AbnormalType.valueOf(abnormal)) != null)
 				{
 					damage *= _skillAddPower;
@@ -98,14 +98,14 @@ public final class FatalBlow extends AbstractEffect
 			}
 		}
 		
-		boolean crit = Formulas.calcCrit(activeChar, target, skill);
+		final boolean crit = Formulas.calcCrit(activeChar, target, skill);
 		if (crit)
 		{
 			damage *= 2;
 		}
 		
 		// reduce damage if target has maxdamage buff
-		double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
+		final double maxDamage = (target.getStat().calcStat(Stats.MAX_SKILL_DAMAGE, 0, null, null));
 		if (maxDamage > 0)
 		{
 			damage = (int) maxDamage;
@@ -123,7 +123,7 @@ public final class FatalBlow extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			L2PcInstance activePlayer = activeChar.getActingPlayer();
+			final L2PcInstance activePlayer = activeChar.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		

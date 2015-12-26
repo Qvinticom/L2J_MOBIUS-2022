@@ -76,14 +76,14 @@ public final class DlgAnswer extends L2GameClientPacket
 			}
 			else if (activeChar.removeAction(PlayerAction.ADMIN_COMMAND))
 			{
-				String cmd = activeChar.getAdminConfirmCmd();
+				final String cmd = activeChar.getAdminConfirmCmd();
 				activeChar.setAdminConfirmCmd(null);
 				if (_answer == 0)
 				{
 					return;
 				}
-				String command = cmd.split(" ")[0];
-				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
+				final String command = cmd.split(" ")[0];
+				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
 				if (AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 				{
 					if (Config.GMAUDIT)

@@ -71,7 +71,7 @@ public class TvTManager
 	{
 		try
 		{
-			Calendar currentTime = Calendar.getInstance();
+			final Calendar currentTime = Calendar.getInstance();
 			Calendar nextStartTime = null;
 			Calendar testStartTime = null;
 			for (String timeOfDay : Config.TVT_EVENT_INTERVAL)
@@ -79,7 +79,7 @@ public class TvTManager
 				// Creating a Calendar object from the specified interval value
 				testStartTime = Calendar.getInstance();
 				testStartTime.setLenient(true);
-				String[] splitTimeOfDay = timeOfDay.split(":");
+				final String[] splitTimeOfDay = timeOfDay.split(":");
 				testStartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTimeOfDay[0]));
 				testStartTime.set(Calendar.MINUTE, Integer.parseInt(splitTimeOfDay[1]));
 				// If the date is in the past, make it the next day (Example: Checking for "1:00", when the time is 23:57.)
@@ -189,7 +189,7 @@ public class TvTManager
 		@Override
 		public void run()
 		{
-			int delay = (int) Math.round((_startTime - System.currentTimeMillis()) / 1000.0);
+			final int delay = (int) Math.round((_startTime - System.currentTimeMillis()) / 1000.0);
 			
 			if (delay > 0)
 			{

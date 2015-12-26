@@ -318,7 +318,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 					{
 						while (rs.next())
 						{
-							int effectCurTime = rs.getInt("remaining_time");
+							final int effectCurTime = rs.getInt("remaining_time");
 							
 							final Skill skill = SkillData.getInstance().getSkill(rs.getInt("skill_id"), rs.getInt("skill_level"));
 							if (skill == null)
@@ -420,7 +420,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 	@Override
 	public void run()
 	{
-		int usedtime = 5000;
+		final int usedtime = 5000;
 		_lifeTimeRemaining -= usedtime;
 		
 		if (isDead() || !isVisible())

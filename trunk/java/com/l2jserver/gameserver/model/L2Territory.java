@@ -100,16 +100,16 @@ public class L2Territory
 	
 	public boolean isIntersect(int x, int y, Point p1, Point p2)
 	{
-		double dy1 = p1._y - y;
-		double dy2 = p2._y - y;
+		final double dy1 = p1._y - y;
+		final double dy2 = p2._y - y;
 		
 		if (Math.abs(Math.signum(dy1) - Math.signum(dy2)) <= 1e-6)
 		{
 			return false;
 		}
 		
-		double dx1 = p1._x - x;
-		double dx2 = p2._x - x;
+		final double dx1 = p1._x - x;
+		final double dx2 = p2._x - x;
 		
 		if ((dx1 >= 0) && (dx2 >= 0))
 		{
@@ -121,7 +121,7 @@ public class L2Territory
 			return false;
 		}
 		
-		double dx0 = (dy1 * (p1._x - p2._x)) / (p1._y - p2._y);
+		final double dx0 = (dy1 * (p1._x - p2._x)) / (p1._y - p2._y);
 		
 		return dx0 <= dx1;
 	}
@@ -131,8 +131,8 @@ public class L2Territory
 		int intersect_count = 0;
 		for (int i = 0; i < _points.size(); i++)
 		{
-			Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
-			Point p2 = _points.get(i);
+			final Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
+			final Point p2 = _points.get(i);
 			
 			if (isIntersect(x, y, p1, p2))
 			{
@@ -148,7 +148,7 @@ public class L2Territory
 		if (_procMax > 0)
 		{
 			int pos = 0;
-			int rnd = Rnd.nextInt(_procMax);
+			final int rnd = Rnd.nextInt(_procMax);
 			for (Point p1 : _points)
 			{
 				pos += p1._proc;
@@ -161,17 +161,17 @@ public class L2Territory
 		}
 		for (int i = 0; i < 100; i++)
 		{
-			int x = Rnd.get(_xMin, _xMax);
-			int y = Rnd.get(_yMin, _yMax);
+			final int x = Rnd.get(_xMin, _xMax);
+			final int y = Rnd.get(_yMin, _yMax);
 			if (isInside(x, y))
 			{
 				double curdistance = 0;
 				int zmin = _zMin;
 				for (Point p1 : _points)
 				{
-					double dx = p1._x - x;
-					double dy = p1._y - y;
-					double distance = Math.sqrt((dx * dx) + (dy * dy));
+					final double dx = p1._x - x;
+					final double dy = p1._y - y;
+					final double distance = Math.sqrt((dx * dx) + (dy * dy));
 					if ((curdistance == 0) || (distance < curdistance))
 					{
 						curdistance = distance;

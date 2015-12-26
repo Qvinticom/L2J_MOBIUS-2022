@@ -249,19 +249,19 @@ public final class Stage1 extends Quest
 		int spawnCount = 0;
 		try
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/spawnZones/seed_of_destruction.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/spawnZones/seed_of_destruction.xml");
 			if (!file.exists())
 			{
 				_log.severe("[Seed of Destruction] Missing seed_of_destruction.xml. The quest wont work without it!");
 				return;
 			}
 			
-			Document doc = factory.newDocumentBuilder().parse(file);
-			Node first = doc.getFirstChild();
+			final Document doc = factory.newDocumentBuilder().parse(file);
+			final Node first = doc.getFirstChild();
 			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
 			{
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
@@ -279,7 +279,7 @@ public final class Stage1 extends Quest
 									_log.severe("[Seed of Destruction] Missing npcId in npc List, skipping");
 									continue;
 								}
-								int npcId = Integer.parseInt(attrs.getNamedItem("npcId").getNodeValue());
+								final int npcId = Integer.parseInt(attrs.getNamedItem("npcId").getNodeValue());
 								
 								att = attrs.getNamedItem("flag");
 								if (att == null)
@@ -287,7 +287,7 @@ public final class Stage1 extends Quest
 									_log.severe("[Seed of Destruction] Missing flag in npc List npcId: " + npcId + ", skipping");
 									continue;
 								}
-								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
+								final int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
 								if (!_spawnList.containsKey(flag))
 								{
 									_spawnList.put(flag, new ArrayList<SODSpawn>());
@@ -298,7 +298,7 @@ public final class Stage1 extends Quest
 									if ("loc".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										SODSpawn spw = new SODSpawn();
+										final SODSpawn spw = new SODSpawn();
 										spw.npcId = npcId;
 										
 										att = attrs.getNamedItem("x");
@@ -352,7 +352,7 @@ public final class Stage1 extends Quest
 									else if ("zone".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										SODSpawn spw = new SODSpawn();
+										final SODSpawn spw = new SODSpawn();
 										spw.npcId = npcId;
 										spw.isZone = true;
 										
@@ -403,22 +403,22 @@ public final class Stage1 extends Quest
 									_log.severe("[Seed of Destruction] Missing id in spawnZones List, skipping");
 									continue;
 								}
-								int id = Integer.parseInt(att.getNodeValue());
+								final int id = Integer.parseInt(att.getNodeValue());
 								att = attrs.getNamedItem("minZ");
 								if (att == null)
 								{
 									_log.severe("[Seed of Destruction] Missing minZ in spawnZones List id: " + id + ", skipping");
 									continue;
 								}
-								int minz = Integer.parseInt(att.getNodeValue());
+								final int minz = Integer.parseInt(att.getNodeValue());
 								att = attrs.getNamedItem("maxZ");
 								if (att == null)
 								{
 									_log.severe("[Seed of Destruction] Missing maxZ in spawnZones List id: " + id + ", skipping");
 									continue;
 								}
-								int maxz = Integer.parseInt(att.getNodeValue());
-								L2Territory ter = new L2Territory(id);
+								final int maxz = Integer.parseInt(att.getNodeValue());
+								final L2Territory ter = new L2Territory(id);
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -495,22 +495,22 @@ public final class Stage1 extends Quest
 		{
 			if (partyMember.getLevel() < 75)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
 			}
-			Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
+			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 			if (System.currentTimeMillis() < reentertime)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -640,7 +640,7 @@ public final class Stage1 extends Quest
 						spawnFlaggedNPCs(world, 0);
 						break;
 					case 1:
-						ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1);
+						final ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1);
 						sendScreenMessage(world, message1);
 						for (int i : ENTRANCE_ROOM_DOORS)
 						{
@@ -653,7 +653,7 @@ public final class Stage1 extends Quest
 						// handled elsewhere
 						return true;
 					case 4:
-						ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
+						final ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
 						sendScreenMessage(world, message2);
 						for (int i : SQUARE_DOORS)
 						{
@@ -673,7 +673,7 @@ public final class Stage1 extends Quest
 						spawnFlaggedNPCs(world, 7);
 						break;
 					case 8:
-						ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 1);
+						final ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 1);
 						sendScreenMessage(world, message4);
 						world.deviceSpawnedMobCount = 0;
 						spawnFlaggedNPCs(world, 8);
@@ -718,7 +718,7 @@ public final class Stage1 extends Quest
 			addTrap(npcId, x, y, z, h, skill, world.getInstanceId());
 			return;
 		}
-		L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getInstanceId());
+		final L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getInstanceId());
 		if (addToKillTable)
 		{
 			world.npcList.put(npc, false);
@@ -748,7 +748,7 @@ public final class Stage1 extends Quest
 	
 	protected void setInstanceTimeRestrictions(SOD1World world)
 	{
-		Calendar reenter = Calendar.getInstance();
+		final Calendar reenter = Calendar.getInstance();
 		reenter.set(Calendar.MINUTE, RESET_MIN);
 		reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 		// if time is >= RESET_HOUR - roll to the next day
@@ -771,13 +771,13 @@ public final class Stage1 extends Quest
 			}
 		}
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 		sm.addInstanceName(INSTANCEID);
 		
 		// set instance reenter time for all allowed players
 		for (int objectId : world.getAllowed())
 		{
-			L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
 			if ((player != null) && player.isOnline())
 			{
@@ -790,7 +790,7 @@ public final class Stage1 extends Quest
 	{
 		for (int objId : world.getAllowed())
 		{
-			L2PcInstance player = L2World.getInstance().getPlayer(objId);
+			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if (player != null)
 			{
 				player.sendPacket(message);
@@ -817,17 +817,17 @@ public final class Stage1 extends Quest
 	{
 		if (!isSummon && (player != null))
 		{
-			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 			if (tmpworld instanceof SOD1World)
 			{
-				SOD1World world = (SOD1World) tmpworld;
+				final SOD1World world = (SOD1World) tmpworld;
 				if (world.getStatus() == 7)
 				{
 					if (spawnState(world))
 					{
 						for (int objId : world.getAllowed())
 						{
-							L2PcInstance pl = L2World.getInstance().getPlayer(objId);
+							final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 							if (pl != null)
 							{
 								pl.showQuestMovie(5);
@@ -844,10 +844,10 @@ public final class Stage1 extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof SOD1World)
 		{
-			SOD1World world = (SOD1World) tmpworld;
+			final SOD1World world = (SOD1World) tmpworld;
 			if ((world.getStatus() == 2) && (npc.getId() == OBELISK))
 			{
 				world.setStatus(4);
@@ -876,16 +876,16 @@ public final class Stage1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof SOD1World)
 		{
-			SOD1World world = (SOD1World) tmpworld;
+			final SOD1World world = (SOD1World) tmpworld;
 			if (event.equalsIgnoreCase("Spawn"))
 			{
-				L2PcInstance target = L2World.getInstance().getPlayer(world.getAllowed().get(getRandom(world.getAllowed().size())));
+				final L2PcInstance target = L2World.getInstance().getPlayer(world.getAllowed().get(getRandom(world.getAllowed().size())));
 				if ((world.deviceSpawnedMobCount < MAX_DEVICESPAWNEDMOBCOUNT) && (target != null) && (target.getInstanceId() == npc.getInstanceId()) && !target.isDead())
 				{
-					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getInstanceId());
+					final L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getInstanceId());
 					world.deviceSpawnedMobCount++;
 					mob.setSeeThroughSilentMove(true);
 					mob.setRunning();
@@ -901,12 +901,12 @@ public final class Stage1 extends Quest
 			}
 			else if (event.equalsIgnoreCase("DoorCheck"))
 			{
-				L2DoorInstance tmp = getDoor(FORTRESS_DOOR, npc.getInstanceId());
+				final L2DoorInstance tmp = getDoor(FORTRESS_DOOR, npc.getInstanceId());
 				if (tmp.getCurrentHp() < tmp.getMaxHp())
 				{
 					world.deviceSpawnedMobCount = 0;
 					spawnFlaggedNPCs(world, 6);
-					ExShowScreenMessage message3 = new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 1);
+					final ExShowScreenMessage message3 = new ExShowScreenMessage(NpcStringId.ENEMIES_ARE_TRYING_TO_DESTROY_THE_FORTRESS_EVERYONE_DEFEND_THE_FORTRESS, 5, 1);
 					sendScreenMessage(world, message3);
 				}
 				else
@@ -926,7 +926,7 @@ public final class Stage1 extends Quest
 				L2Character mostHate = ((L2Attackable) npc).getMostHated();
 				if (mostHate != null)
 				{
-					double dist = Util.calculateDistance(mostHate.getXdestination(), mostHate.getYdestination(), 0, npc.getSpawn().getX(), npc.getSpawn().getY(), 0, false, false);
+					final double dist = Util.calculateDistance(mostHate.getXdestination(), mostHate.getYdestination(), 0, npc.getSpawn().getX(), npc.getSpawn().getY(), 0, false, false);
 					if (dist > 900)
 					{
 						((L2Attackable) npc).reduceHate(mostHate, ((L2Attackable) npc).getHating(mostHate));
@@ -950,10 +950,10 @@ public final class Stage1 extends Quest
 			cancelQuestTimer("Spawn", npc, null);
 			return "";
 		}
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof SOD1World)
 		{
-			SOD1World world = (SOD1World) tmpworld;
+			final SOD1World world = (SOD1World) tmpworld;
 			if (world.getStatus() == 1)
 			{
 				if (checkKillProgress(npc, world))
@@ -993,7 +993,7 @@ public final class Stage1 extends Quest
 					world.incStatus();
 					for (int objId : world.getAllowed())
 					{
-						L2PcInstance pl = L2World.getInstance().getPlayer(objId);
+						final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 						if (pl != null)
 						{
 							pl.showQuestMovie(6);
@@ -1018,11 +1018,11 @@ public final class Stage1 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		getQuestState(player, true);
 		if (npcId == ALENOS)
 		{
-			InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 			if ((GraciaSeedsManager.getInstance().getSoDState() == 1) || ((world != null) && (world instanceof SOD1World)))
 			{
 				enterInstance(player, "SeedOfDestructionStage1.xml", ENTER_TELEPORT_1);
@@ -1042,10 +1042,10 @@ public final class Stage1 extends Quest
 	@Override
 	public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
 		if (tmpworld instanceof SOD1World)
 		{
-			SOD1World world = (SOD1World) tmpworld;
+			final SOD1World world = (SOD1World) tmpworld;
 			switch (action)
 			{
 				case TRAP_TRIGGERED:

@@ -140,7 +140,7 @@ public abstract class AirShipController extends Quest
 				player.sendPacket(SystemMessageId.AIRSHIP_SUMMON_LICENSE_REGISTRATION_CAN_ONLY_BE_DONE_BY_THE_CLAN_LEADER);
 				return null;
 			}
-			int ownerId = player.getClanId();
+			final int ownerId = player.getClanId();
 			if (!AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
 				player.sendPacket(SystemMessageId.AN_AIRSHIP_CANNOT_BE_SUMMONED_BECAUSE_EITHER_YOU_HAVE_NOT_REGISTERED_YOUR_AIRSHIP_LICENSE_OR_THE_AIRSHIP_HAS_NOT_YET_BEEN_SUMMONED);
@@ -349,7 +349,7 @@ public abstract class AirShipController extends Quest
 	
 	protected void validityCheck()
 	{
-		L2ScriptZone zone = ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class);
+		final L2ScriptZone zone = ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class);
 		if (zone == null)
 		{
 			_log.log(Level.WARNING, getName() + ": Invalid zone " + _dockZone + ", controller disabled");

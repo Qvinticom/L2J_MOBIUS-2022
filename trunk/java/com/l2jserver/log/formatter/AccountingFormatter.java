@@ -90,7 +90,7 @@ public class AccountingFormatter extends Formatter
 				}
 				else if (p instanceof L2PcInstance)
 				{
-					L2PcInstance player = (L2PcInstance) p;
+					final L2PcInstance player = (L2PcInstance) p;
 					StringUtil.append(output, player.getName());
 					StringUtil.append(output, "(", String.valueOf(player.getObjectId()), ")");
 				}

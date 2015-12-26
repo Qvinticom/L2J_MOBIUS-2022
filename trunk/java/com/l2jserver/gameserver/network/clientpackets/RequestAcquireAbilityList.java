@@ -42,7 +42,7 @@ public class RequestAcquireAbilityList extends L2GameClientPacket
 		readD(); // Total size
 		for (int i = 0; i < 3; i++)
 		{
-			int size = readD();
+			final int size = readD();
 			for (int j = 0; j < size; j++)
 			{
 				_skills.add(new SkillHolder(readD(), readD()));

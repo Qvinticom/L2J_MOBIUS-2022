@@ -184,7 +184,7 @@ public class CharacterSelect extends L2GameClientPacket
 				client.getActiveCharLock().unlock();
 			}
 			
-			LogRecord record = new LogRecord(Level.INFO, "Logged in");
+			final LogRecord record = new LogRecord(Level.INFO, "Logged in");
 			record.setParameters(new Object[]
 			{
 				client

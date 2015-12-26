@@ -41,13 +41,13 @@ public class BypassUserCmd extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		IUserCommandHandler handler = UserCommandHandler.getInstance().getHandler(_command);
+		final IUserCommandHandler handler = UserCommandHandler.getInstance().getHandler(_command);
 		
 		if (handler == null)
 		{

@@ -330,7 +330,7 @@ public final class Venom extends AbstractNpcAI
 		broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
 		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().isInProgress())
 		{
-			L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);
+			final L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);
 			startQuestTimer("cube_despawn", 120000, cube, null);
 		}
 		cancelQuestTimer("raid_check", npc, null);

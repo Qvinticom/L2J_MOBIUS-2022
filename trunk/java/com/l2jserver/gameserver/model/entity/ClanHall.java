@@ -130,7 +130,7 @@ public abstract class ClanHall
 			{
 				return;
 			}
-			long currentTime = System.currentTimeMillis();
+			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
@@ -216,7 +216,7 @@ public abstract class ClanHall
 		
 		if (_ownerId > 0)
 		{
-			L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
+			final L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
 			if (clan != null)
 			{
 				clan.setHideoutId(getId());
@@ -509,7 +509,7 @@ public abstract class ClanHall
 			}
 			else
 			{
-				int diffLease = lease - _functions.get(type).getLease();
+				final int diffLease = lease - _functions.get(type).getLease();
 				if (diffLease > 0)
 				{
 					_functions.remove(type);

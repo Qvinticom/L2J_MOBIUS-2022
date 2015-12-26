@@ -52,7 +52,7 @@ public final class RequestPetition extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -82,11 +82,11 @@ public final class RequestPetition extends L2GameClientPacket
 			return;
 		}
 		
-		int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar) + 1;
+		final int totalPetitions = PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar) + 1;
 		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS);
 			sm.addInt(totalPetitions);
 			activeChar.sendPacket(sm);
 			return;
@@ -98,7 +98,7 @@ public final class RequestPetition extends L2GameClientPacket
 			return;
 		}
 		
-		int petitionId = PetitionManager.getInstance().submitPetition(activeChar, _content, _type);
+		final int petitionId = PetitionManager.getInstance().submitPetition(activeChar, _content, _type);
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1);
 		sm.addInt(petitionId);

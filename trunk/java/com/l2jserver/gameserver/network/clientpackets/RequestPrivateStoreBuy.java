@@ -47,7 +47,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_storePlayerId = readD();
-		int count = readD();
+		final int count = readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -56,9 +56,9 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 		
 		for (int i = 0; i < count; i++)
 		{
-			int objectId = readD();
-			long cnt = readQ();
-			long price = readQ();
+			final int objectId = readD();
+			final long cnt = readQ();
+			final long price = readQ();
 			
 			if ((objectId < 1) || (cnt < 1) || (price < 0))
 			{
@@ -73,7 +73,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getActiveChar();
+		final L2PcInstance player = getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -91,7 +91,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
-		L2Object object = L2World.getInstance().getPlayer(_storePlayerId);
+		final L2Object object = L2World.getInstance().getPlayer(_storePlayerId);
 		if (object == null)
 		{
 			return;
@@ -102,7 +102,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance storePlayer = (L2PcInstance) object;
+		final L2PcInstance storePlayer = (L2PcInstance) object;
 		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
 		{
 			return;
@@ -127,7 +127,7 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			}
 		}
 		
-		TradeList storeList = storePlayer.getSellList();
+		final TradeList storeList = storePlayer.getSellList();
 		if (storeList == null)
 		{
 			return;
@@ -144,13 +144,13 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 		{
 			if (storeList.getItemCount() > _items.size())
 			{
-				String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
+				final String msgErr = "[RequestPrivateStoreBuy] player " + getClient().getActiveChar().getName() + " tried to buy less items than sold by package-sell, ban this player for bot usage!";
 				Util.handleIllegalPlayerAction(getClient().getActiveChar(), msgErr, Config.DEFAULT_PUNISH);
 				return;
 			}
 		}
 		
-		int result = storeList.privateStoreBuy(player, _items);
+		final int result = storeList.privateStoreBuy(player, _items);
 		if (result > 0)
 		{
 			sendPacket(ActionFailed.STATIC_PACKET);

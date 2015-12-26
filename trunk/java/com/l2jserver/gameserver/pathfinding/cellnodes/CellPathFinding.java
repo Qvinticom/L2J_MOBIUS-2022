@@ -60,7 +60,7 @@ public class CellPathFinding extends PathFinding
 	{
 		try
 		{
-			String[] array = Config.PATHFIND_BUFFERS.split(";");
+			final String[] array = Config.PATHFIND_BUFFERS.split(";");
 			
 			_allBuffers = new BufferInfo[array.length];
 			
@@ -94,27 +94,27 @@ public class CellPathFinding extends PathFinding
 	@Override
 	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean playable)
 	{
-		int gx = GeoData.getInstance().getGeoX(x);
-		int gy = GeoData.getInstance().getGeoY(y);
+		final int gx = GeoData.getInstance().getGeoX(x);
+		final int gy = GeoData.getInstance().getGeoY(y);
 		if (!GeoData.getInstance().hasGeo(x, y))
 		{
 			return null;
 		}
-		int gz = GeoData.getInstance().getHeight(x, y, z);
-		int gtx = GeoData.getInstance().getGeoX(tx);
-		int gty = GeoData.getInstance().getGeoY(ty);
+		final int gz = GeoData.getInstance().getHeight(x, y, z);
+		final int gtx = GeoData.getInstance().getGeoX(tx);
+		final int gty = GeoData.getInstance().getGeoY(ty);
 		if (!GeoData.getInstance().hasGeo(tx, ty))
 		{
 			return null;
 		}
-		int gtz = GeoData.getInstance().getHeight(tx, ty, tz);
-		CellNodeBuffer buffer = alloc(64 + (2 * Math.max(Math.abs(gx - gtx), Math.abs(gy - gty))), playable);
+		final int gtz = GeoData.getInstance().getHeight(tx, ty, tz);
+		final CellNodeBuffer buffer = alloc(64 + (2 * Math.max(Math.abs(gx - gtx), Math.abs(gy - gty))), playable);
 		if (buffer == null)
 		{
 			return null;
 		}
 		
-		boolean debug = playable && Config.DEBUG_PATH;
+		final boolean debug = playable && Config.DEBUG_PATH;
 		
 		if (debug)
 		{
@@ -136,7 +136,7 @@ public class CellPathFinding extends PathFinding
 		List<AbstractNodeLoc> path = null;
 		try
 		{
-			CellNode result = buffer.findPath(gx, gy, gz, gtx, gty, gtz);
+			final CellNode result = buffer.findPath(gx, gy, gz, gtx, gty, gtz);
 			
 			if (debug)
 			{
@@ -178,7 +178,7 @@ public class CellPathFinding extends PathFinding
 			return path;
 		}
 		
-		long timeStamp = System.currentTimeMillis();
+		final long timeStamp = System.currentTimeMillis();
 		_postFilterUses++;
 		if (playable)
 		{
@@ -202,8 +202,8 @@ public class CellPathFinding extends PathFinding
 			int midPoint = 0;
 			while (endPoint.hasNext())
 			{
-				AbstractNodeLoc locMiddle = path.get(midPoint);
-				AbstractNodeLoc locEnd = endPoint.next();
+				final AbstractNodeLoc locMiddle = path.get(midPoint);
+				final AbstractNodeLoc locEnd = endPoint.next();
 				if (GeoData.getInstance().canMove(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instanceId))
 				{
 					path.remove(midPoint);
@@ -246,8 +246,8 @@ public class CellPathFinding extends PathFinding
 		{
 			if (!Config.ADVANCED_DIAGONAL_STRATEGY && (node.getParent().getParent() != null))
 			{
-				int tmpX = node.getLoc().getNodeX() - node.getParent().getParent().getLoc().getNodeX();
-				int tmpY = node.getLoc().getNodeY() - node.getParent().getParent().getLoc().getNodeY();
+				final int tmpX = node.getLoc().getNodeX() - node.getParent().getParent().getLoc().getNodeX();
+				final int tmpY = node.getLoc().getNodeY() - node.getParent().getParent().getLoc().getNodeY();
 				if (Math.abs(tmpX) == Math.abs(tmpY))
 				{
 					directionX = tmpX;

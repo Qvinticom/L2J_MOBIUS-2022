@@ -74,17 +74,17 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 			return;
 		}
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		if (condition <= COND_ALL_FALSE)
 		{
 			return;
 		}
 		
-		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken(); // Get actual command
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken(); // Get actual command
 			String val = "";
 			if (st.countTokens() >= 1)
 			{
@@ -193,7 +193,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 					{
 						return;
 					}
-					int valbuy = Integer.parseInt(st.nextToken()) + (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLvl() * 100000);
+					final int valbuy = Integer.parseInt(st.nextToken()) + (getClanHall().getFunction(ClanHall.FUNC_ITEM_CREATE).getLvl() * 100000);
 					showBuyWindow(player, valbuy);
 				}
 				else if (val.equalsIgnoreCase("support"))
@@ -291,7 +291,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Fireplace (HP Recovery Device)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -348,7 +348,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Carpet (MP Recovery)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -380,7 +380,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Chandelier (EXP Recovery Device)");
-								int percent = Integer.parseInt(val);
+								final int percent = Integer.parseInt(val);
 								int cost;
 								switch (percent)
 								{
@@ -434,7 +434,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -516,7 +516,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -574,7 +574,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int percent = Integer.parseInt(val);
+									final int percent = Integer.parseInt(val);
 									switch (percent)
 									{
 										case 0:
@@ -619,23 +619,23 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/clanHallManager/edit_recovery.htm");
-						String hp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 20\">20%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 220\">220%</a>]";
-						String hp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 100\">100%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 160\">160%</a>]";
-						String hp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 80\">80%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 140\">140%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 200\">200%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 260\">260%</a>]";
-						String hp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 80\">80%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 120\">120%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 180\">180%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 240\">240%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 300\">300%</a>]";
-						String exp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 10\">10%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>]";
-						String exp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 30\">30%</a>]";
-						String exp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 40\">40%</a>]";
-						String exp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 35\">35%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 50\">50%</a>]";
-						String mp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 10\">10%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 25\">25%</a>]";
-						String mp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 25\">25%</a>]";
-						String mp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 30\">30%</a>]";
-						String mp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 30\">30%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 40\">40%</a>]";
+						final String hp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 20\">20%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 220\">220%</a>]";
+						final String hp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 40\">40%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 100\">100%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 160\">160%</a>]";
+						final String hp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 80\">80%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 140\">140%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 200\">200%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 260\">260%</a>]";
+						final String hp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 80\">80%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 120\">120%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 180\">180%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 240\">240%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_hp 300\">300%</a>]";
+						final String exp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 10\">10%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>]";
+						final String exp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 30\">30%</a>]";
+						final String exp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 40\">40%</a>]";
+						final String exp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 25\">25%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 35\">35%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_exp 50\">50%</a>]";
+						final String mp_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 10\">10%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 25\">25%</a>]";
+						final String mp_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 25\">25%</a>]";
+						final String mp_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 30\">30%</a>]";
+						final String mp_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 5\">5%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 15\">15%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 30\">30%</a>][<a action=\"bypass -h npc_%objectId%_manage recovery edit_mp 40\">40%</a>]";
 						if (getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP) != null)
 						{
 							html.replace("%hp_recovery%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLvl()) + "%</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_HPREG_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
 							html.replace("%hp_period%", "Withdraw the fee for the next time at " + format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_HP).getEndTime()));
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -656,7 +656,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%hp_recovery%", "none");
 							html.replace("%hp_period%", "none");
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -677,7 +677,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%exp_recovery%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLvl()) + "%</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_EXPREG_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
 							html.replace("%exp_period%", "Withdraw the fee for the next time at " + format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_EXP).getEndTime()));
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -698,7 +698,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%exp_recovery%", "none");
 							html.replace("%exp_period%", "none");
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -719,7 +719,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%mp_recovery%", String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLvl()) + "%</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_MPREG_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
 							html.replace("%mp_period%", "Withdraw the fee for the next time at " + format.format(getClanHall().getFunction(ClanHall.FUNC_RESTORE_MP).getEndTime()));
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -740,7 +740,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%mp_recovery%", "none");
 							html.replace("%mp_period%", "none");
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -799,7 +799,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Magic Equipment (Item Production Facilities)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -825,7 +825,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Insignia (Supplementary Magic)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -866,7 +866,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Mirror (Teleportation Device)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -910,7 +910,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 										}
 									}
 									int fee;
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -962,7 +962,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -1011,7 +1011,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -1059,12 +1059,12 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/clanHallManager/edit_other.htm");
-						String tele = "[<a action=\"bypass -h npc_%objectId%_manage other edit_tele 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_tele 2\">Level 2</a>]";
-						String support_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>]";
-						String support_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 4\">Level 4</a>]";
-						String support_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 3\">Level 3</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 4\">Level 4</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 5\">Level 5</a>]";
-						String support_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 3\">Level 3</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 5\">Level 5</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 7\">Level 7</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 8\">Level 8</a>]";
-						String item = "[<a action=\"bypass -h npc_%objectId%_manage other edit_item 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_item 2\">Level 2</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_item 3\">Level 3</a>]";
+						final String tele = "[<a action=\"bypass -h npc_%objectId%_manage other edit_tele 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_tele 2\">Level 2</a>]";
+						final String support_grade0 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>]";
+						final String support_grade1 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 2\">Level 2</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 4\">Level 4</a>]";
+						final String support_grade2 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 3\">Level 3</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 4\">Level 4</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 5\">Level 5</a>]";
+						final String support_grade3 = "[<a action=\"bypass -h npc_%objectId%_manage other edit_support 3\">Level 3</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 5\">Level 5</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 7\">Level 7</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_support 8\">Level 8</a>]";
+						final String item = "[<a action=\"bypass -h npc_%objectId%_manage other edit_item 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_item 2\">Level 2</a>][<a action=\"bypass -h npc_%objectId%_manage other edit_item 3\">Level 3</a>]";
 						if (getClanHall().getFunction(ClanHall.FUNC_TELEPORT) != null)
 						{
 							html.replace("%tele%", "Stage " + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLvl()) + "</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_TELEPORT).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_TELE_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
@@ -1081,7 +1081,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%support%", "Stage " + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLvl()) + "</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_SUPPORT_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
 							html.replace("%support_period%", "Withdraw the fee for the next time at " + format.format(getClanHall().getFunction(ClanHall.FUNC_SUPPORT).getEndTime()));
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -1102,7 +1102,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						{
 							html.replace("%support%", "none");
 							html.replace("%support_period%", "none");
-							int grade = getClanHall().getGrade();
+							final int grade = getClanHall().getGrade();
 							switch (grade)
 							{
 								case 0:
@@ -1165,7 +1165,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Curtains (Decoration)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -1188,7 +1188,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 								final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 								html.setFile(player.getHtmlPrefix(), "html/clanHallManager/functions-apply.htm");
 								html.replace("%name%", "Front Platform (Decoration)");
-								int stage = Integer.parseInt(val);
+								final int stage = Integer.parseInt(val);
 								int cost;
 								switch (stage)
 								{
@@ -1227,7 +1227,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -1276,7 +1276,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 											return;
 										}
 									}
-									int lvl = Integer.parseInt(val);
+									final int lvl = Integer.parseInt(val);
 									switch (lvl)
 									{
 										case 0:
@@ -1306,8 +1306,8 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), "html/clanHallManager/deco.htm");
-						String curtains = "[<a action=\"bypass -h npc_%objectId%_manage deco edit_curtains 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage deco edit_curtains 2\">Level 2</a>]";
-						String fixtures = "[<a action=\"bypass -h npc_%objectId%_manage deco edit_fixtures 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage deco edit_fixtures 2\">Level 2</a>]";
+						final String curtains = "[<a action=\"bypass -h npc_%objectId%_manage deco edit_curtains 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage deco edit_curtains 2\">Level 2</a>]";
+						final String fixtures = "[<a action=\"bypass -h npc_%objectId%_manage deco edit_fixtures 1\">Level 1</a>][<a action=\"bypass -h npc_%objectId%_manage deco edit_fixtures 2\">Level 2</a>]";
 						if (getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS) != null)
 						{
 							html.replace("%curtain%", "Stage " + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getLvl()) + "</font> (<font color=\"FFAABB\">" + String.valueOf(getClanHall().getFunction(ClanHall.FUNC_DECO_CURTAINS).getLease()) + "</font>Adena /" + String.valueOf(Config.CH_CURTAIN_FEE_RATIO / 1000 / 60 / 60 / 24) + " Day)");
@@ -1370,7 +1370,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 				
 				try
 				{
-					int skill_id = Integer.parseInt(val);
+					final int skill_id = Integer.parseInt(val);
 					try
 					{
 						int skill_lvl = 0;
@@ -1452,7 +1452,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 			}
 			else if (actualCommand.equalsIgnoreCase("goto"))
 			{
-				int whereTo = Integer.parseInt(val);
+				final int whereTo = Integer.parseInt(val);
 				doTeleport(player, whereTo);
 				return;
 			}
@@ -1473,7 +1473,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		String filename = "html/clanHallManager/chamberlain-no.htm";
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		if (condition == COND_OWNER)
 		{
 			filename = "html/clanHallManager/chamberlain-" + getId() + ".htm";
@@ -1546,7 +1546,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 		{
 			_log.warning("doTeleport(L2PcInstance player, int val) is called");
 		}
-		L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			if (player.isCombatFlagEquipped())
@@ -1572,12 +1572,12 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 	
 	private void revalidateDeco(L2PcInstance player)
 	{
-		AuctionableHall ch = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
+		final AuctionableHall ch = ClanHallManager.getInstance().getClanHallByOwner(player.getClan());
 		if (ch == null)
 		{
 			return;
 		}
-		AgitDecoInfo bl = new AgitDecoInfo(ch);
+		final AgitDecoInfo bl = new AgitDecoInfo(ch);
 		player.sendPacket(bl);
 	}
 }

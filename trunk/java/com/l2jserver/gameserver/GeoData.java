@@ -200,7 +200,7 @@ public class GeoData
 			return z;
 		}
 		
-		int nextLowerZ = getNextLowerZ(geoX, geoY, z + 20);
+		final int nextLowerZ = getNextLowerZ(geoX, geoY, z + 20);
 		return Math.abs(nextLowerZ - z) <= SPAWN_Z_DELTA_LIMIT ? nextLowerZ : z;
 	}
 	
@@ -353,31 +353,31 @@ public class GeoData
 			geoY = tmp;
 		}
 		
-		LinePointIterator3D pointIter = new LinePointIterator3D(geoX, geoY, z, tGeoX, tGeoY, tz);
+		final LinePointIterator3D pointIter = new LinePointIterator3D(geoX, geoY, z, tGeoX, tGeoY, tz);
 		// first point is guaranteed to be available, skip it, we can always see our own position
 		pointIter.next();
 		int prevX = pointIter.x();
 		int prevY = pointIter.y();
-		int prevZ = pointIter.z();
+		final int prevZ = pointIter.z();
 		int prevGeoZ = prevZ;
 		int ptIndex = 0;
 		while (pointIter.next())
 		{
-			int curX = pointIter.x();
-			int curY = pointIter.y();
+			final int curX = pointIter.x();
+			final int curY = pointIter.y();
 			
 			if ((curX == prevX) && (curY == prevY))
 			{
 				continue;
 			}
 			
-			int beeCurZ = pointIter.z();
+			final int beeCurZ = pointIter.z();
 			int curGeoZ = prevGeoZ;
 			
 			// check if the position has geodata
 			if (hasGeoPos(curX, curY))
 			{
-				int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
 				curGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, curX, curY, nswe);
 				int maxHeight;
 				if (ptIndex < ELEVATED_SEE_OVER_DISTANCE)
@@ -394,26 +394,26 @@ public class GeoData
 				{
 					if ((nswe & Cell.NSWE_NORTH_EAST) == Cell.NSWE_NORTH_EAST)
 					{
-						int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_EAST);
-						int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_NORTH);
+						final int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_EAST);
+						final int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_NORTH);
 						canSeeThrough = (northGeoZ <= maxHeight) && (eastGeoZ <= maxHeight) && (northGeoZ <= getNearestZ(prevX, prevY - 1, beeCurZ)) && (eastGeoZ <= getNearestZ(prevX + 1, prevY, beeCurZ));
 					}
 					else if ((nswe & Cell.NSWE_NORTH_WEST) == Cell.NSWE_NORTH_WEST)
 					{
-						int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_WEST);
-						int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_NORTH);
+						final int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_WEST);
+						final int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_NORTH);
 						canSeeThrough = (northGeoZ <= maxHeight) && (westGeoZ <= maxHeight) && (northGeoZ <= getNearestZ(prevX, prevY - 1, beeCurZ)) && (westGeoZ <= getNearestZ(prevX - 1, prevY, beeCurZ));
 					}
 					else if ((nswe & Cell.NSWE_SOUTH_EAST) == Cell.NSWE_SOUTH_EAST)
 					{
-						int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_EAST);
-						int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_SOUTH);
+						final int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_EAST);
+						final int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_SOUTH);
 						canSeeThrough = (southGeoZ <= maxHeight) && (eastGeoZ <= maxHeight) && (southGeoZ <= getNearestZ(prevX, prevY + 1, beeCurZ)) && (eastGeoZ <= getNearestZ(prevX + 1, prevY, beeCurZ));
 					}
 					else if ((nswe & Cell.NSWE_SOUTH_WEST) == Cell.NSWE_SOUTH_WEST)
 					{
-						int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_WEST);
-						int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_SOUTH);
+						final int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_WEST);
+						final int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_SOUTH);
 						canSeeThrough = (southGeoZ <= maxHeight) && (westGeoZ <= maxHeight) && (southGeoZ <= getNearestZ(prevX, prevY + 1, beeCurZ)) && (westGeoZ <= getNearestZ(prevX - 1, prevY, beeCurZ));
 					}
 					else
@@ -461,11 +461,11 @@ public class GeoData
 	 */
 	public Location moveCheck(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
-		int geoX = getGeoX(x);
-		int geoY = getGeoY(y);
+		final int geoX = getGeoX(x);
+		final int geoY = getGeoY(y);
 		z = getNearestZ(geoX, geoY, z);
-		int tGeoX = getGeoX(tx);
-		int tGeoY = getGeoY(ty);
+		final int tGeoX = getGeoX(tx);
+		final int tGeoY = getGeoY(ty);
 		tz = getNearestZ(tGeoX, tGeoY, tz);
 		
 		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false))
@@ -473,7 +473,7 @@ public class GeoData
 			return new Location(x, y, getHeight(x, y, z));
 		}
 		
-		LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
+		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// first point is guaranteed to be available
 		pointIter.next();
 		int prevX = pointIter.x();
@@ -482,13 +482,13 @@ public class GeoData
 		
 		while (pointIter.next())
 		{
-			int curX = pointIter.x();
-			int curY = pointIter.y();
-			int curZ = getNearestZ(curX, curY, prevZ);
+			final int curX = pointIter.x();
+			final int curY = pointIter.y();
+			final int curZ = getNearestZ(curX, curY, prevZ);
 			
 			if (hasGeoPos(prevX, prevY))
 			{
-				int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
 				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
 				{
 					// can't move, return previous location
@@ -523,11 +523,11 @@ public class GeoData
 	 */
 	public boolean canMove(int fromX, int fromY, int fromZ, int toX, int toY, int toZ, int instanceId)
 	{
-		int geoX = getGeoX(fromX);
-		int geoY = getGeoY(fromY);
+		final int geoX = getGeoX(fromX);
+		final int geoY = getGeoY(fromY);
 		fromZ = getNearestZ(geoX, geoY, fromZ);
-		int tGeoX = getGeoX(toX);
-		int tGeoY = getGeoY(toY);
+		final int tGeoX = getGeoX(toX);
+		final int tGeoY = getGeoY(toY);
 		toZ = getNearestZ(tGeoX, tGeoY, toZ);
 		
 		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ, instanceId, false))
@@ -535,7 +535,7 @@ public class GeoData
 			return false;
 		}
 		
-		LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
+		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// first point is guaranteed to be available
 		pointIter.next();
 		int prevX = pointIter.x();
@@ -544,13 +544,13 @@ public class GeoData
 		
 		while (pointIter.next())
 		{
-			int curX = pointIter.x();
-			int curY = pointIter.y();
-			int curZ = getNearestZ(curX, curY, prevZ);
+			final int curX = pointIter.x();
+			final int curY = pointIter.y();
+			final int curZ = getNearestZ(curX, curY, prevZ);
 			
 			if (hasGeoPos(prevX, prevY))
 			{
-				int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
+				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
 				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
 				{
 					return false;
@@ -573,22 +573,22 @@ public class GeoData
 	
 	public int traceTerrainZ(int x, int y, int z, int tx, int ty)
 	{
-		int geoX = getGeoX(x);
-		int geoY = getGeoY(y);
+		final int geoX = getGeoX(x);
+		final int geoY = getGeoY(y);
 		z = getNearestZ(geoX, geoY, z);
-		int tGeoX = getGeoX(tx);
-		int tGeoY = getGeoY(ty);
+		final int tGeoX = getGeoX(tx);
+		final int tGeoY = getGeoY(ty);
 		
-		LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
+		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// first point is guaranteed to be available
 		pointIter.next();
 		int prevZ = z;
 		
 		while (pointIter.next())
 		{
-			int curX = pointIter.x();
-			int curY = pointIter.y();
-			int curZ = getNearestZ(curX, curY, prevZ);
+			final int curX = pointIter.x();
+			final int curY = pointIter.y();
+			final int curZ = getNearestZ(curX, curY, prevZ);
 			
 			prevZ = curZ;
 		}

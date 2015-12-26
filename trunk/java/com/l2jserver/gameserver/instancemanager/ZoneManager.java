@@ -209,7 +209,7 @@ public final class ZoneManager implements IXmlReader
 								if ("node".equalsIgnoreCase(cd.getNodeName()))
 								{
 									attrs = cd.getAttributes();
-									int[] point = new int[2];
+									final int[] point = new int[2];
 									point[0] = parseInteger(attrs, "X");
 									point[1] = parseInteger(attrs, "Y");
 									rs.add(point);
@@ -316,25 +316,25 @@ public final class ZoneManager implements IXmlReader
 							if ("stat".equalsIgnoreCase(cd.getNodeName()))
 							{
 								attrs = cd.getAttributes();
-								String name = attrs.getNamedItem("name").getNodeValue();
-								String val = attrs.getNamedItem("val").getNodeValue();
+								final String name = attrs.getNamedItem("name").getNodeValue();
+								final String val = attrs.getNamedItem("val").getNodeValue();
 								
 								temp.setParameter(name, val);
 							}
 							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof L2ZoneRespawn))
 							{
 								attrs = cd.getAttributes();
-								int spawnX = Integer.parseInt(attrs.getNamedItem("X").getNodeValue());
-								int spawnY = Integer.parseInt(attrs.getNamedItem("Y").getNodeValue());
-								int spawnZ = Integer.parseInt(attrs.getNamedItem("Z").getNodeValue());
-								Node val = attrs.getNamedItem("type");
+								final int spawnX = Integer.parseInt(attrs.getNamedItem("X").getNodeValue());
+								final int spawnY = Integer.parseInt(attrs.getNamedItem("Y").getNodeValue());
+								final int spawnZ = Integer.parseInt(attrs.getNamedItem("Z").getNodeValue());
+								final Node val = attrs.getNamedItem("type");
 								((L2ZoneRespawn) temp).parseLoc(spawnX, spawnY, spawnZ, val == null ? null : val.getNodeValue());
 							}
 							else if ("race".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof L2RespawnZone))
 							{
 								attrs = cd.getAttributes();
-								String race = attrs.getNamedItem("name").getNodeValue();
-								String point = attrs.getNamedItem("point").getNodeValue();
+								final String race = attrs.getNamedItem("name").getNodeValue();
+								final String point = attrs.getNamedItem("point").getNodeValue();
 								
 								((L2RespawnZone) temp).addRaceRespawnPoint(race, point);
 							}
@@ -605,7 +605,7 @@ public final class ZoneManager implements IXmlReader
 	 */
 	public List<NpcSpawnTerritory> getSpawnTerritories(L2Object object)
 	{
-		List<NpcSpawnTerritory> temp = new ArrayList<>();
+		final List<NpcSpawnTerritory> temp = new ArrayList<>();
 		for (NpcSpawnTerritory territory : _spawnTerritories.values())
 		{
 			if (territory.isInsideZone(object.getX(), object.getY(), object.getZ()))
@@ -678,7 +678,7 @@ public final class ZoneManager implements IXmlReader
 			double closestdis = Double.MAX_VALUE;
 			for (T temp : (Collection<T>) _classZones.get(type).values())
 			{
-				double distance = temp.getDistanceToZone(obj);
+				final double distance = temp.getDistanceToZone(obj);
 				if (distance < closestdis)
 				{
 					closestdis = distance;

@@ -257,19 +257,19 @@ public final class FinalEmperialTomb extends AbstractInstance
 		int spawnCount = 0;
 		try
 		{
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			
-			File file = new File(Config.DATAPACK_ROOT + "/spawnZones/final_emperial_tomb.xml");
+			final File file = new File(Config.DATAPACK_ROOT + "/spawnZones/final_emperial_tomb.xml");
 			if (!file.exists())
 			{
 				_log.severe("[Final Emperial Tomb] Missing final_emperial_tomb.xml. The quest wont work without it!");
 				return;
 			}
 			
-			Document doc = factory.newDocumentBuilder().parse(file);
-			Node first = doc.getFirstChild();
+			final Document doc = factory.newDocumentBuilder().parse(file);
+			final Node first = doc.getFirstChild();
 			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
 			{
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
@@ -287,7 +287,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 									_log.severe("[Final Emperial Tomb] Missing npcId in npc List, skipping");
 									continue;
 								}
-								int npcId = Integer.parseInt(attrs.getNamedItem("npcId").getNodeValue());
+								final int npcId = Integer.parseInt(attrs.getNamedItem("npcId").getNodeValue());
 								
 								att = attrs.getNamedItem("flag");
 								if (att == null)
@@ -296,7 +296,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 									continue;
 								}
 								
-								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
+								final int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
 								_spawnList.putIfAbsent(flag, new ArrayList<FETSpawn>());
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
@@ -304,7 +304,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 									if ("loc".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										FETSpawn spw = new FETSpawn();
+										final FETSpawn spw = new FETSpawn();
 										spw.npcId = npcId;
 										
 										att = attrs.getNamedItem("x");
@@ -358,7 +358,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 									else if ("zone".equalsIgnoreCase(cd.getNodeName()))
 									{
 										attrs = cd.getAttributes();
-										FETSpawn spw = new FETSpawn();
+										final FETSpawn spw = new FETSpawn();
 										spw.npcId = npcId;
 										spw.isZone = true;
 										
@@ -409,22 +409,22 @@ public final class FinalEmperialTomb extends AbstractInstance
 									_log.severe("[Final Emperial Tomb] Missing id in spawnZones List, skipping");
 									continue;
 								}
-								int id = Integer.parseInt(att.getNodeValue());
+								final int id = Integer.parseInt(att.getNodeValue());
 								att = attrs.getNamedItem("minZ");
 								if (att == null)
 								{
 									_log.severe("[Final Emperial Tomb] Missing minZ in spawnZones List id: " + id + ", skipping");
 									continue;
 								}
-								int minz = Integer.parseInt(att.getNodeValue());
+								final int minz = Integer.parseInt(att.getNodeValue());
 								att = attrs.getNamedItem("maxZ");
 								if (att == null)
 								{
 									_log.severe("[Final Emperial Tomb] Missing maxZ in spawnZones List id: " + id + ", skipping");
 									continue;
 								}
-								int maxz = Integer.parseInt(att.getNodeValue());
-								L2Territory ter = new L2Territory(id);
+								final int maxz = Integer.parseInt(att.getNodeValue());
+								final L2Territory ter = new L2Territory(id);
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -501,7 +501,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 		else if (player.getInventory().getItemByItemId(8073) == null)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED);
 			sm.addPcName(player);
 			player.sendPacket(sm);
 			return false;
@@ -760,7 +760,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 				{
 					break;
 				}
-				L2MonsterInstance demon = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.getInstanceId());
+				final L2MonsterInstance demon = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.getInstanceId());
 				updateKnownList(_world, demon);
 				_world.demons.add(demon);
 			}
@@ -813,7 +813,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 					{
 						if (_world.frintezza.getScriptValue() != 1)
 						{
-							int rnd = getRandom(100);
+							final int rnd = getRandom(100);
 							for (FrintezzaSong element : FRINTEZZASONGLIST)
 							{
 								if (rnd < element.chance)
@@ -835,7 +835,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 					break;
 				case 1: // Frintezza song effect
 					_world.songEffectTask = null;
-					Skill skill = _world.OnSong.effectSkill.getSkill();
+					final Skill skill = _world.OnSong.effectSkill.getSkill();
 					if (skill == null)
 					{
 						return;
@@ -848,7 +848,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 						{
 							for (int objId : _world.getAllowed())
 							{
-								L2PcInstance player = L2World.getInstance().getPlayer(objId);
+								final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 								if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 								{
 									if (!player.isDead())
@@ -967,7 +967,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					for (int[] element : PORTRAIT_SPAWNS)
 					{
-						L2MonsterInstance demon = (L2MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, _world.getInstanceId());
+						final L2MonsterInstance demon = (L2MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, _world.getInstanceId());
 						demon.setIsImmobilized(true);
 						demon.disableAllSkills();
 						updateKnownList(_world, demon);
@@ -1071,7 +1071,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 				case 21:
 					for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
 					{
-						L2MonsterInstance portrait = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, _world.getInstanceId());
+						final L2MonsterInstance portrait = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, _world.getInstanceId());
 						updateKnownList(_world, portrait);
 						_world.portraits.put(portrait, i);
 					}
@@ -1203,7 +1203,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			for (int objId : _world.getAllowed())
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.abortAttack();
@@ -1221,7 +1221,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			for (int objId : _world.getAllowed())
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.enableAllSkills();
@@ -1234,7 +1234,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 		{
 			for (int objId : _world.getAllowed())
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					if (player.getX() < x)
@@ -1331,7 +1331,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	{
 		for (int objId : world.getAllowed())
 		{
-			L2PcInstance player = L2World.getInstance().getPlayer(objId);
+			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);
@@ -1341,10 +1341,10 @@ public final class FinalEmperialTomb extends AbstractInstance
 	
 	protected void updateKnownList(FETWorld world, L2Npc npc)
 	{
-		Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
+		final Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
 		for (int objId : world.getAllowed())
 		{
-			L2PcInstance player = L2World.getInstance().getPlayer(objId);
+			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				npcKnownPlayers.put(player.getObjectId(), player);
@@ -1398,10 +1398,10 @@ public final class FinalEmperialTomb extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof FETWorld)
 		{
-			FETWorld world = (FETWorld) tmpworld;
+			final FETWorld world = (FETWorld) tmpworld;
 			if (npc.getId() == HALL_ALARM)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 0), 2000);
@@ -1456,7 +1456,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		getQuestState(player, true);
 		if (npcId == GUIDE)
 		{
@@ -1464,8 +1464,8 @@ public final class FinalEmperialTomb extends AbstractInstance
 		}
 		else if (npc.getId() == CUBE)
 		{
-			int x = -87534 + getRandom(500);
-			int y = -153048 + getRandom(500);
+			final int x = -87534 + getRandom(500);
+			final int y = -153048 + getRandom(500);
 			player.teleToLocation(x, y, -9165);
 			return null;
 		}

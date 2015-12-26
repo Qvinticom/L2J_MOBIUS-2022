@@ -51,7 +51,7 @@ public class SkillList implements IBypassHandler
 		{
 			try
 			{
-				String id = command.substring(9).trim();
+				final String id = command.substring(9).trim();
 				if (id.length() != 0)
 				{
 					L2NpcInstance.showSkillList(activeChar, (L2Npc) target, ClassId.getClassId(Integer.parseInt(id)));
@@ -74,7 +74,7 @@ public class SkillList implements IBypassHandler
 					
 					if (!own_class)
 					{
-						String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
+						final String charType = activeChar.getClassId().isMage() ? "fighter" : "mage";
 						text += "Skills of your class are the easiest to learn.<br>" + "Skills of another class of your race are a little harder.<br>" + "Skills for classes of another race are extremely difficult.<br>" + "But the hardest of all to learn are the  " + charType + "skills!<br>";
 					}
 					

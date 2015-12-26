@@ -46,7 +46,7 @@ public final class ManaHealOverTime extends AbstractEffect
 		}
 		
 		double mp = info.getEffected().getCurrentMp();
-		double maxmp = info.getEffected().getMaxRecoverableMp();
+		final double maxmp = info.getEffected().getMaxRecoverableMp();
 		
 		// Not needed to set the MP and send update packet if player is already at max MP
 		if (mp >= maxmp)

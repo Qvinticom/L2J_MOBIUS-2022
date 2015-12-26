@@ -48,7 +48,7 @@ public class TvTEventTeleporter implements Runnable
 		_coordinates = coordinates;
 		_adminRemove = adminRemove;
 		
-		long delay = (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000;
+		final long delay = (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000;
 		
 		ThreadPoolManager.getInstance().scheduleGeneral(this, fastSchedule ? 0 : delay);
 	}
@@ -69,7 +69,7 @@ public class TvTEventTeleporter implements Runnable
 			return;
 		}
 		
-		L2Summon summon = _playerInstance.getPet();
+		final L2Summon summon = _playerInstance.getPet();
 		
 		if (summon != null)
 		{
@@ -88,7 +88,7 @@ public class TvTEventTeleporter implements Runnable
 			_playerInstance.setDuelState(DuelState.INTERRUPTED);
 		}
 		
-		int TvTInstance = TvTEvent.getTvTEventInstance();
+		final int TvTInstance = TvTEvent.getTvTEventInstance();
 		if (TvTInstance != 0)
 		{
 			if (TvTEvent.isStarted() && !_adminRemove)
@@ -111,7 +111,7 @@ public class TvTEventTeleporter implements Runnable
 		
 		if (TvTEvent.isStarted() && !_adminRemove)
 		{
-			int teamId = TvTEvent.getParticipantTeamId(_playerInstance.getObjectId()) + 1;
+			final int teamId = TvTEvent.getParticipantTeamId(_playerInstance.getObjectId()) + 1;
 			switch (teamId)
 			{
 				case 0:

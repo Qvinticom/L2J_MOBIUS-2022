@@ -60,10 +60,10 @@ public final class ThrowUp extends AbstractEffect
 		final int curZ = info.getEffected().getZ();
 		
 		// Calculate distance between effector and effected current position
-		double dx = info.getEffector().getX() - curX;
-		double dy = info.getEffector().getY() - curY;
-		double dz = info.getEffector().getZ() - curZ;
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final double dx = info.getEffector().getX() - curX;
+		final double dy = info.getEffector().getY() - curY;
+		final double dz = info.getEffector().getZ() - curZ;
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
 			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());
@@ -93,9 +93,9 @@ public final class ThrowUp extends AbstractEffect
 		cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		int x = info.getEffector().getX() - (int) (offset * cos);
-		int y = info.getEffector().getY() - (int) (offset * sin);
-		int z = info.getEffected().getZ();
+		final int x = info.getEffector().getX() - (int) (offset * cos);
+		final int y = info.getEffector().getY() - (int) (offset * sin);
+		final int z = info.getEffected().getZ();
 		
 		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
 		

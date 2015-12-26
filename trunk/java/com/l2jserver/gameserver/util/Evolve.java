@@ -73,40 +73,40 @@ public final class Evolve
 		
 		L2ItemInstance item = null;
 		long petexp = currentPet.getStat().getExp();
-		String oldname = currentPet.getName();
-		int oldX = currentPet.getX();
-		int oldY = currentPet.getY();
-		int oldZ = currentPet.getZ();
+		final String oldname = currentPet.getName();
+		final int oldX = currentPet.getX();
+		final int oldY = currentPet.getY();
+		final int oldZ = currentPet.getZ();
 		
-		L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+		final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 		
 		if (oldData == null)
 		{
 			return false;
 		}
 		
-		int oldnpcID = oldData.getNpcId();
+		final int oldnpcID = oldData.getNpcId();
 		
 		if ((currentPet.getStat().getLevel() < petminlvl) || (currentPet.getId() != oldnpcID))
 		{
 			return false;
 		}
 		
-		L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
 		
 		if (petData == null)
 		{
 			return false;
 		}
 		
-		int npcID = petData.getNpcId();
+		final int npcID = petData.getNpcId();
 		
 		if (npcID == 0)
 		{
 			return false;
 		}
 		
-		L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcID);
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcID);
 		
 		currentPet.unSummon(player);
 		
@@ -116,7 +116,7 @@ public final class Evolve
 		item = player.getInventory().addItem("Evolve", itemIdgive, 1, player, npc);
 		
 		// Summoning new pet
-		L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, item);
+		final L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, item);
 		
 		if (petSummon == null)
 		{
@@ -124,7 +124,7 @@ public final class Evolve
 		}
 		
 		// Fix for non-linear baby pet exp
-		long _minimumexp = petSummon.getStat().getExpForLevel(petminlvl);
+		final long _minimumexp = petSummon.getStat().getExpForLevel(petminlvl);
 		if (petexp < _minimumexp)
 		{
 			petexp = _minimumexp;
@@ -169,7 +169,7 @@ public final class Evolve
 			return false;
 		}
 		
-		L2ItemInstance item = player.getInventory().getItemByItemId(itemIdtake);
+		final L2ItemInstance item = player.getInventory().getItemByItemId(itemIdtake);
 		if (item == null)
 		{
 			return false;
@@ -181,43 +181,43 @@ public final class Evolve
 			oldpetlvl = petminlvl;
 		}
 		
-		L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
+		final L2PetData oldData = PetDataTable.getInstance().getPetDataByItemId(itemIdtake);
 		if (oldData == null)
 		{
 			return false;
 		}
 		
-		L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
+		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(itemIdgive);
 		if (petData == null)
 		{
 			return false;
 		}
 		
-		int npcId = petData.getNpcId();
+		final int npcId = petData.getNpcId();
 		if (npcId == 0)
 		{
 			return false;
 		}
 		
-		L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
+		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
 		
 		// deleting old pet item
-		L2ItemInstance removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+		final L2ItemInstance removedItem = player.getInventory().destroyItem("PetRestore", item, player, npc);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 		sm.addItemName(removedItem);
 		player.sendPacket(sm);
 		
 		// Give new pet item
-		L2ItemInstance addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
+		final L2ItemInstance addedItem = player.getInventory().addItem("PetRestore", itemIdgive, 1, player, npc);
 		
 		// Summoning new pet
-		L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, addedItem);
+		final L2PetInstance petSummon = L2PetInstance.spawnPet(npcTemplate, player, addedItem);
 		if (petSummon == null)
 		{
 			return false;
 		}
 		
-		long _maxexp = petSummon.getStat().getExpForLevel(oldpetlvl);
+		final long _maxexp = petSummon.getStat().getExpForLevel(oldpetlvl);
 		
 		petSummon.getStat().addExp(_maxexp);
 		petSummon.setCurrentHp(petSummon.getMaxHp());
@@ -237,7 +237,7 @@ public final class Evolve
 		addedItem.setEnchantLevel(petSummon.getLevel());
 		
 		// Inventory update
-		InventoryUpdate iu = new InventoryUpdate();
+		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addRemovedItem(removedItem);
 		player.sendPacket(iu);
 		
@@ -246,7 +246,7 @@ public final class Evolve
 		
 		player.broadcastUserInfo();
 		
-		L2World world = L2World.getInstance();
+		final L2World world = L2World.getInstance();
 		world.removeObject(removedItem);
 		
 		ThreadPoolManager.getInstance().scheduleGeneral(new EvolveFinalizer(player, petSummon), 900);

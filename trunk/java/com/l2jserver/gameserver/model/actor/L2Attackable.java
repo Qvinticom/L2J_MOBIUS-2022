@@ -351,7 +351,7 @@ public class L2Attackable extends L2Npc
 			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(killer.getActingPlayer(), this, killer.isSummon()), this, _onKillDelay);
 			// if killer have stat hpRestoreOnKill
-			int hpRestore = (int) killer.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
+			final int hpRestore = (int) killer.getStat().calcStat(Stats.HP_RESTORE_ON_KILL, 0, null, null);
 			if (hpRestore > 0)
 			{
 				double amount = (killer.getMaxHp() * hpRestore) / 100;
@@ -479,7 +479,7 @@ public class L2Attackable extends L2Npc
 					// If this attacker have servitor, get Exp Penalty applied for the servitor.
 					float penalty = 1;
 					
-					Optional<L2Summon> summon = attacker.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst();
+					final Optional<L2Summon> summon = attacker.getServitors().values().stream().filter(s -> ((L2ServitorInstance) s).getExpMultiplier() > 1).findFirst();
 					if (summon.isPresent())
 					{
 						penalty = ((L2ServitorInstance) summon.get()).getExpMultiplier();
@@ -511,7 +511,7 @@ public class L2Attackable extends L2Npc
 							exp *= penalty;
 							
 							// Check for an over-hit enabled strike
-							L2Character overhitAttacker = getOverhitAttacker();
+							final L2Character overhitAttacker = getOverhitAttacker();
 							if (isOverhit() && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
 							{
 								attacker.sendPacket(SystemMessageId.OVER_HIT);
@@ -623,7 +623,7 @@ public class L2Attackable extends L2Npc
 						
 						// Check for an over-hit enabled strike
 						// (When in party, the over-hit exp bonus is given to the whole party and splitted proportionally through the party members)
-						L2Character overhitAttacker = getOverhitAttacker();
+						final L2Character overhitAttacker = getOverhitAttacker();
 						if (isOverhit() && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
 						{
 							attacker.sendPacket(SystemMessageId.OVER_HIT);
@@ -760,7 +760,7 @@ public class L2Attackable extends L2Npc
 		
 		if (target == null) // whole aggrolist
 		{
-			L2Character mostHated = getMostHated();
+			final L2Character mostHated = getMostHated();
 			if (mostHated == null) // makes target passive for a moment more
 			{
 				((L2AttackableAI) getAI()).setGlobalAggro(-25);
@@ -783,7 +783,7 @@ public class L2Attackable extends L2Npc
 			return;
 		}
 		
-		AggroInfo ai = _aggroList.get(target);
+		final AggroInfo ai = _aggroList.get(target);
 		if (ai == null)
 		{
 			_log.info("Target " + target + " not present in aggro list of " + this);
@@ -810,7 +810,7 @@ public class L2Attackable extends L2Npc
 		{
 			return;
 		}
-		AggroInfo ai = _aggroList.get(target);
+		final AggroInfo ai = _aggroList.get(target);
 		if (ai != null)
 		{
 			ai.stopHate();
@@ -862,7 +862,7 @@ public class L2Attackable extends L2Npc
 		L2Character mostHated = null;
 		L2Character secondMostHated = null;
 		int maxHate = 0;
-		List<L2Character> result = new ArrayList<>();
+		final List<L2Character> result = new ArrayList<>();
 		
 		// While iterating over this map removing objects is not allowed
 		// Go through the aggroList of the L2Attackable
@@ -901,7 +901,7 @@ public class L2Attackable extends L2Npc
 			return null;
 		}
 		
-		List<L2Character> result = new ArrayList<>();
+		final List<L2Character> result = new ArrayList<>();
 		for (AggroInfo ai : _aggroList.values())
 		{
 			if (ai == null)
@@ -934,7 +934,7 @@ public class L2Attackable extends L2Npc
 		
 		if (ai.getAttacker() instanceof L2PcInstance)
 		{
-			L2PcInstance act = (L2PcInstance) ai.getAttacker();
+			final L2PcInstance act = (L2PcInstance) ai.getAttacker();
 			if (act.isInvisible() || ai.getAttacker().isInvul() || act.isSpawnProtected())
 			{
 				// Remove Object Should Use This Method and Can be Blocked While Interacting
@@ -986,7 +986,7 @@ public class L2Attackable extends L2Npc
 			return;
 		}
 		
-		L2PcInstance player = mainDamageDealer.getActingPlayer();
+		final L2PcInstance player = mainDamageDealer.getActingPlayer();
 		
 		// Don't drop anything if the last attacker or owner isn't L2PcInstance
 		if (player == null)
@@ -1001,12 +1001,12 @@ public class L2Attackable extends L2Npc
 			_sweepItems.set(npcTemplate.calculateDrops(DropListScope.CORPSE, this, player));
 		}
 		
-		Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropListScope.DEATH, this, player);
+		final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropListScope.DEATH, this, player);
 		if (deathItems != null)
 		{
 			for (ItemHolder drop : deathItems)
 			{
-				L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
+				final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
 				// Check if the autoLoot mode is active
 				if (isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
 				{
@@ -1033,7 +1033,7 @@ public class L2Attackable extends L2Npc
 		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE > 0) || (Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE > 0)))
 		{
 			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
-			ItemHolder item = new ItemHolder(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
+			final ItemHolder item = new ItemHolder(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
 			
 			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
 			{
@@ -1081,7 +1081,7 @@ public class L2Attackable extends L2Npc
 			return;
 		}
 		
-		L2PcInstance player = lastAttacker.getActingPlayer();
+		final L2PcInstance player = lastAttacker.getActingPlayer();
 		
 		// Don't drop anything if the last attacker or owner isn't L2PcInstance
 		if (player == null)
@@ -1242,7 +1242,7 @@ public class L2Attackable extends L2Npc
 	{
 		// Calculate the over-hit damage
 		// Ex: mob had 10 HP left, over-hit skill did 50 damage total, over-hit damage is 40
-		double overhitDmg = -(getCurrentHp() - damage);
+		final double overhitDmg = -(getCurrentHp() - damage);
 		if (overhitDmg < 0)
 		{
 			// we didn't killed the mob with the over-hit strike. (it wasn't really an over-hit strike)
@@ -1366,7 +1366,7 @@ public class L2Attackable extends L2Npc
 		{
 			if (diff > 5) // formula revised May 07
 			{
-				double pow = Math.pow((double) 5 / 6, diff - 5);
+				final double pow = Math.pow((double) 5 / 6, diff - 5);
 				xp = xp * pow;
 				sp = sp * pow;
 			}
@@ -1381,7 +1381,7 @@ public class L2Attackable extends L2Npc
 				sp = 0;
 			}
 		}
-		int[] tmp =
+		final int[] tmp =
 		{
 			(int) xp,
 			(int) sp
@@ -1402,10 +1402,10 @@ public class L2Attackable extends L2Npc
 		
 		// Get the overhit exp bonus according to the above over-hit damage percentage
 		// (1/1 basis - 13% of over-hit damage, 13% of extra exp is given, and so on...)
-		double overhitExp = ((overhitPercentage / 100) * normalExp);
+		final double overhitExp = ((overhitPercentage / 100) * normalExp);
 		
 		// Return the rounded ammount of exp points to be added to the player's normal exp reward
-		long bonusOverhit = Math.round(overhitExp);
+		final long bonusOverhit = Math.round(overhitExp);
 		return bonusOverhit;
 	}
 	

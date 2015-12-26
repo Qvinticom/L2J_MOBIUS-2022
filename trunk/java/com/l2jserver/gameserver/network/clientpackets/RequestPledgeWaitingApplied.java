@@ -47,7 +47,7 @@ public class RequestPledgeWaitingApplied extends L2GameClientPacket
 			return;
 		}
 		
-		OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(activeChar.getObjectId());
+		final OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(activeChar.getObjectId());
 		
 		if (clanId.isPresent())
 		{

@@ -546,7 +546,7 @@ public class FortSiege implements Siegable
 		final List<L2PcInstance> players = new LinkedList<>();
 		for (L2SiegeClan siegeclan : getAttackerClans())
 		{
-			L2Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
+			final L2Clan clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			for (L2PcInstance player : clan.getOnlineMembers(0))
 			{
 				if (player.isInSiege())
@@ -574,7 +574,7 @@ public class FortSiege implements Siegable
 		final List<L2PcInstance> players = new LinkedList<>();
 		if (getFort().getOwnerClan() != null)
 		{
-			L2Clan clan = ClanTable.getInstance().getClan(getFort().getOwnerClan().getId());
+			final L2Clan clan = ClanTable.getInstance().getClan(getFort().getOwnerClan().getId());
 			if (clan != getFort().getOwnerClan())
 			{
 				return null;
@@ -600,10 +600,10 @@ public class FortSiege implements Siegable
 	{
 		if (!_commanders.isEmpty() && (getFort() != null))
 		{
-			L2Spawn spawn = instance.getSpawn();
+			final L2Spawn spawn = instance.getSpawn();
 			if (spawn != null)
 			{
-				List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+				final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
 				for (FortSiegeSpawn spawn2 : commanders)
 				{
 					if (spawn2.getId() == spawn.getId())
@@ -953,7 +953,7 @@ public class FortSiege implements Siegable
 	
 	private void setSiegeDateTime(boolean merchant)
 	{
-		Calendar newDate = Calendar.getInstance();
+		final Calendar newDate = Calendar.getInstance();
 		if (merchant)
 		{
 			newDate.add(Calendar.MINUTE, FortSiegeManager.getInstance().getSuspiciousMerchantRespawnDelay());
@@ -1179,7 +1179,7 @@ public class FortSiege implements Siegable
 	{
 		if (clan != null)
 		{
-			L2SiegeClan sc = getAttackerClan(clan);
+			final L2SiegeClan sc = getAttackerClan(clan);
 			if (sc != null)
 			{
 				return sc.getFlag();

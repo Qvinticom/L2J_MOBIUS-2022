@@ -102,7 +102,7 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 		}
 		else
 		{
-			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST);
 			requestor.sendPacket(msg);
 			player.sendPacket(new FriendAddRequestResult(requestor, 0));
 			requestor.sendPacket(new FriendAddRequestResult(player, 0));

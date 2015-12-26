@@ -153,7 +153,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	
 	public byte[] enableCrypt()
 	{
-		byte[] key = BlowFishKeygen.getRandomKey();
+		final byte[] key = BlowFishKeygen.getRandomKey();
 		_crypt.setKey(key);
 		return key;
 	}
@@ -299,7 +299,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	 */
 	public byte markToDeleteChar(int charslot)
 	{
-		int objid = getObjectIdForSlot(charslot);
+		final int objid = getObjectIdForSlot(charslot);
 		
 		if (objid < 0)
 		{
@@ -313,10 +313,10 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			byte answer = 0;
 			try (ResultSet rs = statement.executeQuery())
 			{
-				int clanId = rs.next() ? rs.getInt(1) : 0;
+				final int clanId = rs.next() ? rs.getInt(1) : 0;
 				if (clanId != 0)
 				{
-					L2Clan clan = ClanTable.getInstance().getClan(clanId);
+					final L2Clan clan = ClanTable.getInstance().getClan(clanId);
 					
 					if (clan == null)
 					{
@@ -349,7 +349,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 						}
 					}
 					
-					LogRecord record = new LogRecord(Level.WARNING, "Delete");
+					final LogRecord record = new LogRecord(Level.WARNING, "Delete");
 					record.setParameters(new Object[]
 					{
 						objid,
@@ -688,7 +688,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	@Override
 	protected void onForcedDisconnection()
 	{
-		LogRecord record = new LogRecord(Level.WARNING, "Disconnected abnormally");
+		final LogRecord record = new LogRecord(Level.WARNING, "Disconnected abnormally");
 		record.setParameters(new Object[]
 		{
 			this
@@ -941,7 +941,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			try
 			{
-				L2PcInstance player = getActiveChar();
+				final L2PcInstance player = getActiveChar();
 				if ((player != null) && player.isOnline()) // safety precaution
 				{
 					saveCharToDisk();
@@ -978,7 +978,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return true;
 		}
 		
-		Logger _logAudit = Logger.getLogger("audit");
+		final Logger _logAudit = Logger.getLogger("audit");
 		_logAudit.log(Level.INFO, "AUDIT: Client " + toString() + " kicked for reason: " + punishment);
 		closeNow();
 		return false;

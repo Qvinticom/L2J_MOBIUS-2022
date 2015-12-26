@@ -40,17 +40,17 @@ public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
-		L2Clan _clan = activeChar.getClan();
+		final L2Clan _clan = activeChar.getClan();
 		if (_clan == null)
 		{
 			return;
 		}
-		L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
+		final L2Clan clan = ClanTable.getInstance().getClanByName(_pledgeName);
 		
 		if (clan == null)
 		{
@@ -68,7 +68,7 @@ public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 			return;
 		}
 		
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
 		activeChar.sendPacket(msg);
 		ClanTable.getInstance().deleteclanswars(_clan.getId(), clan.getId());

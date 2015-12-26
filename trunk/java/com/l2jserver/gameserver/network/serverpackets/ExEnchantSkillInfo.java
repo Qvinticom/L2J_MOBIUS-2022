@@ -41,7 +41,7 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket
 		_lvl = lvl;
 		_maxlvl = SkillData.getInstance().getMaxLevel(_id);
 		
-		L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
+		final L2EnchantSkillLearn enchantLearn = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_id);
 		// do we have this skill?
 		if (enchantLearn != null)
 		{
@@ -51,7 +51,7 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket
 				_maxEnchanted = enchantLearn.isMaxEnchant(_lvl);
 				
 				// get detail for next level
-				EnchantSkillHolder esd = enchantLearn.getEnchantSkillHolder(_lvl);
+				final EnchantSkillHolder esd = enchantLearn.getEnchantSkillHolder(_lvl);
 				
 				// if it exists add it
 				if ((esd != null) && !_maxEnchanted)
@@ -59,7 +59,7 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket
 					_routes.add(_lvl + 1); // current enchant add firts
 				}
 				
-				int skillLvL = (_lvl % 1000);
+				final int skillLvL = (_lvl % 1000);
 				
 				for (int route : enchantLearn.getAllRoutes())
 				{

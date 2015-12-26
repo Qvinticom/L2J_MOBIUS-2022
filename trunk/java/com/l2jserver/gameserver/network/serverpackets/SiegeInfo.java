@@ -62,7 +62,7 @@ public class SiegeInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -79,7 +79,7 @@ public class SiegeInfo extends L2GameServerPacket
 			writeD(ownerId);
 			if (ownerId > 0)
 			{
-				L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+				final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
 				if (owner != null)
 				{
 					writeS(owner.getName()); // Clan Name
@@ -103,7 +103,7 @@ public class SiegeInfo extends L2GameServerPacket
 			writeD((int) (System.currentTimeMillis() / 1000));
 			if (!_castle.getIsTimeRegistrationOver() && activeChar.isClanLeader() && (activeChar.getClanId() == _castle.getOwnerId()))
 			{
-				Calendar cal = Calendar.getInstance();
+				final Calendar cal = Calendar.getInstance();
 				cal.setTimeInMillis(_castle.getSiegeDate().getTimeInMillis());
 				cal.set(Calendar.MINUTE, 0);
 				cal.set(Calendar.SECOND, 0);
@@ -132,7 +132,7 @@ public class SiegeInfo extends L2GameServerPacket
 			writeD(ownerId);
 			if (ownerId > 0)
 			{
-				L2Clan owner = ClanTable.getInstance().getClan(ownerId);
+				final L2Clan owner = ClanTable.getInstance().getClan(ownerId);
 				if (owner != null)
 				{
 					writeS(owner.getName()); // Clan Name

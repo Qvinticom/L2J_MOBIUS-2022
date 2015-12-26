@@ -151,7 +151,7 @@ public abstract class L2Vehicle extends L2Character
 							getStat().setRotationSpeed(point.getRotationSpeed());
 						}
 						
-						MoveData m = new MoveData();
+						final MoveData m = new MoveData();
 						m.disregardingGeodata = false;
 						m.onGeodataPathIndex = -1;
 						m._xDestination = point.getX();

@@ -40,7 +40,7 @@ public class RequestFortressMapInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Fort fort = FortManager.getInstance().getFortById(_fortressId);
+		final Fort fort = FortManager.getInstance().getFortById(_fortressId);
 		
 		if (fort == null)
 		{

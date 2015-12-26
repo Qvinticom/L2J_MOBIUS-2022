@@ -159,7 +159,7 @@ public final class DragonVortex extends AbstractNpcAI
 	 */
 	public void spawnRaid(int raidId, L2Npc npc, L2PcInstance player)
 	{
-		L2Spawn spawnDat = addSpawn(raidId, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true).getSpawn();
+		final L2Spawn spawnDat = addSpawn(raidId, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true).getSpawn();
 		SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 		takeItems(player, LARGE_DRAGON_BONE, 1);
 	}
@@ -173,7 +173,7 @@ public final class DragonVortex extends AbstractNpcAI
 	{
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
-			L2Npc spawnedWarpgate = spawn.getLastSpawn();
+			final L2Npc spawnedWarpgate = spawn.getLastSpawn();
 			if ((spawnedWarpgate != null))
 			{
 				return true;

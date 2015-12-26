@@ -86,7 +86,7 @@ public final class BeautyShopData implements IXmlReader
 									sex = parseEnum(att, Sex.class);
 								}
 								
-								BeautyData beautyData = new BeautyData();
+								final BeautyData beautyData = new BeautyData();
 								
 								for (Node a = b.getFirstChild(); a != null; a = a.getNextSibling())
 								{
@@ -99,7 +99,7 @@ public final class BeautyShopData implements IXmlReader
 											att = attrs.item(i);
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
-										BeautyItem hair = new BeautyItem(set);
+										final BeautyItem hair = new BeautyItem(set);
 										
 										for (Node g = a.getFirstChild(); g != null; g = g.getNextSibling())
 										{
@@ -126,7 +126,7 @@ public final class BeautyShopData implements IXmlReader
 											att = attrs.item(i);
 											set.set(att.getNodeName(), att.getNodeValue());
 										}
-										BeautyItem face = new BeautyItem(set);
+										final BeautyItem face = new BeautyItem(set);
 										beautyData.addFace(face);
 									}
 								}

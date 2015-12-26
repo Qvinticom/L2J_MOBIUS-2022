@@ -44,7 +44,7 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
 		if (_activeChar == null)
 		{

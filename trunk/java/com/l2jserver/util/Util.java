@@ -71,7 +71,7 @@ public final class Util
 	{
 		try
 		{
-			InetAddress addr = InetAddress.getByName(host);
+			final InetAddress addr = InetAddress.getByName(host);
 			return addr.isSiteLocalAddress() || addr.isLoopbackAddress();
 		}
 		catch (UnknownHostException e)
@@ -111,9 +111,9 @@ public final class Util
 	 */
 	public static String printData(ByteBuffer buf)
 	{
-		byte[] data = new byte[buf.remaining()];
+		final byte[] data = new byte[buf.remaining()];
 		buf.get(data);
-		String hex = Util.printData(data, data.length);
+		final String hex = Util.printData(data, data.length);
 		buf.position(buf.position() - data.length);
 		return hex;
 	}
@@ -125,7 +125,7 @@ public final class Util
 	 */
 	public static byte[] generateHex(int size)
 	{
-		byte[] array = new byte[size];
+		final byte[] array = new byte[size];
 		Rnd.nextBytes(array);
 		return array;
 	}
@@ -137,7 +137,7 @@ public final class Util
 	 */
 	public static String getStackTrace(Throwable t)
 	{
-		StringWriter sw = new StringWriter();
+		final StringWriter sw = new StringWriter();
 		t.printStackTrace(new PrintWriter(sw));
 		return sw.toString();
 	}

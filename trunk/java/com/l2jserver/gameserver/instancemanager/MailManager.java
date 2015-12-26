@@ -67,12 +67,12 @@ public final class MailManager
 				
 				final Message msg = new Message(rs);
 				
-				int msgId = msg.getId();
+				final int msgId = msg.getId();
 				_messages.put(msgId, msg);
 				
 				count++;
 				
-				long expiration = msg.getExpiration();
+				final long expiration = msg.getExpiration();
 				
 				if (expiration < System.currentTimeMillis())
 				{

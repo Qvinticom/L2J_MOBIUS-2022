@@ -40,8 +40,8 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance activeChar = playable.getActingPlayer();
-		int itemId = item.getId();
+		final L2PcInstance activeChar = playable.getActingPlayer();
+		final int itemId = item.getId();
 		
 		if (activeChar.isInOlympiadMode())
 		{
@@ -49,7 +49,7 @@ public class RollingDice implements IItemHandler
 			return false;
 		}
 		
-		int number = rollDice(activeChar);
+		final int number = rollDice(activeChar);
 		if (number == 0)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER);
@@ -58,7 +58,7 @@ public class RollingDice implements IItemHandler
 		
 		Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), itemId, number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ()));
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2);
 		sm.addString(activeChar.getName());
 		sm.addInt(number);
 		

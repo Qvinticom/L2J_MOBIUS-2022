@@ -46,7 +46,7 @@ public final class RequestOlympiadMatchList extends L2GameClientPacket
 			return;
 		}
 		
-		IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
+		final IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
 		if (handler != null)
 		{
 			handler.useBypass(COMMAND, activeChar, null);

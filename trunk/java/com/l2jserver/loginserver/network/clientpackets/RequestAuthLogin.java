@@ -142,10 +142,10 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		InetAddress clientAddr = getClient().getConnection().getInetAddress();
+		final InetAddress clientAddr = getClient().getConnection().getInetAddress();
 		
 		final LoginController lc = LoginController.getInstance();
-		AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
+		final AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
 		if (info == null)
 		{
 			// user or pass wrong
@@ -153,7 +153,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		AuthLoginResult result = lc.tryCheckinAccount(client, clientAddr, info);
+		final AuthLoginResult result = lc.tryCheckinAccount(client, clientAddr, info);
 		switch (result)
 		{
 			case AUTH_SUCCESS:
@@ -177,7 +177,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				client.close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
 				return;
 			case ALREADY_ON_LS:
-				L2LoginClient oldClient = lc.getAuthedClient(info.getLogin());
+				final L2LoginClient oldClient = lc.getAuthedClient(info.getLogin());
 				if (oldClient != null)
 				{
 					// kick the other client
@@ -188,7 +188,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
 				break;
 			case ALREADY_ON_GS:
-				GameServerInfo gsi = lc.getAccountOnGameServer(info.getLogin());
+				final GameServerInfo gsi = lc.getAccountOnGameServer(info.getLogin());
 				if (gsi != null)
 				{
 					client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);

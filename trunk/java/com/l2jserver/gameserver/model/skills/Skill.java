@@ -294,7 +294,7 @@ public final class Skill implements IIdentifiable
 		final String rideState = set.getString("rideState", null);
 		if (rideState != null)
 		{
-			String[] state = rideState.split(";");
+			final String[] state = rideState.split(";");
 			if (state.length > 0)
 			{
 				_rideState = new HashSet<>(state.length);
@@ -316,7 +316,7 @@ public final class Skill implements IIdentifiable
 		{
 			try
 			{
-				String[] valuesSplit = affectLimit.split("-");
+				final String[] valuesSplit = affectLimit.split("-");
 				_affectLimit[0] = Integer.parseInt(valuesSplit[0]);
 				_affectLimit[1] = Integer.parseInt(valuesSplit[1]);
 			}
@@ -378,7 +378,7 @@ public final class Skill implements IIdentifiable
 		_excludedFromCheck = set.getBoolean("excludedFromCheck", false);
 		_simultaneousCast = set.getBoolean("simultaneousCast", false);
 		
-		String capsuled_items = set.getString("capsuled_items_skill", null);
+		final String capsuled_items = set.getString("capsuled_items_skill", null);
 		if (capsuled_items != null)
 		{
 			if (capsuled_items.isEmpty())
@@ -389,8 +389,8 @@ public final class Skill implements IIdentifiable
 			_extractableItems = parseExtractableSkill(_id, _level, capsuled_items);
 		}
 		
-		String alchemyTransmuteIngredients = set.getString("alchemyTransmuteIngredients", null);
-		String alchemyTransmuteProducts = set.getString("alchemyTransmuteProduction", null);
+		final String alchemyTransmuteIngredients = set.getString("alchemyTransmuteIngredients", null);
+		final String alchemyTransmuteProducts = set.getString("alchemyTransmuteProduction", null);
 		if ((alchemyTransmuteIngredients != null) && (alchemyTransmuteProducts != null))
 		{
 			_transmutedItems = parseAlchemySkill(_id, _level, alchemyTransmuteIngredients, alchemyTransmuteProducts);
@@ -1043,7 +1043,7 @@ public final class Skill implements IIdentifiable
 		L2Character target = null;
 		
 		// Get the L2Objcet targeted by the user of the skill at this moment
-		L2Object objTarget = activeChar.getTarget();
+		final L2Object objTarget = activeChar.getTarget();
 		// If the L2Object targeted is a L2Character, it becomes the L2Character target
 		if (objTarget instanceof L2Character)
 		{
@@ -1099,7 +1099,7 @@ public final class Skill implements IIdentifiable
 	
 	public L2Object getFirstOfTargetList(L2Character activeChar)
 	{
-		L2Object[] targets = getTargetList(activeChar, true);
+		final L2Object[] targets = getTargetList(activeChar, true);
 		if (targets.length == 0)
 		{
 			return null;
@@ -1261,7 +1261,7 @@ public final class Skill implements IIdentifiable
 		final List<AbstractFunction> funcs = new ArrayList<>(_funcTemplates.size());
 		for (FuncTemplate t : _funcTemplates)
 		{
-			AbstractFunction f = t.getFunc(player, null, this, this); // skill is owner
+			final AbstractFunction f = t.getFunc(player, null, this, this); // skill is owner
 			if (f != null)
 			{
 				funcs.add(f);
@@ -1287,7 +1287,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean hasEffects(EffectScope effectScope)
 	{
-		List<AbstractEffect> effects = _effectLists.get(effectScope);
+		final List<AbstractEffect> effects = _effectLists.get(effectScope);
 		return (effects != null) && !effects.isEmpty();
 	}
 	
@@ -1404,7 +1404,7 @@ public final class Skill implements IIdentifiable
 			
 			applyEffectScope(EffectScope.GENERAL, info, instant, addContinuousEffects);
 			
-			EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
+			final EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
 			applyEffectScope(pvpOrPveEffectScope, info, instant, addContinuousEffects);
 			
 			applyEffectScope(EffectScope.CHANNELING, info, instant, addContinuousEffects);
@@ -1541,7 +1541,7 @@ public final class Skill implements IIdentifiable
 						final BuffInfo info = new BuffInfo(caster, target, this);
 						applyEffectScope(EffectScope.GENERAL, info, true, false);
 						
-						EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
+						final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
 						applyEffectScope(pvpOrPveEffectScope, info, true, false);
 						
 						applyEffectScope(EffectScope.CHANNELING, info, true, false);
@@ -1775,7 +1775,7 @@ public final class Skill implements IIdentifiable
 	{
 		final String[] ingrLists = alchemyTransmuteIngredients.split(";");
 		final String[] prodLists = alchemyTransmuteProducts.split(";");
-		List<ItemHolder> ingridients = new ArrayList<>();
+		final List<ItemHolder> ingridients = new ArrayList<>();
 		ItemHolder product = null;
 		
 		String[] ingrData;
@@ -1856,7 +1856,7 @@ public final class Skill implements IIdentifiable
 			{
 				if (_effectTypes == null)
 				{
-					Set<Byte> effectTypesSet = new HashSet<>();
+					final Set<Byte> effectTypesSet = new HashSet<>();
 					for (List<AbstractEffect> effectList : _effectLists.values())
 					{
 						if (effectList != null)
@@ -1872,7 +1872,7 @@ public final class Skill implements IIdentifiable
 						}
 					}
 					
-					Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
+					final Byte[] effectTypesArray = effectTypesSet.toArray(new Byte[effectTypesSet.size()]);
 					Arrays.sort(effectTypesArray);
 					_effectTypes = effectTypesArray;
 				}

@@ -80,7 +80,7 @@ public final class ExperienceData implements IXmlReader
 		{
 			if ("experience".equals(n.getNodeName()))
 			{
-				NamedNodeMap attrs = n.getAttributes();
+				final NamedNodeMap attrs = n.getAttributes();
 				maxLevel = parseInteger(attrs, "level");
 				if (maxLevel > Config.PLAYER_MAXIMUM_LEVEL)
 				{

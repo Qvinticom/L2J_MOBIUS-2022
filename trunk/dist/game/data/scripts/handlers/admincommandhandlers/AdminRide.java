@@ -48,7 +48,7 @@ public class AdminRide implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		L2PcInstance player = getRideTarget(activeChar);
+		final L2PcInstance player = getRideTarget(activeChar);
 		if (player == null)
 		{
 			return false;

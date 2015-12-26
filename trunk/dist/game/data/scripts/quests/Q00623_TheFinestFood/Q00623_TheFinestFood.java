@@ -93,7 +93,7 @@ public final class Q00623_TheFinestFood extends Quest
 				{
 					if (hasAllItems(player, true, LEAF_OF_FLAVA, BUFFALO_MEAT, HORN_OF_ANTELOPE))
 					{
-						int random = getRandom(1000);
+						final int random = getRandom(1000);
 						if (random < 120)
 						{
 							giveAdena(player, 25000, true);

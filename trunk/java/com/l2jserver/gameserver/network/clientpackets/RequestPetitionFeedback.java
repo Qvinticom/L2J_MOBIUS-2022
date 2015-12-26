@@ -52,7 +52,7 @@ public class RequestPetitionFeedback extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = getClient().getActiveChar();
 		
 		if ((player == null) || (player.getLastPetitionGmName() == null))
 		{

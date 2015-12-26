@@ -200,7 +200,7 @@ public final class TaskManager
 	
 	public void registerTask(Task task)
 	{
-		int key = task.getName().hashCode();
+		final int key = task.getName().hashCode();
 		_tasks.computeIfAbsent(key, k ->
 		{
 			task.initializate();
@@ -216,7 +216,7 @@ public final class TaskManager
 		{
 			while (rset.next())
 			{
-				Task task = _tasks.get(rset.getString("task").trim().toLowerCase().hashCode());
+				final Task task = _tasks.get(rset.getString("task").trim().toLowerCase().hashCode());
 				if (task == null)
 				{
 					continue;
@@ -225,7 +225,7 @@ public final class TaskManager
 				final TaskTypes type = TaskTypes.valueOf(rset.getString("type"));
 				if (type != TYPE_NONE)
 				{
-					ExecutedTask current = new ExecutedTask(task, type, rset);
+					final ExecutedTask current = new ExecutedTask(task, type, rset);
 					if (launchTask(current))
 					{
 						_currentTasks.add(current);
@@ -261,8 +261,8 @@ public final class TaskManager
 			case TYPE_TIME:
 				try
 				{
-					Date desired = DateFormat.getInstance().parse(task.getParams()[0]);
-					long diff = desired.getTime() - System.currentTimeMillis();
+					final Date desired = DateFormat.getInstance().parse(task.getParams()[0]);
+					final long diff = desired.getTime() - System.currentTimeMillis();
 					if (diff >= 0)
 					{
 						task.scheduled = scheduler.scheduleGeneral(task, diff);
@@ -275,7 +275,7 @@ public final class TaskManager
 				}
 				break;
 			case TYPE_SPECIAL:
-				ScheduledFuture<?> result = task.getTask().launchSpecial(task);
+				final ScheduledFuture<?> result = task.getTask().launchSpecial(task);
 				if (result != null)
 				{
 					task.scheduled = result;
@@ -284,7 +284,7 @@ public final class TaskManager
 				break;
 			case TYPE_GLOBAL_TASK:
 				interval = Long.valueOf(task.getParams()[0]) * 86400000L;
-				String[] hour = task.getParams()[1].split(":");
+				final String[] hour = task.getParams()[1].split(":");
 				
 				if (hour.length != 3)
 				{
@@ -292,10 +292,10 @@ public final class TaskManager
 					return false;
 				}
 				
-				Calendar check = Calendar.getInstance();
+				final Calendar check = Calendar.getInstance();
 				check.setTimeInMillis(task.getLastActivation() + interval);
 				
-				Calendar min = Calendar.getInstance();
+				final Calendar min = Calendar.getInstance();
 				try
 				{
 					min.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));

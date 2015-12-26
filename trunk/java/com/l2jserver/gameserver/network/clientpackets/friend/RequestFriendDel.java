@@ -53,13 +53,13 @@ public final class RequestFriendDel extends L2GameClientPacket
 	{
 		SystemMessage sm;
 		
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		int id = CharNameTable.getInstance().getIdByName(_name);
+		final int id = CharNameTable.getInstance().getIdByName(_name);
 		
 		if (id == -1)
 		{
@@ -94,7 +94,7 @@ public final class RequestFriendDel extends L2GameClientPacket
 			activeChar.getFriendList().remove(id);
 			activeChar.sendPacket(new FriendRemove(_name, 1));
 			
-			L2PcInstance player = L2World.getInstance().getPlayer(_name);
+			final L2PcInstance player = L2World.getInstance().getPlayer(_name);
 			if (player != null)
 			{
 				player.getFriendList().remove(Integer.valueOf(activeChar.getObjectId()));

@@ -74,7 +74,7 @@ public class AcquireSkillList extends L2GameServerPacket
 				}
 				else
 				{
-					int maxLevel = SkillData.getInstance().getMaxLevel(skillRemove.getId());
+					final int maxLevel = SkillData.getInstance().getMaxLevel(skillRemove.getId());
 					writeH(maxLevel);
 					writeH(skillRemove.getLevel());
 				}

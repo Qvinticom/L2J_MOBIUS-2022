@@ -108,7 +108,7 @@ public final class TeleportToUndergroundColiseum extends AbstractNpcAI
 		}
 		else if (Util.isDigit(event))
 		{
-			int val = Integer.parseInt(event) - 1;
+			final int val = Integer.parseInt(event) - 1;
 			player.teleToLocation(MANAGERS_LOCS[val][getRandom(MANAGERS_LOCS[val].length)], false);
 		}
 		return null;

@@ -53,13 +53,13 @@ public class ItemFilter implements Filter
 			return false;
 		}
 		
-		String[] messageList = record.getMessage().split(":");
+		final String[] messageList = record.getMessage().split(":");
 		if ((messageList.length < 2) || !EXCLUDE_PROCESS.contains(messageList[1]))
 		{
 			return true;
 		}
 		
-		L2ItemInstance item = ((L2ItemInstance) record.getParameters()[0]);
+		final L2ItemInstance item = ((L2ItemInstance) record.getParameters()[0]);
 		if (!EXCLUDED_ITEM_TYPES.contains(item.getItemType()))
 		{
 			return true;

@@ -91,7 +91,7 @@ public final class ItemAuction
 		_itemInfo = new ItemInfo(item);
 		L2World.getInstance().removeObject(item);
 		
-		for (final ItemAuctionBid bid : _auctionBids)
+		for (ItemAuctionBid bid : _auctionBids)
 		{
 			if ((_highestBid == null) || (_highestBid.getLastBid() < bid.getLastBid()))
 			{
@@ -206,7 +206,7 @@ public final class ItemAuction
 			ps.setByte(7, _auctionState.getStateId());
 			ps.execute();
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			_log.log(Level.WARNING, "", e);
 		}
@@ -320,7 +320,7 @@ public final class ItemAuction
 			onPlayerBid(player, bid);
 			updatePlayerBid(bid, false);
 			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_A_BID_FOR_THE_AUCTION_OF_S1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_A_BID_FOR_THE_AUCTION_OF_S1);
 			sm.addLong(newBid);
 			player.sendPacket(sm);
 			return;

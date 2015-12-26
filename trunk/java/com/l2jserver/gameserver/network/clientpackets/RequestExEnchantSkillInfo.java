@@ -59,7 +59,7 @@ public final class RequestExEnchantSkillInfo extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -82,7 +82,7 @@ public final class RequestExEnchantSkillInfo extends L2GameClientPacket
 			return;
 		}
 		
-		int playerSkillLvl = activeChar.getSkillLevel(_skillId);
+		final int playerSkillLvl = activeChar.getSkillLevel(_skillId);
 		if ((playerSkillLvl == -1) || (playerSkillLvl != _skillLvl))
 		{
 			return;

@@ -48,7 +48,7 @@ public class L2SiegeClan
 	
 	public boolean removeFlag(L2Npc flag)
 	{
-		boolean ret = _flag.remove(flag);
+		final boolean ret = _flag.remove(flag);
 		flag.deleteMe();
 		return ret;
 	}

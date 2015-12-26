@@ -48,7 +48,7 @@ public class Freight implements IBypassHandler
 		
 		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			PcFreight freight = activeChar.getFreight();
+			final PcFreight freight = activeChar.getFreight();
 			if (freight != null)
 			{
 				if (freight.getSize() > 0)

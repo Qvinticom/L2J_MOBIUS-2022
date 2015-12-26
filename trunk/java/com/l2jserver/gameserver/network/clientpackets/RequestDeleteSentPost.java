@@ -41,7 +41,7 @@ public final class RequestDeleteSentPost extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int count = readD();
+		final int count = readD();
 		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
 		{
 			return;
@@ -71,7 +71,7 @@ public final class RequestDeleteSentPost extends L2GameClientPacket
 		
 		for (int msgId : _msgIds)
 		{
-			Message msg = MailManager.getInstance().getMessage(msgId);
+			final Message msg = MailManager.getInstance().getMessage(msgId);
 			if (msg == null)
 			{
 				continue;

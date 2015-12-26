@@ -99,12 +99,12 @@ public class NpcBufferTable
 			
 			while (rset.next())
 			{
-				int npcId = rset.getInt("npc_id");
-				int skillId = rset.getInt("skill_id");
-				int skillLevel = rset.getInt("skill_level");
-				int skillFeeId = rset.getInt("skill_fee_id");
-				int skillFeeAmount = rset.getInt("skill_fee_amount");
-				int buffGroup = rset.getInt("buff_group");
+				final int npcId = rset.getInt("npc_id");
+				final int skillId = rset.getInt("skill_id");
+				final int skillLevel = rset.getInt("skill_level");
+				final int skillFeeId = rset.getInt("skill_fee_id");
+				final int skillFeeAmount = rset.getInt("skill_fee_amount");
+				final int buffGroup = rset.getInt("buff_group");
 				
 				if (npcId != lastNpcId)
 				{
@@ -145,12 +145,12 @@ public class NpcBufferTable
 				NpcBufferSkills skills = null;
 				while (rset.next())
 				{
-					int npcId = rset.getInt("npc_id");
-					int skillId = rset.getInt("skill_id");
-					int skillLevel = rset.getInt("skill_level");
-					int skillFeeId = rset.getInt("skill_fee_id");
-					int skillFeeAmount = rset.getInt("skill_fee_amount");
-					int buffGroup = rset.getInt("buff_group");
+					final int npcId = rset.getInt("npc_id");
+					final int skillId = rset.getInt("skill_id");
+					final int skillLevel = rset.getInt("skill_level");
+					final int skillFeeId = rset.getInt("skill_fee_id");
+					final int skillFeeAmount = rset.getInt("skill_fee_amount");
+					final int buffGroup = rset.getInt("buff_group");
 					
 					if (npcId != lastNpcId)
 					{

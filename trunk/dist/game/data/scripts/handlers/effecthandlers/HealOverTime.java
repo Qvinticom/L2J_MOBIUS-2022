@@ -48,7 +48,7 @@ public final class HealOverTime extends AbstractEffect
 		}
 		
 		double hp = info.getEffected().getCurrentHp();
-		double maxhp = info.getEffected().getMaxRecoverableHp();
+		final double maxhp = info.getEffected().getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)

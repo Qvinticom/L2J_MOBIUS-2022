@@ -48,7 +48,7 @@ public abstract class BaseRecievePacket
 	
 	public int readC()
 	{
-		int result = _decrypt[_off++] & 0xff;
+		final int result = _decrypt[_off++] & 0xff;
 		return result;
 	}
 	
@@ -91,7 +91,7 @@ public abstract class BaseRecievePacket
 	
 	public final byte[] readB(int length)
 	{
-		byte[] result = new byte[length];
+		final byte[] result = new byte[length];
 		System.arraycopy(_decrypt, _off, result, 0, length);
 		_off += length;
 		return result;

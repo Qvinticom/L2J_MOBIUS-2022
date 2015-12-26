@@ -40,7 +40,7 @@ public class L2PeaceZone extends L2ZoneType
 	{
 		if (character.isPlayer())
 		{
-			L2PcInstance player = character.getActingPlayer();
+			final L2PcInstance player = character.getActingPlayer();
 			// PVP possible during siege, now for siege participants only
 			// Could also check if this town is in siege, or if any siege is going on
 			if ((player.getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1))

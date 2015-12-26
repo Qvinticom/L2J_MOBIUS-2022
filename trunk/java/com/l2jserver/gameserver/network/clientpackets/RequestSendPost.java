@@ -80,7 +80,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		_subject = readS();
 		_text = readS();
 		
-		int attachCount = readD();
+		final int attachCount = readD();
 		if ((attachCount < 0) || (attachCount > Config.MAX_ITEM_IN_PACKET) || (((attachCount * BATCH_LENGTH) + 8) != _buf.remaining()))
 		{
 			return;
@@ -91,8 +91,8 @@ public final class RequestSendPost extends L2GameClientPacket
 			_items = new AttachmentItem[attachCount];
 			for (int i = 0; i < attachCount; i++)
 			{
-				int objectId = readD();
-				long count = readQ();
+				final int objectId = readD();
+				final long count = readQ();
 				if ((objectId < 1) || (count < 0))
 				{
 					_items = null;
@@ -218,7 +218,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		
 		if (accessLevel.isGm() && !activeChar.getAccessLevel().isGm())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_MESSAGE_TO_C1_DID_NOT_REACH_ITS_RECIPIENT_YOU_CANNOT_SEND_MAIL_TO_THE_GM_STAFF);
 			sm.addString(_receiver);
 			activeChar.sendPacket(sm);
 			return;
@@ -232,7 +232,7 @@ public final class RequestSendPost extends L2GameClientPacket
 		
 		if (BlockList.isInBlockList(receiverId, activeChar.getObjectId()))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
 			sm.addString(_receiver);
 			activeChar.sendPacket(sm);
 			return;
@@ -262,7 +262,7 @@ public final class RequestSendPost extends L2GameClientPacket
 			return;
 		}
 		
-		Message msg = new Message(activeChar.getObjectId(), receiverId, _isCod, _subject, _text, _reqAdena);
+		final Message msg = new Message(activeChar.getObjectId(), receiverId, _isCod, _subject, _text, _reqAdena);
 		if (removeItems(activeChar, msg))
 		{
 			MailManager.getInstance().sendMessage(msg);
@@ -281,7 +281,7 @@ public final class RequestSendPost extends L2GameClientPacket
 			for (AttachmentItem i : _items)
 			{
 				// Check validity of requested item
-				L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+				final L2ItemInstance item = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 				if ((item == null) || !item.isTradeable() || item.isEquipped())
 				{
 					player.sendPacket(SystemMessageId.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER);
@@ -309,7 +309,7 @@ public final class RequestSendPost extends L2GameClientPacket
 			return true;
 		}
 		
-		Mail attachments = msg.createAttachments();
+		final Mail attachments = msg.createAttachments();
 		
 		// message already has attachments ? oO
 		if (attachments == null)
@@ -322,11 +322,11 @@ public final class RequestSendPost extends L2GameClientPacket
 		final String receiver = recv.toString();
 		
 		// Proceed to the transfer
-		InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
+		final InventoryUpdate playerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 		for (AttachmentItem i : _items)
 		{
 			// Check validity of requested item
-			L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
+			final L2ItemInstance oldItem = player.checkItemManipulation(i.getObjectId(), i.getCount(), "attach");
 			if ((oldItem == null) || !oldItem.isTradeable() || oldItem.isEquipped())
 			{
 				_log.warning("Error adding attachment for char " + player.getName() + " (olditem == null)");

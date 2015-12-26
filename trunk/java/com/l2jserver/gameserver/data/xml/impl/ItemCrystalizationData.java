@@ -66,7 +66,7 @@ public final class ItemCrystalizationData implements IXmlReader
 						{
 							if ("item".equalsIgnoreCase(c.getNodeName()))
 							{
-								NamedNodeMap attrs = c.getAttributes();
+								final NamedNodeMap attrs = c.getAttributes();
 								final int itemId = parseInteger(attrs, "id");
 								final long itemCount = parseLong(attrs, "count");
 								final double itemChance = parseDouble(attrs, "chance");

@@ -53,14 +53,14 @@ public class Status extends Thread
 		{
 			try
 			{
-				Socket connection = statusServerSocket.accept();
+				final Socket connection = statusServerSocket.accept();
 				if (_mode == Server.MODE_GAMESERVER)
 				{
 					new GameStatusThread(connection, _uptime, _statusPw);
 				}
 				else if (_mode == Server.MODE_LOGINSERVER)
 				{
-					LoginStatusThread lst = new LoginStatusThread(connection, _uptime, _statusPw);
+					final LoginStatusThread lst = new LoginStatusThread(connection, _uptime, _statusPw);
 					if (lst.isAlive())
 					{
 						_loginStatus.add(lst);
@@ -101,12 +101,12 @@ public class Status extends Thread
 	{
 		super("Status");
 		_mode = mode;
-		Properties telnetSettings = new Properties();
+		final Properties telnetSettings = new Properties();
 		try (InputStream is = new FileInputStream(new File(Config.TELNET_FILE)))
 		{
 			telnetSettings.load(is);
 		}
-		int statusPort = Integer.parseInt(telnetSettings.getProperty("StatusPort", "12345"));
+		final int statusPort = Integer.parseInt(telnetSettings.getProperty("StatusPort", "12345"));
 		_statusPw = telnetSettings.getProperty("StatusPW");
 		
 		if ((_mode == Server.MODE_GAMESERVER) || (_mode == Server.MODE_LOGINSERVER))
@@ -134,7 +134,7 @@ public class Status extends Thread
 		
 		for (int i = 0; i < length; i++)
 		{
-			int charSet = Rnd.nextInt(3);
+			final int charSet = Rnd.nextInt(3);
 			switch (charSet)
 			{
 				case 0:
@@ -153,7 +153,7 @@ public class Status extends Thread
 	
 	public void sendMessageToTelnets(String msg)
 	{
-		List<LoginStatusThread> lsToRemove = new ArrayList<>(); // TODO(Zoey76): Unused?
+		final List<LoginStatusThread> lsToRemove = new ArrayList<>(); // TODO(Zoey76): Unused?
 		for (LoginStatusThread ls : _loginStatus)
 		{
 			if (ls.isInterrupted())

@@ -37,13 +37,13 @@ public final class RequestAnswerJoinAlly extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		L2PcInstance requestor = activeChar.getRequest().getPartner();
+		final L2PcInstance requestor = activeChar.getRequest().getPartner();
 		if (requestor == null)
 		{
 			return;
@@ -61,7 +61,7 @@ public final class RequestAnswerJoinAlly extends L2GameClientPacket
 				return; // hax
 			}
 			
-			L2Clan clan = requestor.getClan();
+			final L2Clan clan = requestor.getClan();
 			// we must double check this cause of hack
 			if (clan.checkAllyJoinCondition(requestor, activeChar))
 			{

@@ -258,7 +258,7 @@ public final class TriggerForce extends AbstractEffect
 				}
 				if ((activeForces >= 4) && (member.getEffectList().getBuffInfoBySkillId(AEORE_FORCE) != null) && (member.getEffectList().getBuffInfoBySkillId(SIGEL_FORCE) != null))
 				{
-					BuffInfo skill = member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY);
+					final BuffInfo skill = member.getEffectList().getBuffInfoBySkillId(PARTY_SOLIDARITY);
 					if (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (skill.getSkill().getLevel() != Math.min((activeForces - 3), 3)))
 					{
 						member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);

@@ -38,9 +38,9 @@ public class AdminLevel implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		L2Object targetChar = activeChar.getTarget();
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken(); // Get actual command
+		final L2Object targetChar = activeChar.getTarget();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken(); // Get actual command
 		
 		String val = "";
 		if (st.countTokens() >= 1)
@@ -72,9 +72,9 @@ public class AdminLevel implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
 					return false;
 				}
-				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
+				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
-				byte lvl = Byte.parseByte(val);
+				final byte lvl = Byte.parseByte(val);
 				if ((lvl >= 1) && (lvl <= maxLevel))
 				{
 					targetPlayer.setExp(ExperienceData.getInstance().getExpForLevel(lvl));

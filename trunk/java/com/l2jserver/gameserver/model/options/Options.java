@@ -72,7 +72,7 @@ public class Options
 		final List<AbstractFunction> funcs = new ArrayList<>(_funcs.size());
 		for (FuncTemplate fuctionTemplate : _funcs)
 		{
-			AbstractFunction fuction = fuctionTemplate.getFunc(player, player, item, this);
+			final AbstractFunction fuction = fuctionTemplate.getFunc(player, player, item, this);
 			if (fuction != null)
 			{
 				funcs.add(fuction);
@@ -141,7 +141,7 @@ public class Options
 	
 	public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type)
 	{
-		List<OptionsSkillHolder> temp = new ArrayList<>();
+		final List<OptionsSkillHolder> temp = new ArrayList<>();
 		for (OptionsSkillHolder holder : _activationSkills)
 		{
 			if (holder.getSkillType() == type)

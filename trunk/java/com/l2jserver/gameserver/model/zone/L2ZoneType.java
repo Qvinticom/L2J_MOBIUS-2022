@@ -132,7 +132,7 @@ public abstract class L2ZoneType extends ListenersContainer
 			}
 			else
 			{
-				int[] temp = new int[_race.length + 1];
+				final int[] temp = new int[_race.length + 1];
 				
 				int i = 0;
 				for (; i < _race.length; i++)
@@ -156,7 +156,7 @@ public abstract class L2ZoneType extends ListenersContainer
 			}
 			else
 			{
-				int[] temp = new int[_class.length + 1];
+				final int[] temp = new int[_class.length + 1];
 				
 				int i = 0;
 				for (; i < _class.length; i++)
@@ -527,7 +527,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public List<L2PcInstance> getPlayersInside()
 	{
-		List<L2PcInstance> players = new ArrayList<>();
+		final List<L2PcInstance> players = new ArrayList<>();
 		for (L2Character ch : _characterList.values())
 		{
 			if ((ch != null) && ch.isPlayer())

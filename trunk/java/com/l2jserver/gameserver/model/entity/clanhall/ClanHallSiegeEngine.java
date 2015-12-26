@@ -102,7 +102,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 				while (rset.next())
 				{
 					final int id = rset.getInt("attacker_id");
-					L2SiegeClan clan = new L2SiegeClan(id, SiegeClanType.ATTACKER);
+					final L2SiegeClan clan = new L2SiegeClan(id, SiegeClanType.ATTACKER);
 					_attackers.put(id, clan);
 				}
 			}
@@ -200,7 +200,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	public List<L2Npc> getFlag(L2Clan clan)
 	{
 		List<L2Npc> result = null;
-		L2SiegeClan sClan = getAttackerClan(clan);
+		final L2SiegeClan sClan = getAttackerClan(clan);
 		if (sClan != null)
 		{
 			result = sClan.getFlag();
@@ -291,7 +291,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		_hall.free();
 		_hall.banishForeigners();
-		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_TERM_FOR_S1_HAS_ENDED);
 		msg.addString(getName());
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
@@ -309,7 +309,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			_hall.updateNextSiege();
 			_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new PrepareOwner(), _hall.getSiegeDate().getTimeInMillis());
 			_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
 			Broadcast.toAllOnlinePlayers(sm);
 			return;
@@ -345,11 +345,11 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	@Override
 	public void endSiege()
 	{
-		SystemMessage end = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
+		final SystemMessage end = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
 		end.addString(_hall.getName());
 		Broadcast.toAllOnlinePlayers(end);
 		
-		L2Clan winner = getWinner();
+		final L2Clan winner = getWinner();
 		SystemMessage finalMsg = null;
 		if (_missionAccomplished && (winner != null))
 		{

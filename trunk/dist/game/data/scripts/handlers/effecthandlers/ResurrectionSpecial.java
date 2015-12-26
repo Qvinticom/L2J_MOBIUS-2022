@@ -62,9 +62,9 @@ public final class ResurrectionSpecial extends AbstractEffect
 		{
 			return;
 		}
-		L2PcInstance caster = info.getEffector().getActingPlayer();
+		final L2PcInstance caster = info.getEffector().getActingPlayer();
 		
-		Skill skill = info.getSkill();
+		final Skill skill = info.getSkill();
 		
 		if (info.getEffected().isPlayer())
 		{
@@ -73,7 +73,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 		}
 		if (info.getEffected().isPet())
 		{
-			L2PetInstance pet = (L2PetInstance) info.getEffected();
+			final L2PetInstance pet = (L2PetInstance) info.getEffected();
 			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
 		}
 	}

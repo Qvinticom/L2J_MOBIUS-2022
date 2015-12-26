@@ -98,9 +98,9 @@ public final class DocumentItem extends DocumentBase
 	
 	protected void parseItem(Node n) throws InvocationTargetException
 	{
-		int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
-		String className = n.getAttributes().getNamedItem("type").getNodeValue();
-		String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
+		final int itemId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
+		final String className = n.getAttributes().getNamedItem("type").getNodeValue();
+		final String itemName = n.getAttributes().getNamedItem("name").getNodeValue();
 		
 		_currentItem.id = itemId;
 		_currentItem.name = itemName;
@@ -109,7 +109,7 @@ public final class DocumentItem extends DocumentBase
 		_currentItem.set.set("item_id", itemId);
 		_currentItem.set.set("name", itemName);
 		
-		Node first = n.getFirstChild();
+		final Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("table".equalsIgnoreCase(n.getNodeName()))
@@ -136,9 +136,9 @@ public final class DocumentItem extends DocumentBase
 			else if ("cond".equalsIgnoreCase(n.getNodeName()))
 			{
 				makeItem();
-				Condition condition = parseCondition(n.getFirstChild(), _currentItem.item);
-				Node msg = n.getAttributes().getNamedItem("msg");
-				Node msgId = n.getAttributes().getNamedItem("msgId");
+				final Condition condition = parseCondition(n.getFirstChild(), _currentItem.item);
+				final Node msg = n.getAttributes().getNamedItem("msg");
+				final Node msgId = n.getAttributes().getNamedItem("msgId");
 				if ((condition != null) && (msg != null))
 				{
 					condition.setMessage(msg.getNodeValue());
@@ -146,7 +146,7 @@ public final class DocumentItem extends DocumentBase
 				else if ((condition != null) && (msgId != null))
 				{
 					condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-					Node addName = n.getAttributes().getNamedItem("addName");
+					final Node addName = n.getAttributes().getNamedItem("addName");
 					if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 					{
 						condition.addName();
@@ -167,7 +167,7 @@ public final class DocumentItem extends DocumentBase
 		}
 		try
 		{
-			Constructor<?> c = Class.forName("com.l2jserver.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
+			final Constructor<?> c = Class.forName("com.l2jserver.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
 			_currentItem.item = (L2Item) c.newInstance(_currentItem.set);
 		}
 		catch (Exception e)

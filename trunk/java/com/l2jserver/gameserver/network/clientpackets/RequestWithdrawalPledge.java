@@ -45,7 +45,7 @@ public final class RequestWithdrawalPledge extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -66,11 +66,11 @@ public final class RequestWithdrawalPledge extends L2GameClientPacket
 			return;
 		}
 		
-		L2Clan clan = activeChar.getClan();
+		final L2Clan clan = activeChar.getClan();
 		
 		clan.removeClanMember(activeChar.getObjectId(), System.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
 		sm.addString(activeChar.getName());
 		clan.broadcastToOnlineMembers(sm);
 		

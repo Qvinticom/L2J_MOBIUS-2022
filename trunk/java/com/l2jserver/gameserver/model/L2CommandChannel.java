@@ -49,7 +49,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	public L2CommandChannel(L2PcInstance leader)
 	{
 		_commandLeader = leader;
-		L2Party party = leader.getParty();
+		final L2Party party = leader.getParty();
 		_parties.add(party);
 		_channelLvl = party.getLevel();
 		party.setCommandChannel(this);

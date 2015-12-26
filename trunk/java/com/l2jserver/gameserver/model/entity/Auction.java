@@ -226,7 +226,7 @@ public class Auction
 	/** Task Manage */
 	private void startAutoTask()
 	{
-		long currentTime = System.currentTimeMillis();
+		final long currentTime = System.currentTimeMillis();
 		long taskDelay = 0;
 		if (_endDate <= currentTime)
 		{
@@ -463,7 +463,7 @@ public class Auction
 				/**
 				 * If seller haven't sell ClanHall, auction removed, THIS MUST BE CONFIRMED
 				 */
-				int aucId = ClanHallAuctionManager.getInstance().getAuctionIndex(_id);
+				final int aucId = ClanHallAuctionManager.getInstance().getAuctionIndex(_id);
 				ClanHallAuctionManager.getInstance().getAuctions().remove(aucId);
 				return;
 			}
@@ -473,7 +473,7 @@ public class Auction
 				returnItem(_sellerClanName, ClanHallManager.getInstance().getAuctionableHallById(_itemId).getLease(), false);
 			}
 			deleteAuctionFromDB();
-			L2Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			final L2Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
 			Clan.setAuctionBiddedAt(0, true);
 			removeBids();

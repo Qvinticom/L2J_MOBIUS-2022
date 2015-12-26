@@ -80,7 +80,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -255,12 +255,12 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		}
 		
 		final QuestState st = getQuestState(partyMember, false);
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
 			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
 			{
-				float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
+				final float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
 					st.giveItems(ORNITHOMIMUS_CLAW, 1);
@@ -272,7 +272,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		{
 			if (st.getQuestItemsCount(DEINONYCHUS_BONE) < 2)
 			{
-				float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
+				final float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
 					st.giveItems(DEINONYCHUS_BONE, 1);

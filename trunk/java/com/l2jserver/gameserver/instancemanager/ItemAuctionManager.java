@@ -69,7 +69,7 @@ public final class ItemAuctionManager
 				_auctionIds.set(rs.getInt(1) + 1);
 			}
 		}
-		catch (final SQLException e)
+		catch (SQLException e)
 		{
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
 		}

@@ -124,7 +124,7 @@ public class L2PetInstance extends L2Summon
 		_inventory = new PetInventory(this);
 		_inventory.restore();
 		
-		int npcId = template.getId();
+		final int npcId = template.getId();
 		_mountable = PetDataTable.isMountable(npcId);
 		getPetData();
 		getPetLevelData();
@@ -185,7 +185,7 @@ public class L2PetInstance extends L2Summon
 				
 				broadcastStatusUpdate();
 				
-				List<Integer> foodIds = getPetData().getFood();
+				final List<Integer> foodIds = getPetData().getFood();
 				if (foodIds.isEmpty())
 				{
 					if (isUncontrollable())
@@ -220,7 +220,7 @@ public class L2PetInstance extends L2Summon
 					final IItemHandler handler = ItemHandler.getInstance().getHandler(food.getEtcItem());
 					if (handler != null)
 					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1);
 						sm.addItemName(food.getId());
 						sendPacket(sm);
 						handler.useItem(L2PetInstance.this, food, false);
@@ -257,7 +257,7 @@ public class L2PetInstance extends L2Summon
 		}
 		final L2PetData data = PetDataTable.getInstance().getPetData(template.getId());
 		
-		L2PetInstance pet = restore(control, template, owner);
+		final L2PetInstance pet = restore(control, template, owner);
 		// add the pet instance to world
 		if (pet != null)
 		{
@@ -347,7 +347,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public L2Weapon getActiveWeaponItem()
 	{
-		L2ItemInstance weapon = getActiveWeaponInstance();
+		final L2ItemInstance weapon = getActiveWeaponInstance();
 		
 		if (weapon == null)
 		{
@@ -389,7 +389,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public boolean destroyItem(String process, int objectId, long count, L2Object reference, boolean sendMessage)
 	{
-		L2ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
+		final L2ItemInstance item = _inventory.destroyItem(process, objectId, count, getOwner(), reference);
 		
 		if (item == null)
 		{
@@ -402,7 +402,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// Send Pet inventory update packet
-		PetInventoryUpdate petIU = new PetInventoryUpdate();
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		petIU.addItem(item);
 		sendPacket(petIU);
 		
@@ -410,14 +410,14 @@ public class L2PetInstance extends L2Summon
 		{
 			if (count > 1)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sendPacket(sm);
 			}
@@ -437,7 +437,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public boolean destroyItemByItemId(String process, int itemId, long count, L2Object reference, boolean sendMessage)
 	{
-		L2ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
+		final L2ItemInstance item = _inventory.destroyItemByItemId(process, itemId, count, getOwner(), reference);
 		
 		if (item == null)
 		{
@@ -449,7 +449,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// Send Pet inventory update packet
-		PetInventoryUpdate petIU = new PetInventoryUpdate();
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		petIU.addItem(item);
 		sendPacket(petIU);
 		
@@ -457,14 +457,14 @@ public class L2PetInstance extends L2Summon
 		{
 			if (count > 1)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sm.addLong(count);
 				sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 				sm.addItemName(item.getId());
 				sendPacket(sm);
 			}
@@ -492,13 +492,13 @@ public class L2PetInstance extends L2Summon
 			return;
 		}
 		
-		boolean follow = getFollowStatus();
+		final boolean follow = getFollowStatus();
 		final L2ItemInstance target = (L2ItemInstance) object;
 		
 		// Cursed weapons
 		if (CursedWeaponsManager.getInstance().isCursed(target.getId()))
 		{
-			SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 			smsg.addItemName(target.getId());
 			sendPacket(smsg);
 			return;
@@ -575,7 +575,7 @@ public class L2PetInstance extends L2Summon
 		// Herbs
 		if (target.getItem().hasExImmediateEffect())
 		{
-			IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
+			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
 			if (handler == null)
 			{
 				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
@@ -650,7 +650,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public boolean doDie(L2Character killer)
 	{
-		L2PcInstance owner = getOwner();
+		final L2PcInstance owner = getOwner();
 		if ((owner != null) && !owner.isInDuel() && (!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE)))
 		{
 			deathPenalty();
@@ -704,9 +704,9 @@ public class L2PetInstance extends L2Summon
 	 */
 	public L2ItemInstance transferItem(String process, int objectId, long count, Inventory target, L2PcInstance actor, L2Object reference)
 	{
-		L2ItemInstance oldItem = getInventory().getItemByObjectId(objectId);
-		L2ItemInstance playerOldItem = target.getItemByItemId(oldItem.getId());
-		L2ItemInstance newItem = getInventory().transferItem(process, objectId, count, target, actor, reference);
+		final L2ItemInstance oldItem = getInventory().getItemByObjectId(objectId);
+		final L2ItemInstance playerOldItem = target.getItemByItemId(oldItem.getId());
+		final L2ItemInstance newItem = getInventory().transferItem(process, objectId, count, target, actor, reference);
 		
 		if (newItem == null)
 		{
@@ -714,7 +714,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// Send inventory update packet
-		PetInventoryUpdate petIU = new PetInventoryUpdate();
+		final PetInventoryUpdate petIU = new PetInventoryUpdate();
 		if ((oldItem.getCount() > 0) && (oldItem != newItem))
 		{
 			petIU.addModifiedItem(oldItem);
@@ -728,13 +728,13 @@ public class L2PetInstance extends L2Summon
 		// Send target update packet
 		if (!newItem.isStackable())
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addNewItem(newItem);
 			sendPacket(iu);
 		}
 		else if ((playerOldItem != null) && newItem.isStackable())
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(newItem);
 			sendPacket(iu);
 		}
@@ -765,7 +765,7 @@ public class L2PetInstance extends L2Summon
 				removedItem = owner.getInventory().destroyItem("PetDestroy", getControlObjectId(), 1, getOwner(), this);
 				if (removedItem != null)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 					sm.addItemName(removedItem);
 					owner.sendPacket(sm);
 				}
@@ -777,7 +777,7 @@ public class L2PetInstance extends L2Summon
 			}
 			else
 			{
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addRemovedItem(removedItem);
 				
 				owner.sendPacket(iu);
@@ -886,7 +886,7 @@ public class L2PetInstance extends L2Summon
 				pet.setName(rs.getString("name"));
 				
 				long exp = rs.getLong("exp");
-				L2PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
+				final L2PetLevelData info = PetDataTable.getInstance().getPetLevelData(pet.getId(), pet.getLevel());
 				// DS: update experience based by level
 				// Avoiding pet delevels due to exp per level values changed.
 				if ((info != null) && (exp < info.getPetMaxExp()))
@@ -985,7 +985,7 @@ public class L2PetInstance extends L2Summon
 			_logPet.log(Level.SEVERE, "Failed to store Pet [ObjectId: " + getObjectId() + "] data", e);
 		}
 		
-		L2ItemInstance itemInst = getControlItem();
+		final L2ItemInstance itemInst = getControlItem();
 		if ((itemInst != null) && (itemInst.getEnchantLevel() != getStat().getLevel()))
 		{
 			itemInst.setEnchantLevel(getStat().getLevel());
@@ -1082,7 +1082,7 @@ public class L2PetInstance extends L2Summon
 				{
 					while (rs.next())
 					{
-						int effectCurTime = rs.getInt("remaining_time");
+						final int effectCurTime = rs.getInt("remaining_time");
 						
 						final Skill skill = SkillData.getInstance().getSkill(rs.getInt("skill_id"), rs.getInt("skill_level"));
 						if (skill == null)
@@ -1167,11 +1167,11 @@ public class L2PetInstance extends L2Summon
 	{
 		// TODO: Need Correct Penalty
 		
-		int lvl = getStat().getLevel();
-		double percentLost = (-0.07 * lvl) + 6.5;
+		final int lvl = getStat().getLevel();
+		final double percentLost = (-0.07 * lvl) + 6.5;
 		
 		// Calculate the Experience loss
-		long lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
+		final long lostExp = Math.round(((getStat().getExpForLevel(lvl + 1) - getStat().getExpForLevel(lvl)) * percentLost) / 100);
 		
 		// Get the Experience before applying penalty
 		_expBeforeDeath = getStat().getExp();
@@ -1236,7 +1236,7 @@ public class L2PetInstance extends L2Summon
 	
 	public void updateRefOwner(L2PcInstance owner)
 	{
-		int oldOwnerId = getOwner().getObjectId();
+		final int oldOwnerId = getOwner().getObjectId();
 		
 		setOwner(owner);
 		L2World.getInstance().removePet(oldOwnerId);
@@ -1250,10 +1250,10 @@ public class L2PetInstance extends L2Summon
 	
 	public void refreshOverloaded()
 	{
-		int maxLoad = getMaxLoad();
+		final int maxLoad = getMaxLoad();
 		if (maxLoad > 0)
 		{
-			long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / maxLoad);
+			final long weightproc = (((getCurrentLoad() - getBonusWeightPenalty()) * 1000) / maxLoad);
 			int newWeightPenalty;
 			if ((weightproc < 500) || getOwner().getDietMode())
 			{
@@ -1319,7 +1319,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public final int getWeapon()
 	{
-		L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		if (weapon != null)
 		{
 			return weapon.getId();
@@ -1330,7 +1330,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public final int getArmor()
 	{
-		L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
 		if (weapon != null)
 		{
 			return weapon.getId();
@@ -1340,7 +1340,7 @@ public class L2PetInstance extends L2Summon
 	
 	public final int getJewel()
 	{
-		L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_NECK);
+		final L2ItemInstance weapon = getInventory().getPaperdollItem(Inventory.PAPERDOLL_NECK);
 		if (weapon != null)
 		{
 			return weapon.getId();
@@ -1371,7 +1371,7 @@ public class L2PetInstance extends L2Summon
 				// name not set yet
 				controlItem.setCustomType2(name != null ? 1 : 0);
 				controlItem.updateDatabase();
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(controlItem);
 				sendPacket(iu);
 			}

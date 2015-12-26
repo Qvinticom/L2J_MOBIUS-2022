@@ -61,7 +61,7 @@ public class QuestLink implements IBypassHandler
 		}
 		else
 		{
-			int questNameEnd = quest.indexOf(" ");
+			final int questNameEnd = quest.indexOf(" ");
 			if (questNameEnd == -1)
 			{
 				showQuestWindow(activeChar, (L2Npc) target, quest);

@@ -109,7 +109,7 @@ public class BlockList
 	
 	private static HashMap<Integer, String> loadList(int ObjId)
 	{
-		HashMap<Integer, String> list = new HashMap<>();
+		final HashMap<Integer, String> list = new HashMap<>();
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT friendId, memo FROM character_friends WHERE charId=? AND relation=1"))
 		{
@@ -124,7 +124,7 @@ public class BlockList
 					{
 						continue;
 					}
-					String memo = rs.getString("memo");
+					final String memo = rs.getString("memo");
 					list.put(friendId, memo);
 				}
 			}
@@ -183,13 +183,13 @@ public class BlockList
 	
 	public static boolean isBlocked(L2PcInstance listOwner, L2PcInstance target)
 	{
-		BlockList blockList = listOwner.getBlockList();
+		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(target);
 	}
 	
 	public static boolean isBlocked(L2PcInstance listOwner, int targetId)
 	{
-		BlockList blockList = listOwner.getBlockList();
+		final BlockList blockList = listOwner.getBlockList();
 		return blockList.isBlockAll() || blockList.isInBlockList(targetId);
 	}
 	
@@ -210,11 +210,11 @@ public class BlockList
 			return;
 		}
 		
-		String charName = CharNameTable.getInstance().getNameById(targetId);
+		final String charName = CharNameTable.getInstance().getNameById(targetId);
 		
 		if (listOwner.getFriendList().containsKey(targetId))
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			sm.addString(charName);
 			listOwner.sendPacket(sm);
 			return;
@@ -232,7 +232,7 @@ public class BlockList
 		sm.addString(charName);
 		listOwner.sendPacket(sm);
 		
-		L2PcInstance player = L2World.getInstance().getPlayer(targetId);
+		final L2PcInstance player = L2World.getInstance().getPlayer(targetId);
 		
 		if (player != null)
 		{
@@ -251,7 +251,7 @@ public class BlockList
 		
 		SystemMessage sm;
 		
-		String charName = CharNameTable.getInstance().getNameById(targetId);
+		final String charName = CharNameTable.getInstance().getNameById(targetId);
 		
 		if (!listOwner.getBlockList().getBlockList().containsKey(targetId))
 		{
@@ -294,7 +294,7 @@ public class BlockList
 	 */
 	public static boolean isInBlockList(int ownerId, int targetId)
 	{
-		L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
+		final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
 		if (player != null)
 		{
 			return BlockList.isBlocked(player, targetId);

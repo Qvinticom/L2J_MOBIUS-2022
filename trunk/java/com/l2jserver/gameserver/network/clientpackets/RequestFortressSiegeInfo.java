@@ -39,7 +39,7 @@ public class RequestFortressSiegeInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2GameClient client = getClient();
+		final L2GameClient client = getClient();
 		if (client != null)
 		{
 			for (Fort fort : FortManager.getInstance().getForts())

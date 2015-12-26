@@ -53,7 +53,7 @@ public class AirShipManager
 	
 	protected AirShipManager()
 	{
-		StatsSet npcDat = new StatsSet();
+		final StatsSet npcDat = new StatsSet();
 		npcDat.set("npcId", 9);
 		npcDat.set("level", 0);
 		npcDat.set("jClass", "boat");
@@ -223,7 +223,7 @@ public class AirShipManager
 			return;
 		}
 		
-		int dockId = ship.getDockId();
+		final int dockId = ship.getDockId();
 		if (!_teleports.containsKey(dockId))
 		{
 			return;
@@ -292,7 +292,7 @@ public class AirShipManager
 	
 	private void storeInDb(int ownerId)
 	{
-		StatsSet info = _airShipsInfo.get(ownerId);
+		final StatsSet info = _airShipsInfo.get(ownerId);
 		if (info == null)
 		{
 			return;

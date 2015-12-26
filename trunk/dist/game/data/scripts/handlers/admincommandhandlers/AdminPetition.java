@@ -102,15 +102,15 @@ public class AdminPetition implements IAdminCommandHandler
 		{
 			try
 			{
-				L2Object targetChar = activeChar.getTarget();
+				final L2Object targetChar = activeChar.getTarget();
 				if ((targetChar == null) || !(targetChar instanceof L2PcInstance))
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;
 				}
-				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
+				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
-				String val = command.substring(15);
+				final String val = command.substring(15);
 				
 				petitionId = PetitionManager.getInstance().submitPetition(targetPlayer, val, 9);
 				PetitionManager.getInstance().acceptPetition(activeChar, petitionId);

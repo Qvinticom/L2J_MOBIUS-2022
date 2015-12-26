@@ -63,7 +63,7 @@ public final class ShortCutRegister extends L2GameServerPacket
 				}
 				else
 				{
-					int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
+					final int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
 					writeH(_maxLevel);
 					writeH(_shortcut.getLevel());
 				}

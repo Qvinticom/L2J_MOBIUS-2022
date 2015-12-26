@@ -60,7 +60,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -82,7 +82,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 			reqSkillLvl = _skillLvl; // change route
 		}
 		
-		int playerSkillLvl = activeChar.getSkillLevel(_skillId);
+		final int playerSkillLvl = activeChar.getSkillLevel(_skillId);
 		
 		// dont have such skill
 		if (playerSkillLvl == -1)
@@ -93,7 +93,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		// if reqlvl is 100,200,.. check base skill lvl enchant
 		if ((reqSkillLvl % 1000) == 0)
 		{
-			L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
+			final L2EnchantSkillLearn esl = EnchantSkillGroupsData.getInstance().getSkillEnchantmentBySkillId(_skillId);
 			if (esl != null)
 			{
 				// if player dont have min level to enchant
@@ -118,7 +118,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		}
 		
 		// send skill enchantment detail
-		ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar);
+		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar);
 		activeChar.sendPacket(esd);
 	}
 	

@@ -58,7 +58,7 @@ public final class CpDamPercent extends AbstractEffect
 			info.getEffected().stopFakeDeath(true);
 		}
 		
-		int damage = (int) ((info.getEffected().getCurrentCp() * _power) / 100);
+		final int damage = (int) ((info.getEffected().getCurrentCp() * _power) / 100);
 		// Manage attack or cast break of the target (calculating rate, sending message)
 		if (!info.getEffected().isRaid() && Formulas.calcAtkBreak(info.getEffected(), damage))
 		{

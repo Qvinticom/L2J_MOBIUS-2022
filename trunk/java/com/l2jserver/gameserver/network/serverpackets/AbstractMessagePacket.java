@@ -440,7 +440,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 					}
 					else
 					{
-						int _maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
+						final int _maxLevel = SkillData.getInstance().getMaxLevel(_skillId);
 						writeH(_maxLevel);
 						writeH(_skillLevel);
 					}

@@ -92,7 +92,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					{
 						if (!st.hasMoreTokens())
 						{
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-add.htm");
+							final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-add.htm");
 							Util.sendCBHtml(activeChar, content);
 							break;
 						}
@@ -104,26 +104,26 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annInitDelay = st.nextToken();
+						final String annInitDelay = st.nextToken();
 						if (!Util.isDigit(annInitDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						int initDelay = Integer.parseInt(annInitDelay) * 1000;
+						final int initDelay = Integer.parseInt(annInitDelay) * 1000;
 						// ************************************
 						if (!st.hasMoreTokens())
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annDelay = st.nextToken();
+						final String annDelay = st.nextToken();
 						if (!Util.isDigit(annDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						int delay = Integer.parseInt(annDelay) * 1000;
+						final int delay = Integer.parseInt(annDelay) * 1000;
 						if ((delay < (10 * 1000)) && ((type == AnnouncementType.AUTO_NORMAL) || (type == AnnouncementType.AUTO_CRITICAL)))
 						{
 							activeChar.sendMessage("Delay cannot be less then 10 seconds!");
@@ -135,7 +135,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annRepeat = st.nextToken();
+						final String annRepeat = st.nextToken();
 						if (!Util.isDigit(annRepeat))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
@@ -178,13 +178,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces edit <id>");
 							break;
 						}
-						String annId = st.nextToken();
+						final String annId = st.nextToken();
 						if (!Util.isDigit(annId))
 						{
 							activeChar.sendMessage("Syntax: //announces edit <id>");
 							break;
 						}
-						int id = Integer.parseInt(annId);
+						final int id = Integer.parseInt(annId);
 						final IAnnouncement announce = AnnouncementsTable.getInstance().getAnnounce(id);
 						if (announce == null)
 						{
@@ -194,13 +194,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						if (!st.hasMoreTokens())
 						{
 							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-edit.htm");
-							String announcementId = "" + announce.getId();
-							String announcementType = announce.getType().name();
+							final String announcementId = "" + announce.getId();
+							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
 							String announcementDelay = "0";
 							String announcementRepeat = "0";
-							String announcementAuthor = announce.getAuthor();
-							String announcementContent = announce.getContent();
+							final String announcementAuthor = announce.getAuthor();
+							final String announcementContent = announce.getContent();
 							if (announce instanceof AutoAnnouncement)
 							{
 								final AutoAnnouncement autoAnnounce = (AutoAnnouncement) announce;
@@ -265,26 +265,26 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annInitDelay = st.nextToken();
+						final String annInitDelay = st.nextToken();
 						if (!Util.isDigit(annInitDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						int initDelay = Integer.parseInt(annInitDelay);
+						final int initDelay = Integer.parseInt(annInitDelay);
 						// ************************************
 						if (!st.hasMoreTokens())
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annDelay = st.nextToken();
+						final String annDelay = st.nextToken();
 						if (!Util.isDigit(annDelay))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						int delay = Integer.parseInt(annDelay);
+						final int delay = Integer.parseInt(annDelay);
 						if ((delay < 10) && ((type == AnnouncementType.AUTO_NORMAL) || (type == AnnouncementType.AUTO_CRITICAL)))
 						{
 							activeChar.sendMessage("Delay cannot be less then 10 seconds!");
@@ -296,7 +296,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
 							break;
 						}
-						String annRepeat = st.nextToken();
+						final String annRepeat = st.nextToken();
 						if (!Util.isDigit(annRepeat))
 						{
 							activeChar.sendMessage("Syntax: //announces add <type> <delay> <repeat> <text>");
@@ -327,7 +327,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						announce.setAuthor(activeChar.getName());
 						if (announce instanceof AutoAnnouncement)
 						{
-							AutoAnnouncement autoAnnounce = (AutoAnnouncement) announce;
+							final AutoAnnouncement autoAnnounce = (AutoAnnouncement) announce;
 							autoAnnounce.setInitial(initDelay * 1000);
 							autoAnnounce.setDelay(delay * 1000);
 							autoAnnounce.setRepeat(repeat);
@@ -343,13 +343,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces remove <announcement id>");
 							break;
 						}
-						String token = st.nextToken();
+						final String token = st.nextToken();
 						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces remove <announcement id>");
 							break;
 						}
-						int id = Integer.parseInt(token);
+						final int id = Integer.parseInt(token);
 						if (AnnouncementsTable.getInstance().deleteAnnouncement(id))
 						{
 							activeChar.sendMessage("Announcement has been successfully removed!");
@@ -375,13 +375,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Auto announcements has been successfully restarted");
 							break;
 						}
-						String token = st.nextToken();
+						final String token = st.nextToken();
 						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces show <announcement id>");
 							break;
 						}
-						int id = Integer.parseInt(token);
+						final int id = Integer.parseInt(token);
 						final IAnnouncement announce = AnnouncementsTable.getInstance().getAnnounce(id);
 						if (announce != null)
 						{
@@ -409,24 +409,24 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							activeChar.sendMessage("Syntax: //announces show <announcement id>");
 							break;
 						}
-						String token = st.nextToken();
+						final String token = st.nextToken();
 						if (!Util.isDigit(token))
 						{
 							activeChar.sendMessage("Syntax: //announces show <announcement id>");
 							break;
 						}
-						int id = Integer.parseInt(token);
+						final int id = Integer.parseInt(token);
 						final IAnnouncement announce = AnnouncementsTable.getInstance().getAnnounce(id);
 						if (announce != null)
 						{
 							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/admin/announces-show.htm");
-							String announcementId = "" + announce.getId();
-							String announcementType = announce.getType().name();
+							final String announcementId = "" + announce.getId();
+							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
 							String announcementDelay = "0";
 							String announcementRepeat = "0";
-							String announcementAuthor = announce.getAuthor();
-							String announcementContent = announce.getContent();
+							final String announcementAuthor = announce.getAuthor();
+							final String announcementContent = announce.getContent();
 							if (announce instanceof AutoAnnouncement)
 							{
 								final AutoAnnouncement autoAnnounce = (AutoAnnouncement) announce;

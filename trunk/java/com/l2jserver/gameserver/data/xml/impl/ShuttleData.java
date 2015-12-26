@@ -110,7 +110,7 @@ public final class ShuttleData implements IXmlReader
 									if ("stop".equalsIgnoreCase(a.getNodeName()))
 									{
 										attrs = a.getAttributes();
-										L2ShuttleStop stop = new L2ShuttleStop(parseInteger(attrs, "id"));
+										final L2ShuttleStop stop = new L2ShuttleStop(parseInteger(attrs, "id"));
 										
 										for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling())
 										{
@@ -131,7 +131,7 @@ public final class ShuttleData implements IXmlReader
 									if ("route".equalsIgnoreCase(a.getNodeName()))
 									{
 										attrs = a.getAttributes();
-										List<Location> locs = new ArrayList<>();
+										final List<Location> locs = new ArrayList<>();
 										for (Node z = a.getFirstChild(); z != null; z = z.getNextSibling())
 										{
 											if ("loc".equalsIgnoreCase(z.getNodeName()))
@@ -141,7 +141,7 @@ public final class ShuttleData implements IXmlReader
 											}
 										}
 										
-										VehiclePathPoint[] route = new VehiclePathPoint[locs.size()];
+										final VehiclePathPoint[] route = new VehiclePathPoint[locs.size()];
 										int i = 0;
 										for (Location loc : locs)
 										{

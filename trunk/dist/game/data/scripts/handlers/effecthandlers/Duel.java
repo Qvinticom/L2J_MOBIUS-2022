@@ -41,15 +41,15 @@ public final class Duel extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		L2PcInstance effector = info.getEffector().getActingPlayer();
-		L2PcInstance effected = info.getEffected().getActingPlayer();
+		final L2PcInstance effector = info.getEffector().getActingPlayer();
+		final L2PcInstance effected = info.getEffected().getActingPlayer();
 		
 		if (effected.isDead() || (effector == null) || (effected.getPvpFlag() == 0))
 		{
 			return;
 		}
 		
-		Skill skill = SkillData.getInstance().getSkill(10319, 1);
+		final Skill skill = SkillData.getInstance().getSkill(10319, 1);
 		skill.applyEffects(effector, effector);
 		
 		effector.setIsInvul(true);

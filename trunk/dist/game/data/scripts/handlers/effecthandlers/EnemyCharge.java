@@ -58,10 +58,10 @@ public final class EnemyCharge extends AbstractEffect
 		final int curZ = info.getEffector().getZ();
 		
 		// Calculate distance (dx,dy) between current position and destination
-		double dx = info.getEffected().getX() - curX;
-		double dy = info.getEffected().getY() - curY;
-		double dz = info.getEffected().getZ() - curZ;
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final double dx = info.getEffected().getX() - curX;
+		final double dy = info.getEffected().getY() - curY;
+		final double dz = info.getEffected().getZ() - curZ;
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
 			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
@@ -85,13 +85,13 @@ public final class EnemyCharge extends AbstractEffect
 		}
 		
 		// Calculate movement angles needed
-		double sin = dy / distance;
-		double cos = dx / distance;
+		final double sin = dy / distance;
+		final double cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		int x = curX + (int) ((distance - offset) * cos);
-		int y = curY + (int) ((distance - offset) * sin);
-		int z = info.getEffected().getZ();
+		final int x = curX + (int) ((distance - offset) * cos);
+		final int y = curY + (int) ((distance - offset) * sin);
+		final int z = info.getEffected().getZ();
 		
 		final Location destination = GeoData.getInstance().moveCheck(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
 		

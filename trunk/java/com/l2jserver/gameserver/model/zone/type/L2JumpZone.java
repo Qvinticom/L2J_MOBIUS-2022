@@ -83,7 +83,7 @@ public class L2JumpZone extends L2ZoneType
 		
 		if (character instanceof L2PcInstance)
 		{
-			L2PcInstance plr = (L2PcInstance) character;
+			final L2PcInstance plr = (L2PcInstance) character;
 			if (!plr.isAwaken() && !Config.FREE_JUMPS_FOR_ALL)
 			{
 				return;
@@ -117,8 +117,8 @@ public class L2JumpZone extends L2ZoneType
 	
 	protected void stopTask(L2Character character)
 	{
-		int poid = character.getObjectId();
-		Future<?> t = _task.get(poid);
+		final int poid = character.getObjectId();
+		final Future<?> t = _task.get(poid);
 		_task.remove(poid);
 		if (t != null)
 		{

@@ -49,7 +49,7 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = getClient().getActiveChar();
 		
 		if (_activeChar == null)
 		{
@@ -66,13 +66,13 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 		if (_activeChar.isInPartyMatchRoom())
 		{
 			// If Player is in Room show him room, not list
-			PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
+			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
 			if (_list == null)
 			{
 				return;
 			}
 			
-			PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
+			final PartyMatchRoom _room = _list.getPlayerRoom(_activeChar);
 			if (_room == null)
 			{
 				return;
@@ -91,7 +91,7 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 			PartyMatchWaitingList.getInstance().addPlayer(_activeChar);
 			
 			// Send Room list
-			ListPartyWating matchList = new ListPartyWating(_activeChar, _auto, _loc, _lvl);
+			final ListPartyWating matchList = new ListPartyWating(_activeChar, _auto, _loc, _lvl);
 			
 			_activeChar.sendPacket(matchList);
 		}

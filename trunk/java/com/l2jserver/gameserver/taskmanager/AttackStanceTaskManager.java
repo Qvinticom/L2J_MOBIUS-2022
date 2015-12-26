@@ -112,7 +112,7 @@ public class AttackStanceTaskManager
 		@Override
 		public void run()
 		{
-			long current = System.currentTimeMillis();
+			final long current = System.currentTimeMillis();
 			try
 			{
 				final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();

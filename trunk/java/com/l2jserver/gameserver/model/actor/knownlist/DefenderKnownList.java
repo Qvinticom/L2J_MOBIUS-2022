@@ -41,9 +41,9 @@ public class DefenderKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		Castle castle = getActiveChar().getCastle();
-		Fort fortress = getActiveChar().getFort();
-		SiegableHall hall = getActiveChar().getConquerableHall();
+		final Castle castle = getActiveChar().getCastle();
+		final Fort fortress = getActiveChar().getFort();
+		final SiegableHall hall = getActiveChar().getConquerableHall();
 		// Check if siege is in progress
 		if (((fortress != null) && fortress.getZone().isActive()) || ((castle != null) && castle.getZone().isActive()) || ((hall != null) && hall.getSiegeZone().isActive()))
 		{
@@ -52,7 +52,7 @@ public class DefenderKnownList extends AttackableKnownList
 			{
 				player = object.getActingPlayer();
 			}
-			int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : hall != null ? hall.getId() : 0));
+			final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : hall != null ? hall.getId() : 0));
 			
 			// Check if player is an enemy of this defender npc
 			if ((player != null) && (((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId)) || ((player.getSiegeState() == 1)) || (player.getSiegeState() == 0)))

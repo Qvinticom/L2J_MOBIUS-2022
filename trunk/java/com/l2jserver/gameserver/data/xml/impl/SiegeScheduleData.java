@@ -75,8 +75,8 @@ public class SiegeScheduleData implements IXmlReader
 							final NamedNodeMap attrs = cd.getAttributes();
 							for (int i = 0; i < attrs.getLength(); i++)
 							{
-								Node node = attrs.item(i);
-								String key = node.getNodeName();
+								final Node node = attrs.item(i);
+								final String key = node.getNodeName();
 								String val = node.getNodeValue();
 								if ("day".equals(key))
 								{

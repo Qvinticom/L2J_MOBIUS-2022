@@ -36,7 +36,7 @@ public final class ShortCutInit extends L2GameServerPacket
 			return;
 		}
 		
-		Shortcut[] tmp = activeChar.getAllShortCuts();
+		final Shortcut[] tmp = activeChar.getAllShortCuts();
 		_shortCuts = new ShortcutInfo[tmp.length];
 		
 		int index = -1;
@@ -55,25 +55,25 @@ public final class ShortCutInit extends L2GameServerPacket
 	private ShortcutInfo convert(L2PcInstance player, Shortcut shortCut)
 	{
 		ShortcutInfo shortcutInfo = null;
-		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
-		ShortcutType type = shortCut.getType();
-		int id = shortCut.getId();
+		final int page = shortCut.getSlot() + (shortCut.getPage() * 12);
+		final ShortcutType type = shortCut.getType();
+		final int id = shortCut.getId();
 		int characterType = 0;
 		
 		switch (type)
 		{
 			case ITEM:
-				int reuseGroup = -1,
-				currentReuse = 0,
-				reuse = 0,
-				augmentationId = 0;
+				int reuseGroup = -1;
+				final int currentReuse = 0,
+				reuse = 0;
+				int augmentationId = 0;
 				
 				characterType = shortCut.getCharacterType();
-				L2ItemInstance item = player.getInventory().getItemByObjectId(shortCut.getId());
+				final L2ItemInstance item = player.getInventory().getItemByObjectId(shortCut.getId());
 				
 				if (item != null)
 				{
-					L2Augmentation augmentation = item.getAugmentation();
+					final L2Augmentation augmentation = item.getAugmentation();
 					if (augmentation != null)
 					{
 						augmentationId = augmentation.getAugmentationId();
@@ -86,9 +86,9 @@ public final class ShortCutInit extends L2GameServerPacket
 				break;
 			
 			case SKILL:
-				int level = shortCut.getLevel();
-				int skillReuseGroup = shortCut.getSharedReuseGroup();
-				boolean isDisabled = false; // FIXME: To implement !!!
+				final int level = shortCut.getLevel();
+				final int skillReuseGroup = shortCut.getSharedReuseGroup();
+				final boolean isDisabled = false; // FIXME: To implement !!!
 				shortcutInfo = new SkillShortcutInfo(type, page, id, skillReuseGroup, level, isDisabled, characterType);
 				break;
 			
@@ -114,7 +114,7 @@ public final class ShortCutInit extends L2GameServerPacket
 			{
 				case ITEM:
 				{
-					ItemShortcutInfo item = (ItemShortcutInfo) sc;
+					final ItemShortcutInfo item = (ItemShortcutInfo) sc;
 					
 					writeD(item.getId());
 					writeD(item.getCharacterType());
@@ -128,7 +128,7 @@ public final class ShortCutInit extends L2GameServerPacket
 				}
 				case SKILL:
 				{
-					SkillShortcutInfo skill = (SkillShortcutInfo) sc;
+					final SkillShortcutInfo skill = (SkillShortcutInfo) sc;
 					
 					writeD(skill.getId());
 					if ((skill.getLevel() < 100) || (skill.getLevel() > 10000))
@@ -137,7 +137,7 @@ public final class ShortCutInit extends L2GameServerPacket
 					}
 					else
 					{
-						int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
+						final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getId());
 						writeH(maxLevel);
 						writeH(skill.getLevel());
 					}

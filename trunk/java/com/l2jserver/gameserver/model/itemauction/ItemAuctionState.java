@@ -41,7 +41,7 @@ public enum ItemAuctionState
 	
 	public static final ItemAuctionState stateForStateId(final byte stateId)
 	{
-		for (final ItemAuctionState state : ItemAuctionState.values())
+		for (ItemAuctionState state : ItemAuctionState.values())
 		{
 			if (state.getStateId() == stateId)
 			{

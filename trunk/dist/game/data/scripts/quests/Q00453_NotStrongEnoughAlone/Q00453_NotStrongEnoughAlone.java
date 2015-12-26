@@ -111,7 +111,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	
 	private void increaseKill(L2PcInstance player, L2Npc npc)
 	{
-		QuestState st = getQuestState(player, false);
+		final QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -143,7 +143,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					npcId = MONSTER1[3];
 				}
 				
-				int i = st.getInt(String.valueOf(npcId));
+				final int i = st.getInt(String.valueOf(npcId));
 				if (i < 15)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
@@ -172,7 +172,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					npcId = MONSTER2[2];
 				}
 				
-				int i = st.getInt(String.valueOf(npcId));
+				final int i = st.getInt(String.valueOf(npcId));
 				if (i < 20)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
@@ -200,7 +200,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					npcId = MONSTER3[2];
 				}
 				
-				int i = st.getInt(String.valueOf(npcId));
+				final int i = st.getInt(String.valueOf(npcId));
 				if (i < 20)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
@@ -220,8 +220,8 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = getQuestState(player, false);
+		final String htmltext = event;
+		final QuestState st = getQuestState(player, false);
 		
 		if (st == null)
 		{
@@ -269,7 +269,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
+		final QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
 		if (st == null)
 		{
 			return htmltext;

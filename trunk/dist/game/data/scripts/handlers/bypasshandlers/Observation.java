@@ -108,7 +108,7 @@ public class Observation implements IBypassHandler
 			return false;
 		}
 		
-		String _command = command.split(" ")[0].toLowerCase();
+		final String _command = command.split(" ")[0].toLowerCase();
 		final int param;
 		try
 		{
@@ -126,7 +126,7 @@ public class Observation implements IBypassHandler
 		}
 		final int[] locCost = LOCATIONS[param];
 		
-		Location loc = new Location(locCost[0], locCost[1], locCost[2]);
+		final Location loc = new Location(locCost[0], locCost[1], locCost[2]);
 		final long cost = locCost[3];
 		
 		switch (_command)

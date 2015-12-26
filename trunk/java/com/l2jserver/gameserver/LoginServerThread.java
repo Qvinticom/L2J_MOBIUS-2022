@@ -154,11 +154,11 @@ public class LoginServerThread extends Thread
 				// Connection
 				_log.info("Connecting to login on " + _hostname + ":" + _port);
 				_loginSocket = new Socket(_hostname, _port);
-				InputStream in = _loginSocket.getInputStream();
+				final InputStream in = _loginSocket.getInputStream();
 				_out = new BufferedOutputStream(_loginSocket.getOutputStream());
 				
 				// init Blowfish
-				byte[] blowfishKey = Util.generateHex(40);
+				final byte[] blowfishKey = Util.generateHex(40);
 				// Protect the new blowfish key what cannot begin with zero
 				if (blowfishKey[0] == 0)
 				{
@@ -177,7 +177,7 @@ public class LoginServerThread extends Thread
 						break;
 					}
 					
-					byte[] incoming = new byte[length - 2];
+					final byte[] incoming = new byte[length - 2];
 					
 					int receivedBytes = 0;
 					int newBytes = 0;
@@ -205,11 +205,11 @@ public class LoginServerThread extends Thread
 						break;
 					}
 					
-					int packetType = incoming[0] & 0xff;
+					final int packetType = incoming[0] & 0xff;
 					switch (packetType)
 					{
 						case 0x00:
-							InitLS init = new InitLS(incoming);
+							final InitLS init = new InitLS(incoming);
 							if (init.getRevision() != REVISION)
 							{
 								// TODO: revision mismatch
@@ -221,9 +221,9 @@ public class LoginServerThread extends Thread
 							
 							try
 							{
-								KeyFactory kfac = KeyFactory.getInstance("RSA");
-								BigInteger modulus = new BigInteger(init.getRSAKey());
-								RSAPublicKeySpec kspec1 = new RSAPublicKeySpec(modulus, RSAKeyGenParameterSpec.F4);
+								final KeyFactory kfac = KeyFactory.getInstance("RSA");
+								final BigInteger modulus = new BigInteger(init.getRSAKey());
+								final RSAPublicKeySpec kspec1 = new RSAPublicKeySpec(modulus, RSAKeyGenParameterSpec.F4);
 								publicKey = (RSAPublicKey) kfac.generatePublic(kspec1);
 							}
 							catch (GeneralSecurityException e)
@@ -238,17 +238,17 @@ public class LoginServerThread extends Thread
 							sendPacket(new AuthRequest(_requestID, _acceptAlternate, _hexID, _gamePort, _reserveHost, _maxPlayer, _subnets, _hosts));
 							break;
 						case 0x01:
-							LoginServerFail lsf = new LoginServerFail(incoming);
+							final LoginServerFail lsf = new LoginServerFail(incoming);
 							_log.info("Damn! Registeration Failed: " + lsf.getReasonString());
 							// login will close the connection here
 							break;
 						case 0x02:
-							AuthResponse aresp = new AuthResponse(incoming);
-							int serverID = aresp.getServerId();
+							final AuthResponse aresp = new AuthResponse(incoming);
+							final int serverID = aresp.getServerId();
 							_serverName = aresp.getServerName();
 							Config.saveHexid(serverID, hexToString(_hexID));
 							_log.info("Registered on login as Server " + serverID + " : " + _serverName);
-							ServerStatus st = new ServerStatus();
+							final ServerStatus st = new ServerStatus();
 							if (Config.SERVER_LIST_BRACKET)
 							{
 								st.addAttribute(ServerStatus.SERVER_LIST_SQUARE_BRACKET, ServerStatus.ON);
@@ -290,8 +290,8 @@ public class LoginServerThread extends Thread
 							}
 							break;
 						case 0x03:
-							PlayerAuthResponse par = new PlayerAuthResponse(incoming);
-							String account = par.getAccount();
+							final PlayerAuthResponse par = new PlayerAuthResponse(incoming);
+							final String account = par.getAccount();
 							WaitingClient wcToRemove = null;
 							synchronized (_waitingClients)
 							{
@@ -307,11 +307,11 @@ public class LoginServerThread extends Thread
 							{
 								if (par.isAuthed())
 								{
-									PlayerInGame pig = new PlayerInGame(par.getAccount());
+									final PlayerInGame pig = new PlayerInGame(par.getAccount());
 									sendPacket(pig);
 									wcToRemove.gameClient.setState(GameClientState.AUTHED);
 									wcToRemove.gameClient.setSessionId(wcToRemove.session);
-									CharSelectionInfo cl = new CharSelectionInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
+									final CharSelectionInfo cl = new CharSelectionInfo(wcToRemove.account, wcToRemove.gameClient.getSessionId().playOkID1);
 									wcToRemove.gameClient.getConnection().sendPacket(cl);
 									wcToRemove.gameClient.setCharSelection(cl.getCharInfo());
 								}
@@ -326,11 +326,11 @@ public class LoginServerThread extends Thread
 							}
 							break;
 						case 0x04:
-							KickPlayer kp = new KickPlayer(incoming);
+							final KickPlayer kp = new KickPlayer(incoming);
 							doKickPlayer(kp.getAccount());
 							break;
 						case 0x05:
-							RequestCharacters rc = new RequestCharacters(incoming);
+							final RequestCharacters rc = new RequestCharacters(incoming);
 							getCharsOnServer(rc.getAccount());
 							break;
 						case 0x06:
@@ -385,12 +385,12 @@ public class LoginServerThread extends Thread
 	 */
 	public void addWaitingClientAndSendRequest(String acc, L2GameClient client, SessionKey key)
 	{
-		WaitingClient wc = new WaitingClient(acc, client, key);
+		final WaitingClient wc = new WaitingClient(acc, client, key);
 		synchronized (_waitingClients)
 		{
 			_waitingClients.add(wc);
 		}
-		PlayerAuthRequest par = new PlayerAuthRequest(acc, key);
+		final PlayerAuthRequest par = new PlayerAuthRequest(acc, key);
 		try
 		{
 			sendPacket(par);
@@ -434,7 +434,7 @@ public class LoginServerThread extends Thread
 		{
 			return;
 		}
-		PlayerLogout pl = new PlayerLogout(account);
+		final PlayerLogout pl = new PlayerLogout(account);
 		try
 		{
 			sendPacket(pl);
@@ -467,7 +467,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendAccessLevel(String account, int level)
 	{
-		ChangeAccessLevel cal = new ChangeAccessLevel(account, level);
+		final ChangeAccessLevel cal = new ChangeAccessLevel(account, level);
 		try
 		{
 			sendPacket(cal);
@@ -484,7 +484,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendClientTracert(String account, String[] address)
 	{
-		PlayerTracert ptc = new PlayerTracert(account, address[0], address[1], address[2], address[3], address[4]);
+		final PlayerTracert ptc = new PlayerTracert(account, address[0], address[1], address[2], address[3], address[4]);
 		try
 		{
 			sendPacket(ptc);
@@ -502,7 +502,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendMail(String account, String mailId, String... args)
 	{
-		SendMail sem = new SendMail(account, mailId, args);
+		final SendMail sem = new SendMail(account, mailId, args);
 		try
 		{
 			sendPacket(sem);
@@ -520,7 +520,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendTempBan(String account, String ip, long time)
 	{
-		TempBan tbn = new TempBan(account, ip, time);
+		final TempBan tbn = new TempBan(account, ip, time);
 		try
 		{
 			sendPacket(tbn);
@@ -546,10 +546,10 @@ public class LoginServerThread extends Thread
 	 */
 	public void doKickPlayer(String account)
 	{
-		L2GameClient client = _accountsInGameServer.get(account);
+		final L2GameClient client = _accountsInGameServer.get(account);
 		if (client != null)
 		{
-			LogRecord record = new LogRecord(Level.WARNING, "Kicked by login");
+			final LogRecord record = new LogRecord(Level.WARNING, "Kicked by login");
 			record.setParameters(new Object[]
 			{
 				client
@@ -568,7 +568,7 @@ public class LoginServerThread extends Thread
 	{
 		
 		int chars = 0;
-		List<Long> charToDel = new ArrayList<>();
+		final List<Long> charToDel = new ArrayList<>();
 		try (Connection con = ConnectionFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?"))
 		{
@@ -578,7 +578,7 @@ public class LoginServerThread extends Thread
 				while (rs.next())
 				{
 					chars++;
-					long delTime = rs.getLong("deletetime");
+					final long delTime = rs.getLong("deletetime");
 					if (delTime != 0)
 					{
 						charToDel.add(delTime);
@@ -591,7 +591,7 @@ public class LoginServerThread extends Thread
 			_log.log(Level.WARNING, "Exception: getCharsOnServer: " + e.getMessage(), e);
 		}
 		
-		ReplyCharacters rec = new ReplyCharacters(account, chars, charToDel);
+		final ReplyCharacters rec = new ReplyCharacters(account, chars, charToDel);
 		try
 		{
 			sendPacket(rec);
@@ -608,11 +608,11 @@ public class LoginServerThread extends Thread
 	 */
 	private void sendPacket(BaseSendablePacket sl) throws IOException
 	{
-		byte[] data = sl.getContent();
+		final byte[] data = sl.getContent();
 		NewCrypt.appendChecksum(data);
 		_blowfish.crypt(data, 0, data.length);
 		
-		int len = data.length + 2;
+		final int len = data.length + 2;
 		synchronized (_out) // avoids tow threads writing in the mean time
 		{
 			_out.write(len & 0xff);
@@ -648,7 +648,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendServerStatus(int id, int value)
 	{
-		ServerStatus ss = new ServerStatus();
+		final ServerStatus ss = new ServerStatus();
 		ss.addAttribute(id, value);
 		try
 		{
@@ -664,7 +664,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendServerType()
 	{
-		ServerStatus ss = new ServerStatus();
+		final ServerStatus ss = new ServerStatus();
 		ss.addAttribute(ServerStatus.SERVER_TYPE, Config.SERVER_LIST_TYPE);
 		try
 		{
@@ -684,7 +684,7 @@ public class LoginServerThread extends Thread
 	 */
 	public void sendChangePassword(String accountName, String charName, String oldpass, String newpass)
 	{
-		ChangePassword cp = new ChangePassword(accountName, charName, oldpass, newpass);
+		final ChangePassword cp = new ChangePassword(accountName, charName, oldpass, newpass);
 		try
 		{
 			sendPacket(cp);

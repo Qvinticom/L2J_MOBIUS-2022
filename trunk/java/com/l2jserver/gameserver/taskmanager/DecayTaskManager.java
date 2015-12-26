@@ -148,7 +148,7 @@ public final class DecayTaskManager
 	@Override
 	public String toString()
 	{
-		StringBuilder ret = new StringBuilder();
+		final StringBuilder ret = new StringBuilder();
 		ret.append("============= DecayTask Manager Report ============");
 		ret.append(Config.EOL);
 		ret.append("Tasks count: ");

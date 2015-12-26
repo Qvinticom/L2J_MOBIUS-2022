@@ -126,7 +126,7 @@ public class AutoSpawnHandler
 			{
 				// Register random spawn group, set various options on the
 				// created spawn instance.
-				AutoSpawnInstance spawnInst = registerSpawn(rs.getInt("npcId"), rs.getInt("initialDelay"), rs.getInt("respawnDelay"), rs.getInt("despawnDelay"));
+				final AutoSpawnInstance spawnInst = registerSpawn(rs.getInt("npcId"), rs.getInt("initialDelay"), rs.getInt("respawnDelay"), rs.getInt("despawnDelay"));
 				
 				spawnInst.setSpawnCount(rs.getInt("count"));
 				spawnInst.setBroadcast(rs.getBoolean("broadcastSpawn"));
@@ -179,7 +179,7 @@ public class AutoSpawnHandler
 			despawnDelay = DEFAULT_DESPAWN;
 		}
 		
-		AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay, respawnDelay, despawnDelay);
+		final AutoSpawnInstance newSpawn = new AutoSpawnInstance(npcId, initialDelay, respawnDelay, despawnDelay);
 		
 		if (spawnPoints != null)
 		{
@@ -189,7 +189,7 @@ public class AutoSpawnHandler
 			}
 		}
 		
-		int newId = IdFactory.getInstance().getNextId();
+		final int newId = IdFactory.getInstance().getNextId();
 		newSpawn._objectId = newId;
 		_registeredSpawns.put(newId, newSpawn);
 		
@@ -230,7 +230,7 @@ public class AutoSpawnHandler
 			_registeredSpawns.remove(spawnInst.getId());
 			
 			// Cancel the currently associated running scheduled task.
-			ScheduledFuture<?> respawnTask = _runningSpawns.remove(spawnInst._objectId);
+			final ScheduledFuture<?> respawnTask = _runningSpawns.remove(spawnInst._objectId);
 			respawnTask.cancel(false);
 		}
 		catch (Exception e)
@@ -263,7 +263,7 @@ public class AutoSpawnHandler
 			return;
 		}
 		
-		int objectId = spawnInst._objectId;
+		final int objectId = spawnInst._objectId;
 		
 		if (isSpawnRegistered(objectId))
 		{
@@ -271,7 +271,7 @@ public class AutoSpawnHandler
 			
 			if (isActive)
 			{
-				AutoSpawner rs = new AutoSpawner(objectId);
+				final AutoSpawner rs = new AutoSpawner(objectId);
 				
 				if (spawnInst._desDelay > 0)
 				{
@@ -286,7 +286,7 @@ public class AutoSpawnHandler
 			}
 			else
 			{
-				AutoDespawner rd = new AutoDespawner(objectId);
+				final AutoDespawner rd = new AutoDespawner(objectId);
 				spawnTask = _runningSpawns.remove(objectId);
 				
 				if (spawnTask != null)
@@ -327,7 +327,7 @@ public class AutoSpawnHandler
 	 */
 	public final long getTimeToNextSpawn(AutoSpawnInstance spawnInst)
 	{
-		int objectId = spawnInst.getObjectId();
+		final int objectId = spawnInst.getObjectId();
 		
 		if (!isSpawnRegistered(objectId))
 		{
@@ -419,7 +419,7 @@ public class AutoSpawnHandler
 			try
 			{
 				// Retrieve the required spawn instance for this spawn task.
-				AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
+				final AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
 				
 				// If the spawn is not scheduled to be active, cancel the spawn
 				// task.
@@ -428,7 +428,7 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				Location[] locationList = spawnInst.getLocationList();
+				final Location[] locationList = spawnInst.getLocationList();
 				
 				// If there are no set co-ordinates, cancel the spawn task.
 				if (locationList.length == 0)
@@ -437,7 +437,7 @@ public class AutoSpawnHandler
 					return;
 				}
 				
-				int locationCount = locationList.length;
+				final int locationCount = locationList.length;
 				int locationIndex = Rnd.nextInt(locationCount);
 				
 				// If random spawning is disabled, the spawn at the next set of co-ordinates after the last.
@@ -500,7 +500,7 @@ public class AutoSpawnHandler
 				
 				if (npcInst != null)
 				{
-					String nearestTown = MapRegionManager.getInstance().getClosestTownName(npcInst);
+					final String nearestTown = MapRegionManager.getInstance().getClosestTownName(npcInst);
 					
 					// Announce to all players that the spawn has taken place, with the nearest town location.
 					if (spawnInst.isBroadcasting())
@@ -512,7 +512,7 @@ public class AutoSpawnHandler
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
-					AutoDespawner rd = new AutoDespawner(_objectId);
+					final AutoDespawner rd = new AutoDespawner(_objectId);
 					ThreadPoolManager.getInstance().scheduleAi(rd, spawnInst.getDespawnDelay() - 1000);
 				}
 			}
@@ -542,7 +542,7 @@ public class AutoSpawnHandler
 		{
 			try
 			{
-				AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
+				final AutoSpawnInstance spawnInst = _registeredSpawns.get(_objectId);
 				
 				if (spawnInst == null)
 				{

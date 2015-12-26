@@ -44,9 +44,9 @@ public class MyBirthday implements IUserCommandHandler
 			return false;
 		}
 		
-		Calendar date = activeChar.getCreateDate();
+		final Calendar date = activeChar.getCreateDate();
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_BIRTHDAY_IS_S3_S4_S2);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_BIRTHDAY_IS_S3_S4_S2);
 		sm.addPcName(activeChar);
 		sm.addString(Integer.toString(date.get(Calendar.YEAR)));
 		sm.addString(Integer.toString(date.get(Calendar.MONTH) + 1));

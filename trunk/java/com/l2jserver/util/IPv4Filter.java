@@ -41,7 +41,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	public IPv4Filter()
 	{
 		_ipFloodMap = new HashMap<>();
-		Thread t = new Thread(this, getClass().getSimpleName());
+		final Thread t = new Thread(this, getClass().getSimpleName());
 		t.setDaemon(true);
 		t.start();
 	}
@@ -78,7 +78,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 		}
 		
 		final int h = hash(addr.getAddress());
-		long current = System.currentTimeMillis();
+		final long current = System.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)
 		{
@@ -125,13 +125,13 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	{
 		while (true)
 		{
-			long reference = System.currentTimeMillis() - (1000 * 300);
+			final long reference = System.currentTimeMillis() - (1000 * 300);
 			synchronized (_ipFloodMap)
 			{
-				Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();
+				final Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();
 				while (it.hasNext())
 				{
-					Flood f = it.next().getValue();
+					final Flood f = it.next().getValue();
 					if (f.lastAccess < reference)
 					{
 						it.remove();

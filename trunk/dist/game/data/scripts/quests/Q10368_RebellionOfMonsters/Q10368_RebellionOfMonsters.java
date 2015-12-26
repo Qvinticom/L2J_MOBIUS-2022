@@ -150,7 +150,7 @@ public class Q10368_RebellionOfMonsters extends Quest
 				qs.set(Integer.toString(npc.getId()), kills);
 			}
 			
-			ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			log.addNpc(WEARY_JAGUAR, qs.getInt(Integer.toString(WEARY_JAGUAR)));
 			log.addNpc(WEARY_JAGUAR_SCOUT, qs.getInt(Integer.toString(WEARY_JAGUAR_SCOUT)));
 			log.addNpc(ANT_SOLDIER, qs.getInt(Integer.toString(ANT_SOLDIER)));

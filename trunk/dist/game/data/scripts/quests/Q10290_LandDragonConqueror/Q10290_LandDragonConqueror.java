@@ -80,11 +80,11 @@ public final class Q10290_LandDragonConqueror extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		Function<L2PcInstance, Boolean> rewardCheck = p ->
+		final Function<L2PcInstance, Boolean> rewardCheck = p ->
 		{
 			if (Util.checkIfInRange(8000, npc, p, false))
 			{
-				QuestState st = getQuestState(p, false);
+				final QuestState st = getQuestState(p, false);
 				
 				if ((st != null) && st.isCond(1) && st.hasQuestItems(SHABBY_NECKLACE))
 				{

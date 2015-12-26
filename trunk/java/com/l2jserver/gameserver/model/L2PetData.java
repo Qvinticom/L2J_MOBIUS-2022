@@ -202,7 +202,7 @@ public class L2PetData
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
-				int maxLvl = SkillData.getInstance().getMaxLevel(temp.getSkillId());
+				final int maxLvl = SkillData.getInstance().getMaxLevel(temp.getSkillId());
 				if (lvl > maxLvl)
 				{
 					lvl = maxLvl;

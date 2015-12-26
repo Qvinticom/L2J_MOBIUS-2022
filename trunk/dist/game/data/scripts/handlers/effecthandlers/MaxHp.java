@@ -102,7 +102,7 @@ public final class MaxHp extends AbstractEffect
 		}
 		if (_heal)
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED);
 			sm.addInt((int) amount);
 			effected.sendPacket(sm);
 		}

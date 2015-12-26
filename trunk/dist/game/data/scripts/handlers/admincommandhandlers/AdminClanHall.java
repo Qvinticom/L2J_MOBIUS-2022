@@ -66,7 +66,7 @@ public class AdminClanHall implements IAdminCommandHandler
 				player = activeChar.getTarget().getActingPlayer();
 			}
 			
-			String val = st.nextToken();
+			final String val = st.nextToken();
 			if (command.startsWith("admin_clanhall"))
 			{
 				if (Util.isDigit(val))

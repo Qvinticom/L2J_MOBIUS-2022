@@ -63,7 +63,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x09); // packet id
-		int size = (_characterPackages.size());
+		final int size = (_characterPackages.size());
 		writeD(size); // How many char there is on this account
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
@@ -186,7 +186,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 			{
 				while (charList.next())// fills the package
 				{
-					CharSelectInfoPackage charInfopackage = restoreChar(charList);
+					final CharSelectInfoPackage charInfopackage = restoreChar(charList);
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
@@ -227,16 +227,16 @@ public class CharSelectionInfo extends L2GameServerPacket
 	
 	private static CharSelectInfoPackage restoreChar(ResultSet chardata) throws Exception
 	{
-		int objectId = chardata.getInt("charId");
-		String name = chardata.getString("char_name");
+		final int objectId = chardata.getInt("charId");
+		final String name = chardata.getString("char_name");
 		
 		// See if the char must be deleted
-		long deletetime = chardata.getLong("deletetime");
+		final long deletetime = chardata.getLong("deletetime");
 		if (deletetime > 0)
 		{
 			if (System.currentTimeMillis() > deletetime)
 			{
-				L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+				final L2Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
 				if (clan != null)
 				{
 					clan.removeClanMember(objectId, 0);
@@ -321,7 +321,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 				{
 					if (result.next())
 					{
-						int augment = result.getInt("augAttributes");
+						final int augment = result.getInt("augAttributes");
 						charInfopackage.setAugmentationId(augment == -1 ? 0 : augment);
 					}
 				}

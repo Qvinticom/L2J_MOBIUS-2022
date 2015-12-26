@@ -89,7 +89,7 @@ public class L2NpcInstance extends L2Npc
 				final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, SkillTreesData.getInstance().getCollectSkillTree());
 				if (minLevel > 0)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 					sm.addInt(minLevel);
 					player.sendPacket(sm);
 				}
@@ -130,7 +130,7 @@ public class L2NpcInstance extends L2Npc
 			final int minLevel = SkillTreesData.getInstance().getMinLevelForNewSkill(player, skillTree);
 			if (minLevel > 0)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
 				sm.addInt(minLevel);
 				player.sendPacket(sm);
 			}
@@ -138,7 +138,7 @@ public class L2NpcInstance extends L2Npc
 			{
 				if (player.getClassId().level() == 1)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN_PLEASE_COME_BACK_AFTER_S1ND_CLASS_CHANGE);
 					sm.addInt(2);
 					player.sendPacket(sm);
 				}

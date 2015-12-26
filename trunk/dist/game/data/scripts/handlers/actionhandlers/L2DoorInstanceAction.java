@@ -42,7 +42,7 @@ public class L2DoorInstanceAction implements IActionHandler
 		}
 		else if (interact)
 		{
-			L2DoorInstance door = (L2DoorInstance) target;
+			final L2DoorInstance door = (L2DoorInstance) target;
 			// MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
 			// activeChar.sendPacket(my);
 			if (target.isAutoAttackable(activeChar))

@@ -114,7 +114,7 @@ public final class Formulas
 	 */
 	public static Calculator[] getStdNPCCalculators()
 	{
-		Calculator[] std = new Calculator[Stats.NUM_STATS];
+		final Calculator[] std = new Calculator[Stats.NUM_STATS];
 		
 		if (!Config.IGNORE_NPC_STAT_FORMULAS)
 		{
@@ -251,9 +251,9 @@ public final class Formulas
 		
 		if (cha.isPlayer())
 		{
-			L2PcInstance player = cha.getActingPlayer();
+			final L2PcInstance player = cha.getActingPlayer();
 			
-			double siegeModifier = calcSiegeRegenModifier(player);
+			final double siegeModifier = calcSiegeRegenModifier(player);
 			if (siegeModifier > 0)
 			{
 				hpRegenMultiplier *= siegeModifier;
@@ -261,12 +261,12 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0))
 			{
-				L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
-				int posChIndex = zone == null ? -1 : zone.getResidenceId();
-				int clanHallIndex = player.getClan().getHideoutId();
+				final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+				final int posChIndex = zone == null ? -1 : zone.getResidenceId();
+				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
-					ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
+					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
 					if (clansHall != null)
 					{
 						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null)
@@ -279,12 +279,12 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
-				int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
-				int castleIndex = player.getClan().getCastleId();
+				final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+				final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
+				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
 				{
-					Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
+					final Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
 					if (castle != null)
 					{
 						if (castle.getFunction(Castle.FUNC_RESTORE_HP) != null)
@@ -297,12 +297,12 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
 			{
-				L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
-				int posFortIndex = zone == null ? -1 : zone.getResidenceId();
-				int fortIndex = player.getClan().getFortId();
+				final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
+				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
 				{
-					Fort fort = FortManager.getInstance().getFortById(fortIndex);
+					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
 					if (fort != null)
 					{
 						if (fort.getFunction(Fort.FUNC_RESTORE_HP) != null)
@@ -316,8 +316,8 @@ public final class Formulas
 			// Mother Tree effect is calculated at last
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
-				L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
-				int hpBonus = zone == null ? 0 : zone.getHpRegenBonus();
+				final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+				final int hpBonus = zone == null ? 0 : zone.getHpRegenBonus();
 				hpRegenBonus += hpBonus;
 			}
 			
@@ -359,24 +359,24 @@ public final class Formulas
 		
 		if (cha.isPlayer())
 		{
-			L2PcInstance player = cha.getActingPlayer();
+			final L2PcInstance player = cha.getActingPlayer();
 			
 			// Mother Tree effect is calculated at last'
 			if (player.isInsideZone(ZoneId.MOTHER_TREE))
 			{
-				L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
-				int mpBonus = zone == null ? 0 : zone.getMpRegenBonus();
+				final L2MotherTreeZone zone = ZoneManager.getInstance().getZone(player, L2MotherTreeZone.class);
+				final int mpBonus = zone == null ? 0 : zone.getMpRegenBonus();
 				mpRegenBonus += mpBonus;
 			}
 			
 			if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0))
 			{
-				L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
-				int posChIndex = zone == null ? -1 : zone.getResidenceId();
-				int clanHallIndex = player.getClan().getHideoutId();
+				final L2ClanHallZone zone = ZoneManager.getInstance().getZone(player, L2ClanHallZone.class);
+				final int posChIndex = zone == null ? -1 : zone.getResidenceId();
+				final int clanHallIndex = player.getClan().getHideoutId();
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
-					ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
+					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
 					if (clansHall != null)
 					{
 						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null)
@@ -389,12 +389,12 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 			{
-				L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
-				int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
-				int castleIndex = player.getClan().getCastleId();
+				final L2CastleZone zone = ZoneManager.getInstance().getZone(player, L2CastleZone.class);
+				final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
+				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
 				{
-					Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
+					final Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
 					if (castle != null)
 					{
 						if (castle.getFunction(Castle.FUNC_RESTORE_MP) != null)
@@ -407,12 +407,12 @@ public final class Formulas
 			
 			if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0))
 			{
-				L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
-				int posFortIndex = zone == null ? -1 : zone.getResidenceId();
-				int fortIndex = player.getClan().getFortId();
+				final L2FortZone zone = ZoneManager.getInstance().getZone(player, L2FortZone.class);
+				final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
+				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
 				{
-					Fort fort = FortManager.getInstance().getFortById(fortIndex);
+					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
 					if (fort != null)
 					{
 						if (fort.getFunction(Fort.FUNC_RESTORE_MP) != null)
@@ -482,13 +482,13 @@ public final class Formulas
 			return 0;
 		}
 		
-		Siege siege = SiegeManager.getInstance().getSiege(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		final Siege siege = SiegeManager.getInstance().getSiege(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 		if ((siege == null) || !siege.isInProgress())
 		{
 			return 0;
 		}
 		
-		L2SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
+		final L2SiegeClan siegeClan = siege.getAttackerClan(activeChar.getClan().getId());
 		if ((siegeClan == null) || siegeClan.getFlag().isEmpty() || !Util.checkIfInRange(200, activeChar, siegeClan.getFlag().get(0), true))
 		{
 			return 0;
@@ -516,10 +516,10 @@ public final class Formulas
 		
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
-		double power = skill.getPower(isPvP, isPvE);
+		final double power = skill.getPower(isPvP, isPvE);
 		double damage = 0;
-		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed);
-		double ssboost = ss ? 1.458 : 1;
+		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed);
+		final double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
 		if (isPvP)
@@ -531,23 +531,23 @@ public final class Formulas
 		}
 		
 		// Initial damage
-		double baseMod = ((77 * (power + (attacker.getPAtk(target) * ssboost))) / defence);
+		final double baseMod = ((77 * (power + (attacker.getPAtk(target) * ssboost))) / defence);
 		// Critical
-		double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
-		double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
-		double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
-		double criticalAddMod = ((attacker.getStat().calcStat(Stats.CRITICAL_DAMAGE_ADD, 0) * 6.1 * 77) / defence);
-		double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
+		final double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
+		final double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalAddMod = ((attacker.getStat().calcStat(Stats.CRITICAL_DAMAGE_ADD, 0) * 6.1 * 77) / defence);
+		final double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		// Trait, elements
-		double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
-		double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
-		double attributeMod = calcAttributeBonus(attacker, target, skill);
-		double weaponMod = attacker.getRandomDamageMultiplier();
+		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
+		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+		final double attributeMod = calcAttributeBonus(attacker, target, skill);
+		final double weaponMod = attacker.getRandomDamageMultiplier();
 		
 		double penaltyMod = 1;
 		if ((target instanceof L2Attackable) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 		{
-			int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
 			{
 				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
@@ -607,11 +607,11 @@ public final class Formulas
 			}
 		}
 		
-		boolean isPvP = attacker.isPlayable() && target.isPlayer();
-		boolean isPvE = attacker.isPlayable() && target.isAttackable();
+		final boolean isPvP = attacker.isPlayable() && target.isPlayer();
+		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
 		double damage = 0;
-		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed)
-		double ssboost = ss ? 1.458 : 1;
+		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed)
+		final double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
 		if (isPvP)
@@ -623,22 +623,22 @@ public final class Formulas
 		}
 		
 		// Initial damage
-		double baseMod = ((77 * (skill.getPower(isPvP, isPvE) + attacker.getPAtk(target))) / defence) * ssboost;
+		final double baseMod = ((77 * (skill.getPower(isPvP, isPvE) + attacker.getPAtk(target))) / defence) * ssboost;
 		// Critical
-		double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
-		double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
-		double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
-		double criticalAddMod = ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.1 * 77) / defence);
-		double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
+		final double criticalMod = (attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalModPos = 1 + ((attacker.calcStat(Stats.CRITICAL_DAMAGE_POS, 1, target, skill) - 1) / 2);
+		final double criticalVulnMod = (target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE, 1, target, skill));
+		final double criticalAddMod = ((attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.1 * 77) / defence);
+		final double criticalAddVuln = target.calcStat(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0, target, skill);
 		// Trait, elements
-		double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
-		double attributeMod = calcAttributeBonus(attacker, target, skill);
-		double weaponMod = attacker.getRandomDamageMultiplier(); // 1?
+		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+		final double attributeMod = calcAttributeBonus(attacker, target, skill);
+		final double weaponMod = attacker.getRandomDamageMultiplier(); // 1?
 		
 		double penaltyMod = 1;
 		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 		{
-			int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
 			{
 				penaltyMod *= Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
@@ -694,7 +694,7 @@ public final class Formulas
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
-		double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10%
+		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10%
 		double damage = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
 		
@@ -835,7 +835,7 @@ public final class Formulas
 			}
 			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 				if (skill != null)
 				{
 					if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
@@ -967,7 +967,7 @@ public final class Formulas
 				}
 				else
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
 					sm.addCharName(target);
 					sm.addSkillName(skill);
 					attacker.sendPacket(sm);
@@ -994,7 +994,7 @@ public final class Formulas
 		// PvP bonuses for damage
 		if (isPvP)
 		{
-			Stats stat = skill.isMagic() ? Stats.PVP_MAGICAL_DMG : Stats.PVP_PHYS_SKILL_DMG;
+			final Stats stat = skill.isMagic() ? Stats.PVP_MAGICAL_DMG : Stats.PVP_PHYS_SKILL_DMG;
 			damage *= attacker.calcStat(stat, 1, null, null);
 		}
 		
@@ -1005,7 +1005,7 @@ public final class Formulas
 			damage *= attacker.calcStat(Stats.PVE_MAGICAL_DMG, 1, null, null);
 			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
@@ -1038,7 +1038,7 @@ public final class Formulas
 				return 1;
 		}
 		
-		int mAtk = attacker.getCubicPower();
+		final int mAtk = attacker.getCubicPower();
 		final boolean isPvP = target.isPlayable();
 		final boolean isPvE = target.isAttackable();
 		
@@ -1046,7 +1046,7 @@ public final class Formulas
 		double damage = 91 * ((mAtk + skill.getPower(isPvP, isPvE)) / mDef);
 		
 		// Failure calculation
-		L2PcInstance owner = attacker.getOwner();
+		final L2PcInstance owner = attacker.getOwner();
 		if (Config.ALT_GAME_MAGICFAILURES && !calcMagicSuccess(owner, target, skill))
 		{
 			if (calcMagicSuccess(owner, target, skill) && ((target.getLevel() - skill.getMagicLevel()) <= 9))
@@ -1063,7 +1063,7 @@ public final class Formulas
 			}
 			else
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
 				sm.addCharName(target);
 				sm.addSkillName(skill);
 				owner.sendPacket(sm);
@@ -1074,13 +1074,13 @@ public final class Formulas
 			{
 				if (skill.hasEffectType(L2EffectType.HP_DRAIN))
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN);
 					sm.addCharName(owner);
 					target.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
 					sm.addCharName(owner);
 					target.sendPacket(sm);
 				}
@@ -1098,7 +1098,7 @@ public final class Formulas
 			damage *= attacker.getOwner().calcStat(Stats.PVE_MAGICAL_DMG, 1, null, null);
 			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getOwner() != null) && ((target.getLevel() - attacker.getOwner().getLevel()) >= 2))
 			{
-				int lvlDiff = target.getLevel() - attacker.getOwner().getLevel() - 1;
+				final int lvlDiff = target.getLevel() - attacker.getOwner().getLevel() - 1;
 				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
@@ -1163,7 +1163,7 @@ public final class Formulas
 		}
 		if (Config.ALT_GAME_CANCEL_BOW && target.isAttackingNow())
 		{
-			L2Weapon wpn = target.getActiveWeaponItem();
+			final L2Weapon wpn = target.getActiveWeaponItem();
 			if ((wpn != null) && (wpn.getItemType() == WeaponType.BOW))
 			{
 				init = 15;
@@ -1261,7 +1261,7 @@ public final class Formulas
 			return 0;
 		}
 		
-		L2Item item = target.getSecondaryWeaponItem();
+		final L2Item item = target.getSecondaryWeaponItem();
 		if ((item == null) || !(item instanceof L2Armor) || (((L2Armor) item).getItemType() == ArmorType.SIGIL))
 		{
 			return 0;
@@ -1273,7 +1273,7 @@ public final class Formulas
 			return 0;
 		}
 		
-		int degreeside = (int) target.calcStat(Stats.SHIELD_DEFENCE_ANGLE, 0, null, null) + 120;
+		final int degreeside = (int) target.calcStat(Stats.SHIELD_DEFENCE_ANGLE, 0, null, null) + 120;
 		if ((degreeside < 360) && (!target.isFacing(attacker, degreeside)))
 		{
 			return 0;
@@ -1282,7 +1282,7 @@ public final class Formulas
 		byte shldSuccess = SHIELD_DEFENSE_FAILED;
 		// if attacker
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
-		L2Weapon at_weapon = attacker.getActiveWeaponItem();
+		final L2Weapon at_weapon = attacker.getActiveWeaponItem();
 		if ((at_weapon != null) && (at_weapon.getItemType() == WeaponType.BOW))
 		{
 			shldRate *= 1.3;
@@ -1299,7 +1299,7 @@ public final class Formulas
 		
 		if (sendSysMsg && target.isPlayer())
 		{
-			L2PcInstance enemy = target.getActingPlayer();
+			final L2PcInstance enemy = target.getActingPlayer();
 			
 			switch (shldSuccess)
 			{
@@ -1334,7 +1334,7 @@ public final class Formulas
 			defence = target.getMDef(actor, skill);
 		}
 		
-		double attack = 2 * actor.getMAtk(target, skill) * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
+		final double attack = 2 * actor.getMAtk(target, skill) * calcGeneralTraitBonus(actor, target, skill.getTraitType(), false);
 		double d = (attack - defence) / (attack + defence);
 		
 		if (skill.isDebuff() && target.isDebuffBlocked())
@@ -1348,9 +1348,9 @@ public final class Formulas
 	
 	public static double calcLvlBonusMod(L2Character attacker, L2Character target, Skill skill)
 	{
-		int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
-		double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
-		double lvlMod = 1 + ((attackerLvl - target.getLevel()) / 100.);
+		final int attackerLvl = skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel();
+		final double skillLvlBonusRateMod = 1 + (skill.getLvlBonusRate() / 100.);
+		final double lvlMod = 1 + ((attackerLvl - target.getLevel()) / 100.);
 		return skillLvlBonusRateMod * lvlMod;
 	}
 	
@@ -1421,7 +1421,7 @@ public final class Formulas
 		
 		if (skill.isMagic())
 		{
-			double mAtk = attacker.getMAtk(null, null);
+			final double mAtk = attacker.getMAtk(null, null);
 			double val = 0;
 			if (attacker.isChargedShot(ShotType.BLESSED_SPIRITSHOTS))
 			{
@@ -1486,20 +1486,20 @@ public final class Formulas
 		}
 		
 		// Calculate BaseRate.
-		double baseRate = skill.getPower();
-		double statMod = skill.getBasicProperty().calcBonus(target);
+		final double baseRate = skill.getPower();
+		final double statMod = skill.getBasicProperty().calcBonus(target);
 		double rate = (baseRate / statMod);
 		
 		// Resist Modifier.
-		double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTraitType(), false);
+		final double resMod = calcGeneralTraitBonus(attacker.getOwner(), target, skill.getTraitType(), false);
 		rate *= resMod;
 		
 		// Lvl Bonus Modifier.
-		double lvlBonusMod = calcLvlBonusMod(attacker.getOwner(), target, skill);
+		final double lvlBonusMod = calcLvlBonusMod(attacker.getOwner(), target, skill);
 		rate *= lvlBonusMod;
 		
 		// Element Modifier.
-		double elementMod = calcAttributeBonus(attacker.getOwner(), target, skill);
+		final double elementMod = calcAttributeBonus(attacker.getOwner(), target, skill);
 		rate *= elementMod;
 		
 		// Add Matk/Mdef Bonus (TODO: Pending)
@@ -1531,12 +1531,12 @@ public final class Formulas
 		}
 		
 		// FIXME: Fix this LevelMod Formula.
-		int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
-		double lvlModifier = Math.pow(1.3, lvlDifference);
+		final int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
+		final double lvlModifier = Math.pow(1.3, lvlDifference);
 		float targetModifier = 1;
 		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
 		{
-			int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
+			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
 			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
 			{
 				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
@@ -1548,7 +1548,7 @@ public final class Formulas
 		}
 		// general magic resist
 		final double resModifier = target.calcStat(Stats.MAGIC_SUCCESS_RES, 1, null, skill);
-		int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
+		final int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
 		
 		if (attacker.isDebug())
 		{
@@ -1571,7 +1571,7 @@ public final class Formulas
 		double mDef = target.getMDef(attacker, skill);
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
-		double mp = target.getMaxMp();
+		final double mp = target.getMaxMp();
 		
 		switch (shld)
 		{
@@ -1621,7 +1621,7 @@ public final class Formulas
 			damage *= attacker.calcStat(Stats.PVE_MAGICAL_DMG, 1, null, null);
 			if (!target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 			{
-				int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
+				final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 				if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
 				{
 					damage *= Config.NPC_SKILL_DMG_PENALTY.get(Config.NPC_SKILL_DMG_PENALTY.size() - 1);
@@ -1638,7 +1638,7 @@ public final class Formulas
 		{
 			if (attacker.isPlayer())
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
 				sm.addCharName(target);
 				sm.addCharName(attacker);
 				attacker.sendPacket(sm);
@@ -1647,7 +1647,7 @@ public final class Formulas
 			
 			if (target.isPlayer())
 			{
-				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
+				final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
 				sm2.addCharName(target);
 				sm2.addCharName(attacker);
 				target.sendPacket(sm2);
@@ -1691,13 +1691,13 @@ public final class Formulas
 		{
 			if (activeChar.isPlayer())
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK);
 				sm.addString(target.getName());
 				activeChar.getActingPlayer().sendPacket(sm);
 			}
 			if (target.isPlayer())
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DODGED_C1_S_ATTACK);
 				sm.addString(activeChar.getName());
 				target.getActingPlayer().sendPacket(sm);
 			}
@@ -1868,7 +1868,7 @@ public final class Formulas
 			}
 		}
 		
-		int attribute_diff = attack_attribute - defence_attribute;
+		final int attribute_diff = attack_attribute - defence_attribute;
 		double min;
 		double max;
 		if (attribute_diff >= 300)
@@ -1992,15 +1992,15 @@ public final class Formulas
 	
 	public static boolean calcBlowSuccess(L2Character activeChar, L2Character target, Skill skill)
 	{
-		double dexMod = BaseStats.DEX.calcBonus(activeChar);
+		final double dexMod = BaseStats.DEX.calcBonus(activeChar);
 		// Apply DEX Mod.
-		double blowChance = skill.getBlowChance();
+		final double blowChance = skill.getBlowChance();
 		// Apply Position Bonus (TODO: values are unconfirmed, possibly custom, remove or update when confirmed).
-		double sideMod = (activeChar.isInFrontOfTarget()) ? 1 : (activeChar.isBehindTarget()) ? 2 : 1.5;
+		final double sideMod = (activeChar.isInFrontOfTarget()) ? 1 : (activeChar.isBehindTarget()) ? 2 : 1.5;
 		// Apply all mods.
-		double baseRate = blowChance * dexMod * sideMod;
+		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates
-		double rate = activeChar.calcStat(Stats.BLOW_RATE, baseRate, target, null);
+		final double rate = activeChar.calcStat(Stats.BLOW_RATE, baseRate, target, null);
 		// Debug
 		if (activeChar.isDebug())
 		{
@@ -2023,12 +2023,12 @@ public final class Formulas
 			case "buff":
 			{
 				// Resist Modifier.
-				int cancelMagicLvl = skill.getMagicLevel();
+				final int cancelMagicLvl = skill.getMagicLevel();
 				final double vuln = target.calcStat(Stats.CANCEL_VULN, 0, target, null);
 				final double prof = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
 				
-				double resMod = 1 + (((vuln + prof) * -1) / 100);
-				double finalRate = rate / resMod;
+				final double resMod = 1 + (((vuln + prof) * -1) / 100);
+				final double finalRate = rate / resMod;
 				
 				if (activeChar.isDebug())
 				{
@@ -2052,7 +2052,7 @@ public final class Formulas
 				}
 				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
 				{
-					BuffInfo info = buffs.get(i);
+					final BuffInfo info = buffs.get(i);
 					if (!info.getSkill().canBeStolen() || (!calcCancelSuccess(info, cancelMagicLvl, (int) finalRate, skill)))
 					{
 						continue;
@@ -2070,7 +2070,7 @@ public final class Formulas
 				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs());
 				for (int i = debuffs.size() - 1; i >= 0; i--)
 				{
-					BuffInfo info = debuffs.get(i);
+					final BuffInfo info = debuffs.get(i);
 					if (info.getSkill().isDebuff() && info.getSkill().canBeDispeled() && (Rnd.get(100) <= rate))
 					{
 						canceled.add(info);
@@ -2121,10 +2121,10 @@ public final class Formulas
 		// Debuffs Duration Affected by Resistances.
 		if ((caster != null) && (target != null) && skill.isDebuff())
 		{
-			double statMod = skill.getBasicProperty().calcBonus(target);
-			double resMod = calcGeneralTraitBonus(caster, target, skill.getTraitType(), false);
-			double lvlBonusMod = calcLvlBonusMod(caster, target, skill);
-			double elementMod = calcAttributeBonus(caster, target, skill);
+			final double statMod = skill.getBasicProperty().calcBonus(target);
+			final double resMod = calcGeneralTraitBonus(caster, target, skill.getTraitType(), false);
+			final double lvlBonusMod = calcLvlBonusMod(caster, target, skill);
+			final double elementMod = calcAttributeBonus(caster, target, skill);
 			time = (int) Math.ceil(Util.constrain(((time * resMod * lvlBonusMod * elementMod) / statMod), (time * 0.5), time));
 		}
 		return time;
@@ -2161,7 +2161,7 @@ public final class Formulas
 	 */
 	public static int calculateKarmaLost(L2PcInstance player, long exp)
 	{
-		double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
+		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
 		if (exp > 0) // Received exp
 		{
 			exp /= Config.RATE_KARMA_LOST;
@@ -2249,7 +2249,7 @@ public final class Formulas
 	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
 	{
 		final TraitType type = attacker.getAttackType().getTraitType();
-		double result = target.getStat().getDefenceTraits()[type.getId()] - 1.0;
+		final double result = target.getStat().getDefenceTraits()[type.getId()] - 1.0;
 		return 1.0 - result;
 	}
 	

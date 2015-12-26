@@ -51,7 +51,7 @@ public class FuncHenna extends AbstractFunction
 	@Override
 	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
 	{
-		L2PcInstance pc = effector.getActingPlayer();
+		final L2PcInstance pc = effector.getActingPlayer();
 		double value = initVal;
 		if (pc != null)
 		{

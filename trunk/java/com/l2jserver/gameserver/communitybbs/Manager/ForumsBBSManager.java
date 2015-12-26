@@ -47,8 +47,8 @@ public class ForumsBBSManager extends BaseBBSManager
 		{
 			while (rs.next())
 			{
-				int forumId = rs.getInt("forum_id");
-				Forum f = new Forum(forumId, null);
+				final int forumId = rs.getInt("forum_id");
+				final Forum f = new Forum(forumId, null);
 				addForum(f);
 			}
 		}
@@ -112,7 +112,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public Forum createNewForum(String name, Forum parent, int type, int perm, int oid)
 	{
-		Forum forum = new Forum(name, parent, type, perm, oid);
+		final Forum forum = new Forum(name, parent, type, perm, oid);
 		forum.insertIntoDb();
 		return forum;
 	}

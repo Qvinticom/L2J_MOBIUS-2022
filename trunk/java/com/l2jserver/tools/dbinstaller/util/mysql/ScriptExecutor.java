@@ -74,7 +74,7 @@ public class ScriptExecutor
 	{
 		_frame.appendToProgressArea("Installing " + file.getName());
 		String line = "";
-		Connection con = _frame.getConnection();
+		final Connection con = _frame.getConnection();
 		try (Statement stmt = con.createStatement();
 			Scanner scn = new Scanner(file))
 		{
@@ -114,13 +114,13 @@ public class ScriptExecutor
 			{
 				try
 				{
-					Object[] options =
+					final Object[] options =
 					{
 						"Continue",
 						"Abort"
 					};
 					
-					int n = JOptionPane.showOptionDialog(null, "MySQL Error: " + e.getMessage(), "Script Error", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+					final int n = JOptionPane.showOptionDialog(null, "MySQL Error: " + e.getMessage(), "Script Error", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 					if (n == 1)
 					{
 						System.exit(0);

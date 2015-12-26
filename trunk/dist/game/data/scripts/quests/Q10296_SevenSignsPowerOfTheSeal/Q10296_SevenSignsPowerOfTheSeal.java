@@ -109,7 +109,7 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						QuestState SolinasTomb = player.getQuestState("Q10295_SevenSignsSolinasTomb");
+						final QuestState SolinasTomb = player.getQuestState("Q10295_SevenSignsSolinasTomb");
 						if ((player.getLevel() >= 81) && SolinasTomb.isCompleted())
 						{
 							htmltext = "32792-01.htm";
@@ -200,7 +200,7 @@ public final class Q10296_SevenSignsPowerOfTheSeal extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return null;

@@ -39,7 +39,7 @@ public class BanHandler implements IPunishmentHandler
 		{
 			case CHARACTER:
 			{
-				int objectId = Integer.parseInt(String.valueOf(task.getKey()));
+				final int objectId = Integer.parseInt(String.valueOf(task.getKey()));
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if (player != null)
 				{
@@ -49,7 +49,7 @@ public class BanHandler implements IPunishmentHandler
 			}
 			case ACCOUNT:
 			{
-				String account = String.valueOf(task.getKey());
+				final String account = String.valueOf(task.getKey());
 				final L2GameClient client = LoginServerThread.getInstance().getClient(account);
 				if (client != null)
 				{
@@ -67,7 +67,7 @@ public class BanHandler implements IPunishmentHandler
 			}
 			case IP:
 			{
-				String ip = String.valueOf(task.getKey());
+				final String ip = String.valueOf(task.getKey());
 				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))

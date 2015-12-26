@@ -66,11 +66,11 @@ public final class Backstab extends AbstractEffect
 			return;
 		}
 		
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		Skill skill = info.getSkill();
-		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, skill);
+		final L2Character target = info.getEffected();
+		final L2Character activeChar = info.getEffector();
+		final Skill skill = info.getSkill();
+		final boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 		double damage = Formulas.calcBackstabDamage(activeChar, target, skill, shld, ss);
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
@@ -91,7 +91,7 @@ public final class Backstab extends AbstractEffect
 		
 		if (activeChar.isPlayer())
 		{
-			L2PcInstance activePlayer = activeChar.getActingPlayer();
+			final L2PcInstance activePlayer = activeChar.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		

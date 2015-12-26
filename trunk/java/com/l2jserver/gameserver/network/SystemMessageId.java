@@ -15187,21 +15187,21 @@ public final class SystemMessageId
 	{
 		final Field[] fields = SystemMessageId.class.getDeclaredFields();
 		
-		for (final Field field : fields)
+		for (Field field : fields)
 		{
-			int mod = field.getModifiers();
+			final int mod = field.getModifiers();
 			if (Modifier.isStatic(mod) && Modifier.isPublic(mod) && field.getType().equals(SystemMessageId.class) && field.isAnnotationPresent(ClientString.class))
 			{
 				try
 				{
 					final ClientString annotation = field.getAnnotationsByType(ClientString.class)[0];
-					SystemMessageId smId = new SystemMessageId(annotation.id());
+					final SystemMessageId smId = new SystemMessageId(annotation.id());
 					smId.setName(field.getName());
 					smId.setParamCount(parseMessageParameters(field.getName()));
 					field.set(null, smId);
 					VALUES.put(smId.getId(), smId);
 				}
-				catch (final Exception e)
+				catch (Exception e)
 				{
 					_log.log(Level.WARNING, "SystemMessageId: Failed field access for '" + field.getName() + "'", e);
 				}
@@ -15246,7 +15246,7 @@ public final class SystemMessageId
 		{
 			return (SystemMessageId) SystemMessageId.class.getField(name).get(null);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			return null;
 		}
@@ -15254,7 +15254,7 @@ public final class SystemMessageId
 	
 	public static final void reloadLocalisations()
 	{
-		for (final SystemMessageId smId : VALUES.values())
+		for (SystemMessageId smId : VALUES.values())
 		{
 			if (smId != null)
 			{
@@ -15279,7 +15279,7 @@ public final class SystemMessageId
 		NamedNodeMap nnmb;
 		SystemMessageId smId;
 		String text;
-		for (final String lang : languages)
+		for (String lang : languages)
 		{
 			file = new File(Config.DATAPACK_ROOT, "/lang/" + lang + "/sm/SystemMessageLocalisation.xml");
 			if (!file.isFile())
@@ -15342,7 +15342,7 @@ public final class SystemMessageId
 					}
 				}
 			}
-			catch (final Exception e)
+			catch (Exception e)
 			{
 				_log.log(Level.SEVERE, "SystemMessageId: Failed loading '" + file + "'", e);
 			}

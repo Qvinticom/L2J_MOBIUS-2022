@@ -42,7 +42,7 @@ public class Clan implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		
 		if (activeChar.isPlayable())
 		{
@@ -167,7 +167,7 @@ public class Clan implements ITargetTypeHandler
 			targetList.add(activeChar);
 			
 			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-			int maxTargets = skill.getAffectLimit();
+			final int maxTargets = skill.getAffectLimit();
 			for (L2Object newTarget : objs)
 			{
 				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))

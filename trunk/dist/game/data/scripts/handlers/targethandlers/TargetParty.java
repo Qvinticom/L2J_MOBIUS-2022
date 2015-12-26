@@ -37,7 +37,7 @@ public class TargetParty implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
+		final List<L2Character> targetList = new ArrayList<>();
 		
 		// Check for null target or any other invalid target
 		if ((target == null) || target.isDead() || (target == activeChar))

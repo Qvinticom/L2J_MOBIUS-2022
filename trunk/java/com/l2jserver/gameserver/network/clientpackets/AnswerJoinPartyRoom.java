@@ -54,7 +54,7 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 			return;
 		}
 		
-		L2PcInstance partner = player.getActiveRequester();
+		final L2PcInstance partner = player.getActiveRequester();
 		if (partner == null)
 		{
 			// Partner hasn't been found, cancel the invitation
@@ -80,7 +80,7 @@ public final class AnswerJoinPartyRoom extends L2GameClientPacket
 		// If answer is positive, join the requester's PartyRoom.
 		if ((_answer == 1) && !partner.isRequestExpired())
 		{
-			PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(partner.getPartyRoom());
+			final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(partner.getPartyRoom());
 			if (room == null)
 			{
 				return;

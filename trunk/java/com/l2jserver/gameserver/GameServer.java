@@ -170,7 +170,7 @@ public final class GameServer
 	
 	public GameServer() throws Exception
 	{
-		long serverLoadStart = System.currentTimeMillis();
+		final long serverLoadStart = System.currentTimeMillis();
 		
 		if (!IdFactory.getInstance().isInitialized())
 		{
@@ -470,7 +470,7 @@ public final class GameServer
 		
 		/*** Main ***/
 		// Create log folder
-		File logFolder = new File(".", LOG_FOLDER);
+		final File logFolder = new File(".", LOG_FOLDER);
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory

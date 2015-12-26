@@ -64,7 +64,7 @@ public final class BanditStronghold extends FlagWar
 		FLAG_COORDS[5] = new Location(81981, -15708, -1858, 60392);
 		FLAG_COORDS[6] = new Location(84375, -17060, -1860, 27712);
 		
-		Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
+		final Collection<L2ResidenceHallTeleportZone> zoneList = ZoneManager.getInstance().getAllZones(L2ResidenceHallTeleportZone.class);
 		
 		for (L2ResidenceHallTeleportZone teleZone : zoneList)
 		{
@@ -73,7 +73,7 @@ public final class BanditStronghold extends FlagWar
 				continue;
 			}
 			
-			int id = teleZone.getResidenceZoneId();
+			final int id = teleZone.getResidenceZoneId();
 			
 			if ((id < 0) || (id >= 6))
 			{

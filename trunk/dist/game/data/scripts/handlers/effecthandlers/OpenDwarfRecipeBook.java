@@ -52,7 +52,7 @@ public final class OpenDwarfRecipeBook extends AbstractEffect
 			return;
 		}
 		
-		L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);

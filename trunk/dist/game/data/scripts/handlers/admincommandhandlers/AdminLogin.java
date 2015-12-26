@@ -60,11 +60,11 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_server_max_player"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
-				String number = st.nextToken();
+				final String number = st.nextToken();
 				try
 				{
 					LoginServerThread.getInstance().setMaxPlayer(Integer.parseInt(number));
@@ -83,12 +83,12 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_server_list_type"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
-			int tokens = st.countTokens();
+			final StringTokenizer st = new StringTokenizer(command);
+			final int tokens = st.countTokens();
 			if (tokens > 1)
 			{
 				st.nextToken();
-				String[] modes = new String[tokens - 1];
+				final String[] modes = new String[tokens - 1];
 				
 				for (int i = 0; i < (tokens - 1); i++)
 				{
@@ -123,11 +123,11 @@ public class AdminLogin implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_server_list_age"))
 		{
-			StringTokenizer st = new StringTokenizer(command);
+			final StringTokenizer st = new StringTokenizer(command);
 			if (st.countTokens() > 1)
 			{
 				st.nextToken();
-				String mode = st.nextToken();
+				final String mode = st.nextToken();
 				int age = 0;
 				try
 				{
@@ -182,7 +182,7 @@ public class AdminLogin implements IAdminCommandHandler
 		String nameType = "";
 		for (int i = 0; i < 7; i++)
 		{
-			int currentType = serverType & (int) Math.pow(2, i);
+			final int currentType = serverType & (int) Math.pow(2, i);
 			
 			if (currentType > 0)
 			{

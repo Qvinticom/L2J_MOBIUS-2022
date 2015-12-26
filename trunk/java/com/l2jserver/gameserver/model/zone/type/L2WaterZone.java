@@ -43,7 +43,7 @@ public class L2WaterZone extends L2ZoneType
 		// TODO: update to only send speed status when that packet is known
 		if (character.isPlayer())
 		{
-			L2PcInstance player = character.getActingPlayer();
+			final L2PcInstance player = character.getActingPlayer();
 			if (player.isTransformed() && !player.getTransformation().canSwim())
 			{
 				character.stopTransformation(true);
@@ -55,7 +55,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+			final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 			
 			for (L2PcInstance player : plrs)
 			{
@@ -83,7 +83,7 @@ public class L2WaterZone extends L2ZoneType
 		}
 		else if (character.isNpc())
 		{
-			Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
+			final Collection<L2PcInstance> plrs = character.getKnownList().getKnownPlayers().values();
 			for (L2PcInstance player : plrs)
 			{
 				if (character.getRunSpeed() == 0)

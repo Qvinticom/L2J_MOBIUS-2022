@@ -42,7 +42,7 @@ public final class RequestLinkHtml extends L2GameClientPacket
 	@Override
 	public void runImpl()
 	{
-		L2PcInstance actor = getClient().getActiveChar();
+		final L2PcInstance actor = getClient().getActiveChar();
 		if (actor == null)
 		{
 			return;
@@ -60,7 +60,7 @@ public final class RequestLinkHtml extends L2GameClientPacket
 			return;
 		}
 		
-		int htmlObjectId = actor.validateHtmlAction("link " + _link);
+		final int htmlObjectId = actor.validateHtmlAction("link " + _link);
 		if (htmlObjectId == -1)
 		{
 			_log.warning("Player " + actor.getName() + " sent non cached  html link: link " + _link);
@@ -73,7 +73,7 @@ public final class RequestLinkHtml extends L2GameClientPacket
 			return;
 		}
 		
-		String filename = "html/" + _link;
+		final String filename = "html/" + _link;
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
 		msg.setFile(actor.getHtmlPrefix(), filename);
 		sendPacket(msg);

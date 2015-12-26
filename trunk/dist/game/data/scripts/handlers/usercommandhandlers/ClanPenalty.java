@@ -45,7 +45,7 @@ public class ClanPenalty implements IUserCommandHandler
 		}
 		
 		boolean penalty = false;
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		final StringBuilder htmlContent = StringUtil.startAppend(500, "<html><body><center><table width=270 border=0 bgcolor=111111><tr><td width=170>Penalty</td><td width=100 align=center>Expiration Date</td></tr></table><table width=270 border=0><tr>");
 		
 		if (activeChar.getClanJoinExpiryTime() > System.currentTimeMillis())

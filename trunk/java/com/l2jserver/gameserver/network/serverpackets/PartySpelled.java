@@ -59,7 +59,7 @@ public class PartySpelled extends L2GameServerPacket
 				}
 				else
 				{
-					int maxLevel = SkillData.getInstance().getMaxLevel(info.getSkill().getDisplayId());
+					final int maxLevel = SkillData.getInstance().getMaxLevel(info.getSkill().getDisplayId());
 					writeH(maxLevel);
 					writeH(info.getSkill().getDisplayLevel());
 				}
