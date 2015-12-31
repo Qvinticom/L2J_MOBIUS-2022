@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,8 +16,6 @@
  */
 package instances.Kamaloka;
 
-import instances.AbstractInstance;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -28,22 +24,24 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+
+import instances.AbstractInstance;
 
 public final class Kamaloka extends AbstractInstance
 {
@@ -650,7 +648,6 @@ public final class Kamaloka extends AbstractInstance
 			5700,
 			7
 		}
-	
 	};
 	
 	/*
@@ -1730,6 +1727,5 @@ public final class Kamaloka extends AbstractInstance
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		
 	}
 }

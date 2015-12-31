@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -17,6 +15,28 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.handler.ActionHandler;
+import com.l2jmobius.gameserver.handler.ActionShiftHandler;
+import com.l2jmobius.gameserver.handler.AdminCommandHandler;
+import com.l2jmobius.gameserver.handler.BypassHandler;
+import com.l2jmobius.gameserver.handler.ChatHandler;
+import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import com.l2jmobius.gameserver.handler.IHandler;
+import com.l2jmobius.gameserver.handler.ItemHandler;
+import com.l2jmobius.gameserver.handler.PunishmentHandler;
+import com.l2jmobius.gameserver.handler.TargetHandler;
+import com.l2jmobius.gameserver.handler.TelnetHandler;
+import com.l2jmobius.gameserver.handler.UserCommandHandler;
+import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 
 import handlers.actionhandlers.L2ArtefactInstanceAction;
 import handlers.actionhandlers.L2DecoyAction;
@@ -261,28 +281,6 @@ import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.Premium;
 import handlers.voicedcommandhandlers.StatsVCmd;
 import handlers.voicedcommandhandlers.Wedding;
-
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.ActionHandler;
-import com.l2jserver.gameserver.handler.ActionShiftHandler;
-import com.l2jserver.gameserver.handler.AdminCommandHandler;
-import com.l2jserver.gameserver.handler.BypassHandler;
-import com.l2jserver.gameserver.handler.ChatHandler;
-import com.l2jserver.gameserver.handler.CommunityBoardHandler;
-import com.l2jserver.gameserver.handler.IHandler;
-import com.l2jserver.gameserver.handler.ItemHandler;
-import com.l2jserver.gameserver.handler.PunishmentHandler;
-import com.l2jserver.gameserver.handler.TargetHandler;
-import com.l2jserver.gameserver.handler.TelnetHandler;
-import com.l2jserver.gameserver.handler.UserCommandHandler;
-import com.l2jserver.gameserver.handler.VoicedCommandHandler;
 
 /**
  * Master handler.

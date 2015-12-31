@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -28,8 +26,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.util.data.xml.IXmlReader;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid

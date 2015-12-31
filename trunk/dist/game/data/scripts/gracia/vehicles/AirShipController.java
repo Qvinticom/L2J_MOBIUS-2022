@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,25 +20,25 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.AirShipManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.ClanPrivilege;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.VehiclePathPoint;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ControllableAirShipInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.model.zone.type.L2ScriptZone;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.AirShipManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.ClanPrivilege;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.VehiclePathPoint;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2ControllableAirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public abstract class AirShipController extends Quest
 {

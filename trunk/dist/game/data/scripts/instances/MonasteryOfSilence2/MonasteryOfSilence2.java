@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,26 +20,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+
+import ai.npc.AbstractNpcAI;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
 import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
 import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
-import ai.npc.AbstractNpcAI;
-
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class MonasteryOfSilence2 extends AbstractNpcAI
 {
@@ -152,7 +150,7 @@ public class MonasteryOfSilence2 extends AbstractNpcAI
 			-241022,
 			-10832
 		}
-	// EtisEtina
+		// EtisEtina
 	};
 	
 	private static final int[] TALK =

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -26,19 +24,19 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.PunishmentManager;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
-import com.l2jserver.gameserver.model.punishment.PunishmentTask;
-import com.l2jserver.gameserver.model.punishment.PunishmentType;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.GMAudit;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
+import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
+import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.GMAudit;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,26 +20,26 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.CommonSkill;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.CommonSkill;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.type.L2BossZone;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Queen Ant's AI
@@ -229,22 +227,30 @@ public final class QueenAnt extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case LARVA:
+			{
 				mob.setIsImmobilized(true);
 				mob.setIsMortal(false);
 				mob.setIsRaidMinion(true);
 				break;
+			}
 			case NURSE:
+			{
 				mob.disableCoreAI(true);
 				mob.setIsRaidMinion(true);
 				_nurses.add(mob);
 				break;
+			}
 			case ROYAL:
 			case GUARD:
+			{
 				mob.setIsRaidMinion(true);
 				break;
+			}
 			case QUEEN:
+			{
 				_task = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
+			}
 		}
 		
 		return super.onSpawn(npc);

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,19 +18,19 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.data.sql.impl.AnnouncementsTable;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.PageResult;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.announce.Announcement;
-import com.l2jserver.gameserver.model.announce.AnnouncementType;
-import com.l2jserver.gameserver.model.announce.AutoAnnouncement;
-import com.l2jserver.gameserver.model.announce.IAnnouncement;
-import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.gameserver.util.HtmlUtil;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.PageResult;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.announce.Announcement;
+import com.l2jmobius.gameserver.model.announce.AnnouncementType;
+import com.l2jmobius.gameserver.model.announce.AutoAnnouncement;
+import com.l2jmobius.gameserver.model.announce.IAnnouncement;
+import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.HtmlUtil;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid

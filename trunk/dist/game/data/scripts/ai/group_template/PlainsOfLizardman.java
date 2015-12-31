@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,16 +16,16 @@
  */
 package ai.group_template;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Plains of Lizardmen AI.
@@ -122,21 +120,30 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case TANTA_SUMMONER:
+			{
 				if (!npc.isAffectedBySkill(DEMOTIVATION_HEX.getSkillId()))
 				{
 					npc.doCast(DEMOTIVATION_HEX.getSkill());
 				}
 				break;
+			}
 			case RAINBOW_FROG:
+			{
 				castSkill(npc, attacker, RAINBOW_FROG_SKILL);
 				break;
+			}
 			case ENERGY_PLANT:
+			{
 				castSkill(npc, attacker, ENERGY_PLANT_SKILL);
 				break;
+			}
 			case STICKY_MUSHROOM:
+			{
 				castSkill(npc, attacker, STICKY_MUSHROOM_SKILL);
 				break;
+			}
 			case FANTASY_MUSHROOM:
+			{
 				if (npc.isScriptValue(0))
 				{
 					npc.setScriptValue(1);
@@ -156,6 +163,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 					startQuestTimer("fantasy_mushroom", 4000, npc, attacker);
 				}
 				break;
+			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,17 +16,17 @@
  */
 package quests.Q00625_TheFinestIngredientsPart2;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.datatables.SpawnTable;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * The Finest Ingredients Part - 2 (625)
@@ -101,7 +99,6 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 						if (random < 167)
 						{
 							rewardItems(player, GREATER_DYE_OF_STR_1);
-							
 						}
 						else if (random < 334)
 						{
@@ -249,7 +246,6 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 						htmltext = "31542-05.html";
 						break;
 					}
-					
 				}
 				break;
 			}

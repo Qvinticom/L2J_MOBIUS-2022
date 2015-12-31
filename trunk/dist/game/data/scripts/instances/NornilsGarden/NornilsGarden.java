@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,25 +16,25 @@
  */
 package instances.NornilsGarden;
 
-import instances.AbstractInstance;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import instances.AbstractInstance;
 
 /**
  * Nornil's Garden instance zone.
@@ -484,7 +482,6 @@ public final class NornilsGarden extends AbstractInstance
 					{
 						spawn4(character);
 					}
-					
 				}
 			}
 		}
@@ -629,6 +626,5 @@ public final class NornilsGarden extends AbstractInstance
 	@Override
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		
 	}
 }

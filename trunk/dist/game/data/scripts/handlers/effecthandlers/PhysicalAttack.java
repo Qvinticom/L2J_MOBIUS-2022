@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,19 +18,19 @@ package handlers.effecthandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.enums.ShotType;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.conditions.Condition;
-import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.items.type.WeaponType;
-import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.gameserver.model.stats.Stats;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.enums.ShotType;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.items.type.WeaponType;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Formulas;
+import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Physical Attack effect implementation.

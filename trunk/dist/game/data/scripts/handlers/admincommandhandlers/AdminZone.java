@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,20 +18,20 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.L2WorldRegion;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.util.StringUtil;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.L2WorldRegion;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.TeleportWhereType;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.util.StringUtil;
 
 /**
  * Small typo fix by Zoey76 24/02/2011

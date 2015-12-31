@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,17 +16,17 @@
  */
 package ai.npc;
 
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.MinionHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.MinionHolder;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Abstract NPC AI class for datapack based AIs.

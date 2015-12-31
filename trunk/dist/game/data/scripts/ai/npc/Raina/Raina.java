@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,7 +16,7 @@
  */
 package ai.npc.Raina;
 
-import static com.l2jserver.gameserver.model.base.ClassLevel.THIRD;
+import static com.l2jmobius.gameserver.model.base.ClassLevel.THIRD;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,33 +28,33 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.enums.SubclassInfoType;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.model.base.ClassLevel;
+import com.l2jmobius.gameserver.model.base.PlayerClass;
+import com.l2jmobius.gameserver.model.base.SubClass;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.Id;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.data.xml.impl.CategoryData;
-import com.l2jserver.gameserver.data.xml.impl.ClassListData;
-import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jserver.gameserver.enums.CategoryType;
-import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.enums.SubclassInfoType;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.base.ClassLevel;
-import com.l2jserver.gameserver.model.base.PlayerClass;
-import com.l2jserver.gameserver.model.base.SubClass;
-import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Raina AI.
@@ -107,7 +105,9 @@ public final class Raina extends AbstractNpcAI
 		subclassSetMap.put(PlayerClass.Spellsinger, subclasseSet5);
 		subclassSetMap.put(PlayerClass.Spellhowler, subclasseSet5);
 	}
+	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
+	
 	{
 		classCloak.put(CategoryType.SIGEL_GROUP, 30310); // Abelius Cloak
 		classCloak.put(CategoryType.TYRR_GROUP, 30311); // Sapyros Cloak Grade
@@ -118,7 +118,9 @@ public final class Raina extends AbstractNpcAI
 		classCloak.put(CategoryType.WYNN_GROUP, 30316); // Leister Cloak Grade
 		classCloak.put(CategoryType.AEORE_GROUP, 30317); // Laksis Cloak Grade
 	}
+	
 	private static final List<PlayerClass> dualClassList = new ArrayList<>();
+	
 	{
 		dualClassList.addAll(Arrays.asList(PlayerClass.sigelPhoenixKnight, PlayerClass.sigelHellKnight, PlayerClass.sigelEvasTemplar, PlayerClass.sigelShilenTemplar));
 		dualClassList.addAll(Arrays.asList(PlayerClass.tyrrDuelist, PlayerClass.tyrrDreadnought, PlayerClass.tyrrTitan, PlayerClass.tyrrGrandKhavatari, PlayerClass.tyrrDoombringer));
@@ -129,6 +131,7 @@ public final class Raina extends AbstractNpcAI
 		dualClassList.addAll(Arrays.asList(PlayerClass.wynnArcanaLord, PlayerClass.wynnElementalMaster, PlayerClass.wynnSpectralMaster));
 		dualClassList.addAll(Arrays.asList(PlayerClass.aeoreCardinal, PlayerClass.aeoreEvaSaint, PlayerClass.aeoreShillienSaint));
 	}
+	
 	// @formatter:off
 	private static final int[] REAWAKEN_PRICE =
 	{

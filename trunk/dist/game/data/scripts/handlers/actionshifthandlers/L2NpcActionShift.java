@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,23 +16,23 @@
  */
 package handlers.actionshifthandlers;
 
-import handlers.bypasshandlers.NpcViewMod;
-
 import java.util.Set;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.handler.IActionShiftHandler;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.Elementals;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.handler.IActionShiftHandler;
+import com.l2jmobius.gameserver.instancemanager.WalkingManager;
+import com.l2jmobius.gameserver.model.Elementals;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.Util;
+
+import handlers.bypasshandlers.NpcViewMod;
 
 public class L2NpcActionShift implements IActionShiftHandler
 {
@@ -43,8 +41,10 @@ public class L2NpcActionShift implements IActionShiftHandler
 	 * <BR>
 	 * <B><U> Actions (If the L2PcInstance is a GM only)</U> :</B><BR>
 	 * <BR>
-	 * <li>Set the L2NpcInstance as target of the L2PcInstance player (if necessary)</li> <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li> <li>If L2NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the
-	 * L2PcInstance in order to update L2NpcInstance HP bar</li> <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this L2NpcInstance</li><BR>
+	 * <li>Set the L2NpcInstance as target of the L2PcInstance player (if necessary)</li>
+	 * <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li>
+	 * <li>If L2NpcInstance is autoAttackable, send a Server->Client packet StatusUpdate to the L2PcInstance in order to update L2NpcInstance HP bar</li>
+	 * <li>Send a Server->Client NpcHtmlMessage() containing the GM console about this L2NpcInstance</li><BR>
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Each group of Server->Client packet must be terminated by a ActionFailed packet in order to avoid that client wait an other packet</B></FONT><BR>
 	 * <BR>

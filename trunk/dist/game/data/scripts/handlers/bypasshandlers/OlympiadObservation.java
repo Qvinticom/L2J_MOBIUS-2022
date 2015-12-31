@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,17 +18,17 @@ package handlers.bypasshandlers;
 
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2OlympiadManagerInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.olympiad.Olympiad;
-import com.l2jserver.gameserver.model.olympiad.OlympiadGameManager;
-import com.l2jserver.gameserver.model.olympiad.OlympiadGameTask;
-import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExOlympiadMatchList;
+import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2OlympiadManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.olympiad.Olympiad;
+import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
+import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
+import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchList;
 
 /**
  * @author DS
@@ -99,7 +97,6 @@ public class OlympiadObservation implements IBypassHandler
 				}
 			}
 			return true;
-			
 		}
 		catch (Exception e)
 		{

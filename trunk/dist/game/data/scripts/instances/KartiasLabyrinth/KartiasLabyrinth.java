@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,36 +16,35 @@
  */
 package instances.KartiasLabyrinth;
 
-import instances.AbstractInstance;
-import instances.KartiasLabyrinth.AI.Fighter;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.util.Util;
+
+import instances.AbstractInstance;
+import instances.KartiasLabyrinth.AI.Fighter;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
 import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
 import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
 import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
 import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
 import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
-
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Kartia's Labyrinth
@@ -87,6 +84,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		BOSSES.add(25883);
 		BOSSES.add(25884);
 	}
+	
 	private static final List<Integer> MONSTERS = new ArrayList<>();
 	static
 	{
@@ -109,6 +107,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		MONSTERS.add(19236);
 		MONSTERS.add(19237);
 	}
+	
 	// Locations
 	private static final Location START_LOC = new Location(-107481, -10435, -12064);
 	private static final Location VANGUARD_SPAWN_LOC = new Location(-109032, -10440, -11949, 32800);

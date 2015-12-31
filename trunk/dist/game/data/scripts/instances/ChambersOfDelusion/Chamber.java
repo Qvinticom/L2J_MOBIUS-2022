@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,34 +16,34 @@
  */
 package instances.ChambersOfDelusion;
 
-import instances.AbstractInstance;
-
 import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
+
+import instances.AbstractInstance;
 
 /**
  * Chambers of Delusion superclass.
@@ -521,7 +519,6 @@ public abstract class Chamber extends AbstractInstance
 				}
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -558,7 +555,6 @@ public abstract class Chamber extends AbstractInstance
 				npc.broadcastEvent("SCE_DREAM_FIRE_IN_THE_HOLE", 2000, null);
 			}
 		}
-		
 		return super.onAttack(npc, attacker, damage, isPet, skill);
 	}
 	
@@ -568,15 +564,18 @@ public abstract class Chamber extends AbstractInstance
 		switch (eventName)
 		{
 			case "SCE_LUCKY":
+			{
 				receiver.setBusy(true);
 				receiver.doCast(SUCCESS_SKILL.getSkill());
 				break;
+			}
 			case "SCE_DREAM_FIRE_IN_THE_HOLE":
+			{
 				receiver.setBusy(true);
 				receiver.doCast(FAIL_SKILL.getSkill());
 				break;
+			}
 		}
-		
 		return null;
 	}
 	
@@ -605,7 +604,6 @@ public abstract class Chamber extends AbstractInstance
 			
 			inst.spawnGroup("boxes");
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -638,7 +636,6 @@ public abstract class Chamber extends AbstractInstance
 				enterInstance(player, new CDWorld(party), INSTANCE_TEMPLATE, INSTANCEID);
 			}
 		}
-		
 		return "";
 	}
 }

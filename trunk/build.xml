@@ -2,24 +2,20 @@
 <!DOCTYPE xml>
 <project name="L2J_Mobius" default="cleanup" basedir=".">
 	<description>
-		This script will build the L2J Server.
-
-		This program is free software; you can redistribute it and/or modify
+		This file is part of the L2J Mobius project.
+		
+		This program is free software: you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
-		the Free Software Foundation; either version 3, or (at your option)
-		any later version.
-
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+		
 		This program is distributed in the hope that it will be useful,
 		but WITHOUT ANY WARRANTY; without even the implied warranty of
-		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-		GNU General Public License for more details.
-
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+		General Public License for more details.
+		
 		You should have received a copy of the GNU General Public License
-		along with this program; if not, write to the Free Software
-		Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-		02111-1307, USA.
-
-		http://www.gnu.org/copyleft/gpl.html
+		along with this program. If not, see [http://www.gnu.org/licenses/].
 	</description>
 
 	<property name="build" location="../build" />
@@ -75,7 +71,7 @@
 			<format property="time.stamp" pattern="yyyy-MM-dd HH:mm:ss" />
 		</tstamp>
 
-		<jar destfile="${build.dist.login}/l2jlogin.jar" level="9">
+		<jar destfile="${build.dist.login}/LoginServer.jar" level="9">
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/gameserver/**" />
@@ -87,10 +83,10 @@
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Main-Class" value="com.l2jserver.loginserver.L2LoginServer" />
+				<attribute name="Main-Class" value="com.l2jmobius.loginserver.L2LoginServer" />
 			</manifest>
 		</jar>
-		<jar destfile="${build.dist.game}/l2jserver.jar" level="9">
+		<jar destfile="${build.dist.game}/GameServer.jar" level="9">
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/loginserver/**" />
@@ -102,7 +98,7 @@
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Main-Class" value="com.l2jserver.gameserver.GameServer" />
+				<attribute name="Main-Class" value="com.l2jmobius.gameserver.GameServer" />
 			</manifest>
 		</jar>
 		<jar destfile="${build.dist.dbinstaller}/Database_Installer_GS.jar" level="9">
@@ -118,7 +114,7 @@
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherGS" />
+				<attribute name="Main-Class" value="com.l2jmobius.tools.dbinstaller.LauncherGS" />
 			</manifest>
 		</jar>
 		<jar destfile="${build.dist.dbinstaller}/Database_Installer_LS.jar" level="9">
@@ -134,7 +130,7 @@
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
-				<attribute name="Main-Class" value="com.l2jserver.tools.dbinstaller.LauncherLS" />
+				<attribute name="Main-Class" value="com.l2jmobius.tools.dbinstaller.LauncherLS" />
 			</manifest>
 		</jar>
 	</target>
@@ -142,11 +138,11 @@
 	<target name="adding-core" depends="jar" description="Adding the compiled jars to the Zip file.">
 		<zip destfile="${build}/L2J_Mobius.zip" basedir="${build.dist}" level="9" />
 	</target>
-	
+
 	<target name="adding-datapack" depends="adding-core" description="Updating the Zip file with datapack content.">
 		<zip destfile="${build}/L2J_Mobius.zip" basedir="${datapack}" update="true" level="9" />
 	</target>
-	
+
 	<target name="cleanup" depends="adding-datapack" description="Cleaning the build folder.">
 		<delete dir="${build.dist}" />
 	</target>

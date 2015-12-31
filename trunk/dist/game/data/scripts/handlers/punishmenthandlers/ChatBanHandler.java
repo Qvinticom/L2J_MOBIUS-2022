@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,14 +16,14 @@
  */
 package handlers.punishmenthandlers;
 
-import com.l2jserver.gameserver.LoginServerThread;
-import com.l2jserver.gameserver.handler.IPunishmentHandler;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.punishment.PunishmentTask;
-import com.l2jserver.gameserver.model.punishment.PunishmentType;
-import com.l2jserver.gameserver.network.L2GameClient;
-import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
+import com.l2jmobius.gameserver.LoginServerThread;
+import com.l2jmobius.gameserver.handler.IPunishmentHandler;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
+import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
  * This class handles chat ban punishment.

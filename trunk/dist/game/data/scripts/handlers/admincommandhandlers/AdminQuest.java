@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -25,18 +23,18 @@ import java.util.TreeSet;
 
 import javax.script.ScriptException;
 
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.listeners.AbstractEventListener;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestTimer;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestTimer;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.util.Util;
 
 public class AdminQuest implements IAdminCommandHandler
 {
@@ -153,7 +151,6 @@ public class AdminQuest implements IAdminCommandHandler
 					activeChar.sendMessage("File Not Found: " + parts[1]);
 				}
 			}
-			
 		}
 		else if (command.startsWith("admin_script_unload"))
 		{

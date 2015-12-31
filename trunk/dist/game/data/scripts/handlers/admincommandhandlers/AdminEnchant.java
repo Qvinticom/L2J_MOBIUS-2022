@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,16 +18,16 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * This class handles following admin commands: - enchant_armor
@@ -41,20 +39,20 @@ public class AdminEnchant implements IAdminCommandHandler
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_seteh",// 6
-		"admin_setec",// 10
-		"admin_seteg",// 9
-		"admin_setel",// 11
-		"admin_seteb",// 12
-		"admin_setew",// 7
-		"admin_setes",// 8
-		"admin_setle",// 1
-		"admin_setre",// 2
-		"admin_setlf",// 4
-		"admin_setrf",// 5
-		"admin_seten",// 3
-		"admin_setun",// 0
-		"admin_setba",// 13
+		"admin_seteh", // 6
+		"admin_setec", // 10
+		"admin_seteg", // 9
+		"admin_setel", // 11
+		"admin_seteb", // 12
+		"admin_setew", // 7
+		"admin_setes", // 8
+		"admin_setle", // 1
+		"admin_setre", // 2
+		"admin_setlf", // 4
+		"admin_setrf", // 5
+		"admin_seten", // 3
+		"admin_setun", // 0
+		"admin_setba", // 13
 		"admin_setbe",
 		"admin_enchant"
 	};

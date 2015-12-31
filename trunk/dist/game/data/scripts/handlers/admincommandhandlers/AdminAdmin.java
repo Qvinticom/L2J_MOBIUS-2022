@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,20 +19,20 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.impl.AdminData;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Hero;
-import com.l2jserver.gameserver.model.olympiad.Olympiad;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.ExWorldChatCnt;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Hero;
+import com.l2jmobius.gameserver.model.olympiad.Olympiad;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import com.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -397,29 +395,45 @@ public class AdminAdmin implements IAdminCommandHandler
 		switch (mode)
 		{
 			case 1:
+			{
 				filename = "main";
 				break;
+			}
 			case 2:
+			{
 				filename = "game";
 				break;
+			}
 			case 3:
+			{
 				filename = "effects";
 				break;
+			}
 			case 4:
+			{
 				filename = "server";
 				break;
+			}
 			case 5:
+			{
 				filename = "mods";
 				break;
+			}
 			case 6:
+			{
 				filename = "char";
 				break;
+			}
 			case 7:
+			{
 				filename = "gm";
 				break;
+			}
 			default:
+			{
 				filename = "main";
 				break;
+			}
 		}
 		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}

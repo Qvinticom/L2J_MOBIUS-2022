@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,29 +20,29 @@ import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable;
-import com.l2jserver.gameserver.data.sql.impl.NpcBufferTable.NpcBufferData;
-import com.l2jserver.gameserver.data.xml.impl.MultisellData;
-import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2OlympiadManagerInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Hero;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.olympiad.CompetitionType;
-import com.l2jserver.gameserver.model.olympiad.Olympiad;
-import com.l2jserver.gameserver.model.olympiad.OlympiadManager;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExHeroList;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable;
+import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable.NpcBufferData;
+import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2OlympiadManagerInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Hero;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
+import com.l2jmobius.gameserver.model.olympiad.Olympiad;
+import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExHeroList;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author DS
@@ -122,6 +120,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				switch (val)
 				{
 					case 0: // H5 match selection
+					{
 						if (!OlympiadManager.getInstance().isRegistered(activeChar))
 						{
 							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_desc2a.htm");
@@ -138,10 +137,14 @@ public class OlympiadManagerLink implements IBypassHandler
 							activeChar.sendPacket(html);
 						}
 						break;
+					}
 					case 1: // unregister
+					{
 						OlympiadManager.getInstance().unRegisterNoble(activeChar);
 						break;
+					}
 					case 2: // show waiting list | TODO: cleanup (not used anymore)
+					{
 						final int nonClassed = OlympiadManager.getInstance().getRegisteredNonClassBased().size();
 						final int teams = OlympiadManager.getInstance().getRegisteredTeamsBased().size();
 						final Collection<List<Integer>> allClassed = OlympiadManager.getInstance().getRegisteredClassBased().values();
@@ -172,20 +175,28 @@ public class OlympiadManagerLink implements IBypassHandler
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
 						activeChar.sendPacket(html);
 						break;
+					}
 					case 3: // There are %points% Grand Olympiad points granted for this event. | TODO: cleanup (not used anymore)
+					{
 						final int points = Olympiad.getInstance().getNoblePoints(activeChar.getObjectId());
 						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points1.htm");
 						html.replace("%points%", String.valueOf(points));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
 						activeChar.sendPacket(html);
 						break;
+					}
 					case 4: // register non classed
+					{
 						OlympiadManager.getInstance().registerNoble(activeChar, CompetitionType.NON_CLASSED);
 						break;
+					}
 					case 5: // register classed
+					{
 						OlympiadManager.getInstance().registerNoble(activeChar, CompetitionType.CLASSED);
 						break;
+					}
 					case 6: // request tokens reward
+					{
 						passes = Olympiad.getInstance().getNoblessePasses(activeChar, false);
 						if (passes > 0)
 						{
@@ -200,20 +211,28 @@ public class OlympiadManagerLink implements IBypassHandler
 							activeChar.sendPacket(html);
 						}
 						break;
+					}
 					case 7: // Equipment Rewards
+					{
 						MultisellData.getInstance().separateAndSend(102, activeChar, (L2Npc) target, false);
 						break;
+					}
 					case 8: // Misc. Rewards
+					{
 						MultisellData.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
 						break;
+					}
 					case 9: // Your Grand Olympiad Score from the previous period is %points% point(s) | TODO: cleanup (not used anymore)
+					{
 						final int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());
 						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points2.htm");
 						html.replace("%points%", String.valueOf(point));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
 						activeChar.sendPacket(html);
 						break;
+					}
 					case 10: // give tokens to player
+					{
 						passes = Olympiad.getInstance().getNoblessePasses(activeChar, true);
 						if (passes > 0)
 						{
@@ -229,12 +248,17 @@ public class OlympiadManagerLink implements IBypassHandler
 							activeChar.sendPacket(sm);
 						}
 						break;
+					}
 					case 11: // register team
+					{
 						OlympiadManager.getInstance().registerNoble(activeChar, CompetitionType.TEAMS);
 						break;
+					}
 					default:
+					{
 						_log.warning("Olympiad System: Couldnt send packet for request " + val);
 						break;
+					}
 				}
 			}
 			else if (command.toLowerCase().startsWith("olybuff"))
@@ -315,8 +339,8 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				switch (val)
 				{
-					case 2: // show rank for a specific class
-						// for example >> Olympiad 1_88
+					case 2: // show rank for a specific class (for example >> Olympiad 1_88)
+					{
 						final int classId = Integer.parseInt(command.substring(11));
 						if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
 						{
@@ -344,10 +368,14 @@ public class OlympiadManagerLink implements IBypassHandler
 							activeChar.sendPacket(reply);
 						}
 						break;
+					}
 					case 4: // hero list
+					{
 						activeChar.sendPacket(new ExHeroList());
 						break;
+					}
 					case 5: // Hero Certification
+					{
 						if (Hero.getInstance().isUnclaimedHero(activeChar.getObjectId()))
 						{
 							Hero.getInstance().claimHero(activeChar);
@@ -359,9 +387,12 @@ public class OlympiadManagerLink implements IBypassHandler
 						}
 						activeChar.sendPacket(reply);
 						break;
+					}
 					default:
+					{
 						_log.warning("Olympiad System: Couldnt send packet for request " + val);
 						break;
+					}
 				}
 			}
 		}

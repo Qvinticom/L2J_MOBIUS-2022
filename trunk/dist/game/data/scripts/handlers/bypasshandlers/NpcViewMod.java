@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -24,24 +22,24 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.Elementals;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.drops.DropListScope;
-import com.l2jserver.gameserver.model.drops.GeneralDropItem;
-import com.l2jserver.gameserver.model.drops.GroupedGeneralDropItem;
-import com.l2jserver.gameserver.model.drops.IDropItem;
-import com.l2jserver.gameserver.model.items.L2Item;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.HtmlUtil;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.model.Elementals;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.drops.DropListScope;
+import com.l2jmobius.gameserver.model.drops.GeneralDropItem;
+import com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem;
+import com.l2jmobius.gameserver.model.drops.IDropItem;
+import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.HtmlUtil;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author NosBit
@@ -435,9 +433,7 @@ public class NpcViewMod implements IBypassHandler
 		{
 			this.min = min;
 			this.max = max;
-			
 		}
-		
 	}
 	
 	private static MinMax getPreciseMinMax(double chance, long min, long max, boolean isPrecise)

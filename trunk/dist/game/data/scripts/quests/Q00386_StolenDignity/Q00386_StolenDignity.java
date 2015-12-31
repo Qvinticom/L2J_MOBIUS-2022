@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -23,12 +21,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Stolen Dignity (386)
@@ -865,7 +863,6 @@ public final class Q00386_StolenDignity extends Quest
 					break;
 				}
 			}
-			
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -885,7 +882,6 @@ public final class Q00386_StolenDignity extends Quest
 		{
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
-				
 				final QuestState qss = getQuestState(pm, false);
 				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(1500, npc, pm, true))
 				{

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,27 +20,27 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.ai.CtrlEvent;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Seed of Infinity (Hall of Suffering) instance zone.<br>
@@ -316,15 +314,25 @@ public final class HallOfSuffering extends AbstractNpcAI
 		switch (room)
 		{
 			case 0:
+			{
 				return ROOM_1_MOBS;
+			}
 			case 1:
+			{
 				return ROOM_2_MOBS;
+			}
 			case 2:
+			{
 				return ROOM_3_MOBS;
+			}
 			case 3:
+			{
 				return ROOM_4_MOBS;
+			}
 			case 4:
+			{
 				return ROOM_5_MOBS;
+			}
 		}
 		_log.warning("");
 		return new int[][] {};

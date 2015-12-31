@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `gameservers` (
   PRIMARY KEY (`server_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `gameservers` VALUES ('14', '-2ad66b3f483c22be097019f55c8abdf0', '');
+INSERT INTO `gameservers` VALUES ('2', '-2ad66b3f483c22be097019f55c8abdf0', '');

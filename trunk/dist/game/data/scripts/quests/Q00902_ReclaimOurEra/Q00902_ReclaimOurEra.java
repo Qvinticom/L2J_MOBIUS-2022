@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,13 +19,13 @@ package quests.Q00902_ReclaimOurEra;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.QuestType;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Reclaim Our Era (902)
@@ -46,7 +44,6 @@ public final class Q00902_ReclaimOurEra extends Quest
 	private static final int PROOF_OF_CHALLENGE = 21750;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTER_DROPS = new HashMap<>();
-	
 	static
 	{
 		MONSTER_DROPS.put(25309, SHATTERED_BONES); // Varka's Hero Shadith

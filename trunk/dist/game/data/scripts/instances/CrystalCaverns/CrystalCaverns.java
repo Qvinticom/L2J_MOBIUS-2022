@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,52 +16,52 @@
  */
 package instances.CrystalCaverns;
 
-import instances.AbstractInstance;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.enums.TrapAction;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
-import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.TrapAction;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
+import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import com.l2jmobius.gameserver.util.Util;
+
+import instances.AbstractInstance;
 
 /**
  * Crystal Caverns instance zone.<br>
@@ -933,7 +931,6 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		
 		boolean doReturn = true;
 		for (L2Object obj : targets)
 		{
@@ -957,10 +954,14 @@ public final class CrystalCaverns extends AbstractInstance
 			case 2360:
 			case 2369:
 			case 5146:
+			{
 				doReturn = false;
 				break;
+			}
 			default:
+			{
 				doReturn = true;
+			}
 		}
 		if (doReturn)
 		{
@@ -1524,7 +1525,6 @@ public final class CrystalCaverns extends AbstractInstance
 				giveItems(player, BLACK_SEED, num);
 			}
 		}
-		
 	}
 	
 	@Override
@@ -1681,16 +1681,23 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (world.getStatus())
 					{
 						case 22:
+						{
 							closeDoor(DOOR6, npc.getInstanceId());
 							oracleOrder = ordreOracle1;
 							break;
+						}
 						case 23:
+						{
 							oracleOrder = ordreOracle2;
 							break;
+						}
 						case 24:
+						{
 							oracleOrder = ordreOracle3;
 							break;
+						}
 						case 25:
+						{
 							world.setStatus(26);
 							final L2Party party = player.getParty();
 							if (party != null)
@@ -1707,9 +1714,12 @@ public final class CrystalCaverns extends AbstractInstance
 							final L2Npc kechi = addSpawn(KECHI, 154069, 149525, -12158, 51165, false, 0, false, world.getInstanceId());
 							startQuestTimer("checkKechiAttack", 1000, kechi, null);
 							return "";
+						}
 						default:
+						{
 							_log.warning("CrystalCavern-SteamCorridor: status " + world.getStatus() + " error. OracleOrder not found in " + world.getInstanceId());
 							return "";
+						}
 					}
 					runSteamOracles(world, oracleOrder);
 				}
@@ -1791,6 +1801,7 @@ public final class CrystalCaverns extends AbstractInstance
 				switch (npc.getId())
 				{
 					case 32275:
+					{
 						if (world.getStatus() == 22)
 						{
 							runSteamRooms(world, STEAM2_SPAWNS, 23);
@@ -1818,7 +1829,9 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer31", 600000, npc, null);
 						break;
+					}
 					case 32276:
+					{
 						if (world.getStatus() == 23)
 						{
 							runSteamRooms(world, STEAM3_SPAWNS, 24);
@@ -1846,7 +1859,9 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer41", 1200000, npc, null);
 						break;
+					}
 					case 32277:
+					{
 						if (world.getStatus() == 24)
 						{
 							runSteamRooms(world, STEAM4_SPAWNS, 25);
@@ -1874,9 +1889,12 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer51", 900000, npc, null);
 						break;
+					}
 					default:
+					{
 						// something is wrong
 						doTeleport = false;
+					}
 				}
 				if (doTeleport && (loc != null))
 				{
@@ -1969,12 +1987,14 @@ public final class CrystalCaverns extends AbstractInstance
 			switch (action)
 			{
 				case TRAP_DISARMED:
+				{
 					if (trap.getId() == DOOR_OPENING_TRAP[0])
 					{
 						openDoor(24220001, world.getInstanceId());
 						runEmeraldRooms(world, ROOM1_SPAWNS, 1);
 					}
 					break;
+				}
 			}
 		}
 		return null;
@@ -1996,19 +2016,27 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (zone.getId())
 					{
 						case 20105:
+						{
 							spawns = ROOM2_SPAWNS;
 							room = 2;
 							break;
+						}
 						case 20106:
+						{
 							spawns = ROOM3_SPAWNS;
 							room = 3;
 							break;
+						}
 						case 20107:
+						{
 							spawns = ROOM4_SPAWNS;
 							room = 4;
 							break;
+						}
 						default:
+						{
 							return super.onEnterZone(character, zone);
+						}
 					}
 					for (L2DoorInstance door : InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoors())
 					{
@@ -2054,16 +2082,24 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (zone.getId())
 					{
 						case 20105:
+						{
 							doorId = 24220002;
 							break;
+						}
 						case 20106:
+						{
 							doorId = 24220003;
 							break;
+						}
 						case 20107:
+						{
 							doorId = 24220004;
 							break;
+						}
 						default:
+						{
 							return super.onExitZone(character, zone);
+						}
 					}
 					for (L2DoorInstance door : InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoors())
 					{
@@ -2077,7 +2113,6 @@ public final class CrystalCaverns extends AbstractInstance
 							break;
 						}
 					}
-					
 				}
 			}
 		}

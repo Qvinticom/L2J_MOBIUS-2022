@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,14 +19,14 @@ package vehicles;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.BoatManager;
-import com.l2jserver.gameserver.model.VehiclePathPoint;
-import com.l2jserver.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.BoatManager;
+import com.l2jmobius.gameserver.model.VehiclePathPoint;
+import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 /**
  * @author DS
@@ -120,46 +118,66 @@ public class BoatInnadrilTour implements Runnable
 			switch (_cycle)
 			{
 				case 0:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL5);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 240000);
 					break;
+				}
 				case 1:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL1);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 40000);
 					break;
+				}
 				case 2:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL0);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 20000);
 					break;
+				}
 				case 3:
+				{
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, LEAVING_INNADRIL, INNADRIL_SOUND);
 					_boat.payForRide(0, 1, 107092, 219098, -3952);
 					_boat.executePath(TOUR);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 650000);
 					break;
+				}
 				case 4:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL20);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
 					break;
+				}
 				case 5:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL15);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
 					break;
+				}
 				case 6:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL10);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
 					break;
+				}
 				case 7:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL5);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 240000);
 					break;
+				}
 				case 8:
+				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL1);
 					break;
+				}
 				case 9:
+				{
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, ARRIVED_AT_INNADRIL, INNADRIL_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 300000);
 					break;
+				}
 			}
 			_cycle++;
 			if (_cycle > 9)

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -31,34 +29,34 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
-import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jserver.gameserver.model.entity.clanhall.SiegeStatus;
-import com.l2jserver.gameserver.model.items.L2Item;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.datatables.SpawnTable;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.TeleportWhereType;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
+import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.model.entity.clanhall.SiegeStatus;
+import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Rainbow Springs Chateau clan hall siege script.
@@ -361,9 +359,11 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		switch (npc.getId())
 		{
 			case MESSENGER:
+			{
 				switch (event)
 				{
 					case "register":
+					{
 						if (!player.isClanLeader())
 						{
 							html = "messenger_yetti010.htm";
@@ -401,7 +401,9 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							}
 						}
 						break;
+					}
 					case "cancel":
+					{
 						if (!player.isClanLeader())
 						{
 							html = "messenger_yetti010.htm";
@@ -420,7 +422,9 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							html = "messenger_yetti018.htm";
 						}
 						break;
+					}
 					case "unregister":
+					{
 						if (_rainbow.isRegistering())
 						{
 							if (_warDecreesCount.containsKey(clan.getId()))
@@ -440,9 +444,12 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							html = "messenger_yetti020.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case CARETAKER:
+			{
 				if (event.equals("portToArena"))
 				{
 					final L2Party party = player.getParty();
@@ -514,6 +521,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 					}
 				}
 				break;
+			}
 		}
 		
 		if (event.startsWith("enterText"))

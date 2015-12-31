@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,16 +19,16 @@ package handlers.effecthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.conditions.Condition;
-import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.BuffInfo;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.conditions.Condition;
+import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * Force Skill effect implementation.
@@ -262,7 +260,6 @@ public final class TriggerForce extends AbstractEffect
 					if (!member.getEffectList().isAffectedBySkill(PARTY_SOLIDARITY) || (skill.getSkill().getLevel() != Math.min((activeForces - 3), 3)))
 					{
 						member.makeTriggerCast(SkillData.getInstance().getSkill(PARTY_SOLIDARITY, Math.min((activeForces - 3), 3)), member);
-						
 					}
 				}
 			}

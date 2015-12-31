@@ -14,14 +14,14 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.request.EnchantItemAttributeRequest;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExChangeAttributeItemList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.handler.IItemHandler;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.request.EnchantItemAttributeRequest;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExChangeAttributeItemList;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Erlandys

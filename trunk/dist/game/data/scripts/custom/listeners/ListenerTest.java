@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,28 +18,28 @@ package custom.listeners;
 
 import java.util.logging.Level;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.events.Containers;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.Id;
+import com.l2jmobius.gameserver.model.events.annotations.NpcLevelRange;
+import com.l2jmobius.gameserver.model.events.annotations.Priority;
+import com.l2jmobius.gameserver.model.events.annotations.Range;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureKill;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.item.OnItemCreate;
+import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
+import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.util.Rnd;
 
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.events.Containers;
-import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.NpcLevelRange;
-import com.l2jserver.gameserver.model.events.annotations.Priority;
-import com.l2jserver.gameserver.model.events.annotations.Range;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
-import com.l2jserver.gameserver.model.events.impl.character.OnCreatureKill;
-import com.l2jserver.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
-import com.l2jserver.gameserver.model.events.impl.character.player.OnPlayerLogin;
-import com.l2jserver.gameserver.model.events.impl.item.OnItemCreate;
-import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
-import com.l2jserver.gameserver.model.events.listeners.ConsumerEventListener;
-import com.l2jserver.gameserver.model.events.returns.TerminateReturn;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.util.Rnd;
+import ai.npc.AbstractNpcAI;
 
 /**
  * An example usage of Listeners.

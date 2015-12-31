@@ -1,50 +1,48 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
- *
- * This file is part of L2J DataPack.
- *
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
- * L2J DataPack is distributed in the hope that it will be useful,
+ * 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- *
+ * 
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual.Baium;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.MountType;
+import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.variables.NpcVariables;
+import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.CategoryType;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.enums.MountType;
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.variables.NpcVariables;
-import com.l2jserver.gameserver.model.zone.type.L2NoRestartZone;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Baium AI.

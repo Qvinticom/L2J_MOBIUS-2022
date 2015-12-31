@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,17 +18,17 @@ package ai.group_template;
 
 import java.util.List;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Stakato Nest AI.
@@ -123,6 +121,7 @@ public final class StakatoNest extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
+			{
 				monster = checkMinion(npc);
 				if (monster != null)
 				{
@@ -134,14 +133,18 @@ public final class StakatoNest extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case STAKATO_BABY:
+			{
 				monster = ((L2MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("nurse_change", 5000, monster, killer);
 				}
 				break;
+			}
 			case STAKATO_MALE:
+			{
 				monster = checkMinion(npc);
 				if (monster != null)
 				{
@@ -153,14 +156,18 @@ public final class StakatoNest extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case STAKATO_FEMALE:
+			{
 				monster = ((L2MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("male_change", 5000, monster, killer);
 				}
 				break;
+			}
 			case STAKATO_CHIEF:
+			{
 				if (killer.isInParty())
 				{
 					final List<L2PcInstance> party = killer.getParty().getMembers();
@@ -174,6 +181,7 @@ public final class StakatoNest extends AbstractNpcAI
 					giveCocoon(killer, npc);
 				}
 				break;
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -202,11 +210,15 @@ public final class StakatoNest extends AbstractNpcAI
 		switch (event)
 		{
 			case "nurse_change":
+			{
 				npcId = STAKATO_NURSE_2;
 				break;
+			}
 			case "male_change":
+			{
 				npcId = STAKATO_MALE_2;
 				break;
+			}
 		}
 		if (npcId > 0)
 		{

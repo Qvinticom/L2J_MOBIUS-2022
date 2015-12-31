@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -34,34 +32,34 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.enums.TrapAction;
-import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Territory;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.enums.TrapAction;
+import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2CommandChannel;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Territory;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Seed of Destruction instance zone.<br>
@@ -637,9 +635,12 @@ public final class Stage1 extends Quest
 				switch (world.getStatus())
 				{
 					case 0:
+					{
 						spawnFlaggedNPCs(world, 0);
 						break;
+					}
 					case 1:
+					{
 						final ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1);
 						sendScreenMessage(world, message1);
 						for (int i : ENTRANCE_ROOM_DOORS)
@@ -648,11 +649,15 @@ public final class Stage1 extends Quest
 						}
 						spawnFlaggedNPCs(world, 1);
 						break;
+					}
 					case 2:
 					case 3:
+					{
 						// handled elsewhere
 						return true;
+					}
 					case 4:
+					{
 						final ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
 						sendScreenMessage(world, message2);
 						for (int i : SQUARE_DOORS)
@@ -661,26 +666,37 @@ public final class Stage1 extends Quest
 						}
 						spawnFlaggedNPCs(world, 4);
 						break;
+					}
 					case 5:
+					{
 						openDoor(SCOUTPASS_DOOR, world.getInstanceId());
 						spawnFlaggedNPCs(world, 3);
 						spawnFlaggedNPCs(world, 5);
 						break;
+					}
 					case 6:
+					{
 						openDoor(THRONE_DOOR, world.getInstanceId());
 						break;
+					}
 					case 7:
+					{
 						spawnFlaggedNPCs(world, 7);
 						break;
+					}
 					case 8:
+					{
 						final ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 1);
 						sendScreenMessage(world, message4);
 						world.deviceSpawnedMobCount = 0;
 						spawnFlaggedNPCs(world, 8);
 						break;
+					}
 					case 9:
+					{
 						// instance end
 						break;
+					}
 				}
 				world.incStatus();
 				return true;
@@ -1049,6 +1065,7 @@ public final class Stage1 extends Quest
 			switch (action)
 			{
 				case TRAP_TRIGGERED:
+				{
 					if (trap.getId() == 18771)
 					{
 						for (int npcId : TRAP_18771_NPCS)
@@ -1064,6 +1081,7 @@ public final class Stage1 extends Quest
 						}
 					}
 					break;
+				}
 			}
 		}
 		return null;

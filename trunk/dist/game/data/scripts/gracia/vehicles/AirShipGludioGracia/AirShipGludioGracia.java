@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,20 +16,20 @@
  */
 package gracia.vehicles.AirShipGludioGracia;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.AirShipManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.VehiclePathPoint;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.AirShipManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.VehiclePathPoint;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * @author DS
@@ -55,7 +53,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 		new VehiclePathPoint(-151202, 252556, 231),
 		new VehiclePathPoint(-160403, 256144, 222),
 		new VehiclePathPoint(-167874, 256731, -509, 0, 41035)
-	// teleport: x,y,z,speed=0,heading
+		// teleport: x,y,z,speed=0,heading
 	};
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GRACIA =
@@ -88,7 +86,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 		new VehiclePathPoint(-169763, 254815, 282),
 		new VehiclePathPoint(-168067, 256626, 343),
 		new VehiclePathPoint(-157261, 255664, 221, 0, 64781)
-	// teleport: x,y,z,speed=0,heading
+		// teleport: x,y,z,speed=0,heading
 	};
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GLUDIO =
@@ -247,43 +245,59 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 			switch (_cycle)
 			{
 				case 0:
+				{
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_GRACIA_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GLUDIO_TO_WARPGATE);
 					break;
+				}
 				case 1:
+				{
 					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;
+				}
 				case 2:
+				{
 					_ship.executePath(WARPGATE_TO_GRACIA);
 					break;
+				}
 				case 3:
+				{
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
 					break;
+				}
 				case 4:
+				{
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_ADEN_CONTINENT_HAS_DEPARTED);
 					_ship.setInDock(0);
 					_ship.executePath(GRACIA_TO_WARPGATE);
 					break;
+				}
 				case 5:
+				{
 					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
 					break;
+				}
 				case 6:
+				{
 					_ship.executePath(WARPGATE_TO_GLUDIO);
 					break;
+				}
 				case 7:
+				{
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
 					break;
+				}
 			}
 			_cycle++;
 			if (_cycle > 7)

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -23,17 +21,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.PledgeShowInfoUpdate;
-import com.l2jserver.gameserver.network.serverpackets.RadarControl;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * A Clan's Fame (509)
@@ -45,7 +43,6 @@ public class Q00509_AClansFame extends Quest
 	private static final int VALDIS = 31331;
 	
 	private static final Map<Integer, List<Integer>> REWARD_POINTS = new HashMap<>();
-	
 	static
 	{
 		REWARD_POINTS.put(1, Arrays.asList(25290, 8489, 1378)); // Daimon The White-Eyed

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,12 +18,12 @@ package events.MasterOfEnchanting;
 
 import java.util.Date;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.event.LongTimeEvent;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Master of Enchanting event AI.
@@ -187,76 +185,118 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				switch (getEnchantLevel(player, MASTER_YOGI_STAFF))
 				{
 					case 4:
+					{
 						giveItems(player, 6406, 1); // Firework
 						break;
+					}
 					case 5:
+					{
 						giveItems(player, 6406, 2); // Firework
 						giveItems(player, 6407, 1); // Large Firework
 						break;
+					}
 					case 6:
+					{
 						giveItems(player, 6406, 3); // Firework
 						giveItems(player, 6407, 2); // Large Firework
 						break;
+					}
 					case 7:
+					{
 						giveItems(player, HAT_SHADOW_REWARD[getRandom(3)], 1);
 						break;
+					}
 					case 8:
+					{
 						giveItems(player, 955, 1); // Scroll: Enchant Weapon (D)
 						break;
+					}
 					case 9:
+					{
 						giveItems(player, 955, 1); // Scroll: Enchant Weapon (D)
 						giveItems(player, 956, 1); // Scroll: Enchant Armor (D)
 						break;
+					}
 					case 10:
+					{
 						giveItems(player, 951, 1); // Scroll: Enchant Weapon (C)
 						break;
+					}
 					case 11:
+					{
 						giveItems(player, 951, 1); // Scroll: Enchant Weapon (C)
 						giveItems(player, 952, 1); // Scroll: Enchant Armor (C)
 						break;
+					}
 					case 12:
+					{
 						giveItems(player, 948, 1); // Scroll: Enchant Armor (B)
 						break;
+					}
 					case 13:
+					{
 						giveItems(player, 729, 1); // Scroll: Enchant Weapon (A)
 						break;
+					}
 					case 14:
+					{
 						giveItems(player, HAT_EVENT_REWARD[getRandom(3)], 1);
 						break;
+					}
 					case 15:
+					{
 						giveItems(player, 13992, 1); // Grade S Accessory Chest (Event)
 						break;
+					}
 					case 16:
+					{
 						giveItems(player, 8762, 1); // Top-Grade Life Stone: level 76
 						break;
+					}
 					case 17:
+					{
 						giveItems(player, 959, 1); // Scroll: Enchant Weapon (S)
 						break;
+					}
 					case 18:
+					{
 						giveItems(player, 13991, 1); // Grade S Armor Chest (Event)
 						break;
+					}
 					case 19:
+					{
 						giveItems(player, 13990, 1); // Grade S Weapon Chest (Event)
 						break;
+					}
 					case 20:
+					{
 						giveItems(player, CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
+					}
 					case 21:
+					{
 						giveItems(player, 8762, 1); // Top-Grade Life Stone: level 76
 						giveItems(player, 8752, 1); // High-Grade Life Stone: level 76
 						giveItems(player, CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
+					}
 					case 22:
+					{
 						giveItems(player, 13989, 1); // S80 Grade Armor Chest (Event)
 						break;
+					}
 					case 23:
+					{
 						giveItems(player, 13988, 1); // S80 Grade Weapon Chest (Event)
+						break;
+					}
 					default:
+					{
 						if (getEnchantLevel(player, MASTER_YOGI_STAFF) > 23)
 						{
 							giveItems(player, 13988, 1); // S80 Grade Weapon Chest (Event)
 						}
-						break;
+					}
 				}
 				takeItems(player, MASTER_YOGI_STAFF, 1);
 				htmltext = "32599-rewardok.htm";

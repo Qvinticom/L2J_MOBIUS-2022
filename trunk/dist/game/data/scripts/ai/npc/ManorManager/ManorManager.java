@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,28 +16,28 @@
  */
 package ai.npc.ManorManager;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
+import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.Id;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.BuyListSeed;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowManorDefaultInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowProcureCropDetail;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowSeedInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowSellCropList;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.BuyListSeed;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowProcureCropDetail;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSellCropList;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Manor manager AI.
@@ -82,8 +80,10 @@ public final class ManorManager extends AbstractNpcAI
 			case "manager-help-01.htm":
 			case "manager-help-02.htm":
 			case "manager-help-03.htm":
+			{
 				htmltext = event;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -133,25 +133,39 @@ public final class ManorManager extends AbstractNpcAI
 				break;
 			}
 			case 2: // Crop sales
+			{
 				player.sendPacket(new ExShowSellCropList(player.getInventory(), castleId));
 				break;
+			}
 			case 3: // Seed info
+			{
 				player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), false));
 				break;
+			}
 			case 4: // Crop info
+			{
 				player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), false));
 				break;
+			}
 			case 5: // Basic info
+			{
 				player.sendPacket(new ExShowManorDefaultInfo(false));
 				break;
+			}
 			case 6: // Buy harvester
+			{
 				((L2MerchantInstance) npc).showBuyWindow(player, 300000 + npc.getId());
 				break;
+			}
 			case 9: // Edit sales (Crop sales)
+			{
 				player.sendPacket(new ExShowProcureCropDetail(evt.getManorId()));
 				break;
+			}
 			default:
+			{
 				_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+			}
 		}
 	}
 	

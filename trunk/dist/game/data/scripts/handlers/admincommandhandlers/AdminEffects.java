@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,38 +19,49 @@ package handlers.admincommandhandlers;
 import java.util.Collection;
 import java.util.StringTokenizer;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.Team;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.ExRedSky;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.SunRise;
-import com.l2jserver.gameserver.network.serverpackets.SunSet;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.enums.Team;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
+import com.l2jmobius.gameserver.network.serverpackets.ExRedSky;
+import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SunRise;
+import com.l2jmobius.gameserver.network.serverpackets.SunSet;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class handles following admin commands: <li>invis/invisible/vis/visible = makes yourself invisible or visible <li>earthquake = causes an earthquake of a given intensity and duration around you <li>bighead/shrinkhead = changes head size <li>gmspeed = temporary Super Haste effect. <li>
- * para/unpara = paralyze/remove paralysis from target <li>para_all/unpara_all = same as para/unpara, affects the whole world. <li>polyself/unpolyself = makes you look as a specified mob. <li>changename = temporary change name <li>clearteams/setteam_close/setteam = team related commands <li>social =
- * forces an L2Character instance to broadcast social action packets. <li>effect = forces an L2Character instance to broadcast MSU packets. <li>abnormal = force changes over an L2Character instance's abnormal state. <li>play_sound/play_sounds = Music broadcasting related commands <li>atmosphere =
- * sky change related commands.
+ * This class handles following admin commands:
+ * <li>invis/invisible/vis/visible = makes yourself invisible or visible
+ * <li>earthquake = causes an earthquake of a given intensity and duration around you
+ * <li>bighead/shrinkhead = changes head size
+ * <li>gmspeed = temporary Super Haste effect.
+ * <li>para/unpara = paralyze/remove paralysis from target
+ * <li>para_all/unpara_all = same as para/unpara, affects the whole world.
+ * <li>polyself/unpolyself = makes you look as a specified mob.
+ * <li>changename = temporary change name
+ * <li>clearteams/setteam_close/setteam = team related commands
+ * <li>social = forces an L2Character instance to broadcast social action packets.
+ * <li>effect = forces an L2Character instance to broadcast MSU packets.
+ * <li>abnormal = force changes over an L2Character instance's abnormal state.
+ * <li>play_sound/play_sounds = Music broadcasting related commands
+ * <li>atmosphere = sky change related commands.
  */
 public class AdminEffects implements IAdminCommandHandler
 {
@@ -539,7 +548,6 @@ public class AdminEffects implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					
 					return false;
 				}
 				
@@ -623,7 +631,6 @@ public class AdminEffects implements IAdminCommandHandler
 					target.broadcastPacket(new MagicSkillUse(target, activeChar, skill, level, hittime, 0));
 					activeChar.sendMessage(obj.getName() + " performs MSU " + skill + "/" + level + " by your request.");
 				}
-				
 			}
 			catch (Exception e)
 			{

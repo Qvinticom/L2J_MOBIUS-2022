@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -24,24 +22,24 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
-import com.l2jserver.gameserver.handler.ITelnetHandler;
-import com.l2jserver.gameserver.instancemanager.PunishmentManager;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
-import com.l2jserver.gameserver.model.punishment.PunishmentTask;
-import com.l2jserver.gameserver.model.punishment.PunishmentType;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.util.GMAudit;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.handler.ITelnetHandler;
+import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
+import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
+import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.GMAudit;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -110,7 +108,6 @@ public class PlayerHandler implements ITelnetHandler
 			}
 			catch (Exception e)
 			{
-				
 			}
 		}
 		else if (command.startsWith("enchant"))
@@ -127,52 +124,84 @@ public class PlayerHandler implements ITelnetHandler
 				switch (itemType)
 				{
 					case 1:
+					{
 						itemType = Inventory.PAPERDOLL_HEAD;
 						break;
+					}
 					case 2:
+					{
 						itemType = Inventory.PAPERDOLL_CHEST;
 						break;
+					}
 					case 3:
+					{
 						itemType = Inventory.PAPERDOLL_GLOVES;
 						break;
+					}
 					case 4:
+					{
 						itemType = Inventory.PAPERDOLL_FEET;
 						break;
+					}
 					case 5:
+					{
 						itemType = Inventory.PAPERDOLL_LEGS;
 						break;
+					}
 					case 6:
+					{
 						itemType = Inventory.PAPERDOLL_RHAND;
 						break;
+					}
 					case 7:
+					{
 						itemType = Inventory.PAPERDOLL_LHAND;
 						break;
+					}
 					case 8:
+					{
 						itemType = Inventory.PAPERDOLL_LEAR;
 						break;
+					}
 					case 9:
+					{
 						itemType = Inventory.PAPERDOLL_REAR;
 						break;
+					}
 					case 10:
+					{
 						itemType = Inventory.PAPERDOLL_LFINGER;
 						break;
+					}
 					case 11:
+					{
 						itemType = Inventory.PAPERDOLL_RFINGER;
 						break;
+					}
 					case 12:
+					{
 						itemType = Inventory.PAPERDOLL_NECK;
 						break;
+					}
 					case 13:
+					{
 						itemType = Inventory.PAPERDOLL_UNDER;
 						break;
+					}
 					case 14:
+					{
 						itemType = Inventory.PAPERDOLL_CLOAK;
 						break;
+					}
 					case 15:
+					{
 						itemType = Inventory.PAPERDOLL_BELT;
 						break;
+					}
 					default:
+					{
 						itemType = 0;
+					}
 				}
 				
 				if (enchant > 127)
@@ -201,7 +230,6 @@ public class PlayerHandler implements ITelnetHandler
 			}
 			catch (Exception e)
 			{
-				
 			}
 		}
 		else if (command.startsWith("jail"))

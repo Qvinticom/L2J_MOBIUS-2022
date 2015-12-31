@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -17,8 +15,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package instances.FinalEmperialTomb;
-
-import instances.AbstractInstance;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -38,41 +34,43 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.L2Territory;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.Earthquake;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillCanceld;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.NpcInfo;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2CommandChannel;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Territory;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
+
+import instances.AbstractInstance;
 
 /**
  * Final Emperial Tomb instance zone. TODO:<br>
@@ -624,23 +622,30 @@ public final class FinalEmperialTomb extends AbstractInstance
 				switch (world.getStatus())
 				{
 					case 0:
+					{
 						spawnFlaggedNPCs(world, 0);
 						break;
+					}
 					case 1:
+					{
 						for (int doorId : FIRST_ROUTE_DOORS)
 						{
 							openDoor(doorId, world.getInstanceId());
 						}
 						spawnFlaggedNPCs(world, world.getStatus());
 						break;
+					}
 					case 2:
+					{
 						for (int doorId : SECOND_ROUTE_DOORS)
 						{
 							openDoor(doorId, world.getInstanceId());
 						}
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 0), 600000);
 						break;
+					}
 					case 3: // first morph
+					{
 						if (world.songEffectTask != null)
 						{
 							world.songEffectTask.cancel(false);
@@ -655,7 +660,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 						world.activeScarlet.doCast(FIRST_MORPH_SKILL.getSkill());
 						ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(world, 2), 1500);
 						break;
+					}
 					case 4: // second morph
+					{
 						world.isVideo = true;
 						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
 						if (world.songEffectTask != null)
@@ -666,7 +673,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 23), 2000);
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 24), 2100);
 						break;
+					}
 					case 5: // raid success
+					{
 						world.isVideo = true;
 						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
 						if (world.songTask != null)
@@ -681,7 +690,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 						world.songEffectTask = null;
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 33), 500);
 						break;
+					}
 					case 6: // open doors
+					{
 						InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(300000);
 						for (int doorId : FIRST_ROOM_DOORS)
 						{
@@ -700,6 +711,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 							closeDoor(doorId, world.getInstanceId());
 						}
 						break;
+					}
 				}
 				world.incStatus();
 				return true;
@@ -805,6 +817,7 @@ public final class FinalEmperialTomb extends AbstractInstance
 			switch (_status)
 			{
 				case 0: // new song play
+				{
 					if (_world.isVideo)
 					{
 						_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), 1000);
@@ -833,7 +846,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 1: // Frintezza song effect
+				{
 					_world.songEffectTask = null;
 					final Skill skill = _world.OnSong.effectSkill.getSkill();
 					if (skill == null)
@@ -880,10 +895,13 @@ public final class FinalEmperialTomb extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 2: // finish morph
+				{
 					_world.activeScarlet.setRHandId(SECOND_SCARLET_WEAPON);
 					_world.activeScarlet.setIsInvul(false);
 					break;
+				}
 			}
 		}
 	}
@@ -905,11 +923,14 @@ public final class FinalEmperialTomb extends AbstractInstance
 			switch (_status)
 			{
 				case 0:
+				{
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 1), 27000);
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 2), 30000);
 					broadCastPacket(_world, new Earthquake(-87784, -155083, -9087, 45, 27));
 					break;
+				}
 				case 1:
+				{
 					for (int doorId : FIRST_ROOM_DOORS)
 					{
 						closeDoor(doorId, _world.getInstanceId());
@@ -928,7 +949,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 					}
 					addSpawn(29061, -87904, -141296, -9168, 0, false, 0, false, _world.getInstanceId());
 					break;
+				}
 				case 2:
+				{
 					_world.frintezzaDummy = addSpawn(29052, -87784, -155083, -9087, 16048, false, 0, false, _world.getInstanceId());
 					_world.frintezzaDummy.setIsInvul(true);
 					_world.frintezzaDummy.setIsImmobilized(true);
@@ -954,7 +977,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 					stopPc();
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 3), 1000);
 					break;
+				}
 				case 3:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 0, 75, -89, 0, 100, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 0, 75, -89, 0, 100, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 300, 90, -10, 6500, 7000, 0, 0, 1, 0, 0));
@@ -975,41 +1000,57 @@ public final class FinalEmperialTomb extends AbstractInstance
 					}
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 4), 6500);
 					break;
+				}
 				case 4:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezzaDummy, 1800, 90, 8, 6500, 7000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 5), 900);
 					break;
+				}
 				case 5:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezzaDummy, 140, 90, 10, 2500, 4500, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 6), 4000);
 					break;
+				}
 				case 6:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 40, 75, -10, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 40, 75, -10, 0, 12000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 7), 1350);
 					break;
+				}
 				case 7:
+				{
 					broadCastPacket(_world, new SocialAction(_world.frintezza.getObjectId(), 2));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 8), 7000);
 					break;
+				}
 				case 8:
+				{
 					_world.frintezzaDummy.deleteMe();
 					_world.frintezzaDummy = null;
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 9), 1000);
 					break;
+				}
 				case 9:
+				{
 					broadCastPacket(_world, new SocialAction(_world.demons.get(1).getObjectId(), 1));
 					broadCastPacket(_world, new SocialAction(_world.demons.get(2).getObjectId(), 1));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 10), 400);
 					break;
+				}
 				case 10:
+				{
 					broadCastPacket(_world, new SocialAction(_world.demons.get(0).getObjectId(), 1));
 					broadCastPacket(_world, new SocialAction(_world.demons.get(3).getObjectId(), 1));
 					sendPacketX(new SpecialCamera(_world.portraitDummy1, 1000, 118, 0, 0, 1000, 0, 0, 1, 0, 0), new SpecialCamera(_world.portraitDummy3, 1000, 62, 0, 0, 1000, 0, 0, 1, 0, 0), -87784);
 					sendPacketX(new SpecialCamera(_world.portraitDummy1, 1000, 118, 0, 0, 10000, 0, 0, 1, 0, 0), new SpecialCamera(_world.portraitDummy3, 1000, 62, 0, 0, 10000, 0, 0, 1, 0, 0), -87784);
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 11), 2000);
 					break;
+				}
 				case 11:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 240, 90, 0, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 240, 90, 25, 5500, 10000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SocialAction(_world.frintezza.getObjectId(), 3));
@@ -1019,36 +1060,50 @@ public final class FinalEmperialTomb extends AbstractInstance
 					_world.portraitDummy3 = null;
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 12), 4500);
 					break;
+				}
 				case 12:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 13), 700);
 					break;
+				}
 				case 13:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 14), 1300);
 					break;
+				}
 				case 14:
+				{
 					broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.MOURNFUL_CHORALE_PRELUDE, 2, 5000));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 120, 180, 45, 1500, 10000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, 5006, 1, 34000, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 15), 1500);
 					break;
+				}
 				case 15:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 520, 135, 45, 8000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 16), 7500);
 					break;
+				}
 				case 16:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 1500, 110, 25, 10000, 13000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 17), 9500);
 					break;
+				}
 				case 17:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 930, 160, -20, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 600, 180, -25, 0, 10000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new MagicSkillUse(_world.scarletDummy, _world.overheadDummy, 5004, 1, 5800, 0));
 					
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 18), 5000);
 					break;
+				}
 				case 18:
+				{
 					_world.activeScarlet = (L2GrandBossInstance) addSpawn(29046, -87789, -153295, -9176, 16384, false, 0, false, _world.getInstanceId());
 					_world.activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
 					_world.activeScarlet.setIsInvul(true);
@@ -1059,16 +1114,22 @@ public final class FinalEmperialTomb extends AbstractInstance
 					broadCastPacket(_world, new SpecialCamera(_world.scarletDummy, 800, 180, 10, 1000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 19), 2100);
 					break;
+				}
 				case 19:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 300, 60, 8, 0, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 20), 2000);
 					break;
+				}
 				case 20:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 500, 90, 10, 3000, 5000, 0, 0, 1, 0, 0));
 					_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), 100);
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 21), 3000);
 					break;
+				}
 				case 21:
+				{
 					for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
 					{
 						final L2MonsterInstance portrait = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, _world.getInstanceId());
@@ -1083,7 +1144,9 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 22), 2000);
 					break;
+				}
 				case 22:
+				{
 					for (L2MonsterInstance demon : _world.demons)
 					{
 						demon.setIsImmobilized(false);
@@ -1101,10 +1164,14 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					ThreadPoolManager.getInstance().scheduleGeneral(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
 					break;
+				}
 				case 23:
+				{
 					broadCastPacket(_world, new SocialAction(_world.frintezza.getObjectId(), 4));
 					break;
+				}
 				case 24:
+				{
 					stopPc();
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 250, 120, 15, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 250, 120, 15, 0, 10000, 0, 0, 1, 0, 0));
@@ -1115,16 +1182,22 @@ public final class FinalEmperialTomb extends AbstractInstance
 					_world.activeScarlet.disableAllSkills();
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 25), 7000);
 					break;
+				}
 				case 25:
+				{
 					broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, 5006, 1, 34000, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 500, 70, 15, 3000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 26), 3000);
 					break;
+				}
 				case 26:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 2500, 90, 12, 6000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 27), 3000);
 					break;
+				}
 				case 27:
+				{
 					_world.scarlet_x = _world.activeScarlet.getX();
 					_world.scarlet_y = _world.activeScarlet.getY();
 					_world.scarlet_z = _world.activeScarlet.getZ();
@@ -1141,17 +1214,23 @@ public final class FinalEmperialTomb extends AbstractInstance
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 250, _world.scarlet_a, 12, 0, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 28), 500);
 					break;
+				}
 				case 28:
+				{
 					_world.activeScarlet.doDie(_world.activeScarlet);
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 450, _world.scarlet_a, 14, 8000, 8000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 29), 6250);
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 30), 7200);
 					break;
+				}
 				case 29:
+				{
 					_world.activeScarlet.deleteMe();
 					_world.activeScarlet = null;
 					break;
+				}
 				case 30:
+				{
 					_world.activeScarlet = (L2GrandBossInstance) addSpawn(SCARLET2, _world.scarlet_x, _world.scarlet_y, _world.scarlet_z, _world.scarlet_h, false, 0, false, _world.getInstanceId());
 					_world.activeScarlet.setIsInvul(true);
 					_world.activeScarlet.setIsImmobilized(true);
@@ -1162,40 +1241,55 @@ public final class FinalEmperialTomb extends AbstractInstance
 					
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 31), 8100);
 					break;
+				}
 				case 31:
+				{
 					broadCastPacket(_world, new SocialAction(_world.activeScarlet.getObjectId(), 2));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 32), 9000);
 					break;
+				}
 				case 32:
+				{
 					startPc();
 					_world.activeScarlet.setIsInvul(false);
 					_world.activeScarlet.setIsImmobilized(false);
 					_world.activeScarlet.enableAllSkills();
 					_world.isVideo = false;
 					break;
+				}
 				case 33:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 300, _world.scarlet_a - 180, 5, 0, 7000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 200, _world.scarlet_a, 85, 4000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 34), 7400);
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 35), 7500);
 					break;
+				}
 				case 34:
+				{
 					_world.frintezza.doDie(_world.frintezza);
 					break;
+				}
 				case 35:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 120, 5, 0, 7000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 90, 5, 5000, 15000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 36), 7000);
 					break;
+				}
 				case 36:
+				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 900, 90, 25, 7000, 10000, 0, 0, 1, 0, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 37), 9000);
 					break;
+				}
 				case 37:
+				{
 					controlStatus(_world);
 					_world.isVideo = false;
 					startPc();
 					break;
+				}
 			}
 		}
 		
@@ -1271,28 +1365,38 @@ public final class FinalEmperialTomb extends AbstractInstance
 			switch (_status)
 			{
 				case 0:
+				{
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(_world, 1), 2000);
 					for (int doorId : FIRST_ROOM_DOORS)
 					{
 						openDoor(doorId, _world.getInstanceId());
 					}
 					break;
+				}
 				case 1:
+				{
 					addAggroToMobs();
 					break;
+				}
 				case 2:
+				{
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(_world, 3), 100);
 					for (int doorId : SECOND_ROOM_DOORS)
 					{
 						openDoor(doorId, _world.getInstanceId());
 					}
 					break;
+				}
 				case 3:
+				{
 					addAggroToMobs();
 					break;
+				}
 				case 4:
+				{
 					controlStatus(_world);
 					break;
+				}
 			}
 		}
 		

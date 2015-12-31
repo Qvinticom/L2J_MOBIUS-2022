@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,19 +18,19 @@ package handlers.bypasshandlers;
 
 import java.text.DateFormat;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.idfactory.IdFactory;
-import com.l2jserver.gameserver.instancemanager.games.Lottery;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.handler.IBypassHandler;
+import com.l2jmobius.gameserver.idfactory.IdFactory;
+import com.l2jmobius.gameserver.instancemanager.games.Lottery;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Loto implements IBypassHandler
 {
@@ -78,8 +76,9 @@ public class Loto implements IBypassHandler
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <BR>
-	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li> <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li> <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the
-	 * client wait another packet</li><BR>
+	 * <li>Get the text of the selected HTML file in function of the npcId and of the page number</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
+	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li><BR>
 	 * @param player The L2PcInstance that talk with the L2NpcInstance
 	 * @param npc L2Npc loto instance
 	 * @param val The number of the page of the L2NpcInstance to display
@@ -276,17 +275,25 @@ public class Loto implements IBypassHandler
 						switch ((int) check[0])
 						{
 							case 1:
+							{
 								message += "- 1st Prize";
 								break;
+							}
 							case 2:
+							{
 								message += "- 2nd Prize";
 								break;
+							}
 							case 3:
+							{
 								message += "- 3th Prize";
 								break;
+							}
 							case 4:
+							{
 								message += "- 4th Prize";
 								break;
+							}
 						}
 						message += " " + check[1] + "a.";
 					}

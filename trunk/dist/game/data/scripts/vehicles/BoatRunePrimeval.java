@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,14 +19,14 @@ package vehicles;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.BoatManager;
-import com.l2jserver.gameserver.model.VehiclePathPoint;
-import com.l2jserver.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.BoatManager;
+import com.l2jmobius.gameserver.model.VehiclePathPoint;
+import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 /**
  * @author DS
@@ -113,21 +111,28 @@ public class BoatRunePrimeval implements Runnable
 			switch (_cycle)
 			{
 				case 0:
+				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, false);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, LEAVING_RUNE, RUNE_SOUND);
 					_boat.payForRide(8925, 1, 34513, -38009, -3640);
 					_boat.executePath(RUNE_TO_PRIMEVAL);
 					break;
+				}
 				case 1:
+				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], ARRIVED_AT_PRIMEVAL, ARRIVED_AT_PRIMEVAL_2, PRIMEVAL_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 180000);
 					break;
+				}
 				case 2:
+				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], LEAVING_PRIMEVAL, PRIMEVAL_SOUND);
 					_boat.payForRide(8924, 1, 10447, -24982, -3664);
 					_boat.executePath(PRIMEVAL_TO_RUNE);
 					break;
+				}
 				case 3:
+				{
 					if (BoatManager.getInstance().dockBusy(BoatManager.RUNE_HARBOR))
 					{
 						if (_shoutCount == 0)
@@ -146,11 +151,14 @@ public class BoatRunePrimeval implements Runnable
 					}
 					_boat.executePath(RUNE_DOCK);
 					break;
+				}
 				case 4:
+				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, true);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, ARRIVED_AT_RUNE, ARRIVED_AT_RUNE_2, RUNE_SOUND);
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 180000);
 					break;
+				}
 			}
 			_shoutCount = 0;
 			_cycle++;

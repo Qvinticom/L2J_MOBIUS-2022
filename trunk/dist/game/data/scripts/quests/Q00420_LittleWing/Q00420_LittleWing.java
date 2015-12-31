@@ -1,18 +1,16 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
- *
- * This file is part of L2J DataPack.
- *
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
- * L2J DataPack is distributed in the hope that it will be useful,
+ * 
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- *
+ * 
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -23,15 +21,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Little Wing (420)
@@ -109,6 +107,7 @@ public final class Q00420_LittleWing extends Quest
 	private static final List<Integer> EGGS = Arrays.asList(EXARION_EGG, SUZET_EGG, KALIBRAN_EGG, SHAMHAI_EGG, ZWOV_EGG);
 	// Drake Drops
 	private static final Map<Integer, Integer> EGG_DROPS = new HashMap<>();
+	
 	{
 		EGG_DROPS.put(DEAD_SEEKER, SHAMHAI_EGG);
 		EGG_DROPS.put(MARSH_SPIDER, ZWOV_EGG);
@@ -116,6 +115,7 @@ public final class Q00420_LittleWing extends Quest
 		EGG_DROPS.put(ROAD_SCAVENGER, KALIBRAN_EGG);
 		EGG_DROPS.put(LETO_WARRIOR, EXARION_EGG);
 	}
+	
 	// Misc
 	private static final int MIN_LVL = 35;
 	

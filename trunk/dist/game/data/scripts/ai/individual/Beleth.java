@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,36 +19,36 @@ package ai.individual;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.TeleportWhereType;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
+import com.l2jmobius.gameserver.network.serverpackets.StaticObject;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.StatsSet;
-import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.network.serverpackets.DoorStatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.SocialAction;
-import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
-import com.l2jserver.gameserver.network.serverpackets.StaticObject;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Beleth's AI.

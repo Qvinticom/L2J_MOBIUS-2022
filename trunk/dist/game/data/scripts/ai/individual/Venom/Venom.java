@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,23 +19,23 @@ package ai.individual.Venom;
 import java.util.ArrayList;
 import java.util.List;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.TeleportWhereType;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
+import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeFinish;
-import com.l2jserver.gameserver.model.events.impl.sieges.castle.OnCastleSiegeStart;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.network.NpcStringId;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Venom AI on Rune Castle.
@@ -154,6 +152,7 @@ public final class Venom extends AbstractNpcAI
 		switch (event)
 		{
 			case "tower_check":
+			{
 				if (CastleManager.getInstance().getCastleById(CASTLE).getSiege().getControlTowerCount() <= 1)
 				{
 					changeLocation(MoveTo.THRONE);
@@ -162,18 +161,23 @@ public final class Venom extends AbstractNpcAI
 					startQuestTimer("raid_check", 10000, npc, null, true);
 				}
 				break;
+			}
 			case "raid_check":
+			{
 				if (!npc.isInsideZone(ZoneId.SIEGE) && !npc.isTeleporting())
 				{
 					npc.teleToLocation(_loc);
 				}
 				break;
+			}
 			case "cube_despawn":
+			{
 				if (npc != null)
 				{
 					npc.deleteMe();
 				}
 				break;
+			}
 		}
 		return event;
 	}
@@ -227,13 +231,18 @@ public final class Venom extends AbstractNpcAI
 		switch (skill.getId())
 		{
 			case 4222:
+			{
 				npc.teleToLocation(_loc);
 				break;
+			}
 			case 4995:
+			{
 				teleportTarget(player);
 				((L2Attackable) npc).stopHating(player);
 				break;
+			}
 			case 4996:
+			{
 				teleportTarget(player);
 				((L2Attackable) npc).stopHating(player);
 				if ((_targets != null) && (_targets.size() > 0))
@@ -253,6 +262,7 @@ public final class Venom extends AbstractNpcAI
 					_targets.clear();
 				}
 				break;
+			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
@@ -291,7 +301,6 @@ public final class Venom extends AbstractNpcAI
 		else
 		{
 			npc.doRevive();
-			
 		}
 		return super.onSpawn(npc);
 	}
@@ -346,9 +355,12 @@ public final class Venom extends AbstractNpcAI
 		switch (loc)
 		{
 			case THRONE:
+			{
 				_venom.teleToLocation(TRHONE, false);
 				break;
+			}
 			case PRISON:
+			{
 				if ((_venom == null) || _venom.isDead() || _venom.isDecayed())
 				{
 					_venom = addSpawn(VENOM, DUNGEON, false, 0);
@@ -360,6 +372,7 @@ public final class Venom extends AbstractNpcAI
 				cancelQuestTimer("raid_check", _venom, null);
 				cancelQuestTimer("tower_check", _venom, null);
 				break;
+			}
 		}
 		_loc.setLocation(_venom.getLocation());
 	}

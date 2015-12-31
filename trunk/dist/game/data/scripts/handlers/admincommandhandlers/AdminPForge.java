@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -24,19 +22,19 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import com.l2jserver.commons.mmocore.NioNetStringBuffer;
-import com.l2jserver.gameserver.GameServer;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.cache.HtmCache;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2BoatInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.clientpackets.L2GameClientPacket;
-import com.l2jserver.gameserver.network.serverpackets.AdminForgePacket;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.commons.mmocore.NioNetStringBuffer;
+import com.l2jmobius.gameserver.GameServer;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
+import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * This class handles commands for gm to forge packets
@@ -134,34 +132,50 @@ public final class AdminPForge implements IAdminCommandHandler
 				case 'B':
 				case 'x':
 				case 'X':
+				{
 					// array
 					break;
+				}
 				case 'c':
 				case 'C':
+				{
 					// byte
 					break;
+				}
 				case 'h':
 				case 'H':
+				{
 					// word
 					break;
+				}
 				case 'd':
 				case 'D':
+				{
 					// dword
 					break;
+				}
 				case 'q':
 				case 'Q':
+				{
 					// qword
 					break;
+				}
 				case 'f':
 				case 'F':
+				{
 					// double
 					break;
+				}
 				case 's':
 				case 'S':
+				{
 					// string
 					break;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		
@@ -175,7 +189,9 @@ public final class AdminPForge implements IAdminCommandHandler
 			case "sc":
 			case "sb":
 			case "cs":
+			{
 				return true;
+			}
 		}
 		
 		return false;
@@ -407,9 +423,12 @@ public final class AdminPForge implements IAdminCommandHandler
 						switch (value)
 						{
 							case "$oid":
+							{
 								value = String.valueOf(activeChar.getObjectId());
 								break;
+							}
 							case "$boid":
+							{
 								boat = activeChar.getBoat();
 								if (boat != null)
 								{
@@ -420,28 +439,44 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$title":
+							{
 								value = activeChar.getTitle();
 								break;
+							}
 							case "$name":
+							{
 								value = activeChar.getName();
 								break;
+							}
 							case "$x":
+							{
 								value = String.valueOf(activeChar.getX());
 								break;
+							}
 							case "$y":
+							{
 								value = String.valueOf(activeChar.getY());
 								break;
+							}
 							case "$z":
+							{
 								value = String.valueOf(activeChar.getZ());
 								break;
+							}
 							case "$heading":
+							{
 								value = String.valueOf(activeChar.getHeading());
 								break;
+							}
 							case "$toid":
+							{
 								value = String.valueOf(activeChar.getTargetId());
 								break;
+							}
 							case "$tboid":
+							{
 								target = activeChar.getTarget();
 								if ((target != null) && (target instanceof L2Playable))
 								{
@@ -456,7 +491,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									}
 								}
 								break;
+							}
 							case "$ttitle":
+							{
 								target = activeChar.getTarget();
 								if ((target != null) && (target instanceof L2Character))
 								{
@@ -467,7 +504,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "";
 								}
 								break;
+							}
 							case "$tname":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -478,7 +517,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "";
 								}
 								break;
+							}
 							case "$tx":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -489,7 +530,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$ty":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -500,7 +543,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$tz":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -511,7 +556,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$theading":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -522,6 +569,7 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 						}
 						
 						if (method.equals("sc") || method.equals("sb"))

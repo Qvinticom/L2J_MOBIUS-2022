@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,27 +16,26 @@
  */
 package instances.DisciplesNecropolisPast;
 
-import instances.AbstractInstance;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.Util;
+import instances.AbstractInstance;
+import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
 
 /**
  * Disciple's Necropolis Past instance zone.
@@ -91,6 +88,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		SKILLS.put(32720, new SkillHolder(6194, 1)); // Presentation - Anakim's Guard Battle
 		SKILLS.put(32721, new SkillHolder(6195, 1)); // Presentation - Anakim's Executor Battle
 	}
+	
 	// Locations
 	private static final Location ENTER = new Location(-89554, 216078, -7488, 0, 0);
 	private static final Location EXIT = new Location(171895, -17501, -4903, 0, 0);
@@ -154,20 +152,30 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		switch (world.countKill)
 		{
 			case 4:
+			{
 				openDoor(DOOR_1, world.getInstanceId());
 				break;
+			}
 			case 10:
+			{
 				openDoor(DOOR_2, world.getInstanceId());
 				break;
+			}
 			case 18:
+			{
 				openDoor(DOOR_3, world.getInstanceId());
 				break;
+			}
 			case 28:
+			{
 				openDoor(DOOR_4, world.getInstanceId());
 				break;
+			}
 			case 40:
+			{
 				openDoor(DOOR_5, world.getInstanceId());
 				break;
+			}
 		}
 	}
 	

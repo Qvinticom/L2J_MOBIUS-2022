@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,13 +19,13 @@ package ai.npc.KetraOrcSupport;
 import java.util.HashMap;
 import java.util.Map;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Ketra Orc Support AI.<br>
@@ -152,58 +150,88 @@ public final class KetraOrcSupport extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case KADUN:
+			{
 				htmltext = (AllianceLevel > 0) ? "31370-friend.html" : "31370-no.html";
 				break;
+			}
 			case WAHKAN:
+			{
 				htmltext = (AllianceLevel > 0) ? "31371-friend.html" : "31371-no.html";
 				break;
+			}
 			case ASEFA:
+			{
 				htmltext = (AllianceLevel > 0) ? (AllianceLevel < 3) ? "31372-01.html" : "31372-04.html" : "31372-03.html";
 				break;
+			}
 			case ATAN:
+			{
 				htmltext = (AllianceLevel > 0) ? "31373-friend.html" : "31373-no.html";
 				break;
+			}
 			case JAFF:
+			{
 				htmltext = (AllianceLevel > 0) ? (AllianceLevel == 1) ? "31374-01.html" : "31374-02.html" : "31374-no.html";
 				break;
+			}
 			case JUMARA:
+			{
 				switch (AllianceLevel)
 				{
 					case 1:
 					case 2:
+					{
 						htmltext = "31375-01.html";
 						break;
+					}
 					case 3:
 					case 4:
+					{
 						htmltext = "31375-02.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "31375-03.html";
 						break;
+					}
 					default:
+					{
 						htmltext = "31375-no.html";
 						break;
+					}
 				}
 				break;
+			}
 			case KURFA:
+			{
 				switch (AllianceLevel)
 				{
 					case 1:
 					case 2:
 					case 3:
+					{
 						htmltext = "31376-01.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "31376-02.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "31376-03.html";
 						break;
+					}
 					default:
+					{
 						htmltext = "31376-no.html";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

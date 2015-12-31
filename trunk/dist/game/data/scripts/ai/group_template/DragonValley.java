@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,16 +18,16 @@ package ai.group_template;
 
 import java.util.EnumMap;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Dragon Valley AI.
@@ -53,7 +51,6 @@ public final class DragonValley extends AbstractNpcAI
 		22826, // Scorpion Bones
 		22823, // Drakos Assassin
 		22828, // Parasitic Leech
-		
 	};
 	private static final int[] SPOIL_REACT_MONSTER =
 	{
@@ -88,6 +85,7 @@ public final class DragonValley extends AbstractNpcAI
 	private static final int MIN_LVL = 80;
 	private static final int CLASS_LVL = 3;
 	private static final EnumMap<ClassId, Double> CLASS_POINTS = new EnumMap<>(ClassId.class);
+	
 	{
 		CLASS_POINTS.put(ClassId.ADVENTURER, 0.2);
 		CLASS_POINTS.put(ClassId.ARCANA_LORD, 1.5);
@@ -257,14 +255,20 @@ public final class DragonValley extends AbstractNpcAI
 					switch (moraleBoostLv)
 					{
 						case 1:
+						{
 							MORALE_BOOST1.getSkill().applyEffects(member, member);
 							break;
+						}
 						case 2:
+						{
 							MORALE_BOOST2.getSkill().applyEffects(member, member);
 							break;
+						}
 						case 3:
+						{
 							MORALE_BOOST3.getSkill().applyEffects(member, member);
 							break;
+						}
 					}
 				}
 			}

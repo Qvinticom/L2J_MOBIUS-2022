@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,20 +18,20 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
-import com.l2jserver.gameserver.instancemanager.ClanHallAuctionManager;
-import com.l2jserver.gameserver.instancemanager.ClanHallManager;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.ClanHall;
-import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jserver.gameserver.model.zone.type.L2ClanHallZone;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.StringUtil;
+import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
+import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
+import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
+import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.ClanHall;
+import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.Util;
+import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles Clan Hall commands.
@@ -76,6 +74,7 @@ public class AdminClanHall implements IAdminCommandHandler
 					switch (command)
 					{
 						case "admin_clanhallset":
+						{
 							if ((player == null) || (player.getClan() == null))
 							{
 								activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -109,8 +108,9 @@ public class AdminClanHall implements IAdminCommandHandler
 								clan.setHideoutId(clanhall.getId());
 							}
 							break;
+						}
 						case "admin_clanhalldel":
-							
+						{
 							if (!clanhall.isSiegableHall())
 							{
 								if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
@@ -138,20 +138,28 @@ public class AdminClanHall implements IAdminCommandHandler
 								}
 							}
 							break;
+						}
 						case "admin_clanhallopendoors":
+						{
 							clanhall.openCloseDoors(true);
 							break;
+						}
 						case "admin_clanhallclosedoors":
+						{
 							clanhall.openCloseDoors(false);
 							break;
+						}
 						case "admin_clanhallteleportself":
+						{
 							final L2ClanHallZone zone = clanhall.getZone();
 							if (zone != null)
 							{
 								activeChar.teleToLocation(zone.getSpawnLoc(), true);
 							}
 							break;
+						}
 						default:
+						{
 							if (!clanhall.isSiegableHall())
 							{
 								showClanHallPage(activeChar, clanhall);
@@ -161,6 +169,7 @@ public class AdminClanHall implements IAdminCommandHandler
 								showSiegableHallPage(activeChar, (SiegableHall) clanhall);
 							}
 							break;
+						}
 					}
 				}
 			}

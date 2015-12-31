@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,46 +16,45 @@
  */
 package instances.IceQueensCastleBattle;
 
-import instances.AbstractInstance;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.MountType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2CommandChannel;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.variables.NpcVariables;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.network.serverpackets.ExChangeClientEffectInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
+import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.enums.MountType;
-import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.L2Party;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2RaidBossInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.variables.NpcVariables;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ExChangeClientEffectInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExSendUIEvent;
-import com.l2jserver.gameserver.network.serverpackets.OnEventTrigger;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
-import com.l2jserver.gameserver.util.Util;
+import instances.AbstractInstance;
+import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
 
 /**
  * Ice Queen's Castle (Battle) instance zone.
@@ -136,7 +133,6 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		new Location(114024, -112278, -11210),
 		new Location(113865, -112435, -11210),
 		new Location(113865, -112276, -11210),
-	
 	};
 	private static final Location[] STATUES_LOC =
 	{

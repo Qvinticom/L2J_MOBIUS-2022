@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,10 +16,10 @@
  */
 package ai.npc.CastleWarehouse;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Castle Warehouse Keeper AI.
@@ -63,11 +61,16 @@ public final class CastleWarehouse extends AbstractNpcAI
 			case "warehouse-01.html":
 			case "warehouse-02.html":
 			case "warehouse-03.html":
+			{
 				break;
+			}
 			case "warehouse-04.html":
+			{
 				htmltext = (!npc.isMyLord(player)) ? "warehouse-no.html" : getHtm(player.getHtmlPrefix(), "warehouse-04.html").replace("%blood%", Integer.toString(player.getClan().getBloodAllianceCount()));
 				break;
+			}
 			case "Receive":
+			{
 				if (!npc.isMyLord(player))
 				{
 					htmltext = "warehouse-no.html";
@@ -83,7 +86,9 @@ public final class CastleWarehouse extends AbstractNpcAI
 					htmltext = "warehouse-06.html";
 				}
 				break;
+			}
 			case "Exchange":
+			{
 				if (!npc.isMyLord(player))
 				{
 					htmltext = "warehouse-no.html";
@@ -99,9 +104,12 @@ public final class CastleWarehouse extends AbstractNpcAI
 					htmltext = "warehouse-07.html";
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}

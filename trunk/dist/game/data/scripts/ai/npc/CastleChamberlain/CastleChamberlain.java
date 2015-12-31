@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -25,41 +23,41 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jmobius.gameserver.enums.CastleSide;
+import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
+import com.l2jmobius.gameserver.instancemanager.FortManager;
+import com.l2jmobius.gameserver.model.ClanPrivilege;
+import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.L2TeleportLocation;
+import com.l2jmobius.gameserver.model.PcCondOverride;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
+import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.Id;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowCropSetting;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowManorDefaultInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowSeedInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowSeedSetting;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.data.sql.impl.TeleportLocationTable;
-import com.l2jserver.gameserver.enums.CastleSide;
-import com.l2jserver.gameserver.instancemanager.CastleManorManager;
-import com.l2jserver.gameserver.instancemanager.FortManager;
-import com.l2jserver.gameserver.model.ClanPrivilege;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.L2TeleportLocation;
-import com.l2jserver.gameserver.model.PcCondOverride;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Castle;
-import com.l2jserver.gameserver.model.entity.Castle.CastleFunction;
-import com.l2jserver.gameserver.model.entity.Fort;
-import com.l2jserver.gameserver.model.events.EventType;
-import com.l2jserver.gameserver.model.events.ListenerRegisterType;
-import com.l2jserver.gameserver.model.events.annotations.Id;
-import com.l2jserver.gameserver.model.events.annotations.RegisterEvent;
-import com.l2jserver.gameserver.model.events.annotations.RegisterType;
-import com.l2jserver.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.itemcontainer.Inventory;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCropInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowCropSetting;
-import com.l2jserver.gameserver.network.serverpackets.ExShowManorDefaultInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSeedInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExShowSeedSetting;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Castle Chamberlain AI.
@@ -101,6 +99,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 		FORTRESS.put(8, Arrays.asList(110, 120, 121)); // Rune Castle
 		FORTRESS.put(9, Arrays.asList(111, 121)); // Schuttgart Castle
 	}
+	
 	// Buffs
 	private static final SkillHolder[] BUFFS =
 	{
@@ -206,20 +205,30 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (func)
 		{
 			case Castle.FUNC_RESTORE_EXP:
+			{
 				fee = (level == 45) ? Config.CS_EXPREG1_FEE : Config.CS_EXPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_RESTORE_HP:
+			{
 				fee = (level == 300) ? Config.CS_HPREG1_FEE : Config.CS_HPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_RESTORE_MP:
+			{
 				fee = (level == 40) ? Config.CS_MPREG1_FEE : Config.CS_MPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_SUPPORT:
+			{
 				fee = (level == 5) ? Config.CS_SUPPORT1_FEE : Config.CS_SUPPORT2_FEE;
 				break;
+			}
 			case Castle.FUNC_TELEPORT:
+			{
 				fee = (level == 1) ? Config.CS_TELE1_FEE : Config.CS_TELE2_FEE;
 				break;
+			}
 		}
 		return fee;
 	}
@@ -230,20 +239,30 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (func)
 		{
 			case Castle.FUNC_RESTORE_EXP:
+			{
 				ratio = Config.CS_EXPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_RESTORE_HP:
+			{
 				ratio = Config.CS_HPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_RESTORE_MP:
+			{
 				ratio = Config.CS_MPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_SUPPORT:
+			{
 				ratio = Config.CS_SUPPORT_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_TELEPORT:
+			{
 				ratio = Config.CS_TELE_FEE_RATIO;
 				break;
+			}
 		}
 		return ratio;
 	}
@@ -258,14 +277,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -274,14 +299,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -290,14 +321,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.WALL_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.WALL_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.WALL_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -311,17 +348,25 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (level)
 		{
 			case 1:
+			{
 				price = Config.TRAP_UPGRADE_PRICE1;
 				break;
+			}
 			case 2:
+			{
 				price = Config.TRAP_UPGRADE_PRICE2;
 				break;
+			}
 			case 3:
+			{
 				price = Config.TRAP_UPGRADE_PRICE3;
 				break;
+			}
 			case 4:
+			{
 				price = Config.TRAP_UPGRADE_PRICE4;
 				break;
+			}
 		}
 		return price;
 	}
@@ -378,14 +423,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 						switch (fortress.getFortState())
 						{
 							case 1:
+							{
 								fortStatus = "1300122";
 								break;
+							}
 							case 2:
+							{
 								fortStatus = "1300124";
 								break;
+							}
 							default:
+							{
 								fortStatus = "1300123";
 								break;
+							}
 						}
 						sb.append("<fstring>1300" + fortId + "</fstring>");
 						sb.append(" (<fstring>" + fortType + "</fstring>)");
@@ -1143,15 +1194,22 @@ public final class CastleChamberlain extends AbstractNpcAI
 			switch (evt.getRequest())
 			{
 				case 3: // Seed info
+				{
 					player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), true));
 					break;
+				}
 				case 4: // Crop info
+				{
 					player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), true));
 					break;
+				}
 				case 5: // Basic info
+				{
 					player.sendPacket(new ExShowManorDefaultInfo(true));
 					break;
+				}
 				case 7: // Seed settings
+				{
 					if (manor.isManorApproved())
 					{
 						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
@@ -1159,7 +1217,9 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					player.sendPacket(new ExShowSeedSetting(castleId));
 					break;
+				}
 				case 8: // Crop settings
+				{
 					if (manor.isManorApproved())
 					{
 						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
@@ -1167,8 +1227,11 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					player.sendPacket(new ExShowCropSetting(castleId));
 					break;
+				}
 				default:
+				{
 					_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+				}
 			}
 		}
 	}

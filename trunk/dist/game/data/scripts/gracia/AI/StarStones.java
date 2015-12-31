@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,13 +16,13 @@
  */
 package gracia.AI;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Star Stones AI.
@@ -59,24 +57,32 @@ public class StarStones extends AbstractNpcAI
 				case 18684:
 				case 18685:
 				case 18686:
+				{
 					// give Red item
 					itemId = 14009;
 					break;
+				}
 				case 18687:
 				case 18688:
 				case 18689:
+				{
 					// give Blue item
 					itemId = 14010;
 					break;
+				}
 				case 18690:
 				case 18691:
 				case 18692:
+				{
 					// give Green item
 					itemId = 14011;
 					break;
+				}
 				default:
+				{
 					// unknown npc!
 					return super.onSkillSee(npc, caster, skill, targets, isSummon);
+				}
 			}
 			if (getRandom(100) < 33)
 			{

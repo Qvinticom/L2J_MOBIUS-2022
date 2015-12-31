@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,13 +19,13 @@ package gracia.AI;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.datatables.SpawnTable;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.NpcStringId;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Lindvior Scene AI.
@@ -65,15 +63,22 @@ public class Lindvior extends AbstractNpcAI
 		switch (event)
 		{
 			case "tomaris_shout1":
+			{
 				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.HUH_THE_SKY_LOOKS_FUNNY_WHAT_S_THAT);
 				break;
+			}
 			case "artius_shout":
+			{
 				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.A_POWERFUL_SUBORDINATE_IS_BEING_HELD_BY_THE_BARRIER_ORB_THIS_REACTION_MEANS);
 				break;
+			}
 			case "tomaris_shout2":
+			{
 				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.BE_CAREFUL_SOMETHING_S_COMING);
 				break;
+			}
 			case "lindvior_scene":
+			{
 				if (npc != null)
 				{
 					for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(4000))
@@ -85,7 +90,9 @@ public class Lindvior extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case "start":
+			{
 				_lindviorCamera = SpawnTable.getInstance().findAny(LINDVIOR_CAMERA).getLastSpawn();
 				_tomaris = SpawnTable.getInstance().findAny(TOMARIS).getLastSpawn();
 				_artius = SpawnTable.getInstance().findAny(ARTIUS).getLastSpawn();
@@ -96,6 +103,7 @@ public class Lindvior extends AbstractNpcAI
 				startQuestTimer("lindvior_scene", 120000, _lindviorCamera, null);
 				scheduleNextLindviorVisit();
 				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

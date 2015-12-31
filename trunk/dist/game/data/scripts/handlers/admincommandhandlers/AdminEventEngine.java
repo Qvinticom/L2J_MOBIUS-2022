@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -26,21 +24,21 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.StringTokenizer;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.data.xml.impl.AdminData;
-import com.l2jserver.gameserver.data.xml.impl.TransformData;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.L2Event;
-import com.l2jserver.gameserver.model.entity.L2Event.EventState;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.util.Broadcast;
-import com.l2jserver.util.Rnd;
-import com.l2jserver.util.StringUtil;
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.data.xml.impl.TransformData;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.entity.L2Event.EventState;
+import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.util.Rnd;
+import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles following admin commands: - admin = shows menu
@@ -48,7 +46,6 @@ import com.l2jserver.util.StringUtil;
  */
 public class AdminEventEngine implements IAdminCommandHandler
 {
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_event",
@@ -111,7 +108,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				// There is an exception here for not using the ST. We use spaces (ST delim) for the event info.
 				tempBuffer += command.substring(10);
 				showNewEventPage(activeChar);
-				
 			}
 			else if (actualCommand.startsWith("admin_event_see"))
 			{
@@ -136,11 +132,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					
 					e.printStackTrace();
-					
 				}
-				
 			}
 			else if (actualCommand.startsWith("admin_event_del"))
 			{
@@ -561,7 +554,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 	
 	private void showEventControl(L2PcInstance activeChar)
 	{
-		
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		final StringBuilder sb = new StringBuilder();
 		sb.append("<html><title>[ L2J EVENT ENGINE ]</title><body><br><center>Current event: <font color=\"LEVEL\">");

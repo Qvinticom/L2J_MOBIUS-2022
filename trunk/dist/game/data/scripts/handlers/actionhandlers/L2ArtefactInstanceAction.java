@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,12 +16,12 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.handler.IActionHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.handler.IActionHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class L2ArtefactInstanceAction implements IActionHandler
 {
@@ -32,8 +30,9 @@ public class L2ArtefactInstanceAction implements IActionHandler
 	 * <BR>
 	 * <B><U> Actions</U> :</B><BR>
 	 * <BR>
-	 * <li>Set the L2NpcInstance as target of the L2PcInstance player (if necessary)</li> <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li> <li>Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading
-	 * on the client</li><BR>
+	 * <li>Set the L2NpcInstance as target of the L2PcInstance player (if necessary)</li>
+	 * <li>Send a Server->Client packet MyTargetSelected to the L2PcInstance player (display the select window)</li>
+	 * <li>Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client</li><BR>
 	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>

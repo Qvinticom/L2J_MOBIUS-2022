@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -24,30 +22,30 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.GameTimeController;
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.datatables.SkillData;
-import com.l2jserver.gameserver.enums.PlayerAction;
-import com.l2jserver.gameserver.handler.IVoicedCommandHandler;
-import com.l2jserver.gameserver.instancemanager.CoupleManager;
-import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.instancemanager.SiegeManager;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.L2Event;
-import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.ZoneId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.util.Broadcast;
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.gameserver.GameTimeController;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.enums.PlayerAction;
+import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
+import com.l2jmobius.gameserver.instancemanager.CoupleManager;
+import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.instancemanager.SiegeManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.entity.TvTEvent;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Wedding voiced commands handler.
@@ -102,7 +100,6 @@ public class Wedding implements IVoicedCommandHandler
 			
 			AdenaAmount = (activeChar.getAdena() / 100) * Config.L2JMOD_WEDDING_DIVORCE_COSTS;
 			activeChar.getInventory().reduceAdena("Wedding", AdenaAmount, activeChar, null);
-			
 		}
 		else
 		{

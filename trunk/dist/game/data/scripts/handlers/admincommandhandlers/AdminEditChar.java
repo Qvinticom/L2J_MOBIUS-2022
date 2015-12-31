@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -29,39 +27,39 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jserver.Config;
-import com.l2jserver.commons.database.pool.impl.ConnectionFactory;
-import com.l2jserver.gameserver.data.sql.impl.CharNameTable;
-import com.l2jserver.gameserver.data.xml.impl.ClassListData;
-import com.l2jserver.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jserver.gameserver.data.xml.impl.TransformData;
-import com.l2jserver.gameserver.enums.Race;
-import com.l2jserver.gameserver.enums.SubclassInfoType;
-import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2World;
-import com.l2jserver.gameserver.model.PageResult;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.network.L2GameClient;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.AcquireSkillList;
-import com.l2jserver.gameserver.network.serverpackets.ExSubjobInfo;
-import com.l2jserver.gameserver.network.serverpackets.ExUserInfoInvenWeight;
-import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
-import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
-import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.network.serverpackets.UserInfo;
-import com.l2jserver.gameserver.util.HtmlUtil;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.StringUtil;
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.data.xml.impl.TransformData;
+import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.enums.SubclassInfoType;
+import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.PageResult;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
+import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
+import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
+import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.HtmlUtil;
+import com.l2jmobius.gameserver.util.Util;
+import com.l2jmobius.util.StringUtil;
 
 /**
  * EditChar admin command implementation.
@@ -79,7 +77,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_setfame", // sets fame of target char to any amount. //setfame <fame>
 		"admin_character_list", // same as character_info, kept for compatibility purposes
 		"admin_character_info", // given a player name, displays an information window
-		"admin_show_characters",// list of characters
+		"admin_show_characters", // list of characters
 		"admin_find_character", // find a player by his name or a part of it (case-insensitive)
 		"admin_find_ip", // find all the player connections from a given IPv4 number
 		"admin_find_account", // list all the characters from an account (useful for GMs w/o DB access)
@@ -770,7 +768,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Usable only with Pets");
 			}
-			
 		}
 		else if (command.startsWith("admin_partyinfo"))
 		{
@@ -804,7 +801,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
-			
 		}
 		else if (command.equals("admin_setnoble"))
 		{

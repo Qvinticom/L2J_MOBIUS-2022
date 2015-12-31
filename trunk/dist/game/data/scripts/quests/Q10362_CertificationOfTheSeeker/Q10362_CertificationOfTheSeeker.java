@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J Server
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J Server.
- * 
- * L2J Server is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J Server is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,18 +19,18 @@ package quests.Q10362_CertificationOfTheSeeker;
 import java.util.HashMap;
 import java.util.Map;
 
-import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jserver.gameserver.util.Util;
+import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
 
 /**
  * Certification of the Seeker (10362)
@@ -47,10 +45,12 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 	private static final int CRAWLER = 22991;
 	private static final int STALKER = 22992;
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
+	
 	{
 		MOBS_REQUIRED.put(CRAWLER, 5);
 		MOBS_REQUIRED.put(STALKER, 10);
 	}
+	
 	// Rewards
 	private static final int ADENA_REWARD = 43000;
 	private static final int EXP_REWARD = 50000;

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,16 +16,16 @@
  */
 package handlers.itemhandlers;
 
-import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.handler.IItemHandler;
+import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
+import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class EventItem implements IItemHandler
 {
@@ -48,13 +46,19 @@ public class EventItem implements IItemHandler
 		switch (itemId)
 		{
 			case 13787: // Handy's Block Checker Bond
+			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
+			}
 			case 13788: // Handy's Block Checker Land Mine
+			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
+			}
 			default:
+			{
 				_log.warning("EventItemHandler: Item with id: " + itemId + " is not handled");
+			}
 		}
 		return used;
 	}

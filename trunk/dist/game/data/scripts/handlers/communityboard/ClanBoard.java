@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,14 +16,14 @@
  */
 package handlers.communityboard;
 
-import com.l2jserver.gameserver.data.sql.impl.ClanTable;
-import com.l2jserver.gameserver.handler.CommunityBoardHandler;
-import com.l2jserver.gameserver.handler.IWriteBoardHandler;
-import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.StringUtil;
+import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
+import com.l2jmobius.gameserver.handler.IWriteBoardHandler;
+import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.Util;
+import com.l2jmobius.util.StringUtil;
 
 /**
  * Clan board.
@@ -232,7 +230,6 @@ public class ClanBoard implements IWriteBoardHandler
 			{
 				StringUtil.append(html, "<td><a action=\"bypass _bbsclan_clanlist;", String.valueOf(i), "\"> ", String.valueOf(i), " </a></td>");
 			}
-			
 		}
 		if (index == nbp)
 		{
@@ -244,7 +241,7 @@ public class ClanBoard implements IWriteBoardHandler
 		}
 		html.append("</tr></table><table border=0 cellspacing=0 cellpadding=0><tr><td width=610><img src=\"sek.cbui141\" width=\"610\" height=\"1\"></td></tr></table><table border=0><tr><td><combobox width=65 var=keyword list=\"Name;Ruler\"></td><td><edit var = \"Search\" width=130 height=11 length=\"16\"></td>" +
 		// TODO: search (Write in BBS)
-		"<td><button value=\"&$420;\" action=\"Write 5 -1 0 Search keyword keyword\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td> </tr></table><br><br></center></body></html>");
+			"<td><button value=\"&$420;\" action=\"Write 5 -1 0 Search keyword keyword\" back=\"l2ui_ch3.smallbutton2_down\" width=65 height=20 fore=\"l2ui_ch3.smallbutton2\"> </td> </tr></table><br><br></center></body></html>");
 		CommunityBoardHandler.separateAndSend(html.toString(), activeChar);
 	}
 	
@@ -270,10 +267,10 @@ public class ClanBoard implements IWriteBoardHandler
 				/*
 				 * html.append("<tr>"); html.append("<td fixWIDTH=100 align=left>ADMINISTRATOR</td>"); html.append("<td fixWIDTH=195 align=left height=16>"+cl.getLeaderName()+"</td>"); html.append("</tr>");
 				 */
-				"<tr><td height=7></td></tr><tr><td fixWIDTH=100 align=left>ALLIANCE</td><td fixWIDTH=195 align=left height=16>", (cl.getAllyName() != null) ? cl.getAllyName() : "", "</td></tr></table></td><td fixWIDTH=5></td></tr><tr><td height=10></td></tr></table>" +
+					"<tr><td height=7></td></tr><tr><td fixWIDTH=100 align=left>ALLIANCE</td><td fixWIDTH=195 align=left height=16>", (cl.getAllyName() != null) ? cl.getAllyName() : "", "</td></tr></table></td><td fixWIDTH=5></td></tr><tr><td height=10></td></tr></table>" +
 				// TODO: the BB for clan :)
-				// html.append("<table border=0 cellspacing=0 cellpadding=0 width=610  bgcolor=333333>");
-				"<img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><img src=\"L2UI.squaregray\" width=\"610\" height=\"1\"><br></center><br> <br></body></html>");
+				// html.append("<table border=0 cellspacing=0 cellpadding=0 width=610 bgcolor=333333>");
+						"<img src=\"L2UI.squareblank\" width=\"1\" height=\"5\"><img src=\"L2UI.squaregray\" width=\"610\" height=\"1\"><br></center><br> <br></body></html>");
 				CommunityBoardHandler.separateAndSend(html, activeChar);
 			}
 		}

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -21,12 +19,12 @@ package quests.Q00382_KailsMagicCoin;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Kail's Magic Coin (382)
@@ -55,6 +53,7 @@ public final class Q00382_KailsMagicCoin extends Quest
 		MONSTER_DROPS.put(FALLEN_ORC_ARCHER, new ItemChanceHolder(KAILS_GOLD_GOLEM, 0.075));
 		MONSTER_DROPS.put(FALLEN_ORC_SHAMAN, new ItemChanceHolder(KAILS_BLOOD_DRAGON, 0.073));
 	}
+	
 	// Misc
 	private static final int MIN_LVL = 55;
 	

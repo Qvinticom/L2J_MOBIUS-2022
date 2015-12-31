@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,16 +16,16 @@
  */
 package ai.group_template;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.network.NpcStringId;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Silent Valley AI
@@ -80,15 +78,21 @@ public final class SilentValley extends AbstractNpcAI
 			switch (event)
 			{
 				case "CLEAR":
+				{
 					npc.doDie(null);
 					break;
+				}
 				case "CLEAR_EVENT":
+				{
 					npc.broadcastEvent("CLEAR_ALL_INSTANT", 2000, null);
 					npc.doDie(null);
 					break;
+				}
 				case "SPAWN_CHEST":
+				{
 					addSpawn(CHEST, npc.getX() - 100, npc.getY(), npc.getZ() - 100, 0, false, 0);
 					break;
+				}
 			}
 		}
 		return null;
@@ -193,11 +197,15 @@ public final class SilentValley extends AbstractNpcAI
 			switch (eventName)
 			{
 				case "CLEAR_ALL":
+				{
 					startQuestTimer("CLEAR", 60000, receiver, null);
 					break;
+				}
 				case "CLEAR_ALL_INSTANT":
+				{
 					receiver.doDie(null);
 					break;
+				}
 			}
 		}
 		return super.onEventReceived(eventName, sender, receiver, reference);

@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -20,9 +18,9 @@ package conquerablehalls.flagwar.BanditStronghold;
 
 import java.util.Collection;
 
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
 
 import conquerablehalls.flagwar.FlagWar;
 
@@ -100,20 +98,30 @@ public final class BanditStronghold extends FlagWar
 		switch (flag)
 		{
 			case 35423:
+			{
 				result = "messenger_flag1.htm";
 				break;
+			}
 			case 35424:
+			{
 				result = "messenger_flag2.htm";
 				break;
+			}
 			case 35425:
+			{
 				result = "messenger_flag3.htm";
 				break;
+			}
 			case 35426:
+			{
 				result = "messenger_flag4.htm";
 				break;
+			}
 			case 35427:
+			{
 				result = "messenger_flag5.htm";
 				break;
+			}
 		}
 		
 		return result;
@@ -127,20 +135,30 @@ public final class BanditStronghold extends FlagWar
 		switch (ally)
 		{
 			case 35428:
+			{
 				result = "messenger_ally1result.htm";
 				break;
+			}
 			case 35429:
+			{
 				result = "messenger_ally2result.htm";
 				break;
+			}
 			case 35430:
+			{
 				result = "messenger_ally3result.htm";
 				break;
+			}
 			case 35431:
+			{
 				result = "messenger_ally4result.htm";
 				break;
+			}
 			case 35432:
+			{
 				result = "messenger_ally5result.htm";
 				break;
+			}
 		}
 		
 		return result;

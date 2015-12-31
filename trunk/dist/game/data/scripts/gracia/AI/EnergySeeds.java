@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -22,27 +20,27 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import ai.npc.AbstractNpcAI;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.util.Util;
 
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.data.xml.impl.DoorData;
-import com.l2jserver.gameserver.data.xml.impl.NpcData;
-import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
-import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.skills.Skill;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.util.Util;
+import ai.npc.AbstractNpcAI;
 
 /**
  * Energy Seeds AI.
@@ -79,7 +77,7 @@ public class EnergySeeds extends AbstractNpcAI
 		12240031
 	};
 	private static final Location SOD_EXIT_POINT = new Location(-248717, 250260, 4337);
-	// @formatter:off
+	// @formatter:on
 	private static final int SOD_ZONE = 60009;
 	
 	private enum GraciaSeeds
@@ -107,13 +105,19 @@ public class EnergySeeds extends AbstractNpcAI
 		switch (seed)
 		{
 			case INFINITY:
+			{
 				return false;
+			}
 			case DESTRUCTION:
+			{
 				return GraciaSeedsManager.getInstance().getSoDState() == 2;
+			}
 			case ANNIHILATION_BISTAKON:
 			case ANNIHILATION_REPTILIKON:
 			case ANNIHILATION_COKRAKON:
+			{
 				return true;
+			}
 		}
 		return true;
 	}
@@ -140,25 +144,39 @@ public class EnergySeeds extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 18678: // Water
+					{
 						itemId = 14016;
 						break;
+					}
 					case 18679: // Fire
+					{
 						itemId = 14015;
 						break;
+					}
 					case 18680: // Wind
+					{
 						itemId = 14017;
 						break;
+					}
 					case 18681: // Earth
+					{
 						itemId = 14018;
 						break;
+					}
 					case 18682: // Divinity
+					{
 						itemId = 14020;
 						break;
+					}
 					case 18683: // Darkness
+					{
 						itemId = 14019;
 						break;
+					}
 					default:
+					{
 						return super.onSkillSee(npc, caster, skill, targets, isSummon);
+					}
 				}
 				if (getRandom(100) < 33)
 				{
@@ -260,11 +278,13 @@ public class EnergySeeds extends AbstractNpcAI
 			switch (zone.getId())
 			{
 				case SOD_ZONE:
+				{
 					if (!isSeedActive(GraciaSeeds.DESTRUCTION) && !character.isGM())
 					{
 						character.teleToLocation(SOD_EXIT_POINT);
 					}
 					break;
+				}
 			}
 		}
 		return super.onEnterZone(character, zone);
@@ -314,6 +334,7 @@ public class EnergySeeds extends AbstractNpcAI
 		switch (seedType)
 		{
 			case ANNIHILATION_BISTAKON:
+			{
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[0][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[0].length)]);
@@ -322,7 +343,9 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 			case ANNIHILATION_REPTILIKON:
+			{
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[1][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[1].length)]);
@@ -331,7 +354,9 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 			case ANNIHILATION_COKRAKON:
+			{
 				if (getRandom(100) < 50)
 				{
 					final L2MonsterInstance mob = spawnSupriseMob(seedEnergy, ANNIHILATION_SUPRISE_MOB_IDS[2][getRandom(ANNIHILATION_SUPRISE_MOB_IDS[2].length)]);
@@ -340,6 +365,7 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 		}
 	}
 	

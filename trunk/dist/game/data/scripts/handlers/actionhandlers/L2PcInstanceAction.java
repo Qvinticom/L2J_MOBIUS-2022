@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -18,17 +16,17 @@
  */
 package handlers.actionhandlers;
 
-import com.l2jserver.gameserver.GeoData;
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.enums.InstanceType;
-import com.l2jserver.gameserver.enums.PrivateStoreType;
-import com.l2jserver.gameserver.handler.IActionHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.TvTEvent;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.handler.IActionHandler;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.TvTEvent;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class L2PcInstanceAction implements IActionHandler
 {
@@ -39,12 +37,14 @@ public class L2PcInstanceAction implements IActionHandler
 	 * <BR>
 	 * <B><U> Actions on first click on the L2PcInstance (Select it)</U> :</B><BR>
 	 * <BR>
-	 * <li>Set the target of the player</li> <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><BR>
+	 * <li>Set the target of the player</li>
+	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li><BR>
 	 * <BR>
 	 * <B><U> Actions on second click on the L2PcInstance (Follow it/Attack it/Intercat with it)</U> :</B><BR>
 	 * <BR>
-	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li> <li>If target L2PcInstance has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li> <li>If target L2PcInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li>
-	 * <BR>
+	 * <li>Send a Server->Client packet MyTargetSelected to the player (display the select window)</li>
+	 * <li>If target L2PcInstance has a Private Store, notify the player AI with AI_INTENTION_INTERACT</li>
+	 * <li>If target L2PcInstance is autoAttackable, notify the player AI with AI_INTENTION_ATTACK</li> <BR>
 	 * <BR>
 	 * <li>If target L2PcInstance is NOT autoAttackable, notify the player AI with AI_INTENTION_FOLLOW</li><BR>
 	 * <BR>

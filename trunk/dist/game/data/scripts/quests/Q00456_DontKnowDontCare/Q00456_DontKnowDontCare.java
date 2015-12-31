@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -23,22 +21,22 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.enums.ChatType;
-import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.enums.QuestType;
-import com.l2jserver.gameserver.model.AggroInfo;
-import com.l2jserver.gameserver.model.L2CommandChannel;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.items.L2Item;
-import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
-import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.AggroInfo;
+import com.l2jmobius.gameserver.model.L2CommandChannel;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Don't Know, Don't Care (456)
@@ -65,7 +63,6 @@ public final class Q00456_DontKnowDontCare extends Quest
 	private static final int MIN_LEVEL = 80;
 	private static final Map<Integer, Integer> MONSTER_NPCS = new HashMap<>();
 	private static final Map<Integer, Integer> MONSTER_ESSENCES = new HashMap<>();
-	
 	static
 	{
 		MONSTER_NPCS.put(25725, DRAKE_LORD_CORPSE);
