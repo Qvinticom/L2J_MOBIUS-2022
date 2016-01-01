@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
-import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
-
 /**
  * Start of Fate (10331)
  * @author Mobius
@@ -61,7 +59,6 @@ public class Q10331_StartOfFate extends Quest
 		addTalkId(FRANCO, VALFAR, RIVIAN, TOOK, MOKA, DEVON, PANTHEON, LAKCIS, SEBION);
 		registerQuestItems(SARIL_NECKLACE, BELIS_MARK);
 		addCondMinLevel(18, "no_level.html");
-		addCondCompletedQuest(Q10366_RuinsStatusUpdate.class.getSimpleName(), "no_prequest.html");
 	}
 	
 	@Override
