@@ -896,8 +896,8 @@
 		<set name="isMagic" val="3" />
 		<for>
 			<effect name="Buff">
-				<add stat="maxCp" val="#maxHpMpCp" />
-				<add stat="maxCp" val="#maxHpMpCp" />
+				<add stat="maxHp" val="#maxHpMpCp" />
+				<add stat="maxMp" val="#maxHpMpCp" />
 				<add stat="maxCp" val="#maxHpMpCp" />
 				<add stat="accCombat" val="#addAccEvas" />
 				<add stat="accMagic" val="#addAccEvas" />
