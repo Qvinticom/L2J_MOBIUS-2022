@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 
 /**
  * @author Ofelin
@@ -133,7 +132,6 @@ public class FeohStance extends AbstractEffect
 			}
 		}
 		player.sendSkillList();
-		player.sendPacket(new ShortCutInit(player));
 	}
 	
 	@Override
@@ -192,6 +190,5 @@ public class FeohStance extends AbstractEffect
 			}
 		}
 		player.sendSkillList();
-		player.sendPacket(new ShortCutInit(player));
 	}
 }
