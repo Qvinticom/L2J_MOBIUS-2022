@@ -128,7 +128,7 @@ public class FeohStance extends AbstractEffect
 				break;
 			}
 		}
-		// FIXME: Need to Update active/passive skill lists and action bars (NOT learn able skill list)
+		player.sendSkillList();
 	}
 	
 	@Override
@@ -182,6 +182,6 @@ public class FeohStance extends AbstractEffect
 				break;
 			}
 		}
-		// FIXME: Need to Update active/passive skill lists and action bars (NOT learn able skill list)
+		player.sendSkillList();
 	}
 }
