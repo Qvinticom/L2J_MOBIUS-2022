@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package handlers.effecthandlers;
 
 import java.util.HashSet;
@@ -26,6 +25,7 @@ import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 
 /**
  * @author Ofelin
@@ -91,6 +91,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId + 1, skillLevel), false);
+					player.replaceShortCuts(skillId, skillId + 1);
 				}
 				break;
 			}
@@ -102,6 +103,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId + 2, skillLevel), false);
+					player.replaceShortCuts(skillId, skillId + 2);
 				}
 				break;
 			}
@@ -113,6 +115,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId + 3, skillLevel), false);
+					player.replaceShortCuts(skillId, skillId + 3);
 				}
 				break;
 			}
@@ -124,11 +127,13 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId + 4, skillLevel), false);
+					player.replaceShortCuts(skillId, skillId + 4);
 				}
 				break;
 			}
 		}
 		player.sendSkillList();
+		player.sendPacket(new ShortCutInit(player));
 	}
 	
 	@Override
@@ -145,6 +150,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId + 1);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId + 1, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
+					player.replaceShortCuts(skillId + 1, skillId);
 				}
 				break;
 			}
@@ -156,6 +162,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId + 2);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId + 2, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
+					player.replaceShortCuts(skillId + 2, skillId);
 				}
 				break;
 			}
@@ -167,6 +174,7 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId + 3);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId + 3, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
+					player.replaceShortCuts(skillId + 3, skillId);
 				}
 				break;
 			}
@@ -178,10 +186,12 @@ public class FeohStance extends AbstractEffect
 					final int skillLevel = player.getSkillLevel(skillId + 4);
 					player.removeSkill(SkillData.getInstance().getSkill(skillId + 4, skillLevel), false);
 					player.addSkill(SkillData.getInstance().getSkill(skillId, skillLevel), false);
+					player.replaceShortCuts(skillId + 4, skillId);
 				}
 				break;
 			}
 		}
 		player.sendSkillList();
+		player.sendPacket(new ShortCutInit(player));
 	}
 }

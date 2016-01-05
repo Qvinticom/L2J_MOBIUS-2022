@@ -1652,6 +1652,16 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
+	 * Replace the shortcut icon with the new skill.
+	 * @param skillId the skill Id to search.
+	 * @param newSkillId the skill Id to replace.
+	 */
+	public void replaceShortCuts(int skillId, int newSkillId)
+	{
+		_shortCuts.replaceShortCuts(skillId, newSkillId);
+	}
+	
+	/**
 	 * Delete the L2ShortCut corresponding to the position (page-slot) from the L2PcInstance _shortCuts.
 	 * @param slot
 	 * @param page

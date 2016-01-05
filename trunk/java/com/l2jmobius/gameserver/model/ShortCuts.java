@@ -292,4 +292,23 @@ public class ShortCuts implements IRestorable
 			}
 		}
 	}
+	
+	/**
+	 * Replace the shortcut icon with the new skill.
+	 * @param skillId the skill Id to search.
+	 * @param newSkillId the skill Id to replace.
+	 */
+	public void replaceShortCuts(int skillId, int newSkillId)
+	{
+		// Replace all the shortcuts with the new skill
+		for (Shortcut sc : _shortCuts.values())
+		{
+			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
+			{
+				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), newSkillId, sc.getLevel(), 1);
+				_owner.sendPacket(new ShortCutRegister(newsc));
+				_owner.registerShortCut(newsc);
+			}
+		}
+	}
 }
