@@ -32,6 +32,10 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class FeohStance extends AbstractEffect
 {
+	private final static int FIRE_STANCE = 11007;
+	private final static int WATER_STANCE = 11008;
+	private final static int WIND_STANCE = 11009;
+	private final static int EARTH_STANCE = 11010;
 	private final static int ELEMENTAL_SPIKE = 11011;
 	private final static int ELEMENTAL_CRASH = 11017;
 	private final static int ELEMENTAL_DESTRUCTION = 11023;
@@ -79,7 +83,7 @@ public class FeohStance extends AbstractEffect
 		
 		switch (_stanceId)
 		{
-			case 11007: // Fire Stance
+			case FIRE_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -90,7 +94,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11008: // Water Stance
+			case WATER_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -101,7 +105,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11009: // Wind Stance
+			case WIND_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -112,7 +116,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11010: // Earth Stance
+			case EARTH_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -133,7 +137,7 @@ public class FeohStance extends AbstractEffect
 		final L2PcInstance player = (L2PcInstance) info.getEffector();
 		switch (_stanceId)
 		{
-			case 11007: // Fire Stance
+			case FIRE_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -144,7 +148,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11008: // Water Stance
+			case WATER_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -155,7 +159,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11009: // Wind Stance
+			case WIND_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
@@ -166,7 +170,7 @@ public class FeohStance extends AbstractEffect
 				}
 				break;
 			}
-			case 11010: // Earth Stance
+			case EARTH_STANCE:
 			{
 				for (Skill skill : _skillList)
 				{
