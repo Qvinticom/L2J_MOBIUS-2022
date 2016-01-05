@@ -193,6 +193,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
 		<for>
+			<effect name="FeohStance"/>
 			<effect name="DamOverTime">
 				<add stat="firePower" val="50" />
 			</effect>
@@ -209,6 +210,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
 		<for>
+			<effect name="FeohStance"/>
 			<effect name="DamOverTime">
 				<add stat="waterPower" val="50" />
 			</effect>
@@ -225,6 +227,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
 		<for>
+			<effect name="FeohStance"/>
 			<effect name="DamOverTime">
 				<add stat="windPower" val="50" />
 			</effect>
@@ -241,6 +244,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="stayAfterDeath" val="true" />
 		<for>
+			<effect name="FeohStance"/>
 			<effect name="DamOverTime">
 				<add stat="earthPower" val="50" />
 			</effect>

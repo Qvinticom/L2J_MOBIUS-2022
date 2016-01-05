@@ -91,6 +91,7 @@ public final class EffectMasterHandler
 		FakeDeath.class,
 		FatalBlow.class,
 		Fear.class,
+		FeohStance.class,
 		Fishing.class,
 		Flag.class,
 		FocusEnergy.class,
