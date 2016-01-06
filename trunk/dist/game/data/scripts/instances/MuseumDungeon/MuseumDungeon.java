@@ -121,7 +121,38 @@ public final class MuseumDungeon extends AbstractInstance
 			{
 				return null;
 			}
-			enterInstance(player, new MDWorld(), "MuseumDungeon.xml", TEMPLATE_ID);
+			
+			InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
+			if ((tmpworld == null) || !(tmpworld instanceof MDWorld))
+			{
+				tmpworld = new MDWorld();
+			}
+			final MDWorld world = (MDWorld) tmpworld;
+			enterInstance(player, world, "MuseumDungeon.xml", TEMPLATE_ID);
+			
+			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
+			if (qs.isCond(1))
+			{
+				showOnScreenMsg(player, NpcStringId.AMONG_THE_4_BOOKSHELVES_FIND_THE_ONE_CONTAINING_A_VOLUME_CALLED_THE_WAR_OF_GODS_AND_GIANTS, ExShowScreenMessage.TOP_CENTER, 10000);
+			}
+			else if (qs.isCond(2))
+			{
+				if ((world.thiefSpawns != null) && (world.thiefSpawns.get(0) != null))
+				{
+					world.thiefSpawns.get(0).deleteMe();
+				}
+				if ((world.thiefSpawns != null) && (world.thiefSpawns.get(1) != null))
+				{
+					world.thiefSpawns.get(1).deleteMe();
+				}
+				world.toyron.setIsRunning(true);
+				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
+				for (L2Npc thief : world.thiefSpawns)
+				{
+					((L2MonsterInstance) thief).addDamage(player, 1, null);
+				}
+				startQuestTimer("assist_player", 2000, world.toyron, player);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -140,6 +171,10 @@ public final class MuseumDungeon extends AbstractInstance
 				qs.setCond(2);
 				giveItems(player, THE_WAR_OF_GODS_AND_GIANTS, 1);
 				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
+				for (L2Npc thief : world.thiefSpawns)
+				{
+					((L2MonsterInstance) thief).addDamage(player, 1, null);
+				}
 				showOnScreenMsg(player, NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, ExShowScreenMessage.TOP_CENTER, 5000);
 				startQuestTimer("assist_player", 2000, world.toyron, player);
 				htmltext = "desk_correct.html";
@@ -148,6 +183,10 @@ public final class MuseumDungeon extends AbstractInstance
 			{
 				htmltext = "desk_wrong.html";
 			}
+		}
+		else
+		{
+			htmltext = "desk_normal.html";
 		}
 		return htmltext;
 	}

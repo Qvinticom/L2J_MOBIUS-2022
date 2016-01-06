@@ -46,8 +46,8 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		super(10321, Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "Qualifications Of The Seeker");
 		addStartNpc(THEODORE);
 		addTalkId(THEODORE, SHANNON);
-		addCondMaxLevel(MAX_LEVEL, "32975-01a.html");
-		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-01a.html");
+		addCondMaxLevel(MAX_LEVEL, "32975-06.html");
+		addCondCompletedQuest(Q10320_LetsGoToTheCentralSquare.class.getSimpleName(), "32975-06.html");
 	}
 	
 	@Override
@@ -62,7 +62,7 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32975-03.html":
+			case "32975-03.htm":
 			{
 				qs.startQuest();
 				qs.setCond(2); // show arrow hack

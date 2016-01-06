@@ -46,8 +46,8 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON);
 		registerQuestItems(THE_WAR_OF_GODS_AND_GIANTS);
-		addCondMaxLevel(MAX_LEVEL, "no_level.html");
-		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "no_level.html");
+		addCondMaxLevel(MAX_LEVEL, "32972-09.htm");
+		addCondCompletedQuest(Q10326_RespectYourElders.class.getSimpleName(), "32972-09.htm");
 	}
 	
 	@Override
@@ -67,13 +67,13 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32972-03.html":
+			case "32972-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32972-06.html":
+			case "32972-07.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -82,6 +82,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 					addExpAndSp(player, 7800, 5);
 					showOnScreenMsg(player, NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 5000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}
@@ -104,19 +105,29 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(3))
+				switch (qs.getCond())
 				{
-					htmltext = "32972-05.html";
-				}
-				else
-				{
-					htmltext = "32972-04.html";
+					case 1:
+					{
+						htmltext = "32972-04.html";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "32972-05.html";
+						break;
+					}
+					case 3:
+					{
+						htmltext = "32972-06.html";
+						break;
+					}
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = "32972-07.html";
+				htmltext = "32972-08.html";
 				break;
 			}
 		}

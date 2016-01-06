@@ -83,8 +83,8 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, ADVENTURERS_GUIDE, EVAIN);
 		addKillId(SCARECROW);
-		addCondMaxLevel(MAX_LEVEL, "32974-01a.html");
-		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-01a.html");
+		addCondMaxLevel(MAX_LEVEL, "32974-06.html");
+		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-06.html");
 	}
 	
 	@Override
@@ -99,7 +99,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32974-03.html":
+			case "32974-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -197,6 +197,11 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 					else if (qs.isCond(5))
 					{
 						htmltext = "32981-03.html";
+						break;
+					}
+					else
+					{
+						htmltext = getNoQuestMsg(player);
 						break;
 					}
 				}

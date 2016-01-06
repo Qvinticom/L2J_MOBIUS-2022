@@ -38,7 +38,7 @@ public final class Pantheon extends AbstractNpcAI
 	// Location
 	private static final Location MUSEUM = new Location(-114711, 243911, -7968);
 	// Misc
-	private static final int MIN_LEVEL = 20;
+	private static final int MIN_LEVEL = 6;
 	
 	private Pantheon()
 	{

@@ -42,8 +42,8 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		super(10324, Q10324_FindingMagisterGallint.class.getSimpleName(), "Finding Magister Gallint");
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, GALLINT);
-		addCondMaxLevel(MAX_LEVEL, "32974-01a.html");
-		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-01a.html");
+		addCondMaxLevel(MAX_LEVEL, "32974-06.html");
+		addCondCompletedQuest(Q10323_TrainLikeItsReal.class.getSimpleName(), "32974-06.html");
 	}
 	
 	@Override
@@ -58,7 +58,7 @@ public final class Q10324_FindingMagisterGallint extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32974-03.html":
+			case "32974-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;

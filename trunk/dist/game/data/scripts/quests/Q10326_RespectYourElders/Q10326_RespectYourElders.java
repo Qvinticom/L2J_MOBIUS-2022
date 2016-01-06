@@ -63,8 +63,8 @@ public class Q10326_RespectYourElders extends Quest
 		addTalkId(GALLINT, PANTHEON);
 		addSpawnId(HANDERMONKEY);
 		addMoveFinishedId(HANDERMONKEY);
-		addCondMaxLevel(MAX_LEVEL, "32980-04.html");
-		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-05.html");
+		addCondMaxLevel(MAX_LEVEL, "32980-05.html");
+		addCondCompletedQuest(Q10325_SearchingForNewPower.class.getSimpleName(), "32980-06.htm");
 	}
 	
 	@Override
@@ -79,7 +79,7 @@ public class Q10326_RespectYourElders extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32980-03.html":
+			case "32980-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -193,21 +193,17 @@ public class Q10326_RespectYourElders extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == GALLINT)
-				{
-					htmltext = "32980-01.htm";
-					break;
-				}
+				htmltext = npc.getId() == GALLINT ? "32980-01.htm" : getNoQuestMsg(player);
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-03.html" : "32972-01.html";
+				htmltext = npc.getId() == GALLINT ? "32980-04.html" : "32972-01.html";
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == GALLINT ? "32980-04.html" : "32972-03.html";
+				htmltext = npc.getId() == GALLINT ? "32980-05.html" : "32972-03.html";
 				break;
 			}
 		}

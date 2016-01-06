@@ -60,8 +60,8 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 		addStartNpc(PANTHEON);
 		addTalkId(PANTHEON, THEODORE);
 		addEnterZoneId(TALKING_ISLAND_PRESENTATION_MOVIE_ZONE);
-		addCondMaxLevel(MAX_LEVEL, "32972-01a.html");
-		addCondNotRace(Race.ERTHEIA, "32972-01b.html");
+		addCondMaxLevel(MAX_LEVEL, "32972-06.html");
+		addCondNotRace(Race.ERTHEIA, "32972-07.html");
 	}
 	
 	@Override
