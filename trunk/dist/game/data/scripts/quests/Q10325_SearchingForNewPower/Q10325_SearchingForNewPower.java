@@ -35,13 +35,13 @@ public class Q10325_SearchingForNewPower extends Quest
 	// NPCs
 	private static final int GALLINT = 32980;
 	private static final int TALBOT = 32156;
-	private static final int CINDET = 32148;
+	private static final int CIDNET = 32148;
 	private static final int BLACK = 32161;
 	private static final int HERZ = 32151;
 	private static final int KINCAID = 32159;
 	private static final int XONIA = 32144;
 	private static final String Talbot = "Talbot";
-	private static final String Cindet = "Cindet";
+	private static final String Cidnet = "Cidnet";
 	private static final String Black = "Black";
 	private static final String Herz = "Herz";
 	private static final String Kincaid = "Kincaid";
@@ -56,7 +56,7 @@ public class Q10325_SearchingForNewPower extends Quest
 	{
 		super(10325, Q10325_SearchingForNewPower.class.getSimpleName(), "Searching For New Power");
 		addStartNpc(GALLINT);
-		addTalkId(GALLINT, TALBOT, CINDET, BLACK, HERZ, KINCAID, XONIA);
+		addTalkId(GALLINT, TALBOT, CIDNET, BLACK, HERZ, KINCAID, XONIA);
 		addCondMaxLevel(MAX_LEVEL, "32980-07.html");
 		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-07.htm");
 	}
@@ -87,7 +87,7 @@ public class Q10325_SearchingForNewPower extends Quest
 				}
 				case ELF:
 				{
-					htmltext = htmltext.replace("%MASTER%", Cindet);
+					htmltext = htmltext.replace("%MASTER%", Cidnet);
 					qs.setCond(3);
 					break;
 				}
@@ -189,7 +189,7 @@ public class Q10325_SearchingForNewPower extends Quest
 						}
 						break;
 					}
-					case CINDET:
+					case CIDNET:
 					{
 						if (player.getRace() == Race.ELF)
 						{
@@ -302,7 +302,7 @@ public class Q10325_SearchingForNewPower extends Quest
 						break;
 					}
 					case TALBOT:
-					case CINDET:
+					case CIDNET:
 					case BLACK:
 					case HERZ:
 					case KINCAID:
