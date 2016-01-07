@@ -147,10 +147,7 @@ public final class MuseumDungeon extends AbstractInstance
 				}
 				world.toyron.setIsRunning(true);
 				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
-				for (L2Npc thief : world.thiefSpawns)
-				{
-					((L2MonsterInstance) thief).addDamage(player, 1, null);
-				}
+				((L2MonsterInstance) world.thiefSpawns.get(0)).addDamage(player, 1, null);
 				startQuestTimer("assist_player", 2000, world.toyron, player);
 			}
 		}
@@ -171,10 +168,7 @@ public final class MuseumDungeon extends AbstractInstance
 				qs.setCond(2);
 				giveItems(player, THE_WAR_OF_GODS_AND_GIANTS, 1);
 				world.thiefSpawns = spawnGroup("thiefs", world.getInstanceId());
-				for (L2Npc thief : world.thiefSpawns)
-				{
-					((L2MonsterInstance) thief).addDamage(player, 1, null);
-				}
+				((L2MonsterInstance) world.thiefSpawns.get(0)).addDamage(player, 1, null);
 				showOnScreenMsg(player, NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, ExShowScreenMessage.TOP_CENTER, 5000);
 				startQuestTimer("assist_player", 2000, world.toyron, player);
 				htmltext = "desk_correct.html";
