@@ -81,10 +81,10 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 	{
 		super(10322, Q10322_SearchingForTheMysteriousPower.class.getSimpleName(), "Searching For The Mysterious Power");
 		addStartNpc(SHANNON);
-		addTalkId(SHANNON, ADVENTURERS_GUIDE, EVAIN);
+		addTalkId(SHANNON, EVAIN, ADVENTURERS_GUIDE);
 		addKillId(SCARECROW);
-		addCondMaxLevel(MAX_LEVEL, "32974-06.html");
-		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-06.html");
+		addCondMaxLevel(MAX_LEVEL, "32974-06.htm");
+		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "32974-06.htm");
 	}
 	
 	@Override

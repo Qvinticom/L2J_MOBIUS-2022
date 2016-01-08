@@ -57,7 +57,7 @@ public class Q10325_SearchingForNewPower extends Quest
 		super(10325, Q10325_SearchingForNewPower.class.getSimpleName(), "Searching For New Power");
 		addStartNpc(GALLINT);
 		addTalkId(GALLINT, TALBOT, CIDNET, BLACK, HERZ, KINCAID, XONIA);
-		addCondMaxLevel(MAX_LEVEL, "32980-07.html");
+		addCondMaxLevel(MAX_LEVEL, "32980-07.htm");
 		addCondCompletedQuest(Q10324_FindingMagisterGallint.class.getSimpleName(), "32980-07.htm");
 	}
 	
