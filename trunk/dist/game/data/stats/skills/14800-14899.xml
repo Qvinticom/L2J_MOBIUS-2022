@@ -1,34 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14800" levels="1" name="Master's Blessing - Elemental Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Fire/Water/Wind/Earth Resistance by 30. -->
 		<set name="icon" val="icon.skill11565" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
+		<set name="targetType" val="AURA" />
+		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
+		<for>
+			<effect name="Buff">
+				<add stat="fireRes" val="30" />
+				<add stat="waterRes" val="30" />
+				<add stat="windRes" val="30" />
+				<add stat="earthRes" val="30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="14801" levels="1" name="Master's Blessing - Holy Attack Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50%. -->
 		<set name="icon" val="icon.skill11567" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
+		<set name="targetType" val="AURA" />
+		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
+		<for>
+			<effect name="Buff">
+				<add stat="holyRes" val="30" />
+				<add stat="darkRes" val="30" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param BLEED="50" />
+				<param POISON="50" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="SONG_OF_INVOCATION;ARMOR_HOLY;ARMOR_UNHOLY;RESIST_POISON;DANCE_OF_ALIGNMENT;DANCE_OF_LIGHT;RESIST_BLEEDING" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="SONG_OF_INVOCATION;ARMOR_HOLY;ARMOR_UNHOLY;RESIST_POISON;DANCE_OF_ALIGNMENT;DANCE_OF_LIGHT;RESIST_BLEEDING" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="14802" levels="1" name="Master's Blessing - Mental Attack Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Hold/Sleep/Mental Attack Resistance by 50, Buff Cancellation Resistance by 30, and Debuff Resistance by 20. -->
 		<set name="icon" val="icon.skill11824" />
+		<set name="abnormalTime" val="3600" />
 		<set name="operateType" val="ACTIVE_CONTINUOUS" />
-		<set name="targetType" val="SELF" />
-		<set name="mpConsume" val="1" />
+		<set name="targetType" val="AURA" />
+		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
+		<for>
+			<effect name="Buff">
+				<add stat="cancelVuln" val="30" />
+				<add stat="debuffVuln" val="20" />
+			</effect>
+			<effect name="DefenceTrait">
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<param DERANGEMENT="50" />
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<param dispel="RESIST_DERANGEMENT;RESIST_DEBUFF_DISPEL;RESIST_DEBUFF_DISPEL;DANCE_OF_PROTECTION" rate="100" />
+			</effect>
+			<effect name="BlockBuffSlot">
+				<param slot="RESIST_DERANGEMENT;RESIST_DEBUFF_DISPEL;RESIST_DEBUFF_DISPEL;DANCE_OF_PROTECTION" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="14803" levels="1" name="Garden Dark Magic">
 		<!-- AUTO GENERATED SKILL -->
