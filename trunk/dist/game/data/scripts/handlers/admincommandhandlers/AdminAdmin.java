@@ -233,14 +233,50 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				final String pName = st.nextToken();
 				final String pValue = st.nextToken();
-				if (Config.setParameterValue(pName, pValue))
-				{
-					activeChar.sendMessage("Config parameter " + pName + " set to " + pValue);
-				}
-				else
+				if (Float.valueOf(pValue) == null)
 				{
 					activeChar.sendMessage("Invalid parameter!");
+					return false;
 				}
+				switch (pName)
+				{
+					case "RateXp":
+					{
+						Config.RATE_XP = Float.valueOf(pValue);
+						break;
+					}
+					case "RateSp":
+					{
+						Config.RATE_SP = Float.valueOf(pValue);
+						break;
+					}
+					case "RateDropSpoil":
+					{
+						Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER = Float.valueOf(pValue);
+						break;
+					}
+					case "EnchantChanceElementStone":
+					{
+						Config.ENCHANT_CHANCE_ELEMENT_STONE = Float.valueOf(pValue);
+						break;
+					}
+					case "EnchantChanceElementCrystal":
+					{
+						Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL = Float.valueOf(pValue);
+						break;
+					}
+					case "EnchantChanceElementJewel":
+					{
+						Config.ENCHANT_CHANCE_ELEMENT_JEWEL = Float.valueOf(pValue);
+						break;
+					}
+					case "EnchantChanceElementEnergy":
+					{
+						Config.ENCHANT_CHANCE_ELEMENT_ENERGY = Float.valueOf(pValue);
+						break;
+					}
+				}
+				activeChar.sendMessage("Config parameter " + pName + " set to " + pValue);
 			}
 			catch (Exception e)
 			{
@@ -249,42 +285,6 @@ public class AdminAdmin implements IAdminCommandHandler
 			finally
 			{
 				showConfigPage(activeChar);
-			}
-		}
-		else if (command.startsWith("admin_set"))
-		{
-			final StringTokenizer st = new StringTokenizer(command);
-			final String[] cmd = st.nextToken().split("_");
-			try
-			{
-				final String[] parameter = st.nextToken().split("=");
-				final String pName = parameter[0].trim();
-				final String pValue = parameter[1].trim();
-				if (Config.setParameterValue(pName, pValue))
-				{
-					activeChar.sendMessage("parameter " + pName + " succesfully set to " + pValue);
-				}
-				else
-				{
-					activeChar.sendMessage("Invalid parameter!");
-				}
-			}
-			catch (Exception e)
-			{
-				if (cmd.length == 2)
-				{
-					activeChar.sendMessage("Usage: //set parameter=value");
-				}
-			}
-			finally
-			{
-				if (cmd.length == 3)
-				{
-					if (cmd[2].equalsIgnoreCase("mod"))
-					{
-						AdminHtml.showAdminHtml(activeChar, "mods_menu.htm");
-					}
-				}
 			}
 		}
 		else if (command.startsWith("admin_gmon"))
