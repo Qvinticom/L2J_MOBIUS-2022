@@ -186,6 +186,11 @@ public final class L2TeleporterInstance extends L2Npc
 				{
 					player.sendMessage("Go away, you're not welcome here.");
 				}
+				else if (!Config.ALT_GAME_FLAGGED_PLAYER_CAN_USE_GK && (player.getPvpFlag() > 0))
+				{
+					player.sendMessage("I don't speak with angry people.");
+					return;
+				}
 				else if (player.isCombatFlagEquipped())
 				{
 					player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
@@ -522,9 +527,14 @@ public final class L2TeleporterInstance extends L2Npc
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
 				return;
 			}
-			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0)) // karma
+			else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0))
 			{
 				player.sendMessage("Go away, you're not welcome here.");
+				return;
+			}
+			else if (!Config.ALT_GAME_FLAGGED_PLAYER_CAN_USE_GK && (player.getPvpFlag() > 0))
+			{
+				player.sendMessage("I don't speak with angry people.");
 				return;
 			}
 			else if (player.isCombatFlagEquipped())

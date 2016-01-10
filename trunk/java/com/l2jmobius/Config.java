@@ -196,6 +196,7 @@ public final class Config
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_TELEPORT;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_GK;
+	public static boolean ALT_GAME_FLAGGED_PLAYER_CAN_USE_GK;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_TRADE;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE;
 	public static int MAX_PERSONAL_FAME_POINTS;
@@ -1618,6 +1619,7 @@ public final class Config
 			ALT_GAME_KARMA_PLAYER_CAN_SHOP = character.getBoolean("AltKarmaPlayerCanShop", true);
 			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = character.getBoolean("AltKarmaPlayerCanTeleport", true);
 			ALT_GAME_KARMA_PLAYER_CAN_USE_GK = character.getBoolean("AltKarmaPlayerCanUseGK", false);
+			ALT_GAME_FLAGGED_PLAYER_CAN_USE_GK = character.getBoolean("AltFlaggedPlayerCanUseGK", true);
 			ALT_GAME_KARMA_PLAYER_CAN_TRADE = character.getBoolean("AltKarmaPlayerCanTrade", true);
 			ALT_GAME_KARMA_PLAYER_CAN_USE_WAREHOUSE = character.getBoolean("AltKarmaPlayerCanUseWareHouse", true);
 			MAX_PERSONAL_FAME_POINTS = character.getInt("MaxPersonalFamePoints", 100000);
