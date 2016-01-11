@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -52,7 +52,7 @@ public final class CHSiegeManager
 	
 	private final void loadClanHalls()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(SQL_LOAD_HALLS))
 		{

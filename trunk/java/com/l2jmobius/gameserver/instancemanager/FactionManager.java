@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -46,7 +46,7 @@ public class FactionManager
 	private void loadAll()
 	{
 		_playerFactions.clear();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT charId, faction FROM characters"))
 		{
@@ -76,7 +76,7 @@ public class FactionManager
 			return factionId;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT faction FROM characters WHERE charId=?"))
 		{
 			ps.setInt(1, id);

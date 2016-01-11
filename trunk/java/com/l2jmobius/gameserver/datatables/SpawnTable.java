@@ -34,7 +34,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -255,7 +255,7 @@ public final class SpawnTable implements IXmlReader
 	private int fillSpawnTable(boolean isCustom)
 	{
 		int npcSpawnCount = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(isCustom ? SELECT_CUSTOM_SPAWNS : SELECT_SPAWNS))
 		{
@@ -416,7 +416,7 @@ public final class SpawnTable implements IXmlReader
 		if (storeInDb)
 		{
 			final String spawnTable = spawn.isCustom() && Config.CUSTOM_SPAWNLIST_TABLE ? "custom_spawnlist" : "spawnlist";
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement insert = con.prepareStatement("INSERT INTO " + spawnTable + "(count,npc_templateid,locx,locy,locz,heading,respawn_delay,respawn_random,loc_id) values(?,?,?,?,?,?,?,?,?)"))
 			{
 				insert.setInt(1, spawn.getAmount());
@@ -451,7 +451,7 @@ public final class SpawnTable implements IXmlReader
 		
 		if (updateDb)
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement delete = con.prepareStatement("DELETE FROM " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + " WHERE locx=? AND locy=? AND locz=? AND npc_templateid=? AND heading=?"))
 			{
 				delete.setInt(1, spawn.getX());

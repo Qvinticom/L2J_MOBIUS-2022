@@ -25,7 +25,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.handler.IPunishmentHandler;
 import com.l2jmobius.gameserver.handler.PunishmentHandler;
@@ -182,7 +182,7 @@ public class PunishmentTask implements Runnable
 	{
 		if (!_isStored)
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 			{
 				ps.setString(1, _key);
@@ -221,7 +221,7 @@ public class PunishmentTask implements Runnable
 	{
 		if (_isStored)
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
 			{
 				ps.setLong(1, System.currentTimeMillis());

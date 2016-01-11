@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -52,7 +52,7 @@ public class PlayerVariables extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_QUERY))
 		{
 			ps.setInt(1, _objectId);
@@ -85,7 +85,7 @@ public class PlayerVariables extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -122,7 +122,7 @@ public class PlayerVariables extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))

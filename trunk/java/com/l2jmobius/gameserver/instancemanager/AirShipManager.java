@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.AirShipTeleportList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -169,7 +169,7 @@ public class AirShipManager
 			
 			_airShipsInfo.put(ownerId, info);
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(ADD_DB))
 			{
 				ps.setInt(1, ownerId);
@@ -265,7 +265,7 @@ public class AirShipManager
 	
 	private void load()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(LOAD_DB))
 		{
@@ -296,7 +296,7 @@ public class AirShipManager
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_DB))
 		{
 			ps.setInt(1, info.getInt("fuel"));

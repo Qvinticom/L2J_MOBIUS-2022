@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -480,7 +480,7 @@ public final class GameServer
 		// Initialize config
 		Config.load();
 		printSection("Database");
-		ConnectionFactory.getInstance();
+		DatabaseFactory.getInstance();
 		gameServer = new GameServer();
 		
 		if (Config.IS_TELNET_ENABLED)

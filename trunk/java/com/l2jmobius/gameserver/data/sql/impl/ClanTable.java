@@ -29,7 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.enums.UserInfoType;
@@ -80,7 +80,7 @@ public class ClanTable
 		L2Clan clan;
 		// Count the clans
 		int clanCount = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT clan_id FROM clan_data"))
 		{
@@ -273,7 +273,7 @@ public class ClanTable
 		_clans.remove(clanId);
 		IdFactory.getInstance().releaseId(clanId);
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_data WHERE clan_id=?"))
 			{
@@ -390,7 +390,7 @@ public class ClanTable
 		clan2.setAttackerClan(clan1);
 		clan1.broadcastClanStatus();
 		clan2.broadcastClanStatus();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, wantspeace1, wantspeace2) VALUES(?,?,?,?)"))
 		{
 			ps.setInt(1, clanId1);
@@ -432,7 +432,7 @@ public class ClanTable
 		clan1.broadcastClanStatus();
 		clan2.broadcastClanStatus();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clan_wars WHERE clan1=? AND clan2=?"))
 		{
 			ps.setInt(1, clanId1);
@@ -474,7 +474,7 @@ public class ClanTable
 	private void restorewars()
 	{
 		L2Clan clan1, clan2;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT clan1, clan2 FROM clan_wars"))
 		{

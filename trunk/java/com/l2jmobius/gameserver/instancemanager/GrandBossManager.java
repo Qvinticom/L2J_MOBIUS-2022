@@ -31,7 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
@@ -73,7 +73,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void init()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_data ORDER BY boss_id"))
 		{
@@ -127,7 +127,7 @@ public final class GrandBossManager implements IStorable
 			zones.put(zoneId, new ArrayList<>());
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_list ORDER BY player_id"))
 		{
@@ -235,7 +235,7 @@ public final class GrandBossManager implements IStorable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate(DELETE_GRAND_BOSS_LIST);
@@ -308,7 +308,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void updateDb(int bossId, boolean statusOnly)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final L2GrandBossInstance boss = BOSSES.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);

@@ -30,7 +30,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
@@ -64,7 +64,7 @@ public final class BuyListData implements IXmlReader
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _buyLists.size() + " BuyLists.");
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rs = statement.executeQuery("SELECT * FROM `buylists`"))
 		{

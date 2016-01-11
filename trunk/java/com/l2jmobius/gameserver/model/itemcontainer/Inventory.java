@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
@@ -2085,7 +2085,7 @@ public abstract class Inventory extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			ps.setInt(1, getOwnerId());

@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.logging.Level;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.SiegeClanType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
@@ -130,7 +130,7 @@ public final class SiegableHall extends ClanHall
 	@Override
 	public final void updateDb()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_SAVE))
 		{
 			ps.setInt(1, getOwnerId());

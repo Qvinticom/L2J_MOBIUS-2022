@@ -23,7 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -208,7 +208,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		// Check if target has player on friend list
 		boolean foundOnFriendList = false;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=?"))
 		{
 			statement.setInt(1, ptarget.getObjectId());

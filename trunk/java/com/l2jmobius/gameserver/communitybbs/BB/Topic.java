@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
 public class Topic
@@ -71,7 +71,7 @@ public class Topic
 	
 	public void insertindb()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO topic (topic_id,topic_forum_id,topic_name,topic_date,topic_ownername,topic_ownerid,topic_type,topic_reply) values (?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _id);
@@ -129,7 +129,7 @@ public class Topic
 	{
 		TopicBBSManager.getInstance().delTopic(this);
 		f.rmTopicByID(getID());
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM topic WHERE topic_id=? AND topic_forum_id=?"))
 		{
 			ps.setInt(1, getID());

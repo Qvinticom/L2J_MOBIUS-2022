@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 
 /**
  * @author UnAfraid
@@ -50,7 +50,7 @@ public class AccountVariables extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(SELECT_QUERY))
 		{
 			st.setString(1, _accountName);
@@ -83,7 +83,7 @@ public class AccountVariables extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -120,7 +120,7 @@ public class AccountVariables extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))

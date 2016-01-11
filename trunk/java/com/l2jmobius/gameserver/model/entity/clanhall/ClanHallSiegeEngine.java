@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -91,7 +91,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public void loadAttackers()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_LOAD_ATTACKERS))
 		{
 			ps.setInt(1, _hall.getId());
@@ -113,7 +113,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public final void saveAttackers()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_siege_attackers WHERE clanhall_id = ?"))
 		{
 			ps.setInt(1, _hall.getId());
@@ -145,7 +145,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		if (_guards == null)
 		{
 			_guards = new ArrayList<>();
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
 			{
 				ps.setInt(1, _hall.getId());

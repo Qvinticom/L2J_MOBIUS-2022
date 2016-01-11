@@ -33,7 +33,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.util.IPSubnet;
 import com.l2jmobius.util.Rnd;
@@ -111,7 +111,7 @@ public final class GameServerTable implements IXmlReader
 	 */
 	private void loadRegisteredGameServers()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM gameservers"))
 		{
@@ -218,7 +218,7 @@ public final class GameServerTable implements IXmlReader
 	public void registerServerOnDB(byte[] hexId, int id, String externalHost)
 	{
 		register(id, new GameServerInfo(id, hexId));
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO gameservers (hexid,server_id,host) values (?,?,?)"))
 		{
 			ps.setString(1, hexToString(hexId));

@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
@@ -176,7 +176,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)
 	{
 		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
 			statement.setString(1, loginName);
@@ -201,7 +201,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level, vitality_points FROM character_subclasses WHERE charId=? && class_id=? ORDER BY charId"))
 		{
 			statement.setInt(1, ObjectId);
@@ -311,7 +311,7 @@ public class CharSelectionInfo extends L2GameServerPacket
 		
 		if (weaponObjId > 0)
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?"))
 			{
 				statement.setInt(1, weaponObjId);

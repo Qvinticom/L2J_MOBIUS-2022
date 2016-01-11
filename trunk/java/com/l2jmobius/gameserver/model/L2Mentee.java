@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 
@@ -49,7 +49,7 @@ public class L2Mentee
 		final L2PcInstance player = getPlayerInstance();
 		if (player == null) // Only if player is offline
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
 			{
 				ps.setInt(1, getObjectId());

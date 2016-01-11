@@ -24,7 +24,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.communitybbs.BB.Forum;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -39,7 +39,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	protected ForumsBBSManager()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))
 		{

@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.UIData;
 
 /**
@@ -104,7 +104,7 @@ public class UIKeysSettings
 			}
 		}
 		query = query.substring(0, query.length() - 1) + "; ";
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(query))
 		{
 			statement.execute();
@@ -125,7 +125,7 @@ public class UIKeysSettings
 		}
 		query = query.substring(0, query.length() - 1) + ";";
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(query))
 		{
 			statement.execute();
@@ -146,7 +146,7 @@ public class UIKeysSettings
 		
 		_storedCategories = new HashMap<>();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_categories WHERE `charId` = ? ORDER BY `catId`, `order`"))
 		{
 			ps.setInt(1, _playerObjId);
@@ -178,7 +178,7 @@ public class UIKeysSettings
 		
 		_storedKeys = new HashMap<>();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_ui_actions WHERE `charId` = ? ORDER BY `cat`, `order`"))
 		{
 			ps.setInt(1, _playerObjId);

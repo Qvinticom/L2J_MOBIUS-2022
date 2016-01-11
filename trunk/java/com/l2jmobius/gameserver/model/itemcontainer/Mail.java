@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Level;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.L2World;
@@ -116,7 +116,7 @@ public class Mail extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
 			ps.setInt(1, getOwnerId());

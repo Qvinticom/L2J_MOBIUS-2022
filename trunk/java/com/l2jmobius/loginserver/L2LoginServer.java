@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.loginserver.network.L2LoginClient;
@@ -90,7 +90,7 @@ public final class L2LoginServer
 		Config.load();
 		
 		// Prepare Database
-		ConnectionFactory.getInstance();
+		DatabaseFactory.getInstance();
 		
 		try
 		{

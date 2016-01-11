@@ -24,7 +24,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -57,7 +57,7 @@ public class L2ContactList
 	{
 		_contacts.clear();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(QUERY_LOAD))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -123,7 +123,7 @@ public class L2ContactList
 			}
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(QUERY_ADD))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -160,7 +160,7 @@ public class L2ContactList
 		
 		_contacts.remove(name);
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(QUERY_REMOVE))
 		{
 			ps.setInt(1, activeChar.getObjectId());

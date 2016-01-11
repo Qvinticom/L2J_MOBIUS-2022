@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.TradeItem;
@@ -878,7 +878,7 @@ public class PcInventory extends Inventory
 	public static int[][] restoreVisibleInventory(int objectId)
 	{
 		final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
 		{
 			ps.setInt(1, objectId);

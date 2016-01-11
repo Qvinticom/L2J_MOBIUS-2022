@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -63,7 +63,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 		
 		final String playerName = parts[1];
 		final String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement(cmd))
 			{

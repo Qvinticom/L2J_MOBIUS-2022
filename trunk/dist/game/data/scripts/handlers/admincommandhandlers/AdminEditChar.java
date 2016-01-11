@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
@@ -576,7 +576,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				if (player == null)
 				{
 					final String updateQuery = "UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1";
-					try (Connection con = ConnectionFactory.getInstance().getConnection();
+					try (Connection con = DatabaseFactory.getInstance().getConnection();
 						PreparedStatement ps = con.prepareStatement(updateQuery))
 					{
 						ps.setString(1, playerName);

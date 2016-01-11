@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
@@ -61,7 +61,7 @@ public class FavoriteBoard implements IParseBoardHandler
 			// Load Favorite links
 			final String list = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "html/CommunityBoard/favorite_list.html");
 			final StringBuilder sb = new StringBuilder();
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_FAVORITES))
 			{
 				ps.setInt(1, activeChar.getObjectId());
@@ -98,7 +98,7 @@ public class FavoriteBoard implements IParseBoardHandler
 					return false;
 				}
 				
-				try (Connection con = ConnectionFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement ps = con.prepareStatement(ADD_FAVORITE))
 				{
 					ps.setInt(1, activeChar.getObjectId());
@@ -123,7 +123,7 @@ public class FavoriteBoard implements IParseBoardHandler
 				return false;
 			}
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_FAVORITE))
 			{
 				ps.setInt(1, activeChar.getObjectId());

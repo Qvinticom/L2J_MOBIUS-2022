@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -62,7 +62,7 @@ public class RequestPetitionFeedback extends L2GameClientPacket
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK))
 		{
 			statement.setString(1, player.getName());

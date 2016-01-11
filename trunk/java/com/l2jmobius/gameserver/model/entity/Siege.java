@@ -31,7 +31,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
@@ -771,7 +771,7 @@ public class Siege implements Siegable
 	/** Clear all registered siege clans from database for castle */
 	public void clearSiegeClan()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -799,7 +799,7 @@ public class Siege implements Siegable
 	/** Clear all siege clans waiting for approval from database for castle */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -1026,7 +1026,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -1291,7 +1291,7 @@ public class Siege implements Siegable
 	/** Load siege clans. */
 	private void loadSiegeClan()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
 		{
 			getAttackerClans().clear();
@@ -1402,7 +1402,7 @@ public class Siege implements Siegable
 			_scheduledStartSiegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle SET siegeDate = ?, regTimeEnd = ?, regTimeOver = ?  WHERE id = ?"))
 		{
 			ps.setLong(1, getSiegeDate().getTimeInMillis());
@@ -1431,7 +1431,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			if ((typeId == DEFENDER) || (typeId == DEFENDER_NOT_APPROVED) || (typeId == OWNER))
 			{

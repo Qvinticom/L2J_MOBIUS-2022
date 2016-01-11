@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -91,7 +91,7 @@ public class Lottery
 	public void increasePrize(long count)
 	{
 		_prize += count;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PRICE))
 		{
 			ps.setLong(1, getPrize());
@@ -125,7 +125,7 @@ public class Lottery
 		@Override
 		public void run()
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				Statement statement = con.createStatement();
 				ResultSet rset = statement.executeQuery(SELECT_LAST_LOTTERY))
 			{
@@ -198,7 +198,7 @@ public class Lottery
 			ThreadPoolManager.getInstance().scheduleGeneral(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 			ThreadPoolManager.getInstance().scheduleGeneral(new finishLottery(), _enddate - System.currentTimeMillis());
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_LOTTERY))
 			{
 				ps.setInt(1, 1);
@@ -304,7 +304,7 @@ public class Lottery
 			int count3 = 0;
 			int count4 = 0;
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_LOTTERY_ITEM))
 			{
 				ps.setInt(1, getId());
@@ -419,7 +419,7 @@ public class Lottery
 				Broadcast.toAllOnlinePlayers(sm);
 			}
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_LOTTERY))
 			{
 				ps.setLong(1, getPrize());
@@ -489,7 +489,7 @@ public class Lottery
 			0,
 			0
 		};
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_LOTTERY_TICKET))
 		{
 			ps.setInt(1, id);

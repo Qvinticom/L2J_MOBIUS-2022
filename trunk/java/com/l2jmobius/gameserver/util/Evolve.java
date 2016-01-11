@@ -22,7 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
@@ -259,7 +259,7 @@ public final class Evolve
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 		{
 			ps.setInt(1, removedItem.getObjectId());

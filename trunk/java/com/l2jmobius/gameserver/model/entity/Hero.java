@@ -33,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -108,7 +108,7 @@ public class Hero
 		HERO_DIARY.clear();
 		HERO_MESSAGE.clear();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s1 = con.createStatement();
 			ResultSet rset = s1.executeQuery(GET_HEROES);
 			PreparedStatement ps = con.prepareStatement(GET_CLAN_ALLY);
@@ -206,7 +206,7 @@ public class Hero
 	 */
 	public void loadMessage(int charId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
 		{
 			ps.setInt(1, charId);
@@ -228,7 +228,7 @@ public class Hero
 	{
 		final List<StatsSet> diary = new ArrayList<>();
 		int diaryentries = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
 		{
 			ps.setInt(1, charId);
@@ -295,7 +295,7 @@ public class Hero
 		int _losses = 0;
 		int _draws = 0;
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
 		{
 			ps.setInt(1, charId);
@@ -692,7 +692,7 @@ public class Hero
 	
 	public void updateHeroes(boolean setDefault)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			if (setDefault)
 			{
@@ -823,7 +823,7 @@ public class Hero
 	
 	public void setDiaryData(int charId, int action, int param)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
 		{
 			ps.setInt(1, charId);
@@ -859,7 +859,7 @@ public class Hero
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
 		{
 			ps.setString(1, HERO_MESSAGE.get(charId));
@@ -874,7 +874,7 @@ public class Hero
 	
 	private void deleteItemsInDb()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate(DELETE_ITEMS);

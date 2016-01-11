@@ -24,7 +24,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -525,7 +525,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		final int x = activeChar.getX();
 		final int y = activeChar.getY();
 		final int z = activeChar.getZ();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE characters SET x=?, y=?, z=? WHERE char_name=?"))
 		{
 			ps.setInt(1, x);

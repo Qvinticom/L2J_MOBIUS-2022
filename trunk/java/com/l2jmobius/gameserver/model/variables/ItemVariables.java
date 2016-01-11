@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 
 /**
  * @author UnAfraid
@@ -55,7 +55,7 @@ public class ItemVariables extends AbstractVariables
 	public static boolean hasVariables(int objectId)
 	{
 		// Restore previous variables.
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(SELECT_COUNT))
 		{
 			st.setInt(1, objectId);
@@ -79,7 +79,7 @@ public class ItemVariables extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(SELECT_QUERY))
 		{
 			st.setInt(1, _objectId);
@@ -112,7 +112,7 @@ public class ItemVariables extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -149,7 +149,7 @@ public class ItemVariables extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))

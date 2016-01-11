@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
@@ -99,7 +99,7 @@ public class FishingChampionshipManager
 	{
 		_enddate = GlobalVariablesManager.getInstance().getLong("fishChampionshipEnd", 0);
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SELECT);
 			final ResultSet rs = statement.executeQuery();
@@ -379,7 +379,7 @@ public class FishingChampionshipManager
 	{
 		GlobalVariablesManager.getInstance().set("fishChampionshipEnd", _enddate);
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE);
 			statement.execute();

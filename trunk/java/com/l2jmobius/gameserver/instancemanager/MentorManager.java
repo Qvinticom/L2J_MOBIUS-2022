@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2Mentee;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -54,7 +54,7 @@ public class MentorManager
 	
 	private void load()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT * FROM character_mentees"))
 		{
@@ -76,7 +76,7 @@ public class MentorManager
 	 */
 	public void deleteMentee(int mentorId, int menteeId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?"))
 		{
 			statement.setInt(1, mentorId);
@@ -95,7 +95,7 @@ public class MentorManager
 	 */
 	public void deleteMentor(int mentorId, int menteeId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?"))
 		{
 			statement.setInt(1, mentorId);

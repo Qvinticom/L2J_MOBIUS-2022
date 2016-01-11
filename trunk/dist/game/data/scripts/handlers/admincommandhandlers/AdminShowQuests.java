@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -173,7 +173,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 	private static void showQuestMenu(L2PcInstance target, L2PcInstance actor, String[] val)
 	{
 		// TODO(Zoey76): Refactor this into smaller methods and separate database access logic from HTML creation.
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			ResultSet rs;
 			PreparedStatement req;

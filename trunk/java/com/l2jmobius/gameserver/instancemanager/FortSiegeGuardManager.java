@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.entity.Fort;
 
@@ -104,7 +104,7 @@ public final class FortSiegeGuardManager
 	void loadSiegeGuard()
 	{
 		_siegeGuards.clear();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT npcId, x, y, z, heading, respawnDelay FROM fort_siege_guards WHERE fortId = ?"))
 		{
 			final int fortId = getFort().getResidenceId();

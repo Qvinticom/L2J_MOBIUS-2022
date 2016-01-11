@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 
 /**
  * 18.8.2010 - JIV: Disabling until someone update it
@@ -39,7 +39,7 @@ public class CompactionIDFactory extends IdFactory
 		_curOID = FIRST_OID;
 		_freeSize = 0;
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final Integer[] tmp_obj_ids = extractUsedObjectIDTable();
 			

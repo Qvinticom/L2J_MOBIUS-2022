@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -43,7 +43,7 @@ public class TaskDailyWorldChatPointReset extends Task
 	public void onTimeElapsed(ExecutedTask task)
 	{
 		// Update data for offline players.
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
 		{
 			ps.setInt(1, Config.WORLD_CHAT_POINTS_PER_DAY);

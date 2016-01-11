@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
@@ -104,7 +104,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeMerc(int npcId, int x, int y, int z)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1"))
 		{
 			ps.setInt(1, npcId);
@@ -124,7 +124,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeMercs()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -191,7 +191,7 @@ public final class SiegeGuardManager
 	 */
 	private void loadSiegeGuard()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -237,7 +237,7 @@ public final class SiegeGuardManager
 	 */
 	private void saveSiegeGuard(int x, int y, int z, int heading, int npcId, int isHire)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());

@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -121,7 +121,7 @@ public final class InstanceManager implements IXmlReader
 			restoreInstanceTimes(playerObjId);
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(ADD_INSTANCE_TIME))
 		{
 			ps.setInt(1, playerObjId);
@@ -143,7 +143,7 @@ public final class InstanceManager implements IXmlReader
 	 */
 	public void deleteInstanceTime(int playerObjId, int id)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME))
 		{
 			ps.setInt(1, playerObjId);
@@ -167,7 +167,7 @@ public final class InstanceManager implements IXmlReader
 			return; // already restored
 		}
 		_playerInstanceTimes.put(playerObjId, new ConcurrentHashMap<>());
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(RESTORE_INSTANCE_TIMES))
 		{
 			ps.setInt(1, playerObjId);

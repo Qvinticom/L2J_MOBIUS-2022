@@ -23,7 +23,7 @@ import java.sql.SQLException;
 import java.util.Calendar;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -36,7 +36,7 @@ public class PremiumManager
 	
 	public long getPremiumEndDate(String accountName)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
 			statement.setString(1, accountName);
@@ -70,7 +70,7 @@ public class PremiumManager
 			remainingTime -= System.currentTimeMillis();
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final Calendar endDate = Calendar.getInstance();
 			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
@@ -100,7 +100,7 @@ public class PremiumManager
 	public void removePremiumStatus(String accountName)
 	{
 		// TODO: Add check if account exists. XD
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service = ?, enddate = ?");
 			statement.setString(1, accountName);

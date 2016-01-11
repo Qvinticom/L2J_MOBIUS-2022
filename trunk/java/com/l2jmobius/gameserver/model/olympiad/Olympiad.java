@@ -37,7 +37,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -176,7 +176,7 @@ public class Olympiad extends ListenersContainer
 	{
 		NOBLES.clear();
 		boolean loaded = false;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rset = s.executeQuery(OLYMPIAD_LOAD_DATA))
 		{
@@ -254,7 +254,7 @@ public class Olympiad extends ListenersContainer
 			}
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rset = s.executeQuery(OLYMPIAD_LOAD_NOBLES))
 		{
@@ -322,7 +322,7 @@ public class Olympiad extends ListenersContainer
 	{
 		NOBLES_RANK.clear();
 		final Map<Integer, Integer> tmpPlace = new HashMap<>();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery(GET_ALL_CLASSIFIED_NOBLESS))
 		{
@@ -721,7 +721,7 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 			{
@@ -793,7 +793,7 @@ public class Olympiad extends ListenersContainer
 	{
 		saveNobleData();
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(OLYMPIAD_SAVE_DATA))
 		{
 			ps.setInt(1, _currentCycle);
@@ -834,7 +834,7 @@ public class Olympiad extends ListenersContainer
 	
 	protected void updateMonthlyData()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s1 = con.createStatement();
 			Statement s2 = con.createStatement())
 		{
@@ -881,7 +881,7 @@ public class Olympiad extends ListenersContainer
 			_logResults.log(record);
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(OLYMPIAD_GET_HEROS))
 		{
 			StatsSet hero;
@@ -1014,7 +1014,7 @@ public class Olympiad extends ListenersContainer
 	{
 		final List<String> names = new ArrayList<>();
 		final String query = Config.ALT_OLY_SHOW_MONTHLY_WINNERS ? ((classId == 132) ? GET_EACH_CLASS_LEADER_SOULHOUND : GET_EACH_CLASS_LEADER) : ((classId == 132) ? GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND : GET_EACH_CLASS_LEADER_CURRENT);
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, classId);
@@ -1102,7 +1102,7 @@ public class Olympiad extends ListenersContainer
 	public int getLastNobleOlympiadPoints(int objId)
 	{
 		int result = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT olympiad_points FROM olympiad_nobles_eom WHERE charId = ?"))
 		{
 			ps.setInt(1, objId);
@@ -1246,7 +1246,7 @@ public class Olympiad extends ListenersContainer
 	
 	protected void deleteNobles()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate(OLYMPIAD_DELETE_ALL);

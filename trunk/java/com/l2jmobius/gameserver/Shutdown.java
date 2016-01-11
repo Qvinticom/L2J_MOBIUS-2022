@@ -20,7 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
@@ -263,8 +263,8 @@ public class Shutdown extends Thread
 			// commit data, last chance
 			try
 			{
-				ConnectionFactory.getInstance().close();
-				_log.info("L2Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				DatabaseFactory.getInstance().close();
+				_log.info("Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)
 			{

@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
@@ -176,7 +176,7 @@ public final class HomeBoard implements IParseBoardHandler
 	private static int getFavoriteCount(L2PcInstance player)
 	{
 		int count = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(COUNT_FAVORITES))
 		{
 			ps.setInt(1, player.getObjectId());

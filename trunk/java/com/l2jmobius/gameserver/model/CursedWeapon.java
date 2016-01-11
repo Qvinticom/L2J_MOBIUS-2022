@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -138,7 +138,7 @@ public class CursedWeapon implements INamable
 				// Remove from Db
 				_log.info(_name + " being removed offline.");
 				
-				try (Connection con = ConnectionFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement del = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
 					PreparedStatement ps = con.prepareStatement("UPDATE characters SET karma=?, pkkills=? WHERE charId=?"))
 				{
@@ -483,7 +483,7 @@ public class CursedWeapon implements INamable
 			_log.info("CursedWeapon: Saving data to disk.");
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement del = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, playerKarma, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))
 		{

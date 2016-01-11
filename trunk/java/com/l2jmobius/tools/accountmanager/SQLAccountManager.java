@@ -26,7 +26,7 @@ import java.util.Scanner;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 
 /**
  * This class SQL Account Manager
@@ -166,7 +166,7 @@ public class SQLAccountManager
 		}
 		q = q.concat(" ORDER BY login ASC");
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(q);
 			ResultSet rset = ps.executeQuery())
 		{
@@ -187,7 +187,7 @@ public class SQLAccountManager
 	
 	private static void addOrUpdateAccount(String account, String password, String level)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE accounts(login, password, accessLevel) VALUES (?, ?, ?)"))
 		{
 			final MessageDigest md = MessageDigest.getInstance("SHA");
@@ -216,7 +216,7 @@ public class SQLAccountManager
 	
 	private static void changeAccountLevel(String account, String level)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE accounts SET accessLevel = ? WHERE login = ?"))
 		{
 			ps.setString(1, level);
@@ -239,7 +239,7 @@ public class SQLAccountManager
 	
 	private static void deleteAccount(String account)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM accounts WHERE login = ?"))
 		{
 			ps.setString(1, account);

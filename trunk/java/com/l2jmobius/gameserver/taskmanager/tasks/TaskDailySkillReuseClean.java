@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.taskmanager.tasks;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.taskmanager.Task;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -44,7 +44,7 @@ public class TaskDailySkillReuseClean extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			for (int skill_id : _daily_skills)
 			{

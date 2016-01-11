@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
@@ -399,7 +399,7 @@ public final class QuestState
 	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
 	public final void saveGlobalQuestVar(String var, String value)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_quest_global_data (charId, var, value) VALUES (?, ?, ?)"))
 		{
 			ps.setInt(1, _player.getObjectId());
@@ -426,7 +426,7 @@ public final class QuestState
 	public final String getGlobalQuestVar(String var)
 	{
 		String result = "";
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT value FROM character_quest_global_data WHERE charId = ? AND var = ?"))
 		{
 			ps.setInt(1, _player.getObjectId());
@@ -452,7 +452,7 @@ public final class QuestState
 	 */
 	public final void deleteGlobalQuestVar(String var)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_quest_global_data WHERE charId = ? AND var = ?"))
 		{
 			ps.setInt(1, _player.getObjectId());

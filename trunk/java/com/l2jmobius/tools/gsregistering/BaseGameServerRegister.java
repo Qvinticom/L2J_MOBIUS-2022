@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.util.Util;
 
@@ -96,7 +96,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void unregisterGameServer(int id) throws SQLException
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM gameservers WHERE server_id = ?"))
 			
 		{
@@ -112,7 +112,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void unregisterAllGameServers() throws SQLException
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("DELETE FROM gameservers");

@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -791,7 +791,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	
 	protected static final void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, one.getObjectId());

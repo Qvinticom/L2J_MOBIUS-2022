@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Level;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
@@ -64,7 +64,7 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 		
 		if (_response == 1)
 		{
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (charId, friendId) VALUES (?, ?), (?, ?)"))
 			{
 				statement.setInt(1, requestor.getObjectId());

@@ -32,7 +32,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.CombatFlag;
 import com.l2jmobius.gameserver.model.FortSiegeSpawn;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -86,7 +86,7 @@ public final class FortSiegeManager
 		}
 		
 		boolean register = false;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT clan_id FROM fortsiege_clans where clan_id=? and fort_id=?"))
 		{
 			ps.setInt(1, clan.getId());

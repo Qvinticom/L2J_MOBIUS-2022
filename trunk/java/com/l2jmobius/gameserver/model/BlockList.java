@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -79,7 +79,7 @@ public class BlockList
 	
 	public void updateBlockMemos()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			for (int target : _updateMemos)
 			{
@@ -108,7 +108,7 @@ public class BlockList
 	private static HashMap<Integer, String> loadList(int ObjId)
 	{
 		final HashMap<Integer, String> list = new HashMap<>();
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT friendId, memo FROM character_friends WHERE charId=? AND relation=1"))
 		{
 			ps.setInt(1, ObjId);
@@ -136,7 +136,7 @@ public class BlockList
 	
 	private void removeFromDB(int targetId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_friends WHERE charId=? AND friendId=? AND relation=1"))
 		{
 			ps.setInt(1, _owner.getObjectId());
@@ -151,7 +151,7 @@ public class BlockList
 	
 	private void persistInDB(int targetId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO character_friends (charId, friendId, relation) VALUES (?, ?, 1)"))
 		{
 			ps.setInt(1, _owner.getObjectId());

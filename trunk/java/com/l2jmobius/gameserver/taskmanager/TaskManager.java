@@ -35,7 +35,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskBirthday;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskClanLeaderApply;
@@ -103,7 +103,7 @@ public final class TaskManager
 		{
 			task.onTimeElapsed(this);
 			lastActivation = System.currentTimeMillis();
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]))
 			{
 				statement.setLong(1, lastActivation);
@@ -207,7 +207,7 @@ public final class TaskManager
 	
 	private void startAllTasks()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
 			ResultSet rset = statement.executeQuery())
 		{
@@ -340,7 +340,7 @@ public final class TaskManager
 	
 	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(SQL_STATEMENTS[2]))
 		{
 			ps1.setString(1, task);
@@ -376,7 +376,7 @@ public final class TaskManager
 	
 	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]))
 		{
 			statement.setString(1, task);

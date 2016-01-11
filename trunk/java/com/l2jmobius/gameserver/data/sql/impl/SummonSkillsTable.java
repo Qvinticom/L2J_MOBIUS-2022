@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 
@@ -45,7 +45,7 @@ public class SummonSkillsTable
 	{
 		_skillTrees.clear();
 		int count = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT templateId, minLvl, skillId, skillLvl FROM pets_skills"))
 		{

@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jmobius.gameserver.model.ItemInfo;
@@ -192,7 +192,7 @@ public final class ItemAuction
 	
 	public final void storeMe()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
 		{
 			ps.setInt(1, _auctionId);
@@ -226,7 +226,7 @@ public final class ItemAuction
 	final void updatePlayerBidInternal(final ItemAuctionBid bid, final boolean delete)
 	{
 		final String query = delete ? DELETE_ITEM_AUCTION_BID : INSERT_ITEM_AUCTION_BID;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, _auctionId);

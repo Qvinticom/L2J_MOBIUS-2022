@@ -23,7 +23,7 @@ import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.entity.Message;
@@ -61,7 +61,7 @@ public class TaskBirthday extends Task
 	private int giveBirthdayGifts(long lastActivation)
 	{
 		int birthdayGiftCount = 0;
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_PENDING_BIRTHDAY_GIFTS))
 		{
 			ps.setLong(1, TimeUnit.SECONDS.convert(lastActivation, TimeUnit.MILLISECONDS));

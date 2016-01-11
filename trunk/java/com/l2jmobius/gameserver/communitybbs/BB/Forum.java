@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
@@ -91,7 +91,7 @@ public final class Forum
 	
 	private void load()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM forums WHERE forum_id=?"))
 		{
 			ps.setInt(1, _forumId);
@@ -112,7 +112,7 @@ public final class Forum
 			_log.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM topic WHERE topic_forum_id=? ORDER BY topic_id DESC"))
 		{
 			ps.setInt(1, _forumId);
@@ -137,7 +137,7 @@ public final class Forum
 	
 	private void getChildren()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT forum_id FROM forums WHERE forum_parent=?"))
 		{
 			ps.setInt(1, _forumId);
@@ -215,7 +215,7 @@ public final class Forum
 	
 	public void insertIntoDb()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO forums (forum_id,forum_name,forum_parent,forum_post,forum_type,forum_perm,forum_owner_id) VALUES (?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _forumId);

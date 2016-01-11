@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
@@ -224,7 +224,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		// Clear list for overwrite
 		SummonEffectsTable.getInstance().clearServitorEffects(getOwner(), getReferenceSkill());
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
 			// Delete all current stored effects for summon to avoid dupe
@@ -302,7 +302,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			if (!SummonEffectsTable.getInstance().containsSkill(getOwner(), getReferenceSkill()))
 			{

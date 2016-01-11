@@ -22,7 +22,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.util.network.BaseRecievePacket;
 
@@ -58,7 +58,7 @@ public class RequestTempBan extends BaseRecievePacket
 	
 	private void banUser()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO account_data VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE value=?"))
 		{
 			ps.setString(1, _accountName);

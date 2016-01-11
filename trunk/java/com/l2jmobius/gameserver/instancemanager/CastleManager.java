@@ -27,7 +27,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.InstanceListManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
@@ -250,7 +250,7 @@ public final class CastleManager implements InstanceListManager
 				}
 			}
 			// else offline-player circlet removal
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?"))
 			{
 				ps.setInt(1, member.getObjectId());
@@ -267,7 +267,7 @@ public final class CastleManager implements InstanceListManager
 	@Override
 	public void loadInstances()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id FROM castle ORDER BY id"))
 		{

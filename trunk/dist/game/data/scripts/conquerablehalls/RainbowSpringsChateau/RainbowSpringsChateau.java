@@ -30,7 +30,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -844,7 +844,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void removeAttacker(int clanId)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM rainbowsprings_attacker_list WHERE clanId = ?"))
 		{
 			ps.setInt(1, clanId);
@@ -858,7 +858,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void addAttacker(int clanId, long count)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO rainbowsprings_attacker_list VALUES (?,?)"))
 		{
 			ps.setInt(1, clanId);
@@ -874,7 +874,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	@Override
 	public void loadAttackers()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
 			ResultSet rset = s.executeQuery("SELECT * FROM rainbowsprings_attacker_list"))
 		{

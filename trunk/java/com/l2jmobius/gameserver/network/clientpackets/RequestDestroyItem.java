@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -153,7 +153,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 				pet.unSummon(activeChar);
 			}
 			
-			try (Connection con = ConnectionFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 			{
 				statement.setInt(1, _objectId);

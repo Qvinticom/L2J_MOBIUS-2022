@@ -33,7 +33,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.MMOClient;
 import com.l2jmobius.commons.mmocore.MMOConnection;
 import com.l2jmobius.commons.mmocore.ReceivablePacket;
@@ -308,7 +308,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return -1;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT clanId FROM characters WHERE charId=?"))
 		{
 			statement.setInt(1, objid);
@@ -401,7 +401,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return;
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?"))
 		{
 			statement.setInt(1, objid);
@@ -430,7 +430,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		
 		CharNameTable.getInstance().removeName(objid);
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?"))
 			{

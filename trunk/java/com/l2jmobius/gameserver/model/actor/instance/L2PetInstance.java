@@ -26,7 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.pool.impl.ConnectionFactory;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
@@ -793,7 +793,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id = ?"))
 		{
 			ps.setInt(1, getControlObjectId());
@@ -851,7 +851,7 @@ public class L2PetInstance extends L2Summon
 	
 	private static L2PetInstance restore(L2ItemInstance control, L2NpcTemplate template, L2PcInstance owner)
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?"))
 		{
 			L2PetInstance pet;
@@ -952,7 +952,7 @@ public class L2PetInstance extends L2Summon
 			req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,ownerId=?,restore=? " + "WHERE item_obj_id = ?";
 		}
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(req))
 		{
 			ps.setString(1, getName());
@@ -1002,7 +1002,7 @@ public class L2PetInstance extends L2Summon
 		// Clear list for overwrite
 		SummonEffectsTable.getInstance().clearPetEffects(getControlObjectId());
 		
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(DELETE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(ADD_SKILL_SAVE))
 		{
@@ -1069,7 +1069,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public void restoreEffects()
 	{
-		try (Connection con = ConnectionFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(RESTORE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
