@@ -973,7 +973,6 @@ public final class Config
 	public static String DATABASE_PASSWORD;
 	public static int DATABASE_MAX_CONNECTIONS;
 	public static int DATABASE_MAX_IDLE_TIME;
-	public static long CONNECTION_CLOSE_TIME;
 	public static int MAXIMUM_ONLINE_USERS;
 	public static Pattern CHARNAME_TEMPLATE_PATTERN;
 	public static String PET_NAME_TEMPLATE;
@@ -1186,7 +1185,6 @@ public final class Config
 			DATABASE_PASSWORD = serverSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 500);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
-			CONNECTION_CLOSE_TIME = serverSettings.getLong("ConnectionCloseTime", 60000);
 			
 			Pattern charNamePattern;
 			
@@ -2933,7 +2931,6 @@ public final class Config
 			DATABASE_PASSWORD = ServerSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = ServerSettings.getInt("MaximumDbIdleTime", 0);
-			CONNECTION_CLOSE_TIME = ServerSettings.getLong("ConnectionCloseTime", 60000);
 			
 			SHOW_LICENCE = ServerSettings.getBoolean("ShowLicence", true);
 			
