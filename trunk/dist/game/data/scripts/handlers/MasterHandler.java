@@ -198,7 +198,6 @@ import handlers.itemhandlers.FishShots;
 import handlers.itemhandlers.Harvester;
 import handlers.itemhandlers.ItemSkills;
 import handlers.itemhandlers.ItemSkillsTemplate;
-import handlers.itemhandlers.ManaPotion;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
@@ -488,7 +487,6 @@ public class MasterHandler
 			Harvester.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
-			ManaPotion.class,
 			Maps.class,
 			MercTicket.class,
 			NicknameColor.class,
