@@ -427,6 +427,9 @@
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
+		<cond msgId="113" addName="1">
+			<player isPvpFlagged="false" />
+		</cond>
 	</item>
 	<item id="727" name="Healing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that restores HP for a certain amount of time. -->
@@ -461,6 +464,9 @@
 		<set name="weight" val="180" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<player isPvpFlagged="false" />
 		</cond>
 	</item>
 	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
