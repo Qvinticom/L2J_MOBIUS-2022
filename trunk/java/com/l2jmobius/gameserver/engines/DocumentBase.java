@@ -89,6 +89,7 @@ import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsClanLeader;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsHero;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsInCombat;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsOnSide;
+import com.l2jmobius.gameserver.model.conditions.ConditionPlayerIsPvpFlagged;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerLandingZone;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerLevel;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerLevelRange;
@@ -565,6 +566,12 @@ public abstract class DocumentBase
 				{
 					final boolean val = Boolean.parseBoolean(a.getNodeValue());
 					cond = joinAnd(cond, new ConditionPlayerIsHero(val));
+					break;
+				}
+				case "ispvpflagged":
+				{
+					final boolean val = Boolean.parseBoolean(a.getNodeValue());
+					cond = joinAnd(cond, new ConditionPlayerIsPvpFlagged(val));
 					break;
 				}
 				case "transformationid":
