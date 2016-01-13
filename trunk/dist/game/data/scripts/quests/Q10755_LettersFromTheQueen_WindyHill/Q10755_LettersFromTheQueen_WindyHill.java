@@ -88,21 +88,20 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 		{
 			case "30037-03.html":
 			{
-				if (qs.isCond(1))
+				qs.startQuest();
+				
+				if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_WINDY_HILL.getId()) < 1)
 				{
-					qs.setCond(2);
-					if (qs.getQuestItemsCount(SCROLL_OF_ESCAPE_WINDY_HILL.getId()) < 1)
-					{
-						giveItems(player, SCROLL_OF_ESCAPE_WINDY_HILL);
-						showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
-					}
-					htmltext = event;
+					giveItems(player, SCROLL_OF_ESCAPE_WINDY_HILL);
+					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_LEVIAN_GAVE_YOU, ExShowScreenMessage.TOP_CENTER, 4500);
 				}
-				break;
+				htmltext = event;
 			}
+				break;
+			
 			case "33963-03.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(1))
 				{
 					giveItems(player, STEEL_DOOR_GUILD);
 					addExpAndSp(player, EXP_REWARD, SP_REWARD);
@@ -150,9 +149,9 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 						{
 							htmltext = getNoQuestMsg(player);
 						}
-						else if (qs.isCond(2))
+						else if (qs.isCreated())
 						{
-							htmltext = "33963-01.html";
+							htmltext = getNoQuestMsg(player);
 						}
 						break;
 					}
@@ -175,7 +174,7 @@ public class Q10755_LettersFromTheQueen_WindyHill extends Quest implements IBypa
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "33963-04.html";
+							htmltext = "33963-01.html";
 						}
 						break;
 					}
