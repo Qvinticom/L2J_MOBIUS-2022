@@ -45,13 +45,11 @@ public class Q10337_SakumsInfluence extends Quest
 	private static final int SCAVENGER_BAT = 20411;
 	private static final int BAT = 27458; // for ruin bat & scavenger bat counter(client counter requires BAT id)
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	
 	{
 		MOBS_REQUIRED.put(SKELETON_WARRIOR, 10);
 		MOBS_REQUIRED.put(RUIN_IMP, 20); // imp elder same counter
 		MOBS_REQUIRED.put(BAT, 25); // & scavenger bat same counter
 	}
-	
 	// Rewards
 	private static final int ADENA_REWARD = 1030;
 	private static final int EXP_REWARD = 650000;

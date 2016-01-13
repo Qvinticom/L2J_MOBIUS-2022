@@ -53,7 +53,7 @@ import ai.npc.AbstractNpcAI;
  */
 public final class Antharas extends AbstractNpcAI
 {
-	// NPC
+	// NPCs
 	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
 	private static final int TERASQUE = 29190; // Tarask Dragon
@@ -61,7 +61,6 @@ public final class Antharas extends AbstractNpcAI
 	private static final int HEART = 13001; // Heart of Warding
 	private static final int CUBE = 31859; // Teleportation Cubic
 	private static final Map<Integer, Location> INVISIBLE_NPC = new HashMap<>();
-	
 	{
 		INVISIBLE_NPC.put(29077, new Location(177229, 113298, -7735)); // antaras_clear_npc_1
 		INVISIBLE_NPC.put(29078, new Location(176707, 113585, -7735)); // antaras_clear_npc_2
@@ -82,7 +81,6 @@ public final class Antharas extends AbstractNpcAI
 		INVISIBLE_NPC.put(29093, new Location(178419, 113417, -7735)); // antaras_clear_npc_17
 		INVISIBLE_NPC.put(29094, new Location(177855, 113282, -7735)); // antaras_clear_npc_18
 	}
-	
 	// Item
 	private static final int STONE = 3865; // Portal Stone
 	// Skill

@@ -43,14 +43,12 @@ public class Q10335_RequestToFindSakum extends Quest
 	private static final int RUIN_ZOMBIE = 20026;
 	private static final int RUIN_SPARTOI = 20054;
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	
 	{
 		MOBS_REQUIRED.put(SKELETON_TRACKER, 10);
 		MOBS_REQUIRED.put(SKELETON_BOWMAN, 10);
 		MOBS_REQUIRED.put(RUIN_ZOMBIE, 15);
 		MOBS_REQUIRED.put(RUIN_SPARTOI, 15);
 	}
-	
 	// Rewards
 	private static final int ADENA_REWARD = 90000;
 	private static final int EXP_REWARD = 350000;

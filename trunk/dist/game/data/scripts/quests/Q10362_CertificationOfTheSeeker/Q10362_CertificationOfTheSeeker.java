@@ -45,12 +45,10 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 	private static final int CRAWLER = 22991;
 	private static final int STALKER = 22992;
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	
 	{
 		MOBS_REQUIRED.put(CRAWLER, 5);
 		MOBS_REQUIRED.put(STALKER, 10);
 	}
-	
 	// Rewards
 	private static final int ADENA_REWARD = 43000;
 	private static final int EXP_REWARD = 50000;

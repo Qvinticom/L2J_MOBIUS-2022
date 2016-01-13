@@ -43,13 +43,11 @@ public final class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 	private static final int BROKEN_CRYSTAL = 7191;
 	// Monsters
 	private final Map<Integer, Double> MONSTER_CHANCES = new HashMap<>();
-	
 	{
 		MONSTER_CHANCES.put(21297, 0.5); // Canyon Bandersnatch Slave
 		MONSTER_CHANCES.put(21299, 0.519); // Buffalo Slave
 		MONSTER_CHANCES.put(21304, 0.673); // Grendel Slave
 	}
-	
 	// Reward
 	private static final int UNFINISHED_CRYSTAL = 7192;
 	// Misc

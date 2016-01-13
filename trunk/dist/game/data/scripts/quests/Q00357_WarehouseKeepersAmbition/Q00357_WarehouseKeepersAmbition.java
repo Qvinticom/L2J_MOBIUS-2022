@@ -36,14 +36,12 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 	private static final int JADE_CRYSTAL = 5867;
 	// Monsters
 	private final Map<Integer, Double> DROP_DATA = new HashMap<>();
-	
 	{
 		DROP_DATA.put(20594, 0.577); // Forest Runner
 		DROP_DATA.put(20595, 0.6); // Fline Elder
 		DROP_DATA.put(20596, 0.638); // Liele Elder
 		DROP_DATA.put(20597, 0.062); // Valley Treant Elder
 	}
-	
 	// Misc
 	private static final int MIN_LVL = 47;
 	

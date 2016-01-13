@@ -41,13 +41,11 @@ public class Q10358_DividedSakumPoslof extends Quest
 	private static final int ZOMBIE_WARRIOR = 20458;
 	private static final int VEELAN_BUGBEAR_WARRIOR = 20402;
 	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	
 	{
 		MOBS_REQUIRED.put(ZOMBIE_WARRIOR, 20);
 		MOBS_REQUIRED.put(VEELAN_BUGBEAR_WARRIOR, 23);
 		MOBS_REQUIRED.put(POSLOF, 0);
 	}
-	
 	// Item
 	private static final int SAKUMS_SKETCH_B = 17585;
 	// Rewards

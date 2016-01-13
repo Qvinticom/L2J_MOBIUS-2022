@@ -40,7 +40,6 @@ public final class DimensionalManager extends AbstractNpcAI
 	private static final int ROSE_SPIRIT = 21887;
 	// Rewards
 	private static final Map<String, SkillHolder> TICKET_REWARDS = new HashMap<>();
-	
 	{
 		// Using SkillHolder to store ticket and reward ids.
 		// buypass - coupon(skillId) - reward(skillLvl)

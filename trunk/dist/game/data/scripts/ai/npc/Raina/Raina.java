@@ -105,9 +105,7 @@ public final class Raina extends AbstractNpcAI
 		subclassSetMap.put(PlayerClass.Spellsinger, subclasseSet5);
 		subclassSetMap.put(PlayerClass.Spellhowler, subclasseSet5);
 	}
-	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
-	
 	{
 		classCloak.put(CategoryType.SIGEL_GROUP, 30310); // Abelius Cloak
 		classCloak.put(CategoryType.TYRR_GROUP, 30311); // Sapyros Cloak Grade
@@ -118,9 +116,7 @@ public final class Raina extends AbstractNpcAI
 		classCloak.put(CategoryType.WYNN_GROUP, 30316); // Leister Cloak Grade
 		classCloak.put(CategoryType.AEORE_GROUP, 30317); // Laksis Cloak Grade
 	}
-	
 	private static final List<PlayerClass> dualClassList = new ArrayList<>();
-	
 	{
 		dualClassList.addAll(Arrays.asList(PlayerClass.sigelPhoenixKnight, PlayerClass.sigelHellKnight, PlayerClass.sigelEvasTemplar, PlayerClass.sigelShilenTemplar));
 		dualClassList.addAll(Arrays.asList(PlayerClass.tyrrDuelist, PlayerClass.tyrrDreadnought, PlayerClass.tyrrTitan, PlayerClass.tyrrGrandKhavatari, PlayerClass.tyrrDoombringer));
@@ -131,7 +127,6 @@ public final class Raina extends AbstractNpcAI
 		dualClassList.addAll(Arrays.asList(PlayerClass.wynnArcanaLord, PlayerClass.wynnElementalMaster, PlayerClass.wynnSpectralMaster));
 		dualClassList.addAll(Arrays.asList(PlayerClass.aeoreCardinal, PlayerClass.aeoreEvaSaint, PlayerClass.aeoreShillienSaint));
 	}
-	
 	// @formatter:off
 	private static final int[] REAWAKEN_PRICE =
 	{

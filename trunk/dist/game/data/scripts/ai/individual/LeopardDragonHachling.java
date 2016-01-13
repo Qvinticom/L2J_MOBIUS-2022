@@ -43,7 +43,6 @@ public class LeopardDragonHachling extends AbstractNpcAI
 	private static final int LEOPARD_DRAGON = 23435;
 	// Locations
 	private static final List<Location> TRANSFORM_LOCATIONS = new ArrayList<>();
-	
 	{
 		TRANSFORM_LOCATIONS.add(new Location(84199, 120022, -2944));
 		TRANSFORM_LOCATIONS.add(new Location(92138, 113735, -3076));

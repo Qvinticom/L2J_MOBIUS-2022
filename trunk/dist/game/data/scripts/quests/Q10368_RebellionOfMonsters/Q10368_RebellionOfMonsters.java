@@ -40,14 +40,12 @@ public class Q10368_RebellionOfMonsters extends Quest
 	private static final int ANT_SOLDIER = 23099;
 	private static final int ANT_WARRIOR_CAPTAIN = 23100;
 	private static final HashMap<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
-	
 	{
 		MOBS_REQUIRED.put(WEARY_JAGUAR, 10);
 		MOBS_REQUIRED.put(WEARY_JAGUAR_SCOUT, 15);
 		MOBS_REQUIRED.put(ANT_SOLDIER, 15);
 		MOBS_REQUIRED.put(ANT_WARRIOR_CAPTAIN, 20);
 	}
-	
 	// Rewards
 	private static final int ADENA_REWARD = 99000;
 	private static final int EXP_REWARD = 750000;
