@@ -102,6 +102,7 @@
 		<xs:attribute name="class_id_restriction" type="xs:normalizedString" />
 		<xs:attribute name="cloakStatus" type="xs:boolean" />
 		<xs:attribute name="isHero" type="xs:boolean" />
+		<xs:attribute name="isPvpFlagged" type="xs:boolean" />
 		<xs:attribute name="insideZoneId" type="xs:normalizedString" />
 		<xs:attribute name="level">
 			<xs:simpleType>
