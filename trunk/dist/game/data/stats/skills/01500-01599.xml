@@ -2029,27 +2029,19 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1565" levels="6" name="Mana Pump" enchantGroup1="1">
+	<skill id="1565" levels="6" name="Mana Pump">
 		<!-- Confirmed High Five -->
 		<table name="#magicLvl"> 40 49 58 64 68 72 </table>
 		<table name="#maxMp"> 70 100 140 150 180 200 </table>
-		<table name="#ench1maxMp"> 203 206 210 213 216 220 223 226 230 233 236 240 243 246 250 253 256 260 263 266 270 273 276 280 283 286 290 293 296 300 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="maxMp" val="#ench1maxMp" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1566" levels="1" name="Class Change">
 		<!-- Change the class. -->

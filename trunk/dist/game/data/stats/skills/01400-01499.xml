@@ -2646,10 +2646,8 @@
 			<effect name="ConvertItem" />
 		</for>
 	</skill>
-	<skill id="1474" levels="1" name="Abyssal Power" enchantGroup1="1">
+	<skill id="1474" levels="1" name="Abyssal Power">
 		<!-- Confirmed CT2.5 -->
-		<table name="#ench1mAtk"> 1.101 1.103 1.105 1.106 1.108 1.11 1.111 1.113 1.115 1.116 1.118 1.12 1.121 1.123 1.125 1.126 1.128 1.13 1.131 1.133 1.135 1.136 1.138 1.14 1.141 1.143 1.145 1.146 1.148 1.15 </table>
-		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="icon" val="icon.skill1474" />
 		<set name="magicLvl" val="43" />
 		<set name="operateType" val="PASSIVE" />
@@ -2660,11 +2658,6 @@
 				<mul stat="mAtk" val="1.1" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="mAtk" val="#ench1mAtk" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="1475" levels="3" name="Erase Mark">
 		<!-- Confirmed CT2.5 -->

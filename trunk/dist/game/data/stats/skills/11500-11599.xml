@@ -13,17 +13,14 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="isMagic" val="1" />
 	</skill>
-	<skill id="11501" levels="7" name="Superior Dual Weapon Mastery" enchantGroup1="10">
+	<skill id="11501" levels="7" name="Superior Dual Weapon Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Dual_Weapon_Mastery_-_Iss_Hierophant -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
-		<table name="#ench1pAtk"> 1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.30 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10252" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="#pAtk">
@@ -50,31 +47,8 @@
 				<add stat="skillCritical" val="1" /> <!-- STR -->
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<mul stat="pAtk" val="#ench1pAtk">
-					<using kind="DUAL, DUALBLUNT" />
-				</mul>
-				<mul stat="pAtkSpd" val="1.20">
-					<using kind="DUAL, DUALBLUNT" />
-				</mul>
-				<mul stat="critDmg" val="1.15">
-					<using kind="DUAL, DUALBLUNT" />
-				</mul>
-				<add stat="accCombat" val="4">
-					<using kind="DUAL, DUALBLUNT" />
-				</add>
-				<add stat="runSpd" val="13">
-					<using kind="DUAL, DUALBLUNT" />
-				</add>
-				<mul stat="pvePhysDmg" val="1.20">
-					<using kind="DUAL, DUALBLUNT" />
-				</mul>
-				<add stat="skillCritical" val="1" /> <!-- STR -->
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11502" levels="1" name="Superior Robe Mastery" enchantGroup1="10">
+	<skill id="11502" levels="1" name="Superior Robe Mastery">
 		<!-- Max HP + 4636 and P. Def. + 1033 when equipped with a Robe. -->
 		<table name="#ench1pDef"> 1063 1093 1123 1153 1183 1213 1243 1273 1303 1335 </table>
 		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
@@ -82,7 +56,6 @@
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="maxHp" val="4636">
@@ -93,30 +66,17 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="maxHp" val="4636">
-					<using kind="MAGIC" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="MAGIC" />
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11503" levels="7" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<skill id="11503" levels="7" name="Superior Light Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Iss_Dominator -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#pDef"> 1506 1654 1817 1959 2196 2279 2365 </table>
-		<table name="#ench1pDef"> 1070 1100 1130 1160 1190 1220 1250 1280 1310 1344 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10254" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="maxHp" val="4636">
@@ -128,29 +88,15 @@
 				<mul stat="regMp" val="1.25" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="maxHp" val="4636">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="LIGHT" />
-				</add>
-				<mul stat="regMp" val="1.25" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11504" levels="7" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<skill id="11504" levels="7" name="Superior Heavy Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Iss_Hierophant -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
-		<table name="#ench1pDef"> 1229 1264 1299 1334 1369 1404 1439 1474 1509 1545 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10002" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="maxHp" val="4636">
@@ -161,28 +107,15 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="maxHp" val="4636">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="HEAVY" />
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11505" levels="7" name="Superior Anti Magic" enchantGroup1="10">
+	<skill id="11505" levels="7" name="Superior Anti Magic">
 	<!-- Source: https://l2wiki.com/Superior_Anti_Magic_-_Iss_Hierophant -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
-		<table name="#ench1mDef"> 146 154 162 170 178 186 194 202 210 218 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10004" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="mDef" val="#mDef" />
@@ -196,67 +129,36 @@
 				<param targetType="SELF" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="mDef" val="#ench1mDef" />
-				<mul stat="magicSuccRes" val="1.35" />
-			</effect>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
-				<param minDamage="1" />
-				<param chance="20" />
-				<param skillId="10058" skillLevel="1" />
-				<param targetType="SELF" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11506" levels="1" name="Superior HP Boost" enchantGroup1="10">
+	<skill id="11506" levels="1" name="Superior HP Boost">
 	<!-- Source: https://l2wiki.com/Superior_HP_Boost_-_Iss_Spectral_Dancer -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#maxHp"> 513 574 635 717 766 835 904 </table>
-		<table name="#ench1maxHp"> 390 414 438 462 486 509 533 557 581 605 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<add stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="maxHp" val="#ench1maxHp" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="11507" levels="7" name="Superior MP Boost" enchantGroup1="10">
+	<skill id="11507" levels="7" name="Superior MP Boost">
 	<!-- Source: https://l2wiki.com/Superior_MP_Boost_-_Iss_Dominator -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#maxMp"> 313 374 435 517 566 635 704 </table>
-		<table name="#ench1maxMp"> 333 354 374 395 415 435 456 476 497 517 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<add stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="maxMp" val="#ench1maxMp" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11508" levels="9" name="Assault Rush" enchantGroup1="10">
 	<!-- Source: https://l2wiki.com/Assault_Rush_-_Iss_Dominator -->
@@ -1892,29 +1794,20 @@
 		<enchant8 name="elementPower" val="#enchElementPower" />
 		<enchant8 name="element" val="5" />
 	</skill>
-	<skill id="11547" levels="7" name="Superior HP Recovery" enchantGroup1="10">
+	<skill id="11547" levels="7" name="Superior HP Recovery">
 	<!-- Source: https://l2wiki.com/Superior_HP_Recovery_-_Iss_Dominator -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#regHp"> 2.8 3.4 4 4.6 5.4 6.2 7 </table>
-		<table name="#ench1regHp"> 3 3.2 3.4 3.6 3.8 3.9 4.1 4.3 4.5 4.7 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill0212" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
 				<add stat="regHp" val="#regHp" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="regHp" val="#ench1regHp" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11548" levels="1" name="Superior Quick Recovery">
 		<!-- STR + 2 and Cooldown for magic skills - 25%. -->

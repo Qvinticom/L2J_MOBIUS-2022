@@ -121,11 +121,10 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="10751" levels="7" name="Superior Bow/Crossbow Mastery" enchantGroup1="10">
+	<skill id="10751" levels="7" name="Superior Bow/Crossbow Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Bow/Crossbow_Mastery_-_Yul_Sagittarius -->
 		<table name="#pAtk"> 1663 1928 2235 2515 2850 3023 3208 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pAtk"> 1402 1488 1574 1660 1746 1832 1918 2004 2090 2176 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -142,26 +141,12 @@
 				<add stat="skillCritical" val="1" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="pAtk" val="#ench1pAtk">
-					<using kind="CROSSBOW,BOW" />
-				</add>
-				<mul stat="pAtkSpd" val="1.12">
-					<using kind="CROSSBOW,BOW" />
-				</mul>
-				<add stat="accCombat" val="8" />
-				<add stat="skillCritical" val="1" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10752" levels="7" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<skill id="10752" levels="7" name="Superior Light Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Yul_Sagittarius -->
 		<!-- Not done spd and rCrit depending on DEX -->
 		<table name="#pDef"> 1506 1645 1817 1959 2196 2279 2365 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pDef"> 1426 1466 1506 1546 1586 1626 1666 1706 1746 1792 </table>
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -185,26 +170,6 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="maxHp" val="4783">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="LIGHT" />
-				</add>
-				<mul stat="regMp" val="1.1">
-					<using kind="LIGHT" />
-				</mul>
-				<mul stat="defCritRate" val="0.65">
-					<using kind="LIGHT" />
-				</mul>
-				<add stat="rEvas" val="7">
-					<using kind="LIGHT" />
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10753" levels="1" name="Superior Hawkeye Mastery">
 		<set name="magicLvl" val="85" />
@@ -222,12 +187,10 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10754" levels="7" name="Superior Survival Ability" enchantGroup1="10">
+	<skill id="10754" levels="7" name="Superior Survival Ability">
 	<!-- Source: https://l2wiki.com/Superior_Survival_Ability_-_Yul_Ghost_Sentinel -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#runSpd"> 17 18 19 20 22 23 24 </table>
-		<table name="#ench1damageZoneVuln"> 31 32 33 34 35 36 37 38 39 40 </table>
-		<table name="#ench1maxLoad"> 1.51 1.52 1.53 1.54 1.55 1.56 1.57 1.58 1.59 1.60 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -247,28 +210,11 @@
 				<param isCritical="true" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<sub stat="damageZoneVuln" val="#ench1damageZoneVuln" />
-				<mul stat="weightLimit" val="#ench1maxLoad" />
-				<add stat="runSpd" val="17" />
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="1" />
-				<param chance="35" />
-				<param skillId="10809" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="ALL" />
-				<param isCritical="true" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10755" levels="7" name="Superior Mental Attack Resistance" enchantGroup1="10">
+	<skill id="10755" levels="7" name="Superior Mental Attack Resistance">
 	<!-- Source: https://l2wiki.com/Superior_Mental_Attack_Resistance_-_Yul_Trickster -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#ench1power"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -286,27 +232,12 @@
 				<add stat="reflectSkillPhysic" val="10" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<param HOLD="#ench1power" />
-				<param SLEEP="#ench1power" />
-				<param PARALYZE="#ench1power" />
-				<param BLEED="#ench1power" />
-				<param SHOCK="#ench1power" />
-				<param POISON="#ench1power" />
-				<param DERANGEMENT="#ench1power" />
-				<add stat="reflectSkillMagic" val="10" />
-				<add stat="reflectSkillPhysic" val="10" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10756" levels="7" name="Superior Critical Arrow" enchantGroup1="10">
+	<skill id="10756" levels="7" name="Superior Critical Arrow">
 	<!-- Source: https://l2wiki.com/Superior_Critical_Arrow_-_Yul_Sagittarius -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#critDmg"> 1.05 1.06 1.07 1.08 1.10 1.12 1.14 </table>
 		<table name="#skillCriticalProbability"> 10 12 14 16 20 22 24 </table>
-		<table name="#ench1cAtk"> 808 841 875 910 946 983 1022 1062 1104 1147 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -318,14 +249,6 @@
 				<mul stat="skillCriticalProbability" val="#skillCriticalProbability" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<mul stat="critRate" val="1.25" />
-				<add stat="critDmgAdd" val="#ench1cAtk" />
-				<mul stat="skillCriticalProbability" val="11" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10757" levels="4" name="Dead Eye Stance">
 		<table name="#magicLvl"> 85 90 95 99 </table>
@@ -1599,22 +1522,14 @@
 	<!-- Source: https://l2wiki.com/Superior_M._Def._-_Yul_Sagittarius -->
 		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1mDef"> 206 213 220 227 234 241 248 255 262 270 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="mDef" val="#ench1mDef" />
 		<for>
 			<effect name="Buff">
 				<add stat="mDef" val="#mDef" />
 				<add stat="STR" val="2" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="mDef" val="#ench1mDef" />
-				<add stat="STR" val="2" />
-			</effect>
-		</enchant1for>
 	</skill>
 </list>

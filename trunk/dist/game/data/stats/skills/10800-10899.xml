@@ -4,7 +4,6 @@
 	<!-- Source: https://l2wiki.com/Superior_Elemental_Resistance_-_Yul_Sagittarius -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#ench1power"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -17,15 +16,6 @@
 				<add stat="fireRes" val="#resistance" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="earthRes" val="#ench1power" />
-				<add stat="windRes" val="#ench1power" />
-				<add stat="waterRes" val="#ench1power" />
-				<add stat="fireRes" val="#ench1power" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10801" levels="8" name="Bullseye">
 	<!-- Source: https://l2wiki.com/Bullseye_-_Yul_Sagittarius -->

@@ -76,16 +76,13 @@
 			<effect name="Stun" />
 		</for>
 	</skill>
-	<skill id="10251" levels="7" name="Superior Weapon Mastery" enchantGroup1="10">
+	<skill id="10251" levels="7" name="Superior Weapon Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Weapon_Mastery_-_Feoh_Archmage -->
-		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10251" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="1252">
@@ -111,43 +108,15 @@
 				<param allowWeapons="SWORD,BLUNT" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="pAtk" val="#ench1pAtk">
-					<using kind="BLUNT,POLE,SWORD" />
-				</add>
-				<add stat="accCombat" val="8">
-					<using kind="BLUNT,POLE,SWORD" />
-				</add>
-				<mul stat="pAtkSpd" val="1.25" />
-				<mul stat="pAtk" val="1.30" />
-				<add stat="STR" val="2" />
-				<add stat="skillCritical" val="1" /> <!-- STR -->
-				<add stat="atkCountMax" val="8">
-					<using kind="POLE" />
-				</add>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param isCritical="false" />
-				<param minDamage="1" chance="50" />
-				<param skillId="10284" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10252" levels="7" name="Superior Dual Weapon Mastery" enchantGroup1="10">
+	<skill id="10252" levels="7" name="Superior Dual Weapon Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Dual_Weapon_Mastery_-_Tyrr_Titan -->
-		<table name="#ench1pAtk"> 1502 1613 1724 1835 1946 2057 2168 2279 2390 2501 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#pAtkAdd"> 1689 1958 2270 2555 2895 3071 3258 </table>
 		<set name="icon" val="icon.skill10252" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.3">
@@ -162,29 +131,15 @@
 				<add stat="STR" val="2" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="pAtk" val="#ench1pAtk">
-					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
-				</add>
-				<add stat="accCombat" val="8">
-					<using kind="FIST,DUALFIST,DUALBLUNT,DUAL" />
-				</add>
-				<add stat="STR" val="2" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10253" levels="7" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<skill id="10253" levels="7" name="Superior Heavy Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Tyrr_Titan -->
 		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pDef"> 1366 1405 1444 1483 1522 1561 1600 1639 1678 1717 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10253" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2">
@@ -198,31 +153,15 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="maxHp" val="5368">
-					<using kind="HEAVY" />
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10254" levels="7" name="Superior Light Armor Mastery" enchantGroup1="10">
+	<skill id="10254" levels="7" name="Superior Light Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Tyrr_Duelist -->
 		<table name="#pDef"> 1506 1654 1817 1959 2196 2279 2365 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pDef"> 1308 1345 1382 1419 1456 1493 1530 1567 1604 1643 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10254" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2">
@@ -251,45 +190,14 @@
 				</mul>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="maxHp" val="5368">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="accCombat" val="3">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="rEvas" val="6">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="runSpd" val="10">
-					<using kind="LIGHT" />
-				</add>
-				<mul stat="pAtkSpd" val="1.10">
-					<using kind="LIGHT" />
-				</mul>
-				<mul stat="defCritRate" val="1.35">
-					<using kind="LIGHT" />
-				</mul>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10255" levels="7" name="Superior Momentum Mastery" enchantGroup1="10">
+	<skill id="10255" levels="7" name="Superior Momentum Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Momentum_Mastery_-_Tyrr_Titan -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1Rate"> 21 22 23 24 25 26 27 28 29 30 </table>
-		<table name="#enchMagicLvl"> 86 87 88 89 90 91 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10255" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="106" />
@@ -307,42 +215,17 @@
 				<param allowWeapons="ALL" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="106" />
-				<param minDamage="1" chance="#ench1Rate" />
-				<param skillId="10283" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="ALL" />
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="106" />
-				<param isCritical="true" />
-				<param minDamage="1" chance="40" />
-				<param skillId="10283" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="ALL" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10256" levels="7" name="Superior HP Mastery" enchantGroup1="10">
+	<skill id="10256" levels="7" name="Superior HP Mastery">
 	<!-- Source: https://l2wiki.com/Superior_HP_Mastery_-_Tyrr_Grand_Khavatari -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#maxHp"> 606 724 843 1002 1092 1222 1352 </table>
 		<table name="#maxCp"> 296 353 411 489 533 596 660 </table>
 		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
-		<table name="#ench1maxHp"> 645 685 724 764 804 843 883 922 962 1002 </table>
-		<table name="#ench1maxCp"> 315 334 353 373 392 411 431 450 469 489 </table>
-		<table name="#ench1regHp"> 7.8 8.2 8.7 9.2 9.7 10.1 10.6 11.1 11.5 12 </table>
-		<table name="#ench1regHpRest"> 7.5 7.9 8.4 8.8 9.3 9.8 10.2 10.7 11.1 11.6 </table>
-		<table name="#ench1regMp"> 3.9 4.2 4.4 4.6 4.9 5.1 5.3 5.5 5.8 6 </table>
-		<table name="#ench1pAtk"> 754 809 864 919 974 1029 1084 1139 1194 1249 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10256" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
@@ -366,30 +249,6 @@
 				<param targetType="SELF" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="maxHp" val="#ench1maxHp" />
-				<add stat="maxCp" val="#ench1maxCp" />
-				<add stat="regHp" val="#ench1regHp" />
-				<add stat="regHp" val="#ench1regHpRest">
-					<player resting="true" />
-				</add>
-				<add stat="regMp" val="#ench1regMp">
-					<player resting="true" />
-				</add>
-				<add stat="pAtk" val="#ench1pAtk">
-					<player hp="60" />
-				</add>
-			</effect>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="106" />
-				<param minDamage="1" /> <!-- Need verify -->
-				<param chance="10" /> <!-- Need verify -->
-				<param skillId="10323" skillLevel="1" />
-				<param targetType="SELF" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10257" levels="1" name="Superior Spirit Mastery">
 		<set name="operateType" val="PASSIVE" />
@@ -1782,13 +1641,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10286" levels="7" name="Superior Resistance" enchantGroup1="10">
+	<skill id="10286" levels="7" name="Superior Resistance">
 	<!-- Source: https://l2wiki.com/Superior_Resistance_-_Othell_Fortune_Seeker -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#enchDef"> 206 213 220 227 234 241 248 255 262 270 </table>
-		<table name="#enchRes"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1809,23 +1666,6 @@
 				<param targetType="SELF" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="mDef" val="#enchDef" />
-				<add stat="waterRes" val="#enchRes" />
-				<add stat="fireRes" val="#enchRes" />
-				<add stat="windRes" val="#enchRes" />
-				<add stat="earthRes" val="#enchRes" />
-			</effect>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param minDamage="1" />
-				<param chance="20" />
-				<param skillId="10058" skillLevel="1" />
-				<param targetType="SELF" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10287" levels="6" name="Rolling Thunder">
 		<table name="#magicLvl">89 91 93 95 97 99</table>

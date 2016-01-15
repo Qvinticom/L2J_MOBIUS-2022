@@ -16,17 +16,14 @@
 			<effect name="RestorationRandom" />
 		</for>
 	</skill>
-	<skill id="10001" levels="7" name="Superior Sword/Blunt Weapon Mastery" enchantGroup1="10">
+	<skill id="10001" levels="7" name="Superior Sword/Blunt Weapon Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Sword/Blunt_Weapon_Mastery_-_Iss_Dominator -->
 		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
-		<table name="#enchPAtk"> 218 232 245 259 272 286 299 313 326 340 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10001" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<mul stat="pAtk" val="1.3">
@@ -53,37 +50,15 @@
 				<param allowWeapons="SWORD,BLUNT" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="pAtk" val="#enchPAtk">
-					<using kind="SWORD, BLUNT" />
-				</add>
-				<add stat="STR" val="2">
-					<using kind="SWORD, BLUNT" />
-				</add>
-				<add stat="skillCritical" val="1" /> <!-- STR -->
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param minDamage="1" chance="60" />
-				<param skillId="10060" skillLevel="1" />
-				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10002" levels="7" name="Superior Heavy Armor Mastery" enchantGroup1="10">
+	<skill id="10002" levels="7" name="Superior Heavy Armor Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Tyrr_Titan -->
 		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pDef1"> 1638 1684 1730 1776 1822 1868 1914 1960 2006 2060 </table>
-		<table name="#ench1pDef2"> 298 316 334 353 371 389 408 426 444 463 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10002" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2">
@@ -118,52 +93,15 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="maxHp" val="6883">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="pDef" val="#ench1pDef1">
-					<using kind="HEAVY" />
-				</add>
-				<mul stat="regMp" val="1.84">
-					<using kind="HEAVY" />
-				</mul>
-				<mul stat="defCritDamage" val="1.35">
-					<using kind="HEAVY" />
-				</mul>
-				<add stat="reflectDam" val="10">
-					<using kind="HEAVY" />
-				</add>
-				<add stat="pDef" val="#ench1pDef2">
-					<and>
-						<player hp="30" />
-						<using kind="HEAVY" />
-					</and>
-				</add>
-				<add stat="rEvas" val="17">
-					<and>
-						<player hp="30" />
-						<using kind="HEAVY" />
-					</and>
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10003" levels="7" name="Superior Shield Mastery" enchantGroup1="10">
+	<skill id="10003" levels="7" name="Superior Shield Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Shield_Mastery_-_Sigel_Phoenix_Knight -->
 		<table name="#sDef"> 1.80 1.85 1.9 1.95 2.0 2.05 2.10 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#ench1pDef"> 222 236 249 263 277 290 304 317 331 345 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10003" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2">
@@ -180,37 +118,15 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2">
-					<using kind="SHIELD" />
-				</add>
-				<mul stat="rShld" val="2">
-					<using kind="SHIELD" />
-				</mul>
-				<mul stat="sDef" val="1.8">
-					<using kind="SHIELD" />
-				</mul>
-				<add stat="sDef" val="#ench1pDef">
-					<using kind="SHIELD" />
-				</add>
-				<add stat="shieldDefAngle" val="360">
-					<using kind="SHIELD" />
-				</add>
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10004" levels="7" name="Superior M. Def." enchantGroup1="10">
+	<skill id="10004" levels="7" name="Superior M. Def.">
 	<!-- Source: https://l2wiki.com/Superior_M._Def._-_Yul_Sagittarius -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
-		<table name="#ench1mDef"> 168 178 188 199 209 219 230 240 250 261 </table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10004" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
@@ -225,32 +141,15 @@
 				<param targetType="SELF" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="mDef" val="#ench1mDef" />
-				<mul stat="magicSuccRes" val="1.25" />
-			</effect>
-			<effect name="TriggerSkillByDamage">
-				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="99" />
-				<param minDamage="1" />
-				<param chance="20" />
-				<param skillId="10058" skillLevel="1" />
-				<param targetType="SELF" />
-			</effect>
-		</enchant1for>
 	</skill>
-	<skill id="10005" levels="7" name="Superior Mental Attack Resistance" enchantGroup1="10">
+	<skill id="10005" levels="7" name="Superior Mental Attack Resistance">
 	<!-- Source: https://l2wiki.com/Superior_Mental_Attack_Resistance_-_Aeore_Shillien_Saint -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#ench1Vuln">21 22 23 24 25 26 27 28 29 30</table>
-		<table name="#enchMagicLvl"> 86 87 88 90 91 92 93 95 97 99 </table>
 		<set name="icon" val="icon.skill10005" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
@@ -267,22 +166,6 @@
 				<param SHOCK="#resistance" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="reflectSkillMagic" val="10" />
-				<add stat="reflectSkillPhysic" val="10" />
-			</effect>
-			<effect name="DefenceTrait">
-				<param HOLD="#ench1Vuln" />
-				<param SLEEP="#ench1Vuln" />
-				<param PARALYZE="#ench1Vuln" />
-				<param DERANGEMENT="#ench1Vuln" />
-				<param POISON="#ench1Vuln" />
-				<param BLEED="#ench1Vuln" />
-				<param SHOCK="#ench1Vuln" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10006" levels="1" name="Last Patience">
 		<set name="magicLvl" val="85" />
@@ -1701,10 +1584,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10044" levels="7" name="Superior Elemental Mastery" enchantGroup1="10">
+	<skill id="10044" levels="7" name="Superior Elemental Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Elemental_Mastery_-_Sigel_Shillien_Templar -->
 		<table name="#elemRes"> 20 22 24 26 30 32 34 </table>
-		<table name="#enchElemRes"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="icon" val="icon.skill10044" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="reuseDelay" val="3000" />
@@ -1720,17 +1602,6 @@
 				<add stat="darkRes" val="#elemRes" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="STR" val="2" />
-				<add stat="waterRes" val="#enchElemRes" />
-				<add stat="fireRes" val="#enchElemRes" />
-				<add stat="windRes" val="#enchElemRes" />
-				<add stat="earthRes" val="#enchElemRes" />
-				<add stat="holyRes" val="#enchElemRes" />
-				<add stat="darkRes" val="#enchElemRes" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="10045" levels="3" name="Shield Charge II">
 		<!-- AUTO GENERATED SKILL -->

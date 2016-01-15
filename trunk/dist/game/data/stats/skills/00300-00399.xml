@@ -678,12 +678,10 @@
 			</effect>
 		</enchant1for>
 	</skill>
-	<skill id="319" levels="2" name="Agile Movement" enchantGroup1="1" enchantGroup2="1">
+	<skill id="319" levels="2" name="Agile Movement">
 		<table name="#accCombat"> 2 3 </table>
 		<table name="#magicLvl"> 20 40 </table>
 		<table name="#runSpd"> 5 10 </table>
-		<table name="#ench1runSpd"> 11 11 11 12 12 12 13 13 13 14 14 14 14 15 15 15 16 16 16 17 17 17 17 18 18 18 19 19 19 20 </table>
-		<table name="#ench2acc"> 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 6 </table>
 		<set name="icon" val="icon.skill0319" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -698,26 +696,6 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="runSpd" val="#ench1runSpd">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="accCombat" val="3">
-					<using kind="LIGHT" />
-				</add>
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="Buff">
-				<add stat="runSpd" val="10">
-					<using kind="LIGHT" />
-				</add>
-				<add stat="accCombat" val="#ench2acc">
-					<using kind="LIGHT" />
-				</add>
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="320" levels="17" name="Wrath">
 		<!-- Updated to Infinite Odyssey -->
@@ -962,16 +940,11 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="328" levels="1" name="Wisdom" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
-		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#enchTraits"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
+	<skill id="328" levels="1" name="Wisdom">
 		<set name="icon" val="icon.skill0328" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="DefenceTrait">
 				<param HOLD="20" />
@@ -979,55 +952,18 @@
 				<param DERANGEMENT="20" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="DefenceTrait">
-				<param HOLD="#enchTraits" />
-				<param SLEEP="20" />
-				<param DERANGEMENT="20" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="DefenceTrait">
-				<param HOLD="20" />
-				<param SLEEP="#enchTraits" />
-				<param DERANGEMENT="20" />
-			</effect>
-		</enchant2for>
-		<enchant3for>
-			<effect name="DefenceTrait">
-				<param HOLD="20" />
-				<param SLEEP="20" />
-				<param DERANGEMENT="#enchTraits" />
-			</effect>
-		</enchant3for>
 	</skill>
-	<skill id="329" levels="1" name="Health" enchantGroup1="5" enchantGroup2="5">
-		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#enchTraits"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
+	<skill id="329" levels="1" name="Health">
 		<set name="icon" val="icon.skill0329" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="DefenceTrait">
 				<param POISON="20" />
 				<param BLEED="20" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="DefenceTrait">
-				<param POISON="#enchTraits" />
-				<param BLEED="20" />
-			</effect>
-		</enchant1for>
-		<enchant2for>
-			<effect name="DefenceTrait">
-				<param POISON="20" />
-				<param BLEED="#enchTraits" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="330" levels="1" name="Skill Mastery">
 		<set name="icon" val="icon.skill0330" />

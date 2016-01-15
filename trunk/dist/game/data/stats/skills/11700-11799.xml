@@ -69,8 +69,6 @@
 	<!-- Source: https://l2wiki.com/Superior_Magic_Weapon_Mastery_-_Aeore_Cardinal -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mAtk"> 981 1138 1319 1458 1682 1785 1893 </table>
-		<table name="#ench1pAtk">87 93 98 104 109 115 120 126 131 137</table>
-		<table name="#ench1mAtk">109 116 123 130 137 144 151 158 165 172</table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -82,16 +80,6 @@
 				<mul stat="mCritRate" val="1.06" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="mAtk" val="#ench1mAtk" />
-				<add stat="pAtk" val="#ench1pAtk" />
-				<mul stat="mCritRate" val="1.06" />
-				<mul stat="pAtk" val="1.45" />
-				<mul stat="mAtk" val="1.24" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11752" levels="11" name="Sustain">
 	<!-- Source: https://l2wiki.com/Sustain_-_Aeore_Shillien_Saint -->
@@ -1038,8 +1026,6 @@
 		<table name="#pDef"> 1212 1330 1462 1576 1767 1833 1903 </table>
 		<table name="#regHp"> 2.8 3.4 4 4.6 5.4 6.2 7 </table>
 		<table name="#regMp"> 3.6 4.2 4.8 5.4 6.2 7 7.8</table>
-		<table name="#ench1pDef"> 116 123 130 137 144 151 158 165 172 180 </table>
-		<table name="#ench1mDef"> 320 340 360 380 400 420 440 460 480 500 </table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1063,34 +1049,11 @@
 				</add>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="maxHp" val="4299">
-					<using kind="MAGIC,LIGHT" />
-				</add>
-				<add stat="pDef" val="#ench1pDef">
-					<using kind="MAGIC,LIGHT" />
-				</add>
-				<add stat="pDef" val="73">
-					<using kind="MAGIC,LIGHT" />
-				</add>
-				<add stat="mDef" val="#ench1mDef">
-					<using kind="MAGIC,LIGHT" />
-				</add>
-				<add stat="mDef" val="300">
-					<using kind="MAGIC,LIGHT" />
-				</add>
-				<add stat="regHp" val="2.8" />
-				<add stat="regMp" val="3.6" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11788" levels="7" name="Superior Casting Mastery">
 	<!-- Source: https://l2wiki.com/Superior_Casting_Mastery_-_Aeore_Shillien_Saint -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#maxMp"> 313 374 435 517 566 635 704 </table>
-		<table name="#ench1maxMp"> 333 353 374 394 415 435 455 476 496 517 </table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1103,21 +1066,11 @@
 				<mul stat="mReuse" val="0.75" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="maxMp" val="#ench1maxMp" />
-				<mul stat="mAtkSpd" val="1.23" />
-				<mul stat="magicalMpConsumeRate" val="0.85" />
-				<mul stat="mReuse" val="0.75" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11789" levels="7" name="Superior Anti Magic">
 	<!-- Source: https://l2wiki.com/Superior_Anti_Magic_-_Aeore_Cardinal -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mDef"> 862 976 1104 1219 1374 1444 1517 </table>
-		<table name="#ench1mDef"> 146 154 162 170 178 186 194 202 210 218 </table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
@@ -1127,18 +1080,11 @@
 				<add stat="INT" val="2" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="mDef" val="#ench1mDef" />
-				<add stat="INT" val="2" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11790" levels="7" name="Superior Elemental Resistance">
 	<!-- Source: https://l2wiki.com/Superior_Elemental_Resistance_-_Aeore_Evas_Saint -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#ench1Vuln"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="PASSIVE" />
 		<set name="targetType" val="SELF" />
@@ -1151,15 +1097,6 @@
 				<add stat="earthRes" val="#resistance" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<add stat="waterRes" val="#ench1Vuln" />
-				<add stat="fireRes" val="#ench1Vuln" />
-				<add stat="windRes" val="#ench1Vuln" />
-				<add stat="earthRes" val="#ench1Vuln" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11791" levels="1" name="Superior Sigil Mastery">
 		<set name="magicLvl" val="85" />
@@ -1179,7 +1116,6 @@
 	<!-- Source: https://l2wiki.com/Superior_Mental_Attack_Resistance_-_Aeore_Shillien_Saint -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
-		<table name="#enchPower"> 21 22 23 24 25 26 27 28 29 30 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<set name="operateType" val="PASSIVE" />
@@ -1192,15 +1128,6 @@
 				<param DERANGEMENT="#resistance" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff">
-				<add stat="INT" val="2" />
-				<param SHOCK="#enchPower" />
-				<param HOLD="#enchPower" />
-				<param SLEEP="#enchPower" />
-				<param DERANGEMENT="#enchPower" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="11793" levels="3" name="Sustain">
 		<!-- AUTO GENERATED SKILL -->
