@@ -254,6 +254,7 @@ import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
 import quests.Q10746_SeeTheWorld.Q10746_SeeTheWorld;
 import quests.Q10755_LettersFromTheQueen_WindyHill.Q10755_LettersFromTheQueen_WindyHill;
 import quests.Q10756_AnInterdimensionalDraft.Q10756_AnInterdimensionalDraft;
+import quests.Q10757_QuietingTheStorm.Q10757_QuietingTheStorm;
 
 /**
  * @author NosBit
@@ -498,7 +499,8 @@ public class QuestMasterHandler
 		Q10745_TheSecretIngredients.class,
 		Q10746_SeeTheWorld.class,
 		Q10755_LettersFromTheQueen_WindyHill.class,
-		Q10756_AnInterdimensionalDraft.class
+		Q10756_AnInterdimensionalDraft.class,
+		Q10757_QuietingTheStorm.class
 	};
 	
 	public static void main(String[] args)

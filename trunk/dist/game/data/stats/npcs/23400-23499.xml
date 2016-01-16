@@ -494,6 +494,8 @@
 		<acquire exp="956" sp="0" />
 		<stats>
 			<vitals hp="772" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="52.11271" magical="33.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="78.46427" magical="58.8748547991048" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -598,6 +600,8 @@
 		<acquire exp="2956" sp="0" />
 		<stats>
 			<vitals hp="4899" hpRegen="3.5" mp="402" mpRegen="1.5" />
+			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="118.46427" magical="78.8748547991048" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
