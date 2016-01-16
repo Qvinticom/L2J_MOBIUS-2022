@@ -147,17 +147,9 @@ public final class TriggerForce extends AbstractEffect
 					_affectedObjToRemove.add(obj);
 				}
 			}
-			if (!_affectedObjToRemove.isEmpty())
+			for (L2Character ch : _affectedObjToRemove)
 			{
-				final int limit = _affectedObjToRemove.size();
-				for (int i = 0; i < limit; i++)
-				{
-					if (_affectedObjects.contains(_affectedObjToRemove.get(i)))
-					{
-						_affectedObjects.remove(i);
-						i--;
-					}
-				}
+				_affectedObjects.remove(ch);
 			}
 			_affectedObjToRemove.clear();
 		}
