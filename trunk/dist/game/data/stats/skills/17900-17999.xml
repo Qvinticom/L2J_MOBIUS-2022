@@ -954,24 +954,14 @@
 		</for>
 	</skill>
 	<skill id="17981" levels="1" name="Scroll of Escape: Gludin Village">
-		<set name="hitTime" val="200" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="39491" />
-		<set name="magicLvl" val="1" />
+		<!-- Escape to Gludin Village. -->
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<cond msgId="113" addName="1">
-			<player canEscape="true" />
-		</cond>
-		<for>
-			<effect name="Teleport">
-				<param x="-79816" y="150828" z="-3040" />
-			</effect>
-		</for>
+		<set name="hitTime" val="1000" />
 	</skill>
-	<skill id="17982" levels="1" name="Scroll of Escape: Gludin Village">
+	<skill id="17982" levels="1" name="Scroll of Escape: Windy Hill">
 		<!-- Escape to Windy Hill. -->
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -991,11 +981,23 @@
 		</for>
 	</skill>
 	<skill id="17983" levels="1" name="Scroll of Escape: Gludin Village Temple">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0000" />
+		<!-- Escape to Gludin Village. -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="39491" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1000" />
+		<cond msgId="113" addName="1">
+			<player canEscape="true" />
+		</cond>
+		<for>
+			<effect name="Teleport">
+				<param x="-79816" y="150828" z="-3040" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="17984" levels="1" name="Scroll of Escape: Orc Barracks">
 		<!-- AUTO GENERATED SKILL -->
