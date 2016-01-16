@@ -1997,6 +1997,7 @@
 		</collision>
 	</npc>
 	<npc id="25542" level="83" type="L2RaidBoss" name="Ranku" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2014,8 +2015,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="3100451" sp="744" raidPoints="9" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="80">
-			<vitals hp="2230489.48877267" hpRegen="187.223482496798" mp="1846.8" mpRegen="3" />
+		<stats>
+			<vitals hp="5310797" hpRegen="187.223482496798" mp="1846" mpRegen="3" />
 			<attack physical="3571.03629544474" magical="2466.91014325959" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="731.989957674419" magical="353.810790697674" />
 			<attribute>
@@ -2031,8 +2032,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2055,19 +2054,15 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="55.2755012512207">
-					<item id="6364" min="1" max="1" chance="0.4657" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.4657" /> <!-- Heaven's Divider -->
-					<item id="6688" min="2" max="4" chance="71.739" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="4" max="12" chance="27.3296" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="60.9370002746582">
-					<item id="7575" min="1" max="1" chance="1.2673" /> <!-- Draconic Bow -->
-					<item id="7579" min="3" max="9" chance="98.7327" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="0.03">
-					<item id="10299" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Ranku -->
-				</group>
+				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
+				<item id="7575" min="1" max="1" chance="0.3" /> <!-- Draconic Bow -->
+				<item id="6696" min="81" max="243" chance="56.07" /> <!-- Heaven's Divider Edge -->
+				<item id="7579" min="14" max="42" chance="55.35" /> <!-- Draconic Bow Shaft -->
+				<item id="6688" min="40" max="120" chance="55.16" /> <!-- Forgotten Blade Edge -->
+				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Ranku -->
+				<item id="39629" min="1" max="1" chance="0.0090925" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>

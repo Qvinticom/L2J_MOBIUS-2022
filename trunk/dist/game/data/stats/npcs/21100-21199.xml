@@ -3116,6 +3116,7 @@
 		</collision>
 	</npc>
 	<npc id="21180" level="87" type="L2Monster" name="Lilim Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3132,9 +3133,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- rhand: Nephilim Lord lhand: Nephilim Lord -->
-		<acquire exp="25957" sp="2344" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1490018" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="894014" hpRegen="9.5" mp="19170" mpRegen="3.3" />
 			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="262.19426" magical="174.571895122369" shield="131" shieldRate="20" />
 			<attribute>
@@ -3154,8 +3155,6 @@
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
 			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
@@ -3163,6 +3162,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -3185,35 +3185,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="6362" min="14" max="28" chance="100" /> <!-- Red Seal Stone -->
-				</group>
-				<group chance="70">
-					<item id="6361" min="574" max="1144" chance="100" /> <!-- Green Seal Stone -->
-				</group>
-				<group chance="2.3301000595092773">
-					<item id="2398" min="1" max="1" chance="0.1309" /> <!-- Blue Wolf Tunic -->
-					<item id="4084" min="1" max="1" chance="21.1296" /> <!-- Blue Wolf Tunic Fabric -->
-					<item id="2399" min="1" max="1" chance="0.1309" /> <!-- Tunic of Doom -->
-					<item id="4085" min="1" max="1" chance="21.1296" /> <!-- Tunic of Doom Pattern -->
-					<item id="2403" min="1" max="1" chance="0.2096" /> <!-- Blue Wolf Stockings -->
-					<item id="4086" min="1" max="1" chance="28.5298" /> <!-- Blue Wolf Stockings Pattern -->
-					<item id="2404" min="1" max="1" chance="0.2096" /> <!-- Stockings of Doom -->
-					<item id="4087" min="1" max="1" chance="28.53" /> <!-- Stockings of Doom Pattern -->
-				</group>
-				<group chance="44.96879959106445">
-					<item id="1871" min="1" max="3" chance="41.9844" /> <!-- Charcoal -->
-					<item id="1866" min="1" max="3" chance="18.6597" /> <!-- Suede -->
-					<item id="1877" min="1" max="1" chance="3.3588" /> <!-- Adamantite Nugget -->
-					<item id="4041" min="1" max="1" chance="0.7302" /> <!-- Mold Hardener -->
-					<item id="4040" min="1" max="1" chance="1.6794" /> <!-- Mold Lubricant -->
-					<item id="1830" min="1" max="1" chance="33.5875" /> <!-- Scroll of Escape: Castle -->
-				</group>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.244" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
 			</death>
 			<corpse>
-				<item id="4052" min="1" max="1" chance="27.1551" /> <!-- Earring of Black Ore Piece -->
-				<item id="5230" min="1" max="1" chance="1.0227" /> <!-- Recipe: Mithril Arrow (100%) -->
-				<item id="4053" min="1" max="1" chance="32.8759" /> <!-- Ring of Black Ore Gemstone -->
+				<item id="36558" min="1" max="1" chance="7.036" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.138" /> <!-- Armor Fragment (Mid-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>

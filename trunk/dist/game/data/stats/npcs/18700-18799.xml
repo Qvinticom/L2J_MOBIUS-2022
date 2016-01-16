@@ -142,10 +142,11 @@
 		</collision>
 	</npc>
 	<npc id="18704" level="79" type="L2Monster" name="Tumor of Death">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="340289.895594747" hpRegen="197.223153775151" mp="1641.0" mpRegen="3" />
+		<stats>
+			<vitals hp="170145" hpRegen="197.223153775151" mp="1641" mpRegen="3" />
 			<attack physical="7521.01103560974" magical="5166.44623212341" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="549.451190476191" magical="603.096804142857" />
 			<attribute>
@@ -160,8 +161,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -3193,13 +3192,14 @@
 		</collision>
 	</npc>
 	<npc id="18780" level="83" type="L2Monster" name="Symbol of Cohemenes">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="type" value="1" />
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="65569.2570829001" hpRegen="111.355378460862" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="65570" hpRegen="111.355378460862" mp="1777" mpRegen="3" />
 			<attack physical="5589.57218651355" magical="3816.95321518099" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="566.178304" magical="621.45708" />
 			<attribute>
@@ -3214,8 +3214,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4042,6 +4040,7 @@
 		</collision>
 	</npc>
 	<npc id="18799" level="77" type="L2Monster" name="Newborn Lavasaurus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -4050,8 +4049,8 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="88993" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+		<stats>
+			<vitals hp="17142" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -4067,8 +4066,6 @@
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -4094,6 +4091,7 @@
 			<death>
 				<item id="6371" min="1" max="1" chance="0.003" /> <!-- Demon Splinter -->
 				<item id="6695" min="1" max="1" chance="0.3" /> <!-- Demon Splinter Blade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>

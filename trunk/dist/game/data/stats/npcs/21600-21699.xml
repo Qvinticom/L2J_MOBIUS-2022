@@ -2977,6 +2977,7 @@
 		</dropLists>
 	</npc>
 	<npc id="21635" level="92" type="L2Monster" name="Veil Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2996,9 +2997,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="22184" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+		<acquire exp="14374" sp="3" />
+		<stats>
+			<vitals hp="14754" hpRegen="6.5" mp="2096" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>
@@ -3019,8 +3020,6 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
 			<skill id="4094" level="5" /> <!-- NPC Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3038,44 +3037,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="810" max="1651" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.1886000633239746">
-					<item id="2436" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Boots -->
-					<item id="2954" min="1" max="1" chance="15.652" /> <!-- Theca Leather Boots Texture -->
-					<item id="2437" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Boots -->
-					<item id="2960" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Boots Design -->
-					<item id="2438" min="1" max="1" chance="0.1798" /> <!-- Full Plate Boots -->
-					<item id="2961" min="1" max="1" chance="13.4659" /> <!-- Full Plate Boots Part -->
-					<item id="2460" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Gloves -->
-					<item id="2955" min="1" max="1" chance="15.652" /> <!-- Theca Leather Gloves Texture -->
-					<item id="2461" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Gloves -->
-					<item id="2962" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Gloves Design -->
-					<item id="2462" min="1" max="1" chance="0.1798" /> <!-- Full Plate Gauntlets -->
-					<item id="2963" min="1" max="1" chance="13.4659" /> <!-- Full Plate Gauntlets Part -->
-					<item id="2463" min="1" max="1" chance="0.1798" /> <!-- Divine Gloves -->
-					<item id="2964" min="1" max="1" chance="13.466" /> <!-- Divine Gloves Pattern -->
-				</group>
-				<group chance="25.88360023498535">
-					<item id="1864" min="1" max="1" chance="48.7823" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="24.3911" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.7565" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="15.0099" /> <!-- Cord -->
-					<item id="4039" min="1" max="1" chance="0.813" /> <!-- Mold Glue -->
-					<item id="4178" min="1" max="1" chance="0.4475" /> <!-- Recipe: Zubei's Shield (100%) -->
-					<item id="4184" min="1" max="1" chance="0.0281" /> <!-- Recipe: Sprite's Staff (100%) -->
-					<item id="5160" min="1" max="1" chance="0.0488" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-					<item id="8726" min="1" max="1" chance="0.5646" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1412" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0141" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 55 -->
-				</group>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="23.81" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="9.36" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="1985" min="1" max="1" chance="7.0752" /> <!-- Theca Leather Gaiters Pattern -->
-				<item id="4937" min="1" max="1" chance="3.3858" /> <!-- Recipe: Adamantite Earrings (70%) -->
-				<item id="1806" min="1" max="1" chance="0.4104" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="36522" min="1" max="1" chance="37.6" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="7.317" /> <!-- Adamantite -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3084,6 +3053,7 @@
 		</collision>
 	</npc>
 	<npc id="21636" level="92" type="L2Monster" name="Veil Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3103,9 +3073,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13973" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="14754" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+		<acquire exp="14374" sp="3" />
+		<stats>
+			<vitals hp="14754" hpRegen="6.5" mp="2096" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="145.743350252286" />
 			<attribute>
@@ -3126,8 +3096,6 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4087" level="5" /> <!-- NPC Blaze -->
 			<skill id="4094" level="5" /> <!-- NPC Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
@@ -3145,44 +3113,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="1148" max="2337" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.0992000102996826">
-					<item id="2436" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Boots -->
-					<item id="2954" min="1" max="1" chance="15.652" /> <!-- Theca Leather Boots Texture -->
-					<item id="2437" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Boots -->
-					<item id="2960" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Boots Design -->
-					<item id="2438" min="1" max="1" chance="0.1798" /> <!-- Full Plate Boots -->
-					<item id="2961" min="1" max="1" chance="13.4659" /> <!-- Full Plate Boots Part -->
-					<item id="2460" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Gloves -->
-					<item id="2955" min="1" max="1" chance="15.652" /> <!-- Theca Leather Gloves Texture -->
-					<item id="2461" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Gloves -->
-					<item id="2962" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Gloves Design -->
-					<item id="2462" min="1" max="1" chance="0.1798" /> <!-- Full Plate Gauntlets -->
-					<item id="2963" min="1" max="1" chance="13.4659" /> <!-- Full Plate Gauntlets Part -->
-					<item id="2463" min="1" max="1" chance="0.1798" /> <!-- Divine Gloves -->
-					<item id="2964" min="1" max="1" chance="13.466" /> <!-- Divine Gloves Pattern -->
-				</group>
-				<group chance="36.65250015258789">
-					<item id="1864" min="1" max="1" chance="48.7823" /> <!-- Stem -->
-					<item id="1869" min="1" max="1" chance="24.3911" /> <!-- Iron Ore -->
-					<item id="1878" min="1" max="1" chance="9.7565" /> <!-- Braided Hemp -->
-					<item id="1884" min="1" max="1" chance="15.0099" /> <!-- Cord -->
-					<item id="4039" min="1" max="1" chance="0.813" /> <!-- Mold Glue -->
-					<item id="4178" min="1" max="1" chance="0.4475" /> <!-- Recipe: Zubei's Shield (100%) -->
-					<item id="4184" min="1" max="1" chance="0.0281" /> <!-- Recipe: Sprite's Staff (100%) -->
-					<item id="5160" min="1" max="1" chance="0.0488" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-					<item id="8726" min="1" max="1" chance="0.5646" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1412" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0141" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.0029" /> <!-- Top-Grade Life Stone - Level 55 -->
-				</group>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="23.81" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="9.36" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="1985" min="1" max="1" chance="10.0189" /> <!-- Theca Leather Gaiters Pattern -->
-				<item id="4937" min="1" max="1" chance="4.7945" /> <!-- Recipe: Adamantite Earrings (70%) -->
-				<item id="1806" min="1" max="1" chance="0.5811" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="36522" min="1" max="1" chance="37.6" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="7.317" /> <!-- Adamantite -->
 			</corpse>
 		</dropLists>
 		<collision>

@@ -321,6 +321,7 @@
 		</collision>
 	</npc>
 	<npc id="18007" level="69" type="L2Monster" name="Limal Karinness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -331,9 +332,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8926" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2395.5" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+		<acquire exp="48146" sp="11" />
+		<stats>
+			<vitals hp="11980" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="734.25" magical="501.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15" magical="176.371815672636" />
 			<attribute>
@@ -351,8 +352,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4118" level="6" /> <!-- Paralysis -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -371,8 +370,21 @@
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="59" max="136" chance="70" /> <!-- Adena -->
+				<item id="1807" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="18008" level="70" type="L2Monster" name="Karik">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -381,9 +393,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="9555" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<acquire exp="59260" sp="14" />
+		<stats>
+			<vitals hp="12225" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="757.75" magical="517.45" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="179.260985460277" />
 			<attribute>
@@ -402,8 +414,6 @@
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
@@ -422,6 +432,18 @@
 			<radius normal="25" grown="30" />
 			<height normal="90" grown="109" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="69" max="160" chance="70" /> <!-- Adena -->
+				<item id="3035" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="18009" level="34" type="L2FestivalMonster" name="Offering of the Branded, Elder">
 		<parameters>

@@ -589,6 +589,7 @@
 		</collision>
 	</npc>
 	<npc id="18212" level="78" type="L2SepulcherMonster" name="Halisha's Archon">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -603,7 +604,7 @@
 		<equipment rhand="6722" /> <!-- rhand: Monster Only(Ahrimanes) -->
 		<acquire exp="312498" sp="75" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="791.661474" magical="457.930728288" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="478.1237352" magical="289.637364" evasion="3" />
 			<attribute>
@@ -620,8 +621,6 @@
 		<skillList>
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
@@ -1045,6 +1044,7 @@
 		</collision>
 	</npc>
 	<npc id="18220" level="78" type="L2SepulcherMonster" name="Shaman of Darkness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1057,8 +1057,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
 		<acquire exp="102245" sp="24" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="1053.70182" magical="811.2522194028" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="359.2214376" magical="217.60884" evasion="3" />
 			<attribute>
@@ -1076,8 +1076,6 @@
 			<skill id="4033" level="9" /> <!-- NPC Burn -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

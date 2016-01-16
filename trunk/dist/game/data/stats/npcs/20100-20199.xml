@@ -1044,6 +1044,7 @@
 		</collision>
 	</npc>
 	<npc id="20145" level="32" type="L2Monster" name="Harpy">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1057,9 +1058,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2707" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+		<acquire exp="2707" sp="0" />
+		<stats>
+			<vitals hp="669" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="83.6107570481808" />
 			<attribute>
@@ -1075,8 +1076,6 @@
 		<skillList>
 			<skill id="4076" level="2" /> <!-- Decrease Speed -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1090,59 +1089,13 @@
 		<ai aggroRange="500" clanHelpRange="300" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="254" max="510" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0649000406265259">
-					<item id="848" min="1" max="1" chance="4.7174" /> <!-- Enchanted Earring -->
-					<item id="911" min="1" max="1" chance="3.5407" /> <!-- Enchanted Necklace -->
-					<item id="1900" min="1" max="1" chance="84.6442" /> <!-- Enchanted Necklace Chain -->
-					<item id="879" min="1" max="1" chance="7.0977" /> <!-- Enchanted Ring -->
-				</group>
-				<group chance="14.193499565124512">
-					<item id="1868" min="1" max="1" chance="77.3949" /> <!-- Thread -->
-					<item id="1873" min="1" max="1" chance="15.479" /> <!-- Silver Nugget -->
-					<item id="5549" min="1" max="1" chance="3.8697" /> <!-- Metallic Thread -->
-					<item id="1889" min="1" max="1" chance="2.5798" /> <!-- Compound Braid -->
-					<item id="2268" min="1" max="1" chance="0.4002" /> <!-- Recipe: Tome of Blood -->
-					<item id="2276" min="1" max="1" chance="0.2764" /> <!-- Recipe: Maingauche -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="2183" min="1" max="1" chance="3.9675" /> <!-- Recipe: Mithril Banded Mail -->
-				<item id="2268" min="1" max="1" chance="0.6236" /> <!-- Recipe: Tome of Blood -->
-				<item id="2153" min="1" max="1" chance="9.3789" /> <!-- Recipe: Tiger's Eye Earring -->
+				<item id="36531" min="1" max="1" chance="11.29" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1151,6 +1104,7 @@
 		</collision>
 	</npc>
 	<npc id="20146" level="50" type="L2Monster" name="Headless Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1166,8 +1120,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="124" /> <!-- rhand: Two-Handed Sword -->
 		<acquire exp="6675" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+		<stats>
+			<vitals hp="1422" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="133.321011603844" />
 			<attribute>
@@ -1183,8 +1137,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4078" level="5" /> <!-- NPC Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -1207,19 +1159,18 @@
 		<dropLists>
 			<death>
 				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
-				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="8725" min="1" max="1" chance="0.3" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.03" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.003" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye (Men   3 Int - 3) -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="8.500" /> <!-- Thread -->
-				<item id="36880" min="1" max="3" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="8.608" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
 	<npc id="20147" level="21" type="L2Monster" name="Hobgoblin">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1233,9 +1184,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="4" /> <!-- rhand: Club -->
-		<acquire exp="1375" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="364.30351" hpRegen="3.5" mp="205.2" mpRegen="1.5" />
+		<acquire exp="1375" sp="0" />
+		<stats>
+			<vitals hp="365" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="89.73059" magical="59.7436374813816" />
 			<attribute>
@@ -1249,8 +1200,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1274,46 +1223,11 @@
 			<death>
 				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
 				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<group chance="17.283100128173828">
-					<item id="1873" min="1" max="1" chance="11.6807" /> <!-- Silver Nugget -->
-					<item id="1868" min="1" max="1" chance="58.4035" /> <!-- Thread -->
-					<item id="2255" min="1" max="1" chance="0.714" /> <!-- Recipe: Saber -->
-					<item id="6666" min="1" max="1" chance="29.2018" /> <!-- Deluxe Chest Key - Grade 2 -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="3.150" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.219" /> <!-- Thread -->
 				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</dropLists>
@@ -1569,6 +1483,7 @@
 		</collision>
 	</npc>
 	<npc id="20153" level="11" type="L2Monster" name="Magical Weaver">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1577,9 +1492,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="587" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="185.38552" hpRegen="2.5" mp="116.4" mpRegen="1.2" />
+		<acquire exp="587" sp="0" />
+		<stats>
+			<vitals hp="186" hpRegen="2.5" mp="116" mpRegen="1.2" />
 			<attack physical="21.0973" magical="14.40672" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="64.04702" magical="42.6432286072855" />
 			<attribute>
@@ -1595,8 +1510,6 @@
 		<skillList>
 			<skill id="4039" level="1" /> <!-- NPC MP Drain -->
 			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1613,56 +1526,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="109" max="147" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.232800006866455">
-					<item id="429" min="1" max="1" chance="4.3575" /> <!-- Leather Tunic -->
-					<item id="1922" min="1" max="1" chance="34.0148" /> <!-- Leather Tunic Pattern -->
-					<item id="464" min="1" max="1" chance="6.981" /> <!-- Leather Stockings -->
-					<item id="1923" min="1" max="1" chance="54.6467" /> <!-- Leather Stockings Pattern -->
-				</group>
-				<group chance="10.877300262451172">
-					<item id="1867" min="1" max="1" chance="48.6583" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="48.6583" /> <!-- Animal Bone -->
-					<item id="1793" min="1" max="1" chance="2.6834" /> <!-- Recipe: Sword of Reflection -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="7.111" /> <!-- Antidote -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="1831" min="1" max="1" chance="53.7542" /> <!-- Antidote -->
-				<item id="30" min="1" max="1" chance="1.0554" /> <!-- Hard Leather Pants -->
-				<item id="1867" min="1" max="1" chance="26.8771" /> <!-- Animal Skin -->
+				<item id="36531" min="1" max="1" chance="3.738" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1671,6 +1542,7 @@
 		</collision>
 	</npc>
 	<npc id="20157" level="29" type="L2Monster" name="Marsh Stakato">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1685,9 +1557,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- rhand: Kukuri -->
-		<acquire exp="2716" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+		<acquire exp="2716" sp="0" />
+		<stats>
+			<vitals hp="574" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -1702,8 +1574,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -1726,40 +1596,11 @@
 		<dropLists>
 			<death>
 				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
-				<item id="1061" min="1" max="1" chance="3.350" /> <!-- Major Healing Potion-->
-				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather-->
+				<item id="1061" min="1" max="1" chance="3.342" /> <!-- Major Healing Potion -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 				<item id="36860" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Upgrade -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
 				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
@@ -1767,6 +1608,7 @@
 		</dropLists>
 	</npc>
 	<npc id="20158" level="34" type="L2Monster" name="Medusa">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1780,9 +1622,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3086" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="736.96177" hpRegen="4.5" mp="387.72" mpRegen="1.8" />
+		<acquire exp="3086" sp="0" />
+		<stats>
+			<vitals hp="737" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="132.9486" magical="88.5186722618248" />
 			<attribute>
@@ -1797,8 +1639,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4320" level="3" /> <!-- Poison -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1816,57 +1656,13 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="288" max="574" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.08049999922513962">
-					<item id="436" min="1" max="1" chance="38.4858" /> <!-- Tunic of Knowledge -->
-					<item id="469" min="1" max="1" chance="61.5142" /> <!-- Stockings of Knowledge -->
-				</group>
-				<group chance="19.16550064086914">
-					<item id="1869" min="1" max="1" chance="31.5065" /> <!-- Iron Ore -->
-					<item id="1864" min="1" max="1" chance="63.0129" /> <!-- Stem -->
-					<item id="1880" min="1" max="1" chance="3.1506" /> <!-- Steel -->
-					<item id="5550" min="1" max="1" chance="0.4201" /> <!-- Durable Metal Plate -->
-					<item id="2271" min="1" max="1" chance="0.225" /> <!-- Recipe: Winged Spear -->
-					<item id="2972" min="1" max="1" chance="1.6849" /> <!-- Recipe: Brigandine Gaiters -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="11" max="27" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="1876" min="1" max="1" chance="13.6283" /> <!-- Mithril Ore -->
-				<item id="1939" min="1" max="1" chance="5.9852" /> <!-- Mithril Banded Gaiters Material -->
-				<item id="1901" min="1" max="1" chance="9.4118" /> <!-- Tiger's Eye Earring Stone -->
+				<item id="36531" min="1" max="1" chance="13.28" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -1923,6 +1719,7 @@
 		</collision>
 	</npc>
 	<npc id="20161" level="53" type="L2Monster" name="Oel Mahum">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1937,8 +1734,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- rhand: Crimson Sword -->
 		<acquire exp="21469" sp="5" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+		<stats>
+			<vitals hp="1571" hpRegen="6.5" mp="832" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="156.73001" />
 			<attribute>
@@ -1952,8 +1749,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1972,54 +1767,22 @@
 		</ai>
 		<dropLists>
 			<death>
-				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
 				<item id="61" min="1" max="1" chance="0.03" /> <!-- Mithril Gloves -->
 				<item id="2429" min="1" max="1" chance="0.03" /> <!-- Chain Boots -->
 				<item id="2428" min="1" max="1" chance="0.03" /> <!-- Plate Boots -->
 				<item id="2387" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gaiters -->
-				<item id="2387" min="1" max="1" chance="0.03" /> <!-- Ogre Power Gauntlets -->
+				<item id="607" min="1" max="1" chance="0.03" /> <!-- Ogre Power Gauntlets -->
 				<item id="381" min="1" max="1" chance="0.03" /> <!-- Chain Gaiters -->
 				<item id="380" min="1" max="1" chance="0.03" /> <!-- Plate Gaiters -->
 				<item id="62" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Boots -->
 				<item id="2452" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gloves -->
-				<item id="354" min="1" max="1" chance="0.03" /> <!--  Chain Mail Shirt -->
-				<item id="36558" min="1" max="1" chance="0.003" /> <!--  Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.0009" /> <!--  Weapon Fragment (Mid-grade) -->
-				<item id="8726" min="1" max="1" chance="0.03" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0055" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0009" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.0009" /> <!-- Top-Grade Life Stone - Level 55 -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="14" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="74" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="354" min="1" max="1" chance="0.0075" /> <!-- Chain Mail Shirt -->
+				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="4" chance="0.0009" /> <!-- Spirit Stone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
@@ -2185,6 +1948,7 @@
 		</collision>
 	</npc>
 	<npc id="20168" level="30" type="L2Monster" name="Silenos">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2198,9 +1962,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- rhand: Morning Star -->
-		<acquire exp="2356" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
+		<acquire exp="2356" sp="0" />
+		<stats>
+			<vitals hp="605" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="78.8748547991048" />
 			<attribute>
@@ -2214,8 +1978,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2233,57 +1995,15 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="224" max="448" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1834000051021576">
-					<item id="627" min="1" max="1" chance="58.8055" /> <!-- Aspis -->
-					<item id="46" min="1" max="1" chance="41.1945" /> <!-- Bronze Helmet -->
-				</group>
-				<group chance="11.342900276184082">
-					<item id="1865" min="1" max="1" chance="42.6345" /> <!-- Varnish -->
-					<item id="1870" min="1" max="1" chance="42.6345" /> <!-- Coal -->
-					<item id="1879" min="1" max="1" chance="7.1058" /> <!-- Cokes -->
-					<item id="1875" min="1" max="1" chance="2.8423" /> <!-- Stone of Purity -->
-					<item id="2184" min="1" max="1" chance="4.4784" /> <!-- Recipe: Mithril Banded Gaiters -->
-					<item id="2274" min="1" max="1" chance="0.3045" /> <!-- Recipe: Skull Breaker -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="1061" min="1" max="1" chance="4.27" /> <!-- Major Healing Potion -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="1877" min="1" max="1" chance="2.1239" /> <!-- Adamantite Nugget -->
-				<item id="1061" min="1" max="1" chance="32.1804" /> <!-- Greater Healing Potion -->
-				<item id="955" min="1" max="1" chance="0.2124" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="36531" min="1" max="1" chance="4.905" /> <!-- Thread -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -2582,6 +2302,7 @@
 		</collision>
 	</npc>
 	<npc id="20176" level="35" type="L2Monster" name="Wyrm">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2595,9 +2316,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3271" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+		<acquire exp="3271" sp="0" />
+		<stats>
+			<vitals hp="773" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="91.0360303625432" />
 			<attribute>
@@ -2613,8 +2334,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4087" level="3" /> <!-- NPC Blaze -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2638,49 +2357,11 @@
 			<death>
 				<item id="57" min="12" max="28" chance="70" /> <!-- Adena -->
 				<item id="956" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<group chance="17.8523006439209">
-					<item id="1867" min="1" max="1" chance="40.8443" /> <!-- Animal Skin -->
-					<item id="1872" min="1" max="1" chance="40.8443" /> <!-- Animal Bone -->
-					<item id="1882" min="1" max="1" chance="6.8074" /> <!-- Leather -->
-					<item id="2977" min="1" max="1" chance="4.1008" /> <!-- Recipe: Brigandine Boots -->
-					<item id="2286" min="1" max="1" chance="0.1702" /> <!-- Recipe: Bonebreaker -->
-					<item id="2985" min="1" max="1" chance="3.1322" /> <!-- Recipe: Plate Boots -->
-					<item id="2981" min="1" max="1" chance="4.1008" /> <!-- Recipe: Mithril Gloves -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="23" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="66" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="11" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="13.60" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="13.67" /> <!-- Thread -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2774,6 +2455,7 @@
 		</collision>
 	</npc>
 	<npc id="20190" level="29" type="L2Monster" name="Skeleton Marauder">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2786,9 +2468,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
-		<acquire exp="2351" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="573.42917" hpRegen="3.5" mp="315.12" mpRegen="1.5" />
+		<acquire exp="2351" sp="0" />
+		<stats>
+			<vitals hp="574" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="115.00598" magical="76.5722740603874" />
 			<attribute>
@@ -2804,8 +2486,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2823,57 +2503,15 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="226" max="448" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.14630000293254852">
-					<item id="275" min="1" max="1" chance="2.6815" /> <!-- Long Bow -->
-					<item id="276" min="1" max="1" chance="2.6815" /> <!-- Elven Bow -->
-					<item id="2024" min="1" max="1" chance="94.637" /> <!-- Elven Bow Shaft -->
-				</group>
-				<group chance="11.343500137329102">
-					<item id="1866" min="1" max="1" chance="34.2667" /> <!-- Suede -->
-					<item id="1871" min="1" max="1" chance="51.4001" /> <!-- Charcoal -->
-					<item id="5220" min="1" max="1" chance="2.056" /> <!-- Metal Hardener -->
-					<item id="1885" min="1" max="1" chance="4.2833" /> <!-- High-Grade Suede -->
-					<item id="2153" min="1" max="1" chance="7.9939" /> <!-- Recipe: Tiger's Eye Earring -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="348" min="1" max="1" chance="0.3" /> <!-- Scale Mail -->
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.0075" /> <!-- Adamantite -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="1864" min="1" max="3" chance="53.3484" /> <!-- Stem -->
-				<item id="2025" min="1" max="1" chance="0.7389" /> <!-- Dwarven Trident Edge -->
-				<item id="1900" min="1" max="1" chance="5.8368" /> <!-- Enchanted Necklace Chain -->
+				<item id="36531" min="1" max="1" chance="4.987" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 		<collision>

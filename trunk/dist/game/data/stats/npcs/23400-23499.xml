@@ -1513,9 +1513,10 @@
 		</dropLists>
 	</npc>
 	<npc id="23440" level="80" type="L2Monster" name="Headless Knight">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>UNDEAD</race>
 		<acquire exp="295937" sp="71" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="19742" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<attack physical="11470" magical="8255" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="1398" magical="1205" />
@@ -1530,8 +1531,8 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="1" />
-			<skill id="5467" level="1" /> <!-- Not Done -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -1544,16 +1545,15 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
+				<item id="57" min="20" max="47" chance="70" /> <!-- Adena -->
 				<item id="9549" min="1" max="1" chance="0.003" /> <!-- Wind Stone -->
-				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="9555" min="1" max="1" chance="0.0009" /> <!-- Wind Crystal -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
 				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid-->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -2341,17 +2341,17 @@
 		</collision>
 	</npc>
 	<npc id="23457" level="19" type="L2Monster" name="Treant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="879" sp="0" />
-		<stats str="78" int="42" dex="41" wit="78" con="75" men="20">
-			<vitals hp="509" hpRegen="2.5" mp="183.28" mpRegen="1.2" />
+		<stats>
+			<vitals hp="322" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="84.07638" magical="61.52345" />
 			<attribute>
@@ -2365,31 +2365,23 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="72">
-					<item id="57" min="6" max="24" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.9757000207901">
-					<item id="29" min="1" max="1" chance="33" /> <!-- Leather Pants -->
-				</group>
-				<group chance="10.583999633789062">
-					<item id="36516" min="1" max="1" chance="28.3333" /> <!-- Worn Leather -->
-				</group>
+				<item id="29" min="1" max="1" chance="6.05" /> <!-- Leather Pants -->
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="3.578" /> <!-- Worn Leather -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="36516" min="1" max="1" chance="23" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="19.57" /> <!-- Worn Leather -->
 			</corpse>
 		</dropLists>
 		<collision>

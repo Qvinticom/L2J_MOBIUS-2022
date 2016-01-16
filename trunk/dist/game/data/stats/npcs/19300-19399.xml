@@ -3,7 +3,7 @@
 	<npc id="19300" level="95" type="L2Npc" name="Spicula Elite Lieutenant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1113846" hpRegen="7.5" mp="1113846" mpRegen="2.7" />
 			<attack physical="87600" magical="96300" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -30,11 +30,11 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19301" level="93" type="L2Npc" name="Elite Soldier Clone 1">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19301" level="93" type="L2Monster" name="Elite Soldier Clone 1">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="270610" hpRegen="7.5" mp="270610" mpRegen="2.7" />
+		<stats>
+			<vitals hp="162367" hpRegen="10.5" mp="21324" mpRegen="3.6" />
 			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1440" magical="1250" />
 			<attribute>
@@ -48,11 +48,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -63,7 +63,7 @@
 	<npc id="19302" level="93" type="L2Npc" name="Spicula Elite Guard 1">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="541220" hpRegen="7.5" mp="541220" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1440" magical="1250" />
@@ -89,11 +89,11 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="19303" level="94" type="L2Npc" name="Elite Soldier Clone 2">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="19303" level="94" type="L2Monster" name="Elite Soldier Clone 2">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="271062" hpRegen="7.5" mp="271062" mpRegen="2.7" />
+		<stats>
+			<vitals hp="162638" hpRegen="10.5" mp="21690" mpRegen="3.6" />
 			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="800" distance="80" width="120" />
 			<defence physical="1440" magical="1250" />
 			<attribute>
@@ -107,11 +107,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
-			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="10" />
@@ -121,7 +121,7 @@
 	<npc id="19304" level="94" type="L2Npc" name="Spicula Elite Guard 2">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="542125" hpRegen="7.5" mp="542125" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="800" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -150,7 +150,7 @@
 	<npc id="19305" level="94" type="L2Npc" name="Boz" title="Spicula Clone Generator">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="25167" hpRegen="7.5" mp="25167" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -172,7 +172,7 @@
 	<npc id="19306" level="95" type="L2Npc" name="Yin Spicula Lieutenant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
 			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2112" magical="1815" />
@@ -202,7 +202,7 @@
 	<npc id="19307" level="96" type="L2Npc" name="Yin Spicula Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125144" hpRegen="7.5" mp="125144" mpRegen="2.7" />
 			<attack physical="54530" magical="54428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2165" magical="1848" />
@@ -231,7 +231,7 @@
 	</npc>
 	<npc id="19308" level="94" type="L2Monster" name="Yin Fragment" title="Spicula Clone Generator">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="45708" hpRegen="7.5" mp="2103" mpRegen="2.7" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1" magical="1" />
@@ -260,7 +260,7 @@
 	</npc>
 	<npc id="19309" level="94" type="L2Monster" name="Golem of Repairs" title="Black Anvil Guild">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="100" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -281,7 +281,7 @@
 	</npc>
 	<npc id="19310" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="133" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
@@ -310,7 +310,7 @@
 	</npc>
 	<npc id="19311" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="100" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -331,7 +331,7 @@
 	</npc>
 	<npc id="19312" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="133" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
@@ -360,7 +360,7 @@
 	</npc>
 	<npc id="19313" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="100" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -382,7 +382,7 @@
 	<npc id="19314" level="95" type="L2Npc" name="Pincer Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="128077" hpRegen="7.5" mp="128077" mpRegen="2.7" />
 			<attack physical="53200" magical="53100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2112" magical="1815" />
@@ -412,7 +412,7 @@
 	<npc id="19315" level="95" type="L2Npc" name="Pincer Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="128077" hpRegen="7.5" mp="128077" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -432,10 +432,11 @@
 		</collision>
 	</npc>
 	<npc id="19316" level="94" type="L2Npc" name="Screw Golem" title="Black Anvil Guild">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
+		<acquire exp="1833182" sp="439" />
+		<stats>
+			<vitals hp="60403" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
 			<attribute>
@@ -449,22 +450,36 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" />
-			<!-- <skill id="4411" level="14" /> -->
-			<!-- <skill id="4410" level="14" /> -->
-			<skill id="4414" level="1" />
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="13457" min="1" max="1" chance="0.003" /> <!-- Vesper Cutter -->
+				<item id="17327" min="1" max="1" chance="0.003" /> <!-- Apocalypse Avenger -->
+				<item id="57" min="1162" max="2712" chance="70" /> <!-- Adena -->
+				<item id="36828" min="1" max="1" chance="0.3" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36766" min="1" max="1" chance="0.03" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="21.03" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3.992" /> <!-- Synthetic Braid -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="19317" level="94" type="L2Npc" name="Screw Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="125837" hpRegen="7.5" mp="125837" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -486,7 +501,7 @@
 	<npc id="19318" level="94" type="L2Npc" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="377512" hpRegen="7.5" mp="377512" mpRegen="2.7" />
 			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1848" magical="1485" />
@@ -516,7 +531,7 @@
 	<npc id="19319" level="94" type="L2Npc" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="377512" hpRegen="7.5" mp="377512" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -537,7 +552,7 @@
 	</npc>
 	<npc id="19320" level="94" type="L2Monster" name="Yin" title="Spicula Clone Generator">
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="65167" hpRegen="7.5" mp="3167" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -559,7 +574,7 @@
 	<npc id="19321" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -581,7 +596,7 @@
 	<npc id="19322" level="94" type="L2Npc" name="Yuti" title="Captain">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -603,7 +618,7 @@
 	<npc id="19323" level="94" type="L2Npc" name="Raider's Crossroads D?cor">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -625,7 +640,7 @@
 	<npc id="19324" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -647,7 +662,7 @@
 	<npc id="19325" level="85" type="L2Npc" name="Sticky Mushroom">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -669,7 +684,7 @@
 	<npc id="19326" level="94" type="L2Npc" name="For Raid Presentation Purposes">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11340" hpRegen="7.5" mp="11340" mpRegen="2.7" />
 			<attack physical="34125" magical="24375" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1400" magical="1350" />
@@ -691,7 +706,7 @@
 	<npc id="19327" level="95" type="L2Monster" name="Gustav">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="328354" magical="476257" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5808" magical="4825" />
@@ -761,7 +776,7 @@
 	<npc id="19328" level="95" type="L2Npc" name="Gustav" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -790,7 +805,7 @@
 	<npc id="19329" level="95" type="L2Npc" name="Mikhail">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -819,7 +834,7 @@
 	<npc id="19330" level="95" type="L2Npc" name="Mikhail" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -848,7 +863,7 @@
 	<npc id="19331" level="95" type="L2Npc" name="Dietrich">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -877,7 +892,7 @@
 	<npc id="19332" level="95" type="L2Npc" name="Dietrich" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2751744" hpRegen="7.5" mp="2751744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -906,7 +921,7 @@
 	<npc id="19333" level="95" type="L2Npc" name="Demolished Throne Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -928,7 +943,7 @@
 	<npc id="19334" level="95" type="L2Npc" name="Transportation Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -950,7 +965,7 @@
 	<npc id="19335" level="95" type="L2Npc" name="Attack Stronghold">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -972,7 +987,7 @@
 	<npc id="19336" level="94" type="L2Monster" name="Doom Servant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1011,7 +1026,7 @@
 	<npc id="19337" level="94" type="L2Monster" name="Doom Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1050,7 +1065,7 @@
 	<npc id="19338" level="94" type="L2Monster" name="Doom Archer">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1089,7 +1104,7 @@
 	<npc id="19339" level="95" type="L2Monster" name="Doom Trooper">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1128,7 +1143,7 @@
 	<npc id="19340" level="95" type="L2Monster" name="Doom Warrior">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1167,7 +1182,7 @@
 	<npc id="19341" level="95" type="L2Monster" name="Doom Knight">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1206,7 +1221,7 @@
 	<npc id="19342" level="95" type="L2Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
 			<attack physical="328354" magical="476257" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5808" magical="4825" />
@@ -1276,7 +1291,7 @@
 	<npc id="19343" level="95" type="L2Npc" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1305,7 +1320,7 @@
 	<npc id="19344" level="95" type="L2Npc" name="Giselle von Hellmann" title="Resurrected">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1334,7 +1349,7 @@
 	<npc id="19345" level="95" type="L2Npc" name="Alfred von Hellmann" title="Master of the von Hellmann House">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5346744" hpRegen="7.5" mp="5346744" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1363,7 +1378,7 @@
 	<npc id="19346" level="94" type="L2Npc" name="Vampire Adept">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1392,7 +1407,7 @@
 	<npc id="19347" level="94" type="L2Npc" name="Vampire Soldier">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1421,7 +1436,7 @@
 	<npc id="19348" level="94" type="L2Npc" name="Vampire Caster">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1450,7 +1465,7 @@
 	<npc id="19349" level="94" type="L2Npc" name="Vampire Magister">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="978641" hpRegen="7.5" mp="978641" mpRegen="2.7" />
 			<attack physical="49823" magical="52163" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1479,7 +1494,7 @@
 	<npc id="19350" level="95" type="L2Npc" name="Vampire Warlord">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1670641" hpRegen="7.5" mp="1670641" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1508,7 +1523,7 @@
 	<npc id="19351" level="95" type="L2Npc" name="Vampire Leader">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1537,7 +1552,7 @@
 	<npc id="19352" level="90" type="L2Npc" name="Sophie von Hellmann's Soul" title="Maligned">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
 			<attack physical="44713" magical="46813" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1560" magical="1250" />
@@ -1566,7 +1581,7 @@
 	<npc id="19353" level="95" type="L2Npc" name="Logan" title="Near-death">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1595,7 +1610,7 @@
 	<npc id="19354" level="95" type="L2Npc" name="Von Hellmann House's Maligned Spirit">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="662320" hpRegen="7.5" mp="662320" mpRegen="2.7" />
 			<attack physical="58400" magical="64200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1624,7 +1639,7 @@
 	<npc id="19355" level="95" type="L2Monster" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -1655,7 +1670,7 @@
 	<npc id="19356" level="95" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="11922" hpRegen="7.5" mp="11922" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -1677,7 +1692,7 @@
 	<npc id="19357" level="95" type="L2Monster" name="Bloody Lord Nurka">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14048992" hpRegen="7.5" mp="14048992" mpRegen="2.7" />
 			<attack physical="299117" magical="393914" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5808" magical="4825" />
@@ -1751,7 +1766,7 @@
 	<npc id="19358" level="95" type="L2Npc" name="Nurka's Royal Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2604841" hpRegen="7.5" mp="2604841" mpRegen="2.7" />
 			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1781,7 +1796,7 @@
 	<npc id="19359" level="95" type="L2Npc" name="Nurka's Royal Guard">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="2016641" hpRegen="7.5" mp="2016641" mpRegen="2.7" />
 			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1811,7 +1826,7 @@
 	<npc id="19360" level="94" type="L2Npc" name="Soldier of Resistance">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="60401" magical="76294" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1841,7 +1856,7 @@
 	<npc id="19361" level="94" type="L2Npc" name="Archer of Resistance">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="60401" magical="76294" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1680" magical="1350" />
@@ -1871,7 +1886,7 @@
 	<npc id="19362" level="95" type="L2Npc" name="Wizard of Resistance">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1901,7 +1916,7 @@
 	<npc id="19363" level="95" type="L2Npc" name="Healer of Resistance">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="1324641" hpRegen="7.5" mp="1324641" mpRegen="2.7" />
 			<attack physical="70800" magical="93900" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1920" magical="1650" />
@@ -1931,7 +1946,7 @@
 	<npc id="19364" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1600" magical="1650" />
@@ -2023,7 +2038,7 @@
 	<npc id="19368" level="1" type="L2Npc" name="Greedy Mahum Chef">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2045,7 +2060,7 @@
 	<npc id="19369" level="99" type="L2Npc" name="Campfire">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2067,7 +2082,7 @@
 	<npc id="19370" level="99" type="L2Npc" name="Mysterious Fruit Tree">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2089,7 +2104,7 @@
 	<npc id="19371" level="99" type="L2Npc" name="Greedy Pixie">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2115,7 +2130,7 @@
 	<npc id="19372" level="99" type="L2Npc" name="Dimensional Rift">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ELEMENTAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2141,7 +2156,7 @@
 	<npc id="19373" level="1" type="L2Npc" name="Broken Toad Cannon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2163,7 +2178,7 @@
 	<npc id="19374" level="1" type="L2Npc" name="Broken Gathering Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2189,7 +2204,7 @@
 	<npc id="19375" level="99" type="L2Npc" name="Repair Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2215,7 +2230,7 @@
 	<npc id="19376" level="99" type="L2Npc" name="Repair Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2237,7 +2252,7 @@
 	<npc id="19377" level="99" type="L2Npc" name="Teleport Source" title="Teleport">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2259,7 +2274,7 @@
 	<npc id="19378" level="99" type="L2Npc" name="Star Stone" title="Gatherable">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2281,7 +2296,7 @@
 	<npc id="19379" level="99" type="L2Npc" name="Sandblast">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2303,7 +2318,7 @@
 	<npc id="19380" level="99" type="L2Npc" name="Stone Gathering Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2325,7 +2340,7 @@
 	<npc id="19381" level="1" type="L2Npc" name="Destroyer Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2351,7 +2366,7 @@
 	<npc id="19382" level="1" type="L2Npc" name="Clan Request Assistant">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2373,7 +2388,7 @@
 	<npc id="19383" level="99" type="L2Npc" name="Blue Stone" title="Gatherable">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2395,7 +2410,7 @@
 	<npc id="19384" level="99" type="L2Npc" name="Dark Summon Circle">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2417,7 +2432,7 @@
 	<npc id="19385" level="99" type="L2Npc" name="Crystal Raider">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2443,7 +2458,7 @@
 	<npc id="19386" level="1" type="L2Npc" name="Broken Guardian Robot">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2469,7 +2484,7 @@
 	<npc id="19387" level="1" type="L2Npc" name="Cute Milk Cow">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="616310" hpRegen="7.5" mp="616310" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4608" magical="825" />
@@ -2495,7 +2510,7 @@
 	<npc id="19388" level="99" type="L2Npc" name="Summon Device">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2517,7 +2532,7 @@
 	<npc id="19389" level="1" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2539,7 +2554,7 @@
 	<npc id="19390" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2561,7 +2576,7 @@
 	<npc id="19391" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2583,7 +2598,7 @@
 	<npc id="19392" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
@@ -2605,7 +2620,7 @@
 	<npc id="19393" level="85" type="L2Npc" name="Contaminated Cocoon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="900" magical="900" />
@@ -2627,7 +2642,7 @@
 	<npc id="19394" level="85" type="L2Npc" name="Large Contaminated Cocoon">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="900" magical="900" />
@@ -2649,7 +2664,7 @@
 	<npc id="19395" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="7324" hpRegen="7.5" mp="7324" mpRegen="2.7" />
 			<attack physical="22500" magical="15000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="900" magical="900" />
@@ -2671,7 +2686,7 @@
 	<npc id="19396" level="99" type="L2Npc" name="Mother Nornil">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1760" magical="1770" />
@@ -2693,7 +2708,7 @@
 	<npc id="19397" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
 			<defence physical="1760" magical="1770" />
@@ -2715,7 +2730,7 @@
 	<npc id="19398" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
 			<defence physical="1760" magical="1770" />
@@ -2737,7 +2752,7 @@
 	<npc id="19399" level="99" type="L2Npc" name="">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
 			<defence physical="1760" magical="1770" />

@@ -2440,11 +2440,11 @@
 		</collision>
 	</npc>
 	<npc id="25875" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
-		<!-- Source http://l2on.net/en/?c=npc&id=25875 -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>UNDEAD</race>
 		<acquire exp="159805184" sp="38353" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3042200" hpRegen="7.5" mp="3042200" mpRegen="2.7" />
+		<stats>
+			<vitals hp="3042201" hpRegen="9.5" mp="22800" mpRegen="3.3" />
 			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2341" magical="2250" evasion="3" />
 			<attribute>
@@ -2472,18 +2472,20 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
-				<item id="17313" min="1" max="1" chance="2.057" /> <!-- Immortal Leather Gloves Light Armor -->
+				<item id="17308" min="1" max="1" chance="4.288" /> <!-- Immortal Boots -->
+				<item id="17318" min="1" max="1" chance="4.236" /> <!-- Immortal Gloves -->
+				<item id="17310" min="1" max="1" chance="2.848" /> <!-- Immortal Leather Helmet -->
+				<item id="17304" min="1" max="1" chance="2.842" /> <!-- Immortal Helmet -->
+				<item id="17313" min="1" max="1" chance="2.136" /> <!-- Immortal Leather Gloves -->
+				<item id="17319" min="1" max="1" chance="1.414" /> <!-- Immortal Shoes -->
 				<item id="17300" min="1" max="1" chance="0.3" /> <!-- Requiem Retributer -->
-				<item id="17318" min="1" max="1" chance="4.207" /> <!-- Immortal Gloves Robe -->
-				<item id="17526" min="1" max="1" chance="2.261" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="18.1818" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17319" min="1" max="1" chance="1.358" /> <!-- Immortal Shoes Robe -->
-				<item id="17304" min="1" max="1" chance="2.869" /> <!-- Immortal Helmet Heavy Armor -->
-				<item id="17290" min="1" max="1" chance="0.3" /> <!-- Requiem Shaper -->
+				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
 				<item id="17291" min="1" max="1" chance="0.3" /> <!-- Requiem Cutter -->
-				<item id="17308" min="1" max="1" chance="4.176" /> <!-- Immortal Boots Heavy Armor -->
-				<item id="17310" min="1" max="1" chance="2.819" /> <!-- Immortal Leather Helmet Light Armor -->
+				<item id="17290" min="1" max="1" chance="0.3" /> <!-- Requiem Shaper -->
+				<item id="17527" min="1" max="1" chance="29.44" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="2.294" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>

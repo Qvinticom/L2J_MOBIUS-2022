@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="27500" level="80" type="L2Npc" name="Ketra's Commander Tayr" title="Quest Monster">
-
+	<npc id="27500" level="80" type="L2Monster" name="Ketra's Commander Tayr" title="Quest Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
+		<stats>
+			<vitals hp="13164" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="1969" magical="1242" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="577" magical="516" />
 			<attribute>
@@ -16,20 +16,19 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="27501" level="80" type="L2Npc" name="Ketra's Chief Brakki" title="Quest Monster">
-
+	<npc id="27501" level="80" type="L2Monster" name="Ketra's Chief Brakki" title="Quest Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
+		<stats>
+			<vitals hp="13164" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="1969" magical="1242" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="577" magical="516" />
 			<attribute>
@@ -41,20 +40,19 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="4" />
+			<skill id="4416" level="4" /> <!-- Animals -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="27502" level="80" type="L2Npc" name="Varka's Commander Mos" title="Quest Monster">
-
+	<npc id="27502" level="80" type="L2Monster" name="Varka's Commander Mos" title="Quest Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
+		<stats>
+			<vitals hp="13164" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="1969" magical="1242" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="577" magical="516" />
 			<attribute>
@@ -66,20 +64,19 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="27503" level="80" type="L2Npc" name="Varka's Chief Horus" title="Quest Monster">
-
+	<npc id="27503" level="80" type="L2Monster" name="Varka's Chief Horus" title="Quest Monster">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="31335" hpRegen="7.5" mp="31335" mpRegen="2.7" />
+		<stats>
+			<vitals hp="13164" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="1969" magical="1242" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="577" magical="516" />
 			<attribute>
@@ -91,9 +88,8 @@
 			</speed>
 			<hitTime>500</hitTime>
 		</stats>
-		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="6" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<collision>
 			<radius normal="22" />
@@ -101,9 +97,8 @@
 		</collision>
 	</npc>
 	<npc id="27504" level="60" type="L2Npc" name="Guardian Giant Akum" title="Quest Monster">
-
 		<race>GIANT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="13378" hpRegen="7.5" mp="13378" mpRegen="2.7" />
 			<attack physical="861" magical="479" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="369" magical="330" />
@@ -126,14 +121,13 @@
 		</collision>
 	</npc>
 	<npc id="27505" level="84" type="L2Monster" name="Awakening Meccadan" title="Quest Monster">
-
 		<parameters>
 			<minions name="Privates">
 				<npc id="27506" count="3" respawnTime= "3" weightPoint="4" />
 			</minions>
 		</parameters>
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="27950" hpRegen="7.5" mp="27950" mpRegen="2.7" />
 			<attack physical="4754" magical="3070" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="930" magical="830" />
@@ -156,9 +150,8 @@
 		</collision>
 	</npc>
 	<npc id="27506" level="84" type="L2Npc" name="Meccadan's Minion" title="Quest Monster">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="6987" hpRegen="7.5" mp="6987" mpRegen="2.7" />
 			<attack physical="3566" magical="2303" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="620" magical="553" />
@@ -181,9 +174,8 @@
 		</collision>
 	</npc>
 	<npc id="27507" level="99" type="L2Npc" name="One-armed Zombie" title="Quest Monster">
-
 		<race>UNDEAD</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="27406" hpRegen="7.5" mp="27406" mpRegen="2.7" />
 			<attack physical="44000" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1760" magical="1770" />
@@ -206,9 +198,8 @@
 		</collision>
 	</npc>
 	<npc id="27508" level="65" type="L2Npc" name="Swamp of Screams Scout" title="Embryo">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
 			<attack physical="1078" magical="620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="419" magical="374" />
@@ -231,9 +222,8 @@
 		</collision>
 	</npc>
 	<npc id="27509" level="65" type="L2Npc" name="Forest of the Dead Scout" title="Embryo">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
 			<attack physical="1078" magical="620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="419" magical="374" />
@@ -256,9 +246,8 @@
 		</collision>
 	</npc>
 	<npc id="27510" level="70" type="L2Npc" name="Ceremony Executor" title="Embryo">
-
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4228" hpRegen="7.5" mp="4228" mpRegen="2.7" />
 			<attack physical="1315" magical="781" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="471" magical="421" />
@@ -281,9 +270,8 @@
 		</collision>
 	</npc>
 	<npc id="27511" level="76" type="L2Npc" name="Ketra Backup Shooter" title="Embryo">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="535" magical="477" />
@@ -306,9 +294,8 @@
 		</collision>
 	</npc>
 	<npc id="27512" level="76" type="L2Npc" name="Ketra Backup Wizard" title="Embryo">
-
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="535" magical="477" />
@@ -331,9 +318,8 @@
 		</collision>
 	</npc>
 	<npc id="27513" level="78" type="L2Npc" name="Belos" title="Sakum's Clone">
-
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5145" hpRegen="7.5" mp="5145" mpRegen="2.7" />
 			<attack physical="1716" magical="1070" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="556" magical="497" />
@@ -356,9 +342,8 @@
 		</collision>
 	</npc>
 	<npc id="27514" level="76" type="L2Npc" name="Varka Backup Shooter" title="Embryo">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="535" magical="477" />
@@ -381,9 +366,8 @@
 		</collision>
 	</npc>
 	<npc id="27515" level="76" type="L2Npc" name="Varka Backup Wizard" title="Embryo">
-
 		<race>HUMAN</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="4771" hpRegen="7.5" mp="4771" mpRegen="2.7" />
 			<attack physical="1615" magical="995" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="535" magical="477" />
@@ -406,9 +390,8 @@
 		</collision>
 	</npc>
 	<npc id="27516" level="78" type="L2Npc" name="Kampf" title="Sakum's Clone">
-
 		<race>ANIMAL</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="5145" hpRegen="7.5" mp="5145" mpRegen="2.7" />
 			<attack physical="1716" magical="1070" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="556" magical="497" />
@@ -431,9 +414,8 @@
 		</collision>
 	</npc>
 	<npc id="27517" level="65" type="L2Npc" name="Armed Assault" title="Embryo">
-
 		<race>HUMANOID</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="3794" hpRegen="7.5" mp="3794" mpRegen="2.7" />
 			<attack physical="1078" magical="620" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="419" magical="374" />

@@ -3273,6 +3273,7 @@
 		</dropLists>
 	</npc>
 	<npc id="22749" level="88" type="L2Monster" name="Treykan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill name="Skill02_ID" id="6388" level="1" /> <!-- Bistakon Jump Blow -->
@@ -3281,7 +3282,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="298353" hpRegen="187.410040552143" mp="19524" mpRegen="3" />
 			<attack physical="12008.0135566142" magical="8707.81891430402" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="578.861024" magical="635.378064" />
@@ -3297,8 +3298,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
@@ -3326,13 +3325,14 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="36813" min="1" max="1" chance="17.21" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="57" min="2820" max="6573" chance="70" /> <!-- Adena -->
+				<item id="36813" min="1" max="3" chance="10.4" /> <!-- Immortal Leather Legging Ingredient -->
 				<item id="36751" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
-				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="40205" min="1" max="1" chance="55.39" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="67.66" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</corpse>
 		</dropLists>

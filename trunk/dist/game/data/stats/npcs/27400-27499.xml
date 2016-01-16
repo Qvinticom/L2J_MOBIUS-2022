@@ -1420,12 +1420,10 @@
 		</collision>
 	</npc>
 	<npc id="27451" level="29" type="L2Monster" name="Kanilov" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<acquire exp="1349" sp="7" />
 		<stats>
-			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="908" hpRegen="7.5" mp="908" mpRegen="2.7" />
+			<vitals hp="574" hpRegen="7.5" mp="315" mpRegen="2.7" />
 			<attack physical="90" magical="90" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="144" magical="96" />
 			<attribute>
@@ -1437,9 +1435,12 @@
 			</speed>
 			<hitTime>398</hitTime>
 		</stats>
-		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- <skill id="4411" level="14" /> --><!-- <skill id="4413" level="14" /> --><!-- <skill id="4412" level="14" /> --><!-- <skill id="4410" level="13" /> --><skill id="4073" level="1" />
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1447,11 +1448,10 @@
 		</collision>
 	</npc>
 	<npc id="27452" level="34" type="L2Monster" name="Poslof" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
 		<stats>
-			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="1168" hpRegen="7.5" mp="1168" mpRegen="2.7" />
+			<vitals hp="737" hpRegen="7.5" mp="387" mpRegen="2.7" />
 			<attack physical="161" magical="120" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="193" magical="128" />
 			<attribute>
@@ -1463,9 +1463,12 @@
 			</speed>
 			<hitTime>398</hitTime>
 		</stats>
-		<status undying="false" attackable="true" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- <skill id="4413" level="15" /> --><!-- <skill id="4410" level="14" /> --><!-- <skill id="4412" level="15" /> --><!-- <skill id="4411" level="13" /> --><skill id="4073" level="1" />
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -1473,11 +1476,10 @@
 		</collision>
 	</npc>
 	<npc id="27453" level="40" type="L2Monster" name="Sakum" title="Quest Monster">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
 		<stats>
-			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="3064" hpRegen="7.5" mp="3064" mpRegen="2.7" />
+			<vitals hp="1934" hpRegen="7.5" mp="478" mpRegen="2.7" />
 			<attack physical="584" magical="708" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267" magical="275" />
 			<attribute>
@@ -1489,9 +1491,12 @@
 			</speed>
 			<hitTime>398</hitTime>
 		</stats>
-		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="4" /> <!-- <skill id="4411" level="14" /> --><!-- <skill id="4410" level="15" /> --><!-- <skill id="4413" level="12" /> --><!-- <skill id="4412" level="13" /> --><skill id="14095" level="1" />
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<collision>
 			<radius normal="31" />
@@ -2203,12 +2208,11 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="27480" level="84" type="L2Npc" name="Sehkmeti">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+	<npc id="27480" level="84" type="L2Monster" name="Sehkmeti">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ETC</race>
 		<stats>
-			<!-- str="79" int="34" dex="42" wit="66" con="75" men="12" -->
-			<vitals hp="110" hpRegen="7.5" mp="110" mpRegen="2.7" />
+			<vitals hp="71" hpRegen="7.5" mp="1812" mpRegen="2.7" />
 			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3840" magical="825" />
 			<attribute>
@@ -2220,7 +2224,9 @@
 			</speed>
 			<hitTime>333</hitTime>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="10781" level="1" /> <!-- Phoenix Arrow -->
+		</skillList>
 		<collision>
 			<radius normal="6" />
 			<height normal="12" />

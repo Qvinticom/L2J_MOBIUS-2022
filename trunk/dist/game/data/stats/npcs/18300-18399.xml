@@ -1331,6 +1331,7 @@
 		</collision>
 	</npc>
 	<npc id="18327" level="58" type="L2Monster" name="Freya's Servant">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1339,8 +1340,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+		<acquire exp="49713" sp="11" />
+		<stats>
+			<vitals hp="14632" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="387.5368" magical="302.44274" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="158.4514992" />
 			<attribute>
@@ -1356,8 +1358,6 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1378,6 +1378,23 @@
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
+				<item id="36546" min="1" max="1" chance="4.778" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36517" min="1" max="1" chance="2.047" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36531" min="1" max="1" chance="64.77" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.437" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="18328" level="83" type="L2Monster" name="Hall Alarm">
 		<parameters>
@@ -2110,6 +2127,7 @@
 		</collision>
 	</npc>
 	<npc id="18342" level="1" type="L2Monster" name="Gremlin">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2117,9 +2135,9 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="44" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="39.74519" hpRegen="2" mp="40.0" mpRegen="0.9" />
+		<acquire exp="44" sp="0" />
+		<stats>
+			<vitals hp="40" hpRegen="2" mp="40" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="44.44444" magical="29.59016164" />
 			<attribute>
@@ -2133,8 +2151,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2242,6 +2258,7 @@
 		</collision>
 	</npc>
 	<npc id="18345" level="78" type="L2Monster" name="Sprigant">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="DeBuff_interval" value="15" />
 			<param name="ProbSelfRangeDeBuff1" value="100" />
@@ -2252,8 +2269,8 @@
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="14880" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2974.35686398316" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+		<stats>
+			<vitals hp="744" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -2267,8 +2284,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -2288,15 +2303,13 @@
 		<dropLists>
 			<death>
 				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
-				<group chance="39.7599983215332">
-					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
-				</group>
+				<item id="8787" min="1" max="1" chance="17.8" /> <!-- Sprigant's Fruit -->
 			</death>
 			<corpse>
-				<item id="36532" min="1" max="1" chance="0.03" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -3310,6 +3323,7 @@
 		</collision>
 	</npc>
 	<npc id="18364" level="79" type="L2Monster" name="Witch Warder">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3319,8 +3333,8 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
+		<stats>
+			<vitals hp="14215" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="337.07008" magical="246.65326" />
 			<attribute>
@@ -3337,8 +3351,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4095" level="1" /> <!-- Damage Shield -->
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

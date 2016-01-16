@@ -2943,6 +2943,7 @@
 		</collision>
 	</npc>
 	<npc id="20628" level="69" type="L2Monster" name="Limal Karinness">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2959,8 +2960,8 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="48146" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+		<stats>
+			<vitals hp="11980" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<attribute>
@@ -2978,8 +2979,6 @@
 			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
 			<skill id="4047" level="6" /> <!-- Hold -->
 			<skill id="4117" level="6" /> <!-- Paralysis -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
@@ -2998,34 +2997,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="4416" max="8967" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.524899959564209">
-					<item id="5304" min="1" max="1" chance="0.2697" /> <!-- Sealed Tallum Tunic -->
-					<item id="5485" min="1" max="1" chance="30.2857" /> <!-- Sealed Tallum Tunic Texture -->
-					<item id="5308" min="1" max="1" chance="0.1659" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5486" min="1" max="1" chance="21.3111" /> <!-- Sealed Dark Crystal Robe Fabric -->
-					<item id="5305" min="1" max="1" chance="0.4313" /> <!-- Sealed Tallum Stockings -->
-					<item id="5489" min="1" max="1" chance="47.5363" /> <!-- Sealed Tallum Stockings Fabric -->
-				</group>
-				<group chance="12.475500106811523">
-					<item id="1895" min="1" max="1" chance="75.4742" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.2832" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.4027" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="8.8053" /> <!-- Asofe -->
-					<item id="4988" min="1" max="1" chance="1.7494" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
-					<item id="4401" min="1" max="1" chance="0.5283" /> <!-- Green Dimensional Stone -->
-					<item id="8730" min="1" max="1" chance="2.9351" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.7338" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0734" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0146" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="59" max="136" chance="70" /> <!-- Adena -->
+				<item id="1807" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="1807" min="1" max="1" chance="1.4876" /> <!-- Recipe: Soulshot (A-Grade) -->
-				<item id="5479" min="1" max="1" chance="6.6016" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="1895" min="1" max="7" chance="79.6908" /> <!-- Metallic Fiber -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>
@@ -3034,6 +3013,7 @@
 		</collision>
 	</npc>
 	<npc id="20629" level="70" type="L2Monster" name="Karik">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3050,8 +3030,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="59260" sp="14" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+		<stats>
+			<vitals hp="12225" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<attribute>
@@ -3071,8 +3051,6 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -3091,34 +3069,14 @@
 		</ai>
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="5182" max="10542" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.381700038909912">
-					<item id="5292" min="1" max="1" chance="0.408" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5494" min="1" max="1" chance="40.0555" /> <!-- Sealed Dark Crystal Shield Fragment -->
-					<item id="5289" min="1" max="1" chance="0.2855" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5525" min="1" max="1" chance="29.4828" /> <!-- Sealed Dark Crystal Helmet Design -->
-					<item id="5294" min="1" max="1" chance="0.2855" /> <!-- Sealed Tallum Helmet -->
-					<item id="5526" min="1" max="1" chance="29.4827" /> <!-- Sealed Tallum Helm Design -->
-				</group>
-				<group chance="48.404701232910156">
-					<item id="1873" min="1" max="1" chance="31.9821" /> <!-- Silver Nugget -->
-					<item id="1868" min="3" max="9" chance="26.6517" /> <!-- Thread -->
-					<item id="1876" min="1" max="1" chance="15.991" /> <!-- Mithril Ore -->
-					<item id="1895" min="1" max="1" chance="22.8444" /> <!-- Metallic Fiber -->
-					<item id="4042" min="1" max="1" chance="1.3326" /> <!-- Enria -->
-					<item id="5006" min="1" max="1" chance="0.061" /> <!-- Recipe: Bellion Cestus (60%) -->
-					<item id="8730" min="1" max="1" chance="0.8884" /> <!-- Life Stone - Level 67 -->
-					<item id="8740" min="1" max="1" chance="0.2221" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8750" min="1" max="1" chance="0.0222" /> <!-- High-Grade Life Stone - Level 67 -->
-					<item id="8760" min="1" max="1" chance="0.0045" /> <!-- Top-Grade Life Stone - Level 67 -->
-				</group>
+				<item id="57" min="69" max="160" chance="70" /> <!-- Adena -->
+				<item id="3035" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 			<corpse>
-				<item id="4077" min="1" max="1" chance="58.9396" /> <!-- Doom Shield Fragment -->
-				<item id="4078" min="1" max="1" chance="19.1386" /> <!-- Blue Wolf Breastplate Part -->
-				<item id="3035" min="1" max="1" chance="1.747" /> <!-- Recipe: Spiritshot A -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</corpse>
 		</dropLists>
 		<collision>

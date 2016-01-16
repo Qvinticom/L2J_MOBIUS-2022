@@ -314,6 +314,7 @@
 		</collision>
 	</npc>
 	<npc id="18906" level="84" type="L2Monster" name="Farm Bandit">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="6559" level="16" /> <!-- NPC water attack -->
@@ -322,8 +323,8 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="47687" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4039.04270539801" hpRegen="8.5" mp="1812.0" mpRegen="3" />
+		<stats>
+			<vitals hp="4040" hpRegen="9.5" mp="1812" mpRegen="3.3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -340,8 +341,6 @@
 			<skill id="4028" level="3" /> <!-- NPC Might -->
 			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -361,49 +360,20 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlets -->
 				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
 				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
 				<item id="15706" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Boots -->
 				<item id="15707" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Boots -->
 				<item id="15708" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shoes -->
-				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15654" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gauntlets Piece -->
 				<item id="15655" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Gloves Piece -->
 				<item id="15656" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Gloves Piece -->
 				<item id="15657" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Boots Piece -->
 				<item id="15658" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Leather Boots Piece -->
 				<item id="15659" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Shoes Piece -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 	</npc>
@@ -500,14 +470,15 @@
 		</dropLists>
 	</npc>
 	<npc id="18908" level="83" type="L2Monster" name="Sel Mahum Chef">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="Skill01_ID" id="6330" level="1" /> <!-- Salmon Porridge Attack -->
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="26321" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="7672" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -523,8 +494,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
@@ -541,19 +510,13 @@
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<death>
-				<group chance="25">
-					<item id="15492" min="1" max="2" chance="100" /> <!-- Sel Mahum Salmon Porridge -->
-				</group>
-			</death>
-		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="18909" level="83" type="L2Monster" name="Solina Knights">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6311" level="1" /> <!-- Solina Thrust -->
 		</parameters>
@@ -561,8 +524,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="8211" lhand="8210" /> <!-- rhand: Monster Only (Monk Warrior Sword) lhand: Monster Only (Monk Warrior Shield) -->
 		<acquire exp="44714" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
+		<stats>
+			<vitals hp="7672" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -603,22 +566,24 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="14109" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="14110" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Gloves -->
 				<item id="14114" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gloves -->
 				<item id="14117" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Shoes -->
-				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlets Piece -->
 				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
 				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
 	<npc id="18910" level="83" type="L2Monster" name="Solina Knight Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6312" level="1" /> <!-- Launch Sacred Sword Energy -->
 			<skill name="Buff" id="6313" level="1" /> <!-- Solina Bless -->
@@ -626,7 +591,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="66324" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
@@ -642,8 +607,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -669,18 +632,19 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
+				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlets -->
 				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
 				<item id="14114" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
 				<item id="14117" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Shoes -->
-				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlet Piece -->
-				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlets Piece -->
 				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
 				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
 				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</death>
 		</dropLists>
 	</npc>
@@ -894,6 +858,7 @@
 		</collision>
 	</npc>
 	<npc id="18917" level="72" type="L2Monster" name="Pavel Safety Device">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="Privates01_sil" value="22801" /> <!-- Cruel Pincer Golem -->
 			<param name="Privates01_ai" value="golem_cannon1_p" />
@@ -902,8 +867,8 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+		<stats>
+			<vitals hp="635" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<attribute>
@@ -932,49 +897,20 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="70">
-					<item id="57" min="361" max="738" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0607000589370728">
-					<item id="9546" min="1" max="1" chance="16.6667" /> <!-- Fire Stone -->
-					<item id="9547" min="1" max="1" chance="16.6667" /> <!-- Water Stone -->
-					<item id="9548" min="1" max="1" chance="16.6667" /> <!-- Earth Stone -->
-					<item id="9549" min="1" max="1" chance="16.6667" /> <!-- Wind Stone -->
-					<item id="9550" min="1" max="1" chance="16.6667" /> <!-- Dark Stone -->
-					<item id="9551" min="1" max="1" chance="16.6665" /> <!-- Holy Stone -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
+				<item id="57" min="251" max="585" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.0075" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="0.0075" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="0.0075" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="0.0075" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="0.0075" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="0.0075" /> <!-- Holy Stone -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</corpse>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -2438,11 +2374,12 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18969" level="83" type="L2Npc" name="Magma Drake Mother">
-		<!-- TODO: Must be confirmed -->
+	<npc id="18969" level="83" type="L2Monster" name="Magma Drake Mother">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="3836" mp="2444.0" />
+		<stats>
+			<vitals hp="3836" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<attribute>
@@ -2458,11 +2395,12 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18970" level="83" type="L2Npc" name="Magma Drake Hatchling">
-		<!-- TODO: Must be confirmed -->
+	<npc id="18970" level="83" type="L2Monster" name="Magma Drake Hatchling">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="3836" mp="2444.0" />
+		<stats>
+			<vitals hp="3836" hpRegen="9.5" mp="1777" mpRegen="3.3" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<attribute>
@@ -2499,11 +2437,11 @@
 		</collision>
 	</npc>
 	<npc id="18972" level="90" type="L2Monster" name="Treekin Defender" title="Scout">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="2667974" sp="11603" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="48048" hpRegen="7.5" mp="48048" mpRegen="2.7" />
+		<acquire exp="2667974" sp="640" />
+		<stats>
+			<vitals hp="28829" hpRegen="9.5" mp="2023" mpRegen="3.3" />
 			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1350" magical="1300" />
 			<attribute>
@@ -2518,8 +2456,8 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="14054" level="2" />
-			<skill id="5465" level="1" />
-			<skill id="4416" level="5" />
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14101" level="2" />
 			<skill id="14053" level="2" />
 		</skillList>
@@ -2532,7 +2470,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>PLANT</race>
 		<acquire exp="3052795" sp="13508" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="32375" magical="23125" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1350" magical="1300" />
@@ -2591,7 +2529,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>FAIRY</race>
 		<acquire exp="3052795" sp="13508" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="98356" hpRegen="7.5" mp="98356" mpRegen="2.7" />
 			<attack physical="32375" magical="23125" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="1350" magical="1300" />
@@ -2650,7 +2588,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>BEAST</race>
 		<acquire exp="1808517" sp="3871" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="100115" hpRegen="7.5" mp="100115" mpRegen="2.7" />
 			<attack physical="33250" magical="23750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1375" magical="1325" />
@@ -2680,7 +2618,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="278972" hpRegen="7.5" mp="278972" mpRegen="2.7" />
 			<attack physical="20500" magical="10250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="820" magical="560" />
@@ -2725,7 +2663,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="278972" hpRegen="7.5" mp="278972" mpRegen="2.7" />
 			<attack physical="43870" magical="38848" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="426" magical="291" />
@@ -2778,7 +2716,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="278972" hpRegen="7.5" mp="278972" mpRegen="2.7" />
 			<attack physical="43870" magical="38848" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="426" magical="291" />
@@ -2827,7 +2765,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="278972" hpRegen="7.5" mp="278972" mpRegen="2.7" />
 			<attack physical="43870" magical="38848" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="426" magical="291" />
@@ -2877,7 +2815,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="322511" hpRegen="7.5" mp="322511" mpRegen="2.7" />
 			<attack physical="43870" magical="38848" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="426" magical="291" />
@@ -2923,7 +2861,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>HUMANOID</race>
 		<acquire exp="370918" sp="1601" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="322511" hpRegen="7.5" mp="322511" mpRegen="2.7" />
 			<attack physical="43870" magical="38848" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="426" magical="291" />
@@ -2967,7 +2905,7 @@
 	<npc id="18984" level="99" type="L2Npc" name="Octavis' Influence">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -2992,7 +2930,7 @@
 	<npc id="18985" level="90" type="L2Npc" name="Genesis Trap 1">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="55069" hpRegen="7.5" mp="55069" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3017,7 +2955,7 @@
 	<npc id="18986" level="90" type="L2Npc" name="Genesis Trap 2">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="55069" hpRegen="7.5" mp="55069" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3042,7 +2980,7 @@
 	<npc id="18987" level="90" type="L2Npc" name="Vine">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="9311" hpRegen="7.5" mp="9311" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3067,7 +3005,7 @@
 	<npc id="18988" level="90" type="L2Npc" name="Rose Vine">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="9311" hpRegen="7.5" mp="9311" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3092,7 +3030,7 @@
 	<npc id="18989" level="90" type="L2Npc" name="Apherus Garden Gate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3117,7 +3055,7 @@
 	<npc id="18990" level="90" type="L2Npc" name="Apherus Garden Gate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3142,7 +3080,7 @@
 	<npc id="18991" level="90" type="L2Npc" name="Apherus Garden Gate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3167,7 +3105,7 @@
 	<npc id="18992" level="90" type="L2Npc" name="Apherus Garden Gate">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>CONSTRUCT</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3190,11 +3128,10 @@
 		</collision>
 	</npc>
 	<npc id="18993" level="88" type="L2Monster" name="Hatched Millipede">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BUG</race>
-		<acquire exp="102099" sp="2028" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="248627" hpRegen="7.5" mp="248627" mpRegen="2.7" />
+		<stats>
+			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="16500" magical="8250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="548" magical="480" />
 			<attribute>
@@ -3209,41 +3146,21 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="14183" level="1" />
-			<skill id="4416" level="12" />
-			<skill id="5465" level="1" />
-			<!-- <skill id="4412" level="9" /> -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="14117" level="5" />
 		</skillList>
 		<collision>
 			<radius normal="45" />
 			<height normal="8" />
 		</collision>
-		<dropLists>
-			<death>
-				<item id="57" min="613" max="1430" chance="70" />
-				<item id="19309" min="1" max="1" chance="0.25" />
-				<item id="19175" min="1" max="1" chance="0.06667" />
-				<item id="17526" min="1" max="1" chance="0.01" />
-				<item id="18130" min="1" max="1" chance="0.01" />
-				<item id="18124" min="1" max="1" chance="0.01" />
-				<item id="18119" min="1" max="1" chance="0.01" />
-				<item id="18103" min="1" max="1" chance="0.00667" />
-				<item id="18113" min="1" max="1" chance="0.00667" />
-				<item id="18106" min="1" max="1" chance="0.00667" />
-			</death>
-			<corpse>
-				<item id="18119" min="1" max="1" chance="0.02" />
-				<item id="18124" min="1" max="1" chance="0.02" />
-				<item id="18130" min="1" max="1" chance="0.02" />
-			</corpse>
-		</dropLists>
 	</npc>
 	<npc id="18994" level="88" type="L2Monster" name="Hatched Underbug">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>BUG</race>
-		<acquire exp="102099" sp="2028" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
-			<vitals hp="248627" hpRegen="7.5" mp="248627" mpRegen="2.7" />
+		<stats>
+			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />
 			<attack physical="16500" magical="8250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="548" magical="480" />
 			<attribute>
@@ -3258,9 +3175,9 @@
 		<status attackable="true" />
 		<skillList>
 			<skill id="14183" level="1" />
-			<skill id="4416" level="12" />
-			<skill id="5465" level="1" />
-			<!-- <skill id="4412" level="9" /> -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="14119" level="1" />
 			<skill id="14118" level="1" />
 		</skillList>
@@ -3268,25 +3185,12 @@
 			<radius normal="35" />
 			<height normal="35" />
 		</collision>
-		<dropLists>
-			<death>
-				<item id="57" min="613" max="1430" chance="70" />
-				<item id="19169" min="1" max="1" chance="0.07502" />
-				<item id="19172" min="1" max="1" chance="0.07502" />
-				<item id="17526" min="1" max="1" chance="0.01" />
-				<item id="18104" min="1" max="1" chance="0.0075" />
-				<item id="18109" min="1" max="1" chance="0.0075" />
-			</death>
-			<corpse>
-				<item id="17526" min="1" max="1" chance="0.05" />
-			</corpse>
-		</dropLists>
 	</npc>
 	<npc id="18995" level="88" type="L2Monster" name="Awakened Millipede">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->  
 		<race>BUG</race>
 		<acquire exp="0" sp="0" />
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="149177" hpRegen="9.5" mp="19524" mpRegen="3.3" />  
 			<attack physical="16500" magical="8250" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="548" magical="480" />
@@ -3330,7 +3234,7 @@
 	<npc id="18996" level="88" type="L2Npc" name="Egg">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="8650" hpRegen="7.5" mp="8650" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3353,7 +3257,7 @@
 	<npc id="18997" level="88" type="L2Npc" name="Egg">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="8650" hpRegen="7.5" mp="8650" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3379,7 +3283,7 @@
 	<npc id="18998" level="90" type="L2Npc" name="Teredor Transparent 1">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="9311" hpRegen="7.5" mp="9311" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />
@@ -3404,7 +3308,7 @@
 	<npc id="18999" level="90" type="L2Npc" name="Teredor Transparent 2">
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>ETC</race>
-		<stats> <!-- str="88" int="79" dex="55" wit="78" con="82" men="78" -->
+		<stats>
 			<vitals hp="9311" hpRegen="7.5" mp="9311" mpRegen="2.7" />
 			<attack physical="971" magical="663" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="341" magical="250" />

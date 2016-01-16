@@ -1088,6 +1088,7 @@
 		</collision>
 	</npc>
 	<npc id="18120" level="78" type="L2SepulcherMonster" name="Halisha's Officer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1103,8 +1104,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" /> <!-- rhand: Sword of Nightmare lhand: Monster Only(Shield of Imperial Warlord Zombie) -->
 		<acquire exp="105451" sp="25" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="326.5649442" magical="197.826246" evasion="-3" shield="173" shieldRate="20" />
 			<attribute>
@@ -1124,8 +1125,6 @@
 			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
 			<skill id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1812,6 +1811,7 @@
 		</collision>
 	</npc>
 	<npc id="18132" level="78" type="L2SepulcherMonster" name="Imperial Healer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1823,8 +1823,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="107458" sp="25" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="791.661474" magical="457.930728288" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="478.1237352" magical="289.637364" evasion="3" />
 			<attribute>
@@ -1840,8 +1840,6 @@
 		<skillList>
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1866,6 +1864,7 @@
 		</collision>
 	</npc>
 	<npc id="18133" level="78" type="L2SepulcherMonster" name="Imperial Mosaic">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1876,8 +1875,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="99253" sp="23" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="838.171536" magical="670.4563793364" random="10" critical="8" accuracy="2" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="359.2214376" magical="217.60884" evasion="3" />
 			<attribute>
@@ -1891,8 +1890,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="17" /> <!-- Very Strong P. Def. -->
@@ -2269,6 +2266,7 @@
 		</collision>
 	</npc>
 	<npc id="18141" level="78" type="L2SepulcherMonster" name="Graveyard Beetle">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2281,8 +2279,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="62966" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="34.884" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="11904" hpRegen="34.884" mp="1742" mpRegen="3.0702" />
 			<attack physical="1542.7245" magical="1738.991176812" random="50" critical="1" accuracy="12" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="245.3530746" magical="148.62981" evasion="3" />
 			<attribute>
@@ -2298,8 +2296,6 @@
 		<skillList>
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -3888,6 +3884,7 @@
 		</collision>
 	</npc>
 	<npc id="18173" level="78" type="L2SepulcherMonster" name="Halisha's Foreman">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -3900,8 +3897,8 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="81620" sp="19" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="326.5649442" magical="197.826246" evasion="3" />
 			<attribute>
@@ -3919,8 +3916,6 @@
 			<skill id="4073" level="9" /> <!-- Stun -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
 			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4584,6 +4579,7 @@
 		</collision>
 	</npc>
 	<npc id="18185" level="78" type="L2SepulcherMonster" name="Evil Astrologer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4596,8 +4592,8 @@
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- rhand: Doll Knife lhand: Doll Knife -->
 		<acquire exp="101667" sp="24" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="870.827652" magical="554.0961810204" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="434.6579448" magical="263.306676" evasion="3" shield="185" />
 			<attribute>
@@ -4615,8 +4611,6 @@
 			<skill id="4036" level="9" /> <!-- Poison -->
 			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -4900,6 +4894,7 @@
 		</collision>
 	</npc>
 	<npc id="18191" level="78" type="L2SepulcherMonster" name="Witch of dust">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4911,8 +4906,8 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
 		<acquire exp="73576" sp="17" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="1159.0719" magical="981.6151849884" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="326.5649442" magical="197.826246" evasion="3" />
 			<attribute>
@@ -4928,8 +4923,6 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -5112,6 +5105,7 @@
 		</collision>
 	</npc>
 	<npc id="18195" level="78" type="L2SepulcherMonster" name="Signet of Emperor">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -5121,8 +5115,8 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="75022" sp="18" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2975.2369188" hpRegen="52.326" mp="1742.976" mpRegen="3.0702" />
+		<stats>
+			<vitals hp="17856" hpRegen="52.326" mp="1742" mpRegen="3.0702" />
 			<attack physical="1542.7245" magical="1738.991176812" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="245.3530746" magical="148.62981" evasion="3" />
 			<attribute>
@@ -5136,8 +5130,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->

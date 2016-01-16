@@ -282,11 +282,11 @@
 		</collision>
 	</npc>
 	<npc id="23020" level="21" type="L2Monster" name="Giant Wild Boar">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>ANIMAL</race>
-		<acquire exp="936" sp="9" />
+		<acquire exp="936" sp="0" />
 		<stats>
-			<vitals hp="577" hpRegen="7.5" mp="577" mpRegen="2.7" />
+			<vitals hp="365" hpRegen="7.5" mp="205" mpRegen="2.7" />
 			<attack physical="884" magical="550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="375" magical="275" />
 			<attribute>
@@ -300,11 +300,11 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="4" />
-			<!-- <skill id="4411" level="10" /> -->
-			<!-- <skill id="4410" level="10" /> -->
-			<!-- <skill id="4413" level="12" /> -->
-			<!-- <skill id="4412" level="12" /> -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<collision>
@@ -313,19 +313,16 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="45" max="98" chance="70" />
-				<item id="1061" min="1" max="1" chance="6.66666" />
-				<item id="2054" min="1" max="1" chance="2" />
-				<item id="1949" min="1" max="1" chance="1" />
-				<item id="36561" min="1" max="1" chance="0.5" />
-				<item id="36546" min="1" max="1" chance="0.3003" />
-				<item id="393" min="1" max="1" chance="0.3003" />
-				<item id="394" min="1" max="1" chance="0.3003" />
-				<item id="296" min="1" max="1" chance="0.09001" />
-				<item id="157" min="1" max="1" chance="0.09001" />
+				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="32.4324" />
+				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 			</corpse>
 		</dropLists>
 	</npc>
@@ -3320,11 +3317,11 @@
 		</dropLists>
 	</npc>
 	<npc id="23097" level="36" type="L2Monster" name="Skeleton Marauder">
-		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
 		<race>UNDEAD</race>
-		<acquire exp="2337" sp="29" />
+		<acquire exp="2337" sp="0" />
 		<stats>
-			<vitals hp="1283" hpRegen="7.5" mp="1283" mpRegen="2.7" />
+			<vitals hp="810" hpRegen="7.5" mp="417" mpRegen="2.7" />
 			<attack physical="151" magical="114" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="127" magical="85" />
 			<attribute>
@@ -3338,12 +3335,12 @@
 		</stats>
 		<status attackable="true" />
 		<skillList>
-			<skill id="4416" level="1" />
-			<!-- <skill id="4413" level="10" /> -->
-			<!-- <skill id="4412" level="10" /> -->
-			<!-- <skill id="4411" level="12" /> -->
-			<!-- <skill id="4410" level="12" /> -->
-			<skill id="4274" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="500" clanHelpRange="300" isAggressive="true">
@@ -3357,18 +3354,15 @@
 		</collision>
 		<dropLists>
 			<death>
-				<item id="57" min="94" max="220" chance="70" />
-				<item id="1061" min="1" max="1" chance="5.30035" />
-				<item id="1956" min="1" max="1" chance="1.23674" />
-				<item id="1950" min="1" max="1" chance="0.3003" />
-				<item id="956" min="1" max="1" chance="0.3003" />
-				<item id="2195" min="1" max="1" chance="0.03" />
-				<item id="630" min="1" max="1" chance="0.03" />
-				<item id="882" min="1" max="1" chance="0.03" />
-				<item id="187" min="1" max="1" chance="0.001" />
+				<item id="278" min="1" max="1" chance="0.03" /> <!-- Gastraphetes -->
+				<item id="57" min="9" max="20" chance="70" /> <!-- Adena -->
+				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 			<corpse>
-				<item id="36531" min="1" max="1" chance="60.5042" />
+				<item id="36531" min="1" max="1" chance="4.741" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</corpse>
 		</dropLists>
 	</npc>

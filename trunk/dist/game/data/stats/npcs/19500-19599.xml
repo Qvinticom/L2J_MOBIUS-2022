@@ -153,69 +153,83 @@
 			</corpse>
 		</dropLists>
 	</npc>
-	<npc id="19506" level="99" type="L2Npc" name="Flox Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328873" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19506" level="99" type="L2Monster" name="Flox Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="20395684" sp="48949" />
+		<stats>
+			<vitals hp="197325" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19507" level="99" type="L2Npc" name="Floxis" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="350797" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19507" level="99" type="L2Monster" name="Floxis" title="Disciplined">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="21755475" sp="52213" />
+		<stats>
+			<vitals hp="210479" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19508" level="99" type="L2Npc" name="Floxis" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="350797" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19508" level="99" type="L2Monster" name="Floxis" title="Magical">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="21755475" sp="52213" />
+		<stats>
+			<vitals hp="210479" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
 		<collision>
 			<radius normal="22" />
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="19509" level="99" type="L2Npc" name="Edan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="328873" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19509" level="99" type="L2Monster" name="Edan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="20395684" sp="48949" />
+		<stats>
+			<vitals hp="197325" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
@@ -300,39 +314,76 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19513" level="99" type="L2Npc" name="Tanya" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="394647" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19513" level="99" type="L2Monster" name="Tanya" title="Disciplined">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>DEMONIC</race>
+		<acquire exp="24474861" sp="58739" />
+		<stats>
+			<vitals hp="236790" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
+				<item id="57" min="46495" max="108308" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37777" min="1" max="1" chance="0.075" /> <!-- Scroll of Blessing Scraps: Weapon (R95-grade) -->
+				<item id="37774" min="1" max="1" chance="0.0075" /> <!-- Recipe: Scroll of Blessing: Weapon (R95-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="5" chance="73.98" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="22.32" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="2.206" /> <!-- Scroll: 100,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
-	<npc id="19514" level="99" type="L2Npc" name="Scarlett" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="394647" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19514" level="99" type="L2Monster" name="Scarlett" title="Magical">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>DEMONIC</race>
+		<acquire exp="24474861" sp="58739" />
+		<stats>
+			<vitals hp="236790" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.6" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="37202" max="86659" chance="50" /> <!-- Adena -->
+				<item id="37786" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37783" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Armor (R95-grade) -->
+				<item id="36921" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="3" chance="91.07" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="17.07" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="1.84" /> <!-- Scroll: 100,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="19515" level="99" type="L2Monster" name="Bridget" title="Fire Slave">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -356,39 +407,80 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19516" level="99" type="L2Npc" name="Tanya" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="236790" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19516" level="99" type="L2Monster" name="Tanya" title="Disciplined">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>DEMONIC</race>
+		<acquire exp="27194246" sp="65266" />
+		<stats>
+			<vitals hp="263100" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
+			<skill id="4225" level="2" /> <!-- Stun Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
+				<item id="57" min="98158" max="228649" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="37778" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
+				<item id="37775" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40051" min="1" max="3" chance="92.135" /> <!-- Scroll: 100,000 SP -->
+				<item id="40052" min="1" max="1" chance="19.47" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="40053" min="1" max="1" chance="1.917" /> <!-- Scroll: 10,000,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
-	<npc id="19517" level="99" type="L2Npc" name="Scarlett" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="236790" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19517" level="99" type="L2Monster" name="Scarlett" title="Magical">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>DEMONIC</race>
+		<acquire exp="27194246" sp="65266" />
+		<stats>
+			<vitals hp="263100" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4287" level="2" /> <!-- Hold Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="40.6" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="78539" max="182948" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="37787" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
+				<item id="37784" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
+				<item id="36919" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40051" min="1" max="3" chance="74.88" /> <!-- Scroll: 100,000 SP -->
+				<item id="40052" min="1" max="1" chance="15.41" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="40053" min="1" max="1" chance="1.579" /> <!-- Scroll: 10,000,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="19518" level="99" type="L2Npc" name="Wormhole">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -441,22 +533,42 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="19521" level="99" type="L2Npc" name="Jabberwok" title="Clone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="274061" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19521" level="99" type="L2Monster" name="Jabberwok" title="Clone">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>BEAST</race>
+		<acquire exp="71385191" sp="171324" />
+		<stats>
+			<vitals hp="657749" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
+			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
+			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
+		</skillList>
 		<collision>
 			<radius normal="23" />
 			<height normal="30.5" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="77773" max="181163" chance="30" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="1.683" /> <!-- Sealed Demonic Tome -->
+				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40049" min="1" max="5" chance="73.15" /> <!-- Scroll: 1,000 SP -->
+				<item id="40050" min="1" max="1" chance="23.14" /> <!-- Scroll: 10,000 SP -->
+				<item id="40051" min="1" max="1" chance="2.287" /> <!-- Scroll: 100,000 SP -->
+			</corpse>
+		</dropLists>
 	</npc>
 	<npc id="19543" level="99" type="L2Npc" name="Invisible Kekropus NPC">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -665,22 +777,38 @@
 			</death>
 		</dropLists>
 	</npc>
-	<npc id="19554" level="99" type="L2Npc" name="Unworldly Imp" title="Treasure Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="87826" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+	<npc id="19554" level="99" type="L2Monster" name="Unworldly Imp" title="Treasure Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="41869872" sp="100487" />
+		<stats>
+			<vitals hp="87827" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
+		</skillList>
 		<collision>
 			<radius normal="12" />
 			<height normal="16.5" />
 		</collision>
+		<dropLists>
+			<death>
+				<item id="40063" min="1" max="4" chance="51.05" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40042" min="1" max="1" chance="13.07" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="1" chance="13.06" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="1" chance="12.82" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="1" chance="12.72" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="1" chance="12.66" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="1" chance="12.62" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40043" min="1" max="1" chance="12.44" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40045" min="1" max="1" chance="11.99" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</death>
+		</dropLists>
 	</npc>
 	<npc id="19555" level="99" type="L2Monster" name="Abyssal Imp" title="Treasure Guard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
