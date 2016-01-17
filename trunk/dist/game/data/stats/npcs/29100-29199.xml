@@ -1222,11 +1222,12 @@
 		</collision>
 	</npc>
 	<npc id="29130" level="29" type="L2Monster" name="Lost Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3243.99114901302" hpRegen="4.82927931744775" mp="315.12" mpRegen="1.5" />
+		<stats>
+			<vitals hp="2695" hpRegen="4.82927931744775" mp="315" mpRegen="1.5" />
 			<attack physical="249.845101440731" magical="170.611813877616" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="84.16" />
 			<attribute>
@@ -1241,8 +1242,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1259,6 +1258,7 @@
 		</collision>
 	</npc>
 	<npc id="29131" level="29" type="L2Monster" name="Lost Assistant Guard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="2" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="2" /> <!-- BOSS Heal -->
@@ -1266,8 +1266,8 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="201" /> <!-- rhand: Club of Nature -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3243.99114901302" hpRegen="4.82927931744775" mp="315.12" mpRegen="7.5" />
+		<stats>
+			<vitals hp="2695" hpRegen="4.82927931744775" mp="315" mpRegen="7.5" />
 			<attack physical="166.563400960487" magical="113.741209251744" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="84.16" />
 			<attribute>
@@ -1282,8 +1282,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4214" level="2" /> <!-- BOSS Reflect Damage -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1461,6 +1459,7 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="49" type="L2RaidBoss" name="Lost Guard Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29136" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1476,8 +1475,8 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="3019381" sp="724" raidPoints="356.4" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="138394.422441285" hpRegen="21.1254457302684" mp="720.0" mpRegen="2.1" />
+		<stats>
+			<vitals hp="263615" hpRegen="21.1254457302684" mp="720" mpRegen="2.1" />
 			<attack physical="2091.7548489206" magical="476.132455909724" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1760.96718" magical="859.08" />
 			<attribute>
@@ -1492,8 +1491,6 @@
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4178" level="4" /> <!-- BOSS Flamestrike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
 			<skill id="4412" level="11" /> <!-- Average P. Def. -->
@@ -1509,24 +1506,20 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<death>
-				<group chance="58.89780044555664">
-					<item id="119" min="1" max="1" chance="28.6435" /> <!-- Necklace of Seal -->
-					<item id="855" min="1" max="1" chance="38.1913" /> <!-- Nassen's Earring -->
-					<item id="886" min="6" max="16" chance="5.2079" /> <!-- Ring of Seal -->
-					<item id="1920" min="140" max="420" chance="7.6028" /> <!-- Necklace of Seal Chain -->
-					<item id="1918" min="81" max="243" chance="16.6321" /> <!-- Nassen's Earring Gemstone -->
-					<item id="2917" min="480" max="1440" chance="3.7224" /> <!-- Ring of Seal Gemstone -->
-				</group>
-				<group chance="38.59149932861328">
-					<item id="286" min="1" max="1" chance="18.1298" /> <!-- Eminence Bow -->
-					<item id="2121" min="12" max="36" chance="81.8702" /> <!-- Eminence Bow Shaft -->
-				</group>
-				<group chance="84.7074966430664">
-					<item id="4607" min="5" max="15" chance="14.0187" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
-					<item id="4608" min="2" max="4" chance="46.729" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
-					<item id="4609" min="2" max="6" chance="35.0467" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-					<item id="6573" min="1" max="1" chance="4.2056" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
-				</group>
+				<item id="855" min="1" max="1" chance="22.37" /> <!-- Nassen's Earring -->
+				<item id="119" min="1" max="1" chance="16.36" /> <!-- Necklace of Seal -->
+				<item id="286" min="1" max="1" chance="7.001" /> <!-- Eminence Bow -->
+				<item id="886" min="6" max="16" chance="3.014" /> <!-- Ring of Seal -->
+				<item id="4608" min="2" max="4" chance="38.09" /> <!-- Greater INT Dye (Int   3 Wit - 3) -->
+				<item id="2121" min="12" max="36" chance="30.94" /> <!-- Eminence Bow Shaft -->
+				<item id="4609" min="2" max="6" chance="28.21" /> <!-- Greater MEN Dye (Men   3 Int - 3) -->
+				<item id="4607" min="5" max="15" chance="12.26" /> <!-- Greater INT Dye (Int   3 Men - 3) -->
+				<item id="1918" min="81" max="243" chance="9.731" /> <!-- Nassen's Earring Gemstone -->
+				<item id="1920" min="140" max="420" chance="4.536" /> <!-- Necklace of Seal Chain -->
+				<item id="6573" min="1" max="1" chance="3.626" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="2917" min="480" max="1440" chance="2.132" /> <!-- Ring of Seal Gemstone -->
+				<item id="39629" min="1" max="1" chance="0.005936" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
 			</death>
 		</dropLists>
 		<collision>
