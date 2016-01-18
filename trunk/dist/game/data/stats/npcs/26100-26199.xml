@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="6163104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -21,7 +21,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="6163104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -166,7 +166,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="6163104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -183,7 +183,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="6163104" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -200,7 +200,7 @@
 		<!-- Source: http://l2on.net/en/?c=npc&id=26105 -->
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="2858591" hpRegen="1500" mp="285859" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -259,7 +259,7 @@
 		<!-- Source: http://l2on.net/en/?c=npc&id=26106 -->
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="7102091" hpRegen="1500" mp="710209" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -303,7 +303,7 @@
 		<!-- Source: http://l2on.net/en/?c=npc&id=26107 -->
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5326568" hpRegen="1500" mp="532657" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -347,7 +347,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="2858591" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -363,7 +363,7 @@
 	<npc id="26109" level="98" type="L2RaidBoss" name="Veridan" title="Wealthy">
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="7102091" hpRegen="1500" mp="710209" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -406,7 +406,7 @@
 	<npc id="26110" level="98" type="L2RaidBoss" name="Veridan" title="Wise">
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5326568" hpRegen="1500" mp="532657" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -449,7 +449,7 @@
 	<npc id="26111" level="98" type="L2RaidBoss" name="Kechi" title="Armed">
 		<race>DEMONIC</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5326568" hpRegen="1500" mp="532657" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -507,7 +507,7 @@
 	<npc id="26112" level="98" type="L2RaidBoss" name="Kechi" title="Wealthy">
 		<race>DEMONIC</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="14204182" hpRegen="1500" mp="1420418" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -550,7 +550,7 @@
 		<!--- Source: http://l2on.net/en/?c=npc&id=26113 -->
 		<race>DEMONIC</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="10653136" hpRegen="1500" mp="1065314" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -593,7 +593,7 @@
 	<npc id="26114" level="98" type="L2RaidBoss" name="Michaela" title="Armed">
 		<race>UNDEAD</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5326568" hpRegen="1500" mp="532657" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -650,7 +650,7 @@
 	<npc id="26115" level="98" type="L2RaidBoss" name="Michaela" title="Wealthy">
 		<race>UNDEAD</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="14204182" hpRegen="1500" mp="1420418" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -692,7 +692,7 @@
 	<npc id="26116" level="98" type="L2RaidBoss" name="Michaela" title="Wise">
 		<race>UNDEAD</race>
 		<acquire exp="468444704" sp="112426" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="10653136" hpRegen="1500" mp="1065314" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -734,7 +734,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="5326568" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -751,7 +751,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="14204182" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -768,7 +768,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="10653136" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -785,7 +785,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="15943245" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />

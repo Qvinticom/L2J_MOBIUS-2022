@@ -272,12 +272,6 @@
 			</xs:element>
 			<xs:element name="hitTime" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1" />
 		</xs:choice>
-		<xs:attribute name="str" type="xs:nonNegativeInteger" />
-		<xs:attribute name="int" type="xs:nonNegativeInteger" />
-		<xs:attribute name="dex" type="xs:nonNegativeInteger" />
-		<xs:attribute name="wit" type="xs:nonNegativeInteger" />
-		<xs:attribute name="con" type="xs:nonNegativeInteger" />
-		<xs:attribute name="men" type="xs:nonNegativeInteger" />
 	</xs:complexType>
 	
 	<xs:complexType name="statusType">

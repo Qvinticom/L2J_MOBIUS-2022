@@ -164,14 +164,6 @@ public class CharStat
 	}
 	
 	/**
-	 * @return the CON of the L2Character (base+modifier).
-	 */
-	public final int getCON()
-	{
-		return (int) calcStat(Stats.STAT_CON, _activeChar.getTemplate().getBaseCON());
-	}
-	
-	/**
 	 * @param target
 	 * @param init
 	 * @return the Critical Damage rate (base+modifier) of the L2Character.
@@ -217,14 +209,6 @@ public class CharStat
 	}
 	
 	/**
-	 * @return the DEX of the L2Character (base+modifier).
-	 */
-	public final int getDEX()
-	{
-		return (int) calcStat(Stats.STAT_DEX, _activeChar.getTemplate().getBaseDEX());
-	}
-	
-	/**
 	 * @param target
 	 * @return the Attack Evasion rate (base+modifier) of the L2Character.
 	 */
@@ -264,14 +248,6 @@ public class CharStat
 	public void setExp(long value)
 	{
 		_exp = value;
-	}
-	
-	/**
-	 * @return the INT of the L2Character (base+modifier).
-	 */
-	public int getINT()
-	{
-		return (int) calcStat(Stats.STAT_INT, _activeChar.getTemplate().getBaseINT());
 	}
 	
 	public byte getLevel()
@@ -411,6 +387,30 @@ public class CharStat
 	}
 	
 	/**
+	 * @return the CON of the L2Character (base+modifier).
+	 */
+	public final int getCON()
+	{
+		return (int) calcStat(Stats.STAT_CON, _activeChar.getTemplate().getBaseCON());
+	}
+	
+	/**
+	 * @return the DEX of the L2Character (base+modifier).
+	 */
+	public final int getDEX()
+	{
+		return (int) calcStat(Stats.STAT_DEX, _activeChar.getTemplate().getBaseDEX());
+	}
+	
+	/**
+	 * @return the INT of the L2Character (base+modifier).
+	 */
+	public int getINT()
+	{
+		return (int) calcStat(Stats.STAT_INT, _activeChar.getTemplate().getBaseINT());
+	}
+	
+	/**
 	 * @return the MEN of the L2Character (base+modifier).
 	 */
 	public final int getMEN()
@@ -418,11 +418,33 @@ public class CharStat
 		return (int) calcStat(Stats.STAT_MEN, _activeChar.getTemplate().getBaseMEN());
 	}
 	
+	/**
+	 * @return the STR of the L2Character (base+modifier).
+	 */
+	public final int getSTR()
+	{
+		return (int) calcStat(Stats.STAT_STR, _activeChar.getTemplate().getBaseSTR());
+	}
+	
+	/**
+	 * @return the WIT of the L2Character (base+modifier).
+	 */
+	public final int getWIT()
+	{
+		return (int) calcStat(Stats.STAT_WIT, _activeChar.getTemplate().getBaseWIT());
+	}
+	
+	/**
+	 * @return the LUC of the L2Character (base+modifier).
+	 */
 	public final int getLUC()
 	{
 		return (int) calcStat(Stats.STAT_LUC, _activeChar.getTemplate().getBaseLUC());
 	}
 	
+	/**
+	 * @return the CHA of the L2Character (base+modifier).
+	 */
 	public final int getCHA()
 	{
 		return (int) calcStat(Stats.STAT_CHA, _activeChar.getTemplate().getBaseCHA());
@@ -631,22 +653,6 @@ public class CharStat
 	public void setSp(long value)
 	{
 		_sp = value;
-	}
-	
-	/**
-	 * @return the STR of the L2Character (base+modifier).
-	 */
-	public final int getSTR()
-	{
-		return (int) calcStat(Stats.STAT_STR, _activeChar.getTemplate().getBaseSTR());
-	}
-	
-	/**
-	 * @return the WIT of the L2Character (base+modifier).
-	 */
-	public final int getWIT()
-	{
-		return (int) calcStat(Stats.STAT_WIT, _activeChar.getTemplate().getBaseWIT());
 	}
 	
 	/**

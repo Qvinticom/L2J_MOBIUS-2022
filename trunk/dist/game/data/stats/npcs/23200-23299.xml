@@ -3879,7 +3879,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- rhand: Monster Only (Heretic Private Axe) lhand: Monster Only (Heretic Private Axe) -->
 		<acquire exp="4453839" sp="2850" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<stats>
 			<vitals hp="196331" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
@@ -3958,7 +3958,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
 		<acquire exp="8776110" sp="14041" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<stats>
 			<vitals hp="197328" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
 			<attack physical="1009.3950039" magical="719.599557852" random="30" critical="4" accuracy="6" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="373.969485" magical="273.65463924" evasion="2" />
@@ -4165,7 +4165,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4910598" sp="3142" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<stats>
 			<vitals hp="196331" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
 			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="367.3536375" magical="268.81344996" evasion="5" />
@@ -4245,7 +4245,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
 		<acquire exp="4593482" sp="2939" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<stats>
 			<vitals hp="196331" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
 			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="4" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="361.0859925" magical="264.22705872" evasion="4" />
@@ -4313,7 +4313,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="8451407" sp="13522" />
-		<stats str="89" int="79" dex="42" wit="66" con="75" men="10">
+		<stats>
 			<vitals hp="196331" hpRegen="8.976" mp="1919.436" mpRegen="3.16812" />
 			<attack physical="1055.0276874" magical="760.9193205984" random="30" critical="4" accuracy="12.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="386.504775" magical="282.8274207" evasion="8" />

@@ -3,7 +3,7 @@
 	<npc id="23500" level="99" type="L2Npc" name="Flame Crow">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -40,7 +40,7 @@
 	<npc id="23501" level="99" type="L2Npc" name="Flame Rael">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -77,7 +77,7 @@
 	<npc id="23502" level="99" type="L2Npc" name="Flame Salamander">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -114,7 +114,7 @@
 	<npc id="23503" level="99" type="L2Npc" name="Flame Drake">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -151,7 +151,7 @@
 	<npc id="23504" level="99" type="L2Npc" name="Flame Votis">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -191,7 +191,7 @@
 		<sex>MALE</sex>
 	    <equipment rhand="17421" />
 		<acquire exp="148977405" sp="357545" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<!-- "Guessed" - Based on xp and sp reward -->
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -240,7 +240,7 @@
 		<sex>MALE</sex>
 	    <equipment rhand="17417" />
 		<acquire exp="187575027" sp="450180" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<!-- "Guessed" - Based on xp and sp reward -->
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -337,7 +337,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<acquire exp="187575027" sp="450180" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<!-- "Guessed" - Based on xp and sp reward -->
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

@@ -845,7 +845,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<acquire exp="441282100" sp="1765128" />
-		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
+		<stats>
 			<vitals hp="562310" hpRegen="7.5" mp="562310" mpRegen="2.7" />
 			<attack physical="336000" magical="252000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" />
@@ -2149,7 +2149,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
 		<acquire exp="198916032" sp="47739" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="8223069" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<attack physical="68250" magical="48750" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2800" magical="2700" />
@@ -2191,7 +2191,7 @@
 		<!-- Source http://l2on.net/en/?c=npc&id=25867 -->
 		<race>HUMANOID</race>
 		<acquire exp="1099043344" sp="263770" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="2278804" hpRegen="7.5" mp="227880" mpRegen="2.7" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3806.32183" magical="516.72362" evasion="3" />
@@ -2611,7 +2611,7 @@
 		<!-- Source http://l2on.net/en/?c=npc&id=25877 -->
 		<race>HUMANOID</race>
 		<acquire exp="708857856" sp="170125" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1262409" hpRegen="7.5" mp="2242" mpRegen="2.7" />
 			<attack physical="164000" magical="123000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6560" magical="6720" evasion="3" />
@@ -2728,7 +2728,7 @@
 		<!-- Source http://l2on.net/en/?c=npc&id=25880 -->
 		<race>HUMANOID</race>
 		<acquire exp="42359318" sp="169452" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1580452" hpRegen="7.5" mp="158045" mpRegen="2.7" />
 			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3360" magical="3420" evasion="3" />
@@ -2768,7 +2768,7 @@
 		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
 		<race>DEMONIC</race>
 		<acquire exp="234222352" sp="56213" raidPoints="1"/>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats>
 			<vitals hp="1775522" hpRegen="7.5" mp="22800" mpRegen="2.7" />
 			<attack physical="516000" magical="387000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6880" magical="6960" evasion="3" />
@@ -2867,7 +2867,7 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>DEMONIC</race>
 		<acquire exp="2658577152" sp="638058" raidPoints="1" />
-		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
+		<stats>
 			<vitals hp="3194997" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1980" magical="1920" evasion="3" />
@@ -2967,7 +2967,7 @@
 		<!-- Source http://l2on.net/en/?c=npc&id=25883 -->
 		<race>DEMONIC</race>
 		<acquire exp="2968720370" sp="712625" raidPoints="1" />
-		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
+		<stats>
 			<vitals hp="3497549" hpRegen="7.5" mp="3497549" mpRegen="2.7" />
 			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2750" magical="2650" />
@@ -3069,7 +3069,7 @@
 		<!-- Source http://l2on.net/en/?c=npc&id=25884 -->
 		<race>DEMONIC</race>
 		<acquire exp="3297130032" sp="791311" />
-		<stats str="20" int="11" dex="30" wit="20" con="23" men="10">
+		<stats>
 			<vitals hp="3916294" hpRegen="7.5" mp="3916294" mpRegen="2.7" />
 			<attack physical="86000" magical="64500" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3440" magical="3480" />

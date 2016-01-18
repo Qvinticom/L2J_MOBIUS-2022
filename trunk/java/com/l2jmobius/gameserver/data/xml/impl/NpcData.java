@@ -184,12 +184,6 @@ public class NpcData implements IXmlReader
 								}
 								case "stats":
 								{
-									set.set("baseSTR", parseInteger(attrs, "str"));
-									set.set("baseINT", parseInteger(attrs, "int"));
-									set.set("baseDEX", parseInteger(attrs, "dex"));
-									set.set("baseWIT", parseInteger(attrs, "wit"));
-									set.set("baseCON", parseInteger(attrs, "con"));
-									set.set("baseMEN", parseInteger(attrs, "men"));
 									for (Node statsNode = npcNode.getFirstChild(); statsNode != null; statsNode = statsNode.getNextSibling())
 									{
 										attrs = statsNode.getAttributes();
