@@ -65,8 +65,8 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 		addStartNpc(CHESHA);
 		addTalkId(CHESHA, NAGEL);
 		addKillId(CRAWLER, STALKER);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.htm");
-		addCondCompletedQuest(Q10361_RolesOfTheSeeker.class.getSimpleName(), "no_prequest.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-08.htm");
+		addCondCompletedQuest(Q10361_RolesOfTheSeeker.class.getSimpleName(), "33449-08.htm");
 	}
 	
 	@Override
@@ -136,8 +136,8 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 					if (npc.getId() == CHESHA) // mobs defeated
 					{
 						htmltext = "33449-05.html";
-						showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 5000);
-						qs.setCond(3);
+						showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 10000);
+						qs.setCond(3, true);
 						qs.unset(Integer.toString(CRAWLER));
 						qs.unset(Integer.toString(STALKER));
 					}
@@ -154,7 +154,7 @@ public class Q10362_CertificationOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				htmltext = npc.getId() == CHESHA ? "33449-07.htm" : "33450-04.html";
 				break;
 			}
 		}
