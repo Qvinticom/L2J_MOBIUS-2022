@@ -505,18 +505,27 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27522" level="28" type="L2Npc" name="Windima" title="Clone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="27522" level="28" type="L2Monster" name="Windima" title="Clone">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DeBuff" id="4098" level="1" /> <!-- Silence -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="1881" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="1881" hpRegen="3.5" mp="231" mpRegen="1.5" />
+			<attack physical="119.09" magical="35.77" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="144.948" magical="92.519" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
